@@ -39,25 +39,19 @@ const CARS: Record<Lane, Record<Day, number>> = {
 
 /**
  * Send a payment on Ethereum or a layer 2, on a quiet or a busy day, and
- * compare the fees. Sending on both lanes and on both days unlocks Continue.
+ * compare the fees. Sending in each lane on each day unlocks Continue.
  */
 const FeeLanesWidget = ({ onComplete }: WidgetProps) => {
   const t = useTranslations("page-courses")
   const [day, setDay] = useState<Day>("quiet")
   const [sent, setSent] = useState<Partial<Record<Lane, Day>>>({})
   const [last, setLast] = useState<{ lane: Lane; day: Day } | null>(null)
-  const [seen, setSeen] = useState({
-    lanes: new Set<Lane>(),
-    days: new Set<Day>(),
-  })
+  // Each lane on each day: the explanation compares both lanes across days
+  const [seen, setSeen] = useState<Set<string>>(new Set())
   const [done, setDone] = useState(false)
 
   useEffect(() => {
-    if (
-      !done &&
-      seen.lanes.size === LANES.length &&
-      seen.days.size === DAYS.length
-    ) {
+    if (!done && seen.size === LANES.length * DAYS.length) {
       setDone(true)
       onComplete()
     }
@@ -72,10 +66,7 @@ const FeeLanesWidget = ({ onComplete }: WidgetProps) => {
   const send = (lane: Lane) => {
     setSent((s) => ({ ...s, [lane]: day }))
     setLast({ lane, day })
-    setSeen((s) => ({
-      lanes: new Set(s.lanes).add(lane),
-      days: new Set(s.days).add(day),
-    }))
+    setSeen((s) => new Set(s).add(`${lane}-${day}`))
   }
 
   return (

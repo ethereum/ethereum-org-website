@@ -553,6 +553,22 @@ const LessonPlayer = ({
       ? "text-green-700 dark:text-green-400"
       : "text-error dark:text-red-400"
   const hasFeedbackRow = explored || (status !== "answering" && isGraded(step))
+
+  // Completion recap: each missed step's prompt and the note a right answer shows
+  const missedSteps = reward
+    ? lesson.steps
+        .filter((s) => isGraded(s) && !firstTry[s.id])
+        .map((s) => {
+          const key = (suffix: string) =>
+            stepKey(courseId, lesson.id, s.id, suffix)
+          return {
+            prompt: key("prompt"),
+            explain:
+              (s.type === "choice" && choiceFeedbackKey(s, s.correct, key)) ||
+              key("explain"),
+          }
+        })
+    : []
   const reportFlag = (className?: string) => (
     <ReportProblemButton
       courseId={courseId}
@@ -792,6 +808,7 @@ const LessonPlayer = ({
             }
             nextIsExam={!nextLessonId && examAfter}
             learnMore={learnMore}
+            missed={missedSteps}
           />
         ) : (
           <AnimatePresence mode="wait" initial={false}>

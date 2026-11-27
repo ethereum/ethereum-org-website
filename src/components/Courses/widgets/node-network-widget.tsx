@@ -71,6 +71,8 @@ const NodeNetworkWidget = ({
   // The rest of the world's tip, for the `world` skin
   const [chainTip, setChainTip] = useState(START)
   const done = useRef(false)
+  // The world skin asks for every computer off, as an attempt to stop Ethereum
+  const allOff = useRef(false)
 
   const tip = world ? chainTip : tipOf(nodes)
   const online = nodes.filter((n) => n.on).length
@@ -97,7 +99,7 @@ const NodeNetworkWidget = ({
       )
       if (finished >= 0) {
         setEvent({ kind: "synced", node: finished })
-        if (!done.current) {
+        if (!done.current && (!world || allOff.current)) {
           done.current = true
           onComplete()
         }
@@ -116,11 +118,9 @@ const NodeNetworkWidget = ({
     const next = nodes.map((n, idx) => (idx === i ? { ...n, on: !n.on } : n))
     setNodes(next)
     if (node.on) {
-      setEvent(
-        next.some((n) => n.on)
-          ? { kind: "offline", node: i }
-          : { kind: "all-off" }
-      )
+      const anyOn = next.some((n) => n.on)
+      if (!anyOn) allOff.current = true
+      setEvent(anyOn ? { kind: "offline", node: i } : { kind: "all-off" })
       return
     }
     setEvent({

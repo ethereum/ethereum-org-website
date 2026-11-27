@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react"
 import {
+  BookOpen,
   CalendarClock,
   LockKeyhole,
   ServerOff,
@@ -11,6 +12,7 @@ import {
 import { useLocale, useTranslations } from "next-intl"
 
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
+import { Card, CardContent } from "@/components/ui/card"
 import { Spinner } from "@/components/ui/spinner"
 
 import { cn } from "@/lib/utils/cn"
@@ -57,6 +59,8 @@ const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 interface ExamGateProps {
   courseId: string
   questions: ExamStep[]
+  /** The course's lessons, whose titles list what Course Mastery covers */
+  lessonIds: string[]
   nextCourseId?: string
   sources?: Record<string, PageLink>
 }
@@ -68,6 +72,7 @@ interface ExamGateProps {
 const ExamGate = ({
   courseId,
   questions,
+  lessonIds,
   nextCourseId,
   sources,
 }: ExamGateProps) => {
@@ -116,7 +121,8 @@ const ExamGate = ({
     icon: React.ReactNode,
     title: string,
     body: string,
-    actions?: React.ReactNode
+    actions?: React.ReactNode,
+    details?: React.ReactNode
   ) => (
     <main
       style={lessonThemeStyle()}
@@ -127,6 +133,7 @@ const ExamGate = ({
       </div>
       <h1 className="m-0 text-h3 font-black">{title}</h1>
       <p className="m-0 text-lg text-body-medium">{body}</p>
+      {details}
       <div className="mt-2 flex w-full flex-col gap-3">
         {actions}
         <ButtonLink
@@ -177,7 +184,27 @@ const ExamGate = ({
             {t("page-courses-exam-sign-in")}
           </Button>
         }
-      />
+      />,
+      lessonIds.length > 0 && (
+        <Card variant="nested" size="md" border className="w-full text-start">
+          <CardContent>
+            <h2 className="m-0 text-md font-bold">
+              {t("page-courses-exam-topics")}
+            </h2>
+            <ul className="m-0 flex list-none flex-col gap-2">
+              {lessonIds.map((id) => (
+                <li key={id} className="m-0 flex items-start gap-2">
+                  <BookOpen
+                    aria-hidden
+                    className="mt-1 size-4 shrink-0 text-(--course-strong) dark:text-(--course-bright)"
+                  />
+                  {t(`${courseId}-${id}-title`)}
+                </li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+      )
     )
 
   if (gate.kind === "limit")

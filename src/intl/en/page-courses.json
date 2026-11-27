@@ -57,7 +57,6 @@
   "page-courses-profile-redirect-link": "Go to courses",
   "page-courses-profile-title": "Your Ethereum journey",
   "page-courses-profile-meta-description": "Your XP, streaks and progress in ethereum.org courses.",
-  "page-courses-profile-account-local": "Not signed in",
   "page-courses-profile-loading": "Loading your profile",
   "page-courses-checking": "Checking…",
   "page-courses-exam-next": "Next",
@@ -92,7 +91,6 @@
   "page-courses-exam-expired-title": "Time's up for that attempt",
   "page-courses-exam-expired-description": "An attempt has to be submitted within {hours, plural, =1 {one hour} =2 {two hours} =3 {three hours} other {# hours}} of starting. That one ran out of time, so it wasn't graded, and it still counts toward today's attempts.",
   "page-courses-no-profile-sign-in": "Have an account? Sign in",
-  "page-courses-profile-account-sign-in": "Save to an account",
   "page-courses-profile-account-title": "Account",
   "page-courses-sign-out-unsaved-title": "Your latest progress isn't saved yet",
   "page-courses-sign-out-unsaved-description": "It hasn't reached your account, so your other devices can't see it. Check your connection and try again. If you sign out anyway, it stays on this device and joins your account the next time you sign in here.",
@@ -4449,5 +4447,10 @@
   "roadmap-title": "Where Ethereum is headed",
   "roadmap-description": "Learn the plans for lower fees and lighter nodes, and the problem each upgrade is meant to solve.",
   "privacy-title": "Privacy on a public blockchain",
-  "privacy-description": "Everything on Ethereum is public by default. Learn what that reveals about you and how tools like zero-knowledge proofs can help."
+  "privacy-description": "Everything on Ethereum is public by default. Learn what that reveals about you and how tools like zero-knowledge proofs can help.",
+  "page-courses-widget-nonce-fix-locked": "Try the other two buttons first, to see why they can't free nonce {stuck}.",
+  "page-courses-complete-xp-progress": "{xp} XP · {remaining} to {name}",
+  "page-courses-complete-xp-total": "{xp} XP",
+  "page-courses-progress-saved-sync": "Saved on this device. <signin>Sign in to sync.</signin>",
+  "page-courses-exam-topics": "What it covers"
 }

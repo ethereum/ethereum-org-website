@@ -7,6 +7,7 @@ import { useLocale, useTranslations } from "next-intl"
 
 import { ArrowPrev } from "@/components/ui/arrow"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
+import { Card, CardContent, CardParagraph } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 
 import { cn } from "@/lib/utils/cn"
@@ -40,6 +41,8 @@ interface LessonCompleteProps {
   nextIsExam?: boolean
   /** ethereum.org page to go deeper, offered once the lesson is done */
   learnMore?: PageLink
+  /** Prompt and explanation keys of the steps missed on the first try */
+  missed: { prompt: string; explain: string }[]
 }
 
 // XP sparks fly from the badge down into the total bar
@@ -109,6 +112,7 @@ const LessonComplete = ({
   nextTitle,
   nextIsExam,
   learnMore,
+  missed,
 }: LessonCompleteProps) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
@@ -170,6 +174,7 @@ const LessonComplete = ({
 
   // The bar shows progress through the level reached
   const level = levelFor(reward.totalAfter)
+  const nextLevel = level.next === null ? null : levelFor(level.next)
   const fill = (n: number) =>
     level.next === null
       ? 100
@@ -274,10 +279,20 @@ const LessonComplete = ({
               </motion.div>
 
               <div className="flex w-full flex-col gap-1">
-                <div className="flex justify-between text-sm font-bold">
+                <div className="flex justify-between gap-2 text-sm font-bold">
                   <span>{levelName(level)}</span>
                   <span className="tabular-nums">
-                    {int.format(Math.round(total))}
+                    {nextLevel
+                      ? t("page-courses-complete-xp-progress", {
+                          xp: int.format(Math.round(total)),
+                          remaining: int.format(
+                            Math.max(0, nextLevel.floor - Math.round(total))
+                          ),
+                          name: levelName(nextLevel),
+                        })
+                      : t("page-courses-complete-xp-total", {
+                          xp: int.format(Math.round(total)),
+                        })}
                   </span>
                 </div>
                 <motion.div
@@ -404,6 +419,33 @@ const LessonComplete = ({
           </div>
           {learnMore && <LearnMoreCard link={learnMore} />}
         </motion.div>
+      )}
+
+      {missed.length > 0 && !showStreak && (
+        <motion.section
+          {...appear(ACTIONS_AT[stage])}
+          className="flex w-full max-w-sm flex-col gap-3 text-start"
+        >
+          <h3 className="m-0 text-lg font-bold">
+            {t("page-courses-profile-review-title")}
+          </h3>
+          <ul className="m-0 flex list-none flex-col gap-3">
+            {missed.map(({ prompt, explain }) => (
+              <li key={prompt} className="m-0">
+                <Card variant="nested" size="md" border>
+                  <CardContent>
+                    <CardParagraph className="m-0 font-bold">
+                      {t(prompt)}
+                    </CardParagraph>
+                    <CardParagraph className="m-0" size="sm">
+                      {t(explain)}
+                    </CardParagraph>
+                  </CardContent>
+                </Card>
+              </li>
+            ))}
+          </ul>
+        </motion.section>
       )}
     </div>
   )

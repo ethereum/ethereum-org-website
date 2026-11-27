@@ -57,7 +57,7 @@ export const LessonsRemain = ({
   )
 }
 
-/** Lessons done, plus the course check as the last step, with its trophy */
+/** Lessons done, then the course check as a separate last step with its trophy */
 const CourseProgress = ({
   courseId,
   lessonIds,
@@ -71,8 +71,6 @@ const CourseProgress = ({
   const total = lessonIds.length
   const done = lessonIds.filter((id) => isLessonComplete(courseId, id)).length
   const passed = hasExam && isExamPassed(courseId)
-  const percent =
-    ((done + (passed ? 1 : 0)) / (total + (hasExam ? 1 : 0))) * 100
 
   const label = passed
     ? t("page-courses-path-finish")
@@ -85,14 +83,30 @@ const CourseProgress = ({
       <div className="flex items-center gap-2">
         <Progress
           aria-hidden
-          value={percent}
+          value={total ? (done / total) * 100 : 0}
+          style={{ flexGrow: total }}
           className={cn(
-            "h-3 *:data-[slot=progress-indicator]:duration-700",
+            "h-3 w-auto basis-0 *:data-[slot=progress-indicator]:duration-700",
             onColor
               ? "bg-black/20 *:data-[slot=progress-indicator]:bg-white"
               : "bg-(--course-soft) *:data-[slot=progress-indicator]:bg-(--course)"
           )}
         />
+        {hasExam && (
+          <span
+            aria-hidden
+            className={cn(
+              "h-3 flex-1 basis-0 rounded-full transition-colors duration-700",
+              passed
+                ? onColor
+                  ? "bg-white"
+                  : "bg-(--course)"
+                : onColor
+                  ? "bg-black/20"
+                  : "bg-(--course-soft)"
+            )}
+          />
+        )}
         {hasExam && (
           <Trophy
             aria-hidden

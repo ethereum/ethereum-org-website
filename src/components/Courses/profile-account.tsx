@@ -181,19 +181,20 @@ export const ProfileAccountLine = () => {
   if (status !== "signed-out") return null
 
   return (
-    <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-      <p className="m-0 text-xl font-bold text-body">
-        {t("page-courses-profile-account-local")}
-      </p>
-      <SignInDialog
-        onSignedIn={() => void syncProgress(true)}
-        trigger={
-          <Button size="sm" variant="outline">
-            {t("page-courses-profile-account-sign-in")}
-          </Button>
-        }
-      />
-    </div>
+    <p className="m-0 text-lg text-body-medium">
+      {t.rich("page-courses-progress-saved-sync", {
+        signin: (chunks) => (
+          <SignInDialog
+            onSignedIn={() => void syncProgress(true)}
+            trigger={
+              <Button variant="link" className="!px-0 text-lg">
+                {chunks}
+              </Button>
+            }
+          />
+        ),
+      })}
+    </p>
   )
 }
 

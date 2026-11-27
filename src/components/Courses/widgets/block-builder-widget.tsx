@@ -106,7 +106,12 @@ const BlockBuilderWidget = ({ onAnswer, locked }: WidgetProps) => {
           <p className="m-0 text-sm font-bold tracking-wide text-body-medium uppercase">
             {t("page-courses-widget-block-block")}
           </p>
-          <svg viewBox="0 10 220 225" aria-hidden className="w-full">
+          {/* Capped on mobile so the pool stays near the fold */}
+          <svg
+            viewBox="0 10 220 225"
+            aria-hidden
+            className="mx-auto w-full max-w-40 md:max-w-none"
+          >
             <polygon points={floor.top} className="fill-(--course-soft)" />
             <polygon
               points={floor.left}

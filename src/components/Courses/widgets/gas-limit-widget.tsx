@@ -32,7 +32,8 @@ const outcome = (limit: number) => {
 
 /**
  * Sandbox: start from the wallet's suggested limit, then see that lowering it
- * never cuts the fee, and that too low a limit fails and still costs
+ * never cuts the fee, that too low a limit fails and still costs, and that
+ * raising it changes nothing either
  */
 const GasLimitWidget = ({ onComplete }: WidgetProps) => {
   const t = useTranslations("page-courses")
@@ -41,6 +42,7 @@ const GasLimitWidget = ({ onComplete }: WidgetProps) => {
   const sliderId = `${uid}-slider`
   const [stop, setStop] = useState(SUGGESTED)
   const done = useRef(false)
+  const seen = useRef({ failed: false, raised: false })
 
   const int = numberFormat(locale)
   const compact = numberFormat(locale, { notation: "compact" })
@@ -60,8 +62,10 @@ const GasLimitWidget = ({ onComplete }: WidgetProps) => {
 
   const handleChange = (next: number) => {
     setStop(next)
-    // Done once a too-low limit has failed: the cost of guessing low
-    if (!done.current && !outcome(STOPS[next]).ok) {
+    if (!outcome(STOPS[next]).ok) seen.current.failed = true
+    if (next > SUGGESTED) seen.current.raised = true
+    // The explanation covers a failed low limit and a raised one
+    if (!done.current && seen.current.failed && seen.current.raised) {
       done.current = true
       onComplete()
     }
