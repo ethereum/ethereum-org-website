@@ -90,6 +90,11 @@ function rtlBidiRules(fileType: "markdown" | "json"): string {
 - Never convert Gregorian dates to Hijri calendar.${mdOnlyTrailer}`
 }
 
+// Locale-specific corrections for mistakes reviews keep fixing in one locale.
+const LOCALE_NOTES: Record<string, string> = {
+  vi: `- "Get" in a call to action ("Get a wallet", "Get ETH", "Get started") means obtain or start: use "Nhận", "Lấy" or "Bắt đầu" as fits. Never "Tải" (download) unless the English says download.`,
+}
+
 /**
  * Site-specific translation notes per language group.
  * These focus on ethereum.org conventions, not general linguistics
@@ -105,6 +110,15 @@ function rtlBidiRules(fileType: "markdown" | "json"): string {
  */
 export function getSiteSpecificNotes(
   group: LanguageGroup,
+  fileType: "markdown" | "json",
+  locale: string
+): string {
+  const notes = groupNotes(group, fileType)
+  return LOCALE_NOTES[locale] ? `${notes}\n${LOCALE_NOTES[locale]}` : notes
+}
+
+function groupNotes(
+  group: LanguageGroup,
   fileType: "markdown" | "json"
 ): string {
   const common = `
@@ -114,7 +128,7 @@ Site-specific rules for ethereum.org (group-specific overrides below take preced
 - Do not translate (keep in original Latin script): ticker symbols (ETH, BTC, ERC, EIP, BLS), URLs, domains, EVM opcodes (SSTORE, CALL, PUSH), hex values (0x...), cryptographic primitives (SHA-256, Keccak-256, ECDSA, zk-SNARKs), network names (Mainnet, Sepolia, Holesky, Goerli), license identifiers (MIT, Apache-2.0), mathematical notations and formulas.
 - Treat client implementation names (Lighthouse, Prysm, Geth, Nethermind, Besu, Teku, Lodestar, Nimbus) as proper nouns; do not translate them. In non-Latin scripts, phonetic transliteration alongside the Latin name is acceptable.
 - Use community glossary terms as provided. In languages with grammatical cases, decline glossary terms to fit the surrounding sentence naturally. If a term in the source text does not match the glossary's intended technical context, ignore the glossary entry and translate according to the general context of the sentence.
-- First mention of acronym-style terms: when the glossary contains a term with an abbreviation in parentheses (e.g., "decentralized application (dapp)" -> "aplicacion descentralizada (dapp)"), expand it on first mention in each section. Use the full translated form with the abbreviation in parentheses. Subsequent mentions in the same section may use the short form alone. If the English source uses a shortened or variant form (e.g., "dapps" instead of "dapp"), still use the glossary's canonical translated form -- do not reproduce informal variants.
+- Glossary terms with an abbreviation in parentheses (e.g., "decentralized application (dapp)" -> "aplicacion descentralizada (dapp)", "layer 2 (L2)") pair a long form with its abbreviation. Follow the English source: where it writes the long form, use the translated long form, adding the abbreviation only if English does; where it writes only the abbreviation (L2, dapp, NFT), write only the abbreviation and never expand it. Abbreviations keep their English capitalization exactly (L1, L2, never l1, l2), even when a glossary entry shows them in lower case. Plural or variant forms in English (e.g., "dapps") take the glossary's spelling of the same form, inflected as the language requires -- do not reproduce informal variants.
 - Translate English idioms and colloquialisms by meaning, not literally. Use natural target-language expressions that convey the same meaning. Examples: "in the wild" = in actual use/in practice; "under the hood" = internally/how it works technically; "out of the box" = by default/without extra configuration; "a deep dive" = a detailed exploration; "the big picture" = the overall view. If no natural equivalent exists, rephrase plainly rather than producing an awkward literal translation.
 - Do not translate technical concepts or loanwords unless an exact translation is provided in the glossary. If a term is not in the glossary, leave it in English.
 - The word "state" in blockchain context means computational state, not political state.`

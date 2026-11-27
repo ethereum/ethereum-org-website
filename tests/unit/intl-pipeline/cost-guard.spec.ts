@@ -8,12 +8,9 @@
 import { expect, test } from "@playwright/test"
 
 import {
-  INPUT_RATE_USD_PER_1M,
   MAX_CHUNK_BYTES,
   MAX_PLANNED_PROMPT_BYTES,
   MAX_PROMPT_BYTES,
-  OUTPUT_RATE_USD_PER_1M,
-  REASONING_TOKENS_PER_CALL,
 } from "../../../src/scripts/intl-pipeline/constants"
 import {
   assertRunFuse,
@@ -22,6 +19,7 @@ import {
   estimatedCostUsd,
   FileBudgetExceededError,
   minimumFuseUsd,
+  reasoningTokensFor,
   recordUsage,
   reserveForCall,
   resetMeter,
@@ -168,9 +166,11 @@ test.describe("Irreducible content", () => {
         `translation ${i} with an explanatory note for translators`
       )
     }
+    // Every section uses every term, so no batch can shed any of them.
+    const allTerms = [...glossary.keys()].join(" ")
     const body = Array.from(
       { length: 20 },
-      (_, i) => `## S${i} {#s-${i}}\n\n${"z".repeat(2_000)}`
+      (_, i) => `## S${i} {#s-${i}}\n\n${allTerms}`
     ).join("\n\n")
     const plan = planIncrementalBatches({
       filePath: "normal.md",
@@ -196,13 +196,14 @@ test.describe("Irreducible content", () => {
     const glossary = new Map<string, string>()
     for (let i = 0; i < 500; i++) {
       glossary.set(
-        `term-number-${i}-english-phrase-with-extra-length`,
+        `t${i}`,
         `a deliberately long translation ${i} with an explanatory note that pads the glossary block substantially`
       )
     }
+    const allTerms = [...glossary.keys()].join(" ")
     const body = Array.from(
       { length: 20 },
-      (_, i) => `## S${i} {#s-${i}}\n\n${"z".repeat(2_000)}`
+      (_, i) => `## S${i} {#s-${i}}\n\n${allTerms}`
     ).join("\n\n")
     expect(() =>
       planIncrementalBatches({
@@ -216,6 +217,63 @@ test.describe("Irreducible content", () => {
         glossaryTerms: glossary,
       })
     ).toThrow(/planning ceiling/)
+  })
+})
+
+test.describe("Glossary per batch", () => {
+  // page-developers-tools-descriptions.json: ~300 glossary terms matched the
+  // whole file, ~33KB resent with every batch. Each batch now carries only the
+  // terms its own sections use, so content fills the call and the plan fits
+  // the budget instead of being refused.
+  const glossary = new Map<string, string>()
+  for (let i = 0; i < 300; i++) {
+    glossary.set(
+      `tool-${i}`,
+      `localized name ${i} (translator note: keep the Latin product name beside the transliteration, as the community vote decided)`
+    )
+  }
+  const keys = Array.from({ length: 300 }, (_, i) => `tool-${i}-description`)
+  const english = JSON.stringify(
+    Object.fromEntries(
+      keys.map((k, i) => [
+        k,
+        `tool-${i} is ${"a useful developer tool ".repeat(16)}`,
+      ])
+    ),
+    null,
+    2
+  )
+  const plan = () =>
+    planIncrementalBatches({
+      filePath: "src/intl/en/page-tools.json",
+      fileType: "json",
+      locale: "hi",
+      languageName: "Hindi",
+      englishContent: english,
+      localeContent: "{}",
+      sectionIds: keys,
+      glossaryTerms: glossary,
+    })!
+
+  test("a batch carries only the terms its sections use", () => {
+    const first = plan().batches[0]
+    const last = plan().batches.at(-1)!
+    expect(first.prompt).toContain('"tool-0" ->')
+    expect(first.prompt).not.toContain('"tool-299" ->')
+    expect(last.prompt).toContain('"tool-299" ->')
+  })
+
+  test("a large update with a large glossary plans within budget", () => {
+    const p = plan()
+    expect(p.overBudget).toBe(false)
+    expect(p.tooManyBatches).toBe(false)
+  })
+})
+
+test.describe("Reasoning model", () => {
+  test("scales with visible output instead of a flat per-call figure", () => {
+    expect(reasoningTokensFor(0)).toBe(500)
+    expect(reasoningTokensFor(6_700)).toBeCloseTo(15_575, 0)
   })
 })
 
@@ -300,20 +358,20 @@ test.describe("In-flight reservation is sized from the prompt", () => {
   test.beforeEach(() => resetMeter(100))
 
   test("reservation is priced from the prompt, not the ceiling", () => {
-    // Prompt tokens in, the same out, plus the per-call reasoning.
-    const priced = (bytes: number) =>
-      (bytes / 3 / 1_000_000) * INPUT_RATE_USD_PER_1M +
-      ((bytes / 3 + REASONING_TOKENS_PER_CALL) / 1_000_000) *
-        OUTPUT_RATE_USD_PER_1M
-    expect(callReserveUsd(8_192)).toBeCloseTo(priced(8_192), 6)
-    expect(callReserveUsd(MAX_PROMPT_BYTES)).toBeCloseTo(
-      priced(MAX_PROMPT_BYTES),
-      6
-    )
+    // Hand-computed at $2/$12 per 1M: prompt/3 tokens in; out, the translation
+    // (capped at one chunk) plus 500 + 2.25x its tokens of reasoning.
+    expect(callReserveUsd(8_192)).toBeCloseTo(0.117957, 5)
+    expect(callReserveUsd(MAX_PROMPT_BYTES)).toBeCloseTo(0.475675, 5)
     // An 8KB incremental prompt reserves well under a third of the ceiling
     expect(callReserveUsd(8_192)).toBeLessThan(
       callReserveUsd(MAX_PROMPT_BYTES) / 3
     )
+  })
+
+  test("an irreducible chunk reserves its whole reply, under the ceiling too", () => {
+    // One 45KB section: past the content budget, prompt still under 64KB
+    expect(callReserveUsd(50_000, true)).toBeCloseTo(0.689333, 5)
+    expect(callReserveUsd(50_000)).toBeCloseTo(0.465317, 5)
   })
 
   test("a settled reservation is released", () => {

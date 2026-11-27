@@ -24,6 +24,7 @@ import {
   sectionCodeLoss,
   translateBatchWithParseRetry,
 } from "@/scripts/intl-pipeline/lib/llm/incremental-translate"
+import { FileGlossary } from "@/scripts/intl-pipeline/lib/llm/prompt-builder"
 import { classifyFailure } from "@/scripts/intl-pipeline/lib/quarantine"
 
 test.describe("parseIncrementalResponse", () => {
@@ -1198,5 +1199,145 @@ test.describe("sectionCodeLoss", () => {
         "## El campo `owner` {#new}\n\nFija `owner` una vez."
       )
     ).toBeNull()
+  })
+})
+
+test.describe("buildIncrementalPrompt -- glossary and locale notes", () => {
+  const prompt = (
+    targetLanguage: string,
+    content: string,
+    contextContent = "Texto existente."
+  ) =>
+    buildIncrementalPrompt({
+      filePath: "src/intl/en/page-start.json",
+      fileType: "json",
+      targetLanguage,
+      languageName: targetLanguage,
+      sections: [
+        { id: "a", action: "TRANSLATE" as const, content },
+        { id: "b", action: "CONTEXT" as const, content: contextContent },
+      ],
+      glossaryTerms: new Map([
+        ["layer 1 (L1)", "capa 1 (l1)"],
+        ["staking", "staking"],
+        ["smart contract", "contrato inteligente"],
+      ]),
+    })
+
+  test("carries only the glossary terms the TRANSLATE sections use", () => {
+    const p = prompt("es", "Compare L1 alternatives.", "smart contract")
+    // An abbreviation alone matches a "long form (ABBR)" entry, as ETHGlossary does
+    expect(p).toContain('"layer 1 (L1)" ->')
+    expect(p).not.toContain('"staking" ->')
+    // CONTEXT is the existing translation, never a reason to add a term
+    expect(p).not.toContain('"smart contract" ->')
+  })
+
+  test("matches glossary terms across hyphen and space variants", () => {
+    const p = buildIncrementalPrompt({
+      filePath: "x.md",
+      fileType: "markdown",
+      targetLanguage: "es",
+      languageName: "Spanish",
+      sections: [
+        {
+          id: "a",
+          action: "TRANSLATE" as const,
+          content: "Ethereum uses proof of stake.",
+        },
+      ],
+      glossaryTerms: new Map([
+        ["proof-of-stake (PoS)", "prueba de participación (PoS)"],
+      ]),
+    })
+    expect(p).toContain('"proof-of-stake (PoS)" ->')
+  })
+
+  test("matches a phrase split by link markup", () => {
+    const p = buildIncrementalPrompt({
+      filePath: "x.md",
+      fileType: "markdown",
+      targetLanguage: "es",
+      languageName: "Spanish",
+      sections: [
+        {
+          id: "a",
+          action: "TRANSLATE" as const,
+          content: "[Ethereum](/) Mainnet",
+        },
+      ],
+      glossaryTerms: new Map([
+        ["Ethereum Mainnet", "Red principal de Ethereum"],
+      ]),
+    })
+    expect(p).toContain('"Ethereum Mainnet" ->')
+  })
+
+  test("matches separator-free and stemmed forms", () => {
+    const p = prompt("fr", "Voting off-chain with calldata.")
+    expect(p).not.toContain('"staking" ->')
+    const forms = buildIncrementalPrompt({
+      filePath: "x.json",
+      fileType: "json",
+      targetLanguage: "fr",
+      languageName: "French",
+      sections: [
+        {
+          id: "a",
+          action: "TRANSLATE" as const,
+          content: "Voting off-chain with calldata.",
+        },
+      ],
+      glossaryTerms: new Map([
+        ["vote", "vote"],
+        ["offchain", "hors chaîne"],
+        ["call data", "données d'appel"],
+      ]),
+    })
+    expect(forms).toContain('"vote" ->')
+    expect(forms).toContain('"offchain" ->')
+    expect(forms).toContain('"call data" ->')
+  })
+
+  test("a term the file glossary could not place rides in every prompt", () => {
+    const glossary = new FileGlossary([
+      ["zero-knowledge proof", "preuve à divulgation nulle de connaissance"],
+      ["staking", "staking"],
+    ]).attribute("ZK proofs and staking", "markdown")
+    const p = buildIncrementalPrompt({
+      filePath: "x.json",
+      fileType: "json",
+      targetLanguage: "fr",
+      languageName: "French",
+      sections: [{ id: "a", action: "TRANSLATE" as const, content: "Hello" }],
+      glossaryTerms: glossary,
+    })
+    expect(p).toContain('"zero-knowledge proof" ->')
+    expect(p).not.toContain('"staking" ->')
+  })
+
+  test("a term /filter counted more often than local forms rides everywhere", () => {
+    // zk-rollups/index.md: one "zero-knowledge rollups" heading, ~95 "ZK-rollups"
+    const file =
+      "What are zero-knowledge rollups? ZK-rollups batch. ZK-rollups prove."
+    const glossary = new FileGlossary([
+      ["zero-knowledge rollup", "rollup à divulgation nulle de connaissance"],
+    ]).attribute(file, "markdown", new Map([["zero-knowledge rollup", 3]]))
+    expect(glossary.unattributed.has("zero-knowledge rollup")).toBe(true)
+    const placed = new FileGlossary([
+      ["zero-knowledge rollup", "rollup à divulgation nulle de connaissance"],
+    ]).attribute(file, "markdown", new Map([["zero-knowledge rollup", 1]]))
+    expect(placed.unattributed.size).toBe(0)
+  })
+
+  test("tells the model to keep a bare abbreviation bare, in English case", () => {
+    const p = prompt("es", "Compare L1 alternatives.")
+    expect(p).toContain("never expand it")
+    expect(p).toContain("never l1, l2")
+  })
+
+  test("vi gets the 'Get' is not 'download' note; other locales do not", () => {
+    expect(prompt("vi", "Get a wallet")).toContain('Never "Tải"')
+    expect(prompt("es", "Get a wallet")).not.toContain("Tải")
   })
 })

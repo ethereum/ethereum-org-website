@@ -22,6 +22,8 @@ const {
   fixCollapsedComponentLineBreaks,
   fixMissingLinkBrackets,
   restoreStrippedAbbreviations,
+  fixLowercasedAcronyms,
+  fixJsonLowercasedAcronyms,
   fixMergedSupDigits,
   fixCrowdinNumberedTags,
   removeStaleComponents,
@@ -1605,6 +1607,79 @@ test.describe("English Comparison Fixes", () => {
       expect(content).toContain('description: "پیکٹرا کا جائزہ"')
       expect(content).toContain('breadcrumb: "پیکٹرا"')
       expect(content).toContain("uploadDate: 2024-02-27")
+    })
+  })
+
+  test.describe("fixLowercasedAcronyms", () => {
+    // PR #19962: ETHGlossary's `layer 1 (l1)` entries lowercased bare L1/L2
+    // in ~250 component-diagrams values across 8 locales.
+    test("restores capitals English uses, keeping locale suffixes", () => {
+      const { content, fixCount } = fixLowercasedAcronyms(
+        "Las alternativas de capa 1 (l1) y la l2. Bu l1'deki rollup.",
+        "L1 alternatives and the L2. The rollup on L1."
+      )
+      expect(content).toBe(
+        "Las alternativas de capa 1 (L1) y la L2. Bu L1'deki rollup."
+      )
+      expect(fixCount).toBe(3)
+    })
+
+    test("leaves code, URLs, paths, anchors and identifiers alone", () => {
+      const translated = [
+        "## Capa 2 {#l2-fees}",
+        "Ver [l2beat](https://l2beat.com/l2) y `l2` en ./l2.png o l2.eth",
+      ].join("\n")
+      const { content, fixCount } = fixLowercasedAcronyms(
+        translated,
+        "## Layer 2 {#l2-fees}\nSee l2beat and L2"
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("only touches acronyms the English writes in capitals", () => {
+      const { fixCount } = fixLowercasedAcronyms("la l1", "layer one")
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips an acronym English also writes in lower case", () => {
+      // evm/opcodes: KECCAK256 is the opcode, keccak256(...) the function
+      const translated = "KECCAK256 calcula addr = keccak256(rlp([x])) en p2p"
+      const { content, fixCount } = fixLowercasedAcronyms(
+        translated,
+        "KECCAK256 computes addr = keccak256(rlp([x])) over P2P and p2p links"
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("fixes plurals and glossary parentheticals English lacks", () => {
+      const { content } = fixLowercasedAcronyms(
+        "Las l2s y la capa 2 (l2), 第1层（l1）",
+        "Most L2s; layer 2 and layer 1"
+      )
+      expect(content).toBe("Las L2s y la capa 2 (L2), 第1层（L1）")
+    })
+
+    test("leaves query strings and attribute values alone", () => {
+      const translated = '<a href="?network=l2" id="l2">x</a> {l2}'
+      expect(fixLowercasedAcronyms(translated, "On L2").content).toBe(
+        translated
+      )
+    })
+
+    test("fixes a lowercased acronym before a hyphenated locale suffix", () => {
+      const { content } = fixLowercasedAcronyms("l2-এ চলে", "runs on L2")
+      expect(content).toBe("L2-এ চলে")
+    })
+
+    test("JSON: compares each value with its own English", () => {
+      const { content, fixCount } = fixJsonLowercasedAcronyms(
+        JSON.stringify({ a: "capa 2 (l2)", b: "l2 bajo" }),
+        JSON.stringify({ a: "L2", b: "low l2 value" })
+      )
+      expect(JSON.parse(content)).toEqual({ a: "capa 2 (L2)", b: "l2 bajo" })
+      expect(fixCount).toBe(1)
     })
   })
 })

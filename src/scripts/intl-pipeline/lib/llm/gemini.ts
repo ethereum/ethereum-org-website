@@ -1197,23 +1197,11 @@ async function translateCodeComments(
 
   if (allComments.length === 0) return content
 
-  // Build a compact payload for comment translation
-  const commentPayload: Record<string, string> = {}
-  for (let i = 0; i < allComments.length; i++) {
-    commentPayload[`c${i}`] = allComments[i].text
-  }
-
-  const languageName = LANGUAGE_NAMES[targetLanguage] || targetLanguage
-  const glossaryLines: string[] = []
-  glossaryTerms.forEach((loc, en) => glossaryLines.push(`  ${en} = ${loc}`))
-  const glossaryHint =
-    glossaryLines.length > 0
-      ? `\nUse these exact translations for glossary terms:\n${glossaryLines.slice(0, 30).join("\n")}`
-      : ""
-
-  const commentPrompt = `Translate these code comments to ${languageName}. Return ONLY a JSON object with the same keys and translated values. Do not add explanations.${glossaryHint}
-
-${JSON.stringify(commentPayload, null, 2)}`
+  const commentPrompt = buildCommentPrompt({
+    comments: allComments.map((c) => c.text),
+    languageName: LANGUAGE_NAMES[targetLanguage] || targetLanguage,
+    glossaryTerms,
+  })
 
   const result = await callGeminiRaw(commentPrompt, {
     filePath,
@@ -1464,7 +1452,8 @@ export async function callGeminiRaw(
       // call while it is in flight -- see reserveForCall.
       const settleReservation = reserveForCall(
         `${ctx} (${prompt.length} chars)`,
-        promptBytes
+        promptBytes,
+        metadata?.irreducible ?? false
       )
 
       console.log(
@@ -1589,7 +1578,7 @@ export async function callGeminiRaw(
             // thoughtsTokenCount in. Cost triage can read tokens_out alone.
             `tokens_out=${billableOutput}` +
             (reasoningTokens
-              ? ` (of which reasoning=${reasoningTokens}, visible=${visibleOutput})`
+              ? ` (of which reasoning=${reasoningTokens}, visible=${billableOutput - reasoningTokens})`
               : "") +
             (response.costUsd != null
               ? ` cost=$${response.costUsd.toFixed(6)}`
