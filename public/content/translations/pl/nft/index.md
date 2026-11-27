@@ -1,7 +1,7 @@
 ---
 title: Niewymienialne tokeny (NFT)
 metaTitle: "Czym są NFT? | Korzyści i zastosowanie"
-description: "Przegląd NFT na Ethereum"
+description: "Czym są NFT? Dowiedz się, jak niewymienne tokeny potwierdzają własność sztuki cyfrowej, przedmiotów kolekcjonerskich, biletów i nie tylko na Ethereum, oraz jak bezpiecznie z nich korzystać."
 lang: pl
 template: use-cases
 sidebarDepth: 2

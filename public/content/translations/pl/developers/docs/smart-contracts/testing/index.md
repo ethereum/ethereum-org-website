@@ -165,7 +165,7 @@ Testowanie oparte na właściwościach to proces sprawdzania, czy inteligentny k
 
 Analizator statyczny przyjmuje jako dane wejściowe kod źródłowy inteligentnego kontraktu i wyprowadza wyniki deklarujące, czy kontrakt spełnia właściwość, czy nie. W przeciwieństwie do analizy dynamicznej, analiza statyczna nie obejmuje wykonywania kontraktu w celu przeanalizowania go pod kątem poprawności. Zamiast tego analiza statyczna wnioskuje o wszystkich możliwych ścieżkach, które inteligentny kontrakt mógłby obrać podczas wykonywania (tj. badając strukturę kodu źródłowego w celu określenia, co oznaczałoby to dla działania kontraktu w czasie wykonywania).
 
-[Lintowanie](https://www.perforce.com/blog/qac/what-is-linting) i [testowanie statyczne](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) to powszechne metody przeprowadzania analizy statycznej kontraktów. Obie wymagają analizy niskopoziomowych reprezentacji wykonania kontraktu, takich jak [drzewa składni abstrakcyjnej](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) i [grafy przepływu sterowania](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/) generowane przez kompilator.
+[Lintowanie](https://www.perforce.com/blog/qac/what-is-linting) i [testowanie statyczne](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) to powszechne metody przeprowadzania analizy statycznej kontraktów. Obie wymagają analizy niskopoziomowych reprezentacji wykonania kontraktu, takich jak [drzewa składni abstrakcyjnej](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) i [grafy przepływu sterowania](https://www.geeksforgeeks.org/software-engineering/software-engineering-control-flow-graph-cfg/) generowane przez kompilator.
 
 W większości przypadków analiza statyczna jest przydatna do wykrywania problemów z bezpieczeństwem, takich jak użycie niebezpiecznych konstrukcji, błędy składniowe lub naruszenia standardów kodowania w kodzie kontraktu. Wiadomo jednak, że analizatory statyczne są na ogół zawodne w wykrywaniu głębszych luk w zabezpieczeniach i mogą generować nadmierną liczbę fałszywych alarmów.
 
@@ -238,7 +238,7 @@ W przeciwieństwie do testowania, weryfikacja formalna może być użyta do spra
 
 Jak wspomniano, rygorystyczne testowanie rzadko może zagwarantować brak błędów w kontrakcie; podejścia oparte na weryfikacji formalnej mogą zapewnić silniejsze gwarancje poprawności, ale obecnie są trudne w użyciu i wiążą się ze znacznymi kosztami.
 
-Mimo to możesz dodatkowo zwiększyć prawdopodobieństwo wychwycenia luk w kontraktach, zlecając niezależny przegląd kodu. [Audyty inteligentnych kontraktów](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/) i [programy bug bounty](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) to dwa sposoby na to, aby inni przeanalizowali twoje kontrakty.
+Mimo to możesz dodatkowo zwiększyć prawdopodobieństwo wychwycenia luk w kontraktach, zlecając niezależny przegląd kodu. [Audyty inteligentnych kontraktów](https://web.archive.org/web/20260410153159/https://immunebytes.com/blog/what-is-a-smart-contract-audit/) i [programy bug bounty](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) to dwa sposoby na to, aby inni przeanalizowali twoje kontrakty.
 
 Audyty są przeprowadzane przez audytorów doświadczonych w znajdowaniu przypadków luk w zabezpieczeniach i złych praktyk programistycznych w inteligentnych kontraktach. Audyt zazwyczaj obejmuje testowanie (i ewentualnie weryfikację formalną), a także ręczny przegląd całej bazy kodu.
 
@@ -276,7 +276,7 @@ Główna różnica polega na tym, że programy bug bounty są otwarte dla szersz
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Linter do egzekwowania najlepszych praktyk w zakresie stylu i bezpieczeństwa dla języka programowania inteligentnych kontraktów Solidity._
 
-- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Oparty na języku Rust analizator statyczny zaprojektowany specjalnie z myślą o bezpieczeństwie i rozwoju inteligentnych kontraktów Web3._
+- **[Cyfrin Aderyn](https://aderyn.cyfrin.io/overview)** - _Oparty na języku Rust analizator statyczny zaprojektowany specjalnie z myślą o bezpieczeństwie i rozwoju inteligentnych kontraktów Web3._
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Oparty na języku Python framework do analizy statycznej z detektorami luk w zabezpieczeniach i jakości kodu, drukarkami do wyodrębniania przydatnych informacji z kodu oraz obsługą pisania niestandardowych podmodułów._
 
@@ -296,12 +296,11 @@ Główna różnica polega na tym, że programy bug bounty są otwarte dla szersz
 
 ## Powiązane samouczki {#related-tutorials}
 
-- [Przegląd i porównanie różnych produktów testowych](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
-- [Jak używać Echidna do testowania inteligentnych kontraktów](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [Jak używać Manticore do znajdowania błędów w inteligentnych kontraktach](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
+- [Przegląd i porównanie różnych produktów do testowania](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
+- [Jak używać Echidny do testowania inteligentnych kontraktów](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
 - [Jak używać Slither do znajdowania błędów w inteligentnych kontraktach](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Jak mockować kontrakty Solidity do testowania](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
-- [Jak uruchamiać testy jednostkowe w Solidity za pomocą Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
+- [Jak uruchamiać testy jednostkowe w Solidity przy użyciu Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
 
 ## Dalsza lektura {#further-reading}
 

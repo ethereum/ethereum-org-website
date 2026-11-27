@@ -16,15 +16,15 @@ Weryfikacja kodu źródłowego polega na porównaniu kodu źródłowego intelige
 
 Weryfikacja inteligentnego kontraktu umożliwia zbadanie, co robi kontrakt, poprzez język wyższego poziomu, w którym został napisany, bez konieczności czytania kodu maszynowego. Funkcje, wartości, a zazwyczaj także nazwy zmiennych i komentarze pozostają takie same jak w oryginalnym kodzie źródłowym, który jest kompilowany i wdrażany. Znacznie ułatwia to czytanie kodu. Weryfikacja źródła zapewnia również dokumentację kodu, dzięki czemu użytkownicy końcowi wiedzą, do czego dany inteligentny kontrakt został zaprojektowany.
 
-### Czym jest pełna weryfikacja? {#full-verification}
+### Czym jest dokładne dopasowanie (exact match)? {#full-verification}
 
 Istnieją pewne części kodu źródłowego, które nie wpływają na skompilowany kod bajtowy, takie jak komentarze czy nazwy zmiennych. Oznacza to, że dwa kody źródłowe z różnymi nazwami zmiennych i różnymi komentarzami mogłyby zweryfikować ten sam kontrakt. Dzięki temu złośliwy aktor może dodać mylące komentarze lub nadać wprowadzające w błąd nazwy zmiennych w kodzie źródłowym i zweryfikować kontrakt za pomocą kodu źródłowego różniącego się od oryginalnego.
 
-Można tego uniknąć, dołączając do kodu bajtowego dodatkowe dane, które służą jako _kryptograficzna gwarancja_ dokładności kodu źródłowego oraz jako _odcisk palca_ informacji o kompilacji. Niezbędne informacje znajdują się w [metadanych kontraktu Solidity](https://docs.soliditylang.org/en/v0.8.15/metadata.html), a hash tego pliku jest dołączany do kodu bajtowego kontraktu. Możesz zobaczyć, jak to działa w [środowisku testowym metadanych](https://playground.sourcify.dev)
+Można tego uniknąć, dołączając do kodu bajtowego dodatkowe dane, które służą jako _kryptograficzna gwarancja_ dokładności kodu źródłowego oraz jako _odcisk palca_ informacji o kompilacji. Niezbędne informacje znajdują się w [metadanych kontraktu Solidity](https://docs.soliditylang.org/en/latest/metadata.html), a hash tego pliku jest dołączany na końcu kodu bajtowego kontraktu. Możesz zobaczyć, jak to działa w [środowisku testowym metadanych](https://playground.sourcify.dev).
 
-Plik metadanych zawiera informacje o kompilacji kontraktu, w tym pliki źródłowe i ich hashe. Oznacza to, że jeśli zmienią się jakiekolwiek ustawienia kompilacji lub nawet jeden bajt w jednym z plików źródłowych, plik metadanych ulegnie zmianie. W konsekwencji zmienia się również hash pliku metadanych, który jest dołączany do kodu bajtowego. Oznacza to, że jeśli kod bajtowy kontraktu + dołączony hash metadanych pasują do danego kodu źródłowego i ustawień kompilacji, możemy być pewni, że jest to dokładnie ten sam kod źródłowy użyty w oryginalnej kompilacji, i nie różni się on nawet o jeden bajt.
+Plik metadanych zawiera informacje o kompilacji kontraktu, w tym ustawienia kompilatora oraz nazwy i hashe plików źródłowych. Oznacza to, że jeśli zmieni się którekolwiek z ustawień kompilacji lub nawet jeden bajt w jednym z plików źródłowych, plik metadanych ulegnie zmianie. W konsekwencji hash pliku metadanych, który jest dołączany do kodu bajtowego, również się zmienia. Oznacza to, że jeśli kod bajtowy kontraktu + dołączony hash metadanych pasują do podanego kodu źródłowego i ustawień kompilacji, możemy być pewni, że jest to dokładnie ten sam kod źródłowy, który został użyty w oryginalnej kompilacji, i nie różni się ani jednym bajtem.
 
-Ten rodzaj weryfikacji, który wykorzystuje hash metadanych, jest określany jako **„[pełna weryfikacja](https://docs.sourcify.dev/docs/full-vs-partial-match/)”** (również „weryfikacja idealna”). Jeśli hashe metadanych nie pasują do siebie lub nie są brane pod uwagę podczas weryfikacji, byłoby to „częściowe dopasowanie”, co obecnie jest bardziej powszechnym sposobem weryfikacji kontraktów. Możliwe jest [wstawienie złośliwego kodu](https://samczsun.com/hiding-in-plain-sight/), który nie znalazłby odzwierciedlenia w zweryfikowanym kodzie źródłowym bez pełnej weryfikacji. Większość deweloperów nie jest świadoma pełnej weryfikacji i nie przechowuje pliku metadanych swojej kompilacji, dlatego częściowa weryfikacja była dotychczas de facto standardową metodą weryfikacji kontraktów.
+Ten rodzaj weryfikacji, który wykorzystuje hash metadanych, nazywa się **„[dokładnym dopasowaniem](https://docs.sourcify.dev/docs/exact-match-vs-match/)”** (exact match, dawniej „pełnym” lub „idealnym” dopasowaniem). Jeśli hashe metadanych nie pasują do siebie lub nie są brane pod uwagę podczas weryfikacji, jest to **„dopasowanie”** (match, dawniej „częściowe dopasowanie”): kod kontraktu jest weryfikowany, ale jego pliki źródłowe mogą różnić się od oryginalnych, na przykład w komentarzach lub nazwach plików. Możliwe jest [wstawienie złośliwego kodu](https://samczsun.com/hiding-in-plain-sight/), który nie znalazłby odzwierciedlenia w zweryfikowanym kodzie źródłowym bez dokładnego dopasowania. Większość deweloperów nie jest świadoma dokładnych dopasowań i nie zachowuje pliku metadanych ze swojej kompilacji, więc dopasowania bez hasha metadanych były jak dotąd najczęstszym sposobem weryfikacji kontraktów.
 
 ## Dlaczego weryfikacja kodu źródłowego jest ważna? {#importance-of-source-code-verification}
 
@@ -44,11 +44,11 @@ W przypadku inteligentnych kontraktów zazwyczaj w grę wchodzi duża stawka. Wy
 
 Publikacja plików kodu źródłowego inteligentnego kontraktu ułatwia zainteresowanym, takim jak audytorzy, ocenę kontraktu pod kątem potencjalnych wektorów ataku. Dzięki temu, że wiele stron niezależnie weryfikuje inteligentny kontrakt, użytkownicy mają silniejsze gwarancje jego bezpieczeństwa.
 
-## Jak zweryfikować kod źródłowy dla inteligentnych kontraktów Ethereum {#source-code-verification-for-ethereum-smart-contracts}
+## Jak weryfikować kod źródłowy dla inteligentnych kontraktów Ethereum {#source-code-verification-for-ethereum-smart-contracts}
 
-[Wdrożenie inteligentnego kontraktu na Ethereum](/developers/docs/smart-contracts/deploying/) wymaga wysłania transakcji z ładunkiem danych (skompilowanym kodem bajtowym) na specjalny adres. Ładunek danych jest generowany poprzez kompilację kodu źródłowego, a do ładunku danych w transakcji dołączane są [argumenty konstruktora](https://docs.soliditylang.org/en/v0.8.14/contracts.html#constructor) instancji kontraktu. Kompilacja jest deterministyczna, co oznacza, że zawsze generuje ten sam wynik (tj. kod bajtowy kontraktu), jeśli użyte zostaną te same pliki źródłowe i ustawienia kompilacji (np. wersja kompilatora, optymalizator).
+[Wdrożenie inteligentnego kontraktu na Ethereum](/developers/docs/smart-contracts/deploying/) wymaga wysłania transakcji z ładunkiem danych (skompilowanym kodem bajtowym) na specjalny adres. Ładunek danych jest generowany poprzez kompilację kodu źródłowego, a do ładunku danych w transakcji dołączane są [argumenty konstruktora](https://docs.soliditylang.org/en/v0.8.14/contracts.html#constructor) instancji kontraktu. Kompilacja jest deterministyczna, co oznacza, że zawsze generuje ten sam wynik (tj. kod bajtowy kontraktu), jeśli użyte zostaną te same pliki źródłowe i ustawienia kompilacji (np. wersja kompilatora, optymalizator). Nazwy i ścieżki plików źródłowych również są częścią tych danych wejściowych: są one zapisywane w metadanych, więc zmiana nazwy pliku zmienia hash metadanych.
 
-![A diagram showing showing smart contract source code verification](./source-code-verification.png)
+<SourceVerifyDiagram />
 
 Weryfikacja inteligentnego kontraktu zasadniczo obejmuje następujące kroki:
 
@@ -56,11 +56,13 @@ Weryfikacja inteligentnego kontraktu zasadniczo obejmuje następujące kroki:
 
 2. Kompilator generuje kod bajtowy kontraktu.
 
-3. Pobranie kodu bajtowego wdrożonego kontraktu pod danym adresem.
+3. Pobranie kodu bajtowego wdrożonego kontraktu pod danym adresem (za pomocą `eth_getCode`).
 
-4. Porównanie wdrożonego kodu bajtowego z ponownie skompilowanym kodem bajtowym. Jeśli kody są zgodne, kontrakt zostaje zweryfikowany z podanym kodem źródłowym i ustawieniami kompilacji.
+4. Porównanie wdrożonego kodu bajtowego z ponownie skompilowanym kodem bajtowym. Jeśli kody pasują do siebie, kontrakt zostaje zweryfikowany z podanym kodem źródłowym i ustawieniami kompilacji.
 
-5. Dodatkowo, jeśli hashe metadanych na końcu kodu bajtowego są zgodne, będzie to pełne dopasowanie.
+5. Dodatkowo, jeśli hashe metadanych na końcu kodu bajtowego pasują do siebie, będzie to dokładne dopasowanie.
+
+Weryfikatory mogą również porównać kod bajtowy tworzenia kontraktu: kod, który go wdrożył (w przypadku kontraktu wdrożonego bezpośrednio z konta, dane wejściowe transakcji wdrożenia), czyli skompilowany kod bajtowy, po którym następują zakodowane [argumenty konstruktora](https://docs.soliditylang.org/en/latest/contracts.html#constructor).
 
 Należy pamiętać, że jest to uproszczony opis weryfikacji i istnieje wiele wyjątków, które by z tym nie zadziałały, takich jak posiadanie [niezmiennych zmiennych](https://docs.sourcify.dev/docs/immutables/).
 
@@ -74,9 +76,9 @@ Chociaż Etherscan jest znany głównie jako [eksplorator bloków Ethereum](/dev
 
 Etherscan pozwala na ponowną kompilację kodu bajtowego kontraktu z oryginalnego ładunku danych (kod źródłowy, adres biblioteki, ustawienia kompilatora, adres kontraktu itp.). Jeśli ponownie skompilowany kod bajtowy jest powiązany z kodem bajtowym (i parametrami konstruktora) kontraktu onchain, to [kontrakt jest zweryfikowany](https://info.etherscan.com/types-of-contract-verification/).
 
-Po weryfikacji kod źródłowy Twojego kontraktu otrzymuje etykietę „Verified” (Zweryfikowany) i jest publikowany na Etherscan, aby inni mogli go poddać audytowi. Zostaje on również dodany do sekcji [Verified Contracts](https://etherscan.io/contractsVerified/) — repozytorium inteligentnych kontraktów ze zweryfikowanymi kodami źródłowymi.
+Po weryfikacji kod źródłowy Twojego kontraktu otrzymuje etykietę „Verified” (Zweryfikowany) i jest publikowany na Etherscan, aby inni mogli przeprowadzić jego audyt. Zostaje on również dodany do sekcji [Verified Contracts](https://etherscan.io/contractsVerified/) — repozytorium inteligentnych kontraktów ze zweryfikowanym kodem źródłowym.
 
-Etherscan jest najczęściej używanym narzędziem do weryfikacji kontraktów. Jednak weryfikacja kontraktów w Etherscan ma pewną wadę: nie porównuje **hasha metadanych** kodu bajtowego onchain i ponownie skompilowanego kodu bajtowego. Dlatego dopasowania w Etherscan są dopasowaniami częściowymi.
+Etherscan jest najczęściej używanym narzędziem do weryfikacji kontraktów. Oznacza on każdy zweryfikowany kontrakt na podstawie tego, [jak został dopasowany](https://info.etherscan.com/types-of-contract-verification/): dokładne dopasowanie (exact match) kodu bajtowego tworzenia kontraktu i argumentów konstruktora, dopasowanie w czasie wykonywania (runtime match) tylko jego wdrożonego kodu bajtowego lub podobne dopasowanie (similar match), nadawane automatycznie, gdy kod bajtowy kontraktu pasuje do kodu bajtowego już zweryfikowanego kontraktu. Dokładne dopasowanie w Etherscan dotyczy kodu bajtowego tworzenia i argumentów konstruktora; nie jest to to samo rozróżnienie, co dokładne dopasowanie i dopasowanie opisane powyżej.
 
 [Więcej o weryfikacji kontraktów na Etherscan](https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327).
 
@@ -88,23 +90,23 @@ Podobnie jak inne usługi weryfikacji, Blockscout pozwala na weryfikację kodu �
 
 ### Sourcify {#sourcify}
 
-[Sourcify](https://sourcify.dev/#/verifier) to kolejne narzędzie do weryfikacji kontraktów, które jest zdecentralizowane i ma otwarty kod źródłowy. Nie jest to eksplorator bloków i weryfikuje jedynie kontrakty w [różnych sieciach opartych na EVM](https://docs.sourcify.dev/docs/chains). Działa jako publiczna infrastruktura, na której mogą opierać się inne narzędzia, a jego celem jest umożliwienie bardziej przyjaznych dla człowieka interakcji z kontraktami przy użyciu [ABI](/developers/docs/smart-contracts/compiling/#web-applications) i komentarzy [NatSpec](https://docs.soliditylang.org/en/v0.8.15/natspec-format.html) znajdującychcych się w pliku metadanych.
+[Sourcify](https://verify.sourcify.dev) to kolejne narzędzie do weryfikacji kontraktów, które jest otwartoźródłowe i zdecentralizowane. Nie jest to eksplorator bloków i weryfikuje kontrakty tylko w [różnych sieciach opartych na EVM](https://docs.sourcify.dev/docs/chains). Działa jako publiczna infrastruktura, na której mogą opierać się inne narzędzia, i ma na celu umożliwienie bardziej przyjaznych dla człowieka interakcji z kontraktami przy użyciu [binarnego interfejsu aplikacji (ABI)](/developers/docs/smart-contracts/compiling/#web-applications) i komentarzy [NatSpec](https://docs.soliditylang.org/en/v0.8.15/natspec-format.html) znajdujących się w pliku metadanych.
 
-W przeciwieństwie do Etherscan, Sourcify obsługuje pełne dopasowania z hashem metadanych. Zweryfikowane kontrakty są udostępniane w jego [publicznym repozytorium](https://docs.sourcify.dev/docs/repository/) przez HTTP i [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/#what-is-ipfs), który jest zdecentralizowanym magazynem [adresowanym po treści](https://docs.storacha.network/concepts/content-addressing/). Pozwala to na pobranie pliku metadanych kontraktu przez IPFS, ponieważ dołączony hash metadanych jest hashem IPFS.
+Sourcify informuje, czy kontrakt jest dokładnym dopasowaniem (z hashem metadanych), czy dopasowaniem bez niego, zarówno dla jego kodu bajtowego tworzenia, jak i wdrożonego kodu bajtowego. Jego zweryfikowane kontrakty są publiczne: można o nie zapytać za pośrednictwem interfejsu programowania aplikacji (API) i pobrać jako [zbiór danych](https://docs.sourcify.dev/docs/repository/). Sourcify przekazuje swoje weryfikacje do eksploratorów bloków, w tym Blockscout, Routescan i Etherscan, oraz udostępnia bazę danych zweryfikowanych kontraktów dla Blockscout i Routescan za pośrednictwem [Verifier Alliance](https://verifieralliance.org/).
 
-Dodatkowo można również pobrać pliki kodu źródłowego przez IPFS, ponieważ hashe IPFS tych plików znajdują się również w metadanych. Kontrakt można zweryfikować, dostarczając plik metadanych i pliki źródłowe przez jego API lub [interfejs użytkownika (UI)](https://sourcify.dev/#/verifier), albo korzystając z wtyczek. Narzędzie monitorujące Sourcify nasłuchuje również tworzenia kontraktów w nowych blokach i próbuje zweryfikować kontrakty, jeśli ich metadane i pliki źródłowe są opublikowane w IPFS.
+Plik metadanych przechowuje również hashe IPFS plików źródłowych, a hash metadanych dołączony do kodu bajtowego jest sam w sobie hashem IPFS. Jeśli deweloper opublikuje metadane i pliki źródłowe w [IPFS](https://docs.ipfs.tech/concepts/what-is-ipfs/), każdy może pobrać dokładne źródła kontraktu z samego jego kodu bajtowego, o ile pliki pozostaną dostępne w IPFS. Kontrakt można zweryfikować, udostępniając plik metadanych i pliki źródłowe za pośrednictwem jego interfejsu programowania aplikacji (API) lub [interfejsu użytkownika](https://verify.sourcify.dev), albo używając wtyczek do narzędzi deweloperskich, takich jak Hardhat i Foundry. [Monitor](https://docs.sourcify.dev/docs/monitoring/) Sourcify obserwuje również nowe kontrakty w śledzonych przez siebie sieciach i weryfikuje je automatycznie, gdy ich metadane i pliki źródłowe zostaną opublikowane w IPFS.
 
-[Więcej o weryfikacji kontraktów na Sourcify](https://soliditylang.org/blog/2020/06/25/sourcify-faq/).
+[Więcej o weryfikacji kontraktów w Sourcify](https://soliditylang.org/blog/2020/06/25/sourcify-faq/).
 
 ### Tenderly {#tenderly}
 
-[Platforma Tenderly](https://tenderly.co/) umożliwia deweloperom Web3 budowanie, testowanie, monitorowanie i obsługę inteligentnych kontraktów. Łącząc narzędzia do debugowania z obserwowalnością i blokami konstrukcyjnymi infrastruktury, Tenderly pomaga deweloperom przyspieszyć rozwój inteligentnych kontraktów. Aby w pełni włączyć funkcje Tenderly, deweloperzy muszą [przeprowadzić weryfikację kodu źródłowego](https://docs.tenderly.co/monitoring/contract-verification) przy użyciu kilku metod.
+[Platforma Tenderly](https://tenderly.co/) umożliwia deweloperom Web3 budowanie, testowanie, monitorowanie i obsługę inteligentnych kontraktów. Łącząc narzędzia do debugowania z obserwowalnością i blokami konstrukcyjnymi infrastruktury, Tenderly pomaga deweloperom przyspieszyć rozwój inteligentnych kontraktów. Aby w pełni włączyć funkcje Tenderly, deweloperzy muszą [przeprowadzić weryfikację kodu źródłowego](https://docs.tenderly.co/contract-verification) przy użyciu kilku metod.
 
-Możliwe jest zweryfikowanie kontraktu prywatnie lub publicznie. W przypadku weryfikacji prywatnej inteligentny kontrakt jest widoczny tylko dla Ciebie (i innych członków Twojego projektu). Publiczna weryfikacja kontraktu sprawia, że jest on widoczny dla wszystkich korzystających z platformy Tenderly.
+Możliwa jest prywatna lub publiczna weryfikacja kontraktu. W przypadku weryfikacji prywatnej inteligentny kontrakt jest widoczny tylko dla Ciebie (i innych członków Twojego projektu). Publiczna weryfikacja kontraktu sprawia, że jest on widoczny dla wszystkich korzystających z platformy Tenderly.
 
-Możesz zweryfikować swoje kontrakty za pomocą [Pulpitu nawigacyjnego (Dashboard)](https://docs.tenderly.co/contract-verification), [wtyczki Tenderly Hardhat](https://docs.tenderly.co/contract-verification/hardhat) lub [CLI](https://docs.tenderly.co/monitoring/smart-contract-verification/verifying-contracts-using-cli).
+Możesz zweryfikować swoje kontrakty za pomocą [Pulpitu nawigacyjnego](https://docs.tenderly.co/contract-verification), [wtyczki Tenderly Hardhat](https://docs.tenderly.co/contract-verification/hardhat) lub [Foundry](https://docs.tenderly.co/contract-verification/foundry).
 
-Podczas weryfikacji kontraktów za pośrednictwem Pulpitu nawigacyjnego należy zaimportować plik źródłowy lub plik metadanych wygenerowany przez kompilator Solidity, adres/sieć oraz ustawienia kompilatora.
+Weryfikując kontrakty za pośrednictwem Pulpitu nawigacyjnego, musisz zaimportować plik źródłowy lub plik metadanych wygenerowany przez kompilator Solidity, adres/sieć oraz ustawienia kompilatora.
 
 Korzystanie z wtyczki Tenderly Hardhat pozwala na większą kontrolę nad procesem weryfikacji przy mniejszym wysiłku, umożliwiając wybór między weryfikacją automatyczną (bez kodu) a ręczną (opartą na kodzie).
 

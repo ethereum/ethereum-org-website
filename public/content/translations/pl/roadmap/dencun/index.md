@@ -1,7 +1,7 @@
 ---
 title: Cancun-Deneb (Dencun)
 metaTitle: FAQ Cancun-Deneb (Dencun)
-description: Często zadawane pytania dotyczące aktualizacji sieci Cancun-Deneb (Dencun)
+description: "Często zadawane pytania dotyczące aktualizacji sieci Cancun-Deneb (Dencun)"
 lang: pl
 template: upgrade
 ---
@@ -37,24 +37,23 @@ Wprowadzenie proto-dankshardingu w aktualizacji Dencun dodaje tańsze przechowyw
 
 [Więcej o skalowaniu Ethereum](/roadmap/scaling/)
 
-## Jak uzyskuje się dostęp do starych danych blobów? {#historical-access}
+## Jak uzyskać dostęp do starych danych blobów? {#historical-access}
 
-Podczas gdy zwykłe węzły Ethereum zawsze będą przechowywać _obecny stan_ sieci, historyczne dane blobów mogą zostać odrzucone około 18 dni po ich wprowadzeniu. Przed odrzuceniem tych danych Ethereum upewnia się, że zostały one udostępnione wszystkim uczestnikom sieci, dając czas na:
+Podczas gdy zwykłe węzły Ethereum zawsze będą przechowywać _obecny stan_ sieci, historyczne dane blobów mogą zostać usunięte po około 18 dniach od ich wprowadzenia. Przed usunięciem tych danych Ethereum upewnia się, że zostały one udostępnione wszystkim uczestnikom sieci, dając czas na:
 
-- Pobrane i przechowanie danych przez zainteresowane strony.
-- Zakończenie wszystkich okresów wyzwań rollupów.
+- Pobranie i przechowanie danych przez zainteresowane strony.
+- Zakończenie wszystkich okresów kwestionowania rollupów.
 - Finalizację transakcji rollupów.
 
 _Historyczne_ dane blobów mogą być pożądane z różnych powodów i można je przechowywać oraz uzyskiwać do nich dostęp za pomocą kilku zdecentralizowanych protokołów:
 
-- **Protokoły indeksowania stron trzecich**, takie jak The Graph, przechowują te dane za pośrednictwem zdecentralizowanej sieci operatorów węzłów motywowanych mechanizmami kryptoekonomicznymi.
-- **BitTorrent** to zdecentralizowany protokół, w którym wolontariusze mogą przechowywać i udostępniać te dane innym.
-- **[Portal Network](/developers/docs/networking-layer/portal-network/)** ma na celu zapewnienie dostępu do wszystkich danych Ethereum za pośrednictwem zdecentralizowanej sieci operatorów węzłów poprzez dystrybucję danych wśród uczestników podobnie jak w BitTorrent.
-- **Indywidualni użytkownicy** zawsze mogą swobodnie przechowywać własne kopie dowolnych danych, które chcą zachować do celów historycznych.
+- **Zewnętrzne protokoły indeksujące**, takie jak The Graph, przechowują te dane za pośrednictwem zdecentralizowanej sieci operatorów węzłów, motywowanych mechanizmami kryptoekonomicznymi.
+- **BitTorrent** to zdecentralizowany protokół, w którym ochotnicy mogą przechowywać i udostępniać te dane innym.
+- **Indywidualni użytkownicy** zawsze mogą swobodnie przechowywać własne kopie dowolnych danych, które chcą zachować w celach historycznych.
 - **Dostawcy rollupów** są motywowani do przechowywania tych danych w celu poprawy doświadczeń użytkowników ich rollupa.
-- **Eksploratory bloków** zazwyczaj uruchamiają węzły archiwalne, które indeksują i przechowują wszystkie te informacje w celu łatwego odniesienia historycznego, dostępnego dla użytkowników za pośrednictwem interfejsu internetowego.
+- **Eksploratory bloków** zazwyczaj uruchamiają węzły archiwalne, które indeksują i przechowują wszystkie te informacje w celu łatwego wglądu w historię, dostępnego dla użytkowników za pośrednictwem interfejsu internetowego.
 
-Należy zauważyć, że odzyskiwanie historycznego stanu działa w **modelu zaufania 1 z N**. Oznacza to, że potrzebujesz danych tylko z _jednego wiarygodnego źródła_, aby zweryfikować ich poprawność przy użyciu obecnego stanu sieci.
+Należy pamiętać, że odzyskiwanie stanu historycznego opiera się na **modelu zaufania 1 z N**. Oznacza to, że potrzebujesz danych tylko z _jednego wiarygodnego źródła_, aby zweryfikować ich poprawność przy użyciu obecnego stanu sieci.
 
 ## W jaki sposób ta aktualizacja przyczynia się do szerszej mapy drogowej Ethereum? {#roadmap-impact}
 

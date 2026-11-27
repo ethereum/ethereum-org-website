@@ -56,7 +56,7 @@ Innym popularnym przykładem jest [SafeMath](https://docs.openzeppelin.com/contr
 
 Aby ułatwić [kompozycyjność i interoperacyjność](/developers/docs/smart-contracts/composability/), społeczność Ethereum zdefiniowała kilka standardów w postaci **ERC**. Możesz przeczytać o nich więcej w sekcji [standardy](/developers/docs/standards/).
 
-Włączając ERC jako część swoich kontraktów, warto poszukać standardowych implementacji, zamiast próbować tworzyć własne. Wiele bibliotek inteligentnych kontraktów zawiera implementacje najpopularniejszych standardów ERC. Na przykład wszechobecny [standard tokena zamiennego ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) można znaleźć w [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) i [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). Dodatkowo, niektóre ERC dostarczają również kanoniczne implementacje jako część samego ERC.
+Włączając ERC jako część swoich kontraktów, warto poszukać standardowych implementacji, zamiast próbować tworzyć własne. Wiele bibliotek inteligentnych kontraktów zawiera implementacje najpopularniejszych standardów ERC. Na przykład wszechobecny [standard tokena zamiennego ERC-20](/developers/docs/standards/tokens/erc-20/) można znaleźć w [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) i [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). Dodatkowo, niektóre ERC dostarczają również kanoniczne implementacje jako część samego ERC.
 
 Warto wspomnieć, że niektóre ERC nie są samodzielne, ale stanowią dodatki do innych ERC. Na przykład [ERC-2612](https://eips.ethereum.org/EIPS/eip-2612) dodaje rozszerzenie do ERC-20 w celu poprawy jego użyteczności.
 
@@ -109,8 +109,7 @@ Na koniec, decydując się na włączenie biblioteki, weź pod uwagę jej ogóln
 
 ## Powiązane samouczki {#related-tutorials}
 
-- [Kwestie bezpieczeństwa dla programistów Ethereum](/developers/docs/smart-contracts/security/) _– Samouczek dotyczący kwestii bezpieczeństwa podczas budowania inteligentnych kontraktów, w tym korzystania z bibliotek._
-- [Zrozumienie inteligentnego kontraktu tokena ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– Samouczek dotyczący standardu ERC-20, dostarczanego przez wiele bibliotek._
+- [Kwestie bezpieczeństwa dla deweloperów Ethereum](/developers/docs/smart-contracts/security/) _– Samouczek dotyczący kwestii bezpieczeństwa podczas tworzenia inteligentnych kontraktów, w tym korzystania z bibliotek._
 
 ## Dalsza lektura {#further-reading}
 

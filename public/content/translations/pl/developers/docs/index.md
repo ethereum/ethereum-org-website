@@ -1,6 +1,6 @@
 ---
 title: "Dokumentacja dla deweloperów Ethereum"
-description: "Wprowadzenie do dokumentacji dla deweloperów na ethereum.org."
+description: "Dokumentacja dla deweloperów Ethereum: poznaj podstawy, stos technologiczny Ethereum, inteligentne kontrakty, węzły i skalowanie, wraz z przewodnikami, jak zbudować pierwszą dapp."
 lang: pl
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Bezpieczeństwo w Ethereum i zapobieganie oszustwom
-description: Jak zachować bezpieczeństwo w Ethereum
+title: "Bezpieczeństwo w Ethereum i zapobieganie oszustwom"
+description: "Jak zachować bezpieczeństwo w Ethereum: chroń swój portfel i frazę odzyskiwania, rozpoznawaj powszechne oszustwa krypto i phishing oraz dowiedz się, co zrobić, gdy coś pójdzie nie tak."
 lang: pl
 ---
 

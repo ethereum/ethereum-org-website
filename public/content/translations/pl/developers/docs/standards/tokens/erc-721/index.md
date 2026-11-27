@@ -243,10 +243,9 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [OpenZeppelin – implementacja ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
 - [API NFT od Alchemy](https://www.alchemy.com/docs/reference/nft-api-quickstart)
 
-## Samouczki: Budowanie z użyciem tokenów niezamiennych (ERC-721) w sieci Ethereum {#tutorials}
+## Samouczki: Budowanie z niewymiennymi tokenami (ERC-721) na Ethereum {#tutorials}
 
-- [Przewodnik po kontrakcie ERC-721 w języku Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _– Przewodnik z adnotacjami po pełnym kontrakcie NFT ERC-721 napisanym w języku Vyper._
-- [Jak napisać i wdrożyć NFT (część 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– Przewodnik krok po kroku, jak napisać i wdrożyć swój pierwszy inteligentny kontrakt ERC-721._
-- [Jak wybijać NFT (część 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Jak wybijać NFT ERC-721 przy użyciu wdrożonego inteligentnego kontraktu i Web3._
-- [Jak wyświetlić NFT w swoim portfelu (część 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Jak wyświetlić wybite NFT w portfelu MetaMask po wdrożeniu._
-- [Samouczek tworzenia mintera NFT](/developers/tutorials/nft-minter/) _– Zbuduj pełnoprawną zdecentralizowaną aplikację (dapp) do wybijania NFT z frontendem w React, portfelem MetaMask i Alchemy._
+- [Przewodnik po kontrakcie ERC-721 w Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _– Opatrzony komentarzami przewodnik po pełnym kontrakcie NFT ERC-721 napisanym w Vyper._
+- [Jak napisać i wdrożyć NFT (Część 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– Przewodnik krok po kroku dotyczący pisania i wdrażania pierwszego inteligentnego kontraktu ERC-721._
+- [Jak wybić NFT (Część 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Jak wybić NFT ERC-721 za pomocą wdrożonego inteligentnego kontraktu i Web3._
+- [Jak zobaczyć swoje NFT w portfelu (Część 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Jak wyświetlić wybite NFT w MetaMask po wdrożeniu._

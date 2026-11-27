@@ -1,7 +1,7 @@
 ---
-title: Wprowadzenie do inteligentnych kontraktów
+title: "Wprowadzenie do inteligentnych kontraktów"
 metaTitle: "Inteligentne kontrakty: Czym są i jakie mają zalety"
-description: Nietechniczne wprowadzenie do inteligentnych kontraktów
+description: "Czym są inteligentne kontrakty? Nietechniczne wprowadzenie do programów, które działają na Ethereum i napędzają aplikacje takie jak DeFi, NFT i DAO bez pośredników."
 lang: pl
 ---
 

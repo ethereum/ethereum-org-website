@@ -78,7 +78,7 @@ Zwykłą metodą jest pisanie małych testów jednostkowych przy użyciu fałszy
 
 Niestety, testowanie jednostkowe jest minimalnie skuteczne w poprawie bezpieczeństwa inteligentnych kontraktów, gdy jest stosowane w izolacji. Test jednostkowy może udowodnić, że funkcja wykonuje się poprawnie dla fałszywych danych, ale testy jednostkowe są tylko tak skuteczne, jak napisane testy. Utrudnia to wykrycie pominiętych przypadków brzegowych i luk w zabezpieczeniach, które mogłyby naruszyć bezpieczeństwo Twojego inteligentnego kontraktu.
 
-Lepszym podejściem jest połączenie testowania jednostkowego z testowaniem opartym na właściwościach, wykonywanym przy użyciu [analizy statycznej i dynamicznej](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). Analiza statyczna opiera się na reprezentacjach niskiego poziomu, takich jak [grafy przepływu sterowania](https://en.wikipedia.org/wiki/Control-flow_graph) i [drzewa składni abstrakcyjnej](https://deepsource.io/glossary/ast/), w celu analizy osiągalnych stanów programu i ścieżek wykonania. Tymczasem techniki analizy dynamicznej, takie jak [fuzzing inteligentnych kontraktów](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), wykonują kod kontraktu z losowymi wartościami wejściowymi w celu wykrycia operacji naruszających właściwości bezpieczeństwa.
+Lepszym podejściem jest połączenie testowania jednostkowego z testowaniem opartym na właściwościach, wykonywanym przy użyciu [analizy statycznej i dynamicznej](/developers/docs/smart-contracts/testing/#property-based-testing-for-smart-contracts). Analiza statyczna opiera się na reprezentacjach niskiego poziomu, takich jak [grafy przepływu sterowania](https://en.wikipedia.org/wiki/Control-flow_graph) i [drzewa składni abstrakcyjnej](https://deepsource.io/glossary/ast/), w celu analizy osiągalnych stanów programu i ścieżek wykonania. Tymczasem techniki analizy dynamicznej, takie jak [fuzzing inteligentnych kontraktów](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), wykonują kod kontraktu z losowymi wartościami wejściowymi w celu wykrycia operacji naruszających właściwości bezpieczeństwa.
 
 [Weryfikacja formalna](/developers/docs/smart-contracts/formal-verification) to kolejna technika weryfikacji właściwości bezpieczeństwa w inteligentnych kontraktach. W przeciwieństwie do zwykłego testowania, weryfikacja formalna może ostatecznie udowodnić brak błędów w inteligentnym kontrakcie. Osiąga się to poprzez stworzenie formalnej specyfikacji, która przechwytuje pożądane właściwości bezpieczeństwa i udowodnienie, że formalny model kontraktów jest zgodny z tą specyfikacją.
 
@@ -463,9 +463,9 @@ Jeśli planujesz zapytać wyrocznię onchain o ceny aktywów, rozważ użycie ta
 
 - **[Narzędzia do weryfikacji formalnej](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _Narzędzia do weryfikacji poprawności funkcjonalnej w inteligentnych kontraktach i sprawdzania niezmienników._
 
-- **[Usługi audytu inteligentnych kontraktów](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _Lista organizacji świadczących usługi audytu inteligentnych kontraktów dla projektów programistycznych na Ethereum._
+- **[Usługi audytu inteligentnych kontraktów](#smart-contract-auditing-services)** - _Lista organizacji świadczących usługi audytu inteligentnych kontraktów dla projektów programistycznych na Ethereum._
 
-- **[Platformy bug bounty](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Platformy do koordynowania programów bug bounty i nagradzania odpowiedzialnego ujawniania krytycznych luk w inteligentnych kontraktach._
+- **[Platformy bug bounty](#bug-bounty-platforms)** - _Platformy do koordynowania programów bug bounty i nagradzania odpowiedzialnego ujawniania krytycznych luk w inteligentnych kontraktach._
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _Darmowe narzędzie online do sprawdzania wszystkich dostępnych informacji dotyczących kontraktu będącego wynikiem rozwidlenia._
 
@@ -566,8 +566,6 @@ Jeśli planujesz zapytać wyrocznię onchain o ceny aktywów, rozważ użycie ta
 - [Jak pisać bezpieczne inteligentne kontrakty](/developers/tutorials/secure-development-workflow/)
 
 - [Jak używać narzędzia Slither do znajdowania błędów w inteligentnych kontraktach](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-
-- [Jak używać narzędzia Manticore do znajdowania błędów w inteligentnych kontraktach](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 
 - [Wytyczne dotyczące bezpieczeństwa inteligentnych kontraktów](/developers/tutorials/smart-contract-security-guidelines/)
 

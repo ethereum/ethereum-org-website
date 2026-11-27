@@ -1,6 +1,6 @@
 ---
 title: Mosty
-description: "Przegląd mostów dla deweloperów"
+description: "Przewodnik dla deweloperów po mostach: jak działa międzyłańcuchowe przekazywanie wiadomości i przenoszenie tokenów przez mosty, rodzaje mostów i założenia dotyczące zaufania oraz jak zintegrować je w zdecentralizowanych aplikacjach (dapp)."
 lang: pl
 ---
 
@@ -123,16 +123,16 @@ Aby monitorować aktywność kontraktów w różnych łańcuchach, deweloperzy m
 ## Dalsza lektura {#further-reading}
 
 - [Mosty blockchain](/bridges/) – ethereum.org
-- [Ramy ryzyka mostów L2BEAT](https://l2beat.com/bridges/summary)
-- [Mosty blockchain: Budowanie sieci kryptosieci](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 września 2021 r. – Dmitriy Berenzon
-- [Trylemat interoperacyjności](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1 października 2021 r. – Arjun Bhuptani
-- [Klastry: Jak zaufane mosty i mosty o zminimalizowanym zaufaniu kształtują wielołańcuchowy krajobraz](https://blog.celestia.org/clusters/) - 4 października 2021 r. – Mustafa Al-Bassam
-- [LI.FI: W przypadku mostów zaufanie to spektrum](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28 kwietnia 2022 r. – Arjun Chand
-- [Stan rozwiązań interoperacyjności rollupów](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 czerwca 2024 r. – Alex Hook
-- [Wykorzystanie współdzielonego bezpieczeństwa do bezpiecznej interoperacyjności międzyłańcuchowej: Komitety stanu Lagrange'a i nie tylko](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 czerwca 2024 r. – Emmanuel Awosika
+- [ETHBEAT Bridge Risk Framework](https://ethbeat.org/interop/summary)
+- [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 września 2021 r. – Dmitriy Berenzon
+- [The Interoperability Trilemma](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1 października 2021 r. – Arjun Bhuptani
+- [Clusters: How Trusted & Trust-Minimized Bridges Shape the Multi-Chain Landscape](https://blog.celestia.org/clusters/) - 4 października 2021 r. – Mustafa Al-Bassam
+- [LI.FI: With Bridges, Trust is a Spectrum](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28 kwietnia 2022 r. – Arjun Chand
+- [The State Of Rollup Interoperability Solutions](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 czerwca 2024 r. – Alex Hook
+- [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 czerwca 2024 r. – Emmanuel Awosika
 
-Dodatkowo, oto kilka wnikliwych prezentacji autorstwa [Jamesa Prestwicha](https://twitter.com/_prestwich), które mogą pomóc w głębszym zrozumieniu mostów:
+Ponadto oto kilka wnikliwych prezentacji autorstwa [Jamesa Prestwicha](https://twitter.com/_prestwich), które mogą pomóc w głębszym zrozumieniu mostów:
 
-- [Budowanie mostów, a nie zamkniętych ogrodów](https://youtu.be/ZQJWMiX4hT0)
-- [Rozkładanie mostów na czynniki pierwsze](https://youtu.be/b0mC-ZqN8Oo)
-- [Dlaczego mosty płoną](https://youtu.be/c7cm2kd20j8)
+- [Building Bridges, Not Walled Gardens](https://youtu.be/ZQJWMiX4hT0)
+- [Breaking Down Bridges](https://youtu.be/b0mC-ZqN8Oo)
+- [Why are the Bridges Burning](https://youtu.be/c7cm2kd20j8)
