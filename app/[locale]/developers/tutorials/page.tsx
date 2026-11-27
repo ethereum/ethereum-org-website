@@ -13,13 +13,14 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getTutorialsData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import { filterTutorialsByLang } from "@/lib/utils/tutorial"
+
+import externalTutorials from "@/data/externalTutorials.json"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import TutorialSubmitModal from "./_components/modal"
-// Imported directly, not via next/dynamic: this list is the page's entire
-// content and its internal links drive crawl discovery of the individual
-// tutorials. dynamic() wraps the component in Suspense, which makes the server
-// stream a skeleton inline and the real list into a <div hidden> that only a
-// script swaps in -- invisible to crawlers that don't execute JS. See #18977.
+import TutorialCard from "./_components/tutorial-card"
 import TutorialsList from "./_components/tutorials"
 import TutorialsPageJsonLD from "./page-jsonld"
 
@@ -42,6 +43,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const dir = contentNotTranslated ? "ltr" : "unset"
 
   const internalTutorials = await getTutorialsData(locale)
+  const tutorials = filterTutorialsByLang(
+    internalTutorials,
+    externalTutorials,
+    (internalTutorials.length > 0 ? locale : DEFAULT_LOCALE) as Lang
+  )
 
   const { contributors } = await getAppPageContributorInfo(
     "developers/tutorials",
@@ -73,7 +79,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           className="mx-auto my-page w-full max-w-screen-lg shadow-xl"
           dir={dir}
         >
-          <TutorialsList internalTutorials={internalTutorials} />
+          <TutorialsList
+            tutorials={tutorials}
+            cards={Object.fromEntries(
+              tutorials.map((tutorial) => [
+                tutorial.href,
+                <TutorialCard key={tutorial.href} tutorial={tutorial} />,
+              ])
+            )}
+          />
         </MainArticle>
       </I18nProvider>
 

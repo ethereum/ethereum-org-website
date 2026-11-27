@@ -28,12 +28,6 @@ export const KPISection = dynamic(
   }
 )
 
-// SavingsCarousel is deliberately NOT lazy-loaded from here: it is editorial
-// content whose CTAs are internal links, so it has to reach crawlers that don't
-// execute JS. dynamic() alone isn't enough -- it wraps the component in
-// Suspense, so the server streams the fallback inline and the real markup into
-// a <div hidden> that only a script swaps in. page.tsx imports it directly.
-
 export const SimulatorSection = dynamic(
   () => import("@/components/Homepage/SimulatorSection"),
   {

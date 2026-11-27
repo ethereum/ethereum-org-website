@@ -1,24 +1,21 @@
 "use client"
 
-import React, { useEffect, useMemo, useState } from "react"
+import { Fragment, type ReactNode, useEffect, useMemo, useState } from "react"
 import {
   ArchiveX,
   Code,
-  ExternalLink,
   GraduationCap,
   Layers,
   Search,
   Trophy,
   X,
 } from "lucide-react"
-import { useLocale, useTranslations } from "next-intl"
+import { useTranslations } from "next-intl"
 
-import { ITutorial, Lang, SectionNavDetails } from "@/lib/types"
+import { ITutorial, SectionNavDetails } from "@/lib/types"
 
 import Emoji from "@/components/Emoji"
 import Translation from "@/components/Translation"
-import { getSkillTranslationId } from "@/components/TutorialMetadata"
-import TutorialTags from "@/components/TutorialTags"
 import {
   Alert,
   AlertCloseButton,
@@ -27,45 +24,17 @@ import {
   AlertIcon,
 } from "@/components/ui/alert"
 import { Button } from "@/components/ui/buttons/Button"
-import { Flex } from "@/components/ui/flex"
 import Input from "@/components/ui/input"
-import { BaseLink } from "@/components/ui/Link"
 import TabNav from "@/components/ui/TabNav"
 import { Tag } from "@/components/ui/tag"
 import TagFilter from "@/components/ui/tag-filter"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getTagCounts } from "@/lib/utils/tags"
-import { getLocaleTimestamp } from "@/lib/utils/time"
-import { filterTutorialsByLang } from "@/lib/utils/tutorial"
-
-import externalTutorials from "@/data/externalTutorials.json"
-
-import { DEFAULT_LOCALE } from "@/lib/constants"
 
 const MAX_DEFAULT_TAGS = 12
 
-const published = (locale: string, published: string) => {
-  // Publish dates are date-only strings, so they parse as UTC midnight. Without
-  // a pinned timeZone, Intl formats them in the runtime's zone -- the server
-  // (UTC) and a browser behind UTC disagree by a day, which both renders the
-  // wrong date and breaks hydration now that this list is server-rendered.
-  const localeTimestamp = getLocaleTimestamp(locale as Lang, published, {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    timeZone: "UTC",
-  })
-
-  return localeTimestamp !== "Invalid Date" ? (
-    <span>
-      <Emoji text=":calendar:" className="ms-2 me-2 text-sm" />
-      {localeTimestamp}
-    </span>
-  ) : null
-}
-
-const SKILL_ICONS: Record<string, React.ReactNode> = {
+const SKILL_ICONS: Record<string, ReactNode> = {
   all: <Layers className="stroke-1" />,
   beginner: <GraduationCap className="stroke-1" />,
   intermediate: <Code className="stroke-1" />,
@@ -73,40 +42,31 @@ const SKILL_ICONS: Record<string, React.ReactNode> = {
 }
 
 type TutorialsListProps = {
-  internalTutorials: ITutorial[]
+  tutorials: ITutorial[]
+  // Server-rendered card per tutorial, keyed by href
+  cards: Record<string, ReactNode>
 }
 
-const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
+const TutorialsList = ({ tutorials, cards }: TutorialsListProps) => {
   const t = useTranslations("page-developers-tutorials")
   const tCommon = useTranslations("common")
-  const locale = useLocale()
-  const effectiveLocale = internalTutorials.length > 0 ? locale : DEFAULT_LOCALE
-  const filteredTutorialsByLang = useMemo(
-    () =>
-      filterTutorialsByLang(
-        internalTutorials,
-        externalTutorials,
-        effectiveLocale as Lang
-      ),
-    [internalTutorials, effectiveLocale]
-  )
 
   // Count-descending tag entries, dropping one-off tags (count <= 1) which add
   // noise to the filter row.
   const eligibleTags = useMemo(
     () =>
-      getTagCounts(filteredTutorialsByLang, (tutorial) => tutorial.tags).filter(
+      getTagCounts(tutorials, (tutorial) => tutorial.tags).filter(
         ([, count]) => count > 1
       ),
-    [filteredTutorialsByLang]
+    [tutorials]
   )
 
   // Build skill level sections for TabNav (same pattern as events ContinentTabs)
   const skillSections: SectionNavDetails[] = useMemo(() => {
     const counts: Record<string, number> = {
-      all: filteredTutorialsByLang.length,
+      all: tutorials.length,
     }
-    filteredTutorialsByLang.forEach((tutorial) => {
+    tutorials.forEach((tutorial) => {
       if (tutorial.skill)
         counts[tutorial.skill] = (counts[tutorial.skill] || 0) + 1
     })
@@ -133,11 +93,8 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
         icon: SKILL_ICONS.advanced,
       },
     ]
-  }, [filteredTutorialsByLang, t])
+  }, [tutorials, t])
 
-  const [filteredTutorials, setFilteredTutorials] = useState(
-    filteredTutorialsByLang
-  )
   const [selectedTags, setSelectedTags] = useState<Array<string>>([])
   const [selectedSkill, setSelectedSkill] = useState<string>("all")
   const [searchQuery, setSearchQuery] = useState("")
@@ -155,19 +112,17 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
   }, [])
 
   // Combined filtering: skill + tags + search
-  useEffect(() => {
-    let tutorials = filteredTutorialsByLang
+  const filteredTutorials = useMemo(() => {
+    let filtered = tutorials
 
     // Skill filter
     if (selectedSkill !== "all") {
-      tutorials = tutorials.filter(
-        (tutorial) => tutorial.skill === selectedSkill
-      )
+      filtered = filtered.filter((tutorial) => tutorial.skill === selectedSkill)
     }
 
     // Tag filter (AND logic)
     if (selectedTags.length) {
-      tutorials = tutorials.filter((tutorial) => {
+      filtered = filtered.filter((tutorial) => {
         return selectedTags.every((tag) => (tutorial.tags || []).includes(tag))
       })
     }
@@ -175,7 +130,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
     // Search filter (matches title, description, tags, author)
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase().trim()
-      tutorials = tutorials.filter((tutorial) => {
+      filtered = filtered.filter((tutorial) => {
         const titleMatch = tutorial.title?.toLowerCase().includes(query)
         const descMatch = tutorial.description?.toLowerCase().includes(query)
         const tagMatch = (tutorial.tags || []).some((tag) =>
@@ -186,8 +141,8 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
       })
     }
 
-    setFilteredTutorials(tutorials)
-  }, [filteredTutorialsByLang, selectedTags, selectedSkill, searchQuery])
+    return filtered
+  }, [tutorials, selectedTags, selectedSkill, searchQuery])
 
   // Assumes a single-tag delta per call (chip toggle or one active-filter
   // removal) and reports exactly one Matomo event. A multi-tag change (e.g. a
@@ -374,68 +329,8 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
         <h2 className="sr-only">{t("page-tutorials-available")}</h2>
       )}
 
-      {/* Tutorial cards */}
-      {filteredTutorials.map((tutorial) => (
-        <BaseLink
-          key={tutorial.href}
-          href={tutorial.href ?? undefined}
-          className="flow block border-b px-page py-8 no-underline duration-100 hover:bg-background-highlight"
-          hideArrow
-        >
-          <Flex className="items-start justify-between gap-4 max-md:flex-col">
-            <h3 className="relative me-0 text-2xl text-body md:me-24">
-              {tutorial.title}
-              {tutorial.isExternal && (
-                <ExternalLink className="ms-[0.25em] mb-[0.25em] inline-block size-[0.875em]" />
-              )}
-            </h3>
-            {tutorial.skill && (
-              <Tag
-                variant="outline"
-                status={
-                  tutorial.skill === "beginner"
-                    ? "tag-green"
-                    : tutorial.skill === "intermediate"
-                      ? "tag-yellow"
-                      : tutorial.skill === "advanced"
-                        ? "tag-red"
-                        : "normal"
-                }
-              >
-                {t(getSkillTranslationId(tutorial.skill))}
-              </Tag>
-            )}
-          </Flex>
-          <p className="text-body-medium uppercase">
-            <Emoji text=":writing_hand:" className="me-2 text-sm" />
-            {tutorial.author}
-            {tutorial.published ? (
-              <> •{published(locale, tutorial.published!)}</>
-            ) : null}
-            {tutorial.timeToRead && (
-              <>
-                {" "}
-                •
-                <Emoji text=":stopwatch:" className="mx-2 text-sm" />
-                {tutorial.timeToRead}{" "}
-                <Translation id="page-developers-tutorials:page-tutorial-read-time" />
-              </>
-            )}
-            {tutorial.isExternal && (
-              <>
-                {" "}
-                •<Emoji text=":link:" className="mx-2 text-sm" />
-                <span className="cursor-pointer text-primary">
-                  <Translation id="page-developers-tutorials:page-tutorial-external-link" />
-                </span>
-              </>
-            )}
-          </p>
-          <p className="text-body-medium">{tutorial.description}</p>
-          <Flex className="flex-wrap gap-2">
-            <TutorialTags tags={tutorial.tags ?? []} />
-          </Flex>
-        </BaseLink>
+      {filteredTutorials.map(({ href }) => (
+        <Fragment key={href}>{cards[href]}</Fragment>
       ))}
     </>
   )
