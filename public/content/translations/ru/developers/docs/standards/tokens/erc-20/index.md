@@ -176,14 +176,14 @@ print("Addr Balance:", addr_balance)
 - [Alchemy - Руководство по токенам ERC20 на Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## Другие стандарты взаимозаменяемых токенов {#fungible-token-standards}
+
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 — Токенизированные хранилища](/developers/docs/standards/tokens/erc-4626)
 - [ERC-7540 — Асинхронные токенизированные хранилища](/developers/docs/standards/tokens/erc-7540)
-## Руководства: Создание с использованием ERC-20 в Эфириуме {#tutorials}
+## Руководства: разработка с использованием ERC-20 в Эфириуме {#tutorials}
 
-- [Пошаговое руководство по контракту ERC-20](/developers/tutorials/erc20-annotated-code/) _— построчный аннотированный разбор реализации контракта ERC-20 от ОпенЗеппелин._
-- [ERC-20 с мерами безопасности](/developers/tutorials/erc20-with-safety-rails/) _— как добавить защитные механизмы в токены ERC-20, чтобы помочь пользователям избежать распространенных ошибок._
-- [Отправка токенов с использованием Ethers.js](/developers/tutorials/send-token-ethersjs/) _— руководство для начинающих по переводу токенов ERC-20 с помощью Ethers.js._
-- [Некоторые уловки, используемые мошенническими токенами, и как их обнаружить](/developers/tutorials/scam-token-tricks/) _— подробный разбор паттернов мошеннических токенов ERC-20 и способов их выявления._
+- [Пошаговый разбор контракта ERC-20](/developers/tutorials/erc20-annotated-code/) _– Построчный аннотированный разбор реализации контракта ERC-20 от ОпенЗеппелин._
+- [ERC-20 с мерами предосторожности](/developers/tutorials/erc20-with-safety-rails/) _– Как добавить защитные механизмы в токены ERC-20, чтобы помочь пользователям избежать распространенных ошибок._
+- [Некоторые уловки, используемые мошенническими токенами, и как их обнаружить](/developers/tutorials/scam-token-tricks/) _– Подробный разбор паттернов мошеннических токенов ERC-20 и способов их выявления._

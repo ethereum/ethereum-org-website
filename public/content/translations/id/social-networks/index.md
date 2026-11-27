@@ -1,6 +1,6 @@
 ---
 title: Jejaring sosial terdesentralisasi
-description: Gambaran umum tentang jejaring sosial terdesentralisasi di Ethereum
+description: Apa itu jejaring sosial terdesentralisasi? Pelajari bagaimana aplikasi sosial berbasis Ethereum memungkinkan Anda memiliki identitas, konten, dan audiens Anda sendiri, bukan platform.
 lang: id
 template: use-cases
 sidebarDepth: 2
@@ -59,7 +59,7 @@ Jaringan Ethereum telah menjadi alat pilihan bagi para pengembang yang membuat m
 
 [Mirror](https://mirror.xyz/) adalah platform penulisan yang mendukung Web3 yang bertujuan untuk menjadi terdesentralisasi dan dimiliki oleh pengguna. Pengguna dapat membaca dan menulis secara gratis di Mirror hanya dengan menghubungkan dompet mereka. Pengguna juga dapat mengoleksi tulisan dan berlangganan ke penulis favorit mereka.
 
-Postingan yang diterbitkan di Mirror disimpan secara permanen di Arweave, sebuah platform penyimpanan terdesentralisasi, dan dapat dicetak sebagai [non-fungible token (NFT)](/nft/) yang dapat dikoleksi yang dikenal sebagai Writing NFT. Writing NFT sepenuhnya gratis untuk dibuat oleh penulis, dan pengumpulan terjadi di [lapisan 2 (l2)](/glossary/#layer-2) Ethereum — membuat transaksi menjadi murah, cepat, dan ramah lingkungan.
+Postingan yang diterbitkan di Mirror disimpan secara permanen di Arweave, sebuah platform penyimpanan terdesentralisasi, dan dapat dicetak sebagai [non-fungible token (NFT)](/nft/) yang dapat dikoleksi yang dikenal sebagai Writing NFT. Writing NFT sepenuhnya gratis untuk dibuat oleh penulis, dan pengumpulan terjadi di [lapisan 2 (L2)](/glossary/#layer-2) Ethereum — membuat transaksi menjadi murah, cepat, dan ramah lingkungan.
 
 ### MINDS {#minds}
 
@@ -69,7 +69,7 @@ Pengguna menggunakan token [ERC-20](/glossary/#erc-20) asli platform, yaitu $MIN
 
 ### Farcaster {#farcaster}
 
-[Farcaster](https://farcaster.xyz/) adalah jejaring sosial yang "cukup terdesentralisasi" mirip dengan X dan Reddit, yang memungkinkan pengguna untuk membagikan dan menemukan "casts". Ini dibangun di atas jaringan lapisan 2 (l2) Optimism untuk menjaga transaksi tetap relatif murah.
+[Farcaster](https://farcaster.xyz/) adalah jejaring sosial yang "cukup terdesentralisasi" mirip dengan X dan Reddit, yang memungkinkan pengguna untuk membagikan dan menemukan "casts". Ini dibangun di atas jaringan lapisan 2 (L2) Optimism untuk menjaga transaksi tetap relatif murah.
 
 ## Gunakan jejaring sosial terdesentralisasi {#use-decentralized-social-networks}
 

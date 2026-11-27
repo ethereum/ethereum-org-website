@@ -1,6 +1,6 @@
 ---
 title: "Introduction technique à Ethereum"
-description: "Une introduction aux concepts fondamentaux d'Ethereum pour les développeurs d'applications décentralisées (dapps)."
+description: "Une introduction technique à Ethereum pour les développeurs : chaînes de blocs, comptes, transactions, l'EVM, le gaz et les contrats intelligents, expliqués étape par étape."
 lang: fr
 ---
 

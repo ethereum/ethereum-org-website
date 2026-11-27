@@ -243,10 +243,9 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [ओपनझेपलिन - ERC-721 अंमलबजावणी](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
 - [Alchemy NFT API](https://www.alchemy.com/docs/reference/nft-api-quickstart)
 
-## ट्यूटोरियल्स: इथेरियमवर अविनिमयक्षम टोकन्स (ERC-721) सह तयार करा {#tutorials}
+## ट्युटोरियल्स: इथेरियमवर नॉन-फंजिबल टोकन्स (ERC-721) वापरून तयार करा {#tutorials}
 
-- [Vyper ERC-721 कॉन्ट्रॅक्ट वॉकथ्रू](/developers/tutorials/erc-721-vyper-annotated-code/) _– Vyper मध्ये लिहिलेल्या संपूर्ण ERC-721 NFT कॉन्ट्रॅक्टचा भाष्य केलेला वॉकथ्रू._
+- [Vyper ERC-721 कॉन्ट्रॅक्ट वॉकथ्रू](/developers/tutorials/erc-721-vyper-annotated-code/) _– Vyper मध्ये लिहिलेल्या संपूर्ण ERC-721 NFT कॉन्ट्रॅक्टचा एक स्पष्टीकरणात्मक वॉकथ्रू._
 - [NFT कसे लिहावे आणि प्रस्थापित करावे (भाग 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– तुमचे पहिले ERC-721 स्मार्ट कॉन्ट्रॅक्ट लिहिण्यासाठी आणि प्रस्थापित करण्यासाठी टप्प्याटप्प्याने मार्गदर्शक._
 - [NFT कसे मिंट करावे (भाग 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– तुमचे प्रस्थापित केलेले स्मार्ट कॉन्ट्रॅक्ट आणि Web3 वापरून ERC-721 NFT कसे मिंट करावे._
-- [तुमच्या वॉलेटमध्ये तुमचे NFT कसे पहावे (भाग 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– प्रस्थापनेनंतर मेटामास्कमध्ये तुमचे मिंट केलेले NFT कसे प्रदर्शित करावे._
-- [NFT मिंटर ट्यूटोरियल](/developers/tutorials/nft-minter/) _– React फ्रंटएंड, मेटामास्क आणि Alchemy सह फुल-स्टॅक NFT मिंटिंग विकेंद्रित ॲप्लिकेशन (dapp) तयार करा._
+- [तुमच्या वॉलेटमध्ये तुमचे NFT कसे पाहावे (भाग 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– प्रस्थापनेनंतर तुमचे मिंट केलेले NFT मेटामास्कमध्ये कसे प्रदर्शित करावे._

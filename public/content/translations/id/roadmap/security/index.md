@@ -41,11 +41,11 @@ Bagi pengguna, [finalitas](/glossary/#finality) adalah momen ketika sebuah trans
 
 ## Validator yang tangguh {#resilient-validators}
 
-Sebuah validator biasanya adalah satu mesin yang memegang satu kunci penandatanganan. **Teknologi validator terdistribusi (DVT)** menggantikan mesin tunggal tersebut dengan sebuah komite mesin yang berbagi kunci dan menandatangani bersama, sehingga satu komputer yang gagal atau satu kunci yang dicuri tidak akan melumpuhkan validator. DVT telah aktif dalam produksi dan digunakan oleh operator staking dalam skala besar. Pada Januari 2026, Vitalik Buterin mengajukan varian tingkat protokol yang disederhanakan yang disebut DVT-lite; ini adalah proposal awal tanpa jadwal percabangan.
+Sebuah validator biasanya adalah satu mesin yang memegang satu kunci penandatanganan. **Teknologi validator terdistribusi (DVT)** menggantikan mesin tunggal tersebut dengan sebuah komite mesin yang berbagi kunci dan menandatangani bersama, sehingga satu komputer yang gagal atau satu kunci yang dicuri tidak membuat validator tersebut tumbang. DVT telah aktif di produksi dan digunakan oleh operator staking dalam skala besar. Pada Januari 2026, Vitalik Buterin mengajukan varian tingkat protokol yang disederhanakan yang disebut DVT-lite; ini adalah proposal awal tanpa jadwal percabangan.
 
-Jaringan juga melindungi dirinya sendiri melalui [keragaman klien](/developers/docs/nodes-and-clients/client-diversity/): Ethereum berjalan pada beberapa implementasi perangkat lunak yang dibangun secara independen, sehingga bug pada satu klien akan membiarkan sisa jaringan tetap berdiri.
+Jaringan juga melindungi dirinya sendiri melalui [keragaman klien](/developers/docs/nodes-and-clients/client-diversity/): Ethereum berjalan pada beberapa implementasi perangkat lunak yang dibangun secara independen, sehingga bug pada satu klien membiarkan sisa jaringan tetap berdiri.
 
-Dua ide penelitian sebelumnya, view-merge dan pemilihan pemimpin rahasia, tidak lagi menjadi item peta jalan yang aktif.
+Dua ide penelitian sebelumnya, view-merge dan [pemilihan pemimpin rahasia](/roadmap/secret-leader-election/), tidak lagi menjadi item peta jalan yang aktif.
 
 <ButtonLink variant="outline" href="/staking/dvt/">Lebih lanjut tentang teknologi validator terdistribusi</ButtonLink>
 
@@ -71,9 +71,9 @@ Tidak. Tidak ada komputer kuantum saat ini yang dapat memecahkan kriptografi Eth
 
 ## Protokol yang lebih sederhana dan lebih efisien {#simpler-and-more-efficient-protocol}
 
-Kompleksitas menciptakan peluang untuk bug dan kerentanan. Bagian dari peta jalan berfokus pada **menyederhanakan Ethereum dan menghilangkan utang teknis** sehingga protokol lebih mudah dipelihara, diaudit, dan dipahami. Protokol yang lebih sederhana juga memberi penyerang lebih sedikit permukaan untuk diselidiki.
+Kompleksitas menciptakan peluang untuk bug dan kerentanan. Bagian dari peta jalan berfokus pada **menyederhanakan Ethereum dan menghapus utang teknis** sehingga protokol lebih mudah dipelihara, diaudit, dan dipahami. Protokol yang lebih sederhana juga memberi penyerang lebih sedikit permukaan untuk diselidiki.
 
-Yang telah disampaikan sejauh ini:
+Telah dirilis sejauh ini:
 
 - **[Pectra (Mei 2025)](/roadmap/pectra/)**: Memperkenalkan EIP-7702, yang memungkinkan akun yang dimiliki secara eksternal untuk sementara mendelegasikan ke kode kontrak pintar, sebuah batu loncatan menuju abstraksi akun penuh.
 - **[Fusaka (Desember 2025)](/roadmap/fusaka/)**: Menerapkan PeerDAS (EIP-7594), yang mendistribusikan beban kerja ketersediaan data ke seluruh jaringan. Juga meningkatkan parameter blob, memperluas laju pemrosesan data untuk rollup.
@@ -85,7 +85,7 @@ Sedang berlangsung:
 
 - **Glamsterdam (ditargetkan untuk 2026)**: Sorotan utamanya adalah ePBS (EIP-7732) dan daftar akses tingkat blok (EIP-7928), dengan penetapan ulang harga gas juga sedang dipertimbangkan.
 - **Hegotá (ditargetkan untuk 2027)**: FOCIL (EIP-7805) adalah sorotan utama lapisan konsensus. Sedang dipertimbangkan untuk disertakan: EIP-8141 (abstraksi akun bawaan).
-- **Sedang berjalan**: Upaya untuk menyederhanakan [EVM](/developers/docs/evm/), menyelaraskan implementasi klien, dan menghapus fitur yang tidak lagi digunakan terus berlanjut di seluruh tim klien. Pekerjaan pada ketiadaan state (memungkinkan peserta memverifikasi rantai tanpa menyimpan semua datanya) sedang dirancang ulang di sekitar pohon hash biner yang aman dari kuantum, dengan pendekatan akhir yang belum dikonfirmasi.
+- **Sedang berjalan**: Upaya untuk menyederhanakan [EVM](/developers/docs/evm/), menyelaraskan implementasi klien, dan menghapus fitur yang tidak lagi digunakan terus berlanjut di seluruh tim klien. Pekerjaan pada [ketiadaan state](/roadmap/statelessness/) (memungkinkan peserta memverifikasi rantai tanpa menyimpan semua datanya) sedang didesain ulang di sekitar pohon hash biner yang aman dari kuantum, yang akan menggantikan desain [pohon Verkle](/roadmap/verkle-trees/) sebelumnya. Pendekatan akhir belum dikonfirmasi.
 
 ## Kemajuan saat ini {#current-progress}
 

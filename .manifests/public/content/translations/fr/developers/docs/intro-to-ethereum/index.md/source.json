@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/intro-to-ethereum/index.md",
-  "generatedAt": "2026-06-18T21:40:44.560Z",
-  "rootHash": "4313a3975d34",
+  "generatedAt": "2026-11-27T10:02:45.076Z",
+  "rootHash": "fbcf34dabf0b",
   "tree": {
-    "contentHash": "521ddaab1a7b",
+    "contentHash": "f0ae78cb2396",
     "anchorHash": "73ee42233bb1",
     "children": {
       "frontmatter:title": {
@@ -12,7 +12,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "8a7fc965fa21",
+        "contentHash": "e71f502ef316",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -588,5 +588,5 @@
       "related-tutorials"
     ]
   },
-  "sourceCommitSha": "aaeb4f67fd616782cfcbaceb7a776b26c0578df4"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

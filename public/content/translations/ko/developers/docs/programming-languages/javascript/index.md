@@ -4,9 +4,9 @@ description: "JavaScript 기반 프로젝트 및 도구를 사용하여 이더�
 lang: ko
 ---
 
-JavaScript는 이더리움 생태계에서 가장 인기 있는 언어 중 하나입니다. 실제로 가능한 한 많은 이더리움 기능을 JavaScript로 가져오기 위해 전념하는 [팀](https://github.com/ethereumjs)이 있습니다.
+JavaScript는 이더리움 생태계에서 가장 인기 있는 언어 중 하나이며, 핵심 프로토콜 기본 요소부터 프로덕션 합의 클라이언트에 이르기까지 모든 것이 JavaScript 및 TypeScript로 구현되어 있습니다.
 
-[스택의 모든 수준](/developers/docs/ethereum-stack/)에서 JavaScript(또는 이와 유사한 언어)를 작성할 기회가 있습니다.
+[스택의 모든 계층](/developers/docs/ethereum-stack/)에서 JavaScript(또는 이와 유사한 언어)를 작성할 수 있는 기회가 있습니다.
 
 ## 이더리움과 상호 작용 {#interact-with-ethereum}
 
@@ -52,10 +52,15 @@ JavaScript 개발자로서 자신만의 스마트 컨트랙트를 작성하고 �
 
 ### 노드 및 클라이언트 {#nodes-and-clients}
 
-여러분이 이해할 수 있는 언어인 JavaScript로 이더리움 클라이언트가 어떻게 작동하는지 파헤쳐 볼 수 있는 EthereumJS 클라이언트가 활발히 개발 중입니다!
+[로드스타](https://lodestar.chainsafe.io/)는 TypeScript로 작성되고 ChainSafe에서 유지 관리하는 프로덕션 준비가 완료된 합의 클라이언트입니다. 여기에는 비콘 노드와 검증자 클라이언트가 포함되어 있으며, 익숙한 언어로 이더리움의 지분 증명 합의가 어떻게 작동하는지 확인하기에 좋은 곳입니다.
 
-**클라이언트 확인해 보기**  
-[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**로드스타 확인해 보기**  
+[`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
+
+실행 측면에서 EthereumJS 클라이언트는 더 이상 사용되지 않으며 보관 처리되었지만, JavaScript에서 이더리움 클라이언트가 어떻게 작동하는지 탐색할 수 있도록 소스 코드는 계속 제공됩니다.
+
+**보관된 클라이언트 확인해 보기**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/archive/client)
 
 ## 기타 프로젝트 {#other-projects}
 

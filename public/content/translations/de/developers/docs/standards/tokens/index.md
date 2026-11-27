@@ -39,6 +39,6 @@ _Kennst du eine Community-Ressource, die dir geholfen hat? Bearbeite diese Seite
 ## Verwandte Tutorials {#related-tutorials}
 
 - [Checkliste für die Token-Integration](/developers/tutorials/token-integration-checklist/) _– Eine Checkliste mit Dingen, die bei der Interaktion mit Token zu beachten sind._
-- [Den ERC20-Token-Smart-Contract verstehen](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– Eine Einführung in die Bereitstellung Ihres ersten Smart Contracts in einem Ethereum-Testnetzwerk._
-- [Übertragungen und Genehmigungen von ERC20-Token aus einem Solidity-Smart-Contract](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Wie man einen Smart Contract verwendet, um mit einem Token unter Verwendung der Sprache Solidity zu interagieren._
-- [Implementierung eines ERC721-Marktes [eine Anleitung]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Wie man tokenisierte Artikel auf einem dezentralen Anzeigenportal zum Verkauf anbietet._
+- [Schritt-für-Schritt-Anleitung für einen ERC-20-Vertrag](/developers/tutorials/erc20-annotated-code/) _– Ein zeilenweise kommentierter Durchgang durch die OpenZeppelin-Implementierung eines ERC-20-Vertrags._
+- [Übertragungen und Genehmigung von ERC-20-Token über einen Solidity-Smart Contract](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Wie man einen Smart Contract verwendet, um mit einem Token in der Sprache Solidity zu interagieren._
+- [Implementierung eines ERC-721-Marktes [eine Anleitung]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Wie man tokenisierte Artikel auf einem dezentralen Anzeigenportal zum Verkauf anbietet._

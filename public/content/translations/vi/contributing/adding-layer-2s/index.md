@@ -1,6 +1,6 @@
 ---
-title: Thêm lớp 2
-description: Chính sách chúng tôi sử dụng khi thêm lớp 2 vào ethereum.org
+title: "Thêm lớp 2"
+description: "Chính sách chúng tôi sử dụng khi thêm lớp 2 vào ethereum.org"
 lang: vi
 ---
 
@@ -20,10 +20,10 @@ Lớp 2 là một mô hình tương đối mới và thú vị đối với Ethe
 
 ### Tiêu chí để đưa vào: những điều bắt buộc phải có {#criteria-for-inclusion-the-must-haves}
 
-**Được niêm yết trên L2BEAT**
+**Niêm yết trên ETHBEAT**
 
-- Để được xem xét, dự án này phải được niêm yết trên [L2BEAT](https://l2beat.com). L2BEAT cung cấp một đánh giá rủi ro mạnh mẽ về các dự án lớp 2 mà chúng tôi dựa vào để đánh giá các dự án L2. **Nếu dự án không có trên L2BEAT, chúng tôi sẽ không liệt kê chúng là L2 trên ethereum.org.**
-- [Tìm hiểu cách thêm dự án L2 của bạn vào L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- Để được xem xét, dự án này phải được niêm yết trên [ETHBEAT](https://ethbeat.org). ETHBEAT cung cấp một đánh giá rủi ro mạnh mẽ về các dự án lớp 2 mà chúng tôi dựa vào để đánh giá các dự án L2. **Nếu dự án không được giới thiệu trên ETHBEAT, chúng tôi sẽ không niêm yết chúng dưới dạng L2 trên ethereum.org.**
+- [Tìm hiểu cách thêm dự án L2 của bạn vào ETHBEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Mã nguồn mở**
 
@@ -31,7 +31,7 @@ Lớp 2 là một mô hình tương đối mới và thú vị đối với Ethe
 
 **Danh mục lớp 2**
 
-Chúng tôi hiện coi các giải pháp sau là giải pháp lớp 2:
+Hiện tại, chúng tôi coi các giải pháp sau là giải pháp lớp 2:
 
 - Rollup lạc quan
 - Rollup không tri thức
@@ -44,17 +44,17 @@ _Chúng tôi không coi các giải pháp mở rộng quy mô khác không sử 
 
 **Cầu nối**
 
-- Làm thế nào để người dùng có thể tham gia vào lớp 2?
+- Người dùng có thể tham gia vào lớp 2 như thế nào?
 
 **Ngày dự án đi vào hoạt động**
 
 - Một lớp 2 đã "hoạt động" trên Mạng chính trong hơn 6 tháng
 
-- Các dự án mới hơn chưa được người dùng thử nghiệm thực tế sẽ ít có khả năng được niêm yết hơn.
+- Các dự án mới hơn chưa được người dùng kiểm chứng qua thực tế sẽ ít có khả năng được niêm yết hơn.
 
 **Kiểm toán bảo mật bên ngoài**
 
-- Dù thông qua kiểm toán, nhóm bảo mật nội bộ hay một số phương pháp khác, bảo mật sản phẩm của bạn phải được kiểm tra một cách đáng tin cậy. Điều này làm giảm rủi ro cho người dùng của chúng tôi và cho chúng tôi thấy rằng bạn rất coi trọng vấn đề bảo mật.
+- Cho dù thông qua kiểm toán, nhóm bảo mật nội bộ hay một số phương pháp khác, bảo mật sản phẩm của bạn phải được kiểm tra một cách đáng tin cậy. Điều này làm giảm rủi ro cho người dùng của chúng tôi và cho chúng tôi thấy rằng bạn coi trọng vấn đề bảo mật.
 
 **Cơ sở người dùng bền vững**
 
@@ -62,11 +62,11 @@ _Chúng tôi không coi các giải pháp mở rộng quy mô khác không sử 
 
 **Nhóm phát triển tích cực**
 
-- Chúng tôi sẽ không liệt kê một lớp 2 không có nhóm tích cực làm việc cho dự án.
+- Chúng tôi sẽ không niêm yết một lớp 2 không có nhóm tích cực làm việc cho dự án.
 
 **Trình khám phá khối**
 
-- Các dự án được niêm yết yêu cầu một trình khám phá khối đang hoạt động để cho phép người dùng dễ dàng điều hướng chuỗi.
+- Các dự án được niêm yết yêu cầu một trình khám phá khối đang hoạt động để cho phép người dùng dễ dàng điều hướng Chuỗi.
 
 ### Các tiêu chí khác: những điều nên có {#nice-to-haves}
 

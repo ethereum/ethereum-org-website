@@ -1,6 +1,6 @@
 ---
 title: So widerrufen Sie den Zugriff von Smart Contracts auf Ihr Krypto-Guthaben
-description: Eine Anleitung zum Widerrufen des Token-Zugriffs durch ausbeuterische Smart Contracts
+description: "Eine Schritt-für-Schritt-Anleitung zum Widerrufen von Token-Genehmigungen: Finden Sie heraus, welche Smart Contracts Ihre Kryptowährungen ausgeben können, und entziehen Sie den Zugriff, um Ihr Guthaben zu schützen."
 lang: de
 ---
 

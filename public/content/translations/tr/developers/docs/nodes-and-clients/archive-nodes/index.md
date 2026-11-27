@@ -50,9 +50,9 @@ Geçmiş verilere erişime izin veren çeşitli ücretsiz [hizmetler](/developer
 
 ## Uygulamalar ve kullanım {#implementations-and-usage}
 
-Bu bağlamda arşiv düğümü, durum veritabanını işledikleri ve JSON-RPC uç noktaları sağladıkları için kullanıcıya dönük yürütme katmanı istemcileri tarafından sunulan veriler anlamına gelir. Yapılandırma seçenekleri, eşzamanlama süresi ve veritabanı boyutu istemciye göre değişebilir. Ayrıntılar için lütfen istemciniz tarafından sağlanan belgelere bakın.
+Bu bağlamda arşiv düğümü, durum veritabanını işlerken ve JSON-RPC uç noktalarını sağlarken kullanıcıya dönük yürütme katmanı istemcileri tarafından sunulan veriler anlamına gelir. Yapılandırma seçenekleri, eşzamanlama süresi ve veritabanı boyutu istemciye göre değişebilir. Ayrıntılar için lütfen istemciniz tarafından sağlanan belgelere başvurun.
 
-Kendi arşiv düğümünüzü başlatmadan önce, istemciler arasındaki farkları ve özellikle çeşitli [donanım gereksinimlerini](/developers/docs/nodes-and-clients/run-a-node/#requirements) öğrenin. Çoğu istemci bu özellik için optimize edilmemiştir ve arşivleri 12 TB'tan fazla alan gerektirir. Buna karşılık, Erigon gibi uygulamalar aynı verileri 3 TB'ın altında depolayabilir, bu da onları bir arşiv düğümü çalıştırmanın en etkili yolu yapar.
+Kendi arşiv düğümünüzü başlatmadan önce, istemciler arasındaki farklar ve özellikle çeşitli [donanım gereksinimleri](/developers/docs/nodes-and-clients/run-a-node/#requirements) hakkında bilgi edinin. Arşiv boyutu, her istemcinin depolama tasarımına göre büyük ölçüde değişir. Erigon, Reth ve Geth (yol tabanlı arşiviyle) bir Ana Ağ arşivini kabaca 2-3 TB'ta depolarken, Besu ve Nethermind arşivleri 12 TB veya daha fazlasına ihtiyaç duyar.
 
 ## Önerilen uygulamalar {#recommended-practices}
 
@@ -61,11 +61,11 @@ Bir düğüm çalıştırmak için genel [önerilerin](/developers/docs/nodes-an
 ### Donanım {#hardware}
 
 Bir istemcinin belgelerinde belirli bir mod için donanım gereksinimlerini her zaman doğruladığınızdan emin olun.
-Arşiv düğümleri için en büyük gereksinim disk alanıdır. İstemciye bağlı olarak 3 TB ile 12 TB arasında değişir. Büyük miktarda veri için HDD daha iyi bir çözüm olarak düşünülse bile, onu eşzamanlamak ve zincirin ucunu sürekli güncellemek SSD sürücüleri gerektirecektir. [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) sürücüleri yeterince iyidir ancak güvenilir kalitede, en azından [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences) olmalıdır. Diskler bir masaüstü bilgisayara veya yeterli yuvaya sahip bir sunucuya takılabilir. Bu tür özel cihazlar, yüksek çalışma süresine sahip düğüm çalıştırmak için idealdir. Bir dizüstü bilgisayarda çalıştırmak tamamen mümkündür ancak taşınabilirlik ek bir maliyet getirecektir.
+Arşiv düğümleri için en büyük gereksinim disk alanıdır. İstemciye bağlı olarak, yaklaşık 2 TB'tan 12 TB'ın üzerine kadar değişir. Büyük miktarda veri için HDD daha iyi bir çözüm olarak düşünülse bile, bunu eşzamanlamak ve zincirin ucunu sürekli güncellemek SSD sürücüleri gerektirecektir. [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) sürücüleri yeterince iyidir ancak güvenilir bir kalitede, en azından [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences) olmalıdır. Diskler bir masaüstü bilgisayara veya yeterli yuvaya sahip bir sunucuya takılabilir. Bu tür özel cihazlar, yüksek çalışma süresine sahip bir düğüm çalıştırmak için idealdir. Bir dizüstü bilgisayarda çalıştırmak tamamen mümkündür ancak taşınabilirlik ek bir maliyet getirecektir.
 
 Tüm verilerin tek bir birime sığması gerekir, bu nedenle disklerin örneğin [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) veya LVM ile birleştirilmesi gerekir. Verilerin herhangi bir düşük seviyeli hata olmadan diske doğru şekilde yazılmasını sağlayan "Yazarken kopyala" (Copy-on-write) özelliğini desteklediği için [ZFS](https://en.wikipedia.org/wiki/ZFS) kullanmayı düşünmek de faydalı olabilir.
 
-Özellikle profesyonel bir kurulumda, kazara veritabanı bozulmasını önlemede daha fazla kararlılık ve güvenlik için, sisteminiz destekliyorsa [ECC belleği](https://en.wikipedia.org/wiki/ECC_memory) kullanmayı düşünün. RAM boyutunun genellikle bir tam düğüm için olanla aynı olması tavsiye edilir, ancak daha fazla RAM eşzamanlamayı hızlandırmaya yardımcı olabilir.
+Özellikle profesyonel bir kurulumda, kazara veritabanı bozulmasını önlemede daha fazla kararlılık ve güvenlik için, sisteminiz destekliyorsa [ECC bellek](https://en.wikipedia.org/wiki/ECC_memory) kullanmayı düşünün. RAM boyutunun genellikle bir tam düğüm için olanla aynı olması tavsiye edilir ancak daha fazla RAM eşzamanlamayı hızlandırmaya yardımcı olabilir.
 
 İlk eşzamanlama sırasında, arşiv modundaki istemciler başlangıçtan (genesis) bu yana her işlemi yürütecektir. Yürütme hızı çoğunlukla CPU ile sınırlıdır, bu nedenle daha hızlı bir CPU ilk eşzamanlama süresine yardımcı olabilir. Ortalama bir tüketici bilgisayarında ilk eşzamanlama bir aya kadar sürebilir.
 

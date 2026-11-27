@@ -309,13 +309,13 @@ contract Token {
 }
 ```
 
-### 独特的数字资产 {#unique-digital-asset}
+### 唯一数字资产 {#unique-digital-asset}
 
 ```solidity
 pragma solidity ^0.5.10;
 
 // 将其他文件中的符号导入到当前合约中。
-// 在本例中，是来自 OpenZeppelin 的一系列辅助合约。
+// 在这个例子中，是来自 OpenZeppelin 的一系列辅助合约。
 // 了解更多：https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
@@ -324,21 +324,21 @@ import "../node_modules/@openzeppelin/contracts/introspection/ERC165.sol";
 import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 
 // `is` 关键字用于从外部合约继承函数和关键字。
-// 在本例中，`CryptoPizza` 继承自 `IERC721` 和 `ERC165` 合约。
+// 在这个例子中，`CryptoPizza` 继承了 `IERC721` 和 `ERC165` 合约。
 // 了解更多：https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
-    // 使用 OpenZeppelin 的 SafeMath 库安全地执行算术运算。
-    // 了解更多：https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    // 使用 OpenZeppelin 的 SafeMath 库来安全地执行算术运算。
+    // 了解更多：https://docs.openzeppelin.com/contracts/3.x/api/math#safemath
     using SafeMath for uint256;
 
-    // Solidity 中的常量状态变量与其他语言类似，
-    // 但必须通过在编译时为常量的表达式进行赋值。
+    // Solidity 中的常量状态变量与其他语言类似
+    // 但你必须从一个在编译时为常量的表达式进行赋值。
     // 了解更多：https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
 
-    // 结构体（Struct）类型允许你定义自己的类型
+    // 结构体（Struct）类型让你能够定义自己的类型
     // 了解更多：https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
     struct Pizza {
         string name;
@@ -351,37 +351,37 @@ contract CryptoPizza is IERC721, ERC165 {
     // 从披萨 ID 到其所有者地址的映射
     mapping(uint256 => address) public pizzaToOwner;
 
-    // 从所有者地址到所拥有代币数量的映射
+    // 从所有者地址到所拥有的代币数量的映射
     mapping(address => uint256) public ownerPizzaCount;
 
     // 从代币 ID 到授权地址的映射
     mapping(uint256 => address) pizzaApprovals;
 
-    // 你可以嵌套映射，此示例将所有者映射到操作员授权
+    // 你可以嵌套映射，这个例子将所有者映射到操作员授权
     mapping(address => mapping(address => bool)) private operatorApprovals;
 
-    // 从字符串（名称）和 DNA 创建随机披萨的内部函数
+    // 从字符串（名称）和 DNA 创建随机 Pizza 的内部函数
     function _createPizza(string memory _name, uint256 _dna)
         // `internal` 关键字意味着此函数仅在
         // 此合约以及派生自此合约的合约内可见
         // 了解更多：https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
         internal
-        // `isUnique` 是一个函数修饰符，用于检查披萨是否已存在
+        // `isUnique` 是一个函数修饰符，用于检查披萨是否已经存在
         // 了解更多：https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
         isUnique(_name, _dna)
     {
-        // 将披萨添加到披萨数组并获取 ID
+        // 将 Pizza 添加到 Pizza 数组并获取 ID
         uint256 id = SafeMath.sub(pizzas.push(Pizza(_name, _dna)), 1);
 
-        // 检查披萨所有者是否与当前用户相同
+        // 检查 Pizza 所有者是否与当前用户相同
         // 了解更多：https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
-        // 请注意，address(0) 是零地址，
+        // 注意 address(0) 是零地址，
         // 表示 pizza[id] 尚未分配给特定用户。
 
         assert(pizzaToOwner[id] == address(0));
 
-        // 将披萨映射到所有者
+        // 将 Pizza 映射到所有者
         pizzaToOwner[id] = msg.sender;
         ownerPizzaCount[msg.sender] = SafeMath.add(
             ownerPizzaCount[msg.sender],
@@ -389,7 +389,7 @@ contract CryptoPizza is IERC721, ERC165 {
         );
     }
 
-    // 从字符串（名称）创建一个随机披萨
+    // 从字符串（名称）创建一个随机 Pizza
     function createRandomPizza(string memory _name) public {
         uint256 randDna = generateRandomDna(_name, msg.sender);
         _createPizza(_name, randDna);
@@ -410,7 +410,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return rand;
     }
 
-    // 返回按所有者查找的披萨数组
+    // 返回按所有者找到的 Pizza 数组
     function getPizzasByOwner(address _owner)
         public
         // 标记为 `view` 的函数承诺不修改状态
@@ -418,7 +418,7 @@ contract CryptoPizza is IERC721, ERC165 {
         view
         returns (uint256[] memory)
     {
-        // 使用 `memory` 存储位置仅在
+        // 使用 `memory` 存储位置来仅在
         // 此函数调用的生命周期内存储值。
         // 了解更多：https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
@@ -432,7 +432,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return result;
     }
 
-    // 将披萨及其所有权转移到其他地址
+    // 将 Pizza 及其所有权转移到其他地址
     function transferFrom(address _from, address _to, uint256 _pizzaId) public {
         require(_from != address(0) && _to != address(0), "Invalid address.");
         require(_exists(_pizzaId), "Pizza does not exist.");
@@ -450,10 +450,10 @@ contract CryptoPizza is IERC721, ERC165 {
 
     /**
      * 安全地将给定代币 ID 的所有权转移到另一个地址
-     * 如果目标地址是合约，它必须实现 `onERC721Received`，
+     * 如果目标地址是一个合约，它必须实现 `onERC721Received`，
      * 该函数在安全转移时被调用，并返回魔术值
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`；
-     * 否则，转移将被撤销。
+     * 否则，转移将被回退。
     */
     function safeTransferFrom(address from, address to, uint256 pizzaId)
         public
@@ -464,10 +464,10 @@ contract CryptoPizza is IERC721, ERC165 {
 
     /**
      * 安全地将给定代币 ID 的所有权转移到另一个地址
-     * 如果目标地址是合约，它必须实现 `onERC721Received`，
+     * 如果目标地址是一个合约，它必须实现 `onERC721Received`，
      * 该函数在安全转移时被调用，并返回魔术值
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`；
-     * 否则，转移将被撤销。
+     * 否则，转移将被回退。
      */
     function safeTransferFrom(
         address from,
@@ -502,7 +502,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return (retval == _ERC721_RECEIVED);
     }
 
-    // 销毁披萨 - 完全销毁代币
+    // 销毁一个 Pizza - 完全销毁代币
     // `external` 函数修饰符意味着此函数是
     // 合约接口的一部分，其他合约可以调用它
     function burn(uint256 _pizzaId) external {
@@ -517,26 +517,26 @@ contract CryptoPizza is IERC721, ERC165 {
         pizzaToOwner[_pizzaId] = address(0);
     }
 
-    // 按地址返回披萨数量
+    // 按地址返回 Pizza 的数量
     function balanceOf(address _owner) public view returns (uint256 _balance) {
         return ownerPizzaCount[_owner];
     }
 
-    // 返回按 ID 查找的披萨的所有者
+    // 返回按 ID 找到的 Pizza 的所有者
     function ownerOf(uint256 _pizzaId) public view returns (address _owner) {
         address owner = pizzaToOwner[_pizzaId];
         require(owner != address(0), "Invalid Pizza ID.");
         return owner;
     }
 
-    // 授权其他地址转移披萨的所有权
+    // 授权其他地址转移 Pizza 的所有权
     function approve(address _to, uint256 _pizzaId) public {
         require(msg.sender == pizzaToOwner[_pizzaId], "Must be the Pizza owner.");
         pizzaApprovals[_pizzaId] = _to;
         emit Approval(msg.sender, _to, _pizzaId);
     }
 
-    // 返回特定披萨的授权地址
+    // 返回特定 Pizza 的授权地址
     function getApproved(uint256 _pizzaId)
         public
         view
@@ -548,7 +548,7 @@ contract CryptoPizza is IERC721, ERC165 {
 
     /**
      * 清除给定代币 ID 当前授权的私有函数
-     * 如果给定地址确实不是代币的所有者，则撤销
+     * 如果给定地址确实不是代币的所有者，则回退
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
         require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
@@ -559,7 +559,7 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /*
-     * 设置或取消设置给定操作员的授权
+     * 设置或取消给定操作员的授权
      * 允许操作员代表发送者转移其所有代币
      */
     function setApprovalForAll(address to, bool approved) public {
@@ -568,7 +568,7 @@ contract CryptoPizza is IERC721, ERC165 {
         emit ApprovalForAll(msg.sender, to, approved);
     }
 
-    // 查询操作员是否已获得给定所有者的授权
+    // 告知操作员是否已获得给定所有者的授权
     function isApprovedForAll(address owner, address operator)
         public
         view
@@ -577,20 +577,20 @@ contract CryptoPizza is IERC721, ERC165 {
         return operatorApprovals[owner][operator];
     }
 
-    // 获取披萨的所有权 - 仅限授权用户
+    // 获取 Pizza 的所有权 - 仅限授权用户
     function takeOwnership(uint256 _pizzaId) public {
         require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
         address owner = this.ownerOf(_pizzaId);
         this.transferFrom(owner, msg.sender, _pizzaId);
     }
 
-    // 检查披萨是否存在
+    // 检查 Pizza 是否存在
     function _exists(uint256 pizzaId) internal view returns (bool) {
         address owner = pizzaToOwner[pizzaId];
         return owner != address(0);
     }
 
-    // 检查地址是否为所有者或已获授权转移披萨
+    // 检查地址是否为所有者或被授权转移 Pizza
     function _isApprovedOrOwner(address spender, uint256 pizzaId)
         internal
         view
@@ -598,14 +598,14 @@ contract CryptoPizza is IERC721, ERC165 {
     {
         address owner = pizzaToOwner[pizzaId];
         // 禁用 solium 检查，因为
-        // https://github.com/duaraghav8/Solium/issues/175
+        // https://github.com/duaraghav8/Ethlint/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
             this.getApproved(pizzaId) == spender ||
             this.isApprovedForAll(owner, spender));
     }
 
-    // 检查披萨是否唯一且尚不存在
+    // 检查 Pizza 是否唯一且尚不存在
     modifier isUnique(string memory _name, uint256 _dna) {
         bool result = true;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -624,8 +624,8 @@ contract CryptoPizza is IERC721, ERC165 {
     // 返回目标地址是否为合约
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // 目前没有更好的方法来检查地址中是否存在合约，
-        // 只能检查该地址的代码大小。
+        // 目前没有更好的方法来检查一个地址中是否存在合约
+        // 除了检查该地址处的代码大小。
         // 参见 https://ethereum.stackexchange.com/a/14016/36603
         // 了解有关其工作原理的更多详细信息。
         // TODO 在 Serenity 发布之前再次检查此项，因为届时所有地址都将是

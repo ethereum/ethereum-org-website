@@ -1,6 +1,6 @@
 ---
 title: "Dados e análises"
-description: "Como obter análises e dados onchain para usar em seus dapps"
+description: "Como obter dados onchain para o seu dapp: indexadores, subgrafos, exploradores de blocos, plataformas de análise SQL e APIs para consultar e analisar dados do Ethereum."
 lang: pt-br
 ---
 
@@ -76,7 +76,7 @@ Para começar, siga o [guia de início rápido do HyperIndex](https://docs.envio
 
 - [Explorando dados cripto I: arquiteturas de fluxo de dados](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
 - [Visão geral da rede The Graph](https://thegraph.com/docs/en/about/)
-- [Playground de consultas do The Graph](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
+- [Graph Explorer](https://thegraph.com/explorer)
 - [Exemplos de código de API no Etherscan](https://etherscan.io/apis#contracts)
 - [Documentação da API no Blockscout](https://docs.blockscout.com/devs/apis)
 - [Explorador da Beacon Chain Beaconcha.in](https://beaconcha.in)

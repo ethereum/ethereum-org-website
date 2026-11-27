@@ -1,7 +1,7 @@
 ---
 title: Ethereum-Zahlungen
 metaTitle: Zahlungen auf Ethereum
-description: "Ein Überblick über Zahlungen auf Ethereum"
+description: "Wie funktionieren Zahlungen auf Ethereum? Erfahren Sie, wie Sie mit ETH und Stablecoins weltweit Geld senden können, oft in Sekundenschnelle und zu geringen Kosten, ohne eine Bank dazwischen."
 lang: de
 template: use-cases
 sidebarDepth: 2

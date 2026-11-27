@@ -314,8 +314,8 @@ contract Token {
 ```solidity
 pragma solidity ^0.5.10;
 
-// Huingiza alama kutoka kwa faili zingine kwenye mkataba wa sasa.
-// Katika kesi hii, mfululizo wa mikataba ya usaidizi kutoka OpenZeppelin.
+// Huleta alama kutoka faili zingine hadi kwenye mkataba wa sasa.
+// Katika hali hii, mfululizo wa mikataba ya usaidizi kutoka OpenZeppelin.
 // Jifunze zaidi: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
@@ -323,16 +323,16 @@ import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol
 import "../node_modules/@openzeppelin/contracts/introspection/ERC165.sol";
 import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 
-// Neno kuu `is` linatumika kurithi vitendaji na maneno makuu kutoka kwa mikataba ya nje.
-// Katika kesi hii, `CryptoPizza` inarithi kutoka kwa mikataba ya `IERC721` na `ERC165`.
+// Neno kuu `is` hutumika kurithi vitendaji na maneno makuu kutoka kwa mikataba ya nje.
+// Katika hali hii, `CryptoPizza` inarithi kutoka kwa mikataba ya `IERC721` na `ERC165`.
 // Jifunze zaidi: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
     // Hutumia maktaba ya SafeMath ya OpenZeppelin kufanya shughuli za hesabu kwa usalama.
-    // Jifunze zaidi: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    // Jifunze zaidi: https://docs.openzeppelin.com/contracts/3.x/api/math#safemath
     using SafeMath for uint256;
 
-    // Vibadilika vya hali vya kudumu katika Solidity ni sawa na lugha zingine
-    // lakini lazima upeane kutoka kwa usemi ambao ni wa kudumu wakati wa kukusanya (compile time).
+    // Vigezo vya hali isiyobadilika katika Solidity vinafanana na lugha zingine
+    // lakini lazima ukabidhi kutoka kwa usemi ambao haubadiliki wakati wa kukusanya.
     // Jifunze zaidi: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
@@ -348,7 +348,7 @@ contract CryptoPizza is IERC721, ERC165 {
     // Huunda safu tupu ya struct za Pizza
     Pizza[] public pizzas;
 
-    // Kuweka ramani (Mapping) kutoka kitambulisho cha pizza hadi anwani ya mmiliki wake
+    // Kuweka ramani kutoka kitambulisho cha pizza hadi anwani ya mmiliki wake
     mapping(uint256 => address) public pizzaToOwner;
 
     // Kuweka ramani kutoka anwani ya mmiliki hadi idadi ya tokeni zinazomilikiwa
@@ -357,7 +357,7 @@ contract CryptoPizza is IERC721, ERC165 {
     // Kuweka ramani kutoka kitambulisho cha tokeni hadi anwani iliyoidhinishwa
     mapping(uint256 => address) pizzaApprovals;
 
-    // Unaweza kuweka ramani ndani ya ramani (nest mappings), mfano huu unaweka ramani ya mmiliki kwa idhini za mhudumu
+    // Unaweza kuweka ramani ndani ya ramani, mfano huu unaweka ramani ya mmiliki kwa idhini za mhudumu
     mapping(address => mapping(address => bool)) private operatorApprovals;
 
     // Kitendaji cha ndani cha kuunda Pizza ya nasibu kutoka kwa mfuatano (jina) na DNA
@@ -370,14 +370,14 @@ contract CryptoPizza is IERC721, ERC165 {
         // Jifunze zaidi: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
         isUnique(_name, _dna)
     {
-        // Huongeza Pizza kwenye safu ya Pizza na kupata kitambulisho (id)
+        // Huongeza Pizza kwenye safu ya Pizza na kupata kitambulisho
         uint256 id = SafeMath.sub(pizzas.push(Pizza(_name, _dna)), 1);
 
         // Hukagua kuwa mmiliki wa Pizza ni sawa na mtumiaji wa sasa
         // Jifunze zaidi: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
         // kumbuka kuwa address(0) ni anwani sifuri,
-        // ikionyesha kuwa pizza[id] bado haijatengwa kwa mtumiaji fulani.
+        // ikionyesha kuwa pizza[id] bado haijatengewa mtumiaji fulani.
 
         assert(pizzaToOwner[id] == address(0));
 
@@ -398,7 +398,7 @@ contract CryptoPizza is IERC721, ERC165 {
     // Huzalisha DNA ya nasibu kutoka kwa mfuatano (jina) na anwani ya mmiliki (muundaji)
     function generateRandomDna(string memory _str, address _owner)
         public
-        // Vitendaji vilivyowekwa alama kama `pure` vinaahidi kutosoma au kurekebisha hali
+        // Vitendaji vilivyowekwa alama ya `pure` vinaahidi kutosoma kutoka au kurekebisha hali
         // Jifunze zaidi: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
         pure
         returns (uint256)
@@ -413,7 +413,7 @@ contract CryptoPizza is IERC721, ERC165 {
     // Hurejesha safu ya Pizza zilizopatikana na mmiliki
     function getPizzasByOwner(address _owner)
         public
-        // Vitendaji vilivyowekwa alama kama `view` vinaahidi kutorekebisha hali
+        // Vitendaji vilivyowekwa alama ya `view` vinaahidi kutorekebisha hali
         // Jifunze zaidi: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
         view
         returns (uint256[] memory)
@@ -449,11 +449,11 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Huhamisha kwa usalama umiliki wa kitambulisho cha tokeni kilichopewa kwa anwani nyingine
+     * Huhamisha kwa usalama umiliki wa kitambulisho cha tokeni fulani kwenda kwa anwani nyingine
      * Ikiwa anwani lengwa ni mkataba, lazima itekeleze `onERC721Received`,
-     * ambayo inaitwa wakati wa uhamishaji salama, na kurejesha thamani ya kichawi
+     * ambayo inaitwa wakati wa uhamisho salama, na kurejesha thamani ya kichawi
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * vinginevyo, uhamishaji unarejeshwa nyuma.
+     * vinginevyo, uhamisho unarejeshwa nyuma.
     */
     function safeTransferFrom(address from, address to, uint256 pizzaId)
         public
@@ -463,11 +463,11 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Huhamisha kwa usalama umiliki wa kitambulisho cha tokeni kilichopewa kwa anwani nyingine
+     * Huhamisha kwa usalama umiliki wa kitambulisho cha tokeni fulani kwenda kwa anwani nyingine
      * Ikiwa anwani lengwa ni mkataba, lazima itekeleze `onERC721Received`,
-     * ambayo inaitwa wakati wa uhamishaji salama, na kurejesha thamani ya kichawi
+     * ambayo inaitwa wakati wa uhamisho salama, na kurejesha thamani ya kichawi
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * vinginevyo, uhamishaji unarejeshwa nyuma.
+     * vinginevyo, uhamisho unarejeshwa nyuma.
      */
     function safeTransferFrom(
         address from,
@@ -481,7 +481,7 @@ contract CryptoPizza is IERC721, ERC165 {
 
     /**
      * Kitendaji cha ndani cha kuita `onERC721Received` kwenye anwani lengwa
-     * Wito hautekelezwi ikiwa anwani lengwa sio mkataba
+     * Wito hautekelezwi ikiwa anwani lengwa si mkataba
      */
     function _checkOnERC721Received(
         address from,
@@ -502,7 +502,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return (retval == _ERC721_RECEIVED);
     }
 
-    // Huchoma Pizza - huharibu Tokeni kabisa
+    // Huchoma Pizza - huharibu tokeni kabisa
     // Kirekebishaji cha kitendaji cha `external` kinamaanisha kitendaji hiki ni
     // sehemu ya kiolesura cha mkataba na mikataba mingine inaweza kukiita
     function burn(uint256 _pizzaId) external {
@@ -522,7 +522,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return ownerPizzaCount[_owner];
     }
 
-    // Hurejesha mmiliki wa Pizza iliyopatikana kwa kitambulisho (id)
+    // Hurejesha mmiliki wa Pizza iliyopatikana kwa kitambulisho
     function ownerOf(uint256 _pizzaId) public view returns (address _owner) {
         address owner = pizzaToOwner[_pizzaId];
         require(owner != address(0), "Invalid Pizza ID.");
@@ -547,8 +547,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Kitendaji cha kibinafsi cha kufuta idhini ya sasa ya kitambulisho cha tokeni kilichopewa
-     * Hurejesha nyuma ikiwa anwani iliyopewa sio mmiliki wa tokeni
+     * Kitendaji cha faragha cha kufuta idhini ya sasa ya kitambulisho cha tokeni fulani
+     * Hurejesha nyuma ikiwa anwani iliyotolewa si mmiliki wa tokeni kweli
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
         require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
@@ -577,7 +577,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return operatorApprovals[owner][operator];
     }
 
-    // Huchukua umiliki wa Pizza - kwa watumiaji walioidhinishwa pekee
+    // Huchukua umiliki wa Pizza - kwa watumiaji walioidhinishwa tu
     function takeOwnership(uint256 _pizzaId) public {
         require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
         address owner = this.ownerOf(_pizzaId);
@@ -597,8 +597,8 @@ contract CryptoPizza is IERC721, ERC165 {
         returns (bool)
     {
         address owner = pizzaToOwner[pizzaId];
-        // Zima ukaguzi wa solium kwa sababu ya
-        // https://github.com/duaraghav8/Solium/issues/175
+        // Lemaza ukaguzi wa solium kwa sababu ya
+        // https://github.com/duaraghav8/Ethlint/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
             this.getApproved(pizzaId) == spender ||

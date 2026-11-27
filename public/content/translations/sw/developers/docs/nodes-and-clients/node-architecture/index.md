@@ -4,17 +4,17 @@ description: Utangulizi wa jinsi nodi za Ethereum zinavyopangwa.
 lang: sw
 ---
 
-Nodi ya Ethereum inaundwa na wateja wawili: [kiteja cha utekelezaji](/developers/docs/nodes-and-clients/#execution-clients) na [mteja wa mwafaka](/developers/docs/nodes-and-clients/#consensus-clients). Ili nodi iweze kupendekeza kitalu kipya, lazima pia iendeshe [kiteja cha mthibitishaji](#validators).
+Nodi ya Ethereum inaundwa na wateja wawili: [kiteja cha utekelezaji](/developers/docs/nodes-and-clients/#execution-clients) na [mteja wa mwafaka](/developers/docs/nodes-and-clients/#consensus-clients). Ili nodi ipendekeze kitalu kipya, lazima pia iendeshe [kiteja cha mthibitishaji](#validators).
 
-Wakati Ethereum ilipokuwa ikitumia [Uthibitisho wa Kazi (PoW)](/developers/docs/consensus-mechanisms/pow/), kiteja cha utekelezaji kilitosha kuendesha nodi kamili ya Ethereum. Hata hivyo, tangu kutekelezwa kwa [Uthibitisho wa Dau (PoS)](/developers/docs/consensus-mechanisms/pos/), kiteja cha utekelezaji lazima kitumike pamoja na programu nyingine inayoitwa [mteja wa mwafaka](/developers/docs/nodes-and-clients/#consensus-clients).
+Wakati Ethereum ilipokuwa ikitumia [Uthibitisho wa Kazi](/developers/docs/consensus-mechanisms/pow/), kiteja cha utekelezaji kilitosha kuendesha nodi kamili ya Ethereum. Hata hivyo, tangu kutekelezwa kwa [Uthibitisho wa Dau](/developers/docs/consensus-mechanisms/pos/), kiteja cha utekelezaji lazima kitumike pamoja na programu nyingine inayoitwa [mteja wa mwafaka](/developers/docs/nodes-and-clients/#consensus-clients).
 
-Mchoro ulio hapa chini unaonyesha uhusiano kati ya wateja wawili wa Ethereum. Wateja hao wawili huunganishwa kwenye mitandao yao husika ya rika-kwa-rika (P2P). Mitandao tofauti ya P2P inahitajika kwa kuwa viteja vya utekelezaji husambaza miamala kwenye mtandao wao wa P2P, na kuviwezesha kudhibiti kusanyiko la miamala la ndani, huku wateja wa mwafaka wakisambaza vitalu kwenye mtandao wao wa P2P, na kuwezesha mwafaka na ukuaji wa mnyororo.
+Mchoro ulio hapa chini unaonyesha uhusiano kati ya wateja wawili wa Ethereum. Wateja hao wawili huunganishwa kwenye mitandao yao husika ya rika-kwa-rika (P2P). Mitandao tofauti ya P2P inahitajika kwa kuwa viteja vya utekelezaji husambaza miamala kwenye mtandao wao wa P2P, na kuviwezesha kusimamia kusanyiko la miamala la ndani, huku wateja wa mwafaka wakisambaza vitalu kwenye mtandao wao wa P2P, na kuwezesha mwafaka na ukuaji wa mnyororo.
 
-![Diagram of Ethereum node architecture showing execution and consensus layers](node-architecture-text-background.png)
+<NodeArchitectureDiagram />
 
-_Kuna chaguzi kadhaa za kiteja cha utekelezaji ikiwa ni pamoja na Erigon, Nethermind, na Besu_.
+_Kuna chaguo kadhaa kwa kiteja cha utekelezaji ikiwa ni pamoja na Erigon, Nethermind, na Besu_.
 
-Ili muundo huu wa wateja wawili ufanye kazi, wateja wa mwafaka lazima wapitishe vifurushi vya miamala kwa kiteja cha utekelezaji. Kiteja cha utekelezaji hutekeleza miamala ndani ya mfumo ili kuthibitisha kuwa miamala haikiuki sheria zozote za Ethereum na kwamba sasisho lililopendekezwa kwa hali ya Ethereum ni sahihi. Wakati nodi inapochaguliwa kuwa mzalishaji wa kitalu, mfano wake wa mteja wa mwafaka huomba vifurushi vya miamala kutoka kwa kiteja cha utekelezaji ili kuvijumuisha kwenye kitalu kipya na kuvitekeleza ili kusasisha hali ya kimataifa. Mteja wa mwafaka huendesha kiteja cha utekelezaji kupitia muunganisho wa ndani wa RPC kwa kutumia [API ya Injini](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+Ili muundo huu wa wateja wawili ufanye kazi, wateja wa mwafaka lazima wapitishe vifurushi vya miamala kwa kiteja cha utekelezaji. Kiteja cha utekelezaji hutekeleza miamala ndani kwa ndani ili kuthibitisha kwamba miamala haikiuki sheria zozote za Ethereum na kwamba sasisho linalopendekezwa kwa hali ya Ethereum ni sahihi. Nodi inapochaguliwa kuwa mzalishaji wa kitalu, mfano wake wa mteja wa mwafaka huomba vifurushi vya miamala kutoka kwa kiteja cha utekelezaji ili kuvijumuisha katika kitalu kipya na kuvitekeleza ili kusasisha hali ya kimataifa. Mteja wa mwafaka huendesha kiteja cha utekelezaji kupitia muunganisho wa ndani wa RPC kwa kutumia [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## Kiteja cha utekelezaji hufanya nini? {#execution-client}
 

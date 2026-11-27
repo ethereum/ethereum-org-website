@@ -1,21 +1,21 @@
 ---
-title: ERC-7540 非同步代幣化金庫標準
-description: ERC-4626 的擴充功能，為代幣化金庫新增了非同步存款與贖回流程。
+title: "ERC-7540 非同步代幣化金庫標準"
+description: "ERC-4626 的擴充功能，為代幣化金庫新增了非同步存款與贖回流程。"
 lang: zh-tw
 ---
 
 ## 簡介 {#introduction}
 
-ERC-7540 擴充了 [ERC-4626 代幣化金庫標準](/developers/docs/standards/tokens/erc-4626/)，新增對非同步存款與贖回流程的支援。它引入了「先請求後申領」的模式：使用者首先提交請求（鎖定其資產或份額），然後在金庫處理完畢後申領結果。
+ERC-7540 擴充了 [ERC-4626 代幣化金庫標準](/developers/docs/standards/tokens/erc-4626/)，新增了對非同步存款與贖回流程的支援。它引入了「先請求後申領」的模式：使用者首先提交請求（將其資產或份額交給金庫），然後在金庫處理完畢後申領結果。
 
-當金庫無法在單筆交易中立即結算時，就需要此功能，例如：
+當金庫無法在單筆交易中立即結算時，就需要這種機制，例如：
 
-- 真實世界資產 (RWA) 協定，如代幣化國債、私人信貸以及其他具有 T+1 或 T+2 結算週期的資產
+- 真實世界資產 (RWA) 協議，如代幣化國庫券、私人信貸以及其他具有 T+1 或 T+2 結算週期的資產
 - 信用評估在鏈下發生的抵押不足借貸
 - 跨鏈金庫策略，其中橋接會引入延遲
 - 具有解除綁定期的流動性質押代幣
 
-金庫可以選擇僅在存款、僅在贖回或兩者皆採用非同步。這種靈活性讓金庫開發者只需在底層策略需要時加入非同步流程，同時保持另一端為同步。
+金庫可以選擇僅在存款、僅在贖回或兩者皆採用非同步。這種彈性讓金庫開發者能夠僅在底層策略需要時加入非同步流程，同時保持另一側為同步。
 
 ## 先決條件 {#prerequisites}
 
@@ -23,23 +23,23 @@ ERC-7540 擴充了 [ERC-4626 代幣化金庫標準](/developers/docs/standards/t
 
 ## ERC-4626 與 ERC-7540 比較 {#comparison}
 
-在 ERC-4626 中，存款是原子化結算的：投資者發送資產並在單筆交易中收回份額。
+在 ERC-4626 中，存款會以原子方式結算：投資者發送資產並在單筆交易中收回份額。
 
-![ERC-4626 synchronous deposit flow](./erc-4626-sync-flow.svg)
+<VaultDepositDiagram />
 
-ERC-7540 將此分為兩個步驟。投資者首先呼叫 `requestDeposit()` 來鎖定資產，然後等待金庫管理者處理請求。一旦完成，投資者呼叫 `deposit()` 來申領其份額。匯率是在完成時決定的，而不是在請求時。
+ERC-7540 將此分為兩個步驟。投資者首先呼叫 `requestDeposit()`，將其資產轉帳到金庫，然後等待金庫處理請求。處理的方式與時間由金庫決定，例如當鏈下結算完成時。一旦完成，投資者呼叫 `deposit()` 來申領其份額。匯率在請求時並不固定：由金庫設定，通常是在完成請求時，因此收到的份額可能與提出請求時 `convertToShares()` 回傳的數量不同。
 
-![ERC-7540 asynchronous deposit flow](./erc-7540-async-flow.svg)
+<AsyncVaultDiagram />
 
-贖回流程的運作方式相同：`requestRedeem()` 鎖定份額，一旦完成，投資者呼叫 `redeem()` 來申領資產。
+贖回流程的運作方式相同：`requestRedeem()` 從投資者那裡取得份額，一旦完成，投資者呼叫 `redeem()` 來申領資產。
 
 ## ERC-7540 函式與功能 {#body}
 
-ERC-7540 繼承了完整的 ERC-4626 介面，但將 `deposit`/`mint`/`withdraw`/`redeem` 重新用作申領函式。新的 `requestDeposit` 和 `requestRedeem` 函式負責處理初始請求步驟。
+ERC-7540 繼承了完整的 ERC-4626 介面，但將 `deposit`/`mint`/`withdraw`/`redeem` 重新用作申領函式。新的 `requestDeposit` 和 `requestRedeem` 函式負責處理初始的請求步驟。
 
-每個請求會經歷三個狀態：待處理（已提交，等待處理）、可申領（已完成並定價）以及已申領（投資者已領取其份額或資產）。
+每個請求會經歷三個狀態：待處理（已提交，等待處理）、可申領（已完成並定價）以及已申領（投資者已領取其份額或資產）。金庫可以讓請求立即變為可申領，跳過待處理狀態，但申領始終是一個獨立的呼叫。該標準沒有定義請求變為可申領時的事件。
 
-![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
+<VaultRequestDiagram />
 
 ### 存款請求流程 {#deposit-request-flow}
 
@@ -79,7 +79,7 @@ function claimableDepositRequest(uint256 requestId, address controller) external
 function requestRedeem(uint256 shares, address controller, address owner) external returns (uint256 requestId)
 ```
 
-鎖定來自 `owner` 的 `shares` 並提交贖回請求。`controller` 地址獲得該請求的控制權。
+從 `owner` 取得 `shares` 的控制權並提交贖回請求。金庫可以保留這些份額直到請求被申領，或者立即將其銷毀。`controller` 地址獲得該請求的控制權。
 
 #### pendingRedeemRequest {#pendingredeemrequest}
 

@@ -36,21 +36,20 @@ incomplete: true
 
 - [Rust-এ একটি ব্লকচেইন তৈরি করুন](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
 
-## Rust প্রজেক্ট এবং টুলস {#rust-projects-and-tools}
+## Rust প্রজেক্ট এবং টুল {#rust-projects-and-tools}
 
-- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _ইথেরিয়ামের মতো নেটওয়ার্কের সাথে ইন্টারঅ্যাক্ট করার জন্য এক্সটার্নসের সংগ্রহ_
+- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _ইথেরিয়ামের মতো নেটওয়ার্কের সাথে ইন্টারঅ্যাক্ট করার জন্য এক্সটার্নস (externs)-এর সংগ্রহ_
 - [লাইটহাউস](https://github.com/sigp/lighthouse) - _দ্রুতগতির ইথেরিয়াম কনসেনসাস লেয়ার ক্লায়েন্ট_
 - [ইথেরিয়াম WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _WebAssembly-এর একটি ডিটারমিনিস্টিক সাবসেট ব্যবহার করে ইথেরিয়াম স্মার্ট কন্ট্রাক্ট এক্সিকিউশন লেয়ারের প্রস্তাবিত রিডিজাইন_
-- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API রেফারেন্স_
 - [Solaris](https://github.com/paritytech/sol-rs) - _নেটিভ Parity ক্লায়েন্ট EVM ব্যবহার করে Solidity স্মার্ট কন্ট্রাক্ট ইউনিট টেস্ট হারনেস।_
-- [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust ইথেরিয়াম ভার্চুয়াল মেশিন ইমপ্লিমেন্টেশন_
+- [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust ইথেরিয়াম ভার্চুয়াল মেশিন ইমপ্লিমেন্টেশন_
 - [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Rust-এ Wavelet স্মার্ট কন্ট্রাক্ট_
 - [Foundry](https://github.com/foundry-rs/foundry) - _ইথেরিয়াম অ্যাপ্লিকেশন ডেভেলপমেন্টের জন্য টুলকিট_
 - [Alloy](https://alloy.rs) - _ইথেরিয়াম এবং অন্যান্য EVM-ভিত্তিক চেইনের সাথে ইন্টারঅ্যাক্ট করার জন্য উচ্চ-ক্ষমতাসম্পন্ন, ভালোভাবে পরীক্ষিত এবং ডকুমেন্টেড লাইব্রেরি।_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _ইথেরিয়াম লাইব্রেরি এবং ওয়ালেট ইমপ্লিমেন্টেশন_
 - [SewUp](https://github.com/second-state/SewUp) - _Rust দিয়ে আপনার ইথেরিয়াম WebAssembly কন্ট্রাক্ট তৈরি করতে এবং সাধারণ ব্যাকএন্ডের মতো ডেভেলপ করতে সাহায্য করার জন্য একটি লাইব্রেরি_
 - [Substreams](https://github.com/streamingfast/substreams) - _প্যারালালাইজড ব্লকচেইন ডেটা ইনডেক্সিং প্রযুক্তি_
-- [রেথ](https://github.com/paradigmxyz/reth) রেথ (Rust ইথেরিয়ামের সংক্ষিপ্ত রূপ) হলো একটি নতুন ইথেরিয়াম ফুল-নোড ইমপ্লিমেন্টেশন
+- [রেথ](https://github.com/paradigmxyz/reth) রেথ (Rust ইথেরিয়ামের সংক্ষিপ্ত রূপ) হলো একটি নতুন ইথেরিয়াম ফুল নোড ইমপ্লিমেন্টেশন
 - [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Rust-এ লেখা ইথেরিয়াম ইকোসিস্টেমের প্রজেক্টগুলোর একটি বাছাইকৃত সংগ্রহ_
 - [Stylus](https://github.com/OffchainLabs/stylus) - _Arbitrum-এ স্মার্ট কন্ট্রাক্ট তৈরি করার জন্য Rust SDK_
 

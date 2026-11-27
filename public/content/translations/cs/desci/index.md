@@ -1,6 +1,6 @@
 ---
 title: "Decentralizovaná věda (DeSci)"
-description: "Přehled decentralizované vědy na Ethereu"
+description: "Co je decentralizovaná věda? Zjistěte, jak DeSci využívá Ethereum k financování výzkumu, otevřenému sdílení dat a odměňování vědců, čímž činí vědu dostupnější."
 lang: cs
 template: use-cases
 sidebarDepth: 2

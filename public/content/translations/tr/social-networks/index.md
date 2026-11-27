@@ -1,6 +1,6 @@
 ---
 title: "Merkeziyetsiz sosyal ağlar"
-description: "Ethereum üzerindeki merkeziyetsiz sosyal ağlara genel bir bakış"
+description: "Merkeziyetsiz sosyal ağlar nelerdir? Ethereum tabanlı sosyal uygulamaların, bir platform yerine kimliğinize, içeriğinize ve kitlenize sahip olmanızı nasıl sağladığını öğrenin."
 lang: tr
 template: use-cases
 sidebarDepth: 2

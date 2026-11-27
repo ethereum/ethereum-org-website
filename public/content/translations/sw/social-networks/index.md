@@ -1,6 +1,6 @@
 ---
 title: Mitandao ya kijamii iliyogatuliwa
-description: Muhtasari wa mitandao ya kijamii iliyogatuliwa kwenye Ethereum
+description: Mitandao ya kijamii iliyogatuliwa ni nini? Jifunze jinsi programu za kijamii zinazotegemea Ethereum zinavyokuruhusu kumiliki utambulisho, maudhui na hadhira yako badala ya jukwaa.
 lang: sw
 template: use-cases
 sidebarDepth: 2
@@ -59,7 +59,7 @@ Mtandao wa Ethereum umekuwa zana inayopendekezwa kwa wasanidi wanaounda mitandao
 
 [Mirror](https://mirror.xyz/) ni jukwaa la uandishi linalowezeshwa na Web3 ambalo linalenga kugatuliwa na kumilikiwa na mtumiaji. Watumiaji wanaweza kusoma na kuandika bila malipo kwenye Mirror kwa kuunganisha tu mikoba yao. Watumiaji wanaweza pia kukusanya maandishi na kujiandikisha kwa waandishi wanaowapenda.
 
-Machapisho yaliyochapishwa kwenye Mirror huhifadhiwa kabisa kwenye Arweave, jukwaa la hifadhi iliyogatuliwa, na yanaweza kutengenezwa kama [tokeni zisizoweza kuvuika (NFTs)](/nft/) zinazokusanywa zinazojulikana kama Writing NFTs. Writing NFTs ni bure kabisa kwa waandishi kuunda, na ukusanyaji hufanyika kwenye [tabaka la 2 (l2)](/glossary/#layer-2) la Ethereum — na kufanya miamala kuwa ya bei nafuu, ya haraka, na rafiki kwa mazingira.
+Machapisho yaliyochapishwa kwenye Mirror huhifadhiwa kabisa kwenye Arweave, jukwaa la hifadhi iliyogatuliwa, na yanaweza kutengenezwa kama [tokeni zisizoweza kuvuika (NFTs)](/nft/) zinazokusanywa zinazojulikana kama Writing NFTs. Writing NFTs ni bure kabisa kwa waandishi kuunda, na ukusanyaji hufanyika kwenye [tabaka la 2 (L2)](/glossary/#layer-2) la Ethereum — na kufanya miamala kuwa ya bei nafuu, ya haraka, na rafiki kwa mazingira.
 
 ### MINDS {#minds}
 
@@ -69,7 +69,7 @@ Watumiaji hutumia tokeni asili ya jukwaa ya [ERC-20](/glossary/#erc-20) $MIND ku
 
 ### Farcaster {#farcaster}
 
-[Farcaster](https://farcaster.xyz/) ni mtandao wa kijamii "uliogatuliwa vya kutosha" sawa na X na Reddit ambao unaruhusu watumiaji kushiriki na kugundua "casts". Imejengwa kwenye mtandao wa tabaka la 2 (l2) wa Optimism ili kufanya miamala kuwa nafuu kiasi.
+[Farcaster](https://farcaster.xyz/) ni mtandao wa kijamii "uliogatuliwa vya kutosha" sawa na X na Reddit ambao unaruhusu watumiaji kushiriki na kugundua "casts". Imejengwa kwenye mtandao wa tabaka la 2 (L2) wa Optimism ili kufanya miamala kuwa nafuu kiasi.
 
 ## Tumia mitandao ya kijamii iliyogatuliwa {#use-decentralized-social-networks}
 

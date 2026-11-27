@@ -315,7 +315,7 @@ contract Token {
 pragma solidity ^0.5.10;
 
 // Importe des symboles d'autres fichiers dans le contrat actuel.
-// Dans ce cas, une série de contrats utilitaires d'OpenZeppelin.
+// Dans ce cas, une série de contrats auxiliaires d'OpenZeppelin.
 // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
@@ -328,10 +328,10 @@ import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
     // Utilise la bibliothèque SafeMath d'OpenZeppelin pour effectuer des opérations arithmétiques en toute sécurité.
-    // En savoir plus : https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    // En savoir plus : https://docs.openzeppelin.com/contracts/3.x/api/math#safemath
     using SafeMath for uint256;
 
-    // Les variables d'état constantes en Solidity sont similaires à d'autres langages
+    // Les variables d'état constantes en Solidity sont similaires à celles d'autres langages
     // mais vous devez les assigner à partir d'une expression qui est constante au moment de la compilation.
     // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
@@ -360,10 +360,10 @@ contract CryptoPizza is IERC721, ERC165 {
     // Vous pouvez imbriquer des mappings, cet exemple mappe le propriétaire aux approbations de l'opérateur
     mapping(address => mapping(address => bool)) private operatorApprovals;
 
-    // Fonction interne pour créer une Pizza aléatoire à partir d'une chaîne de caractères (nom) et d'un ADN
+    // Fonction interne pour créer une Pizza aléatoire à partir d'une chaîne (nom) et d'un ADN
     function _createPizza(string memory _name, uint256 _dna)
-        // Le mot-clé `internal` signifie que cette fonction n'est visible
-        // qu'au sein de ce contrat et des contrats qui dérivent de ce contrat
+        // Le mot-clé `internal` signifie que cette fonction est uniquement visible
+        // dans ce contrat et les contrats qui dérivent de ce contrat
         // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
         internal
         // `isUnique` est un modificateur de fonction qui vérifie si la pizza existe déjà
@@ -389,13 +389,13 @@ contract CryptoPizza is IERC721, ERC165 {
         );
     }
 
-    // Crée une Pizza aléatoire à partir d'une chaîne de caractères (nom)
+    // Crée une Pizza aléatoire à partir d'une chaîne (nom)
     function createRandomPizza(string memory _name) public {
         uint256 randDna = generateRandomDna(_name, msg.sender);
         _createPizza(_name, randDna);
     }
 
-    // Génère un ADN aléatoire à partir d'une chaîne de caractères (nom) et de l'adresse du propriétaire (créateur)
+    // Génère un ADN aléatoire à partir d'une chaîne (nom) et de l'adresse du propriétaire (créateur)
     function generateRandomDna(string memory _str, address _owner)
         public
         // Les fonctions marquées comme `pure` promettent de ne pas lire ou modifier l'état
@@ -403,14 +403,14 @@ contract CryptoPizza is IERC721, ERC165 {
         pure
         returns (uint256)
     {
-        // Génère un uint aléatoire à partir d'une chaîne de caractères (nom) + adresse (propriétaire)
+        // Génère un uint aléatoire à partir d'une chaîne (nom) + adresse (propriétaire)
         uint256 rand = uint256(keccak256(abi.encodePacked(_str))) +
             uint256(_owner);
         rand = rand % dnaModulus;
         return rand;
     }
 
-    // Renvoie le tableau des Pizzas trouvées par le propriétaire
+    // Renvoie le tableau de Pizzas trouvées par le propriétaire
     function getPizzasByOwner(address _owner)
         public
         // Les fonctions marquées comme `view` promettent de ne pas modifier l'état
@@ -450,7 +450,7 @@ contract CryptoPizza is IERC721, ERC165 {
 
     /**
      * Transfère en toute sécurité la propriété d'un ID de jeton donné à une autre adresse
-     * Si l'adresse cible est un contrat, elle doit implémenter `onERC721Received`,
+     * Si l'adresse cible est un contrat, il doit implémenter `onERC721Received`,
      * qui est appelé lors d'un transfert sécurisé, et renvoyer la valeur magique
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))` ;
      * sinon, le transfert est annulé.
@@ -464,7 +464,7 @@ contract CryptoPizza is IERC721, ERC165 {
 
     /**
      * Transfère en toute sécurité la propriété d'un ID de jeton donné à une autre adresse
-     * Si l'adresse cible est un contrat, elle doit implémenter `onERC721Received`,
+     * Si l'adresse cible est un contrat, il doit implémenter `onERC721Received`,
      * qui est appelé lors d'un transfert sécurisé, et renvoyer la valeur magique
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))` ;
      * sinon, le transfert est annulé.
@@ -548,7 +548,7 @@ contract CryptoPizza is IERC721, ERC165 {
 
     /**
      * Fonction privée pour effacer l'approbation actuelle d'un ID de jeton donné
-     * Annule si l'adresse donnée n'est pas en effet le propriétaire du jeton
+     * Annule si l'adresse donnée n'est pas effectivement le propriétaire du jeton
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
         require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
@@ -577,7 +577,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return operatorApprovals[owner][operator];
     }
 
-    // Prend possession de la Pizza - uniquement pour les utilisateurs approuvés
+    // Prend la propriété de la Pizza - uniquement pour les utilisateurs approuvés
     function takeOwnership(uint256 _pizzaId) public {
         require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
         address owner = this.ownerOf(_pizzaId);
@@ -598,7 +598,7 @@ contract CryptoPizza is IERC721, ERC165 {
     {
         address owner = pizzaToOwner[pizzaId];
         // Désactive la vérification solium en raison de
-        // https://github.com/duaraghav8/Solium/issues/175
+        // https://github.com/duaraghav8/Ethlint/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
             this.getApproved(pizzaId) == spender ||
@@ -627,9 +627,9 @@ contract CryptoPizza is IERC721, ERC165 {
         // Actuellement, il n'y a pas de meilleure façon de vérifier s'il y a un contrat à une adresse
         // que de vérifier la taille du code à cette adresse.
         // Voir https://ethereum.stackexchange.com/a/14016/36603
-        // pour plus de détails sur le fonctionnement.
-        // TODO Vérifier cela à nouveau avant la sortie de Serenity, car toutes les adresses seront des
-        // contrats alors.
+        // pour plus de détails sur la façon dont cela fonctionne.
+        // TODO Vérifier cela à nouveau avant la version Serenity, car toutes les adresses seront alors des
+        // contrats.
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)

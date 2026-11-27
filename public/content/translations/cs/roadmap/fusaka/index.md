@@ -1,7 +1,7 @@
 ---
 title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
-description: "Přečtěte si o aktualizaci protokolu Fusaka"
+description: "Fusaka byla spuštěna 3. prosince 2025. Zjistěte, co tato aktualizace Etherea změnila, včetně PeerDAS, který škáluje bloby pro levnější transakce na vrstvě 2 (L2)."
 lang: cs
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -27,11 +27,11 @@ Aktualizace Fusaka je pouze jedním krokem v dlouhodobých cílech vývoje Ether
 
 #### PeerDAS {#peerdas}
 
-Toto je _hlavní tahák_ forku Fusaka, hlavní funkce přidaná v této aktualizaci. Sítě vrstvy 2 (l2) v současnosti odesílají svá data do Etherea v blobech, což je dočasný datový typ vytvořený speciálně pro vrstvu 2 (l2). Před Fusakou musel každý plný uzel ukládat každý blob, aby se zajistilo, že data existují. S rostoucí propustností blobů se stahování všech těchto dat stává neudržitelně náročným na zdroje.
+Toto je _hlavní tahák_ forku Fusaka, hlavní funkce přidaná v této aktualizaci. Sítě vrstvy 2 (L2) v současnosti odesílají svá data do Etherea v blobech, což je dočasný datový typ vytvořený speciálně pro vrstvu 2 (L2). Před Fusakou musel každý plný uzel ukládat každý blob, aby se zajistilo, že data existují. S rostoucí propustností blobů se stahování všech těchto dat stává neudržitelně náročným na zdroje.
 
 Díky [vzorkování dostupnosti dat (DAS)](https://notes.ethereum.org/@fradamt/das-fork-choice) bude každý uzel zodpovědný pouze za podmnožinu dat blobu, místo aby musel ukládat všechna data. Bloby jsou rovnoměrně a náhodně distribuovány mezi uzly v síti, přičemž každý plný uzel uchovává pouze 1/8 dat, což umožňuje teoretické škálování až na osminásobek. Pro zajištění dostupnosti dat lze jakoukoli část dat zrekonstruovat z jakýchkoli existujících 50 % celku pomocí metod, které snižují pravděpodobnost chybných nebo chybějících dat na kryptograficky zanedbatelnou úroveň (\~jedna ku 10<sup>20</sup> až jedna ku 10<sup>24</sup>).
 
-To udržuje požadavky na hardware a šířku pásma pro uzly na přijatelné úrovni a zároveň umožňuje škálování blobů, což vede k většímu škálování s menšími poplatky pro sítě vrstvy 2 (l2).
+To udržuje požadavky na hardware a šířku pásma pro uzly na přijatelné úrovni a zároveň umožňuje škálování blobů, což vede k většímu škálování s menšími poplatky pro sítě vrstvy 2 (L2).
 
 [Přečtěte si více o PeerDAS](/roadmap/fusaka/peerdas/)
 
@@ -43,11 +43,11 @@ To udržuje požadavky na hardware a šířku pásma pro uzly na přijatelné ú
 
 #### Forky pouze pro parametry blobů (Blob-Parameter-Only) {#blob-parameter-only-forks}
 
-Sítě vrstvy 2 (l2) škálují Ethereum – jak jejich sítě rostou, potřebují do Etherea odesílat více dat. To znamená, že Ethereum bude muset postupem času zvyšovat počet blobů, které mají k dispozici. Ačkoli PeerDAS umožňuje škálování dat blobů, je třeba to dělat postupně a bezpečně.
+Sítě vrstvy 2 (L2) škálují Ethereum – jak jejich sítě rostou, potřebují do Etherea odesílat více dat. To znamená, že Ethereum bude muset postupem času zvyšovat počet blobů, které mají k dispozici. Ačkoli PeerDAS umožňuje škálování dat blobů, je třeba to dělat postupně a bezpečně.
 
 Protože Ethereum je kód běžící na tisících nezávislých uzlů, které vyžadují shodu na stejných pravidlech, nemůžeme jednoduše zavádět změny, jako je zvýšení počtu blobů, stejným způsobem, jakým nasazujete aktualizaci webových stránek. Jakákoli změna pravidel musí být koordinovanou aktualizací, při které se každý uzel, klient a software validátoru aktualizuje před stejným předem určeným blokem.
 
-Tyto koordinované aktualizace obecně zahrnují mnoho změn, vyžadují spoustu testování a to zabere čas. Aby se bylo možné rychleji přizpůsobit měnícím se potřebám blobů na vrstvě 2 (l2), forky pouze pro parametry blobů zavádějí mechanismus pro zvýšení počtu blobů, aniž by se muselo čekat na plán těchto velkých aktualizací.
+Tyto koordinované aktualizace obecně zahrnují mnoho změn, vyžadují spoustu testování a to zabere čas. Aby se bylo možné rychleji přizpůsobit měnícím se potřebám blobů na vrstvě 2 (L2), forky pouze pro parametry blobů zavádějí mechanismus pro zvýšení počtu blobů, aniž by se muselo čekat na plán těchto velkých aktualizací.
 
 Forky pouze pro parametry blobů mohou být nastaveny klienty, podobně jako jiná konfigurace, například limit plynu. Mezi hlavními aktualizacemi Etherea se klienti mohou dohodnout na zvýšení `target` a `max` blobů např. na 9 a 12 a provozovatelé uzlů se pak aktualizují, aby se tohoto drobného forku zúčastnili. Tyto forky pouze pro parametry blobů lze nakonfigurovat kdykoli.
 
@@ -61,12 +61,12 @@ Zdroj grafu: [Ethereum Blobs - @hildobby, Dune Analytics](https://dune.com/hildo
 
 #### Základní poplatek za blob ohraničený exekučními náklady {#blob-base-fee-bounded-by-execution-costs}
 
-Sítě vrstvy 2 (l2) platí při odesílání dat dva účty: poplatek za blob a exekuční gas potřebný k ověření těchto blobů. Pokud dominuje exekuční gas, aukce poplatků za blob může klesnout až na 1 Wei a přestat fungovat jako cenový signál.
+Sítě vrstvy 2 (L2) platí při odesílání dat dva účty: poplatek za blob a exekuční gas potřebný k ověření těchto blobů. Pokud dominuje exekuční gas, aukce poplatků za blob může klesnout až na 1 Wei a přestat fungovat jako cenový signál.
 
 EIP-7918 stanovuje pod každý blob proporcionální rezervní cenu. Když je rezerva vyšší než nominální základní poplatek za blob, algoritmus pro úpravu poplatků považuje blok za překračující cíl, přestane tlačit poplatek dolů a umožní mu normálně růst. V důsledku toho:
 
 - trh s poplatky za blob vždy reaguje na přetížení sítě
-- sítě vrstvy 2 (l2) platí alespoň smysluplnou část výpočetního výkonu, který vyžadují od uzlů
+- sítě vrstvy 2 (L2) platí alespoň smysluplnou část výpočetního výkonu, který vyžadují od uzlů
 - skoky základního poplatku na exekuční vrstvě již nemohou srazit poplatek za blob na 1 Wei
 
 **Zdroje**:
@@ -74,7 +74,7 @@ EIP-7918 stanovuje pod každý blob proporcionální rezervní cenu. Když je re
 - [Technická specifikace EIP-7918](https://eips.ethereum.org/EIPS/eip-7918)
 - [Vysvětlení ve Storybooku](https://notes.ethereum.org/@anderselowsson/AIG)
 
-### Škálování vrstvy 1 (l1) {#scale-l1}
+### Škálování vrstvy 1 (L1) {#scale-l1}
 
 #### Exspirace historie a jednodušší účtenky {#history-expiry}
 
@@ -161,11 +161,11 @@ Tato funkce přidává malou instrukci EVM, **počítání úvodních nul (CLZ)*
 
 #### Předkompilovaný kontrakt pro podporu křivky secp256r1 {#secp256r1-precompile}
 
-Zavádí vestavěnou kontrolu podpisů secp256r1 (P-256) ve stylu přístupových klíčů na pevné adrese `0x100` pomocí stejného formátu volání, který již přijalo mnoho sítí vrstvy 2 (l2), a opravuje okrajové případy, takže kontrakty napsané pro tato prostředí fungují na vrstvě 1 (l1) beze změn.
+Zavádí vestavěnou kontrolu podpisů secp256r1 (P-256) ve stylu přístupových klíčů na pevné adrese `0x100` pomocí stejného formátu volání, který již přijalo mnoho sítí vrstvy 2 (L2), a opravuje okrajové případy, takže kontrakty napsané pro tato prostředí fungují na vrstvě 1 (L1) beze změn.
 
 Vylepšení UX! Pro uživatele to odemyká nativní podepisování na zařízení a přístupové klíče. Peněženky mohou přímo využívat Apple Secure Enclave, úložiště klíčů Android, hardwarové bezpečnostní moduly (HSM) a FIDO2/WebAuthn – žádná seed fráze, plynulejší onboarding a vícefaktorové toky, které působí jako moderní aplikace. Výsledkem je lepší UX, snazší obnova a vzorce abstrakce účtu, které odpovídají tomu, co již dělají miliardy zařízení.
 
-Pro vývojáře to znamená, že přijímá 160bajtový vstup a vrací 32bajtový výstup, což usnadňuje portování existujících knihoven a kontraktů z vrstvy 2 (l2). Interně zahrnuje kontroly bodu v nekonečnu a modulárního porovnání, aby se eliminovaly záludné okrajové případy bez narušení platných volajících.
+Pro vývojáře to znamená, že přijímá 160bajtový vstup a vrací 32bajtový výstup, což usnadňuje portování existujících knihoven a kontraktů z vrstvy 2 (L2). Interně zahrnuje kontroly bodu v nekonečnu a modulárního porovnání, aby se eliminovaly záludné okrajové případy bez narušení platných volajících.
 
 **Zdroje**:
 
@@ -205,9 +205,9 @@ Zebra je vývojáři zvoleným „maskotem“ Fusaky, protože její pruhy odrá
 
 Merge v roce 2022 [použil jako maskota pandu](https://x.com/hwwonx/status/1431970802040127498), aby signalizoval spojení exekuční vrstvy a vrstvy konsensu. Od té doby jsou maskoti neformálně vybíráni pro každý fork a objevují se jako ASCII art v protokolech klientů v době aktualizace. Je to jen zábavný způsob oslavy.
 
-### Jaká vylepšení jsou zahrnuta pro škálování vrstvy 2 (l2)? {#what-improvements-are-included-for-l2-scaling}
+### Jaká vylepšení jsou zahrnuta pro škálování vrstvy 2 (L2)? {#what-improvements-are-included-for-l2-scaling}
 
-[PeerDAS](/roadmap/fusaka/peerdas) je hlavní funkcí forku. Implementuje vzorkování dostupnosti dat (DAS), které odemyká větší škálovatelnost pro rollupy, čímž teoreticky škáluje prostor pro bloby až na 8násobek současné velikosti. Trh s poplatky za blob bude také vylepšen, aby efektivně reagoval na přetížení a zaručil, že sítě vrstvy 2 (l2) zaplatí smysluplný poplatek za výpočetní výkon a prostor, který bloby vyžadují od uzlů.
+[PeerDAS](/roadmap/fusaka/peerdas) je hlavní funkcí forku. Implementuje vzorkování dostupnosti dat (DAS), které odemyká větší škálovatelnost pro rollupy, čímž teoreticky škáluje prostor pro bloby až na 8násobek současné velikosti. Trh s poplatky za blob bude také vylepšen, aby efektivně reagoval na přetížení a zaručil, že sítě vrstvy 2 (L2) zaplatí smysluplný poplatek za výpočetní výkon a prostor, který bloby vyžadují od uzlů.
 
 ### V čem se liší forky BPO? {#how-are-bpo-forks-different}
 
@@ -228,7 +228,7 @@ Příklad, jak by to mohlo vypadat:
 
 ### Sníží to poplatky na Ethereu (vrstva 1) {#will-this-lower-gas}
 
-Tato aktualizace nesnižuje poplatky za gas na vrstvě 1 (l1), alespoň ne přímo. Hlavním zaměřením je více prostoru pro bloby pro data rollupů, a tím snížení poplatků na vrstvě 2 (l2). To může mít určité vedlejší účinky na trh s poplatky na vrstvě 1 (l1), ale neočekává se žádná významná změna.
+Tato aktualizace nesnižuje poplatky za gas na vrstvě 1 (L1), alespoň ne přímo. Hlavním zaměřením je více prostoru pro bloby pro data rollupů, a tím snížení poplatků na vrstvě 2 (L2). To může mít určité vedlejší účinky na trh s poplatky na vrstvě 1 (L1), ale neočekává se žádná významná změna.
 
 ### Co musím jako staker udělat pro aktualizaci? {#as-a-staker-what-do-i-need-to-do-for-the-upgrade}
 

@@ -315,7 +315,7 @@ contract Token {
 pragma solidity ^0.5.10;
 
 // Импортирует символы из других файлов в текущий контракт.
-// В данном случае — ряд вспомогательных контрактов из OpenZeppelin.
+// В данном случае — серию вспомогательных контрактов от OpenZeppelin.
 // Узнать больше: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
@@ -323,22 +323,22 @@ import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol
 import "../node_modules/@openzeppelin/contracts/introspection/ERC165.sol";
 import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 
-// Ключевое слово `is` используется для наследования функций и ключевых слов от внешних контрактов.
+// Ключевое слово `is` используется для наследования функций и ключевых слов из внешних контрактов.
 // В данном случае `CryptoPizza` наследует контракты `IERC721` и `ERC165`.
 // Узнать больше: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
     // Использует библиотеку SafeMath от OpenZeppelin для безопасного выполнения арифметических операций.
-    // Узнать больше: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    // Узнать больше: https://docs.openzeppelin.com/contracts/3.x/api/math#safemath
     using SafeMath for uint256;
 
-    // Константные переменные состояния в Solidity похожи на другие языки,
-    // но вы должны присваивать им значения из выражения, которое является константой во время компиляции.
+    // Константные переменные состояния в Solidity похожи на аналогичные в других языках
+    // но им необходимо присваивать выражение, которое является константой во время компиляции.
     // Узнать больше: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
 
-    // Типы структур (Struct) позволяют вам определять свой собственный тип
+    // Типы структур позволяют определять собственный тип
     // Узнать больше: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
     struct Pizza {
         string name;
@@ -348,36 +348,36 @@ contract CryptoPizza is IERC721, ERC165 {
     // Создает пустой массив структур Pizza
     Pizza[] public pizzas;
 
-    // Отображение (mapping) ID пиццы на адрес ее владельца
+    // Отображение ID пиццы на адрес ее владельца
     mapping(uint256 => address) public pizzaToOwner;
 
-    // Отображение (mapping) адреса владельца на количество принадлежащих ему токенов
+    // Отображение адреса владельца на количество принадлежащих ему токенов
     mapping(address => uint256) public ownerPizzaCount;
 
-    // Отображение (mapping) ID токена на одобренный адрес
+    // Отображение ID токена на одобренный адрес
     mapping(uint256 => address) pizzaApprovals;
 
-    // Вы можете вкладывать отображения (mappings), этот пример отображает владельца на одобрения оператора
+    // Вы можете вкладывать отображения друг в друга, этот пример отображает владельца на одобрения операторов
     mapping(address => mapping(address => bool)) private operatorApprovals;
 
     // Внутренняя функция для создания случайной Pizza из строки (имени) и ДНК
     function _createPizza(string memory _name, uint256 _dna)
         // Ключевое слово `internal` означает, что эта функция видима только
-        // внутри этого контракта и контрактов, которые наследуют этот контракт
+        // внутри этого контракта и контрактов, наследующих этот контракт
         // Узнать больше: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
         internal
-        // `isUnique` — это модификатор функции, который проверяет, существует ли уже пицца
+        // `isUnique` — это модификатор функции, который проверяет, существует ли уже такая пицца
         // Узнать больше: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
         isUnique(_name, _dna)
     {
-        // Добавляет Pizza в массив Pizzas и получает id
+        // Добавляет Pizza в массив пицц и получает id
         uint256 id = SafeMath.sub(pizzas.push(Pizza(_name, _dna)), 1);
 
         // Проверяет, что владелец Pizza совпадает с текущим пользователем
         // Узнать больше: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
         // обратите внимание, что address(0) — это нулевой адрес,
-        // указывающий на то, что pizza[id] еще не выделена конкретному пользователю.
+        // указывающий на то, что pizza[id] еще не распределена конкретному пользователю.
 
         assert(pizzaToOwner[id] == address(0));
 
@@ -398,7 +398,7 @@ contract CryptoPizza is IERC721, ERC165 {
     // Генерирует случайную ДНК из строки (имени) и адреса владельца (создателя)
     function generateRandomDna(string memory _str, address _owner)
         public
-        // Функции, помеченные как `pure`, обещают не читать и не изменять состояние
+        // Функции, отмеченные как `pure`, обещают не читать и не изменять состояние
         // Узнать больше: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
         pure
         returns (uint256)
@@ -410,15 +410,15 @@ contract CryptoPizza is IERC721, ERC165 {
         return rand;
     }
 
-    // Возвращает массив Pizzas, найденных по владельцу
+    // Возвращает массив пицц, найденных по владельцу
     function getPizzasByOwner(address _owner)
         public
-        // Функции, помеченные как `view`, обещают не изменять состояние
+        // Функции, отмеченные как `view`, обещают не изменять состояние
         // Узнать больше: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
         view
         returns (uint256[] memory)
     {
-        // Использует местоположение хранилища `memory` для хранения значений только на время
+        // Использует область хранения `memory` для хранения значений только на время
         // жизненного цикла вызова этой функции.
         // Узнать больше: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
@@ -449,7 +449,7 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Безопасно передает право собственности на данный ID токена на другой адрес
+     * Безопасно передает право собственности на заданный ID токена на другой адрес
      * Если целевой адрес является контрактом, он должен реализовывать `onERC721Received`,
      * который вызывается при безопасной передаче и возвращает магическое значение
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
@@ -463,7 +463,7 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Безопасно передает право собственности на данный ID токена на другой адрес
+     * Безопасно передает право собственности на заданный ID токена на другой адрес
      * Если целевой адрес является контрактом, он должен реализовывать `onERC721Received`,
      * который вызывается при безопасной передаче и возвращает магическое значение
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
@@ -517,7 +517,7 @@ contract CryptoPizza is IERC721, ERC165 {
         pizzaToOwner[_pizzaId] = address(0);
     }
 
-    // Возвращает количество Pizzas по адресу
+    // Возвращает количество пицц по адресу
     function balanceOf(address _owner) public view returns (uint256 _balance) {
         return ownerPizzaCount[_owner];
     }
@@ -547,8 +547,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Приватная функция для очистки текущего одобрения данного ID токена
-     * Отменяет транзакцию, если данный адрес на самом деле не является владельцем токена
+     * Приватная функция для очистки текущего одобрения заданного ID токена
+     * Отменяет транзакцию, если указанный адрес на самом деле не является владельцем токена
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
         require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
@@ -559,7 +559,7 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /*
-     * Устанавливает или снимает одобрение данного оператора
+     * Устанавливает или снимает одобрение для заданного оператора
      * Оператору разрешено передавать все токены отправителя от его имени
      */
     function setApprovalForAll(address to, bool approved) public {
@@ -598,14 +598,14 @@ contract CryptoPizza is IERC721, ERC165 {
     {
         address owner = pizzaToOwner[pizzaId];
         // Отключает проверку solium из-за
-        // https://github.com/duaraghav8/Solium/issues/175
+        // https://github.com/duaraghav8/Ethlint/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
             this.getApproved(pizzaId) == spender ||
             this.isApprovedForAll(owner, spender));
     }
 
-    // Проверяет, уникальна ли Pizza и не существует ли она уже
+    // Проверяет, является ли Pizza уникальной и не существует ли она уже
     modifier isUnique(string memory _name, uint256 _dna) {
         bool result = true;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -624,12 +624,12 @@ contract CryptoPizza is IERC721, ERC165 {
     // Возвращает, является ли целевой адрес контрактом
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // В настоящее время нет лучшего способа проверить, есть ли контракт по адресу,
+        // В настоящее время нет лучшего способа проверить, находится ли контракт по адресу
         // чем проверить размер кода по этому адресу.
         // Смотрите https://ethereum.stackexchange.com/a/14016/36603
         // для получения более подробной информации о том, как это работает.
-        // TODO Проверить это снова перед релизом Serenity, потому что все адреса будут
-        // контрактами тогда.
+        // TODO Проверить это снова перед релизом Serenity, потому что тогда все адреса будут
+        // контрактами.
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)

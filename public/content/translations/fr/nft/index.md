@@ -1,7 +1,7 @@
 ---
 title: Jetons non fongibles (NFT)
 metaTitle: Que sont les NFT ? | Avantages et utilisation
-description: "Un aperçu des NFT sur Ethereum"
+description: "Que sont les NFT ? Découvrez comment les jetons non fongibles prouvent la propriété d'œuvres d'art numériques, d'objets de collection, de billets et bien plus sur Ethereum, et comment les utiliser en toute sécurité."
 lang: fr
 template: use-cases
 sidebarDepth: 2

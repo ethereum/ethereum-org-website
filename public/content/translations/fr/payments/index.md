@@ -1,7 +1,7 @@
 ---
 title: Paiements sur Ethereum
 metaTitle: Paiements sur Ethereum
-description: "Un aperçu des paiements sur Ethereum"
+description: "Comment fonctionnent les paiements sur Ethereum ? Découvrez comment envoyer de l'argent dans le monde entier avec de l'ETH et des stablecoins, souvent en quelques secondes et à moindre coût, sans passer par une banque."
 lang: fr
 template: use-cases
 sidebarDepth: 2
@@ -99,7 +99,7 @@ Ces cartes sont directement liées à des portefeuilles non dépositaires ou à 
 
 ## Micropaiements pour les sites web et les agents (x402) {#x402}
 
-[x402](https://www.x402.org/) est une norme de paiement ouverte qui apporte des paiements natifs à l'utilisation sur le web. En utilisant des [stablecoins](/stablecoins/) sur des [réseaux de couche 2 (l2) Ethereum](/layer-2/) à faible coût, la norme x402 rend économique pour les humains et les machines de payer directement pour une action unique, comme lire un article de presse ou appeler une API, plutôt que de gérer des clés d'API, des abonnements ou de « payer » en accordant de l'attention à la publicité.
+[x402](https://www.x402.org/) est une norme de paiement ouverte qui apporte des paiements natifs à l'utilisation sur le web. En utilisant des [stablecoins](/stablecoins/) sur des [réseaux de couche 2 (L2) Ethereum](/layer-2/) à faible coût, la norme x402 rend économique pour les humains et les machines de payer directement pour une action unique, comme lire un article de presse ou appeler une API, plutôt que de gérer des clés d'API, des abonnements ou de « payer » en accordant de l'attention à la publicité.
 
 - **Suppression des murs payants et des connexions :** Au lieu de créer un compte et de partager des informations personnelles pour lire un article de presse, votre portefeuille peut payer les quelques centimes nécessaires pour le débloquer.
 - **Paiements pour les agents IA :** x402 permet aux logiciels autonomes (« agents IA ») de payer pour les données et les appels d'API dont ils ont besoin pour fonctionner, sans intervention humaine.

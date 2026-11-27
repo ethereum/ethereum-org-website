@@ -38,23 +38,22 @@ Kripto para ve Blokzincir teknolojisinin avantajlarından yararlanan merkeziyets
 
 ## Rust projeleri ve araçları {#rust-projects-and-tools}
 
-- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Ethereum benzeri bir ağ ile etkileşim kurmak için externs koleksiyonu_
+- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Ethereum benzeri bir ağ ile etkileşim kurmak için extern koleksiyonu_
 - [Lighthouse](https://github.com/sigp/lighthouse) - _Hızlı Ethereum mutabakat katmanı istemcisi_
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _WebAssembly'nin deterministik bir alt kümesini kullanarak Ethereum akıllı sözleşme yürütme katmanının önerilen yeniden tasarımı_
-- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API referansı_
-- [Solaris](https://github.com/paritytech/sol-rs) - _Yerel Parity İstemcisi EVM'sini kullanan Solidity Akıllı Sözleşmeleri birim test aracı._
+- [Solaris](https://github.com/paritytech/sol-rs) - _Yerel Parity İstemcisi EVM'sini kullanan Solidity Akıllı Sözleşmeleri birim test ortamı._
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust Ethereum Sanal Makinesi Uygulaması_
-- [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Rust'ta Wavelet akıllı sözleşmesi_
+- [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Rust dilinde Wavelet akıllı sözleşmesi_
 - [Foundry](https://github.com/foundry-rs/foundry) - _Ethereum uygulama geliştirme araç seti_
 - [Alloy](https://alloy.rs) - _Ethereum ve diğer EVM tabanlı zincirlerle etkileşim kurmak için yüksek performanslı, iyi test edilmiş ve belgelenmiş kütüphaneler._
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Ethereum kütüphanesi ve cüzdan uygulaması_
-- [SewUp](https://github.com/second-state/SewUp) - _Rust ile Ethereum WebAssembly sözleşmenizi oluşturmanıza ve tıpkı yaygın bir arka uçta geliştirme yapar gibi geliştirmenize yardımcı olan bir kütüphane_
+- [SewUp](https://github.com/second-state/SewUp) - _Rust ile Ethereum webassembly sözleşmenizi oluşturmanıza ve tıpkı yaygın bir arka uçta geliştirme yapıyormuş gibi geliştirmenize yardımcı olacak bir kütüphane_
 - [Substreams](https://github.com/streamingfast/substreams) - _Paralelleştirilmiş Blokzincir veri indeksleme teknolojisi_
-- [Reth](https://github.com/paradigmxyz/reth) Reth (Rust Ethereum'un kısaltması), yeni bir Ethereum tam düğüm uygulamasıdır
+- [Reth](https://github.com/paradigmxyz/reth) Reth (Rust Ethereum'un kısaltması) yeni bir Ethereum tam düğüm uygulamasıdır
 - [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Ethereum ekosisteminde Rust ile yazılmış projelerin özenle seçilmiş bir koleksiyonu_
 - [Stylus](https://github.com/OffchainLabs/stylus) - _Arbitrum üzerinde akıllı sözleşmeler oluşturmak için Rust SDK'sı_
 
-Daha fazla kaynak mı arıyorsunuz? [ethereum.org/developers.](/developers/) sayfasına göz atın.
+Daha fazla kaynak mı arıyorsunuz? [ethereum.org/developers](/developers/) sayfasına göz atın.
 
 ## Rust topluluğu katkıda bulunanları {#rust-community-contributors}
 

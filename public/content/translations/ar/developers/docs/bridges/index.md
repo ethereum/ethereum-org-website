@@ -1,6 +1,6 @@
 ---
 title: "⁦الجسور⁩"
-description: "⁦نظرة عامة على الجسور للمطورين⁩"
+description: "دليل المطورين للجسور: كيف تعمل المراسلة عبر السلاسل وتجسير الرموز المميزة، وأنواع الجسور وافتراضات الثقة، وكيفية دمجها في التطبيقات اللامركزية (⁦dapps⁩)."
 lang: ar
 ---
 
@@ -120,16 +120,16 @@ lang: ar
 - [The Graph](https://thegraph.com/en/)
 - [Tenderly](https://tenderly.co/)
 
-## قراءة إضافية {#further-reading}
+## قراءات إضافية {#further-reading}
 
-- [جسور سلسلة الكتل](/bridges/) – ethereum.org
-- [إطار عمل مخاطر الجسور من L2BEAT](https://l2beat.com/bridges/summary)
-- [جسور سلسلة الكتل: بناء شبكات من شبكات الكريبتو](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 سبتمبر 2021 – Dmitriy Berenzon
-- [المعضلة الثلاثية لقابلية التشغيل البيني](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1 أكتوبر 2021 – Arjun Bhuptani
-- [المجموعات: كيف تشكل الجسور الموثوقة ومقللة الثقة مشهد السلاسل المتعددة](https://blog.celestia.org/clusters/) - 4 أكتوبر 2021 – Mustafa Al-Bassam
-- [LI.FI: مع الجسور، الثقة هي طيف](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28 أبريل 2022 – Arjun Chand
-- [حالة حلول قابلية التشغيل البيني للتجميعات](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 يونيو 2024 – Alex Hook
-- [تسخير الأمان المشترك لقابلية التشغيل البيني الآمنة عبر السلاسل: لجان حالة Lagrange وما بعدها](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 يونيو 2024 – Emmanuel Awosika
+- [جسور سلسلة الكتل](/bridges/) – <span dir="ltr">ethereum.org</span>
+- [إطار عمل مخاطر الجسور من <span dir="ltr">ETHBEAT</span>](https://ethbeat.org/interop/summary)
+- [جسور سلسلة الكتل: بناء شبكات من شبكات الكريبتو](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - <span dir="ltr">Sep 8, 2021</span> – Dmitriy Berenzon
+- [المعضلة الثلاثية لقابلية التشغيل البيني](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - <span dir="ltr">Oct 1, 2021</span> – Arjun Bhuptani
+- [المجموعات: كيف تشكل الجسور الموثوقة ومقللة الثقة مشهد السلاسل المتعددة](https://blog.celestia.org/clusters/) - <span dir="ltr">Oct 4, 2021</span> – Mustafa Al-Bassam
+- [<span dir="ltr">LI.FI</span>: مع الجسور، الثقة هي طيف](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - <span dir="ltr">Apr 28, 2022</span> – Arjun Chand
+- [حالة حلول قابلية التشغيل البيني للتجميعات](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - <span dir="ltr">June 20, 2024</span> – Alex Hook
+- [تسخير الأمان المشترك من أجل قابلية تشغيل بيني آمنة عبر السلاسل: لجان حالة <span dir="ltr">Lagrange</span> وما بعدها](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - <span dir="ltr">June 12, 2024</span> – Emmanuel Awosika
 
 بالإضافة إلى ذلك، إليك بعض العروض التقديمية الثاقبة من [James Prestwich](https://twitter.com/_prestwich) والتي يمكن أن تساعد في تطوير فهم أعمق للجسور:
 

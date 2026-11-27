@@ -1,6 +1,6 @@
 ---
 title: Dezentrale soziale Netzwerke
-description: "Ein Überblick über dezentrale soziale Netzwerke auf Ethereum"
+description: "Was sind dezentrale soziale Netzwerke? Erfahren Sie, wie Sie mit Ethereum-basierten sozialen Apps die Kontrolle über Ihre Identität, Inhalte und Ihr Publikum behalten, anstatt sie einer Plattform zu überlassen."
 lang: de
 template: use-cases
 sidebarDepth: 2

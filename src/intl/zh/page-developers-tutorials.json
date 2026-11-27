@@ -23,5 +23,6 @@
   "page-tutorial-all": "全部",
   "page-tutorial-topics": "主题",
   "page-tutorial-search-placeholder": "搜索教程...",
-  "page-tutorial-filtering-by": "筛选条件："
+  "page-tutorial-filtering-by": "筛选条件：",
+  "page-tutorial-removed-notice": "你请求的教程已不再可用。请在下方浏览仍在维护的教程。"
 }

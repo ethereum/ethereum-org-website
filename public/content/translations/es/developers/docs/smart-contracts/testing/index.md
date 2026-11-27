@@ -165,7 +165,7 @@ El **análisis estático** y el **análisis dinámico** son dos técnicas comune
 
 Un analizador estático toma como entrada el código fuente de un contrato inteligente y genera resultados declarando si un contrato satisface una propiedad o no. A diferencia del análisis dinámico, el análisis estático no implica ejecutar un contrato para analizar su corrección. En cambio, el análisis estático razona sobre todas las rutas posibles que un contrato inteligente podría tomar durante la ejecución (es decir, examinando la estructura del código fuente para determinar qué significaría para la operación del contrato en tiempo de ejecución).
 
-El [linting](https://www.perforce.com/blog/qac/what-is-linting) y las [pruebas estáticas](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) son métodos comunes para ejecutar análisis estáticos en contratos. Ambos requieren analizar representaciones de bajo nivel de la ejecución de un contrato, como [árboles de sintaxis abstracta](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) y [gráficos de flujo de control](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/) generados por el compilador.
+El [linting](https://www.perforce.com/blog/qac/what-is-linting) y las [pruebas estáticas](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) son métodos comunes para ejecutar análisis estáticos en contratos. Ambos requieren analizar representaciones de bajo nivel de la ejecución de un contrato, como [árboles de sintaxis abstracta](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) y [gráficos de flujo de control](https://www.geeksforgeeks.org/software-engineering/software-engineering-control-flow-graph-cfg/) generados por el compilador.
 
 En la mayoría de los casos, el análisis estático es útil para detectar problemas de seguridad como el uso de construcciones inseguras, errores de sintaxis o violaciones de los estándares de codificación en el código de un contrato. Sin embargo, se sabe que los analizadores estáticos son generalmente poco fiables para detectar vulnerabilidades más profundas y pueden producir excesivos falsos positivos.
 
@@ -238,7 +238,7 @@ A diferencia de las pruebas, la verificación formal se puede utilizar para veri
 
 Como se mencionó, las pruebas rigurosas rara vez pueden garantizar la ausencia de errores en un contrato; los enfoques de verificación formal pueden proporcionar garantías más sólidas de corrección, pero actualmente son difíciles de usar e incurren en costos considerables.
 
-Aún así, puede aumentar aún más la posibilidad de detectar vulnerabilidades en los contratos obteniendo una revisión de código independiente. Las [auditorías de contratos inteligentes](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/) y las [recompensas por errores](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) son dos formas de hacer que otros analicen sus contratos.
+Aún así, puede aumentar aún más la posibilidad de detectar vulnerabilidades en los contratos obteniendo una revisión de código independiente. Las [auditorías de contratos inteligentes](https://web.archive.org/web/20260410153159/https://immunebytes.com/blog/what-is-a-smart-contract-audit/) y las [recompensas por errores](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) son dos formas de hacer que otros analicen sus contratos.
 
 Las auditorías son realizadas por auditores con experiencia en encontrar casos de fallas de seguridad y malas prácticas de desarrollo en contratos inteligentes. Una auditoría generalmente incluirá pruebas (y posiblemente verificación formal), así como una revisión manual de toda la base de código.
 
@@ -276,7 +276,7 @@ La principal diferencia es que los programas de recompensas por errores están a
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Linter para hacer cumplir las mejores prácticas de estilo y seguridad para el lenguaje de programación de contratos inteligentes Solidity._
 
-- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Analizador estático basado en Rust diseñado específicamente para la seguridad y el desarrollo de contratos inteligentes Web3._
+- **[Cyfrin Aderyn](https://aderyn.cyfrin.io/overview)** - _Analizador estático basado en Rust diseñado específicamente para la seguridad y el desarrollo de contratos inteligentes Web3._
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Marco de análisis estático basado en Python con detectores de vulnerabilidad y calidad de código, impresoras para extraer información útil del código y soporte para escribir submódulos personalizados._
 
@@ -298,7 +298,6 @@ La principal diferencia es que los programas de recompensas por errores están a
 
 - [Una descripción general y comparación de diferentes productos de prueba](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [Cómo usar Echidna para probar contratos inteligentes](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [Cómo usar Manticore para encontrar errores en contratos inteligentes](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [Cómo usar Slither para encontrar errores en contratos inteligentes](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Cómo simular (mock) contratos de Solidity para pruebas](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Cómo ejecutar pruebas unitarias en Solidity usando Foundry](https://www.rareskills.io/post/foundry-testing-solidity)

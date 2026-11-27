@@ -52,7 +52,7 @@ sidebarDepth: 2
 
 在此背景下的歸檔節點，是指由面向使用者的執行層用戶端所提供的資料，因為它們處理狀態資料庫並提供 JSON-RPC 端點。設定選項、同步時間和資料庫大小可能因用戶端而異。如需詳細資訊，請參閱您的用戶端所提供的文件。
 
-在啟動您自己的歸檔節點之前，請先了解用戶端之間的差異，特別是各種 [硬體要求](/developers/docs/nodes-and-clients/run-a-node/#requirements)。大多數用戶端並未針對此功能進行最佳化，其歸檔需要超過 12TB 的空間。相比之下，像艾瑞貢 (Erigon) 這樣的實作可以在 3TB 以下儲存相同的資料，這使其成為運行歸檔節點最有效的方式。
+在啟動您自己的歸檔節點之前，請先了解用戶端之間的差異，特別是各種[硬體要求](/developers/docs/nodes-and-clients/run-a-node/#requirements)。歸檔大小會因每個用戶端的儲存設計而有很大差異。艾瑞貢 (Erigon)、瑞斯 (Reth) 和 Geth（具有基於路徑的歸檔）儲存主網歸檔大約需要 2-3TB，而貝蘇 (Besu) 和奈瑟邁 (Nethermind) 歸檔則需要 12TB 或更多。
 
 ## 推薦實務 {#recommended-practices}
 
@@ -61,13 +61,13 @@ sidebarDepth: 2
 ### 硬體 {#hardware}
 
 請務必在用戶端文件中驗證特定模式的硬體要求。
-歸檔節點最大的要求是磁碟空間。根據用戶端的不同，空間需求從 3TB 到 12TB 不等。即使 HDD 可能被認為是處理大量資料的更好解決方案，但同步資料並不斷更新鏈頭將需要 SSD 磁碟機。[SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) 磁碟機已經足夠好，但應該具備可靠的品質，至少是 [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences)。磁碟可以安裝在桌上型電腦或具有足夠插槽的伺服器中。這類專用裝置非常適合運行高正常運行時間的節點。完全可以在筆記型電腦上運行它，但便攜性將帶來額外的成本。
+歸檔節點最大的要求是磁碟空間。根據用戶端的不同，它從大約 2TB 到超過 12TB 不等。即使 HDD 可能被認為是處理大量資料的更好解決方案，但同步資料並不斷更新鏈頭將要求使用 SSD 磁碟機。[SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) 磁碟機已經足夠好，但應該具有可靠的品質，至少是 [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences)。磁碟可以安裝在桌上型電腦或具有足夠插槽的伺服器中。這類專用裝置非常適合運行高正常運行時間的節點。完全可以在筆記型電腦上運行它，但便攜性將帶來額外的成本。
 
-所有資料都需要放入一個磁碟區中，因此必須將磁碟合併，例如使用 [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) 或 LVM。也值得考慮使用 [ZFS](https://en.wikipedia.org/wiki/ZFS)，因為它支援「寫入時複製 (Copy-on-write)」，這可確保資料正確寫入磁碟而不會出現任何低階錯誤。
+所有資料都需要放入一個磁碟區中，因此必須將磁碟連接起來，例如使用 [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) 或 LVM。也值得考慮使用 [ZFS](https://en.wikipedia.org/wiki/ZFS)，因為它支援「寫入時複製 (Copy-on-write)」，這可確保資料正確寫入磁碟而不會出現任何低階錯誤。
 
-為了在防止意外資料庫損毀方面獲得更高的穩定性和安全性（特別是在專業設定中），如果您的系統支援，請考慮使用 [ECC 記憶體](https://en.wikipedia.org/wiki/ECC_memory)。通常建議 RAM 的大小與全節點相同，但更多的 RAM 有助於加快同步速度。
+為了在防止意外的資料庫損壞方面獲得更高的穩定性和安全性，特別是在專業設定中，如果您的系統支援，請考慮使用 [ECC 記憶體](https://en.wikipedia.org/wiki/ECC_memory)。通常建議 RAM 的大小與全節點相同，但更多的 RAM 可以幫助加快同步速度。
 
-在初始同步期間，處於歸檔模式的用戶端將執行自創世區塊以來的每筆交易。執行速度主要受限於 CPU，因此更快的 CPU 有助於縮短初始同步時間。在一般的消費級電腦上，初始同步可能需要長達一個月的時間。
+在初始同步期間，處於歸檔模式的用戶端將執行自創世區塊以來的每筆交易。執行速度主要受限於 CPU，因此更快的 CPU 可以幫助縮短初始同步時間。在一般的消費級電腦上，初始同步可能需要長達一個月的時間。
 
 ## 延伸閱讀 {#further-reading}
 

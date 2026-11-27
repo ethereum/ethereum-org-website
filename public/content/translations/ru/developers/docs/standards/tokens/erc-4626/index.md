@@ -51,7 +51,7 @@ function asset() public view returns (address assetTokenAddress)
 function totalAssets() public view returns (uint256)
 ```
 
-Эта функция возвращает общую сумму базовых активов, удерживаемых хранилищем.
+Эта функция возвращает общее количество базовых активов, управляемых хранилищем, включая любые активы, задействованные им в других местах, и за вычетом любых комиссий.
 
 #### convertToShares {#convertoshares}
 
@@ -139,7 +139,7 @@ function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-Эта функция сжигает `shares` у `owner` и отправляет ровно `assets` токенов из хранилища к `receiver`.
+Эта функция сжигает `shares` с баланса `owner` и отправляет ровно `assets` токенов из хранилища к `receiver`.
 
 #### maxRedeem {#maxredeem}
 
@@ -183,7 +183,7 @@ function balanceOf(address owner) public view returns (uint256)
 
 ### Карта интерфейса {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### События {#events}
 

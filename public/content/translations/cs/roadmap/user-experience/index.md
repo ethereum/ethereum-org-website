@@ -19,18 +19,18 @@ template: roadmap
 
 ## Uzly pro každého {#nodes-for-everyone}
 
-Uživatelé provozující [uzly](/glossary/#node) nemusí důvěřovat třetím stranám, že jim poskytnou data, a mohou s [blockchainem](/glossary/#blockchain) Etherea interagovat rychle, soukromě a způsobem nevyžadujícím povolení. Provozování uzlu však v současné době vyžaduje technické znalosti a značný prostor na disku, což znamená, že mnoho lidí musí místo toho důvěřovat zprostředkovatelům.
+Uživatelé provozující [uzly](/glossary/#node) nemusí důvěřovat třetím stranám, že jim poskytnou data, a mohou s [blockchainem](/glossary/#blockchain) Etherea komunikovat rychle, soukromě a způsobem nevyžadujícím povolení. Provozování uzlu však v současnosti vyžaduje technické znalosti a značný prostor na disku, což znamená, že mnoho lidí musí místo toho důvěřovat zprostředkovatelům.
 
-Existuje několik vylepšení, která učiní provozování uzlů mnohem snazším a méně náročným na zdroje. Způsob ukládání dat se změní tak, aby využíval prostorově efektivnější strukturu známou jako **Verkle strom**. Také díky [bezstavovosti](/roadmap/statelessness) nebo [expiraci dat](/roadmap/statelessness/#data-expiry) nebudou uzly Etherea muset ukládat kopii celkových dat o stavu Etherea, což drasticky sníží požadavky na místo na pevném disku. [Lehké uzly](/developers/docs/nodes-and-clients/light-clients/) nabídnou mnoho výhod provozování plného uzlu, ale mohou snadno běžet na mobilních telefonech nebo v jednoduchých aplikacích v prohlížeči.
+Existuje několik vylepšení, díky kterým bude provozování uzlů mnohem snazší a mnohem méně náročné na zdroje. Očekává se, že stav Etherea přejde na novou stromovou strukturu, v současnosti navrhovanou jako binární strom v [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864), která vytváří mnohem menší důkazy. Také díky [bezstavovosti](/roadmap/statelessness) nebo [vypršení platnosti dat](/roadmap/statelessness/#data-expiry) nebudou uzly Etherea muset ukládat kopii všech dat stavu Etherea, což drasticky sníží požadavky na místo na pevném disku. [Lehké uzly](/developers/docs/nodes-and-clients/light-clients/) nabídnou mnoho výhod provozování plného uzlu, ale mohou snadno běžet na mobilních telefonech nebo v jednoduchých aplikacích v prohlížeči.
 
-<ButtonLink variant="outline-color" href="/roadmap/verkle-trees/">Přečtěte si o Verkle stromech</ButtonLink>
+<ButtonLink variant="outline" href="/roadmap/statelessness/">Více o bezstavovosti</ButtonLink>
 
-S těmito vylepšeními se bariéry pro provozování uzlu snižují prakticky na nulu. Uživatelé budou těžit z bezpečného přístupu k Ethereu, který nevyžaduje povolení, aniž by museli obětovat znatelné místo na disku nebo výkon procesoru na svém počítači či mobilním telefonu, a při používání aplikací se nebudou muset spoléhat na třetí strany ohledně dat nebo přístupu k síti.
+S těmito vylepšeními se bariéry pro provozování uzlu snižují prakticky na nulu. Uživatelé budou těžit z bezpečného přístupu k Ethereu nevyžadujícího povolení, aniž by museli obětovat znatelné místo na disku nebo výkon procesoru na svém počítači nebo mobilním telefonu, a při používání aplikací se nebudou muset spoléhat na třetí strany ohledně dat nebo přístupu k síti.
 
 ## Současný pokrok {#current-progress}
 
 Peněženky s chytrými kontrakty jsou již k dispozici, ale je zapotřebí dalších vylepšení, aby byly co nejvíce decentralizované a nevyžadující povolení. EIP-4337 je vyspělý návrh, který nevyžaduje žádné změny protokolu Etherea. Hlavní chytrý kontrakt požadovaný pro EIP-4337 byl **nasazen v březnu 2023**.
 
-**Úplná bezstavovost je stále ve fázi výzkumu** a její implementace je pravděpodobně ještě několik let vzdálená. Na cestě k úplné bezstavovosti je několik milníků, včetně expirace dat, které mohou být implementovány dříve. Nejprve je třeba dokončit další položky plánu vývoje, jako jsou [Verkle stromy](/roadmap/verkle-trees/) a [oddělení navrhovatele a tvůrce (PBS)](/roadmap/pbs/).
+**Úplná bezstavovost je stále ve fázi výzkumu** a její implementace je pravděpodobně vzdálena několik let. Na cestě k úplné bezstavovosti je několik milníků, včetně vypršení platnosti dat, které mohou být implementovány dříve. Nejprve je třeba dokončit další položky plánu vývoje, jako je nový strom stavu (v současnosti navrhovaný jako binární strom v [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) a [oddělení navrhovatele a tvůrce](/roadmap/pbs/).
 
-Testnety pro Verkle stromy jsou již v provozu a další fází je spuštění klientů s podporou Verkle stromů na soukromých a poté veřejných testnetech. Pokrok můžete pomoci urychlit nasazením kontraktů na testnety nebo provozováním klientů na testnetu.
+Pro tuto roli byly zkoumány [Verkle stromy](/roadmap/verkle-trees/), ale návrh Verkle stromů ([EIP-6800](https://eips.ethereum.org/EIPS/eip-6800)) nyní stagnuje. EIP-7864 je stále konceptem a nebyl naplánován pro upgrade sítě.

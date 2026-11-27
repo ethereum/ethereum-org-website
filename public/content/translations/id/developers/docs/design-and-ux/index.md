@@ -1,6 +1,6 @@
 ---
 title: Desain dan UX di Web3
-description: Pengantar desain dan riset UX di ruang Web3 dan Ethereum
+description: "Pengantar desain dan UX di Web3: riset, pola, dan sumber daya untuk membantu Anda membangun aplikasi Ethereum yang mudah, aman, dan jelas untuk digunakan."
 lang: id
 ---
 

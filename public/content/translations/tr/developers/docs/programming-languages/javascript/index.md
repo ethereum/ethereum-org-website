@@ -4,7 +4,7 @@ description: "JavaScript tabanlı projeleri ve araçları kullanarak Ethereum i�
 lang: tr
 ---
 
-JavaScript, Ethereum ekosistemindeki en popüler diller arasındadır. Hatta, Ethereum'u mümkün olduğunca JavaScript'e taşımaya adanmış bir [ekip](https://github.com/ethereumjs) bulunmaktadır.
+JavaScript, temel protokol ilkellerinden üretim düzeyinde bir fikir birliği istemcisine kadar her şeyin JavaScript ve TypeScript uygulamalarıyla Ethereum ekosistemindeki en popüler diller arasındadır.
 
 [Yığının tüm seviyelerinde](/developers/docs/ethereum-stack/) JavaScript (veya ona yakın bir şey) yazma fırsatları vardır.
 
@@ -52,10 +52,15 @@ Eğer kod okumayı tercih ediyorsanız, bu JavaScript belgelerimizi okumaya hari
 
 ### Düğümler ve istemciler {#nodes-and-clients}
 
-Ethereum istemcilerinin nasıl çalıştığını anladığınız bir dilde, yani JavaScript'te incelemenizi sağlayan bir EthereumJS istemcisi aktif olarak geliştirilmektedir!
+[Lodestar](https://lodestar.chainsafe.io/), TypeScript ile yazılmış ve ChainSafe tarafından sürdürülen, üretime hazır bir fikir birliği istemcisidir. Bir işaret düğümü ve doğrulayıcı istemcisi içerir ve Ethereum'un Hisse Kanıtı mutabakatının bildiğiniz bir dilde nasıl çalıştığını görmek için iyi bir yerdir.
 
-**İstemciye göz atın**  
-[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**Lodestar'a göz atın**  
+[`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
+
+Yürütme tarafında, EthereumJS istemcisi kullanımdan kaldırılmış ve arşivlenmiştir, ancak kaynak kodu bir Ethereum istemcisinin JavaScript'te nasıl çalıştığını keşfetmek için hala mevcuttur.
+
+**Arşivlenmiş istemciye göz atın**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/archive/client)
 
 ## Diğer projeler {#other-projects}
 

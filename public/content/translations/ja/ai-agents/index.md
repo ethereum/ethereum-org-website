@@ -1,7 +1,7 @@
 ---
 title: "AI・エージェント"
 metaTitle: "AI・エージェント | イーサリアム上のAI・エージェント"
-description: "イーサリアム上のAI・エージェントの概要"
+description: "イーサリアム上のAI・エージェントとは？自律型エージェントが資産を保持し、取引を行い、分散型金融 (DeFi) を使用し、オンチェーンで互いに支払いを行う方法と、注意すべきリスクについて学びましょう。"
 lang: ja
 template: use-cases
 sidebarDepth: 2

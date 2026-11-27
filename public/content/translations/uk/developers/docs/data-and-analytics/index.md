@@ -1,6 +1,6 @@
 ---
 title: "Дані та аналітика"
-description: "Як отримувати ончейн-аналітику та дані для використання у ваших децентралізованих застосунках (dapp)"
+description: "Як отримати ончейн-дані для вашого dapp: індексатори, підграфи, оглядачі блоків, платформи SQL-аналітики та API для виконання запитів і аналізу даних Етеріуму."
 lang: uk
 ---
 
@@ -80,12 +80,12 @@ EVM Query Language (EQL) — це SQL-подібна мова, розробле�
 
 - [Дослідження криптоданих I: Архітектури потоків даних](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
 - [Огляд мережі Graph](https://thegraph.com/docs/en/about/)
-- [Пісочниця запитів Graph](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
+- [Оглядач Graph](https://thegraph.com/explorer)
 - [Приклади коду API на Etherscan](https://etherscan.io/apis#contracts)
 - [Документація API на Blockscout](https://docs.blockscout.com/devs/apis)
 - [Оглядач сигнального ланцюга Beaconcha.in](https://beaconcha.in)
 - [Основи Dune](https://docs.dune.com/#dune-basics)
-- [Короткий посібник з Етеріуму від SubQuery](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
+- [Короткий посібник із SubQuery для Етеріуму](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [Огляд мережі SQD](https://docs.sqd.dev/)
 - [EVM Query Language](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 

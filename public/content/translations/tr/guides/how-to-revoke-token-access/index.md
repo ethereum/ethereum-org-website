@@ -1,6 +1,6 @@
 ---
 title: "Kripto fonlarınıza olan akıllı sözleşme erişimi nasıl iptal edilir"
-description: "Kötü niyetli akıllı sözleşme token erişimini iptal etme üzerine bir nasıl yapılır rehberi"
+description: "Token onaylarını iptal etmeye yönelik adım adım bir rehber: hangi akıllı sözleşmelerin kriptonuzu harcayabileceğini bulun ve fonlarınızı korumak için erişimi kaldırın."
 lang: tr
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Pengantar tata kelola Ethereum
 metaTitle: Tata Kelola Ethereum
-description: Pengantar tentang bagaimana keputusan mengenai Ethereum dibuat.
+description: Bagaimana keputusan tentang Ethereum dibuat? Pelajari bagaimana perubahan protokol diusulkan, diperdebatkan, dan diadopsi oleh pengembang, operator node, dan komunitas.
 lang: id
 ---
 
@@ -71,7 +71,7 @@ Proses formal untuk memperkenalkan perubahan pada protokol Ethereum adalah sebag
 
 1. **Mengusulkan EIP Inti**: seperti yang dijelaskan dalam [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips), langkah pertama untuk secara formal mengusulkan perubahan pada Ethereum adalah merincinya dalam EIP Inti. Ini akan bertindak sebagai spesifikasi resmi untuk EIP yang akan diterapkan oleh Pengembang Protokol jika diterima.
 
-2. **Mempresentasikan EIP Anda kepada Pengembang Protokol**: setelah Anda memiliki EIP Inti yang telah mengumpulkan masukan komunitas, Anda harus mempresentasikannya kepada Pengembang Protokol. Anda dapat melakukannya dengan mengusulkannya untuk didiskusikan pada [panggilan AllCoreDevs](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status). Kemungkinan beberapa diskusi telah terjadi secara asinkron di [forum Ethereum Magicians](https://ethereum-magicians.org/) atau di [Discord R&D Ethereum](https://discord.gg/mncqtgVSVw).
+2. **Mempresentasikan EIP Anda kepada Pengembang Protokol**: setelah Anda memiliki EIP Inti yang telah mengumpulkan masukan komunitas, Anda harus mempresentasikannya kepada Pengembang Protokol. Anda dapat melakukannya dengan mengusulkannya untuk didiskusikan pada [panggilan AllCoreDevs](https://eips.ethereum.org/EIPS/eip-7723). Kemungkinan beberapa diskusi telah terjadi secara asinkron di [forum Ethereum Magicians](https://ethereum-magicians.org/) atau di [Discord R&D Ethereum](https://discord.gg/mncqtgVSVw).
 
 > Potensi hasil dari tahap ini adalah:
 

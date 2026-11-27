@@ -1,7 +1,7 @@
 ---
 title: Aset dunia nyata (RWA)
 metaTitle: Apa itu RWA? | Manfaat dan Penggunaan Aset dunia nyata
-description: Gambaran umum tentang Aset dunia nyata di Ethereum
+description: Apa itu aset dunia nyata (RWA)? Pelajari bagaimana aset seperti surat utang negara, real estat, dan komoditas ditokenisasi di Ethereum, serta manfaat dan risikonya.
 lang: id
 template: use-cases
 image: /images/man-and-dog-playing.png

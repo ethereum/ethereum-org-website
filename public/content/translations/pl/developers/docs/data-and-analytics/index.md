@@ -1,6 +1,6 @@
 ---
 title: Dane i analityka
-description: "Jak uzyskać analitykę i dane onchain do wykorzystania w twoich zdecentralizowanych aplikacjach (dapp)"
+description: "Jak uzyskać dane onchain dla dappa: indeksatory, podgrafy, eksploratory bloków, platformy analityczne SQL i API do odpytywania i analizowania danych Ethereum."
 lang: pl
 ---
 
@@ -80,7 +80,7 @@ Aby rozpocząć, postępuj zgodnie z [przewodnikiem szybkiego startu HyperIndex]
 
 - [Eksploracja danych krypto I: Architektury przepływu danych](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
 - [Przegląd sieci Graph](https://thegraph.com/docs/en/about/)
-- [Środowisko testowe zapytań Graph](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
+- [Eksplorator Graph](https://thegraph.com/explorer)
 - [Przykłady kodu API w Etherscan](https://etherscan.io/apis#contracts)
 - [Dokumentacja API w Blockscout](https://docs.blockscout.com/devs/apis)
 - [Eksplorator Beacon Chain Beaconcha.in](https://beaconcha.in)

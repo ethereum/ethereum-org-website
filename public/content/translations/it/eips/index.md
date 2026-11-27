@@ -1,7 +1,7 @@
 ---
 title: Introduzione alle Proposte di Miglioramento di Ethereum (EIP)
 metaTitle: Proposte di Miglioramento di Ethereum (EIP)
-description: Le informazioni di base necessarie per comprendere le EIP
+description: Cosa sono le Proposte di Miglioramento di Ethereum (EIP)? Scopri come le modifiche a Ethereum vengono proposte, discusse e adottate, e come puoi partecipare.
 lang: it
 ---
 
@@ -15,7 +15,7 @@ Chiunque all'interno della community di Ethereum ha la possibilità di creare un
 
 Le EIP svolgono un ruolo centrale nel modo in cui le modifiche avvengono e vengono documentate su Ethereum. Sono il modo in cui le persone possono proporre, dibattere e adottare le modifiche. Esistono [diversi tipi di EIP](https://eips.ethereum.org/EIPS/eip-1#eip-types), tra cui le EIP principali (core) per le modifiche di basso livello al protocollo che influenzano il consenso e richiedono un aggiornamento della rete come l'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), e le ERC per gli standard delle applicazioni come l'[EIP-20](https://eips.ethereum.org/EIPS/eip-20) e l'[EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
-Ogni aggiornamento della rete consiste in un insieme di EIP che devono essere implementate da ciascun [client di Ethereum](/learn/#clients-and-nodes) sulla rete. Ciò significa che per rimanere in consenso con gli altri client sulla Mainnet di Ethereum, gli sviluppatori dei client devono assicurarsi di aver implementato tutte le EIP richieste.
+Ogni aggiornamento della rete consiste in un insieme di EIP che devono essere implementate da ciascun [client di Ethereum](/developers/docs/nodes-and-clients/) sulla rete. Ciò significa che per rimanere in consenso con gli altri client sulla Mainnet di Ethereum, gli sviluppatori dei client devono assicurarsi di aver implementato tutte le EIP richieste.
 
 Oltre a fornire una specifica tecnica per le modifiche, le EIP sono l'unità attorno alla quale avviene la governance in Ethereum: chiunque è libero di proporne una, e poi i vari stakeholder della community ne discuteranno per determinare se debba essere adottata come standard o inclusa in un aggiornamento della rete. Poiché le EIP non principali (non-core) non devono essere adottate da tutte le applicazioni (ad esempio, è possibile creare un token fungibile che non implementa l'EIP-20), ma le EIP principali devono essere ampiamente adottate (perché tutti i nodi devono aggiornarsi per rimanere parte della stessa rete), le EIP principali richiedono un consenso più ampio all'interno della community rispetto alle EIP non principali.
 

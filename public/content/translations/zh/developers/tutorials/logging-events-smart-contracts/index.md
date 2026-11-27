@@ -11,8 +11,6 @@ skill: intermediate
 breadcrumb: "事件记录"
 lang: zh
 published: 2020-04-03
-source: EthereumDev
-sourceUrl: https://ethereumdev.io/logging-data-with-events/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
@@ -20,33 +18,34 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 ## 事件 {#events}
 
-在撰写本文时，以太坊区块链上最常见的事件是 ERC-20 代币在有人转账代币时触发的 Transfer 事件。
+以太坊区块链上最常见的事件之一是 ``Transfer`` 事件，当有人转账代币时，ERC-20 代币会触发该事件。
 
 ```solidity
 event Transfer(address indexed from, address indexed to, uint256 value);
 ```
 
-事件签名在合约代码内部声明，并可以使用 emit 关键字触发。例如，transfer 事件记录了谁发起了转账（_from_）、转账给谁（_to_）以及转账了多少代币（_value_）。
+事件签名在合约代码内部声明，并且可以使用 emit 关键字触发。例如，转账事件会记录谁发起了转账（_from_）、转给谁（_to_）以及转账了多少代币（_value_）。
 
-如果我们回到我们的 Counter 智能合约，并决定在每次值更改时进行记录。由于该合约不打算被部署，而是作为通过继承来构建另一个合约的基础：它被称为抽象合约。在我们的计数器示例中，它看起来像这样：
+让我们回到[部署你的第一个智能合约](/developers/tutorials/deploying-your-first-smart-contract/)中的 ``Counter`` 智能合约，并在每次值改变时记录日志。它看起来像这样：
 
 ```solidity
-pragma solidity 0.5.17;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
 
 contract Counter {
 
-    event ValueChanged(uint oldValue, uint256 newValue);
+    event ValueChanged(uint256 oldValue, uint256 newValue);
 
-    // 类型为无符号整型的私有变量，用于保存计数数量
-    uint256 private count = 0;
+    // 无符号整型公有变量，用于记录计数值
+    uint256 public count = 0;
 
-    // 用于递增计数器的函数
+    // 递增计数器的函数
     function increment() public {
         count += 1;
         emit ValueChanged(count - 1, count);
     }
 
-    // 用于获取计数值的 Getter
+    // 非必需的 getter，用于获取计数值
     function getCount() public view returns (uint256) {
         return count;
     }
@@ -56,12 +55,12 @@ contract Counter {
 
 请注意：
 
-- **第 5 行**：我们声明了我们的事件及其包含的内容，即旧值和新值。
+- **第 6 行**：我们声明了我们的事件及其包含的内容，即旧值和新值。
 
-- **第 13 行**：当我们递增 count 变量时，我们触发该事件。
+- **第 14 行**：当我们递增 count 变量时，我们触发该事件。
 
-如果我们现在部署该合约并调用 increment 函数，我们会看到，如果你点击名为 logs 的数组中的新交易，Remix 将自动显示它。
+如果我们现在部署合约并调用 increment 函数，你会看到，如果你点击新交易，Remix 会在一个名为 logs 的数组中自动显示它。
 
-![Remix screenshot](./remix-screenshot.png)
+![Remix 屏幕截图](./remix-screenshot.png)
 
-日志对于调试智能合约非常有用，但如果你构建供不同人使用的应用程序，它们也很重要，并且可以更轻松地进行分析以跟踪和了解智能合约的使用情况。交易生成的日志会显示在流行的区块浏览器中，例如，你还可以使用它们创建链下脚本，以监听特定事件并在事件发生时采取行动。
+日志对于调试智能合约非常有用，但如果你构建供不同人使用的应用程序，它们也很重要，并且可以让你更轻松地进行分析，以跟踪和了解你的智能合约是如何被使用的。交易生成的日志会显示在流行的区块浏览器中，例如，你还可以使用它们创建链下脚本，以监听特定事件并在事件发生时采取行动。

@@ -66,7 +66,7 @@ Các thư viện này trừu tượng hóa phần lớn sự phức tạp khi t�
 **Infura -** **_API Ethereum dưới dạng dịch vụ._**
 
 - [infura.io](https://infura.io)
-- [Tài liệu](https://docs.infura.io/api)
+- [Tài liệu](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _Nhà cung cấp JSON-RPC của Máy ảo Ethereum (EVM) tiết kiệm chi phí_**
@@ -77,7 +77,7 @@ Các thư viện này trừu tượng hóa phần lớn sự phức tạp khi t�
 **NOWNodes - _Các nút đầy đủ và trình khám phá khối._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Tài liệu](https://nownodes.gitbook.io/documentation)
+- [Tài liệu](https://docs.nownodes.io/)
 
 **QuickNode -** **_Cơ sở hạ tầng chuỗi khối dưới dạng dịch vụ._**
 
@@ -143,9 +143,9 @@ Các thư viện này trừu tượng hóa phần lớn sự phức tạp khi t�
 - [Tài liệu](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
-### Dịch vụ chuỗi khối {#blockchain-services}
+### Các dịch vụ chuỗi khối {#blockchain-services}
 
-**BlockCypher -** **_Các Web API của Ethereum._**
+**BlockCypher -** **_Các API Web Ethereum._**
 
 - [blockcypher.com](https://www.blockcypher.com/)
 - [Tài liệu](https://www.blockcypher.com/dev/ethereum/)
@@ -162,7 +162,7 @@ Các thư viện này trừu tượng hóa phần lớn sự phức tạp khi t�
 - [Tài liệu](https://docs.chainstack.com/)
 - [Tài liệu tham khảo API Ethereum](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**Coinbase Cloud Node -** **_API cơ sở hạ tầng chuỗi khối._**
+**Coinbase Cloud Node -** **_API Cơ sở hạ tầng chuỗi khối._**
 
 - [Coinbase Cloud Node](https://www.coinbase.com/developer-platform)
 - [Tài liệu](https://docs.cdp.coinbase.com/)
@@ -176,11 +176,10 @@ Các thư viện này trừu tượng hóa phần lớn sự phức tạp khi t�
 
 - [moralis.io](https://moralis.io)
 - [Tài liệu](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [Discord](https://moralis.io/joindiscord/)
 - [Diễn đàn](https://forum.moralis.io/)
 
-**NFTPort -** **_Các API dữ liệu và đúc của Ethereum._**
+**NFTPort -** **_Các API Dữ liệu và Đúc của Ethereum._**
 
 - [nftport.xyz](https://www.nftport.xyz/)
 - [Tài liệu](https://docs.nftport.xyz/)
@@ -210,10 +209,9 @@ Các thư viện này trừu tượng hóa phần lớn sự phức tạp khi t�
 **Covalent -** **_Các API chuỗi khối phong phú cho hơn 200 chuỗi._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [Tài liệu](https://www.covalenthq.com/docs/api/)
+- [Tài liệu](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
-
 
 ## Đọc thêm {#further-reading}
 
@@ -226,5 +224,4 @@ _Bạn biết một tài nguyên cộng đồng nào đó đã giúp ích cho b�
 
 ## Các hướng dẫn liên quan {#related-tutorials}
 
-- [Thiết lập Web3.js để sử dụng chuỗi khối Ethereum trong JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Hướng dẫn thiết lập Web3.js trong dự án của bạn._
-- [Gọi một hợp đồng thông minh từ JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Sử dụng token DAI, xem cách gọi hàm của hợp đồng bằng JavaScript._
+- [Các thành phần máy chủ và tác nhân cho các ứng dụng Web3](/developers/tutorials/server-components/) _– Cách viết các thành phần máy chủ TypeScript lắng nghe các sự kiện chuỗi khối và phản hồi bằng các giao dịch._

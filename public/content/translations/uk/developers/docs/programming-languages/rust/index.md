@@ -38,21 +38,20 @@ incomplete: true
 
 ## Проєкти та інструменти на Rust {#rust-projects-and-tools}
 
-- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) — _Колекція externs для взаємодії з мережею, подібною до Етеріуму_
-- [Лайтхаус](https://github.com/sigp/lighthouse) — _Швидкий клієнт рівня консенсусу Етеріуму_
-- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) — _Запропонований редизайн рівня виконання смарт-контрактів Етеріуму з використанням детермінованої підмножини WebAssembly_
-- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) — _Довідник з API OASIS_
-- [Solaris](https://github.com/paritytech/sol-rs) — _Середовище модульного тестування смарт-контрактів Solidity з використанням нативної EVM клієнта Parity._
-- [SputnikVM](https://github.com/rust-blockchain/evm) — _Реалізація віртуальної машини Етеріуму на Rust_
-- [Wavelet](https://github.com/perlin-network/smart-contract-rs) — _Смарт-контракт Wavelet на Rust_
-- [Foundry](https://github.com/foundry-rs/foundry) — _Набір інструментів для розробки застосунків для Етеріуму_
-- [Alloy](https://alloy.rs) — _Високопродуктивні, добре протестовані та задокументовані бібліотеки для взаємодії з Етеріумом та іншими мережами на базі EVM._
-- [Ethers_rs](https://github.com/gakonst/ethers-rs) — _Бібліотека Етеріуму та реалізація гаманця_
-- [SewUp](https://github.com/second-state/SewUp) — _Бібліотека, яка допоможе вам створити контракт WebAssembly для Етеріуму за допомогою Rust, подібно до розробки звичайного бекенду_
-- [Substreams](https://github.com/streamingfast/substreams) — _Технологія паралельного індексування даних блокчейну_
+- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Колекція зовнішніх функцій (externs) для взаємодії з мережею, подібною до Етеріуму_
+- [Лайтхаус](https://github.com/sigp/lighthouse) - _Швидкий клієнт рівня консенсусу Етеріуму_
+- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _Запропонований редизайн рівня виконання смарт-контрактів Етеріуму з використанням детермінованої підмножини WebAssembly_
+- [Solaris](https://github.com/paritytech/sol-rs) - _Середовище модульного тестування смарт-контрактів на Solidity з використанням нативної EVM клієнта Parity._
+- [SputnikVM](https://github.com/rust-blockchain/evm) - _Реалізація віртуальної машини Ethereum (EVM) на Rust_
+- [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Смарт-контракт Wavelet на Rust_
+- [Foundry](https://github.com/foundry-rs/foundry) - _Набір інструментів для розробки застосунків для Етеріуму_
+- [Alloy](https://alloy.rs) - _Високопродуктивні, добре протестовані та задокументовані бібліотеки для взаємодії з Етеріумом та іншими мережами на базі EVM._
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Бібліотека Етеріуму та реалізація гаманця_
+- [SewUp](https://github.com/second-state/SewUp) - _Бібліотека, яка допоможе вам створити контракт WebAssembly для Етеріуму на Rust, подібно до розробки звичайного бекенду_
+- [Substreams](https://github.com/streamingfast/substreams) - _Технологія паралельного індексування даних блокчейну_
 - [Рет](https://github.com/paradigmxyz/reth) Рет (скорочення від Rust Ethereum) — це нова реалізація повного вузла Етеріуму
-- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) — _Кураторська колекція проєктів в екосистемі Етеріуму, написаних на Rust_
-- [Stylus](https://github.com/OffchainLabs/stylus) — _SDK на Rust для створення смарт-контрактів на Arbitrum_
+- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Кураторська колекція проєктів в екосистемі Етеріуму, написаних на Rust_
+- [Stylus](https://github.com/OffchainLabs/stylus) - _SDK на Rust для створення смарт-контрактів на Arbitrum_
 
 Шукаєте більше ресурсів? Перегляньте [ethereum.org/developers.](/developers/)
 

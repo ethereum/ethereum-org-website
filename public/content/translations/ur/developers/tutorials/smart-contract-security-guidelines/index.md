@@ -26,7 +26,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 - **سسٹم کی سادہ انگریزی میں تفصیل**، جو یہ بیان کرے کہ کنٹریکٹس کیا کرتے ہیں اور کوڈ بیس پر کوئی مفروضات کیا ہیں۔
 - **سکیما اور آرکیٹیکچرل ڈائیگرامز**، بشمول کنٹریکٹ کے تعاملات اور سسٹم کی حالت (state) مشین۔ [سلدر (Slither) پرنٹرز](https://github.com/crytic/slither/wiki/Printer-documentation) ان سکیموں کو بنانے میں مدد کر سکتے ہیں۔
-- **کوڈ کی مکمل دستاویزات**، <span dir="ltr">Solidity</span> کے لیے [<span dir="ltr">NatSpec</span> فارمیٹ](https://docs.soliditylang.org/en/develop/natspec-format.html) استعمال کیا جا سکتا ہے۔
+- **کوڈ کی مکمل دستاویزات**، <span dir="ltr">Solidity</span> کے لیے [<span dir="ltr">NatSpec</span> فارمیٹ](https://docs.soliditylang.org/en/latest/natspec-format.html) استعمال کیا جا سکتا ہے۔
 
 ### آن چین بمقابلہ آف چین کمپیوٹیشن {#onchain-vs-offchain-computation}
 
@@ -75,15 +75,15 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 ### ٹیسٹنگ اور تصدیق {#testing-and-verification}
 
-- **مکمل یونٹ ٹیسٹ لکھیں۔** اعلیٰ معیار کا سافٹ ویئر بنانے کے لیے ایک وسیع ٹیسٹ سویٹ بہت ضروری ہے۔
-- **[سلدر](https://github.com/crytic/slither)، [ایکڈنا](https://github.com/crytic/echidna) اور [مینٹیکور](https://github.com/trailofbits/manticore) کی کسٹم چیکس اور پراپرٹیز لکھیں۔** خودکار ٹولز یہ یقینی بنانے میں مدد کریں گے کہ آپ کا کنٹریکٹ محفوظ ہے۔ موثر چیکس اور پراپرٹیز لکھنے کا طریقہ سیکھنے کے لیے اس گائیڈ کے باقی حصے کا جائزہ لیں۔
-- **[<span dir="ltr">crytic.io</span>](https://crytic.io/) استعمال کریں۔** <span dir="ltr">Crytic</span> <span dir="ltr">GitHub</span> کے ساتھ مربوط ہوتا ہے، نجی سلدر ڈیٹیکٹرز تک رسائی فراہم کرتا ہے، اور ایکڈنا سے کسٹم پراپرٹی چیکس چلاتا ہے۔
+- **جامع یونٹ ٹیسٹس لکھیں۔** اعلیٰ معیار کا سافٹ ویئر بنانے کے لیے ایک وسیع ٹیسٹ سویٹ بہت ضروری ہے۔
+- **[سلدر](https://github.com/crytic/slither)، [ایکڈنا](https://github.com/crytic/echidna) اور [<span dir="ltr">Medusa</span>](https://github.com/crytic/medusa) کے کسٹم چیکس اور پراپرٹیز لکھیں۔** خودکار ٹولز آپ کے کنٹریکٹ کو محفوظ بنانے میں مدد کریں گے۔ موثر چیکس اور پراپرٹیز لکھنے کا طریقہ سیکھنے کے لیے اس گائیڈ کے باقی حصے کا جائزہ لیں۔
+- **ان ٹولز کو مسلسل انضمام (continuous integration) میں چلائیں۔** ہر پل ریکوئسٹ پر سلدر اور اپنی فزنگ پراپرٹیز کو چلانے سے ریگریشنز کو ضم ہونے سے پہلے ہی پکڑا جا سکتا ہے۔
 
-### Solidity {#solidity}
+### <span dir="ltr">Solidity</span> {#solidity}
 
-- **<span dir="ltr">Solidity 0.4</span> اور <span dir="ltr">0.6</span> کے مقابلے میں <span dir="ltr">Solidity 0.5</span> کو ترجیح دیں۔** ہماری رائے میں، <span dir="ltr">Solidity 0.5</span> زیادہ محفوظ ہے اور اس میں <span dir="ltr">0.4</span> کے مقابلے میں بہتر بلٹ ان پریکٹسز ہیں۔ <span dir="ltr">Solidity 0.6</span> پروڈکشن کے لیے بہت غیر مستحکم ثابت ہوئی ہے اور اسے پختہ ہونے کے لیے وقت درکار ہے۔
-- **کمپائل کرنے کے لیے ایک مستحکم ریلیز استعمال کریں؛ وارننگز چیک کرنے کے لیے تازہ ترین ریلیز استعمال کریں۔** چیک کریں کہ آپ کے کوڈ میں تازہ ترین کمپائلر ورژن کے ساتھ کوئی رپورٹ شدہ مسائل نہیں ہیں۔ تاہم، <span dir="ltr">Solidity</span> کا ریلیز سائیکل تیز ہے اور اس میں کمپائلر بگز کی تاریخ رہی ہے، اس لیے ہم تعیناتی کے لیے تازہ ترین ورژن کی سفارش نہیں کرتے (سلدر کی [<span dir="ltr">solc</span> ورژن کی سفارش](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33) دیکھیں)۔
-- **ان لائن اسمبلی (inline assembly) استعمال نہ کریں۔** اسمبلی کے لیے <span dir="ltr">EVM</span> کی مہارت درکار ہوتی ہے۔ اگر آپ نے یلو پیپر پر _عبور_ حاصل نہیں کیا ہے تو <span dir="ltr">EVM</span> کوڈ نہ لکھیں۔
+- **بغیر کسی معلوم سنگین بگز کے حالیہ <span dir="ltr">Solidity 0.8.x</span> ریلیز استعمال کریں۔** <span dir="ltr">Solidity 0.8</span> پہلے سے طے شدہ طور پر اوور فلو اور انڈر فلو کے لیے ریاضی کی جانچ پڑتال کرتا ہے، اور پرانے ورژنز میں نئے کمپائلر سیکیورٹی چیکس موجود نہیں ہوتے ہیں۔ سلدر کی [<span dir="ltr">solc</span> ورژن کی سفارش](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity) دیکھیں۔
+- **کمپائل کرنے کے لیے ایک مستحکم ریلیز استعمال کریں؛ وارننگز چیک کرنے کے لیے تازہ ترین ریلیز استعمال کریں۔** چیک کریں کہ آپ کے کوڈ میں تازہ ترین کمپائلر ورژن کے ساتھ کوئی رپورٹ شدہ مسائل نہیں ہیں۔ تاہم، <span dir="ltr">Solidity</span> کا ریلیز سائیکل تیز ہے اور اس میں کمپائلر بگز کی تاریخ موجود ہے، اس لیے صرف چند دن پہلے ریلیز ہونے والے ورژن کے ساتھ تعینات کرنے سے گریز کریں۔ اپنے منتخب کردہ ورژن کے لیے [معلوم کمپائلر بگز کی فہرست](https://docs.soliditylang.org/en/latest/bugs.html) چیک کریں۔
+- **ان لائن اسمبلی استعمال نہ کریں۔** اسمبلی کے لیے <span dir="ltr">EVM</span> کی مہارت درکار ہوتی ہے۔ اگر آپ نے یلو پیپر میں _مہارت_ حاصل نہیں کی ہے تو <span dir="ltr">EVM</span> کوڈ نہ لکھیں۔
 
 ## تعیناتی کے رہنما اصول {#deployment-guidelines}
 

@@ -23,7 +23,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 - **系统的通俗描述**，说明合约的功能以及对代码库的任何假设。
 - **模式和架构图**，包括合约交互和系统的状态机。[斯莱瑟 (Slither) 打印机](https://github.com/crytic/slither/wiki/Printer-documentation)可以帮助生成这些模式。
-- **详尽的代码文档**，Solidity 可以使用 [NatSpec 格式](https://docs.soliditylang.org/en/develop/natspec-format.html)。
+- **详尽的代码文档**，Solidity 可以使用 [NatSpec 格式](https://docs.soliditylang.org/en/latest/natspec-format.html)。
 
 ### 链上与链下计算 {#onchain-vs-offchain-computation}
 
@@ -72,15 +72,15 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 ### 测试与验证 {#testing-and-verification}
 
-- **编写详尽的单元测试。** 广泛的测试套件对于构建高质量软件至关重要。
-- **编写 [斯莱瑟](https://github.com/crytic/slither)、[埃基德纳](https://github.com/crytic/echidna) 和 [曼蒂科尔](https://github.com/trailofbits/manticore) 自定义检查和属性。** 自动化工具将有助于确保你的合约安全。查看本指南的其余部分，了解如何编写高效的检查和属性。
-- **使用 [crytic.io](https://crytic.io/)。** Crytic 与 GitHub 集成，提供对私有斯莱瑟检测器的访问，并运行来自埃基德纳的自定义属性检查。
+- **编写全面的单元测试。** 广泛的测试套件对于构建高质量软件至关重要。
+- **编写 [斯莱瑟](https://github.com/crytic/slither)、[埃基德纳](https://github.com/crytic/echidna) 和 [Medusa](https://github.com/crytic/medusa) 的自定义检查和属性。** 自动化工具将有助于确保你的合约安全。查阅本指南的其余部分，了解如何编写高效的检查和属性。
+- **在持续集成中运行这些工具。** 在每个拉取请求上运行斯莱瑟和你的模糊测试属性，可以在合并之前捕获回归问题。
 
 ### Solidity {#solidity}
 
-- **优先选择 Solidity 0.5 而不是 0.4 和 0.6。** 在我们看来，Solidity 0.5 比 0.4 更安全，并且具有更好的内置实践。事实证明，Solidity 0.6 对于生产环境来说过于不稳定，需要时间来成熟。
-- **使用稳定版本进行编译；使用最新版本检查警告。** 检查你的代码在最新编译器版本中没有报告的问题。然而，Solidity 的发布周期很快，并且有编译器错误的历史，因此我们不建议使用最新版本进行部署（请参阅斯莱瑟的 [solc 版本建议](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33)）。
-- **不要使用内联汇编。** 汇编需要 EVM 专业知识。如果你还没有_精通_黄皮书，请不要编写 EVM 代码。
+- **使用没有已知严重错误的最新 Solidity 0.8.x 版本。** Solidity 0.8 默认检查算术运算的溢出和下溢，而旧版本缺少较新的编译器安全检查。请参阅斯莱瑟的 [solc 版本建议](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity)。
+- **使用稳定版本进行编译；使用最新版本检查警告。** 检查你的代码在最新编译器版本中是否没有报告问题。然而，Solidity 的发布周期很快，并且有编译器错误的历史，因此请避免使用几天前才发布的版本进行部署。检查你选择的版本的[已知编译器错误列表](https://docs.soliditylang.org/en/latest/bugs.html)。
+- **不要使用内联汇编。** 汇编需要以太坊虚拟机 (EVM) 专业知识。如果你还没有_精通_黄皮书，请不要编写 EVM 代码。
 
 ## 部署指南 {#deployment-guidelines}
 

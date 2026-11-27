@@ -1,7 +1,7 @@
 ---
 title: Sobre o ethereum.org
 metaTitle: "Sobre nós"
-description: "Sobre a equipe, a comunidade e a missão do ethereum.org"
+description: "Conheça a equipe e a comunidade por trás do ethereum.org: nossa missão, como o site é construído e governado de forma aberta e como você pode ajudar a melhorá-lo."
 lang: pt-br
 ---
 
@@ -107,9 +107,11 @@ Usamos um conjunto de [princípios de design](/contributing/design-principles/) 
 
 ## Sistema de design {#design-system}
 
-Construímos e lançamos um [sistema de design](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) para lançar recursos mais rapidamente e permitir que os membros da comunidade participem do design aberto do ethereum.org.
+Nós construímos e lançamos um [sistema de design](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) para entregar recursos mais rapidamente e permitir que os membros da comunidade participem do design aberto do ethereum.org.
 
 Quer se envolver? [Acompanhe no Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) e participe da conversa em nosso [canal #design no Discord](/discord/).
+
+Procurando por logotipos, ilustrações ou outros arquivos de marca? Baixe-os em nossa [página de ativos](/assets/).
 
 ## Guia de estilo {#style-guide}
 
@@ -122,6 +124,10 @@ Agradecemos o feedback sobre nossos princípios de design, sistema de design e o
 ## Licença {#license}
 
 O site ethereum.org é de código aberto e construído sob uma [Licença MIT](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE), a menos que especificado de outra forma. Mais sobre os [termos de uso](/terms-of-use/) do ethereum.org.
+
+## Sua privacidade {#your-privacy}
+
+O ethereum.org usa o Matomo para análises que preservam a privacidade, e você pode desativá-lo a qualquer momento. Leia nossa [política de cookies](/cookie-policy/) e [política de privacidade](/privacy-policy/) para obter detalhes.
 
 ## Vagas abertas {#open-jobs}
 

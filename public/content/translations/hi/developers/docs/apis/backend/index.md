@@ -66,7 +66,7 @@ lang: hi
 **Infura -** **_एक सेवा के रूप में इथेरियम API।_**
 
 - [infura.io](https://infura.io)
-- [दस्तावेज़ीकरण](https://docs.infura.io/api)
+- [दस्तावेज़ीकरण](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _किफ़ायती इथेरियम वर्चुअल मशीन (EVM) जेसन-आरपीसी प्रदाता_**
@@ -77,7 +77,7 @@ lang: hi
 **NOWNodes - _फुल नोड और ब्लॉक एक्सप्लोरर।_**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [दस्तावेज़ीकरण](https://nownodes.gitbook.io/documentation)
+- [दस्तावेज़ीकरण](https://docs.nownodes.io/)
 
 **QuickNode -** **_एक सेवा के रूप में ब्लॉकचेन इन्फ्रास्ट्रक्चर।_**
 
@@ -162,9 +162,9 @@ lang: hi
 - [दस्तावेज़ीकरण](https://docs.chainstack.com/)
 - [इथेरियम API संदर्भ](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**Coinbase Cloud Node -** **_ब्लॉकचेन इन्फ्रास्ट्रक्चर API।_**
+**कॉइनबेस Cloud Node -** **_ब्लॉकचेन इन्फ्रास्ट्रक्चर API।_**
 
-- [Coinbase Cloud Node](https://www.coinbase.com/developer-platform)
+- [कॉइनबेस Cloud Node](https://www.coinbase.com/developer-platform)
 - [दस्तावेज़ीकरण](https://docs.cdp.coinbase.com/)
 
 **Figment द्वारा DataHub -** **_इथेरियम मेननेट और टेस्टनेट के साथ Web3 API सेवाएं।_**
@@ -176,7 +176,6 @@ lang: hi
 
 - [moralis.io](https://moralis.io)
 - [दस्तावेज़ीकरण](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [डिस्कॉर्ड](https://moralis.io/joindiscord/)
 - [फ़ोरम](https://forum.moralis.io/)
 
@@ -193,7 +192,7 @@ lang: hi
 - [दस्तावेज़ीकरण](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-**Watchdata -** **_इथेरियम ब्लॉकचेन तक सरल और विश्वसनीय API पहुंच प्रदान करता है।_**
+**Watchdata -** **_इथेरियम ब्लॉकचेन के लिए सरल और विश्वसनीय API एक्सेस प्रदान करता है।_**
 
 - [Watchdata](https://watchdata.io/)
 - [दस्तावेज़ीकरण](https://docs.watchdata.io/)
@@ -210,10 +209,9 @@ lang: hi
 **Covalent -** **_200+ चेन के लिए समृद्ध ब्लॉकचेन API।_**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [दस्तावेज़ीकरण](https://www.covalenthq.com/docs/api/)
+- [दस्तावेज़ीकरण](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [डिस्कॉर्ड](https://www.covalenthq.com/discord/)
-
 
 ## आगे की जानकारी {#further-reading}
 
@@ -226,5 +224,4 @@ _क्या आप किसी ऐसे सामुदायिक सं�
 
 ## संबंधित ट्यूटोरियल {#related-tutorials}
 
-- [JavaScript में इथेरियम ब्लॉकचेन का उपयोग करने के लिए Web3.js सेट अप करें](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– अपने प्रोजेक्ट में Web3.js सेट अप करने के निर्देश।_
-- [JavaScript से स्मार्ट अनुबंध को कॉल करना](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI टोकन का उपयोग करके, देखें कि JavaScript का उपयोग करके अनुबंध फ़ंक्शन को कैसे कॉल किया जाए।_
+- [Web3 ऐप के लिए सर्वर कंपोनेंट और एजेंट](/developers/tutorials/server-components/) _– TypeScript सर्वर कंपोनेंट कैसे लिखें जो ब्लॉकचेन इवेंट को सुनते हैं और लेन-देन के साथ प्रतिक्रिया देते हैं।_

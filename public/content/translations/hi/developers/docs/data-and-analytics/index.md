@@ -1,6 +1,6 @@
 ---
 title: "डेटा और एनालिटिक्स"
-description: "अपने dapps में उपयोग के लिए ऑनचेन एनालिटिक्स और डेटा कैसे प्राप्त करें"
+description: "अपने dapp के लिए ऑनचेन डेटा कैसे प्राप्त करें: इथेरियम डेटा को क्वेरी करने और उसका विश्लेषण करने के लिए इंडेक्सर, सबग्राफ, ब्लॉक एक्सप्लोरर, SQL एनालिटिक्स प्लेटफ़ॉर्म और API।"
 lang: hi
 ---
 
@@ -75,9 +75,9 @@ EVM क्वेरी लैंग्वेज (EQL) एक SQL जैसी �
 ## आगे की पढ़ाई {#further-reading}
 
 - [क्रिप्टो डेटा की खोज I: डेटा फ्लो आर्किटेक्चर](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
-- [Graph नेटवर्क अवलोकन](https://thegraph.com/docs/en/about/)
-- [Graph क्वेरी प्लेग्राउंड](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
-- [EtherScan पर API कोड उदाहरण](https://etherscan.io/apis#contracts)
+- [ग्राफ नेटवर्क अवलोकन](https://thegraph.com/docs/en/about/)
+- [ग्राफ एक्सप्लोरर](https://thegraph.com/explorer)
+- [EtherScan पर API कोड के उदाहरण](https://etherscan.io/apis#contracts)
 - [Blockscout पर API दस्तावेज़](https://docs.blockscout.com/devs/apis)
 - [Beaconcha.in बीकन चेन एक्सप्लोरर](https://beaconcha.in)
 - [Dune की मूल बातें](https://docs.dune.com/#dune-basics)

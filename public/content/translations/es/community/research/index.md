@@ -57,7 +57,7 @@ La capa de ejecución se ocupa de ejecutar transacciones, ejecutar la [Máquina 
 - expiración del historial que los nodos ya no necesitan servir;
 - listas de acceso a nivel de bloque que permiten validar transacciones en paralelo;
 - mercados de tarifas multidimensionales que fijan el precio del estado, los datos y la computación por separado;
-- y probar la ejecución de bloques de la capa 1 (l1) con una zkEVM.
+- y probar la ejecución de bloques de la capa 1 (L1) con una zkEVM.
 
 #### Lecturas complementarias {#background-reading-1}
 
@@ -72,7 +72,7 @@ La capa de ejecución se ocupa de ejecutar transacciones, ejecutar la [Máquina 
 - [EIP-8037: Aumento del costo de gas para la creación de estado](https://eips.ethereum.org/EIPS/eip-8037)
 - [EIP-7999: Mercado de tarifas multidimensional unificado](https://eips.ethereum.org/EIPS/eip-7999)
 - [EIP-7642: eth/69, expiración del historial y recibos más simples](https://eips.ethereum.org/EIPS/eip-7642)
-- [Lanzamiento de una zkEVM de l1: pruebas en tiempo real](https://blog.ethereum.org/2025/07/10/realtime-proving)
+- [Lanzamiento de una zkEVM de L1: pruebas en tiempo real](https://blog.ethereum.org/2025/07/10/realtime-proving)
 
 ### Resistencia a la censura y construcción de bloques {#censorship-resistance-and-block-building}
 
@@ -128,7 +128,7 @@ Se requiere que un nodo de Ethereum ejecute dos piezas de software:
 1. un cliente de consenso para realizar un seguimiento de la cabeza de la cadena de bloques, propagar bloques y manejar la lógica de consenso
 2. un cliente de ejecución para admitir la Máquina Virtual de Ethereum y ejecutar transacciones y contratos inteligentes
 
-Se están creando prototipos de nuevas clases de clientes junto con esos dos, incluidos clientes que prueban la ejecución de bloques de la capa 1 (l1) y clientes de consenso ligero construidos en torno a firmas poscuánticas.
+Se están creando prototipos de nuevas clases de clientes junto con esos dos, incluidos clientes que prueban la ejecución de bloques de la capa 1 (L1) y clientes de consenso ligero construidos en torno a firmas poscuánticas.
 
 Consulte la [página de nodos y clientes](/developers/docs/nodes-and-clients/) para obtener más detalles sobre nodos y clientes y para obtener una lista de todas las implementaciones de clientes actuales. También puede encontrar un historial de todas las actualizaciones de Ethereum en la [página de historial](/ethereum-forks/).
 
@@ -146,27 +146,27 @@ Consulte la [página de nodos y clientes](/developers/docs/nodes-and-clients/) p
 
 - [zkEVM](/roadmap/zkevm/)
 - [Ethproofs](https://ethproofs.org/)
-- [Lanzamiento de una zkEVM de l1: los fundamentos de seguridad](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
+- [Lanzamiento de una zkEVM de L1: los fundamentos de seguridad](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ## Escalabilidad y rendimiento {#scaling-and-performance}
 
-Escalar Ethereum es una gran área de enfoque para los investigadores de Ethereum, y se ejecuta en dos vías al mismo tiempo: aumentar la capacidad de procesamiento de la capa 1 (l1) en sí y trasladar la ejecución a los rollups que publican sus datos en Ethereum. El trabajo actual incluye aumentar el límite de gas del bloque, revaluar el crecimiento del estado, expandir la capacidad de blob para los datos de los rollups y reducir lo que un nodo tiene que almacenar y verificar. La información introductoria sobre el escalado de Ethereum está disponible en nuestra [página de escalabilidad](/developers/docs/scaling/) y en la [hoja de ruta de escalabilidad](/roadmap/scaling/).
+Escalar Ethereum es una gran área de enfoque para los investigadores de Ethereum, y se ejecuta en dos vías al mismo tiempo: aumentar la capacidad de procesamiento de la capa 1 (L1) en sí y trasladar la ejecución a los rollups que publican sus datos en Ethereum. El trabajo actual incluye aumentar el límite de gas del bloque, revaluar el crecimiento del estado, expandir la capacidad de blob para los datos de los rollups y reducir lo que un nodo tiene que almacenar y verificar. La información introductoria sobre el escalado de Ethereum está disponible en nuestra [página de escalabilidad](/developers/docs/scaling/) y en la [hoja de ruta de escalabilidad](/roadmap/scaling/).
 
 ### Capa 2 {#layer-2}
 
-Ahora hay varios protocolos de capa 2 (l2) que escalan Ethereum utilizando diferentes técnicas para el procesamiento por lotes de transacciones y asegurándolas en la capa 1 de Ethereum. La investigación abierta incluye reducir la latencia y el costo de las pruebas, acortar el tiempo que tarda una transacción en alcanzar una finalidad sin necesidad de confianza y brindar a los usuarios una experiencia única y coherente en muchos rollups.
+Ahora hay varios protocolos de capa 2 (L2) que escalan Ethereum utilizando diferentes técnicas para el procesamiento por lotes de transacciones y asegurándolas en la capa 1 de Ethereum. La investigación abierta incluye reducir la latencia y el costo de las pruebas, acortar el tiempo que tarda una transacción en alcanzar una finalidad sin necesidad de confianza y brindar a los usuarios una experiencia única y coherente en muchos rollups.
 
 #### Lecturas complementarias {#background-reading-2}
 
 - [Introducción a la capa 2](/layer-2/)
-- [L2BEAT: resumen de escalabilidad](https://l2beat.com/scaling/summary)
-- [Una hoja de ruta de Ethereum centrada en los rollups](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
+- [ETHBEAT: resumen de escalabilidad](https://ethbeat.org/layer2s/summary)
+- [Una hoja de ruta de Ethereum centrada en los rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### Investigación reciente {#recent-research-2}
 
 - [Capa 2 en Ethresear.ch](https://ethresear.ch/c/layer-2/32)
-- [L2BEAT: costos en cadena](https://l2beat.com/scaling/costs)
-- [Construyendo en Ethereum en 2026: qué ha cambiado](/latest/building-on-ethereum-in-2026/)
+- [ETHBEAT: costos en cadena](https://ethbeat.org/layer2s/costs)
+- [Construir en Ethereum en 2026: qué ha cambiado](/latest/building-on-ethereum-in-2026/)
 
 ### Interoperabilidad {#interoperability}
 
@@ -226,7 +226,7 @@ La seguridad es un tema amplio que puede incluir la prevención de spam y estafa
 
 ### Criptografía y ZKP {#cryptography--zkp}
 
-Las pruebas de conocimiento cero (ZKP) y la criptografía son fundamentales para incorporar privacidad y seguridad en Ethereum y sus aplicaciones. Las pruebas de conocimiento cero han pasado de la investigación a la infraestructura de producción: los probadores que prueban bloques reales de Ethereum ahora se evalúan públicamente en cuanto a latencia, costo y solidez. Los problemas abiertos han cambiado en consecuencia, hacia la prueba de bloques de la capa 1 (l1) lo suficientemente rápido como para hacerlo en tiempo real, dando cuenta rigurosamente de la seguridad de los sistemas de prueba en uso y preparándose para la criptografía poscuántica.
+Las pruebas de conocimiento cero (ZKP) y la criptografía son fundamentales para incorporar privacidad y seguridad en Ethereum y sus aplicaciones. Las pruebas de conocimiento cero han pasado de la investigación a la infraestructura de producción: los probadores que prueban bloques reales de Ethereum ahora se evalúan públicamente en cuanto a latencia, costo y solidez. Los problemas abiertos han cambiado en consecuencia, hacia la prueba de bloques de la capa 1 (L1) lo suficientemente rápido como para hacerlo en tiempo real, dando cuenta rigurosamente de la seguridad de los sistemas de prueba en uso y preparándose para la criptografía poscuántica.
 
 #### Lecturas complementarias {#background-reading-6}
 
@@ -239,7 +239,7 @@ Las pruebas de conocimiento cero (ZKP) y la criptografía son fundamentales para
 - [ZK en Ethresear.ch](https://ethresear.ch/c/zk-s-nt-arks/13)
 - [Criptografía en Ethresear.ch](https://ethresear.ch/c/cryptography/28)
 - [Calculadora de solidez para sistemas de prueba zkEVM basados en hash](https://github.com/ethereum/soundcalc)
-- [Lanzamiento de una zkEVM de l1: los fundamentos de seguridad](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
+- [Lanzamiento de una zkEVM de L1: los fundamentos de seguridad](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ### Billeteras {#wallets}
 
@@ -387,7 +387,7 @@ Existe la necesidad de más herramientas de análisis de datos y paneles que bri
 
 - [Análisis de datos del Robust Incentives Group](https://rig.ethereum.org/)
 - [Datos abiertos de ethPandaOps](https://ethpandaops.io/data/)
-- [L2BEAT: resumen de escalabilidad](https://l2beat.com/scaling/summary)
+- [ETHBEAT: resumen de escalabilidad](https://ethbeat.org/layer2s/summary)
 
 ## Aplicaciones y herramientas {#apps-and-tooling}
 

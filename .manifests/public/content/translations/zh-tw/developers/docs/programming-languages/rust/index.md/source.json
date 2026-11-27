@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/programming-languages/rust/index.md",
-  "generatedAt": "2026-06-29T23:59:58.708Z",
-  "rootHash": "eae38ae5bdad",
+  "generatedAt": "2026-11-27T10:22:11.031Z",
+  "rootHash": "70c6fa00dd44",
   "tree": {
-    "contentHash": "92610beacf61",
-    "anchorHash": "d4732b0bb864",
+    "contentHash": "cd812df5a69d",
+    "anchorHash": "0834597d26db",
     "children": {
       "frontmatter:title": {
         "contentHash": "3fb6ac791c02",
@@ -221,15 +221,15 @@
         ]
       },
       "rust-projects-and-tools": {
-        "contentHash": "5ce1ed0327df",
-        "anchorHash": "d4f36aef2ffe",
+        "contentHash": "f4b1997e6179",
+        "anchorHash": "a38a3b3d4948",
         "labelHash": "20d74f967f2e",
         "children": {
           "_label": {
             "contentHash": "20d74f967f2e",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:16": {
+          "prose:15": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
@@ -237,7 +237,7 @@
             "contentHash": "768736aec9cf",
             "anchorHash": "a8166c0638b5"
           },
-          "prose:17": {
+          "prose:16": {
             "contentHash": "a71b7c66c4e1",
             "anchorHash": "e3b0c44298fc"
           },
@@ -245,7 +245,7 @@
             "contentHash": "68bd571fcc5b",
             "anchorHash": "19dc98a55ae8"
           },
-          "prose:18": {
+          "prose:17": {
             "contentHash": "2be3f174981d",
             "anchorHash": "e3b0c44298fc"
           },
@@ -253,145 +253,135 @@
             "contentHash": "60197b9c658b",
             "anchorHash": "1ca414c86a11"
           },
-          "prose:19": {
+          "prose:18": {
             "contentHash": "4982dfbe46cd",
             "anchorHash": "e3b0c44298fc"
           },
           "link:3": {
-            "contentHash": "bcae5e9bab1a",
-            "anchorHash": "44c6192d2453"
-          },
-          "prose:20": {
-            "contentHash": "b5da78d613d3",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:4": {
             "contentHash": "98dc766e32c3",
             "anchorHash": "0f1097d61033"
           },
-          "prose:21": {
+          "prose:19": {
             "contentHash": "63e2186722d0",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:5": {
+          "link:4": {
             "contentHash": "689409f99932",
             "anchorHash": "e35335d5429b"
           },
-          "prose:22": {
+          "prose:20": {
             "contentHash": "2981b846e652",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:6": {
+          "link:5": {
             "contentHash": "cd50a37462f3",
             "anchorHash": "c0697175968d"
           },
-          "prose:23": {
+          "prose:21": {
             "contentHash": "5e16c617c4b4",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:7": {
+          "link:6": {
             "contentHash": "88bc6ea46083",
             "anchorHash": "47bb10a71924"
           },
-          "prose:24": {
+          "prose:22": {
             "contentHash": "7aa16ffae098",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:8": {
+          "link:7": {
             "contentHash": "fcc41bccbdb8",
             "anchorHash": "6a90f66ebf29"
           },
-          "prose:25": {
+          "prose:23": {
             "contentHash": "b81ae5c7efa4",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:9": {
+          "link:8": {
             "contentHash": "480a29be6880",
             "anchorHash": "3607c55b7c22"
           },
-          "prose:26": {
+          "prose:24": {
             "contentHash": "c4e883cb8cfa",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:10": {
+          "link:9": {
             "contentHash": "9d6269bee5ed",
             "anchorHash": "96b426df16ec"
           },
-          "prose:27": {
+          "prose:25": {
             "contentHash": "2f6a39aa1875",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:11": {
+          "link:10": {
             "contentHash": "c9c51b855aab",
             "anchorHash": "70750213ec91"
           },
-          "prose:28": {
+          "prose:26": {
             "contentHash": "5a4c09059711",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:12": {
+          "link:11": {
             "contentHash": "5aa3254b91b8",
             "anchorHash": "7edcfbca374d"
           },
-          "prose:29": {
+          "prose:27": {
             "contentHash": "a85b5ede675e",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:13": {
+          "link:12": {
             "contentHash": "9a498aa5b120",
             "anchorHash": "92dfcff0e359"
           },
-          "prose:30": {
+          "prose:28": {
             "contentHash": "25c1bf6ca88b",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:14": {
+          "link:13": {
             "contentHash": "37d4d5290434",
             "anchorHash": "03fb462e2969"
           },
-          "prose:31": {
+          "prose:29": {
             "contentHash": "871ae7a940ae",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:15": {
+          "link:14": {
             "contentHash": "c7c04a0b0432",
             "anchorHash": "10260c8eaaaa"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:16",
+          "prose:15",
           "link:0",
-          "prose:17",
+          "prose:16",
           "link:1",
-          "prose:18",
+          "prose:17",
           "link:2",
-          "prose:19",
+          "prose:18",
           "link:3",
-          "prose:20",
+          "prose:19",
           "link:4",
-          "prose:21",
+          "prose:20",
           "link:5",
-          "prose:22",
+          "prose:21",
           "link:6",
-          "prose:23",
+          "prose:22",
           "link:7",
-          "prose:24",
+          "prose:23",
           "link:8",
-          "prose:25",
+          "prose:24",
           "link:9",
-          "prose:26",
+          "prose:25",
           "link:10",
-          "prose:27",
+          "prose:26",
           "link:11",
-          "prose:28",
+          "prose:27",
           "link:12",
-          "prose:29",
+          "prose:28",
           "link:13",
-          "prose:30",
-          "link:14",
-          "prose:31",
-          "link:15"
+          "prose:29",
+          "link:14"
         ]
       },
       "rust-community-contributors": {
@@ -463,5 +453,5 @@
       "rust-community-contributors"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

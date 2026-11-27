@@ -1,6 +1,6 @@
 ---
 title: Dodawanie warstw 2
-description: Zasady, którymi kierujemy się przy dodawaniu warstwy 2 do ethereum.org
+description: "Zasady, którymi kierujemy się przy dodawaniu warstwy 2 do ethereum.org"
 lang: pl
 ---
 
@@ -20,27 +20,27 @@ Warstwa 2 to stosunkowo nowy i ekscytujący paradygmat dla Ethereum. Staraliśmy
 
 ### Kryteria włączenia: wymagania obowiązkowe {#criteria-for-inclusion-the-must-haves}
 
-**Obecność na L2BEAT**
+**Obecność na ETHBEAT**
 
-- Aby projekt mógł zostać wzięty pod uwagę, musi znajdować się na liście [L2BEAT](https://l2beat.com). L2BEAT zapewnia solidną ocenę ryzyka projektów warstwy 2, na której opieramy się przy ocenie projektów L2. **Jeśli projekt nie jest uwzględniony na L2BEAT, nie umieścimy go jako L2 na ethereum.org.**
-- [Dowiedz się, jak dodać swój projekt L2 do L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- Aby projekt mógł zostać wzięty pod uwagę, musi znajdować się na liście [ETHBEAT](https://ethbeat.org). ETHBEAT zapewnia solidną ocenę ryzyka projektów warstwy 2, na której opieramy się przy ocenie projektów L2. **Jeśli projekt nie jest obecny na ETHBEAT, nie umieścimy go jako L2 na ethereum.org.**
+- [Dowiedz się, jak dodać swój projekt L2 do ETHBEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
-**Otwarte oprogramowanie (open source)**
+**Otwarte oprogramowanie**
 
 - Twój kod musi być dostępny i powinieneś akceptować PR-y od szerszej społeczności.
 
 **Kategoria warstwy 2**
 
-Obecnie za rozwiązania warstwy 2 uznajemy:
+Obecnie za rozwiązania warstwy 2 uważamy:
 
 - Optymistyczny rollup
 - Rollup wiedzy zerowej
 
-_Nie uznajemy za warstwę 2 innych rozwiązań skalujących, które nie wykorzystują Ethereum do dostępności danych lub bezpieczeństwa._
+_Nie uważamy za warstwę 2 innych rozwiązań skalujących, które nie wykorzystują Ethereum do dostępności danych lub bezpieczeństwa._
 
-**Ethereum dla dostępności danych**
+**Ethereum do dostępności danych**
 
-- Dostępność danych jest ważnym czynnikiem odróżniającym inne rozwiązania skalujące od warstwy 2. Projekt **musi** wykorzystywać sieć główną Ethereum do dostępności danych, aby mógł zostać wzięty pod uwagę.
+- Dostępność danych jest ważnym czynnikiem odróżniającym inne rozwiązania skalujące od warstwy 2. Projekt **musi** wykorzystywać sieć główną Ethereum do dostępności danych, aby mógł zostać wzięty pod uwagę przy dodawaniu do listy.
 
 **Mosty**
 
@@ -58,7 +58,7 @@ _Nie uznajemy za warstwę 2 innych rozwiązań skalujących, które nie wykorzys
 
 **Utrzymująca się baza użytkowników**
 
-- Weźmiemy pod uwagę wskaźniki takie jak historia całkowitej wartości zablokowanej (TVL), statystyki transakcji oraz to, czy jest używany przez znane firmy lub projekty
+- Będziemy brać pod uwagę wskaźniki takie jak historia całkowitej wartości zablokowanej (TVL), statystyki transakcji oraz to, czy projekt jest używany przez znane firmy lub projekty
 
 **Aktywny zespół programistów**
 

@@ -1,6 +1,6 @@
 ---
 title: "Dokumentace pro vývojáře Etherea"
-description: "Představení dokumentace pro vývojáře na ethereum.org."
+description: "Dokumentace pro vývojáře Etherea: naučte se základy, technologický stack Etherea, chytré kontrakty, uzly a škálování, s návody na vytvoření vaší první dapp."
 lang: cs
 ---
 

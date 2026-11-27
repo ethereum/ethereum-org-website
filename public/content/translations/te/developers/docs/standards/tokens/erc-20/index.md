@@ -176,6 +176,7 @@ ERC-20తో ఈ సమస్యను పూర్తిగా నివార�
 - [Alchemy - Solidity ERC20 టోకెన్‌లకు గైడ్](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## ఇతర ఫంజిబుల్ టోకెన్ ప్రమాణాలు {#fungible-token-standards}
+
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
@@ -185,5 +186,4 @@ ERC-20తో ఈ సమస్యను పూర్తిగా నివార�
 
 - [ERC-20 కాంట్రాక్ట్ వాక్‌త్రూ](/developers/tutorials/erc20-annotated-code/) _– ఓపెన్‌జెప్పెలిన్ ERC-20 కాంట్రాక్ట్ అమలు యొక్క లైన్-బై-లైన్ ఉల్లేఖన వాక్‌త్రూ._
 - [సేఫ్టీ రైల్స్‌తో ERC-20](/developers/tutorials/erc20-with-safety-rails/) _– వినియోగదారులు సాధారణ తప్పులను నివారించడంలో సహాయపడటానికి ERC-20 టోకెన్‌లకు రక్షణలను ఎలా జోడించాలి._
-- [Ethers.js ఉపయోగించి టోకెన్‌లను పంపడం](/developers/tutorials/send-token-ethersjs/) _– Ethers.js ఉపయోగించి ERC-20 టోకెన్‌లను బదిలీ చేయడానికి ప్రారంభకులకు అనుకూలమైన గైడ్._
-- [స్కామ్ టోకెన్‌లు ఉపయోగించే కొన్ని ఉపాయాలు మరియు వాటిని ఎలా గుర్తించాలి](/developers/tutorials/scam-token-tricks/) _– స్కామ్ ERC-20 టోకెన్ ప్యాటర్న్‌లు మరియు వాటిని ఎలా గుర్తించాలో వివరణాత్మక అన్వేషణ._
+- [స్కామ్ టోకెన్‌లు ఉపయోగించే కొన్ని ఉపాయాలు మరియు వాటిని ఎలా గుర్తించాలి](/developers/tutorials/scam-token-tricks/) _– స్కామ్ ERC-20 టోకెన్ ప్యాటర్న్‌లు మరియు వాటిని ఎలా గుర్తించాలి అనే దానిపై వివరణాత్మక అన్వేషణ._

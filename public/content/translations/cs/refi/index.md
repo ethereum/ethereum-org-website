@@ -1,6 +1,6 @@
 ---
 title: "Regenerativní finance (ReFi)"
-description: "Přehled ReFi a jeho současných případů užití."
+description: "Co jsou regenerativní finance (ReFi)? Zjistěte, jak nástroje Etherea financují veřejné statky, opatření v oblasti klimatu a komunitní projekty, které vytvářejí trvalý pozitivní dopad."
 lang: cs
 template: use-cases
 sidebarDepth: 2

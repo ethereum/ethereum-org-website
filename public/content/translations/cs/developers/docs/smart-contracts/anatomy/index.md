@@ -315,7 +315,7 @@ contract Token {
 pragma solidity ^0.5.10;
 
 // Importuje symboly z jiných souborů do aktuálního kontraktu.
-// V tomto případě sérii pomocných kontraktů od OpenZeppelin.
+// V tomto případě sérii pomocných kontraktů z OpenZeppelin.
 // Zjistěte více: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
@@ -328,11 +328,11 @@ import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 // Zjistěte více: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
     // Používá knihovnu SafeMath od OpenZeppelin k bezpečnému provádění aritmetických operací.
-    // Zjistěte více: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    // Zjistěte více: https://docs.openzeppelin.com/contracts/3.x/api/math#safemath
     using SafeMath for uint256;
 
     // Konstantní stavové proměnné v Solidity jsou podobné jako v jiných jazycích,
-    // ale musíte jim přiřadit výraz, který je konstantní v době kompilace.
+    // ale musíte jim přiřadit výraz, který je konstantní v době překladu.
     // Zjistěte více: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
@@ -377,11 +377,11 @@ contract CryptoPizza is IERC721, ERC165 {
         // Zjistěte více: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
         // všimněte si, že address(0) je nulová adresa,
-        // což indikuje, že pizza[id] ještě není přidělena konkrétnímu uživateli.
+        // což naznačuje, že pizza[id] ještě není přidělena konkrétnímu uživateli.
 
         assert(pizzaToOwner[id] == address(0));
 
-        // Mapuje Pizzu na vlastníka
+        // Namapuje Pizzu na vlastníka
         pizzaToOwner[id] = msg.sender;
         ownerPizzaCount[msg.sender] = SafeMath.add(
             ownerPizzaCount[msg.sender],
@@ -395,7 +395,7 @@ contract CryptoPizza is IERC721, ERC165 {
         _createPizza(_name, randDna);
     }
 
-    // Generuje náhodnou DNA z řetězce (jména) a adresy vlastníka (tvůrce)
+    // Vygeneruje náhodnou DNA z řetězce (jména) a adresy vlastníka (tvůrce)
     function generateRandomDna(string memory _str, address _owner)
         public
         // Funkce označené jako `pure` slibují, že nebudou číst ani upravovat stav
@@ -403,14 +403,14 @@ contract CryptoPizza is IERC721, ERC165 {
         pure
         returns (uint256)
     {
-        // Generuje náhodný uint z řetězce (jména) + adresy (vlastníka)
+        // Vygeneruje náhodný uint z řetězce (jména) + adresy (vlastníka)
         uint256 rand = uint256(keccak256(abi.encodePacked(_str))) +
             uint256(_owner);
         rand = rand % dnaModulus;
         return rand;
     }
 
-    // Vrací pole Pizz nalezených podle vlastníka
+    // Vrátí pole Pizz nalezených podle vlastníka
     function getPizzasByOwner(address _owner)
         public
         // Funkce označené jako `view` slibují, že nebudou upravovat stav
@@ -418,8 +418,8 @@ contract CryptoPizza is IERC721, ERC165 {
         view
         returns (uint256[] memory)
     {
-        // Používá umístění úložiště `memory` k uložení hodnot pouze pro
-        // životní cyklus tohoto volání funkce.
+        // Používá úložiště `memory` k uložení hodnot pouze po dobu
+        // životního cyklu tohoto volání funkce.
         // Zjistěte více: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
@@ -453,7 +453,7 @@ contract CryptoPizza is IERC721, ERC165 {
      * Pokud je cílová adresa kontrakt, musí implementovat `onERC721Received`,
      * což je voláno při bezpečném převodu, a vrátit magickou hodnotu
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * v opačném případě je převod vrácen zpět.
+     * v opačném případě je převod zrušen.
     */
     function safeTransferFrom(address from, address to, uint256 pizzaId)
         public
@@ -467,7 +467,7 @@ contract CryptoPizza is IERC721, ERC165 {
      * Pokud je cílová adresa kontrakt, musí implementovat `onERC721Received`,
      * což je voláno při bezpečném převodu, a vrátit magickou hodnotu
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * v opačném případě je převod vrácen zpět.
+     * v opačném případě je převod zrušen.
      */
     function safeTransferFrom(
         address from,
@@ -502,9 +502,9 @@ contract CryptoPizza is IERC721, ERC165 {
         return (retval == _ERC721_RECEIVED);
     }
 
-    // Spálí Pizzu - kompletně zničí token
+    // Spálí Pizzu - úplně zničí token
     // Modifikátor funkce `external` znamená, že tato funkce je
-    // součástí rozhraní kontraktu a mohou ji volat jiné kontrakty
+    // součástí rozhraní kontraktu a ostatní kontrakty ji mohou volat
     function burn(uint256 _pizzaId) external {
         require(msg.sender != address(0), "Invalid address.");
         require(_exists(_pizzaId), "Pizza does not exist.");
@@ -517,26 +517,26 @@ contract CryptoPizza is IERC721, ERC165 {
         pizzaToOwner[_pizzaId] = address(0);
     }
 
-    // Vrací počet Pizz podle adresy
+    // Vrátí počet Pizz podle adresy
     function balanceOf(address _owner) public view returns (uint256 _balance) {
         return ownerPizzaCount[_owner];
     }
 
-    // Vrací vlastníka Pizzy nalezené podle id
+    // Vrátí vlastníka Pizzy nalezené podle id
     function ownerOf(uint256 _pizzaId) public view returns (address _owner) {
         address owner = pizzaToOwner[_pizzaId];
         require(owner != address(0), "Invalid Pizza ID.");
         return owner;
     }
 
-    // Schvaluje jinou adresu k převodu vlastnictví Pizzy
+    // Schválí jinou adresu k převodu vlastnictví Pizzy
     function approve(address _to, uint256 _pizzaId) public {
         require(msg.sender == pizzaToOwner[_pizzaId], "Must be the Pizza owner.");
         pizzaApprovals[_pizzaId] = _to;
         emit Approval(msg.sender, _to, _pizzaId);
     }
 
-    // Vrací schválenou adresu pro konkrétní Pizzu
+    // Vrátí schválenou adresu pro konkrétní Pizzu
     function getApproved(uint256 _pizzaId)
         public
         view
@@ -548,7 +548,7 @@ contract CryptoPizza is IERC721, ERC165 {
 
     /**
      * Privátní funkce pro vymazání aktuálního schválení daného ID tokenu
-     * Vrátí zpět, pokud daná adresa není skutečně vlastníkem tokenu
+     * Zruší se, pokud daná adresa není skutečným vlastníkem tokenu
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
         require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
@@ -577,7 +577,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return operatorApprovals[owner][operator];
     }
 
-    // Přebírá vlastnictví Pizzy - pouze pro schválené uživatele
+    // Převezme vlastnictví Pizzy - pouze pro schválené uživatele
     function takeOwnership(uint256 _pizzaId) public {
         require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
         address owner = this.ownerOf(_pizzaId);
@@ -597,8 +597,8 @@ contract CryptoPizza is IERC721, ERC165 {
         returns (bool)
     {
         address owner = pizzaToOwner[pizzaId];
-        // Zakázat kontrolu solium kvůli
-        // https://github.com/duaraghav8/Solium/issues/175
+        // Zakáže kontrolu solium kvůli
+        // https://github.com/duaraghav8/Ethlint/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
             this.getApproved(pizzaId) == spender ||
@@ -621,7 +621,7 @@ contract CryptoPizza is IERC721, ERC165 {
         _;
     }
 
-    // Vrací, zda je cílová adresa kontrakt
+    // Vrátí, zda je cílová adresa kontrakt
     function isContract(address account) internal view returns (bool) {
         uint256 size;
         // V současné době neexistuje lepší způsob, jak zkontrolovat, zda je na adrese kontrakt,

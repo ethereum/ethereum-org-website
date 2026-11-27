@@ -53,7 +53,7 @@ Tato funkce vrací adresu podkladového tokenu používaného pro trezor k účt
 function totalAssets() public view returns (uint256)
 ```
 
-Tato funkce vrací celkové množství podkladových aktiv držených trezorem.
+Tato funkce vrací celkové množství podkladových aktiv spravovaných trezorem, včetně těch, která byla využita jinde, a po odečtení jakýchkoli poplatků.
 
 #### convertToShares {#convertoshares}
 
@@ -185,7 +185,7 @@ Vrací celkové množství podílů trezoru, které `owner` aktuálně má.
 
 ### Mapa rozhraní {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### Události {#events}
 

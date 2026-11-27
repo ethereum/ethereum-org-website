@@ -66,7 +66,7 @@ lang: zh-tw
 **Infura -** **_以太坊 API 即服務。_**
 
 - [infura.io](https://infura.io)
-- [文件](https://docs.infura.io/api)
+- [文件](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _具成本效益的 EVM JSON-RPC 供應商_**
@@ -77,7 +77,7 @@ lang: zh-tw
 **NOWNodes - _全節點與區塊鏈瀏覽器。_**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [文件](https://nownodes.gitbook.io/documentation)
+- [文件](https://docs.nownodes.io/)
 
 **QuickNode -** **_區塊鏈基礎設施即服務。_**
 
@@ -150,7 +150,7 @@ lang: zh-tw
 - [blockcypher.com](https://www.blockcypher.com/)
 - [文件](https://www.blockcypher.com/dev/ethereum/)
 
-**Chainbase -** **_適用於以太坊的一站式 Web3 資料基礎設施。_**
+**Chainbase -** **_適用於以太坊的 Web3 全方位資料基礎設施。_**
 
 - [chainbase.com](https://chainbase.com/)
 - [文件](https://docs.chainbase.com/)
@@ -167,7 +167,7 @@ lang: zh-tw
 - [Coinbase Cloud Node](https://www.coinbase.com/developer-platform)
 - [文件](https://docs.cdp.coinbase.com/)
 
-**Figment 的 DataHub -** **_支援以太坊主網與測試網的 Web3 API 服務。_**
+**DataHub by Figment -** **_支援以太坊主網與測試網的 Web3 API 服務。_**
 
 - [DataHub](https://www.figment.io/)
 - [文件](https://docs.figment.io/)
@@ -176,7 +176,6 @@ lang: zh-tw
 
 - [moralis.io](https://moralis.io)
 - [文件](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [Discord](https://moralis.io/joindiscord/)
 - [論壇](https://forum.moralis.io/)
 
@@ -193,7 +192,7 @@ lang: zh-tw
 - [文件](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-**Watchdata -** **_提供簡單可靠的 API 來存取以太坊區塊鏈。_**
+**Watchdata -** **_提供簡單且可靠的以太坊區塊鏈 API 存取。_**
 
 - [Watchdata](https://watchdata.io/)
 - [文件](https://docs.watchdata.io/)
@@ -210,10 +209,9 @@ lang: zh-tw
 **Covalent -** **_支援 200 多條鏈的豐富區塊鏈 API。_**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [文件](https://www.covalenthq.com/docs/api/)
+- [文件](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
-
 
 ## 延伸閱讀 {#further-reading}
 
@@ -226,5 +224,4 @@ _知道有哪個社群資源對你有所幫助嗎？編輯此頁面並加入它�
 
 ## 相關教學 {#related-tutorials}
 
-- [設定 Web3.js 以在 JavaScript 中使用以太坊區塊鏈](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– 在專案中設定 Web3.js 的說明。_
-- [從 JavaScript 呼叫智能合約](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– 使用 DAI 代幣，了解如何使用 JavaScript 呼叫合約函式。_
+- [Web3 應用程式的伺服器元件與代理程式](/developers/tutorials/server-components/) _– 如何編寫監聽區塊鏈事件並以交易回應的 TypeScript 伺服器元件。_

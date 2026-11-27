@@ -1,7 +1,7 @@
 ---
 title: "Czym są dowody z wiedzą zerową?"
 metaTitle: "Dowody z wiedzą zerową"
-description: "Nietechniczne wprowadzenie do dowodów z wiedzą zerową dla początkujących."
+description: "Czym są dowody z wiedzą zerową? Przystępne dla początkujących wprowadzenie do tego, jak dowody ZK weryfikują twierdzenie bez ujawniania danych i jak wykorzystuje je Ethereum."
 lang: pl
 ---
 

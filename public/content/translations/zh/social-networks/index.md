@@ -1,6 +1,6 @@
 ---
 title: "去中心化社交网络"
-description: "以太坊上的去中心化社交网络概述"
+description: "什么是去中心化社交网络？了解基于以太坊的社交应用如何让你（而非平台）拥有自己的身份、内容和受众。"
 lang: zh
 template: use-cases
 sidebarDepth: 2
@@ -59,7 +59,7 @@ summaryPoints:
 
 [Mirror](https://mirror.xyz/) 是一个支持 Web3 的写作平台，旨在实现去中心化和用户所有。用户只需连接钱包即可在 Mirror 上免费阅读和写作。用户还可以收藏文章并订阅他们最喜欢的作家。
 
-在 Mirror 上发布的帖子永久存储在去中心化存储平台 Arweave 上，并且可以铸造为具有收藏价值的[非同质化代币 (NFT)](/nft/)，称为写作 NFT。作家可以完全免费地创建写作 NFT，并且收藏发生在以太坊[二层网络 (l2)](/glossary/#layer-2) 上——这使得交易成本低廉、速度快且环保。
+在 Mirror 上发布的帖子永久存储在去中心化存储平台 Arweave 上，并且可以铸造为具有收藏价值的[非同质化代币 (NFT)](/nft/)，称为写作 NFT。作家可以完全免费地创建写作 NFT，并且收藏发生在以太坊[二层网络 (L2)](/glossary/#layer-2) 上——这使得交易成本低廉、速度快且环保。
 
 ### MINDS {#minds}
 
@@ -69,7 +69,7 @@ summaryPoints:
 
 ### Farcaster {#farcaster}
 
-[Farcaster](https://farcaster.xyz/) 是一个“充分去中心化的”社交网络，类似于 X 和 Reddit，允许用户分享和发现“casts”。它建立在 Optimism 二层网络 (l2) 上，以保持相对低廉的交易费用。
+[Farcaster](https://farcaster.xyz/) 是一个“充分去中心化的”社交网络，类似于 X 和 Reddit，允许用户分享和发现“casts”。它建立在 Optimism 二层网络 (L2) 上，以保持相对低廉的交易费用。
 
 ## 使用去中心化社交网络 {#use-decentralized-social-networks}
 

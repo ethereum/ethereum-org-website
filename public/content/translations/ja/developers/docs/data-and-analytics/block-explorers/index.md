@@ -21,12 +21,13 @@ sidebarDepth: 3
 
 ## サービス {#services}
 
-- [Blockchair](https://blockchair.com/ethereum) - プライベートなイーサリアム・エクスプローラー。(メンプール) データの並べ替えやフィルタリングにも対応。スペイン語、フランス語、イタリア語、オランダ語、ポルトガル語、ロシア語、中国語、ペルシア語で利用可能
+- [Blockchair](https://blockchair.com/ethereum) - プライベートなイーサリアム・エクスプローラー。データの並べ替えやフィルタリング (メンプール) にも対応。スペイン語、フランス語、イタリア語、オランダ語、ポルトガル語、ロシア語、中国語、ペルシア語で利用可能
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Etherscan](https://etherscan.io/) - 中国語、韓国語、ロシア語、日本語でも利用可能
 - [Ethplorer](https://ethplorer.io/) - トークンに焦点を当てたブロック・エクスプローラー。中国語、スペイン語、フランス語、トルコ語、ロシア語、韓国語、ベトナム語でも利用可能
+- [Ethscanner](https://ethscanner.io/) - Routescanによる提供。検証済みのコントラクトをVerifier Allianceのオープンデータセットに提供し、クロスチェーンのトランザクションを表示
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)

@@ -1,6 +1,6 @@
 ---
-title: 委託質押 (質押即服務)
-description: 關於如何開始委託質押的概述
+title: "委託質押 (質押即服務)"
+description: "什麼是質押即服務？了解如何存入 32 ETH 並由節點營運商運行你的驗證者，以及與在家質押或聯合質押相比的權衡。"
 lang: zh-tw
 template: staking
 image: /images/staking/leslie-saas.png

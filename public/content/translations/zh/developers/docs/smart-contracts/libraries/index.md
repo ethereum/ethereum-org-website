@@ -56,7 +56,7 @@ contract MyContract is Ownable {
 
 为了促进[可组合性和互操作性](/developers/docs/smart-contracts/composability/)，以太坊社区以 **ERC** 的形式定义了几个标准。你可以在[标准](/developers/docs/standards/)部分阅读更多关于它们的信息。
 
-当将 ERC 作为合约的一部分包含在内时，最好寻找标准实现，而不是尝试自己编写。许多智能合约库都包含了最流行的 ERC 的实现。例如，无处不在的 [ERC-20 同质化代币标准](/developers/tutorials/understand-the-erc-20-token-smart-contract/)可以在 [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md)、[DappSys](https://github.com/dapphub/ds-token/) 和 [欧本齐柏林](https://docs.openzeppelin.com/contracts/3.x/erc20) 中找到。此外，一些 ERC 还提供规范实现作为 ERC 本身的一部分。
+当将 ERC 作为合约的一部分包含在内时，最好寻找标准实现，而不是尝试自己编写。许多智能合约库都包含了最流行的 ERC 的实现。例如，无处不在的 [ERC-20 同质化代币标准](/developers/docs/standards/tokens/erc-20/)可以在 [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md)、[DappSys](https://github.com/dapphub/ds-token/) 和 [欧本齐柏林](https://docs.openzeppelin.com/contracts/3.x/erc20) 中找到。此外，一些 ERC 还提供规范实现作为 ERC 本身的一部分。
 
 值得一提的是，有些 ERC 并不是独立的，而是对其他 ERC 的补充。例如，[ERC-2612](https://eips.ethereum.org/EIPS/eip-2612) 为 ERC-20 添加了一个扩展，以提高其可用性。
 
@@ -109,8 +109,7 @@ contract MyNFT is ERC721 {
 
 ## 相关教程 {#related-tutorials}
 
-- [以太坊开发者的安全注意事项](/developers/docs/smart-contracts/security/) _– 一篇关于构建智能合约时安全注意事项的教程，包括库的使用。_
-- [了解 ERC-20 代币智能合约](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– 关于 ERC-20 标准的教程，由多个库提供。_
+- [以太坊开发者的安全考量](/developers/docs/smart-contracts/security/) _– 一篇关于构建智能合约（包括库的使用）时的安全考量的教程。_
 
 ## 延伸阅读 {#further-reading}
 

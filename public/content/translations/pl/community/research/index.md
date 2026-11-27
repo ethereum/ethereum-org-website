@@ -158,14 +158,14 @@ Obecnie istnieje kilka protokołów warstwy 2 (L2), które skalują Ethereum prz
 
 #### Lektury uzupełniające {#background-reading-2}
 
-- [Wprowadzenie do warstwy 2 (L2)](/layer-2/)
-- [L2BEAT: podsumowanie skalowania](https://l2beat.com/scaling/summary)
+- [Wprowadzenie do warstwy 2](/layer-2/)
+- [ETHBEAT: podsumowanie skalowania](https://ethbeat.org/layer2s/summary)
 - [Mapa drogowa Ethereum skoncentrowana na rollupach](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### Najnowsze badania {#recent-research-2}
 
-- [Warstwa 2 na Ethresear.ch](https://ethresear.ch/c/layer-2/32)
-- [L2BEAT: koszty onchain](https://l2beat.com/scaling/costs)
+- [Ethresear.ch Warstwa 2](https://ethresear.ch/c/layer-2/32)
+- [ETHBEAT: koszty onchain](https://ethbeat.org/layer2s/costs)
 - [Budowanie na Ethereum w 2026 roku: co się zmieniło](/latest/building-on-ethereum-in-2026/)
 
 ### Interoperacyjność {#interoperability}
@@ -387,7 +387,7 @@ Istnieje potrzeba stworzenia większej liczby narzędzi do analizy danych i pulp
 
 - [Analiza danych Robust Incentives Group](https://rig.ethereum.org/)
 - [Otwarte dane ethPandaOps](https://ethpandaops.io/data/)
-- [L2BEAT: podsumowanie skalowania](https://l2beat.com/scaling/summary)
+- [ETHBEAT: podsumowanie skalowania](https://ethbeat.org/layer2s/summary)
 
 ## Aplikacje i narzędzia {#apps-and-tooling}
 

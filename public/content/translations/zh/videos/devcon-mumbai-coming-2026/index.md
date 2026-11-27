@@ -1,6 +1,6 @@
 ---
-title: "Devcon 孟买 - 将于 2026 年 11 月 3 日至 6 日举行"
-description: "以太坊基金会旗舰社区会议 Devcon 的官方预告片，该会议将于 2026 年 11 月在印度孟买举行。"
+title: "Devcon 孟买官宣预告片（2026 年 11 月 3 日至 6 日）"
+description: "以太坊基金会旗舰社区会议 Devcon 的官方发布预告片，该会议将于 2026 年 11 月 3 日至 6 日在印度孟买举行。"
 lang: zh
 youtubeId: "st_A7rRr9tk"
 uploadDate: 2025-11-21
@@ -13,6 +13,6 @@ author: "以太坊基金会"
 breadcrumb: "Devcon 孟买"
 ---
 
-**Devcon 8**（以太坊基金会为开发者和建设者举办的旗舰会议）的官方预告片，会议定于 2026 年 11 月 3 日至 6 日在印度孟买举行。
+以太坊基金会面向开发者和建设者的旗舰会议 **Devcon 8** 的官方发布预告片，该会议将于 2026 年 11 月 3 日至 6 日在印度孟买举行。
 
-*本视频暂无文字记录。请在 YouTube 上观看由以太坊基金会发布的[原视频](https://www.youtube.com/watch?v=st_A7rRr9tk)。*
+*本视频暂无文字记录。请在 YouTube 上观看以太坊基金会发布的[原视频](https://www.youtube.com/watch?v=st_A7rRr9tk)。*

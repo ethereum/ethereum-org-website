@@ -4,9 +4,9 @@ description: "了解如何使用基於 JavaScript 的專案與工具來開發以
 lang: zh-tw
 ---
 
-JavaScript 是以太坊生態系中最受歡迎的語言之一。事實上，有一個[團隊](https://github.com/ethereumjs)致力於盡可能將以太坊的各個層面引入 JavaScript 中。
+JavaScript 是以太坊生態系中最受歡迎的語言之一，從核心協定原語到生產級共識客戶端，都有 JavaScript 與 TypeScript 的實作。
 
-在[技術堆疊的所有層級](/developers/docs/ethereum-stack/)中，都有機會編寫 JavaScript（或類似的語言）。
+在[堆疊的所有層級](/developers/docs/ethereum-stack/)中，都有機會編寫 JavaScript（或類似的語言）。
 
 ## 與以太坊互動 {#interact-with-ethereum}
 
@@ -52,10 +52,15 @@ JavaScript 是以太坊生態系中最受歡迎的語言之一。事實上，有
 
 ### 節點與客戶端 {#nodes-and-clients}
 
-一個 EthereumJS 客戶端正在積極開發中，它能讓你用你熟悉的語言——JavaScript，來深入探究以太坊客戶端的運作方式！
+[洛德斯塔](https://lodestar.chainsafe.io/)是一個可用於生產環境的共識客戶端，以 TypeScript 編寫並由 ChainSafe 維護。它包含一個信標節點與驗證者客戶端，這是一個很好的起點，讓你用熟悉的語言了解以太坊的權益證明共識是如何運作的。
 
-**查看客戶端**  
-[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**查看洛德斯塔**  
+[`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
+
+在執行層方面，EthereumJS 客戶端已被棄用並封存，但其原始碼仍然可用，供你探索以太坊客戶端在 JavaScript 中是如何運作的。
+
+**查看已封存的客戶端**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/archive/client)
 
 ## 其他專案 {#other-projects}
 

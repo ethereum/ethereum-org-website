@@ -7,7 +7,7 @@ alt: "Ethereum yol haritası"
 template: roadmap
 ---
 
-Ethereum, işlemleri bir araya getiren ve çıktıyı Ethereum'a gönderen [katman 2'ler](/layer-2/#rollups) (toplamalar olarak da bilinir) kullanılarak ölçeklendirilir. Toplamalar, Ethereum Ana Ağı'ndan sekiz kata kadar daha ucuz olsa da, son kullanıcılar için maliyetleri düşürmek amacıyla toplamaları daha da optimize etmek mümkündür. Toplamalar ayrıca, toplamalar olgunlaştıkça geliştiricilerin kaldırabileceği bazı merkezi bileşenlere dayanır.
+Ethereum, işlemleri bir araya getiren ve çıktıyı Ethereum'a gönderen [katman 2'ler](/layer-2/learn/#how-does-layer-2-work) (toplamalar olarak da bilinir) kullanılarak ölçeklendirilir. Toplamalar, Ethereum Ana Ağı'ndan sekiz kata kadar daha ucuz olsa da, son kullanıcılar için maliyetleri düşürmek amacıyla toplamaları daha da optimize etmek mümkündür. Toplamalar ayrıca, toplamalar olgunlaştıkça geliştiricilerin kaldırabileceği bazı merkezi bileşenlere dayanır.
 
 <Alert variant="update">
 <AlertContent>
@@ -43,9 +43,15 @@ Bu ikinci adım ["Danksharding"](/roadmap/danksharding/) olarak bilinir. [Blok o
 
 ## Toplamaları merkeziyetsizleştirmek {#decentralizing-rollups}
 
-[Toplamalar](/layer-2) halihazırda Ethereum'u ölçeklendiriyor. [Zengin bir Rollup projeleri ekosistemi](https://l2beat.com/scaling/tvs), kullanıcıların çeşitli güvenlik garantileriyle hızlı ve ucuz bir şekilde işlem yapmalarını sağlıyor. Ancak toplamalar, merkezi sıralayıcılar (işlemleri Ethereum'a göndermeden önce tüm işlemeyi ve birleştirmeyi yapan bilgisayarlar) kullanılarak başlatılmıştır. Bu durum sansüre karşı savunmasızdır, çünkü sıralayıcı operatörlerine yaptırım uygulanabilir, rüşvet verilebilir veya başka bir şekilde tehlikeye atılabilirler. Aynı zamanda, [toplamalar](https://l2beat.com/scaling/summary) gelen verileri doğrulama biçimlerinde farklılık gösterir. En iyi yol, "kanıtlayıcıların" [dolandırıcılık kanıtları](/glossary/#fraud-proof) veya geçerlilik kanıtları sunmasıdır, ancak henüz tüm toplamalar bu aşamada değildir. Geçerlilik/dolandırıcılık kanıtlarını kullanan toplamalar bile bilinen küçük bir kanıtlayıcı havuzu kullanır. Bu nedenle, Ethereum'u ölçeklendirmedeki bir sonraki kritik adım, sıralayıcıları ve kanıtlayıcıları çalıştırma sorumluluğunu daha fazla kişiye dağıtmaktır.
+[Toplamalar](/layer-2) halihazırda Ethereum'u ölçeklendiriyor. [Zengin bir Rollup projeleri ekosistemi](https://ethbeat.org/layer2s/tvs), kullanıcıların çeşitli güvenlik garantileriyle hızlı ve ucuz bir şekilde işlem yapmalarını sağlıyor. Ancak toplamalar, merkezi sıralayıcılar (işlemleri Ethereum'a göndermeden önce tüm işlemeyi ve birleştirmeyi yapan bilgisayarlar) kullanılarak başlatılmıştır. Bu durum sansüre karşı savunmasızdır, çünkü sıralayıcı operatörlerine yaptırım uygulanabilir, rüşvet verilebilir veya başka bir şekilde tehlikeye atılabilirler. Aynı zamanda, [toplamalar](https://ethbeat.org/layer2s/summary) gelen verileri doğrulama biçimlerinde farklılık gösterir. En iyi yol, "kanıtlayıcıların" [dolandırıcılık kanıtları](/glossary/#fraud-proof) veya geçerlilik kanıtları sunmasıdır, ancak henüz tüm toplamalar bu aşamada değildir. Geçerlilik/dolandırıcılık kanıtlarını kullanan toplamalar bile bilinen küçük bir kanıtlayıcı havuzu kullanır. Bu nedenle, Ethereum'u ölçeklendirmedeki bir sonraki kritik adım, sıralayıcıları ve kanıtlayıcıları çalıştırma sorumluluğunu daha fazla kişiye dağıtmaktır.
 
 <ButtonLink variant="outline-color" href="/developers/docs/scaling/">Toplamalar hakkında daha fazlası</ButtonLink>
+
+## Ethereum Ana Ağı'nı zkEVM'ler ile Ölçeklendirmek {#zkevm}
+
+Toplamalar ölçeklendirme için tek yol değildir. Bugün her [doğrulayıcı](/glossary/#validator) her bloktaki her işlemi yeniden yürütür, bu da donanım gereksinimlerini artırmadan Ethereum Ana Ağı'nın ne kadar işlem işleyebileceğini sınırlar. Bir zkEVM ile, tek bir kanıtlayıcı bloğu yürütür ve yürütmenin doğru olduğuna dair bir [sıfır bilgi ispatı](/zero-knowledge-proofs/) oluşturur; doğrulayıcılar ise bunun yerine bu ispatı kontrol eder. Bir ispatı kontrol etmek, yeniden yürütmekten çok daha ucuzdur, bu nedenle Ana Ağ, doğrulayıcıları pahalı donanımlar kullanmaya zorlamadan daha fazla işlemi işleyebilir.
+
+<ButtonLink variant="outline" href="/roadmap/zkevm/">zkEVM hakkında daha fazlası</ButtonLink>
 
 ## Mevcut ilerleme {#current-progress}
 

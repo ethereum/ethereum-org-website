@@ -57,7 +57,7 @@ La couche d'exécution concerne l'exécution des transactions, le fonctionnement
 - l'expiration de l'historique que les nœuds n'ont plus besoin de fournir ;
 - les listes d'accès au niveau du bloc qui permettent de valider les transactions en parallèle ;
 - les marchés de frais multidimensionnels qui fixent séparément le prix de l'état, des données et du calcul ;
-- et la preuve de l'exécution des blocs de couche 1 (l1) avec un zkEVM.
+- et la preuve de l'exécution des blocs de couche 1 (L1) avec un zkEVM.
 
 #### Lectures de base {#background-reading-1}
 
@@ -72,7 +72,7 @@ La couche d'exécution concerne l'exécution des transactions, le fonctionnement
 - [EIP-8037 : Augmentation du coût en gaz de la création d'état](https://eips.ethereum.org/EIPS/eip-8037)
 - [EIP-7999 : Marché de frais multidimensionnel unifié](https://eips.ethereum.org/EIPS/eip-7999)
 - [EIP-7642 : eth/69, expiration de l'historique et reçus simplifiés](https://eips.ethereum.org/EIPS/eip-7642)
-- [Déploiement d'un zkEVM l1 : preuve en temps réel](https://blog.ethereum.org/2025/07/10/realtime-proving)
+- [Déploiement d'un zkEVM L1 : preuve en temps réel](https://blog.ethereum.org/2025/07/10/realtime-proving)
 
 ### Résistance à la censure et construction de blocs {#censorship-resistance-and-block-building}
 
@@ -128,7 +128,7 @@ Un nœud Ethereum doit exécuter deux logiciels :
 1. un client de consensus pour suivre la tête de la chaîne de blocs, propager les blocs et gérer la logique de consensus
 2. un client d'exécution pour prendre en charge la machine virtuelle Ethereum et exécuter les transactions et les contrats intelligents
 
-De nouvelles classes de clients sont en cours de prototypage aux côtés de ces deux-là, notamment des clients qui prouvent l'exécution des blocs de couche 1 (l1) et des clients de consensus allégés construits autour de signatures post-quantiques.
+De nouvelles classes de clients sont en cours de prototypage aux côtés de ces deux-là, notamment des clients qui prouvent l'exécution des blocs de couche 1 (L1) et des clients de consensus allégés construits autour de signatures post-quantiques.
 
 Consultez la [page des nœuds et des clients](/developers/docs/nodes-and-clients/) pour plus de détails sur les nœuds et les clients et pour obtenir une liste de toutes les implémentations de clients actuelles. Vous pouvez également trouver un historique de toutes les mises à jour d'Ethereum sur la [page d'historique](/ethereum-forks/).
 
@@ -146,31 +146,31 @@ Consultez la [page des nœuds et des clients](/developers/docs/nodes-and-clients
 
 - [zkEVM](/roadmap/zkevm/)
 - [Ethproofs](https://ethproofs.org/)
-- [Déploiement d'un zkEVM l1 : les fondations de sécurité](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
+- [Déploiement d'un zkEVM L1 : les fondations de sécurité](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ## Mise à l'échelle et performances {#scaling-and-performance}
 
-La mise à l'échelle d'Ethereum est un domaine d'intérêt majeur pour les chercheurs d'Ethereum, et elle se déroule sur deux voies en même temps : l'augmentation du débit de la couche 1 (l1) elle-même, et le déplacement de l'exécution vers des rollups qui publient leurs données sur Ethereum. Les travaux actuels comprennent l'augmentation de la limite de gaz des blocs, la réévaluation de la croissance de l'état, l'expansion de la capacité des blobs pour les données de rollup, et la réduction de ce qu'un nœud doit stocker et vérifier. Des informations introductives sur la mise à l'échelle d'Ethereum sont disponibles sur notre [page sur la mise à l'échelle](/developers/docs/scaling/) et sur la [feuille de route de mise à l'échelle](/roadmap/scaling/).
+La mise à l'échelle d'Ethereum est un domaine d'intérêt majeur pour les chercheurs d'Ethereum, et elle se déroule sur deux voies en même temps : l'augmentation du débit de la couche 1 (L1) elle-même, et le déplacement de l'exécution vers des rollups qui publient leurs données sur Ethereum. Les travaux actuels comprennent l'augmentation de la limite de gaz des blocs, la réévaluation de la croissance de l'état, l'expansion de la capacité des blobs pour les données de rollup, et la réduction de ce qu'un nœud doit stocker et vérifier. Des informations introductives sur la mise à l'échelle d'Ethereum sont disponibles sur notre [page sur la mise à l'échelle](/developers/docs/scaling/) et sur la [feuille de route de mise à l'échelle](/roadmap/scaling/).
 
-### Couche 2 (l2) {#layer-2}
+### Couche 2 (L2) {#layer-2}
 
-Il existe désormais plusieurs protocoles de couche 2 (l2) qui mettent à l'échelle Ethereum en utilisant différentes techniques pour le traitement par lots des transactions et leur sécurisation sur la couche 1 (l1) d'Ethereum. La recherche ouverte comprend la réduction de la latence et du coût de la preuve, le raccourcissement du temps nécessaire pour qu'une transaction atteigne une finalité sans tiers de confiance, et l'offre aux utilisateurs d'une expérience unique et cohérente à travers de nombreux rollups.
+Il existe désormais plusieurs protocoles de couche 2 (L2) qui mettent à l'échelle Ethereum en utilisant différentes techniques pour le traitement par lots des transactions et leur sécurisation sur la couche 1 (L1) d'Ethereum. La recherche ouverte comprend la réduction de la latence et du coût de la preuve, le raccourcissement du temps nécessaire pour qu'une transaction atteigne une finalité sans tiers de confiance, et l'offre aux utilisateurs d'une expérience unique et cohérente à travers de nombreux rollups.
 
 #### Lectures de base {#background-reading-2}
 
-- [Introduction à la couche 2 (l2)](/layer-2/)
-- [L2BEAT : résumé de la mise à l'échelle](https://l2beat.com/scaling/summary)
+- [Introduction à la couche 2](/layer-2/)
+- [ETHBEAT : résumé de la mise à l'échelle](https://ethbeat.org/layer2s/summary)
 - [Une feuille de route Ethereum centrée sur les rollups](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### Recherches récentes {#recent-research-2}
 
-- [Couche 2 (l2) sur Ethresear.ch](https://ethresear.ch/c/layer-2/32)
-- [L2BEAT : coûts onchain](https://l2beat.com/scaling/costs)
+- [Ethresear.ch Couche 2](https://ethresear.ch/c/layer-2/32)
+- [ETHBEAT : coûts onchain](https://ethbeat.org/layer2s/costs)
 - [Construire sur Ethereum en 2026 : ce qui a changé](/latest/building-on-ethereum-in-2026/)
 
 ### Interopérabilité {#interoperability}
 
-Les utilisateurs et les actifs sont répartis sur la couche 1 (l1) d'Ethereum et de nombreuses couches 2 (l2), et le problème de recherche est de leur permettre de se déplacer et d'agir à travers ces chaînes sans faire confiance à un intermédiaire. Les travaux ici couvrent les transferts basés sur l'intention, l'adressage et le nommage inter-chaîne standardisés, la transmission générale de messages et l'abstraction de chaîne au niveau du portefeuille. Cela remplace un modèle dans lequel des ponts de garde détenaient les actifs, et les ponts ont historiquement été l'une des plus grandes sources de pertes dans l'écosystème, de sorte que la sécurité de tout mécanisme inter-chaîne reste une préoccupation centrale.
+Les utilisateurs et les actifs sont répartis sur la couche 1 (L1) d'Ethereum et de nombreuses couches 2 (L2), et le problème de recherche est de leur permettre de se déplacer et d'agir à travers ces chaînes sans faire confiance à un intermédiaire. Les travaux ici couvrent les transferts basés sur l'intention, l'adressage et le nommage inter-chaîne standardisés, la transmission générale de messages et l'abstraction de chaîne au niveau du portefeuille. Cela remplace un modèle dans lequel des ponts de garde détenaient les actifs, et les ponts ont historiquement été l'une des plus grandes sources de pertes dans l'écosystème, de sorte que la sécurité de tout mécanisme inter-chaîne reste une préoccupation centrale.
 
 #### Lectures de base {#background-reading-3}
 
@@ -226,7 +226,7 @@ La sécurité est un vaste sujet qui peut inclure la prévention du spam et des 
 
 ### Cryptographie et ZKP {#cryptography--zkp}
 
-Les preuves à divulgation nulle de connaissance (ZKP) et la cryptographie sont essentielles pour intégrer la confidentialité et la sécurité dans Ethereum et ses applications. La preuve à divulgation nulle de connaissance est passée de la recherche à l'infrastructure de production : les prouveurs qui prouvent de vrais blocs Ethereum sont désormais évalués publiquement sur la latence, le coût et la solidité. Les problèmes ouverts ont évolué en conséquence, vers la preuve des blocs de couche 1 (l1) assez rapidement pour le faire en temps réel, la prise en compte rigoureuse de la sécurité des systèmes de preuve utilisés, et la préparation à la cryptographie post-quantique.
+Les preuves à divulgation nulle de connaissance (ZKP) et la cryptographie sont essentielles pour intégrer la confidentialité et la sécurité dans Ethereum et ses applications. La preuve à divulgation nulle de connaissance est passée de la recherche à l'infrastructure de production : les prouveurs qui prouvent de vrais blocs Ethereum sont désormais évalués publiquement sur la latence, le coût et la solidité. Les problèmes ouverts ont évolué en conséquence, vers la preuve des blocs de couche 1 (L1) assez rapidement pour le faire en temps réel, la prise en compte rigoureuse de la sécurité des systèmes de preuve utilisés, et la préparation à la cryptographie post-quantique.
 
 #### Lectures de base {#background-reading-6}
 
@@ -239,7 +239,7 @@ Les preuves à divulgation nulle de connaissance (ZKP) et la cryptographie sont 
 - [ZK sur Ethresear.ch](https://ethresear.ch/c/zk-s-nt-arks/13)
 - [Cryptographie sur Ethresear.ch](https://ethresear.ch/c/cryptography/28)
 - [Calculateur de solidité pour les systèmes de preuve zkEVM basés sur le hash](https://github.com/ethereum/soundcalc)
-- [Déploiement d'un zkEVM l1 : les fondations de sécurité](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
+- [Déploiement d'un zkEVM L1 : les fondations de sécurité](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ### Portefeuilles {#wallets}
 
@@ -386,8 +386,8 @@ Il y a un besoin de plus d'outils d'analyse de données et de tableaux de bord q
 #### Recherches récentes {#recent-research-14}
 
 - [Analyse de données du Robust Incentives Group](https://rig.ethereum.org/)
-- [Données ouvertes ethPandaOps](https://ethpandaops.io/data/)
-- [L2BEAT : résumé de la mise à l'échelle](https://l2beat.com/scaling/summary)
+- [Données ouvertes d'ethPandaOps](https://ethpandaops.io/data/)
+- [ETHBEAT : résumé de la mise à l'échelle](https://ethbeat.org/layer2s/summary)
 
 ## Applications et outils {#apps-and-tooling}
 

@@ -1,6 +1,6 @@
 ---
 title: "Identité décentralisée"
-description: "Qu'est-ce que l'identité décentralisée et pourquoi est-ce important ?"
+description: "Qu'est-ce que l'identité décentralisée ? Découvrez comment Ethereum vous permet de posséder et de contrôler votre identité, vos identifiants et vos données sans dépendre d'un fournisseur centralisé."
 lang: fr
 template: use-cases
 sidebarDepth: 2

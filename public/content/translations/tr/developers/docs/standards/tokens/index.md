@@ -38,7 +38,7 @@ _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düze
 - [Token entegrasyonunun Tehlikeleri (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _OpenZeppelin_
 ## İlgili eğitimler {#related-tutorials}
 
-- [Token entegrasyon kontrol listesi](/developers/tutorials/token-integration-checklist/) _– Token'larla etkileşime girerken dikkate alınması gerekenlerin bir kontrol listesi._
-- [ERC20 token akıllı sözleşmesini anlayın](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– Bir Ethereum test ağında ilk akıllı sözleşmenizi dağıtmaya giriş._
-- [Bir Solidity akıllı sözleşmesinden ERC20 token'larının transferleri ve onayı](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Solidity dilini kullanarak bir token ile etkileşime girmek için bir akıllı sözleşmenin nasıl kullanılacağı._
-- [Bir ERC721 pazarı uygulamak [nasıl yapılır kılavuzu]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Tokenlaştırılmış öğelerin merkeziyetsiz bir ilan panosunda nasıl satışa çıkarılacağı._
+- [Token entegrasyonu kontrol listesi](/developers/tutorials/token-integration-checklist/) _– Token'larla etkileşime girerken dikkate alınması gerekenlerin bir kontrol listesi._
+- [ERC-20 sözleşmesi incelemesi](/developers/tutorials/erc20-annotated-code/) _– OpenZeppelin ERC-20 sözleşme uygulamasının satır satır açıklamalı bir incelemesi._
+- [Bir Solidity akıllı sözleşmesinden ERC-20 token'larının transferi ve onayı](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Solidity dilini kullanarak bir token ile etkileşime girmek için bir akıllı sözleşmenin nasıl kullanılacağı._
+- [Bir ERC-721 pazarı uygulamak [nasıl yapılır kılavuzu]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Tokenlaştırılmış öğelerin merkeziyetsiz bir ilan panosunda nasıl satışa çıkarılacağı._

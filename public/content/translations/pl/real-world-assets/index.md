@@ -1,7 +1,7 @@
 ---
 title: "Aktywa świata rzeczywistego (RWA)"
 metaTitle: "Czym są RWA? | Korzyści i zastosowanie aktywów świata rzeczywistego"
-description: "Przegląd aktywów świata rzeczywistego na Ethereum"
+description: "Czym są aktywa świata rzeczywistego (RWA)? Dowiedz się, jak aktywa takie jak obligacje skarbowe, nieruchomości i towary są tokenizowane na Ethereum, oraz poznaj związane z tym korzyści i ryzyka."
 lang: pl
 template: use-cases
 image: /images/man-and-dog-playing.png

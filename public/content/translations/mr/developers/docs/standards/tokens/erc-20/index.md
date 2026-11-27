@@ -176,14 +176,14 @@ print("Addr Balance:", addr_balance)
 - [Alchemy - Solidity ERC20 टोकन्ससाठी मार्गदर्शक](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## इतर विनिमयक्षम टोकन मानके {#fungible-token-standards}
+
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - टोकनाइज्ड व्हॉल्ट्स](/developers/docs/standards/tokens/erc-4626)
 - [ERC-7540 - असिंक्रोनस टोकनाइज्ड व्हॉल्ट्स](/developers/docs/standards/tokens/erc-7540)
-## ट्युटोरियल्स: इथेरियमवर ERC-20 सह तयार करा {#tutorials}
+## ट्युटोरियल्स: इथेरियमवर ERC-20 वापरून तयार करा {#tutorials}
 
-- [ERC-20 कॉन्ट्रॅक्ट वॉक-थ्रू](/developers/tutorials/erc20-annotated-code/) _– ओपनझेपलिन ERC-20 कॉन्ट्रॅक्ट अंमलबजावणीचे ओळीनुसार स्पष्टीकरणात्मक वॉकथ्रू._
-- [सुरक्षा रेलसह ERC-20](/developers/tutorials/erc20-with-safety-rails/) _– वापरकर्त्यांना सामान्य चुका टाळण्यास मदत करण्यासाठी ERC-20 टोकन्समध्ये सुरक्षा उपाय कसे जोडावेत._
-- [Ethers.js वापरून टोकन्स पाठवणे](/developers/tutorials/send-token-ethersjs/) _– Ethers.js वापरून ERC-20 टोकन्स हस्तांतरित करण्यासाठी नवशिक्यांसाठी अनुकूल मार्गदर्शक._
+- [ERC-20 कॉन्ट्रॅक्ट वॉक-थ्रू](/developers/tutorials/erc20-annotated-code/) _– ओपनझेपलिन ERC-20 कॉन्ट्रॅक्ट अंमलबजावणीचा ओळी-दर-ओळी भाष्य केलेला वॉक-थ्रू._
+- [सेफ्टी रेल्ससह ERC-20](/developers/tutorials/erc20-with-safety-rails/) _– वापरकर्त्यांना सामान्य चुका टाळण्यास मदत करण्यासाठी ERC-20 टोकन्समध्ये सुरक्षा उपाय कसे जोडावेत._
 - [स्कॅम टोकन्सद्वारे वापरल्या जाणाऱ्या काही युक्त्या आणि त्या कशा ओळखाव्या](/developers/tutorials/scam-token-tricks/) _– स्कॅम ERC-20 टोकन पॅटर्न आणि ते कसे ओळखावे याबद्दल सविस्तर माहिती._

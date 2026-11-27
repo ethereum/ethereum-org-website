@@ -51,7 +51,7 @@ function asset() public view returns (address assetTokenAddress)
 function totalAssets() public view returns (uint256)
 ```
 
-이 함수는 볼트가 보유한 기초 자산의 총량을 반환합니다.
+이 함수는 볼트가 관리하는 기초 자산의 총량을 반환하며, 여기에는 다른 곳에 운용 중인 자산과 수수료 차감 후의 금액이 모두 포함됩니다.
 
 #### convertToShares {#convertoshares}
 
@@ -183,7 +183,7 @@ function balanceOf(address owner) public view returns (uint256)
 
 ### 인터페이스 맵 {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### 이벤트 {#events}
 

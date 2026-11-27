@@ -1,7 +1,7 @@
 ---
 title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
-description: "Aprende sobre la actualización del protocolo Fusaka"
+description: "Fusaka se lanzó el 3 de diciembre de 2025. Aprende qué cambió con esta actualización de Ethereum, incluido PeerDAS, que escala los blobs para lograr transacciones de capa 2 más baratas."
 lang: es
 template: upgrade
 authors: ["Nixo", "Mario Havel"]

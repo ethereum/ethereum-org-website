@@ -19,14 +19,15 @@ Bạn nên hiểu các khái niệm cơ bản về Ethereum để có thể hi�
 - [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
 - [Otterscan](https://otterscan.io/)
 
-## Các dịch vụ {#services}
+## Dịch vụ {#services}
 
 - [Blockchair](https://blockchair.com/ethereum) - Trình khám phá Ethereum riêng tư. Cũng dùng để sắp xếp và lọc dữ liệu (mempool). Có sẵn bằng tiếng Tây Ban Nha, tiếng Pháp, tiếng Ý, tiếng Hà Lan, tiếng Bồ Đào Nha, tiếng Nga, tiếng Trung và tiếng Ba Tư
 - [Chainlens](https://www.chainlens.com/)
-- [Trình khám phá khối DexGuru](https://ethereum.dex.guru/)
+- [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Etherscan](https://etherscan.io/) - Cũng có sẵn bằng tiếng Trung, tiếng Hàn, tiếng Nga và tiếng Nhật
-- [Ethplorer](https://ethplorer.io/) - Một trình khám phá khối tập trung vào các token. Cũng có sẵn bằng tiếng Trung, tiếng Tây Ban Nha, tiếng Pháp, tiếng Thổ Nhĩ Kỳ, tiếng Nga, tiếng Hàn và tiếng Việt
+- [Ethplorer](https://ethplorer.io/) - Một trình khám phá khối tập trung vào token. Cũng có sẵn bằng tiếng Trung, tiếng Tây Ban Nha, tiếng Pháp, tiếng Thổ Nhĩ Kỳ, tiếng Nga, tiếng Hàn và tiếng Việt
+- [Ethscanner](https://ethscanner.io/) - Bởi Routescan. Đóng góp các hợp đồng đã được xác minh cho tập dữ liệu mở của Verifier Alliance và hiển thị các giao dịch chuỗi chéo
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)

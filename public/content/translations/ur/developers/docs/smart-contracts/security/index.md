@@ -78,7 +78,7 @@ contract VendingMachine {
 
 بدقسمتی سے، جب یونٹ ٹیسٹنگ کو تنہائی میں استعمال کیا جاتا ہے تو یہ سمارٹ کنٹریکٹ کی سیکیورٹی کو بہتر بنانے کے لیے کم از کم موثر ہوتی ہے۔ ایک یونٹ ٹیسٹ یہ ثابت کر سکتا ہے کہ کوئی فنکشن فرضی ڈیٹا کے لیے مناسب طریقے سے ایگزیکیوٹ ہوتا ہے، لیکن یونٹ ٹیسٹ صرف اتنے ہی موثر ہوتے ہیں جتنے کہ لکھے گئے ٹیسٹ۔ اس سے ان ایج کیسز (edge cases) اور کمزوریوں کا پتہ لگانا مشکل ہو جاتا ہے جو آپ کے سمارٹ کنٹریکٹ کی حفاظت کو توڑ سکتے ہیں۔
 
-ایک بہتر طریقہ یہ ہے کہ یونٹ ٹیسٹنگ کو [سٹیٹک اور ڈائنامک تجزیہ](/developers/docs/smart-contracts/testing/#static-dynamic-analysis) کا استعمال کرتے ہوئے کی جانے والی پراپرٹی پر مبنی ٹیسٹنگ کے ساتھ ملایا جائے۔ سٹیٹک تجزیہ قابل رسائی پروگرام سٹیٹس اور ایگزیکیوشن پاتھس کا تجزیہ کرنے کے لیے نچلی سطح کی نمائندگیوں، جیسے [کنٹرول فلو گرافس](https://en.wikipedia.org/wiki/Control-flow_graph) اور [ایبسٹریکٹ سنٹیکس ٹریز](https://deepsource.io/glossary/ast/) پر انحصار کرتا ہے۔ دریں اثنا، ڈائنامک تجزیہ کی تکنیکیں، جیسے [سمارٹ کنٹریکٹ فزنگ (fuzzing)](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry)، سیکیورٹی خصوصیات کی خلاف ورزی کرنے والے آپریشنز کا پتہ لگانے کے لیے بے ترتیب ان پٹ ویلیوز کے ساتھ کنٹریکٹ کوڈ کو ایگزیکیوٹ کرتی ہیں۔
+ایک بہتر طریقہ یہ ہے کہ یونٹ ٹیسٹنگ کو [سٹیٹک اور ڈائنامک تجزیہ](/developers/docs/smart-contracts/testing/#property-based-testing-for-smart-contracts) کا استعمال کرتے ہوئے کی جانے والی پراپرٹی پر مبنی ٹیسٹنگ کے ساتھ ملایا جائے۔ سٹیٹک تجزیہ قابل رسائی پروگرام سٹیٹس اور ایگزیکیوشن پاتھس کا تجزیہ کرنے کے لیے نچلی سطح کی نمائندگیوں، جیسے [کنٹرول فلو گرافس](https://en.wikipedia.org/wiki/Control-flow_graph) اور [ایبسٹریکٹ سنٹیکس ٹریز](https://deepsource.io/glossary/ast/) پر انحصار کرتا ہے۔ دریں اثنا، ڈائنامک تجزیہ کی تکنیکیں، جیسے [سمارٹ کنٹریکٹ فزنگ (fuzzing)](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry)، سیکیورٹی خصوصیات کی خلاف ورزی کرنے والے آپریشنز کا پتہ لگانے کے لیے بے ترتیب ان پٹ ویلیوز کے ساتھ کنٹریکٹ کوڈ کو ایگزیکیوٹ کرتی ہیں۔
 
 [رسمی تصدیق (Formal verification)](/developers/docs/smart-contracts/formal-verification) سمارٹ کنٹریکٹس میں سیکیورٹی خصوصیات کی تصدیق کے لیے ایک اور تکنیک ہے۔ باقاعدہ ٹیسٹنگ کے برعکس، رسمی تصدیق سمارٹ کنٹریکٹ میں خامیوں کی عدم موجودگی کو حتمی طور پر ثابت کر سکتی ہے۔ یہ ایک رسمی تصریح (formal specification) بنا کر حاصل کیا جاتا ہے جو مطلوبہ سیکیورٹی خصوصیات کو حاصل کرتی ہے اور یہ ثابت کرتی ہے کہ کنٹریکٹس کا ایک رسمی ماڈل اس تصریح کی پابندی کرتا ہے۔
 
@@ -461,9 +461,9 @@ DEX کی قیمتیں اکثر درست ہوتی ہیں، جس کی بڑی وج�
 
 - **[رسمی تصدیق (Formal verification) کے ٹولز](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _سمارٹ کنٹریکٹس میں فنکشنل درستگی کی تصدیق کرنے اور انویرینٹس (invariants) کو چیک کرنے کے ٹولز۔_
 
-- **[سمارٹ کنٹریکٹ آڈیٹنگ سروسز](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _ایتھیریم ڈیولپمنٹ پروجیکٹس کے لیے سمارٹ کنٹریکٹ آڈیٹنگ سروسز فراہم کرنے والی تنظیموں کی فہرست۔_
+- **[سمارٹ کنٹریکٹ آڈیٹنگ سروسز](#smart-contract-auditing-services)** - _ایتھیریم ڈیولپمنٹ پروجیکٹس کے لیے سمارٹ کنٹریکٹ آڈیٹنگ سروسز فراہم کرنے والی تنظیموں کی فہرست۔_
 
-- **[بگ باؤنٹی پلیٹ فارمز](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _بگ باؤنٹیز کو مربوط کرنے اور سمارٹ کنٹریکٹس میں اہم کمزوریوں کے ذمہ دارانہ انکشاف پر انعام دینے کے پلیٹ فارمز۔_
+- **[بگ باؤنٹی پلیٹ فارمز](#bug-bounty-platforms)** - _بگ باؤنٹیز کو مربوط کرنے اور سمارٹ کنٹریکٹس میں اہم کمزوریوں کے ذمہ دارانہ انکشاف پر انعام دینے کے پلیٹ فارمز۔_
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _فورک شدہ کنٹریکٹ کے حوالے سے تمام دستیاب معلومات چیک کرنے کے لیے ایک مفت آن لائن ٹول۔_
 
@@ -563,12 +563,10 @@ DEX کی قیمتیں اکثر درست ہوتی ہیں، جس کی بڑی وج�
 
 - [محفوظ سمارٹ کنٹریکٹس کیسے لکھیں](/developers/tutorials/secure-development-workflow/)
 
-- [سمارٹ کنٹریکٹ بگز تلاش کرنے کے لیے سلدر کا استعمال کیسے کریں](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-
-- [سمارٹ کنٹریکٹ بگز تلاش کرنے کے لیے <span dir="ltr">Manticore</span> کا استعمال کیسے کریں](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
+- [سمارٹ کنٹریکٹ کے بگز تلاش کرنے کے لیے سلدر کا استعمال کیسے کریں](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
 - [سمارٹ کنٹریکٹ سیکیورٹی کے رہنما خطوط](/developers/tutorials/smart-contract-security-guidelines/)
 
-- [اپنے ٹوکن کنٹریکٹ کو صوابدیدی (arbitrary) ٹوکنز کے ساتھ محفوظ طریقے سے کیسے مربوط کریں](/developers/tutorials/token-integration-checklist/)
+- [اپنے ٹوکن کنٹریکٹ کو کسی بھی ٹوکن کے ساتھ محفوظ طریقے سے کیسے مربوط کریں](/developers/tutorials/token-integration-checklist/)
 
 - [Cyfrin Updraft - سمارٹ کنٹریکٹس سیکیورٹی اور آڈیٹنگ کا مکمل کورس](https://updraft.cyfrin.io/courses/security)

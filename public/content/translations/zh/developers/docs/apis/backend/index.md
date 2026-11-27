@@ -66,7 +66,7 @@ lang: zh
 **Infura -** **_以太坊 API 即服务。_**
 
 - [infura.io](https://infura.io)
-- [文档](https://docs.infura.io/api)
+- [文档](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _高性价比的以太坊虚拟机 (EVM) JSON-RPC 提供商_**
@@ -77,7 +77,7 @@ lang: zh
 **NOWNodes - _全节点和区块浏览器。_**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [文档](https://nownodes.gitbook.io/documentation)
+- [文档](https://docs.nownodes.io/)
 
 **QuickNode -** **_区块链基础设施即服务。_**
 
@@ -167,7 +167,7 @@ lang: zh
 - [Coinbase Cloud Node](https://www.coinbase.com/developer-platform)
 - [文档](https://docs.cdp.coinbase.com/)
 
-**Figment 提供的 DataHub -** **_支持以太坊主网和测试网的 Web3 API 服务。_**
+**DataHub by Figment -** **_具有以太坊主网和测试网的 Web3 API 服务。_**
 
 - [DataHub](https://www.figment.io/)
 - [文档](https://docs.figment.io/)
@@ -176,7 +176,6 @@ lang: zh
 
 - [moralis.io](https://moralis.io)
 - [文档](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [Discord](https://moralis.io/joindiscord/)
 - [论坛](https://forum.moralis.io/)
 
@@ -193,7 +192,7 @@ lang: zh
 - [文档](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-**Watchdata -** **_提供简单可靠的以太坊区块链 API 访问。_**
+**Watchdata -** **_提供对以太坊区块链简单可靠的 API 访问。_**
 
 - [Watchdata](https://watchdata.io/)
 - [文档](https://docs.watchdata.io/)
@@ -207,13 +206,12 @@ lang: zh
 - [GitHub](https://github.com/Codex-Data)
 - [Discord](https://discord.com/invite/mFpUhT3vAq)
 
-**Covalent -** **_支持 200 多条链的丰富区块链 API。_**
+**Covalent -** **_适用于 200 多条链的丰富区块链 API。_**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [文档](https://www.covalenthq.com/docs/api/)
+- [文档](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
-
 
 ## 延伸阅读 {#further-reading}
 
@@ -226,5 +224,4 @@ _知道对你有帮助的社区资源吗？编辑本页面并添加它！_
 
 ## 相关教程 {#related-tutorials}
 
-- [设置 Web3.js 以在 JavaScript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– 在项目中设置 Web3.js 的说明。_
-- [从 JavaScript 调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– 使用 DAI 代币，了解如何使用 JavaScript 调用合约函数。_
+- [Web3 应用程序的服务器组件和代理](/developers/tutorials/server-components/) _– 如何编写监听区块链事件并以交易响应的 TypeScript 服务器组件。_

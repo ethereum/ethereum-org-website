@@ -38,20 +38,20 @@ Mikusanyiko ya Ethereum pia ingenufaika na viteja vyepesi. Moja ya matatizo maku
 
 Viteja vyepesi pia vinaweza kutumika kuboresha mikoba ya Ethereum. Badala ya kuamini data iliyotolewa kutoka kwa mtoa huduma wa RPC, mkoba wako unaweza kuthibitisha moja kwa moja data inayowasilishwa kwako kwa kutumia kiteja chepesi kilichopachikwa. Hii ingeongeza usalama kwenye mkoba wako. Ikiwa mtoa huduma wako wa RPC hakuwa mwaminifu na akakupa data isiyo sahihi, kiteja chepesi kilichopachikwa kingeweza kukuambia!
 
-## Je, hali ya sasa ya maendeleo ya kiteja chepesi ni ipi? {#current-state-of-development}
+## Hali ya sasa ya maendeleo ya viteja vyepesi ni ipi? {#current-state-of-development}
 
-Kuna viteja vyepesi kadhaa vinavyotengenezwa, ikiwa ni pamoja na viteja vyepesi vya utekelezaji, mwafaka na mchanganyiko wa utekelezaji/mwafaka. Hizi ni utekelezaji wa kiteja chepesi tunazozijua wakati wa kuandika ukurasa huu:
+Kuna viteja vyepesi kadhaa vinavyotengenezwa, ikiwa ni pamoja na viteja vyepesi vya utekelezaji, mwafaka na mchanganyiko wa utekelezaji/mwafaka. Huu ni utekelezaji wa viteja vyepesi tunaoujua wakati wa kuandika ukurasa huu:
 
-- [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): mteja mwepesi wa mwafaka katika TypeScript
-- [Helios](https://github.com/a16z/helios): kiteja chepesi kilichojumuishwa cha utekelezaji na mwafaka katika Rust
-- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): hali nyepesi kwa kiteja cha utekelezaji (katika maendeleo) katika Go
-- [Nimbus](https://nimbus.guide/el-light-client.html): mteja mwepesi wa mwafaka katika Nim
+- [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): kiteja chepesi cha mwafaka katika TypeScript
+- [Helios](https://github.com/a16z/helios): kiteja chepesi cha mchanganyiko wa utekelezaji na mwafaka katika Rust
+- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): hali nyepesi ya kiteja cha utekelezaji (inayotengenezwa) katika Go
+- [Nimbus](https://nimbus.guide/el-light-client.html): kiteja chepesi cha mwafaka katika Nim
 
 Kwa ufahamu wetu hakuna hata moja kati ya hizi inayochukuliwa kuwa tayari kwa uzalishaji bado.
 
-Pia kuna kazi nyingi inayofanywa ili kuboresha njia ambazo viteja vyepesi vinaweza kufikia data ya Ethereum. Kwa sasa, viteja vyepesi vinategemea maombi ya RPC kwa nodi kamili kwa kutumia muundo wa kiteja/seva, lakini katika siku zijazo data inaweza kuombwa kwa njia iliyogatuliwa zaidi kwa kutumia mtandao maalum kama vile [Potal Netwoki](https://www.ethportal.net/) ambao unaweza kutoa data kwa viteja vyepesi kwa kutumia itifaki ya uvumi ya rika-kwa-rika.
+Pia kuna kazi nyingi inayofanywa ili kuboresha njia ambazo viteja vyepesi vinaweza kufikia data ya Ethereum. Kwa sasa, viteja vyepesi hutegemea maombi ya RPC kwa nodi kamili kwa kutumia muundo wa kiteja/seva. [Potal Netwoki](/developers/docs/networking-layer/portal-network/) ilibuniwa kwanza kutoa data hii kwa viteja vyepesi kupitia mtandao wa rika-kwa-rika, lakini maendeleo yake sasa yanalenga kutoa historia ya vitalu vilivyopita.
 
-Vipengee vingine vya [ramani ya njia](/roadmap/) kama vile [Miti ya Verkle](/roadmap/verkle-trees/) na [ubilahali](/roadmap/statelessness/) hatimaye vitaleta dhamana za usalama za viteja vyepesi sawa na zile za viteja kamili.
+Vipengele vingine vya [ramani ya njia](/roadmap/) kama vile mti mpya wa hali (unaopendekezwa kwa sasa kama mti wa jozi katika [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) na [ubilahali](/roadmap/statelessness/) hatimaye vitaleta dhamana za usalama za viteja vyepesi sawa na zile za viteja kamili.
 
 ## Usomaji zaidi {#further-reading}
 

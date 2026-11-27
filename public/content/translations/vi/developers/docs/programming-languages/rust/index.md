@@ -38,21 +38,20 @@ Bạn cần một tài liệu hướng dẫn cơ bản hơn trước? Hãy xem [
 
 ## Các dự án và công cụ Rust {#rust-projects-and-tools}
 
-- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Bộ sưu tập các externs để tương tác với mạng lưới giống Ethereum_
-- [Lighthouse](https://github.com/sigp/lighthouse) - _Máy khách lớp đồng thuận Ethereum tốc độ cao_
-- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _Đề xuất thiết kế lại lớp thực thi hợp đồng thông minh Ethereum bằng cách sử dụng một tập hợp con tất định của WebAssembly_
-- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _Tài liệu tham khảo API OASIS_
-- [Solaris](https://github.com/paritytech/sol-rs) - _Công cụ kiểm thử đơn vị cho hợp đồng thông minh Solidity sử dụng EVM của máy khách Parity gốc._
-- [SputnikVM](https://github.com/rust-blockchain/evm) - _Bản triển khai Máy ảo Ethereum bằng Rust_
+- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Bộ sưu tập các extern để tương tác với mạng lưới giống Ethereum_
+- [Lighthouse](https://github.com/sigp/lighthouse) - _Máy khách lớp đồng thuận Ethereum nhanh_
+- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _Đề xuất thiết kế lại lớp thực thi hợp đồng thông minh Ethereum bằng cách sử dụng một tập hợp con xác định của WebAssembly_
+- [Solaris](https://github.com/paritytech/sol-rs) - _Công cụ kiểm thử đơn vị hợp đồng thông minh Solidity sử dụng EVM của máy khách Parity gốc._
+- [SputnikVM](https://github.com/rust-blockchain/evm) - _Bản triển khai Máy ảo Ethereum (EVM) bằng Rust_
 - [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Hợp đồng thông minh Wavelet bằng Rust_
-- [Foundry](https://github.com/foundry-rs/foundry) - _Bộ công cụ phát triển ứng dụng Ethereum_
-- [Alloy](https://alloy.rs) - _Các thư viện hiệu suất cao, được kiểm thử kỹ lưỡng & có tài liệu đầy đủ để tương tác với Ethereum và các chuỗi dựa trên EVM khác._
-- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Thư viện Ethereum và bản triển khai ví_
-- [SewUp](https://github.com/second-state/SewUp) - _Một thư viện giúp bạn xây dựng hợp đồng WebAssembly Ethereum bằng Rust giống như phát triển một backend thông thường_
+- [Foundry](https://github.com/foundry-rs/foundry) - _Bộ công cụ để phát triển ứng dụng Ethereum_
+- [Alloy](https://alloy.rs) - _Các thư viện hiệu suất cao, được kiểm thử kỹ lưỡng và có tài liệu đầy đủ để tương tác với Ethereum và các chuỗi dựa trên EVM khác._
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Bản triển khai ví và thư viện Ethereum_
+- [SewUp](https://github.com/second-state/SewUp) - _Một thư viện giúp bạn xây dựng hợp đồng WebAssembly Ethereum bằng Rust giống như phát triển ở một backend thông thường_
 - [Substreams](https://github.com/streamingfast/substreams) - _Công nghệ lập chỉ mục dữ liệu chuỗi khối song song_
 - [Reth](https://github.com/paradigmxyz/reth) Reth (viết tắt của Rust Ethereum) là một bản triển khai nút đầy đủ Ethereum mới
-- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Một bộ sưu tập chọn lọc các dự án trong hệ sinh thái Ethereum được viết bằng Rust_
-- [Stylus](https://github.com/OffchainLabs/stylus) - _Rust SDK để xây dựng hợp đồng thông minh trên Arbitrum_
+- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Một bộ sưu tập được tuyển chọn gồm các dự án trong hệ sinh thái Ethereum được viết bằng Rust_
+- [Stylus](https://github.com/OffchainLabs/stylus) - _SDK Rust để xây dựng hợp đồng thông minh trên Arbitrum_
 
 Bạn đang tìm kiếm thêm tài nguyên? Hãy xem [ethereum.org/developers.](/developers/)
 

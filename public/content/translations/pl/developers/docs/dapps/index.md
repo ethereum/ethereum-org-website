@@ -1,6 +1,6 @@
 ---
 title: "Techniczne wprowadzenie do dappów"
-description:
+description: "Techniczne wprowadzenie do dappów: jak zdecentralizowane aplikacje łączą inteligentne kontrakty na Ethereum z frontendem i czym różnią się od aplikacji internetowych."
 lang: pl
 ---
 
@@ -96,8 +96,7 @@ _Znasz zasób społeczności, który Ci pomógł? Edytuj tę stronę i dodaj go!
 
 ## Samouczki: Tworzenie aplikacji i frontendów na Ethereum {#tutorials}
 
-- [Przewodnik po kontraktach Uniswap-v2](/developers/tutorials/uniswap-v2-annotated-code/) _– Przewodnik z adnotacjami po głównych kontraktach Uniswap v2 wyjaśniający, jak działa zautomatyzowany animator rynku (AMM)._
-- [Budowanie interfejsu użytkownika dla Twojego kontraktu](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– Jak zbudować nowoczesny frontend w React + Wagmi, który łączy się z Twoim inteligentnym kontraktem._
-- [Inteligentny kontrakt Hello World dla początkujących – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Kompleksowy samouczek: napisz, wdróż i zbuduj frontend dla prostego inteligentnego kontraktu._
+- [Przewodnik po kontraktach Uniswap-v2](/developers/tutorials/uniswap-v2-annotated-code/) _– Opatrzony komentarzami przewodnik po głównych kontraktach Uniswap v2 wyjaśniający, jak działa AMM._
+- [Tworzenie interfejsu użytkownika dla Twojego kontraktu](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– Jak zbudować nowoczesny frontend React + Wagmi, który łączy się z Twoim inteligentnym kontraktem._
 - [Komponenty serwerowe i agenci dla aplikacji Web3](/developers/tutorials/server-components/) _– Jak pisać komponenty serwerowe w TypeScript, które nasłuchują zdarzeń na blockchainie i odpowiadają transakcjami._
 - [IPFS dla zdecentralizowanych interfejsów użytkownika](/developers/tutorials/ipfs-decentralized-ui/) _– Jak hostować frontend swojego dappa w IPFS, aby zapewnić odporność na cenzurę._

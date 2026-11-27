@@ -1,7 +1,7 @@
 ---
 title: O ethereum.org
 metaTitle: "O nás"
-description: "O týmu, komunitě a poslání ethereum.org"
+description: "Seznamte se s týmem a komunitou, která stojí za ethereum.org: naše poslání, jak je web otevřeně budován a spravován a jak můžete pomoci s jeho vylepšením."
 lang: cs
 ---
 
@@ -111,6 +111,8 @@ Vytvořili jsme a vydali [designový systém](https://www.figma.com/file/NrNxGjB
 
 Chcete se zapojit? [Sledujte nás ve Figmě](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) a připojte se ke konverzaci na našem [kanálu #design na Discordu](/discord/).
 
+Hledáte loga, ilustrace nebo jiné soubory značky? Stáhněte si je z naší [stránky s materiály](/assets/).
+
 ## Průvodce stylem {#style-guide}
 
 Máme [průvodce stylem](/contributing/style-guide/), který standardizuje určité aspekty psaní obsahu, aby byl proces přispívání plynulejší.
@@ -122,6 +124,10 @@ Uvítáme zpětnou vazbu k našim principům designu, designovému systému a pr
 ## Licence {#license}
 
 Web ethereum.org je open-source a je vytvořen pod [licencí MIT](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE), pokud není uvedeno jinak. Více o [podmínkách použití](/terms-of-use/) ethereum.org.
+
+## Vaše soukromí {#your-privacy}
+
+ethereum.org používá Matomo pro analytiku zachovávající soukromí a vy se z ní můžete kdykoli odhlásit. Přečtěte si naše [zásady používání souborů cookie](/cookie-policy/) a [zásady ochrany osobních údajů](/privacy-policy/) pro více podrobností.
 
 ## Volné pozice {#open-jobs}
 

@@ -39,15 +39,15 @@ Für Benutzer ist die [Endgültigkeit](/glossary/#finality) der Moment, in dem e
 
 <ButtonLink variant="outline" href="/roadmap/single-slot-finality/">Mehr zur Forschung an schnellerer Endgültigkeit</ButtonLink>
 
-## Widerstandsfähige Validatoren {#resilient-validators}
+## Resiliente Validatoren {#resilient-validators}
 
-Ein Validator ist normalerweise eine Maschine, die einen Signierschlüssel hält. Die **Verteilte Validator-Technologie (DVT)** ersetzt diese einzelne Maschine durch ein Komitee von Maschinen, die sich den Schlüssel teilen und gemeinsam signieren, sodass der Ausfall eines Computers oder der Diebstahl eines Schlüssels den Validator nicht lahmlegt. DVT ist in der Produktion live und wird von Staking-Betreibern in großem Maßstab genutzt. Im Januar 2026 schlug Vitalik Buterin eine vereinfachte Variante auf Protokollebene namens DVT-lite vor; es handelt sich um einen frühen Vorschlag ohne geplanten Fork.
+Ein Validator ist normalerweise eine einzige Maschine, die einen Signierschlüssel besitzt. Die **Verteilte Validator-Technologie (DVT)** ersetzt diese einzelne Maschine durch ein Komitee von Maschinen, die sich den Schlüssel teilen und gemeinsam signieren, sodass der Ausfall eines Computers oder der Diebstahl eines Schlüssels den Validator nicht lahmlegt. DVT ist produktiv im Einsatz und wird von Staking-Betreibern in großem Maßstab genutzt. Im Januar 2026 schlug Vitalik Buterin eine vereinfachte Variante auf Protokollebene namens DVT-lite vor; es handelt sich um einen frühen Vorschlag ohne geplanten Fork.
 
 Das Netzwerk schützt sich auch durch [Client-Diversität](/developers/docs/nodes-and-clients/client-diversity/): Ethereum läuft auf mehreren unabhängig entwickelten Software-Implementierungen, sodass ein Fehler in einem Client den Rest des Netzwerks intakt lässt.
 
-Zwei frühere Forschungsideen, View-Merge und Geheime Anführerwahl, sind keine aktiven Roadmap-Punkte mehr.
+Zwei frühere Forschungsideen, View-Merge und die [Geheime Anführerwahl](/roadmap/secret-leader-election/), sind keine aktiven Roadmap-Punkte mehr.
 
-<ButtonLink variant="outline" href="/staking/dvt/">Mehr zur Verteilten Validator-Technologie (DVT)</ButtonLink>
+<ButtonLink variant="outline" href="/staking/dvt/">Mehr zur Verteilten Validator-Technologie</ButtonLink>
 
 ## Quantenresistenz {#quantum-resistance}
 
@@ -71,21 +71,21 @@ Nein. Kein Quantencomputer kann heute die Kryptographie von Ethereum knacken. Di
 
 ## Einfacheres und effizienteres Protokoll {#simpler-and-more-efficient-protocol}
 
-Komplexität schafft Möglichkeiten für Fehler und Schwachstellen. Ein Teil der Roadmap konzentriert sich darauf, **Ethereum zu vereinfachen und technische Schulden abzubauen**, damit das Protokoll leichter zu warten, zu prüfen und zu verstehen ist. Ein einfacheres Protokoll bietet Angreifern auch weniger Angriffsfläche.
+Komplexität schafft Möglichkeiten für Fehler und Schwachstellen. Ein Teil der Roadmap konzentriert sich darauf, **Ethereum zu vereinfachen und technische Schulden abzubauen**, damit das Protokoll leichter zu warten, zu prüfen und nachzuvollziehen ist. Ein einfacheres Protokoll bietet Angreifern zudem weniger Angriffsfläche.
 
-Bisher geliefert:
+Bisher ausgeliefert:
 
-- **[Pectra (Mai 2025)](/roadmap/pectra/)**: Führte EIP-7702 ein, das es externen Konten (Externally Owned Accounts) ermöglicht, vorübergehend an Smart Contract-Code zu delegieren – ein Sprungbrett zur vollständigen Kontoabstraktion.
-- **[Fusaka (Dezember 2025)](/roadmap/fusaka/)**: Implementierte PeerDAS (EIP-7594), das die Arbeitslast der Datenverfügbarkeit über das Netzwerk verteilt. Erhöhte außerdem die Blob-Parameter, was den Transaktionsdurchsatz für Rollups erweitert.
-- **[Dencun (März 2024)](/roadmap/dencun/)**: Führte Blob-Transaktionen (EIP-4844) für günstigere Rollup-Daten ein und schränkte `SELFDESTRUCT` (EIP-6780) ein, um eine langjährige Quelle der Komplexität zu beseitigen.
+- **[Pectra (Mai 2025)](/roadmap/pectra/)**: Führte EIP-7702 ein, das es extern verwalteten Konten ermöglicht, vorübergehend an Smart Contract-Code zu delegieren – ein Sprungbrett in Richtung vollständiger Kontoabstraktion.
+- **[Fusaka (Dezember 2025)](/roadmap/fusaka/)**: Implementierte PeerDAS (EIP-7594), das die Arbeitslast der Datenverfügbarkeit über das Netzwerk verteilt. Zudem wurden die Blob-Parameter erhöht, was den Transaktionsdurchsatz für Rollups erweitert.
+- **[Dencun (März 2024)](/roadmap/dencun/)**: Führte Blob-Transaktionen (EIP-4844) für günstigere Rollup-Daten ein und schränkte `SELFDESTRUCT` (EIP-6780) ein, um eine langjährige Komplexitätsquelle zu beseitigen.
 - **[Shapella (April 2023)](/staking/withdrawals/)**: Ermöglichte es Validatoren, gestakte ETH abzuheben (EIP-4895), wodurch eine frühe Einschränkung des [Proof-of-Stake](/glossary/#pos)-Stakings aufgehoben wurde.
-- **London (August 2021)**: Überarbeitete die Gas-Preisgestaltung mit EIP-1559 und führte eine Grundgebühr sowie einen Mechanismus zum Verbrennen ein, um vorhersehbarere Transaktionskosten zu erzielen.
+- **London (August 2021)**: Überarbeitete die Gas-Preisgestaltung mit EIP-1559 und führte eine Grundgebühr sowie einen Mechanismus zum Verbrennen ein, um die Transaktionskosten vorhersehbarer zu machen.
 
 In Arbeit:
 
-- **Glamsterdam (anvisiert für 2026)**: Die Hauptmerkmale sind ePBS (EIP-7732) und Zugriffslisten auf Blockebene (EIP-7928), wobei auch eine Neugestaltung der Gas-Preise in Betracht gezogen wird.
-- **Hegotá (anvisiert für 2027)**: FOCIL (EIP-7805) ist das Hauptmerkmal der Konsens-Schicht. Für die Aufnahme in Betracht gezogen: EIP-8141 (native Kontoabstraktion).
-- **Laufend**: Die Bemühungen zur Vereinfachung der [EVM](/developers/docs/evm/), zur Harmonisierung von Client-Implementierungen und zum Auslaufen veralteter Funktionen werden von den Client-Teams fortgesetzt. Die Arbeit an der Zustandslosigkeit (die es Teilnehmern ermöglicht, die Chain zu verifizieren, ohne all ihre Daten zu speichern) wird um quantensichere binäre Hash-Bäume herum neu gestaltet, wobei der endgültige Ansatz noch bestätigt werden muss.
+- **Glamsterdam (anvisiert für 2026)**: Die Hauptmerkmale sind ePBS (EIP-7732) und Zugriffslisten auf Blockebene (EIP-7928), wobei auch eine Gas-Preisanpassung in Betracht gezogen wird.
+- **Hegotá (anvisiert für 2027)**: FOCIL (EIP-7805) ist das Hauptmerkmal der Konsensschicht. Für die Aufnahme in Betracht gezogen: EIP-8141 (native Kontoabstraktion).
+- **Fortlaufend**: Die Bemühungen zur Vereinfachung der [EVM](/developers/docs/evm/), zur Harmonisierung von Client-Implementierungen und zum Auslaufen veralteter Funktionen werden von den Client-Teams fortgesetzt. Die Arbeit an der [Zustandslosigkeit](/roadmap/statelessness/) (die es Teilnehmern ermöglicht, die Chain zu verifizieren, ohne all ihre Daten zu speichern) wird um quantensichere binäre Hash-Bäume herum neu gestaltet, welche das frühere [Verkle-Baum](/roadmap/verkle-trees/)-Design ersetzen würden. Der endgültige Ansatz muss noch bestätigt werden.
 
 ## Aktueller Fortschritt {#current-progress}
 

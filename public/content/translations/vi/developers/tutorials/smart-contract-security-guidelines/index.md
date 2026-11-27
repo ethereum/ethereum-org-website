@@ -23,7 +23,7 @@ Tài liệu có thể được viết ở các cấp độ khác nhau và nên �
 
 - **Mô tả hệ thống bằng ngôn ngữ thông thường**, mô tả những gì các hợp đồng thực hiện và bất kỳ giả định nào về cơ sở mã.
 - **Sơ đồ kiến trúc và lược đồ**, bao gồm các tương tác hợp đồng và máy trạng thái của hệ thống. [Slither printers](https://github.com/crytic/slither/wiki/Printer-documentation) có thể giúp tạo ra các lược đồ này.
-- **Tài liệu mã nguồn kỹ lưỡng**, [định dạng NatSpec](https://docs.soliditylang.org/en/develop/natspec-format.html) có thể được sử dụng cho Solidity.
+- **Tài liệu mã nguồn kỹ lưỡng**, [định dạng NatSpec](https://docs.soliditylang.org/en/latest/natspec-format.html) có thể được sử dụng cho Solidity.
 
 ### Tính toán trên chuỗi so với ngoài chuỗi {#onchain-vs-offchain-computation}
 
@@ -73,14 +73,14 @@ Kiến trúc cơ sở mã của bạn nên làm cho mã dễ dàng được xem 
 ### Thử nghiệm và xác minh {#testing-and-verification}
 
 - **Viết các bài kiểm thử đơn vị kỹ lưỡng.** Một bộ kiểm thử mở rộng là rất quan trọng để xây dựng phần mềm chất lượng cao.
-- **Viết các thuộc tính và kiểm tra tùy chỉnh cho [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) và [Manticore](https://github.com/trailofbits/manticore).** Các công cụ tự động sẽ giúp đảm bảo hợp đồng của bạn được bảo mật. Hãy xem lại phần còn lại của hướng dẫn này để tìm hiểu cách viết các kiểm tra và thuộc tính hiệu quả.
-- **Sử dụng [crytic.io](https://crytic.io/).** Crytic tích hợp với GitHub, cung cấp quyền truy cập vào các trình phát hiện Slither riêng tư và chạy các kiểm tra thuộc tính tùy chỉnh từ Echidna.
+- **Viết các kiểm tra và thuộc tính tùy chỉnh cho [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) và [Medusa](https://github.com/crytic/medusa).** Các công cụ tự động sẽ giúp đảm bảo hợp đồng của bạn được bảo mật. Hãy xem lại phần còn lại của hướng dẫn này để tìm hiểu cách viết các kiểm tra và thuộc tính hiệu quả.
+- **Chạy các công cụ này trong tích hợp liên tục.** Việc chạy Slither và các thuộc tính fuzzing của bạn trên mỗi pull request sẽ phát hiện các lỗi hồi quy trước khi chúng được hợp nhất.
 
 ### Solidity {#solidity}
 
-- **Ưu tiên Solidity 0.5 hơn 0.4 và 0.6.** Theo ý kiến của chúng tôi, Solidity 0.5 bảo mật hơn và có các thực tiễn tích hợp tốt hơn so với 0.4. Solidity 0.6 đã được chứng minh là quá không ổn định cho môi trường sản xuất và cần thời gian để hoàn thiện.
-- **Sử dụng một bản phát hành ổn định để biên dịch; sử dụng bản phát hành mới nhất để kiểm tra các cảnh báo.** Kiểm tra xem mã của bạn không có vấn đề nào được báo cáo với phiên bản trình biên dịch mới nhất. Tuy nhiên, Solidity có chu kỳ phát hành nhanh và có lịch sử về các lỗi trình biên dịch, vì vậy chúng tôi không khuyến nghị sử dụng phiên bản mới nhất cho việc triển khai (xem [khuyến nghị phiên bản solc](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33) của Slither).
-- **Không sử dụng inline assembly.** Assembly đòi hỏi chuyên môn về EVM. Đừng viết mã EVM nếu bạn chưa _nắm vững_ sách vàng.
+- **Sử dụng bản phát hành Solidity 0.8.x gần đây không có lỗi nghiêm trọng nào đã biết.** Solidity 0.8 kiểm tra số học đối với lỗi tràn số và tràn số dưới theo mặc định, và các phiên bản cũ hơn thiếu các kiểm tra bảo mật trình biên dịch mới hơn. Xem [khuyến nghị phiên bản solc](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity) của Slither.
+- **Sử dụng bản phát hành ổn định để biên dịch; sử dụng bản phát hành mới nhất để kiểm tra các cảnh báo.** Kiểm tra xem mã của bạn không có vấn đề nào được báo cáo với phiên bản trình biên dịch mới nhất. Tuy nhiên, Solidity có chu kỳ phát hành nhanh và có lịch sử lỗi trình biên dịch, vì vậy hãy tránh triển khai với phiên bản chỉ mới được phát hành vài ngày trước. Kiểm tra [danh sách các lỗi trình biên dịch đã biết](https://docs.soliditylang.org/en/latest/bugs.html) cho phiên bản bạn chọn.
+- **Không sử dụng inline assembly.** Assembly đòi hỏi chuyên môn về EVM. Không viết mã EVM nếu bạn chưa _nắm vững_ sách vàng.
 
 ## Hướng dẫn triển khai {#deployment-guidelines}
 

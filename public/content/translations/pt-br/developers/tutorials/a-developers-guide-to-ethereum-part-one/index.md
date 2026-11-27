@@ -15,17 +15,17 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 Então, você ouviu falar sobre esse tal de Ethereum e está pronto para entrar na toca do coelho? Esta publicação abordará rapidamente alguns conceitos básicos de blockchain e, em seguida, fará com que você interaja com um nó simulado do Ethereum – lendo dados de blocos, verificando saldos de contas e enviando transações. Ao longo do caminho, destacaremos as diferenças entre as formas tradicionais de criar aplicativos e esse novo paradigma descentralizado.
 
-## Pré-requisitos (básicos) {#soft-prerequisites}
+## Pré-requisitos (flexíveis) {#soft-prerequisites}
 
 Esta publicação aspira ser acessível a uma ampla gama de desenvolvedores. [Ferramentas Python](/developers/docs/programming-languages/python/) estarão envolvidas, mas elas são apenas um veículo para as ideias – não há problema se você não for um desenvolvedor Python. No entanto, farei apenas algumas suposições sobre o que você já sabe, para que possamos passar rapidamente para as partes específicas do Ethereum.
 
 Suposições:
 
-- Você sabe se virar em um terminal,
+- Você consegue se virar em um terminal,
 - Você já escreveu algumas linhas de código Python,
-- A versão 3.6 ou superior do Python está instalada em sua máquina (o uso de um [ambiente virtual](https://realpython.com/effective-python-environment/#virtual-environments) é altamente recomendado), e
+- A versão 3.10 ou superior do Python está instalada em sua máquina (o uso de um [ambiente virtual](https://realpython.com/effective-python-environment/#virtual-environments) é fortemente recomendado), e
 - você já usou o `pip`, o instalador de pacotes do Python.
-  Novamente, se alguma dessas afirmações não for verdadeira, ou se você não planeja reproduzir o código neste artigo, provavelmente ainda poderá acompanhar sem problemas.
+  Novamente, se alguma dessas afirmações não for verdadeira, ou se você não planeja reproduzir o código neste artigo, provavelmente ainda conseguirá acompanhar sem problemas.
 
 ## Blockchains, resumidamente {#blockchains-briefly}
 
@@ -81,7 +81,7 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 Neste passo a passo, trabalharemos apenas dentro de um interpretador Python. Não criaremos diretórios, arquivos, classes ou funções.
 
-<FeaturedText>Nota: Nos exemplos abaixo, os comandos que começam com `$` devem ser executados no terminal. (Não digite o `$`, ele apenas significa o início da linha.)</FeaturedText>
+<FeaturedText>Nota: Nos exemplos abaixo, os comandos que começam com `$` devem ser executados no terminal. (Não digite o `$`, ele apenas indica o início da linha.)</FeaturedText>
 
 Primeiro, instale o [IPython](https://ipython.org/) para ter um ambiente amigável para explorar. O IPython oferece preenchimento com a tecla Tab, entre outros recursos, tornando muito mais fácil ver o que é possível dentro da Web3.py.
 
@@ -89,7 +89,7 @@ Primeiro, instale o [IPython](https://ipython.org/) para ter um ambiente amigáv
 pip install ipython
 ```
 
-A Web3.py é publicada sob o nome `web3`. Instale-a assim:
+A Web3.py é publicada sob o nome `web3`. Instale-a da seguinte forma:
 
 ```bash
 pip install web3
@@ -101,9 +101,7 @@ Mais uma coisa – vamos simular uma blockchain mais tarde, o que requer mais al
 pip install 'web3[tester]'
 ```
 
-Você está pronto para começar!
-
-Nota: O pacote `web3[tester]` funciona até o Python 3.10.xx
+Você está com tudo pronto para começar!
 
 ## Crie um ambiente de testes (sandbox) {#spin-up-a-sandbox}
 
@@ -129,7 +127,7 @@ In [1]: from web3 import Web3
 
 Além de ser uma porta de entrada para o Ethereum, o módulo [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) oferece algumas funções de conveniência. Vamos explorar algumas.
 
-Em um aplicativo Ethereum, você normalmente precisará converter denominações de moeda. O módulo Web3 fornece alguns métodos auxiliares apenas para isso: [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) e [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
+Em um aplicativo Ethereum, você geralmente precisará converter denominações de moeda. O módulo Web3 fornece alguns métodos auxiliares apenas para isso: [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) e [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
 
 <FeaturedText>
 Nota: Os computadores são notoriamente ruins em lidar com matemática decimal. Para contornar isso, os desenvolvedores costumam armazenar valores em dólares em centavos. Por exemplo, um item com preço de US$ 5,99 pode ser armazenado no banco de dados como 599.
@@ -152,7 +150,7 @@ In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
-Outros métodos utilitários no módulo Web3 incluem conversores de formato de dados (por exemplo, [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)), auxiliares de endereço (por exemplo, [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)) e funções de hash (por exemplo, [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Muitos deles serão abordados mais adiante na série. Para visualizar todos os métodos e propriedades disponíveis, utilize o preenchimento automático do IPython digitando `Web3`. e pressionando a tecla Tab duas vezes após o ponto.
+Outros métodos utilitários no módulo Web3 incluem conversores de formato de dados (por exemplo, [`to_hex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_hex)), auxiliares de endereço (por exemplo, [`is_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.is_address)) e funções de hash (por exemplo, [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Muitos deles serão abordados mais adiante na série. Para visualizar todos os métodos e propriedades disponíveis, utilize o preenchimento automático do IPython digitando `Web3`. e pressionando a tecla Tab duas vezes após o ponto.
 
 ## Fale com a cadeia {#talk-to-the-chain}
 
@@ -172,7 +170,7 @@ Embora essa seja uma maneira "real" de fazer isso, o processo de sincronização
 
 _O EthereumTesterProvider se conecta a um nó simulado e é útil para ambientes de desenvolvimento rápido._
 
-Esse nó simulado é chamado de [eth-tester](https://github.com/ethereum/eth-tester) e nós o instalamos como parte do comando `pip install web3[tester]`. Configurar a Web3.py para usar esse provedor de testes é tão simples quanto:
+Esse nó simulado é chamado de [eth-tester](https://github.com/ApeWorX/eth-tester) e nós o instalamos como parte do comando `pip install web3[tester]`. Configurar a Web3.py para usar esse provedor de testes é tão simples quanto:
 
 ```python
 In [4]: w3 = Web3(Web3.EthereumTesterProvider())
@@ -294,10 +292,10 @@ Out[13]: 1000003000000000000000000
 
 O último parece bom! O saldo passou de 1.000.000 para 1.000.003 ether. Mas o que aconteceu com a primeira conta? Parece ter perdido um pouco mais de três ethers. Infelizmente, nada na vida é de graça, e usar a rede pública do Ethereum exige que você compense seus pares por seu papel de apoio. Uma pequena taxa de transação foi deduzida da conta que enviou a transação - essa taxa é a quantidade de gás queimado (21.000 unidades de gás para uma transferência de ETH) multiplicada por uma taxa básica que varia de acordo com a atividade da rede, mais uma taxa de prioridade que vai para o validador que inclui a transação em um bloco.
 
-Mais sobre [gás](/developers/docs/gas/#post-london)
+Mais sobre [gás](/developers/docs/gas/)
 
 <FeaturedText>Nota: Na rede pública, as taxas de transação são variáveis com base na demanda da rede e na rapidez com que você gostaria que uma transação fosse processada. Se você estiver interessado em um detalhamento de como as taxas são calculadas, veja minha publicação anterior sobre <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">como as transações são incluídas em um bloco</a>.</FeaturedText>
 
 ## E respire {#and-breathe}
 
-Já estamos nisso há algum tempo, então este parece ser um lugar tão bom quanto qualquer outro para fazer uma pausa. A toca do coelho continua, e continuaremos explorando na parte dois desta série. Alguns conceitos que estão por vir: conexão a um nó real, contratos inteligentes e tokens. Tem perguntas de acompanhamento? Avise-me! Seu feedback influenciará para onde iremos a partir daqui. Solicitações são bem-vindas via [Twitter](https://twitter.com/wolovim).
+Já estamos nisso há algum tempo, então este parece ser um lugar tão bom quanto qualquer outro para fazer uma pausa. A toca do coelho continua, e continuaremos explorando na parte dois desta série. Alguns conceitos que estão por vir: conexão a um nó real, contratos inteligentes e tokens. Tem perguntas de acompanhamento? Avise-me! Seu feedback influenciará para onde iremos a partir daqui. Solicitações são bem-vindas via [Twitter](https://x.com/wolovim).

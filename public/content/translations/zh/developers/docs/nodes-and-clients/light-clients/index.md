@@ -38,20 +38,20 @@ lang: zh
 
 轻客户端还可用于升级以太坊钱包。你的钱包无需信任 RPC 提供商提供的数据，而是可以使用嵌入式轻客户端直接验证呈现给你的数据。这将增加你钱包的安全性。如果你的 RPC 提供商不诚实并向你提供了错误数据，嵌入式轻客户端可以告诉你！
 
-## 轻客户端开发的现状如何？ {#current-state-of-development}
+## 轻客户端的开发现状如何？ {#current-state-of-development}
 
-目前有几个轻客户端正在开发中，包括执行客户端、共识客户端以及执行/共识组合轻客户端。以下是我们在撰写本页面时所知的轻客户端实现：
+目前有几个轻客户端正在开发中，包括执行客户端、共识客户端以及执行/共识组合轻客户端。以下是我们在编写本页面时所知的轻客户端实现：
 
-- [洛德斯塔 (Lodestar)](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client)：使用 TypeScript 编写的共识轻客户端
-- [Helios](https://github.com/a16z/helios)：使用 Rust 编写的执行和共识组合轻客户端
+- [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client)：使用 TypeScript 编写的共识轻客户端
+- [Helios](https://github.com/a16z/helios)：使用 Rust 编写的执行与共识组合轻客户端
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light)：使用 Go 编写的执行客户端轻模式（开发中）
-- [尼姆巴斯 (Nimbus)](https://nimbus.guide/el-light-client.html)：使用 Nim 编写的共识轻客户端
+- [Nimbus](https://nimbus.guide/el-light-client.html)：使用 Nim 编写的共识轻客户端
 
 据我们所知，目前这些实现都尚未达到生产就绪状态。
 
-此外，还有大量工作正在进行，以改进轻客户端访问以太坊数据的方式。目前，轻客户端依赖于使用客户端/服务器模型向全节点发出 RPC 请求，但在未来，可以使用专用网络（例如[波特尔网络 (Portal Network)](https://www.ethportal.net/)）以更加去中心化的方式请求数据，该网络可以使用点对点流言协议向轻客户端提供数据。
+此外，还有大量工作致力于改进轻客户端访问以太坊数据的方式。目前，轻客户端依赖于使用客户端/服务器模型向全节点发送 RPC 请求。[波特尔网络](/developers/docs/networking-layer/portal-network/)最初旨在通过点对点网络向轻客户端提供这些数据，但其目前的开发重点是提供过去区块的历史记录。
 
-其他[路线图](/roadmap/)项目（如[沃克尔树](/roadmap/verkle-trees/)和[无状态](/roadmap/statelessness/)）最终将使轻客户端的安全保证与全客户端同等。
+其他[路线图](/roadmap/)项目，例如新的状态树（目前在 [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864) 中提议为二叉树）和[无状态](/roadmap/statelessness/)，最终将使轻客户端的安全保证与全客户端同等。
 
 ## 延伸阅读 {#further-reading}
 

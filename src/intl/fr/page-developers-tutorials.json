@@ -23,5 +23,6 @@
   "page-tutorial-all": "Tous",
   "page-tutorial-topics": "Sujets",
   "page-tutorial-search-placeholder": "Rechercher des tutoriels...",
-  "page-tutorial-filtering-by": "Filtrer par :"
+  "page-tutorial-filtering-by": "Filtrer par :",
+  "page-tutorial-removed-notice": "Le tutoriel que vous avez demandé n'est plus disponible. Parcourez les tutoriels maintenus ci-dessous."
 }

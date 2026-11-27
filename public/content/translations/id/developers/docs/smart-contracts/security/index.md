@@ -78,7 +78,7 @@ Metode yang biasa dilakukan adalah menulis pengujian unit kecil menggunakan data
 
 Sayangnya, pengujian unit kurang efektif untuk meningkatkan keamanan kontrak pintar jika digunakan secara terpisah. Pengujian unit mungkin membuktikan suatu fungsi dieksekusi dengan benar untuk data tiruan, tetapi pengujian unit hanya seefektif pengujian yang ditulis. Hal ini menyulitkan untuk mendeteksi kasus tepi (edge cases) yang terlewat dan kerentanan yang dapat merusak keamanan kontrak pintar Anda.
 
-Pendekatan yang lebih baik adalah menggabungkan pengujian unit dengan pengujian berbasis properti yang dilakukan menggunakan [analisis statis dan dinamis](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). Analisis statis bergantung pada representasi tingkat rendah, seperti [grafik aliran kontrol](https://en.wikipedia.org/wiki/Control-flow_graph) dan [pohon sintaksis abstrak](https://deepsource.io/glossary/ast/) untuk menganalisis state program dan jalur eksekusi yang dapat dijangkau. Sementara itu, teknik analisis dinamis, seperti [fuzzing kontrak pintar](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), mengeksekusi kode kontrak dengan nilai input acak untuk mendeteksi operasi yang melanggar properti keamanan.
+Pendekatan yang lebih baik adalah menggabungkan pengujian unit dengan pengujian berbasis properti yang dilakukan menggunakan [analisis statis dan dinamis](/developers/docs/smart-contracts/testing/#property-based-testing-for-smart-contracts). Analisis statis bergantung pada representasi tingkat rendah, seperti [grafik aliran kontrol](https://en.wikipedia.org/wiki/Control-flow_graph) dan [pohon sintaksis abstrak](https://deepsource.io/glossary/ast/) untuk menganalisis state program dan jalur eksekusi yang dapat dijangkau. Sementara itu, teknik analisis dinamis, seperti [fuzzing kontrak pintar](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), mengeksekusi kode kontrak dengan nilai input acak untuk mendeteksi operasi yang melanggar properti keamanan.
 
 [Verifikasi formal](/developers/docs/smart-contracts/formal-verification) adalah teknik lain untuk memverifikasi properti keamanan dalam kontrak pintar. Tidak seperti pengujian biasa, verifikasi formal dapat secara meyakinkan membuktikan tidak adanya kesalahan dalam kontrak pintar. Hal ini dicapai dengan membuat spesifikasi formal yang menangkap properti keamanan yang diinginkan dan membuktikan bahwa model formal dari kontrak mematuhi spesifikasi ini.
 
@@ -99,7 +99,7 @@ Meskipun demikian, Anda harus menghindari memperlakukan audit sebagai solusi aja
 
 Menyiapkan program bug bounty adalah pendekatan lain untuk menerapkan tinjauan kode eksternal. Bug bounty adalah imbalan finansial yang diberikan kepada individu (biasanya peretas topi putih) yang menemukan kerentanan dalam suatu aplikasi.
 
-Jika digunakan dengan benar, bug bounty memberikan insentif kepada anggota komunitas peretas untuk memeriksa kode Anda dari kelemahan kritis. Contoh di kehidupan nyata adalah "bug uang tak terbatas" yang akan memungkinkan penyerang membuat Ether dalam jumlah tak terbatas di [Optimism](https://www.optimism.io/), sebuah protokol [lapisan 2 (l2)](/layer-2/) yang berjalan di Ethereum. Untungnya, seorang peretas topi putih [menemukan kelemahan tersebut](https://www.saurik.com/optimism.html) dan memberi tahu tim, [mendapatkan bayaran besar dalam prosesnya](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+Jika digunakan dengan benar, bug bounty memberikan insentif kepada anggota komunitas peretas untuk memeriksa kode Anda dari kelemahan kritis. Contoh di kehidupan nyata adalah "bug uang tak terbatas" yang akan memungkinkan penyerang membuat Ether dalam jumlah tak terbatas di [Optimism](https://www.optimism.io/), sebuah protokol [lapisan 2 (L2)](/layer-2/) yang berjalan di Ethereum. Untungnya, seorang peretas topi putih [menemukan kelemahan tersebut](https://www.saurik.com/optimism.html) dan memberi tahu tim, [mendapatkan bayaran besar dalam prosesnya](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
 Strategi yang berguna adalah menetapkan bayaran program bug bounty secara proporsional dengan jumlah dana yang dipertaruhkan. Digambarkan sebagai "[bug bounty berskala](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)", pendekatan ini memberikan insentif finansial bagi individu untuk mengungkapkan kerentanan secara bertanggung jawab alih-alih mengeksploitasinya.
 
@@ -463,9 +463,9 @@ Jika Anda berencana untuk meminta harga aset ke orakel onchain, pertimbangkan un
 
 - **[Alat verifikasi formal](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _Alat untuk memverifikasi kebenaran fungsional dalam kontrak pintar dan memeriksa invarian._
 
-- **[Layanan audit kontrak pintar](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _Daftar organisasi yang menyediakan layanan audit kontrak pintar untuk proyek pengembangan Ethereum._
+- **[Layanan audit kontrak pintar](#smart-contract-auditing-services)** - _Daftar organisasi yang menyediakan layanan audit kontrak pintar untuk proyek pengembangan Ethereum._
 
-- **[Platform bug bounty](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Platform untuk mengoordinasikan bug bounty dan memberikan imbalan atas pengungkapan kerentanan kritis yang bertanggung jawab dalam kontrak pintar._
+- **[Platform bug bounty](#bug-bounty-platforms)** - _Platform untuk mengoordinasikan bug bounty dan memberikan imbalan atas pengungkapan kerentanan kritis yang bertanggung jawab dalam kontrak pintar._
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _Alat daring gratis untuk memeriksa semua informasi yang tersedia mengenai kontrak yang mengalami percabangan._
 
@@ -567,10 +567,8 @@ Jika Anda berencana untuk meminta harga aset ke orakel onchain, pertimbangkan un
 
 - [Cara menggunakan Slither untuk menemukan bug kontrak pintar](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
-- [Cara menggunakan Manticore untuk menemukan bug kontrak pintar](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-
 - [Panduan keamanan kontrak pintar](/developers/tutorials/smart-contract-security-guidelines/)
 
-- [Cara mengintegrasikan kontrak token Anda dengan aman dengan token arbitrer](/developers/tutorials/token-integration-checklist/)
+- [Cara mengintegrasikan kontrak token Anda secara aman dengan sembarang token](/developers/tutorials/token-integration-checklist/)
 
 - [Cyfrin Updraft - Kursus lengkap keamanan dan audit kontrak pintar](https://updraft.cyfrin.io/courses/security)

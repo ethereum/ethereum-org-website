@@ -12,36 +12,37 @@ Ethereum.org es un proyecto de código abierto con **más de 12 000** colaborado
 ## Formas de contribuir {#ways-to-contribute}
 
 **Traducciones**
-- [Reportar un error de traducción](https://github.com/ethereum/ethereum-org-website/issues/new/choose): el [Programa de traducción](/contributing/translation-program/) está llegando a su fin y ya no está realizando la incorporación de nuevos traductores.
+- [Reportar un error de traducción](https://github.com/ethereum/ethereum-org-website/issues/new/choose): el [Programa de traducción](/contributing/translation-program/) está llegando a su fin y ya no está incorporando nuevos traductores.
 
 **Desarrollo**
-- [Trabajar en un problema abierto](https://github.com/ethereum/ethereum-org-website/issues): trabajo que hemos identificado que debe hacerse.
+- [Trabajar en un problema abierto](https://github.com/ethereum/ethereum-org-website/issues): trabajo que hemos identificado que necesita hacerse.
 
 **Diseño**
 - [Ayudar a diseñar el sitio web](/contributing/design/): los diseñadores de todos los niveles pueden contribuir a mejorar el sitio web.
 
 **Contenido**
-- [Crear/editar contenido](/contributing/#how-to-update-content): sugiere nuevas páginas o haz ajustes a lo que ya está aquí.
-- [Escribir un artículo de constructor](/contributing/adding-articles/): contribuye con un artículo para la sección [Últimas noticias](/latest/).
-- [Añadir recursos de la comunidad](/contributing/content-resources/): añade un artículo o recurso útil a una página relevante.
-- [Sugerir un informe](/contributing/adding-reports/): sugiere un informe de investigación para la página de [Informes](/reports/).
-- [Compartir tu historia](/contributing/adding-community-stories/): envía una historia sobre tus experiencias personales con tecnologías de código abierto y refugio, cómo el ecosistema de Ethereum ha impactado tu vida, o cómo tú y tu comunidad usan Ethereum.
-- [Cuestionarios](/contributing/quizzes/): añade, actualiza y elimina bancos de preguntas de cuestionarios para una página relevante.
-- [Sugerir un recurso de diseño](/contributing/design/adding-design-resources/): añade, actualiza y elimina recursos de diseño útiles.
-- [Sugerir un video](/contributing/adding-videos/): sugiere un video educativo para la galería de videos.
+- [Crear/editar contenido](/contributing/#how-to-update-content): sugerir nuevas páginas o hacer ajustes a lo que ya está aquí.
+- [Escribir un artículo de constructor](/contributing/adding-articles/): contribuir con un artículo para la sección [Últimas noticias](/latest/).
+- [Añadir recursos de la comunidad](/contributing/content-resources/): añadir un artículo o recurso útil a una página relevante.
+- [Sugerir un informe](/contributing/adding-reports/): sugerir un informe de investigación para la página de [Informes](/reports/).
+- [Compartir tu historia](/contributing/adding-community-stories/): enviar una historia sobre tus experiencias personales con tecnologías de código abierto y de refugio, cómo el ecosistema de Ethereum ha impactado tu vida, o cómo tú y tu comunidad usan Ethereum.
+- [Cuestionarios](/contributing/quizzes/): añadir, actualizar y eliminar bancos de preguntas de cuestionarios para una página relevante.
+- [Sugerir un recurso de diseño](/contributing/design/adding-design-resources/): añadir, actualizar y eliminar recursos de diseño útiles.
+- [Sugerir un video](/contributing/adding-videos/): sugerir un video educativo para la galería de videos.
+- [Añadir un término al glosario](/contributing/adding-glossary-terms/): añadir o actualizar un término en el [glosario de Ethereum](/glossary/).
 
 **Ideas de características**
 - [Solicitar una característica](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=): cuéntanos sobre cualquier idea que tengas para una nueva característica o diseño.
 
 **Listados de productos**
-- [Añadir un exchange](/contributing/adding-exchanges/): añade un exchange a nuestro [buscador de exchanges](/get-eth/#country-picker).
-- [Añadir un producto](/contributing/adding-products/): añade una aplicación descentralizada (dapp) o billetera a una página relevante.
-- [Añadir herramientas para desarrolladores](/contributing/adding-developer-tools/): añade una herramienta para desarrolladores a una página relevante.
-- [Añadir una capa 2 (l2)](/contributing/adding-layer-2s/): añade una capa 2 (l2) a una página relevante.
-- [Añadir un producto o servicio de staking](/contributing/adding-staking-products/): añade un proyecto que ayude a facilitar el staking en solitario, el staking conjunto o el staking como servicio.
-- [Añadir una billetera](/contributing/adding-wallets/): añade una billetera para la [página de búsqueda de billeteras](/wallets/find-wallet/).
-- [Sugerir un proyecto para nuestra página de ciencia descentralizada (DeSci)](/contributing/adding-desci-projects/): añade un proyecto construido en Ethereum que contribuya a la ciencia descentralizada (DeSci).
-- [Añadir un recurso](/contributing/adding-resources/): añade un recurso útil a cualquier página relevante.
+- [Añadir un exchange](/contributing/adding-exchanges/): añadir un exchange a nuestro [buscador de exchanges](/get-eth/#country-picker).
+- [Añadir un producto](/contributing/adding-products/): añadir una dapp o billetera a una página relevante.
+- [Añadir herramientas para desarrolladores](/contributing/adding-developer-tools/): añadir una herramienta para desarrolladores a una página relevante.
+- [Añadir una capa 2](/contributing/adding-layer-2s/): añadir una capa 2 a una página relevante.
+- [Añadir un producto o servicio de staking](/contributing/adding-staking-products/): añadir un proyecto que ayude a facilitar el staking en solitario, el staking conjunto o el staking como servicio.
+- [Añadir una billetera](/contributing/adding-wallets/): añadir una billetera para la [página de búsqueda de billeteras](/wallets/find-wallet/).
+- [Sugerir un proyecto para nuestra página de DeSci](/contributing/adding-desci-projects/): añadir un proyecto construido en Ethereum que contribuya a la ciencia descentralizada.
+- [Añadir un recurso](/contributing/adding-resources/): añadir un recurso útil a cualquier página relevante.
 
 ¿Tienes alguna pregunta? 🤔 Únete a nuestro [servidor de Discord](/discord/).
 
@@ -100,19 +101,9 @@ Si tu contribución se fusiona en ethereum.org, tendrás la oportunidad de recla
 3. Espera a que un miembro de nuestro equipo te envíe un enlace a tu OAT.
 4. ¡Reclama tu OAT!
 
-Solo debes usar billeteras de autocustodia para reclamar los OAT. No uses cuentas de exchange u otras cuentas de las que no poseas las claves privadas, ya que estas no te permitirán acceder y gestionar tus OAT.
+Solo debes usar billeteras de autocustodia para reclamar OAT. No uses cuentas de exchanges u otras cuentas de las que no poseas las claves privadas, ya que estas no te permitirán acceder y administrar tus OAT.
 
-## Reclama tu GitPOAP {#claim-gitpoap}
-
-¡GitPOAP también reconocerá automáticamente tu contribución fusionada y te permitirá acuñar un POAP de colaborador único e independiente en su propia plataforma!
-
-
-### Cómo reclamar {#how-to-claim-2}
-
-1. Visita [GitPOAP](https://www.gitpoap.io).
-2. Conéctate con tu billetera o incluso con tu correo electrónico a través de la opción de inicio de sesión.
-3. Busca tu nombre de usuario de GitHub, dirección de ETH, nombres del Servicio de Nombres de Ethereum (ENS) o cualquier GitPOAP para comprobar si eres elegible.
-4. Si tu cuenta de GitHub es elegible, ¡entonces podrás acuñar un GitPOAP!
+<LinkWithArrow href="/collectibles/">Ver tus coleccionables de ethereum.org</LinkWithArrow>
 
 ## Colaboradores {#contributors}
 

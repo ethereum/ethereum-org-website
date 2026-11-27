@@ -38,21 +38,20 @@ Potřebujete nejprve základnější úvod? Podívejte se na [ethereum.org/learn
 
 ## Projekty a nástroje v Rustu {#rust-projects-and-tools}
 
-- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Sbírka externs pro interakci se sítí podobnou Ethereu_
+- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Kolekce externs pro interakci se sítí podobnou Ethereu_
 - [Lighthouse](https://github.com/sigp/lighthouse) - _Rychlý klient vrstvy konsensu Etherea_
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _Navrhovaný redesign exekuční vrstvy chytrých kontraktů Etherea pomocí deterministické podmnožiny WebAssembly_
-- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _Reference OASIS API_
-- [Solaris](https://github.com/paritytech/sol-rs) - _Nástroj pro jednotkové testování chytrých kontraktů v Solidity využívající nativní EVM klienta Parity._
-- [SputnikVM](https://github.com/rust-blockchain/evm) - _Implementace Ethereum Virtual Machine v Rustu_
+- [Solaris](https://github.com/paritytech/sol-rs) - _Testovací prostředí pro jednotkové testy chytrých kontraktů v Solidity využívající nativní EVM klienta Parity._
+- [SputnikVM](https://github.com/rust-blockchain/evm) - _Implementace virtuálního stroje Etherea (EVM) v Rustu_
 - [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Chytrý kontrakt Wavelet v Rustu_
 - [Foundry](https://github.com/foundry-rs/foundry) - _Sada nástrojů pro vývoj aplikací na Ethereu_
-- [Alloy](https://alloy.rs) - _Vysoce výkonné, dobře otestované a zdokumentované knihovny pro interakci s Ethereem a dalšími řetězci založenými na EVM._
+- [Alloy](https://alloy.rs) - _Vysoce výkonné, dobře otestované a zdokumentované knihovny pro interakci s Ethereem a dalšími blockchainy založenými na EVM._
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Knihovna pro Ethereum a implementace peněženky_
-- [SewUp](https://github.com/second-state/SewUp) - _Knihovna, která vám pomůže vytvořit váš WebAssembly kontrakt pro Ethereum pomocí Rustu, podobně jako při vývoji běžného backendu_
-- [Substreams](https://github.com/streamingfast/substreams) - _Technologie pro paralelizované indexování dat z blockchainu_
+- [SewUp](https://github.com/second-state/SewUp) - _Knihovna, která vám pomůže vytvořit váš WebAssembly kontrakt pro Ethereum v Rustu, podobně jako při vývoji běžného backendu_
+- [Substreams](https://github.com/streamingfast/substreams) - _Technologie pro paralelizované indexování dat na blockchainu_
 - [Reth](https://github.com/paradigmxyz/reth) Reth (zkratka pro Rust Ethereum) je nová implementace plného uzlu Etherea
-- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Vybraná sbírka projektů v ekosystému Etherea napsaných v Rustu_
-- [Stylus](https://github.com/OffchainLabs/stylus) - _Rust SDK pro tvorbu chytrých kontraktů na Arbitru_
+- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Pečlivě vybraná sbírka projektů v ekosystému Etherea napsaných v Rustu_
+- [Stylus](https://github.com/OffchainLabs/stylus) - _Rust SDK pro tvorbu chytrých kontraktů na síti Arbitrum_
 
 Hledáte další zdroje? Podívejte se na [ethereum.org/developers.](/developers/)
 

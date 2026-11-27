@@ -23,5 +23,6 @@
   "page-tutorial-all": "전체",
   "page-tutorial-topics": "주제",
   "page-tutorial-search-placeholder": "튜토리얼 검색...",
-  "page-tutorial-filtering-by": "필터링 기준:"
+  "page-tutorial-filtering-by": "필터링 기준:",
+  "page-tutorial-removed-notice": "요청하신 튜토리얼은 더 이상 제공되지 않습니다. 아래에서 관리되는 튜토리얼을 살펴보세요."
 }

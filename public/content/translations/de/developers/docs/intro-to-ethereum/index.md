@@ -1,6 +1,6 @@
 ---
 title: "Technische Einführung in Ethereum"
-description: "Eine Einführung in die Kernkonzepte von Ethereum für Dapp-Entwickler."
+description: "Eine technische Einführung in Ethereum für Entwickler: Blockchains, Konten, Transaktionen, die EVM, Gas und Smart Contracts, Schritt für Schritt erklärt."
 lang: de
 ---
 

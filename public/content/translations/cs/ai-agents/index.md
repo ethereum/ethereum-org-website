@@ -1,7 +1,7 @@
 ---
 title: AI agenti
 metaTitle: AI agenti | AI agenti na Ethereu
-description: "Přehled AI agentů na Ethereu"
+description: "Co jsou AI agenti na Ethereu? Zjistěte, jak autonomní agenti drží aktiva, obchodují, využívají DeFi a platí si navzájem onchain, a na jaká rizika si dát pozor."
 lang: cs
 template: use-cases
 sidebarDepth: 2

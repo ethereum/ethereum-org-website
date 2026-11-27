@@ -1,6 +1,6 @@
 ---
 title: "dapp에 대한 기술적 소개"
-description:
+description: "dapp에 대한 기술적 소개: 탈중앙화 애플리케이션이 이더리움의 스마트 컨트랙트와 프론트엔드를 결합하는 방법과 웹 앱과의 차이점."
 lang: ko
 ---
 
@@ -94,8 +94,7 @@ _도움이 된 커뮤니티 리소스를 알고 계신가요? 이 페이지를 �
 
 ## 튜토리얼: 이더리움에서 앱 및 프론트엔드 구축하기 {#tutorials}
 
-- [유니스왑 v2 컨트랙트 연습](/developers/tutorials/uniswap-v2-annotated-code/) _– 자동화된 마켓 메이커 (AMM)의 작동 방식을 설명하는 유니스왑 v2 핵심 컨트랙트에 대한 주석이 달린 연습입니다._
+- [유니스왑 v2 컨트랙트 살펴보기](/developers/tutorials/uniswap-v2-annotated-code/) _– 자동화된 마켓 메이커 (AMM)가 어떻게 작동하는지 설명하는 유니스왑 v2 핵심 컨트랙트에 대한 주석이 달린 가이드입니다._
 - [컨트랙트를 위한 사용자 인터페이스 구축하기](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– 스마트 컨트랙트에 연결되는 최신 React + Wagmi 프론트엔드를 구축하는 방법입니다._
-- [초보자를 위한 Hello World 스마트 컨트랙트 – 풀스택](/developers/tutorials/hello-world-smart-contract-fullstack/) _– 엔드투엔드 튜토리얼: 간단한 스마트 컨트랙트를 작성, 배포하고 프론트엔드를 구축합니다._
 - [Web3 앱을 위한 서버 컴포넌트 및 에이전트](/developers/tutorials/server-components/) _– 블록체인 이벤트를 수신하고 트랜잭션으로 응답하는 TypeScript 서버 컴포넌트를 작성하는 방법입니다._
 - [탈중앙화된 사용자 인터페이스를 위한 IPFS](/developers/tutorials/ipfs-decentralized-ui/) _– 검열 저항성을 위해 IPFS에 dapp의 프론트엔드를 호스팅하는 방법입니다._

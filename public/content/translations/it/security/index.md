@@ -1,6 +1,6 @@
 ---
 title: Sicurezza su Ethereum e prevenzione delle truffe
-description: Rimanere al sicuro su Ethereum
+description: "Come rimanere al sicuro su Ethereum: proteggi il tuo portafoglio e la frase di recupero, riconosci le truffe cripto e il phishing più comuni, e scopri cosa fare se qualcosa va storto."
 lang: it
 ---
 

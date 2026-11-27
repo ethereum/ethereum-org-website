@@ -38,7 +38,7 @@ _तुम्हाला मदत करणाऱ्या एखाद्य�
 - [टोकन एकत्रीकरणाचे धोके (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _ओपनझेपलिन_
 ## संबंधित ट्यूटोरियल्स {#related-tutorials}
 
-- [टोकन एकत्रीकरण चेकलिस्ट](/developers/tutorials/token-integration-checklist/) _– टोकन्सशी संवाद साधताना विचारात घेण्याच्या गोष्टींची चेकलिस्ट._
-- [ERC20 टोकन स्मार्ट कॉन्ट्रॅक्ट समजून घ्या](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– इथेरियम टेस्ट नेटवर्कवर तुमचे पहिले स्मार्ट कॉन्ट्रॅक्ट तैनात करण्याचा परिचय._
-- [Solidity स्मार्ट कॉन्ट्रॅक्टमधून ERC20 टोकन्सचे हस्तांतरण आणि मंजुरी](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Solidity भाषेचा वापर करून टोकनशी संवाद साधण्यासाठी स्मार्ट कॉन्ट्रॅक्ट कसे वापरावे._
-- [ERC721 मार्केट लागू करणे [एक मार्गदर्शक]](/developers/tutorials/how-to-implement-an-erc721-market/) _– विकेंद्रित क्लासिफाइड्स बोर्डवर विक्रीसाठी टोकनाइज्ड वस्तू कशा ठेवाव्यात._
+- [टोकन एकत्रीकरण चेकलिस्ट](/developers/tutorials/token-integration-checklist/) _– टोकन्सशी संवाद साधताना विचारात घ्यावयाच्या गोष्टींची चेकलिस्ट._
+- [ERC-20 कॉन्ट्रॅक्ट वॉक-थ्रू](/developers/tutorials/erc20-annotated-code/) _– ओपनझेपलिन ERC-20 कॉन्ट्रॅक्ट अंमलबजावणीचा ओळी-दर-ओळी भाष्य केलेला वॉक-थ्रू._
+- [Solidity स्मार्ट कॉन्ट्रॅक्टमधून ERC20 टोकन्सचे हस्तांतरण आणि मंजुरी](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Solidity भाषेचा वापर करून टोकनशी संवाद साधण्यासाठी स्मार्ट कॉन्ट्रॅक्टचा वापर कसा करावा._
+- [ERC721 मार्केटची अंमलबजावणी करणे [कसे करावे यावरील मार्गदर्शक]](/developers/tutorials/how-to-implement-an-erc721-market/) _– विकेंद्रित क्लासिफाइड्स बोर्डवर विक्रीसाठी टोकनाइज्ड वस्तू कशा ठेवाव्यात._

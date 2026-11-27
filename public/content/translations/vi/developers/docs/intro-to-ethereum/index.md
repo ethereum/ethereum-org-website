@@ -1,6 +1,6 @@
 ---
 title: "Giới thiệu kỹ thuật về Ethereum"
-description: "Giới thiệu cho nhà phát triển dapp về các khái niệm cốt lõi của Ethereum."
+description: "Giới thiệu kỹ thuật về Ethereum dành cho nhà phát triển: chuỗi khối, tài khoản, giao dịch, EVM, gas và hợp đồng thông minh, được giải thích từng bước."
 lang: vi
 ---
 

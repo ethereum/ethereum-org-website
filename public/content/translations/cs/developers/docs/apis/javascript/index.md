@@ -300,8 +300,6 @@ _Znáte komunitní zdroj, který vám pomohl? Upravte tuto stránku a přidejte 
 
 ## Související tutoriály {#related-tutorials}
 
-- [Nastavení Web3.js pro použití blockchainu Etherea v JavaScriptu](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Pokyny pro nastavení Web3.js ve vašem projektu._
-- [Volání chytrého kontraktu z JavaScriptu](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Podívejte se, jak volat funkce kontraktů pomocí JavaScriptu na příkladu tokenu DAI._
 - [Odesílání transakcí pomocí Web3 a Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Průvodce krok za krokem pro odesílání transakcí z backendu._
 
 ## Tutoriály: JavaScript API a WebSockets na Ethereu {#tutorials}

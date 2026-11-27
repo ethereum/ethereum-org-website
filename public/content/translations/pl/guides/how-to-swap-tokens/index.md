@@ -1,6 +1,6 @@
 ---
 title: "Jak wymieniać tokeny"
-description: "Przewodnik po tym, jak wymieniać tokeny na Ethereum."
+description: "Przewodnik krok po kroku, jak wymieniać tokeny na Ethereum: podłącz swój portfel do zdecentralizowanej giełdy, sprawdź opłaty i poślizg cenowy, i potwierdź transakcję."
 lang: pl
 ---
 

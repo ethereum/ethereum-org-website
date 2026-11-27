@@ -40,21 +40,20 @@ incomplete: true
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _इथेरियम-सारख्या नेटवर्कशी संवाद साधण्यासाठी externs चा संग्रह_
 - [लाइटहाऊस](https://github.com/sigp/lighthouse) - _जलद इथेरियम सहमती स्तर क्लायंट_
-- [इथेरियम WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _WebAssembly च्या डिटरमिनिस्टिक सबसेटचा वापर करून इथेरियम स्मार्ट कॉन्ट्रॅक्ट अंमलबजावणी स्तराचे प्रस्तावित पुनर्निर्मिती_
-- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API संदर्भ_
+- [इथेरियम WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _WebAssembly च्या डिटरमिनिस्टिक सबसेटचा वापर करून इथेरियम स्मार्ट कॉन्ट्रॅक्ट अंमलबजावणी स्तराची प्रस्तावित पुनर्निर्मिती_
 - [Solaris](https://github.com/paritytech/sol-rs) - _नेटिव्ह Parity क्लायंट EVM वापरून Solidity स्मार्ट कॉन्ट्रॅक्ट्स युनिट टेस्ट हार्नेस._
-- [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust इथेरियम व्हर्च्युअल मशीन अंमलबजावणी_
+- [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust इथरियम व्हर्च्युअल मशीन (EVM) अंमलबजावणी_
 - [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Rust मधील Wavelet स्मार्ट कॉन्ट्रॅक्ट_
 - [Foundry](https://github.com/foundry-rs/foundry) - _इथेरियम ॲप्लिकेशन डेव्हलपमेंटसाठी टूलकिट_
-- [Alloy](https://alloy.rs) - _इथेरियम आणि इतर EVM-आधारित चेन्सशी संवाद साधण्यासाठी उच्च-कार्यक्षमता, चांगल्या प्रकारे तपासलेल्या आणि दस्तऐवजीकरण केलेल्या लायब्ररी._
+- [Alloy](https://alloy.rs) - _इथेरियम आणि इतर EVM-आधारित चेन्सशी संवाद साधण्यासाठी उच्च-कार्यक्षमता, उत्तम-चाचणी केलेल्या आणि दस्तऐवजीकरण केलेल्या लायब्ररीज._
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _इथेरियम लायब्ररी आणि वॉलेट अंमलबजावणी_
-- [SewUp](https://github.com/second-state/SewUp) - _Rust सह तुमचे इथेरियम WebAssembly कॉन्ट्रॅक्ट तयार करण्यात आणि सामान्य बॅकएंडमध्ये डेव्हलप करण्यासारखे मदत करणारी एक लायब्ररी_
-- [Substreams](https://github.com/streamingfast/substreams) - _पॅरललाईज्ड ब्लॉकचेन डेटा इंडेक्सिंग तंत्रज्ञान_
-- [रेथ](https://github.com/paradigmxyz/reth) रेथ (Rust इथेरियमचे संक्षिप्त रूप) ही एक नवीन इथेरियम फुल-नोड अंमलबजावणी आहे
+- [SewUp](https://github.com/second-state/SewUp) - _Rust सह तुमचे इथेरियम WebAssembly कॉन्ट्रॅक्ट तयार करण्यात मदत करणारी आणि सामान्य बॅकएंडमध्ये डेव्हलप करण्यासारखा अनुभव देणारी एक लायब्ररी_
+- [Substreams](https://github.com/streamingfast/substreams) - _पॅरललाइज्ड ब्लॉकचेन डेटा इंडेक्सिंग तंत्रज्ञान_
+- [रेथ](https://github.com/paradigmxyz/reth) रेथ (Rust इथेरियमचे संक्षिप्त रूप) ही एक नवीन इथेरियम पूर्ण नोड अंमलबजावणी आहे
 - [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Rust मध्ये लिहिलेल्या इथेरियम इकोसिस्टममधील प्रोजेक्ट्सचा क्युरेटेड संग्रह_
 - [Stylus](https://github.com/OffchainLabs/stylus) - _Arbitrum वर स्मार्ट कॉन्ट्रॅक्ट्स तयार करण्यासाठी Rust SDK_
 
-आणखी संसाधने शोधत आहात? [ethereum.org/developers.](/developers/)
+अधिक संसाधने शोधत आहात? [ethereum.org/developers.](/developers/) तपासा.
 
 ## Rust कम्युनिटी योगदानकर्ते {#rust-community-contributors}
 

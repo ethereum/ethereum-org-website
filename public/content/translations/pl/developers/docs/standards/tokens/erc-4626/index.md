@@ -51,7 +51,7 @@ Ta funkcja zwraca adres bazowego tokena używanego przez skarbiec do księgowani
 function totalAssets() public view returns (uint256)
 ```
 
-Ta funkcja zwraca całkowitą kwotę aktywów bazowych przechowywanych przez skarbiec.
+Ta funkcja zwraca całkowitą kwotę aktywów bazowych zarządzanych przez skarbiec, w tym wszelkie aktywa ulokowane gdzie indziej, po odliczeniu wszelkich opłat.
 
 #### convertToShares {#convertoshares}
 
@@ -183,7 +183,7 @@ Zwraca całkowitą liczbę udziałów skarbca, które obecnie posiada `owner`.
 
 ### Mapa interfejsu {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### Zdarzenia {#events}
 

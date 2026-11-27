@@ -1,7 +1,7 @@
 ---
 title: Mosty blockchain
 metaTitle: "Wprowadzenie do mostów blockchain"
-description: "Mosty pozwalają użytkownikom na przenoszenie środków między różnymi blockchainami"
+description: "Czym jest most blockchain? Dowiedz się, jak mosty przenoszą tokeny między Ethereum, warstwami 2 i innymi łańcuchami, poznaj rodzaje mostów oraz ryzyko, które należy wziąć pod uwagę."
 lang: pl
 ---
 
@@ -101,10 +101,10 @@ Wiele rozwiązań mostowych przyjmuje modele pomiędzy tymi dwoma skrajnościami
 
 ## Korzystanie z mostów {#use-bridge}
 
-Korzystanie z mostów pozwala na przenoszenie aktywów między różnymi blockchainami. Oto kilka zasobów, które mogą pomóc Ci znaleźć i korzystać z mostów:
+Korzystanie z mostów pozwala na przenoszenie aktywów między różnymi blockchainami. Oto kilka zasobów, które mogą pomóc w znalezieniu i korzystaniu z mostów:
 
-- **[Podsumowanie mostów L2BEAT](https://l2beat.com/bridges/summary) i [Analiza ryzyka mostów L2BEAT](https://l2beat.com/bridges/summary)**: Kompleksowe podsumowanie różnych mostów, w tym szczegóły dotyczące udziału w rynku, typu mostu i łańcuchów docelowych. L2BEAT posiada również analizę ryzyka dla mostów, pomagając użytkownikom w podejmowaniu świadomych decyzji przy wyborze mostu.
-- **[Podsumowanie mostów DefiLlama](https://defillama.com/bridges/Ethereum)**: Podsumowanie wolumenów mostów w sieciach Ethereum.
+- **[ETHBEAT Interop Summary](https://ethbeat.org/interop/summary)**: Kompleksowe podsumowanie różnych mostów, w tym szczegóły dotyczące udziału w rynku, typu mostu i łańcuchów docelowych. ETHBEAT zawiera również analizę ryzyka dla mostów, pomagając użytkownikom w podejmowaniu świadomych decyzji przy wyborze mostu.
+- **[DefiLlama Bridge Summary](https://defillama.com/bridges/Ethereum)**: Podsumowanie wolumenów mostów w sieciach Ethereum.
 
 <Divider />
 
@@ -137,9 +137,10 @@ Mosty mają kluczowe znaczenie dla onboardingu użytkowników do warstwy 2 (L2) 
 ## Dalsza lektura {#further-reading}
 
 - [EIP-5164: Wykonywanie międzyłańcuchowe](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 czerwca 2022 r. - Brendan Asselstine_
-- [Ramy ryzyka L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 lipca 2022 r. - Bartek Kiepuszewski_
+- [Ramy ryzyka L2Bridge](https://forum.ethbeat.org/t/l2bridge-risk-framework/31) - _5 lipca 2022 r. - Bartek Kiepuszewski_
 - [„Dlaczego przyszłość będzie wielołańcuchowa, ale nie międzyłańcuchowa.”](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 stycznia 2022 r. - Vitalik Buterin_
 - [Wykorzystanie współdzielonego bezpieczeństwa do bezpiecznej interoperacyjności międzyłańcuchowej: Komitety stanu Lagrange'a i nie tylko](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 czerwca 2024 r. - Emmanuel Awosika_
 - [Stan rozwiązań interoperacyjności rollupów](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 czerwca 2024 r. - Alex Hook_
 
 <QuizWidget quizKey="bridges" />
+

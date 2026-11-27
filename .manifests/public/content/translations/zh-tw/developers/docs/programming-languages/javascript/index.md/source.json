@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/programming-languages/javascript/index.md",
-  "generatedAt": "2026-06-19T18:52:22.745Z",
-  "rootHash": "d44445379499",
+  "generatedAt": "2026-11-27T10:13:43.567Z",
+  "rootHash": "de8713c2423d",
   "tree": {
-    "contentHash": "780a8a931374",
-    "anchorHash": "a9b9f5ef0287",
+    "contentHash": "6028171a35b6",
+    "anchorHash": "4e02ea726631",
     "children": {
       "frontmatter:title": {
         "contentHash": "2066561345a7",
@@ -19,23 +19,15 @@
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
       },
-      "prose:2": {
-        "contentHash": "2497b5d36e7b",
+      "prose:1": {
+        "contentHash": "15105a96160c",
         "anchorHash": "e3b0c44298fc"
       },
       "link:0": {
-        "contentHash": "ca8b22d0db83",
-        "anchorHash": "ff2b5d6ebc89"
-      },
-      "prose:3": {
-        "contentHash": "22ae2ac09bb2",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "link:1": {
         "contentHash": "be61bcca51d0",
         "anchorHash": "496b8e555c12"
       },
-      "prose:4": {
+      "prose:2": {
         "contentHash": "cdb4ee2aea69",
         "anchorHash": "e3b0c44298fc"
       },
@@ -174,8 +166,8 @@
         ]
       },
       "understand-the-protocol": {
-        "contentHash": "bb60427a88de",
-        "anchorHash": "aae1853f51ea",
+        "contentHash": "7e1439208859",
+        "anchorHash": "1e82fc8cb30e",
         "labelHash": "33a966bdaf04",
         "children": {
           "_label": {
@@ -217,27 +209,42 @@
             ]
           },
           "nodes-and-clients": {
-            "contentHash": "6c9445a88025",
-            "anchorHash": "449d1e376720",
+            "contentHash": "21e24b99934b",
+            "anchorHash": "a57f4e70f62f",
             "labelHash": "0e034426d05b",
             "children": {
               "_label": {
                 "contentHash": "0e034426d05b",
                 "anchorHash": "e3b0c44298fc"
               },
-              "prose:1": {
-                "contentHash": "a45ddba7250a",
+              "link:0": {
+                "contentHash": "ebcd9aca2aa3",
+                "anchorHash": "ac6811bbb0bb"
+              },
+              "prose:3": {
+                "contentHash": "f6b4111595c0",
                 "anchorHash": "e3b0c44298fc"
               },
-              "link:0": {
+              "link:1": {
+                "contentHash": "fb04a503599e",
+                "anchorHash": "27d11d2c3fef"
+              },
+              "prose:4": {
+                "contentHash": "68f1b93a9722",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
                 "contentHash": "488e0482880a",
-                "anchorHash": "4425358e3e68"
+                "anchorHash": "c1dce79d9563"
               }
             },
             "childrenOrder": [
               "_label",
-              "prose:1",
-              "link:0"
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4",
+              "link:2"
             ]
           }
         },
@@ -305,16 +312,14 @@
       "frontmatter:title",
       "frontmatter:description",
       "frontmatter:lang",
-      "prose:2",
+      "prose:1",
       "link:0",
-      "prose:3",
-      "link:1",
-      "prose:4",
+      "prose:2",
       "interact-with-ethereum",
       "understand-the-protocol",
       "other-projects",
       "further-reading"
     ]
   },
-  "sourceCommitSha": "f81744420359dc1f7c24ec7290b16ff6591fd2e0"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

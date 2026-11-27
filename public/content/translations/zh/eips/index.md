@@ -1,7 +1,7 @@
 ---
-title: 以太坊改进提案 (EIP) 简介
-metaTitle: 以太坊改进提案 (EIP)
-description: 了解 EIP 所需的基本信息
+title: "以太坊改进提案 (EIP) 简介"
+metaTitle: "以太坊改进提案 (EIP)"
+description: "什么是以太坊改进提案 (EIP)？了解以太坊的更改是如何被提议、讨论和采用的，以及你如何参与其中。"
 lang: zh
 ---
 
@@ -15,7 +15,7 @@ lang: zh
 
 EIP 在以太坊上如何发生更改以及如何记录更改方面发挥着核心作用。它们是人们提议、辩论和采用更改的途径。有[不同类型的 EIP](https://eips.ethereum.org/EIPS/eip-1#eip-types)，包括用于影响共识并要求网络升级的底层协议更改的核心 EIP（如 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)），以及用于应用标准的 ERC（如 [EIP-20](https://eips.ethereum.org/EIPS/eip-20) 和 [EIP-721](https://eips.ethereum.org/EIPS/eip-721)）。
 
-每次网络升级都包含一组需要由网络上的每个[以太坊客户端](/learn/#clients-and-nodes)实现的 EIP。这意味着，为了与以太坊主网上的其他客户端保持共识，客户端开发者需要确保他们已经实现了所有要求的 EIP。
+每次网络升级都包含一组需要由网络上的每个[以太坊客户端](/developers/docs/nodes-and-clients/)实现的 EIP。这意味着，为了与以太坊主网上的其他客户端保持共识，客户端开发者需要确保他们已经实现了所有要求的 EIP。
 
 除了为更改提供技术规范外，EIP 还是以太坊中进行治理的单位：任何人都可以自由提出 EIP，然后社区中的各个利益相关者将进行辩论，以决定是否应将其作为标准采用或包含在网络升级中。因为非核心 EIP 不必被所有应用采用（例如，可以创建一个不实现 EIP-20 的同质化代币），但核心 EIP 必须被广泛采用（因为所有节点都必须升级才能继续作为同一网络的一部分），所以核心 EIP 比非核心 EIP 需要在社区内达成更广泛的共识。
 

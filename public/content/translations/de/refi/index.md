@@ -1,6 +1,6 @@
 ---
 title: Regeneratives Finanzwesen (ReFi)
-description: "Ein Überblick über ReFi und seine aktuellen Anwendungsfälle."
+description: "Was ist Regeneratives Finanzwesen (ReFi)? Erfahren Sie, wie Ethereum-Werkzeuge öffentliche Güter, Klimaschutz und Gemeinschaftsprojekte finanzieren, die eine dauerhafte positive Wirkung erzielen."
 lang: de
 template: use-cases
 sidebarDepth: 2

@@ -53,7 +53,7 @@ function asset() public view returns (address assetTokenAddress)
 function totalAssets() public view returns (uint256)
 ```
 
-یہ فنکشن تجوری کے پاس موجود بنیادی اثاثوں کی کل رقم لوٹاتا ہے۔
+یہ فنکشن تجوری کے زیر انتظام بنیادی اثاثوں کی کل مقدار لوٹاتا ہے، جس میں وہ اثاثے بھی شامل ہیں جو اس نے کہیں اور کام پر لگائے ہیں اور کسی بھی فیس کی کٹوتی کے بعد۔
 
 #### convertToShares {#convertoshares}
 
@@ -141,7 +141,7 @@ function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-یہ فنکشن `owner` سے `shares` کو جلاتا ہے اور تجوری سے بالکل `assets` ٹوکن `receiver` کو بھیجتا ہے۔
+یہ فنکشن `owner` سے `shares` کو جلاتا ہے اور تجوری سے بالکل `assets` ٹوکنز `receiver` کو بھیجتا ہے۔
 
 #### maxRedeem {#maxredeem}
 
@@ -185,7 +185,7 @@ function balanceOf(address owner) public view returns (uint256)
 
 ### انٹرفیس کا نقشہ {#mapoftheinterface}
 
-![Map of the <span dir="ltr">ERC-4626</span> interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### ایونٹس {#events}
 

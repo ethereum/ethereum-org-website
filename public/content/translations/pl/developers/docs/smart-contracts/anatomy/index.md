@@ -328,17 +328,17 @@ import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 // Dowiedz się więcej: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
     // Używa biblioteki SafeMath z OpenZeppelin do bezpiecznego wykonywania operacji arytmetycznych.
-    // Dowiedz się więcej: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    // Dowiedz się więcej: https://docs.openzeppelin.com/contracts/3.x/api/math#safemath
     using SafeMath for uint256;
 
-    // Stałe zmienne stanu w Solidity są podobne do innych języków
-    // ale musisz przypisać z wyrażenia, które jest stałe w czasie kompilacji.
+    // Stałe zmienne stanu w Solidity są podobne do tych w innych językach
+    // ale musisz przypisać do nich wyrażenie, które jest stałe w czasie kompilacji.
     // Dowiedz się więcej: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
 
-    // Typy struktur pozwalają zdefiniować własny typ
+    // Typy strukturalne pozwalają na zdefiniowanie własnego typu
     // Dowiedz się więcej: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
     struct Pizza {
         string name;
@@ -363,7 +363,7 @@ contract CryptoPizza is IERC721, ERC165 {
     // Wewnętrzna funkcja do tworzenia losowej Pizzy z ciągu znaków (nazwy) i DNA
     function _createPizza(string memory _name, uint256 _dna)
         // Słowo kluczowe `internal` oznacza, że ta funkcja jest widoczna tylko
-        // w ramach tego kontraktu i kontraktów, które dziedziczą po tym kontrakcie
+        // wewnątrz tego kontraktu i kontraktów dziedziczących po tym kontrakcie
         // Dowiedz się więcej: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
         internal
         // `isUnique` to modyfikator funkcji, który sprawdza, czy pizza już istnieje
@@ -373,7 +373,7 @@ contract CryptoPizza is IERC721, ERC165 {
         // Dodaje Pizzę do tablicy Pizz i pobiera id
         uint256 id = SafeMath.sub(pizzas.push(Pizza(_name, _dna)), 1);
 
-        // Sprawdza, czy właściciel Pizzy jest taki sam jak obecny użytkownik
+        // Sprawdza, czy właściciel Pizzy jest taki sam jak bieżący użytkownik
         // Dowiedz się więcej: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
         // zauważ, że address(0) to adres zerowy,
@@ -381,7 +381,7 @@ contract CryptoPizza is IERC721, ERC165 {
 
         assert(pizzaToOwner[id] == address(0));
 
-        // Mapuje Pizzę do właściciela
+        // Mapuje Pizzę na właściciela
         pizzaToOwner[id] = msg.sender;
         ownerPizzaCount[msg.sender] = SafeMath.add(
             ownerPizzaCount[msg.sender],
@@ -410,7 +410,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return rand;
     }
 
-    // Zwraca tablicę Pizz znalezionych przez właściciela
+    // Zwraca tablicę Pizz znalezionych po właścicielu
     function getPizzasByOwner(address _owner)
         public
         // Funkcje oznaczone jako `view` obiecują, że nie będą modyfikować stanu
@@ -418,8 +418,8 @@ contract CryptoPizza is IERC721, ERC165 {
         view
         returns (uint256[] memory)
     {
-        // Używa lokalizacji przechowywania `memory` do przechowywania wartości tylko na czas
-        // cyklu życia tego wywołania funkcji.
+        // Używa lokalizacji przechowywania `memory`, aby przechowywać wartości tylko przez
+        // cykl życia tego wywołania funkcji.
         // Dowiedz się więcej: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
@@ -450,10 +450,10 @@ contract CryptoPizza is IERC721, ERC165 {
 
     /**
      * Bezpiecznie przenosi własność danego ID tokena na inny adres
-     * Jeśli adres docelowy to kontrakt, musi on implementować `onERC721Received`,
-     * które jest wywoływane przy bezpiecznym transferze i zwracać magiczną wartość
+     * Jeśli adresem docelowym jest kontrakt, musi on implementować `onERC721Received`,
+     * które jest wywoływane podczas bezpiecznego transferu i zwracać magiczną wartość
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * w przeciwnym razie transfer jest cofany.
+     * w przeciwnym razie transfer zostanie cofnięty.
     */
     function safeTransferFrom(address from, address to, uint256 pizzaId)
         public
@@ -464,10 +464,10 @@ contract CryptoPizza is IERC721, ERC165 {
 
     /**
      * Bezpiecznie przenosi własność danego ID tokena na inny adres
-     * Jeśli adres docelowy to kontrakt, musi on implementować `onERC721Received`,
-     * które jest wywoływane przy bezpiecznym transferze i zwracać magiczną wartość
+     * Jeśli adresem docelowym jest kontrakt, musi on implementować `onERC721Received`,
+     * które jest wywoływane podczas bezpiecznego transferu i zwracać magiczną wartość
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * w przeciwnym razie transfer jest cofany.
+     * w przeciwnym razie transfer zostanie cofnięty.
      */
     function safeTransferFrom(
         address from,
@@ -502,9 +502,9 @@ contract CryptoPizza is IERC721, ERC165 {
         return (retval == _ERC721_RECEIVED);
     }
 
-    // Spala Pizzę - całkowicie niszczy Token
+    // Pali Pizzę - całkowicie niszczy token
     // Modyfikator funkcji `external` oznacza, że ta funkcja jest
-    // częścią interfejsu kontraktu i inne kontrakty mogą ją wywołać
+    // częścią interfejsu kontraktu i inne kontrakty mogą ją wywoływać
     function burn(uint256 _pizzaId) external {
         require(msg.sender != address(0), "Invalid address.");
         require(_exists(_pizzaId), "Pizza does not exist.");
@@ -547,8 +547,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Prywatna funkcja do czyszczenia obecnego zatwierdzenia danego ID tokena
-     * Cofa, jeśli podany adres nie jest w rzeczywistości właścicielem tokena
+     * Prywatna funkcja do czyszczenia bieżącego zatwierdzenia dla danego ID tokena
+     * Cofa operację, jeśli podany adres nie jest w rzeczywistości właścicielem tokena
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
         require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
@@ -559,7 +559,7 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /*
-     * Ustawia lub cofa zatwierdzenie danego operatora
+     * Ustawia lub cofa zatwierdzenie dla danego operatora
      * Operator ma prawo do transferu wszystkich tokenów nadawcy w jego imieniu
      */
     function setApprovalForAll(address to, bool approved) public {
@@ -598,7 +598,7 @@ contract CryptoPizza is IERC721, ERC165 {
     {
         address owner = pizzaToOwner[pizzaId];
         // Wyłącza sprawdzanie solium z powodu
-        // https://github.com/duaraghav8/Solium/issues/175
+        // https://github.com/duaraghav8/Ethlint/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
             this.getApproved(pizzaId) == spender ||
@@ -621,10 +621,10 @@ contract CryptoPizza is IERC721, ERC165 {
         _;
     }
 
-    // Zwraca, czy adres docelowy jest kontraktem
+    // Zwraca informację, czy adres docelowy jest kontraktem
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // Obecnie nie ma lepszego sposobu na sprawdzenie, czy pod adresem znajduje się kontrakt
+        // Obecnie nie ma lepszego sposobu na sprawdzenie, czy pod adresem znajduje się kontrakt,
         // niż sprawdzenie rozmiaru kodu pod tym adresem.
         // Zobacz https://ethereum.stackexchange.com/a/14016/36603
         // aby uzyskać więcej szczegółów na temat tego, jak to działa.

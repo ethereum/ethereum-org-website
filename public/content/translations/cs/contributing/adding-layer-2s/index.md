@@ -1,6 +1,6 @@
 ---
-title: Přidávání vrstev 2
-description: Zásady, které používáme při přidávání vrstvy 2 na ethereum.org
+title: "Přidávání vrstev 2"
+description: "Zásady, které používáme při přidávání vrstvy 2 na ethereum.org"
 lang: cs
 ---
 
@@ -8,7 +8,7 @@ Chceme se ujistit, že uvádíme ty nejlepší možné zdroje, aby se uživatel�
 
 Kdokoli může navrhnout přidání vrstvy 2 na ethereum.org. Pokud existuje vrstva 2, kterou jsme vynechali, **[navrhněte ji prosím](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
 
-V současné době uvádíme l2 na následujících stránkách:
+V současné době uvádíme L2 na následujících stránkách:
 
 - [Optimistické rollupy](/developers/docs/scaling/optimistic-rollups/)
 - [Rollupy s nulovou znalostí](/developers/docs/scaling/zk-rollups/)
@@ -20,10 +20,10 @@ Vrstva 2 je pro Ethereum relativně nové a vzrušující paradigma. Snažili js
 
 ### Kritéria pro zařazení: nezbytné požadavky {#criteria-for-inclusion-the-must-haves}
 
-**Zařazení na L2BEAT**
+**Uvedení na ETHBEAT**
 
-- Aby mohl být projekt zvažován, musí být uveden na [L2BEAT](https://l2beat.com). L2BEAT poskytuje robustní hodnocení rizik projektů vrstvy 2, o které se opíráme při hodnocení l2 projektů. **Pokud projekt není uveden na L2BEAT, nezařadíme jej jako l2 na ethereum.org.**
-- [Přečtěte si, jak přidat svůj l2 projekt na L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- Aby mohl být tento projekt zvážen, musí být uveden na [ETHBEAT](https://ethbeat.org). ETHBEAT poskytuje robustní hodnocení rizik projektů vrstvy 2, o které se opíráme při hodnocení projektů L2. **Pokud projekt není uveden na ETHBEAT, nezařadíme jej jako L2 na ethereum.org.**
+- [Zjistěte, jak přidat svůj projekt L2 na ETHBEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Open source**
 
@@ -40,15 +40,15 @@ _Jiná řešení škálování, která nevyužívají Ethereum pro dostupnost da
 
 **Ethereum pro dostupnost dat**
 
-- Dostupnost dat je důležitým rozlišovacím faktorem mezi ostatními řešeními škálování a vrstvou 2. Aby mohl být projekt zvažován pro zařazení, **musí** pro dostupnost dat využívat Ethereum Mainnet.
+- Dostupnost dat je důležitým rozlišovacím faktorem mezi ostatními řešeními škálování a vrstvou 2. Aby mohl být projekt zvážen k zařazení, **musí** pro dostupnost dat využívat Ethereum Mainnet.
 
-**Mosty**
+**Můstky**
 
-- Jak se mohou uživatelé připojit k vrstvě 2?
+- Jak mohou uživatelé přejít na vrstvu 2?
 
 **Datum spuštění projektu**
 
-- Vrstva 2, která je „živě“ na Mainnetu déle než 6 měsíců.
+- Vrstva 2, která je „v provozu“ na Mainnetu déle než 6 měsíců.
 
 - U novějších projektů, které nebyly prověřeny uživateli v praxi, je menší pravděpodobnost, že budou zařazeny.
 
@@ -56,9 +56,9 @@ _Jiná řešení škálování, která nevyužívají Ethereum pro dostupnost da
 
 - Ať už prostřednictvím auditu, interního bezpečnostního týmu nebo jiné metody, bezpečnost vašeho produktu musí být spolehlivě otestována. To snižuje riziko pro naše uživatele a ukazuje nám, že berete bezpečnost vážně.
 
-**Trvalá uživatelská základna**
+**Udržitelná uživatelská základna**
 
-- Budeme zvažovat metriky, jako je historie celkové uzamčené hodnoty (TVL), statistiky transakcí a to, zda jej používají známé společnosti nebo projekty.
+- Budeme brát v úvahu metriky, jako je historie TVL, statistiky transakcí a to, zda jej používají známé společnosti nebo projekty.
 
 **Aktivní vývojový tým**
 
@@ -84,7 +84,7 @@ _Jiná řešení škálování, která nevyužívají Ethereum pro dostupnost da
 
 **Nativní podpora peněženek**
 
-- Podporují nějaké peněženky l2 nativně?
+- Podporují nějaké peněženky L2 nativně?
 
 ## Přidejte svou vrstvu 2 {#add-exchange}
 

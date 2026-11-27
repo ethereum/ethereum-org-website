@@ -1,7 +1,7 @@
 ---
 title: "ethereum.org Hakkında"
 metaTitle: "Hakkımızda"
-description: "ethereum.org ekibi, topluluğu ve misyonu hakkında"
+description: "ethereum.org'un arkasındaki ekiple ve toplulukla tanışın: misyonumuz, sitenin nasıl açık bir şekilde oluşturulduğu ve yönetildiği ve onu geliştirmeye nasıl yardımcı olabileceğiniz."
 lang: tr
 ---
 
@@ -116,6 +116,8 @@ Sitedeki içerik ve tasarım kararlarımıza rehberlik etmesi için bir dizi [ta
 
 Dahil olmak ister misiniz? [Figma'dan takip edin](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) ve [#design Discord kanalımızdaki](/discord/) sohbete katılın.
 
+Logolar, illüstrasyonlar veya diğer marka dosyalarını mı arıyorsunuz? Bunları [varlıklar sayfamızdan](/assets/) indirin.
+
 ## Stil rehberi {#style-guide}
 
 Katkı sürecini daha sorunsuz hale getirmek amacıyla içerik yazımının belirli yönlerini standartlaştırmak için bir [stil rehberimiz](/contributing/style-guide/) var.
@@ -127,6 +129,10 @@ Tasarım ilkelerimiz, tasarım sistemimiz ve stil rehberimiz hakkındaki geri bi
 ## Lisans {#license}
 
 ethereum.org web sitesi açık kaynaklıdır ve aksi belirtilmedikçe [MIT Lisansı](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) altında oluşturulmuştur. ethereum.org'un [kullanım koşulları](/terms-of-use/) hakkında daha fazla bilgi.
+
+## Gizliliğiniz {#your-privacy}
+
+ethereum.org, gizliliği koruyan analizler için Matomo'yu kullanır ve dilediğiniz zaman bundan vazgeçebilirsiniz. Ayrıntılar için [çerez politikamızı](/cookie-policy/) ve [gizlilik politikamızı](/privacy-policy/) okuyun.
 
 ## Açık pozisyonlar {#open-jobs}
 

@@ -15,13 +15,13 @@ Sie haben also von diesem Ethereum-Ding gehört und sind bereit, in den Kaninche
 
 ## (Weiche) Voraussetzungen {#soft-prerequisites}
 
-Dieser Beitrag soll für eine breite Palette von Entwicklern zugänglich sein. [Python-Tools](/developers/docs/programming-languages/python/) werden verwendet, aber sie sind nur ein Mittel zum Zweck für die Ideen – kein Problem, wenn Sie kein Python-Entwickler sind. Ich werde jedoch einige wenige Annahmen darüber treffen, was Sie bereits wissen, damit wir schnell zu den Ethereum-spezifischen Teilen übergehen können.
+Dieser Beitrag soll für eine breite Palette von Entwicklern zugänglich sein. Es werden [Python-Tools](/developers/docs/programming-languages/python/) verwendet, aber sie sind nur ein Vehikel für die Ideen – kein Problem, wenn Sie kein Python-Entwickler sind. Ich werde jedoch ein paar Annahmen darüber treffen, was Sie bereits wissen, damit wir schnell zu den Ethereum-spezifischen Teilen übergehen können.
 
 Annahmen:
 
-- Sie können mit einem Terminal umgehen,
+- Sie können sich in einem Terminal zurechtfinden,
 - Sie haben schon ein paar Zeilen Python-Code geschrieben,
-- Python Version 3.6 oder höher ist auf Ihrem Rechner installiert (die Verwendung einer [virtuellen Umgebung](https://realpython.com/effective-python-environment/#virtual-environments) wird dringend empfohlen), und
+- Python-Version 3.10 oder höher ist auf Ihrem Computer installiert (die Verwendung einer [virtuellen Umgebung](https://realpython.com/effective-python-environment/#virtual-environments) wird dringend empfohlen) und
 - Sie haben `pip`, den Paket-Installer von Python, verwendet.
   Nochmals: Wenn etwas davon nicht zutrifft oder Sie nicht vorhaben, den Code in diesem Artikel zu reproduzieren, können Sie wahrscheinlich trotzdem problemlos folgen.
 
@@ -81,7 +81,7 @@ In dieser Anleitung werden wir nur innerhalb eines Python-Interpreters arbeiten.
 
 <FeaturedText>Hinweis: In den folgenden Beispielen sollen Befehle, die mit `$` beginnen, im Terminal ausgeführt werden. (Tippen Sie das `$` nicht ein, es kennzeichnet nur den Anfang der Zeile.)</FeaturedText>
 
-Installieren Sie zunächst [IPython](https://ipython.org/) für eine benutzerfreundliche Umgebung zum Erkunden. IPython bietet unter anderem Tab-Vervollständigung, was es viel einfacher macht zu sehen, was innerhalb von Web3.py möglich ist.
+Installieren Sie zunächst [IPython](https://ipython.org/) für eine benutzerfreundliche Umgebung zum Erkunden. IPython bietet unter anderem eine Tab-Vervollständigung, die es viel einfacher macht, zu sehen, was innerhalb von Web3.py möglich ist.
 
 ```bash
 pip install ipython
@@ -93,15 +93,13 @@ Web3.py wird unter dem Namen `web3` veröffentlicht. Installieren Sie es wie fol
 pip install web3
 ```
 
-Noch etwas – wir werden später eine Blockchain simulieren, was ein paar weitere Abhängigkeiten erfordert. Sie können diese installieren über:
+Noch etwas – wir werden später eine Blockchain simulieren, was ein paar weitere Abhängigkeiten erfordert. Sie können diese wie folgt installieren:
 
 ```bash
 pip install 'web3[tester]'
 ```
 
 Sie sind startklar!
-
-Hinweis: Das Paket `web3[tester]` funktioniert bis Python 3.10.xx
 
 ## Eine Sandbox starten {#spin-up-a-sandbox}
 
@@ -127,12 +125,12 @@ In [1]: from web3 import Web3
 
 Neben der Funktion als Gateway zu Ethereum bietet das [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api)-Modul einige praktische Funktionen. Lassen Sie uns ein paar davon erkunden.
 
-In einer Ethereum-Anwendung müssen Sie häufig Währungsbezeichnungen umrechnen. Das Web3-Modul bietet genau dafür ein paar Hilfsmethoden: [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) und [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
+In einer Ethereum-Anwendung müssen Sie häufig Währungseinheiten umrechnen. Das Web3-Modul bietet genau dafür ein paar Hilfsmethoden: [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) und [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
 
 <FeaturedText>
 Hinweis: Computer sind bekanntermaßen schlecht im Umgang mit Dezimalrechnung. Um dies zu umgehen, speichern Entwickler Dollarbeträge oft in Cent. Zum Beispiel kann ein Artikel mit einem Preis von 5,99 $ in der Datenbank als 599 gespeichert werden.
 
-Ein ähnliches Muster wird bei der Handhabung von Transaktionen in <b>Ether</b> verwendet. Anstelle von zwei Dezimalstellen hat Ether jedoch 18! Die kleinste Stückelung von Ether wird <b>Wei</b> genannt, das ist also der Wert, der beim Senden von Transaktionen angegeben wird.
+Ein ähnliches Muster wird bei der Verarbeitung von Transaktionen in <b>Ether</b> verwendet. Anstelle von zwei Dezimalstellen hat Ether jedoch 18! Die kleinste Einheit von Ether wird <b>Wei</b> genannt, daher ist dies der Wert, der beim Senden von Transaktionen angegeben wird.
 
 1 Ether = 1000000000000000000 Wei
 
@@ -140,7 +138,7 @@ Ein ähnliches Muster wird bei der Handhabung von Transaktionen in <b>Ether</b> 
 
 </FeaturedText>
 
-Versuchen Sie, einige Werte in und aus Wei umzurechnen. Beachten Sie, dass [es Namen für viele der Stückelungen](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) zwischen Ether und Wei gibt. Eine der bekannteren darunter ist **Gwei**, da Transaktionsgebühren oft so dargestellt werden.
+Versuchen Sie, einige Werte in und aus Wei umzurechnen. Beachten Sie, dass [es Namen für viele der Einheiten gibt](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations), die zwischen Ether und Wei liegen. Eine der bekannteren darunter ist **Gwei**, da Transaktionsgebühren oft so dargestellt werden.
 
 ```python
 In [2]: Web3.to_wei(1, 'ether')
@@ -150,7 +148,7 @@ In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
-Weitere Hilfsmethoden im Web3-Modul umfassen Datenformatkonverter (z. B. [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)), Adresshelfer (z. B. [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)) und Hash-Funktionen (z. B. [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Viele davon werden später in der Serie behandelt. Um alle verfügbaren Methoden und Eigenschaften anzuzeigen, nutzen Sie die automatische Vervollständigung von IPython, indem Sie `Web3`. eingeben und nach dem Punkt zweimal die Tabulatortaste drücken.
+Weitere Hilfsmethoden im Web3-Modul umfassen Datenformatkonverter (z. B. [`to_hex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_hex)), Adresshelfer (z. B. [`is_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.is_address)) und Hash-Funktionen (z. B. [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Viele davon werden später in der Serie behandelt. Um alle verfügbaren Methoden und Eigenschaften anzuzeigen, nutzen Sie die automatische Vervollständigung von IPython, indem Sie `Web3`. eingeben und nach dem Punkt zweimal die Tabulatortaste drücken.
 
 ## Mit der Chain kommunizieren {#talk-to-the-chain}
 
@@ -170,7 +168,7 @@ Obwohl dies ein „echter“ Weg ist, dauert der Synchronisierungsprozess Stunde
 
 _Der EthereumTesterProvider verbindet sich mit einem simulierten Knoten und ist praktisch für schnelle Entwicklungsumgebungen._
 
-Dieser simulierte Knoten heißt [eth-tester](https://github.com/ethereum/eth-tester) und wir haben ihn als Teil des Befehls `pip install web3[tester]` installiert. Die Konfiguration von Web3.py zur Verwendung dieses Tester-Providers ist so einfach wie:
+Dieser simulierte Knoten heißt [eth-tester](https://github.com/ApeWorX/eth-tester) und wir haben ihn als Teil des Befehls `pip install web3[tester]` installiert. Die Konfiguration von Web3.py zur Verwendung dieses Tester-Providers ist so einfach wie:
 
 ```python
 In [4]: w3 = Web3(Web3.EthereumTesterProvider())
@@ -292,10 +290,10 @@ Out[13]: 1000003000000000000000000
 
 Letzteres sieht gut aus! Der Kontostand stieg von 1.000.000 auf 1.000.003 Ether. Aber was ist mit dem ersten Konto passiert? Es scheint etwas mehr als drei Ether verloren zu haben. Leider ist nichts im Leben umsonst, und die Nutzung des öffentlichen Ethereum-Netzwerks erfordert, dass Sie Ihre Peers für ihre unterstützende Rolle entschädigen. Eine kleine Transaktionsgebühr wurde von dem Konto abgezogen, das die Transaktion eingereicht hat – diese Gebühr ist die Menge an verbranntem Gas (21000 Einheiten Gas für einen ETH-Transfer) multipliziert mit einer Grundgebühr, die je nach Netzwerkaktivität variiert, plus einer Prioritätsgebühr, die an den Validator geht, der die Transaktion in einen Block aufnimmt.
 
-Mehr zu [Gas](/developers/docs/gas/#post-london)
+Mehr zu [Gas](/developers/docs/gas/)
 
 <FeaturedText>Hinweis: Im öffentlichen Netzwerk sind Transaktionsgebühren variabel, basierend auf der Netzwerknachfrage und darauf, wie schnell eine Transaktion verarbeitet werden soll. Wenn Sie an einer Aufschlüsselung der Gebührenberechnung interessiert sind, lesen Sie meinen früheren Beitrag darüber, <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">wie Transaktionen in einen Block aufgenommen werden</a>.</FeaturedText>
 
 ## Und durchatmen {#and-breathe}
 
-Wir sind schon eine Weile dabei, also scheint dies ein guter Zeitpunkt für eine Pause zu sein. Der Kaninchenbau geht weiter, und wir werden in Teil zwei dieser Serie weiter auf Erkundungstour gehen. Einige kommende Konzepte: Verbindung zu einem echten Knoten, Smart Contracts und Token. Haben Sie Anschlussfragen? Lassen Sie es mich wissen! Ihr Feedback wird beeinflussen, wohin wir von hier aus gehen. Anfragen sind über [Twitter](https://twitter.com/wolovim) willkommen.
+Wir sind schon eine Weile dabei, also scheint dies ein guter Zeitpunkt für eine Pause zu sein. Der Kaninchenbau geht weiter, und wir werden in Teil zwei dieser Serie weiter auf Erkundungstour gehen. Einige kommende Konzepte: Verbindung zu einem echten Knoten, Smart Contracts und Token. Haben Sie Anschlussfragen? Lassen Sie es mich wissen! Ihr Feedback wird beeinflussen, wohin wir von hier aus gehen. Anfragen sind über [Twitter](https://x.com/wolovim) willkommen.

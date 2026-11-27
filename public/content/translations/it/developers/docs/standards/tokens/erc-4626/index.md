@@ -51,7 +51,7 @@ Questa funzione restituisce l'indirizzo del token sottostante utilizzato per il 
 function totalAssets() public view returns (uint256)
 ```
 
-Questa funzione restituisce l'importo totale degli asset sottostanti detenuti dal vault.
+Questa funzione restituisce l'importo totale degli asset sottostanti gestiti dal vault, inclusi quelli impiegati altrove e al netto di eventuali commissioni.
 
 #### convertToShares {#convertoshares}
 
@@ -183,7 +183,7 @@ Restituisce l'importo totale delle quote del vault che `owner` possiede attualme
 
 ### Mappa dell'interfaccia {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### Eventi {#events}
 

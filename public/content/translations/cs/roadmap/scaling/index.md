@@ -7,7 +7,7 @@ alt: "Plán vývoje Etherea"
 template: roadmap
 ---
 
-Ethereum se škáluje pomocí [vrstev 2](/layer-2/#rollups) (známých také jako rollupy), které dávkují transakce dohromady a odesílají výstup do Etherea. Přestože jsou rollupy až osmkrát levnější než Ethereum Mainnet, je možné je dále optimalizovat a snížit tak náklady pro koncové uživatele. Rollupy také spoléhají na některé centralizované komponenty, které mohou vývojáři s tím, jak rollupy dospívají, odstranit.
+Ethereum se škáluje pomocí [vrstev 2](/layer-2/learn/#how-does-layer-2-work) (známých také jako rollupy), které dávkují transakce dohromady a odesílají výstup do Etherea. Přestože jsou rollupy až osmkrát levnější než Ethereum Mainnet, je možné je dále optimalizovat a snížit tak náklady pro koncové uživatele. Rollupy také spoléhají na některé centralizované komponenty, které mohou vývojáři s tím, jak rollupy dospívají, odstranit.
 
 <Alert variant="update">
 <AlertContent>
@@ -15,7 +15,7 @@ Ethereum se škáluje pomocí [vrstev 2](/layer-2/#rollups) (známých také jak
   Transakční náklady
 </AlertTitle>
   <ul style={{ marginBottom: 0 }}>
-    <li>Dnešní rollupy jsou <strong>\~5-20x</strong> levnější než vrstva 1 (l1) Etherea</li>
+    <li>Dnešní rollupy jsou <strong>\~5-20x</strong> levnější než vrstva 1 (L1) Etherea</li>
     <li>ZK-rollupy brzy sníží poplatky o <strong>\~40-100x</strong></li>
     <li>Nadcházející změny v Ethereu poskytnou dalších <strong>\~100-1000x</strong> škálování</li>
  <li style={{ marginBottom: 0 }}>Uživatelé by měli těžit z transakcí, <strong>které stojí méně než 0,001 $</strong></li>
@@ -43,9 +43,15 @@ Tento druhý krok je známý jako [„danksharding“](/roadmap/danksharding/). 
 
 ## Decentralizace rollupů {#decentralizing-rollups}
 
-[Rollupy](/layer-2) již Ethereum škálují. [Bohatý ekosystém rollupových projektů](https://l2beat.com/scaling/tvs) umožňuje uživatelům provádět transakce rychle a levně s řadou bezpečnostních záruk. Rollupy však byly spuštěny pomocí centralizovaných sekvencerů (počítačů, které provádějí veškeré zpracování a agregaci transakcí před jejich odesláním do Etherea). To je zranitelné vůči cenzuře, protože operátoři sekvencerů mohou být sankcionováni, podplaceni nebo jinak kompromitováni. Zároveň se [rollupy liší](https://l2beat.com/scaling/summary) ve způsobu, jakým ověřují příchozí data. Nejlepším způsobem je, aby „dokazovatelé“ (provers) předkládali [důkazy o podvodu](/glossary/#fraud-proof) nebo důkazy o platnosti, ale ne všechny rollupy už jsou tak daleko. Dokonce i ty rollupy, které používají důkazy o platnosti/podvodu, využívají malou skupinu známých dokazovatelů. Proto je dalším kritickým krokem ve škálování Etherea rozdělení odpovědnosti za provoz sekvencerů a dokazovatelů mezi více lidí.
+[Rollupy](/layer-2) již Ethereum škálují. [Bohatý ekosystém rollupových projektů](https://ethbeat.org/layer2s/tvs) umožňuje uživatelům provádět transakce rychle a levně s řadou bezpečnostních záruk. Rollupy však byly spuštěny pomocí centralizovaných sekvencerů (počítačů, které provádějí veškeré zpracování a agregaci transakcí před jejich odesláním do Etherea). To je zranitelné vůči cenzuře, protože operátoři sekvencerů mohou být sankcionováni, podplaceni nebo jinak kompromitováni. Zároveň se [rollupy liší](https://ethbeat.org/layer2s/summary) ve způsobu, jakým ověřují příchozí data. Nejlepším způsobem je, aby „dokazovatelé“ (provers) předkládali [důkazy o podvodu](/glossary/#fraud-proof) nebo důkazy o platnosti, ale ne všechny rollupy už jsou tak daleko. Dokonce i ty rollupy, které používají důkazy o platnosti/podvodu, využívají malou skupinu známých dokazovatelů. Proto je dalším kritickým krokem ve škálování Etherea rozdělení odpovědnosti za provoz sekvencerů a dokazovatelů mezi více lidí.
 
 <ButtonLink variant="outline-color" href="/developers/docs/scaling/">Více o rollupech</ButtonLink>
+
+## Škálování Etherea Mainnet pomocí zkEVM {#zkevm}
+
+Rollupy nejsou jedinou cestou ke škálování. Dnes každý [validátor](/glossary/#validator) znovu provádí každou transakci v každém bloku, což omezuje, kolik toho může Ethereum Mainnet zpracovat bez zvýšení hardwarových požadavků. Pomocí zkEVM provede jeden dokazovatel blok a vygeneruje [důkaz s nulovou znalostí](/zero-knowledge-proofs/), že provedení bylo správné, a validátoři místo toho zkontrolují tento důkaz. Kontrola důkazu je mnohem levnější než opětovné provádění, takže Mainnet může zpracovat více transakcí, aniž by nutil validátory k přechodu na drahý hardware.
+
+<ButtonLink variant="outline" href="/roadmap/zkevm/">Více o zkEVM</ButtonLink>
 
 ## Současný pokrok {#current-progress}
 

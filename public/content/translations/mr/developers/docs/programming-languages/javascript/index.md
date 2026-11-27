@@ -4,9 +4,9 @@ description: "JavaScript-आधारित प्रोजेक्ट्स �
 lang: mr
 ---
 
-इथेरियम इकोसिस्टममध्ये JavaScript ही सर्वात लोकप्रिय भाषांपैकी एक आहे. किंबहुना, इथेरियमला शक्य तितक्या प्रमाणात JavaScript मध्ये आणण्यासाठी एक समर्पित [टीम](https://github.com/ethereumjs) आहे.
+इथेरियम इकोसिस्टममध्ये JavaScript ही सर्वात लोकप्रिय भाषांपैकी एक आहे, ज्यामध्ये कोर प्रोटोकॉल प्रिमिटिव्ह्जपासून ते प्रोडक्शन सहमती क्लायंटपर्यंत प्रत्येक गोष्टीची JavaScript आणि TypeScript अंमलबजावणी उपलब्ध आहे.
 
-[स्टॅकच्या सर्व स्तरांवर](/developers/docs/ethereum-stack/) JavaScript (किंवा त्यासारखे काहीतरी) लिहिण्याच्या संधी आहेत.
+[स्टॅकच्या सर्व स्तरांवर](/developers/docs/ethereum-stack/) JavaScript (किंवा त्यासारखे काहीतरी) लिहिण्याच्या संधी उपलब्ध आहेत.
 
 ## इथेरियमशी संवाद साधा {#interact-with-ethereum}
 
@@ -52,10 +52,15 @@ lang: mr
 
 ### नोड्स आणि क्लायंट्स {#nodes-and-clients}
 
-एक EthereumJS क्लायंट सक्रिय डेव्हलपमेंटमध्ये आहे जो तुम्हाला समजणाऱ्या भाषेत, म्हणजेच JavaScript मध्ये, इथेरियम क्लायंट्स कसे काम करतात हे सखोलपणे समजून घेण्यास मदत करतो!
+[लोडस्टार](https://lodestar.chainsafe.io/) हा TypeScript मध्ये लिहिलेला आणि ChainSafe द्वारे मेंटेन केलेला एक प्रोडक्शन-रेडी सहमती क्लायंट आहे. यामध्ये बीकन नोड आणि प्रमाणक क्लायंट समाविष्ट आहे, आणि तुम्हाला माहीत असलेल्या भाषेत इथेरियमचे प्रूफ-ऑफ-स्टेक एकमत कसे कार्य करते हे पाहण्यासाठी हे एक उत्तम ठिकाण आहे.
 
-**क्लायंट तपासा**  
-[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**लोडस्टार तपासा**  
+[`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
+
+एक्झिक्यूशनच्या बाजूने, EthereumJS क्लायंट डेप्रिकेट आणि अर्काइव्ह केला गेला आहे, परंतु JavaScript मध्ये इथेरियम क्लायंट कसे कार्य करते हे एक्सप्लोर करण्यासाठी त्याचा सोर्स कोड अद्याप उपलब्ध आहे.
+
+**अर्काइव्ह केलेला क्लायंट तपासा**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/archive/client)
 
 ## इतर प्रोजेक्ट्स {#other-projects}
 

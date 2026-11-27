@@ -1,7 +1,7 @@
 ---
 title: Uthibitisho wa maarifa-sifuri ni nini?
 metaTitle: Uthibitisho wa maarifa-sifuri
-description: Utangulizi usio wa kiufundi wa uthibitisho wa maarifa-sifuri kwa wanaoanza.
+description: Uthibitisho wa maarifa-sifuri ni nini? Utangulizi rafiki kwa wanaoanza kuhusu jinsi uthibitisho wa ZK unavyohalalisha dai bila kufichua data, na jinsi Ethereum inavyoutumia.
 lang: sw
 ---
 

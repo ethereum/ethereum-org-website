@@ -1,7 +1,7 @@
 ---
 title: Pectra
 metaTitle: Prague-Electra (Pectra)
-description: "Tìm hiểu về bản nâng cấp giao thức Pectra"
+description: "Pectra đã chính thức hoạt động vào ngày 07 tháng 05 năm 2025. Tìm hiểu những thay đổi của bản nâng cấp Ethereum này, bao gồm tài khoản thông minh EIP-7702 và số dư trình xác thực tối đa 2048 ETH."
 lang: vi
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -77,7 +77,7 @@ Hợp đồng tiền biên dịch mới bổ sung khả năng cho mọi nhà ph�
 
 EVM hiện cung cấp mã lệnh `BLOCKHASH` cho phép các nhà phát triển hợp đồng truy xuất mã băm của một khối trực tiếp trong lớp thực thi. Tuy nhiên, điều này chỉ giới hạn ở 256 khối gần nhất và có thể trở thành vấn đề đối với các ứng dụng khách phi trạng thái trong tương lai.
 
-[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) tạo ra một hợp đồng hệ thống mới có thể cung cấp 8192 mã băm khối gần nhất dưới dạng các khe lưu trữ. Điều này giúp giao thức bắt kịp tương lai cho việc thực thi phi trạng thái và trở nên hiệu quả hơn khi các cây verkle được áp dụng. Tuy nhiên, ngoài điều này, các bản cuộn có thể hưởng lợi từ điều này ngay lập tức, vì chúng có thể truy vấn hợp đồng trực tiếp với một khoảng thời gian lịch sử dài hơn.
+[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) tạo ra một hợp đồng hệ thống mới có thể cung cấp 8192 mã băm khối gần nhất dưới dạng các khe lưu trữ. Điều này giúp giao thức bắt kịp tương lai cho việc thực thi phi trạng thái. Tuy nhiên, ngoài điều này, các bản cuộn có thể hưởng lợi từ điều này ngay lập tức, vì chúng có thể truy vấn hợp đồng trực tiếp với một khoảng thời gian lịch sử dài hơn.
 
 ### Di chuyển chỉ số ủy ban ra ngoài Chứng thực {#7549}
 

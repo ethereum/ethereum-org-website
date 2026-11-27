@@ -40,18 +40,18 @@ lang: ko
 
 ## 경량 클라이언트 개발의 현재 상태는 어떤가요? {#current-state-of-development}
 
-실행, 합의 및 실행/합의 결합 경량 클라이언트를 포함하여 여러 경량 클라이언트가 개발 중입니다. 이 페이지를 작성하는 시점에 알려진 경량 클라이언트 구현체는 다음과 같습니다.
+실행, 합의 및 실행/합의 결합 경량 클라이언트를 포함하여 여러 경량 클라이언트가 개발 중입니다. 이 페이지를 작성하는 시점에 알려진 경량 클라이언트 구현은 다음과 같습니다.
 
-- [로드스타(Lodestar)](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): TypeScript로 작성된 합의 경량 클라이언트
-- [헬리오스(Helios)](https://github.com/a16z/helios): Rust로 작성된 실행 및 합의 결합 경량 클라이언트
-- [고 이더리움 (geth)](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): Go로 작성된 실행 클라이언트용 라이트 모드(개발 중)
-- [님버스(Nimbus)](https://nimbus.guide/el-light-client.html): Nim으로 작성된 합의 경량 클라이언트
+- [로드스타](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): TypeScript로 작성된 합의 경량 클라이언트
+- [Helios](https://github.com/a16z/helios): Rust로 작성된 실행 및 합의 결합 경량 클라이언트
+- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): Go로 작성된 실행 클라이언트용 경량 모드(개발 중)
+- [님버스](https://nimbus.guide/el-light-client.html): Nim으로 작성된 합의 경량 클라이언트
 
-우리가 아는 한, 이들 중 아직 프로덕션 준비가 완료된 것으로 간주되는 것은 없습니다.
+우리가 아는 한, 이들 중 아직 프로덕션 환경에서 사용할 준비가 된 것은 없습니다.
 
-경량 클라이언트가 이더리움 데이터에 접근하는 방식을 개선하기 위한 많은 작업도 진행 중입니다. 현재 경량 클라이언트는 클라이언트/서버 모델을 사용하여 풀 노드에 대한 RPC 요청에 의존하지만, 미래에는 피어 투 피어 가십 프로토콜을 사용하여 경량 클라이언트에 데이터를 제공할 수 있는 [포털 네트워크](https://www.ethportal.net/)와 같은 전용 네트워크를 사용하여 보다 탈중앙화된 방식으로 데이터를 요청할 수 있습니다.
+경량 클라이언트가 이더리움 데이터에 접근하는 방식을 개선하기 위한 많은 작업도 진행되고 있습니다. 현재 경량 클라이언트는 클라이언트/서버 모델을 사용하여 풀 노드에 대한 RPC 요청에 의존합니다. [포털 네트워크](/developers/docs/networking-layer/portal-network/)는 처음에는 피어 투 피어 네트워크를 통해 경량 클라이언트에 이 데이터를 제공하도록 설계되었지만, 현재는 과거 블록의 기록을 제공하는 데 개발의 초점을 맞추고 있습니다.
 
-[버클 트리](/roadmap/verkle-trees/) 및 [무상태성](/roadmap/statelessness/)과 같은 다른 [로드맵](/roadmap/) 항목들은 궁극적으로 경량 클라이언트의 보안 보장을 풀 클라이언트와 동일한 수준으로 끌어올릴 것입니다.
+새로운 상태 트리(현재 [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)에서 이진 트리로 제안됨) 및 [무상태성](/roadmap/statelessness/)과 같은 다른 [로드맵](/roadmap/) 항목은 궁극적으로 경량 클라이언트의 보안 보장을 풀 클라이언트와 동일한 수준으로 끌어올릴 것입니다.
 
 ## 더 읽어보기 {#further-reading}
 

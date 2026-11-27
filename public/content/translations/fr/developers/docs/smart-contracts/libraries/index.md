@@ -56,7 +56,7 @@ Un autre exemple populaire est [SafeMath](https://docs.openzeppelin.com/contract
 
 Pour faciliter la [composabilité et l'interopérabilité](/developers/docs/smart-contracts/composability/), la communauté Ethereum a défini plusieurs normes sous la forme d'**ERC**. Vous pouvez en apprendre davantage à leur sujet dans la section [normes](/developers/docs/standards/).
 
-Lors de l'inclusion d'un ERC dans vos contrats, il est judicieux de rechercher des implémentations standard plutôt que d'essayer de créer la vôtre. De nombreuses bibliothèques de contrats intelligents incluent des implémentations pour les ERC les plus populaires. Par exemple, l'omniprésente [norme de jeton fongible ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) peut être trouvée dans [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) et [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). De plus, certains ERC fournissent également des implémentations canoniques dans le cadre de l'ERC lui-même.
+Lors de l'inclusion d'un ERC dans vos contrats, il est judicieux de rechercher des implémentations standard plutôt que d'essayer de créer la vôtre. De nombreuses bibliothèques de contrats intelligents incluent des implémentations pour les ERC les plus populaires. Par exemple, l'omniprésente [norme de jeton fongible ERC-20](/developers/docs/standards/tokens/erc-20/) peut être trouvée dans [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) et [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). De plus, certains ERC fournissent également des implémentations canoniques dans le cadre de l'ERC lui-même.
 
 Il convient de mentionner que certains ERC ne sont pas autonomes, mais sont des ajouts à d'autres ERC. Par exemple, l'[ERC-2612](https://eips.ethereum.org/EIPS/eip-2612) ajoute une extension à l'ERC-20 pour améliorer sa convivialité.
 
@@ -110,7 +110,6 @@ Enfin, lorsque vous décidez d'inclure ou non une bibliothèque, tenez compte de
 ## Tutoriels connexes {#related-tutorials}
 
 - [Considérations de sécurité pour les développeurs Ethereum](/developers/docs/smart-contracts/security/) _– Un tutoriel sur les considérations de sécurité lors de la création de contrats intelligents, y compris l'utilisation de bibliothèques._
-- [Comprendre le contrat intelligent de jeton ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- Tutoriel sur la norme ERC-20, fournie par de multiples bibliothèques._
 
 ## Lectures complémentaires {#further-reading}
 

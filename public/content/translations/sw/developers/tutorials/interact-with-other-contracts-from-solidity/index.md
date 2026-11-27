@@ -7,17 +7,16 @@ skill: advanced
 breadcrumb: Mwingiliano wa mikataba
 lang: sw
 published: 2020-04-05
-source: EthereumDev
-sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Katika mafunzo yaliyopita tulijifunza mengi kuhusu [jinsi ya kusambaza mkataba mahiri wako wa kwanza](/developers/tutorials/deploying-your-first-smart-contract/) na kuongeza baadhi ya vipengele kwake kama vile [kudhibiti ufikiaji kwa kutumia virekebishaji](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) au [ushughulikiaji wa makosa katika Solidity](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). Katika mafunzo haya tutajifunza jinsi ya kusambaza mkataba mahiri kutoka kwenye mkataba uliopo na kuingiliana nao.
+Katika mafunzo yaliyopita tulijifunza mengi [jinsi ya kusambaza mkataba mahiri wako wa kwanza](/developers/tutorials/deploying-your-first-smart-contract/) na kuongeza baadhi ya vipengele kwake kama [kudhibiti ufikiaji kwa kutumia virekebishaji](https://docs.soliditylang.org/en/latest/contracts.html#function-modifiers) au [kushughulikia makosa katika Solidity](https://docs.soliditylang.org/en/latest/control-structures.html#error-handling-assert-require-revert-and-exceptions). Katika mafunzo haya tutajifunza jinsi ya kusambaza mkataba mahiri kutoka kwenye mkataba uliopo na kuingiliana nao.
 
-Tutaunda mkataba unaomwezesha mtu yeyote kuwa na mkataba mahiri wake wa `Counter` kwa kuunda kiwanda chake, jina lake litakuwa `CounterFactory`. Kwanza hapa kuna msimbo wa mkataba mahiri wetu wa awali wa `Counter`:
+Tutaunda mkataba unaowezesha mtu yeyote kuwa na mkataba mahiri wake wa `Counter` kwa kuunda kiwanda (factory) kwa ajili yake, jina lake litakuwa `CounterFactory`. Kwanza hapa kuna msimbo wa mkataba mahiri wetu wa awali wa `Counter`:
 
 ```solidity
-pragma solidity 0.5.17;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
 
 contract Counter {
 
@@ -36,7 +35,7 @@ contract Counter {
         _;
     }
 
-     constructor(address owner) public {
+     constructor(address owner) {
         _owner = owner;
         _factory = msg.sender;
     }
@@ -52,34 +51,34 @@ contract Counter {
 }
 ```
 
-Kumbuka kwamba tulibadilisha kidogo msimbo wa mkataba ili kufuatilia anwani ya kiwanda na anwani ya mmiliki wa mkataba. Unapoita msimbo wa mkataba kutoka kwenye mkataba mwingine, msg.sender itarejelea anwani ya kiwanda chetu cha mkataba. Hili ni **suala muhimu sana kuelewa** kwani kutumia mkataba kuingiliana na mikataba mingine ni jambo la kawaida. Kwa hivyo unapaswa kuwa mwangalifu kuhusu nani ni mtumaji katika hali ngumu.
+Kumbuka kwamba tulibadilisha kidogo msimbo wa mkataba ili kufuatilia anwani ya kiwanda na anwani ya mmiliki wa mkataba. Unapoita msimbo wa mkataba kutoka kwenye mkataba mwingine, msg.sender itarejelea anwani ya kiwanda chetu cha mkataba. Hili ni **jambo muhimu sana kuelewa** kwani kutumia mkataba kuingiliana na mikataba mingine ni jambo la kawaida. Kwa hivyo unapaswa kuwa mwangalifu kuhusu nani ni mtumaji katika hali ngumu.
 
 Kwa hili pia tuliongeza kirekebishaji cha `onlyFactory` ambacho kinahakikisha kwamba kipengele cha kubadilisha hali kinaweza kuitwa tu na kiwanda ambacho kitapisha mpigaji wa asili kama kigezo.
 
-Ndani ya `CounterFactory` yetu mpya ambayo itasimamia Counters zingine zote, tutaongeza ramani (mapping) ambayo itahusisha mmiliki na anwani ya mkataba wake wa counter:
+Ndani ya `CounterFactory` yetu mpya itakayosimamia Counters zingine zote, tutaongeza ramani (mapping) itakayohusisha mmiliki na anwani ya mkataba wake wa counter:
 
 ```solidity
 mapping(address => Counter) _counters;
 ```
 
-Katika Ethereum, ramani (mapping) ni sawa na vitu (objects) katika JavaScript, zinawezesha kuweka ramani ya ufunguo wa aina A kwa thamani ya aina B. Katika kesi hii tunaweka ramani ya anwani ya mmiliki na mfano wa Counter yake.
+Katika Solidity, [ramani (mappings)](https://docs.soliditylang.org/en/latest/types.html#mapping-types) zinafanana na vitu (objects) katika JavaScript: zinahusisha ufunguo wa aina A na thamani ya aina B. Katika hali hii tunahusisha anwani ya mmiliki na mfano (instance) wa Counter yake.
 
 Kuanzisha Counter mpya kwa ajili ya mtu kutaonekana hivi:
 
 ```solidity
   function createCounter() public {
-      require (_counters[msg.sender] == Counter(0));
+      require(address(_counters[msg.sender]) == address(0), "You already have a counter");
       _counters[msg.sender] = new Counter(msg.sender);
   }
 ```
 
-Kwanza tunaangalia ikiwa mtu huyo tayari anamiliki counter. Ikiwa hamiliki counter tunaanzisha counter mpya kwa kupitisha anwani yake kwenye konstrukta ya `Counter` na kugawa mfano ulioundwa hivi karibuni kwenye ramani.
+Kwanza tunaangalia ikiwa mtu huyo tayari anamiliki counter. Ramani hurudisha thamani chaguo-msingi kwa funguo ambazo hazikuwahi kuwekwa, ambayo kwa aina ya mkataba ni anwani sifuri, kwa hivyo tunalinganisha anwani ya mkataba iliyohifadhiwa na `address(0)`. Ikiwa hamiliki counter tunaanzisha counter mpya kwa kupitisha anwani yake kwenye konstrukta ya `Counter` na kukabidhi mfano mpya ulioundwa kwenye ramani.
 
 Ili kupata hesabu ya Counter maalum itaonekana hivi:
 
 ```solidity
 function getCount(address account) public view returns (uint256) {
-    require (_counters[account] != Counter(0));
+    require(address(_counters[account]) != address(0), "This account has no counter");
     return (_counters[account].getCount());
 }
 
@@ -88,25 +87,26 @@ function getMyCount() public view returns (uint256) {
 }
 ```
 
-Kazi ya kwanza inaangalia ikiwa mkataba wa Counter upo kwa anwani iliyotolewa na kisha inaita mbinu ya `getCount` kutoka kwenye mfano. Kazi ya pili: `getMyCount` ni njia fupi tu ya kupitisha msg.sender moja kwa moja kwenye kazi ya `getCount`.
+Kipengele cha kwanza kinaangalia ikiwa mkataba wa Counter upo kwa anwani iliyotolewa na kisha kuita mbinu ya `getCount` kutoka kwenye mfano. Kipengele cha pili: `getMyCount` ni njia fupi tu ya kupitisha msg.sender moja kwa moja kwenye kipengele cha `getCount`.
 
-Kazi ya `increment` inafanana sana lakini inapitisha mtumaji wa asili wa muamala kwenye mkataba wa `Counter`:
+Kipengele cha `increment` kinafanana sana lakini kinapitisha mtumaji wa asili wa muamala kwenye mkataba wa `Counter`:
 
 ```solidity
 function increment() public {
-      require (_counters[msg.sender] != Counter(0));
-      Counter(_counters[msg.sender]).increment(msg.sender);
+      require(address(_counters[msg.sender]) != address(0), "You need to create a counter first");
+      _counters[msg.sender].increment(msg.sender);
   }
 ```
 
-Kumbuka kwamba ikiwa itaitwa mara nyingi sana, counter yetu inaweza kuwa mwathirika wa mzidio. Unapaswa kutumia maktaba ya [SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/) kadiri iwezekanavyo ili kujilinda kutokana na hali hii inayowezekana.
+Tangu Solidity 0.8, hesabu [hukaguliwa kwa chaguo-msingi](https://docs.soliditylang.org/en/latest/control-structures.html#checked-or-unchecked-arithmetic): ikiwa `_count` itawahi kufurika (overflow), `_count++` itatengua muamala badala ya kuzunguka kimya kimya, kwa hivyo hakuna maktaba ya ziada kama SafeMath inayohitajika.
 
 Ili kusambaza mkataba wetu, utahitaji kutoa msimbo wa `CounterFactory` na `Counter`. Wakati wa kusambaza kwa mfano katika Remix utahitaji kuchagua CounterFactory.
 
 Hapa kuna msimbo kamili:
 
 ```solidity
-pragma solidity 0.5.17;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
 
 contract Counter {
 
@@ -125,7 +125,7 @@ contract Counter {
         _;
     }
 
-     constructor(address owner) public {
+     constructor(address owner) {
         _owner = owner;
         _factory = msg.sender;
     }
@@ -145,17 +145,17 @@ contract CounterFactory {
     mapping(address => Counter) _counters;
 
     function createCounter() public {
-        require (_counters[msg.sender] == Counter(0));
+        require(address(_counters[msg.sender]) == address(0), "You already have a counter");
         _counters[msg.sender] = new Counter(msg.sender);
     }
 
     function increment() public {
-        require (_counters[msg.sender] != Counter(0));
-        Counter(_counters[msg.sender]).increment(msg.sender);
+        require(address(_counters[msg.sender]) != address(0), "You need to create a counter first");
+        _counters[msg.sender].increment(msg.sender);
     }
 
     function getCount(address account) public view returns (uint256) {
-        require (_counters[account] != Counter(0));
+        require(address(_counters[account]) != address(0), "This account has no counter");
         return (_counters[account].getCount());
     }
 
@@ -168,6 +168,6 @@ contract CounterFactory {
 
 Baada ya ukusanyaji, katika sehemu ya kusambaza ya Remix utachagua kiwanda kitakachosambazwa:
 
-![Selecting the factory to be deployed in Remix](./counterfactory-deploy.png)
+![Kuchagua kiwanda kitakachosambazwa katika Remix](./counterfactory-deploy.png)
 
-Kisha unaweza kucheza na kiwanda chako cha mkataba na kuangalia thamani ikibadilika. Ikiwa ungependa kuita mkataba mahiri kutoka kwenye anwani tofauti utahitaji kubadilisha anwani katika sehemu ya kuchagua Akaunti ya Remix.
+Kisha unaweza kucheza na kiwanda chako cha mkataba na kuangalia thamani ikibadilika. Ikiwa ungependa kuita mkataba mahiri kutoka kwenye anwani tofauti utahitaji kubadilisha anwani katika uteuzi wa Akaunti wa Remix.

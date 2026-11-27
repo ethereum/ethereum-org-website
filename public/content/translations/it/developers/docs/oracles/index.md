@@ -383,33 +383,31 @@ Alcune reti di oracoli decentralizzate offrono servizi di automazione, che conse
 
 La [Keeper Network](https://chain.link/keepers) di Chainlink fornisce opzioni per gli smart contract per esternalizzare le normali attività di manutenzione in modo decentralizzato e con fiducia ridotta al minimo. Leggi la [documentazione ufficiale di Keeper](https://docs.chain.link/docs/chainlink-keepers/introduction/) per informazioni su come rendere il tuo contratto compatibile con Keeper e utilizzare il servizio Upkeep.
 
-## Come utilizzare gli oracoli blockchain {#use-blockchain-oracles}
+## Come usare gli oracoli blockchain {#use-blockchain-oracles}
 
-Ci sono diverse applicazioni di oracoli che puoi integrare nella tua dapp di Ethereum:
+Ci sono diverse applicazioni di oracolo che puoi integrare nella tua dapp su Ethereum:
 
 **[Chainlink](https://chain.link/)** - _Le reti di oracoli decentralizzate di Chainlink forniscono input, output e calcoli a prova di manomissione per supportare smart contract avanzati su qualsiasi blockchain._
 
-**[RedStone Oracles](https://redstone.finance/)** - _RedStone è un oracolo modulare decentralizzato che fornisce feed di dati ottimizzati per il gas. È specializzato nell'offrire feed dei prezzi per asset emergenti, come token di liquid staking (LST), token di liquid restaking (LRT) e derivati di staking di Bitcoin._
+**[RedStone Oracles](https://redstone.finance/)** - _RedStone è un oracolo modulare decentralizzato che fornisce feed di dati ottimizzati per il gas. È specializzato nell'offrire feed dei prezzi per asset emergenti, come i token di liquid staking (LST), i token di liquid restaking (LRT) e i derivati di staking di Bitcoin._
 
-**[Chronicle](https://chroniclelabs.org/)** - _Chronicle supera gli attuali limiti del trasferimento di dati onchain sviluppando oracoli veramente scalabili, convenienti, decentralizzati e verificabili._
+**[Chronicle](https://chroniclelabs.org/)** - _Chronicle supera le attuali limitazioni del trasferimento di dati onchain sviluppando oracoli veramente scalabili, convenienti, decentralizzati e verificabili._
 
 **[Witnet](https://witnet.io/)** - _Witnet è un oracolo permissionless, decentralizzato e resistente alla censura che aiuta gli smart contract a reagire agli eventi del mondo reale con forti garanzie cripto-economiche._
 
-**[UMA Oracle](https://uma.xyz)** - _L'oracolo ottimistico di UMA consente agli smart contract di ricevere rapidamente qualsiasi tipo di dati per diverse applicazioni, tra cui assicurazioni, derivati finanziari e mercati predittivi._
+**[UMA Oracle](https://uma.xyz)** - _L'oracolo ottimistico di UMA consente agli smart contract di ricevere rapidamente qualsiasi tipo di dato per diverse applicazioni, tra cui assicurazioni, derivati finanziari e mercati predittivi._
 
-**[Tellor](https://tellor.io/)** - _Tellor è un protocollo di oracolo trasparente e permissionless per consentire al tuo smart contract di ottenere facilmente qualsiasi dato ogni volta che ne ha bisogno._
+**[Tellor](https://tellor.io/)** - _Tellor è un protocollo oracolo trasparente e permissionless che permette al tuo smart contract di ottenere facilmente qualsiasi dato ogni volta che ne ha bisogno._
 
-**[Band Protocol](https://bandprotocol.com/)** - _Band Protocol è una piattaforma di oracoli di dati cross-chain che aggrega e connette dati del mondo reale e API agli smart contract._
+**[Band Protocol](https://bandprotocol.com/)** - _Band Protocol è una piattaforma oracolo di dati cross-chain che aggrega e connette dati del mondo reale e API agli smart contract._
 
 **[Pyth Network](https://pyth.network/)** - _La rete Pyth è una rete di oracoli finanziari di prima parte progettata per pubblicare dati continui del mondo reale onchain in un ambiente resistente alle manomissioni, decentralizzato e autosostenibile._
 
-**[API3 DAO](https://api3.org/)** - _API3 DAO sta fornendo soluzioni di oracoli di prima parte che offrono maggiore trasparenza della fonte, sicurezza e scalabilità in una soluzione decentralizzata per gli smart contract_
+**[API3 DAO](https://api3.org/)** - _API3 DAO fornisce soluzioni oracolo di prima parte che offrono maggiore trasparenza delle fonti, sicurezza e scalabilità in una soluzione decentralizzata per gli smart contract_
 
-**[Supra](https://supra.com/)** - Un toolkit integrato verticalmente di soluzioni cross-chain che interconnettono tutte le blockchain, pubbliche (L1 e L2) o private (aziende), fornendo feed dei prezzi di oracoli decentralizzati che possono essere utilizzati per casi d'uso onchain e offchain. 
+**[Supra](https://supra.com/)** - Un toolkit integrato verticalmente di soluzioni cross-chain che interconnettono tutte le blockchain, pubbliche (L1 e L2) o private (aziendali), fornendo feed dei prezzi di oracoli decentralizzati che possono essere utilizzati per casi d'uso onchain e offchain. 
 
-**[Gas Network](https://gas.network/)** - Una piattaforma di oracoli distribuita che fornisce dati sul prezzo del gas in tempo reale attraverso la blockchain. Portando onchain i dati dei principali fornitori di dati sul prezzo del gas, Gas Network sta contribuendo a guidare l'interoperabilità. Gas Network supporta i dati per oltre 35 catene, tra cui la Mainnet di Ethereum e molti dei principali L2.
-
-**[DIA](https://www.diadata.org/)** - Una rete di oracoli cross-chain che fornisce feed di dati verificabili per oltre 20.000 asset in tutte le principali classi di asset. DIA ricava i dati grezzi di trading direttamente da oltre 100 mercati primari e li calcola onchain, garantendo la completa trasparenza e verificabilità dei dati con configurazioni personalizzate per qualsiasi caso d'uso.
+**[DIA](https://www.diadata.org/)** - Una rete di oracoli cross-chain che fornisce feed di dati verificabili per oltre 20.000 asset in tutte le principali classi di asset. DIA ricava i dati di trading grezzi direttamente da oltre 100 mercati primari e li calcola onchain, garantendo completa trasparenza e verificabilità dei dati con configurazioni personalizzate per qualsiasi caso d'uso.
 
 **[Stork](https://stork.network)** - Stork fornisce dati sui prezzi a latenza ultra-bassa, supportando un'ampia gamma di casi d'uso tra cui mercati perpetui, protocolli di prestito ed ecosistemi DeFi, con nuovi asset supportati rapidamente al momento della quotazione.
 

@@ -41,13 +41,12 @@ Besoin d'une introduction plus basique d'abord ? Consultez [ethereum.org/learn](
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Collection d'externes pour interagir avec un réseau de type Ethereum_
 - [Lighthouse](https://github.com/sigp/lighthouse) - _Client rapide de la couche de consensus Ethereum_
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _Proposition de refonte de la couche d'exécution des contrats intelligents Ethereum utilisant un sous-ensemble déterministe de WebAssembly_
-- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _Référence de l'API OASIS_
 - [Solaris](https://github.com/paritytech/sol-rs) - _Harnais de tests unitaires pour contrats intelligents Solidity utilisant l'EVM native du client Parity._
-- [SputnikVM](https://github.com/rust-blockchain/evm) - _Implémentation de la machine virtuelle Ethereum en Rust_
+- [SputnikVM](https://github.com/rust-blockchain/evm) - _Implémentation en Rust de la Machine Virtuelle Ethereum_
 - [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Contrat intelligent Wavelet en Rust_
 - [Foundry](https://github.com/foundry-rs/foundry) - _Boîte à outils pour le développement d'applications Ethereum_
 - [Alloy](https://alloy.rs) - _Bibliothèques performantes, bien testées et documentées pour interagir avec Ethereum et d'autres chaînes basées sur l'EVM._
-- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Bibliothèque Ethereum et implémentation de portefeuille_
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Implémentation de bibliothèque et de portefeuille Ethereum_
 - [SewUp](https://github.com/second-state/SewUp) - _Une bibliothèque pour vous aider à créer votre contrat WebAssembly Ethereum avec Rust, tout comme pour le développement d'un backend classique_
 - [Substreams](https://github.com/streamingfast/substreams) - _Technologie d'indexation de données de chaîne de blocs parallélisée_
 - [Reth](https://github.com/paradigmxyz/reth) Reth (abréviation de Rust Ethereum) est une nouvelle implémentation de nœud complet Ethereum

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-stablecoins.json",
-  "generatedAt": "2026-07-22T22:42:32.281Z",
-  "rootHash": "422a881ec5f6",
+  "generatedAt": "2026-11-27T09:54:54.783Z",
+  "rootHash": "b47412ffaa77",
   "tree": {
-    "contentHash": "7996d652037b",
-    "anchorHash": "f144deca9f31",
+    "contentHash": "f9e358af0b30",
+    "anchorHash": "04140342f8d2",
     "children": {
       "page-stablecoins-title": {
         "contentHash": "2d46a862ce8b",
@@ -577,6 +577,10 @@
         "contentHash": "01d0eaeadeb0",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-stablecoins-tools-pharos-description": {
+        "contentHash": "6f5429e9f301",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-stablecoins-tools-visit-brand": {
         "contentHash": "fdd97f785936",
         "anchorHash": "f4f47dcecf20",
@@ -625,6 +629,10 @@
       },
       "page-stablecoins-tools-stablewars-title": {
         "contentHash": "1179ece393f6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-tools-pharos-title": {
+        "contentHash": "ba2f9050d27a",
         "anchorHash": "e3b0c44298fc"
       },
       "pros": {
@@ -773,6 +781,7 @@
       "page-stablecoins-tools-dune-description",
       "page-stablecoins-tools-visa-description",
       "page-stablecoins-tools-stablewars-description",
+      "page-stablecoins-tools-pharos-description",
       "page-stablecoins-tools-visit-brand",
       "page-stablecoins-tools-stablecoinswtf-title",
       "page-stablecoins-tools-stablepulse-title",
@@ -782,6 +791,7 @@
       "page-stablecoins-tools-visa-title",
       "page-stablecoins-tools-visa-brand",
       "page-stablecoins-tools-stablewars-title",
+      "page-stablecoins-tools-pharos-title",
       "pros",
       "cons",
       "example-projects",
@@ -791,5 +801,5 @@
       "summerfi-logo"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

@@ -1,7 +1,7 @@
 ---
 title: "ایتھیریم گورننس کا تعارف"
 metaTitle: "ایتھیریم گورننس"
-description: "اس بات کا تعارف کہ ایتھیریم کے بارے میں فیصلے کیسے کیے جاتے ہیں۔"
+description: "ایتھیریم کے بارے میں فیصلے کیسے کیے جاتے ہیں؟ جانیں کہ ڈیولپرز، نوڈ آپریٹرز اور کمیونٹی کی جانب سے پروٹوکول میں تبدیلیوں کی تجویز کیسے دی جاتی ہے، ان پر بحث کیسے ہوتی ہے اور انہیں کیسے اپنایا جاتا ہے۔"
 lang: ur
 ---
 
@@ -71,7 +71,7 @@ _نوٹ: کوئی بھی فرد ان میں سے متعدد گروپس کا حص
 
 1. **ایک کور <span dir="ltr">EIP</span> تجویز کریں**: جیسا کہ [<span dir="ltr">EIP-1</span>](https://eips.ethereum.org/EIPS/eip-1#core-eips) میں بیان کیا گیا ہے، ایتھیریم میں باضابطہ طور پر تبدیلی کی تجویز دینے کا پہلا قدم اسے ایک کور <span dir="ltr">EIP</span> میں تفصیل سے بیان کرنا ہے۔ یہ ایک <span dir="ltr">EIP</span> کے لیے سرکاری تصریح کے طور پر کام کرے گا جسے پروٹوکول ڈیولپرز قبول ہونے کی صورت میں نافذ کریں گے۔
 
-2. **اپنا <span dir="ltr">EIP</span> پروٹوکول ڈیولپرز کے سامنے پیش کریں**: ایک بار جب آپ کے پاس ایک کور <span dir="ltr">EIP</span> ہو جس کے لیے آپ نے کمیونٹی کی رائے اکٹھی کر لی ہو، تو آپ کو اسے پروٹوکول ڈیولپرز کے سامنے پیش کرنا چاہیے۔ آپ اسے [<span dir="ltr">AllCoreDevs</span> کال](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status) پر بحث کے لیے تجویز کر کے ایسا کر سکتے ہیں۔ اس بات کا امکان ہے کہ کچھ بات چیت پہلے ہی [<span dir="ltr">Ethereum Magicians</span> فورم](https://ethereum-magicians.org/) پر یا [ایتھیریم <span dir="ltr">R&D</span> ڈسکارڈ](https://discord.gg/mncqtgVSVw) میں غیر ہم آہنگ طور پر ہو چکی ہوگی۔
+2. **اپنا <span dir="ltr">EIP</span> پروٹوکول ڈیولپرز کے سامنے پیش کریں**: ایک بار جب آپ کے پاس ایک کور <span dir="ltr">EIP</span> ہو جس کے لیے آپ نے کمیونٹی کی رائے اکٹھی کر لی ہو، تو آپ کو اسے پروٹوکول ڈیولپرز کے سامنے پیش کرنا چاہیے۔ آپ اسے [<span dir="ltr">AllCoreDevs</span> کال](https://eips.ethereum.org/EIPS/eip-7723) پر بحث کے لیے تجویز کر کے ایسا کر سکتے ہیں۔ اس بات کا امکان ہے کہ کچھ بات چیت پہلے ہی [<span dir="ltr">Ethereum Magicians</span> فورم](https://ethereum-magicians.org/) پر یا [ایتھیریم <span dir="ltr">R&D</span> ڈسکارڈ](https://discord.gg/mncqtgVSVw) میں غیر ہم آہنگ طور پر ہو چکی ہوگی۔
 
 > اس مرحلے کے ممکنہ نتائج یہ ہیں:
 

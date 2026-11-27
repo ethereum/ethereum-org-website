@@ -1,6 +1,6 @@
 ---
 title: "डेटा आणि ॲनालिटिक्स"
-description: "तुमच्या विकेंद्रित ॲप्लिकेशन्स (dapps) मध्ये वापरण्यासाठी ऑनचेन ॲनालिटिक्स आणि डेटा कसा मिळवायचा"
+description: "तुमच्या dapp साठी ऑनचेन डेटा कसा मिळवायचा: इथेरियम डेटाची क्वेरी आणि विश्लेषण करण्यासाठी इंडेक्सर्स, सबग्राफ्स, ब्लॉक एक्सप्लोरर्स, SQL ॲनालिटिक्स प्लॅटफॉर्म्स आणि APIs."
 lang: mr
 ---
 
@@ -76,12 +76,12 @@ EVM Query Language (EQL) ही EVM (इथेरियम व्हर्च्
 
 - [क्रिप्टो डेटा एक्सप्लोर करणे I: डेटा फ्लो आर्किटेक्चर्स](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
 - [Graph नेटवर्क विहंगावलोकन](https://thegraph.com/docs/en/about/)
-- [Graph क्वेरी प्लेग्राउंड](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
+- [Graph एक्सप्लोरर](https://thegraph.com/explorer)
 - [Etherscan वरील API कोड उदाहरणे](https://etherscan.io/apis#contracts)
 - [Blockscout वरील API डॉक्युमेंटेशन](https://docs.blockscout.com/devs/apis)
 - [Beaconcha.in बीकन साखळी एक्सप्लोरर](https://beaconcha.in)
 - [Dune बेसिक्स](https://docs.dune.com/#dune-basics)
-- [SubQuery इथेरियम क्विक स्टार्ट मार्गदर्शक](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
+- [SubQuery इथेरियम क्विक स्टार्ट गाईड](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [SQD नेटवर्क विहंगावलोकन](https://docs.sqd.dev/)
 - [EVM Query Language](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 

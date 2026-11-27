@@ -1,6 +1,6 @@
 ---
 title: "தரவு மற்றும் பகுப்பாய்வு"
-description: "உங்கள் பரவலாக்கப்பட்ட செயலிகளில் (dapps) பயன்படுத்துவதற்கான சங்கிலிசார் பகுப்பாய்வு மற்றும் தரவை எவ்வாறு பெறுவது"
+description: "உங்கள் பரவலாக்கப்பட்ட செயலிக்கான (dapp) சங்கிலிசார் தரவை எவ்வாறு பெறுவது: எத்திரியம் தரவை வினவுவதற்கும் பகுப்பாய்வு செய்வதற்கும் குறியீட்டாளர்கள், துணை வரைபடங்கள், தொகுதி உலாவிகள், SQL பகுப்பாய்வு தளங்கள் மற்றும் APIகள்."
 lang: ta
 ---
 
@@ -79,14 +79,14 @@ EVM வினவல் மொழி (EQL) என்பது EVM (எத்த�
 ## மேலும் படிக்க {#further-reading}
 
 - [கிரிப்டோ தரவை ஆராய்தல் I: தரவு ஓட்டக் கட்டமைப்புகள்](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
-- [Graph பிணையத்தின் மேலோட்டம்](https://thegraph.com/docs/en/about/)
-- [Graph வினவல் விளையாட்டு மைதானம் (Query Playground)](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
-- [EtherScan இல் API குறியீடு எடுத்துக்காட்டுகள்](https://etherscan.io/apis#contracts)
+- [Graph பிணைய மேலோட்டம்](https://thegraph.com/docs/en/about/)
+- [Graph உலாவி](https://thegraph.com/explorer)
+- [EtherScan இல் API குறியீட்டு எடுத்துக்காட்டுகள்](https://etherscan.io/apis#contracts)
 - [Blockscout இல் API ஆவணங்கள்](https://docs.blockscout.com/devs/apis)
 - [Beaconcha.in பீக்கன் சங்கிலி உலாவி](https://beaconcha.in)
 - [Dune அடிப்படைகள்](https://docs.dune.com/#dune-basics)
 - [SubQuery எத்திரியம் விரைவுத் தொடக்க வழிகாட்டி](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
-- [SQD பிணையத்தின் மேலோட்டம்](https://docs.sqd.dev/)
+- [SQD பிணைய மேலோட்டம்](https://docs.sqd.dev/)
 - [EVM வினவல் மொழி](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## பயிற்சிகள்: தரவு மற்றும் பகுப்பாய்வு / எத்திரியத்தில் SQL {#tutorials}

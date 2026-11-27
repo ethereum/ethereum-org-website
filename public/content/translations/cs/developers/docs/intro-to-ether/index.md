@@ -1,6 +1,6 @@
 ---
 title: "Technický úvod do etheru"
-description: "Úvod do kryptoměny ether pro vývojáře."
+description: "Technický úvod do etheru (ETH): k čemu se používá, jak se vyjadřuje ve Wei a Gwei a jak se razí, spaluje a převádí."
 lang: cs
 ---
 

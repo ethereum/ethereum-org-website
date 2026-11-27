@@ -7,7 +7,7 @@ alt: "Lộ trình Ethereum"
 template: roadmap
 ---
 
-Ethereum được mở rộng quy mô bằng cách sử dụng [lớp 2](/layer-2/#rollups) (còn được gọi là các bản cuộn), giúp gộp các giao dịch lại với nhau và gửi kết quả đầu ra đến Ethereum. Mặc dù các bản cuộn rẻ hơn tới tám lần so với Mạng chính Ethereum, nhưng vẫn có thể tối ưu hóa các bản cuộn hơn nữa để giảm chi phí cho người dùng cuối. Các bản cuộn cũng dựa vào một số thành phần tập trung mà các nhà phát triển có thể loại bỏ khi các bản cuộn trưởng thành hơn.
+Ethereum được mở rộng quy mô bằng cách sử dụng [lớp 2](/layer-2/learn/#how-does-layer-2-work) (còn được gọi là các bản cuộn), giúp gộp các giao dịch lại với nhau và gửi kết quả đầu ra đến Ethereum. Mặc dù các bản cuộn rẻ hơn tới tám lần so với Mạng chính Ethereum, nhưng vẫn có thể tối ưu hóa các bản cuộn hơn nữa để giảm chi phí cho người dùng cuối. Các bản cuộn cũng dựa vào một số thành phần tập trung mà các nhà phát triển có thể loại bỏ khi các bản cuộn trưởng thành hơn.
 
 <Alert variant="update">
 <AlertContent>
@@ -43,9 +43,15 @@ Bước thứ hai này được gọi là ["danksharding"](/roadmap/danksharding
 
 ## Phi tập trung hóa các bản cuộn {#decentralizing-rollups}
 
-[Các bản cuộn](/layer-2) đã và đang mở rộng quy mô Ethereum. Một [hệ sinh thái phong phú gồm các dự án Rollup](https://l2beat.com/scaling/tvs) đang cho phép người dùng giao dịch nhanh chóng và rẻ mẻ, với một loạt các đảm bảo về bảo mật. Tuy nhiên, các bản cuộn đã được khởi chạy bằng cách sử dụng các bộ sắp xếp tập trung (các máy tính thực hiện tất cả quá trình xử lý và tổng hợp giao dịch trước khi gửi chúng đến Ethereum). Điều này dễ bị kiểm duyệt, bởi vì những người vận hành bộ sắp xếp có thể bị trừng phạt, mua chuộc hoặc bị xâm phạm theo cách khác. Đồng thời, [các bản cuộn khác nhau](https://l2beat.com/scaling/summary) ở cách chúng xác thực dữ liệu đến. Cách tốt nhất là để các "người chứng minh" (provers) gửi [bằng chứng gian lận](/glossary/#fraud-proof) hoặc bằng chứng tính hợp lệ, nhưng không phải tất cả các bản cuộn đều đã đạt được điều đó. Ngay cả những bản cuộn sử dụng bằng chứng tính hợp lệ/gian lận cũng chỉ sử dụng một nhóm nhỏ các người chứng minh đã biết. Do đó, bước quan trọng tiếp theo trong việc mở rộng quy mô Ethereum là phân phối trách nhiệm chạy các bộ sắp xếp và người chứng minh cho nhiều người hơn.
+[Các bản cuộn](/layer-2) đã và đang mở rộng quy mô Ethereum. Một [hệ sinh thái phong phú gồm các dự án Rollup](https://ethbeat.org/layer2s/tvs) đang cho phép người dùng giao dịch nhanh chóng và rẻ mẻ, với một loạt các đảm bảo về bảo mật. Tuy nhiên, các bản cuộn đã được khởi chạy bằng cách sử dụng các bộ sắp xếp tập trung (các máy tính thực hiện tất cả quá trình xử lý và tổng hợp giao dịch trước khi gửi chúng đến Ethereum). Điều này dễ bị kiểm duyệt, bởi vì những người vận hành bộ sắp xếp có thể bị trừng phạt, mua chuộc hoặc bị xâm phạm theo cách khác. Đồng thời, [các bản cuộn khác nhau](https://ethbeat.org/layer2s/summary) ở cách chúng xác thực dữ liệu đến. Cách tốt nhất là để các "người chứng minh" (provers) gửi [bằng chứng gian lận](/glossary/#fraud-proof) hoặc bằng chứng tính hợp lệ, nhưng không phải tất cả các bản cuộn đều đã đạt được điều đó. Ngay cả những bản cuộn sử dụng bằng chứng tính hợp lệ/gian lận cũng chỉ sử dụng một nhóm nhỏ các người chứng minh đã biết. Do đó, bước quan trọng tiếp theo trong việc mở rộng quy mô Ethereum là phân phối trách nhiệm chạy các bộ sắp xếp và người chứng minh cho nhiều người hơn.
 
 <ButtonLink variant="outline-color" href="/developers/docs/scaling/">Tìm hiểu thêm về các bản cuộn</ButtonLink>
+
+## Mở rộng quy mô Mạng chính Ethereum bằng zkEVM {#zkevm}
+
+Các bản cuộn không phải là con đường duy nhất để mở rộng quy mô. Ngày nay, mọi [trình xác thực](/glossary/#validator) đều thực thi lại mọi giao dịch trong mỗi khối, điều này giới hạn khối lượng mà Mạng chính Ethereum có thể xử lý mà không làm tăng yêu cầu phần cứng. Với một zkEVM, một trình chứng minh duy nhất sẽ thực thi khối và tạo ra một [bằng chứng không kiến thức](/zero-knowledge-proofs/) rằng việc thực thi là chính xác, và thay vào đó, các trình xác thực sẽ kiểm tra bằng chứng đó. Việc kiểm tra một bằng chứng rẻ hơn nhiều so với việc thực thi lại, vì vậy Mạng chính có thể xử lý nhiều giao dịch hơn mà không buộc các trình xác thực phải sử dụng phần cứng đắt tiền.
+
+<ButtonLink variant="outline" href="/roadmap/zkevm/">Tìm hiểu thêm về zkEVM</ButtonLink>
 
 ## Tiến độ hiện tại {#current-progress}
 

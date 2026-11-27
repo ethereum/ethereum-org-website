@@ -1,10 +1,10 @@
 ---
 title: Ponts
-description: "Un aperçu des ponts pour les développeurs"
+description: "Un guide pour les développeurs sur les ponts : comment fonctionnent la messagerie inter-chaîne et le transfert de jetons, les types de ponts et les hypothèses de confiance, et comment les intégrer dans les dapps."
 lang: fr
 ---
 
-Avec la prolifération des chaînes de blocs de couche 1 (l1) et des solutions de [mise à l'échelle](/developers/docs/scaling/) de couche 2 (l2), ainsi qu'un nombre toujours croissant d'applications décentralisées (dapp) devenant inter-chaînes, le besoin de communication et de mouvement d'actifs entre les chaînes est devenu une partie essentielle de l'infrastructure du réseau. Différents types de ponts existent pour rendre cela possible.
+Avec la prolifération des chaînes de blocs de couche 1 (L1) et des solutions de [mise à l'échelle](/developers/docs/scaling/) de couche 2 (L2), ainsi qu'un nombre toujours croissant d'applications décentralisées (dapp) devenant inter-chaînes, le besoin de communication et de mouvement d'actifs entre les chaînes est devenu une partie essentielle de l'infrastructure du réseau. Différents types de ponts existent pour rendre cela possible.
 
 ## Besoin de ponts {#need-for-bridges}
 
@@ -24,7 +24,7 @@ Pour les développeurs, les ponts permettent ce qui suit :
 
 - le transfert de toutes données, informations et actifs de manière inter-chaîne.
 - le déblocage de nouvelles fonctionnalités et de nouveaux cas d'utilisation pour les protocoles, car les ponts élargissent l'espace de conception de ce que les protocoles peuvent offrir. Par exemple, un protocole d'agriculture de rendement initialement déployé sur le [réseau principal Ethereum](/) peut offrir des pools de liquidité sur toutes les chaînes compatibles EVM.
-- l'opportunité de tirer parti des forces de différentes chaînes de blocs. Par exemple, les développeurs peuvent bénéficier des frais réduits offerts par les différentes solutions de couche 2 (l2) en déployant leurs dapps sur des rollups et des chaînes latérales (sidechains), et les utilisateurs peuvent utiliser des ponts pour passer de l'une à l'autre.
+- l'opportunité de tirer parti des forces de différentes chaînes de blocs. Par exemple, les développeurs peuvent bénéficier des frais réduits offerts par les différentes solutions de couche 2 (L2) en déployant leurs dapps sur des rollups et des chaînes latérales (sidechains), et les utilisateurs peuvent utiliser des ponts pour passer de l'une à l'autre.
 - la collaboration entre les développeurs de divers écosystèmes de chaînes de blocs pour créer de nouveaux produits.
 - l'attraction d'utilisateurs et de communautés de divers écosystèmes vers leurs dapps.
 
@@ -120,19 +120,19 @@ Pour surveiller l'activité des contrats sur plusieurs chaînes, les développeu
 - [The Graph](https://thegraph.com/en/)
 - [Tenderly](https://tenderly.co/)
 
-## Complément d'information {#further-reading}
+## Pour aller plus loin {#further-reading}
 
 - [Ponts de chaînes de blocs](/bridges/) – ethereum.org
-- [Cadre de risque des ponts L2BEAT](https://l2beat.com/bridges/summary)
-- [Ponts de chaînes de blocs : Construire des réseaux de cryptoréseaux](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 sept. 2021 – Dmitriy Berenzon
-- [Le trilemme de l'interopérabilité](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1er oct. 2021 – Arjun Bhuptani
-- [Clusters : Comment les ponts de confiance et à confiance minimisée façonnent le paysage multi-chaînes](https://blog.celestia.org/clusters/) - 4 oct. 2021 – Mustafa Al-Bassam
-- [LI.FI : Avec les ponts, la confiance est un spectre](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28 avr. 2022 – Arjun Chand
-- [L'état des solutions d'interopérabilité des rollups](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 juin 2024 – Alex Hook
-- [Exploiter la sécurité partagée pour une interopérabilité inter-chaîne sécurisée : Comités d'état Lagrange et au-delà](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 juin 2024 – Emmanuel Awosika
+- [ETHBEAT Bridge Risk Framework](https://ethbeat.org/interop/summary)
+- [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 sept. 2021 – Dmitriy Berenzon
+- [The Interoperability Trilemma](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1er oct. 2021 – Arjun Bhuptani
+- [Clusters: How Trusted & Trust-Minimized Bridges Shape the Multi-Chain Landscape](https://blog.celestia.org/clusters/) - 4 oct. 2021 – Mustafa Al-Bassam
+- [LI.FI: With Bridges, Trust is a Spectrum](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28 avr. 2022 – Arjun Chand
+- [The State Of Rollup Interoperability Solutions](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 juin 2024 – Alex Hook
+- [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 juin 2024 – Emmanuel Awosika
 
-De plus, voici quelques présentations perspicaces de [James Prestwich](https://twitter.com/_prestwich) qui peuvent aider à développer une compréhension plus approfondie des ponts :
+De plus, voici quelques présentations instructives de [James Prestwich](https://twitter.com/_prestwich) qui peuvent aider à approfondir la compréhension des ponts :
 
-- [Construire des ponts, pas des jardins clos](https://youtu.be/ZQJWMiX4hT0)
-- [Décomposer les ponts](https://youtu.be/b0mC-ZqN8Oo)
-- [Pourquoi les ponts brûlent-ils](https://youtu.be/c7cm2kd20j8)
+- [Building Bridges, Not Walled Gardens](https://youtu.be/ZQJWMiX4hT0)
+- [Breaking Down Bridges](https://youtu.be/b0mC-ZqN8Oo)
+- [Why are the Bridges Burning](https://youtu.be/c7cm2kd20j8)

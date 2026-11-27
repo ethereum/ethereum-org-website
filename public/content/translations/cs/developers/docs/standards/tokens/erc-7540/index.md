@@ -1,21 +1,21 @@
 ---
-title: Standard asynchronního tokenizovaného trezoru ERC-7540
-description: Rozšíření ERC-4626, které přidává asynchronní toky vkladů a výběrů pro tokenizované trezory.
+title: "Standard asynchronního tokenizovaného trezoru ERC-7540"
+description: "Rozšíření ERC-4626, které přidává asynchronní toky vkladů a výběrů pro tokenizované trezory."
 lang: cs
 ---
 
 ## Úvod {#introduction}
 
-ERC-7540 rozšiřuje [standard tokenizovaného trezoru ERC-4626](/developers/docs/standards/tokens/erc-4626/) přidáním podpory pro asynchronní toky vkladů a výběrů. Zavádí vzor žádost-poté-nárok (request-then-claim): uživatelé nejprve podají žádost (uzamknou svá aktiva nebo podíly) a poté si nárokují výsledek poté, co jej trezor zpracuje.
+ERC-7540 rozšiřuje [standard tokenizovaného trezoru ERC-4626](/developers/docs/standards/tokens/erc-4626/) o podporu asynchronních toků vkladů a výběrů. Zavádí vzor žádost-poté-nárok (request-then-claim): uživatelé nejprve podají žádost (předají svá aktiva nebo podíly do trezoru) a poté si nárokují výsledek, jakmile jej trezor zpracuje.
 
 To je potřeba, když trezor nemůže provést vypořádání okamžitě v jedné transakci, například:
 
 - Protokoly pro aktiva reálného světa (RWA), jako jsou tokenizované státní dluhopisy, soukromé úvěry a další aktiva s cykly vypořádání T+1 nebo T+2
-- Nedostatečně zajištěné půjčování, kde hodnocení úvěruschopnosti probíhá offchain
+- Půjčování s nedostatečným zajištěním (undercollateralized lending), kde hodnocení úvěrového rizika probíhá offchain
 - Meziřetězcové strategie trezorů, kde přemostění (bridging) vnáší zpoždění
-- Tokeny likvidního stakingu (LST) s obdobím pro uvolnění (unbonding)
+- Tokeny likvidního stakingu (LST) s obdobími pro uvolnění (unbonding periods)
 
-Trezory si mohou vybrat, zda budou asynchronní pouze pro vklady, pouze pro výběry, nebo pro obojí. Tato flexibilita umožňuje vývojářům trezorů přidat asynchronní toky pouze tam, kde to podkladová strategie vyžaduje, a zároveň ponechat druhou stranu synchronní.
+Trezory si mohou vybrat, zda budou asynchronní pouze pro vklady, pouze pro výběry, nebo pro obojí. Tato flexibilita umožňuje vývojářům trezorů přidat asynchronní toky pouze tam, kde to podkladová strategie vyžaduje, a zároveň zachovat druhou stranu synchronní.
 
 ## Předpoklady {#prerequisites}
 
@@ -23,23 +23,23 @@ Pro lepší pochopení této stránky doporučujeme nejprve si přečíst o [sta
 
 ## ERC-4626 vs ERC-7540 {#comparison}
 
-V ERC-4626 se vklad vypořádá atomicky: investor odešle aktiva a obdrží zpět podíly v jediné transakci.
+V ERC-4626 se vklad vypořádává atomicky: investor odešle aktiva a obdrží zpět podíly v jediné transakci.
 
-![ERC-4626 synchronous deposit flow](./erc-4626-sync-flow.svg)
+<VaultDepositDiagram />
 
-ERC-7540 to rozděluje do dvou kroků. Investor nejprve zavolá `requestDeposit()` pro uzamčení aktiv, poté čeká, až správce trezoru žádost zpracuje. Po splnění investor zavolá `deposit()`, aby si nárokoval své podíly. Směnné kurzy se určují v době splnění, nikoli v době žádosti.
+ERC-7540 to rozděluje do dvou kroků. Investor nejprve zavolá `requestDeposit()`, což převede jeho aktiva do trezoru, a poté čeká, až trezor žádost zpracuje. Jak a kdy se tak stane, závisí na trezoru, například když se dokončí offchain vypořádání. Jakmile je žádost splněna, investor zavolá `deposit()`, aby si nárokoval své podíly. Směnný kurz není v době žádosti pevně stanoven: trezor jej nastavuje, obvykle při splnění žádosti, takže obdržené podíly se mohou lišit od toho, co vrátilo `convertToShares()` v době podání žádosti.
 
-![ERC-7540 asynchronous deposit flow](./erc-7540-async-flow.svg)
+<AsyncVaultDiagram />
 
-Tok výběru funguje stejným způsobem: `requestRedeem()` uzamkne podíly a po splnění investor zavolá `redeem()`, aby si nárokoval aktiva.
+Tok výběru funguje stejným způsobem: `requestRedeem()` převezme podíly od investora a jakmile je žádost splněna, investor zavolá `redeem()`, aby si nárokoval aktiva.
 
 ## Funkce a vlastnosti ERC-7540 {#body}
 
 ERC-7540 dědí celé rozhraní ERC-4626, ale mění účel `deposit`/`mint`/`withdraw`/`redeem` na funkce pro nárokování. Nové funkce `requestDeposit` a `requestRedeem` zpracovávají počáteční krok žádosti.
 
-Každá žádost prochází třemi stavy: čekající (pending - podaná, čeká na zpracování), nárokovatelná (claimable - splněná a oceněná) a nárokovaná (claimed - investor si vyzvedl své podíly nebo aktiva).
+Každá žádost prochází třemi stavy: čekající (pending - podána, čeká na zpracování), nárokovatelná (claimable - splněna a oceněna) a nárokovaná (claimed - investor si vyzvedl své podíly nebo aktiva). Trezor může učinit žádost nárokovatelnou okamžitě a přeskočit stav čekání, ale nárokování je vždy samostatné volání. Standard nedefinuje žádnou událost pro okamžik, kdy se žádost stane nárokovatelnou.
 
-![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
+<VaultRequestDiagram />
 
 ### Tok žádosti o vklad {#deposit-request-flow}
 
@@ -79,7 +79,7 @@ Jakmile se žádost o vklad stane nárokovatelnou, uživatel zavolá standardní
 function requestRedeem(uint256 shares, address controller, address owner) external returns (uint256 requestId)
 ```
 
-Uzamkne `shares` z `owner` a podá žádost o výběr. Adresa `controller` získá kontrolu nad žádostí.
+Převezme kontrolu nad `shares` od `owner` a podá žádost o výběr. Trezor může držet podíly, dokud není žádost nárokována, nebo je může rovnou spálit. Adresa `controller` získá kontrolu nad žádostí.
 
 #### pendingRedeemRequest {#pendingredeemrequest}
 

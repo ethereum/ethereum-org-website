@@ -12,7 +12,7 @@ zkEVM adalah teknologi yang menggunakan [bukti tanpa pengetahuan](/zero-knowledg
 <AlertContent>
 <AlertTitle>Jangan disamakan dengan rollup zkEVM</AlertTitle>
 <AlertDescription>
-Halaman ini membahas penggunaan zkEVM untuk memverifikasi eksekusi blok L1 Ethereum. Untuk rollup zkEVM yang menggunakan bukti ZK untuk menskalakan Ethereum sebagai solusi lapisan 2 (l2), lihat [rollup zero-knowledge](/developers/docs/scaling/zk-rollups/).
+Halaman ini membahas penggunaan zkEVM untuk memverifikasi eksekusi blok L1 Ethereum. Untuk rollup zkEVM yang menggunakan bukti ZK untuk menskalakan Ethereum sebagai solusi lapisan 2 (L2), lihat [rollup zero-knowledge](/developers/docs/scaling/zk-rollups/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -99,16 +99,16 @@ Ini menggunakan mesin virtual berbasis RISC-V untuk mengeksekusi kode bita EVM, 
 
 Verifikasi L1 zkEVM terhubung dengan beberapa item peta jalan Ethereum lainnya:
 
-- **[Pohon Verkle](/roadmap/verkle-trees/)**: Memungkinkan saksi yang lebih kecil untuk verifikasi ketiadaan state, mengurangi data yang perlu dikerjakan oleh pembukti
-- **[Ketiadaan state](/roadmap/statelessness/)**: zkEVM adalah pengaktif utama—dengan bukti eksekusi ZK, node tidak memerlukan state penuh untuk memverifikasi blok
-- **[Pemisahan pengusul-pembangun (PBS)](/roadmap/pbs/)**: Pembangun blok berpotensi mengintegrasikan pembuatan bukti, atau pasar pembukti terpisah dapat muncul
-- **[Finalitas slot tunggal](/roadmap/single-slot-finality/)**: Pembuatan bukti yang lebih cepat dapat memungkinkan finalitas slot tunggal dengan jaminan kriptografis
+- **Pohon state baru**: Pohon biner terpadu ([EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)), yang diusulkan sebagai pengganti desain [pohon Verkle](/roadmap/verkle-trees/) sebelumnya, akan memungkinkan saksi (witness) yang lebih kecil untuk verifikasi ketiadaan state dan dirancang agar lebih mudah dibuktikan
+- **[Ketiadaan state](/roadmap/statelessness/)**: zkEVM adalah pendorong utama—dengan bukti eksekusi ZK, node tidak memerlukan state penuh untuk memverifikasi blok
+- **[PBS](/roadmap/pbs/)**: Pembangun blok berpotensi mengintegrasikan pembuatan bukti, atau pasar pembukti yang terpisah dapat muncul
+- **[Finalitas Slot Tunggal](/roadmap/single-slot-finality/)**: Pembuatan bukti yang lebih cepat dapat memungkinkan finalitas slot tunggal dengan jaminan kriptografis
 
 <Alert variant="warning">
 <AlertEmoji text="🧪" />
 <AlertContent>
 <AlertDescription>
-Verifikasi L1 zkEVM sedang dalam penelitian aktif dan belum terintegrasi ke dalam klien Ethereum produksi.
+Verifikasi L1 zkEVM sedang dalam penelitian aktif dan belum diintegrasikan ke dalam klien Ethereum produksi.
 </AlertDescription>
 </AlertContent>
 </Alert>

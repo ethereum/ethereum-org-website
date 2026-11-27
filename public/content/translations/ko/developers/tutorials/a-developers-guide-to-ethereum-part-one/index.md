@@ -15,16 +15,16 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 이더리움에 대해 들어보셨고 이제 본격적으로 파헤쳐 볼 준비가 되셨나요? 이 글에서는 블록체인의 기본 사항을 빠르게 살펴본 다음, 시뮬레이션된 이더리움 노드와 상호 작용하여 블록 데이터를 읽고, 계정 잔액을 확인하고, 트랜잭션을 전송하는 방법을 알아봅니다. 그 과정에서 기존의 앱 구축 방식과 이 새로운 탈중앙화된 패러다임의 차이점을 강조할 것입니다.
 
-## (가벼운) 사전 지식 {#soft-prerequisites}
+## (가벼운) 사전 준비 사항 {#soft-prerequisites}
 
-이 글은 다양한 개발자들이 쉽게 접근할 수 있도록 작성되었습니다. [Python 도구](/developers/docs/programming-languages/python/)가 포함되지만, 이는 아이디어를 전달하기 위한 수단일 뿐이므로 Python 개발자가 아니어도 문제없습니다. 하지만 이더리움과 관련된 내용으로 빠르게 넘어가기 위해 여러분이 이미 알고 있다고 가정하는 몇 가지 사항이 있습니다.
+이 글은 다양한 개발자가 쉽게 접근할 수 있도록 작성되었습니다. [Python 도구](/developers/docs/programming-languages/python/)가 사용되지만, 이는 아이디어를 전달하기 위한 수단일 뿐이므로 Python 개발자가 아니어도 문제없습니다. 하지만 이더리움 관련 내용으로 빠르게 넘어가기 위해 여러분이 이미 알고 있다고 가정하는 몇 가지 사항이 있습니다.
 
-가정:
+가정하는 사항:
 
 - 터미널을 다룰 줄 압니다.
 - Python 코드를 몇 줄 작성해 본 적이 있습니다.
-- 컴퓨터에 Python 버전 3.6 이상이 설치되어 있습니다([가상 환경](https://realpython.com/effective-python-environment/#virtual-environments) 사용을 강력히 권장합니다).
-- Python의 패키지 설치 프로그램인 `pip`을 사용해 본 적이 있습니다.
+- 컴퓨터에 Python 버전 3.10 이상이 설치되어 있습니다([가상 환경](https://realpython.com/effective-python-environment/#virtual-environments) 사용을 강력히 권장합니다).
+- Python의 패키지 설치 프로그램인 `pip`을(를) 사용해 본 적이 있습니다.
   다시 말씀드리지만, 이 중 해당하지 않는 사항이 있거나 이 글의 코드를 직접 실행해 볼 계획이 없더라도 내용을 따라가는 데는 큰 무리가 없을 것입니다.
 
 ## 블록체인 요약 {#blockchains-briefly}
@@ -81,9 +81,9 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 이 연습에서는 Python 인터프리터 내에서만 작업할 것입니다. 디렉터리, 파일, 클래스 또는 함수는 생성하지 않습니다.
 
-<FeaturedText>참고: 아래 예시에서 `$` 기호로 시작하는 명령은 터미널에서 실행해야 합니다. (`$` 기호는 줄의 시작을 의미할 뿐이므로 입력하지 마세요.)</FeaturedText>
+<FeaturedText>참고: 아래 예시에서 `$`(으)로 시작하는 명령은 터미널에서 실행하기 위한 것입니다. (`$`은(는) 줄의 시작을 의미할 뿐이므로 입력하지 마세요.)</FeaturedText>
 
-먼저, 탐색하기 쉬운 사용자 친화적인 환경을 위해 [IPython](https://ipython.org/)을 설치합니다. IPython은 탭 자동 완성 등의 기능을 제공하여 Web3.py 내에서 가능한 작업을 훨씬 쉽게 확인할 수 있게 해줍니다.
+먼저, 사용자 친화적인 탐색 환경을 위해 [IPython](https://ipython.org/)을 설치합니다. IPython은 탭 자동 완성 등의 기능을 제공하여 Web3.py에서 가능한 작업을 훨씬 쉽게 확인할 수 있도록 해줍니다.
 
 ```bash
 pip install ipython
@@ -95,15 +95,13 @@ Web3.py는 `web3`라는 이름으로 게시되어 있습니다. 다음과 같이
 pip install web3
 ```
 
-한 가지 더, 나중에 블록체인을 시뮬레이션할 예정인데, 이를 위해 몇 가지 종속성이 더 필요합니다. 다음을 통해 설치할 수 있습니다.
+한 가지 더 말씀드리자면, 나중에 블록체인을 시뮬레이션할 예정인데, 이를 위해 몇 가지 종속성이 더 필요합니다. 다음 명령을 통해 설치할 수 있습니다.
 
 ```bash
 pip install 'web3[tester]'
 ```
 
 이제 모든 준비가 끝났습니다!
-
-참고: `web3[tester]` 패키지는 Python 3.10.xx 버전까지만 작동합니다.
 
 ## 샌드박스 실행 {#spin-up-a-sandbox}
 
@@ -127,22 +125,22 @@ In [1]: from web3 import Web3
 
 ## Web3 모듈 소개 {#introducing-the-web3-module}
 
-이더리움으로 가는 관문 역할 외에도 [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) 모듈은 몇 가지 편의 기능을 제공합니다. 몇 가지를 살펴보겠습니다.
+[Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) 모듈은 이더리움으로 가는 관문일 뿐만 아니라 몇 가지 편의 함수도 제공합니다. 몇 가지를 살펴보겠습니다.
 
-이더리움 애플리케이션에서는 통화 단위를 변환해야 하는 경우가 많습니다. Web3 모듈은 이를 위한 몇 가지 도우미 메서드인 [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei)와 [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei)를 제공합니다.
+이더리움 애플리케이션에서는 통화 단위를 변환해야 하는 경우가 자주 있습니다. Web3 모듈은 이를 위한 몇 가지 도우미 메서드인 [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei)와 [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei)를 제공합니다.
 
 <FeaturedText>
-참고: 컴퓨터는 소수점 연산에 취약한 것으로 악명이 높습니다. 이를 우회하기 위해 개발자들은 종종 달러 금액을 센트 단위로 저장합니다. 예를 들어, 가격이 $5.99인 품목은 데이터베이스에 599로 저장될 수 있습니다.
+참고: 컴퓨터는 소수점 연산에 취약한 것으로 잘 알려져 있습니다. 이를 우회하기 위해 개발자들은 종종 달러 금액을 센트 단위로 저장합니다. 예를 들어, 가격이 $5.99인 품목은 데이터베이스에 599로 저장될 수 있습니다.
 
-<b>이더</b>로 트랜잭션을 처리할 때도 비슷한 패턴이 사용됩니다. 하지만 이더는 소수점 2자리가 아니라 18자리입니다! 이더의 가장 작은 단위를 <b>Wei</b>라고 부르며, 트랜잭션을 전송할 때 지정되는 값이 바로 이 단위입니다.
+<b>이더(ether)</b>로 트랜잭션을 처리할 때도 비슷한 패턴이 사용됩니다. 하지만 이더는 소수점 이하 2자리가 아니라 18자리입니다! 이더의 가장 작은 단위를 <b>웨이(wei)</b>라고 하며, 트랜잭션을 전송할 때 이 값이 지정됩니다.
 
-1 이더 = 1000000000000000000 Wei
+1 ether = 1000000000000000000 wei
 
-1 Wei = 0.000000000000000001 이더
+1 wei = 0.000000000000000001 ether
 
 </FeaturedText>
 
-몇 가지 값을 Wei로 변환하거나 Wei에서 변환해 보세요. 이더와 Wei 사이에는 [다양한 단위 이름이 존재](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations)한다는 점에 유의하세요. 그중 가장 잘 알려진 것은 <strong>Gwei</strong>이며, 트랜잭션 수수료를 나타낼 때 자주 사용됩니다.
+몇 가지 값을 웨이로 변환하거나 웨이에서 변환해 보세요. 이더와 웨이 사이의 [많은 단위에는 이름이 있습니다](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations). 그중 가장 잘 알려진 것은 <strong>gwei</strong>이며, 트랜잭션 수수료를 나타낼 때 자주 사용됩니다.
 
 ```python
 In [2]: Web3.to_wei(1, 'ether')
@@ -152,7 +150,7 @@ In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
-Web3 모듈의 다른 유틸리티 메서드로는 데이터 형식 변환기(예: [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)), 주소 도우미(예: [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)), 해시 함수(예: [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)) 등이 있습니다. 이 중 상당수는 이 시리즈의 뒷부분에서 다룰 예정입니다. 사용 가능한 모든 메서드와 속성을 보려면 `Web3`.을 입력하고 마침표 뒤에 탭 키를 두 번 눌러 IPython의 자동 완성 기능을 활용하세요.
+Web3 모듈의 다른 유틸리티 메서드로는 데이터 형식 변환기(예: [`to_hex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_hex)), 주소 도우미(예: [`is_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.is_address)), 해시 함수(예: [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)) 등이 있습니다. 이 중 상당수는 이 시리즈의 뒷부분에서 다룰 예정입니다. 사용 가능한 모든 메서드와 속성을 보려면 `Web3`.을(를) 입력하고 마침표 뒤에서 탭 키를 두 번 눌러 IPython의 자동 완성 기능을 활용해 보세요.
 
 ## 체인과 통신하기 {#talk-to-the-chain}
 
@@ -172,7 +170,7 @@ Web3 모듈의 다른 유틸리티 메서드로는 데이터 형식 변환기(�
 
 _EthereumTesterProvider는 시뮬레이션된 노드에 연결되며 빠른 개발 환경을 구축하는 데 유용합니다._
 
-이 시뮬레이션된 노드는 [eth-tester](https://github.com/ethereum/eth-tester)라고 불리며, 앞서 `pip install web3[tester]` 명령의 일부로 설치했습니다. 이 테스터 공급자를 사용하도록 Web3.py를 구성하는 방법은 다음과 같이 간단합니다.
+이 시뮬레이션된 노드는 [eth-tester](https://github.com/ApeWorX/eth-tester)라고 불리며, 앞서 `pip install web3[tester]` 명령의 일부로 설치했습니다. 이 테스터 공급자를 사용하도록 Web3.py를 구성하는 방법은 다음과 같이 간단합니다.
 
 ```python
 In [4]: w3 = Web3(Web3.EthereumTesterProvider())
@@ -294,10 +292,10 @@ Out[13]: 1000003000000000000000000
 
 두 번째 계정은 정상입니다! 잔액이 1,000,000 이더에서 1,000,003 이더로 늘어났습니다. 하지만 첫 번째 계정은 어떻게 된 걸까요? 3 이더보다 조금 더 많은 금액이 줄어든 것 같습니다. 아아, 세상에 공짜는 없으며, 이더리움 퍼블릭 네트워크를 사용하려면 지원 역할을 하는 피어에게 보상을 제공해야 합니다. 트랜잭션을 제출한 계정에서 소액의 트랜잭션 수수료가 차감되었습니다. 이 수수료는 소모된 가스 양(ETH 전송의 경우 21000 가스 단위)에 네트워크 활동에 따라 달라지는 기본 수수료를 곱한 값에, 트랜잭션을 블록에 포함하는 검증자에게 지급되는 팁을 더한 금액입니다.
 
-[가스](/developers/docs/gas/#post-london)에 대해 자세히 알아보기
+[가스](/developers/docs/gas/)에 대해 자세히 알아보기
 
 <FeaturedText>참고: 퍼블릭 네트워크에서 트랜잭션 수수료는 네트워크 수요와 트랜잭션 처리 속도에 따라 달라집니다. 수수료가 계산되는 방식에 관심이 있다면 <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">트랜잭션이 블록에 포함되는 방법</a>에 대한 제 이전 글을 참조하세요.</FeaturedText>
 
 ## 잠시 쉬어가기 {#and-breathe}
 
-꽤 오랫동안 달려왔으니 여기서 잠시 쉬어가는 것이 좋겠습니다. 탐험은 계속되며, 이 시리즈의 2부에서 계속해서 파헤쳐 볼 것입니다. 앞으로 다룰 개념으로는 실제 노드 연결, 스마트 컨트랙트, 토큰 등이 있습니다. 추가 질문이 있으신가요? 알려주세요! 여러분의 피드백은 앞으로의 방향에 영향을 미칠 것입니다. [트위터](https://twitter.com/wolovim)를 통한 요청도 환영합니다.
+꽤 오랫동안 달려왔으니 여기서 잠시 쉬어가는 것이 좋겠습니다. 탐험은 계속되며, 이 시리즈의 2부에서 계속해서 파헤쳐 볼 것입니다. 앞으로 다룰 개념으로는 실제 노드 연결, 스마트 컨트랙트, 토큰 등이 있습니다. 추가 질문이 있으신가요? 알려주세요! 여러분의 피드백은 앞으로의 방향에 영향을 미칠 것입니다. [트위터](https://x.com/wolovim)를 통한 요청도 환영합니다.

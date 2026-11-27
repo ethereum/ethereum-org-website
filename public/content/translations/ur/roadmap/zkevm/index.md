@@ -1,5 +1,5 @@
 ---
-title: "لیئر ۱ ⁦(l1)⁩ بلاک کی توثیق کے لیے ⁦zkEVM⁩"
+title: "لیئر ۱ ⁦(L1)⁩ بلاک کی توثیق کے لیے ⁦zkEVM⁩"
 description: "جانیں کہ کس طرح صفر علم ثبوت ایتھیریم بلاک کی کارروائی کی توثیق کر سکتے ہیں، جس سے زیادہ تھرو پٹ اور توثیق کار کی کم ضروریات ممکن ہوتی ہیں۔"
 lang: ur
 template: roadmap
@@ -12,7 +12,7 @@ template: roadmap
 <AlertContent>
 <AlertTitle><span dir="ltr">zkEVM</span> رول اپس کے ساتھ خلط ملط نہ کریں</AlertTitle>
 <AlertDescription>
-یہ صفحہ ایتھیریم لیئر ۱ (l1) بلاک کے عمل درآمد کی توثیق کے لیے <span dir="ltr">zkEVM</span> کے استعمال پر بحث کرتا ہے۔ <span dir="ltr">zkEVM</span> رول اپس کے لیے جو ایتھیریم کو لیئر ۲ (l2) کے حل کے طور پر اسکیل کرنے کے لیے <span dir="ltr">ZK</span> ثبوت استعمال کرتے ہیں، [صفر علم رول اپس](/developers/docs/scaling/zk-rollups/) دیکھیں۔
+یہ صفحہ ایتھیریم لیئر ۱ (L1) بلاک کے عمل درآمد کی توثیق کے لیے <span dir="ltr">zkEVM</span> کے استعمال پر بحث کرتا ہے۔ <span dir="ltr">zkEVM</span> رول اپس کے لیے جو ایتھیریم کو لیئر ۲ (L2) کے حل کے طور پر اسکیل کرنے کے لیے <span dir="ltr">ZK</span> ثبوت استعمال کرتے ہیں، [صفر علم رول اپس](/developers/docs/scaling/zk-rollups/) دیکھیں۔
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -25,7 +25,7 @@ template: roadmap
 
 <span dir="ltr">zkEVM</span> اس سمجھوتے سے نکلنے کا راستہ پیش کرتا ہے۔ "ہر کوئی دوبارہ عمل درآمد کرتا ہے" سے "ایک ثابت کرتا ہے، ہر کوئی توثیق کرتا ہے" کی طرف منتقل ہو کر، ایتھیریم توثیق کار کے ہارڈویئر کی ضروریات کو بڑھائے بغیر گیس کی حد کو محفوظ طریقے سے بڑھا سکتا ہے۔
 
-## <span dir="ltr">zkEVM</span> لیئر ۱ (l1) کی توثیق کیسے کام کرتی ہے {#how-it-works}
+## <span dir="ltr">zkEVM</span> لیئر ۱ (L1) کی توثیق کیسے کام کرتی ہے {#how-it-works}
 
 <span dir="ltr">zkEVM</span> کی توثیق بلاک کی توثیق کو <span dir="ltr">"1-of-N"</span> ماڈل میں تبدیل کرتی ہے:
 
@@ -42,7 +42,7 @@ template: roadmap
 - **<span dir="ltr">Type 1</span>**: مکمل طور پر ایتھیریم کے مساوی۔ <span dir="ltr">EVM</span> میں کوئی ترمیم نہیں، لہذا کسی بھی ایتھیریم بلاک کو بالکل اسی طرح ثابت کیا جا سکتا ہے
 - **<span dir="ltr">Type 2-4</span>**: ثابت کرنے کو آسان بنانے کے لیے <span dir="ltr">EVM</span> کے رویے میں ترمیم کرتے ہوئے، مختلف سمجھوتے کرتے ہیں
 
-لیئر ۱ (l1) کی توثیق کے لیے، <span dir="ltr">Type 1</span> ضروری ہے۔ <span dir="ltr">zkEVM</span> کو کسی بھی درست ایتھیریم بلاک کو ثابت کرنے کے قابل ہونا چاہیے، بشمول ایج کیسز اور تاریخی بلاکس۔ ایتھیریم کے عین مطابق رویے سے کوئی بھی انحراف اتفاق رائے کے مسائل پیدا کرے گا۔
+لیئر ۱ (L1) کی توثیق کے لیے، <span dir="ltr">Type 1</span> ضروری ہے۔ <span dir="ltr">zkEVM</span> کو کسی بھی درست ایتھیریم بلاک کو ثابت کرنے کے قابل ہونا چاہیے، بشمول ایج کیسز اور تاریخی بلاکس۔ ایتھیریم کے عین مطابق رویے سے کوئی بھی انحراف اتفاق رائے کے مسائل پیدا کرے گا۔
 
 ایتھیریم فاؤنڈیشن کی <span dir="ltr">zkEVM</span> تحقیق <span dir="ltr">Type 1</span> کے نفاذ پر مرکوز ہے جو موجودہ ایتھیریم کے عمل درآمد کے ساتھ مکمل طور پر ہم آہنگ ہیں۔
 
@@ -64,7 +64,7 @@ template: roadmap
 
 ## ریئل ٹائم ثابت کرنے کے چیلنجز {#realtime-proving}
 
-<span dir="ltr">zkEVM</span> لیئر ۱ (l1) کی توثیق کے لیے بنیادی چیلنج رفتار ہے۔ ایتھیریم بلاکس ہر 12 سیکنڈ میں تیار ہوتے ہیں، جس کا مطلب ہے کہ اتفاق رائے کے لیے کارآمد ہونے کے لیے ثبوتوں کو اسی ٹائم فریم کے اندر تیار کرنے کی ضرورت ہے۔
+<span dir="ltr">zkEVM</span> لیئر ۱ (L1) کی توثیق کے لیے بنیادی چیلنج رفتار ہے۔ ایتھیریم بلاکس ہر 12 سیکنڈ میں تیار ہوتے ہیں، جس کا مطلب ہے کہ اتفاق رائے کے لیے کارآمد ہونے کے لیے ثبوتوں کو اسی ٹائم فریم کے اندر تیار کرنے کی ضرورت ہے۔
 
 موجودہ <span dir="ltr">zkEVM</span> کے نفاذ میں ایک ہی بلاک کو ثابت کرنے میں منٹوں سے لے کر گھنٹوں تک کا وقت لگ سکتا ہے۔ تحقیق اس فرق کو ختم کرنے پر مرکوز ہے بذریعہ:
 
@@ -97,18 +97,18 @@ template: roadmap
 
 ## <span dir="ltr">zkEVM</span> دیگر اپ گریڈز کے ساتھ کیسے فٹ بیٹھتا ہے {#related-upgrades}
 
-<span dir="ltr">zkEVM</span> لیئر ۱ (l1) کی توثیق ایتھیریم روڈ میپ کے کئی دیگر آئٹمز کے ساتھ جڑتی ہے:
+<span dir="ltr">zkEVM</span> لیئر ۱ (L1) کی توثیق ایتھیریم روڈ میپ کے کئی دیگر آئٹمز سے جڑتی ہے:
 
-- **[ورکل ٹریز](/roadmap/verkle-trees/)**: غیر حالتی توثیق کے لیے چھوٹے گواہوں (witnesses) کو فعال کرتے ہیں، جس سے اس ڈیٹا میں کمی آتی ہے جس کے ساتھ ثابت کنندگان کو کام کرنے کی ضرورت ہوتی ہے
+- **نیا حالت کا ٹری**: ایک متحد بائنری ٹری ([<span dir="ltr">EIP-7864</span>](https://eips.ethereum.org/EIPS/eip-7864))، جسے پہلے کے [<span dir="ltr">Verkle tree</span>](/roadmap/verkle-trees/) ڈیزائن کی جگہ تجویز کیا گیا ہے، غیر حالتی توثیق کے لیے چھوٹے شواہد کو ممکن بنائے گا اور اسے ثابت کرنے میں آسان بنانے کے لیے ڈیزائن کیا گیا ہے
 - **[غیر حالتی کیفیت](/roadmap/statelessness/)**: <span dir="ltr">zkEVM</span> ایک کلیدی فعال کنندہ ہے—عمل درآمد کے <span dir="ltr">ZK</span> ثبوتوں کے ساتھ، نوڈز کو بلاکس کی توثیق کرنے کے لیے مکمل حالت کی ضرورت نہیں ہوتی
-- **[پی بی ایس (PBS)](/roadmap/pbs/)**: بلاک بنانے والے ممکنہ طور پر ثبوت کی تیاری کو مربوط کر سکتے ہیں، یا ایک الگ ثابت کنندہ مارکیٹ ابھر سکتی ہے
-- **[سنگل سلاٹ حتمیت](/roadmap/single-slot-finality/)**: تیز تر ثبوت کی تیاری کرپٹوگرافک ضمانتوں کے ساتھ سنگل سلاٹ حتمیت کو فعال کر سکتی ہے
+- **[<span dir="ltr">PBS</span>](/roadmap/pbs/)**: بلاک بنانے والے ممکنہ طور پر ثبوت کی تیاری کو ضم کر سکتے ہیں، یا ایک الگ ثابت کنندہ مارکیٹ ابھر سکتی ہے
+- **[سنگل سلاٹ حتمیت](/roadmap/single-slot-finality/)**: تیز تر ثبوت کی تیاری کرپٹوگرافک ضمانتوں کے ساتھ سنگل سلاٹ حتمیت کو ممکن بنا سکتی ہے
 
 <Alert variant="warning">
 <AlertEmoji text="🧪" />
 <AlertContent>
 <AlertDescription>
-<span dir="ltr">zkEVM</span> لیئر ۱ (l1) کی توثیق فعال تحقیق میں ہے اور ابھی تک پروڈکشن ایتھیریم کلائنٹس میں مربوط نہیں ہوئی ہے۔
+<span dir="ltr">zkEVM</span> لیئر ۱ (L1) کی توثیق پر فعال تحقیق جاری ہے اور اسے ابھی تک پروڈکشن ایتھیریم کلائنٹس میں ضم نہیں کیا گیا ہے۔
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -117,7 +117,7 @@ template: roadmap
 
 - [<span dir="ltr">zkEVM Foundation</span>](https://zkevm.ethereum.foundation) - ایتھیریم فاؤنڈیشن کا آفیشل <span dir="ltr">zkEVM</span> ریسرچ ہب
 - [<span dir="ltr">Ethproofs</span>](https://ethproofs.org/) - ایتھیریم کو ریئل ٹائم میں ثابت کرنے کی دوڑ کو ٹریک کریں
-- [<span dir="ltr">zkevm.fyi</span>](https://zkevm.fyi) - لیئر ۱ (l1) کے لیے <span dir="ltr">zkEVM</span> پر تکنیکی کتاب
+- [<span dir="ltr">zkevm.fyi</span>](https://zkevm.fyi) - لیئر ۱ (L1) کے لیے <span dir="ltr">zkEVM</span> پر تکنیکی کتاب
 - [<span dir="ltr">PSE zkEVM Specs</span>](https://github.com/privacy-scaling-explorations/zkevm-specs) - تکنیکی خصوصیات
 - [<span dir="ltr">The Verge</span>](https://vitalik.eth.limo/general/2024/10/23/futures4.html) - توثیق کی بہتریوں کا وٹالک (Vitalik) کا جائزہ
 - [<span dir="ltr">EF zkEVM Blog</span>](https://zkevm.ethereum.foundation/blog) - <span dir="ltr">EF</span> ٹیم کی جانب سے کارکردگی کا تجزیہ

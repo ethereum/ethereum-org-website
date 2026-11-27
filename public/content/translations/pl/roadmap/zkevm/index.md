@@ -1,6 +1,6 @@
 ---
-title: zkEVM do weryfikacji bloków L1
-description: Dowiedz się, jak dowody z wiedzą zerową mogą weryfikować wykonanie bloków Ethereum, umożliwiając wyższą przepustowość i niższe wymagania dla walidatorów.
+title: "zkEVM do weryfikacji bloków L1"
+description: "Dowiedz się, jak dowody z wiedzą zerową mogą weryfikować wykonanie bloków Ethereum, umożliwiając wyższą przepustowość i niższe wymagania dla walidatorów."
 lang: pl
 template: roadmap
 ---
@@ -99,10 +99,10 @@ Wykorzystują one maszyny wirtualne oparte na architekturze RISC-V do wykonywani
 
 Weryfikacja zkEVM w L1 łączy się z kilkoma innymi elementami mapy drogowej Ethereum:
 
-- **[Drzewa Verkle](/roadmap/verkle-trees/)**: Umożliwiają mniejszych świadków (witnesses) dla weryfikacji bezstanowej, zmniejszając ilość danych, z którymi muszą pracować provery.
-- **[Bezstanowość](/roadmap/statelessness/)**: zkEVM jest kluczowym czynnikiem umożliwiającym jej wdrożenie — dzięki dowodom wykonania ZK węzły nie potrzebują pełnego stanu do weryfikacji bloków.
-- **[Separacja proponującego i budującego (PBS)](/roadmap/pbs/)**: Budujący bloki mogliby potencjalnie zintegrować generowanie dowodów lub mógłby powstać oddzielny rynek proverów.
-- **[Ostateczność w pojedynczym slocie](/roadmap/single-slot-finality/)**: Szybsze generowanie dowodów mogłoby umożliwić ostateczność w pojedynczym slocie z gwarancjami kryptograficznymi.
+- **Nowe drzewo stanu**: Zunifikowane drzewo binarne ([EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)), zaproponowane w miejsce wcześniejszego projektu [drzewa Verkle](/roadmap/verkle-trees/), umożliwiłoby mniejsze dane świadka dla weryfikacji bezstanowej i jest zaprojektowane tak, aby było łatwiejsze do udowodnienia
+- **[Bezstanowość](/roadmap/statelessness/)**: zkEVM jest kluczowym elementem umożliwiającym jej wdrożenie — dzięki dowodom ZK z wykonania, węzły nie potrzebują pełnego stanu do weryfikacji bloków
+- **[PBS](/roadmap/pbs/)**: Budujący bloki mogliby potencjalnie zintegrować generowanie dowodów, lub mógłby powstać oddzielny rynek proverów
+- **[Ostateczność w pojedynczym slocie](/roadmap/single-slot-finality/)**: Szybsze generowanie dowodów mogłoby umożliwić ostateczność w pojedynczym slocie z gwarancjami kryptograficznymi
 
 <Alert variant="warning">
 <AlertEmoji text="🧪" />

@@ -1,6 +1,6 @@
 ---
 title: Redes sociais descentralizadas
-description: "Uma visão geral das redes sociais descentralizadas no Ethereum"
+description: "O que são redes sociais descentralizadas? Aprenda como os aplicativos sociais baseados no Ethereum permitem que você seja dono da sua identidade, conteúdo e público em vez de uma plataforma."
 lang: pt-br
 template: use-cases
 sidebarDepth: 2
@@ -59,7 +59,7 @@ A rede Ethereum se tornou a ferramenta preferida para desenvolvedores que criam 
 
 O [Mirror](https://mirror.xyz/) é uma plataforma de escrita habilitada para Web3 que visa ser descentralizada e de propriedade do usuário. Os usuários podem ler e escrever gratuitamente no Mirror simplesmente conectando suas carteiras. Os usuários também podem colecionar textos e se inscrever em seus escritores favoritos.
 
-As postagens publicadas no Mirror são armazenadas permanentemente no Arweave, uma plataforma de armazenamento descentralizada, e podem ser cunhadas como [tokens não fungíveis (NFTs)](/nft/) colecionáveis conhecidos como Writing NFTs. Os Writing NFTs são totalmente gratuitos para os escritores criarem, e a coleção acontece em uma [camada 2 (l2)](/glossary/#layer-2) do Ethereum — tornando as transações baratas, rápidas e ecologicamente corretas.
+As postagens publicadas no Mirror são armazenadas permanentemente no Arweave, uma plataforma de armazenamento descentralizada, e podem ser cunhadas como [tokens não fungíveis (NFTs)](/nft/) colecionáveis conhecidos como Writing NFTs. Os Writing NFTs são totalmente gratuitos para os escritores criarem, e a coleção acontece em uma [camada 2 (L2)](/glossary/#layer-2) do Ethereum — tornando as transações baratas, rápidas e ecologicamente corretas.
 
 ### MINDS {#minds}
 
@@ -69,7 +69,7 @@ Os usuários usam o token [ERC-20](/glossary/#erc-20) nativo da plataforma, $MIN
 
 ### Farcaster {#farcaster}
 
-[Farcaster](https://farcaster.xyz/) é uma rede social "suficientemente descentralizada" semelhante ao X e ao Reddit que permite aos usuários compartilhar e descobrir "casts". Ela é construída na rede de camada 2 (l2) Optimism para manter as transações relativamente baratas.
+[Farcaster](https://farcaster.xyz/) é uma rede social "suficientemente descentralizada" semelhante ao X e ao Reddit que permite aos usuários compartilhar e descobrir "casts". Ela é construída na rede de camada 2 (L2) Optimism para manter as transações relativamente baratas.
 
 ## Use redes sociais descentralizadas {#use-decentralized-social-networks}
 

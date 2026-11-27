@@ -1,6 +1,6 @@
 ---
 title: Delegiertes Staking (Staking as a Service)
-description: Ein Überblick über den Einstieg in das delegierte Staking
+description: "Was ist Staking as a Service? Erfahre, wie du 32 ETH einzahlen kannst, während ein Knotenbetreiber deinen Validator betreibt, und welche Vor- und Nachteile es im Vergleich zum Solo Staking oder Pooled Staking gibt."
 lang: de
 template: staking
 image: /images/staking/leslie-saas.png

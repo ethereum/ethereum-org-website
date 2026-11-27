@@ -1,7 +1,7 @@
 ---
-title: Introducción a la gobernanza de Ethereum
+title: "Introducción a la gobernanza de Ethereum"
 metaTitle: Gobernanza de Ethereum
-description: Una introducción a cómo se toman las decisiones sobre Ethereum.
+description: "¿Cómo se toman las decisiones sobre Ethereum? Aprenda cómo los desarrolladores, los operadores de nodos y la comunidad proponen, debaten y adoptan los cambios al protocolo."
 lang: es
 ---
 
@@ -71,7 +71,7 @@ El proceso formal para introducir cambios en el protocolo de Ethereum es el sigu
 
 1. **Proponer una EIP principal**: como se describe en la [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips), el primer paso para proponer formalmente un cambio en Ethereum es detallarlo en una EIP principal (Core EIP). Esta actuará como la especificación oficial para una EIP que los desarrolladores del protocolo implementarán si es aceptada.
 
-2. **Presentar su EIP a los desarrolladores del protocolo**: una vez que tenga una EIP principal para la cual haya recopilado los comentarios de la comunidad, debe presentarla a los desarrolladores del protocolo. Puede hacerlo proponiéndola para su discusión en una [llamada de AllCoreDevs](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status). Es probable que algunas discusiones ya hayan tenido lugar de forma asincrónica en el [foro de Ethereum Magicians](https://ethereum-magicians.org/) o en el [Discord de I+D de Ethereum](https://discord.gg/mncqtgVSVw).
+2. **Presentar su EIP a los desarrolladores del protocolo**: una vez que tenga una EIP principal para la cual haya recopilado los comentarios de la comunidad, debe presentarla a los desarrolladores del protocolo. Puede hacerlo proponiéndola para su discusión en una [llamada de AllCoreDevs](https://eips.ethereum.org/EIPS/eip-7723). Es probable que algunas discusiones ya hayan tenido lugar de forma asincrónica en el [foro de Ethereum Magicians](https://ethereum-magicians.org/) o en el [Discord de I+D de Ethereum](https://discord.gg/mncqtgVSVw).
 
 > Los posibles resultados de esta etapa son:
 

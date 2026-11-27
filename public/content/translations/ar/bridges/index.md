@@ -1,7 +1,7 @@
 ---
 title: "⁦جسور سلسلة الكتل⁩"
 metaTitle: "⁦مقدمة عن جسور سلسلة الكتل⁩"
-description: "⁦تتيح الجسور للمستخدمين نقل أموالهم عبر سلاسل الكتل المختلفة⁩"
+description: "ما هو جسر سلسلة الكتل؟ تعرف على كيفية نقل الجسور للرموز المميزة بين إيثيريوم، وشبكات طبقة 2 (⁦L2⁩)، والسلاسل الأخرى، وأنواع الجسور، والمخاطر التي يجب مراعاتها."
 lang: ar
 ---
 
@@ -101,9 +101,9 @@ _تطور <span dir="ltr">Web3</span> إلى نظام بيئي من سلاسل �
 
 ## استخدام الجسور {#use-bridge}
 
-يتيح لك استخدام الجسور نقل أصولك عبر سلاسل الكتل المختلفة. إليك بعض الموارد التي يمكن أن تساعدك في العثور على الجسور واستخدامها:
+يتيح لك استخدام الجسور نقل أصولك عبر سلاسل كتل مختلفة. إليك بعض الموارد التي يمكن أن تساعدك في العثور على الجسور واستخدامها:
 
-- **[ملخص جسور <span dir="ltr">L2BEAT</span>](https://l2beat.com/bridges/summary) و [تحليل مخاطر جسور <span dir="ltr">L2BEAT</span>](https://l2beat.com/bridges/summary)**: ملخص شامل للجسور المختلفة، بما في ذلك تفاصيل حول الحصة السوقية ونوع الجسر وسلاسل الوجهة. تمتلك <span dir="ltr">L2BEAT</span> أيضًا تحليلًا لمخاطر الجسور، مما يساعد المستخدمين على اتخاذ قرارات مستنيرة عند اختيار الجسر.
+- **[ملخص التشغيل البيني لـ <span dir="ltr">ETHBEAT</span>](https://ethbeat.org/interop/summary)**: ملخص شامل للجسور المختلفة، بما في ذلك تفاصيل حول الحصة السوقية، ونوع الجسر، وسلاسل الوجهة. يوفر <span dir="ltr">ETHBEAT</span> أيضًا تحليلاً لمخاطر الجسور، مما يساعد المستخدمين على اتخاذ قرارات مستنيرة عند اختيار الجسر.
 - **[ملخص جسور <span dir="ltr">DefiLlama</span>](https://defillama.com/bridges/Ethereum)**: ملخص لأحجام الجسور عبر شبكات إيثيريوم.
 
 <Divider />
@@ -137,9 +137,10 @@ _تطور <span dir="ltr">Web3</span> إلى نظام بيئي من سلاسل �
 ## قراءة المزيد {#further-reading}
 
 - [<span dir="ltr">EIP-5164</span>: التنفيذ عبر السلاسل](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _<span dir="ltr">June 18, 2022</span> - بريندان أسيلستين_
-- [إطار عمل مخاطر <span dir="ltr">L2Bridge</span>](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _<span dir="ltr">July 5, 2022</span> - بارتيك كيبوشيفسكي_
+- [إطار عمل مخاطر <span dir="ltr">L2Bridge</span>](https://forum.ethbeat.org/t/l2bridge-risk-framework/31) - _<span dir="ltr">July 5, 2022</span> - بارتيك كيبوشيفسكي_
 - ["لماذا سيكون المستقبل متعدد السلاسل، ولكنه لن يكون عبر السلاسل."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _<span dir="ltr">January 8, 2022</span> - فيتاليك بوتيرين_
 - [تسخير الأمان المشترك من أجل قابلية التشغيل البيني الآمنة عبر السلاسل: لجان حالة لاغرانج وما بعدها](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _<span dir="ltr">June 12, 2024</span> - إيمانويل أوسيكا_
 - [حالة حلول قابلية التشغيل البيني للتجميعات](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _<span dir="ltr">June 20, 2024</span> - أليكس هوك_
 
 <QuizWidget quizKey="bridges" />
+

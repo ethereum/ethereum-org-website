@@ -39,22 +39,21 @@ La introducción de Proto-Danksharding en la actualización Dencun añade un alm
 
 ## ¿Cómo se accede a los datos antiguos de los blobs? {#historical-access}
 
-Mientras que los nodos regulares de Ethereum siempre mantendrán el _estado actual_ de la red, los datos históricos de los blobs pueden descartarse aproximadamente 18 días después de su introducción. Antes de descartar estos datos, Ethereum se asegura de que se hayan puesto a disposición de todos los participantes de la red, dando tiempo para:
+Si bien los nodos regulares de Ethereum siempre mantendrán el _estado actual_ de la red, los datos históricos de los blobs pueden descartarse aproximadamente 18 días después de su introducción. Antes de descartar estos datos, Ethereum se asegura de que hayan estado disponibles para todos los participantes de la red, dando tiempo para:
 
 - Que las partes interesadas descarguen y almacenen los datos.
 - La finalización de todos los períodos de desafío de los rollup.
 - La finalización de las transacciones de los rollup.
 
-Los datos _históricos_ de los blobs pueden ser deseados por diversas razones y pueden almacenarse y accederse utilizando varios protocolos descentralizados:
+Los datos _históricos_ de los blobs pueden ser requeridos por diversas razones y se pueden almacenar y acceder a ellos utilizando varios protocolos descentralizados:
 
-- **Protocolos de índice de terceros**, como The Graph, almacenan estos datos a través de una red descentralizada de operadores de nodos incentivados por mecanismos criptoeconómicos.
+- **Protocolos de indexación de terceros**, como The Graph, almacenan estos datos a través de una red descentralizada de operadores de nodos incentivados por mecanismos criptoeconómicos.
 - **BitTorrent** es un protocolo descentralizado donde los voluntarios pueden guardar y distribuir estos datos a otros.
-- **[Portal Network de Ethereum](/developers/docs/networking-layer/portal-network/)** tiene como objetivo proporcionar acceso a todos los datos de Ethereum a través de una red descentralizada de operadores de nodos mediante la distribución de datos entre los participantes de manera similar a BitTorrent.
-- **Los usuarios individuales** siempre son libres de almacenar sus propias copias de cualquier dato que deseen para referencia histórica.
-- **Los proveedores de rollup** están incentivados a almacenar estos datos para mejorar la experiencia de usuario de su rollup.
-- **Los exploradores de bloques** suelen ejecutar nodos de archivo que indexan y almacenan toda esta información para facilitar la referencia histórica, accesible a los usuarios a través de una interfaz web.
+- Los **usuarios individuales** siempre son libres de almacenar sus propias copias de cualquier dato que deseen para referencia histórica.
+- Los **proveedores de rollup** están incentivados a almacenar estos datos para mejorar la experiencia de usuario de su rollup.
+- Los **exploradores de bloques** normalmente ejecutan nodos de archivo que indexan y almacenan toda esta información para facilitar la referencia histórica, accesible a los usuarios a través de una interfaz web.
 
-Es importante tener en cuenta que la recuperación del estado histórico opera en un **modelo de confianza 1 de N**. Esto significa que solo necesita datos de _una única fuente confiable_ para verificar su exactitud utilizando el estado actual de la red.
+Es importante tener en cuenta que la recuperación del estado histórico opera bajo un **modelo de confianza 1 de N**. Esto significa que solo necesita datos de _una única fuente confiable_ para verificar su exactitud utilizando el estado actual de la red.
 
 ## ¿Cómo contribuye esta actualización a la hoja de ruta más amplia de Ethereum? {#roadmap-impact}
 

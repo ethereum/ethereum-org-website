@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-what-is-ether.json",
-  "generatedAt": "2026-06-29T23:52:07.605Z",
-  "rootHash": "23fbdadcd162",
+  "generatedAt": "2026-11-27T09:55:53.244Z",
+  "rootHash": "58a5355df450",
   "tree": {
-    "contentHash": "5b01ba7d41d9",
-    "anchorHash": "dd57aea7ba10",
+    "contentHash": "fe9f3defc5cc",
+    "anchorHash": "2818d66b1f8a",
     "children": {
       "page-what-is-ether-meta-title": {
         "contentHash": "3e6e276fa4c1",
@@ -411,6 +411,10 @@
           }
         }
       },
+      "page-what-is-ether-what-is-the-eth-supply-learn-more": {
+        "contentHash": "3c7c85084512",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-what-is-ether-what-is-the-distribution-of-eth": {
         "contentHash": "916cc56ca68a",
         "anchorHash": "e3b0c44298fc"
@@ -703,6 +707,7 @@
       "page-what-is-ether-what-is-the-eth-supply-description-4",
       "page-what-is-ether-what-is-the-eth-supply-description-5",
       "page-what-is-ether-what-is-the-eth-supply-description-6",
+      "page-what-is-ether-what-is-the-eth-supply-learn-more",
       "page-what-is-ether-what-is-the-distribution-of-eth",
       "page-what-is-ether-what-is-the-distribution-of-eth-description-1",
       "page-what-is-ether-breakdown",
@@ -741,5 +746,5 @@
       "page-what-is-ether-gas-table-row-3-1"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

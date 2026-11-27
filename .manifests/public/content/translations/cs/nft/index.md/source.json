@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/nft/index.md",
-  "generatedAt": "2026-06-30T00:51:13.348Z",
-  "rootHash": "ec8705fba5ff",
+  "generatedAt": "2026-11-27T10:01:37.612Z",
+  "rootHash": "fcd7cacf6f65",
   "tree": {
-    "contentHash": "d9e46c822ee6",
+    "contentHash": "7d50f4604c80",
     "anchorHash": "b64ab4ac51da",
     "children": {
       "frontmatter:title": {
@@ -16,7 +16,7 @@
         "anchorHash": "a5a0fcfa2f7a"
       },
       "frontmatter:description": {
-        "contentHash": "0c2d4fd90cdb",
+        "contentHash": "ea94f5cfa124",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -598,5 +598,5 @@
       "other-resources"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

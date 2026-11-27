@@ -1,7 +1,7 @@
 ---
 title: "실물 자산 (RWA)"
 metaTitle: "RWA란 무엇인가요? | 실물 자산의 이점과 활용"
-description: "이더리움의 실물 자산 개요"
+description: "실물 자산(RWA)이란 무엇일까요? 국채, 부동산, 원자재와 같은 자산이 이더리움에서 어떻게 토큰화되는지, 그리고 그 이점과 위험성에 대해 알아보세요."
 lang: ko
 template: use-cases
 image: /images/man-and-dog-playing.png

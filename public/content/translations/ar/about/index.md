@@ -1,7 +1,7 @@
 ---
 title: "حول ⁦ethereum.org⁩"
 metaTitle: "معلومات عنا"
-description: "نبذة عن فريق ومجتمع ومهمة ⁦ethereum.org⁩"
+description: "تعرف على الفريق والمجتمع الذي يقف وراء ⁦ethereum.org⁩: مهمتنا، وكيف يتم بناء الموقع وإدارته بشكل مفتوح، وكيف يمكنك المساعدة في تحسينه."
 lang: ar
 ---
 
@@ -107,9 +107,11 @@ lang: ar
 
 ## نظام التصميم {#design-system}
 
-لقد قمنا ببناء وإصدار [نظام تصميم](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) لتقديم الميزات بسرعة أكبر والسماح لأعضاء المجتمع بالمشاركة في التصميم المفتوح لـ <span dir="ltr">ethereum.org</span>.
+قمنا ببناء وإصدار [نظام تصميم](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) لشحن الميزات بسرعة أكبر والسماح لأعضاء المجتمع بالمشاركة في التصميم المفتوح لموقع <span dir="ltr">ethereum.org</span>.
 
 هل ترغب في المشاركة؟ [تابعنا على Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) وانضم إلى المحادثة في [قناة ديسكورد <span dir="ltr">#design</span> الخاصة بنا](/discord/).
+
+هل تبحث عن شعارات أو رسومات توضيحية أو ملفات علامة تجارية أخرى؟ قم بتنزيلها من [صفحة الأصول الخاصة بنا](/assets/).
 
 ## دليل الأسلوب {#style-guide}
 
@@ -122,6 +124,10 @@ lang: ar
 ## الترخيص {#license}
 
 موقع <span dir="ltr">ethereum.org</span> مفتوح المصدر ومبني بموجب [ترخيص <span dir="ltr">MIT</span>](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) ما لم يُنص على خلاف ذلك. المزيد حول [شروط استخدام](/terms-of-use/) <span dir="ltr">ethereum.org</span>.
+
+## خصوصيتك {#your-privacy}
+
+يستخدم موقع <span dir="ltr">ethereum.org</span> أداة Matomo للتحليلات التي تحافظ على الخصوصية، ويمكنك إلغاء الاشتراك في أي وقت. اقرأ [سياسة ملفات تعريف الارتباط](/cookie-policy/) و[سياسة الخصوصية](/privacy-policy/) الخاصة بنا للحصول على التفاصيل.
 
 ## الوظائف المتاحة {#open-jobs}
 

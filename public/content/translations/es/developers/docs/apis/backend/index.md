@@ -66,7 +66,7 @@ Estas bibliotecas abstraen gran parte de la complejidad de interactuar directame
 **Infura -** **_La API de Ethereum como servicio._**
 
 - [infura.io](https://infura.io)
-- [Documentación](https://docs.infura.io/api)
+- [Documentación](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _Proveedor de JSON-RPC de EVM rentable._**
@@ -77,7 +77,7 @@ Estas bibliotecas abstraen gran parte de la complejidad de interactuar directame
 **NOWNodes - _Nodos completos y exploradores de bloques._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Documentación](https://nownodes.gitbook.io/documentation)
+- [Documentación](https://docs.nownodes.io/)
 
 **QuickNode -** **_Infraestructura de cadena de bloques como servicio._**
 
@@ -145,61 +145,60 @@ Estas bibliotecas abstraen gran parte de la complejidad de interactuar directame
 
 ### Servicios de cadena de bloques {#blockchain-services}
 
-**BlockCypher:** **_API web de Ethereum._**
+**BlockCypher -** **_API web de Ethereum._**
 
 - [blockcypher.com](https://www.blockcypher.com/)
 - [Documentación](https://www.blockcypher.com/dev/ethereum/)
 
-**Chainbase:** **_Infraestructura de datos Web3 todo en uno para Ethereum._**
+**Chainbase -** **_Infraestructura de datos Web3 todo en uno para Ethereum._**
 
 - [chainbase.com](https://chainbase.com/)
 - [Documentación](https://docs.chainbase.com/)
 - [Discord](https://discord.gg/Wx6qpqz4AF)
 
-**Chainstack:** **_Nodos de Ethereum elásticos y dedicados como servicio._**
+**Chainstack -** **_Nodos de Ethereum elásticos y dedicados como servicio._**
 
 - [chainstack.com](https://chainstack.com)
 - [Documentación](https://docs.chainstack.com/)
 - [Referencia de la API de Ethereum](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**Coinbase Cloud Node:** **_API de infraestructura de cadena de bloques._**
+**Coinbase Cloud Node -** **_API de infraestructura de cadena de bloques._**
 
 - [Coinbase Cloud Node](https://www.coinbase.com/developer-platform)
 - [Documentación](https://docs.cdp.coinbase.com/)
 
-**DataHub de Figment:** **_Servicios de API Web3 con la red principal de Ethereum y redes de prueba._**
+**DataHub de Figment -** **_Servicios de API Web3 con la red principal de Ethereum y redes de prueba._**
 
 - [DataHub](https://www.figment.io/)
 - [Documentación](https://docs.figment.io/)
 
-**Moralis:** **_Proveedor de API de EVM de nivel empresarial._**
+**Moralis -** **_Proveedor de API de EVM de nivel empresarial._**
 
 - [moralis.io](https://moralis.io)
 - [Documentación](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [Discord](https://moralis.io/joindiscord/)
 - [Foro](https://forum.moralis.io/)
 
-**NFTPort:** **_API de datos y acuñación de Ethereum._**
+**NFTPort -** **_API de datos y acuñación de Ethereum._**
 
 - [nftport.xyz](https://www.nftport.xyz/)
 - [Documentación](https://docs.nftport.xyz/)
 - [GitHub](https://github.com/nftport/)
 - [Discord](https://discord.com/invite/K8nNrEgqhE)
 
-**Tokenview:** **_La plataforma general de API de cadenas de bloques multicripto._**
+**Tokenview -** **_La plataforma general de API de cadenas de bloques multicripto._**
 
 - [services.tokenview.io](https://services.tokenview.io/)
 - [Documentación](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-**Watchdata:** **_Proporciona un acceso a la API simple y confiable a la cadena de bloques de Ethereum._**
+**Watchdata -** **_Proporciona acceso simple y confiable a la API de la cadena de bloques de Ethereum._**
 
 - [Watchdata](https://watchdata.io/)
 - [Documentación](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
 
-**Codex:** **_API de datos de cadenas de bloques enriquecidos en tiempo real en docenas de cadenas._**
+**Codex -** **_API de datos de cadena de bloques enriquecidos y en tiempo real en docenas de cadenas._**
 
 - [codex.io](https://www.codex.io/)
 - [Documentación](https://docs.codex.io)
@@ -207,13 +206,12 @@ Estas bibliotecas abstraen gran parte de la complejidad de interactuar directame
 - [GitHub](https://github.com/Codex-Data)
 - [Discord](https://discord.com/invite/mFpUhT3vAq)
 
-**Covalent:** **_API de cadenas de bloques enriquecidas para más de 200 cadenas._**
+**Covalent -** **_API de cadena de bloques enriquecidas para más de 200 cadenas._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [Documentación](https://www.covalenthq.com/docs/api/)
+- [Documentación](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
-
 
 ## Lecturas adicionales {#further-reading}
 
@@ -226,5 +224,4 @@ _¿Conoce algún recurso de la comunidad que le haya ayudado? ¡Edite esta pági
 
 ## Tutoriales relacionados {#related-tutorials}
 
-- [Configurar Web3.js para usar la cadena de bloques de Ethereum en JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instrucciones para configurar Web3.js en su proyecto._
-- [Llamar a un contrato inteligente desde JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Usando el token DAI, vea cómo llamar a la función de contratos usando JavaScript._
+- [Componentes de servidor y agentes para aplicaciones Web3](/developers/tutorials/server-components/) _– Cómo escribir componentes de servidor en TypeScript que escuchen eventos de la cadena de bloques y respondan con transacciones._

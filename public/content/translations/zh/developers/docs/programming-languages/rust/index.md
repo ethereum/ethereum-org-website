@@ -38,11 +38,10 @@ incomplete: true
 
 ## Rust 项目和工具 {#rust-projects-and-tools}
 
-- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _用于与类以太坊网络交互的外部函数集合_
-- [莱特豪斯 (Lighthouse)](https://github.com/sigp/lighthouse) - _快速的以太坊共识层客户端_
-- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _提议使用 WebAssembly 的确定性子集重新设计以太坊智能合约执行层_
-- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API 参考_
-- [Solaris](https://github.com/paritytech/sol-rs) - _使用原生 Parity 客户端 EVM 的 Solidity 智能合约单元测试工具。_
+- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _用于与类以太坊网络交互的外部接口集合_
+- [Lighthouse](https://github.com/sigp/lighthouse) - _快速的以太坊共识层客户端_
+- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _使用 WebAssembly 的确定性子集对以太坊智能合约执行层进行重新设计的提案_
+- [Solaris](https://github.com/paritytech/sol-rs) - _使用原生 Parity 客户端以太坊虚拟机 (EVM) 的 Solidity 智能合约单元测试工具。_
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust 以太坊虚拟机实现_
 - [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Rust 编写的 Wavelet 智能合约_
 - [Foundry](https://github.com/foundry-rs/foundry) - _以太坊应用开发工具包_
@@ -50,11 +49,11 @@ incomplete: true
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _以太坊库和钱包实现_
 - [SewUp](https://github.com/second-state/SewUp) - _一个帮助你使用 Rust 构建以太坊 WebAssembly 合约的库，就像在普通后端开发一样_
 - [Substreams](https://github.com/streamingfast/substreams) - _并行化区块链数据索引技术_
-- [瑞斯 (Reth)](https://github.com/paradigmxyz/reth) 瑞斯 (Reth)（Rust Ethereum 的缩写）是一个新的以太坊全节点实现
-- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _以太坊生态系统中用 Rust 编写的精选项目集合_
+- [Reth](https://github.com/paradigmxyz/reth) 瑞斯 (Reth)（Rust Ethereum 的缩写）是一个新的以太坊全节点实现
+- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _使用 Rust 编写的以太坊生态系统项目精选集_
 - [Stylus](https://github.com/OffchainLabs/stylus) - _用于在 Arbitrum 上构建智能合约的 Rust SDK_
 
-寻找更多资源？请查看 [ethereum.org/developers。](/developers/)
+寻找更多资源？请查看 [ethereum.org/developers](/developers/)。
 
 ## Rust 社区贡献者 {#rust-community-contributors}
 

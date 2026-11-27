@@ -1,7 +1,7 @@
 ---
 title: Introduzione alla governance di Ethereum
 metaTitle: Governance di Ethereum
-description: Un'introduzione a come vengono prese le decisioni su Ethereum.
+description: Come vengono prese le decisioni su Ethereum? Scopri come le modifiche al protocollo vengono proposte, discusse e adottate da sviluppatori, operatori dei nodi e dalla community.
 lang: it
 ---
 
@@ -71,7 +71,7 @@ Il processo formale per introdurre modifiche al protocollo di Ethereum è il seg
 
 1. **Proporre una Core EIP**: come descritto nella [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips), il primo passo per proporre formalmente una modifica a Ethereum è dettagliarla in una Core EIP. Questa fungerà da specifica ufficiale per una EIP che gli sviluppatori del protocollo implementeranno se accettata.
 
-2. **Presentare la tua EIP agli sviluppatori del protocollo**: una volta che hai una Core EIP per la quale hai raccolto i feedback della community, dovresti presentarla agli sviluppatori del protocollo. Puoi farlo proponendola per la discussione in una [chiamata AllCoreDevs](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status). È probabile che alcune discussioni siano già avvenute in modo asincrono sul [forum di Ethereum Magicians](https://ethereum-magicians.org/) o nel [Discord di R&S di Ethereum](https://discord.gg/mncqtgVSVw).
+2. **Presentare la tua EIP agli sviluppatori del protocollo**: una volta che hai una Core EIP per la quale hai raccolto i feedback della community, dovresti presentarla agli sviluppatori del protocollo. Puoi farlo proponendola per la discussione in una [chiamata AllCoreDevs](https://eips.ethereum.org/EIPS/eip-7723). È probabile che alcune discussioni siano già avvenute in modo asincrono sul [forum di Ethereum Magicians](https://ethereum-magicians.org/) o nel [Discord di R&S di Ethereum](https://discord.gg/mncqtgVSVw).
 
 > I potenziali risultati di questa fase sono:
 

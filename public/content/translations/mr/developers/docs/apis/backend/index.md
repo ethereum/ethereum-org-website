@@ -66,7 +66,7 @@ lang: mr
 **Infura -** **_इथेरियम API ॲज अ सर्व्हिस._**
 
 - [infura.io](https://infura.io)
-- [डॉक्युमेंटेशन](https://docs.infura.io/api)
+- [डॉक्युमेंटेशन](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _किफायतशीर इथरियम व्हर्च्युअल मशीन (EVM) जेसॉन-आरपीसी प्रोव्हायडर_**
@@ -77,7 +77,7 @@ lang: mr
 **NOWNodes - _फुल नोड्स आणि ब्लॉक एक्सप्लोरर्स._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [डॉक्युमेंटेशन](https://nownodes.gitbook.io/documentation)
+- [डॉक्युमेंटेशन](https://docs.nownodes.io/)
 
 **QuickNode -** **_ब्लॉकचेन इन्फ्रास्ट्रक्चर ॲज अ सर्व्हिस._**
 
@@ -156,7 +156,7 @@ lang: mr
 - [डॉक्युमेंटेशन](https://docs.chainbase.com/)
 - [डिस्कॉर्ड्](https://discord.gg/Wx6qpqz4AF)
 
-**Chainstack -** **_इलास्टिक आणि समर्पित इथेरियम नोड्स ॲज अ सर्व्हिस._**
+**Chainstack -** **_इलास्टिक आणि डेडिकेटेड इथेरियम नोड्स ॲज अ सर्व्हिस._**
 
 - [chainstack.com](https://chainstack.com)
 - [डॉक्युमेंटेशन](https://docs.chainstack.com/)
@@ -172,11 +172,10 @@ lang: mr
 - [DataHub](https://www.figment.io/)
 - [डॉक्युमेंटेशन](https://docs.figment.io/)
 
-**Moralis -** **_एंटरप्राइझ-ग्रेड EVM API प्रोव्हायडर._**
+**Moralis -** **_एंटरप्राइज-ग्रेड इथरियम व्हर्च्युअल मशीन (EVM) API प्रोव्हायडर._**
 
 - [moralis.io](https://moralis.io)
 - [डॉक्युमेंटेशन](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [डिस्कॉर्ड्](https://moralis.io/joindiscord/)
 - [फोरम](https://forum.moralis.io/)
 
@@ -187,19 +186,19 @@ lang: mr
 - [GitHub](https://github.com/nftport/)
 - [डिस्कॉर्ड्](https://discord.com/invite/K8nNrEgqhE)
 
-**Tokenview -** **_सामान्य मल्टी-क्रिप्टो ब्लॉकचेन APIs प्लॅटफॉर्म._**
+**Tokenview -** **_जनरल मल्टी-क्रिप्टो ब्लॉकचेन APIs प्लॅटफॉर्म._**
 
 - [services.tokenview.io](https://services.tokenview.io/)
 - [डॉक्युमेंटेशन](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-**Watchdata -** **_इथेरियम ब्लॉकचेनला सोपा आणि विश्वासार्ह API ॲक्सेस प्रदान करते._**
+**Watchdata -** **_इथेरियम ब्लॉकचेनसाठी सोपा आणि विश्वसनीय API ॲक्सेस प्रदान करते._**
 
 - [Watchdata](https://watchdata.io/)
 - [डॉक्युमेंटेशन](https://docs.watchdata.io/)
 - [डिस्कॉर्ड्](https://discord.com/invite/TZRJbZ6bdn)
 
-**Codex -** **_अनेक चेन्सवर रिअल-टाइम, समृद्ध ब्लॉकचेन डेटा API._**
+**Codex -** **_अनेक चेन्सवरील रिअल-टाइम, एनरिच्ड ब्लॉकचेन डेटा API._**
 
 - [codex.io](https://www.codex.io/)
 - [डॉक्युमेंटेशन](https://docs.codex.io)
@@ -207,13 +206,12 @@ lang: mr
 - [GitHub](https://github.com/Codex-Data)
 - [डिस्कॉर्ड्](https://discord.com/invite/mFpUhT3vAq)
 
-**Covalent -** **_200+ चेन्ससाठी समृद्ध ब्लॉकचेन APIs._**
+**Covalent -** **_200+ चेन्ससाठी एनरिच्ड ब्लॉकचेन APIs._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [डॉक्युमेंटेशन](https://www.covalenthq.com/docs/api/)
+- [डॉक्युमेंटेशन](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [डिस्कॉर्ड्](https://www.covalenthq.com/discord/)
-
 
 ## पुढील वाचन {#further-reading}
 
@@ -226,5 +224,4 @@ _तुम्हाला मदत केलेल्या एखाद्य�
 
 ## संबंधित ट्युटोरियल्स {#related-tutorials}
 
-- [JavaScript मध्ये इथेरियम ब्लॉकचेन वापरण्यासाठी Web3.js सेट करा](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– तुमच्या प्रोजेक्टमध्ये Web3.js सेट करण्यासाठी सूचना._
-- [JavaScript मधून स्मार्ट कॉन्ट्रॅक्ट कॉल करणे](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI टोकन वापरून, JavaScript चा वापर करून कॉन्ट्रॅक्ट्स फंक्शन कसे कॉल करायचे ते पहा._
+- [Web3 ॲप्ससाठी सर्व्हर कंपोनंट्स आणि एजंट्स](/developers/tutorials/server-components/) _– ब्लॉकचेन घटना ऐकणारे आणि व्यवहारांसह प्रतिसाद देणारे TypeScript सर्व्हर कंपोनंट्स कसे लिहावेत._

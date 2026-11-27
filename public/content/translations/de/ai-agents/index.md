@@ -1,7 +1,7 @@
 ---
 title: KI-Agenten
 metaTitle: KI-Agenten | KI-Agenten auf Ethereum
-description: "Ein Überblick über KI-Agenten auf Ethereum"
+description: "Was sind KI-Agenten auf Ethereum? Erfahre, wie autonome Agenten Vermögenswerte halten, handeln, DeFi nutzen und sich gegenseitig onchain bezahlen, sowie auf welche Risiken du achten solltest."
 lang: de
 template: use-cases
 sidebarDepth: 2

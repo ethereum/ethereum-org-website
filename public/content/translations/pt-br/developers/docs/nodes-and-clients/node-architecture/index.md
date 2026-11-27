@@ -6,15 +6,15 @@ lang: pt-br
 
 Um nó do Ethereum é composto por dois clientes: um [cliente de execução](/developers/docs/nodes-and-clients/#execution-clients) e um [cliente de consenso](/developers/docs/nodes-and-clients/#consensus-clients). Para que um nó proponha um novo bloco, ele também deve executar um [cliente validador](#validators).
 
-Quando o Ethereum usava a [Prova de Trabalho (PoW)](/developers/docs/consensus-mechanisms/pow/), um cliente de execução era suficiente para executar um nó completo do Ethereum. No entanto, desde a implementação da [Prova de Participação (PoS)](/developers/docs/consensus-mechanisms/pos/), o cliente de execução deve ser usado junto com outro software chamado [cliente de consenso](/developers/docs/nodes-and-clients/#consensus-clients).
+Quando o Ethereum usava a [Prova de Trabalho](/developers/docs/consensus-mechanisms/pow/), um cliente de execução era suficiente para executar um nó completo do Ethereum. No entanto, desde a implementação da [Prova de Participação](/developers/docs/consensus-mechanisms/pos/), o cliente de execução deve ser usado junto com outro software chamado [cliente de consenso](/developers/docs/nodes-and-clients/#consensus-clients).
 
-O diagrama abaixo mostra a relação entre os dois clientes do Ethereum. Os dois clientes se conectam às suas respectivas redes ponto a ponto (P2P). Redes P2P separadas são necessárias, pois os clientes de execução propagam transações em sua rede P2P, permitindo que gerenciem seu pool de transações local, enquanto os clientes de consenso propagam blocos em sua rede P2P, permitindo o consenso e o crescimento da cadeia.
+O diagrama abaixo mostra a relação entre os dois clientes do Ethereum. Os dois clientes se conectam às suas próprias redes ponto a ponto (P2P) respectivas. Redes P2P separadas são necessárias porque os clientes de execução propagam transações em sua rede P2P, permitindo que gerenciem seu pool de transações local, enquanto os clientes de consenso propagam blocos em sua rede P2P, permitindo o consenso e o crescimento da cadeia.
 
-![Diagram of Ethereum node architecture showing execution and consensus layers](node-architecture-text-background.png)
+<NodeArchitectureDiagram />
 
 _Existem várias opções para o cliente de execução, incluindo o Erigon, o Nethermind e o Besu_.
 
-Para que essa estrutura de dois clientes funcione, os clientes de consenso devem passar pacotes de transações para o cliente de execução. O cliente de execução executa as transações localmente para validar que as transações não violam nenhuma regra do Ethereum e que a atualização proposta para o estado do Ethereum está correta. Quando um nó é selecionado para ser um produtor de blocos, sua instância de cliente de consenso solicita pacotes de transações do cliente de execução para incluir no novo bloco e executá-los para atualizar o estado global. O cliente de consenso controla o cliente de execução por meio de uma conexão RPC local usando a [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+Para que essa estrutura de dois clientes funcione, os clientes de consenso devem passar pacotes de transações para o cliente de execução. O cliente de execução executa as transações localmente para validar se as transações não violam nenhuma regra do Ethereum e se a atualização proposta para o estado do Ethereum está correta. Quando um nó é selecionado para ser um produtor de blocos, sua instância de cliente de consenso solicita pacotes de transações do cliente de execução para incluir no novo bloco e executá-las para atualizar o estado global. O cliente de consenso controla o cliente de execução por meio de uma conexão RPC local usando a [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## O que o cliente de execução faz? {#execution-client}
 

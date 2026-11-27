@@ -1,7 +1,7 @@
 ---
-title: 以太坊治理簡介
-metaTitle: 以太坊治理
-description: 介紹以太坊如何進行決策。
+title: "以太坊治理簡介"
+metaTitle: "以太坊治理"
+description: "關於以太坊的決策是如何制定的？了解開發者、節點營運者和社群如何提出、討論和採用協定變更。"
 lang: zh-tw
 ---
 
@@ -71,7 +71,7 @@ _注意：任何個人都可以同時屬於這些群體中的多個（例如，�
 
 1. **提出核心 EIP**：如 [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips) 中所述，正式提議對以太坊進行變更的第一步是在核心 EIP 中詳細說明。這將作為 EIP 的官方規範，如果被接受，協定開發者將實施它。
 
-2. **向協定開發者展示您的 EIP**：一旦您有了一個已經收集了社群意見的核心 EIP，您應該將其展示給協定開發者。您可以透過在 [AllCoreDevs 電話會議](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status)上提議討論來做到這一點。很可能一些討論已經在 [Ethereum Magicians 論壇](https://ethereum-magicians.org/)或 [Ethereum R&D Discord](https://discord.gg/mncqtgVSVw) 中非同步進行了。
+2. **向協定開發者展示您的 EIP**：一旦您有了一個已經收集了社群意見的核心 EIP，您應該將其展示給協定開發者。您可以透過在 [AllCoreDevs 電話會議](https://eips.ethereum.org/EIPS/eip-7723)上提議討論來做到這一點。很可能一些討論已經在 [Ethereum Magicians 論壇](https://ethereum-magicians.org/)或 [Ethereum R&D Discord](https://discord.gg/mncqtgVSVw) 中非同步進行了。
 
 > 此階段的潛在結果是：
 

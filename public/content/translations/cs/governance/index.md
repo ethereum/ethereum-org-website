@@ -1,7 +1,7 @@
 ---
-title: Úvod do správy Etherea
-metaTitle: Správa Etherea
-description: Úvod do toho, jak se přijímají rozhodnutí o Ethereu.
+title: "Úvod do správy Etherea"
+metaTitle: "Správa Etherea"
+description: "Jak se přijímají rozhodnutí o Ethereu? Zjistěte, jak vývojáři, provozovatelé uzlů a komunita navrhují, projednávají a přijímají změny protokolu."
 lang: cs
 ---
 
@@ -71,7 +71,7 @@ Formální proces pro zavádění změn do protokolu Ethereum je následující:
 
 1. **Navrhněte Core EIP**: jak je popsáno v [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips), prvním krokem k formálnímu navržení změny Etherea je její podrobné popsání v Core EIP. To bude sloužit jako oficiální specifikace pro EIP, kterou vývojáři protokolu implementují, pokud bude přijata.
 
-2. **Představte svůj EIP vývojářům protokolu**: jakmile máte Core EIP, pro který jste shromáždili zpětnou vazbu od komunity, měli byste jej představit vývojářům protokolu. Můžete tak učinit tím, že jej navrhnete k diskusi v rámci [hovoru AllCoreDevs](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status). Je pravděpodobné, že některé diskuse již proběhly asynchronně na [fóru Ethereum Magicians](https://ethereum-magicians.org/) nebo na [Discordu Ethereum R&D](https://discord.gg/mncqtgVSVw).
+2. **Představte svůj EIP vývojářům protokolu**: jakmile máte Core EIP, pro který jste shromáždili zpětnou vazbu od komunity, měli byste jej představit vývojářům protokolu. Můžete tak učinit tím, že jej navrhnete k diskusi v rámci [hovoru AllCoreDevs](https://eips.ethereum.org/EIPS/eip-7723). Je pravděpodobné, že některé diskuse již proběhly asynchronně na [fóru Ethereum Magicians](https://ethereum-magicians.org/) nebo na [Discordu Ethereum R&D](https://discord.gg/mncqtgVSVw).
 
 > Potenciální výsledky této fáze jsou:
 

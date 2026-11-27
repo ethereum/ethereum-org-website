@@ -1,6 +1,6 @@
 ---
 title: "Introducción técnica a las dapps"
-description:
+description: "Una introducción técnica a las dapps: cómo las aplicaciones descentralizadas combinan contratos inteligentes en Ethereum con un frontend, y en qué se diferencian de las aplicaciones web."
 lang: es
 ---
 
@@ -94,10 +94,9 @@ _¿Conoce algún recurso de la comunidad que le haya ayudado? ¡Edite esta pági
 - [Introducción a la pila de Ethereum](/developers/docs/ethereum-stack/)
 - [Entornos de desarrollo](/developers/docs/frameworks/)
 
-## Tutoriales: Construir aplicaciones y frontends en Ethereum {#tutorials}
+## Tutoriales: Cree aplicaciones y frontends en Ethereum {#tutorials}
 
-- [Recorrido por el contrato de Uniswap-v2](/developers/tutorials/uniswap-v2-annotated-code/) _– Un recorrido anotado por los contratos principales de Uniswap v2 que explica cómo funciona el creador de mercado automatizado (AMM)._
-- [Construir una interfaz de usuario para su contrato](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– Cómo construir un frontend moderno con React + Wagmi que se conecte a su contrato inteligente._
-- [Contrato inteligente "Hola Mundo" para principiantes – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Tutorial de principio a fin: escriba, despliegue y construya un frontend para un contrato inteligente simple._
+- [Guía paso a paso del contrato de Uniswap-v2](/developers/tutorials/uniswap-v2-annotated-code/) _– Una guía paso a paso anotada de los contratos principales de Uniswap v2 que explica cómo funciona el creador de mercado automatizado (AMM)._
+- [Creación de una interfaz de usuario para su contrato](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– Cómo crear un frontend moderno con React + Wagmi que se conecte a su contrato inteligente._
 - [Componentes de servidor y agentes para aplicaciones Web3](/developers/tutorials/server-components/) _– Cómo escribir componentes de servidor en TypeScript que escuchen eventos de la cadena de bloques y respondan con transacciones._
-- [IPFS para interfaces de usuario descentralizadas](/developers/tutorials/ipfs-decentralized-ui/) _– Cómo alojar el frontend de su dapp en IPFS para obtener resistencia a la censura._
+- [IPFS para interfaces de usuario descentralizadas](/developers/tutorials/ipfs-decentralized-ui/) _– Cómo alojar el frontend de su dapp en IPFS para lograr resistencia a la censura._

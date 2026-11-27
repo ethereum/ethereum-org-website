@@ -1,7 +1,7 @@
 ---
 title: "Yapay zeka ajanları"
 metaTitle: "Yapay zeka ajanları | Ethereum'da yapay zeka ajanları"
-description: "Ethereum'daki yapay zeka ajanlarına genel bir bakış"
+description: "Ethereum'daki yapay zeka ajanları nedir? Otonom ajanların nasıl varlık tuttuğunu, alım satım yaptığını, DeFi kullandığını ve birbirlerine zincir içi ödeme yaptığını, ayrıca dikkat edilmesi gereken riskleri öğrenin."
 lang: tr
 template: use-cases
 sidebarDepth: 2

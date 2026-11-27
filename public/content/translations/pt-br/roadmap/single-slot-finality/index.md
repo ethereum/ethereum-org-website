@@ -1,6 +1,6 @@
 ---
-title: Finalidade de slot único
-description: Explicação sobre a finalidade de slot único
+title: "Finalidade de slot único"
+description: "A finalidade de slot único poderia reduzir o tempo até a finalidade do Ethereum de cerca de 15 minutos para um único slot. Entenda como ela funciona e os compromissos envolvidos."
 lang: pt-br
 template: roadmap
 ---
@@ -57,7 +57,7 @@ O problema de escalar a agregação aumentando o número de validadores por sub-
 
 ## Progresso atual {#current-progress}
 
-A SSF está na fase de pesquisa. Não se espera que seja lançada por vários anos, provavelmente após outras atualizações substanciais, como as [árvores Verkle](/roadmap/verkle-trees/) e o [danksharding](/roadmap/danksharding/).
+A SSF está em fase de pesquisa. Não deve ser lançada por vários anos, provavelmente após outras atualizações substanciais, como uma nova árvore de estado (atualmente proposta como uma árvore binária na [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) e o [danksharding](/roadmap/danksharding/).
 
 ## Leitura adicional {#further-reading}
 

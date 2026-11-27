@@ -1,6 +1,6 @@
 ---
 title: "去中心化社群網路"
-description: "以太坊上的去中心化社群網路概覽"
+description: "什麼是去中心化社群網路？了解基於以太坊的社群應用程式如何讓您（而非平台）擁有自己的身分、內容與受眾。"
 lang: zh-tw
 template: use-cases
 sidebarDepth: 2

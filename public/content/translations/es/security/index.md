@@ -1,6 +1,6 @@
 ---
-title: Seguridad en Ethereum y prevención de estafas
-description: Cómo mantenerse seguro en Ethereum
+title: "Seguridad en Ethereum y prevención de estafas"
+description: "Cómo mantenerte seguro en Ethereum: protege tu billetera y frase de recuperación, detecta estafas cripto comunes y phishing, y conoce qué hacer si algo sale mal."
 lang: es
 ---
 

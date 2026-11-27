@@ -36,23 +36,22 @@ Hai prima bisogno di un'introduzione più basilare? Dai un'occhiata a [ethereum.
 
 - [Costruire una blockchain in Rust](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
 
-## Progetti e strumenti in Rust {#rust-projects-and-tools}
+## Progetti e strumenti Rust {#rust-projects-and-tools}
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Collezione di extern per interagire con una rete simile a Ethereum_
 - [Lighthouse](https://github.com/sigp/lighthouse) - _Client veloce per il livello di consenso di Ethereum_
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _Proposta di riprogettazione del livello di esecuzione degli smart contract di Ethereum usando un sottoinsieme deterministico di WebAssembly_
-- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _Riferimento per l'API OASIS_
-- [Solaris](https://github.com/paritytech/sol-rs) - _Strumento di unit test per gli smart contract in Solidity che usa l'EVM nativa del client Parity._
-- [SputnikVM](https://github.com/rust-blockchain/evm) - _Implementazione della Ethereum Virtual Machine in Rust_
+- [Solaris](https://github.com/paritytech/sol-rs) - _Strumento di unit test per gli smart contract in Solidity che usa la EVM nativa del client Parity._
+- [SputnikVM](https://github.com/rust-blockchain/evm) - _Implementazione in Rust della Macchina Virtuale di Ethereum (EVM)_
 - [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Smart contract Wavelet in Rust_
 - [Foundry](https://github.com/foundry-rs/foundry) - _Toolkit per lo sviluppo di applicazioni Ethereum_
-- [Alloy](https://alloy.rs) - _Librerie ad alte prestazioni, ben testate e documentate per interagire con Ethereum e altre catene basate su EVM._
-- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Libreria Ethereum e implementazione di portafoglio_
-- [SewUp](https://github.com/second-state/SewUp) - _Una libreria per aiutarti a costruire il tuo contratto WebAssembly per Ethereum con Rust, proprio come se sviluppassi in un backend comune_
+- [Alloy](https://alloy.rs) - _Librerie ad alte prestazioni, ben testate e documentate per interagire con Ethereum e altre catene basate sulla EVM._
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Implementazione di libreria e portafoglio Ethereum_
+- [SewUp](https://github.com/second-state/SewUp) - _Una libreria per aiutarti a creare il tuo contratto WebAssembly per Ethereum con Rust, proprio come se sviluppassi in un backend comune_
 - [Substreams](https://github.com/streamingfast/substreams) - _Tecnologia parallelizzata di indicizzazione dei dati della blockchain_
 - [Reth](https://github.com/paradigmxyz/reth) Reth (abbreviazione di Rust Ethereum) è una nuova implementazione di nodo completo Ethereum
 - [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Una collezione curata di progetti nell'ecosistema Ethereum scritti in Rust_
-- [Stylus](https://github.com/OffchainLabs/stylus) - _SDK in Rust per costruire smart contract su Arbitrum_
+- [Stylus](https://github.com/OffchainLabs/stylus) - _SDK in Rust per creare smart contract su Arbitrum_
 
 Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers.](/developers/)
 

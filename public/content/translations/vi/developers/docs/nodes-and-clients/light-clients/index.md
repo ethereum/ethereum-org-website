@@ -40,18 +40,18 @@ Máy khách nhẹ cũng có thể được sử dụng để nâng cấp các v�
 
 ## Tình trạng phát triển máy khách nhẹ hiện tại như thế nào? {#current-state-of-development}
 
-Có một số máy khách nhẹ đang được phát triển, bao gồm máy khách thực thi, đồng thuận và máy khách nhẹ kết hợp thực thi/đồng thuận. Đây là các triển khai máy khách nhẹ mà chúng tôi biết tại thời điểm viết trang này:
+Có một số máy khách nhẹ đang được phát triển, bao gồm máy khách nhẹ thực thi, đồng thuận và kết hợp thực thi/đồng thuận. Đây là các bản triển khai máy khách nhẹ mà chúng tôi biết tại thời điểm viết trang này:
 
-- [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): ứng dụng khách đồng thuận nhẹ bằng TypeScript
+- [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): máy khách nhẹ đồng thuận bằng TypeScript
 - [Helios](https://github.com/a16z/helios): máy khách nhẹ kết hợp thực thi và đồng thuận bằng Rust
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): chế độ nhẹ cho máy khách thực thi (đang phát triển) bằng Go
-- [Nimbus](https://nimbus.guide/el-light-client.html): ứng dụng khách đồng thuận nhẹ bằng Nim
+- [Nimbus](https://nimbus.guide/el-light-client.html): máy khách nhẹ đồng thuận bằng Nim
 
-Theo hiểu biết của chúng tôi, chưa có triển khai nào trong số này được coi là sẵn sàng cho sản xuất.
+Theo hiểu biết của chúng tôi, chưa có bản nào trong số này được coi là sẵn sàng cho môi trường sản xuất.
 
-Cũng có rất nhiều công việc đang được thực hiện để cải thiện các cách mà máy khách nhẹ có thể truy cập dữ liệu Ethereum. Hiện tại, các máy khách nhẹ dựa vào các yêu cầu RPC đến các nút đầy đủ bằng cách sử dụng mô hình máy khách/máy chủ, nhưng trong tương lai, dữ liệu có thể được yêu cầu theo cách phi tập trung hơn bằng cách sử dụng một mạng lưới chuyên dụng như [Portal Network](https://www.ethportal.net/) có thể phục vụ dữ liệu cho các máy khách nhẹ bằng cách sử dụng một giao thức lan truyền ngang hàng.
+Cũng có rất nhiều công việc đang được thực hiện để cải thiện các cách mà máy khách nhẹ có thể truy cập dữ liệu Ethereum. Hiện tại, các máy khách nhẹ dựa vào các yêu cầu RPC đến các nút đầy đủ bằng cách sử dụng mô hình máy khách/máy chủ. [Portal Network](/developers/docs/networking-layer/portal-network/) ban đầu được thiết kế để phục vụ dữ liệu này cho các máy khách nhẹ qua một mạng lưới ngang hàng, nhưng quá trình phát triển của nó hiện tập trung vào việc phục vụ lịch sử của các khối trong quá khứ.
 
-Các mục [lộ trình](/roadmap/) khác như [cây Verkle](/roadmap/verkle-trees/) và [tính phi trạng thái](/roadmap/statelessness/) cuối cùng sẽ mang lại các đảm bảo bảo mật của máy khách nhẹ ngang bằng với các máy khách đầy đủ.
+Các mục khác trong [lộ trình](/roadmap/) như một cây trạng thái mới (hiện được đề xuất dưới dạng cây nhị phân trong [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) và [tính phi trạng thái](/roadmap/statelessness/) cuối cùng sẽ mang lại các đảm bảo bảo mật của máy khách nhẹ ngang bằng với các máy khách đầy đủ.
 
 ## Đọc thêm {#further-reading}
 

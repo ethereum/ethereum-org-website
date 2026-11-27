@@ -1,6 +1,6 @@
 ---
 title: "Merkeziyetsiz uygulamalara (dapp) teknik giriş"
-description:
+description: "Dapp'lere teknik bir giriş: Merkeziyetsiz uygulamaların Ethereum üzerindeki akıllı sözleşmeleri bir ön yüz ile nasıl birleştirdiği ve web uygulamalarından nasıl farklılaştığı."
 lang: tr
 ---
 
@@ -94,10 +94,9 @@ _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düze
 - [Ethereum yığınına giriş](/developers/docs/ethereum-stack/)
 - [Geliştirme çerçeveleri](/developers/docs/frameworks/)
 
-## Eğitimler: Ethereum üzerinde uygulamalar ve ön uçlar oluşturun {#tutorials}
+## Öğreticiler: Ethereum üzerinde uygulamalar ve ön yüzler oluşturun {#tutorials}
 
-- [Uniswap-v2 Sözleşme İncelemesi](/developers/tutorials/uniswap-v2-annotated-code/) _– Otomatik piyasa yapıcı (AMM) sisteminin nasıl çalıştığını açıklayan Uniswap v2 çekirdek sözleşmelerinin açıklamalı bir incelemesi._
-- [Sözleşmeniz için bir kullanıcı arayüzü oluşturma](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– Akıllı sözleşmenize bağlanan modern bir React + Wagmi ön ucunun nasıl oluşturulacağı._
-- [Yeni Başlayanlar İçin Merhaba Dünya Akıllı Sözleşmesi – Tam Yığın (Fullstack)](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Uçtan uca eğitim: basit bir akıllı sözleşme yazın, dağıtın ve bir ön uç oluşturun._
+- [Uniswap-v2 Sözleşme İncelemesi](/developers/tutorials/uniswap-v2-annotated-code/) _– AMM'nin nasıl çalıştığını açıklayan Uniswap v2 çekirdek sözleşmelerinin açıklamalı bir incelemesi._
+- [Sözleşmeniz için bir kullanıcı arayüzü oluşturma](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– Akıllı sözleşmenize bağlanan modern bir React + Wagmi ön yüzünün nasıl oluşturulacağı._
 - [Web3 uygulamaları için sunucu bileşenleri ve aracıları](/developers/tutorials/server-components/) _– Blokzincir olaylarını dinleyen ve işlemlerle yanıt veren TypeScript sunucu bileşenlerinin nasıl yazılacağı._
-- [Merkeziyetsiz kullanıcı arayüzleri için IPFS](/developers/tutorials/ipfs-decentralized-ui/) _– Sansür direncini sağlamak için dapp'inizin ön ucunu IPFS üzerinde nasıl barındıracağınız._
+- [Merkeziyetsiz kullanıcı arayüzleri için IPFS](/developers/tutorials/ipfs-decentralized-ui/) _– Sansür direnci için dapp'inizin ön yüzünün IPFS üzerinde nasıl barındırılacağı._

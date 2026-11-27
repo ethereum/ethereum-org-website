@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/nodes-and-clients/archive-nodes/index.md",
-  "generatedAt": "2026-06-17T22:00:24.174Z",
-  "rootHash": "709173cab86a",
+  "generatedAt": "2026-11-27T10:27:07.983Z",
+  "rootHash": "521ed9205a91",
   "tree": {
-    "contentHash": "eed0d191e765",
+    "contentHash": "6611fe805b54",
     "anchorHash": "195625bd0878",
     "children": {
       "frontmatter:title": {
@@ -154,7 +154,7 @@
         ]
       },
       "implementations-and-usage": {
-        "contentHash": "59dd698b5459",
+        "contentHash": "0f1f34b0c81e",
         "anchorHash": "85c3f3629be7",
         "labelHash": "bc0e2ab96914",
         "children": {
@@ -171,7 +171,7 @@
             "anchorHash": "0c9b69dac2d8"
           },
           "prose:2": {
-            "contentHash": "dc12e3822e2d",
+            "contentHash": "3ed75f17362e",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -183,7 +183,7 @@
         ]
       },
       "recommended-practices": {
-        "contentHash": "54bc1f7af833",
+        "contentHash": "0a95cae1c22b",
         "anchorHash": "376841818dbe",
         "labelHash": "064bb9f1a8f7",
         "children": {
@@ -220,7 +220,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "hardware": {
-            "contentHash": "e6d20b9a5b6b",
+            "contentHash": "1e5712198e55",
             "anchorHash": "dab6ea38b452",
             "labelHash": "7975300f01bc",
             "children": {
@@ -229,7 +229,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "prose:5": {
-                "contentHash": "3e9b1f55839e",
+                "contentHash": "193a2191b8a6",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:0": {
@@ -401,5 +401,5 @@
       "related-topics"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

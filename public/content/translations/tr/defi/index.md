@@ -1,7 +1,7 @@
 ---
 title: Merkeziyetsiz finans (DeFi)
 metaTitle: "DeFi Nedir? | Merkeziyetsiz Finansın Faydaları ve Kullanımı"
-description: "Ethereum'daki DeFi'ye genel bir bakış"
+description: "DeFi nedir? Ethereum'daki merkeziyetsiz finansın bankalara ihtiyaç duymadan herkesin borç vermesini, borç almasını, ticaret yapmasını ve faiz kazanmasını nasıl sağladığını ve içerdiği riskleri öğrenin."
 lang: tr
 template: use-cases
 image: /images/use-cases/defi.png

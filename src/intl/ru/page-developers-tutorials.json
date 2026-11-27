@@ -23,5 +23,6 @@
   "page-tutorial-all": "Все",
   "page-tutorial-topics": "Темы",
   "page-tutorial-search-placeholder": "Поиск руководств...",
-  "page-tutorial-filtering-by": "Фильтрация по:"
+  "page-tutorial-filtering-by": "Фильтрация по:",
+  "page-tutorial-removed-notice": "Запрошенное вами руководство больше недоступно. Ознакомьтесь с актуальными руководствами ниже."
 }

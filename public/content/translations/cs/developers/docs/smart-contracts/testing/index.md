@@ -165,7 +165,7 @@ Testování založené na vlastnostech (property-based testing) je proces kontro
 
 Statický analyzátor bere jako vstup zdrojový kód chytrého kontraktu a vydává výsledky deklarující, zda kontrakt splňuje vlastnost či nikoli. Na rozdíl od dynamické analýzy statická analýza nezahrnuje spuštění kontraktu za účelem analýzy jeho správnosti. Statická analýza místo toho uvažuje o všech možných cestách, kterými by se chytrý kontrakt mohl během provádění vydat (tj. zkoumáním struktury zdrojového kódu, aby se určilo, co by to znamenalo pro fungování kontraktu za běhu).
 
-[Lintování](https://www.perforce.com/blog/qac/what-is-linting) a [statické testování](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) jsou běžné metody pro spouštění statické analýzy na kontraktech. Obě vyžadují analýzu nízkoúrovňových reprezentací provádění kontraktu, jako jsou [abstraktní syntaktické stromy](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) a [grafy toku řízení](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/) na výstupu kompilátoru.
+[Lintování](https://www.perforce.com/blog/qac/what-is-linting) a [statické testování](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) jsou běžné metody pro spouštění statické analýzy na kontraktech. Obě vyžadují analýzu nízkoúrovňových reprezentací provádění kontraktu, jako jsou [abstraktní syntaktické stromy](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) a [grafy toku řízení](https://www.geeksforgeeks.org/software-engineering/software-engineering-control-flow-graph-cfg/) na výstupu kompilátoru.
 
 Ve většině případů je statická analýza užitečná pro detekci bezpečnostních problémů, jako je použití nebezpečných konstrukcí, syntaktické chyby nebo porušení standardů kódování v kódu kontraktu. Je však známo, že statické analyzátory jsou obecně nespolehlivé při detekci hlubších zranitelností a mohou produkovat nadměrné množství falešně pozitivních výsledků.
 
@@ -238,7 +238,7 @@ Na rozdíl od testování lze formální verifikaci použít k ověření, že p
 
 Jak již bylo zmíněno, důkladné testování může jen zřídka zaručit absenci chyb v kontraktu; přístupy formální verifikace mohou poskytnout silnější záruky správnosti, ale v současné době se obtížně používají a nesou s sebou značné náklady.
 
-Přesto můžete dále zvýšit pravděpodobnost zachycení zranitelností kontraktu tím, že získáte nezávislou revizi kódu. [Audity chytrých kontraktů](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/) a [programy bug bounty](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) jsou dva způsoby, jak přimět ostatní k analýze vašich kontraktů.
+Přesto můžete dále zvýšit pravděpodobnost zachycení zranitelností kontraktu tím, že získáte nezávislou revizi kódu. [Audity chytrých kontraktů](https://web.archive.org/web/20260410153159/https://immunebytes.com/blog/what-is-a-smart-contract-audit/) a [programy bug bounty](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) jsou dva způsoby, jak přimět ostatní k analýze vašich kontraktů.
 
 Audity provádějí auditoři zkušení v hledání případů bezpečnostních chyb a špatných vývojových postupů v chytrých kontraktech. Audit obvykle zahrnuje testování (a případně formální verifikaci) a také manuální revizi celé kódové základny.
 
@@ -276,7 +276,7 @@ Hlavním rozdílem je, že programy bug bounty jsou otevřené širší komunit�
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Linter pro vynucování stylu a bezpečnostních osvědčených postupů pro programovací jazyk chytrých kontraktů Solidity._
 
-- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Statický analyzátor založený na Rustu speciálně navržený pro bezpečnost a vývoj chytrých kontraktů ve Web3._
+- **[Cyfrin Aderyn](https://aderyn.cyfrin.io/overview)** - _Statický analyzátor založený na Rustu speciálně navržený pro bezpečnost a vývoj chytrých kontraktů ve Web3._
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Framework pro statickou analýzu založený na Pythonu s detektory zranitelností a kvality kódu, tiskárnami pro extrakci užitečných informací z kódu a podporou pro psaní vlastních submodulů._
 
@@ -298,7 +298,6 @@ Hlavním rozdílem je, že programy bug bounty jsou otevřené širší komunit�
 
 - [Přehled a srovnání různých testovacích produktů](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [Jak používat Echidna k testování chytrých kontraktů](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [Jak používat Manticore k hledání chyb v chytrých kontraktech](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [Jak používat Slither k hledání chyb v chytrých kontraktech](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Jak mockovat kontrakty v Solidity pro testování](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Jak spouštět jednotkové testy v Solidity pomocí Foundry](https://www.rareskills.io/post/foundry-testing-solidity)

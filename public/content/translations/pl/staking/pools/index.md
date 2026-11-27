@@ -1,6 +1,6 @@
 ---
-title: Płynny staking i staking grupowy
-description: Przegląd płynnego stakingu i stakingu grupowego na Ethereum
+title: "Płynny staking i staking grupowy"
+description: "Czym jest płynny staking? Dowiedz się, jak pule stakingowe pozwalają zdobywać nagrody w ETH przy użyciu dowolnej ilości ETH, często otrzymując płynny token, z którego nadal możesz korzystać."
 lang: pl
 template: staking
 image: /images/staking/leslie-pool.png

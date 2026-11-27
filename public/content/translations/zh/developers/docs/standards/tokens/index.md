@@ -39,6 +39,6 @@ _知道有什么对您有帮助的社区资源吗？编辑本页面并添加它�
 ## 相关教程 {#related-tutorials}
 
 - [代币集成清单](/developers/tutorials/token-integration-checklist/) _– 与代币交互时需要考虑的事项清单。_
-- [了解 ERC20 代币智能合约](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– 在以太坊测试网络上部署您的第一个智能合约的简介。_
-- [通过 Solidity 智能合约转移和授权 ERC20 代币](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– 如何使用 Solidity 语言通过智能合约与代币进行交互。_
-- [实现 ERC721 市场【操作指南】](/developers/tutorials/how-to-implement-an-erc721-market/) _– 如何在去中心化分类广告板上出售代币化物品。_
+- [ERC-20 合约演练](/developers/tutorials/erc20-annotated-code/) _– 欧本齐柏林 ERC-20 合约实现的逐行注释演练。_
+- [从 Solidity 智能合约转移和批准 ERC-20 代币](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– 如何使用 Solidity 语言通过智能合约与代币进行交互。_
+- [实现 ERC-721 市场 [操作指南]](/developers/tutorials/how-to-implement-an-erc721-market/) _– 如何在去中心化分类广告板上出售代币化物品。_

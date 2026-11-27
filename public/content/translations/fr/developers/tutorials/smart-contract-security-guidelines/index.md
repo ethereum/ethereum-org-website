@@ -23,7 +23,7 @@ La documentation peut être rédigée à différents niveaux et doit être mise 
 
 - **Une description en langage clair du système**, décrivant ce que font les contrats et toutes les hypothèses sur la base de code.
 - **Schémas et diagrammes architecturaux**, incluant les interactions du contrat et la machine d'état du système. Les [imprimantes Slither](https://github.com/crytic/slither/wiki/Printer-documentation) peuvent aider à générer ces schémas.
-- **Une documentation approfondie du code**, le [format NatSpec](https://docs.soliditylang.org/en/develop/natspec-format.html) peut être utilisé pour Solidity.
+- **Une documentation approfondie du code**, le [format NatSpec](https://docs.soliditylang.org/en/latest/natspec-format.html) peut être utilisé pour Solidity.
 
 ### Calcul onchain vs hors chaîne {#onchain-vs-offchain-computation}
 
@@ -73,13 +73,13 @@ L'architecture de votre base de code doit rendre votre code facile à réviser. 
 ### Tests et vérification {#testing-and-verification}
 
 - **Écrivez des tests unitaires approfondis.** Une suite de tests exhaustive est cruciale pour créer des logiciels de haute qualité.
-- **Écrivez des vérifications et des propriétés personnalisées pour [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) et [Manticore](https://github.com/trailofbits/manticore).** Les outils automatisés aideront à garantir la sécurité de votre contrat. Consultez le reste de ce guide pour apprendre à écrire des vérifications et des propriétés efficaces.
-- **Utilisez [crytic.io](https://crytic.io/).** Crytic s'intègre à GitHub, donne accès à des détecteurs Slither privés et exécute des vérifications de propriétés personnalisées à partir d'Echidna.
+- **Écrivez des vérifications et des propriétés personnalisées pour [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) et [Medusa](https://github.com/crytic/medusa).** Les outils automatisés aideront à garantir la sécurité de votre contrat. Consultez le reste de ce guide pour apprendre à écrire des vérifications et des propriétés efficaces.
+- **Exécutez ces outils en intégration continue.** L'exécution de Slither et de vos propriétés de fuzzing à chaque pull request permet de détecter les régressions avant qu'elles ne soient fusionnées.
 
 ### Solidity {#solidity}
 
-- **Privilégiez Solidity 0.5 par rapport à 0.4 et 0.6.** À notre avis, Solidity 0.5 est plus sécurisé et possède de meilleures pratiques intégrées que 0.4. Solidity 0.6 s'est avéré trop instable pour la production et a besoin de temps pour mûrir.
-- **Utilisez une version stable pour compiler ; utilisez la dernière version pour vérifier les avertissements.** Vérifiez que votre code ne présente aucun problème signalé avec la dernière version du compilateur. Cependant, Solidity a un cycle de publication rapide et un historique de bogues de compilateur, nous ne recommandons donc pas la dernière version pour le déploiement (voir la [recommandation de version solc](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33) de Slither).
+- **Utilisez une version récente de Solidity 0.8.x sans bogues graves connus.** Solidity 0.8 vérifie par défaut l'arithmétique pour les dépassements de capacité, et les anciennes versions ne disposent pas des nouvelles vérifications de sécurité du compilateur. Voir la [recommandation de version solc](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity) de Slither.
+- **Utilisez une version stable pour compiler ; utilisez la dernière version pour vérifier les avertissements.** Vérifiez que votre code ne présente aucun problème signalé avec la dernière version du compilateur. Cependant, Solidity a un cycle de publication rapide et un historique de bogues de compilateur, évitez donc de déployer avec une version publiée il y a seulement quelques jours. Consultez la [liste des bogues de compilateur connus](https://docs.soliditylang.org/en/latest/bugs.html) pour la version que vous choisissez.
 - **N'utilisez pas d'assembleur en ligne.** L'assembleur nécessite une expertise de l'EVM. N'écrivez pas de code EVM si vous ne _maîtrisez_ pas le livre jaune.
 
 ## Directives de déploiement {#deployment-guidelines}

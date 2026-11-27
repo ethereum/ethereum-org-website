@@ -1,10 +1,10 @@
 ---
 title: Ponti
-description: Una panoramica sui ponti per gli sviluppatori
+description: "Una guida per sviluppatori sui ponti: come funzionano la messaggistica cross-chain e il bridging dei token, i tipi di ponti e le assunzioni di fiducia, e come integrarli nelle dapp."
 lang: it
 ---
 
-Con la proliferazione delle blockchain di layer 1 (l1) e delle soluzioni di [ridimensionamento](/developers/docs/scaling/) di layer 2 (l2), insieme a un numero sempre crescente di applicazioni decentralizzate (dapp) che diventano cross-chain, la necessità di comunicazione e movimento di asset tra le catene è diventata una parte essenziale dell'infrastruttura di rete. Esistono diversi tipi di ponti per contribuire a rendere tutto ciò possibile.
+Con la proliferazione delle blockchain di layer 1 (L1) e delle soluzioni di [ridimensionamento](/developers/docs/scaling/) di layer 2 (L2), insieme a un numero sempre crescente di applicazioni decentralizzate (dapp) che diventano cross-chain, la necessità di comunicazione e movimento di asset tra le catene è diventata una parte essenziale dell'infrastruttura di rete. Esistono diversi tipi di ponti per contribuire a rendere tutto ciò possibile.
 
 ## Necessità dei ponti {#need-for-bridges}
 
@@ -24,7 +24,7 @@ Per gli sviluppatori, i ponti consentono quanto segue:
 
 - il trasferimento di qualsiasi dato, informazione e asset tra le catene.
 - lo sblocco di nuove funzionalità e casi d'uso per i protocolli, poiché i ponti espandono lo spazio di progettazione per ciò che i protocolli possono offrire. Ad esempio, un protocollo per lo yield farming originariamente distribuito sulla [Mainnet di Ethereum](/) può offrire pool di liquidità su tutte le catene compatibili con l'EVM.
-- l'opportunità di sfruttare i punti di forza di diverse blockchain. Ad esempio, gli sviluppatori possono trarre vantaggio dalle commissioni più basse offerte dalle diverse soluzioni di layer 2 (l2) distribuendo le loro dapp su rollup e sidechain, e gli utenti possono utilizzare i ponti per spostarsi tra di esse.
+- l'opportunità di sfruttare i punti di forza di diverse blockchain. Ad esempio, gli sviluppatori possono trarre vantaggio dalle commissioni più basse offerte dalle diverse soluzioni di layer 2 (L2) distribuendo le loro dapp su rollup e sidechain, e gli utenti possono utilizzare i ponti per spostarsi tra di esse.
 - la collaborazione tra sviluppatori di vari ecosistemi blockchain per creare nuovi prodotti.
 - l'attrazione di utenti e comunità da vari ecosistemi verso le loro dapp.
 
@@ -123,16 +123,16 @@ Per monitorare l'attività dei contratti tra le catene, gli sviluppatori possono
 ## Letture consigliate {#further-reading}
 
 - [Ponti blockchain](/bridges/) – ethereum.org
-- [Framework di rischio dei ponti di L2BEAT](https://l2beat.com/bridges/summary)
-- [Ponti blockchain: costruire reti di criptoreti](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 settembre 2021 – Dmitriy Berenzon
-- [Il trilemma dell'interoperabilità](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1 ottobre 2021 – Arjun Bhuptani
-- [Cluster: come i ponti fidati e a fiducia minimizzata modellano il panorama multi-chain](https://blog.celestia.org/clusters/) - 4 ottobre 2021 – Mustafa Al-Bassam
-- [LI.FI: con i ponti, la fiducia è uno spettro](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28 aprile 2022 – Arjun Chand
-- [Lo stato delle soluzioni di interoperabilità dei rollup](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 giugno 2024 – Alex Hook
-- [Sfruttare la sicurezza condivisa per un'interoperabilità cross-chain sicura: i comitati di stato di Lagrange e oltre](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 giugno 2024 – Emmanuel Awosika
+- [ETHBEAT Bridge Risk Framework](https://ethbeat.org/interop/summary)
+- [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 set 2021 – Dmitriy Berenzon
+- [The Interoperability Trilemma](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1 ott 2021 – Arjun Bhuptani
+- [Clusters: How Trusted & Trust-Minimized Bridges Shape the Multi-Chain Landscape](https://blog.celestia.org/clusters/) - 4 ott 2021 – Mustafa Al-Bassam
+- [LI.FI: With Bridges, Trust is a Spectrum](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28 apr 2022 – Arjun Chand
+- [The State Of Rollup Interoperability Solutions](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 giu 2024 – Alex Hook
+- [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 giu 2024 – Emmanuel Awosika
 
-Inoltre, ecco alcune presentazioni interessanti di [James Prestwich](https://twitter.com/_prestwich) che possono aiutare a sviluppare una comprensione più profonda dei ponti:
+Inoltre, ecco alcune presentazioni illuminanti di [James Prestwich](https://twitter.com/_prestwich) che possono aiutare a sviluppare una comprensione più profonda dei ponti:
 
-- [Costruire ponti, non giardini recintati](https://youtu.be/ZQJWMiX4hT0)
-- [Analizzare i ponti](https://youtu.be/b0mC-ZqN8Oo)
-- [Perché i ponti stanno bruciando](https://youtu.be/c7cm2kd20j8)
+- [Building Bridges, Not Walled Gardens](https://youtu.be/ZQJWMiX4hT0)
+- [Breaking Down Bridges](https://youtu.be/b0mC-ZqN8Oo)
+- [Why are the Bridges Burning](https://youtu.be/c7cm2kd20j8)

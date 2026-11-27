@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-learn.json",
-  "generatedAt": "2026-09-30T18:09:28.143Z",
-  "rootHash": "94791a737545",
+  "generatedAt": "2026-11-27T09:52:06.150Z",
+  "rootHash": "f67d41bd6ab4",
   "tree": {
-    "contentHash": "06a4ed9e1662",
-    "anchorHash": "630346a9ebc3",
+    "contentHash": "0c6b19ab8cbc",
+    "anchorHash": "38724a78e2b4",
     "children": {
       "about-ethereum-video-series": {
         "contentHash": "5560b6bc4617",
@@ -29,6 +29,10 @@
       },
       "toc-go-deeper": {
         "contentHash": "060d957bd9bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "toc-reference-and-resources": {
+        "contentHash": "05cbd8bca8fa",
         "anchorHash": "e3b0c44298fc"
       },
       "toc-learn-about-the-ethereum-community": {
@@ -259,6 +263,10 @@
         "contentHash": "b31ed2645860",
         "anchorHash": "e3b0c44298fc"
       },
+      "get-started-link": {
+        "contentHash": "a7a708372cab",
+        "anchorHash": "e3b0c44298fc"
+      },
       "ethereum-networks-card-title": {
         "contentHash": "52281e65571f",
         "anchorHash": "e3b0c44298fc"
@@ -305,6 +313,10 @@
       },
       "additional-reading-gas": {
         "contentHash": "eb759566d397",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "additional-reading-bridges": {
+        "contentHash": "b0e70485eb5c",
         "anchorHash": "e3b0c44298fc"
       },
       "additional-reading-support": {
@@ -403,6 +415,46 @@
         "contentHash": "70df0a6c0eea",
         "anchorHash": "e3b0c44298fc"
       },
+      "reference-and-resources-description": {
+        "contentHash": "4ba4734e4b93",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-card-title": {
+        "contentHash": "58a0b40a99da",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-card-description": {
+        "contentHash": "c92c3b4ad0a8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-cta": {
+        "contentHash": "2b8128515732",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "glossary-card-title": {
+        "contentHash": "e4c68a9413a8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "glossary-card-description": {
+        "contentHash": "c49a1716561d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "glossary-cta": {
+        "contentHash": "b36a65bb4e8d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "resources-card-title": {
+        "contentHash": "5ad3134e1fd7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "resources-card-description": {
+        "contentHash": "3eada2197237",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "resources-cta": {
+        "contentHash": "09a28a834d47",
+        "anchorHash": "e3b0c44298fc"
+      },
       "privacy-card-title": {
         "contentHash": "d452cb414fe3",
         "anchorHash": "e3b0c44298fc"
@@ -467,8 +519,12 @@
         "contentHash": "f62f79756117",
         "anchorHash": "e3b0c44298fc"
       },
-      "more-on-ethereum-protocol-nodes-and-clients": {
-        "contentHash": "d1eb519a3432",
+      "more-on-ethereum-protocol-zero-knowledge-proofs": {
+        "contentHash": "ae5bb240b17e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "more-on-ethereum-protocol-run-a-node": {
+        "contentHash": "40fbade57ccb",
         "anchorHash": "e3b0c44298fc"
       },
       "ethereum-community-description": {
@@ -619,6 +675,7 @@
       "toc-how-do-i-use-ethereum",
       "toc-what-is-ethereum-used-for",
       "toc-go-deeper",
+      "toc-reference-and-resources",
       "toc-learn-about-the-ethereum-community",
       "toc-books-and-podcasts",
       "hero-header",
@@ -676,6 +733,7 @@
       "stories-card-title",
       "stories-card-description",
       "stories-cta",
+      "get-started-link",
       "ethereum-networks-card-title",
       "ethereum-networks-card-description",
       "ethereum-networks-card-button",
@@ -688,6 +746,7 @@
       "additional-reading-how-to-use-a-wallet",
       "additional-reading-security",
       "additional-reading-gas",
+      "additional-reading-bridges",
       "additional-reading-support",
       "additional-reading-layer-2",
       "what-is-ethereum-used-for-1",
@@ -712,6 +771,16 @@
       "more-on-ethereum-history",
       "keep-learning-title",
       "go-deeper-description",
+      "reference-and-resources-description",
+      "what-are-apps-card-title",
+      "what-are-apps-card-description",
+      "what-are-apps-cta",
+      "glossary-card-title",
+      "glossary-card-description",
+      "glossary-cta",
+      "resources-card-title",
+      "resources-card-description",
+      "resources-cta",
       "privacy-card-title",
       "privacy-card-description",
       "privacy-card-button",
@@ -728,7 +797,8 @@
       "more-on-ethereum-protocol-ethereum-for-developers",
       "more-on-ethereum-protocol-consensus",
       "more-on-ethereum-protocol-evm",
-      "more-on-ethereum-protocol-nodes-and-clients",
+      "more-on-ethereum-protocol-zero-knowledge-proofs",
+      "more-on-ethereum-protocol-run-a-node",
       "ethereum-community-description",
       "community-hub-card-title",
       "community-hub-card-description",
@@ -766,5 +836,5 @@
       "the-daily-gwei-description"
     ]
   },
-  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

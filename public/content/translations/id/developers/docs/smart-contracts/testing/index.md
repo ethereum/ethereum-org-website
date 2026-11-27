@@ -165,7 +165,7 @@ Pengujian berbasis properti adalah proses memeriksa bahwa kontrak pintar memenuh
 
 Penganalisis statis mengambil kode sumber kontrak pintar sebagai masukan dan mengeluarkan hasil yang menyatakan apakah kontrak memenuhi properti atau tidak. Tidak seperti analisis dinamis, analisis statis tidak melibatkan eksekusi kontrak untuk menganalisis kebenarannya. Analisis statis sebaliknya menalar tentang semua kemungkinan jalur yang dapat diambil oleh kontrak pintar selama eksekusi (yaitu, dengan memeriksa struktur kode sumber untuk menentukan apa artinya bagi operasi kontrak saat runtime).
 
-[Linting](https://www.perforce.com/blog/qac/what-is-linting) dan [pengujian statis](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) adalah metode umum untuk menjalankan analisis statis pada kontrak. Keduanya memerlukan analisis representasi tingkat rendah dari eksekusi kontrak seperti [pohon sintaksis abstrak](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) dan [grafik aliran kontrol](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/) yang dikeluarkan oleh kompiler.
+[Linting](https://www.perforce.com/blog/qac/what-is-linting) dan [pengujian statis](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) adalah metode umum untuk menjalankan analisis statis pada kontrak. Keduanya memerlukan analisis representasi tingkat rendah dari eksekusi kontrak seperti [pohon sintaksis abstrak](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) dan [grafik aliran kontrol](https://www.geeksforgeeks.org/software-engineering/software-engineering-control-flow-graph-cfg/) yang dikeluarkan oleh kompiler.
 
 Dalam kebanyakan kasus, analisis statis berguna untuk mendeteksi masalah keamanan seperti penggunaan konstruksi yang tidak aman, kesalahan sintaksis, atau pelanggaran standar pengkodean dalam kode kontrak. Namun, penganalisis statis diketahui umumnya tidak kuat dalam mendeteksi kerentanan yang lebih dalam, dan dapat menghasilkan positif palsu yang berlebihan.
 
@@ -238,7 +238,7 @@ Tidak seperti pengujian, verifikasi formal dapat digunakan untuk memverifikasi e
 
 Seperti yang disebutkan, pengujian yang ketat jarang dapat menjamin tidak adanya bug dalam kontrak; pendekatan verifikasi formal dapat memberikan jaminan kebenaran yang lebih kuat tetapi saat ini sulit digunakan dan menimbulkan biaya yang cukup besar.
 
-Namun, Anda dapat lebih meningkatkan kemungkinan menangkap kerentanan kontrak dengan mendapatkan tinjauan kode independen. [Audit kontrak pintar](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/) dan [bug bounty](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) adalah dua cara untuk meminta orang lain menganalisis kontrak Anda.
+Namun, Anda dapat lebih meningkatkan kemungkinan menangkap kerentanan kontrak dengan mendapatkan tinjauan kode independen. [Audit kontrak pintar](https://web.archive.org/web/20260410153159/https://immunebytes.com/blog/what-is-a-smart-contract-audit/) dan [bug bounty](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) adalah dua cara untuk meminta orang lain menganalisis kontrak Anda.
 
 Audit dilakukan oleh auditor yang berpengalaman dalam menemukan kasus kelemahan keamanan dan praktik pengembangan yang buruk dalam kontrak pintar. Audit biasanya akan mencakup pengujian (dan mungkin verifikasi formal) serta tinjauan manual dari seluruh basis kode.
 
@@ -276,7 +276,7 @@ Perbedaan utamanya adalah bahwa program bug bounty terbuka untuk komunitas penge
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Linter untuk menegakkan gaya dan praktik terbaik keamanan untuk bahasa pemrograman kontrak pintar Solidity._
 
-- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Penganalisis statis berbasis Rust yang dirancang khusus untuk keamanan dan pengembangan kontrak pintar Web3._
+- **[Cyfrin Aderyn](https://aderyn.cyfrin.io/overview)** - _Penganalisis statis berbasis Rust yang dirancang khusus untuk keamanan dan pengembangan kontrak pintar Web3._
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Kerangka kerja analisis statis berbasis Python dengan detektor kerentanan dan kualitas kode, pencetak untuk mengekstrak informasi berguna dari kode dan dukungan untuk menulis submodul kustom._
 
@@ -298,7 +298,6 @@ Perbedaan utamanya adalah bahwa program bug bounty terbuka untuk komunitas penge
 
 - [Gambaran umum dan perbandingan berbagai produk pengujian](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [Cara menggunakan Echidna untuk menguji kontrak pintar](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [Cara menggunakan Manticore untuk menemukan bug kontrak pintar](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [Cara menggunakan Slither untuk menemukan bug kontrak pintar](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Cara membuat tiruan (mock) kontrak Solidity untuk pengujian](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Cara menjalankan pengujian unit di Solidity menggunakan Foundry](https://www.rareskills.io/post/foundry-testing-solidity)

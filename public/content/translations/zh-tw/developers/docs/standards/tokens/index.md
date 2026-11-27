@@ -38,7 +38,7 @@ _知道對您有幫助的社群資源嗎？編輯此頁面並加入它！_
 - [代幣整合的危險 (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _歐本齊柏林_
 ## 相關教學 {#related-tutorials}
 
-- [代幣整合檢查清單](/developers/tutorials/token-integration-checklist/) _– 與代幣互動時應考慮的事項清單。_
-- [了解 ERC20 代幣智能合約](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– 在以太坊測試網路上部署您的第一個智能合約的簡介。_
-- [從 Solidity 智能合約轉帳與核准 ERC20 代幣](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– 如何使用 Solidity 語言透過智能合約與代幣互動。_
-- [實作 ERC721 市場 [操作指南]](/developers/tutorials/how-to-implement-an-erc721-market/) _– 如何在去中心化分類廣告板上出售代幣化物品。_
+- [代幣整合檢查清單](/developers/tutorials/token-integration-checklist/) _– 與代幣互動時應考慮的事項檢查清單。_
+- [ERC-20 合約逐步解說](/developers/tutorials/erc20-annotated-code/) _– 歐本齊柏林 ERC-20 合約實作的逐行註解逐步解說。_
+- [從 Solidity 智能合約轉帳與核准 ERC-20 代幣](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– 如何使用 Solidity 語言透過智能合約與代幣互動。_
+- [實作 ERC-721 市場 [操作指南]](/developers/tutorials/how-to-implement-an-erc721-market/) _– 如何在去中心化分類廣告板上出售代幣化物品。_

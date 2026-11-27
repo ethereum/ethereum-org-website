@@ -15,14 +15,14 @@ Demek bu Ethereum denen şeyi duydunuz ve tavşan deliğinden aşağı inmeye ha
 
 ## (Esnek) ön koşullar {#soft-prerequisites}
 
-Bu yazı, geniş bir geliştirici kitlesi için erişilebilir olmayı hedefliyor. [Python araçları](/developers/docs/programming-languages/python/) kullanılacak, ancak bunlar sadece fikirleri aktarmak için bir araç; bir Python geliştiricisi olmasanız da sorun değil. Yine de, Ethereum'a özgü kısımlara hızlıca geçebilmemiz için halihazırda bildikleriniz hakkında sadece birkaç varsayımda bulunacağım.
+Bu yazı, geniş bir geliştirici kitlesi için erişilebilir olmayı hedeflemektedir. [Python araçları](/developers/docs/programming-languages/python/) kullanılacak, ancak bunlar sadece fikirleri aktarmak için bir araçtır; Python geliştiricisi olmasanız da sorun değil. Ancak, Ethereum'a özgü kısımlara hızlıca geçebilmemiz için halihazırda bildikleriniz hakkında sadece birkaç varsayımda bulunacağım.
 
 Varsayımlar:
 
-- Bir terminalde gezinebilirsiniz,
+- Bir terminalde gezinebiliyorsunuz,
 - Birkaç satır Python kodu yazdınız,
-- Makinenizde Python 3.6 veya daha yeni bir sürüm yüklü (bir [sanal ortam](https://realpython.com/effective-python-environment/#virtual-environments) kullanılması şiddetle tavsiye edilir) ve
-- Python'un paket yükleyicisi olan `pip` aracını kullandınız.
+- Makinenizde Python 3.10 veya daha yeni bir sürümü yüklü (bir [sanal ortam](https://realpython.com/effective-python-environment/#virtual-environments) kullanılması şiddetle tavsiye edilir) ve
+- Python'ın paket yükleyicisi olan `pip`'i kullandınız.
   Tekrar belirtmek gerekirse, bunlardan herhangi biri doğru değilse veya bu makaledeki kodu yeniden üretmeyi planlamıyorsanız, muhtemelen yine de sorunsuz bir şekilde takip edebilirsiniz.
 
 ## Kısaca blokzincirler {#blockchains-briefly}
@@ -81,7 +81,7 @@ Bu rehberde, sadece bir Python yorumlayıcısı içinde çalışacağız. Herhan
 
 <FeaturedText>Not: Aşağıdaki örneklerde, `$` ile başlayan komutların terminalde çalıştırılması amaçlanmıştır. (`$` işaretini yazmayın, sadece satırın başlangıcını belirtir.)</FeaturedText>
 
-İlk olarak, keşif yapmak için kullanıcı dostu bir ortam sağlayan [IPython](https://ipython.org/)'ı kurun. IPython, diğer özelliklerinin yanı sıra sekme (tab) ile tamamlama sunarak Web3.py içinde nelerin mümkün olduğunu görmeyi çok daha kolay hale getirir.
+İlk olarak, keşfetmek için kullanıcı dostu bir ortam sağlayan [IPython](https://ipython.org/)'ı kurun. IPython, diğer özelliklerinin yanı sıra sekme (tab) ile tamamlama sunarak Web3.py içinde nelerin mümkün olduğunu görmeyi çok daha kolaylaştırır.
 
 ```bash
 pip install ipython
@@ -99,9 +99,7 @@ Bir şey daha – daha sonra bir blokzinciri simüle edeceğiz, bu da birkaç ba
 pip install 'web3[tester]'
 ```
 
-Başlamak için her şey hazır!
-
-Not: `web3[tester]` paketi Python 3.10.xx sürümüne kadar çalışır.
+Artık başlamaya hazırsınız!
 
 ## Bir korumalı alan (sandbox) oluşturun {#spin-up-a-sandbox}
 
@@ -125,12 +123,12 @@ In [1]: from web3 import Web3
 
 ## Web3 modülüne giriş {#introducing-the-web3-module}
 
-Ethereum'a bir geçit olmasının yanı sıra, [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) modülü birkaç kolaylık sağlayan fonksiyon sunar. Birkaçını inceleyelim.
+Ethereum'a bir geçit olmasının yanı sıra, [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) modülü birkaç kolaylık sağlayan fonksiyon sunar. Gelin birkaçını inceleyelim.
 
 Bir Ethereum uygulamasında, genellikle para birimi değerlerini dönüştürmeniz gerekecektir. Web3 modülü tam da bunun için birkaç yardımcı metot sağlar: [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) ve [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
 
 <FeaturedText>
-Not: Bilgisayarlar ondalık matematikle başa çıkma konusunda kötü şöhrete sahiptir. Bunu aşmak için geliştiriciler genellikle dolar tutarlarını sent olarak saklarlar. Örneğin, fiyatı 5,99 $ olan bir ürün veritabanında 599 olarak saklanabilir.
+Not: Bilgisayarlar ondalık matematikle başa çıkma konusunda oldukça kötüdür. Bunu aşmak için geliştiriciler genellikle dolar tutarlarını sent olarak saklarlar. Örneğin, fiyatı 5,99 $ olan bir ürün veritabanında 599 olarak saklanabilir.
 
 <b>Ether</b> cinsinden işlemleri yönetirken de benzer bir model kullanılır. Ancak, iki ondalık basamak yerine Ether'in 18 basamağı vardır! Ether'in en küçük birimine <b>Wei</b> denir, bu nedenle işlemler gönderilirken belirtilen değer budur.
 
@@ -140,7 +138,7 @@ Not: Bilgisayarlar ondalık matematikle başa çıkma konusunda kötü şöhrete
 
 </FeaturedText>
 
-Bazı değerleri Wei'ye ve Wei'den dönüştürmeyi deneyin. Ether ve Wei arasındaki [birçok birimin isimleri olduğuna](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) dikkat edin. Bunlar arasında en iyi bilinenlerden biri **Gwei**'dir, çünkü işlem ücretleri genellikle bu şekilde temsil edilir.
+Bazı değerleri Wei'ye ve Wei'den dönüştürmeyi deneyin. Ether ve Wei arasındaki [birçok birimin isimleri olduğuna](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) dikkat edin. Bunlar arasında en iyi bilinenlerden biri **Gwei**'dir, çünkü işlem ücretleri genellikle bu şekilde ifade edilir.
 
 ```python
 In [2]: Web3.to_wei(1, 'ether')
@@ -150,7 +148,7 @@ In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
-Web3 modülündeki diğer yardımcı metotlar arasında veri formatı dönüştürücüleri (örn. [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)), adres yardımcıları (örn. [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)) ve hash fonksiyonları (örn. [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)) bulunur. Bunların birçoğu serinin ilerleyen bölümlerinde ele alınacaktır. Mevcut tüm metotları ve özellikleri görüntülemek için, `Web3` yazıp noktadan sonra sekme (tab) tuşuna iki kez basarak IPython'ın otomatik tamamlama özelliğinden yararlanın.
+Web3 modülündeki diğer yardımcı metotlar arasında veri formatı dönüştürücüleri (örn. [`to_hex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_hex)), adres yardımcıları (örn. [`is_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.is_address)) ve hash fonksiyonları (örn. [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)) bulunur. Bunların birçoğu serinin ilerleyen bölümlerinde ele alınacaktır. Mevcut tüm metotları ve özellikleri görüntülemek için, `Web3`. yazıp noktadan sonra sekme (tab) tuşuna iki kez basarak IPython'ın otomatik tamamlama özelliğinden yararlanın.
 
 ## Zincirle konuşun {#talk-to-the-chain}
 
@@ -170,7 +168,7 @@ Bu, bunu yapmanın "gerçek" bir yolu olsa da, eşzamanlama süreci saatler sür
 
 _EthereumTesterProvider simüle edilmiş bir düğüme bağlanır ve hızlı geliştirme ortamları için kullanışlıdır._
 
-Bu simüle edilmiş düğüm [eth-tester](https://github.com/ethereum/eth-tester) olarak adlandırılır ve onu `pip install web3[tester]` komutunun bir parçası olarak kurduk. Web3.py'ı bu test sağlayıcısını kullanacak şekilde yapılandırmak şu kadar basittir:
+Bu simüle edilmiş düğüm [eth-tester](https://github.com/ApeWorX/eth-tester) olarak adlandırılır ve onu `pip install web3[tester]` komutunun bir parçası olarak kurduk. Web3.py'ı bu test sağlayıcısını kullanacak şekilde yapılandırmak şu kadar basittir:
 
 ```python
 In [4]: w3 = Web3(Web3.EthereumTesterProvider())
@@ -292,10 +290,10 @@ Out[13]: 1000003000000000000000000
 
 İkincisi iyi görünüyor! Bakiye 1.000.000'dan 1.000.003 Ether'e çıktı. Peki ilk hesaba ne oldu? Üç Ether'den biraz daha fazlasını kaybetmiş gibi görünüyor. Ne yazık ki hayatta hiçbir şey bedava değildir ve Ethereum açık ağını kullanmak, destekleyici rolleri için eşlerinizi telafi etmenizi gerektirir. İşlemi gönderen hesaptan küçük bir işlem ücreti düşüldü - bu ücret, yakılan Gaz miktarının (bir ETH transferi için 21000 birim Gaz) ağ etkinliğine göre değişen bir taban ücret ile çarpılması ve işlemi bir bloğa dahil eden Doğrulayıcıya giden bir öncelik ücretinin eklenmesiyle hesaplanır.
 
-[Gaz](/developers/docs/gas/#post-london) hakkında daha fazla bilgi
+[Gaz](/developers/docs/gas/) hakkında daha fazla bilgi
 
 <FeaturedText>Not: Açık ağda, işlem ücretleri ağ talebine ve bir işlemin ne kadar hızlı işlenmesini istediğinize bağlı olarak değişkendir. Ücretlerin nasıl hesaplandığının bir dökümüyle ilgileniyorsanız, <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">işlemlerin bir bloğa nasıl dahil edildiği</a> hakkındaki önceki yazıma bakın.</FeaturedText>
 
 ## Ve nefes alın {#and-breathe}
 
-Bir süredir bununla uğraşıyoruz, bu yüzden burası mola vermek için iyi bir yer gibi görünüyor. Tavşan deliği devam ediyor ve bu serinin ikinci bölümünde keşfetmeye devam edeceğiz. Gelecek bazı kavramlar: gerçek bir düğüme bağlanma, akıllı sözleşmeler ve token'lar. Takip eden sorularınız mı var? Bana bildirin! Geri bildiriminiz buradan nereye gideceğimizi etkileyecektir. İsteklerinizi [Twitter](https://twitter.com/wolovim) üzerinden iletebilirsiniz.
+Bir süredir bununla uğraşıyoruz, bu yüzden burası mola vermek için iyi bir yer gibi görünüyor. Tavşan deliği devam ediyor ve bu serinin ikinci bölümünde keşfetmeye devam edeceğiz. Gelecek bazı kavramlar: gerçek bir düğüme bağlanma, akıllı sözleşmeler ve token'lar. Takip eden sorularınız mı var? Bana bildirin! Geri bildiriminiz buradan nereye gideceğimizi etkileyecektir. İsteklerinizi [Twitter](https://x.com/wolovim) üzerinden iletebilirsiniz.

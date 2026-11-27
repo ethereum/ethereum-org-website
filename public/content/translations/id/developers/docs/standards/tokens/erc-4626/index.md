@@ -51,7 +51,7 @@ Fungsi ini mengembalikan alamat token yang mendasarinya yang digunakan untuk bra
 function totalAssets() public view returns (uint256)
 ```
 
-Fungsi ini mengembalikan jumlah total aset yang mendasarinya yang dipegang oleh brankas.
+Fungsi ini mengembalikan jumlah total aset yang mendasarinya yang dikelola oleh brankas, termasuk aset apa pun yang telah digunakan di tempat lain dan setelah dikurangi biaya apa pun.
 
 #### convertToShares {#convertoshares}
 
@@ -183,7 +183,7 @@ Mengembalikan jumlah total saham brankas yang saat ini dimiliki oleh `owner`.
 
 ### Peta antarmuka {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### Peristiwa {#events}
 

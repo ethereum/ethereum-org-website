@@ -23,10 +23,11 @@ sidebarDepth: 3
 
 - [Blockchair](https://blockchair.com/ethereum) - 注重隱私的以太坊瀏覽器。也可用於排序和過濾（記憶體池）資料。提供西班牙文、法文、義大利文、荷蘭文、葡萄牙文、俄文、中文和波斯文版本
 - [Chainlens](https://www.chainlens.com/)
-- [DexGuru Block Explorer](https://ethereum.dex.guru/)
+- [DexGuru 區塊鏈瀏覽器](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
-- [Etherscan](https://etherscan.io/) - 亦提供中文、韓文、俄文和日文版本
-- [Ethplorer](https://ethplorer.io/) - 專注於代幣的區塊鏈瀏覽器。亦提供中文、西班牙文、法文、土耳其文、俄文、韓文和越南文版本
+- [Etherscan](https://etherscan.io/) - 也提供中文、韓文、俄文和日文版本
+- [Ethplorer](https://ethplorer.io/) - 專注於代幣的區塊鏈瀏覽器。也提供中文、西班牙文、法文、土耳其文、俄文、韓文和越南文版本
+- [Ethscanner](https://ethscanner.io/) - 由 Routescan 提供。將已驗證的合約貢獻給 Verifier Alliance 的開放資料集，並顯示跨鏈交易
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)

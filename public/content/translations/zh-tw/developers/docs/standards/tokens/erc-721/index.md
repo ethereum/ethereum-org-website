@@ -245,8 +245,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## 教學：在以太坊上使用非同質化代幣 (ERC-721) 進行建置 {#tutorials}
 
-- [Vyper ERC-721 合約演練](/developers/tutorials/erc-721-vyper-annotated-code/) _– 以 Vyper 撰寫的完整 ERC-721 NFT 合約的註解演練。_
-- [如何撰寫與部署 NFT（第 1/3 部分）](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– 撰寫並部署您的第一個 ERC-721 智能合約的逐步指南。_
-- [如何鑄造 NFT（第 2/3 部分）](/developers/tutorials/how-to-mint-an-nft/) _– 如何使用您部署的智能合約和 Web3 鑄造 ERC-721 NFT。_
+- [Vyper ERC-721 合約導覽](/developers/tutorials/erc-721-vyper-annotated-code/) _– 以 Vyper 撰寫的完整 ERC-721 NFT 合約的附註導覽。_
+- [如何撰寫與部署 NFT（第 1/3 部分）](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– 撰寫與部署您的第一個 ERC-721 智能合約的逐步指南。_
+- [如何鑄造 NFT（第 2/3 部分）](/developers/tutorials/how-to-mint-an-nft/) _– 如何使用您部署的智能合約與 Web3 鑄造 ERC-721 NFT。_
 - [如何在錢包中檢視您的 NFT（第 3/3 部分）](/developers/tutorials/how-to-view-nft-in-metamask/) _– 部署後如何在梅塔馬斯克中顯示您鑄造的 NFT。_
-- [NFT 鑄造器教學](/developers/tutorials/nft-minter/) _– 使用 React 前端、梅塔馬斯克和 Alchemy 建置全端 NFT 鑄造去中心化應用程式 (dapp)。_

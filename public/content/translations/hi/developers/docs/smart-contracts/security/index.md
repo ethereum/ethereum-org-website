@@ -78,7 +78,7 @@ contract VendingMachine {
 
 दुर्भाग्य से, जब अलगाव में उपयोग किया जाता है तो स्मार्ट अनुबंध सुरक्षा में सुधार के लिए यूनिट परीक्षण न्यूनतम रूप से प्रभावी होता है। एक यूनिट परीक्षण यह साबित कर सकता है कि एक फ़ंक्शन मॉक डेटा के लिए ठीक से निष्पादित होता है, लेकिन यूनिट परीक्षण केवल उतने ही प्रभावी होते हैं जितने कि लिखे गए परीक्षण। इससे छूटे हुए एज केस और कमजोरियों का पता लगाना मुश्किल हो जाता है जो आपके स्मार्ट अनुबंध की सुरक्षा को तोड़ सकते हैं।
 
-एक बेहतर दृष्टिकोण यूनिट परीक्षण को [स्थैतिक और गतिशील विश्लेषण (static and dynamic analysis)](/developers/docs/smart-contracts/testing/#static-dynamic-analysis) का उपयोग करके किए गए संपत्ति-आधारित परीक्षण (property-based testing) के साथ जोड़ना है। स्थैतिक विश्लेषण पहुंच योग्य प्रोग्राम स्थितियों और निष्पादन पथों का विश्लेषण करने के लिए निम्न-स्तरीय अभ्यावेदन, जैसे [नियंत्रण प्रवाह ग्राफ़ (control flow graphs)](https://en.wikipedia.org/wiki/Control-flow_graph) और [अमूर्त सिंटैक्स ट्री (abstract syntax trees)](https://deepsource.io/glossary/ast/) पर निर्भर करता है। इस बीच, गतिशील विश्लेषण तकनीकें, जैसे [स्मार्ट अनुबंध फ़ज़िंग](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), सुरक्षा गुणों का उल्लंघन करने वाले संचालन का पता लगाने के लिए यादृच्छिक इनपुट मानों के साथ अनुबंध कोड निष्पादित करती हैं।
+एक बेहतर दृष्टिकोण यूनिट परीक्षण को [स्थैतिक और गतिशील विश्लेषण (static and dynamic analysis)](/developers/docs/smart-contracts/testing/#property-based-testing-for-smart-contracts) का उपयोग करके किए गए संपत्ति-आधारित परीक्षण (property-based testing) के साथ जोड़ना है। स्थैतिक विश्लेषण पहुंच योग्य प्रोग्राम स्थितियों और निष्पादन पथों का विश्लेषण करने के लिए निम्न-स्तरीय अभ्यावेदन, जैसे [नियंत्रण प्रवाह ग्राफ़ (control flow graphs)](https://en.wikipedia.org/wiki/Control-flow_graph) और [अमूर्त सिंटैक्स ट्री (abstract syntax trees)](https://deepsource.io/glossary/ast/) पर निर्भर करता है। इस बीच, गतिशील विश्लेषण तकनीकें, जैसे [स्मार्ट अनुबंध फ़ज़िंग](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), सुरक्षा गुणों का उल्लंघन करने वाले संचालन का पता लगाने के लिए यादृच्छिक इनपुट मानों के साथ अनुबंध कोड निष्पादित करती हैं।
 
 [औपचारिक सत्यापन](/developers/docs/smart-contracts/formal-verification) स्मार्ट अनुबंध में सुरक्षा गुणों को सत्यापित करने की एक और तकनीक है। नियमित परीक्षण के विपरीत, औपचारिक सत्यापन निर्णायक रूप से स्मार्ट अनुबंध में त्रुटियों की अनुपस्थिति को साबित कर सकता है। यह एक औपचारिक विनिर्देश बनाकर प्राप्त किया जाता है जो वांछित सुरक्षा गुणों को कैप्चर करता है और यह साबित करता है कि अनुबंध का एक औपचारिक मॉडल इस विनिर्देश का पालन करता है।
 
@@ -461,9 +461,9 @@ DEX की कीमतें अक्सर सटीक होती है�
 
 - **[औपचारिक सत्यापन टूल](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _स्मार्ट अनुबंधों में कार्यात्मक शुद्धता को सत्यापित करने और इनवेरिएंट्स की जांच करने के लिए टूल।_
 
-- **[स्मार्ट अनुबंध ऑडिटिंग सेवाएँ](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _इथेरियम विकास परियोजनाओं के लिए स्मार्ट अनुबंध ऑडिटिंग सेवाएँ प्रदान करने वाले संगठनों की सूची।_
+- **[स्मार्ट अनुबंध ऑडिटिंग सेवाएँ](#smart-contract-auditing-services)** - _इथेरियम विकास परियोजनाओं के लिए स्मार्ट अनुबंध ऑडिटिंग सेवाएँ प्रदान करने वाले संगठनों की सूची।_
 
-- **[बग बाउंटी प्लेटफ़ॉर्म](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _बग बाउंटी का समन्वय करने और स्मार्ट अनुबंधों में महत्वपूर्ण कमजोरियों के जिम्मेदार प्रकटीकरण को पुरस्कृत करने के लिए प्लेटफ़ॉर्म।_
+- **[बग बाउंटी प्लेटफ़ॉर्म](#bug-bounty-platforms)** - _बग बाउंटी का समन्वय करने और स्मार्ट अनुबंधों में महत्वपूर्ण कमजोरियों के जिम्मेदार प्रकटीकरण को पुरस्कृत करने के लिए प्लेटफ़ॉर्म।_
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _फ़ोर्क किए गए अनुबंध के संबंध में सभी उपलब्ध जानकारी की जांच करने के लिए एक मुफ़्त ऑनलाइन टूल।_
 
@@ -563,12 +563,10 @@ DEX की कीमतें अक्सर सटीक होती है�
 
 - [सुरक्षित स्मार्ट अनुबंध कैसे लिखें](/developers/tutorials/secure-development-workflow/)
 
-- [स्मार्ट अनुबंध बग खोजने के लिए स्लिथर का उपयोग कैसे करें](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-
-- [स्मार्ट अनुबंध बग खोजने के लिए मैन्टिकोर का उपयोग कैसे करें](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
+- [स्मार्ट अनुबंध के बग खोजने के लिए स्लिथर का उपयोग कैसे करें](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
 - [स्मार्ट अनुबंध सुरक्षा दिशानिर्देश](/developers/tutorials/smart-contract-security-guidelines/)
 
-- [अपने टोकन अनुबंध को मनमाने टोकन के साथ सुरक्षित रूप से कैसे एकीकृत करें](/developers/tutorials/token-integration-checklist/)
+- [अपने टोकन अनुबंध को किसी भी टोकन के साथ सुरक्षित रूप से कैसे एकीकृत करें](/developers/tutorials/token-integration-checklist/)
 
-- [Cyfrin Updraft - स्मार्ट अनुबंध सुरक्षा और ऑडिटिंग पूर्ण कोर्स](https://updraft.cyfrin.io/courses/security)
+- [Cyfrin Updraft - स्मार्ट अनुबंध सुरक्षा और ऑडिटिंग का पूरा कोर्स](https://updraft.cyfrin.io/courses/security)

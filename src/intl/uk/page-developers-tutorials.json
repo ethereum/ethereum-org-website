@@ -23,5 +23,6 @@
   "page-tutorial-all": "Усі",
   "page-tutorial-topics": "Теми",
   "page-tutorial-search-placeholder": "Пошук посібників...",
-  "page-tutorial-filtering-by": "Фільтрування за:"
+  "page-tutorial-filtering-by": "Фільтрування за:",
+  "page-tutorial-removed-notice": "Посібник, який ви шукали, більше не доступний. Перегляньте актуальні посібники нижче."
 }

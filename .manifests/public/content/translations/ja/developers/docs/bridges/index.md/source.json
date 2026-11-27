@@ -1,18 +1,18 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/bridges/index.md",
-  "generatedAt": "2026-06-16T21:55:02.775Z",
-  "rootHash": "a1dd3e8b4f3e",
+  "generatedAt": "2026-11-27T10:22:21.536Z",
+  "rootHash": "adb8e1e37543",
   "tree": {
-    "contentHash": "045f039d7e21",
-    "anchorHash": "6f58b67f36ad",
+    "contentHash": "e8982ae0ae5e",
+    "anchorHash": "6e2a00b0c4a0",
     "children": {
       "frontmatter:title": {
         "contentHash": "d982f029f5c8",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "7549b8a117f7",
+        "contentHash": "2a3ba32cced9",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -435,8 +435,8 @@
         ]
       },
       "further-reading": {
-        "contentHash": "c50d8aff266a",
-        "anchorHash": "984f623fac6f",
+        "contentHash": "0032d43af44e",
+        "anchorHash": "163cc9292537",
         "labelHash": "4082f515b2f4",
         "children": {
           "_label": {
@@ -456,8 +456,8 @@
             "anchorHash": "e3b0c44298fc"
           },
           "link:1": {
-            "contentHash": "02fb065d034f",
-            "anchorHash": "956c61cfb445"
+            "contentHash": "a9b2315573f2",
+            "anchorHash": "fb4749715325"
           },
           "prose:14": {
             "contentHash": "3973e022e932",
@@ -586,5 +586,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

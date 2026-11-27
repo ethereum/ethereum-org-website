@@ -1,7 +1,7 @@
 ---
 title: "Thanh toán trên Ethereum"
 metaTitle: "Thanh toán trên Ethereum"
-description: "Tổng quan về thanh toán trên Ethereum"
+description: "Thanh toán trên Ethereum hoạt động như thế nào? Tìm hiểu cách gửi tiền trên toàn cầu bằng ETH và stablecoin, thường chỉ trong vài giây và với chi phí thấp, mà không cần ngân hàng trung gian."
 lang: vi
 template: use-cases
 sidebarDepth: 2
@@ -99,7 +99,7 @@ Những thẻ này liên kết trực tiếp với các Ví không lưu ký ho�
 
 ## Thanh toán vi mô cho các trang web & tác nhân (x402) {#x402}
 
-[x402](https://www.x402.org/) là một tiêu chuẩn thanh toán mở mang đến các khoản thanh toán gốc theo mỗi lần sử dụng cho web. Bằng cách sử dụng [stablecoin](/stablecoins/) trên các [mạng lưới lớp 2 (l2) Ethereum](/layer-2/) chi phí thấp, tiêu chuẩn x402 giúp con người và máy móc tiết kiệm chi phí khi thanh toán trực tiếp cho một hành động duy nhất, chẳng hạn như đọc một bài báo hoặc gọi một API, thay vì quản lý các khóa API, các gói đăng ký hoặc "thanh toán" bằng cách dành sự chú ý cho quảng cáo.
+[x402](https://www.x402.org/) là một tiêu chuẩn thanh toán mở mang đến các khoản thanh toán gốc theo mỗi lần sử dụng cho web. Bằng cách sử dụng [stablecoin](/stablecoins/) trên các [mạng lưới lớp 2 (L2) Ethereum](/layer-2/) chi phí thấp, tiêu chuẩn x402 giúp con người và máy móc tiết kiệm chi phí khi thanh toán trực tiếp cho một hành động duy nhất, chẳng hạn như đọc một bài báo hoặc gọi một API, thay vì quản lý các khóa API, các gói đăng ký hoặc "thanh toán" bằng cách dành sự chú ý cho quảng cáo.
 
 - **Loại bỏ tường phí và đăng nhập:** Thay vì tạo một Tài khoản và chia sẻ thông tin cá nhân để đọc một bài báo, Ví của bạn có thể thanh toán vài xu được yêu cầu để mở khóa bài báo đó.
 - **Thanh toán cho các tác nhân AI:** x402 cho phép phần mềm tự trị ("Tác nhân AI") thanh toán cho dữ liệu và các lệnh gọi API mà chúng cần để hoạt động, mà không cần sự can thiệp của con người.

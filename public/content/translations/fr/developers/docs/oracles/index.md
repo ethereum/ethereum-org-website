@@ -385,31 +385,29 @@ Le [réseau Keeper](https://chain.link/keepers) de Chainlink offre des options a
 
 ## Comment utiliser les oracles de blockchain {#use-blockchain-oracles}
 
-Il existe de multiples applications d'oracle que vous pouvez intégrer dans votre dapp Ethereum :
+Il existe de multiples applications d'oracle que vous pouvez intégrer à votre dapp Ethereum :
 
-**[Chainlink](https://chain.link/)** - _Les réseaux d'oracles décentralisés Chainlink fournissent des entrées, des sorties et des calculs inviolables pour prendre en charge des contrats intelligents avancés sur n'importe quelle chaîne de blocs._
+**[Chainlink](https://chain.link/)** - _Les réseaux d'oracles décentralisés Chainlink fournissent des entrées, des sorties et des calculs infalsifiables pour prendre en charge des contrats intelligents avancés sur n'importe quelle chaîne de blocs._
 
-**[Oracles RedStone](https://redstone.finance/)** - _RedStone est un oracle modulaire décentralisé qui fournit des flux de données optimisés en gaz. Il se spécialise dans l'offre de flux de prix pour les actifs émergents, tels que les jetons de staking liquide (LST), les jetons de restaking liquide (LRT) et les dérivés de staking Bitcoin._
+**[RedStone Oracles](https://redstone.finance/)** - _RedStone est un oracle modulaire décentralisé qui fournit des flux de données optimisés en gaz. Il se spécialise dans l'offre de flux de prix pour les actifs émergents, tels que les jetons de staking liquide (LST), les jetons de restaking liquide (LRT) et les dérivés de staking Bitcoin._
 
 **[Chronicle](https://chroniclelabs.org/)** - _Chronicle surmonte les limites actuelles du transfert de données onchain en développant des oracles véritablement évolutifs, rentables, décentralisés et vérifiables._
 
 **[Witnet](https://witnet.io/)** - _Witnet est un oracle sans permission, décentralisé et résistant à la censure qui aide les contrats intelligents à réagir aux événements du monde réel avec de solides garanties crypto-économiques._
 
-**[Oracle UMA](https://uma.xyz)** - _L'oracle optimiste d'UMA permet aux contrats intelligents de recevoir rapidement tout type de données pour différentes applications, y compris l'assurance, les dérivés financiers et les marchés de prédiction._
+**[UMA Oracle](https://uma.xyz)** - _L'oracle optimiste d'UMA permet aux contrats intelligents de recevoir rapidement tout type de données pour différentes applications, y compris l'assurance, les dérivés financiers et les marchés de prédiction._
 
 **[Tellor](https://tellor.io/)** - _Tellor est un protocole d'oracle transparent et sans permission permettant à votre contrat intelligent d'obtenir facilement n'importe quelle donnée chaque fois qu'il en a besoin._
 
-**[Protocole Band](https://bandprotocol.com/)** - _Le protocole Band est une plateforme d'oracle de données inter-chaîne qui agrège et connecte des données du monde réel et des API aux contrats intelligents._
+**[Band Protocol](https://bandprotocol.com/)** - _Band Protocol est une plateforme d'oracle de données inter-chaîne qui agrège et connecte des données du monde réel et des API aux contrats intelligents._
 
-**[Réseau Pyth](https://pyth.network/)** - _Le réseau Pyth est un réseau d'oracles financiers de première partie conçu pour publier des données continues du monde réel onchain dans un environnement inviolable, décentralisé et autonome._
+**[Pyth Network](https://pyth.network/)** - _Le réseau Pyth est un réseau d'oracles financiers de première partie conçu pour publier des données continues du monde réel onchain dans un environnement inviolable, décentralisé et autonome._
 
-**[API3 DAO](https://api3.org/)** - _API3 DAO fournit des solutions d'oracles de première partie qui offrent une plus grande transparence des sources, une sécurité et une évolutivité accrues dans une solution décentralisée pour les contrats intelligents._
+**[API3 DAO](https://api3.org/)** - _API3 DAO fournit des solutions d'oracles de première partie qui offrent une plus grande transparence des sources, une meilleure sécurité et une plus grande évolutivité dans une solution décentralisée pour les contrats intelligents_
 
 **[Supra](https://supra.com/)** - Une boîte à outils verticalement intégrée de solutions inter-chaînes qui relient toutes les chaînes de blocs, publiques (L1 et L2) ou privées (entreprises), fournissant des flux de prix d'oracles décentralisés qui peuvent être utilisés pour des cas d'utilisation onchain et hors chaîne. 
 
-**[Gas Network](https://gas.network/)** - Une plateforme d'oracle distribuée fournissant des données de prix du gaz en temps réel à travers la chaîne de blocs. En apportant des données des principaux fournisseurs de données de prix du gaz onchain, Gas Network contribue à stimuler l'interopérabilité. Gas Network prend en charge les données pour plus de 35 chaînes, y compris le réseau principal Ethereum et de nombreux L2 de premier plan.
-
-**[DIA](https://www.diadata.org/)** - Un réseau d'oracles inter-chaîne fournissant des flux de données vérifiables pour plus de 20 000 actifs dans toutes les principales classes d'actifs. DIA s'approvisionne en données commerciales brutes directement auprès de plus de 100 marchés primaires et les calcule onchain, garantissant une transparence et une vérifiabilité complètes des données avec des configurations personnalisées pour tout cas d'utilisation.
+**[DIA](https://www.diadata.org/)** - Un réseau d'oracles inter-chaîne fournissant des flux de données vérifiables pour plus de 20 000 actifs dans toutes les principales classes d'actifs. DIA s'approvisionne en données de trading brutes directement auprès de plus de 100 marchés primaires et les calcule onchain, garantissant une transparence et une vérifiabilité complètes des données avec des configurations personnalisées pour n'importe quel cas d'utilisation.
 
 **[Stork](https://stork.network)** - Stork fournit des données de prix à très faible latence, prenant en charge un large éventail de cas d'utilisation, y compris les marchés perpétuels, les protocoles de prêt et les écosystèmes DeFi, avec de nouveaux actifs pris en charge rapidement lors de leur cotation.
 

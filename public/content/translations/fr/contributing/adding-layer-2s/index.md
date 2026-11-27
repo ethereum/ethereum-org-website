@@ -8,7 +8,7 @@ Nous voulons nous assurer de répertorier les meilleures ressources possibles af
 
 Tout le monde est libre de suggérer l'ajout d'une couche 2 sur ethereum.org. S'il y a une couche 2 que nous avons manquée, **[veuillez la suggérer](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml) !**
 
-Nous répertorions actuellement les l2 sur les pages suivantes :
+Nous répertorions actuellement les L2 sur les pages suivantes :
 
 - [Rollups optimistes](/developers/docs/scaling/optimistic-rollups/)
 - [Rollups à divulgation nulle de connaissance](/developers/docs/scaling/zk-rollups/)
@@ -20,10 +20,10 @@ La couche 2 est un paradigme relativement nouveau et passionnant pour Ethereum. 
 
 ### Critères d'inclusion : les indispensables {#criteria-for-inclusion-the-must-haves}
 
-**Inscription sur L2BEAT**
+**Présence sur ETHBEAT**
 
-- Pour être pris en considération, ce projet doit être répertorié sur [L2BEAT](https://l2beat.com). L2BEAT fournit une évaluation robuste des risques des projets de couche 2 sur laquelle nous nous appuyons pour évaluer les projets l2. **Si le projet ne figure pas sur L2BEAT, nous ne le répertorierons pas en tant que l2 sur ethereum.org.**
-- [Découvrez comment ajouter votre projet l2 à L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- Pour être pris en considération, ce projet doit être répertorié sur [ETHBEAT](https://ethbeat.org). ETHBEAT fournit une évaluation robuste des risques des projets de couche 2 sur laquelle nous nous appuyons pour évaluer les projets de L2. **Si le projet ne figure pas sur ETHBEAT, nous ne le répertorierons pas en tant que L2 sur ethereum.org.**
+- [Découvrez comment ajouter votre projet de L2 à ETHBEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Open source**
 
@@ -48,7 +48,7 @@ _Nous ne considérons pas les autres solutions de mise à l'échelle qui n'utili
 
 **Date de lancement du projet**
 
-- Une couche 2 qui est « active » sur le Réseau principal depuis plus de 6 mois
+- Une couche 2 qui est « en ligne » sur le Réseau principal depuis plus de 6 mois
 
 - Les projets plus récents qui n'ont pas été éprouvés par les utilisateurs sont moins susceptibles d'être répertoriés.
 
@@ -58,7 +58,7 @@ _Nous ne considérons pas les autres solutions de mise à l'échelle qui n'utili
 
 **Base d'utilisateurs soutenue**
 
-- Nous prendrons en compte des métriques telles que l'historique de la valeur totale bloquée (TVL), les statistiques de transaction et si le projet est utilisé par des entreprises ou des projets connus
+- Nous prendrons en compte des mesures telles que l'historique de la valeur totale bloquée (TVL), les statistiques de transaction et s'il est utilisé par des entreprises ou des projets connus
 
 **Équipe de développement active**
 
@@ -84,7 +84,7 @@ _Nous ne considérons pas les autres solutions de mise à l'échelle qui n'utili
 
 **Prise en charge native par les portefeuilles**
 
-- Y a-t-il des portefeuilles qui prennent en charge la l2 de manière native ?
+- Y a-t-il des portefeuilles qui prennent en charge la L2 de manière native ?
 
 ## Ajouter votre couche 2 {#add-exchange}
 

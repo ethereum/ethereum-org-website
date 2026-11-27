@@ -21,12 +21,13 @@ Anda harus memahami konsep dasar Ethereum sehingga Anda dapat memahami data yang
 
 ## Layanan {#services}
 
-- [Blockchair](https://blockchair.com/ethereum) - Penjelajah Ethereum privat. Juga untuk menyortir dan memfilter data (mempool). Tersedia dalam bahasa Spanyol, Prancis, Italia, Belanda, Portugis, Rusia, Mandarin, dan Farsi
+- [Blockchair](https://blockchair.com/ethereum) - Penjelajah Ethereum privat. Juga untuk menyortir dan memfilter data (mempool). Tersedia dalam bahasa Spanyol, Prancis, Italia, Belanda, Portugis, Rusia, Mandarin, dan Persia
 - [Chainlens](https://www.chainlens.com/)
-- [Penjelajah Blok DexGuru](https://ethereum.dex.guru/)
+- [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Etherscan](https://etherscan.io/) - Juga tersedia dalam bahasa Mandarin, Korea, Rusia, dan Jepang
 - [Ethplorer](https://ethplorer.io/) - Penjelajah blok dengan fokus pada token. Juga tersedia dalam bahasa Mandarin, Spanyol, Prancis, Turki, Rusia, Korea, dan Vietnam
+- [Ethscanner](https://ethscanner.io/) - Oleh Routescan. Menyumbangkan kontrak yang telah diverifikasi ke set data terbuka Verifier Alliance dan menampilkan transaksi lintas rantai
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)

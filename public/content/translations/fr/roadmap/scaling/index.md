@@ -7,7 +7,7 @@ alt: Feuille de route d'Ethereum
 template: roadmap
 ---
 
-La mise à l'échelle d'Ethereum s'effectue à l'aide de [couches 2](/layer-2/#rollups) (également appelées rollups), qui regroupent les transactions et envoient le résultat à Ethereum. Même si les rollups sont jusqu'à huit fois moins chers que le réseau principal Ethereum, il est possible de les optimiser davantage pour réduire les coûts pour les utilisateurs finaux. Les rollups s'appuient également sur certains composants centralisés que les développeurs peuvent supprimer à mesure que les rollups gagnent en maturité.
+La mise à l'échelle d'Ethereum s'effectue à l'aide de [couches 2](/layer-2/learn/#how-does-layer-2-work) (également appelées rollups), qui regroupent les transactions et envoient le résultat à Ethereum. Même si les rollups sont jusqu'à huit fois moins chers que le réseau principal Ethereum, il est possible de les optimiser davantage pour réduire les coûts pour les utilisateurs finaux. Les rollups s'appuient également sur certains composants centralisés que les développeurs peuvent supprimer à mesure que les rollups gagnent en maturité.
 
 <Alert variant="update">
 <AlertContent>
@@ -15,7 +15,7 @@ La mise à l'échelle d'Ethereum s'effectue à l'aide de [couches 2](/layer-2/#r
   Coûts de transaction
 </AlertTitle>
   <ul style={{ marginBottom: 0 }}>
-    <li>Les rollups actuels sont <strong>\~5 à 20 fois</strong> moins chers que la couche 1 (l1) d'Ethereum</li>
+    <li>Les rollups actuels sont <strong>\~5 à 20 fois</strong> moins chers que la couche 1 (L1) d'Ethereum</li>
     <li>Les ZK-rollups réduiront bientôt les frais de <strong>\~40 à 100 fois</strong></li>
     <li>Les prochaines modifications apportées à Ethereum offriront une mise à l'échelle supplémentaire de <strong>\~100 à 1000 fois</strong></li>
  <li style={{ marginBottom: 0 }}>Les utilisateurs devraient bénéficier de transactions <strong>coûtant moins de 0,001 $</strong></li>
@@ -43,9 +43,15 @@ Cette deuxième étape est connue sous le nom de [« danksharding »](/roadmap/d
 
 ## Décentralisation des rollups {#decentralizing-rollups}
 
-Les [rollups](/layer-2) mettent déjà Ethereum à l'échelle. Un [riche écosystème de projets de rollups](https://l2beat.com/scaling/tvs) permet aux utilisateurs d'effectuer des transactions rapidement et à moindre coût, avec diverses garanties de sécurité. Cependant, les rollups ont été amorcés à l'aide de séquenceurs centralisés (des ordinateurs qui effectuent tout le traitement et l'agrégation des transactions avant de les soumettre à Ethereum). Cela les rend vulnérables à la censure, car les opérateurs de séquenceurs peuvent être sanctionnés, soudoyés ou autrement compromis. Dans le même temps, les [rollups varient](https://l2beat.com/scaling/summary) dans la façon dont ils valident les données entrantes. La meilleure méthode consiste pour les « prouveurs » à soumettre des [preuves de fraude](/glossary/#fraud-proof) ou des preuves de validité, mais tous les rollups n'en sont pas encore là. Même les rollups qui utilisent des preuves de validité/fraude font appel à un petit groupe de prouveurs connus. Par conséquent, la prochaine étape critique dans la mise à l'échelle d'Ethereum consiste à répartir la responsabilité de l'exécution des séquenceurs et des prouveurs entre un plus grand nombre de personnes.
+Les [rollups](/layer-2) mettent déjà Ethereum à l'échelle. Un [riche écosystème de projets de rollups](https://ethbeat.org/layer2s/tvs) permet aux utilisateurs d'effectuer des transactions rapidement et à moindre coût, avec diverses garanties de sécurité. Cependant, les rollups ont été amorcés à l'aide de séquenceurs centralisés (des ordinateurs qui effectuent tout le traitement et l'agrégation des transactions avant de les soumettre à Ethereum). Cela les rend vulnérables à la censure, car les opérateurs de séquenceurs peuvent être sanctionnés, soudoyés ou autrement compromis. Dans le même temps, les [rollups varient](https://ethbeat.org/layer2s/summary) dans la façon dont ils valident les données entrantes. La meilleure méthode consiste pour les « prouveurs » à soumettre des [preuves de fraude](/glossary/#fraud-proof) ou des preuves de validité, mais tous les rollups n'en sont pas encore là. Même les rollups qui utilisent des preuves de validité/fraude font appel à un petit groupe de prouveurs connus. Par conséquent, la prochaine étape critique dans la mise à l'échelle d'Ethereum consiste à répartir la responsabilité de l'exécution des séquenceurs et des prouveurs entre un plus grand nombre de personnes.
 
 <ButtonLink variant="outline-color" href="/developers/docs/scaling/">En savoir plus sur les rollups</ButtonLink>
+
+## Mise à l'échelle du réseau principal Ethereum avec les zkEVM {#zkevm}
+
+Les rollups ne sont pas la seule voie vers la mise à l'échelle. Aujourd'hui, chaque [validateur](/glossary/#validator) réexécute chaque transaction dans chaque bloc, ce qui limite la capacité de traitement du réseau principal Ethereum sans augmenter les exigences matérielles. Avec un zkEVM, un seul prouveur exécute le bloc et génère une [preuve à divulgation nulle de connaissance](/zero-knowledge-proofs/) attestant que l'exécution était correcte, et les validateurs vérifient cette preuve à la place. La vérification d'une preuve est beaucoup moins coûteuse que la réexécution, de sorte que le réseau principal peut traiter plus de transactions sans obliger les validateurs à s'équiper de matériel coûteux.
+
+<ButtonLink variant="outline" href="/roadmap/zkevm/">En savoir plus sur le zkEVM</ButtonLink>
 
 ## Progrès actuels {#current-progress}
 

@@ -1,7 +1,7 @@
 ---
 title: "Que sont les preuves à divulgation nulle de connaissance ?"
 metaTitle: "Preuves à divulgation nulle de connaissance"
-description: "Une introduction non technique aux preuves à divulgation nulle de connaissance pour les débutants."
+description: "Que sont les preuves à divulgation nulle de connaissance ? Une introduction accessible aux débutants sur la façon dont les preuves ZK vérifient une réclamation sans révéler les données, et comment Ethereum les utilise."
 lang: fr
 ---
 
@@ -100,7 +100,7 @@ C'est là que le calcul vérifiable entre en jeu. Lorsqu'un nœud exécute une t
 
 Les [rollup à divulgation nulle de connaissance](/developers/docs/scaling/zk-rollups) et les [validiums](/developers/docs/scaling/validium/) sont deux solutions de mise à l'échelle hors chaîne qui utilisent des preuves de validité pour fournir une évolutivité sécurisée. Ces protocoles exécutent des milliers de transactions hors chaîne et soumettent des preuves pour vérification sur Ethereum. Ces résultats peuvent être appliqués immédiatement une fois la preuve vérifiée, permettant à Ethereum de traiter plus de transactions sans augmenter le calcul sur la couche de base.
 
-Au-delà de la mise à l'échelle de la couche 2 (l2), les preuves à divulgation nulle de connaissance peuvent également vérifier l'exécution des blocs de la couche 1 (l1) d'Ethereum elle-même. Le [zkEVM pour la vérification L1](/roadmap/zkevm/) permettrait aux validateurs de vérifier les blocs en contrôlant une preuve plutôt qu'en réexécutant toutes les transactions — permettant des limites de gaz plus élevées sans augmenter les exigences matérielles des validateurs.
+Au-delà de la mise à l'échelle de la couche 2 (L2), les preuves à divulgation nulle de connaissance peuvent également vérifier l'exécution des blocs de la couche 1 (L1) d'Ethereum elle-même. Le [zkEVM pour la vérification L1](/roadmap/zkevm/) permettrait aux validateurs de vérifier les blocs en contrôlant une preuve plutôt qu'en réexécutant toutes les transactions — permettant des limites de gaz plus élevées sans augmenter les exigences matérielles des validateurs.
 
 ### Réduire la corruption et la collusion dans le vote onchain {#secure-blockchain-voting}
 

@@ -1,7 +1,7 @@
 ---
 title: "Decentralizované finance (DeFi)"
 metaTitle: "Co je DeFi? | Výhody a využití decentralizovaných financí"
-description: "Přehled DeFi na Ethereu"
+description: "Co je DeFi? Zjistěte, jak decentralizované finance na Ethereu umožňují komukoli půjčovat, vypůjčovat si, obchodovat a získávat úroky bez bank, a jaká jsou s tím spojená rizika."
 lang: cs
 template: use-cases
 image: /images/use-cases/defi.png

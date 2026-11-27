@@ -4,9 +4,9 @@ description: "JavaScriptベースのプロジェクトやツールを使用し�
 lang: ja
 ---
 
-JavaScriptは、イーサリアムエコシステムの中で最も人気のある言語の1つです。実際、イーサリアムの機能を可能な限りJavaScriptに導入することに専念している[チーム](https://github.com/ethereumjs)が存在します。
+JavaScriptはイーサリアムエコシステムで最も人気のある言語の1つであり、コアプロトコルのプリミティブから本番環境のコンセンサス・クライアントに至るまで、あらゆるもののJavaScriptおよびTypeScript実装が存在します。
 
-[スタックのすべてのレベル](/developers/docs/ethereum-stack/)で、JavaScript（またはそれに近い言語）を記述する機会があります。
+[スタックのすべてのレベル](/developers/docs/ethereum-stack/)で、JavaScript（またはそれに近いもの）を記述する機会があります。
 
 ## イーサリアムとのやり取り {#interact-with-ethereum}
 
@@ -52,10 +52,15 @@ JavaScript開発者で独自のスマート・コントラクトを記述した�
 
 ### ノードとクライアント {#nodes-and-clients}
 
-EthereumJSクライアントは現在活発に開発されており、あなたが理解できる言語であるJavaScriptで、イーサリアムクライアントがどのように機能するかを深く掘り下げることができます！
+[ロードスター](https://lodestar.chainsafe.io/)は、TypeScriptで記述され、ChainSafeによって保守されている本番環境対応のコンセンサス・クライアントです。これにはビーコン・ノードとバリデータクライアントが含まれており、イーサリアムのプルーフ・オブ・ステークのコンセンサスがどのように機能するかを、使い慣れた言語で確認するのに適しています。
 
-**クライアントをチェックする**  
-[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**ロードスターをチェックする**  
+[`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
+
+実行側では、EthereumJSクライアントは非推奨となりアーカイブされていますが、イーサリアムクライアントがJavaScriptでどのように機能するかを探求するために、そのソースコードは引き続き利用可能です。
+
+**アーカイブされたクライアントをチェックする**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/archive/client)
 
 ## その他のプロジェクト {#other-projects}
 

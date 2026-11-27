@@ -1,7 +1,7 @@
 ---
 title: Was sind Zero-Knowledge-Beweise?
 metaTitle: Zero-Knowledge-Beweise
-description: "Eine nicht-technische Einführung in Zero-Knowledge-Beweise für Anfänger."
+description: "Was sind Zero-Knowledge-Beweise? Eine anfängerfreundliche Einführung dazu, wie ZK-Beweise einen Anspruch verifizieren, ohne die Daten preiszugeben, und wie Ethereum sie verwendet."
 lang: de
 ---
 

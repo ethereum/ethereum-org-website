@@ -57,7 +57,7 @@ lang: zh
 - 过期节点不再需要提供的历史数据；
 - 允许并行验证交易的区块级访问列表；
 - 分别对状态、数据和计算进行定价的多维费用市场；
-- 以及使用 zkEVM 证明一层网络 (l1) 区块的执行。
+- 以及使用 zkEVM 证明一层网络 (L1) 区块的执行。
 
 #### 背景阅读 {#background-reading-1}
 
@@ -72,7 +72,7 @@ lang: zh
 - [EIP-8037：状态创建 Gas 成本增加](https://eips.ethereum.org/EIPS/eip-8037)
 - [EIP-7999：统一的多维费用市场](https://eips.ethereum.org/EIPS/eip-7999)
 - [EIP-7642：eth/69、历史数据过期和更简单的收据](https://eips.ethereum.org/EIPS/eip-7642)
-- [发布一层网络 (l1) zkEVM：实时证明](https://blog.ethereum.org/2025/07/10/realtime-proving)
+- [发布一层网络 (L1) zkEVM：实时证明](https://blog.ethereum.org/2025/07/10/realtime-proving)
 
 ### 抗审查性与区块构建 {#censorship-resistance-and-block-building}
 
@@ -128,7 +128,7 @@ lang: zh
 1. 一个共识客户端，用于跟踪区块链的头部、广播区块并处理共识逻辑
 2. 一个执行客户端，用于支持以太坊虚拟机并执行交易和智能合约
 
-除了这两种客户端之外，还在对新型客户端进行原型设计，包括证明一层网络 (l1) 区块执行的客户端，以及围绕抗量子签名构建的精简共识客户端。
+除了这两种客户端之外，还在对新型客户端进行原型设计，包括证明一层网络 (L1) 区块执行的客户端，以及围绕抗量子签名构建的精简共识客户端。
 
 有关节点和客户端的更多详细信息以及所有当前客户端实现的列表，请参阅[节点和客户端页面](/developers/docs/nodes-and-clients/)。你还可以在[历史页面](/ethereum-forks/)上找到所有以太坊升级的历史记录。
 
@@ -146,31 +146,31 @@ lang: zh
 
 - [zkEVM](/roadmap/zkevm/)
 - [Ethproofs](https://ethproofs.org/)
-- [发布一层网络 (l1) zkEVM：安全基础](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
+- [发布一层网络 (L1) zkEVM：安全基础](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ## 扩容与性能 {#scaling-and-performance}
 
-扩容以太坊是以太坊研究人员关注的一个重要领域，它同时在两条轨道上运行：提高一层网络 (l1) 本身的吞吐量，以及将执行转移到将其数据发布到以太坊的汇总 (rollups) 上。目前的工作包括增加区块 gas 上限、重新定价状态增长、扩展汇总数据的斑点容量，以及减少节点必须存储和验证的内容。有关扩容以太坊的介绍性信息，请参阅我们的[扩容页面](/developers/docs/scaling/)和[扩容路线图](/roadmap/scaling/)。
+扩容以太坊是以太坊研究人员关注的一个重要领域，它同时在两条轨道上运行：提高一层网络 (L1) 本身的吞吐量，以及将执行转移到将其数据发布到以太坊的汇总 (rollups) 上。目前的工作包括增加区块 gas 上限、重新定价状态增长、扩展汇总数据的斑点容量，以及减少节点必须存储和验证的内容。有关扩容以太坊的介绍性信息，请参阅我们的[扩容页面](/developers/docs/scaling/)和[扩容路线图](/roadmap/scaling/)。
 
-### 二层网络 (l2) {#layer-2}
+### 二层网络 (L2) {#layer-2}
 
-现在有几个二层网络 (l2) 协议使用不同的技术来批量处理交易并在以太坊一层网络 (l1) 上保护它们，从而扩展以太坊。开放研究包括降低证明的延迟和成本，缩短交易达到无须信任的最终性所需的时间，以及为用户提供跨多个汇总的单一连贯体验。
+现在有几个二层网络 (L2) 协议使用不同的技术来批量处理交易并在以太坊一层网络 (L1) 上保护它们，从而扩展以太坊。开放研究包括降低证明的延迟和成本，缩短交易达到无须信任的最终性所需的时间，以及为用户提供跨多个汇总的单一连贯体验。
 
 #### 背景阅读 {#background-reading-2}
 
-- [二层网络 (l2) 简介](/layer-2/)
-- [L2BEAT：扩容总结](https://l2beat.com/scaling/summary)
+- [二层网络简介](/layer-2/)
+- [ETHBEAT：扩容摘要](https://ethbeat.org/layer2s/summary)
 - [以 Rollup 为中心的以太坊路线图](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### 近期研究 {#recent-research-2}
 
-- [Ethresear.ch 二层网络 (l2)](https://ethresear.ch/c/layer-2/32)
-- [L2BEAT：链上成本](https://l2beat.com/scaling/costs)
+- [Ethresear.ch 二层网络](https://ethresear.ch/c/layer-2/32)
+- [ETHBEAT：链上成本](https://ethbeat.org/layer2s/costs)
 - [2026 年在以太坊上构建：发生了什么变化](/latest/building-on-ethereum-in-2026/)
 
 ### 互操作性 {#interoperability}
 
-用户和资产分布在以太坊一层网络 (l1) 和许多二层网络 (l2) 中，研究问题是让他们在不信任中介的情况下跨这些链移动和行动。这里的工作涵盖基于意图的转账、标准化的跨链寻址和命名、通用消息传递以及钱包级别的链抽象。这取代了托管桥持有资产的模式，而桥在历史上一直是生态系统中最大的损失来源之一，因此任何跨链机制的安全性仍然是核心关注点。
+用户和资产分布在以太坊一层网络 (L1) 和许多二层网络 (L2) 中，研究问题是让他们在不信任中介的情况下跨这些链移动和行动。这里的工作涵盖基于意图的转账、标准化的跨链寻址和命名、通用消息传递以及钱包级别的链抽象。这取代了托管桥持有资产的模式，而桥在历史上一直是生态系统中最大的损失来源之一，因此任何跨链机制的安全性仍然是核心关注点。
 
 #### 背景阅读 {#background-reading-3}
 
@@ -226,7 +226,7 @@ lang: zh
 
 ### 密码学与零知识证明 (ZKP) {#cryptography--zkp}
 
-零知识证明 (ZKP) 和密码学对于在以太坊及其应用程序中构建隐私和安全性至关重要。零知识证明已经从研究走向生产基础设施：证明真实以太坊区块的证明者现在在延迟、成本和可靠性方面进行公开基准测试。悬而未决的问题也相应地发生了转变，转向足够快地证明一层网络 (l1) 区块以实现实时证明，严格说明所使用的证明系统的安全性，并为抗量子密码学做准备。
+零知识证明 (ZKP) 和密码学对于在以太坊及其应用程序中构建隐私和安全性至关重要。零知识证明已经从研究走向生产基础设施：证明真实以太坊区块的证明者现在在延迟、成本和可靠性方面进行公开基准测试。悬而未决的问题也相应地发生了转变，转向足够快地证明一层网络 (L1) 区块以实现实时证明，严格说明所使用的证明系统的安全性，并为抗量子密码学做准备。
 
 #### 背景阅读 {#background-reading-6}
 
@@ -239,7 +239,7 @@ lang: zh
 - [Ethresear.ch 零知识 (ZK)](https://ethresear.ch/c/zk-s-nt-arks/13)
 - [Ethresear.ch 密码学](https://ethresear.ch/c/cryptography/28)
 - [基于哈希的 zkEVM 证明系统的可靠性计算器](https://github.com/ethereum/soundcalc)
-- [发布一层网络 (l1) zkEVM：安全基础](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
+- [发布一层网络 (L1) zkEVM：安全基础](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ### 钱包 {#wallets}
 
@@ -298,7 +298,7 @@ lang: zh
 
 ### 区块空间与费用市场 {#blockspace-fee-markets}
 
-区块空间市场管理最终用户交易的包含，无论是在以太坊（一层网络 (l1)）上直接进行，还是在桥接网络（例如汇总（二层网络 (l2)））上进行。在以太坊上，交易被提交到作为 EIP-1559 部署在协议内的费用市场，从而保护链免受垃圾信息的侵害并对拥堵进行定价。在这两层网络上，交易都可能产生外部性，即最大可提取价值 (MEV)，这会引发新的市场结构来捕获或管理这些外部性。目前的工作将其扩展到同时对多种资源进行定价，因为状态、数据和计算是独立拥堵的，并改变由谁组装区块以及在什么条件下组装。
+区块空间市场管理最终用户交易的包含，无论是在以太坊（一层网络 (L1)）上直接进行，还是在桥接网络（例如汇总（二层网络 (L2)））上进行。在以太坊上，交易被提交到作为 EIP-1559 部署在协议内的费用市场，从而保护链免受垃圾信息的侵害并对拥堵进行定价。在这两层网络上，交易都可能产生外部性，即最大可提取价值 (MEV)，这会引发新的市场结构来捕获或管理这些外部性。目前的工作将其扩展到同时对多种资源进行定价，因为状态、数据和计算是独立拥堵的，并改变由谁组装区块以及在什么条件下组装。
 
 #### 背景阅读 {#background-reading-10}
 
@@ -385,9 +385,9 @@ lang: zh
 
 #### 近期研究 {#recent-research-14}
 
-- [稳健激励小组数据分析](https://rig.ethereum.org/)
+- [Robust Incentives Group 数据分析](https://rig.ethereum.org/)
 - [ethPandaOps 开放数据](https://ethpandaops.io/data/)
-- [L2BEAT：扩容总结](https://l2beat.com/scaling/summary)
+- [ETHBEAT：扩容摘要](https://ethbeat.org/layer2s/summary)
 
 ## 应用程序与工具 {#apps-and-tooling}
 

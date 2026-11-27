@@ -53,7 +53,7 @@ function asset() public view returns (address assetTokenAddress)
 function totalAssets() public view returns (uint256)
 ```
 
-இந்தச் செயல்பாடு பெட்டகத்தால் வைத்திருக்கப்படும் அடிப்படைச் சொத்துகளின் மொத்த அளவை வழங்குகிறது.
+இந்தச் செயல்பாடு, பெட்டகத்தால் நிர்வகிக்கப்படும் அடிப்படைச் சொத்துகளின் மொத்த அளவை வழங்குகிறது, இதில் அது வேறு எங்கும் பயன்படுத்தியவை மற்றும் ஏதேனும் கட்டணங்கள் கழிக்கப்பட்ட பிறகானவையும் அடங்கும்.
 
 #### convertToShares {#convertoshares}
 
@@ -141,7 +141,7 @@ function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-இந்தச் செயல்பாடு `owner` இலிருந்து `shares` ஐ எரித்து, பெட்டகத்திலிருந்து `receiver` க்குச் சரியாக `assets` வில்லையை அனுப்புகிறது.
+இந்தச் செயல்பாடு `owner` இலிருந்து `shares` ஐ எரித்து, பெட்டகத்திலிருந்து `receiver` க்குச் சரியாக `assets` வில்லைகளை அனுப்புகிறது.
 
 #### maxRedeem {#maxredeem}
 
@@ -185,7 +185,7 @@ function balanceOf(address owner) public view returns (uint256)
 
 ### இடைமுகத்தின் வரைபடம் {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### நிகழ்வுகள் {#events}
 

@@ -171,7 +171,6 @@ Em um dapp, a carteira do usuário (como MetaMask, Rainbow ou WalletConnect) lid
 
 ## Tutoriais relacionados {#related-tutorials}
 
-- [Chamando um contrato inteligente a partir do JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/)
 - [Enviando transações usando Web3.js e Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 - [Como visualizar seu NFT na sua carteira](/developers/tutorials/how-to-view-nft-in-metamask/)
 
@@ -180,7 +179,7 @@ Em um dapp, a carteira do usuário (como MetaMask, Rainbow ou WalletConnect) lid
 - [Documentação do Viem: Lendo e escrevendo em contratos](https://viem.sh/docs/contract/readContract)
 - [Documentação do ethers.js: Contratos](https://docs.ethers.org/v6/api/contract/)
 - [Especificação da ABI do Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [O que é uma ABI? - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [Como funcionam as ABIs de contratos inteligentes? - Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## Tópicos relacionados {#related-topics}
 

@@ -1,6 +1,6 @@
 ---
 title: Utangulizi wa kiufundi wa Etha
-description: Utangulizi wa msanidi programu kuhusu sarafu-fiche ya Etha.
+description: "Utangulizi wa kiufundi wa Etha (ETH): inatumika kwa nini, jinsi inavyotajwa katika Wei na Gwei, na jinsi inavyofuliwa, kuteketezwa na kuhamishwa."
 lang: sw
 ---
 

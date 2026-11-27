@@ -1,6 +1,6 @@
 ---
 title: Techniczne wprowadzenie do etheru
-description: "Wprowadzenie do kryptowaluty ether dla deweloperów."
+description: "Techniczne wprowadzenie do etheru (ETH): do czego służy, jak jest denominowany w wei i gwei oraz jak jest wybijany, spalany i przesyłany."
 lang: pl
 ---
 

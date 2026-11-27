@@ -66,7 +66,7 @@ Te biblioteki abstrahują od dużej części złożoności bezpośredniej intera
 **Infura -** **_API Ethereum jako usługa._**
 
 - [infura.io](https://infura.io)
-- [Dokumentacja](https://docs.infura.io/api)
+- [Dokumentacja](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _Opłacalny dostawca EVM JSON-RPC_**
@@ -77,7 +77,7 @@ Te biblioteki abstrahują od dużej części złożoności bezpośredniej intera
 **NOWNodes - _Pełne węzły i eksploratory bloków._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Dokumentacja](https://nownodes.gitbook.io/documentation)
+- [Dokumentacja](https://docs.nownodes.io/)
 
 **QuickNode -** **_Infrastruktura blockchain jako usługa._**
 
@@ -176,11 +176,10 @@ Te biblioteki abstrahują od dużej części złożoności bezpośredniej intera
 
 - [moralis.io](https://moralis.io)
 - [Dokumentacja](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [Discord](https://moralis.io/joindiscord/)
 - [Forum](https://forum.moralis.io/)
 
-**NFTPort -** **_API danych Ethereum i wybijania (mint)._**
+**NFTPort -** **_API danych i wybijania na Ethereum._**
 
 - [nftport.xyz](https://www.nftport.xyz/)
 - [Dokumentacja](https://docs.nftport.xyz/)
@@ -193,13 +192,13 @@ Te biblioteki abstrahują od dużej części złożoności bezpośredniej intera
 - [Dokumentacja](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-**Watchdata -** **_Zapewnia prosty i niezawodny dostęp API do blockchaina Ethereum._**
+**Watchdata -** **_Zapewnia prosty i niezawodny dostęp do API blockchaina Ethereum._**
 
 - [Watchdata](https://watchdata.io/)
 - [Dokumentacja](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
 
-**Codex -** **_Wzbogacone API danych blockchain w czasie rzeczywistym dla dziesiątek sieci._**
+**Codex -** **_Wzbogacone API danych blockchain w czasie rzeczywistym dla dziesiątek łańcuchów._**
 
 - [codex.io](https://www.codex.io/)
 - [Dokumentacja](https://docs.codex.io)
@@ -207,13 +206,12 @@ Te biblioteki abstrahują od dużej części złożoności bezpośredniej intera
 - [GitHub](https://github.com/Codex-Data)
 - [Discord](https://discord.com/invite/mFpUhT3vAq)
 
-**Covalent -** **_Wzbogacone API blockchain dla ponad 200 sieci._**
+**Covalent -** **_Wzbogacone API blockchain dla ponad 200 łańcuchów._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [Dokumentacja](https://www.covalenthq.com/docs/api/)
+- [Dokumentacja](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
-
 
 ## Dalsza lektura {#further-reading}
 
@@ -226,5 +224,4 @@ _Znasz zasób społeczności, który Ci pomógł? Edytuj tę stronę i dodaj go!
 
 ## Powiązane samouczki {#related-tutorials}
 
-- [Skonfiguruj Web3.js, aby korzystać z blockchaina Ethereum w JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instrukcje dotyczące konfiguracji Web3.js w Twoim projekcie._
-- [Wywoływanie inteligentnego kontraktu z JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Na przykładzie tokena DAI zobacz, jak wywoływać funkcje kontraktów za pomocą JavaScript._
+- [Komponenty serwerowe i agenci dla aplikacji Web3](/developers/tutorials/server-components/) _– Jak pisać komponenty serwerowe w TypeScript, które nasłuchują zdarzeń na blockchainie i odpowiadają transakcjami._

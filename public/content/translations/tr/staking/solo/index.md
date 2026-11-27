@@ -1,6 +1,6 @@
 ---
 title: ETH'nizi evden stake edin
-description: ETH'nizi evden stake etmeye nasıl başlayacağınıza dair genel bir bakış
+description: "ETH'nizi evden nasıl stake edersiniz: 32 ETH ile kendi Ethereum doğrulayıcınızı çalıştırın, doğrudan protokolden ödüller kazanın ve ağın güvenliğini sağlamaya yardımcı olun."
 lang: tr
 template: staking
 image: /images/staking/leslie-solo.png
@@ -104,7 +104,7 @@ Birden fazla doğrulayıcı çalıştırıyorsanız, ağdan çıkıp yeniden gir
 
 ## Staking Launchpad'de başlayın {#get-started-on-the-staking-launchpad}
 
-Staking Launchpad, bir staker olmanıza yardımcı olacak açık kaynaklı bir uygulamadır. İstemcilerinizi seçme, anahtarlarınızı oluşturma ve ETH'nizi staking depozitosu sözleşmesine yatırma konusunda size rehberlik edecektir. Doğrulayıcınızı güvenli bir şekilde kurmak için her şeyi kapsadığınızdan emin olmanız için bir kontrol listesi sağlanmıştır.
+Staking Launchpad, stake eden biri olmanıza yardımcı olacak açık kaynaklı bir uygulamadır. İstemcilerinizi seçme, anahtarlarınızı oluşturma ve ETH'nizi [staking depozitosu sözleşmesine](/staking/deposit-contract/) yatırma süreçlerinde size rehberlik edecektir. Doğrulayıcınızı güvenli bir şekilde kurmak için gereken her şeyi tamamladığınızdan emin olmanız için bir kontrol listesi sunulmaktadır.
 
 <StakingLaunchpadWidget />
 

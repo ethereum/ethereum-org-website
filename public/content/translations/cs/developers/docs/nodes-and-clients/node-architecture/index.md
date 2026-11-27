@@ -6,15 +6,15 @@ lang: cs
 
 Uzel Etherea se skládá ze dvou klientů: [exekučního klienta](/developers/docs/nodes-and-clients/#execution-clients) a [konsensuálního klienta](/developers/docs/nodes-and-clients/#consensus-clients). Aby mohl uzel navrhnout nový blok, musí také provozovat [klienta validátoru](#validators).
 
-Když Ethereum používalo [důkaz prací (PoW)](/developers/docs/consensus-mechanisms/pow/), k provozování plného uzlu Etherea stačil exekuční klient. Od implementace [důkazu podílem (PoS)](/developers/docs/consensus-mechanisms/pos/) však musí být exekuční klient používán společně s dalším softwarem zvaným [konsensuální klient](/developers/docs/nodes-and-clients/#consensus-clients).
+Když Ethereum používalo [důkaz prací](/developers/docs/consensus-mechanisms/pow/), k provozování plného uzlu Etherea stačil exekuční klient. Od implementace [důkazu podílem](/developers/docs/consensus-mechanisms/pos/) však musí být exekuční klient používán společně s dalším softwarem zvaným [konsensuální klient](/developers/docs/nodes-and-clients/#consensus-clients).
 
 Níže uvedený diagram ukazuje vztah mezi těmito dvěma klienty Etherea. Oba klienti se připojují ke svým vlastním peer-to-peer (P2P) sítím. Oddělené P2P sítě jsou potřeba, protože exekuční klienti šíří transakce přes svou P2P síť, což jim umožňuje spravovat jejich lokální transakční pool, zatímco konsensuální klienti šíří bloky přes svou P2P síť, což umožňuje konsensus a růst řetězce.
 
-![Diagram of Ethereum node architecture showing execution and consensus layers](node-architecture-text-background.png)
+<NodeArchitectureDiagram />
 
 _Existuje několik možností pro exekučního klienta, včetně Erigon, Nethermind a Besu_.
 
-Aby tato dvouklientová struktura fungovala, musí konsensuální klienti předávat balíčky transakcí exekučnímu klientovi. Exekuční klient provádí transakce lokálně, aby ověřil, že neporušují žádná pravidla Etherea a že navrhovaná aktualizace stavu Etherea je správná. Když je uzel vybrán jako producent bloku, jeho instance konsensuálního klienta si vyžádá balíčky transakcí od exekučního klienta, aby je zahrnula do nového bloku a provedla je za účelem aktualizace globálního stavu. Konsensuální klient řídí exekučního klienta prostřednictvím lokálního RPC připojení pomocí [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+Aby tato struktura dvou klientů fungovala, musí konsensuální klienti předávat balíčky transakcí exekučnímu klientovi. Exekuční klient provádí transakce lokálně, aby ověřil, že neporušují žádná pravidla Etherea a že navrhovaná aktualizace stavu Etherea je správná. Když je uzel vybrán jako producent bloku, jeho instance konsensuálního klienta si vyžádá balíčky transakcí od exekučního klienta, aby je zahrnula do nového bloku a provedla je za účelem aktualizace globálního stavu. Konsensuální klient řídí exekučního klienta prostřednictvím lokálního RPC připojení pomocí [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## Co dělá exekuční klient? {#execution-client}
 

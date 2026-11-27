@@ -300,9 +300,7 @@ _Conhece algum recurso da comunidade que o ajudou? Edite esta página e adicione
 
 ## Tutoriais relacionados {#related-tutorials}
 
-- [Configurar o Web3js para usar a blockchain do Ethereum em JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instruções para configurar o web3.js no seu projeto._
-- [Chamando um contrato inteligente a partir do JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Usando o token DAI, veja como chamar funções de contratos usando JavaScript._
-- [Enviando transações usando web3 e Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Passo a passo para enviar transações a partir do backend._
+- [Enviando transações usando Web3 e Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Passo a passo para enviar transações a partir do backend._
 
 ## Tutoriais: APIs JavaScript e WebSockets no Ethereum {#tutorials}
 

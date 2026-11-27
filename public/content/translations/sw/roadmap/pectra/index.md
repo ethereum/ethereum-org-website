@@ -1,7 +1,7 @@
 ---
 title: Pectra
 metaTitle: Prague-Electra (Pectra)
-description: Jifunze kuhusu sasisho la itifaki ya Pectra
+description: Pectra ilianza kutumika mnamo Mei 7, 2025. Jifunze kile ambacho sasisho hili la Ethereum lilibadilisha, ikiwa ni pamoja na akaunti mahiri za EIP-7702 na salio la juu zaidi la mthibitishaji la 2048 ETH.
 lang: sw
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -73,11 +73,11 @@ Prikampaili ni seti maalum ya mikataba mahiri iliyojengwa moja kwa moja kwenye M
 
 Prikampaili mpya inaongeza uwezo kwa kila msanidi kufanya operesheni za kificho kwa urahisi, ufanisi, na usalama akitumia tao hili, kwa mfano, kuthibitisha sahihi. Programu za mnyororoni zinazotegemea tao hili zinaweza kuwa na ufanisi zaidi wa gesi na salama zikitegemea prikampaili badala ya mkataba fulani maalum. Hii inatumika zaidi kwa programu zinazotaka kufikiri kuhusu wathibitishaji ndani ya EVM, k.m., mabwawa ya uwekaji dhamana, [uwekaji dhamana upya](/restaking/), wateja wepesi, madaraja lakini pia sifuri-maarifa.
 
-### Kutoa heshi za kitalu za kihistoria kutoka kwenye hali {#2935}
+### Kutoa heshi za kihistoria za kitalu kutoka kwenye hali {#2935}
 
-EVM kwa sasa inatoa msimbo wa operesheni wa `BLOCKHASH` ambao unawezesha wasanidi wa mkataba kupata heshi ya kitalu moja kwa moja katika tabaka la utekelezaji. Hata hivyo, hii ina kikomo kwa vitalu 256 vya mwisho pekee na inaweza kuwa tatizo kwa wateja wasio na hali katika siku zijazo.
+Kwa sasa EVM inatoa msimbo wa operesheni wa `BLOCKHASH` ambao unawawezesha wasanidi wa mkataba kupata heshi ya kitalu moja kwa moja kwenye tabaka la utekelezaji. Hata hivyo, hii ina kikomo cha vitalu 256 pekee vya mwisho na inaweza kuwa tatizo kwa wateja wasio na hali katika siku zijazo.
 
-[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) inaunda mkataba mpya wa mfumo unaoweza kutoa heshi za kitalu 8192 za mwisho kama nafasi za kuhifadhi. Hii inasaidia kuandaa itifaki kwa ajili ya siku zijazo kwa utekelezaji usio na hali na inakuwa na ufanisi zaidi wakati miti ya verkle inapitishwa. Hata hivyo, mbali na hili, mikusanyiko inaweza kufaidika na hili mara moja, kwani inaweza kuhoji mkataba moja kwa moja na dirisha refu zaidi la kihistoria.
+[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) inaunda mkataba mpya wa mfumo unaoweza kutoa heshi 8192 za mwisho za kitalu kama nafasi za hifadhi. Hili linasaidia kuandaa itifaki kwa ajili ya siku zijazo kwa utekelezaji usio na hali. Hata hivyo, mbali na hili, mikusanyiko inaweza kunufaika na hili mara moja, kwa kuwa inaweza kuhoji mkataba moja kwa moja kwa dirisha refu zaidi la kihistoria.
 
 ### Kuhamisha faharisi ya kamati nje ya Uthibitisho {#7549}
 

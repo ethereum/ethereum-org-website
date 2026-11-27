@@ -1,18 +1,18 @@
 {
   "version": 2,
   "sourceFile": "public/content/staking/solo/index.md",
-  "generatedAt": "2026-08-19T20:57:19.271Z",
-  "rootHash": "e0433f0763e7",
+  "generatedAt": "2026-11-27T10:09:16.375Z",
+  "rootHash": "e0d313755acb",
   "tree": {
-    "contentHash": "1e24a48ba19f",
-    "anchorHash": "56d65dc6df2b",
+    "contentHash": "a27dab8a3aed",
+    "anchorHash": "148852b48e05",
     "children": {
       "frontmatter:title": {
         "contentHash": "5b7cb5e07235",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "6a56e7bcbb82",
+        "contentHash": "aa2a666fa852",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -498,27 +498,37 @@
         ]
       },
       "get-started-on-the-staking-launchpad": {
-        "contentHash": "b891bd90ee12",
-        "anchorHash": "f5818652a990",
+        "contentHash": "812d58c566bd",
+        "anchorHash": "161f33347442",
         "labelHash": "d70762259872",
         "children": {
           "_label": {
             "contentHash": "d70762259872",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:0": {
-            "contentHash": "2a2befe907f5",
+          "prose:1": {
+            "contentHash": "681d36369e2b",
             "anchorHash": "e3b0c44298fc"
           },
-          "component:2": {
+          "link:0": {
+            "contentHash": "4280bcef3f5f",
+            "anchorHash": "76015326685c"
+          },
+          "prose:2": {
+            "contentHash": "ad82135a6e88",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:4": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:0",
-          "component:2"
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "component:4"
         ]
       },
       "node-tool-considerations": {
@@ -1098,5 +1108,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "9638e1f9f88c9e74ab4d15a11f3f6d1e782ff7f5"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

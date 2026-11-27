@@ -176,6 +176,7 @@ print("Addr Balance:", addr_balance)
 - [Alchemy - Solidity ERC20 টোকেনের গাইড](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## অন্যান্য বিনিমেয় টোকেন স্ট্যান্ডার্ড {#fungible-token-standards}
+
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
@@ -184,6 +185,5 @@ print("Addr Balance:", addr_balance)
 ## টিউটোরিয়াল: ইথেরিয়ামে ERC-20 দিয়ে তৈরি করুন {#tutorials}
 
 - [ERC-20 কন্ট্রাক্ট ওয়াক-থ্রু](/developers/tutorials/erc20-annotated-code/) _– ওপেনজেপেলিন ERC-20 কন্ট্রাক্ট বাস্তবায়নের একটি লাইন-বাই-লাইন টীকাযুক্ত ওয়াকথ্রু।_
-- [সেফটি রেলস সহ ERC-20](/developers/tutorials/erc20-with-safety-rails/) _– ব্যবহারকারীদের সাধারণ ভুল এড়াতে সাহায্য করার জন্য কীভাবে ERC-20 টোকেনে সুরক্ষামূলক ব্যবস্থা যোগ করতে হয়।_
-- [Ethers.js ব্যবহার করে টোকেন পাঠানো](/developers/tutorials/send-token-ethersjs/) _– Ethers.js ব্যবহার করে ERC-20 টোকেন হস্তান্তর করার জন্য নতুনদের উপযোগী একটি গাইড।_
-- [স্ক্যাম টোকেনগুলোর ব্যবহৃত কিছু কৌশল এবং কীভাবে সেগুলো শনাক্ত করবেন](/developers/tutorials/scam-token-tricks/) _– স্ক্যাম ERC-20 টোকেন প্যাটার্ন এবং কীভাবে সেগুলো শনাক্ত করতে হয় তার একটি বিস্তারিত আলোচনা।_
+- [নিরাপত্তা বেষ্টনীসহ ERC-20](/developers/tutorials/erc20-with-safety-rails/) _– ব্যবহারকারীদের সাধারণ ভুল এড়াতে সাহায্য করার জন্য ERC-20 টোকেনে কীভাবে সুরক্ষামূলক ব্যবস্থা যোগ করতে হয়।_
+- [স্ক্যাম টোকেন দ্বারা ব্যবহৃত কিছু কৌশল এবং কীভাবে সেগুলি শনাক্ত করা যায়](/developers/tutorials/scam-token-tricks/) _– স্ক্যাম ERC-20 টোকেন প্যাটার্ন এবং কীভাবে সেগুলি শনাক্ত করা যায় তার একটি বিস্তারিত বিশ্লেষণ।_

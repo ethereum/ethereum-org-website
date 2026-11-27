@@ -1,7 +1,7 @@
 ---
 title: "去中心化金融 (DeFi)"
 metaTitle: "什麼是 DeFi？ | 去中心化金融的優勢與用途"
-description: "以太坊上的去中心化金融 (DeFi) 概覽"
+description: "什麼是 DeFi？了解以太坊上的去中心化金融如何讓任何人在無需銀行的情況下進行借貸、借款、交易和賺取利息，以及其中涉及的風險。"
 lang: zh-tw
 template: use-cases
 image: /images/use-cases/defi.png

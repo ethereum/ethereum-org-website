@@ -12,7 +12,7 @@ Siamo una community accogliente che ti aiuterà a crescere e a formarti nell'eco
 ## Modi per contribuire {#ways-to-contribute}
 
 **Traduzioni**
-- [Segnala un errore di traduzione](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – Il [Programma di Traduzione](/contributing/translation-program/) è in fase di chiusura e non prevede più l'inserimento di nuovi traduttori
+- [Segnala un errore di traduzione](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – Il [Programma di traduzione](/contributing/translation-program/) si sta concludendo e non prevede più l'inserimento di nuovi traduttori
 
 **Sviluppo**
 - [Lavora su una issue aperta](https://github.com/ethereum/ethereum-org-website/issues) – Lavori che abbiamo identificato e che devono essere svolti
@@ -22,13 +22,14 @@ Siamo una community accogliente che ti aiuterà a crescere e a formarti nell'eco
 
 **Contenuti**
 - [Crea/modifica contenuti](/contributing/#how-to-update-content) – Suggerisci nuove pagine o apporta modifiche a quelle già presenti
-- [Scrivi un articolo per costruttori](/contributing/adding-articles/) - Contribuisci con un articolo per la sezione [Novità](/latest/)
+- [Scrivi un articolo per costruttori](/contributing/adding-articles/) - Contribuisci con un articolo per la sezione [Ultime novità](/latest/)
 - [Aggiungi risorse della community](/contributing/content-resources/) – Aggiungi un articolo o una risorsa utile a una pagina pertinente
 - [Suggerisci un report](/contributing/adding-reports/) - Suggerisci un report di ricerca per la pagina [Report](/reports/)
-- [Condividi la tua storia](/contributing/adding-community-stories/) - Invia una storia sulle tue esperienze personali con l'open source e le tecnologie rifugio, su come l'ecosistema di Ethereum ha avuto un impatto sulla tua vita o su come tu e la tua community utilizzate Ethereum
-- [Quiz](/contributing/quizzes/) – Aggiungi, aggiorna ed elimina le banche dati delle domande dei quiz per una pagina pertinente
+- [Condividi la tua storia](/contributing/adding-community-stories/) - Invia una storia sulle tue esperienze personali con le tecnologie open source e rifugio, su come l'ecosistema di Ethereum ha avuto un impatto sulla tua vita o su come tu e la tua community utilizzate Ethereum
+- [Quiz](/contributing/quizzes/) – Aggiungi, aggiorna ed elimina banche di domande per i quiz per una pagina pertinente
 - [Suggerisci una risorsa di design](/contributing/design/adding-design-resources/) – Aggiungi, aggiorna ed elimina risorse di design utili
 - [Suggerisci un video](/contributing/adding-videos/) – Suggerisci un video educativo per la galleria video
+- [Aggiungi un termine al glossario](/contributing/adding-glossary-terms/) – Aggiungi o aggiorna un termine nel [glossario di Ethereum](/glossary/)
 
 **Idee per funzionalità**
 - [Richiedi una funzionalità](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Facci sapere se hai idee per una nuova funzionalità o un nuovo design
@@ -37,13 +38,13 @@ Siamo una community accogliente che ti aiuterà a crescere e a formarti nell'eco
 - [Aggiungi un exchange](/contributing/adding-exchanges/) – Aggiungi un exchange al nostro [strumento di ricerca degli exchange](/get-eth/#country-picker)
 - [Aggiungi un prodotto](/contributing/adding-products/) – Aggiungi un'applicazione decentralizzata (dapp) o un portafoglio a una pagina pertinente
 - [Aggiungi strumenti per sviluppatori](/contributing/adding-developer-tools/) – Aggiungi uno strumento per sviluppatori a una pagina pertinente
-- [Aggiungi un layer 2 (l2)](/contributing/adding-layer-2s/) – Aggiungi un layer 2 (l2) a una pagina pertinente
+- [Aggiungi un layer 2](/contributing/adding-layer-2s/) – Aggiungi un layer 2 a una pagina pertinente
 - [Aggiungi un prodotto o servizio di staking](/contributing/adding-staking-products/) – Aggiungi un progetto che aiuta a facilitare il solo staking, lo staking in pool o lo staking come servizio
 - [Aggiungi un portafoglio](/contributing/adding-wallets/) – Aggiungi un portafoglio per la [pagina di ricerca dei portafogli](/wallets/find-wallet/)
-- [Suggerisci un progetto per la nostra pagina DeSci](/contributing/adding-desci-projects/) – Aggiungi un progetto basato su Ethereum che contribuisce alla scienza decentralizzata (desci)
+- [Suggerisci un progetto per la nostra pagina DeSci](/contributing/adding-desci-projects/) – Aggiungi un progetto basato su Ethereum che contribuisce alla scienza decentralizzata
 - [Aggiungi una risorsa](/contributing/adding-resources/) – Aggiungi una risorsa utile a qualsiasi pagina pertinente
 
-Hai delle domande? 🤔 Unisciti al nostro [server Discord](/discord/)
+Hai domande? 🤔 Unisciti al nostro [server Discord](/discord/)
 
 ## Ottimi primi compiti per iniziare a contribuire {#good-first-tasks-to-start-contributing}
 
@@ -100,19 +101,9 @@ Se il tuo contributo viene unito in ethereum.org, avrai la possibilità di risca
 3. Attendi che un membro del nostro team ti invii un link al tuo OAT.
 4. Riscatta il tuo OAT!
 
-Dovresti usare solo portafogli di autocustodia per riscattare gli OAT. Non utilizzare account di exchange o altri account di cui non possiedi le chiavi private, poiché questi non ti consentiranno di accedere e gestire i tuoi OAT.
+Dovresti usare solo portafogli di autocustodia per riscattare gli OAT. Non usare account di exchange o altri account di cui non possiedi le chiavi private, poiché questi non ti permetteranno di accedere e gestire i tuoi OAT.
 
-## Riscatta il tuo GitPOAP {#claim-gitpoap}
-
-GitPOAP riconoscerà automaticamente anche il tuo contributo unito e ti permetterà di coniare un POAP separato e unico per i contributori sulla loro stessa piattaforma!
-
-
-### Come riscattare {#how-to-claim-2}
-
-1. Visita [GitPOAP](https://www.gitpoap.io).
-2. Connettiti con il tuo portafoglio o anche con la tua email tramite l'opzione di accesso.
-3. Cerca il tuo nome utente GitHub, indirizzo ETH, nomi Ethereum Name Service (ENS) o qualsiasi GitPOAP per verificare se sei idoneo.
-4. Se il tuo account GitHub è idoneo, sarai in grado di coniare un GitPOAP!
+<LinkWithArrow href="/collectibles/">Visualizza i tuoi oggetti da collezione di ethereum.org</LinkWithArrow>
 
 ## Contributori {#contributors}
 

@@ -1,6 +1,6 @@
 ---
 title: "డేటా మరియు విశ్లేషణలు"
-description: "మీ వికేంద్రీకృత అప్లికేషన్ (dapp)లలో ఉపయోగించడానికి ఆన్‌చైన్ విశ్లేషణలు మరియు డేటాను ఎలా పొందాలి"
+description: "మీ dapp కోసం ఆన్‌చైన్ డేటాను ఎలా పొందాలి: ఎథీరియం డేటాను క్వెరీ చేయడానికి మరియు విశ్లేషించడానికి ఇండెక్సర్‌లు, ఉపగ్రాఫ్‌లు, బ్లాక్ ఎక్స్‌ప్లోరర్‌లు, SQL అనలిటిక్స్ ప్లాట్‌ఫారమ్‌లు మరియు APIలు."
 lang: te
 ---
 
@@ -75,9 +75,9 @@ EVM క్వెరీ లాంగ్వేజ్ (EQL) అనేది EVM (�
 ## తదుపరి పఠనం {#further-reading}
 
 - [క్రిప్టో డేటాను అన్వేషించడం I: డేటా ఫ్లో ఆర్కిటెక్చర్‌లు](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
-- [Graph నెట్‌వర్క్ అవలోకనం](https://thegraph.com/docs/en/about/)
-- [Graph క్వెరీ ప్లేగ్రౌండ్](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
-- [EtherScanలో API కోడ్ ఉదాహరణలు](https://etherscan.io/apis#contracts)
+- [గ్రాఫ్ నెట్‌వర్క్ అవలోకనం](https://thegraph.com/docs/en/about/)
+- [గ్రాఫ్ ఎక్స్‌ప్లోరర్](https://thegraph.com/explorer)
+- [Etherscanలో API కోడ్ ఉదాహరణలు](https://etherscan.io/apis#contracts)
 - [Blockscoutలో API డాక్యుమెంటేషన్](https://docs.blockscout.com/devs/apis)
 - [Beaconcha.in బీకన్ చైన్ ఎక్స్‌ప్లోరర్](https://beaconcha.in)
 - [Dune బేసిక్స్](https://docs.dune.com/#dune-basics)

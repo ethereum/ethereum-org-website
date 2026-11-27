@@ -1,6 +1,6 @@
 ---
 title: "Данные и аналитика"
-description: "Как получать ончейн-аналитику и данные для использования в ваших децентрализованных приложениях (dapp)"
+description: "Как получить ончейн данные для вашего dapp: индексаторы, подграфы, обозреватели блоков, платформы SQL-аналитики и API для запросов и анализа данных Эфириума."
 lang: ru
 ---
 
@@ -74,9 +74,9 @@ EVM Query Language (EQL) — это SQL-подобный язык, предна�
 Для начала следуйте [краткому руководству по HyperIndex](https://docs.envio.dev/docs/HyperIndex/quickstart), чтобы создать, развернуть и сделать запрос к индексатору.
 ## Дополнительная литература {#further-reading}
 
-- [Изучение криптоданных I: архитектуры потоков данных](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
+- [Изучение криптовалютных данных I: архитектуры потоков данных](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
 - [Обзор сети Graph](https://thegraph.com/docs/en/about/)
-- [Песочница запросов Graph](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
+- [Обозреватель Graph](https://thegraph.com/explorer)
 - [Примеры кода API на Etherscan](https://etherscan.io/apis#contracts)
 - [Документация по API на Blockscout](https://docs.blockscout.com/devs/apis)
 - [Обозреватель сигнальной цепочки Beaconcha.in](https://beaconcha.in)

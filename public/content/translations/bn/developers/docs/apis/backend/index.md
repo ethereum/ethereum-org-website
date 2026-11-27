@@ -66,7 +66,7 @@ lang: bn
 **Infura -** **_একটি পরিষেবা হিসাবে ইথেরিয়াম এপিআই।_**
 
 - [infura.io](https://infura.io)
-- [ডকুমেন্টেশন](https://docs.infura.io/api)
+- [ডকুমেন্টেশন](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _সাশ্রয়ী ইথেরিয়াম ভার্চুয়াল মেশিন (EVM) জেসন-আরপিসি প্রোভাইডার_**
@@ -77,7 +77,7 @@ lang: bn
 **NOWNodes - _ফুল নোড এবং ব্লক এক্সপ্লোরার।_**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [ডকুমেন্টেশন](https://nownodes.gitbook.io/documentation)
+- [ডকুমেন্টেশন](https://docs.nownodes.io/)
 
 **QuickNode -** **_একটি পরিষেবা হিসাবে ব্লকচেইন পরিকাঠামো।_**
 
@@ -145,7 +145,7 @@ lang: bn
 
 ### ব্লকচেইন পরিষেবা {#blockchain-services}
 
-**BlockCypher -** **_ইথেরিয়াম ওয়েব API।_**
+**BlockCypher -** **_ইথেরিয়াম ওয়েব এপিআই।_**
 
 - [blockcypher.com](https://www.blockcypher.com/)
 - [ডকুমেন্টেশন](https://www.blockcypher.com/dev/ethereum/)
@@ -160,46 +160,45 @@ lang: bn
 
 - [chainstack.com](https://chainstack.com)
 - [ডকুমেন্টেশন](https://docs.chainstack.com/)
-- [ইথেরিয়াম API রেফারেন্স](https://docs.chainstack.com/reference/ethereum-getting-started)
+- [ইথেরিয়াম এপিআই রেফারেন্স](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**Coinbase Cloud Node -** **_ব্লকচেইন পরিকাঠামো API।_**
+**Coinbase Cloud Node -** **_ব্লকচেইন পরিকাঠামো এপিআই।_**
 
 - [কয়েনবেস ক্লাউড নোড](https://www.coinbase.com/developer-platform)
 - [ডকুমেন্টেশন](https://docs.cdp.coinbase.com/)
 
-**DataHub by Figment -** **_ইথেরিয়াম মেইননেট এবং টেস্টনেটগুলির সাথে Web3 API পরিষেবা।_**
+**DataHub by Figment -** **_ইথেরিয়াম মেইননেট এবং টেস্টনেটগুলির সাথে Web3 এপিআই পরিষেবা।_**
 
 - [DataHub](https://www.figment.io/)
 - [ডকুমেন্টেশন](https://docs.figment.io/)
 
-**Moralis -** **_এন্টারপ্রাইজ-গ্রেড EVM API প্রোভাইডার।_**
+**Moralis -** **_এন্টারপ্রাইজ-গ্রেড EVM এপিআই প্রোভাইডার।_**
 
 - [moralis.io](https://moralis.io)
 - [ডকুমেন্টেশন](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [ডিসকর্ড](https://moralis.io/joindiscord/)
 - [ফোরাম](https://forum.moralis.io/)
 
-**NFTPort -** **_ইথেরিয়াম ডেটা এবং মিন্ট API।_**
+**NFTPort -** **_ইথেরিয়াম ডেটা এবং মিন্ট এপিআই।_**
 
 - [nftport.xyz](https://www.nftport.xyz/)
 - [ডকুমেন্টেশন](https://docs.nftport.xyz/)
 - [GitHub](https://github.com/nftport/)
 - [ডিসকর্ড](https://discord.com/invite/K8nNrEgqhE)
 
-**Tokenview -** **_সাধারণ মাল্টি-ক্রিপ্টো ব্লকচেইন API প্ল্যাটফর্ম।_**
+**Tokenview -** **_সাধারণ মাল্টি-ক্রিপ্টো ব্লকচেইন এপিআই প্ল্যাটফর্ম।_**
 
 - [services.tokenview.io](https://services.tokenview.io/)
 - [ডকুমেন্টেশন](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-**Watchdata -** **_ইথেরিয়াম ব্লকচেইনে সহজ এবং নির্ভরযোগ্য API অ্যাক্সেস প্রদান করে।_**
+**Watchdata -** **_ইথেরিয়াম ব্লকচেইনে সহজ এবং নির্ভরযোগ্য এপিআই অ্যাক্সেস প্রদান করে।_**
 
 - [Watchdata](https://watchdata.io/)
 - [ডকুমেন্টেশন](https://docs.watchdata.io/)
 - [ডিসকর্ড](https://discord.com/invite/TZRJbZ6bdn)
 
-**Codex -** **_কয়েক ডজন চেইন জুড়ে রিয়েল-টাইম, সমৃদ্ধ ব্লকচেইন ডেটা API।_**
+**Codex -** **_কয়েক ডজন চেইন জুড়ে রিয়েল-টাইম, সমৃদ্ধ ব্লকচেইন ডেটা এপিআই।_**
 
 - [codex.io](https://www.codex.io/)
 - [ডকুমেন্টেশন](https://docs.codex.io)
@@ -207,13 +206,12 @@ lang: bn
 - [GitHub](https://github.com/Codex-Data)
 - [ডিসকর্ড](https://discord.com/invite/mFpUhT3vAq)
 
-**Covalent -** **_200+ চেইনের জন্য সমৃদ্ধ ব্লকচেইন API।_**
+**Covalent -** **_200+ চেইনের জন্য সমৃদ্ধ ব্লকচেইন এপিআই।_**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [ডকুমেন্টেশন](https://www.covalenthq.com/docs/api/)
+- [ডকুমেন্টেশন](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [ডিসকর্ড](https://www.covalenthq.com/discord/)
-
 
 ## আরও পড়ুন {#further-reading}
 
@@ -226,5 +224,4 @@ _এমন কোনো কমিউনিটি রিসোর্স সম্
 
 ## সম্পর্কিত টিউটোরিয়াল {#related-tutorials}
 
-- [JavaScript-এ ইথেরিয়াম ব্লকচেইন ব্যবহার করতে Web3.js সেট আপ করুন](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– আপনার প্রজেক্টে Web3.js সেট আপ করার নির্দেশিকা।_
-- [JavaScript থেকে একটি স্মার্ট কন্ট্রাক্ট কল করা](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI টোকেন ব্যবহার করে, দেখুন কীভাবে JavaScript ব্যবহার করে কন্ট্রাক্ট ফাংশন কল করতে হয়।_
+- [Web3 অ্যাপের জন্য সার্ভার কম্পোনেন্ট এবং এজেন্ট](/developers/tutorials/server-components/) _– কীভাবে TypeScript সার্ভার কম্পোনেন্ট লিখতে হয় যা ব্লকচেইন ইভেন্ট শোনে এবং ট্রানজ্যাকশনের মাধ্যমে প্রতিক্রিয়া জানায়।_

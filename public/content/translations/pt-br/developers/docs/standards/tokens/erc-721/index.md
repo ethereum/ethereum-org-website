@@ -248,5 +248,4 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [Passo a passo do contrato ERC-721 em Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _– Um passo a passo anotado de um contrato de NFT ERC-721 completo escrito em Vyper._
 - [Como escrever e implantar um NFT (Parte 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– Guia passo a passo para escrever e implantar seu primeiro contrato inteligente ERC-721._
 - [Como cunhar um NFT (Parte 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Como cunhar um NFT ERC-721 usando seu contrato inteligente implantado e a Web3._
-- [Como visualizar seu NFT em sua carteira (Parte 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Como exibir seu NFT cunhado na MetaMask após a implantação._
-- [Tutorial de cunhador de NFT](/developers/tutorials/nft-minter/) _– Construa um dapp de cunhagem de NFT full-stack com um frontend em React, MetaMask e Alchemy._
+- [Como visualizar seu NFT na sua carteira (Parte 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Como exibir seu NFT cunhado na MetaMask após a implantação._

@@ -1,6 +1,6 @@
 ---
 title: "以太坊技術簡介"
-description: "專為 dapp 開發者編寫的以太坊核心概念簡介。"
+description: "專為開發者編寫的以太坊技術簡介：逐步解析區塊鏈、帳戶、交易、EVM、gas 與智能合約。"
 lang: zh-tw
 ---
 

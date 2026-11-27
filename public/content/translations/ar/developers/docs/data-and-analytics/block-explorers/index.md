@@ -21,12 +21,13 @@ sidebarDepth: 3
 
 ## الخدمات {#services}
 
-- [Blockchair](https://blockchair.com/ethereum) - مستكشف إيثيريوم خاص. يستخدم أيضًا لفرز وتصفية بيانات مجمع الذاكرة (mempool). متوفر باللغات الإسبانية والفرنسية والإيطالية والهولندية والبرتغالية والروسية والصينية والفارسية
+- [Blockchair](https://blockchair.com/ethereum) - مستكشف إيثيريوم خاص. يستخدم أيضًا لفرز وتصفية بيانات (مجمع الذاكرة). متوفر باللغات الإسبانية والفرنسية والإيطالية والهولندية والبرتغالية والروسية والصينية والفارسية
 - [Chainlens](https://www.chainlens.com/)
-- [DexGuru Block Explorer](https://ethereum.dex.guru/)
+- [مستكشف الكتل DexGuru](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Etherscan](https://etherscan.io/) - متوفر أيضًا باللغات الصينية والكورية والروسية واليابانية
 - [Ethplorer](https://ethplorer.io/) - مستكشف كتل يركز على الرموز المميزة. متوفر أيضًا باللغات الصينية والإسبانية والفرنسية والتركية والروسية والكورية والفيتنامية
+- [Ethscanner](https://ethscanner.io/) - مقدم من Routescan. يساهم بالعقود التي تم التحقق منها في مجموعة البيانات المفتوحة لتحالف المتحققين (Verifier Alliance) ويعرض المعاملات عبر السلاسل
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)

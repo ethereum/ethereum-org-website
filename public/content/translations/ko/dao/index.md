@@ -1,7 +1,7 @@
 ---
 title: "DAO란 무엇인가요?"
 metaTitle: "DAO란 무엇인가요? | 탈중앙화 자율 조직 (DAO)"
-description: "이더리움의 DAO 개요"
+description: "DAO란 무엇인가요? 탈중앙화 자율 조직(DAO)이 이더리움에서 스마트 컨트랙트와 토큰을 사용하여 어떻게 의사결정을 내리고 공동 자금을 관리하는지 알아보세요."
 lang: ko
 template: use-cases
 sidebarDepth: 2

@@ -1,7 +1,7 @@
 ---
 title: Pengantar Proposal Peningkatan Ethereum (EIP)
 metaTitle: Proposal Peningkatan Ethereum (EIP)
-description: Informasi dasar yang Anda butuhkan untuk memahami EIP
+description: Apa itu Proposal Peningkatan Ethereum (EIP)? Pelajari bagaimana perubahan pada Ethereum diusulkan, didiskusikan, dan diadopsi, serta bagaimana Anda dapat berpartisipasi.
 lang: id
 ---
 
@@ -15,7 +15,7 @@ Siapa pun di dalam komunitas Ethereum memiliki kemampuan untuk membuat EIP. Pand
 
 EIP memainkan peran sentral dalam bagaimana perubahan terjadi dan didokumentasikan di Ethereum. EIP adalah cara bagi orang-orang untuk mengajukan proposal, memperdebatkan, dan mengadopsi perubahan. Ada [berbagai jenis EIP](https://eips.ethereum.org/EIPS/eip-1#eip-types), termasuk EIP inti untuk perubahan protokol tingkat rendah yang memengaruhi konsensus dan mewajibkan peningkatan jaringan seperti [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), dan ERC untuk standar aplikasi seperti [EIP-20](https://eips.ethereum.org/EIPS/eip-20) dan [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
-Setiap peningkatan jaringan terdiri dari serangkaian EIP yang perlu diimplementasikan oleh setiap [klien Ethereum](/learn/#clients-and-nodes) di jaringan. Ini berarti bahwa untuk tetap berada dalam konsensus dengan klien lain di Mainnet Ethereum, pengembang klien perlu memastikan bahwa mereka telah mengimplementasikan semua EIP yang diwajibkan.
+Setiap peningkatan jaringan terdiri dari serangkaian EIP yang perlu diimplementasikan oleh setiap [klien Ethereum](/developers/docs/nodes-and-clients/) di jaringan. Ini berarti bahwa untuk tetap berada dalam konsensus dengan klien lain di Mainnet Ethereum, pengembang klien perlu memastikan bahwa mereka telah mengimplementasikan semua EIP yang diwajibkan.
 
 Selain memberikan spesifikasi teknis untuk perubahan, EIP adalah unit di mana tata kelola terjadi di Ethereum: siapa pun bebas untuk mengajukan proposal, dan kemudian berbagai pemangku kepentingan di komunitas akan berdebat untuk menentukan apakah proposal tersebut harus diadopsi sebagai standar atau disertakan dalam peningkatan jaringan. Karena EIP non-inti tidak harus diadopsi oleh semua aplikasi (misalnya, dimungkinkan untuk membuat token sepadan yang tidak mengimplementasikan EIP-20), tetapi EIP inti harus diadopsi secara luas (karena semua node harus ditingkatkan untuk tetap menjadi bagian dari jaringan yang sama), EIP inti mewajibkan konsensus yang lebih luas di dalam komunitas daripada EIP non-inti.
 

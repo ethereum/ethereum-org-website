@@ -1,6 +1,6 @@
 ---
 title: "탈중앙화 신원증명"
-description: "탈중앙화 신원증명이란 무엇이며 왜 중요할까요?"
+description: "탈중앙화 신원증명이란 무엇일까요? 중앙화된 제공자에 의존하지 않고 이더리움을 통해 어떻게 신원, 자격증명 및 데이터를 소유하고 통제할 수 있는지 알아보세요."
 lang: ko
 template: use-cases
 sidebarDepth: 2

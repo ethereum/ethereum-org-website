@@ -4,7 +4,7 @@ description: "Dowiedz się, jak programować dla Ethereum przy użyciu projektó
 lang: pl
 ---
 
-JavaScript jest jednym z najpopularniejszych języków w ekosystemie Ethereum. W rzeczywistości istnieje [zespół](https://github.com/ethereumjs) poświęcony przeniesieniu jak największej części Ethereum do języka JavaScript.
+JavaScript jest jednym z najpopularniejszych języków w ekosystemie Ethereum, z implementacjami w językach JavaScript i TypeScript wszystkiego, od podstawowych prymitywów protokołu po produkcyjnego klienta konsensusu.
 
 Istnieją możliwości pisania w języku JavaScript (lub czymś podobnym) na [wszystkich poziomach stosu](/developers/docs/ethereum-stack/).
 
@@ -50,12 +50,17 @@ Jeśli wolisz czytać kod, ten JavaScript może być świetną alternatywą dla 
 **Sprawdź EVM**  
 [`@ethereumjs/evm`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm)
 
-### Węzły i klienci {#nodes-and-clients}
+### Węzły i klienty {#nodes-and-clients}
 
-Klient EthereumJS jest w fazie aktywnego rozwoju, co pozwala zagłębić się w to, jak działają klienci Ethereum w języku, który rozumiesz: JavaScript!
+[Lodestar](https://lodestar.chainsafe.io/) to gotowy do użytku produkcyjnego klient konsensusu napisany w języku TypeScript i utrzymywany przez ChainSafe. Zawiera węzeł Beacon i klienta walidatora, i jest dobrym miejscem, aby zobaczyć, jak działa konsensus dowodu stawki w Ethereum w języku, który znasz.
 
-**Sprawdź klienta**  
-[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**Sprawdź Lodestar**  
+[`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
+
+Po stronie warstwy wykonawczej klient EthereumJS jest przestarzały i zarchiwizowany, ale jego kod źródłowy pozostaje dostępny, aby móc sprawdzić, jak działa klient Ethereum w języku JavaScript.
+
+**Sprawdź zarchiwizowanego klienta**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/archive/client)
 
 ## Inne projekty {#other-projects}
 

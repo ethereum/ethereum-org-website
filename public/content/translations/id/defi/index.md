@@ -1,7 +1,7 @@
 ---
 title: Keuangan terdesentralisasi (DeFi)
 metaTitle: Apa itu DeFi? | Manfaat dan Penggunaan Keuangan Terdesentralisasi
-description: Gambaran umum tentang DeFi di Ethereum
+description: Apa itu DeFi? Pelajari bagaimana keuangan terdesentralisasi di Ethereum memungkinkan siapa saja untuk meminjamkan, meminjam, berdagang, dan mendapatkan bunga tanpa bank, serta risiko yang terlibat.
 lang: id
 template: use-cases
 image: /images/use-cases/defi.png

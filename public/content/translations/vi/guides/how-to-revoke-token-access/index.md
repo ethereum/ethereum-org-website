@@ -1,6 +1,6 @@
 ---
 title: "Cách thu hồi quyền truy cập của hợp đồng thông minh vào quỹ tiền mã hóa của bạn"
-description: "Hướng dẫn cách thu hồi quyền truy cập token của các hợp đồng thông minh có tính bóc lột"
+description: "Hướng dẫn từng bước để thu hồi quyền chấp thuận token: tìm xem hợp đồng thông minh nào có thể chi tiêu tiền mã hóa của bạn và xóa quyền truy cập để bảo vệ quỹ của bạn."
 lang: vi
 ---
 

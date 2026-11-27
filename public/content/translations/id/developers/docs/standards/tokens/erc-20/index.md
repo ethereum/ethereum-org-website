@@ -177,6 +177,7 @@ Beberapa standar alternatif telah muncul dari masalah ini seperti [ERC-223](/dev
 - [Alchemy - Panduan untuk Token ERC20 Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## Standar token sepadan lainnya {#fungible-token-standards}
+
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
@@ -185,6 +186,5 @@ Beberapa standar alternatif telah muncul dari masalah ini seperti [ERC-223](/dev
 ## Tutorial: Membangun dengan ERC-20 di Ethereum {#tutorials}
 
 - [Panduan Kontrak ERC-20](/developers/tutorials/erc20-annotated-code/) _– Panduan beranotasi baris demi baris dari implementasi kontrak ERC-20 OpenZeppelin._
-- [ERC-20 dengan Rel Pengaman](/developers/tutorials/erc20-with-safety-rails/) _– Cara menambahkan pengamanan pada token ERC-20 untuk membantu pengguna menghindari kesalahan umum._
-- [Mengirim Token Menggunakan Ethers.js](/developers/tutorials/send-token-ethersjs/) _– Panduan ramah pemula untuk mentransfer token ERC-20 menggunakan Ethers.js._
-- [Beberapa trik yang digunakan oleh token penipuan dan cara mendeteksinya](/developers/tutorials/scam-token-tricks/) _– Eksplorasi mendetail tentang pola token ERC-20 penipuan dan cara mengidentifikasinya._
+- [ERC-20 dengan Pagar Pengaman](/developers/tutorials/erc20-with-safety-rails/) _– Cara menambahkan perlindungan pada token ERC-20 untuk membantu pengguna menghindari kesalahan umum._
+- [Beberapa trik yang digunakan oleh token penipuan dan cara mendeteksinya](/developers/tutorials/scam-token-tricks/) _– Pembahasan mendalam tentang pola token ERC-20 penipuan dan cara mengidentifikasinya._

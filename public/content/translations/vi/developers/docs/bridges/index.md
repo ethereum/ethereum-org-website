@@ -1,10 +1,10 @@
 ---
 title: "Cầu nối"
-description: "Tổng quan về cầu nối dành cho nhà phát triển"
+description: "Hướng dẫn dành cho nhà phát triển về cầu nối: cách hoạt động của việc truyền thông điệp chuỗi chéo và cầu nối token, các loại cầu nối và giả định tin cậy, cũng như cách tích hợp chúng vào các dapp."
 lang: vi
 ---
 
-Với sự phát triển mạnh mẽ của các chuỗi khối lớp 1 (l1) và các giải pháp [mở rộng quy mô](/developers/docs/scaling/) lớp 2 (l2), cùng với số lượng ngày càng tăng các ứng dụng phi tập trung (dapp) hoạt động chuỗi chéo, nhu cầu giao tiếp và di chuyển tài sản qua các chuỗi đã trở thành một phần thiết yếu của cơ sở hạ tầng mạng lưới. Các loại cầu nối khác nhau tồn tại để giúp biến điều này thành hiện thực.
+Với sự phát triển mạnh mẽ của các chuỗi khối lớp 1 (L1) và các giải pháp [mở rộng quy mô](/developers/docs/scaling/) lớp 2 (L2), cùng với số lượng ngày càng tăng các ứng dụng phi tập trung (dapp) hoạt động chuỗi chéo, nhu cầu giao tiếp và di chuyển tài sản qua các chuỗi đã trở thành một phần thiết yếu của cơ sở hạ tầng mạng lưới. Các loại cầu nối khác nhau tồn tại để giúp biến điều này thành hiện thực.
 
 ## Nhu cầu về cầu nối {#need-for-bridges}
 
@@ -24,7 +24,7 @@ Các chuỗi khối có những điểm mạnh, điểm yếu và cách tiếp c
 
 - việc chuyển bất kỳ dữ liệu, thông tin và tài sản nào qua các chuỗi.
 - mở khóa các tính năng và trường hợp sử dụng mới cho các giao thức vì các cầu nối mở rộng không gian thiết kế cho những gì các giao thức có thể cung cấp. Ví dụ: một giao thức để khai thác lợi suất ban đầu được triển khai trên [Mạng chính Ethereum](/) có thể cung cấp các nhóm thanh khoản trên tất cả các chuỗi tương thích với EVM.
-- cơ hội tận dụng thế mạnh của các chuỗi khối khác nhau. Ví dụ: các nhà phát triển có thể hưởng lợi từ mức phí thấp hơn do các giải pháp lớp 2 (l2) khác nhau cung cấp bằng cách triển khai các dapp của họ trên các bản cuộn và chuỗi phụ (sidechain), và người dùng có thể sử dụng cầu nối qua lại giữa chúng.
+- cơ hội tận dụng thế mạnh của các chuỗi khối khác nhau. Ví dụ: các nhà phát triển có thể hưởng lợi từ mức phí thấp hơn do các giải pháp lớp 2 (L2) khác nhau cung cấp bằng cách triển khai các dapp của họ trên các bản cuộn và chuỗi phụ (sidechain), và người dùng có thể sử dụng cầu nối qua lại giữa chúng.
 - sự hợp tác giữa các nhà phát triển từ các hệ sinh thái chuỗi khối khác nhau để xây dựng các sản phẩm mới.
 - thu hút người dùng và cộng đồng từ các hệ sinh thái khác nhau đến với các dapp của họ.
 
@@ -123,15 +123,15 @@ Nếu một dapp đi theo con đường tích hợp một cầu nối hoặc m�
 ## Đọc thêm {#further-reading}
 
 - [Cầu nối chuỗi khối](/bridges/) – ethereum.org
-- [Khung rủi ro cầu nối L2BEAT](https://l2beat.com/bridges/summary)
-- [Cầu nối chuỗi khối: Xây dựng mạng lưới của các mạng lưới tiền mã hóa](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 tháng 9, 2021 – Dmitriy Berenzon
-- [Bộ ba bất khả thi về khả năng tương tác](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1 tháng 10, 2021 – Arjun Bhuptani
-- [Cụm: Cách các cầu nối tin cậy & tối thiểu hóa niềm tin định hình bối cảnh đa chuỗi](https://blog.celestia.org/clusters/) - 4 tháng 10, 2021 – Mustafa Al-Bassam
-- [LI.FI: Với các cầu nối, niềm tin là một phổ](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28 tháng 4, 2022 – Arjun Chand
-- [Trạng thái của các giải pháp khả năng tương tác Rollup](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 tháng 6, 2024 – Alex Hook
-- [Khai thác bảo mật chia sẻ cho khả năng tương tác chuỗi chéo an toàn: Các ủy ban trạng thái Lagrange và hơn thế nữa](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 tháng 6, 2024 – Emmanuel Awosika
+- [Khung rủi ro cầu nối ETHBEAT](https://ethbeat.org/interop/summary)
+- [Cầu nối chuỗi khối: Xây dựng mạng lưới của các mạng lưới tiền mã hóa](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 tháng 9 năm 2021 – Dmitriy Berenzon
+- [Bộ ba bất khả thi về khả năng tương tác](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1 tháng 10 năm 2021 – Arjun Bhuptani
+- [Cụm: Cách các cầu nối tin cậy và tối thiểu hóa niềm tin định hình bối cảnh đa chuỗi](https://blog.celestia.org/clusters/) - 4 tháng 10 năm 2021 – Mustafa Al-Bassam
+- [LI.FI: Với các cầu nối, niềm tin là một phổ](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28 tháng 4 năm 2022 – Arjun Chand
+- [Trạng thái của các giải pháp khả năng tương tác Rollup](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 tháng 6 năm 2024 – Alex Hook
+- [Khai thác bảo mật chia sẻ cho khả năng tương tác chuỗi chéo an toàn: Ủy ban trạng thái Lagrange và hơn thế nữa](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 tháng 6 năm 2024 – Emmanuel Awosika
 
-Ngoài ra, đây là một số bài thuyết trình sâu sắc của [James Prestwich](https://twitter.com/_prestwich) có thể giúp phát triển sự hiểu biết sâu sắc hơn về các cầu nối:
+Ngoài ra, dưới đây là một số bài thuyết trình sâu sắc của [James Prestwich](https://twitter.com/_prestwich) có thể giúp bạn hiểu sâu hơn về các cầu nối:
 
 - [Xây dựng cầu nối, không phải những khu vườn có tường bao quanh](https://youtu.be/ZQJWMiX4hT0)
 - [Phân tích các cầu nối](https://youtu.be/b0mC-ZqN8Oo)

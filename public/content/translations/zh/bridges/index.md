@@ -1,11 +1,11 @@
 ---
 title: "区块链跨链桥"
 metaTitle: "区块链跨链桥简介"
-description: "跨链桥允许用户在不同的区块链之间转移资金"
+description: "什么是区块链跨链桥？了解跨链桥如何在以太坊、二层网络 (L2) 和其他链之间转移代币，跨链桥的类型，以及需要考虑的风险。"
 lang: zh
 ---
 
-_Web3 已经发展成为一个由一层网络 (l1) 区块链和二层网络 (l2) 扩容解决方案组成的生态系统，每种方案都具有独特的功能和权衡。随着区块链协议数量的增加，跨链转移资产的需求也在增加。为了满足这种需求，我们需要跨链桥。_
+_Web3 已经发展成为一个由一层网络 (L1) 区块链和二层网络 (L2) 扩容解决方案组成的生态系统，每种方案都具有独特的功能和权衡。随着区块链协议数量的增加，跨链转移资产的需求也在增加。为了满足这种需求，我们需要跨链桥。_
 
 <Divider />
 
@@ -21,7 +21,7 @@ _Web3 已经发展成为一个由一层网络 (l1) 区块链和二层网络 (l2)
 
 ## 为什么我们需要跨链桥？ {#why-do-we-need-bridges}
 
-所有区块链都有其局限性。为了让以太坊扩容并满足需求，它需要[汇总](/glossary/#rollups)。另一方面，像 Solana 和 Avalanche 这样的一层网络 (l1) 采用了不同的设计，以实现更高的吞吐量，但代价是牺牲了去中心化。
+所有区块链都有其局限性。为了让以太坊扩容并满足需求，它需要[汇总](/glossary/#rollups)。另一方面，像 Solana 和 Avalanche 这样的一层网络 (L1) 采用了不同的设计，以实现更高的吞吐量，但代价是牺牲了去中心化。
 
 然而，所有区块链都是在孤立的环境中开发的，并且具有不同的规则和[共识](/glossary/#consensus)机制。这意味着它们无法进行原生通信，代币也无法在区块链之间自由移动。
 
@@ -34,7 +34,7 @@ _Web3 已经发展成为一个由一层网络 (l1) 区块链和二层网络 (l2)
 - 用户能够访问新平台并利用不同链的优势。
 - 来自不同区块链生态系统的开发者能够协作并为用户构建新平台。
 
-[如何将代币跨链到二层网络 (l2)](/guides/how-to-use-a-bridge/)
+[如何将代币跨链到二层网络 (L2)](/guides/how-to-use-a-bridge/)
 
 <Divider />
 
@@ -44,7 +44,7 @@ _Web3 已经发展成为一个由一层网络 (l1) 区块链和二层网络 (l2)
 
 ### 降低交易费用 {#transaction-fees}
 
-假设你在以太坊主网上拥有 ETH，但希望以更便宜的交易费用来探索不同的去中心化应用 (dapp)。通过将你的 ETH 从主网跨链到以太坊二层网络 (l2) Rollup，你可以享受更低的交易费用。
+假设你在以太坊主网上拥有 ETH，但希望以更便宜的交易费用来探索不同的去中心化应用 (dapp)。通过将你的 ETH 从主网跨链到以太坊二层网络 (L2) Rollup，你可以享受更低的交易费用。
 
 ### 其他区块链上的去中心化应用 (dapp) {#dapps-other-chains}
 
@@ -52,7 +52,7 @@ _Web3 已经发展成为一个由一层网络 (l1) 区块链和二层网络 (l2)
 
 ### 探索区块链生态系统 {#explore-ecosystems}
 
-如果你在以太坊主网上拥有 ETH，并且想要探索一个替代性一层网络 (l1) 以尝试其原生的去中心化应用 (dapp)。你可以使用跨链桥将你的 ETH 从以太坊主网转账到该替代性一层网络 (l1)。
+如果你在以太坊主网上拥有 ETH，并且想要探索一个替代性一层网络 (L1) 以尝试其原生的去中心化应用 (dapp)。你可以使用跨链桥将你的 ETH 从以太坊主网转账到该替代性一层网络 (L1)。
 
 ### 拥有原生加密资产 {#own-native}
 
@@ -103,7 +103,7 @@ _Web3 已经发展成为一个由一层网络 (l1) 区块链和二层网络 (l2)
 
 使用跨链桥可以让你在不同的区块链之间转移资产。以下是一些可以帮助你寻找和使用跨链桥的资源：
 
-- **[L2BEAT 跨链桥摘要](https://l2beat.com/bridges/summary)与[L2BEAT 跨链桥风险分析](https://l2beat.com/bridges/summary)**：各种跨链桥的综合摘要，包括有关市场份额、跨链桥类型和目标链的详细信息。L2BEAT 还对跨链桥进行了风险分析，帮助用户在选择跨链桥时做出明智的决定。
+- **[ETHBEAT 互操作性摘要](https://ethbeat.org/interop/summary)**：各种跨链桥的综合摘要，包括市场份额、跨链桥类型和目标链的详细信息。ETHBEAT 还对跨链桥进行了风险分析，帮助用户在选择跨链桥时做出明智的决定。
 - **[DefiLlama 跨链桥摘要](https://defillama.com/bridges/Ethereum)**：以太坊网络中跨链桥交易量的摘要。
 
 <Divider />
@@ -130,16 +130,17 @@ _Web3 已经发展成为一个由一层网络 (l1) 区块链和二层网络 (l2)
 
 最近发生的一起黑客攻击事件是 Solana 的 Wormhole 跨链桥，[在攻击期间有 12 万枚 wETH（价值 3.25 亿美元）被盗](https://rekt.news/wormhole-rekt/)。许多[区块链领域的顶级黑客攻击都涉及跨链桥](https://rekt.news/leaderboard/)。
 
-跨链桥对于将用户引导至以太坊二层网络 (l2) 至关重要，对于想要探索不同生态系统的用户也是如此。然而，鉴于与跨链桥交互所涉及的风险，用户必须了解跨链桥所做的权衡。以下是一些[跨链安全策略](https://debridge.com/learn/blog/10-strategies-for-cross-chain-security/)。
+跨链桥对于将用户引导至以太坊二层网络 (L2) 至关重要，对于想要探索不同生态系统的用户也是如此。然而，鉴于与跨链桥交互所涉及的风险，用户必须了解跨链桥所做的权衡。以下是一些[跨链安全策略](https://debridge.com/learn/blog/10-strategies-for-cross-chain-security/)。
 
 <Divider />
 
 ## 延伸阅读 {#further-reading}
 
 - [EIP-5164：跨链执行](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _2022 年 6 月 18 日 - Brendan Asselstine_
-- [L2Bridge 风险框架](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _2022 年 7 月 5 日 - Bartek Kiepuszewski_
+- [L2Bridge 风险框架](https://forum.ethbeat.org/t/l2bridge-risk-framework/31) - _2022 年 7 月 5 日 - Bartek Kiepuszewski_
 - [“为什么未来将是多链的，但不会是跨链的。”](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _2022 年 1 月 8 日 - Vitalik Buterin_
 - [利用共享安全实现安全的跨链互操作性：Lagrange 状态委员会及其他](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _2024 年 6 月 12 日 - Emmanuel Awosika_
 - [Rollup 互操作性解决方案的现状](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _2024 年 6 月 20 日 - Alex Hook_
 
 <QuizWidget quizKey="bridges" />
+

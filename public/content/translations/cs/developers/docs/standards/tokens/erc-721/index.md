@@ -246,7 +246,6 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 ## Návody: Budování s nezaměnitelnými tokeny (ERC-721) na Ethereu {#tutorials}
 
 - [Průvodce kontraktem ERC-721 ve Vyperu](/developers/tutorials/erc-721-vyper-annotated-code/) _– Komentovaný průvodce kompletním kontraktem NFT ERC-721 napsaným ve Vyperu._
-- [Jak napsat a nasadit NFT (Část 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– Podrobný průvodce psaním a nasazením vašeho prvního chytrého kontraktu ERC-721._
-- [Jak razit NFT (Část 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Jak razit NFT ERC-721 pomocí vašeho nasazeného chytrého kontraktu a Web3._
-- [Jak si prohlédnout své NFT v peněžence (Část 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Jak po nasazení zobrazit vaše vyražené NFT v MetaMasku._
-- [Návod na ražení NFT](/developers/tutorials/nft-minter/) _– Vytvořte full-stack decentralizovanou aplikaci (dapp) pro ražení NFT s frontendem v Reactu, MetaMaskem a Alchemy._
+- [Jak napsat a nasadit NFT (část 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– Podrobný průvodce psaním a nasazením vašeho prvního chytrého kontraktu ERC-721._
+- [Jak razit NFT (část 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Jak razit NFT ERC-721 pomocí vašeho nasazeného chytrého kontraktu a Web3._
+- [Jak si prohlédnout své NFT v peněžence (část 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Jak po nasazení zobrazit vyražené NFT v MetaMasku._

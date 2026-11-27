@@ -4,17 +4,17 @@ description: "مقدمة حول كيفية تنظيم عقد إيثيريوم."
 lang: ar
 ---
 
-تتكون عقدة إيثيريوم من عميلين: [عميل التنفيذ](/developers/docs/nodes-and-clients/#execution-clients) و[عميل إجماع](/developers/docs/nodes-and-clients/#consensus-clients). لكي تقترح العقدة كتلة جديدة، يجب عليها أيضًا تشغيل [عميل مُدَقِّق](#validators).
+تتكون عقدة إيثيريوم من عميلين: [عميل تنفيذ](/developers/docs/nodes-and-clients/#execution-clients) و[عميل إجماع](/developers/docs/nodes-and-clients/#consensus-clients). لكي تقترح العقدة كتلة جديدة، يجب عليها أيضًا تشغيل [عميل مُدَقِّق](#validators).
 
-عندما كانت إيثيريوم تستخدم [إثبات العمل (PoW)](/developers/docs/consensus-mechanisms/pow/)، كان عميل التنفيذ كافيًا لتشغيل عقدة إيثيريوم كاملة. ومع ذلك، منذ تنفيذ [إثبات الحصة (PoS)](/developers/docs/consensus-mechanisms/pos/)، يجب استخدام عميل التنفيذ جنبًا إلى جنب مع برنامج آخر يسمى [عميل إجماع](/developers/docs/nodes-and-clients/#consensus-clients).
+عندما كانت إيثيريوم تستخدم [إثبات العمل](/developers/docs/consensus-mechanisms/pow/)، كان عميل التنفيذ كافيًا لتشغيل عقدة إيثيريوم كاملة. ومع ذلك، منذ تنفيذ [إثبات الحصة](/developers/docs/consensus-mechanisms/pos/)، يجب استخدام عميل التنفيذ جنبًا إلى جنب مع برنامج آخر يسمى [عميل إجماع](/developers/docs/nodes-and-clients/#consensus-clients).
 
 يوضح المخطط أدناه العلاقة بين عميلي إيثيريوم. يتصل العميلان بشبكات نظير إلى نظير (<span dir="ltr">P2P</span>) الخاصة بهما. هناك حاجة إلى شبكات <span dir="ltr">P2P</span> منفصلة لأن عملاء التنفيذ ينشرون المعاملات عبر شبكة <span dir="ltr">P2P</span> الخاصة بهم، مما يمكنهم من إدارة مجمع المعاملات المحلي الخاص بهم، بينما ينشر عملاء الإجماع الكتل عبر شبكة <span dir="ltr">P2P</span> الخاصة بهم، مما يتيح الإجماع ونمو السلسلة.
 
-![Diagram of Ethereum node architecture showing execution and consensus layers](node-architecture-text-background.png)
+<NodeArchitectureDiagram />
 
-_هناك عدة خيارات لعميل التنفيذ بما في ذلك إريغون، ونيذرميند، وبيسو_.
+_هناك العديد من الخيارات لعميل التنفيذ بما في ذلك إريغون، ونيذرميند، و<span dir="ltr">Besu</span>_.
 
-لكي تعمل بنية العميلين هذه، يجب على عملاء الإجماع تمرير حزم من المعاملات إلى عميل التنفيذ. ينفذ عميل التنفيذ المعاملات محليًا للتحقق من أن المعاملات لا تنتهك أيًا من قواعد إيثيريوم وأن التحديث المقترح لحالة إيثيريوم صحيح. عندما يتم اختيار عقدة لتكون منتجًا للكتلة، يطلب مثيل عميل الإجماع الخاص بها حزمًا من المعاملات من عميل التنفيذ لتضمينها في الكتلة الجديدة وتنفيذها لتحديث الحالة العالمية. يقود عميل الإجماع عميل التنفيذ عبر اتصال <span dir="ltr">RPC</span> محلي باستخدام [<span dir="ltr">Engine API</span>](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+لكي يعمل هذا الهيكل المكون من عميلين، يجب على عملاء الإجماع تمرير حزم من المعاملات إلى عميل التنفيذ. ينفذ عميل التنفيذ المعاملات محليًا للتحقق من أن المعاملات لا تنتهك أيًا من قواعد إيثيريوم وأن التحديث المقترح لحالة إيثيريوم صحيح. عندما يتم اختيار عقدة لتكون منتجًا للكتل، يطلب مثيل عميل الإجماع الخاص بها حزمًا من المعاملات من عميل التنفيذ لتضمينها في الكتلة الجديدة وتنفيذها لتحديث الحالة العالمية. يوجه عميل الإجماع عميل التنفيذ عبر اتصال <span dir="ltr">RPC</span> محلي باستخدام [واجهة برمجة تطبيقات المحرك (<span dir="ltr">Engine API</span>)](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## ماذا يفعل عميل التنفيذ؟ {#execution-client}
 

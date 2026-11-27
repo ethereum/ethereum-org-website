@@ -12,10 +12,10 @@ Ethereum.org 是一个开源项目，拥有 <strong>12 000 多名</strong>贡献
 ## 贡献方式 {#ways-to-contribute}
 
 **翻译**
-- [报告翻译错误](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – [翻译计划](/contributing/translation-program/)即将结束，不再招募新译者
+- [报告翻译错误](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – [翻译计划](/contributing/translation-program/)即将结束，不再进行新译者的用户引导
 
 **开发**
-- [处理未解决的议题](https://github.com/ethereum/ethereum-org-website/issues) – 我们已确定需要完成的工作
+- [处理开放议题](https://github.com/ethereum/ethereum-org-website/issues) – 我们已确定需要完成的工作
 
 **设计**
 - [帮助设计网站](/contributing/design/) – 各种水平的设计师都可以为改进网站做出贡献
@@ -23,27 +23,28 @@ Ethereum.org 是一个开源项目，拥有 <strong>12 000 多名</strong>贡献
 **内容**
 - [创建/编辑内容](/contributing/#how-to-update-content) – 建议新页面或对现有内容进行调整
 - [撰写构建者文章](/contributing/adding-articles/) - 为[最新动态](/latest/)部分贡献一篇文章
-- [添加社区资源](/contributing/content-resources/) – 在相关页面添加有用的文章或资源
-- [推荐报告](/contributing/adding-reports/) - 为[报告](/reports/)页面推荐一份研究报告
-- [分享你的故事](/contributing/adding-community-stories/) - 提交一个关于你使用开源和避风港技术 (sanctuary technologies) 的个人经历、以太坊生态系统如何影响你的生活，或者你和你的社区如何使用以太坊的故事
+- [添加社区资源](/contributing/content-resources/) – 向相关页面添加有用的文章或资源
+- [推荐报告](/contributing/adding-reports/) - 为[报告](/reports/)页面推荐研究报告
+- [分享你的故事](/contributing/adding-community-stories/) - 提交一个关于你使用开源和避风港技术的个人经历、以太坊生态系统如何影响你的生活，或者你和你的社区如何使用以太坊的故事
 - [测验](/contributing/quizzes/) – 为相关页面添加、更新和删除测验题库
 - [推荐设计资源](/contributing/design/adding-design-resources/) – 添加、更新和删除有用的设计资源
 - [推荐视频](/contributing/adding-videos/) – 为视频库推荐教育视频
+- [添加术语](/contributing/adding-glossary-terms/) – 在[以太坊术语表](/glossary/)中添加或更新术语
 
 **功能想法**
-- [请求功能](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – 让我们知道你对新功能或设计的任何想法
+- [请求功能](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – 告诉我们你对新功能或设计的任何想法
 
 **产品列表**
 - [添加交易所](/contributing/adding-exchanges/) – 将交易所添加到我们的[交易所查找工具](/get-eth/#country-picker)中
-- [添加产品](/contributing/adding-products/) – 将去中心化应用 (dapp) 或钱包添加到相关页面
+- [添加产品](/contributing/adding-products/) – 将 dapp 或钱包添加到相关页面
 - [添加开发者工具](/contributing/adding-developer-tools/) – 将开发者工具添加到相关页面
-- [添加二层网络 (l2)](/contributing/adding-layer-2s/) – 将二层网络 (l2) 添加到相关页面
+- [添加二层网络](/contributing/adding-layer-2s/) – 将二层网络添加到相关页面
 - [添加质押产品或服务](/contributing/adding-staking-products/) – 添加有助于促进独立质押、联合质押或质押即服务的项目
 - [添加钱包](/contributing/adding-wallets/) – 为[查找钱包页面](/wallets/find-wallet/)添加钱包
-- [为我们的去中心化科学 (DeSci) 页面推荐项目](/contributing/adding-desci-projects/) – 添加建立在以太坊上、有助于去中心化科学的项目
-- [添加资源](/contributing/adding-resources/) – 将有用的资源添加到任何相关页面
+- [为我们的 DeSci 页面推荐项目](/contributing/adding-desci-projects/) – 添加建立在以太坊上、有助于去中心化科学的项目
+- [添加资源](/contributing/adding-resources/) – 向任何相关页面添加有用的资源
 
-有任何问题吗？🤔 加入我们的 [Discord 服务器](/discord/)
+有任何问题？🤔 加入我们的 [Discord 服务器](/discord/)
 
 ## 适合开始贡献的优秀首选任务 {#good-first-tasks-to-start-contributing}
 
@@ -100,19 +101,9 @@ Ethereum.org 是一个开源项目，拥有 <strong>12 000 多名</strong>贡献
 3. 等待我们的团队成员向你发送 OAT 链接。
 4. 申领你的 OAT！
 
-你应该只使用自托管钱包来申领 OAT。请勿使用交易所账户或其他你不持有私钥的账户，因为这些账户将不允许你访问和管理你的 OAT。
+你应该只使用自托管钱包来申领 OAT。不要使用交易所账户或其他你不持有私钥的账户，因为这些账户将不允许你访问和管理你的 OAT。
 
-## 申领你的 GitPOAP {#claim-gitpoap}
-
-GitPOAP 也会自动识别你已合并的贡献，并让你在其平台上铸造一个独立的、独一无二的贡献者 POAP！
-
-
-### 如何申领 {#how-to-claim-2}
-
-1. 访问 [GitPOAP](https://www.gitpoap.io)。
-2. 通过登录选项连接你的钱包，甚至可以使用电子邮件连接。
-3. 搜索你的 GitHub 用户名、ETH 地址、以太坊域名服务 (ENS) 名称或任何 GitPOAP，以检查你是否符合条件。
-4. 如果你的 GitHub 账户符合条件，那么你就可以铸造一个 GitPOAP！
+<LinkWithArrow href="/collectibles/">查看你的 ethereum.org 收藏品</LinkWithArrow>
 
 ## 贡献者 {#contributors}
 

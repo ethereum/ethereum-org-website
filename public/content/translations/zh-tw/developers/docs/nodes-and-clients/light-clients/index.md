@@ -38,20 +38,20 @@ lang: zh-tw
 
 輕客戶端也可用於升級以太坊錢包。你的錢包可以使用內建的輕客戶端直接驗證呈現給你的資料，而不是信任 RPC 提供者提供的資料。這將增加你錢包的安全性。如果你的 RPC 提供者不誠實並向你提供錯誤資料，內建的輕客戶端可以告訴你！
 
-## 輕客戶端開發的現狀為何？ {#current-state-of-development}
+## 輕客戶端目前的開發狀態為何？ {#current-state-of-development}
 
 目前有幾個輕客戶端正在開發中，包括執行客戶端、共識客戶端以及結合執行與共識的輕客戶端。以下是我們在撰寫本頁面時所知的輕客戶端實作：
 
-- [洛德斯塔 (Lodestar)](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client)：使用 TypeScript 的共識輕客戶端
-- [Helios](https://github.com/a16z/helios)：使用 Rust 結合執行與共識的輕客戶端
-- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light)：使用 Go 的執行客戶端輕量模式（開發中）
-- [寧布斯 (Nimbus)](https://nimbus.guide/el-light-client.html)：使用 Nim 的共識輕客戶端
+- [洛德斯塔 (Lodestar)](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client)：使用 TypeScript 編寫的共識輕客戶端
+- [Helios](https://github.com/a16z/helios)：使用 Rust 編寫的結合執行與共識輕客戶端
+- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light)：使用 Go 編寫的執行客戶端輕量模式（開發中）
+- [寧布斯 (Nimbus)](https://nimbus.guide/el-light-client.html)：使用 Nim 編寫的共識輕客戶端
 
-據我們所知，這些目前都尚未達到可投入生產的狀態。
+據我們所知，這些實作目前都尚未達到可投入生產環境的標準。
 
-此外，還有許多工作正在進行，以改善輕客戶端存取以太坊資料的方式。目前，輕客戶端依賴使用主從式架構 (client/server model) 向全節點發出 RPC 請求，但在未來，可以使用專用網路（例如[波特爾網路](https://www.ethportal.net/)）以更去中心化的方式請求資料，該網路可以使用點對點流言協定將資料提供給輕客戶端。
+此外，目前也有許多工作致力於改善輕客戶端存取以太坊資料的方式。目前，輕客戶端依賴使用主從式架構向全節點發送 RPC 請求。[波特爾網路](/developers/docs/networking-layer/portal-network/)最初的設計是透過點對點網路將這些資料提供給輕客戶端，但其目前的開發重點已轉向提供過去區塊的歷史紀錄。
 
-其他[路線圖](/roadmap/)項目，例如[沃克爾樹](/roadmap/verkle-trees/)和[無狀態性](/roadmap/statelessness/)，最終將使輕客戶端的安全保證與全客戶端相當。
+其他[路線圖](/roadmap/)項目，例如新的狀態樹（目前在 [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864) 中提議為二元樹）和[無狀態性](/roadmap/statelessness/)，最終將使輕客戶端的安全保證與全客戶端達到同等水準。
 
 ## 進一步閱讀 {#further-reading}
 

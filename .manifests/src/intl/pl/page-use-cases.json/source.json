@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-use-cases.json",
-  "generatedAt": "2026-04-27T16:15:05.754Z",
-  "rootHash": "156861499629",
+  "generatedAt": "2026-11-27T09:56:05.255Z",
+  "rootHash": "7eaf09c53a24",
   "tree": {
-    "contentHash": "869ff61f5633",
-    "anchorHash": "d2c7de30f1f1",
+    "contentHash": "d1e457edf507",
+    "anchorHash": "9e6c84f1024f",
     "children": {
       "meta-title": {
         "contentHash": "cf96345bd8cd",
@@ -15,12 +15,8 @@
         "contentHash": "e9210b175368",
         "anchorHash": "e3b0c44298fc"
       },
-      "hero-title": {
-        "contentHash": "f45bf9e18d4d",
-        "anchorHash": "e3b0c44298fc"
-      },
       "hero-header": {
-        "contentHash": "49911b5cbdab",
+        "contentHash": "9caf299d8bcd",
         "anchorHash": "e3b0c44298fc"
       },
       "hero-description": {
@@ -295,7 +291,6 @@
     "childrenOrder": [
       "meta-title",
       "meta-description",
-      "hero-title",
       "hero-header",
       "hero-description",
       "page-intro-heading",
@@ -366,5 +361,5 @@
       "ready-to-start-eth-cta"
     ]
   },
-  "sourceCommitSha": "2d028c1f6f2e405835b098e3340933118e98589a"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

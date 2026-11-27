@@ -1,7 +1,7 @@
 ---
-title: Giới thiệu về hợp đồng thông minh
+title: "Giới thiệu về hợp đồng thông minh"
 metaTitle: "Hợp đồng thông minh: Chúng là gì và lợi ích của chúng"
-description: Giới thiệu phi kỹ thuật về hợp đồng thông minh
+description: "Hợp đồng thông minh là gì? Một bài giới thiệu phi kỹ thuật về các chương trình chạy trên Ethereum và vận hành các ứng dụng như DeFi, NFT và DAO mà không cần bên trung gian."
 lang: vi
 ---
 

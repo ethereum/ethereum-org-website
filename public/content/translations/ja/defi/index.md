@@ -1,7 +1,7 @@
 ---
 title: "分散型金融 (DeFi)"
 metaTitle: "DeFiとは？ | 分散型金融のメリットと用途"
-description: "イーサリアム上のDeFiの概要"
+description: "DeFiとは？イーサリアム上の分散型金融によって、銀行を介さずに誰でもレンディング、借り入れ、取引、利息の獲得ができる仕組みと、それに伴うリスクについて学びましょう。"
 lang: ja
 template: use-cases
 image: /images/use-cases/defi.png

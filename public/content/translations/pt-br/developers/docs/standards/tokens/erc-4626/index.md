@@ -51,7 +51,7 @@ Esta função retorna o endereço do token subjacente usado para o cofre para co
 function totalAssets() public view returns (uint256)
 ```
 
-Esta função retorna a quantidade total de ativos subjacentes mantidos pelo cofre.
+Esta função retorna a quantidade total de ativos subjacentes gerenciados pelo cofre, incluindo quaisquer ativos que ele tenha colocado para render em outro lugar e após quaisquer taxas.
 
 #### convertToShares {#convertoshares}
 
@@ -139,7 +139,7 @@ Esta função permite aos usuários simular os efeitos de seu saque no bloco atu
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-Esta função queima `shares` de `owner` e envia exatamente `assets` token do cofre para `receiver`.
+Esta função queima `shares` de `owner` e envia exatamente `assets` tokens do cofre para `receiver`.
 
 #### maxRedeem {#maxredeem}
 
@@ -183,7 +183,7 @@ Retorna a quantidade total de cotas do cofre que `owner` possui atualmente.
 
 ### Mapa da interface {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### Eventos {#events}
 
