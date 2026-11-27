@@ -23,5 +23,6 @@
   "page-tutorial-all": "全部",
   "page-tutorial-topics": "主題",
   "page-tutorial-search-placeholder": "搜尋教學...",
-  "page-tutorial-filtering-by": "篩選條件："
+  "page-tutorial-filtering-by": "篩選條件：",
+  "page-tutorial-removed-notice": "你所請求的教學已不再提供。請瀏覽下方維護中的教學。"
 }

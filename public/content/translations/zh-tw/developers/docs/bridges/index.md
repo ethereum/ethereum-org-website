@@ -1,6 +1,6 @@
 ---
 title: "跨鏈橋"
-description: "寫給開發者的跨鏈橋接概覽"
+description: "跨鏈橋開發者指南：跨鏈訊息傳遞與代幣橋接的運作方式、跨鏈橋類型與信任假設，以及如何將它們整合到去中心化應用程式 (dapp) 中。"
 lang: zh-tw
 ---
 
@@ -123,16 +123,16 @@ lang: zh-tw
 ## 延伸閱讀 {#further-reading}
 
 - [區塊鏈跨鏈橋](/bridges/) – ethereum.org
-- [L2BEAT 跨鏈橋風險框架](https://l2beat.com/bridges/summary)
+- [ETHBEAT 跨鏈橋風險框架](https://ethbeat.org/interop/summary)
 - [區塊鏈跨鏈橋：建立加密網路的網路](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 2021 年 9 月 8 日 – Dmitriy Berenzon
-- [互操作性不可能三角](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 2021 年 10 月 1 日 – Arjun Bhuptani
+- [互操作性三難困境](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 2021 年 10 月 1 日 – Arjun Bhuptani
 - [叢集：受信任與信任最小化跨鏈橋如何塑造多鏈格局](https://blog.celestia.org/clusters/) - 2021 年 10 月 4 日 – Mustafa Al-Bassam
 - [LI.FI：對於跨鏈橋而言，信任是一個光譜](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 2022 年 4 月 28 日 – Arjun Chand
 - [匯總互操作性解決方案的現狀](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 2024 年 6 月 20 日 – Alex Hook
-- [利用共享安全性實現安全的跨鏈互操作性：Lagrange 狀態委員會及其他](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 2024 年 6 月 12 日 – Emmanuel Awosika
+- [利用共享安全性實現安全的跨鏈互操作性：Lagrange 狀態委員會及未來展望](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 2024 年 6 月 12 日 – Emmanuel Awosika
 
-此外，以下是 [James Prestwich](https://twitter.com/_prestwich) 的一些具洞察力的簡報，有助於更深入地了解跨鏈橋：
+此外，以下是 [James Prestwich](https://twitter.com/_prestwich) 的一些精闢演講，有助於更深入地了解跨鏈橋：
 
 - [建立跨鏈橋，而非封閉花園](https://youtu.be/ZQJWMiX4hT0)
 - [解析跨鏈橋](https://youtu.be/b0mC-ZqN8Oo)
-- [為什麼跨鏈橋會被燒毀](https://youtu.be/c7cm2kd20j8)
+- [為什麼跨鏈橋會被銷毀](https://youtu.be/c7cm2kd20j8)

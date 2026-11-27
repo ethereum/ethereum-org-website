@@ -4,17 +4,17 @@ description: "介紹以太坊節點的組織方式。"
 lang: zh-tw
 ---
 
-一個以太坊節點由兩個客戶端組成：一個[執行客戶端](/developers/docs/nodes-and-clients/#execution-clients)和一個[共識客戶端](/developers/docs/nodes-and-clients/#consensus-clients)。為了讓節點能夠提案新區塊，它還必須執行一個[驗證者客戶端](#validators)。
+一個以太坊節點由兩個客戶端組成：[執行客戶端](/developers/docs/nodes-and-clients/#execution-clients)與[共識客戶端](/developers/docs/nodes-and-clients/#consensus-clients)。若節點要提案新區塊，還必須執行[驗證者客戶端](#validators)。
 
-當以太坊使用[工作量證明 (PoW)](/developers/docs/consensus-mechanisms/pow/)時，一個執行客戶端就足以執行一個完整的以太坊節點。然而，自從實施[權益證明 (PoS)](/developers/docs/consensus-mechanisms/pos/)以來，執行客戶端必須與另一個稱為[共識客戶端](/developers/docs/nodes-and-clients/#consensus-clients)的軟體一起使用。
+當以太坊使用[工作量證明 (PoW)](/developers/docs/consensus-mechanisms/pow/) 時，一個執行客戶端就足以執行完整的以太坊節點。然而，自從實施[權益證明 (PoS)](/developers/docs/consensus-mechanisms/pos/) 以來，執行客戶端必須與另一個稱為[共識客戶端](/developers/docs/nodes-and-clients/#consensus-clients)的軟體一起使用。
 
-下圖顯示了兩個以太坊客戶端之間的關係。這兩個客戶端連接到各自的點對點 (P2P) 網路。需要獨立的 P2P 網路，因為執行客戶端透過其 P2P 網路廣播交易，使它們能夠管理本地的交易池，而共識客戶端則透過其 P2P 網路廣播區塊，從而實現共識和鏈的增長。
+下圖顯示了這兩個以太坊客戶端之間的關係。這兩個客戶端連接到各自的點對點 (P2P) 網路。需要獨立的 P2P 網路，因為執行客戶端透過其 P2P 網路廣播交易，使它們能夠管理本地的交易池，而共識客戶端則透過其 P2P 網路廣播區塊，以實現共識和鏈的增長。
 
-![Diagram of Ethereum node architecture showing execution and consensus layers](node-architecture-text-background.png)
+<NodeArchitectureDiagram />
 
-_執行客戶端有多種選擇，包括 Erigon、Nethermind 和 Besu_。
+_執行客戶端有多種選擇，包括艾瑞貢 (Erigon)、奈瑟邁 (Nethermind) 和 Besu_。
 
-為了讓這種雙客戶端架構運作，共識客戶端必須將打包的交易傳遞給執行客戶端。執行客戶端在本地執行這些交易，以驗證交易沒有違反任何以太坊規則，並且提議的以太坊狀態更新是正確的。當一個節點被選為區塊生產者時，其共識客戶端實例會向執行客戶端請求打包的交易，以將其包含在新區塊中並執行它們來更新全域狀態。共識客戶端透過使用 [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) 的本地 RPC 連線來驅動執行客戶端。
+為了讓這種雙客戶端結構運作，共識客戶端必須將交易包傳遞給執行客戶端。執行客戶端在本地執行交易，以驗證交易沒有違反任何以太坊規則，並且提議的以太坊狀態更新是正確的。當節點被選為區塊生產者時，其共識客戶端實例會向執行客戶端請求交易包，以包含在新區塊中並執行它們來更新全域狀態。共識客戶端透過使用 [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) 的本地 RPC 連線來驅動執行客戶端。
 
 ## 執行客戶端的作用是什麼？ {#execution-client}
 

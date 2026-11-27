@@ -1,7 +1,7 @@
 ---
 title: "真實世界資產 (RWA)"
 metaTitle: "什麼是 RWA？ | 真實世界資產的優勢與用途"
-description: "以太坊上的真實世界資產概覽"
+description: "什麼是真實世界資產 (RWA)？了解國債、房地產和商品等資產如何在以太坊上被代幣化，以及其優勢與風險。"
 lang: zh-tw
 template: use-cases
 image: /images/man-and-dog-playing.png

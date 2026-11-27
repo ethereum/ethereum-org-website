@@ -1,6 +1,6 @@
 ---
 title: "去中心化身分"
-description: "什麼是去中心化身分？為什麼它很重要？"
+description: "什麼是去中心化身分？了解以太坊如何讓您擁有並控制自己的身分、憑證和資料，而無須依賴中心化供應商。"
 lang: zh-tw
 template: use-cases
 sidebarDepth: 2

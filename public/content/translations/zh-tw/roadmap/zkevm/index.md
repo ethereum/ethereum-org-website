@@ -1,6 +1,6 @@
 ---
-title: 用於第一層 (L1) 區塊驗證的 zkEVM
-description: 了解零知識證明如何驗證以太坊區塊執行，從而實現更高的吞吐量並降低驗證者硬體需求。
+title: "用於第一層 (L1) 區塊驗證的 zkEVM"
+description: "了解零知識證明如何驗證以太坊區塊執行，從而實現更高的吞吐量並降低驗證者硬體需求。"
 lang: zh-tw
 template: roadmap
 ---
@@ -99,16 +99,16 @@ zkEVM 第一層 (L1) 驗證的主要挑戰是速度。以太坊區塊每 12 秒�
 
 zkEVM 第一層 (L1) 驗證與其他幾個以太坊路線圖項目相關聯：
 
-- **[沃克爾樹](/roadmap/verkle-trees/)**：為無狀態驗證實現更小的見證資料，減少證明者需要處理的資料量
-- **[無狀態性](/roadmap/statelessness/)**：zkEVM 是一個關鍵的推動因素——有了執行的 ZK 證明，節點就不需要完整的狀態來驗證區塊
-- **[提案者與建構者分離 (PBS)](/roadmap/pbs/)**：區塊建構者可能會整合證明產生，或者可能會出現一個獨立的證明者市場
+- **新狀態樹**：統一的二元樹（[EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)）被提議用來取代早期的 [Verkle 樹](/roadmap/verkle-trees/)設計，這將為無狀態驗證提供更小的見證資料，並且在設計上更容易證明
+- **[無狀態性](/roadmap/statelessness/)**：zkEVM 是一個關鍵的推動因素——有了執行的 ZK 證明，節點不需要完整的狀態就能驗證區塊
+- **[PBS](/roadmap/pbs/)**：區塊建構者可能會整合證明產生過程，或者可能會出現一個獨立的證明者市場
 - **[單槽最終性](/roadmap/single-slot-finality/)**：更快的證明產生可以透過密碼學保證實現單槽最終性
 
 <Alert variant="warning">
 <AlertEmoji text="🧪" />
 <AlertContent>
 <AlertDescription>
-zkEVM 第一層 (L1) 驗證正處於積極研究階段，尚未整合到生產環境的以太坊客戶端中。
+zkEVM 第一層 (L1) 驗證正處於積極研究階段，尚未整合到正式環境的以太坊客戶端中。
 </AlertDescription>
 </AlertContent>
 </Alert>

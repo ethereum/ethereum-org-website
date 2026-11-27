@@ -300,9 +300,7 @@ _知道有幫助過您的社群資源嗎？編輯此頁面並加入它！_
 
 ## 相關教學 {#related-tutorials}
 
-- [設定 Web3js 以在 JavaScript 中使用以太坊區塊鏈](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– 在專案中設定 Web3.js 的說明。_
-- [從 JavaScript 呼叫智能合約](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– 使用 DAI 代幣，了解如何使用 JavaScript 呼叫合約函式。_
-- [使用 Web3 和 Alchemy 發送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– 從後端發送交易的逐步演練。_
+- [使用 Web3 和 Alchemy 發送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– 從後端發送交易的逐步解說。_
 
 ## 教學：以太坊上的 JavaScript API 與 WebSockets {#tutorials}
 

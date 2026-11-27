@@ -1,6 +1,6 @@
 ---
 title: "以太坊開發文件"
-description: "ethereum.org 開發者文件介紹。"
+description: "以太坊開發文件：學習基礎知識、以太坊堆疊、智能合約、節點與擴容，並透過指南建立您的第一個去中心化應用程式 (dapp)。"
 lang: zh-tw
 ---
 

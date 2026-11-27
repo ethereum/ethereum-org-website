@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/contributing/adding-layer-2s/index.md",
-  "generatedAt": "2026-06-08T07:47:46.628Z",
-  "rootHash": "9ba3e39e593f",
+  "generatedAt": "2026-11-27T10:21:09.361Z",
+  "rootHash": "6bc61eb09a05",
   "tree": {
-    "contentHash": "8a2da6880922",
-    "anchorHash": "a51b4bd83078",
+    "contentHash": "44a377c91a97",
+    "anchorHash": "1da181913045",
     "children": {
       "frontmatter:title": {
         "contentHash": "144fa3038d58",
@@ -56,8 +56,8 @@
         "anchorHash": "e3b0c44298fc"
       },
       "decision-framework": {
-        "contentHash": "03873a604f4f",
-        "anchorHash": "520dca993641",
+        "contentHash": "fbb8b0f903c2",
+        "anchorHash": "9ed446611a39",
         "labelHash": "09f808a5016b",
         "children": {
           "_label": {
@@ -65,8 +65,8 @@
             "anchorHash": "e3b0c44298fc"
           },
           "criteria-for-inclusion-the-must-haves": {
-            "contentHash": "5f82ec55e714",
-            "anchorHash": "765356a87fcc",
+            "contentHash": "46b5b3faa406",
+            "anchorHash": "de31d1b18265",
             "labelHash": "c0101a929d45",
             "children": {
               "_label": {
@@ -74,19 +74,19 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "prose:2": {
-                "contentHash": "06147c99310d",
+                "contentHash": "28e2295df0bd",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:0": {
-                "contentHash": "7b7bfeda3554",
-                "anchorHash": "e83e8307e183"
+                "contentHash": "1a4d0120ca56",
+                "anchorHash": "370dcafab9be"
               },
               "prose:3": {
-                "contentHash": "cd41954b206f",
+                "contentHash": "c57942edd1a2",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:1": {
-                "contentHash": "98deb0b07c63",
+                "contentHash": "3925af752fc9",
                 "anchorHash": "b78dce185b5c"
               },
               "prose:4": {
@@ -185,5 +185,5 @@
       "add-exchange"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

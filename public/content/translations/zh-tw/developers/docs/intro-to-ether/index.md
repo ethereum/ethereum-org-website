@@ -1,6 +1,6 @@
 ---
 title: "以太幣技術簡介"
-description: "寫給開發者的以太幣（加密貨幣）簡介。"
+description: "以太幣 (ETH) 技術簡介：它的用途、如何以 Wei 和 Gwei 作為面額，以及它是如何被鑄造、銷毀和轉移的。"
 lang: zh-tw
 ---
 
