@@ -14,13 +14,16 @@ import {
 const root = path.resolve(__dirname, "../../..")
 const messages = loadEnglishMessages(root)
 let refs: TranslationRef[] = []
+let looseTemplates: RegExp[] = []
 
 test.describe("translation keys", () => {
   test.describe.configure({ mode: "default" })
 
   test.beforeAll(() => {
     test.setTimeout(180_000)
-    refs = scanTranslations(root).refs
+    const scan = scanTranslations(root)
+    refs = scan.refs
+    looseTemplates = scan.looseTemplates
   })
 
   test("the scan resolves most translator calls", () => {
@@ -32,6 +35,13 @@ test.describe("translation keys", () => {
     })
     expect(literal.filter((r) => r.ns !== null).length).toBeGreaterThan(4000)
     expect(skipped).toBeLessThan(literal.length / 5)
+  })
+
+  test("loose templates can't cover a whole namespace", () => {
+    const broad = looseTemplates.filter((re) =>
+      ["page-not-a-real-key", "nav-not-a-real-key"].some((k) => re.test(k))
+    )
+    expect(broad.map(String)).toEqual([])
   })
 
   test("every literal key exists in its English namespace", () => {
