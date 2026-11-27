@@ -1452,7 +1452,8 @@ export async function callGeminiRaw(
       // call while it is in flight -- see reserveForCall.
       const settleReservation = reserveForCall(
         `${ctx} (${prompt.length} chars)`,
-        promptBytes
+        promptBytes,
+        metadata?.irreducible ?? false
       )
 
       console.log(

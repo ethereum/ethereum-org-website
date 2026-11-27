@@ -104,15 +104,17 @@ export function reasoningTokensFor(visibleOutputTokens: number): number {
 
 /**
  * Upper-bound cost of one call from its prompt size: the prompt as input, and
- * as output its translation (one chunk at most, unless the call is past the
- * ceiling and so irreducible) plus its reasoning. Run 35252423844.
+ * as output its translation (one chunk at most, unless the call carries an
+ * irreducible chunk) plus its reasoning. Run 35252423844.
  */
-export function callReserveUsd(promptBytes: number): number {
+export function callReserveUsd(
+  promptBytes: number,
+  irreducible = false
+): number {
   const promptTokens = promptBytes / BYTES_PER_TOKEN
-  const outputTokens =
-    promptBytes > MAX_PROMPT_BYTES
-      ? promptTokens
-      : Math.min(promptTokens, MAX_CHUNK_BYTES / BYTES_PER_TOKEN)
+  const outputTokens = irreducible
+    ? promptTokens
+    : Math.min(promptTokens, MAX_CHUNK_BYTES / BYTES_PER_TOKEN)
   return (
     (promptTokens / 1_000_000) * INPUT_RATE_USD_PER_1M +
     ((outputTokens + reasoningTokensFor(outputTokens)) / 1_000_000) *
@@ -144,13 +146,14 @@ export function minimumFuseUsd(concurrency: number): number {
  */
 export function reserveForCall(
   context: string,
-  promptBytes?: number
+  promptBytes?: number,
+  irreducible = false
 ): (actualUsd: number) => void {
   assertRunFuse(context)
   const reserved =
     promptBytes === undefined
       ? WORST_CASE_CALL_USD
-      : callReserveUsd(promptBytes)
+      : callReserveUsd(promptBytes, irreducible)
   reservedUsd += reserved
   inFlight += 1
   let settled = false
