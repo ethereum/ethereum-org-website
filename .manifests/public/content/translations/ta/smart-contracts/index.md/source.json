@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/smart-contracts/index.md",
-  "generatedAt": "2026-07-23T00:26:16.860Z",
-  "rootHash": "ee00cfae816f",
+  "generatedAt": "2026-11-27T09:59:52.621Z",
+  "rootHash": "180c167fd903",
   "tree": {
-    "contentHash": "cff526a80480",
+    "contentHash": "f86c4bd83056",
     "anchorHash": "1f59def212db",
     "children": {
       "frontmatter:title": {
@@ -16,7 +16,7 @@
         "anchorHash": "2aab5d2bfaf4"
       },
       "frontmatter:description": {
-        "contentHash": "23c836a0ea27",
+        "contentHash": "f9b8ccfdc003",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -413,5 +413,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

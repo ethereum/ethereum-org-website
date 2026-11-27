@@ -300,9 +300,7 @@ _உங்களுக்கு உதவிய சமூக வளம் பற
 
 ## தொடர்புடைய டுடோரியல்கள் {#related-tutorials}
 
-- [JavaScript-இல் எத்திரியம் தொகுதிச்சங்கிலியைப் பயன்படுத்த Web3.js-ஐ அமைக்கவும்](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– உங்கள் திட்டத்தில் Web3.js-ஐ அமைப்பதற்கான வழிமுறைகள்._
-- [JavaScript-இலிருந்து ஒரு திறன் ஒப்பந்தத்தை அழைத்தல்](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI வில்லையைப் பயன்படுத்தி, JavaScript-ஐப் பயன்படுத்தி ஒப்பந்தச் செயல்பாட்டை எவ்வாறு அழைப்பது என்பதைப் பார்க்கவும்._
-- [Web3 மற்றும் Alchemy-ஐப் பயன்படுத்திப் பரிவர்த்தனைகளை அனுப்புதல்](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– பின்தளத்திலிருந்து பரிவர்த்தனைகளை அனுப்புவதற்கான படிப்படியான வழிகாட்டி._
+- [Web3 மற்றும் Alchemy-ஐப் பயன்படுத்தி பரிவர்த்தனைகளை அனுப்புதல்](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– பின்னணியிலிருந்து பரிவர்த்தனைகளை அனுப்புவதற்கான படிப்படியான வழிகாட்டி._
 
 ## டுடோரியல்கள்: எத்திரியத்தில் JavaScript API-கள் & WebSocket-கள் {#tutorials}
 

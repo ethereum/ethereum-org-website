@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/community/research/index.md",
-  "generatedAt": "2026-08-20T22:13:09.695Z",
-  "rootHash": "848cab3b5e24",
+  "generatedAt": "2026-11-27T10:11:55.394Z",
+  "rootHash": "10e07854f6c4",
   "tree": {
-    "contentHash": "97747dafa627",
-    "anchorHash": "6528005fdcab",
+    "contentHash": "907323ff9d88",
+    "anchorHash": "2351022fe2ce",
     "children": {
       "frontmatter:title": {
         "contentHash": "54144186c8d1",
@@ -954,8 +954,8 @@
         ]
       },
       "scaling-and-performance": {
-        "contentHash": "1a8a47bf8b46",
-        "anchorHash": "fb7583699b37",
+        "contentHash": "beacc60a8889",
+        "anchorHash": "d80131ce5cbf",
         "labelHash": "9fcb99eb8d08",
         "children": {
           "_label": {
@@ -983,8 +983,8 @@
             "anchorHash": "e3b0c44298fc"
           },
           "layer-2": {
-            "contentHash": "ce7b9e566ff2",
-            "anchorHash": "39c42bf8ab40",
+            "contentHash": "81cf7f28a39c",
+            "anchorHash": "99077ab3878e",
             "labelHash": "620558ceadc1",
             "children": {
               "_label": {
@@ -996,8 +996,8 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "background-reading-2": {
-                "contentHash": "11bd5ec4ecf2",
-                "anchorHash": "700d07530158",
+                "contentHash": "e57faaed6b4f",
+                "anchorHash": "38860a89b9ca",
                 "labelHash": "2d3a4fec94b0",
                 "children": {
                   "_label": {
@@ -1017,8 +1017,8 @@
                     "anchorHash": "e3b0c44298fc"
                   },
                   "link:1": {
-                    "contentHash": "59351055d49e",
-                    "anchorHash": "cdbcac4645a5"
+                    "contentHash": "5666753986bb",
+                    "anchorHash": "112763b8aaba"
                   },
                   "prose:5": {
                     "contentHash": "3973e022e932",
@@ -1040,8 +1040,8 @@
                 ]
               },
               "recent-research-2": {
-                "contentHash": "09fee3ac00ec",
-                "anchorHash": "21e05214e8b4",
+                "contentHash": "92f219c52b01",
+                "anchorHash": "f93416cccbec",
                 "labelHash": "0b74f62773b6",
                 "children": {
                   "_label": {
@@ -1061,8 +1061,8 @@
                     "anchorHash": "e3b0c44298fc"
                   },
                   "link:1": {
-                    "contentHash": "35596477a25d",
-                    "anchorHash": "729d718171f8"
+                    "contentHash": "7b084379d2f3",
+                    "anchorHash": "722ce9f662f3"
                   },
                   "prose:5": {
                     "contentHash": "3973e022e932",
@@ -2520,8 +2520,8 @@
         ]
       },
       "data-science-and-analytics": {
-        "contentHash": "7d79b3c73d98",
-        "anchorHash": "a8450b5210c8",
+        "contentHash": "879a363dc92b",
+        "anchorHash": "8bc94d173595",
         "labelHash": "2c44d77f4ef7",
         "children": {
           "_label": {
@@ -2533,8 +2533,8 @@
             "anchorHash": "e3b0c44298fc"
           },
           "background-reading-14": {
-            "contentHash": "a36288339429",
-            "anchorHash": "eb2a0db07962",
+            "contentHash": "bd424b15550f",
+            "anchorHash": "2355efd65bbe",
             "labelHash": "2d3a4fec94b0",
             "children": {
               "_label": {
@@ -2566,8 +2566,8 @@
                 "anchorHash": "479bb71ee459"
               },
               "recent-research-14": {
-                "contentHash": "592d1d83d55b",
-                "anchorHash": "c90ed8620a7d",
+                "contentHash": "c34d1bc8f737",
+                "anchorHash": "76ee31f68f29",
                 "labelHash": "0b74f62773b6",
                 "children": {
                   "_label": {
@@ -2595,8 +2595,8 @@
                     "anchorHash": "e3b0c44298fc"
                   },
                   "link:2": {
-                    "contentHash": "59351055d49e",
-                    "anchorHash": "cdbcac4645a5"
+                    "contentHash": "5666753986bb",
+                    "anchorHash": "112763b8aaba"
                   }
                 },
                 "childrenOrder": [
@@ -3216,5 +3216,5 @@
       "apps-and-tooling"
     ]
   },
-  "sourceCommitSha": "1988a451065e8d91e60a09d73935256ab102a52c"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }
