@@ -1,3 +1,4 @@
+import type { KeyboardEvent } from "react"
 import { Link as NavigationMenuLink } from "@radix-ui/react-navigation-menu"
 
 import type { MatomoEventOptions } from "@/lib/types"
@@ -146,6 +147,50 @@ export const GroupHeading = ({
 // Tighter than the panel's own radius so the cards nest inside its corners
 const nestedCardClasses = "rounded-lg [--card-pad:--spacing(3)]"
 
+const COLUMN_SELECTOR = "[data-nav-column]"
+
+/**
+ * Left/Right hop to the neighbouring column, landing on the link nearest the current row.
+ * Works from on-screen positions, so it follows RTL and the stacked layouts.
+ */
+const hopColumn = (event: KeyboardEvent<HTMLDivElement>) => {
+  const toRight = event.key === "ArrowRight"
+  if (!toRight && event.key !== "ArrowLeft") return
+  if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return
+  const current = document.activeElement
+  const column = current?.closest(COLUMN_SELECTOR)
+  if (!current || !column) return
+  // Radix treats Left/Right as previous/next link; it skips a prevented event
+  event.preventDefault()
+
+  const from = column.getBoundingClientRect()
+  const row = current.getBoundingClientRect()
+  const beside = [...event.currentTarget.querySelectorAll(COLUMN_SELECTOR)]
+    .map((el) => {
+      const box = el.getBoundingClientRect()
+      return {
+        el,
+        box,
+        gap: toRight ? box.left - from.right : from.left - box.right,
+      }
+    })
+    .filter(({ gap }) => gap >= -1)
+  const level = beside.filter(
+    ({ box }) => box.top < row.bottom && box.bottom > row.top
+  )
+  const pool = level.length ? level : beside
+  const nearest = Math.min(...pool.map(({ gap }) => gap))
+  const links = pool
+    .filter(({ gap }) => gap <= nearest + 1)
+    .flatMap(({ el }) =>
+      el.matches("a") ? [el] : [...el.querySelectorAll("a")]
+    )
+  const distance = (link: Element) =>
+    Math.abs(link.getBoundingClientRect().top - row.top)
+  const target = links.sort((a, b) => distance(a) - distance(b))[0]
+  if (target instanceof HTMLElement) target.focus()
+}
+
 type MenuPanelProps = {
   sectionKey: NavSectionKey
   section: NavSectionDetail
@@ -183,9 +228,16 @@ const MenuPanel = ({
   )
 
   return (
-    <div className="flex gap-6 p-4 max-xl:flex-col xl:gap-8">
+    <div
+      onKeyDownCapture={hopColumn}
+      className="flex gap-6 p-4 max-xl:flex-col xl:gap-8"
+    >
       <div className="grid shrink-0 auto-rows-min gap-3 max-xl:grid-cols-2 xl:w-64">
-        <NavigationMenuLink asChild active={isActive(section.hub.href)}>
+        <NavigationMenuLink
+          asChild
+          data-nav-column
+          active={isActive(section.hub.href)}
+        >
           <HubCard
             sectionKey={sectionKey}
             hub={section.hub}
@@ -194,7 +246,11 @@ const MenuPanel = ({
           />
         </NavigationMenuLink>
         {section.featured && (
-          <NavigationMenuLink asChild active={isActive(section.featured.href)}>
+          <NavigationMenuLink
+            asChild
+            data-nav-column
+            active={isActive(section.featured.href)}
+          >
             <FeaturedCard
               featured={section.featured}
               track={track}
@@ -211,6 +267,7 @@ const MenuPanel = ({
           return (
             <div
               key={group.id}
+              data-nav-column
               className="min-w-0 lg:row-span-2 lg:grid lg:grid-rows-subgrid lg:items-start"
             >
               {group.href ? (
