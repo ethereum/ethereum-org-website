@@ -47,17 +47,17 @@ sidebarDepth: 2
 
 阅读更多关于[运行自己的节点的好处](/developers/docs/nodes-and-clients/#benefits-to-you)。
 
-## 流行的节点服务 {#popular-node-services}
+## 热门节点服务 {#popular-node-services}
 
-以下是一些最流行的以太坊节点提供商列表，欢迎补充任何遗漏的提供商！除了免费或付费层级之外，每个节点服务还提供不同的优势和功能，在做出决定之前，你应该调查哪些服务最适合你的需求。
+以下是一些最热门的以太坊节点提供商列表，欢迎补充任何遗漏的提供商！除了免费或付费层级之外，每种节点服务还提供不同的优势和功能，在做出决定之前，你应该调查哪些服务最适合你的需求。
 
 - [**Alchemy**](https://alchemy.com/)
   - [文档](https://www.alchemy.com/docs/)
   - 功能
     - 最大的免费层级，每月 3 亿个计算单元（约 3000 万次 getLatestBlock 请求）
-    - 支持 Polygon、Starknet、Optimism、Arbitrum 等多链
-    - 为约 70% 的最大以太坊去中心化应用 (dapp) 和去中心化金融 (DeFi) 交易量提供支持
-    - 通过 Alchemy Notify 提供实时 Webhook 警报
+    - 支持 Polygon、Starknet、Optimism、Arbitrum 的多链支持
+    - 为约 70% 的最大以太坊 dapp 和 DeFi 交易量提供支持
+    - 通过 Alchemy Notify 提供实时 webhook 警报
     - 一流的支持和可靠性/稳定性
     - Alchemy 的 NFT API
     - 带有请求浏览器、内存池观察器和 Composer 的仪表板
@@ -95,10 +95,10 @@ sidebarDepth: 2
   - 功能
     - 完全托管的以太坊节点
     - 在六个地区可用
-    - 基于 HTTP 和安全 WebSocket 的 JSON-RPC
+    - 基于 HTTP 和安全 WebSockets 的 JSON-RPC
     - 支持 3 条链
     - SLA，AWS 24/7 支持
-    - Go-ethereum 和莱特豪斯 (Lighthouse)
+    - Go-ethereum 和莱特豪斯
 
 - [**Ankr**](https://www.ankr.com/)
   - [文档](https://docs.ankr.com/)
@@ -116,7 +116,7 @@ sidebarDepth: 2
 - [**Blast**](https://blastapi.io/)
   - [文档](https://docs.blastapi.io/)
   - 功能
-    - 支持 RPC 和 WSS
+    - RPC 和 WSS 支持
     - 多区域节点托管
     - 去中心化基础设施
     - 公共 API
@@ -161,7 +161,7 @@ sidebarDepth: 2
   - 功能
     - 免费共享节点
     - 共享归档节点
-    - 支持 GraphQL
+    - GraphQL 支持
     - RPC 和 WSS 端点
     - 专用全节点和归档节点
     - 专用部署的快速同步时间
@@ -222,20 +222,20 @@ sidebarDepth: 2
   - 功能
     - 免费入门层级
     - 一键式以太坊节点部署
-    - 可定制的客户端和算法（Geth、Quorum 和贝苏 (Besu) || PoA、IBFT 和 Raft）
+    - 可定制的客户端和算法（Geth、Quorum 和贝苏 || PoA、IBFT 和 Raft）
     - 500 多个管理和服务 API
     - 用于以太坊交易提交的 RESTful 接口（由 Apache Kafka 支持）
     - 用于事件交付的出站流（由 Apache Kafka 支持）
     - 深入收集“链下”和辅助服务（例如，双边加密消息传输）
     - 具有治理和基于角色的访问控制的简单网络用户引导
-    - 针对管理员和最终用户的复杂用户管理
+    - 面向管理员和最终用户的复杂用户管理
     - 高度可扩展、有弹性、企业级的基础设施
     - 云 HSM 私钥管理
     - 以太坊主网锚定
     - ISO 27k 和 SOC 2 Type 2 认证
     - 动态运行时配置（例如，添加云集成、更改节点入口等）
     - 支持多云、多区域和混合部署编排
-    - 基于 SaaS 的简单按小时计费
+    - 简单的基于 SaaS 的按小时定价
     - SLA 和 24x7 支持
 
 - [**Lava Network**](https://www.lavanet.xyz/)
@@ -255,7 +255,7 @@ sidebarDepth: 2
   - 功能
     - 免费共享节点
     - 免费共享归档节点
-    - 注重隐私（无日志策略）
+    - 注重隐私（无日志政策）
     - 跨链支持
     - 随用随扩展
     - 仪表板
@@ -267,18 +267,18 @@ sidebarDepth: 2
   - [文档](https://docs.nodereal.io/docs/introduction)
   - 功能
     - 可靠、快速且可扩展的 RPC API 服务
-    - 为 Web3 开发人员增强的 API
+    - 为 Web3 开发者增强的 API
     - 多链支持
     - 免费开始使用
 
 - [**NodeFlare**](https://nodeflare.app/)
   - [文档](https://nodeflare.app/docs/quick-start)
   - 功能
-    - 23 条 EVM 链，包括以太坊、Base、Arbitrum One 和 Nova、Optimism、Linea 以及 Unichain
-    - 5 个区域（欧洲、英国、亚洲、美国东部、美国西部），自动故障转移到最近的健康节点
-    - 免费公共端点（无 API 密钥）+ 每月 300 万个计算单元的免费计划
-    - 计算单元计费——仅为你使用的内容付费，较重的调用成本更高
-    - 付费计划无节流
+    - 17 条 EVM 链，包括以太坊、Base、Arbitrum One、Optimism 和 Unichain
+    - 拥有裸机节点，在法兰克福、伦敦、阿什本、芝加哥、洛杉矶和新加坡设有网关
+    - 免费公共端点（无需 API 密钥，每个 IP 每 10 秒 50 次请求）
+    - 免费 API 密钥，每月 300 万个计算单元，每秒 10 次请求，无需信用卡
+    - 计算单元计费——更繁重的调用成本更高
 
 - [**NOWNodes**](https://nownodes.io/)
   - 功能
@@ -297,7 +297,7 @@ sidebarDepth: 2
     - 每天 100 万次请求的免费层级（每个端点，最多 2 个）
     - Pre-Stake+ 计划（如果你每天需要超过 100 万次请求）
     - 支持 15 条以上区块链
-    - 6400 多个节点通过为应用程序提供服务赚取 POKT
+    - 6400 多个节点通过为应用提供服务赚取 POKT
     - 归档节点、带 Tracing 的归档节点和测试网节点支持
     - 以太坊主网节点客户端多样性
     - 无单点故障
@@ -306,23 +306,23 @@ sidebarDepth: 2
     - 无每月沉没成本，将你的基础设施转化为资产
     - 协议内置负载均衡
     - 随用随无限扩展每天的请求数和每小时的节点数
-    - 最私密、抗审查的选项
-    - 实践开发人员支持
+    - 最私密、最抗审查的选项
+    - 实践开发者支持
     - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) 仪表板和分析
 
 - [**QuickNode**](https://www.quicknode.com)
   - [文档](https://www.quicknode.com/docs/)
   - 功能
-    - 24/7 技术支持和开发人员 Discord 社区
+    - 24/7 技术支持和开发者 Discord 社区
     - 地理均衡、多云/裸机、低延迟网络
     - 多链支持（Optimism、Arbitrum、Polygon + 其他 11 条链）
-    - 用于速度和稳定性的中间层（调用路由、缓存、索引）
-    - 通过 Webhook 进行智能合约监控
-    - 直观的仪表板、分析套件、RPC Composer
+    - 提高速度和稳定性的中间层（调用路由、缓存、索引）
+    - 通过 Webhooks 进行智能合约监控
+    - 直观的仪表板、分析套件、RPC 编写器
     - 高级安全功能（JWT、掩码、白名单）
     - NFT 数据和分析 API
     - [SOC2 认证](https://www.quicknode.com/security)
-    - 适合从开发人员到企业的各类用户
+    - 适合开发者到企业
 
 - [**Rivet**](https://rivet.cloud/)
   - [文档](https://rivet.readthedocs.io/en/latest/)
@@ -336,14 +336,14 @@ sidebarDepth: 2
     - 专用和共享节点
     - 仪表板
     - 在拉丁美洲不同地点的多个托管提供商上脱离 AWS 托管
-    - 普莱斯姆 (Prysm) 和莱特豪斯 (Lighthouse) 客户端
+    - 普莱斯姆和莱特豪斯客户端
 
 - [**SettleMint**](https://console.settlemint.com/)
   - [文档](https://docs.settlemint.com/)
   - 功能
     - 免费试用
     - 随用随扩展
-    - 支持 GraphQL
+    - GraphQL 支持
     - RPC 和 WSS 端点
     - 专用全节点
     - 自带云
@@ -355,7 +355,7 @@ sidebarDepth: 2
 - [**Tenderly**](https://tenderly.co/web3-gateway)
   - [文档](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - 功能
-    - 免费层级，每月包含 2500 万个 Tenderly 单元
+    - 免费层级，包括每月 2500 万个 Tenderly 单元
     - 免费访问历史数据
     - 读取密集型工作负载速度提升高达 8 倍
     - 100% 一致的读取访问
@@ -370,8 +370,8 @@ sidebarDepth: 2
 - [**Tokenview**](https://services.tokenview.io/)
   - [文档](https://services.tokenview.io/docs?type=nodeService)
   - 功能
-    - 24/7 技术支持和开发人员电报 (Telegram) 社区
-    - 多链支持（比特币、以太坊、Tron、BNB Smart Chain、以太坊经典）
+    - 24/7 技术支持和开发者电报社区
+    - 多链支持（比特币、以太坊、波场、BNB 智能链、以太坊经典）
     - RPC 和 WSS 端点均开放使用
     - 无限制访问归档数据 API
     - 带有请求浏览器和内存池观察器的仪表板
@@ -396,7 +396,7 @@ sidebarDepth: 2
   - 功能
     - 抢跑即服务
     - 具有搜索/过滤方法的全球交易内存池
-    - 发送交易的无限交易费用和无限 Gas
+    - 发送交易的无限制交易费用和无限 Gas
     - 最快获取新区块和读取区块链
     - 保证每次 API 调用的最佳价格
 
@@ -405,11 +405,12 @@ sidebarDepth: 2
   - 功能
     - 企业级无代码自动化平台，提供区块链节点和网络的部署、监控和管理
     - 支持 30 多种协议和集成，并不断增加
-    - 增值 Web3 基础设施服务，如去中心化存储、去中心化身份 (DID) 和用于现实世界用例的区块链账本数据 API
+    - 增值 Web3 基础设施服务，如去中心化存储、去中心化身份和用于现实世界用例的区块链账本数据 API
     - 24/7 支持和主动监控始终确保节点的健康。
     - RPC 端点提供对 API 的经过身份验证的访问，通过直观的仪表板和分析实现无忧管理。
     - 提供托管云和自带云选项供选择，并支持所有主要云提供商，如 AWS、Azure、Google Cloud、Digital Ocean 和本地部署。
     - 我们使用智能路由，每次都命中离你的用户最近的节点
+
 ## 延伸阅读 {#further-reading}
 
 - [以太坊节点服务列表](https://ethereumnodes.com/)
@@ -420,5 +421,4 @@ sidebarDepth: 2
 
 ## 相关教程 {#related-tutorials}
 
-- [使用 Alchemy 开始以太坊开发](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [使用 Web3 和 Alchemy 发送交易指南](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
