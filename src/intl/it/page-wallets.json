@@ -3,7 +3,7 @@
   "page-wallets-accounts-addresses-desc": "Vale la pena comprendere le differenze tra alcuni termini chiave.",
   "page-wallets-accounts-ethereum-addresses": "<b>Un account Ethereum ha un indirizzo</b>, proprio come una casella di posta ha un indirizzo e-mail. Questo viene utilizzato per identificare i tuoi asset digitali.",
   "page-wallets-alt": "Illustrazione di un robot con un vault al posto del corpo, che rappresenta un portafoglio Ethereum",
-  "page-wallets-ethereum-account": "<b>Un account Ethereum è una coppia di chiavi</b>. <a href=\"/glossary/#public-key\">Una chiave</a> viene utilizzata per creare l'indirizzo che puoi condividere liberamente, mentre l'<a href=\"/glossary/#private-key\">altra chiave</a> devi mantenerla segreta perché viene utilizzata per firmare le cose. Insieme, queste chiavi ti consentono di detenere asset ed effettuare transazioni.",
+  "page-wallets-ethereum-account": "<b>Un account Ethereum è una coppia di chiavi</b>. <a href=\"/glossary/#public-key\">Una chiave</a> viene utilizzata per creare l'indirizzo che puoi condividere liberamente, mentre l''<a href=\"/glossary/#private-key\">altra chiave</a> devi mantenerla segreta perché viene utilizzata per firmare le cose. Insieme, queste chiavi ti consentono di detenere asset ed effettuare transazioni.",
   "page-wallets-blog": "Blog di Coinbase",
   "page-wallets-bookmarking": "Aggiungi il tuo portafoglio ai segnalibri",
   "page-wallets-bookmarking-desc": "Se usi un portafoglio web, aggiungi il sito ai segnalibri per proteggerti dalle truffe di phishing.",
