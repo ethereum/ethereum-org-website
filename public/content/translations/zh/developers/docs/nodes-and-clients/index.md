@@ -15,15 +15,14 @@ sidebarDepth: 2
 
 ## 什么是节点和客户端？ {#what-are-nodes-and-clients}
 
-“节点”是指连接到其他同样运行以太坊软件的计算机并形成网络的任何以太坊客户端软件实例。客户端是以太坊的一种实现，它根据协议规则验证数据并保持网络安全。一个节点必须运行两个客户端：一个共识客户端和一个执行客户端。
+“节点”是指连接到其他同样运行以太坊软件的计算机，从而形成一个网络的任何以太坊客户端软件实例。客户端是以太坊的一种实现，它根据协议规则验证数据并保持网络安全。一个节点必须运行两个客户端：一个共识客户端和一个执行客户端。
 
-- 执行客户端（也称为执行引擎、EL 客户端或以前的 Eth1 客户端）侦听网络中广播的新交易，在 EVM 中执行它们，并保存所有当前以太坊数据的最新状态和数据库。
-- 共识客户端（也称为信标节点、CL 客户端或以前的 Eth2 客户端）实现了权益证明 (PoS) 共识算法，该算法使网络能够根据来自执行客户端的已验证数据达成一致。还有第三个软件，称为“验证者”，可以添加到共识客户端中，允许节点参与保护网络。
+- 执行客户端（也称为执行引擎、EL 客户端或以前的 Eth1 客户端）监听网络中广播的新交易，在以太坊虚拟机 (EVM) 中执行它们，并保存所有当前以太坊数据的最新状态和数据库。
+- 共识客户端（也称为信标节点、CL 客户端或以前的 Eth2 客户端）实现了权益证明 (PoS) 共识算法，该算法使网络能够根据来自执行客户端的已验证数据达成共识。还有第三个被称为“验证者”的软件，可以将其添加到共识客户端中，允许节点参与保护网络。
 
-这些客户端协同工作以跟踪以太坊链的头部，并允许用户与以太坊网络进行交互。这种由多个软件协同工作的模块化设计被称为[封装复杂性](https://vitalik.eth.limo/general/2022/02/28/complexity.html)。这种方法使得无缝执行[合并](/roadmap/merge)变得更加容易，使客户端软件更易于维护和开发，并实现了单个客户端的重用，例如在[二层网络 (l2) 生态系统](/layer-2/)中。
+这些客户端协同工作以跟踪以太坊链的头部，并允许用户与以太坊网络进行交互。这种由多个软件协同工作的模块化设计被称为[封装复杂性](https://vitalik.eth.limo/general/2022/02/28/complexity.html)。这种方法使得无缝执行[合并](/roadmap/merge)变得更加容易，使客户端软件更易于维护和开发，并实现了单个客户端的重用，例如在[二层网络 (L2) 生态系统](/layer-2/)中。
 
-![Coupled execution and consensus clients](./eth1eth2client.png)
-耦合的执行客户端和共识客户端的简化图。
+<NodeClientsDiagram />
 
 ### 客户端多样性 {#client-diversity}
 
@@ -90,16 +89,16 @@ sidebarDepth: 2
 
 ### 对你的好处 {#benefits-to-you}
 
-运行你自己的节点使你能够以私密、自给自足和无须信任的方式使用以太坊。你不需要信任网络，因为你可以使用你的客户端自己验证数据。“不要信任，要验证”是一句流行的区块链格言。
+运行你自己的节点使你能够以私密、自给自足且无须信任的方式使用以太坊。你不需要信任网络，因为你可以使用自己的客户端自行验证数据。“不要信任，要验证”是一句流行的区块链格言。
 
 - 你的节点会自行根据共识规则验证所有交易和区块。这意味着你不必依赖网络中的任何其他节点或完全信任它们。
-- 你可以将以太坊钱包与你自己的节点一起使用。你可以更安全、更私密地使用去中心化应用 (dapp)，因为你不必向中介泄露你的地址和余额。一切都可以用你自己的客户端进行检查。[梅塔马斯克](https://metamask.io)、[Frame](https://frame.sh/) 和[许多其他钱包](/wallets/find-wallet/)提供 RPC 导入功能，允许它们使用你的节点。
-- 你可以运行和自托管依赖于以太坊数据的其他服务。例如，这可能是信标链验证者、二层网络 (l2) 等软件、基础设施、区块浏览器、支付处理器等。
+- 你可以将以太坊钱包与你自己的节点一起使用。你可以更安全、更私密地使用去中心化应用 (dapp)，因为你不必向中介泄露你的地址和余额。一切都可以用你自己的客户端进行检查。[梅塔马斯克 (MetaMask)](https://metamask.io)、[Frame](https://frame.sh/) 以及[许多其他钱包](/wallets/find-wallet/)提供 RPC 导入功能，允许它们使用你的节点。
+- 你可以运行和自托管其他依赖以太坊数据的服务。例如，这可能是信标链验证者、二层网络 (L2) 等软件、基础设施、区块浏览器、支付处理器等。
 - 你可以提供自己的自定义 [RPC 端点](/developers/docs/apis/json-rpc/)。你甚至可以向社区公开提供这些端点，以帮助他们避开大型中心化提供商。
-- 你可以使用**进程间通信 (IPC)** 连接到你的节点，或者重写节点以将你的程序作为插件加载。这提供了低延迟，这非常有帮助，例如，当使用 Web3 库处理大量数据时，或者当你需要尽可能快地替换交易时（即抢跑）。
+- 你可以使用**进程间通信 (IPC)** 连接到你的节点，或者重写节点以将你的程序作为插件加载。这提供了低延迟，这在很多情况下非常有帮助，例如，当使用 Web3 库处理大量数据时，或者当你需要尽可能快地替换交易时（即抢跑）。
 - 你可以直接质押 ETH 来保护网络并赚取奖励。请参阅[独立质押](/staking/solo/)以开始使用。
 
-![How you access Ethereum via your application and nodes](./nodes.png)
+<NodeAccessDiagram />
 
 ### 网络优势 {#network-benefits}
 
@@ -130,22 +129,22 @@ sidebarDepth: 2
 
 ## 执行客户端 {#execution-clients}
 
-以太坊社区维护着多个开源执行客户端（以前称为“Eth1 客户端”，或简称为“以太坊客户端”），由不同团队使用不同的编程语言开发。这使得网络更加强大和[多样化](/developers/docs/nodes-and-clients/client-diversity/)。理想的目标是实现多样性，而没有任何客户端占据主导地位，以减少任何单点故障。
+以太坊社区维护着多个开源执行客户端（以前称为“Eth1 客户端”或简称为“以太坊客户端”），由不同的团队使用不同的编程语言开发。这使得网络更加强大和[多样化](/developers/docs/nodes-and-clients/client-diversity/)。理想的目标是实现多样性，而没有任何一个客户端占据主导地位，从而减少任何单点故障。
 
 下表总结了不同的客户端。它们都通过了[客户端测试](https://github.com/ethereum/tests)，并得到积极维护以跟上网络升级的步伐。
 
-| 客户端                                                                   | 语言   | 操作系统     | 网络                | 同步策略                                            | 状态修剪   |
+| 客户端 | 语言 | 操作系统 | 网络 | 同步策略 | 状态修剪 |
 | ------------------------------------------------------------------------ | ---------- | --------------------- | ----------------------- | ---------------------------------------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | 主网、Sepolia、Hoodi | [快照](#snap-sync)、[完整](#full-sync)                     | 归档、已修剪 |
-| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | 主网、Sepolia、Hoodi | [快照](#snap-sync)、快速、[完整](#full-sync)               | 归档、已修剪 |
-| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | 主网、Sepolia、Hoodi | [快照](#snap-sync)、[快速](#fast-sync)、[完整](#full-sync) | 归档、已修剪 |
-| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | 主网、Sepolia、Hoodi | [完整](#full-sync)                                         | 归档、已修剪 |
-| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | 主网、Sepolia、Hoodi | [完整](#full-sync)                                         | 归档、已修剪 |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(测试版)_ | TypeScript | Linux, Windows, macOS | Sepolia、Hoodi          | [完整](#full-sync)                                         | 已修剪          |
+| [Go以太坊 (Geth)](https://geth.ethereum.org/) | Go | Linux、Windows、macOS | Mainnet、Sepolia、Hoodi | [Snap](#snap-sync)、[全同步](#full-sync) | 归档、修剪 |
+| [奈瑟曼德 (Nethermind)](https://www.nethermind.io/) | C#、.NET | Linux、Windows、macOS | Mainnet、Sepolia、Hoodi | [Snap](#snap-sync)、快速、[全同步](#full-sync) | 归档、修剪 |
+| [贝苏 (Besu)](https://besu.hyperledger.org/en/stable/) | Java | Linux、Windows、macOS | Mainnet、Sepolia、Hoodi | [Snap](#snap-sync)、[快速](#fast-sync)、[全同步](#full-sync) | 归档、修剪 |
+| [埃里贡 (Erigon)](https://github.com/ledgerwatch/erigon) | Go | Linux、Windows、macOS | Mainnet、Sepolia、Hoodi | [全同步](#full-sync) | 归档、修剪 |
+| [ethrex](https://ethrex.xyz/) | Rust | Linux、macOS | Mainnet、Sepolia、Hoodi | [Snap](#snap-sync)、[全同步](#full-sync) | 修剪 |
+| [瑞斯 (Reth)](https://reth.rs/) | Rust | Linux、Windows、macOS | Mainnet、Sepolia、Hoodi | [全同步](#full-sync) | 归档、修剪 |
 
 有关支持的网络的更多信息，请阅读[以太坊网络](/developers/docs/networks/)。
 
-每个客户端都有独特的用例和优势，因此你应该根据自己的偏好选择一个。多样性允许实现专注于不同的功能和用户受众。你可能希望根据功能、支持、编程语言或许可证来选择客户端。
+每个客户端都有独特的用例和优势，因此你应该根据自己的偏好选择一个。多样性允许不同的实现专注于不同的功能和用户群体。你可能希望根据功能、支持、编程语言或许可证来选择客户端。
 
 ### 贝苏 {#besu}
 
@@ -155,12 +154,11 @@ Hyperledger Besu 是一个用于公共和许可型网络的企业级以太坊客
 
 ### 埃里贡 {#erigon}
 
-埃里贡（以前称为 Turbo-Geth）最初是 Go以太坊 (Geth) 的一个分叉，旨在提高速度和磁盘空间效率。埃里贡是一个完全重新架构的以太坊实现，目前用 Go 编写，但其他语言的实现正在开发中。埃里贡的目标是提供一个更快、更模块化和更优化的以太坊实现。它可以在不到 3 天的时间内使用大约 2TB 的磁盘空间执行完整的归档节点同步。
-
+埃里贡 (Erigon)（以前称为 Turbo-Geth）最初是 Go以太坊 (Geth) 的一个分叉，致力于提高速度和磁盘空间效率。埃里贡 (Erigon) 是以太坊的一种完全重新架构的实现，目前用 Go 编写，但其他语言的实现正在开发中。埃里贡 (Erigon) 的目标是提供更快、更模块化和更优化的以太坊实现。它可以在不到 3 天的时间内使用不到 3TB 的磁盘空间执行完整的归档节点同步。
 
 ### ethrex {#ethrex}
 
-ethrex 是一个极简、模块化的以太坊执行客户端，由 LambdaClass 使用 Rust 编写。它的构建考虑了零知识证明，并且相同的代码库既可以作为一层网络 (l1) 执行客户端运行，也可以作为多证明者 ZK-Rollup（二层网络 (l2)）运行。它在 Apache 2.0 和 MIT 许可证下获得双重许可。
+ethrex 是一个极简、模块化的以太坊执行客户端，由 LambdaClass 使用 Rust 编写。它的构建考虑了零知识证明，并且相同的代码库既可以作为一层网络 (L1) 执行客户端运行，也可以作为多证明者 ZK-Rollup（二层网络 (L2)）运行。它在 Apache 2.0 和 MIT 许可证下获得双重许可。
 
 通过阅读 [ethrex 文档](https://docs.ethrex.xyz/)或查看 [ethrex GitHub 仓库](https://github.com/lambdaclass/ethrex)了解更多信息。
 ### Go以太坊 (Geth) {#geth}
@@ -187,16 +185,6 @@ Go以太坊 (Geth)（简称 Geth）是以太坊协议的最初实现之一。目
 
 通过查看 [Reth Book](https://reth.rs/) 或 [Reth GitHub 仓库](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth)了解更多信息。
 
-### 开发中 {#execution-in-development}
-
-这些客户端仍处于早期开发阶段，尚不建议用于生产环境。
-
-#### EthereumJS {#ethereumjs}
-
-EthereumJS 执行客户端 (EthereumJS) 是用 TypeScript 编写的，由许多包组成，包括由区块、交易和默克尔帕特里夏树 (Merkle-Patricia Trie) 类表示的核心以太坊原语，以及核心客户端组件，包括以太坊虚拟机 (EVM) 的实现、区块链类和 devp2p 网络堆栈。
-
-通过阅读其[文档](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master)了解更多信息
-
 ## 共识客户端 {#consensus-clients}
 
 有多个共识客户端（以前称为“Eth2”客户端）来支持[共识升级](/roadmap/beacon-chain/)。它们负责所有与共识相关的逻辑，包括分叉选择算法、处理证明以及管理[权益证明 (PoS)](/developers/docs/consensus-mechanisms/pos)奖励和罚没。
@@ -218,9 +206,9 @@ EthereumJS 执行客户端 (EthereumJS) 是用 TypeScript 编写的，由许多�
 
 ### 洛德斯塔 {#lodestar}
 
-洛德斯塔是一个可用于生产的共识客户端实现，用 TypeScript 编写，采用 LGPL-3.0 许可证。它由 ChainSafe Systems 维护，是面向独立质押者、开发者和研究人员的最新共识客户端。洛德斯塔由信标节点和验证者客户端组成，由以太坊协议的 JavaScript 实现提供支持。洛德斯塔旨在通过轻客户端提高以太坊的可用性，扩大对更多开发者的可访问性，并进一步促进生态系统的多样性。
+洛德斯塔 (Lodestar) 是一个用 TypeScript 编写的、可用于生产的共识客户端实现，采用 Apache-2.0 许可证。它由 ChainSafe Systems 维护，是面向独立质押者、开发者和研究人员的最新共识客户端。洛德斯塔 (Lodestar) 由信标节点和验证者客户端组成，由以太坊协议的 JavaScript 实现提供支持。洛德斯塔 (Lodestar) 旨在通过轻客户端提高以太坊的可用性，扩大对更多开发者的可访问性，并进一步促进生态系统的多样性。
 
-更多信息可以在[洛德斯塔网站](https://lodestar.chainsafe.io/)上找到
+更多信息可以在[洛德斯塔 (Lodestar) 网站](https://lodestar.chainsafe.io/)上找到
 
 ### 尼姆巴斯 {#nimbus}
 
@@ -300,7 +288,7 @@ Grandine 是一个共识客户端实现，用 Rust 编写，采用 GPL-3.0 许�
 
 乐观同步是一种合并后的同步策略，旨在成为可选且向后兼容的，允许执行节点通过既定方法进行同步。执行引擎可以_乐观地_导入信标区块而无需完全验证它们，找到最新的头部，然后开始使用上述方法同步链。然后，在执行客户端赶上之后，它将通知共识客户端信标链中交易的有效性。
 
-[有关乐观同步的更多信息](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
+[有关乐观同步的更多信息](https://github.com/ethereum/consensus-specs/blob/master/specs/bellatrix/optimistic-sync.md)
 
 #### 检查点同步 {#checkpoint-sync}
 
@@ -322,4 +310,4 @@ Grandine 是一个共识客户端实现，用 Rust 编写，采用 GPL-3.0 许�
 
 ## 相关教程 {#related-tutorials}
 
-- [只需刷入 MicroSD 卡即可将你的 Raspberry Pi 4 变成验证者节点 – 安装指南](/developers/tutorials/run-node-raspberry-pi/) _– 刷入你的 Raspberry Pi 4，插入以太网电缆，连接 SSD 磁盘并启动设备，即可将 Raspberry Pi 4 变成运行执行层（主网）和/或共识层（信标链/验证者）的完整以太坊节点。_
+- [只需刷入 MicroSD 卡即可将你的 Raspberry Pi 5 变成验证者节点 – 安装指南](/developers/tutorials/run-node-raspberry-pi/) _– 刷入你的 Raspberry Pi 5，插入以太网电缆，连接 NVMe 磁盘并启动设备，即可将 Raspberry Pi 5 变成运行执行层 (Mainnet) 和/或共识层（信标链/验证者）的完整以太坊节点。_

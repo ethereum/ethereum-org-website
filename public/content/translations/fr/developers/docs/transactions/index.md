@@ -12,30 +12,29 @@ Pour vous aider à mieux comprendre cette page, nous vous recommandons de lire d
 
 ## Qu'est-ce qu'une transaction ? {#whats-a-transaction}
 
-Une transaction Ethereum fait référence à une action initiée par un compte détenu par un tiers (externally-owned account), c'est-à-dire un compte géré par un humain, et non par un contrat. Par exemple, si Bob envoie 1 ETH à Alice, le compte de Bob doit être débité et celui d'Alice doit être crédité. Cette action modifiant l'état a lieu au sein d'une transaction.
+Une transaction Ethereum fait référence à une action initiée par un compte détenu en externe, c'est-à-dire un compte géré par un humain, et non par un contrat. Par exemple, si Bob envoie 1 ETH à Alice, le compte de Bob doit être débité et celui d'Alice doit être crédité. Cette action modifiant l'état a lieu au sein d'une transaction.
 
-![Diagram showing a transaction cause state change](./tx.png)
-_Schéma adapté de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<TxApplyDiagram />
 
-Les transactions, qui modifient l'état de l'EVM, doivent être diffusées à l'ensemble du réseau. N'importe quel nœud peut diffuser une requête pour qu'une transaction soit exécutée sur l'EVM ; après cela, un validateur exécutera la transaction et propagera le changement d'état résultant au reste du réseau.
+Les transactions, qui modifient l'état de l'EVM, doivent être diffusées sur l'ensemble du réseau. N'importe quel nœud peut diffuser une requête pour qu'une transaction soit exécutée sur l'EVM ; après cela, un validateur exécutera la transaction et propagera le changement d'état résultant au reste du réseau.
 
 Les transactions nécessitent des frais et doivent être incluses dans un bloc validé. Pour simplifier cet aperçu, nous aborderons les frais de gaz et la validation ailleurs.
 
 Une transaction soumise comprend les informations suivantes :
 
-- `from` – l'adresse de l'expéditeur, qui signera la transaction. Il s'agira d'un compte détenu par un tiers, car les comptes de contrat ne peuvent pas envoyer de transactions
-- `to` – l'adresse de réception (s'il s'agit d'un compte détenu par un tiers, la transaction transférera de la valeur. S'il s'agit d'un compte de contrat, la transaction exécutera le code du contrat)
+- `from` – l'adresse de l'expéditeur, qui signera la transaction. Il s'agira d'un compte détenu en externe, car les comptes de contrat ne peuvent pas envoyer de transactions
+- `to` – l'adresse de réception (s'il s'agit d'un compte détenu en externe, la transaction transférera de la valeur. S'il s'agit d'un compte de contrat, la transaction exécutera le code du contrat)
 - `signature` – l'identifiant de l'expéditeur. Il est généré lorsque la clé privée de l'expéditeur signe la transaction et confirme que l'expéditeur a autorisé cette transaction
-- `nonce` - un compteur s'incrémentant séquentiellement qui indique le numéro de la transaction depuis le compte
+- `nonce` - un compteur s'incrémentant séquentiellement qui indique le numéro de la transaction provenant du compte
 - `value` – le montant d'ETH à transférer de l'expéditeur au destinataire (libellé en Wei, où 1 ETH équivaut à 1e+18 Wei)
-- `input data` – champ optionnel pour inclure des données arbitraires
+- `input data` – champ facultatif pour inclure des données arbitraires
 - `gasLimit` – la quantité maximale d'unités de gaz pouvant être consommées par la transaction. L'[EVM](/developers/docs/evm/opcodes) spécifie les unités de gaz requises par chaque étape de calcul
 - `maxPriorityFeePerGas` - le prix maximum du gaz consommé à inclure comme frais de priorité pour le validateur
-- `maxFeePerGas` - les frais maximums par unité de gaz que l'on est prêt à payer pour la transaction (incluant `baseFeePerGas` et `maxPriorityFeePerGas`)
+- `maxFeePerGas` - les frais maximum par unité de gaz que l'on est prêt à payer pour la transaction (incluant `baseFeePerGas` et `maxPriorityFeePerGas`)
 
-Le gaz est une référence au calcul requis pour traiter la transaction par un validateur. Les utilisateurs doivent payer des frais pour ce calcul. La `gasLimit` et les `maxPriorityFeePerGas` déterminent les frais de transaction maximums payés au validateur. [En savoir plus sur le gaz](/developers/docs/gas/).
+Le gaz est une référence au calcul requis pour traiter la transaction par un validateur. Les utilisateurs doivent payer des frais pour ce calcul. Le `gasLimit` et le `maxPriorityFeePerGas` déterminent les frais de transaction maximum payés au validateur. [En savoir plus sur le gaz](/developers/docs/gas/).
 
-L'objet de la transaction ressemblera un peu à ceci :
+L'objet de transaction ressemblera un peu à ceci :
 
 ```js
 {
@@ -100,8 +99,8 @@ Exemple de réponse :
 }
 ```
 
-- le `raw` est la transaction signée sous forme encodée [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp)
-- la `tx` est la transaction signée au format JSON
+- le `raw` est la transaction signée sous forme encodée avec un [préfixe de longueur récursif (RLP)](/developers/docs/data-structures-and-encoding/rlp)
+- le `tx` est la transaction signée au format JSON
 
 Avec le hash de la signature, il peut être prouvé cryptographiquement que la transaction provient de l'expéditeur et a été soumise au réseau.
 
@@ -150,13 +149,13 @@ Sur Ethereum, il existe quelques types de transactions différents :
 
 ### À propos du gaz {#on-gas}
 
-Comme mentionné, l'exécution des transactions coûte du [gaz](/developers/docs/gas/). Les transactions de transfert simples nécessitent 21000 unités de gaz.
+Comme mentionné, l'exécution des transactions coûte du [gaz](/developers/docs/gas/). Les transactions de transfert simples nécessitent 21 000 unités de gaz.
 
-Donc, pour que Bob envoie 1 ETH à Alice avec des `baseFeePerGas` de 190 gwei et des `maxPriorityFeePerGas` de 10 gwei, Bob devra payer les frais suivants :
+Ainsi, pour que Bob envoie 1 ETH à Alice avec un `baseFeePerGas` de 190 gwei et un `maxPriorityFeePerGas` de 10 gwei, Bob devra payer les frais suivants :
 
 ```
 (190 + 10) * 21000 = 4,200,000 gwei
---ou--
+--or--
 0.0042 ETH
 ```
 
@@ -169,8 +168,7 @@ Les frais de base seront brûlés **-0,00399 ETH**
 Le validateur conserve les frais de priorité **+0,000210 ETH**
 
 
-![Diagram showing how unused gas is refunded](./gas-tx.png)
-_Schéma adapté de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 Tout gaz non utilisé dans une transaction est remboursé sur le compte de l'utilisateur.
 
@@ -225,7 +223,7 @@ En fonction de la valeur `TransactionType`, une transaction peut être classée 
 
 3. **Transactions de type 2**, communément appelées transactions EIP-1559, sont des transactions introduites dans l'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), lors de la mise à jour [London](/ethereum-forks/#london) d'Ethereum. Elles sont devenues le type de transaction standard sur le réseau Ethereum. Ces transactions introduisent un nouveau mécanisme de marché des frais qui améliore la prévisibilité en séparant les frais de transaction en frais de base et en frais de priorité. Elles commencent par l'octet `0x02` et incluent des champs tels que `maxPriorityFeePerGas` et `maxFeePerGas`. Les transactions de type 2 sont désormais la valeur par défaut en raison de leur flexibilité et de leur efficacité, particulièrement appréciées pendant les périodes de forte congestion du réseau pour leur capacité à aider les utilisateurs à gérer les frais de transaction de manière plus prévisible. La valeur TransactionType pour ces transactions est `0x2`.
 
-4. **Transactions de type 3 (Blob)** ont été introduites dans l'[EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) dans le cadre de la [mise à jour Dencun](/ethereum-forks/#dencun) d'Ethereum. Ces transactions sont conçues pour gérer les données « blob » (Binary Large Objects) plus efficacement, bénéficiant particulièrement aux rollup de couche 2 (l2) en fournissant un moyen de publier des données sur le réseau Ethereum à un coût inférieur. Les transactions blob incluent des champs supplémentaires tels que `blobVersionedHashes`, `maxFeePerBlobGas` et `blobGasPrice`. Elles commencent par l'octet `0x03`, et leur valeur TransactionType est `0x3`. Les transactions blob représentent une amélioration significative de la disponibilité des données et des capacités de mise à l'échelle d'Ethereum.
+4. **Transactions de type 3 (Blob)** ont été introduites dans l'[EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) dans le cadre de la [mise à jour Dencun](/ethereum-forks/#dencun) d'Ethereum. Ces transactions sont conçues pour gérer les données « blob » (Binary Large Objects) plus efficacement, bénéficiant particulièrement aux rollup de couche 2 (L2) en fournissant un moyen de publier des données sur le réseau Ethereum à un coût inférieur. Les transactions blob incluent des champs supplémentaires tels que `blobVersionedHashes`, `maxFeePerBlobGas` et `blobGasPrice`. Elles commencent par l'octet `0x03`, et leur valeur TransactionType est `0x3`. Les transactions blob représentent une amélioration significative de la disponibilité des données et des capacités de mise à l'échelle d'Ethereum.
 
 5. **Transactions de type 4** ont été introduites dans l'[EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) dans le cadre de la mise à jour [Pectra](/roadmap/pectra/) d'Ethereum. Ces transactions sont conçues pour être compatibles de manière ascendante avec l'abstraction de compte. Elles permettent aux comptes détenus par des tiers (EOA) de se comporter temporairement comme des comptes de contrat intelligent sans compromettre leur fonctionnalité d'origine. Elles incluent un paramètre `authorization_list`, qui spécifie le contrat intelligent auquel l'EOA délègue son autorité. Après la transaction, le champ de code de l'EOA contiendra l'adresse du contrat intelligent délégué.
 

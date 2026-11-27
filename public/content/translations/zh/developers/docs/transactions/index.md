@@ -14,26 +14,25 @@ lang: zh
 
 以太坊交易是指由外部拥有账户发起的行动，换句话说，是由人而不是合约管理的账户。例如，如果 Bob 向 Alice 发送 1 ETH，则必须从 Bob 的账户中扣除，并记入 Alice 的账户。这种改变状态的行动发生在交易中。
 
-![Diagram showing a transaction cause state change](./tx.png)
-_图表改编自[以太坊 EVM 图解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<TxApplyDiagram />
 
-改变 EVM 状态的交易需要广播到整个网络。任何节点都可以广播在 EVM 上执行交易的请求；发生这种情况后，验证者将执行该交易并将产生的状态变化传播到网络的其余部分。
+改变以太坊虚拟机 (EVM) 状态的交易需要广播到整个网络。任何节点都可以广播在以太坊虚拟机 (EVM) 上执行交易的请求；在此之后，验证者将执行该交易并将产生的状态变化传播到网络的其余部分。
 
-交易需要支付费用，并且必须包含在经过验证的区块中。为了使本概述更简单，我们将在其他地方介绍 gas 费和验证。
+交易需要费用，并且必须包含在经过验证的区块中。为了使本概述更简单，我们将在其他地方介绍 gas 费和验证。
 
-提交的交易包含以下信息：
+提交的交易包括以下信息：
 
-- `from` – 发送者的地址，将对交易进行签名。这将是一个外部拥有账户，因为合约账户无法发送交易
+- `from` – 发送者的地址，该发送者将对交易进行签名。这将是一个外部拥有账户，因为合约账户无法发送交易
 - `to` – 接收地址（如果是外部拥有账户，交易将转账价值。如果是合约账户，交易将执行合约代码）
 - `signature` – 发送者的标识符。这是在发送者的私钥对交易进行签名并确认发送者已授权此交易时生成的
-- `nonce` - 一个顺序递增的计数器，指示来自该账户的交易编号（随机数）
-- `value` – 从发送者转账到接收者的 ETH 数量（以 Wei 为单位，其中 1 ETH 等于 1e+18 Wei）
+- `nonce` - 一个顺序递增的计数器，指示来自该账户的交易编号
+- `value` – 从发送者转账到接收者的 ETH 数量（以 Wei 为单位，其中 1ETH 等于 1e+18wei）
 - `input data` – 包含任意数据的可选字段
-- `gasLimit` – 交易可以消耗的最大 Gas 单位数量（gas 上限）。[EVM](/developers/docs/evm/opcodes) 指定了每个计算步骤所需的 Gas 单位
-- `maxPriorityFeePerGas` - 作为给验证者的优先费包含在内的已消耗 Gas 的最高价格
+- `gasLimit` – 交易可以消耗的最大 Gas 单位数。[以太坊虚拟机 (EVM)](/developers/docs/evm/opcodes) 指定了每个计算步骤所需的 Gas 单位
+- `maxPriorityFeePerGas` - 作为优先费包含给验证者的已消耗 Gas 的最高价格
 - `maxFeePerGas` - 愿意为交易支付的每单位 Gas 的最高费用（包括 `baseFeePerGas` 和 `maxPriorityFeePerGas`）
 
-Gas 是指验证者处理交易所需的计算量。用户必须为此计算支付费用。`gasLimit` 和 `maxPriorityFeePerGas` 决定了支付给验证者的最高交易费。[了解更多关于 Gas 的信息](/developers/docs/gas/)。
+Gas 是指验证者处理交易所需的计算。用户必须为此计算支付费用。`gasLimit` 和 `maxPriorityFeePerGas` 决定了支付给验证者的最高交易费。[关于 Gas 的更多信息](/developers/docs/gas/)。
 
 交易对象看起来有点像这样：
 
@@ -51,9 +50,9 @@ Gas 是指验证者处理交易所需的计算量。用户必须为此计算支�
 
 但是交易对象需要使用发送者的私钥进行签名。这证明了交易只能来自发送者，而不是欺诈性发送的。
 
-像 Geth 这样的以太坊客户端将处理此签名过程。
+像 Go以太坊 (Geth) 这样的以太坊客户端将处理此签名过程。
 
-示例 [JSON-RPC](/developers/docs/apis/json-rpc) 调用：
+[JSON-RPC](/developers/docs/apis/json-rpc) 调用示例：
 
 ```json
 {
@@ -75,7 +74,7 @@ Gas 是指验证者处理交易所需的计算量。用户必须为此计算支�
 }
 ```
 
-示例响应：
+响应示例：
 
 ```json
 {
@@ -100,10 +99,10 @@ Gas 是指验证者处理交易所需的计算量。用户必须为此计算支�
 }
 ```
 
-- `raw` 是以[递归长度前缀 (RLP)](/developers/docs/data-structures-and-encoding/rlp) 编码形式表示的已签名交易
+- `raw` 是[递归长度前缀 (RLP)](/developers/docs/data-structures-and-encoding/rlp) 编码形式的已签名交易
 - `tx` 是 JSON 形式的已签名交易
 
-借助签名哈希，可以通过密码学证明该交易来自发送者并已提交到网络。
+通过签名哈希，可以通过密码学证明交易来自发送者并提交到网络。
 
 ### 数据字段 {#the-data-field}
 
@@ -150,9 +149,9 @@ ERC-7730 规范使用交易描述符（通常结构化为 JSON 文件）来丰�
 
 ### 关于 Gas {#on-gas}
 
-如前所述，执行交易需要消耗 [Gas](/developers/docs/gas/)。简单的转账交易需要 21000 单位的 Gas。
+如前所述，执行交易需要花费 [Gas](/developers/docs/gas/)。简单的转账交易需要 21000 单位的 Gas。
 
-因此，如果 Bob 要以 190 Gwei 的 `baseFeePerGas`（基础费用）和 10 Gwei 的 `maxPriorityFeePerGas`（优先费）向 Alice 发送 1 ETH，Bob 将需要支付以下费用：
+因此，如果 Bob 要以 190 Gwei 的 `baseFeePerGas` 和 10 Gwei 的 `maxPriorityFeePerGas` 向 Alice 发送 1 ETH，Bob 将需要支付以下费用：
 
 ```
 (190 + 10) * 21000 = 4,200,000 gwei
@@ -169,10 +168,9 @@ Alice 的账户将增加 **+1.0 ETH**
 验证者保留优先费 **+0.000210 ETH**
 
 
-![Diagram showing how unused gas is refunded](./gas-tx.png)
-_图表改编自[以太坊 EVM 图解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
-交易中未使用的任何 Gas 都将退还给用户账户。
+交易中未使用的任何 Gas 都会退还到用户账户。
 
 ### 智能合约交互 {#smart-contract-interactions}
 
@@ -223,7 +221,7 @@ _图表改编自[以太坊 EVM 图解](https://takenobu-hs.github.io/downloads/e
 
 3. **类型 2 交易**，通常被称为 EIP-1559 交易，是在以太坊的[伦敦升级](/ethereum-forks/#london)中通过 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 引入的交易。它们已成为以太坊网络上的标准交易类型。这些交易引入了一种新的费用市场机制，通过将交易费分为基础费用和优先费来提高可预测性。它们以字节 `0x02` 开头，并包含 `maxPriorityFeePerGas` 和 `maxFeePerGas` 等字段。由于其灵活性和效率，类型 2 交易现在是默认的，特别是在网络高度拥堵期间受到青睐，因为它们能够帮助用户更可预测地管理交易费。这些交易的 TransactionType 值为 `0x2`。
 
-4. <strong>类型 3（斑点）交易</strong>是在 [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) 中引入的，作为以太坊[登昆升级](/ethereum-forks/#dencun)的一部分。这些交易旨在更有效地处理“斑点”数据（二进制大型对象），通过提供一种以较低成本将数据发布到以太坊网络的方法，特别有利于二层网络 (l2) 汇总。斑点交易包含额外的字段，例如 `blobVersionedHashes`、`maxFeePerBlobGas` 和 `blobGasPrice`。它们以字节 `0x03` 开头，其 TransactionType 值为 `0x3`。斑点交易代表了以太坊数据可用性和扩展能力的重大改进。
+4. <strong>类型 3（斑点）交易</strong>是在 [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) 中引入的，作为以太坊[登昆升级](/ethereum-forks/#dencun)的一部分。这些交易旨在更有效地处理“斑点”数据（二进制大型对象），通过提供一种以较低成本将数据发布到以太坊网络的方法，特别有利于二层网络 (L2) 汇总。斑点交易包含额外的字段，例如 `blobVersionedHashes`、`maxFeePerBlobGas` 和 `blobGasPrice`。它们以字节 `0x03` 开头，其 TransactionType 值为 `0x3`。斑点交易代表了以太坊数据可用性和扩展能力的重大改进。
 
 5. <strong>类型 4 交易</strong>是在 [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) 中引入的，作为以太坊[佩克特拉升级](/roadmap/pectra/)的一部分。这些交易旨在与账户抽象向前兼容。它们允许外部拥有账户 (EOA) 暂时表现得像智能合约账户，而不会损害其原始功能。它们包含一个 `authorization_list` 参数，该参数指定了 EOA 将其权限委托给的智能合约。交易完成后，EOA 的代码字段将具有被委托智能合约的地址。
 

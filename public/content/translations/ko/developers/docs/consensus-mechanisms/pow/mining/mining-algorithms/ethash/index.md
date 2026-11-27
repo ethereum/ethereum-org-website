@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-캐시 생성 프로세스는 먼저 32 MB의 메모리를 순차적으로 채운 다음, [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf)에 나오는 Sergio Demian Lerner의 _RandMemoHash_ 알고리즘을 두 번 통과시키는 과정을 포함합니다. 출력은 524288개의 64바이트 값 세트입니다.
+캐시 생성 프로세스는 먼저 32 MB의 메모리를 순차적으로 채운 다음, [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf)에 나오는 Sergio Demian Lerner의 _RandMemoHash_ 알고리즘을 세 번의 패스(`CACHE_ROUNDS`)로 수행하는 과정을 포함합니다. 출력은 524288개의 64바이트 값 세트입니다.
 
 ## 데이터 집계 함수 {#date-aggregation-function}
 
@@ -220,7 +220,7 @@ _도움이 된 커뮤니티 리소스를 알고 계신가요? 이 페이지를 �
 ```python
 import sha3, copy
 
-# 리틀 엔디언 비트 순서를 가정한다 (인텔 아키텍처와 동일)
+# 리틀 엔디안 비트 순서를 가정한다 (인텔 아키텍처와 동일)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True

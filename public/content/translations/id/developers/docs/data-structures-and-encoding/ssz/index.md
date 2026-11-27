@@ -80,7 +80,7 @@ Ini masih merupakan penyederhanaan - bilangan bulat dan nol dalam skema di atas 
 
 Jadi, nilai aktual untuk tipe dengan panjang variabel disimpan dalam heap di akhir objek yang diserialisasi dengan offset-nya disimpan di posisi yang benar dalam daftar bidang yang diurutkan.
 
-Ada juga beberapa kasus khusus yang memerlukan perlakuan spesifik, seperti tipe `BitList` yang mewajibkan penambahan batas panjang selama serialisasi dan dihapus selama deserialisasi. Detail lengkap tersedia di [spesifikasi SSZ](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
+Ada juga beberapa kasus khusus yang memerlukan perlakuan spesifik, seperti tipe `BitList` yang mewajibkan penambahan batas panjang selama serialisasi dan dihapus selama deserialisasi. Detail lengkap tersedia di [spesifikasi SSZ](https://github.com/ethereum/consensus-specs/blob/v1.6.1/ssz/simple-serialize.md).
 
 Untuk mendeserialisasi objek ini memerlukan <b>skema</b>. Skema mendefinisikan tata letak yang tepat dari data yang diserialisasi sehingga setiap elemen spesifik dapat dideserialisasi dari blob byte menjadi suatu objek yang bermakna dengan elemen-elemen yang memiliki tipe, nilai, ukuran, dan posisi yang tepat. Skemalah yang memberi tahu pendeserialisasi nilai mana yang merupakan nilai aktual dan mana yang merupakan offset. Semua nama bidang akan menghilang saat sebuah objek diserialisasi, tetapi akan diinstansiasi ulang saat deserialisasi sesuai dengan skema.
 ## Merkleisasi {#merkleization}
@@ -119,7 +119,7 @@ Representasi ini menghasilkan indeks node untuk setiap bagian data dalam pohon M
 
 ## Multiproof {#multiproofs}
 
-Menyediakan daftar indeks yang digeneralisasi yang merepresentasikan elemen spesifik memungkinkan kita untuk memverifikasinya terhadap akar pohon hash (hash-tree-root). Akar ini adalah versi realitas yang kita terima. Data apa pun yang diberikan kepada kita dapat diverifikasi terhadap realitas tersebut dengan memasukkannya ke tempat yang tepat di pohon Merkle (ditentukan oleh indeks yang digeneralisasi) dan mengamati bahwa akarnya tetap konstan. Ada fungsi dalam spesifikasi [di sini](https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs) yang menunjukkan cara menghitung set node minimal yang diwajibkan untuk memverifikasi konten dari set indeks yang digeneralisasi tertentu.
+Menyediakan daftar indeks yang digeneralisasi yang merepresentasikan elemen spesifik memungkinkan kita untuk memverifikasinya terhadap akar pohon hash (hash-tree-root). Akar ini adalah versi realitas yang kita terima. Data apa pun yang diberikan kepada kita dapat diverifikasi terhadap realitas tersebut dengan memasukkannya ke tempat yang tepat di pohon Merkle (ditentukan oleh indeks yang digeneralisasi) dan mengamati bahwa akarnya tetap konstan. Ada fungsi dalam spesifikasi [di sini](https://github.com/ethereum/consensus-specs/blob/v1.6.1/ssz/merkle-proofs.md#merkle-multiproofs) yang menunjukkan cara menghitung set node minimal yang diwajibkan untuk memverifikasi konten dari set indeks yang digeneralisasi tertentu.
 
 Misalnya, untuk memverifikasi data pada indeks 9 di pohon di bawah ini, kita memerlukan hash dari data pada indeks 8, 9, 5, 3, 1.
 Hash dari (8,9) harus sama dengan hash (4), yang di-hash dengan 5 untuk menghasilkan 2, yang di-hash dengan 3 untuk menghasilkan akar pohon 1. Jika data yang salah diberikan untuk 9, akarnya akan berubah - kita akan mendeteksi ini dan gagal memverifikasi cabang tersebut.

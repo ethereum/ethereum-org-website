@@ -1,10 +1,10 @@
 ---
 title: The Merge
-description: Pelajari tentang The Merge - ketika Mainnet Ethereum mengadopsi Bukti Kepemilikan (PoS).
+description: Pelajari tentang The Merge, ketika Mainnet Ethereum beralih dari Bukti Kerja (PoW) ke Bukti Kepemilikan (PoS) pada bulan September 2022, memangkas penggunaan energinya sekitar 99,95%.
 lang: id
 template: upgrade
 image: /images/upgrades/merge.png
-alt: 
+alt:
 summaryPoints:
   - "Mainnet Ethereum menggunakan Bukti Kepemilikan (PoS), tetapi tidak selalu demikian."
   - "Peningkatan dari mekanisme Bukti Kerja (PoW) asli ke Bukti Kepemilikan (PoS) disebut The Merge."
@@ -122,16 +122,16 @@ The Merge juga menyiapkan panggung untuk peningkatan skalabilitas lebih lanjut y
 ## Kesalahpahaman tentang The Merge {#misconceptions}
 
 <ExpandableCard
-title="Miskonsepsi: &quot;Menjalankan node memerlukan staking 32 ETH.&quot;"
-contentPreview="Salah. Siapa pun bebas melakukan sinkronisasi salinan Ethereum mereka sendiri yang diverifikasi secara mandiri (yaitu, menjalankan node). Tidak diperlukan ETH—baik sebelum The Merge, setelah The Merge, maupun kapan pun.">
+title="Kesalahpahaman: &quot;Menjalankan node mewajibkan staking 32 ETH.&quot;"
+contentPreview="Salah. Siapa pun bebas menyinkronkan salinan Ethereum yang diverifikasi sendiri (yaitu, menjalankan node). Tidak ada ETH yang diwajibkan—tidak sebelum The Merge, tidak setelah The Merge, tidak akan pernah.">
 
 Ada dua jenis node Ethereum: node yang dapat mengusulkan blok dan node yang tidak.
 
-Node yang mengusulkan blok hanyalah sebagian kecil dari total node di Ethereum. Kategori ini mencakup node penambangan di bawah Bukti Kerja (PoW) dan node validator di bawah Bukti Kepemilikan (PoS). Kategori ini memerlukan komitmen sumber daya ekonomi (seperti kekuatan hash GPU dalam Bukti Kerja (PoW) atau ETH yang di-stake dalam Bukti Kepemilikan (PoS)) sebagai imbalan atas kemampuan untuk sesekali mengusulkan blok berikutnya dan mendapatkan hadiah protokol.
+Node yang mengusulkan blok hanyalah sebagian kecil dari total node di Ethereum. Kategori ini mencakup node penambangan di bawah Bukti Kerja (PoW) dan node validator di bawah Bukti Kepemilikan (PoS). Kategori ini mensyaratkan komitmen sumber daya ekonomi (seperti daya hash GPU dalam Bukti Kerja (PoW) atau ETH yang di-stake dalam Bukti Kepemilikan (PoS)) sebagai imbalan atas kemampuan untuk sesekali mengusulkan blok berikutnya dan mendapatkan hadiah protokol.
 
-Node lain di jaringan (yaitu, mayoritas) tidak diharuskan untuk memberikan komitmen sumber daya ekonomi apa pun selain komputer tingkat konsumen dengan penyimpanan yang tersedia 1-2 TB dan koneksi internet. Node ini tidak mengusulkan blok, tetapi mereka tetap melayani peran penting dalam mengamankan jaringan dengan meminta pertanggungjawaban semua pengusul blok dengan mendengarkan blok baru dan memverifikasi validitasnya pada saat kedatangan sesuai dengan aturan konsensus jaringan. Jika blok tersebut valid, node terus menyebarkannya melalui jaringan. Jika blok tidak valid karena alasan apa pun, perangkat lunak node akan mengabaikannya sebagai tidak valid dan menghentikan penyebarannya.
+Node lain di jaringan (yaitu, mayoritas) tidak diwajibkan untuk memberikan komitmen sumber daya ekonomi apa pun selain komputer tingkat konsumen dengan penyimpanan tersedia sebesar 4 TB dan koneksi internet. Node-node ini tidak mengusulkan blok, tetapi mereka tetap memainkan peran penting dalam mengamankan jaringan dengan meminta pertanggungjawaban semua pengusul blok dengan mendengarkan blok baru dan memverifikasi validitasnya saat tiba sesuai dengan aturan konsensus jaringan. Jika blok tersebut valid, node akan terus menyebarkannya ke seluruh jaringan. Jika blok tersebut tidak valid karena alasan apa pun, perangkat lunak node akan mengabaikannya sebagai tidak valid dan menghentikan penyebarannya.
 
-Menjalankan node yang tidak memproduksi blok dimungkinkan bagi siapa saja di bawah mekanisme konsensus mana pun (Bukti Kerja (PoW) atau Bukti Kepemilikan (PoS)); ini <em>sangat dianjurkan</em> untuk semua pengguna jika mereka memiliki sarana. Menjalankan node sangat berharga bagi Ethereum dan memberikan manfaat tambahan bagi setiap individu yang menjalankannya, seperti peningkatan keamanan, privasi, dan ketahanan terhadap penyensoran.
+Menjalankan node yang tidak memproduksi blok dapat dilakukan oleh siapa saja di bawah mekanisme konsensus mana pun (Bukti Kerja (PoW) atau Bukti Kepemilikan (PoS)); hal ini <em>sangat dianjurkan</em> bagi semua pengguna jika mereka memiliki sarana. Menjalankan node sangat berharga bagi Ethereum dan memberikan manfaat tambahan bagi setiap individu yang menjalankannya, seperti peningkatan keamanan, privasi, dan ketahanan terhadap penyensoran.
 
 Kemampuan bagi siapa saja untuk menjalankan node mereka sendiri <em>sangat penting</em> untuk mempertahankan desentralisasi jaringan Ethereum.
 
@@ -140,48 +140,48 @@ Kemampuan bagi siapa saja untuk menjalankan node mereka sendiri <em>sangat penti
 </ExpandableCard>
 
 <ExpandableCard
-title="Miskonsepsi: &quot;The Merge gagal menurunkan biaya gas.&quot;"
+title="Kesalahpahaman: &quot;The Merge gagal mengurangi biaya gas.&quot;"
 contentPreview="Salah. The Merge adalah perubahan mekanisme konsensus, bukan perluasan kapasitas jaringan, dan tidak pernah dimaksudkan untuk menurunkan biaya gas.">
 
-Biaya gas adalah produk dari permintaan jaringan relatif terhadap kapasitas jaringan. The Merge menghentikan penggunaan Bukti Kerja (PoW), bertransisi ke Bukti Kepemilikan (PoS) untuk konsensus, tetapi tidak secara signifikan mengubah parameter apa pun yang secara langsung memengaruhi kapasitas jaringan atau laju pemrosesan.
+Biaya gas adalah produk dari permintaan jaringan relatif terhadap kapasitas jaringan. The Merge menghentikan penggunaan Bukti Kerja (PoW), beralih ke Bukti Kepemilikan (PoS) untuk konsensus, tetapi tidak secara signifikan mengubah parameter apa pun yang secara langsung memengaruhi kapasitas jaringan atau laju pemrosesan.
 
-Dengan <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">peta jalan yang berpusat pada rollup</a>, upaya difokuskan pada penskalaan aktivitas pengguna di [lapisan 2 (l2)](/layer-2/), sambil mengaktifkan Mainnet lapisan 1 (l1) sebagai lapisan penyelesaian terdesentralisasi yang aman yang dioptimalkan untuk penyimpanan data rollup guna membantu membuat transaksi rollup secara eksponensial lebih murah. Transisi ke Bukti Kepemilikan (PoS) adalah pendahulu penting untuk mewujudkan hal ini. [Lebih lanjut tentang gas dan biaya.](/developers/docs/gas/)
-
-</ExpandableCard>
-
-<ExpandableCard
-title="Miskonsepsi: &quot;Transaksi dipercepat secara substansial oleh The Merge.&quot;"
-contentPreview="Salah. Meskipun ada sedikit perubahan, kecepatan transaksi sebagian besar sama di lapisan 1 saat ini seperti sebelum The Merge.">
-"Kecepatan" transaksi dapat diukur dengan beberapa cara, termasuk waktu untuk dimasukkan ke dalam blok dan waktu hingga finalitas. Keduanya sedikit berubah, tetapi tidak dengan cara yang akan diperhatikan pengguna.
-
-Secara historis, pada Bukti Kerja (PoW), targetnya adalah memiliki blok baru setiap ~13,3 detik. Di bawah Bukti Kepemilikan (PoS), slot terjadi tepat setiap 12 detik, yang masing-masing merupakan peluang bagi validator untuk menerbitkan blok. Sebagian besar slot memiliki blok, tetapi belum tentu semuanya (misalnya, validator sedang offline). Dalam Bukti Kepemilikan (PoS), blok diproduksi ~10% lebih sering daripada pada Bukti Kerja (PoW). Ini adalah perubahan yang cukup tidak signifikan dan tidak mungkin diperhatikan oleh pengguna.
-
-Bukti Kepemilikan (PoS) memperkenalkan konsep finalitas transaksi yang sebelumnya tidak ada. Dalam Bukti Kerja (PoW), kemampuan untuk membalikkan blok menjadi semakin sulit secara eksponensial dengan setiap blok yang ditambang di atas transaksi, tetapi tidak pernah benar-benar mencapai nol. Di bawah Bukti Kepemilikan (PoS), blok digabungkan ke dalam Epok (rentang waktu 6,4 menit yang berisi 32 peluang untuk blok) yang dipilih oleh validator. Saat Epok berakhir, validator memberikan suara tentang apakah akan menganggap Epok tersebut 'terjustifikasi'. Jika validator setuju untuk menjustifikasi Epok, itu akan difinalisasi di Epok berikutnya. Membatalkan transaksi yang difinalisasi secara ekonomi tidak layak karena akan membutuhkan perolehan dan pembakaran lebih dari sepertiga dari total ETH yang di-stake.
+Dengan <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">peta jalan yang berpusat pada rollup</a>, upaya difokuskan pada penskalaan aktivitas pengguna di [lapisan 2 (L2)](/layer-2/), sambil memungkinkan Mainnet lapisan 1 (L1) sebagai lapisan penyelesaian terdesentralisasi yang aman yang dioptimalkan untuk penyimpanan data rollup guna membantu membuat transaksi rollup menjadi jauh lebih murah. Transisi ke Bukti Kepemilikan (PoS) adalah pendahulu penting untuk mewujudkan hal ini. [Lebih lanjut tentang gas dan biaya.](/developers/docs/gas/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Miskonsepsi: &quot;The Merge memungkinkan penarikan staking.&quot;"
+title="Kesalahpahaman: &quot;Transaksi dipercepat secara substansial oleh The Merge.&quot;"
+contentPreview="Salah. Meskipun ada sedikit perubahan, kecepatan transaksi sebagian besar sama di lapisan 1 (L1) sekarang seperti sebelum The Merge.">
+Kecepatan transaksi dapat diukur dengan beberapa cara, termasuk waktu untuk dimasukkan ke dalam blok dan waktu hingga finalisasi. Keduanya sedikit berubah, tetapi tidak dengan cara yang akan disadari oleh pengguna.
+
+Secara historis, pada Bukti Kerja (PoW), targetnya adalah memiliki blok baru setiap ~13,3 detik. Di bawah Bukti Kepemilikan (PoS), slot terjadi tepat setiap 12 detik, yang masing-masing merupakan peluang bagi validator untuk menerbitkan blok. Sebagian besar slot memiliki blok, tetapi belum tentu semuanya (misalnya, validator sedang offline). Dalam Bukti Kepemilikan (PoS), blok diproduksi ~10% lebih sering daripada pada Bukti Kerja (PoW). Ini adalah perubahan yang cukup tidak signifikan dan tidak mungkin disadari oleh pengguna.
+
+Bukti Kepemilikan (PoS) memperkenalkan konsep finalitas transaksi yang sebelumnya tidak ada. Dalam Bukti Kerja (PoW), kemampuan untuk membalikkan blok menjadi jauh lebih sulit dengan setiap blok yang ditambang di atas suatu transaksi, tetapi tidak pernah benar-benar mencapai nol. Di bawah Bukti Kepemilikan (PoS), blok digabungkan ke dalam Epok (rentang waktu 6,4 menit yang berisi 32 peluang untuk blok) yang diberikan suara oleh validator. Ketika sebuah Epok berakhir, validator memberikan suara tentang apakah akan menganggap Epok tersebut 'terjustifikasi'. Jika validator setuju untuk menjustifikasi Epok tersebut, Epok itu akan difinalisasi pada Epok berikutnya. Membatalkan transaksi yang difinalisasi secara ekonomi tidak memungkinkan karena akan membutuhkan perolehan dan pembakaran lebih dari sepertiga dari total ETH yang di-stake.
+
+</ExpandableCard>
+
+<ExpandableCard
+title="Kesalahpahaman: &quot;The Merge memungkinkan penarikan staking.&quot;"
 contentPreview="Salah, tetapi penarikan staking sejak saat itu telah diaktifkan melalui peningkatan Shanghai/Capella.">
 
-Awalnya setelah The Merge, staker hanya dapat mengakses tip biaya dan MEV yang diperoleh sebagai hasil dari proposal blok. Hadiah ini dikreditkan ke akun non-staking yang dikendalikan oleh validator (dikenal sebagai <em>penerima biaya</em>), dan segera tersedia. Hadiah ini terpisah dari hadiah protokol untuk melakukan tugas validator.
+Awalnya setelah The Merge, pelaku staking hanya dapat mengakses tip biaya dan Nilai Ekstrak Maksimal (MEV) yang diperoleh sebagai hasil dari usulan blok. Hadiah ini dikreditkan ke akun non-staking yang dikendalikan oleh validator (dikenal sebagai <em>penerima biaya</em>), dan tersedia dengan segera. Hadiah ini terpisah dari hadiah protokol untuk melakukan tugas validator.
 
-Sejak peningkatan jaringan Shanghai/Capella, staker sekarang dapat menunjuk <em>alamat penarikan</em> untuk mulai menerima pembayaran otomatis dari setiap kelebihan saldo staking (ETH di atas 32 dari hadiah protokol). Peningkatan ini juga mengaktifkan kemampuan validator untuk membuka kunci dan mengklaim kembali seluruh saldonya saat keluar dari jaringan.
+Sejak peningkatan jaringan Shanghai/Capella, pelaku staking sekarang dapat menunjuk <em>alamat penarikan</em> untuk mulai menerima pembayaran otomatis dari setiap kelebihan saldo staking (ETH di atas 32 dari hadiah protokol). Peningkatan ini juga memungkinkan kemampuan bagi validator untuk membuka kunci dan mengklaim kembali seluruh saldonya saat keluar dari jaringan.
 
 [Lebih lanjut tentang penarikan staking](/staking/withdrawals/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Miskonsepsi: &quot;Sekarang setelah The Merge selesai, dan penarikan diaktifkan, semua pelaku staking dapat keluar secara bersamaan.&quot;"
-contentPreview="Salah. Proses keluar validator dibatasi kecepatannya demi alasan keamanan.">
-Sejak peningkatan Shanghai/Capella mengaktifkan penarikan, validator diberi insentif untuk menarik saldo staking mereka di atas 32 ETH, karena dana ini tidak menambah imbal hasil dan sebaliknya terkunci. Bergantung pada APR (ditentukan oleh total ETH yang di-stake), mereka mungkin diberi insentif untuk keluar dari validator mereka untuk mengklaim kembali seluruh saldo mereka atau berpotensi melakukan stake lebih banyak lagi menggunakan hadiah mereka untuk mendapatkan lebih banyak imbal hasil.
+title="Kesalahpahaman: &quot;Sekarang setelah The Merge selesai, dan penarikan diaktifkan, pelaku staking dapat keluar secara bersamaan.&quot;"
+contentPreview="Salah. Keluar validator dibatasi lajunya demi alasan keamanan.">
+Karena peningkatan Shanghai/Capella mengaktifkan penarikan, validator diberi insentif untuk menarik saldo staking mereka di atas 32 ETH, karena dana ini tidak menambah imbal hasil dan sebaliknya akan terkunci. Bergantung pada APR (ditentukan oleh total ETH yang di-stake), mereka mungkin diberi insentif untuk keluar dari validator mereka untuk mengklaim kembali seluruh saldo mereka atau berpotensi melakukan staking lebih banyak lagi menggunakan hadiah mereka untuk mendapatkan lebih banyak imbal hasil.
 
-Peringatan penting di sini, keluar validator penuh dibatasi lajunya oleh protokol, dan hanya sejumlah validator yang dapat keluar per Epok (setiap 6,4 menit). Batas ini berfluktuasi tergantung pada jumlah validator aktif, tetapi mencapai sekitar 0,33% dari total ETH yang di-stake dapat dikeluarkan dari jaringan dalam satu hari.
+Peringatan penting di sini, keluar validator secara penuh dibatasi lajunya oleh protokol, dan hanya sejumlah validator yang dapat keluar per Epok (setiap 6,4 menit). Batas ini berfluktuasi bergantung pada jumlah validator aktif, tetapi hasilnya sekitar 0,33% dari total ETH yang di-stake dapat dikeluarkan dari jaringan dalam satu hari.
 
-Ini mencegah eksodus massal dana yang di-stake. Selain itu, ini mencegah penyerang potensial dengan akses ke sebagian besar total ETH yang di-stake dari melakukan pelanggaran yang dapat dipotong dan keluar/menarik semua saldo validator yang melanggar di Epok yang sama sebelum protokol dapat menegakkan hukuman pemotongan.
+Ini mencegah eksodus massal dana yang di-stake. Selain itu, ini mencegah penyerang potensial dengan akses ke sebagian besar dari total ETH yang di-stake untuk melakukan pelanggaran yang dapat dipotong dan keluar/menarik semua saldo validator yang melanggar di Epok yang sama sebelum protokol dapat memberlakukan hukuman pemotongan.
 
-APR juga sengaja dibuat dinamis, memungkinkan pasar staker untuk menyeimbangkan berapa banyak mereka bersedia dibayar untuk membantu mengamankan jaringan. Jika tarifnya terlalu rendah, maka validator akan keluar pada tingkat yang dibatasi oleh protokol. Secara bertahap ini akan menaikkan APR untuk semua orang yang tersisa, menarik staker baru atau yang kembali lagi.
+APR juga sengaja dibuat dinamis, memungkinkan pasar pelaku staking untuk menyeimbangkan seberapa banyak mereka bersedia dibayar untuk membantu mengamankan jaringan. Jika tarifnya terlalu rendah, maka validator akan keluar pada laju yang dibatasi oleh protokol. Secara bertahap ini akan menaikkan APR untuk semua orang yang tersisa, menarik pelaku staking baru atau yang kembali lagi.
 </ExpandableCard>
 
 ## Apa yang terjadi pada 'Eth2'? {#eth2}
@@ -220,9 +220,9 @@ Bagi yang penasaran, pelajari lebih lanjut tentang [Apa yang Terjadi Setelah The
 
 ### The Merge dan sharding {#merge-and-data-sharding}
 
-Awalnya, rencananya adalah mengerjakan sharding sebelum The Merge untuk mengatasi skalabilitas. Namun, dengan ledakan [solusi penskalaan lapisan 2 (l2)](/layer-2/), prioritas bergeser ke menukar Bukti Kerja (PoW) ke Bukti Kepemilikan (PoS) terlebih dahulu.
+Awalnya, rencananya adalah mengerjakan sharding sebelum The Merge untuk mengatasi skalabilitas. Namun, dengan ledakan [solusi penskalaan lapisan 2 (L2)](/layer-2/), prioritas bergeser ke menukar Bukti Kerja (PoW) ke Bukti Kepemilikan (PoS) terlebih dahulu.
 
-Rencana untuk sharding berkembang pesat, tetapi mengingat kebangkitan dan keberhasilan teknologi lapisan 2 (l2) untuk menskalakan eksekusi transaksi, rencana sharding telah bergeser untuk menemukan cara paling optimal untuk mendistribusikan beban penyimpanan data panggilan terkompresi dari kontrak rollup, memungkinkan pertumbuhan eksponensial dalam kapasitas jaringan. Ini tidak akan mungkin terjadi tanpa terlebih dahulu bertransisi ke Bukti Kepemilikan (PoS).
+Rencana untuk sharding berkembang pesat, tetapi mengingat kebangkitan dan keberhasilan teknologi lapisan 2 (L2) untuk menskalakan eksekusi transaksi, rencana sharding telah bergeser untuk menemukan cara paling optimal untuk mendistribusikan beban penyimpanan data panggilan terkompresi dari kontrak rollup, memungkinkan pertumbuhan eksponensial dalam kapasitas jaringan. Ini tidak akan mungkin terjadi tanpa terlebih dahulu bertransisi ke Bukti Kepemilikan (PoS).
 
 <ButtonLink href="/roadmap/danksharding/">
   Sharding

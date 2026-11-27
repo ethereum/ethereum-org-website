@@ -12,30 +12,29 @@ Um diese Seite besser zu verstehen, empfehlen wir Ihnen, zuerst [Konten](/develo
 
 ## Was ist eine Transaktion? {#whats-a-transaction}
 
-Eine Ethereum-Transaktion bezieht sich auf eine Aktion, die von einem externen Konto (Externally-Owned Account, EOA) initiiert wird, mit anderen Worten, einem Konto, das von einem Menschen und nicht von einem Vertrag verwaltet wird. Wenn Bob beispielsweise 1 ETH an Alice sendet, muss Bobs Konto belastet und Alices Konto gutgeschrieben werden. Diese zustandsändernde Aktion findet innerhalb einer Transaktion statt.
+Eine Ethereum-Transaktion bezieht sich auf eine Aktion, die von einem externen Konto initiiert wird, mit anderen Worten, einem Konto, das von einem Menschen und nicht von einem Vertrag verwaltet wird. Wenn Bob beispielsweise Alice 1 ETH sendet, muss Bobs Konto belastet und Alices Konto gutgeschrieben werden. Diese zustandsändernde Aktion findet innerhalb einer Transaktion statt.
 
-![Diagram showing a transaction cause state change](./tx.png)
-_Diagramm adaptiert von [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<TxApplyDiagram />
 
-Transaktionen, die den Zustand der EVM ändern, müssen an das gesamte Netzwerk übertragen werden. Jeder Knoten kann eine Anfrage zur Ausführung einer Transaktion auf der EVM übertragen; danach wird ein Validator die Transaktion ausführen und die resultierende Zustandsänderung an den Rest des Netzwerks weitergeben.
+Transaktionen, die den Zustand der EVM ändern, müssen an das gesamte Netzwerk übertragen werden. Jeder Knoten kann eine Anfrage zur Ausführung einer Transaktion auf der EVM übertragen; nachdem dies geschehen ist, wird ein Validator die Transaktion ausführen und die resultierende Zustandsänderung an den Rest des Netzwerks weitergeben.
 
-Transaktionen erfordern eine Gebühr und müssen in einen validierten Block aufgenommen werden. Um diesen Überblick zu vereinfachen, behandeln wir Gasgebühren und Validierung an anderer Stelle.
+Transaktionen erfordern eine Gebühr und müssen in einen validierten Block aufgenommen werden. Um diesen Überblick zu vereinfachen, werden wir Gasgebühren und Validierung an anderer Stelle behandeln.
 
 Eine eingereichte Transaktion enthält die folgenden Informationen:
 
-- `from` – die Adresse des Absenders, der die Transaktion signieren wird. Dies ist ein externes Konto, da Contract-Konten keine Transaktionen senden können.
-- `to` – die Empfängeradresse (wenn es sich um ein externes Konto handelt, überträgt die Transaktion einen Wert. Wenn es sich um ein Contract-Konto handelt, führt die Transaktion den Code des Vertrags aus).
+- `from` – die Adresse des Absenders, der die Transaktion signieren wird. Dies wird ein externes Konto sein, da Contract-Konten keine Transaktionen senden können.
+- `to` – die Empfängeradresse (wenn es sich um ein externes Konto handelt, wird die Transaktion einen Wert transferieren. Wenn es sich um ein Contract-Konto handelt, wird die Transaktion den Vertragscode ausführen).
 - `signature` – die Kennung des Absenders. Diese wird generiert, wenn der private Schlüssel des Absenders die Transaktion signiert und bestätigt, dass der Absender diese Transaktion autorisiert hat.
 - `nonce` – ein sequenziell inkrementierender Zähler, der die Transaktionsnummer des Kontos angibt.
-- `value` – die Menge an ETH, die vom Absender an den Empfänger übertragen werden soll (angegeben in Wei, wobei 1 ETH gleich 1e+18 Wei ist).
+- `value` – die Menge an ETH, die vom Absender an den Empfänger transferiert werden soll (angegeben in Wei, wobei 1 ETH gleich 1e+18 Wei ist).
 - `input data` – optionales Feld zum Einfügen beliebiger Daten.
-- `gasLimit` – die maximale Menge an Gaseinheiten, die von der Transaktion verbraucht werden kann. Die [EVM](/developers/docs/evm/opcodes) gibt die Gaseinheiten an, die für jeden Berechnungsschritt erforderlich sind.
+- `gasLimit` – die maximale Menge an Gas-Einheiten, die von der Transaktion verbraucht werden kann. Die [EVM](/developers/docs/evm/opcodes) gibt die Gas-Einheiten an, die für jeden Berechnungsschritt erforderlich sind.
 - `maxPriorityFeePerGas` – der maximale Preis des verbrauchten Gases, der als Prioritätsgebühr für den Validator enthalten sein soll.
-- `maxFeePerGas` – die maximale Gebühr pro Gaseinheit, die für die Transaktion bezahlt werden soll (einschließlich `baseFeePerGas` und `maxPriorityFeePerGas`).
+- `maxFeePerGas` – die maximale Gebühr pro Gas-Einheit, die für die Transaktion bezahlt werden soll (einschließlich `baseFeePerGas` und `maxPriorityFeePerGas`).
 
-Gas ist ein Maß für die Berechnung, die erforderlich ist, um die Transaktion durch einen Validator zu verarbeiten. Benutzer müssen eine Gebühr für diese Berechnung zahlen. Das `gasLimit` und die `maxPriorityFeePerGas` bestimmen die maximale Transaktionsgebühr, die an den Validator gezahlt wird. [Mehr über Gas](/developers/docs/gas/).
+Gas ist ein Bezug auf die Berechnung, die erforderlich ist, um die Transaktion durch einen Validator zu verarbeiten. Benutzer müssen eine Gebühr für diese Berechnung zahlen. Die `gasLimit` und `maxPriorityFeePerGas` bestimmen die maximale Transaktionsgebühr, die an den Validator gezahlt wird. [Mehr über Gas](/developers/docs/gas/).
 
-Das Transaktionsobjekt sieht in etwa so aus:
+Das Transaktionsobjekt wird in etwa so aussehen:
 
 ```js
 {
@@ -51,7 +50,7 @@ Das Transaktionsobjekt sieht in etwa so aus:
 
 Ein Transaktionsobjekt muss jedoch mit dem privaten Schlüssel des Absenders signiert werden. Dies beweist, dass die Transaktion nur vom Absender stammen konnte und nicht in betrügerischer Absicht gesendet wurde.
 
-Ein Ethereum-Client wie Go Ethereum (Geth) übernimmt diesen Signierprozess.
+Ein Ethereum-Client wie Geth übernimmt diesen Signierprozess.
 
 Beispielhafter [JSON-RPC](/developers/docs/apis/json-rpc)-Aufruf:
 
@@ -100,8 +99,8 @@ Beispielhafte Antwort:
 }
 ```
 
-- `raw` ist die signierte Transaktion in [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp)-kodierter Form
-- `tx` ist die signierte Transaktion in JSON-Form
+- die `raw` ist die signierte Transaktion in [Rekursiver Längenpräfix (RLP)](/developers/docs/data-structures-and-encoding/rlp)-kodierter Form.
+- die `tx` ist die signierte Transaktion in JSON-Form.
 
 Mit dem Signatur-Hash kann kryptografisch bewiesen werden, dass die Transaktion vom Absender stammt und an das Netzwerk übermittelt wurde.
 
@@ -150,9 +149,9 @@ Auf Ethereum gibt es einige verschiedene Arten von Transaktionen:
 
 ### Über Gas {#on-gas}
 
-Wie bereits erwähnt, kostet die Ausführung von Transaktionen [Gas](/developers/docs/gas/). Einfache Transfer-Transaktionen erfordern 21000 Gaseinheiten.
+Wie bereits erwähnt, kostet die Ausführung von Transaktionen [Gas](/developers/docs/gas/). Einfache Transfer-Transaktionen erfordern 21000 Einheiten Gas.
 
-Damit Bob also 1 ETH an Alice mit einer `baseFeePerGas` von 190 Gwei und einer `maxPriorityFeePerGas` von 10 Gwei senden kann, muss Bob die folgende Gebühr zahlen:
+Damit Bob also Alice 1 ETH bei einer `baseFeePerGas` von 190 Gwei und einer `maxPriorityFeePerGas` von 10 Gwei senden kann, muss Bob die folgende Gebühr zahlen:
 
 ```
 (190 + 10) * 21000 = 4,200,000 gwei
@@ -160,17 +159,16 @@ Damit Bob also 1 ETH an Alice mit einer `baseFeePerGas` von 190 Gwei und einer `
 0.0042 ETH
 ```
 
-Bobs Konto wird mit **-1,0042 ETH** belastet (1 ETH für Alice + 0,0042 ETH an Gasgebühren)
+Bobs Konto wird mit **-1,0042 ETH** belastet (1 ETH für Alice + 0,0042 ETH an Gasgebühren).
 
-Alices Konto werden **+1,0 ETH** gutgeschrieben
+Alices Konto werden **+1,0 ETH** gutgeschrieben.
 
-Die Grundgebühr wird verbrannt **-0,00399 ETH**
+Die Grundgebühr wird verbrannt **-0,00399 ETH**.
 
-Der Validator behält die Prioritätsgebühr **+0,000210 ETH**
+Der Validator behält die Prioritätsgebühr **+0,000210 ETH**.
 
 
-![Diagram showing how unused gas is refunded](./gas-tx.png)
-_Diagramm adaptiert von [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 Jegliches Gas, das in einer Transaktion nicht verbraucht wird, wird dem Benutzerkonto erstattet.
 

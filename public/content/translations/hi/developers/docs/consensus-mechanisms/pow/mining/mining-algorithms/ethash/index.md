@@ -88,7 +88,7 @@ def mkcache(cache_size, seed):
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # randmemohash के लो-राउंड संस्करण का उपयोग करें
+    # randmemohash के कम-राउंड वाले संस्करण का उपयोग करें
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-कैश उत्पादन प्रक्रिया में पहले क्रमिक रूप से 32 MB मेमोरी भरना शामिल है, फिर [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) से Sergio Demian Lerner के _RandMemoHash_ एल्गोरिदम के दो पास निष्पादित करना शामिल है। आउटपुट 524288 64-बाइट मानों का एक सेट है।
+कैश निर्माण प्रक्रिया में पहले क्रमिक रूप से 32 MB मेमोरी भरना शामिल है, फिर [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) से सर्जियो डेमियन लर्नर के _RandMemoHash_ एल्गोरिदम के तीन पास (`CACHE_ROUNDS`) निष्पादित करना शामिल है। आउटपुट 524288 64-बाइट मानों का एक सेट है।
 
 ## डेटा एग्रीगेशन फ़ंक्शन {#date-aggregation-function}
 
@@ -215,12 +215,12 @@ _क्या आप किसी ऐसे सामुदायिक सं�
 
 ## परिशिष्ट {#appendix}
 
-यदि आप उपरोक्त Python स्पेक को कोड के रूप में चलाने में रुचि रखते हैं तो निम्नलिखित कोड को पहले जोड़ा जाना चाहिए।
+यदि आप उपरोक्त Python स्पेक को कोड के रूप में चलाने में रुचि रखते हैं, तो निम्नलिखित कोड को शुरुआत में जोड़ा जाना चाहिए।
 
 ```python
 import sha3, copy
 
-# लिटिल-एंडियन बिट क्रम मानता है (Intel आर्किटेक्चर के समान)
+# लिटिल एंडियन बिट ऑर्डरिंग मानता है (इंटेल आर्किटेक्चर के समान)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# sha3 हैश फ़ंक्शन, 64 बाइट्स आउटपुट करता है
+# sha3 हैश फ़ंक्शन, 64 बाइट्स आउटपुट देता है
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True

@@ -17,19 +17,19 @@ Se sei nuovo all'argomento dell'esecuzione di un nodo, o cerchi un percorso meno
 
 ## Scegliere un approccio {#choosing-approach}
 
-Il primo passo per avviare il tuo nodo è scegliere l'approccio. In base ai requisiti e alle varie possibilità, devi selezionare l'implementazione del client (sia per i client di esecuzione che per quelli di consenso), l'ambiente (hardware, sistema) e i parametri per le impostazioni del client.
+Il primo passo per avviare il tuo nodo è scegliere il tuo approccio. In base ai requisiti e alle varie possibilità, devi selezionare l'implementazione del client (sia per i client di esecuzione che per i client di consenso), l'ambiente (hardware, sistema) e i parametri per le impostazioni del client.
 
-Questa pagina ti guiderà attraverso queste decisioni e ti aiuterà a trovare il modo più adatto per eseguire la tua istanza Ethereum.
+Questa pagina ti guiderà attraverso queste decisioni e ti aiuterà a trovare il modo più adatto per eseguire la tua istanza di Ethereum.
 
-Per scegliere tra le implementazioni dei client, vedi tutti i [client di esecuzione](/developers/docs/nodes-and-clients/#execution-clients) e i [client di consenso](/developers/docs/nodes-and-clients/#consensus-clients) pronti per la Mainnet disponibili e scopri di più sulla [diversità dei client](/developers/docs/nodes-and-clients/client-diversity).
+Per scegliere tra le implementazioni dei client, consulta tutti i [client di esecuzione](/developers/docs/nodes-and-clients/#execution-clients) e i [client di consenso](/developers/docs/nodes-and-clients/#consensus-clients) disponibili e pronti per la Mainnet, e scopri di più sulla [diversità dei client](/developers/docs/nodes-and-clients/client-diversity).
 
 Decidi se eseguire il software sul tuo [hardware o nel cloud](#local-vs-cloud), considerando i [requisiti](#requirements) dei client.
 
-Dopo aver preparato l'ambiente, installa i client scelti con un'[interfaccia adatta ai principianti](#automatized-setup) o [manualmente](#manual-setup) usando un terminale con opzioni avanzate.
+Dopo aver preparato l'ambiente, installa i client scelti con un'[interfaccia adatta ai principianti](#automatized-setup) o [manualmente](#manual-setup) utilizzando un terminale con opzioni avanzate.
 
 Quando il nodo è in esecuzione e in sincronizzazione, sei pronto per [usarlo](#using-the-node), ma assicurati di tenere d'occhio la sua [manutenzione](#operating-the-node).
 
-![Configurazione del client](./diagram.png)
+<ClientSetupDiagram />
 
 ### Ambiente e hardware {#environment-and-hardware}
 
@@ -61,15 +61,15 @@ Usare il proprio hardware può essere molto semplice. Ci sono molte opzioni semp
 
 #### Requisiti {#requirements}
 
-I requisiti hardware differiscono in base al client, ma in genere non sono così elevati poiché il nodo deve solo rimanere sincronizzato. Non confonderlo con il minaggio, che richiede molta più potenza di calcolo. Il tempo di sincronizzazione e le prestazioni migliorano tuttavia con un hardware più potente.
+I requisiti hardware differiscono in base al client, ma generalmente non sono così elevati poiché il nodo deve solo rimanere sincronizzato. Non confonderlo con il minaggio, che richiede molta più potenza di calcolo. Il tempo di sincronizzazione e le prestazioni migliorano comunque con un hardware più potente.
 
-Prima di installare qualsiasi client, assicurati che il tuo computer abbia risorse sufficienti per eseguirlo. Puoi trovare i requisiti minimi e consigliati di seguito.
+Prima di installare qualsiasi client, assicurati che il tuo computer abbia risorse sufficienti per eseguirlo. Di seguito puoi trovare i requisiti minimi e consigliati.
 
 Il collo di bottiglia per il tuo hardware è principalmente lo spazio su disco. La sincronizzazione della blockchain di Ethereum è molto intensiva in termini di input/output e richiede molto spazio. È meglio avere un'**unità a stato solido (SSD)** con centinaia di GB di spazio libero a disposizione anche dopo la sincronizzazione.
 
 La dimensione del database e la velocità della sincronizzazione iniziale dipendono dal client scelto, dalla sua configurazione e dalla [strategia di sincronizzazione](/developers/docs/nodes-and-clients/#sync-modes).
 
-Assicurati inoltre che la tua connessione Internet non sia limitata da un [limite di larghezza di banda](https://wikipedia.org/wiki/Data_cap). Si consiglia di utilizzare una connessione a consumo illimitato poiché la sincronizzazione iniziale e i dati trasmessi alla rete potrebbero superare il limite.
+Assicurati inoltre che la tua connessione internet non sia limitata da un [tetto di larghezza di banda](https://wikipedia.org/wiki/Data_cap). Si consiglia di utilizzare una connessione a consumo illimitato poiché la sincronizzazione iniziale e i dati trasmessi alla rete potrebbero superare il tuo limite.
 
 ##### Sistema operativo
 
@@ -77,33 +77,34 @@ Tutti i client supportano i principali sistemi operativi: Linux, macOS, Windows.
 
 ##### Requisiti minimi
 
-- CPU con 2+ core
+- CPU con 2 o più core
 - 16 GB di RAM (32 GB consigliati per la stabilità)
-- SSD NVMe da 2 TB (probabilmente superati entro il 2027, leggi di più su [SSD ottimi e meno ottimi per i nodi Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
+- SSD NVMe da 4 TB (copre un nodo con la cronologia completa della catena più spazio per crescere, vedi le dimensioni del disco dei client di seguito; leggi di più su [SSD ottimi e meno ottimi per i nodi Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
 - Larghezza di banda di 25+ MBit/s
 
 ##### Specifiche consigliate
 
-Le attuali linee guida hardware per gli operatori dei nodi sono identificate nell'[EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). Per un nodo completo si consiglia:
+Le attuali linee guida hardware per gli operatori dei nodi sono identificate nella [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). Per un nodo completo si consiglia:
 
-- CPU veloce con 4+ core (8+ core se si esegue la convalida)
-- 32 GB di RAM (64 GB consigliati se si esegue la convalida per garantire la stabilità)
+- CPU veloce con 4 o più core (8 o più core se si fa da validatore)
+- 32 GB di RAM (64 GB consigliati se si fa da validatore per garantire la stabilità)
 - SSD NVMe da 4 TB (le unità senza DRAM e QLC sono sconsigliate)
-- Larghezza di banda di 50 MBit/s in download / 15+ MBit/s in upload (25+ MBit/s in upload se si esegue la convalida)
+- Larghezza di banda di 50 MBit/s in download / 15+ MBit/s in upload (25+ MBit/s in upload se si fa da validatore)
 
-La modalità di sincronizzazione e il client scelti influenzeranno i requisiti di spazio, ma abbiamo stimato lo spazio su disco di cui avrai bisogno per ciascun client di seguito.
+La modalità di sincronizzazione e il client scelti influiranno sui requisiti di spazio, ma di seguito abbiamo stimato lo spazio su disco di cui avrai bisogno per ciascun client.
 
-| Client     | Spazio su disco (sincronizzazione snap) | Spazio su disco (archivio completo) |
-| ---------- | --------------------- | ------------------------ |
-| Besu       | 800GB+                | 12TB+                    |
-| Erigon     | N/A                   | 2.5TB+                   |
-| Geth       | 500GB+                | 12TB+                    |
-| Nethermind | 500GB+                | 12TB+                    |
-| Reth       | N/A                   | 2.2TB+                   |
+| Client     | Dimensione del disco (nodo completo) | Dimensione del disco (archivio completo) |
+| ---------- | ------------------------------------ | ---------------------------------------- |
+| Besu       | 1.8TB+                               | 12TB+                                    |
+| Erigon     | 1.7TB+                               | 2.7TB+                                   |
+| Geth       | 1.8TB+                               | 2TB+                                     |
+| Nethermind | 1.7TB+                               | 14TB+                                    |
+| Reth       | 2.2TB+                               | 2.8TB+                                   |
 
-- Nota: Erigon e Reth non offrono la sincronizzazione snap, ma è possibile il Full Pruning (~2TB per Erigon, ~1.2TB per Reth)
+- Nota: le dimensioni del nodo completo mantengono la cronologia completa della catena e sono state misurate a settembre 2026 da [Eth Docker](https://ethdocker.com/Usage/ResourceUsage). I client che supportano la scadenza della cronologia richiedono meno spazio: circa 1.2-1.4TB solo con la cronologia post-Merge, o circa 400-650GB con scadenza progressiva (non ancora supportata da Geth).
+- Nota: le dimensioni dell'archivio provengono dalla documentazione di ciascun client ([Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Erigon](https://docs.erigon.tech/get-started/hardware-requirements), [Geth](https://geth.ethereum.org/docs/fundamentals/archive), [Nethermind](https://docs.nethermind.io/get-started/system-requirements), [Reth](https://reth.rs/run/system-requirements)). Il dato di Geth si riferisce al suo archivio basato sui percorsi; mantenere anche la cronologia del trie richiede circa 6.5TB. Il dato di Nethermind risale a luglio 2023 ed è cresciuto da allora.
 
-Per i client di consenso, il requisito di spazio dipende anche dall'implementazione del client e dalle funzionalità abilitate (ad es. lo slasher del validatore), ma in genere calcola altri 200 GB necessari per i dati beacon. Con un gran numero di validatori, cresce anche il carico della larghezza di banda. Puoi trovare [dettagli sui requisiti dei client di consenso in questa analisi](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
+Per i client di consenso, il requisito di spazio dipende anche dall'implementazione del client e dalle funzionalità abilitate (ad es. lo slasher del validatore), ma in genere calcola altri 15-90GB per i dati della beacon chain, più circa 500GB di dati blob se si esegue un supernodo. Con un gran numero di validatori, cresce anche il carico sulla larghezza di banda. Puoi trovare [dettagli sui requisiti dei client di consenso in questa analisi](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Soluzioni plug-and-play {#plug-and-play}
 

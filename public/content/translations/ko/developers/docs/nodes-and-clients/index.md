@@ -13,17 +13,16 @@ sidebarDepth: 2
 
 노드라는 주제가 처음이라면, 먼저 사용자 친화적인 [이더리움 노드 실행하기](/run-a-node) 소개를 확인해 보시길 권장합니다.
 
-## 노드와 클라이언트란 무엇인가요? {#what-are-nodes-and-clients}
+## 노드와 클라이언트는 무엇인가요? {#what-are-nodes-and-clients}
 
-"노드"는 이더리움 소프트웨어를 실행하는 다른 컴퓨터들과 연결되어 네트워크를 형성하는 이더리움 클라이언트 소프트웨어의 인스턴스입니다. 클라이언트는 프로토콜 규칙에 따라 데이터를 검증하고 네트워크를 안전하게 유지하는 이더리움의 구현체입니다. 노드는 합의 클라이언트와 실행 클라이언트라는 두 가지 클라이언트를 실행해야 합니다.
+"노드"는 이더리움 소프트웨어를 실행하는 다른 컴퓨터에 연결되어 네트워크를 형성하는 이더리움 클라이언트 소프트웨어의 모든 인스턴스입니다. 클라이언트는 프로토콜 규칙에 따라 데이터를 검증하고 네트워크를 안전하게 유지하는 이더리움의 구현체입니다. 노드는 합의 클라이언트와 실행 클라이언트라는 두 가지 클라이언트를 실행해야 합니다.
 
-- 실행 클라이언트(실행 엔진, EL 클라이언트 또는 이전의 이더1 클라이언트라고도 함)는 네트워크에 브로드캐스트된 새로운 트랜잭션을 수신하고, 이를 EVM에서 실행하며, 모든 현재 이더리움 데이터의 최신 상태와 데이터베이스를 유지합니다.
-- 합의 클라이언트(비콘 노드, CL 클라이언트 또는 이전의 이더2 클라이언트라고도 함)는 지분 증명 (PoS) 합의 알고리즘을 구현하여, 실행 클라이언트의 검증된 데이터를 기반으로 네트워크가 합의에 도달할 수 있게 합니다. 또한 합의 클라이언트에 추가할 수 있는 '검증자'라는 세 번째 소프트웨어가 있어, 노드가 네트워크 보안에 참여할 수 있도록 합니다.
+- 실행 클라이언트(실행 엔진, EL 클라이언트 또는 이전의 이더1 클라이언트라고도 함)는 네트워크에 브로드캐스트된 새로운 트랜잭션을 수신하고, 이를 이더리움 가상 머신 (EVM)에서 실행하며, 모든 현재 이더리움 데이터의 최신 상태와 데이터베이스를 유지합니다.
+- 합의 클라이언트(비콘 노드, CL 클라이언트 또는 이전의 이더2 클라이언트라고도 함)는 지분 증명 (PoS) 합의 알고리즘을 구현하여, 네트워크가 실행 클라이언트의 검증된 데이터를 기반으로 합의를 이룰 수 있도록 합니다. 또한 합의 클라이언트에 추가할 수 있는 '검증자'라는 세 번째 소프트웨어가 있어, 노드가 네트워크 보안에 참여할 수 있게 합니다.
 
-이러한 클라이언트들은 함께 작동하여 이더리움 체인의 헤드를 추적하고 사용자가 이더리움 네트워크와 상호 작용할 수 있도록 합니다. 여러 소프트웨어가 함께 작동하는 모듈식 설계를 [캡슐화된 복잡성](https://vitalik.eth.limo/general/2022/02/28/complexity.html)이라고 합니다. 이러한 접근 방식은 [머지](/roadmap/merge)를 원활하게 실행하기 쉽게 만들었고, 클라이언트 소프트웨어의 유지 관리 및 개발을 용이하게 하며, 예를 들어 [레이어 2 (l2) 생태계](/layer-2/)에서 개별 클라이언트를 재사용할 수 있게 해줍니다.
+이러한 클라이언트들은 함께 작동하여 이더리움 체인의 헤드를 추적하고 사용자가 이더리움 네트워크와 상호 작용할 수 있도록 합니다. 여러 소프트웨어가 함께 작동하는 모듈식 설계를 [캡슐화된 복잡성(encapsulated complexity)](https://vitalik.eth.limo/general/2022/02/28/complexity.html)이라고 합니다. 이 접근 방식은 [머지](/roadmap/merge)를 원활하게 실행하기 쉽게 만들었고, 클라이언트 소프트웨어의 유지 관리 및 개발을 더 쉽게 만들었으며, 예를 들어 [레이어 2 (L2) 생태계](/layer-2/)에서 개별 클라이언트의 재사용을 가능하게 했습니다.
 
-![Coupled execution and consensus clients](./eth1eth2client.png)
-결합된 실행 및 합의 클라이언트의 단순화된 다이어그램.
+<NodeClientsDiagram />
 
 ### 클라이언트 다양성 {#client-diversity}
 
@@ -90,16 +89,16 @@ sidebarDepth: 2
 
 ### 사용자에게 주는 이점 {#benefits-to-you}
 
-자체 노드를 실행하면 프라이버시를 보호하고 자급자족하며 무신뢰 방식으로 이더리움을 사용할 수 있습니다. 클라이언트를 통해 데이터를 직접 검증할 수 있으므로 네트워크를 신뢰할 필요가 없습니다. "신뢰하지 말고 검증하라"는 유명한 블록체인 격언입니다.
+자체 노드를 실행하면 프라이버시를 유지하며 자급자족하고 무신뢰 방식으로 이더리움을 사용할 수 있습니다. 클라이언트를 통해 데이터를 직접 검증할 수 있으므로 네트워크를 신뢰할 필요가 없습니다. "신뢰하지 말고 검증하라(Don't trust, verify)"는 유명한 블록체인 격언입니다.
 
 - 노드는 합의 규칙에 따라 모든 트랜잭션과 블록을 스스로 검증합니다. 즉, 네트워크의 다른 노드에 의존하거나 전적으로 신뢰할 필요가 없습니다.
-- 자체 노드와 함께 이더리움 지갑을 사용할 수 있습니다. 중개자에게 주소와 잔액을 유출할 필요가 없으므로 탈중앙화 애플리케이션 (dapp)을 더 안전하고 프라이버시를 보호하며 사용할 수 있습니다. 모든 것은 자체 클라이언트로 확인할 수 있습니다. [메타마스크](https://metamask.io), [Frame](https://frame.sh/) 및 [기타 여러 지갑](/wallets/find-wallet/)은 RPC 가져오기를 제공하여 노드를 사용할 수 있도록 합니다.
-- 이더리움의 데이터에 의존하는 다른 서비스를 실행하고 자체 호스팅할 수 있습니다. 예를 들어 비콘 체인 검증자, 레이어 2 (l2)와 같은 소프트웨어, 인프라, 블록 탐색기, 결제 프로세서 등이 될 수 있습니다.
-- 자체 맞춤형 [RPC 엔드포인트](/developers/docs/apis/json-rpc/)를 제공할 수 있습니다. 커뮤니티가 대규모 중앙 집중식 공급자를 피할 수 있도록 이러한 엔드포인트를 공개적으로 제공할 수도 있습니다.
-- <strong>프로세스 간 통신(IPC)</strong>을 사용하여 노드에 연결하거나 프로그램을 플러그인으로 로드하도록 노드를 다시 작성할 수 있습니다. 이는 지연 시간을 줄여주어 Web3 라이브러리를 사용하여 많은 데이터를 처리하거나 트랜잭션을 가능한 한 빨리 교체해야 할 때(예: 프론트러닝) 큰 도움이 됩니다.
+- 자체 노드와 함께 이더리움 지갑을 사용할 수 있습니다. 중개자에게 주소와 잔액을 노출할 필요가 없으므로 탈중앙화 애플리케이션 (dapp)을 더 안전하고 프라이버시를 유지하며 사용할 수 있습니다. 모든 것은 자체 클라이언트로 확인할 수 있습니다. [메타마스크](https://metamask.io), [Frame](https://frame.sh/) 및 [기타 여러 지갑](/wallets/find-wallet/)은 RPC 가져오기를 제공하여 사용자의 노드를 사용할 수 있게 해줍니다.
+- 이더리움의 데이터에 의존하는 다른 서비스를 실행하고 자체 호스팅할 수 있습니다. 예를 들어, 비콘 체인 검증자, 레이어 2 (L2)와 같은 소프트웨어, 인프라, 블록 탐색기, 결제 프로세서 등이 될 수 있습니다.
+- 자체 사용자 지정 [RPC 엔드포인트](/developers/docs/apis/json-rpc/)를 제공할 수 있습니다. 커뮤니티가 대규모 중앙화된 제공업체를 피할 수 있도록 이러한 엔드포인트를 공개적으로 제공할 수도 있습니다.
+- <strong>프로세스 간 통신(IPC)</strong>을 사용하여 노드에 연결하거나 프로그램을 플러그인으로 로드하도록 노드를 다시 작성할 수 있습니다. 이는 지연 시간을 줄여주어, Web3 라이브러리를 사용하여 많은 데이터를 처리하거나 트랜잭션을 가능한 한 빨리 교체해야 할 때(예: 프론트러닝) 큰 도움이 됩니다.
 - ETH를 직접 스테이킹하여 네트워크를 보호하고 보상을 받을 수 있습니다. 시작하려면 [솔로 스테이킹](/staking/solo/)을 참조하세요.
 
-![How you access Ethereum via your application and nodes](./nodes.png)
+<NodeAccessDiagram />
 
 ### 네트워크 이점 {#network-benefits}
 
@@ -134,18 +133,18 @@ sidebarDepth: 2
 
 이 표는 다양한 클라이언트를 요약한 것입니다. 이들 모두는 [클라이언트 테스트](https://github.com/ethereum/tests)를 통과했으며 네트워크 업그레이드에 맞춰 최신 상태를 유지하도록 적극적으로 유지 관리됩니다.
 
-| 클라이언트 | 언어 | 운영 체제 | 네트워크 | 동기화 전략 | 상태 프루닝 |
-| --- | --- | --- | --- | --- | --- |
-| [고 이더리움 (geth)](https://geth.ethereum.org/) | Go | Linux, Windows, macOS | 메인넷, Sepolia, Hoodi | [스냅](#snap-sync), [풀](#full-sync) | 아카이브, 프루닝됨 |
-| [네더마인드](https://www.nethermind.io/) | C#, .NET | Linux, Windows, macOS | 메인넷, Sepolia, Hoodi | [스냅](#snap-sync), 빠른, [풀](#full-sync) | 아카이브, 프루닝됨 |
-| [베수](https://besu.hyperledger.org/en/stable/) | Java | Linux, Windows, macOS | 메인넷, Sepolia, Hoodi | [스냅](#snap-sync), [빠른](#fast-sync), [풀](#full-sync) | 아카이브, 프루닝됨 |
-| [에리곤](https://github.com/ledgerwatch/erigon) | Go | Linux, Windows, macOS | 메인넷, Sepolia, Hoodi | [풀](#full-sync) | 아카이브, 프루닝됨 |
-| [레스](https://reth.rs/) | Rust | Linux, Windows, macOS | 메인넷, Sepolia, Hoodi | [풀](#full-sync) | 아카이브, 프루닝됨 |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(베타)_ | TypeScript | Linux, Windows, macOS | Sepolia, Hoodi | [풀](#full-sync) | 프루닝됨 |
+| 클라이언트                                                               | 언어       | 운영 체제             | 네트워크                | 동기화 전략                                                | 상태 프루닝     |
+| ------------------------------------------------------------------------ | ---------- | --------------------- | ----------------------- | ---------------------------------------------------------- | --------------- |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Full](#full-sync)                     | Archive, Pruned |
+| [네더마인드](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), Fast, [Full](#full-sync)               | Archive, Pruned |
+| [베수](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Fast](#fast-sync), [Full](#full-sync) | Archive, Pruned |
+| [에리곤](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                         | Archive, Pruned |
+| [ethrex](https://ethrex.xyz/)                                            | Rust       | Linux, macOS          | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Full](#full-sync)                     | Pruned          |
+| [레스](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                         | Archive, Pruned |
 
 지원되는 네트워크에 대한 자세한 내용은 [이더리움 네트워크](/developers/docs/networks/)를 읽어보세요.
 
-각 클라이언트에는 고유한 사용 사례와 장점이 있으므로 자신의 선호도에 따라 하나를 선택해야 합니다. 다양성을 통해 구현체는 서로 다른 기능과 사용자 대상에 집중할 수 있습니다. 기능, 지원, 프로그래밍 언어 또는 라이선스에 따라 클라이언트를 선택할 수 있습니다.
+각 클라이언트에는 고유한 사용 사례와 장점이 있으므로 자신의 선호도에 따라 하나를 선택해야 합니다. 다양성을 통해 구현체는 다양한 기능과 사용자 대상에 집중할 수 있습니다. 기능, 지원, 프로그래밍 언어 또는 라이선스에 따라 클라이언트를 선택할 수 있습니다.
 
 ### 베수 {#besu}
 
@@ -155,12 +154,11 @@ Hyperledger 베수는 퍼블릭 및 허가형 네트워크를 위한 엔터프�
 
 ### 에리곤 {#erigon}
 
-이전에 Turbo-Geth로 알려졌던 에리곤은 속도와 디스크 공간 효율성을 지향하는 고 이더리움 (geth)의 포크로 시작되었습니다. 에리곤은 완전히 재설계된 이더리움 구현체로, 현재 Go로 작성되었지만 다른 언어로 된 구현체도 개발 중입니다. 에리곤의 목표는 더 빠르고, 더 모듈화되고, 더 최적화된 이더리움 구현체를 제공하는 것입니다. 약 2TB의 디스크 공간을 사용하여 3일 이내에 전체 아카이브 노드 동기화를 수행할 수 있습니다.
-
+이전에 Turbo-Geth로 알려졌던 에리곤(Erigon)은 속도와 디스크 공간 효율성을 지향하는 고 이더리움 (geth)의 포크로 시작되었습니다. 에리곤은 완전히 재설계된 이더리움 구현체로, 현재 Go로 작성되었지만 다른 언어로 된 구현체도 개발 중입니다. 에리곤의 목표는 더 빠르고, 더 모듈화되고, 더 최적화된 이더리움 구현체를 제공하는 것입니다. 3TB 미만의 디스크 공간을 사용하여 3일 이내에 전체 아카이브 노드 동기화를 수행할 수 있습니다.
 
 ### ethrex {#ethrex}
 
-ethrex는 Rust로 작성되고 LambdaClass에서 개발한 미니멀하고 모듈화된 이더리움 실행 클라이언트입니다. 영지식 증명을 염두에 두고 구축되었으며, 동일한 코드베이스가 레이어 1 (l1) 실행 클라이언트와 다중 증명자 ZK-롤업(레이어 2 (l2))으로 모두 실행될 수 있습니다. Apache-2.0 및 MIT 라이선스에 따라 이중 라이선스가 부여됩니다.
+ethrex는 Rust로 작성되고 LambdaClass에서 개발한 미니멀하고 모듈화된 이더리움 실행 클라이언트입니다. 영지식 증명을 염두에 두고 구축되었으며, 동일한 코드베이스가 레이어 1 (L1) 실행 클라이언트와 다중 증명자 ZK-롤업(레이어 2 (L2))으로 모두 실행될 수 있습니다. Apache-2.0 및 MIT 라이선스에 따라 이중 라이선스가 부여됩니다.
 
 자세한 내용은 [ethrex 문서](https://docs.ethrex.xyz/)를 읽거나 [ethrex GitHub 리포지토리](https://github.com/lambdaclass/ethrex)를 확인하여 알아보세요.
 ### 고 이더리움 (geth) {#geth}
@@ -187,16 +185,6 @@ ethrex는 Rust로 작성되고 LambdaClass에서 개발한 미니멀하고 모�
 
 [레스 북](https://reth.rs/) 또는 [레스 GitHub 리포지토리](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth)를 확인하여 자세히 알아보세요.
 
-### 개발 중 {#execution-in-development}
-
-이러한 클라이언트는 아직 개발 초기 단계에 있으며 프로덕션 환경에서의 사용은 아직 권장되지 않습니다.
-
-#### EthereumJS {#ethereumjs}
-
-EthereumJS 실행 클라이언트(EthereumJS)는 TypeScript로 작성되었으며, 블록, 트랜잭션 및 머클 패트리샤 트라이(Merkle-Patricia Trie) 클래스로 표현되는 핵심 이더리움 원시 요소와 이더리움 가상 머신(EVM) 구현체, 블록체인 클래스 및 devp2p 네트워킹 스택을 포함한 핵심 클라이언트 구성 요소를 포함하는 여러 패키지로 구성됩니다.
-
-[문서](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master)를 읽고 자세히 알아보세요.
-
 ## 합의 클라이언트 {#consensus-clients}
 
 [합의 업그레이드](/roadmap/beacon-chain/)를 지원하기 위한 여러 합의 클라이언트(이전에는 '이더2' 클라이언트로 알려짐)가 있습니다. 이들은 포크 선택 알고리즘, 증명 처리, [지분 증명 (PoS)](/developers/docs/consensus-mechanisms/pos) 보상 및 페널티 관리를 포함한 모든 합의 관련 로직을 담당합니다.
@@ -218,9 +206,9 @@ EthereumJS 실행 클라이언트(EthereumJS)는 TypeScript로 작성되었으�
 
 ### 로드스타 {#lodestar}
 
-로드스타는 LGPL-3.0 라이선스에 따라 Typescript로 작성된 프로덕션 준비가 완료된 합의 클라이언트 구현체입니다. ChainSafe Systems에서 유지 관리하며 솔로 스테이킹 사용자, 개발자 및 연구원을 위한 가장 최신의 합의 클라이언트입니다. 로드스타는 이더리움 프로토콜의 JavaScript 구현체로 구동되는 비콘 노드와 검증자 클라이언트로 구성됩니다. 로드스타는 경량 클라이언트를 통해 이더리움 사용성을 개선하고, 더 많은 개발자 그룹으로 접근성을 확장하며, 생태계 다양성에 더욱 기여하는 것을 목표로 합니다.
+로드스타(Lodestar)는 Apache-2.0 라이선스에 따라 TypeScript로 작성된 프로덕션 준비가 완료된 합의 클라이언트 구현체입니다. ChainSafe Systems에서 유지 관리하며 솔로 스테이킹 사용자, 개발자 및 연구원을 위한 가장 최신의 합의 클라이언트입니다. 로드스타는 이더리움 프로토콜의 JavaScript 구현체로 구동되는 비콘 노드와 검증자 클라이언트로 구성됩니다. 로드스타는 경량 클라이언트를 통해 이더리움 사용성을 개선하고, 더 많은 개발자 그룹으로 접근성을 확대하며, 생태계 다양성에 더욱 기여하는 것을 목표로 합니다.
 
-자세한 정보는 [로드스타 웹사이트](https://lodestar.chainsafe.io/)에서 찾을 수 있습니다.
+자세한 내용은 [로드스타 웹사이트](https://lodestar.chainsafe.io/)에서 확인할 수 있습니다.
 
 ### 님버스 {#nimbus}
 
@@ -300,7 +288,7 @@ Grandine은 GPL-3.0 라이선스에 따라 Rust로 작성된 합의 클라이언
 
 낙관적 동기화는 옵트인 및 이전 버전과의 호환성을 갖도록 설계된 머지 이후 동기화 전략으로, 실행 노드가 확립된 방법을 통해 동기화할 수 있도록 합니다. 실행 엔진은 비콘 블록을 완전히 검증하지 않고 _낙관적으로_ 가져와서 최신 헤드를 찾은 다음 위의 방법으로 체인 동기화를 시작할 수 있습니다. 그런 다음 실행 클라이언트가 따라잡은 후 비콘 체인에 있는 트랜잭션의 유효성을 합의 클라이언트에 알립니다.
 
-[낙관적 동기화에 대한 자세한 내용](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
+[낙관적 동기화에 대한 자세한 내용](https://github.com/ethereum/consensus-specs/blob/master/specs/bellatrix/optimistic-sync.md)
 
 #### 체크포인트 동기화 {#checkpoint-sync}
 
@@ -322,4 +310,4 @@ Grandine은 GPL-3.0 라이선스에 따라 Rust로 작성된 합의 클라이언
 
 ## 관련 튜토리얼 {#related-tutorials}
 
-- [MicroSD 카드를 플래싱하여 Raspberry Pi 4를 검증자 노드로 전환하기 – 설치 가이드](/developers/tutorials/run-node-raspberry-pi/) _– Raspberry Pi 4를 플래싱하고, 이더넷 케이블을 연결하고, SSD 디스크를 연결하고, 장치의 전원을 켜서 Raspberry Pi 4를 실행 계층(메인넷) 및/또는 합의 레이어(비콘 체인 / 검증자)를 실행하는 전체 이더리움 노드로 전환합니다._
+- [MicroSD 카드를 플래싱하여 Raspberry Pi 5를 검증자 노드로 전환하기 – 설치 가이드](/developers/tutorials/run-node-raspberry-pi/) _– Raspberry Pi 5를 플래싱하고, 이더넷 케이블을 꽂고, NVMe 디스크를 연결한 다음 장치의 전원을 켜서 Raspberry Pi 5를 실행 계층(Mainnet) 및/또는 합의 레이어(비콘 체인 / 검증자)를 실행하는 전체 이더리움 노드로 전환하세요._

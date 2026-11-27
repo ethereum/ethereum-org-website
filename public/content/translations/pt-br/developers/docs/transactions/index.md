@@ -14,20 +14,19 @@ Para ajudar você a entender melhor esta página, recomendamos que leia primeiro
 
 Uma transação no Ethereum refere-se a uma ação iniciada por uma conta de propriedade externa, em outras palavras, uma conta gerenciada por um humano, não por um contrato. Por exemplo, se Bob enviar 1 ETH para Alice, a conta de Bob deve ser debitada e a de Alice deve ser creditada. Essa ação de mudança de estado ocorre dentro de uma transação.
 
-![Diagram showing a transaction cause state change](./tx.png)
-_Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<TxApplyDiagram />
 
 As transações, que alteram o estado da EVM, precisam ser transmitidas para toda a rede. Qualquer nó pode transmitir uma solicitação para que uma transação seja executada na EVM; depois que isso acontece, um validador executará a transação e propagará a mudança de estado resultante para o resto da rede.
 
-As transações exigem uma taxa e devem ser incluídas em um bloco validado. Para tornar esta visão geral mais simples, abordaremos as taxas de gás e a validação em outro lugar.
+As transações exigem uma taxa e devem ser incluídas em um bloco validado. Para tornar esta visão geral mais simples, abordaremos as taxas de gas e a validação em outro lugar.
 
 Uma transação enviada inclui as seguintes informações:
 
 - `from` – o endereço do remetente, que assinará a transação. Esta será uma conta de propriedade externa, pois contas de contrato não podem enviar transações
 - `to` – o endereço de recebimento (se for uma conta de propriedade externa, a transação transferirá valor. Se for uma conta de contrato, a transação executará o código do contrato)
 - `signature` – o identificador do remetente. Isso é gerado quando a chave privada do remetente assina a transação e confirma que o remetente autorizou esta transação
-- `nonce` - um contador incrementado sequencialmente que indica o número da transação da conta (nonce)
-- `value` – quantidade de ETH a ser transferida do remetente para o destinatário (denominada em Wei, onde 1 ETH é igual a 1e+18 Wei)
+- `nonce` - um contador incrementado sequencialmente que indica o número da transação da conta
+- `value` – quantidade de ETH a ser transferida do remetente para o destinatário (denominada em Wei, onde 1 ETH equivale a 1e+18 Wei)
 - `input data` – campo opcional para incluir dados arbitrários
 - `gasLimit` – a quantidade máxima de unidades de gás que podem ser consumidas pela transação. A [EVM](/developers/docs/evm/opcodes) especifica as unidades de gás exigidas por cada etapa computacional
 - `maxPriorityFeePerGas` - o preço máximo do gás consumido a ser incluído como uma taxa de prioridade para o validador
@@ -100,10 +99,10 @@ Exemplo de resposta:
 }
 ```
 
-- o `raw` é a transação assinada na forma codificada de [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp)
-- a `tx` é a transação assinada no formato JSON
+- o `raw` é a transação assinada na forma codificada de [Prefixo de Comprimento Recursivo (RLP)](/developers/docs/data-structures-and-encoding/rlp)
+- o `tx` é a transação assinada no formato JSON
 
-Com o hash da assinatura, pode-se provar criptograficamente que a transação veio do remetente e foi enviada à rede.
+Com o hash da assinatura, pode-se provar criptograficamente que a transação veio do remetente e foi enviada para a rede.
 
 ### O campo de dados {#the-data-field}
 
@@ -150,17 +149,17 @@ No Ethereum, existem alguns tipos diferentes de transações:
 
 ### Sobre o gás {#on-gas}
 
-Como mencionado, as transações custam [gás](/developers/docs/gas/) para serem executadas. Transações de transferência simples exigem 21.000 unidades de Gás.
+Como mencionado, as transações custam [gás](/developers/docs/gas/) para serem executadas. Transações de transferência simples exigem 21000 unidades de gás.
 
-Portanto, para Bob enviar a Alice 1 ETH a uma `baseFeePerGas` de 190 gwei e uma `maxPriorityFeePerGas` de 10 gwei, Bob precisará pagar a seguinte taxa:
+Portanto, para Bob enviar 1 ETH para Alice a uma `baseFeePerGas` de 190 gwei e `maxPriorityFeePerGas` de 10 gwei, Bob precisará pagar a seguinte taxa:
 
 ```
 (190 + 10) * 21000 = 4,200,000 gwei
---ou--
+--or--
 0.0042 ETH
 ```
 
-A conta de Bob será debitada em **-1,0042 ETH** (1 ETH para Alice + 0,0042 ETH em taxas de gás)
+A conta de Bob será debitada em **-1,0042 ETH** (1 ETH para Alice + 0,0042 ETH em taxas de gas)
 
 A conta de Alice será creditada em **+1,0 ETH**
 
@@ -169,8 +168,7 @@ A taxa básica será queimada **-0,00399 ETH**
 O validador fica com a taxa de prioridade **+0,000210 ETH**
 
 
-![Diagram showing how unused gas is refunded](./gas-tx.png)
-_Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 Qualquer gás não utilizado em uma transação é reembolsado para a conta do usuário.
 
@@ -223,7 +221,7 @@ Com base no valor de `TransactionType`, uma transação pode ser classificada co
 
 3. **Transações do Tipo 2**, comumente chamadas de transações EIP-1559, são transações introduzidas na [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), na [atualização London](/ethereum-forks/#london) do Ethereum. Elas se tornaram o tipo de transação padrão na rede Ethereum. Essas transações introduzem um novo mecanismo de mercado de taxas que melhora a previsibilidade ao separar a taxa de transação em uma taxa básica e uma taxa de prioridade. Elas começam com o byte `0x02` e incluem campos como `maxPriorityFeePerGas` e `maxFeePerGas`. As transações do Tipo 2 agora são o padrão devido à sua flexibilidade e eficiência, sendo especialmente favorecidas durante períodos de alto congestionamento da rede por sua capacidade de ajudar os usuários a gerenciar as taxas de transação de forma mais previsível. O valor de TransactionType para essas transações é `0x2`.
 
-4. **Transações do Tipo 3 (Blob)** foram introduzidas na [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) como parte da [atualização Dencun](/ethereum-forks/#dencun) do Ethereum. Essas transações são projetadas para lidar com dados "blob" (Binary Large Objects) de forma mais eficiente, beneficiando particularmente os rollups de camada 2 (l2) ao fornecer uma maneira de postar dados na rede Ethereum a um custo menor. As transações de blob incluem campos adicionais, como `blobVersionedHashes`, `maxFeePerBlobGas` e `blobGasPrice`. Elas começam com o byte `0x03`, e seu valor de TransactionType é `0x3`. As transações de blob representam uma melhoria significativa na disponibilidade de dados e nas capacidades de escalabilidade do Ethereum.
+4. **Transações do Tipo 3 (Blob)** foram introduzidas na [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) como parte da [atualização Dencun](/ethereum-forks/#dencun) do Ethereum. Essas transações são projetadas para lidar com dados "blob" (Binary Large Objects) de forma mais eficiente, beneficiando particularmente os rollups de camada 2 (L2) ao fornecer uma maneira de postar dados na rede Ethereum a um custo menor. As transações de blob incluem campos adicionais, como `blobVersionedHashes`, `maxFeePerBlobGas` e `blobGasPrice`. Elas começam com o byte `0x03`, e seu valor de TransactionType é `0x3`. As transações de blob representam uma melhoria significativa na disponibilidade de dados e nas capacidades de escalabilidade do Ethereum.
 
 5. **Transações do Tipo 4** foram introduzidas na [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) como parte da [atualização Pectra](/roadmap/pectra/) do Ethereum. Essas transações são projetadas para serem compatíveis com o futuro da abstração de conta. Elas permitem que as EOAs se comportem temporariamente como contas de contrato inteligente sem comprometer sua funcionalidade original. Elas incluem um parâmetro `authorization_list`, que especifica o contrato inteligente ao qual a EOA delega sua autoridade. Após a transação, o campo de código da EOA terá o endereço do contrato inteligente delegado.
 

@@ -1,6 +1,6 @@
 ---
 title: "Estruturas de dados e codificação"
-description: "Uma visão geral das estruturas de dados fundamentais do Ethereum."
+description: "Uma visão geral das principais estruturas de dados e codificações do Ethereum, incluindo as tries de Patricia Merkle, RLP e SSZ, e como elas armazenam e verificam o estado."
 lang: pt-br
 sidebarDepth: 2
 ---

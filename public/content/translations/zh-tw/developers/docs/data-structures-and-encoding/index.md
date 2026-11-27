@@ -1,6 +1,6 @@
 ---
 title: "資料結構與編碼"
-description: "以太坊基本資料結構的概覽。"
+description: "以太坊核心資料結構與編碼的概述，包含帕特里夏默克爾樹、RLP 與 SSZ，以及它們如何儲存與驗證狀態。"
 lang: zh-tw
 sidebarDepth: 2
 ---

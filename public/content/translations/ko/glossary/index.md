@@ -1,7 +1,7 @@
 ---
-title: 용어집
-metaTitle: 이더리움 용어집
-description: 이더리움과 관련된 기술 및 비기술 용어의 불완전한 용어집입니다.
+title: "용어집"
+metaTitle: "이더리움 용어집"
+description: "이더리움과 관련된 기술 및 비기술 용어의 불완전한 용어집입니다."
 lang: ko
 authors: ["안드레아스 안토노풀로스"]
 ---
@@ -44,6 +44,8 @@ authors: ["안드레아스 안토노풀로스"]
 
 <GlossaryDefinition term="block" />
 
+<GlossaryDefinition term="block-builder" />
+
 <GlossaryDefinition term="block-explorer" />
 
 <GlossaryDefinition term="block-header" />
@@ -75,6 +77,8 @@ authors: ["안드레아스 안토노풀로스"]
 ## C {#section-c}
 
 <GlossaryDefinition term="casper-ffg" />
+
+<GlossaryDefinition term="cfi" />
 
 <GlossaryDefinition term="checkpoint" />
 
@@ -174,6 +178,8 @@ authors: ["안드레아스 안토노풀로스"]
 
 <GlossaryDefinition term="erc-1155" />
 
+<GlossaryDefinition term="escrow" />
+
 <GlossaryDefinition term="ethash" />
 
 <GlossaryDefinition term="ether" />
@@ -260,6 +266,8 @@ authors: ["안드레아스 안토노풀로스"]
 
 <GlossaryDefinition term="keccak-256" />
 
+<GlossaryDefinition term="kyc" />
+
 <Divider />
 
 ## L {#section-l}
@@ -271,6 +279,8 @@ authors: ["안드레아스 안토노풀로스"]
 <GlossaryDefinition term="library" />
 
 <GlossaryDefinition term="light-client" />
+
+<GlossaryDefinition term="liquid-staking-tokens" />
 
 <GlossaryDefinition term="liquidity" />
 
@@ -285,6 +295,8 @@ authors: ["안드레아스 안토노풀로스"]
 <GlossaryDefinition term="mainnet" />
 
 <GlossaryDefinition term="max-fee-per-gas" />
+
+<GlossaryDefinition term="mempool" />
 
 <GlossaryDefinition term="merkle-patricia-tree" />
 
@@ -340,6 +352,8 @@ authors: ["안드레아스 안토노풀로스"]
 
 <GlossaryDefinition term="peer-to-peer-network" />
 
+<GlossaryDefinition term="p2p-trading" />
+
 <GlossaryDefinition term="permissionless" />
 
 <GlossaryDefinition term="plasma" />
@@ -359,6 +373,12 @@ authors: ["안드레아스 안토노풀로스"]
 <GlossaryDefinition term="public-goods" />
 
 <GlossaryDefinition term="public-key" />
+
+<Divider />
+
+## Q {#section-q}
+
+<GlossaryDefinition term="quadratic-voting" />
 
 <Divider />
 
@@ -390,6 +410,8 @@ authors: ["안드레아스 안토노풀로스"]
 
 <GlossaryDefinition term="shard" />
 
+<GlossaryDefinition term="shielded-pool" />
+
 <GlossaryDefinition term="sidechain" />
 
 <GlossaryDefinition term="signing" />
@@ -397,6 +419,8 @@ authors: ["안드레아스 안토노풀로스"]
 <GlossaryDefinition term="singleton" />
 
 <GlossaryDefinition term="slasher" />
+
+<GlossaryDefinition term="slippage" />
 
 <GlossaryDefinition term="slot" />
 
@@ -421,6 +445,8 @@ authors: ["안드레아스 안토노풀로스"]
 <GlossaryDefinition term="state" />
 
 <GlossaryDefinition term="state-channels" />
+
+<GlossaryDefinition term="stealth-address" />
 
 <GlossaryDefinition term="supermajority" />
 
@@ -473,6 +499,8 @@ authors: ["안드레아스 안토노풀로스"]
 ## W {#section-w}
 
 <GlossaryDefinition term="wallet" />
+
+<GlossaryDefinition term="web2" />
 
 <GlossaryDefinition term="web3" />
 

@@ -5,13 +5,13 @@ lang: id
 sidebarDepth: 2
 ---
 
-State dari [Ethereum](/) (keseluruhan dari semua akun, saldo, dan kontrak pintar), dienkode ke dalam versi khusus dari struktur data yang secara umum dikenal dalam ilmu komputer sebagai pohon Merkle. Struktur ini berguna untuk banyak aplikasi dalam kriptografi karena menciptakan hubungan yang dapat diverifikasi antara semua potongan data individu yang terjalin dalam pohon tersebut, menghasilkan satu nilai **akar** (root) yang dapat digunakan untuk membuktikan hal-hal tentang data tersebut.
+State dari [Ethereum](/) (keseluruhan dari semua akun, saldo, dan kontrak pintar), dienkode ke dalam versi khusus dari struktur data yang secara umum dikenal dalam ilmu komputer sebagai pohon Merkle. Struktur ini berguna untuk banyak aplikasi dalam kriptografi karena menciptakan hubungan yang dapat diverifikasi antara semua potongan data individu yang terjalin di dalam pohon, menghasilkan satu nilai **akar** yang dapat digunakan untuk membuktikan hal-hal tentang data tersebut.
 
 Struktur data Ethereum adalah 'Trie Merkle Patricia yang dimodifikasi', dinamakan demikian karena meminjam beberapa fitur dari PATRICIA (Practical Algorithm To Retrieve Information Coded in Alphanumeric), dan karena dirancang untuk pengambilan (re**trie**val) data yang efisien dari item-item yang membentuk state Ethereum.
 
-Trie Merkle Patricia bersifat deterministik dan dapat diverifikasi secara kriptografi: Satu-satunya cara untuk menghasilkan akar state adalah dengan menghitungnya dari setiap bagian individu dari state tersebut, dan dua state yang identik dapat dengan mudah dibuktikan dengan membandingkan hash akar dan hash yang mengarah kepadanya (_bukti Merkle_). Sebaliknya, tidak ada cara untuk membuat dua state yang berbeda dengan hash akar yang sama, dan setiap upaya untuk memodifikasi state dengan nilai yang berbeda akan menghasilkan hash akar state yang berbeda. Secara teoretis, struktur ini memberikan 'cawan suci' efisiensi `O(log(n))` untuk penyisipan, pencarian, dan penghapusan.
+Trie Merkle Patricia bersifat deterministik dan dapat diverifikasi secara kriptografi: Satu-satunya cara untuk menghasilkan akar state adalah dengan menghitungnya dari setiap potongan individu dari state, dan dua state yang identik dapat dengan mudah dibuktikan demikian dengan membandingkan hash akar dan hash yang mengarah kepadanya (_bukti Merkle_). Sebaliknya, tidak ada cara untuk membuat dua state yang berbeda dengan hash akar yang sama, dan setiap upaya untuk memodifikasi state dengan nilai yang berbeda akan menghasilkan hash akar state yang berbeda. Secara teoretis, struktur ini memberikan 'solusi ideal' efisiensi `O(log(n))` untuk penyisipan, pencarian, dan penghapusan.
 
-Dalam waktu dekat, Ethereum berencana untuk bermigrasi ke struktur [Pohon Verkle](/roadmap/verkle-trees), yang akan membuka banyak kemungkinan baru untuk peningkatan protokol di masa depan.
+Ethereum berencana untuk mengganti trie ini dengan pohon state baru, yang saat ini diusulkan sebagai pohon biner terpadu dalam [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864). Proposal sebelumnya untuk menggunakan [pohon Verkle](/roadmap/verkle-trees/) telah dikesampingkan.
 
 ## Prasyarat {#prerequisites}
 
@@ -215,13 +215,18 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 ```
 
-Mengambil elemen lain dalam penyimpanan sedikit lebih rumit karena posisi dalam trie penyimpanan harus dihitung terlebih dahulu. Posisi dihitung sebagai hash `keccak256` dari alamat dan posisi penyimpanan, keduanya diisi dengan nol di sebelah kiri hingga panjang 32 byte. Misalnya, posisi untuk data di slot penyimpanan 1 untuk alamat `0x391694e7e0b0cce554cb130d723a9d27458f9298` adalah:
+Dua jenis "kunci" yang berbeda terlibat di sini, dan akan membantu jika kita membedakannya:
+
+1. **Slot penyimpanan.** Ini adalah kunci 32-byte yang dibaca dan ditulis oleh kontrak dengan opcode `SLOAD` dan `SSTORE`, dan ini adalah apa yang diambil oleh `eth_getStorageAt` sebagai parameter keduanya. Protokol tidak peduli bagaimana sebuah kontrak memilih slotnya. Hal tersebut diputuskan oleh tata letak penyimpanan kompilator (lihat [tata letak Solidity dalam penyimpanan](https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html)).
+2. **Jalur di trie penyimpanan.** Seperti trie keadaan, trie penyimpanan tidak pernah menggunakan slot secara langsung sebagai jalurnya. Jalurnya selalu `keccak256(slot)`, dan nilai yang disimpan di sana adalah pengodean RLP dari nilai slot dengan angka nol di depan dihapus. Proses hash pada kunci menjaga jalur terdistribusi secara merata, sehingga tidak ada yang dapat membuat kunci yang membuat trie menjadi sangat dalam. Klien menerapkan hash ini sendiri, sehingga pemanggil `eth_getStorageAt` hanya perlu meneruskan slot tersebut.
+
+Variabel state sederhana berada di slot yang ditetapkan oleh kompilator secara berurutan (`0`, `1`, ...), dengan tipe kecil terkadang dikemas bersama ke dalam satu slot, seperti pada contoh di atas. Nilai di dalam struktur dinamis perlu dihitung slotnya terlebih dahulu. Misalnya, Solidity menyimpan nilai untuk kunci `k` dari `mapping` yang dideklarasikan pada slot `p` di slot `keccak256(pad32(k) ++ pad32(p))`. Jika kontrak di `0x295a70b2de5e3953354a6a8344e616ed314d7251` mendeklarasikan `mapping(address => uint)` pada slot 1, slot yang menampung entri untuk kunci `0x391694e7e0b0cce554cb130d723a9d27458f9298` adalah:
 
 ```python
 keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
 
-Di konsol Geth, ini dapat dihitung sebagai berikut:
+Proses hash ini berasal dari tata letak penyimpanan Solidity (dihitung oleh kontrak saat runtime), bukan dari trie. Di konsol Geth, ini dapat dihitung sebagai berikut:
 
 ```
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -230,7 +235,7 @@ undefined
 "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9"
 ```
 
-Oleh karena itu, `path` adalah `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`. Ini sekarang dapat digunakan untuk mengambil data dari trie penyimpanan seperti sebelumnya:
+Jadi slot penyimpanannya adalah `0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9`, dan jalurnya di trie penyimpanan adalah `keccak256(0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9)`. Slot tersebut sekarang dapat diteruskan ke `eth_getStorageAt` seperti sebelumnya, dan klien menge-hash-nya untuk menemukan nilai di dalam trie:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545
@@ -238,7 +243,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-Catatan: `storageRoot` untuk akun Ethereum secara default kosong jika itu bukan akun kontrak.
+Catatan: `storageRoot` untuk akun Ethereum kosong secara default jika itu bukan akun kontrak.
 
 ### Trie Transaksi {#transaction-trie}
 

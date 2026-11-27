@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-Proces tworzenia pamięci podręcznej polega najpierw na sekwencyjnym zapełnieniu 32 MB pamięci, a następnie wykonaniu dwóch przebiegów algorytmu _RandMemoHash_ autorstwa Sergio Demiana Lernera z publikacji [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Wynikiem jest zestaw 524288 64-bajtowych wartości.
+Proces tworzenia pamięci podręcznej polega najpierw na sekwencyjnym zapełnieniu 32 MB pamięci, a następnie wykonaniu trzech przebiegów (`CACHE_ROUNDS`) algorytmu _RandMemoHash_ Sergio Demiana Lernera z publikacji [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Wynikiem jest zbiór 524288 64-bajtowych wartości.
 
 ## Funkcja agregacji danych {#date-aggregation-function}
 
@@ -215,12 +215,12 @@ _Znasz zasób społeczności, który Ci pomógł? Edytuj tę stronę i dodaj go!
 
 ## Załącznik {#appendix}
 
-Poniższy kod powinien zostać dodany na początku, jeśli jesteś zainteresowany uruchomieniem powyższej specyfikacji w języku Python jako kodu.
+Poniższy kod należy dodać na początku, jeśli chcesz uruchomić powyższą specyfikację w języku Python jako kod.
 
 ```python
 import sha3, copy
 
-# Zakłada kolejność bitów little-endian (taką samą jak w architekturach Intel)
+# Zakłada kolejność bitów little endian (taką samą jak w architekturach Intel)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# funkcja hashująca sha3, zwraca 64 bajty
+# Funkcja hash sha3, zwraca 64 bajty
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True

@@ -12,30 +12,29 @@ Bu sayfayı daha iyi anlamanıza yardımcı olması için öncelikle [Hesaplar](
 
 ## İşlem nedir? {#whats-a-transaction}
 
-Bir Ethereum işlemi, harici olarak sahip olunan bir hesap, başka bir deyişle bir sözleşme değil, bir insan tarafından yönetilen bir hesap tarafından başlatılan bir eylemi ifade eder. Örneğin, Bob Alice'e 1 ETH gönderirse, Bob'un hesabından düşülmeli ve Alice'in hesabına eklenmelidir. Bu durum değiştiren eylem bir işlem içinde gerçekleşir.
+Bir Ethereum işlemi, harici sahipli bir hesap, başka bir deyişle bir sözleşme değil, bir insan tarafından yönetilen bir hesap tarafından başlatılan bir eylemi ifade eder. Örneğin, Bob Alice'e 1 ETH gönderirse, Bob'un hesabından düşülmeli ve Alice'in hesabına eklenmelidir. Bu durum değiştiren eylem bir işlem içinde gerçekleşir.
 
-![Diagram showing a transaction cause state change](./tx.png)
-_Diyagram [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)'dan uyarlanmıştır_
+<TxApplyDiagram />
 
-EVM'nin durumunu değiştiren işlemlerin tüm ağa yayınlanması gerekir. Herhangi bir düğüm, EVM üzerinde bir işlemin yürütülmesi için bir istek yayınlayabilir; bu gerçekleştikten sonra, bir doğrulayıcı işlemi yürütecek ve ortaya çıkan durum değişikliğini ağın geri kalanına yayacaktır.
+EVM'nin durumunu değiştiren işlemlerin tüm ağa yayınlanması gerekir. Herhangi bir düğüm, bir işlemin EVM'de yürütülmesi için bir istek yayınlayabilir; bu gerçekleştikten sonra, bir doğrulayıcı işlemi yürütecek ve ortaya çıkan durum değişikliğini ağın geri kalanına yayacaktır.
 
 İşlemler bir ücret gerektirir ve doğrulanmış bir bloğa dahil edilmelidir. Bu genel bakışı daha basit hale getirmek için gaz ücretlerini ve doğrulamayı başka bir yerde ele alacağız.
 
 Gönderilen bir işlem aşağıdaki bilgileri içerir:
 
-- `from` – işlemi imzalayacak olan göndericinin adresi. Kontrat hesapları işlem gönderemediği için bu, harici olarak sahip olunan bir hesap olacaktır
-- `to` – alıcı adresi (eğer harici olarak sahip olunan bir hesap ise, işlem değer transfer edecektir. Eğer bir kontrat hesabı ise, işlem sözleşme kodunu yürütecektir)
+- `from` – işlemi imzalayacak olan göndericinin adresi. Kontrat hesapları işlem gönderemediği için bu, harici sahipli bir hesap olacaktır
+- `to` – alıcı adresi (eğer harici sahipli bir hesapsa, işlem değer transfer edecektir. Eğer bir kontrat hesabıysa, işlem sözleşme kodunu yürütecektir)
 - `signature` – göndericinin tanımlayıcısı. Bu, göndericinin özel anahtarı işlemi imzaladığında oluşturulur ve göndericinin bu işleme yetki verdiğini onaylar
-- `nonce` - hesaptan gelen işlem numarasını gösteren sıralı olarak artan bir sayaç (nonce)
+- `nonce` - hesaptan yapılan işlem numarasını gösteren, sırayla artan bir sayaç
 - `value` – göndericiden alıcıya transfer edilecek ETH miktarı (1 ETH'nin 1e+18 Wei'ye eşit olduğu Wei cinsinden ifade edilir)
 - `input data` – isteğe bağlı verileri dahil etmek için isteğe bağlı alan
-- `gasLimit` – işlem tarafından tüketilebilecek maksimum gaz birimi miktarı. [EVM](/developers/docs/evm/opcodes), her hesaplama adımı için gereken gaz birimlerini belirtir
-- `maxPriorityFeePerGas` - tüketilen gazın doğrulayıcıya öncelik ücreti olarak dahil edilecek maksimum fiyatı
-- `maxFeePerGas` - işlem için ödenmeye razı olunan gaz birimi başına maksimum ücret (`baseFeePerGas` ve `maxPriorityFeePerGas` dahil)
+- `gasLimit` – işlem tarafından tüketilebilecek maksimum gaz birimi miktarı. [EVM](/developers/docs/evm/opcodes), her bir hesaplama adımı için gereken gaz birimlerini belirtir
+- `maxPriorityFeePerGas` - tüketilen gazın doğrulayıcıya bir öncelik ücreti olarak dahil edilecek maksimum fiyatı
+- `maxFeePerGas` - işlem için ödenmek istenen gaz birimi başına maksimum ücret (`baseFeePerGas` ve `maxPriorityFeePerGas` dahil)
 
-Gaz, işlemin bir doğrulayıcı tarafından işlenmesi için gereken hesaplamaya bir referanstır. Kullanıcılar bu hesaplama için bir ücret ödemek zorundadır. `gasLimit` ve `maxPriorityFeePerGas`, doğrulayıcıya ödenen maksimum işlem ücretini belirler. [Gaz hakkında daha fazlası](/developers/docs/gas/).
+Gaz, işlemin bir doğrulayıcı tarafından işlenmesi için gereken hesaplamanın bir referansıdır. Kullanıcılar bu hesaplama için bir ücret ödemek zorundadır. `gasLimit` ve `maxPriorityFeePerGas`, doğrulayıcıya ödenen maksimum işlem ücretini belirler. [Gaz hakkında daha fazlası](/developers/docs/gas/).
 
-İşlem nesnesi şuna benzer bir görünüme sahip olacaktır:
+İşlem nesnesi şuna benzer olacaktır:
 
 ```js
 {
@@ -100,7 +99,7 @@ Geth gibi bir Ethereum istemcisi bu imzalama sürecini halledecektir.
 }
 ```
 
-- `raw`, [Özyinelemeli Uzunluk Öneki (RLP)](/developers/docs/data-structures-and-encoding/rlp) kodlanmış formundaki imzalı işlemdir
+- `raw`, [Özyineli Uzunluk Öneki (RLP)](/developers/docs/data-structures-and-encoding/rlp) kodlanmış formundaki imzalı işlemdir
 - `tx`, JSON formundaki imzalı işlemdir
 
 İmza hash'i ile işlemin göndericiden geldiği ve ağa gönderildiği kriptografik olarak kanıtlanabilir.
@@ -150,9 +149,9 @@ Ethereum'da birkaç farklı işlem türü vardır:
 
 ### Gaz üzerine {#on-gas}
 
-Belirtildiği gibi, işlemlerin yürütülmesi [gaz](/developers/docs/gas/) maliyetine neden olur. Basit transfer işlemleri 21000 birim Gaz gerektirir.
+Belirtildiği gibi, işlemlerin yürütülmesi [gaz](/developers/docs/gas/) maliyeti gerektirir. Basit transfer işlemleri 21000 birim Gaz gerektirir.
 
-Yani Bob'un Alice'e 190 Gwei `baseFeePerGas` ve 10 Gwei `maxPriorityFeePerGas` ile 1 ETH göndermesi için Bob'un aşağıdaki ücreti ödemesi gerekecektir:
+Yani Bob'un Alice'e 190 Gwei `baseFeePerGas` ve 10 Gwei `maxPriorityFeePerGas` üzerinden 1 ETH göndermesi için Bob'un aşağıdaki ücreti ödemesi gerekecektir:
 
 ```
 (190 + 10) * 21000 = 4,200,000 gwei
@@ -169,8 +168,7 @@ Taban ücret yakılacaktır **-0.00399 ETH**
 Doğrulayıcı öncelik ücretini elinde tutar **+0.000210 ETH**
 
 
-![Diagram showing how unused gas is refunded](./gas-tx.png)
-_Diyagram [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)'dan uyarlanmıştır_
+<GasTxDiagram />
 
 Bir işlemde kullanılmayan gaz, kullanıcı hesabına iade edilir.
 

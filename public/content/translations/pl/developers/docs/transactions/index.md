@@ -12,28 +12,27 @@ Aby pomóc Ci lepiej zrozumieć tę stronę, zalecamy najpierw przeczytać o [ko
 
 ## Czym jest transakcja? {#whats-a-transaction}
 
-Transakcja w Ethereum odnosi się do akcji zainicjowanej przez konto posiadane zewnętrznie, czyli konto zarządzane przez człowieka, a nie przez kontrakt. Na przykład, jeśli Bob wysyła Alice 1 ETH, konto Boba musi zostać obciążone, a konto Alice uznane. Ta zmieniająca stan akcja ma miejsce w ramach transakcji.
+Transakcja Ethereum odnosi się do akcji zainicjowanej przez konto posiadane zewnętrznie, czyli konto zarządzane przez człowieka, a nie kontrakt. Na przykład, jeśli Bob wysyła Alice 1 ETH, konto Boba musi zostać obciążone, a konto Alice uznane. Ta akcja zmieniająca stan ma miejsce w ramach transakcji.
 
-![Diagram showing a transaction cause state change](./tx.png)
-_Schemat na podstawie [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<TxApplyDiagram />
 
-Transakcje, które zmieniają stan EVM, muszą zostać rozgłoszone w całej sieci. Każdy węzeł może rozgłosić żądanie wykonania transakcji w EVM; po tym walidator wykona transakcję i roześle wynikową zmianę stanu do reszty sieci.
+Transakcje, które zmieniają stan EVM, muszą zostać rozgłoszone w całej sieci. Każdy węzeł może rozgłosić żądanie wykonania transakcji w EVM; po tym, jak to nastąpi, walidator wykona transakcję i roześle wynikową zmianę stanu do reszty sieci.
 
-Transakcje wymagają opłaty i muszą zostać włączone do zwalidowanego bloku. Aby uprościć ten przegląd, opłaty za gaz i walidację omówimy w innym miejscu.
+Transakcje wymagają opłaty i muszą zostać włączone do zwalidowanego bloku. Aby uprościć ten przegląd, omówimy opłaty za gaz i walidację w innym miejscu.
 
 Przesłana transakcja zawiera następujące informacje:
 
 - `from` – adres nadawcy, który będzie podpisywał transakcję. Będzie to konto posiadane zewnętrznie, ponieważ konta kontraktów nie mogą wysyłać transakcji
 - `to` – adres odbiorcy (jeśli jest to konto posiadane zewnętrznie, transakcja przetransferuje wartość. Jeśli jest to konto kontraktu, transakcja wykona kod kontraktu)
 - `signature` – identyfikator nadawcy. Jest on generowany, gdy klucz prywatny nadawcy podpisuje transakcję i potwierdza, że nadawca autoryzował tę transakcję
-- `nonce` - sekwencyjnie rosnący licznik, który wskazuje numer transakcji z danego konta
+- `nonce` – sekwencyjnie rosnący licznik, który wskazuje numer transakcji z danego konta
 - `value` – ilość ETH do przetransferowania od nadawcy do odbiorcy (wyrażona w wei, gdzie 1 ETH równa się 1e+18 wei)
 - `input data` – opcjonalne pole do dołączenia dowolnych danych
 - `gasLimit` – maksymalna ilość jednostek gazu, która może zostać zużyta przez transakcję. [EVM](/developers/docs/evm/opcodes) określa jednostki gazu wymagane przez każdy krok obliczeniowy
-- `maxPriorityFeePerGas` - maksymalna cena zużytego gazu, która ma zostać uwzględniona jako opłata priorytetowa dla walidatora
-- `maxFeePerGas` - maksymalna opłata za jednostkę gazu, jaką użytkownik jest skłonny zapłacić za transakcję (obejmuje `baseFeePerGas` oraz `maxPriorityFeePerGas`)
+- `maxPriorityFeePerGas` – maksymalna cena zużytego gazu, która ma zostać uwzględniona jako opłata priorytetowa dla walidatora
+- `maxFeePerGas` – maksymalna opłata za jednostkę gazu, jaką nadawca jest skłonny zapłacić za transakcję (w tym `baseFeePerGas` i `maxPriorityFeePerGas`)
 
-Gaz odnosi się do obliczeń wymaganych do przetworzenia transakcji przez walidatora. Użytkownicy muszą uiścić opłatę za te obliczenia. `gasLimit` oraz `maxPriorityFeePerGas` określają maksymalną opłatę transakcyjną płaconą walidatorowi. [Więcej o gazie](/developers/docs/gas/).
+Gaz to odniesienie do obliczeń wymaganych do przetworzenia transakcji przez walidatora. Użytkownicy muszą uiścić opłatę za te obliczenia. `gasLimit` i `maxPriorityFeePerGas` określają maksymalną opłatę transakcyjną płaconą walidatorowi. [Więcej o gazie](/developers/docs/gas/).
 
 Obiekt transakcji będzie wyglądał mniej więcej tak:
 
@@ -100,7 +99,7 @@ Przykładowa odpowiedź:
 }
 ```
 
-- `raw` to podpisana transakcja w formie zakodowanej za pomocą [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp)
+- `raw` to podpisana transakcja w formie zakodowanej za pomocą [rekurencyjnego przedrostka długości (RLP)](/developers/docs/data-structures-and-encoding/rlp)
 - `tx` to podpisana transakcja w formacie JSON
 
 Dzięki hashowi podpisu można kryptograficznie udowodnić, że transakcja pochodzi od nadawcy i została przesłana do sieci.
@@ -169,10 +168,9 @@ Opłata podstawowa zostanie spalona **-0,00399 ETH**
 Walidator zatrzymuje opłatę priorytetową **+0,000210 ETH**
 
 
-![Diagram showing how unused gas is refunded](./gas-tx.png)
-_Schemat na podstawie [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
-Wszelki gaz niewykorzystany w transakcji jest zwracany na konto użytkownika.
+Każdy gaz niewykorzystany w transakcji jest zwracany na konto użytkownika.
 
 ### Interakcje z inteligentnymi kontraktami {#smart-contract-interactions}
 

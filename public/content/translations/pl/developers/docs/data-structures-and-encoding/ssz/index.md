@@ -80,7 +80,7 @@ To wciąż uproszczenie – liczby całkowite i zera na powyższych schematach w
 
 Zatem rzeczywiste wartości dla typów o zmiennej długości są przechowywane na stercie na końcu serializowanego obiektu, a ich przesunięcia są przechowywane na odpowiednich pozycjach w uporządkowanej liście pól.
 
-Istnieją również pewne szczególne przypadki, które wymagają specyficznego traktowania, takie jak typ `BitList`, który wymaga dodania limitu długości podczas serializacji i usunięcia go podczas deserializacji. Pełne szczegóły są dostępne w [specyfikacji SSZ](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
+Istnieją również pewne szczególne przypadki, które wymagają specyficznego traktowania, takie jak typ `BitList`, który wymaga dodania limitu długości podczas serializacji i usunięcia go podczas deserializacji. Pełne szczegóły są dostępne w [specyfikacji SSZ](https://github.com/ethereum/consensus-specs/blob/v1.6.1/ssz/simple-serialize.md).
 
 Deserializacja tego obiektu wymaga <b>schematu</b>. Schemat definiuje dokładny układ zserializowanych danych, dzięki czemu każdy konkretny element może zostać zdeserializowany z ciągu bajtów w sensowny obiekt, którego elementy mają odpowiedni typ, wartość, rozmiar i pozycję. To właśnie schemat informuje deserializator, które wartości są rzeczywistymi wartościami, a które przesunięciami. Wszystkie nazwy pól znikają, gdy obiekt jest serializowany, ale są przywracane podczas deserializacji zgodnie ze schematem.
 ## Merkleizacja {#merkleization}
@@ -119,7 +119,7 @@ Ta reprezentacja daje indeks węzła dla każdego fragmentu danych w drzewie Mer
 
 ## Dowody wielokrotne (Multiproofs) {#multiproofs}
 
-Dostarczenie listy uogólnionych indeksów reprezentujących określony element pozwala nam zweryfikować go względem korzenia drzewa hashów (hash-tree-root). Ten korzeń jest naszą zaakceptowaną wersją rzeczywistości. Wszelkie dostarczone nam dane można zweryfikować z tą rzeczywistością, wstawiając je w odpowiednie miejsce w drzewie Merklego (określone przez ich uogólniony indeks) i obserwując, czy korzeń pozostaje niezmienny. W specyfikacji [tutaj](https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs) znajdują się funkcje, które pokazują, jak obliczyć minimalny zestaw węzłów wymagany do weryfikacji zawartości określonego zestawu uogólnionych indeksów.
+Dostarczenie listy uogólnionych indeksów reprezentujących określony element pozwala nam zweryfikować go względem korzenia drzewa hashów (hash-tree-root). Ten korzeń jest naszą zaakceptowaną wersją rzeczywistości. Wszelkie dostarczone nam dane można zweryfikować z tą rzeczywistością, wstawiając je w odpowiednie miejsce w drzewie Merklego (określone przez ich uogólniony indeks) i obserwując, czy korzeń pozostaje niezmienny. W specyfikacji [tutaj](https://github.com/ethereum/consensus-specs/blob/v1.6.1/ssz/merkle-proofs.md#merkle-multiproofs) znajdują się funkcje, które pokazują, jak obliczyć minimalny zestaw węzłów wymagany do weryfikacji zawartości określonego zestawu uogólnionych indeksów.
 
 Na przykład, aby zweryfikować dane pod indeksem 9 w poniższym drzewie, potrzebujemy hasha danych pod indeksami 8, 9, 5, 3, 1.
 Hash z (8,9) powinien być równy hashowi (4), który jest haszowany z 5, aby utworzyć 2, a ten z kolei jest haszowany z 3, aby utworzyć korzeń drzewa 1. Gdyby dla 9 podano nieprawidłowe dane, korzeń uległby zmianie – wykrylibyśmy to i weryfikacja gałęzi zakończyłaby się niepowodzeniem.

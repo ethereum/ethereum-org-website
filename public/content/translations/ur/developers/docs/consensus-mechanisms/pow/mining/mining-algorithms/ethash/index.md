@@ -75,7 +75,7 @@ def get_full_size(block_number):
 
 ڈیٹاسیٹ اور کیش سائز کی اقدار کے جدول ضمیمہ میں فراہم کیے گئے ہیں۔
 
-## کیش کی تیاری {#cache-generation}
+## کیش جنریشن {#cache-generation}
 
 اب، ہم کیش تیار کرنے کے لیے فنکشن کی وضاحت کرتے ہیں:
 
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-کیش کی تیاری کے عمل میں پہلے ترتیب وار <span dir="ltr">32 MB</span> میموری کو بھرنا شامل ہے، پھر [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) سے Sergio Demian Lerner کے _RandMemoHash_ الگورتھم کے دو پاسز انجام دینا شامل ہے۔ آؤٹ پٹ <span dir="ltr">524288</span> <span dir="ltr">64-byte</span> اقدار کا ایک سیٹ ہے۔
+کیش کی تیاری کے عمل میں سب سے پہلے ترتیب وار <span dir="ltr">32 MB</span> میموری کو بھرنا شامل ہے، پھر [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) سے Sergio Demian Lerner کے _RandMemoHash_ الگورتھم کے تین پاسز (`CACHE_ROUNDS`) انجام دیے جاتے ہیں۔ اس کا آؤٹ پٹ 524288 <span dir="ltr">64-byte</span> اقدار کا ایک سیٹ ہے۔
 
 ## ڈیٹا ایگریگیشن فنکشن {#date-aggregation-function}
 
@@ -215,12 +215,12 @@ _کسی ایسے کمیونٹی وسیلے کے بارے میں جانتے ہی�
 
 ## ضمیمہ {#appendix}
 
-اگر آپ مندرجہ بالا Python اسپیک کو کوڈ کے طور پر چلانے میں دلچسپی رکھتے ہیں تو درج ذیل کوڈ کو پہلے شامل کیا جانا چاہیے۔
+اگر آپ مندرجہ بالا Python اسپیک کو کوڈ کے طور پر چلانے میں دلچسپی رکھتے ہیں تو درج ذیل کوڈ کو شروع میں شامل کیا جانا چاہیے۔
 
 ```python
 import sha3, copy
 
-# لٹل اینڈِین بٹ کی ترتیب فرض کرتا ہے (انٹیل آرکیٹیکچرز کی طرح)
+# لٹل اینڈئن بٹ کی ترتیب فرض کرتا ہے (انٹیل آرکیٹیکچرز کی طرح)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True

@@ -5,13 +5,13 @@ lang: tr
 sidebarDepth: 2
 ---
 
-[Ethereum](/) durumu (tüm hesapların, bakiyelerin ve akıllı sözleşmelerin bütünü), bilgisayar bilimlerinde genel olarak Merkle Ağacı olarak bilinen veri yapısının özel bir sürümüne kodlanır. Bu yapı, kriptografideki birçok uygulama için faydalıdır çünkü ağaçta birbirine dolanmış tüm bireysel veri parçaları arasında doğrulanabilir bir ilişki yaratır ve veriler hakkında bir şeyleri kanıtlamak için kullanılabilecek tek bir **kök** (root) değeriyle sonuçlanır.
+[Ethereum](/) durumu (tüm hesapların, bakiyelerin ve akıllı sözleşmelerin bütünü), bilgisayar biliminde genel olarak Merkle ağacı olarak bilinen veri yapısının özel bir sürümüne kodlanmıştır. Bu yapı, ağaçta birbirine dolanmış tüm bireysel veri parçaları arasında doğrulanabilir bir ilişki yarattığı ve veriler hakkında bir şeyler kanıtlamak için kullanılabilecek tek bir **kök** değeriyle sonuçlandığı için kriptografideki birçok uygulama için faydalıdır.
 
-Ethereum'un veri yapısı, PATRICIA'nın (Alfanümerik Olarak Kodlanmış Bilgileri Geri Almak İçin Pratik Algoritma - Practical Algorithm To Retrieve Information Coded in Alphanumeric) bazı özelliklerini ödünç aldığı ve Ethereum durumunu oluşturan öğelerin verimli bir şekilde geri alınması (re**trie**val) için tasarlandığı için bu şekilde adlandırılan 'değiştirilmiş bir Merkle-Patricia Ağacı'dır.
+Ethereum'un veri yapısı, PATRICIA'nın (Alfanümerik Olarak Kodlanmış Bilgileri Geri Almak İçin Pratik Algoritma) bazı özelliklerini ödünç aldığı ve Ethereum durumunu oluşturan öğelerin verimli bir şekilde geri alınması (İngilizcede re**trie**val) için tasarlandığı için bu şekilde adlandırılan 'değiştirilmiş bir Merkle Patricia Ağacı'dır.
 
-Bir Merkle-Patricia ağacı deterministiktir ve kriptografik olarak doğrulanabilir: Bir durum kökü oluşturmanın tek yolu, onu durumun her bir parçasından hesaplamaktır ve tamamen aynı olan iki durum, kök hash'i ve ona yol açan hash'ler karşılaştırılarak kolayca kanıtlanabilir (_bir Merkle kanıtı_). Aksine, aynı kök hash'ine sahip iki farklı durum yaratmanın hiçbir yolu yoktur ve durumu farklı değerlerle değiştirme girişimi farklı bir durum kök hash'i ile sonuçlanacaktır. Teorik olarak bu yapı, eklemeler, aramalar ve silmeler için `O(log(n))` verimliliğinin 'kutsal kasesini' sağlar.
+Bir Merkle Patricia Ağacı deterministik ve kriptografik olarak doğrulanabilirdir: Bir durum kökü oluşturmanın tek yolu, onu durumun her bir parçasından hesaplamaktır ve tamamen aynı olan iki durum, kök hash'i ve ona yol açan hash'ler karşılaştırılarak kolayca kanıtlanabilir (_bir Merkle kanıtı_). Aksine, aynı kök hash'ine sahip iki farklı durum yaratmanın hiçbir yolu yoktur ve durumu farklı değerlerle değiştirme girişimi farklı bir durum kök hash'i ile sonuçlanacaktır. Teorik olarak bu yapı, eklemeler, aramalar ve silmeler için `O(log(n))` verimliliğinin 'kutsal kasesini' sağlar.
 
-Yakın gelecekte Ethereum, gelecekteki protokol iyileştirmeleri için birçok yeni olasılığın kapısını açacak olan bir [Verkle Ağacı](/roadmap/verkle-trees) yapısına geçmeyi planlamaktadır.
+Ethereum, bu trie'yi şu anda [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864) içinde birleşik bir ikili ağaç olarak önerilen yeni bir durum ağacı ile değiştirmeyi planlamaktadır. Bir [Verkle ağacı](/roadmap/verkle-trees/) kullanmaya yönelik daha önceki bir teklif bir kenara bırakılmıştır.
 
 ## Ön Koşullar {#prerequisites}
 
@@ -206,7 +206,7 @@ Bir tane küresel durum ağacı vardır ve bir istemci bir bloğu her işlediği
 
 ### Depolama Trie'si {#storage-trie}
 
-Depolama trie'si, _tüm_ sözleşme verilerinin yaşadığı yerdir. Her hesap için ayrı bir depolama trie'si vardır. Belirli bir adresteki belirli depolama konumlarındaki değerleri almak için depolama adresi, depolanan verilerin depolamadaki tam sayı konumu ve blok kimliği gereklidir. Bunlar daha sonra JSON-RPC API'sinde tanımlanan `eth_getStorageAt`'ye argüman olarak geçirilebilir, örneğin `0x295a70b2de5e3953354a6a8344e616ed314d7251` adresi için depolama slot 0'daki verileri almak için:
+Depolama trie'si, _tüm_ sözleşme verilerinin bulunduğu yerdir. Her hesap için ayrı bir depolama trie'si vardır. Belirli bir adresteki belirli depolama konumlarındaki değerleri almak için depolama adresi, depolanan verinin depolamadaki tam sayı konumu ve blok kimliği gereklidir. Bunlar daha sonra JSON-RPC API'sinde tanımlanan `eth_getStorageAt` yöntemine argüman olarak geçirilebilir, örneğin `0x295a70b2de5e3953354a6a8344e616ed314d7251` adresi için depolama slot 0'daki verileri almak için:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
@@ -215,13 +215,18 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 ```
 
-Depolamadaki diğer öğeleri almak biraz daha karmaşıktır çünkü önce depolama trie'sindeki konum hesaplanmalıdır. Konum, adresin ve depolama konumunun `keccak256` hash'i olarak hesaplanır ve her ikisi de 32 bayt uzunluğunda olacak şekilde sola sıfırlarla doldurulur. Örneğin, `0x391694e7e0b0cce554cb130d723a9d27458f9298` adresi için depolama slot 1'deki verilerin konumu şöyledir:
+Burada iki farklı "anahtar" türü söz konusudur ve bunları birbirinden ayırmak faydalı olacaktır:
+
+1. **Depolama slotu.** Bu, bir sözleşmenin `SLOAD` ve `SSTORE` işlem kodlarıyla (opcode) okuduğu ve yazdığı 32 baytlık anahtardır ve `eth_getStorageAt` yönteminin ikinci parametre olarak aldığı şeydir. Protokol, bir sözleşmenin slotlarını nasıl seçtiğiyle ilgilenmez. Buna derleyicinin depolama düzeni karar verir (bkz. [Solidity'nin depolamadaki düzeni](https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html)).
+2. **Depolama trie'sindeki yol.** Durum ağacı gibi, depolama trie'si de slotu asla doğrudan yolu olarak kullanmaz. Yol her zaman `keccak256(slot)` şeklindedir ve orada depolanan değer, slot değerinin baştaki sıfırları kaldırılmış Özyineli Uzunluk Öneki (RLP) kodlamasıdır. Anahtarı hashlemek yolların eşit olarak dağıtılmasını sağlar, böylece hiç kimse trie'yi olağandışı derecede derinleştirecek anahtarlar oluşturamaz. İstemciler bu hash'i kendileri uygular, bu nedenle `eth_getStorageAt` çağırıcıları her zaman yalnızca slotu geçirir.
+
+Basit durum değişkenleri, derleyicinin onlara sırayla atadığı slotlarda (`0`, `1`, ...) yaşar ve yukarıdaki örnekte olduğu gibi küçük türler bazen tek bir slotta bir araya getirilir. Dinamik bir yapı içindeki değerlerin önce slotlarının hesaplanması gerekir. Örneğin Solidity, `p` slotunda bildirilen bir `mapping` için `k` anahtarının değerini `keccak256(pad32(k) ++ pad32(p))` slotunda depolar. `0x295a70b2de5e3953354a6a8344e616ed314d7251` adresindeki sözleşme, slot 1'de bir `mapping(address => uint)` bildirirse, `0x391694e7e0b0cce554cb130d723a9d27458f9298` anahtarı için girdiyi tutan slot şudur:
 
 ```python
 keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
 
-Bir Geth konsolunda, bu aşağıdaki gibi hesaplanabilir:
+Bu hashleme, trie'den değil, Solidity'nin depolama düzeninden (çalışma zamanında sözleşme tarafından hesaplanır) gelir. Bir Geth konsolunda bu şu şekilde hesaplanabilir:
 
 ```
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -230,7 +235,7 @@ undefined
 "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9"
 ```
 
-Bu nedenle `path` `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)` olur. Bu artık verileri depolama trie'sinden daha önce olduğu gibi almak için kullanılabilir:
+Yani depolama slotu `0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9`'dır ve depolama trie'sindeki yolu `keccak256(0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9)`'dir. Slot artık daha önce olduğu gibi `eth_getStorageAt` yöntemine geçirilebilir ve istemci trie'deki değeri bulmak için onu hashler:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545
@@ -238,7 +243,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-Not: Bir Ethereum hesabı için `storageRoot`, bir kontrat hesabı değilse varsayılan olarak boştur.
+Not: Bir Ethereum hesabı için `storageRoot`, eğer bir kontrat hesabı değilse varsayılan olarak boştur.
 
 ### İşlemler Trie'si {#transaction-trie}
 

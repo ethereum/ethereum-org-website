@@ -77,7 +77,7 @@ def get_full_size(block_number):
 
 ## 快取生成 {#cache-generation}
 
-現在，我們指定用於生成快取的函式：
+現在，我們指定用於產生快取的函式：
 
 ```python
 def mkcache(cache_size, seed):
@@ -88,7 +88,7 @@ def mkcache(cache_size, seed):
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # 使用低回合版本的 randmemohash
+    # 使用低輪數版本的 randmemohash
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-快取生成過程包括首先依序填滿 32 MB 的記憶體，然後執行兩次 Sergio Demian Lerner 在 [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) 中提出的 _RandMemoHash_ 演算法。輸出是一組 524288 個 64 位元組的值。
+快取產生過程包括首先依序填滿 32 MB 的記憶體，然後對 Sergio Demian Lerner 在 [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) 中提出的 _RandMemoHash_ 演算法執行三次遍歷 (`CACHE_ROUNDS`)。輸出為一組 524288 個 64 位元組的值。
 
 ## 資料聚合函式 {#date-aggregation-function}
 
@@ -215,12 +215,12 @@ _知道有什麼社群資源對您有幫助嗎？編輯此頁面並加入它！_
 
 ## 附錄 {#appendix}
 
-如果您有興趣將上述 Python 規範作為程式碼執行，則應在前面加上以下程式碼。
+如果您有興趣將上述 Python 規範作為程式碼執行，應在開頭加入以下程式碼。
 
 ```python
 import sha3, copy
 
-# 假設為小端序位元排序（與 Intel 架構相同）
+# 假設為小端序位元順序 (與 Intel 架構相同)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True

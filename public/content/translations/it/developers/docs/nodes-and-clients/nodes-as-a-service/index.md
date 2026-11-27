@@ -56,9 +56,9 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
   - Funzionalità
     - Il livello gratuito più ampio con 300 milioni di unità di calcolo al mese (\~30 milioni di richieste getLatestBlock)
     - Supporto multi-catena per Polygon, Starknet, Optimism, Arbitrum
-    - Alimenta circa il 70% delle più grandi applicazioni decentralizzate (dapp) di Ethereum e del volume di transazioni della finanza decentralizzata (DeFi)
+    - Alimenta circa il 70% delle più grandi dapp di Ethereum e del volume di transazioni della DeFi
     - Avvisi webhook in tempo reale tramite Alchemy Notify
-    - Supporto, affidabilità e stabilità ai vertici della categoria
+    - Supporto e affidabilità/stabilità ai vertici della categoria
     - API per NFT di Alchemy
     - Dashboard con Request Explorer, Mempool Watcher e Composer
     - Accesso integrato al faucet della testnet
@@ -71,7 +71,7 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
     - Endpoint RPC gratuiti incentrati sulla privacy (oltre 100 blockchain) su [PublicNode](https://www.publicnode.com)
     - Nodi dedicati senza limiti di frequenza per oltre 90 blockchain
     - Nodi di archivio dedicati per oltre 30 blockchain
-    - Disponibile in 3 regioni (Stati Uniti, Unione Europea, Asia)
+    - Disponibile in 3 regioni (Stati Uniti, UE, Asia)
     - Snapshot per oltre 100 blockchain su [PublicNode](https://www.publicnode.com/snapshots)
     - Supporto tecnico 24/7 con SLA di uptime del 99,90%-99,98% (a seconda del piano).
     - Prezzi orari
@@ -87,7 +87,7 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
     - Supporto tecnico 24/7 e uptime superiore al 99,9%
     - Faucet disponibile su più catene
     - Accesso illimitato agli endpoint con un numero illimitato di chiavi API
-    - API di tracciamento/debug supportate
+    - API Trace/Debug supportate
     - Aggiornamenti automatizzati
 
 - [**Amazon Managed Blockchain**](https://aws.amazon.com/managed-blockchain/)
@@ -95,7 +95,7 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
   - Funzionalità
     - Nodi Ethereum completamente gestiti
     - Disponibile in sei regioni
-    - JSON-RPC su HTTP e WebSockets sicuri
+    - JSON-RPC su HTTP e WebSocket sicuri
     - Supporta 3 catene
     - SLA, supporto AWS 24/7
     - Go-ethereum e Lighthouse
@@ -105,7 +105,7 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
   - Funzionalità
     - Protocollo Ankr: accesso aperto agli endpoint API RPC pubblici per oltre 8 catene
     - Bilanciamento del carico e monitoraggio dello stato dei nodi per un gateway veloce e affidabile verso il nodo disponibile più vicino
-    - Livello premium che abilita l'endpoint WSS e limiti di frequenza illimitati
+    - Livello Premium che abilita l'endpoint WSS e limiti di frequenza illimitati
     - Distribuzione di nodi completi e nodi validatori con un clic per oltre 40 catene
     - Scala in base alle tue esigenze
     - Strumenti di analisi
@@ -141,7 +141,7 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
     - Struttura dei nodi robusta e distribuita
     - Fino a 40 endpoint HTTPS e WSS
     - Pacchetto di iscrizione gratuito e pacchetto mensile
-    - Metodo di tracciamento + supporto per i dati di archivio
+    - Metodo Trace + supporto per i dati di archivio
     - Pacchetti con validità fino a 90 giorni
     - Piano personalizzato e pagamento a consumo
     - Paga in cripto
@@ -164,7 +164,7 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
     - Supporto GraphQL
     - Endpoint RPC e WSS
     - Nodi completi e di archivio dedicati
-    - Tempi di sincronizzazione rapidi per distribuzioni dedicate
+    - Tempi di sincronizzazione rapidi per le distribuzioni dedicate
     - Porta il tuo cloud
     - Prezzi orari
     - Supporto diretto 24/7
@@ -190,8 +190,8 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
     - Accesso a oltre 40 nodi blockchain
     - 40.000 richieste giornaliere gratuite
     - Numero illimitato di chiavi API
-    - Elevata velocità di connessione a 1 GB/sec
-    - Tracciamento+Archivio
+    - Alta velocità di connessione a 1 GB/sec
+    - Trace+Archive
     - Analisi avanzate
     - Aggiornamenti automatizzati
     - Supporto tecnico
@@ -204,7 +204,7 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
     - Dashboard
     - Endpoint API unici
     - Nodi completi dedicati
-    - Tempi di sincronizzazione rapidi per distribuzioni dedicate
+    - Tempi di sincronizzazione rapidi per le distribuzioni dedicate
     - Supporto diretto 24/7
     - Accesso a oltre 50 nodi blockchain
 
@@ -226,14 +226,14 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
     - Oltre 500 API amministrative e di servizio
     - Interfaccia RESTful per l'invio di transazioni Ethereum (supportata da Apache Kafka)
     - Flussi in uscita per la consegna degli eventi (supportati da Apache Kafka)
-    - Vasta raccolta di servizi "offchain" e ausiliari (ad es. trasporto di messaggistica crittografata bilaterale)
+    - Ampia raccolta di servizi "offchain" e ausiliari (ad es. trasporto di messaggistica crittografata bilaterale)
     - Inserimento diretto nella rete con governance e controllo degli accessi basato sui ruoli
     - Gestione sofisticata degli utenti sia per gli amministratori che per gli utenti finali
     - Infrastruttura di livello aziendale altamente scalabile e resiliente
     - Gestione delle chiavi private Cloud HSM
     - Tethering alla Mainnet di Ethereum
     - Certificazioni ISO 27k e SOC 2, Tipo 2
-    - Configurazione dinamica in fase di esecuzione (ad es. aggiunta di integrazioni cloud, modifica degli ingressi dei nodi, ecc.)
+    - Configurazione di runtime dinamica (ad es. aggiunta di integrazioni cloud, modifica degli ingressi dei nodi, ecc.)
     - Supporto per orchestrazioni di distribuzione multi-cloud, multi-regione e ibride
     - Prezzi orari semplici basati su SaaS
     - SLA e supporto 24/7
@@ -241,7 +241,7 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
 - [**Lava Network**](https://www.lavanet.xyz/)
   - [Documentazione](https://docs.lavanet.xyz/)
   - Funzionalità
-    - Utilizzo gratuito della testnet
+    - Uso gratuito della testnet
     - Ridondanza decentralizzata per un uptime elevato
     - Open source
     - SDK completamente decentralizzato
@@ -274,17 +274,17 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
 - [**NodeFlare**](https://nodeflare.app/)
   - [Documentazione](https://nodeflare.app/docs/quick-start)
   - Funzionalità
-    - 23 catene EVM tra cui Ethereum, Base, Arbitrum One e Nova, Optimism, Linea e Unichain
-    - 5 regioni (Europa, Regno Unito, Asia, Stati Uniti orientali, Stati Uniti occidentali) con failover automatico al nodo integro più vicino
-    - Endpoint pubblico gratuito (nessuna chiave API) + piano gratuito con 3 milioni di unità di calcolo al mese
-    - Fatturazione per unità di calcolo: paghi solo per ciò che usi, le chiamate più pesanti costano di più
-    - Nessuna limitazione sui piani a pagamento
+    - 17 catene EVM tra cui Ethereum, Base, Arbitrum One, Optimism e Unichain
+    - Nodi bare-metal di proprietà, con gateway a Francoforte, Londra, Ashburn, Chicago, Los Angeles e Singapore
+    - Endpoint pubblico gratuito (nessuna chiave API, 50 richieste ogni 10 secondi per IP)
+    - Chiave API gratuita con 3 milioni di unità di calcolo al mese e 10 richieste al secondo, nessuna carta di credito
+    - Fatturazione per unità di calcolo: le chiamate più pesanti costano di più
 
 - [**NOWNodes**](https://nownodes.io/)
   - Funzionalità
     - Accesso a oltre 50 nodi blockchain
     - Chiave API gratuita
-    - Esploratori di blocchi
+    - Block explorer
     - Tempo di risposta dell'API ⩽ 1 sec
     - Team di supporto 24/7
     - Account manager personale
@@ -300,7 +300,7 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
     - Oltre 6400 nodi che guadagnano POKT per servire le applicazioni
     - Supporto per nodi di archivio, nodi di archivio con tracciamento e nodi di testnet
     - Diversità dei client dei nodi della Mainnet di Ethereum
-    - Nessun singolo punto di guasto
+    - Nessun singolo punto di errore
     - Zero tempi di inattività
     - Tokenomics conveniente quasi a zero (metti in staking POKT una volta per la larghezza di banda della rete)
     - Nessun costo irrecuperabile mensile, trasforma la tua infrastruttura in un asset
@@ -317,10 +317,10 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
     - Rete geo-bilanciata, multi-cloud/metal, a bassa latenza
     - Supporto multi-catena (Optimism, Arbitrum, Polygon + altre 11)
     - Livelli intermedi per velocità e stabilità (instradamento delle chiamate, cache, indicizzazione)
-    - Monitoraggio dei contratti intelligenti tramite webhook
+    - Monitoraggio degli smart contract tramite webhook
     - Dashboard intuitiva, suite di analisi, compositore RPC
     - Funzionalità di sicurezza avanzate (JWT, mascheramento, whitelisting)
-    - API per dati e analisi NFT
+    - API per dati e analisi degli NFT
     - [Certificato SOC2](https://www.quicknode.com/security)
     - Adatto dagli sviluppatori alle aziende
 
@@ -335,7 +335,7 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
   - Funzionalità
     - Nodi dedicati e condivisi
     - Dashboard
-    - Hosting al di fuori di AWS su più fornitori di hosting in diverse località dell'America Latina
+    - Hosting fuori da AWS su più fornitori di hosting in diverse località dell'America Latina
     - Client Prysm e Lighthouse
 
 - [**SettleMint**](https://console.settlemint.com/)
@@ -364,7 +364,7 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
     - Strettamente integrato con gli strumenti di sviluppo, debug e test di Tenderly
     - Simulazioni di transazioni
     - Analisi e filtraggio dell'utilizzo
-    - Gestione semplificata delle chiavi di accesso
+    - Gestione delle chiavi di facile accesso
     - Supporto ingegneristico dedicato tramite chat, e-mail e Discord
 
 - [**Tokenview**](https://services.tokenview.io/)
@@ -375,7 +375,7 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
     - Entrambi gli endpoint RPC e WSS sono aperti all'uso
     - Accesso illimitato all'API dei dati di archivio
     - Dashboard con Request Explorer e Mempool Watcher
-    - API per dati NFT e notifiche webhook
+    - API per i dati degli NFT e notifiche webhook
     - Paga in cripto
     - Supporto esterno per requisiti di comportamento aggiuntivi
 
@@ -405,11 +405,12 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
   - Funzionalità
     - Piattaforma di automazione no-code di livello aziendale che fornisce distribuzione, monitoraggio e gestione di nodi e reti blockchain
     - Oltre 30 protocolli e integrazioni supportati, in continuo aumento
-    - Servizi di infrastruttura Web3 a valore aggiunto come archiviazione decentralizzata, identità decentralizzata (DID) e API di dati del registro blockchain per casi d'uso reali
-    - Supporto 24/7 e monitoraggio proattivo garantiscono la salute dei nodi in ogni momento.
+    - Servizi di infrastruttura Web3 a valore aggiunto come archiviazione decentralizzata, identità decentralizzata e API di dati del registro blockchain per casi d'uso reali
+    - Il supporto 24/7 e il monitoraggio proattivo garantiscono la salute dei nodi in ogni momento.
     - Gli endpoint RPC offrono accesso autenticato alle API, gestione senza problemi con dashboard intuitiva e analisi.
     - Fornisce opzioni di cloud gestito e "porta il tuo cloud" tra cui scegliere e supporta tutti i principali fornitori di cloud come AWS, Azure, Google Cloud, Digital Ocean e on-premise.
     - Utilizziamo un instradamento intelligente per raggiungere ogni volta il nodo più vicino al tuo utente
+
 ## Letture consigliate {#further-reading}
 
 - [Elenco dei servizi di nodi Ethereum](https://ethereumnodes.com/)
@@ -420,5 +421,4 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
 
 ## Tutorial correlati {#related-tutorials}
 
-- [Iniziare con lo sviluppo su Ethereum utilizzando Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Guida all'invio di transazioni utilizzando Web3 e Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

@@ -1,6 +1,6 @@
 ---
 title: "Các framework phát triển dapp"
-description: "Khám phá những lợi thế của các framework và so sánh các tùy chọn có sẵn."
+description: "So sánh các framework phát triển Ethereum như Foundry và Hardhat. Tìm hiểu những gì một framework cung cấp cho bạn để biên dịch, kiểm thử và triển khai các hợp đồng thông minh."
 lang: vi
 ---
 
@@ -22,7 +22,7 @@ Trước khi đi sâu vào các framework, chúng tôi khuyên bạn trước ti
 
 ## Các framework có sẵn {#available-frameworks}
 
-**Foundry** - **_Foundry là một bộ công cụ cực kỳ nhanh, có tính di động và mô-đun hóa để phát triển ứng dụng Ethereum_**
+**Foundry** - **_Foundry là một bộ công cụ cực nhanh, di động và có tính mô-đun để phát triển ứng dụng Ethereum_**
 
 - [Cài đặt Foundry](https://book.getfoundry.sh/)
 - [Sách Foundry](https://book.getfoundry.sh/)
@@ -39,45 +39,45 @@ Trước khi đi sâu vào các framework, chúng tôi khuyên bạn trước ti
 - [Tài liệu](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
 
-**Web3j -** **_Một nền tảng để phát triển các ứng dụng Chuỗi khối trên JVM._**
+**Web3j -** **_Một nền tảng để phát triển các ứng dụng chuỗi khối trên JVM._**
 
 - [Trang chủ](https://www.web3labs.com/web3j-sdk)
 - [Tài liệu](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**ethers-kt -** **_Thư viện Kotlin/Java/Android bất đồng bộ, hiệu suất cao dành cho các Chuỗi khối dựa trên EVM._**
+**ethers-kt -** **_Thư viện Kotlin/Java/Android bất đồng bộ, hiệu suất cao dành cho các chuỗi khối dựa trên EVM._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Ví dụ](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_Tạo các ứng dụng được hỗ trợ bởi Ethereum bằng một lệnh. Đi kèm với nhiều framework giao diện người dùng (UI) và các mẫu tài chính phi tập trung (DeFi) để lựa chọn._**
+**Create Eth App -** **_Tạo các ứng dụng được hỗ trợ bởi Ethereum bằng một lệnh. Đi kèm với nhiều framework giao diện người dùng và các mẫu tài chính phi tập trung (DeFi) để lựa chọn._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
-- [Các mẫu](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
+- [Mẫu](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem và RainbowKit với lựa chọn Hardhat hoặc Foundry của bạn: tải lại nóng hợp đồng, các hook React tùy chỉnh, một Ví dùng một lần (burner wallet) và vòi cục bộ, cùng các mô-đun mở rộng để phát triển ứng dụng phi tập trung (dapp) full-stack._**
+**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem và RainbowKit với sự lựa chọn của bạn giữa Hardhat hoặc Foundry: tải lại nóng hợp đồng, các hook React tùy chỉnh, một ví dùng một lần và vòi cục bộ, cùng các mô-đun mở rộng để phát triển ứng dụng phi tập trung (dapp) toàn diện._**
 
 - [Trang web](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Nền tảng phát triển Web3 cho phép các nhà phát triển Chuỗi khối xây dựng, kiểm thử, gỡ lỗi, giám sát và vận hành các hợp đồng thông minh cũng như cải thiện trải nghiệm người dùng (UX) của dapp._**
+**Tenderly -** **_Nền tảng phát triển Web3 cho phép các nhà phát triển chuỗi khối xây dựng, kiểm thử, gỡ lỗi, giám sát và vận hành các hợp đồng thông minh cũng như cải thiện trải nghiệm người dùng (UX) của dapp._**
 
 - [Trang web](https://tenderly.co/)
 - [Tài liệu](https://docs.tenderly.co/)
 
-**The Graph -** **_The Graph để truy vấn dữ liệu Chuỗi khối một cách hiệu quả._**
+**The Graph -** **_The Graph để truy vấn dữ liệu chuỗi khối một cách hiệu quả._**
 
 - [Trang web](https://thegraph.com/)
-- [Hướng dẫn](/developers/tutorials/the-graph-fixing-web3-data-querying/)
+- [Tài liệu](https://thegraph.com/docs/en/)
 
-**Alchemy -** **_Nền tảng Phát triển Ethereum._**
+**Alchemy -** **_Nền tảng phát triển Ethereum._**
 
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
 
-**NodeReal -** **_Nền tảng Phát triển Ethereum._**
+**NodeReal -** **_Nền tảng phát triển Ethereum._**
 
 - [Nodereal.io](https://nodereal.io/)
 - [GitHub](https://github.com/node-real)
@@ -88,13 +88,13 @@ Trước khi đi sâu vào các framework, chúng tôi khuyên bạn trước ti
 - [Tài liệu](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Chainstack -** **_Nền tảng Phát triển Web3 (Ethereum và các nền tảng khác)._**
+**Chainstack -** **_Nền tảng phát triển Web3 (Ethereum và các nền tảng khác)._**
 
 - [chainstack.com](https://www.chainstack.com/)
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_Nền tảng phát triển Web3 cấp doanh nghiệp, cho phép bạn xây dựng các ứng dụng token không thể thay thế (NFT) trên tất cả các Chuỗi chính, các Chuỗi EVM (và các chuỗi khác)._**
+**Crossmint -** **_Nền tảng phát triển Web3 cấp doanh nghiệp, cho phép bạn xây dựng các ứng dụng token không thể thay thế (NFT) trên tất cả các chuỗi chính, Chuỗi EVM (và các chuỗi khác)._**
 
 - [Trang web](https://www.crossmint.com)
 - [Tài liệu](https://docs.crossmint.com)
@@ -104,33 +104,33 @@ Trước khi đi sâu vào các framework, chúng tôi khuyên bạn trước ti
 
 - [Tài liệu](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
-- **Brownie hiện không còn được bảo trì**
+- **Brownie hiện không được bảo trì**
 
-**OpenZeppelin SDK -** **_Bộ công cụ Hợp đồng thông minh Tối thượng: Một bộ công cụ giúp bạn phát triển, biên dịch, nâng cấp, triển khai và tương tác với các hợp đồng thông minh._**
+**OpenZeppelin SDK -** **_Bộ công cụ hợp đồng thông minh tối ưu: Một bộ công cụ giúp bạn phát triển, biên dịch, nâng cấp, triển khai và tương tác với các hợp đồng thông minh._**
 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
-- [Diễn đàn Cộng đồng](https://forum.openzeppelin.com/c/support/17)
+- [Diễn đàn cộng đồng](https://forum.openzeppelin.com/c/support/17)
 - **Quá trình phát triển OpenZeppelin SDK đã kết thúc**
 
-**Catapulta -** **_Công cụ triển khai hợp đồng thông minh đa chuỗi, tự động hóa việc xác minh trong các trình khám phá khối, theo dõi các hợp đồng thông minh đã triển khai và chia sẻ báo cáo về việc triển khai, cắm và chạy (plug-n-play) cho các dự án Foundry và Hardhat._**
+**Catapulta -** **_Công cụ triển khai hợp đồng thông minh đa chuỗi, tự động hóa việc xác minh trong các trình khám phá khối, theo dõi các hợp đồng thông minh đã triển khai và chia sẻ báo cáo triển khai, cắm và chạy (plug-n-play) cho các dự án Foundry và Hardhat._**
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (được cung cấp bởi Covalent) -** **_GoldRush cung cấp bộ Giao diện Lập trình Ứng dụng (API) dữ liệu Chuỗi khối toàn diện nhất dành cho các nhà phát triển, nhà phân tích và doanh nghiệp. Cho dù bạn đang xây dựng một bảng điều khiển tài chính phi tập trung (DeFi), một Ví, một bot giao dịch, một tác nhân AI hay một nền tảng tuân thủ, các API dữ liệu đều cung cấp quyền truy cập nhanh chóng, chính xác và thân thiện với nhà phát triển vào dữ liệu trên chuỗi thiết yếu mà bạn cần_**
+**GoldRush (được cung cấp bởi Covalent) -** **_GoldRush cung cấp bộ Giao diện Lập trình Ứng dụng (API) dữ liệu chuỗi khối toàn diện nhất cho các nhà phát triển, nhà phân tích và doanh nghiệp. Cho dù bạn đang xây dựng một bảng điều khiển tài chính phi tập trung (DeFi), một ví, một bot giao dịch, một tác nhân AI hay một nền tảng tuân thủ, các API dữ liệu cung cấp quyền truy cập nhanh chóng, chính xác và thân thiện với nhà phát triển vào dữ liệu trên chuỗi thiết yếu mà bạn cần_**
 
 - [Trang web](https://goldrush.dev/)
 - [Tài liệu](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
-**Wake -** **_Framework Python tất cả trong một để kiểm thử hợp đồng, fuzzing, triển khai, quét lỗ hổng bảo mật và điều hướng mã._**
+**Wake -** **_Framework Python tất cả trong một để kiểm thử, fuzzing, triển khai, quét lỗ hổng và điều hướng mã của hợp đồng._**
 
 - [Trang chủ](https://getwake.io/)
 - [Tài liệu](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [Tiện ích mở rộng VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_Framework mã nguồn mở, mô-đun hóa và bất khả tri giúp các nhà phát triển ứng dụng phi tập trung dễ dàng xây dựng các danh tính phi tập trung và thông tin xác thực có thể xác minh vào ứng dụng của họ._**
+**Veramo -** **_Framework mã nguồn mở, có tính mô-đun và bất khả tri giúp các nhà phát triển ứng dụng phi tập trung dễ dàng xây dựng danh tính phi tập trung và thông tin xác thực có thể xác minh vào ứng dụng của họ._**
 
 - [Trang chủ](https://veramo.io/)
 - [Tài liệu](https://veramo.io/docs/basics/introduction)
@@ -153,4 +153,4 @@ _Bạn biết một tài nguyên cộng đồng nào đó đã giúp ích cho b�
 
 ## Hướng dẫn: Các framework phát triển trên Ethereum {#tutorials}
 
-- [Hợp đồng thông minh Hello World cho người mới bắt đầu – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Xây dựng và triển khai một hợp đồng thông minh hello world bằng Hardhat, sau đó kết nối nó với một giao diện người dùng (frontend)._
+- [Hợp đồng thông minh Hello World cho người mới bắt đầu](/developers/tutorials/hello-world-smart-contract/) _– Xây dựng và triển khai một hợp đồng thông minh hello world bằng Hardhat._

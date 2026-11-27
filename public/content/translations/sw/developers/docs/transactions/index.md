@@ -12,22 +12,21 @@ Ili kukusaidia kuelewa ukurasa huu vizuri zaidi, tunapendekeza usome kwanza [Aka
 
 ## Muamala ni nini? {#whats-a-transaction}
 
-Muamala wa Ethereum unarejelea kitendo kilichoanzishwa na akaunti inayomilikiwa na mtu wa nje, kwa maneno mengine akaunti inayosimamiwa na binadamu, si mkataba. Kwa mfano, ikiwa Bob atamtumia Alice 1 ETH, akaunti ya Bob lazima ikatwe na ya Alice lazima iongezwe. Kitendo hiki cha kubadilisha hali hufanyika ndani ya muamala.
+Muamala wa Ethereum unarejelea kitendo kilichoanzishwa na akaunti inayomilikiwa nje, kwa maneno mengine akaunti inayosimamiwa na binadamu, si mkataba. Kwa mfano, ikiwa Bob atamtumia Alice 1 ETH, akaunti ya Bob lazima ikatwe na ya Alice lazima iongezwe. Kitendo hiki cha kubadilisha hali hufanyika ndani ya muamala.
 
-![Diagram showing a transaction cause state change](./tx.png)
-_Mchoro umechukuliwa kutoka [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<TxApplyDiagram />
 
-Miamala, ambayo hubadilisha hali ya EVM, inahitaji kutangazwa kwa mtandao mzima. Nodi yoyote inaweza kutangaza ombi la muamala kutekelezwa kwenye EVM; baada ya hili kutokea, mthibitishaji atatekeleza muamala na kusambaza mabadiliko ya hali yanayotokana kwa mtandao uliosalia.
+Miamala, ambayo inabadilisha hali ya EVM, inahitaji kutangazwa kwenye mtandao mzima. Nodi yoyote inaweza kutangaza ombi la muamala kutekelezwa kwenye EVM; baada ya hili kutokea, mthibitishaji atatekeleza muamala na kusambaza mabadiliko ya hali yanayotokana na hayo kwa mtandao uliosalia.
 
-Miamala inahitaji ada na lazima ijumuishe kwenye kitalu kilichothibitishwa. Ili kufanya muhtasari huu kuwa rahisi tutaangazia ada za gesi na uthibitishaji mahali pengine.
+Miamala inahitaji ada na lazima ijumuishwe kwenye kitalu kilichothibitishwa. Ili kurahisisha muhtasari huu tutaangazia ada za gesi na uthibitishaji mahali pengine.
 
 Muamala uliowasilishwa unajumuisha taarifa zifuatazo:
 
-- `from` – anwani ya mtumaji, ambaye atasaini muamala. Hii itakuwa akaunti inayomilikiwa na mtu wa nje kwa kuwa akaunti za mkataba haziwezi kutuma miamala
-- `to` – anwani inayopokea (ikiwa ni akaunti inayomilikiwa na mtu wa nje, muamala utahamisha thamani. Ikiwa ni akaunti ya mkataba, muamala utatekeleza msimbo wa mkataba)
-- `signature` – kitambulisho cha mtumaji. Hiki huzalishwa wakati ufunguo wa siri wa mtumaji unaposaini muamala na kuthibitisha kuwa mtumaji ameidhinisha muamala huu
+- `from` – anwani ya mtumaji, ambaye atasaini muamala. Hii itakuwa akaunti inayomilikiwa nje kwa kuwa akaunti za mkataba haziwezi kutuma miamala
+- `to` – anwani inayopokea (ikiwa ni akaunti inayomilikiwa nje, muamala utahamisha thamani. Ikiwa ni akaunti ya mkataba, muamala utatekeleza msimbo wa mkataba)
+- `signature` – kitambulisho cha mtumaji. Hiki kinazalishwa wakati ufunguo wa siri wa mtumaji unaposaini muamala na kuthibitisha kuwa mtumaji ameidhinisha muamala huu
 - `nonce` - kihesabio kinachoongezeka kwa mfuatano ambacho kinaonyesha nambari ya muamala kutoka kwenye akaunti
-- `value` – kiasi cha ETH cha kuhamisha kutoka kwa mtumaji kwenda kwa mpokeaji (kikipimwa kwa Wei, ambapo 1ETH ni sawa na 1e+18wei)
+- `value` – kiasi cha ETH cha kuhamisha kutoka kwa mtumaji kwenda kwa mpokeaji (kikionyeshwa kwa Wei, ambapo 1ETH ni sawa na 1e+18wei)
 - `input data` – sehemu ya hiari ya kujumuisha data yoyote
 - `gasLimit` – kiwango cha juu cha uniti za gesi zinazoweza kutumiwa na muamala. [EVM](/developers/docs/evm/opcodes) inabainisha uniti za gesi zinazohitajika kwa kila hatua ya ukokotoaji
 - `maxPriorityFeePerGas` - bei ya juu zaidi ya gesi iliyotumika kujumuishwa kama ada ya kipaumbele kwa mthibitishaji
@@ -49,9 +48,9 @@ Kipengee cha muamala kitaonekana hivi:
 }
 ```
 
-Lakini kipengee cha muamala kinahitaji kusainiwa kwa kutumia ufunguo wa siri wa mtumaji. Hii inathibitisha kuwa muamala ungeweza tu kutoka kwa mtumaji na haukutumwa kwa njia ya udanganyifu.
+Lakini kipengee cha muamala kinahitaji kusainiwa kwa kutumia ufunguo wa siri wa mtumaji. Hii inathibitisha kwamba muamala ungeweza tu kutoka kwa mtumaji na haukutumwa kwa njia ya udanganyifu.
 
-Kiteja cha Ethereum kama Geth kitashughulikia mchakato huu wa kusaini.
+Kiteja cha Ethereum kama vile Geth kitashughulikia mchakato huu wa kusaini.
 
 Mfano wa mwito wa [JSON-RPC](/developers/docs/apis/json-rpc):
 
@@ -100,10 +99,10 @@ Mfano wa majibu:
 }
 ```
 
-- `raw` ni muamala uliosainiwa katika muundo uliosimbwa wa [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp)
+- `raw` ni muamala uliosainiwa katika muundo uliosimbwa wa [Kiambishi Awali cha Urefu Kijirudiacho (RLP)](/developers/docs/data-structures-and-encoding/rlp)
 - `tx` ni muamala uliosainiwa katika muundo wa JSON
 
-Kwa heshi ya sahihi, muamala unaweza kuthibitishwa kwa njia ya kriptografia kuwa ulitoka kwa mtumaji na kuwasilishwa kwenye mtandao.
+Kwa heshi ya sahihi, muamala unaweza kuthibitishwa kwa njia ya kriptografia kwamba ulitoka kwa mtumaji na kuwasilishwa kwenye mtandao.
 
 ### Sehemu ya data {#the-data-field}
 
@@ -152,7 +151,7 @@ Kwenye Ethereum kuna aina chache tofauti za miamala:
 
 Kama ilivyotajwa, miamala inagharimu [gesi](/developers/docs/gas/) ili kutekelezwa. Miamala rahisi ya hamisho inahitaji uniti 21000 za Gesi.
 
-Kwa hivyo ili Bob amtumie Alice 1 ETH kwa `baseFeePerGas` ya 190 Gwei na `maxPriorityFeePerGas` ya 10 Gwei, Bob atahitaji kulipa ada ifuatayo:
+Kwa hivyo ili Bob amtumie Alice 1 ETH kwa `baseFeePerGas` ya Gwei 190 na `maxPriorityFeePerGas` ya Gwei 10, Bob atahitaji kulipa ada ifuatayo:
 
 ```
 (190 + 10) * 21000 = 4,200,000 gwei
@@ -160,7 +159,7 @@ Kwa hivyo ili Bob amtumie Alice 1 ETH kwa `baseFeePerGas` ya 190 Gwei na `maxPri
 0.0042 ETH
 ```
 
-Akaunti ya Bob itakatwa **-1.0042 ETH** (1 ETH kwa Alice + 0.0042 ETH katika ada za gesi)
+Akaunti ya Bob itakatwa **-1.0042 ETH** (1 ETH kwa ajili ya Alice + 0.0042 ETH katika ada za gesi)
 
 Akaunti ya Alice itaongezwa **+1.0 ETH**
 
@@ -169,8 +168,7 @@ Ada ya msingi itachomwa **-0.00399 ETH**
 Mthibitishaji anabaki na ada ya kipaumbele **+0.000210 ETH**
 
 
-![Diagram showing how unused gas is refunded](./gas-tx.png)
-_Mchoro umechukuliwa kutoka [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 Gesi yoyote ambayo haijatumika katika muamala inarejeshwa kwenye akaunti ya mtumiaji.
 
@@ -223,7 +221,7 @@ Kulingana na thamani ya `TransactionType`, muamala unaweza kuainishwa kama:
 
 3. **Miamala ya Aina ya 2**, inayojulikana kwa kawaida kama miamala ya EIP-1559, ni miamala iliyoanzishwa katika [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), katika [Sasisho la London](/ethereum-forks/#london) la Ethereum. Imekuwa aina ya kawaida ya muamala kwenye mtandao wa Ethereum. Miamala hii inaleta utaratibu mpya wa soko la ada ambao unaboresha utabiri kwa kutenganisha ada ya muamala kuwa ada ya msingi na ada ya kipaumbele. Inaanza na baiti `0x02` na inajumuisha sehemu kama vile `maxPriorityFeePerGas` na `maxFeePerGas`. Miamala ya Aina ya 2 sasa ndiyo chaguo-msingi kutokana na unyumbufu na ufanisi wake, hasa ikipendelewa wakati wa msongamano mkubwa wa mtandao kwa uwezo wake wa kusaidia watumiaji kudhibiti ada za muamala kwa njia inayotabirika zaidi. Thamani ya TransactionType kwa miamala hii ni `0x2`.
 
-4. **Miamala ya Aina ya 3 (Blobu)** ilianzishwa katika [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) kama sehemu ya [Sasisho la Dencun](/ethereum-forks/#dencun) la Ethereum. Miamala hii imeundwa kushughulikia data za "blobu" (Binary Large Objects) kwa ufanisi zaidi, hasa ikinufaisha mikusanyiko ya tabaka la 2 (l2) kwa kutoa njia ya kuchapisha data kwenye mtandao wa Ethereum kwa gharama ya chini. Miamala ya blobu inajumuisha sehemu za ziada kama vile `blobVersionedHashes`, `maxFeePerBlobGas`, na `blobGasPrice`. Inaanza na baiti `0x03`, na thamani yake ya TransactionType ni `0x3`. Miamala ya blobu inawakilisha uboreshaji mkubwa katika upatikanaji wa data wa Ethereum na uwezo wa kuongeza ukubwa.
+4. **Miamala ya Aina ya 3 (Blobu)** ilianzishwa katika [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) kama sehemu ya [Sasisho la Dencun](/ethereum-forks/#dencun) la Ethereum. Miamala hii imeundwa kushughulikia data za "blobu" (Binary Large Objects) kwa ufanisi zaidi, hasa ikinufaisha mikusanyiko ya tabaka la 2 (L2) kwa kutoa njia ya kuchapisha data kwenye mtandao wa Ethereum kwa gharama ya chini. Miamala ya blobu inajumuisha sehemu za ziada kama vile `blobVersionedHashes`, `maxFeePerBlobGas`, na `blobGasPrice`. Inaanza na baiti `0x03`, na thamani yake ya TransactionType ni `0x3`. Miamala ya blobu inawakilisha uboreshaji mkubwa katika upatikanaji wa data wa Ethereum na uwezo wa kuongeza ukubwa.
 
 5. **Miamala ya Aina ya 4** ilianzishwa katika [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) kama sehemu ya [Sasisho la Pectra](/roadmap/pectra/) la Ethereum. Miamala hii imeundwa ili kuendana na udhanifu wa akaunti wa siku zijazo. Inaruhusu EOA kufanya kazi kwa muda kama akaunti za mkataba mahiri bila kuathiri utendaji wao wa asili. Inajumuisha kigezo cha `authorization_list`, ambacho kinabainisha mkataba mahiri ambao EOA inakabidhi mamlaka yake. Baada ya muamala, sehemu ya msimbo ya EOA itakuwa na anwani ya mkataba mahiri uliokabidhiwa.
 
