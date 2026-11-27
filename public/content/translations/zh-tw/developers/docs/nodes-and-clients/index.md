@@ -15,15 +15,14 @@ sidebarDepth: 2
 
 ## 什麼是節點與客戶端？ {#what-are-nodes-and-clients}
 
-「節點」是指任何連接到其他同樣執行以太坊軟體的電腦，從而形成一個網路的以太坊客戶端軟體實例。客戶端是以太坊的一種實作，它根據協定規則驗證資料並保持網路安全。一個節點必須執行兩個客戶端：一個共識客戶端和一個執行客戶端。
+「節點」是指任何連接到其他同樣執行以太坊軟體的電腦，從而形成網路的以太坊客戶端軟體實例。客戶端是以太坊的一種實作，它根據協定規則驗證資料並保持網路安全。一個節點必須執行兩個客戶端：一個共識客戶端和一個執行客戶端。
 
-- 執行客戶端（也稱為執行引擎、EL 客戶端或以前的 Eth1 客戶端）監聽網路中廣播的新交易，在 EVM 中執行它們，並保存所有當前以太坊資料的最新狀態與資料庫。
-- 共識客戶端（也稱為信標節點、CL 客戶端或以前的 Eth2 客戶端）實作了權益證明 (PoS) 共識演算法，這使得網路能夠根據來自執行客戶端的已驗證資料達成共識。還有第三個軟體，稱為「驗證者」，可以新增到共識客戶端中，允許節點參與保護網路。
+- 執行客戶端（也稱為執行引擎、EL 客戶端或以前的 Eth1 客戶端）監聽網路中廣播的新交易，在 EVM 中執行它們，並保存所有當前以太坊資料的最新狀態和資料庫。
+- 共識客戶端（也稱為信標節點、CL 客戶端或以前的 Eth2 客戶端）實作權益證明 (PoS) 共識演算法，這使得網路能夠根據來自執行客戶端的已驗證資料達成共識。還有第三個軟體，稱為「驗證者」，可以新增到共識客戶端中，允許節點參與保護網路。
 
 這些客戶端協同工作以追蹤以太坊鏈的頂端，並允許使用者與以太坊網路互動。這種由多個軟體協同工作的模組化設計被稱為[封裝複雜性](https://vitalik.eth.limo/general/2022/02/28/complexity.html)。這種方法使得無縫執行[合併](/roadmap/merge)變得更加容易，使客戶端軟體更易於維護和開發，並實現了個別客戶端的重複使用，例如在[第二層 (L2) 生態系統](/layer-2/)中。
 
-![Coupled execution and consensus clients](./eth1eth2client.png)
-耦合的執行與共識客戶端簡化圖。
+<NodeClientsDiagram />
 
 ### 客戶端多樣性 {#client-diversity}
 
@@ -90,16 +89,16 @@ sidebarDepth: 2
 
 ### 對你的好處 {#benefits-to-you}
 
-執行你自己的節點使你能夠以私密、自給自足且無須信任的方式使用以太坊。你不需要信任網路，因為你可以使用你的客戶端自行驗證資料。「不要信任，要驗證」是一句流行的區塊鏈格言。
+執行你自己的節點使你能夠以私密、自給自足且無須信任的方式使用以太坊。你不需要信任網路，因為你可以使用自己的客戶端自行驗證資料。「不要信任，要驗證 (Don't trust, verify)」是一句流行的區塊鏈格言。
 
 - 你的節點會自行根據共識規則驗證所有交易和區塊。這意味著你不必依賴網路中的任何其他節點或完全信任它們。
-- 你可以將以太坊錢包與你自己的節點一起使用。你可以更安全、更私密地使用去中心化應用程式 (dapp)，因為你不必向中介機構洩露你的地址和餘額。一切都可以用你自己的客戶端進行檢查。[梅塔馬斯克](https://metamask.io)、[Frame](https://frame.sh/) 和[許多其他錢包](/wallets/find-wallet/)提供 RPC 匯入功能，允許它們使用你的節點。
-- 你可以執行並自行託管依賴以太坊資料的其他服務。例如，這可能是信標鏈驗證者、像第二層 (L2) 這樣的軟體、基礎設施、區塊瀏覽器、支付處理器等。
+- 你可以將以太坊錢包與你自己的節點一起使用。你可以更安全、更私密地使用去中心化應用程式 (dapp)，因為你無需將地址和餘額洩露給中介機構。一切都可以用你自己的客戶端進行檢查。[MetaMask](https://metamask.io)、[Frame](https://frame.sh/) 以及[許多其他錢包](/wallets/find-wallet/)都提供 RPC 匯入功能，允許它們使用你的節點。
+- 你可以執行並自行託管依賴以太坊資料的其他服務。例如，這可能是信標鏈驗證者、第二層 (L2) 等軟體、基礎設施、區塊瀏覽器、支付處理器等。
 - 你可以提供自己的自訂 [RPC 端點](/developers/docs/apis/json-rpc/)。你甚至可以向社群公開提供這些端點，以幫助他們避開大型中心化供應商。
-- 你可以使用**行程間通訊 (IPC)** 連接到你的節點，或者重寫節點以將你的程式作為外掛程式載入。這提供了低延遲，這非常有幫助，例如，當使用 Web3 函式庫處理大量資料時，或者當你需要盡快替換交易時（即搶先交易）。
+- 你可以使用**行程間通訊 (IPC)** 連接到你的節點，或者重寫節點以將你的程式作為外掛程式載入。這賦予了低延遲的優勢，這在很多情況下非常有幫助，例如，當使用 Web3 函式庫處理大量資料時，或者當你需要盡快替換交易時（即搶先交易）。
 - 你可以直接質押 ETH 來保護網路並賺取獎勵。請參閱[獨立質押](/staking/solo/)以開始使用。
 
-![How you access Ethereum via your application and nodes](./nodes.png)
+<NodeAccessDiagram />
 
 ### 網路好處 {#network-benefits}
 
@@ -130,22 +129,22 @@ sidebarDepth: 2
 
 ## 執行客戶端 {#execution-clients}
 
-以太坊社群維護著多個開源執行客戶端（以前稱為「Eth1 客戶端」，或簡稱「以太坊客戶端」），由不同團隊使用不同的程式語言開發。這使得網路更加強大且更具[多樣性](/developers/docs/nodes-and-clients/client-diversity/)。理想的目標是實現多樣性，而沒有任何客戶端佔主導地位，以減少任何單點故障。
+以太坊社群維護著多個開源執行客戶端（以前稱為「Eth1 客戶端」或簡稱「以太坊客戶端」），由不同的團隊使用不同的程式語言開發。這使得網路更強大且更具[多樣性](/developers/docs/nodes-and-clients/client-diversity/)。理想的目標是實現多樣性，而沒有任何一個客戶端佔主導地位，以減少任何單點故障。
 
-下表總結了不同的客戶端。它們都通過了[客戶端測試](https://github.com/ethereum/tests)，並得到積極維護以跟上網路升級。
+下表總結了不同的客戶端。它們都通過了[客戶端測試](https://github.com/ethereum/tests)，並得到積極維護以跟上網路升級的步伐。
 
 | 客戶端                                                                   | 語言   | 作業系統     | 網路                | 同步策略                                            | 狀態修剪   |
 | ------------------------------------------------------------------------ | ---------- | --------------------- | ----------------------- | ---------------------------------------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [快照 (Snap)](#snap-sync), [完整 (Full)](#full-sync)                     | 歸檔、已修剪 |
-| [奈瑟邁](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [快照 (Snap)](#snap-sync), 快速 (Fast), [完整 (Full)](#full-sync)               | 歸檔、已修剪 |
-| [貝蘇](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [快照 (Snap)](#snap-sync), [快速 (Fast)](#fast-sync), [完整 (Full)](#full-sync) | 歸檔、已修剪 |
-| [艾瑞貢](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [完整 (Full)](#full-sync)                                         | 歸檔、已修剪 |
-| [瑞斯](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [完整 (Full)](#full-sync)                                         | 歸檔、已修剪 |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(測試版)_ | TypeScript | Linux, Windows, macOS | Sepolia, Hoodi          | [完整 (Full)](#full-sync)                                         | 已修剪          |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | 主網, Sepolia, Hoodi | [快照 (Snap)](#snap-sync), [完整 (Full)](#full-sync)                     | 歸檔, 修剪 |
+| [奈瑟邁 (Nethermind)](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | 主網, Sepolia, Hoodi | [快照 (Snap)](#snap-sync), 快速 (Fast), [完整 (Full)](#full-sync)               | 歸檔, 修剪 |
+| [貝蘇 (Besu)](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | 主網, Sepolia, Hoodi | [快照 (Snap)](#snap-sync), [快速 (Fast)](#fast-sync), [完整 (Full)](#full-sync) | 歸檔, 修剪 |
+| [艾瑞貢 (Erigon)](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | 主網, Sepolia, Hoodi | [完整 (Full)](#full-sync)                                         | 歸檔, 修剪 |
+| [ethrex](https://ethrex.xyz/)                                            | Rust       | Linux, macOS          | 主網, Sepolia, Hoodi | [快照 (Snap)](#snap-sync), [完整 (Full)](#full-sync)                     | 修剪          |
+| [瑞斯 (Reth)](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | 主網, Sepolia, Hoodi | [完整 (Full)](#full-sync)                                         | 歸檔, 修剪 |
 
 有關支援網路的更多資訊，請閱讀[以太坊網路](/developers/docs/networks/)。
 
-每個客戶端都有獨特的使用案例和優勢，因此你應該根據自己的偏好選擇一個。多樣性允許實作專注於不同的功能和使用者受眾。你可能希望根據功能、支援、程式語言或授權來選擇客戶端。
+每個客戶端都有獨特的使用案例和優勢，因此你應該根據自己的偏好選擇一個。多樣性允許實作專注於不同的功能和使用者群體。你可能希望根據功能、支援、程式語言或授權來選擇客戶端。
 
 ### 貝蘇 {#besu}
 
@@ -153,10 +152,9 @@ Hyperledger Besu 是一個適用於公共和許可制網路的企業級以太坊
 
 貝蘇廣泛的[文件](https://besu.hyperledger.org/en/stable/)將引導你了解其功能和設定的所有細節。
 
-### 艾瑞貢 {#erigon}
+### 艾瑞貢 (Erigon) {#erigon}
 
-艾瑞貢（以前稱為 Turbo-Geth）最初是 Go 以太坊的一個分叉，旨在提高速度和磁碟空間效率。艾瑞貢是一個完全重新架構的以太坊實作，目前用 Go 編寫，但其他語言的實作正在開發中。艾瑞貢的目標是提供一個更快、更模組化且更優化的以太坊實作。它可以在不到 3 天的時間內使用大約 2TB 的磁碟空間執行完整的歸檔節點同步。
-
+艾瑞貢 (Erigon) 以前稱為 Turbo-Geth，最初是 Go 以太坊 (Geth) 的一個分叉，致力於提高速度和磁碟空間效率。Erigon 是一個完全重新架構的以太坊實作，目前用 Go 編寫，但其他語言的實作正在開發中。Erigon 的目標是提供一個更快、更模組化且更最佳化的以太坊實作。它可以在不到 3 天的時間內，使用不到 3TB 的磁碟空間執行完整的歸檔節點同步。
 
 ### ethrex {#ethrex}
 
@@ -187,16 +185,6 @@ Go 以太坊（簡稱 Geth）是以太坊協定的最初實作之一。目前，
 
 透過查看 [Reth Book](https://reth.rs/) 或 [Reth GitHub 儲存庫](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth)了解更多資訊。
 
-### 開發中 {#execution-in-development}
-
-這些客戶端仍處於早期開發階段，尚不建議用於生產環境。
-
-#### EthereumJS {#ethereumjs}
-
-EthereumJS 執行客戶端 (EthereumJS) 是用 TypeScript 編寫的，由許多套件組成，包括由區塊、交易和 Merkle-Patricia Trie 類別表示的核心以太坊原語，以及核心客戶端元件，包括以太坊虛擬機 (EVM) 的實作、區塊鏈類別和 devp2p 網路堆疊。
-
-透過閱讀其[文件](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master)了解更多資訊
-
 ## 共識客戶端 {#consensus-clients}
 
 有多個共識客戶端（以前稱為「Eth2」客戶端）來支援[共識升級](/roadmap/beacon-chain/)。它們負責所有與共識相關的邏輯，包括分叉選擇演算法、處理證明以及管理[權益證明 (PoS)](/developers/docs/consensus-mechanisms/pos)獎勵和罰沒。
@@ -216,11 +204,11 @@ EthereumJS 執行客戶端 (EthereumJS) 是用 TypeScript 編寫的，由許多�
 
 文件可以在 [Lighthouse Book](https://lighthouse-book.sigmaprime.io/) 中找到
 
-### 洛德斯塔 {#lodestar}
+### 洛德斯塔 (Lodestar) {#lodestar}
 
-洛德斯塔是一個在 LGPL-3.0 授權下用 TypeScript 編寫的生產就緒共識客戶端實作。它由 ChainSafe Systems 維護，是為獨立質押者、開發者和研究人員提供的最新共識客戶端。洛德斯塔由信標節點和驗證者客戶端組成，由以太坊協定的 JavaScript 實作提供支援。洛德斯塔旨在透過輕客戶端提高以太坊的可用性，擴大對更多開發者的可及性，並進一步為生態系統多樣性做出貢獻。
+洛德斯塔 (Lodestar) 是一個生產就緒的共識客戶端實作，在 Apache-2.0 授權下使用 TypeScript 編寫。它由 ChainSafe Systems 維護，是為獨立質押者、開發者和研究人員提供的最新共識客戶端。Lodestar 由信標節點和驗證者客戶端組成，由以太坊協定的 JavaScript 實作提供支援。Lodestar 旨在透過輕客戶端提高以太坊的可用性，擴大對更多開發者的可及性，並進一步為生態系統的多樣性做出貢獻。
 
-更多資訊可以在[洛德斯塔網站](https://lodestar.chainsafe.io/)上找到
+更多資訊可以在 [Lodestar 網站](https://lodestar.chainsafe.io/)上找到。
 
 ### 寧布斯 {#nimbus}
 
@@ -300,7 +288,7 @@ Grandine 是一個在 GPL-3.0 授權下用 Rust 編寫的共識客戶端實作�
 
 樂觀同步是一種合併後的同步策略，設計為可選且向後相容，允許執行節點透過既定方法進行同步。執行引擎可以_樂觀地_匯入信標區塊而無需完全驗證它們，找到最新的頂端，然後開始使用上述方法同步鏈。然後，在執行客戶端趕上之後，它將通知共識客戶端信標鏈中交易的有效性。
 
-[更多關於樂觀同步的資訊](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
+[更多關於樂觀同步的資訊](https://github.com/ethereum/consensus-specs/blob/master/specs/bellatrix/optimistic-sync.md)
 
 #### 檢查點同步 (Checkpoint sync) {#checkpoint-sync}
 
@@ -322,4 +310,4 @@ Grandine 是一個在 GPL-3.0 授權下用 Rust 編寫的共識客戶端實作�
 
 ## 相關教學 {#related-tutorials}
 
-- [只需燒錄 MicroSD 卡即可將你的 Raspberry Pi 4 變成驗證者節點 – 安裝指南](/developers/tutorials/run-node-raspberry-pi/) _– 燒錄你的 Raspberry Pi 4，插入乙太網路線，連接 SSD 磁碟並開啟裝置電源，即可將 Raspberry Pi 4 變成執行執行層（主網）和/或共識層（信標鏈/驗證者）的完整以太坊節點。_
+- [只需燒錄 MicroSD 卡即可將你的 Raspberry Pi 5 變成驗證者節點 – 安裝指南](/developers/tutorials/run-node-raspberry-pi/) _– 燒錄你的 Raspberry Pi 5，插入乙太網路線，連接 NVMe 磁碟並開啟裝置電源，即可將 Raspberry Pi 5 變成執行執行層（主網）和/或共識層（信標鏈/驗證者）的完整以太坊節點。_

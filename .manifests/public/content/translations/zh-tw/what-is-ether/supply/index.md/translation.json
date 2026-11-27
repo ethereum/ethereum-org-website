@@ -1,10 +1,10 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "zh-tw",
-  "translatedAt": "2026-06-08T09:11:02.568Z",
-  "englishManifestHash": "54ca69e2cfb0",
+  "translatedAt": "2026-11-27T14:43:41.010Z",
+  "englishManifestHash": "57e373bd75a9",
   "placeholderOrder": [
-    "LINK-5e43ec",
+    "LINK-2ed744",
     "LINK-9d6d3a",
     "LINK-0168d9",
     "LINK-1ee787",
@@ -22,10 +22,10 @@
     "LINK-eb3d62"
   ],
   "placeholderMap": {
-    "LINK-5e43ec": {
+    "LINK-2ed744": {
       "type": "link",
       "values": {
-        "url": "/eips/#introduction-to-ethereum-improvement-proposals"
+        "url": "/eips/"
       }
     },
     "LINK-9d6d3a": {
@@ -91,7 +91,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-08T09:11:02.568Z",
+      "translatedAt": "2026-11-27T14:43:41.010Z",
       "status": "success"
     }
   }
