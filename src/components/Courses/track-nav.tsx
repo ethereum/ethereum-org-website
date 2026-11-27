@@ -241,7 +241,11 @@ const TrackNav = ({
           </span>
           <ChevronDown aria-hidden className="size-4 shrink-0" />
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="min-w-64">
+        <DropdownMenuContent
+          align="end"
+          collisionPadding={16}
+          className="min-w-64"
+        >
           {tracks.map(({ id, title, share, count }) => (
             <DropdownMenuItem
               key={id}
@@ -254,7 +258,7 @@ const TrackNav = ({
               ) : (
                 <Construction
                   aria-hidden
-                  className="size-6 shrink-0 text-body-medium"
+                  className="size-6 shrink-0 text-primary opacity-20"
                 />
               )}
               <span id={`${uid}-${id}-menu-title`} className="flex-1">
