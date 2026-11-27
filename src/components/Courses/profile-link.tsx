@@ -26,7 +26,7 @@ const chipHover = "hover:border-primary-hover hover:text-primary-hover"
 const roundChip = cn(
   statChip,
   chipHover,
-  "size-[calc(1lh+0.5rem+4px)] justify-center p-0 text-body-medium no-underline"
+  "size-[calc(1lh+0.5rem+4px)] justify-center p-0 text-body no-underline"
 )
 
 const SignInChip = ({ className }: { className?: string }) => {
@@ -40,7 +40,7 @@ const SignInChip = ({ className }: { className?: string }) => {
           className={cn(
             statChip,
             chipHover,
-            "cursor-pointer text-body-medium",
+            "cursor-pointer text-body",
             className
           )}
         >
