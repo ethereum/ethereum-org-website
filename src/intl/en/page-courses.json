@@ -586,7 +586,7 @@
   "smart-accounts-rules-can-opt-limit": "Cap how much can leave each day",
   "smart-accounts-rules-can-fb-limit": "Yes. A regular account sends whatever its key signs, but a smart account's code can refuse anything over the limit.",
   "smart-accounts-rules-can-opt-recover": "Let contacts you picked approve a new key if you lose yours",
-  "smart-accounts-rules-can-fb-recover": "Yes. That's social recovery. A regular account whose key is lost stays locked for good.",
+  "smart-accounts-rules-can-fb-recover": "Yes. That's social recovery. A regular account whose key and recovery phrase are both lost stays locked for good.",
   "smart-accounts-rules-can-opt-undo": "Undo a payment after it's in a block",
   "smart-accounts-rules-can-fb-undo": "No account can do that. Rules check a request before it goes through, and once a payment is on the blockchain, it can't be undone.",
   "smart-accounts-rules-can-opt-gas": "Send transactions without anyone paying gas",
