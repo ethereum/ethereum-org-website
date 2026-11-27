@@ -1,6 +1,6 @@
 ---
-title: 在家质押你的 ETH
-description: 关于如何开始在家质押 ETH 的概述
+title: "在家质押你的 ETH"
+description: "如何在家质押你的 ETH：使用 32 个 ETH 运行你自己的以太坊验证者，直接从协议中赚取奖励并帮助保护网络安全。"
 lang: zh
 template: staking
 image: /images/staking/leslie-solo.png
@@ -104,7 +104,7 @@ summaryPoints:
 
 ## 在质押启动板上开始 {#get-started-on-the-staking-launchpad}
 
-质押启动板 (Staking Launchpad) 是一个开源应用程序，将帮助你成为一名质押者。它将引导你选择客户端、生成密钥并将你的 ETH 存入质押存款合约。它提供了一份清单，以确保你已涵盖所有内容，从而安全地设置你的验证者。
+质押启动板 (Staking Launchpad) 是一个开源应用程序，将帮助你成为一名质押者。它将指导你选择客户端、生成密钥并将你的 ETH 存入[质押存款合约](/staking/deposit-contract/)。它还提供了一份清单，以确保你已完成所有步骤，从而安全地设置你的验证者。
 
 <StakingLaunchpadWidget />
 

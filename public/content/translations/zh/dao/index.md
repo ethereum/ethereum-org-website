@@ -1,7 +1,7 @@
 ---
 title: "什么是 DAO？"
 metaTitle: "什么是 DAO？| 去中心化自治组织"
-description: "以太坊上的 DAO 概览"
+description: "什么是 DAO？了解去中心化自治组织 (DAO) 如何在以太坊上使用智能合约和代币来做出决策并管理共享资金。"
 lang: zh
 template: use-cases
 sidebarDepth: 2

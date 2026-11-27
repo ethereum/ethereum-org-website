@@ -1,6 +1,6 @@
 ---
 title: "数据与分析"
-description: "如何获取链上分析和数据以在你的去中心化应用 (dapp) 中使用"
+description: "如何为你的 dapp 获取链上数据：用于查询和分析以太坊数据的索引器、子图、区块浏览器、SQL 分析平台和 API。"
 lang: zh
 ---
 
@@ -76,7 +76,7 @@ EVM 查询语言 (EQL) 是一种类似 SQL 的语言，旨在查询 EVM（以太
 
 - [探索加密货币数据 I：数据流架构](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
 - [Graph 网络概述](https://thegraph.com/docs/en/about/)
-- [Graph 查询游乐场](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
+- [Graph 浏览器](https://thegraph.com/explorer)
 - [EtherScan 上的 API 代码示例](https://etherscan.io/apis#contracts)
 - [Blockscout 上的 API 文档](https://docs.blockscout.com/devs/apis)
 - [Beaconcha.in 信标链浏览器](https://beaconcha.in)

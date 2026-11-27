@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/glossary.json",
-  "generatedAt": "2026-06-29T23:46:52.881Z",
-  "rootHash": "3562b9745e40",
+  "generatedAt": "2026-11-27T09:46:09.841Z",
+  "rootHash": "24ad2b97c10d",
   "tree": {
-    "contentHash": "33b00f32bd8f",
-    "anchorHash": "81c0387846f2",
+    "contentHash": "92e538d96b3c",
+    "anchorHash": "7516c8e6247f",
     "children": {
       "51%-attack-term": {
         "contentHash": "03ad01db08ac",
@@ -441,6 +441,14 @@
           "prose:5"
         ]
       },
+      "block-builder-term": {
+        "contentHash": "6b442d2ef57a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "block-builder-definition": {
+        "contentHash": "311d86aa9b13",
+        "anchorHash": "e3b0c44298fc"
+      },
       "block-explorer-term": {
         "contentHash": "9dc2e7397ab5",
         "anchorHash": "e3b0c44298fc"
@@ -648,10 +656,10 @@
         "anchorHash": "e3b0c44298fc"
       },
       "byzantium-fork-definition": {
-        "contentHash": "b66cc962f704",
-        "anchorHash": "da37018b5002",
+        "contentHash": "68cd6d6e5d4a",
+        "anchorHash": "a8c3dab93558",
         "children": {
-          "prose:4": {
+          "prose:2": {
             "contentHash": "0f4547af7ec1",
             "anchorHash": "e3b0c44298fc"
           },
@@ -659,45 +667,25 @@
             "contentHash": "4d221f97b773",
             "anchorHash": "a025d9ae6318"
           },
-          "prose:5": {
-            "contentHash": "42e4ae3042c6",
+          "prose:3": {
+            "contentHash": "888fd7044218",
             "anchorHash": "e3b0c44298fc"
           },
           "html-tag:1": {
-            "contentHash": "1dce2c62a0fd",
-            "anchorHash": "4817ac938eed"
-          },
-          "prose:6": {
-            "contentHash": "05de3b5ffdcc",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "html-tag:2": {
             "contentHash": "784f6d3b22ed",
             "anchorHash": "0d033daf3e38"
           },
-          "prose:7": {
-            "contentHash": "b376b9480f4d",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "html-tag:3": {
-            "contentHash": "185904afd06f",
-            "anchorHash": "34c6d9f20f63"
-          },
-          "prose:8": {
-            "contentHash": "3b93b46a4eeb",
+          "prose:4": {
+            "contentHash": "56144b803089",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
-          "prose:4",
+          "prose:2",
           "html-tag:0",
-          "prose:5",
+          "prose:3",
           "html-tag:1",
-          "prose:6",
-          "html-tag:2",
-          "prose:7",
-          "html-tag:3",
-          "prose:8"
+          "prose:4"
         ]
       },
       "casper-ffg-term": {
@@ -743,7 +731,7 @@
       },
       "checkpoint-definition": {
         "contentHash": "9c4f5c8466d2",
-        "anchorHash": "71dc45d43213",
+        "anchorHash": "7eff7a57acea",
         "children": {
           "prose:4": {
             "contentHash": "b344d80e24a3",
@@ -767,7 +755,7 @@
           },
           "html-tag:2": {
             "contentHash": "a4dd76661553",
-            "anchorHash": "b9723408cfd0"
+            "anchorHash": "2eba0155ecc3"
           },
           "prose:7": {
             "contentHash": "332b2c76892a",
@@ -1022,46 +1010,36 @@
         "anchorHash": "e3b0c44298fc"
       },
       "constantinople-fork-definition": {
-        "contentHash": "d25f36ee1140",
-        "anchorHash": "4de1c0f7ac7c",
+        "contentHash": "a639ff458f73",
+        "anchorHash": "443c755416e1",
         "children": {
-          "prose:3": {
-            "contentHash": "40fb2e6e7e8f",
+          "prose:2": {
+            "contentHash": "cad083018333",
             "anchorHash": "e3b0c44298fc"
           },
           "html-tag:0": {
-            "contentHash": "1dce2c62a0fd",
-            "anchorHash": "4817ac938eed"
-          },
-          "prose:4": {
-            "contentHash": "87ce1f784964",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "html-tag:1": {
             "contentHash": "673993a95ab9",
             "anchorHash": "0a60c6de691b"
           },
-          "prose:5": {
+          "prose:3": {
             "contentHash": "8a5edab28263",
             "anchorHash": "e3b0c44298fc"
           },
-          "html-tag:2": {
+          "html-tag:1": {
             "contentHash": "769e0b8515e3",
-            "anchorHash": "0a60c6de691b"
+            "anchorHash": "bc37315e1cad"
           },
-          "prose:6": {
+          "prose:4": {
             "contentHash": "515bb92c4247",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
-          "prose:3",
+          "prose:2",
           "html-tag:0",
-          "prose:4",
+          "prose:3",
           "html-tag:1",
-          "prose:5",
-          "html-tag:2",
-          "prose:6"
+          "prose:4"
         ]
       },
       "contract-account-term": {
@@ -1690,7 +1668,7 @@
       },
       "epoch-definition": {
         "contentHash": "3ef9e875a6d4",
-        "anchorHash": "69bfc3a632ba",
+        "anchorHash": "d0d6d00ea317",
         "children": {
           "prose:4": {
             "contentHash": "0a47a4b52060",
@@ -1722,7 +1700,7 @@
           },
           "html-tag:3": {
             "contentHash": "266101847105",
-            "anchorHash": "1d5360e3a7c5"
+            "anchorHash": "b49d9d6ec8ee"
           }
         },
         "childrenOrder": [
@@ -2045,6 +2023,33 @@
           },
           "prose:2": {
             "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
+      "escrow-term": {
+        "contentHash": "bd2227203962",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "escrow-definition": {
+        "contentHash": "0416955d7ec4",
+        "anchorHash": "c76b94fd4b9e",
+        "children": {
+          "prose:1": {
+            "contentHash": "e574e8d49acb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "d0665bba31dc",
+            "anchorHash": "c99af25b777e"
+          },
+          "prose:2": {
+            "contentHash": "119b5a633ac0",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -2954,6 +2959,33 @@
           "prose:4"
         ]
       },
+      "kyc-term": {
+        "contentHash": "45f1a44ce1de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "kyc-definition": {
+        "contentHash": "58ba3b152b63",
+        "anchorHash": "f9eae7c5d001",
+        "children": {
+          "prose:1": {
+            "contentHash": "fc0a1378753a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "d3756c425380",
+            "anchorHash": "16e58604d3f3"
+          },
+          "prose:2": {
+            "contentHash": "f2cb1f49ade8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
       "key-term": {
         "contentHash": "99a52df3ff3d",
         "anchorHash": "e3b0c44298fc"
@@ -3150,7 +3182,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "liquid-staking-tokens-definition": {
-        "contentHash": "797c1c5ba107",
+        "contentHash": "94319081ee28",
         "anchorHash": "e3b0c44298fc"
       },
       "lmd-ghost-term": {
@@ -3243,6 +3275,14 @@
           "html-tag:0",
           "prose:2"
         ]
+      },
+      "mempool-term": {
+        "contentHash": "f2845b922706",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "mempool-definition": {
+        "contentHash": "ab3cb653e374",
+        "anchorHash": "e3b0c44298fc"
       },
       "merkle-patricia-tree-term": {
         "contentHash": "7d424f0bfd17",
@@ -3822,6 +3862,43 @@
           "prose:4"
         ]
       },
+      "p2p-trading-term": {
+        "contentHash": "bf9f62f75e17",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "p2p-trading-definition": {
+        "contentHash": "52355cadb346",
+        "anchorHash": "dd4f8b7be5d1",
+        "children": {
+          "prose:2": {
+            "contentHash": "824cb473b0fa",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "a8437843cad2",
+            "anchorHash": "6186c4f42972"
+          },
+          "prose:3": {
+            "contentHash": "7ab29aa67278",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:1": {
+            "contentHash": "c8c3d72c8520",
+            "anchorHash": "4bc0cdaa9742"
+          },
+          "prose:4": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "html-tag:0",
+          "prose:3",
+          "html-tag:1",
+          "prose:4"
+        ]
+      },
       "permissionless-term": {
         "contentHash": "cbc68abde686",
         "anchorHash": "e3b0c44298fc"
@@ -3981,7 +4058,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "quadratic-voting-definition": {
-        "contentHash": "7c8fc57639e5",
+        "contentHash": "c892108ad070",
         "anchorHash": "e3b0c44298fc"
       },
       "receipt-term": {
@@ -4276,6 +4353,14 @@
           "prose:2"
         ]
       },
+      "shielded-pool-term": {
+        "contentHash": "14770122ef58",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shielded-pool-definition": {
+        "contentHash": "16efc34194a4",
+        "anchorHash": "e3b0c44298fc"
+      },
       "sidechain-term": {
         "contentHash": "b8ddff9a59c3",
         "anchorHash": "e3b0c44298fc"
@@ -4367,13 +4452,21 @@
         "contentHash": "d37e1f668faf",
         "anchorHash": "e3b0c44298fc"
       },
+      "slippage-term": {
+        "contentHash": "d601a6ac7498",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "slippage-definition": {
+        "contentHash": "1db266a68c67",
+        "anchorHash": "e3b0c44298fc"
+      },
       "slot-term": {
         "contentHash": "79689782061d",
         "anchorHash": "e3b0c44298fc"
       },
       "slot-definition": {
         "contentHash": "342404caad94",
-        "anchorHash": "039d9f67d9de",
+        "anchorHash": "b6c442650f83",
         "children": {
           "prose:4": {
             "contentHash": "39d140842b51",
@@ -4405,7 +4498,7 @@
           },
           "html-tag:3": {
             "contentHash": "266101847105",
-            "anchorHash": "1d5360e3a7c5"
+            "anchorHash": "b49d9d6ec8ee"
           },
           "prose:8": {
             "contentHash": "cdb4ee2aea69",
@@ -4856,6 +4949,14 @@
           "html-tag:3",
           "prose:8"
         ]
+      },
+      "stealth-address-term": {
+        "contentHash": "cdd83c28e867",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "stealth-address-definition": {
+        "contentHash": "130d146b2be6",
+        "anchorHash": "e3b0c44298fc"
       },
       "supermajority-term": {
         "contentHash": "71b84afbbab8",
@@ -5459,7 +5560,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "web2-definition": {
-        "contentHash": "ab346c68c2be",
+        "contentHash": "6156754751eb",
         "anchorHash": "e3b0c44298fc"
       },
       "web3-term": {
@@ -5508,8 +5609,8 @@
         "anchorHash": "e3b0c44298fc"
       },
       "wrapped-token-definition": {
-        "contentHash": "1e33b21dc12f",
-        "anchorHash": "81be0d865759",
+        "contentHash": "a8dfec90e2ed",
+        "anchorHash": "e51356450e1b",
         "children": {
           "prose:3": {
             "contentHash": "b0ca2da749d1",
@@ -5517,10 +5618,10 @@
           },
           "html-tag:0": {
             "contentHash": "2a9223d60430",
-            "anchorHash": "447f3b9a6250"
+            "anchorHash": "d50236154236"
           },
           "prose:4": {
-            "contentHash": "964592903999",
+            "contentHash": "9384f40409d8",
             "anchorHash": "e3b0c44298fc"
           },
           "html-tag:1": {
@@ -5682,6 +5783,8 @@
       "big-endian-definition",
       "block-term",
       "block-definition",
+      "block-builder-term",
+      "block-builder-definition",
       "block-explorer-term",
       "block-explorer-definition",
       "block-header-term",
@@ -5800,6 +5903,8 @@
       "execution-layer-definition",
       "eoa-term",
       "eoa-definition",
+      "escrow-term",
+      "escrow-definition",
       "erc-term",
       "erc-definition",
       "ethash-term",
@@ -5866,6 +5971,8 @@
       "keystore-definition",
       "keccak-256-term",
       "keccak-256-definition",
+      "kyc-term",
+      "kyc-definition",
       "key-term",
       "key-definition",
       "layer-1-term",
@@ -5888,6 +5995,8 @@
       "mainnet-definition",
       "max-fee-per-gas-term",
       "max-fee-per-gas-definition",
+      "mempool-term",
+      "mempool-definition",
       "merkle-patricia-tree-term",
       "merkle-patricia-tree-definition",
       "merkle-root-term",
@@ -5930,6 +6039,8 @@
       "peer-definition",
       "peer-to-peer-network-term",
       "peer-to-peer-network-definition",
+      "p2p-trading-term",
+      "p2p-trading-definition",
       "permissionless-term",
       "permissionless-definition",
       "plasma-term",
@@ -5974,6 +6085,8 @@
       "sequencer-definition",
       "shard-term",
       "shard-definition",
+      "shielded-pool-term",
+      "shielded-pool-definition",
       "sidechain-term",
       "sidechain-definition",
       "signing-term",
@@ -5982,6 +6095,8 @@
       "singleton-definition",
       "slasher-term",
       "slasher-definition",
+      "slippage-term",
+      "slippage-definition",
       "slot-term",
       "slot-definition",
       "smart-contract-term",
@@ -6006,6 +6121,8 @@
       "state-definition",
       "state-channels-term",
       "state-channels-definition",
+      "stealth-address-term",
+      "stealth-address-definition",
       "supermajority-term",
       "supermajority-definition",
       "sybil-attack-term",
@@ -6062,5 +6179,5 @@
       "zk-rollup-definition"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

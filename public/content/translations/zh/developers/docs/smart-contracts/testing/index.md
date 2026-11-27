@@ -165,7 +165,7 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 
 静态分析器将智能合约的源代码作为输入，并输出声明合约是否满足属性的结果。与动态分析不同，静态分析不涉及执行合约来分析其正确性。相反，静态分析推理智能合约在执行期间可能采取的所有可能路径（即，通过检查源代码的结构来确定它在运行时的合约操作意味着什么）。
 
-[代码检查 (Linting)](https://www.perforce.com/blog/qac/what-is-linting) 和[静态测试](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis)是对合约运行静态分析的常见方法。两者都需要分析合约执行的低级表示，例如编译器输出的[抽象语法树](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree)和[控制流图](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/)。
+[代码检查 (Linting)](https://www.perforce.com/blog/qac/what-is-linting) 和[静态测试](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis)是对合约运行静态分析的常见方法。两者都需要分析合约执行的低级表示，例如编译器输出的[抽象语法树](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree)和[控制流图](https://www.geeksforgeeks.org/software-engineering/software-engineering-control-flow-graph-cfg/)。
 
 在大多数情况下，静态分析有助于检测安全问题，例如在合约代码中使用不安全的结构、语法错误或违反编码标准。然而，众所周知，静态分析器在检测更深层次的漏洞时通常不够完善，并且可能会产生过多的误报。
 
@@ -238,7 +238,7 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 
 如前所述，严格的测试很少能保证合约中没有错误；形式化验证方法可以提供更强的正确性保证，但目前难以使用且会产生大量成本。
 
-尽管如此，你仍然可以通过进行独立的代码审查来进一步增加捕获合约漏洞的可能性。[智能合约审计](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/)和[漏洞赏金](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)是让其他人分析你的合约的两种方法。
+尽管如此，你仍然可以通过进行独立的代码审查来进一步增加捕获合约漏洞的可能性。[智能合约审计](https://web.archive.org/web/20260410153159/https://immunebytes.com/blog/what-is-a-smart-contract-audit/)和[漏洞赏金](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)是让其他人分析你的合约的两种方法。
 
 审计由在发现智能合约中的安全缺陷和不良开发实践案例方面经验丰富的审计员执行。审计通常包括测试（可能还有形式化验证）以及对整个代码库的手动审查。
 
@@ -278,7 +278,7 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _用于强制执行 Solidity 智能合约编程语言的样式和安全最佳实践的代码检查工具 (Linter)。_
 
-- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _基于 Rust 的静态分析器，专为 Web3 智能合约安全和开发而设计。_
+- **[Cyfrin Aderyn](https://aderyn.cyfrin.io/overview)** - _基于 Rust 的静态分析器，专为 Web3 智能合约安全和开发而设计。_
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _基于 Python 的静态分析框架，具有漏洞和代码质量检测器、用于从代码中提取有用信息的打印机以及对编写自定义子模块的支持。_
 
@@ -298,10 +298,9 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 
 ## 相关教程 {#related-tutorials}
 
-- [不同测试产品的概述和比较](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
-- [如何使用埃基德纳 (Echidna) 测试智能合约](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [如何使用曼蒂科尔 (Manticore) 查找智能合约错误](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-- [如何使用斯莱瑟 (Slither) 查找智能合约错误](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [不同测试产品的概述与比较](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
+- [如何使用埃基德纳测试智能合约](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
+- [如何使用斯莱瑟发现智能合约漏洞](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [如何模拟 Solidity 合约进行测试](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [如何使用 Foundry 在 Solidity 中运行单元测试](https://www.rareskills.io/post/foundry-testing-solidity)
 

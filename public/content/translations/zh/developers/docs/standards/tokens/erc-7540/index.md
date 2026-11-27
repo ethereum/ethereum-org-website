@@ -1,19 +1,19 @@
 ---
-title: ERC-7540 异步代币化金库标准
-description: ERC-4626 的扩展，为代币化金库添加了异步存款和赎回流程。
+title: "ERC-7540 异步代币化金库标准"
+description: "ERC-4626 的扩展，为代币化金库添加了异步存款和赎回流程。"
 lang: zh
 ---
 
 ## 简介 {#introduction}
 
-ERC-7540 扩展了 [ERC-4626 代币化金库标准](/developers/docs/standards/tokens/erc-4626/)，添加了对异步存款和赎回流程的支持。它引入了“先请求后申领”的模式：用户首先提交请求（锁定其资产或份额），然后在金库处理完毕后申领结果。
+ERC-7540 扩展了 [ERC-4626 代币化金库标准](/developers/docs/standards/tokens/erc-4626/)，增加了对异步存款和赎回流程的支持。它引入了一种“先请求后申领”的模式：用户首先提交请求（将其资产或份额交给金库），然后在金库处理完毕后申领结果。
 
-当金库无法在单笔交易中立即结算时，就需要这种机制，例如：
+当金库无法在一笔交易中立即结算时，就需要这种机制，例如：
 
 - 真实世界资产 (RWA) 协议，如代币化国债、私募信贷以及其他具有 T+1 或 T+2 结算周期的资产
 - 信用评估在链下发生的抵押不足借贷
 - 跨链金库策略，其中桥接会引入延迟
-- 具有解绑期的流动性质押代币 (LST)
+- 具有解绑期的流动性质押代币
 
 金库可以选择仅在存款时异步、仅在赎回时异步，或两者皆异步。这种灵活性使金库开发者能够仅在底层策略需要时添加异步流程，同时保持另一侧同步。
 
@@ -25,21 +25,21 @@ ERC-7540 扩展了 [ERC-4626 代币化金库标准](/developers/docs/standards/t
 
 在 ERC-4626 中，存款是原子化结算的：投资者发送资产并在单笔交易中收回份额。
 
-![ERC-4626 synchronous deposit flow](./erc-4626-sync-flow.svg)
+<VaultDepositDiagram />
 
-ERC-7540 将此分为两步。投资者首先调用 `requestDeposit()` 锁定资产，然后等待金库管理器处理请求。一旦完成，投资者调用 `deposit()` 申领其份额。汇率在完成时确定，而不是在请求时确定。
+ERC-7540 将此分为两步。投资者首先调用 `requestDeposit()`，将其资产转账到金库中，然后等待金库处理该请求。处理的方式和时间由金库决定，例如在链下结算完成时。一旦完成，投资者调用 `deposit()` 来申领其份额。汇率在请求时并不固定：金库通常在完成请求时设定汇率，因此收到的份额可能与发出请求时 `convertToShares()` 返回的数值不同。
 
-![ERC-7540 asynchronous deposit flow](./erc-7540-async-flow.svg)
+<AsyncVaultDiagram />
 
-赎回流程的工作方式相同：`requestRedeem()` 锁定份额，一旦完成，投资者调用 `redeem()` 申领资产。
+赎回流程的工作方式相同：`requestRedeem()` 从投资者那里获取份额，一旦完成，投资者调用 `redeem()` 来申领资产。
 
 ## ERC-7540 函数与特性 {#body}
 
 ERC-7540 继承了完整的 ERC-4626 接口，但将 `deposit`/`mint`/`withdraw`/`redeem` 重新用作申领函数。新的 `requestDeposit` 和 `requestRedeem` 函数处理初始请求步骤。
 
-每个请求都会经历三种状态：待处理（已提交，等待处理）、可申领（已完成并定价）和已申领（投资者已收集其份额或资产）。
+每个请求都会经历三种状态：待处理（已提交，等待处理）、可申领（已完成并定价）和已申领（投资者已收集其份额或资产）。金库可以使请求立即变为可申领状态，跳过待处理状态，但申领始终是一个单独的调用。该标准没有定义请求变为可申领状态时的事件。
 
-![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
+<VaultRequestDiagram />
 
 ### 存款请求流程 {#deposit-request-flow}
 
@@ -79,7 +79,7 @@ function claimableDepositRequest(uint256 requestId, address controller) external
 function requestRedeem(uint256 shares, address controller, address owner) external returns (uint256 requestId)
 ```
 
-锁定来自 `owner` 的 `shares` 并提交赎回请求。`controller` 地址获得对该请求的控制权。
+从 `owner` 获取 `shares` 的控制权并提交赎回请求。金库可以持有这些份额直到请求被申领，或者立即销毁它们。`controller` 地址获得对该请求的控制权。
 
 #### pendingRedeemRequest {#pendingredeemrequest}
 

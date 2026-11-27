@@ -1,6 +1,6 @@
 ---
 title: "以太币技术简介"
-description: "面向开发者的以太币（加密货币）简介。"
+description: "以太币 (ETH) 技术简介：它的用途、如何以 Wei 和 Gwei 计价，以及它是如何被铸造、销毁和转移的。"
 lang: zh
 ---
 

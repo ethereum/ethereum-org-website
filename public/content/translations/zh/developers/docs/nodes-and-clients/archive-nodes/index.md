@@ -50,9 +50,9 @@ sidebarDepth: 2
 
 ## 实现与使用 {#implementations-and-usage}
 
-在此语境下，归档节点指的是由面向用户的执行层客户端提供的数据，因为它们处理状态数据库并提供 JSON-RPC 端点。配置选项、同步时间和数据库大小可能因客户端而异。有关详细信息，请参阅你的客户端提供的文档。
+在此语境下，归档节点是指由面向用户的执行层客户端提供的数据，因为它们处理状态数据库并提供 JSON-RPC 端点。配置选项、同步时间和数据库大小可能因客户端而异。有关详细信息，请参阅客户端提供的文档。
 
-在启动你自己的归档节点之前，请了解客户端之间的差异，尤其是各种 [硬件要求](/developers/docs/nodes-and-clients/run-a-node/#requirements)。大多数客户端并未针对此功能进行优化，它们的归档需要超过 12TB 的空间。相比之下，像埃里贡（Erigon）这样的实现可以在不到 3TB 的空间内存储相同的数据，这使得它们成为运行归档节点的最有效方式。
+在启动你自己的归档节点之前，请了解客户端之间的差异，尤其是各种[硬件要求](/developers/docs/nodes-and-clients/run-a-node/#requirements)。归档大小因每个客户端的存储设计而异。埃里贡、瑞斯和 Geth（具有基于路径的归档）将主网归档存储在约 2-3TB 的空间中，而贝苏和奈瑟曼德归档需要 12TB 或更多。
 
 ## 推荐实践 {#recommended-practices}
 
@@ -60,12 +60,12 @@ sidebarDepth: 2
 
 ### 硬件 {#hardware}
 
-务必在客户端文档中验证特定模式的硬件要求。
-归档节点最大的要求是磁盘空间。根据客户端的不同，它从 3TB 到 12TB 不等。即使 HDD 可能被认为是处理大量数据的更好解决方案，但同步数据并不断更新链头将需要 SSD 驱动器。[SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) 驱动器已经足够好，但它应该是可靠的质量，至少是 [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences)。磁盘可以安装在台式电脑或具有足够插槽的服务器中。这种专用设备是运行高正常运行时间节点的理想选择。完全可以在笔记本电脑上运行它，但便携性将带来额外的成本。
+务必在客户端文档中验证给定模式的硬件要求。
+归档节点最大的要求是磁盘空间。根据客户端的不同，它从大约 2TB 到超过 12TB 不等。即使 HDD 可能被认为是处理大量数据的更好解决方案，但同步数据并不断更新链头将需要 SSD 驱动器。[SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) 驱动器已经足够好，但质量应该可靠，至少是 [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences)。磁盘可以安装在台式电脑或具有足够插槽的服务器中。这种专用设备非常适合运行高正常运行时间的节点。完全可以在笔记本电脑上运行它，但便携性会带来额外的成本。
 
-所有数据都需要放在一个卷中，因此必须将磁盘连接起来，例如使用 [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) 或 LVM。也可以考虑使用 [ZFS](https://en.wikipedia.org/wiki/ZFS)，因为它支持“写时复制 (Copy-on-write)”，这可确保数据正确写入磁盘而没有任何底层错误。
+所有数据都需要放在一个卷中，因此必须将磁盘连接起来，例如使用 [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) 或 LVM。也可以考虑使用 [ZFS](https://en.wikipedia.org/wiki/ZFS)，因为它支持“写时复制 (Copy-on-write)”，这可确保数据正确写入磁盘而没有任何低级错误。
 
-为了在防止意外数据库损坏方面获得更高的稳定性和安全性，特别是在专业设置中，如果你的系统支持，请考虑使用 [ECC](https://en.wikipedia.org/wiki/ECC_memory) 内存。通常建议 RAM 的大小与全节点相同，但更多的 RAM 有助于加快同步速度。
+为了在防止意外数据库损坏方面获得更高的稳定性和安全性，特别是在专业设置中，如果你的系统支持，请考虑使用 [ECC 内存](https://en.wikipedia.org/wiki/ECC_memory)。通常建议 RAM 的大小与全节点相同，但更多的 RAM 有助于加快同步速度。
 
 在初始同步期间，处于归档模式的客户端将执行自创世以来的每笔交易。执行速度主要受 CPU 限制，因此更快的 CPU 有助于缩短初始同步时间。在普通的消费级计算机上，初始同步可能需要长达一个月的时间。
 
