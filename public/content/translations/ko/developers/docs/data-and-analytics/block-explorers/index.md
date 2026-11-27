@@ -21,12 +21,13 @@ sidebarDepth: 3
 
 ## 서비스 {#services}
 
-- [Blockchair](https://blockchair.com/ethereum) - 프라이빗 이더리움 탐색기. (멤풀) 데이터를 정렬하고 필터링하는 기능도 제공합니다. 스페인어, 프랑스어, 이탈리아어, 네덜란드어, 포르투갈어, 러시아어, 중국어, 페르시아어로 제공됩니다.
+- [Blockchair](https://blockchair.com/ethereum) - 프라이빗 이더리움 탐색기입니다. (멤풀) 데이터를 정렬하고 필터링하는 기능도 제공합니다. 스페인어, 프랑스어, 이탈리아어, 네덜란드어, 포르투갈어, 러시아어, 중국어, 페르시아어로 제공됩니다.
 - [Chainlens](https://www.chainlens.com/)
-- [DexGuru Block Explorer](https://ethereum.dex.guru/)
+- [DexGuru 블록 탐색기](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Etherscan](https://etherscan.io/) - 중국어, 한국어, 러시아어, 일본어로도 제공됩니다.
-- [Ethplorer](https://ethplorer.io/) - 토큰에 중점을 둔 블록 탐색기. 중국어, 스페인어, 프랑스어, 튀르키예어, 러시아어, 한국어, 베트남어로도 제공됩니다.
+- [Ethplorer](https://ethplorer.io/) - 토큰에 중점을 둔 블록 탐색기입니다. 중국어, 스페인어, 프랑스어, 터키어, 러시아어, 한국어, 베트남어로도 제공됩니다.
+- [Ethscanner](https://ethscanner.io/) - Routescan에서 제공합니다. 검증된 컨트랙트를 Verifier Alliance의 오픈 데이터 세트에 기여하고 크로스체인 트랜잭션을 보여줍니다.
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)

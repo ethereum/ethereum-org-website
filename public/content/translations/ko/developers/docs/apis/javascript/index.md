@@ -300,9 +300,7 @@ _도움이 된 커뮤니티 리소스를 알고 계신가요? 이 페이지를 �
 
 ## 관련 튜토리얼 {#related-tutorials}
 
-- [JavaScript에서 이더리움 블록체인을 사용하기 위한 Web3js 설정](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– 프로젝트에 Web3.js를 설정하는 방법에 대한 지침입니다._
-- [JavaScript에서 스마트 컨트랙트 호출하기](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI 토큰을 사용하여 JavaScript로 컨트랙트 함수를 호출하는 방법을 알아봅니다._
-- [Web3 및 Alchemy를 사용하여 트랜잭션 전송하기](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– 백엔드에서 트랜잭션을 전송하기 위한 단계별 가이드입니다._
+- [web3와 Alchemy를 사용하여 트랜잭션 전송하기](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– 백엔드에서 트랜잭션을 전송하기 위한 단계별 가이드입니다._
 
 ## 튜토리얼: 이더리움의 JavaScript API 및 웹소켓(WebSockets) {#tutorials}
 

@@ -66,7 +66,7 @@ lang: ko
 **Infura -** **_서비스형 이더리움 API._**
 
 - [infura.io](https://infura.io)
-- [문서](https://docs.infura.io/api)
+- [문서](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _비용 효율적인 이더리움 가상 머신 (EVM) JSON-RPC 제공자_**
@@ -77,7 +77,7 @@ lang: ko
 **NOWNodes - _풀 노드 및 블록 탐색기._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [문서](https://nownodes.gitbook.io/documentation)
+- [문서](https://docs.nownodes.io/)
 
 **QuickNode -** **_서비스형 블록체인 인프라._**
 
@@ -162,7 +162,7 @@ lang: ko
 - [문서](https://docs.chainstack.com/)
 - [이더리움 API 참조](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**코인베이스 클라우드 노드(Coinbase Cloud Node) -** **_블록체인 인프라 API._**
+**코인베이스 클라우드 노드 -** **_블록체인 인프라 API._**
 
 - [코인베이스 클라우드 노드](https://www.coinbase.com/developer-platform)
 - [문서](https://docs.cdp.coinbase.com/)
@@ -176,7 +176,6 @@ lang: ko
 
 - [moralis.io](https://moralis.io)
 - [문서](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [디스코드](https://moralis.io/joindiscord/)
 - [포럼](https://forum.moralis.io/)
 
@@ -210,10 +209,9 @@ lang: ko
 **Covalent -** **_200개 이상의 체인을 위한 풍부한 블록체인 API._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [문서](https://www.covalenthq.com/docs/api/)
+- [문서](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [디스코드](https://www.covalenthq.com/discord/)
-
 
 ## 더 읽어보기 {#further-reading}
 
@@ -226,5 +224,4 @@ _도움이 된 커뮤니티 리소스를 알고 계신가요? 이 페이지를 �
 
 ## 관련 튜토리얼 {#related-tutorials}
 
-- [JavaScript에서 이더리움 블록체인을 사용하기 위한 Web3.js 설정](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– 프로젝트에 Web3.js를 설정하는 방법에 대한 지침입니다._
-- [JavaScript에서 스마트 컨트랙 호출하기](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI 토큰을 사용하여 JavaScript로 컨트랙트 함수를 호출하는 방법을 알아봅니다._
+- [Web3 앱을 위한 서버 컴포넌트 및 에이전트](/developers/tutorials/server-components/) _– 블록체인 이벤트를 수신하고 트랜잭션으로 응답하는 TypeScript 서버 컴포넌트를 작성하는 방법._

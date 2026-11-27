@@ -1,7 +1,7 @@
 ---
 title: "헤고타"
 metaTitle: "헤제-보고타(Hegotá)"
-description: "헤고타 프로토콜 업그레이드에 대해 알아보세요"
+description: "헤고타는 글램스테르담 이후에 계획된 이더리움 업그레이드입니다. 검열 저항성을 위한 주요 기능인 FOCIL과 계정을 위한 프레임 트랜잭션에 대해 알아보세요."
 lang: ko
 template: upgrade
 ---

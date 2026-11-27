@@ -1,6 +1,6 @@
 ---
-title: L1 블록 검증을 위한 zkEVM
-description: 영지식 증명이 어떻게 이더리움 블록 실행을 검증하여 더 높은 처리량과 더 낮은 검증자 요구 사항을 가능하게 하는지 알아보세요.
+title: "L1 블록 검증을 위한 zkEVM"
+description: "영지식 증명이 어떻게 이더리움 블록 실행을 검증하여 더 높은 처리량과 더 낮은 검증자 요구 사항을 가능하게 하는지 알아보세요."
 lang: ko
 template: roadmap
 ---
@@ -12,7 +12,7 @@ zkEVM은 [영지식 증명](/zero-knowledge-proofs/)을 사용하여 이더리�
 <AlertContent>
 <AlertTitle>zkEVM 롤업과 혼동하지 마세요</AlertTitle>
 <AlertDescription>
-이 페이지에서는 이더리움 레이어 1 (l1) 블록 실행을 검증하기 위해 zkEVM을 사용하는 방법에 대해 설명합니다. 영지식 증명을 사용하여 이더리움을 레이어 2 (l2) 솔루션으로 확장하는 zkEVM 롤업에 대해서는 [영지식 롤업](/developers/docs/scaling/zk-rollups/)을 참조하세요.
+이 페이지에서는 이더리움 레이어 1 (L1) 블록 실행을 검증하기 위해 zkEVM을 사용하는 방법에 대해 설명합니다. 영지식 증명을 사용하여 이더리움을 레이어 2 (L2) 솔루션으로 확장하는 zkEVM 롤업에 대해서는 [영지식 롤업](/developers/docs/scaling/zk-rollups/)을 참조하세요.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -95,13 +95,13 @@ zkEVM L1 검증의 주요 과제는 속도입니다. 이더리움 블록은 12�
 
 이들은 RISC-V 기반 가상 머신을 사용하여 EVM 바이트코드를 실행한 다음, 올바른 실행에 대한 영지식 증명을 생성합니다. 최신 테스트 결과 및 진행 상황은 [이더리움 재단의 zkVM 트래커](https://zkevm.ethereum.foundation/zkvm-tracker)에서 추적할 수 있습니다.
 
-## zkEVM이 다른 업그레이드와 어울리는 방식 {#related-upgrades}
+## zkEVM과 다른 업그레이드의 관계 {#related-upgrades}
 
 zkEVM L1 검증은 다른 여러 이더리움 로드맵 항목과 연결됩니다.
 
-- **[버클 트리](/roadmap/verkle-trees/)**: 무상태성 검증을 위해 더 작은 증거(witness)를 가능하게 하여 증명자가 작업해야 하는 데이터를 줄입니다.
-- **[무상태성](/roadmap/statelessness/)**: zkEVM은 핵심 조력자입니다. 실행에 대한 영지식 증명이 있으면 노드는 블록을 검증하기 위해 전체 상태가 필요하지 않습니다.
-- **[제안자-빌더 분리 (PBS)](/roadmap/pbs/)**: 블록 빌더가 잠재적으로 증명 생성을 통합하거나 별도의 증명자 시장이 나타날 수 있습니다.
+- **새로운 상태 트리**: 이전의 [버클 트리](/roadmap/verkle-trees/) 설계 대신 제안된 통합 이진 트리([EIP-7864](https://eips.ethereum.org/EIPS/eip-7864))는 무상태 검증을 위해 더 작은 위트니스를 가능하게 하며 증명하기 더 쉽도록 설계되었습니다.
+- **[무상태성](/roadmap/statelessness/)**: zkEVM은 이를 가능하게 하는 핵심 요소입니다. 실행에 대한 영지식 증명을 통해 노드는 블록을 검증하기 위해 전체 상태가 필요하지 않습니다.
+- **[PBS](/roadmap/pbs/)**: 블록 빌더가 잠재적으로 증명 생성을 통합하거나, 별도의 증명자 시장이 나타날 수 있습니다.
 - **[단일 슬롯 완결성](/roadmap/single-slot-finality/)**: 더 빠른 증명 생성은 암호학적 보장과 함께 단일 슬롯 완결성을 가능하게 할 수 있습니다.
 
 <Alert variant="warning">

@@ -1,11 +1,11 @@
 ---
 title: "블록체인 브릿지"
 metaTitle: "블록체인 브릿지 소개"
-description: "브릿지를 통해 사용자는 서로 다른 블록체인 간에 자금을 이동할 수 있습니다."
+description: "블록체인 브릿지란 무엇일까요? 브릿지가 이더리움, 레이어 2 (L2) 및 기타 체인 간에 토큰을 이동하는 방법, 브릿지의 종류, 그리고 고려해야 할 위험성에 대해 알아보세요."
 lang: ko
 ---
 
-_Web3는 고유한 기능과 장단점을 갖춘 레이어 1 (l1) 블록체인 및 레이어 2 (l2) 확장 솔루션 생태계로 발전했습니다. 블록체인 프로토콜의 수가 증가함에 따라 체인 간에 자산을 이동하려는 수요도 증가하고 있습니다. 이러한 수요를 충족하기 위해 브릿지가 필요합니다._
+_Web3는 고유한 기능과 장단점을 갖춘 레이어 1 (L1) 블록체인 및 레이어 2 (L2) 확장 솔루션 생태계로 발전했습니다. 블록체인 프로토콜의 수가 증가함에 따라 체인 간에 자산을 이동하려는 수요도 증가하고 있습니다. 이러한 수요를 충족하기 위해 브릿지가 필요합니다._
 
 <Divider />
 
@@ -21,7 +21,7 @@ _Web3는 고유한 기능과 장단점을 갖춘 레이어 1 (l1) 블록체인 �
 
 ## 브릿지가 필요한 이유는 무엇인가요? {#why-do-we-need-bridges}
 
-모든 블록체인에는 한계가 있습니다. 이더리움이 확장하고 수요를 따라잡기 위해서는 [롤업](/glossary/#rollups)이 필요했습니다. 반면, 솔라나(Solana)나 아발란체(Avalanche)와 같은 레이어 1 (l1)은 탈중앙화를 희생하는 대신 더 높은 처리량을 가능하게 하도록 다르게 설계되었습니다.
+모든 블록체인에는 한계가 있습니다. 이더리움이 확장하고 수요를 따라잡기 위해서는 [롤업](/glossary/#rollups)이 필요했습니다. 반면, 솔라나(Solana)나 아발란체(Avalanche)와 같은 레이어 1 (L1)은 탈중앙화를 희생하는 대신 더 높은 처리량을 가능하게 하도록 다르게 설계되었습니다.
 
 그러나 모든 블록체인은 격리된 환경에서 개발되며 서로 다른 규칙과 [합의](/glossary/#consensus) 메커니즘을 가지고 있습니다. 이는 블록체인들이 기본적으로 통신할 수 없으며, 토큰이 블록체인 간에 자유롭게 이동할 수 없음을 의미합니다.
 
@@ -34,7 +34,7 @@ _Web3는 고유한 기능과 장단점을 갖춘 레이어 1 (l1) 블록체인 �
 - 사용자가 새로운 플랫폼에 접근하고 다양한 체인의 이점을 활용.
 - 서로 다른 블록체인 생태계의 개발자들이 협력하여 사용자를 위한 새로운 플랫폼을 구축.
 
-[레이어 2 (l2)로 토큰을 브릿징하는 방법](/guides/how-to-use-a-bridge/)
+[레이어 2 (L2)로 토큰을 브릿징하는 방법](/guides/how-to-use-a-bridge/)
 
 <Divider />
 
@@ -44,7 +44,7 @@ _Web3는 고유한 기능과 장단점을 갖춘 레이어 1 (l1) 블록체인 �
 
 ### 더 낮은 트랜잭션 수수료 {#transaction-fees}
 
-이더리움 메인넷에 ETH를 가지고 있지만, 다양한 탈중앙화 애플리케이션 (dapp)을 탐색하기 위해 더 저렴한 트랜잭션 수수료를 원한다고 가정해 보겠습니다. 메인넷에서 이더리움 레이어 2 (l2) 롤업으로 ETH를 브릿징하면 더 낮은 트랜잭션 수수료를 누릴 수 있습니다.
+이더리움 메인넷에 ETH를 가지고 있지만, 다양한 탈중앙화 애플리케이션 (dapp)을 탐색하기 위해 더 저렴한 트랜잭션 수수료를 원한다고 가정해 보겠습니다. 메인넷에서 이더리움 레이어 2 (L2) 롤업으로 ETH를 브릿징하면 더 낮은 트랜잭션 수수료를 누릴 수 있습니다.
 
 ### 다른 블록체인의 탈중앙화 애플리케이션 (dapp) {#dapps-other-chains}
 
@@ -52,7 +52,7 @@ _Web3는 고유한 기능과 장단점을 갖춘 레이어 1 (l1) 블록체인 �
 
 ### 블록체인 생태계 탐색 {#explore-ecosystems}
 
-이더리움 메인넷에 ETH를 가지고 있고, 대체 레이어 1 (l1)을 탐색하여 해당 네이티브 탈중앙화 애플리케이션 (dapp)을 사용해보고 싶은 경우입니다. 브릿지를 사용하여 이더리움 메인넷에서 대체 레이어 1 (l1)으로 ETH를 전송할 수 있습니다.
+이더리움 메인넷에 ETH를 가지고 있고, 대체 레이어 1 (L1)을 탐색하여 해당 네이티브 탈중앙화 애플리케이션 (dapp)을 사용해보고 싶은 경우입니다. 브릿지를 사용하여 이더리움 메인넷에서 대체 레이어 1 (L1)으로 ETH를 전송할 수 있습니다.
 
 ### 네이티브 암호화폐 자산 소유 {#own-native}
 
@@ -101,10 +101,10 @@ _Web3는 고유한 기능과 장단점을 갖춘 레이어 1 (l1) 블록체인 �
 
 ## 브릿지 사용하기 {#use-bridge}
 
-브릿지를 사용하면 서로 다른 블록체인 간에 자산을 이동할 수 있습니다. 다음은 브릿지를 찾고 사용하는 데 도움이 되는 몇 가지 리소스입니다.
+브릿지를 사용하면 다양한 블록체인 간에 자산을 이동할 수 있습니다. 다음은 브릿지를 찾고 사용하는 데 도움이 되는 몇 가지 리소스입니다.
 
-- **[L2BEAT 브릿지 요약](https://l2beat.com/bridges/summary) 및 [L2BEAT 브릿지 위험 분석](https://l2beat.com/bridges/summary)**: 시장 점유율, 브릿지 유형 및 목적지 체인에 대한 세부 정보를 포함하여 다양한 브릿지에 대한 포괄적인 요약입니다. L2BEAT는 브릿지에 대한 위험 분석도 제공하여 사용자가 브릿지를 선택할 때 정보에 입각한 결정을 내릴 수 있도록 돕습니다.
-- **[DefiLlama 브릿지 요약](https://defillama.com/bridges/Ethereum)**: 이더리움 네트워크 전반의 브릿지 거래량 요약입니다.
+- **[ETHBEAT Interop Summary](https://ethbeat.org/interop/summary)**: 시장 점유율, 브릿지 유형 및 목적지 체인에 대한 세부 정보를 포함한 다양한 브릿지에 대한 포괄적인 요약입니다. ETHBEAT는 또한 브릿지에 대한 위험 분석을 제공하여 사용자가 브릿지를 선택할 때 정보에 입각한 결정을 내릴 수 있도록 돕습니다.
+- **[DefiLlama Bridge Summary](https://defillama.com/bridges/Ethereum)**: 이더리움 네트워크 전반의 브릿지 볼륨 요약입니다.
 
 <Divider />
 
@@ -130,16 +130,17 @@ _Web3는 고유한 기능과 장단점을 갖춘 레이어 1 (l1) 블록체인 �
 
 최근 해킹 사례 중 하나는 솔라나의 웜홀(Wormhole) 브릿지로, [해킹 중에 12만 wETH(미화 3억 2,500만 달러)를 도난당했습니다](https://rekt.news/wormhole-rekt/). [블록체인에서 발생한 주요 해킹](https://rekt.news/leaderboard/) 중 상당수가 브릿지와 관련되어 있습니다.
 
-브릿지는 사용자를 이더리움 레이어 2 (l2)에 온보딩하는 데 중요하며, 다양한 생태계를 탐색하려는 사용자에게도 필수적입니다. 그러나 브릿지와의 상호 작용에 수반되는 위험을 고려할 때, 사용자는 브릿지가 취하는 장단점을 이해해야 합니다. 다음은 [크로스체인 보안을 위한 몇 가지 전략](https://debridge.com/learn/blog/10-strategies-for-cross-chain-security/)입니다.
+브릿지는 사용자를 이더리움 레이어 2 (L2)에 온보딩하는 데 중요하며, 다양한 생태계를 탐색하려는 사용자에게도 필수적입니다. 그러나 브릿지와의 상호 작용에 수반되는 위험을 고려할 때, 사용자는 브릿지가 취하는 장단점을 이해해야 합니다. 다음은 [크로스체인 보안을 위한 몇 가지 전략](https://debridge.com/learn/blog/10-strategies-for-cross-chain-security/)입니다.
 
 <Divider />
 
 ## 더 읽어보기 {#further-reading}
 
 - [EIP-5164: 크로스체인 실행](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _2022년 6월 18일 - 브렌던 아셀스틴(Brendan Asselstine)_
-- [L2Bridge 위험 프레임워크](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _2022년 7월 5일 - 바르텍 키에푸셰프스키(Bartek Kiepuszewski)_
+- [L2Bridge 위험 프레임워크](https://forum.ethbeat.org/t/l2bridge-risk-framework/31) - _2022년 7월 5일 - 바르텍 키에푸셰프스키(Bartek Kiepuszewski)_
 - ["미래가 멀티체인이 될 것이지만 크로스체인은 아닐 이유"](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _2022년 1월 8일 - 비탈릭 부테린(Vitalik Buterin)_
 - [안전한 크로스체인 상호운용성을 위한 공유 보안 활용: 라그랑주 상태 위원회 및 그 너머](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _2024년 6월 12일 - 에마뉘엘 아워시카(Emmanuel Awosika)_
 - [롤업 상호운용성 솔루션의 상태](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _2024년 6월 20일 - 알렉스 훅(Alex Hook)_
 
 <QuizWidget quizKey="bridges" />
+

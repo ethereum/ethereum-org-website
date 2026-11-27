@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/refi/index.md",
-  "generatedAt": "2026-06-19T23:36:36.336Z",
-  "rootHash": "ab920e47ddaa",
+  "generatedAt": "2026-11-27T10:00:03.799Z",
+  "rootHash": "e03d8ec90af3",
   "tree": {
-    "contentHash": "39e7d155b9a3",
+    "contentHash": "1811aaa1e148",
     "anchorHash": "6c9e1ab5acf9",
     "children": {
       "frontmatter:title": {
@@ -12,7 +12,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "df8467ea5f15",
+        "contentHash": "18b253c2b7f9",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -386,5 +386,5 @@
       "additional-reading-on-refi"
     ]
   },
-  "sourceCommitSha": "1d108007c381bf3350d7e706746f624a9050ea3e"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

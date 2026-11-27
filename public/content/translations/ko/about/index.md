@@ -1,7 +1,7 @@
 ---
 title: "ethereum.org 소개"
 metaTitle: "소개"
-description: "ethereum.org의 팀, 커뮤니티 및 미션 소개"
+description: "ethereum.org를 이끄는 팀과 커뮤니티를 만나보세요. 우리의 미션, 사이트가 공개적으로 구축되고 거버넌스되는 방식, 그리고 사이트 개선에 기여할 수 있는 방법을 알아볼 수 있습니다."
 lang: ko
 ---
 
@@ -107,9 +107,11 @@ ethereum.org는 누구나 기여할 수 있는 [이더리움](/) 커뮤니티를
 
 ## 디자인 시스템 {#design-system}
 
-우리는 기능을 더 빠르게 출시하고 커뮤니티 회원이 ethereum.org의 오픈 디자인에 참여할 수 있도록 [디자인 시스템](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1)을 구축하고 출시했습니다.
+우리는 기능을 더 빠르게 배포하고 커뮤니티 회원들이 ethereum.org의 공개 디자인에 참여할 수 있도록 [디자인 시스템](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1)을 구축하여 출시했습니다.
 
-참여하고 싶으신가요? [Figma에서 팔로우](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)하고 [#design 디스코드 채널](/discord/)에서 대화에 참여해 보세요.
+참여하고 싶으신가요? [Figma에서 진행 상황을 확인](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)하고 [#design 디스코드 채널](/discord/)에서 대화에 참여해 보세요.
+
+로고, 일러스트레이션 또는 기타 브랜드 파일이 필요하신가요? [에셋 페이지](/assets/)에서 다운로드하세요.
 
 ## 스타일 가이드 {#style-guide}
 
@@ -122,6 +124,10 @@ ethereum.org는 누구나 기여할 수 있는 [이더리움](/) 커뮤니티를
 ## 라이선스 {#license}
 
 ethereum.org 웹사이트는 오픈 소스이며, 별도로 명시되지 않는 한 [MIT 라이선스](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE)에 따라 구축되었습니다. ethereum.org의 [이용 약관](/terms-of-use/)에 대해 더 알아보세요.
+
+## 프라이버시 {#your-privacy}
+
+ethereum.org는 프라이버시 보호 분석을 위해 Matomo를 사용하며, 언제든지 이를 거부할 수 있습니다. 자세한 내용은 [쿠키 정책](/cookie-policy/) 및 [프라이버시 정책](/privacy-policy/)을 확인해 주세요.
 
 ## 채용 정보 {#open-jobs}
 

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/roadmap/zkevm/index.md",
-  "generatedAt": "2026-07-23T00:26:05.233Z",
-  "rootHash": "47f260fd2ea5",
+  "generatedAt": "2026-11-27T10:15:10.964Z",
+  "rootHash": "88f7f233919a",
   "tree": {
-    "contentHash": "9a473c5a9d46",
-    "anchorHash": "82282aac458d",
+    "contentHash": "271e34c6fec1",
+    "anchorHash": "ea23144e79c9",
     "children": {
       "frontmatter:title": {
         "contentHash": "6a3637808297",
@@ -386,51 +386,59 @@
         ]
       },
       "related-upgrades": {
-        "contentHash": "1153eff81e54",
-        "anchorHash": "e4227c02516d",
+        "contentHash": "1d1f4d552dce",
+        "anchorHash": "a2944d5bf398",
         "labelHash": "a7e9d6c0e7f1",
         "children": {
           "_label": {
             "contentHash": "a7e9d6c0e7f1",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:4": {
-            "contentHash": "1ad1638a8aa2",
+          "prose:5": {
+            "contentHash": "c19bb5373ae5",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
-            "contentHash": "9695cf37bcd2",
-            "anchorHash": "dbd9c3cd11b2"
+            "contentHash": "f7b332825bb2",
+            "anchorHash": "d95e7bf1ea74"
           },
-          "prose:5": {
-            "contentHash": "fc8a66c658a5",
+          "prose:6": {
+            "contentHash": "ea91f9a064b5",
             "anchorHash": "e3b0c44298fc"
           },
           "link:1": {
-            "contentHash": "6c88f20571b1",
-            "anchorHash": "ceae87f49ade"
+            "contentHash": "860168773b3c",
+            "anchorHash": "dbd9c3cd11b2"
           },
-          "prose:6": {
-            "contentHash": "528be936d936",
+          "prose:7": {
+            "contentHash": "18363c60c681",
             "anchorHash": "e3b0c44298fc"
           },
           "link:2": {
-            "contentHash": "56e0d7394b5c",
-            "anchorHash": "7b168c5cd30c"
+            "contentHash": "6c88f20571b1",
+            "anchorHash": "ceae87f49ade"
           },
-          "prose:7": {
-            "contentHash": "c5b1a60ef5c0",
+          "prose:8": {
+            "contentHash": "528be936d936",
             "anchorHash": "e3b0c44298fc"
           },
           "link:3": {
+            "contentHash": "56e0d7394b5c",
+            "anchorHash": "7b168c5cd30c"
+          },
+          "prose:9": {
+            "contentHash": "c5b1a60ef5c0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
             "contentHash": "946776d2e322",
             "anchorHash": "e44d5c0cf695"
           },
-          "prose:8": {
+          "prose:10": {
             "contentHash": "818f26af8dea",
             "anchorHash": "e3b0c44298fc"
           },
-          "component:10": {
+          "component:12": {
             "contentHash": "e50964b43f48",
             "anchorHash": "2f5ae6dce311",
             "children": {
@@ -474,16 +482,18 @@
         },
         "childrenOrder": [
           "_label",
-          "prose:4",
-          "link:0",
           "prose:5",
-          "link:1",
+          "link:0",
           "prose:6",
-          "link:2",
+          "link:1",
           "prose:7",
-          "link:3",
+          "link:2",
           "prose:8",
-          "component:10"
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10",
+          "component:12"
         ]
       },
       "further-reading": {
@@ -586,5 +596,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

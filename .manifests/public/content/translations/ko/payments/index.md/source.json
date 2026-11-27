@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/payments/index.md",
-  "generatedAt": "2026-08-07T06:11:31.141Z",
-  "rootHash": "28d9e5ddcb7f",
+  "generatedAt": "2026-11-27T09:59:02.750Z",
+  "rootHash": "f2458fcbefa0",
   "tree": {
-    "contentHash": "02f01460281e",
+    "contentHash": "125b3ffe3012",
     "anchorHash": "0a2423c9bb52",
     "children": {
       "frontmatter:title": {
@@ -16,7 +16,7 @@
         "anchorHash": "74a5e40762a2"
       },
       "frontmatter:description": {
-        "contentHash": "829d2472377a",
+        "contentHash": "3c817bfa434d",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -845,5 +845,5 @@
       "ethereum-vs-fiat"
     ]
   },
-  "sourceCommitSha": "3c76f545357f4d2d02a6f906d4b647d531be7088"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

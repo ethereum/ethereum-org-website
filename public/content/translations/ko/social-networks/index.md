@@ -1,6 +1,6 @@
 ---
 title: "탈중앙화 소셜 네트워크"
-description: "이더리움의 탈중앙화 소셜 네트워크 개요"
+description: "탈중앙화 소셜 네트워크란 무엇일까요? 이더리움 기반 소셜 앱을 통해 플랫폼이 아닌 사용자가 직접 자신의 신원, 콘텐츠, 오디언스를 소유하는 방법을 알아보세요."
 lang: ko
 template: use-cases
 sidebarDepth: 2
@@ -59,7 +59,7 @@ summaryPoints:
 
 [Mirror](https://mirror.xyz/)는 탈중앙화 및 사용자 소유를 목표로 하는 Web3 지원 글쓰기 플랫폼입니다. 사용자는 지갑을 연결하기만 하면 Mirror에서 무료로 글을 읽고 쓸 수 있습니다. 또한 글을 수집하고 좋아하는 작가를 구독할 수도 있습니다.
 
-Mirror에 게시된 글은 탈중앙화 스토리지 플랫폼인 Arweave에 영구적으로 저장되며, Writing NFT로 알려진 수집 가능한 [대체 불가능한 토큰(NFT)](/nft/)으로 발행될 수 있습니다. 작가는 Writing NFT를 완전히 무료로 생성할 수 있으며, 수집은 이더리움 [레이어 2 (l2)](/glossary/#layer-2)에서 이루어지므로 트랜잭션이 저렴하고 빠르며 환경 친화적입니다.
+Mirror에 게시된 글은 탈중앙화 스토리지 플랫폼인 Arweave에 영구적으로 저장되며, Writing NFT로 알려진 수집 가능한 [대체 불가능한 토큰(NFT)](/nft/)으로 발행될 수 있습니다. 작가는 Writing NFT를 완전히 무료로 생성할 수 있으며, 수집은 이더리움 [레이어 2 (L2)](/glossary/#layer-2)에서 이루어지므로 트랜잭션이 저렴하고 빠르며 환경 친화적입니다.
 
 ### MINDS {#minds}
 
@@ -69,7 +69,7 @@ Mirror에 게시된 글은 탈중앙화 스토리지 플랫폼인 Arweave에 영
 
 ### Farcaster {#farcaster}
 
-[Farcaster](https://farcaster.xyz/)는 사용자가 "casts"를 공유하고 발견할 수 있게 해주는, X 및 레딧과 유사한 "충분히 탈중앙화된" 소셜 네트워크입니다. 트랜잭션 비용을 비교적 저렴하게 유지하기 위해 옵티미즘 레이어 2 (l2) 네트워크를 기반으로 구축되었습니다.
+[Farcaster](https://farcaster.xyz/)는 사용자가 "casts"를 공유하고 발견할 수 있게 해주는, X 및 레딧과 유사한 "충분히 탈중앙화된" 소셜 네트워크입니다. 트랜잭션 비용을 비교적 저렴하게 유지하기 위해 옵티미즘 레이어 2 (L2) 네트워크를 기반으로 구축되었습니다.
 
 ## 탈중앙화 소셜 네트워크 사용하기 {#use-decentralized-social-networks}
 
