@@ -9,6 +9,14 @@ import {
   useState,
 } from "react"
 import { useTranslations } from "next-intl"
+import { Portal } from "@radix-ui/react-portal"
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -22,6 +30,8 @@ import {
   type AnatomyHue,
   DIAGRAM_SVG_FALLBACKS,
 } from "./tokens"
+
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 export type AnatomyLabelPlacement = "above" | "below" | "start"
 
@@ -91,6 +101,8 @@ export function AnatomyLabels({
   labels,
   definitions,
   litId,
+  leaders = true,
+  tooltips = false,
 }: {
   /** The drawing's viewBox size. */
   width: number
@@ -101,8 +113,16 @@ export function AnatomyLabels({
   /** One-line definition per part, read with the label. */
   definitions: Record<string, ReactNode>
   litId?: string | null
+  /** Off: no leader lines, for labels that sit right beside their part. */
+  leaders?: boolean
+  /**
+   * Show the hovered or focused part's definition in a tooltip on its label,
+   * for figures without the status line.
+   */
+  tooltips?: boolean
 }) {
   const t = useTranslations("component-diagrams")
+  const { isRtl } = useRtlFlip()
   const idPrefix = useId()
   const { hovered, setHovered } = useDiagramHover()
   const containerRef = useRef<HTMLDivElement>(null)
@@ -155,6 +175,7 @@ export function AnatomyLabels({
       }
       // Each leader segment as a thin box, to keep labels off other leaders.
       const leaderBoxes = (spot: AnatomyLabelSpot) => {
+        if (!leaders) return []
         const points = [
           spot.target,
           ...(spot.elbow ? [spot.elbow] : []),
@@ -306,81 +327,104 @@ export function AnatomyLabels({
       inView?.disconnect()
       resize?.disconnect()
     }
-  }, [spots, width, height, litId])
+  }, [spots, width, height, litId, leaders])
 
   return (
-    <div ref={containerRef} className="pointer-events-none absolute inset-0">
-      <svg
-        aria-hidden
-        viewBox={`0 0 ${width} ${height}`}
-        {...DIAGRAM_SVG_FALLBACKS}
-        className={cn(ISO_SVG_CLASS, "absolute inset-0 h-full")}
-      >
-        {spots.map((spot) =>
-          isHidden(spot.id) ? null : (
-            <path
-              key={spot.id}
-              d={leaderPath(spot)}
-              fill="none"
-              strokeLinejoin="round"
-              className={cn(
-                hovered === spot.id
-                  ? ANATOMY_HOVER_STROKE
-                  : litId === spot.id
-                    ? ANATOMY_LIT_STROKE[spot.tone]
-                    : "stroke-diagram-line"
-              )}
-            />
-          )
-        )}
-      </svg>
+    <TooltipProvider>
+      <div ref={containerRef} className="pointer-events-none absolute inset-0">
+        <svg
+          aria-hidden
+          viewBox={`0 0 ${width} ${height}`}
+          {...DIAGRAM_SVG_FALLBACKS}
+          className={cn(ISO_SVG_CLASS, "absolute inset-0 h-full")}
+        >
+          {spots.map((spot) =>
+            !leaders || isHidden(spot.id) ? null : (
+              <path
+                key={spot.id}
+                d={leaderPath(spot)}
+                fill="none"
+                strokeLinejoin="round"
+                className={cn(
+                  hovered === spot.id
+                    ? ANATOMY_HOVER_STROKE
+                    : litId === spot.id
+                      ? ANATOMY_LIT_STROKE[spot.tone]
+                      : "stroke-diagram-line"
+                )}
+              />
+            )
+          )}
+        </svg>
 
-      <div role="group" aria-label={t("diagram-parts-label")}>
-        {spots.map((spot) => (
-          <span
-            key={spot.id}
-            data-part={spot.id}
-            ref={(el) => {
-              labelRefs.current[spot.id] = el
-            }}
-            className={cn(
-              "absolute text-sm leading-tight whitespace-nowrap",
-              PLACEMENT[spot.placement],
-              isHidden(spot.id) ? "invisible" : "pointer-events-auto"
-            )}
-            style={{
-              insetInlineStart: pct(spot.anchor[0], width),
-              top: pct(spot.anchor[1], height),
-            }}
-          >
+        <div role="group" aria-label={t("diagram-parts-label")}>
+          {spots.map((spot) => (
             <span
+              key={spot.id}
+              data-part={spot.id}
               ref={(el) => {
-                focusRefs.current[spot.id] = el
+                labelRefs.current[spot.id] = el
               }}
-              tabIndex={spot.id === tabStop ? 0 : -1}
-              aria-describedby={`${idPrefix}-${spot.id}`}
-              onKeyDown={(event) => onKeyDown(event, spot.id)}
-              onFocus={() => {
-                setFocusId(spot.id)
-                setHovered(spot.id)
-              }}
-              onBlur={() => setHovered(null)}
               className={cn(
-                "cursor-default rounded-sm font-bold outline-offset-2 transition-opacity duration-200 focus-visible:outline-2 focus-visible:outline-primary motion-reduce:transition-none",
-                hovered === spot.id || litId === spot.id
-                  ? ANATOMY_LIT_TEXT[spot.tone]
-                  : "text-body",
-                hovered !== null && hovered !== spot.id && "opacity-70"
+                "absolute text-sm leading-tight whitespace-nowrap",
+                PLACEMENT[spot.placement],
+                isHidden(spot.id) ? "invisible" : "pointer-events-auto"
               )}
+              style={{
+                insetInlineStart: pct(spot.anchor[0], width),
+                top: pct(spot.anchor[1], height),
+              }}
             >
-              {labels[spot.id]}
+              <Tooltip open={tooltips && hovered === spot.id}>
+                <TooltipTrigger asChild>
+                  <span
+                    ref={(el) => {
+                      focusRefs.current[spot.id] = el
+                    }}
+                    tabIndex={spot.id === tabStop ? 0 : -1}
+                    aria-describedby={`${idPrefix}-${spot.id}`}
+                    onKeyDown={(event) => onKeyDown(event, spot.id)}
+                    onFocus={() => {
+                      setFocusId(spot.id)
+                      setHovered(spot.id)
+                    }}
+                    onBlur={() => setHovered(null)}
+                    className={cn(
+                      "cursor-default rounded-sm font-bold outline-offset-2 transition-opacity duration-200 focus-visible:outline-2 focus-visible:outline-primary motion-reduce:transition-none",
+                      hovered === spot.id || litId === spot.id
+                        ? ANATOMY_LIT_TEXT[spot.tone]
+                        : "text-body",
+                      hovered !== null && hovered !== spot.id && "opacity-70"
+                    )}
+                  >
+                    {labels[spot.id]}
+                  </span>
+                </TooltipTrigger>
+                {/* Never under the pointer's hit test: a tooltip that took the
+                  hover from its part would close and reopen in a loop. */}
+                <Portal className="pointer-events-none">
+                  <TooltipContent
+                    side={spot.placement === "below" ? "bottom" : "top"}
+                    align={
+                      spot.placement === "start"
+                        ? isRtl
+                          ? "start"
+                          : "end"
+                        : "center"
+                    }
+                    className="max-w-64 p-3"
+                  >
+                    {definitions[spot.id]}
+                  </TooltipContent>
+                </Portal>
+              </Tooltip>
+              <span id={`${idPrefix}-${spot.id}`} className="sr-only">
+                {definitions[spot.id]}
+              </span>
             </span>
-            <span id={`${idPrefix}-${spot.id}`} className="sr-only">
-              {definitions[spot.id]}
-            </span>
-          </span>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </TooltipProvider>
   )
 }
