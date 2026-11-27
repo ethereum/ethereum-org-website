@@ -78,7 +78,7 @@ Die übliche Methode besteht darin, kleine Unit-Tests mit Mock-Daten zu schreibe
 
 Leider ist Unit-Testing isoliert betrachtet nur minimal effektiv, um die Sicherheit von Smart Contracts zu verbessern. Ein Unit-Test könnte beweisen, dass eine Funktion für Mock-Daten ordnungsgemäß ausgeführt wird, aber Unit-Tests sind nur so effektiv wie die Tests, die geschrieben werden. Dies macht es schwierig, übersehene Randfälle und Schwachstellen zu erkennen, die die Sicherheit Ihres Smart Contracts gefährden könnten.
 
-Ein besserer Ansatz ist die Kombination von Unit-Testing mit eigenschaftsbasiertem Testen, das mittels [statischer und dynamischer Analyse](/developers/docs/smart-contracts/testing/#static-dynamic-analysis) durchgeführt wird. Die statische Analyse stützt sich auf Low-Level-Darstellungen wie [Kontrollflussgraphen](https://en.wikipedia.org/wiki/Control-flow_graph) und [abstrakte Syntaxbäume](https://deepsource.io/glossary/ast/), um erreichbare Programmzustände und Ausführungspfade zu analysieren. Währenddessen führen dynamische Analysetechniken, wie das [Fuzzing von Smart Contracts](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), Vertragscode mit zufälligen Eingabewerten aus, um Operationen zu erkennen, die Sicherheitseigenschaften verletzen.
+Ein besserer Ansatz ist die Kombination von Unit-Testing mit eigenschaftsbasiertem Testen, das mittels [statischer und dynamischer Analyse](/developers/docs/smart-contracts/testing/#property-based-testing-for-smart-contracts) durchgeführt wird. Die statische Analyse stützt sich auf Low-Level-Darstellungen wie [Kontrollflussgraphen](https://en.wikipedia.org/wiki/Control-flow_graph) und [abstrakte Syntaxbäume](https://deepsource.io/glossary/ast/), um erreichbare Programmzustände und Ausführungspfade zu analysieren. Währenddessen führen dynamische Analysetechniken, wie das [Fuzzing von Smart Contracts](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), Vertragscode mit zufälligen Eingabewerten aus, um Operationen zu erkennen, die Sicherheitseigenschaften verletzen.
 
 [Formale Verifikation](/developers/docs/smart-contracts/formal-verification) ist eine weitere Technik zur Überprüfung von Sicherheitseigenschaften in Smart Contracts. Im Gegensatz zu regulären Tests kann die formale Verifikation die Fehlerfreiheit in einem Smart Contract schlüssig beweisen. Dies wird erreicht, indem eine formale Spezifikation erstellt wird, die die gewünschten Sicherheitseigenschaften erfasst, und bewiesen wird, dass ein formales Modell der Verträge dieser Spezifikation entspricht.
 
@@ -463,9 +463,9 @@ Wenn Sie planen, ein Onchain-Orakel nach Vermögenspreisen abzufragen, sollten S
 
 - **[Tools für Formale Verifikation](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _Tools zur Überprüfung der funktionalen Korrektheit in Smart Contracts und zur Prüfung von Invarianten._
 
-- **[Audit-Dienste für Smart Contracts](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _Auflistung von Organisationen, die Audit-Dienste für Smart Contracts für Ethereum-Entwicklungsprojekte anbieten._
+- **[Audit-Dienste für Smart Contracts](#smart-contract-auditing-services)** - _Auflistung von Organisationen, die Audit-Dienste für Smart Contracts für Ethereum-Entwicklungsprojekte anbieten._
 
-- **[Bug-Bounty-Plattformen](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Plattformen zur Koordinierung von Bug-Bounties und zur Belohnung der verantwortungsvollen Offenlegung kritischer Schwachstellen in Smart Contracts._
+- **[Bug-Bounty-Plattformen](#bug-bounty-platforms)** - _Plattformen zur Koordinierung von Bug-Bounties und zur Belohnung der verantwortungsvollen Offenlegung kritischer Schwachstellen in Smart Contracts._
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _Ein kostenloses Online-Tool zur Überprüfung aller verfügbaren Informationen bezüglich eines geforkten Vertrags._
 
@@ -567,10 +567,8 @@ Wenn Sie planen, ein Onchain-Orakel nach Vermögenspreisen abzufragen, sollten S
 
 - [Wie man Slither verwendet, um Fehler in Smart Contracts zu finden](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
-- [Wie man Manticore verwendet, um Fehler in Smart Contracts zu finden](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-
 - [Sicherheitsrichtlinien für Smart Contracts](/developers/tutorials/smart-contract-security-guidelines/)
 
 - [Wie Sie Ihren Token-Vertrag sicher mit beliebigen Token integrieren](/developers/tutorials/token-integration-checklist/)
 
-- [Cyfrin Updraft - Vollständiger Kurs zu Smart-Contract-Sicherheit und -Auditing](https://updraft.cyfrin.io/courses/security)
+- [Cyfrin Updraft – Vollständiger Kurs zu Smart-Contract-Sicherheit und -Auditing](https://updraft.cyfrin.io/courses/security)

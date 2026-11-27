@@ -1,6 +1,6 @@
 ---
 title: "Brücken"
-description: "Ein Überblick über Brücken für Entwickler"
+description: "Ein Entwicklerleitfaden zu Brücken: wie kettenübergreifende Nachrichtenübermittlung und Token-Bridging funktionieren, Arten von Brücken und Vertrauensannahmen und wie man sie in Dapps integriert."
 lang: de
 ---
 
@@ -123,15 +123,15 @@ Um die Vertragsaktivität über Chains hinweg zu überwachen, können Entwickler
 ## Weiterführende Literatur {#further-reading}
 
 - [Blockchain-Brücken](/bridges/) – ethereum.org
-- [L2BEAT Bridge Risk Framework](https://l2beat.com/bridges/summary)
-- [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8. Sep. 2021 – Dmitriy Berenzon
-- [The Interoperability Trilemma](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1. Okt. 2021 – Arjun Bhuptani
-- [Clusters: How Trusted & Trust-Minimized Bridges Shape the Multi-Chain Landscape](https://blog.celestia.org/clusters/) - 4. Okt. 2021 – Mustafa Al-Bassam
-- [LI.FI: With Bridges, Trust is a Spectrum](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28. Apr. 2022 – Arjun Chand
+- [ETHBEAT Bridge Risk Framework](https://ethbeat.org/interop/summary)
+- [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8. September 2021 – Dmitriy Berenzon
+- [The Interoperability Trilemma](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1. Oktober 2021 – Arjun Bhuptani
+- [Clusters: How Trusted & Trust-Minimized Bridges Shape the Multi-Chain Landscape](https://blog.celestia.org/clusters/) - 4. Oktober 2021 – Mustafa Al-Bassam
+- [LI.FI: With Bridges, Trust is a Spectrum](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28. April 2022 – Arjun Chand
 - [The State Of Rollup Interoperability Solutions](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20. Juni 2024 – Alex Hook
 - [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12. Juni 2024 – Emmanuel Awosika
 
-Darüber hinaus sind hier einige aufschlussreiche Präsentationen von [James Prestwich](https://twitter.com/_prestwich), die helfen können, ein tieferes Verständnis von Brücken zu entwickeln:
+Zusätzlich gibt es hier einige aufschlussreiche Präsentationen von [James Prestwich](https://twitter.com/_prestwich), die dabei helfen können, ein tieferes Verständnis für Brücken zu entwickeln:
 
 - [Building Bridges, Not Walled Gardens](https://youtu.be/ZQJWMiX4hT0)
 - [Breaking Down Bridges](https://youtu.be/b0mC-ZqN8Oo)

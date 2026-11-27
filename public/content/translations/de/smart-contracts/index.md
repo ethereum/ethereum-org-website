@@ -1,7 +1,7 @@
 ---
-title: Einführung in Smart Contracts
+title: "Einführung in Smart Contracts"
 metaTitle: "Smart Contracts: Was sie sind und ihre Vorteile"
-description: Eine nicht-technische Einführung in Smart Contracts
+description: "Was sind Smart Contracts? Eine nicht-technische Einführung in die Programme, die auf Ethereum laufen und Apps wie DeFi, NFTs und DAOs ohne Vermittler antreiben."
 lang: de
 ---
 

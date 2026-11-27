@@ -1,6 +1,6 @@
 ---
 title: Liquid & Pooled Staking
-description: Ein Überblick über Liquid und Pooled Staking auf Ethereum
+description: "Was ist Liquid Staking? Erfahren Sie, wie Staking-Pools es Ihnen ermöglichen, mit einem beliebigen ETH-Betrag ETH-Belohnungen zu verdienen, wobei Sie oft einen liquiden Token erhalten, den Sie weiterhin nutzen können."
 lang: de
 template: staking
 image: /images/staking/leslie-pool.png

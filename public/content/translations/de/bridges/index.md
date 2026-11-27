@@ -1,7 +1,7 @@
 ---
 title: "Blockchain-Brücken"
 metaTitle: "Einführung in Blockchain-Brücken"
-description: "Brücken ermöglichen es Benutzern, ihre Gelder über verschiedene Blockchains hinweg zu bewegen"
+description: "Was ist eine Blockchain-Brücke? Erfahren Sie, wie Brücken Token zwischen Ethereum, Layer 2s und anderen Chains bewegen, welche Arten von Brücken es gibt und welche Risiken zu beachten sind."
 lang: de
 ---
 
@@ -103,8 +103,8 @@ Viele Brückenlösungen übernehmen Modelle zwischen diesen beiden Extremen mit 
 
 Die Nutzung von Brücken ermöglicht es Ihnen, Ihre Vermögenswerte über verschiedene Blockchains hinweg zu bewegen. Hier sind einige Ressourcen, die Ihnen helfen können, Brücken zu finden und zu nutzen:
 
-- **[L2BEAT-Brückenzusammenfassung](https://l2beat.com/bridges/summary) & [L2BEAT-Brückenrisikoanalyse](https://l2beat.com/bridges/summary)**: Eine umfassende Zusammenfassung verschiedener Brücken, einschließlich Details zu Marktanteil, Brückentyp und Ziel-Chains. L2BEAT bietet auch eine Risikoanalyse für Brücken, die Benutzern hilft, fundierte Entscheidungen bei der Auswahl einer Brücke zu treffen.
-- **[DefiLlama-Brückenzusammenfassung](https://defillama.com/bridges/Ethereum)**: Eine Zusammenfassung der Brückenvolumina über Ethereum-Netzwerke hinweg.
+- **[ETHBEAT Interop Summary](https://ethbeat.org/interop/summary)**: Eine umfassende Zusammenfassung verschiedener Brücken, einschließlich Details zu Marktanteil, Brückentyp und Ziel-Chains. ETHBEAT bietet auch eine Risikoanalyse für Brücken, die Benutzern hilft, fundierte Entscheidungen bei der Auswahl einer Brücke zu treffen.
+- **[DefiLlama Bridge Summary](https://defillama.com/bridges/Ethereum)**: Eine Zusammenfassung der Brückenvolumina über Ethereum-Netzwerke hinweg.
 
 <Divider />
 
@@ -137,9 +137,10 @@ Brücken sind entscheidend für das Onboarding von Benutzern auf Ethereum Layer 
 ## Weiterführende Literatur {#further-reading}
 
 - [EIP-5164: Cross-Chain Execution](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18. Juni 2022 - Brendan Asselstine_
-- [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5. Juli 2022 - Bartek Kiepuszewski_
+- [L2Bridge Risk Framework](https://forum.ethbeat.org/t/l2bridge-risk-framework/31) - _5. Juli 2022 - Bartek Kiepuszewski_
 - [„Why the future will be multi-chain, but it will not be cross-chain.“](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8. Januar 2022 - Vitalik Buterin_
 - [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12. Juni 2024 - Emmanuel Awosika_
 - [The State Of Rollup Interoperability Solutions](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _20. Juni 2024 - Alex Hook_
 
 <QuizWidget quizKey="bridges" />
+

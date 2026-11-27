@@ -42,16 +42,16 @@ Light-Clients könnten auch verwendet werden, um Ethereum-Wallets zu aktualisier
 
 Es befinden sich mehrere Light-Clients in der Entwicklung, darunter Ausführungs-, Konsens- und kombinierte Ausführungs-/Konsens-Light-Clients. Dies sind die Light-Client-Implementierungen, die uns zum Zeitpunkt des Schreibens dieser Seite bekannt sind:
 
-- [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): Konsens-Light-Client in TypeScript
+- [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): Konsens-Light-Client in TypeScript
 - [Helios](https://github.com/a16z/helios): kombinierter Ausführungs- und Konsens-Light-Client in Rust
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): Light-Modus für Ausführungsclient (in Entwicklung) in Go
 - [Nimbus](https://nimbus.guide/el-light-client.html): Konsens-Light-Client in Nim
 
-Unseres Wissens nach gilt noch keiner davon als produktionsreif.
+Nach unserem Kenntnisstand gilt noch keiner davon als produktionsreif.
 
-Es wird auch viel daran gearbeitet, die Möglichkeiten zu verbessern, wie Light-Clients auf Ethereum-Daten zugreifen können. Derzeit verlassen sich Light-Clients auf RPC-Anfragen an Full Nodes unter Verwendung eines Client/Server-Modells, aber in Zukunft könnten die Daten auf dezentralere Weise über ein dediziertes Netzwerk wie das [Portal-Netzwerk](https://www.ethportal.net/) angefordert werden, das die Daten für Light-Clients über ein Peer-to-Peer-Gossip-Protokoll bereitstellen könnte.
+Es wird auch viel daran gearbeitet, die Möglichkeiten zu verbessern, wie Light-Clients auf Ethereum-Daten zugreifen können. Derzeit sind Light-Clients auf RPC-Anfragen an Full Nodes angewiesen, die ein Client/Server-Modell verwenden. Das [Portal-Netzwerk](/developers/docs/networking-layer/portal-network/) wurde ursprünglich entwickelt, um diese Daten für Light-Clients über ein Peer-to-Peer-Netzwerk bereitzustellen, aber seine Entwicklung konzentriert sich nun auf die Bereitstellung der Historie vergangener Blöcke.
 
-Andere Punkte auf der [Roadmap](/roadmap/) wie [Verkle-Bäume](/roadmap/verkle-trees/) und [Zustandslosigkeit](/roadmap/statelessness/) werden die Sicherheitsgarantien von Light-Clients letztendlich an die von Full-Clients angleichen.
+Andere Punkte auf der [Roadmap](/roadmap/), wie ein neuer Zustandsbaum (derzeit als Binärbaum in [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864) vorgeschlagen) und [Zustandslosigkeit](/roadmap/statelessness/), werden die Sicherheitsgarantien von Light-Clients letztendlich an die von Full-Clients angleichen.
 
 ## Weiterführende Literatur {#further-reading}
 

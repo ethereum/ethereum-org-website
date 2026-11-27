@@ -165,7 +165,7 @@ Eigenschaftsbasiertes Testen ist der Prozess der Überprüfung, ob ein Smart Con
 
 Ein statischer Analysator nimmt den Quellcode eines Smart Contracts als Eingabe und gibt Ergebnisse aus, die erklären, ob ein Vertrag eine Eigenschaft erfüllt oder nicht. Im Gegensatz zur dynamischen Analyse beinhaltet die statische Analyse nicht die Ausführung eines Vertrags, um ihn auf Korrektheit zu analysieren. Die statische Analyse schlussfolgert stattdessen über alle möglichen Pfade, die ein Smart Contract während der Ausführung nehmen könnte (d. h. durch Untersuchung der Struktur des Quellcodes, um zu bestimmen, was dies für den Betrieb des Vertrags zur Laufzeit bedeuten würde).
 
-[Linting](https://www.perforce.com/blog/qac/what-is-linting) und [statisches Testen](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) sind gängige Methoden zur Durchführung statischer Analysen von Verträgen. Beide erfordern die Analyse von Low-Level-Darstellungen der Ausführung eines Vertrags, wie z. B. [abstrakte Syntaxbäume](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) und [Kontrollflussgraphen](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/), die vom Compiler ausgegeben werden.
+[Linting](https://www.perforce.com/blog/qac/what-is-linting) und [statisches Testen](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) sind gängige Methoden zur Durchführung statischer Analysen von Verträgen. Beide erfordern die Analyse von Low-Level-Darstellungen der Ausführung eines Vertrags, wie z. B. [abstrakte Syntaxbäume](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) und [Kontrollflussgraphen](https://www.geeksforgeeks.org/software-engineering/software-engineering-control-flow-graph-cfg/), die vom Compiler ausgegeben werden.
 
 In den meisten Fällen ist die statische Analyse nützlich, um Sicherheitsprobleme wie die Verwendung unsicherer Konstrukte, Syntaxfehler oder Verstöße gegen Codierungsstandards im Code eines Vertrags zu erkennen. Statische Analysatoren sind jedoch dafür bekannt, dass sie bei der Erkennung tieferer Schwachstellen im Allgemeinen unzuverlässig sind und übermäßig viele falsch-positive Ergebnisse produzieren können.
 
@@ -238,7 +238,7 @@ Im Gegensatz zum Testen kann die Formale Verifikation verwendet werden, um zu ve
 
 Wie bereits erwähnt, kann rigoroses Testen selten die Abwesenheit von Fehlern in einem Vertrag garantieren; Ansätze der Formalen Verifikation können stärkere Zusicherungen der Korrektheit bieten, sind aber derzeit schwierig zu verwenden und verursachen erhebliche Kosten.
 
-Dennoch können Sie die Wahrscheinlichkeit, Vertragsschwachstellen aufzudecken, weiter erhöhen, indem Sie eine unabhängige Codeüberprüfung durchführen lassen. [Smart-Contract-Audits](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/) und [Bug-Bounties](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) sind zwei Möglichkeiten, andere dazu zu bringen, Ihre Verträge zu analysieren.
+Dennoch können Sie die Wahrscheinlichkeit, Vertragsschwachstellen aufzudecken, weiter erhöhen, indem Sie eine unabhängige Codeüberprüfung durchführen lassen. [Smart-Contract-Audits](https://web.archive.org/web/20260410153159/https://immunebytes.com/blog/what-is-a-smart-contract-audit/) und [Bug-Bounties](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) sind zwei Möglichkeiten, andere dazu zu bringen, Ihre Verträge zu analysieren.
 
 Audits werden von Prüfern durchgeführt, die Erfahrung darin haben, Fälle von Sicherheitslücken und schlechten Entwicklungspraktiken in Smart Contracts zu finden. Ein Audit umfasst in der Regel Tests (und möglicherweise Formale Verifikation) sowie eine manuelle Überprüfung der gesamten Codebasis.
 
@@ -276,7 +276,7 @@ Der Hauptunterschied besteht darin, dass Bug-Bounty-Programme für die breitere 
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Linter zur Durchsetzung von Stil- und Sicherheits-Best-Practices für die Smart-Contract-Programmiersprache Solidity._
 
-- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Rust-basierter statischer Analysator, der speziell für die Sicherheit und Entwicklung von Web3-Smart-Contracts entwickelt wurde._
+- **[Cyfrin Aderyn](https://aderyn.cyfrin.io/overview)** - _Rust-basierter statischer Analysator, der speziell für die Sicherheit und Entwicklung von Web3-Smart-Contracts entwickelt wurde._
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Python-basiertes Framework zur statischen Analyse mit Detektoren für Schwachstellen und Codequalität, Druckern zum Extrahieren nützlicher Informationen aus Code und Unterstützung für das Schreiben benutzerdefinierter Submodule._
 
@@ -298,9 +298,8 @@ Der Hauptunterschied besteht darin, dass Bug-Bounty-Programme für die breitere 
 
 - [Ein Überblick und Vergleich verschiedener Testprodukte](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [Wie man Echidna zum Testen von Smart Contracts verwendet](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [Wie man Manticore verwendet, um Smart-Contract-Fehler zu finden](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-- [Wie man Slither verwendet, um Smart-Contract-Fehler zu finden](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-- [Wie man Solidity-Verträge für Tests mockt](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
+- [Wie man Slither verwendet, um Fehler in Smart Contracts zu finden](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [Wie man Solidity-Smart-Contracts für Tests mockt](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Wie man Unit-Tests in Solidity mit Foundry ausführt](https://www.rareskills.io/post/foundry-testing-solidity)
 
 ## Weiterführende Literatur {#further-reading}

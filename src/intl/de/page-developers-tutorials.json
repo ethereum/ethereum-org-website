@@ -23,5 +23,6 @@
   "page-tutorial-all": "Alle",
   "page-tutorial-topics": "Themen",
   "page-tutorial-search-placeholder": "Tutorials durchsuchen...",
-  "page-tutorial-filtering-by": "Gefiltert nach:"
+  "page-tutorial-filtering-by": "Gefiltert nach:",
+  "page-tutorial-removed-notice": "Das angeforderte Tutorial ist nicht mehr verfügbar. Durchsuche die unten stehenden gepflegten Tutorials."
 }

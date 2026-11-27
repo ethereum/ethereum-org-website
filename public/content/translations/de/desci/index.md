@@ -1,6 +1,6 @@
 ---
 title: Dezentralisierte Wissenschaft (DeSci)
-description: "Ein Überblick über dezentralisierte Wissenschaft auf Ethereum"
+description: "Was ist dezentralisierte Wissenschaft? Erfahren Sie, wie DeSci Ethereum nutzt, um Forschung zu finanzieren, Daten offen zu teilen und Wissenschaftler zu belohnen, wodurch Wissenschaft zugänglicher wird."
 lang: de
 template: use-cases
 sidebarDepth: 2

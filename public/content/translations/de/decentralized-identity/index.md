@@ -1,6 +1,6 @@
 ---
 title: "Dezentrale Identität"
-description: "Was ist dezentrale Identität und warum ist sie wichtig?"
+description: "Was ist dezentrale Identität? Erfahren Sie, wie Ethereum es Ihnen ermöglicht, Ihre Identität, Nachweise und Daten zu besitzen und zu kontrollieren, ohne auf einen zentralen Anbieter angewiesen zu sein."
 lang: de
 template: use-cases
 sidebarDepth: 2

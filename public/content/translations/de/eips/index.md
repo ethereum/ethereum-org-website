@@ -1,7 +1,7 @@
 ---
-title: Einführung in Ethereum Improvement Proposals (EIPs)
+title: "Einführung in Ethereum Improvement Proposals (EIPs)"
 metaTitle: Ethereum Improvement Proposals (EIPs)
-description: Die grundlegenden Informationen, die Sie benötigen, um EIPs zu verstehen
+description: "Was sind Ethereum-Verbesserungsvorschläge (EIPs)? Erfahren Sie, wie Änderungen an Ethereum vorgeschlagen, diskutiert und übernommen werden und wie Sie sich beteiligen können."
 lang: de
 ---
 
@@ -15,7 +15,7 @@ Jeder innerhalb der Ethereum-Community hat die Möglichkeit, einen EIP zu erstel
 
 EIPs spielen eine zentrale Rolle dabei, wie Änderungen bei Ethereum stattfinden und dokumentiert werden. Sie sind der Weg für Menschen, Änderungen vorzuschlagen, zu debattieren und zu übernehmen. Es gibt [verschiedene Arten von EIPs](https://eips.ethereum.org/EIPS/eip-1#eip-types), einschließlich Core-EIPs für Low-Level-Protokolländerungen, die den Konsens beeinflussen und ein Netzwerk-Upgrade wie [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) erfordern, sowie ERCs für Anwendungsstandards wie [EIP-20](https://eips.ethereum.org/EIPS/eip-20) und [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
-Jedes Netzwerk-Upgrade besteht aus einer Reihe von EIPs, die von jedem [Ethereum-Client](/learn/#clients-and-nodes) im Netzwerk implementiert werden müssen. Das bedeutet, dass Client-Entwickler sicherstellen müssen, dass sie alle erforderlichen EIPs implementiert haben, um im Konsens mit anderen Clients im Ethereum Mainnet zu bleiben.
+Jedes Netzwerk-Upgrade besteht aus einer Reihe von EIPs, die von jedem [Ethereum-Client](/developers/docs/nodes-and-clients/) im Netzwerk implementiert werden müssen. Das bedeutet, dass Client-Entwickler sicherstellen müssen, dass sie alle erforderlichen EIPs implementiert haben, um im Konsens mit anderen Clients im Ethereum Mainnet zu bleiben.
 
 Neben der Bereitstellung einer technischen Spezifikation für Änderungen sind EIPs die Einheit, um die herum Governance bei Ethereum stattfindet: Es steht jedem frei, einen Vorschlag einzureichen, und dann werden verschiedene Stakeholder in der Community debattieren, um zu bestimmen, ob er als Standard übernommen oder in ein Netzwerk-Upgrade aufgenommen werden soll. Da Non-Core-EIPs nicht von allen Anwendungen übernommen werden müssen (es ist beispielsweise möglich, einen fungiblen Token zu erstellen, der EIP-20 nicht implementiert), Core-EIPs jedoch weithin übernommen werden müssen (da alle Knoten aktualisiert werden müssen, um Teil desselben Netzwerks zu bleiben), erfordern Core-EIPs einen breiteren Konsens innerhalb der Community als Non-Core-EIPs.
 

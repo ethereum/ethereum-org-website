@@ -1,6 +1,6 @@
 ---
-title: Single-Slot-Finalität
-description: Erklärung der Single-Slot-Finalität
+title: "Single-Slot-Finalität"
+description: "Single-Slot-Finalität könnte Ethereums Zeit bis zur Endgültigkeit von etwa 15 Minuten auf einen einzigen Slot reduzieren. Erfahre, wie es funktioniert und welche Kompromisse damit verbunden sind."
 lang: de
 template: roadmap
 ---
@@ -57,7 +57,7 @@ Das Problem bei der Skalierung der Aggregation durch Erhöhung der Anzahl der Va
 
 ## Aktueller Fortschritt {#current-progress}
 
-SSF befindet sich in der Forschungsphase. Es wird nicht erwartet, dass es in den nächsten Jahren veröffentlicht wird, wahrscheinlich erst nach anderen wesentlichen Upgrades wie [Verkle-Bäumen](/roadmap/verkle-trees/) und [Danksharding](/roadmap/danksharding/).
+SSF befindet sich in der Forschungsphase. Es wird voraussichtlich erst in einigen Jahren eingeführt, wahrscheinlich nach anderen wesentlichen Upgrades wie einem neuen Zustandsbaum (derzeit als Binärbaum in [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864) vorgeschlagen) und [Danksharding](/roadmap/danksharding/).
 
 ## Weiterführende Literatur {#further-reading}
 

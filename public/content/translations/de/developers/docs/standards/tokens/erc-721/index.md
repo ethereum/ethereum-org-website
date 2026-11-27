@@ -245,10 +245,9 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [OpenZeppelin - ERC-721 Implementierung](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
 - [Alchemy NFT API](https://www.alchemy.com/docs/reference/nft-api-quickstart)
 
-## Tutorials: Bauen mit nicht-fungiblen Token (ERC-721) auf Ethereum {#tutorials}
+## Tutorials: Entwickeln mit nicht-fungiblen Token (ERC-721) auf Ethereum {#tutorials}
 
-- [Vyper ERC-721 Vertrag – Ein Durchlauf](/developers/tutorials/erc-721-vyper-annotated-code/) _– Ein kommentierter Durchlauf eines vollständigen ERC-721 NFT-Vertrags, geschrieben in Vyper._
-- [Wie man einen NFT schreibt und bereitstellt (Teil 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– Schritt-für-Schritt-Anleitung zum Schreiben und Bereitstellen deines ersten ERC-721 Smart Contracts._
-- [Wie man einen NFT prägt (Teil 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Wie man einen ERC-721 NFT mit deinem bereitgestellten Smart Contract und Web3 prägt._
+- [Vyper ERC-721 Vertrags-Walkthrough](/developers/tutorials/erc-721-vyper-annotated-code/) _– Ein kommentierter Durchlauf eines vollständigen ERC-721 NFT-Vertrags, der in Vyper geschrieben wurde._
+- [Wie du einen NFT schreibst & bereitstellst (Teil 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– Schritt-für-Schritt-Anleitung zum Schreiben und Bereitstellen deines ersten ERC-721 Smart Contracts._
+- [Wie du einen NFT prägst (Teil 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Wie du einen ERC-721 NFT mit deinem bereitgestellten Smart Contract und Web3 prägst._
 - [Wie du deinen NFT in deiner Wallet anzeigst (Teil 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Wie du deinen geprägten NFT nach der Bereitstellung in MetaMask anzeigst._
-- [NFT-Minter-Tutorial](/developers/tutorials/nft-minter/) _– Baue eine Full-Stack-Dapp zum Prägen von NFTs mit einem React-Frontend, MetaMask und Alchemy._
