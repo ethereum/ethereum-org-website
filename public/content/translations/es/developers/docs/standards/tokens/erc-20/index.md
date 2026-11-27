@@ -176,14 +176,14 @@ Algunos estándares alternativos han surgido de este problema, como [ERC-223](/d
 - [Alchemy - Guía de tokens ERC-20 en Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## Otros estándares de tokens fungibles {#fungible-token-standards}
+
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Bóvedas tokenizadas](/developers/docs/standards/tokens/erc-4626)
 - [ERC-7540 - Bóvedas tokenizadas asíncronas](/developers/docs/standards/tokens/erc-7540)
-## Tutoriales: Construir con ERC-20 en Ethereum {#tutorials}
+## Tutoriales: Desarrollar con ERC-20 en Ethereum {#tutorials}
 
-- [Tutorial del contrato ERC-20](/developers/tutorials/erc20-annotated-code/) _– Un tutorial anotado línea por línea de la implementación del contrato ERC-20 de OpenZeppelin._
-- [ERC-20 con barandillas de seguridad](/developers/tutorials/erc20-with-safety-rails/) _– Cómo agregar salvaguardas a los tokens ERC-20 para ayudar a los usuarios a evitar errores comunes._
-- [Envío de tokens usando Ethers.js](/developers/tutorials/send-token-ethersjs/) _– Una guía para principiantes sobre la transferencia de tokens ERC-20 usando Ethers.js._
+- [Recorrido por el contrato ERC-20](/developers/tutorials/erc20-annotated-code/) _– Un recorrido anotado línea por línea de la implementación del contrato ERC-20 de OpenZeppelin._
+- [ERC-20 con medidas de seguridad](/developers/tutorials/erc20-with-safety-rails/) _– Cómo agregar medidas de seguridad a los tokens ERC-20 para ayudar a los usuarios a evitar errores comunes._
 - [Algunos trucos utilizados por tokens fraudulentos y cómo detectarlos](/developers/tutorials/scam-token-tricks/) _– Una exploración detallada de los patrones de tokens ERC-20 fraudulentos y cómo identificarlos._

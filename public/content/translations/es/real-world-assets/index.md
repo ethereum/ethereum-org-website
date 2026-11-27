@@ -1,7 +1,7 @@
 ---
 title: Activos del mundo real (RWA)
 metaTitle: "¿Qué son los RWA? | Beneficios y uso de los activos del mundo real"
-description: "Una descripción general de los activos del mundo real en Ethereum"
+description: "¿Qué son los activos del mundo real (RWA)? Aprende cómo activos como bonos del tesoro, bienes raíces y materias primas se tokenizan en Ethereum, y sus beneficios y riesgos."
 lang: es
 template: use-cases
 image: /images/man-and-dog-playing.png

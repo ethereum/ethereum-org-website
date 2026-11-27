@@ -1,6 +1,6 @@
 ---
 title: Hacer staking de ETH desde casa
-description: Una descripción general de cómo empezar a hacer staking de ETH desde casa
+description: "Cómo hacer staking de tu ETH desde casa: ejecuta tu propio validador de Ethereum con 32 ETH, gana recompensas directamente del protocolo y ayuda a asegurar la red."
 lang: es
 template: staking
 image: /images/staking/leslie-solo.png
@@ -104,7 +104,7 @@ Si ejecutas múltiples validadores, puedes consolidarlos en un solo validador co
 
 ## Empieza en el Staking Launchpad {#get-started-on-the-staking-launchpad}
 
-El Staking Launchpad es una aplicación de código abierto que te ayudará a convertirte en staker. Te guiará en la elección de tus clientes, generará tus claves y depositará tu ETH en el contrato de depósito de staking. Se proporciona una lista de verificación para asegurarse de que has cubierto todo para configurar tu validador de forma segura.
+El Staking Launchpad es una aplicación de código abierto que te ayudará a empezar a hacer staking. Te guiará en la elección de tus clientes, la generación de tus claves y el depósito de tus ETH en el [contrato de depósito de staking](/staking/deposit-contract/). Se proporciona una lista de verificación para asegurar que has cubierto todo lo necesario para configurar tu validador de forma segura.
 
 <StakingLaunchpadWidget />
 

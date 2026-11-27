@@ -1,19 +1,19 @@
 ---
-title: Estándar de bóveda tokenizada asíncrona ERC-7540
-description: Una extensión de ERC-4626 que añade flujos asíncronos de depósito y canje para bóvedas tokenizadas.
+title: "Estándar de bóveda tokenizada asíncrona ERC-7540"
+description: "Una extensión de ERC-4626 que añade flujos asíncronos de depósito y canje para bóvedas tokenizadas."
 lang: es
 ---
 
 ## Introducción {#introduction}
 
-ERC-7540 extiende el [estándar de bóveda tokenizada ERC-4626](/developers/docs/standards/tokens/erc-4626/) al añadir soporte para flujos asíncronos de depósito y canje. Introduce un patrón de solicitud y luego reclamo (request-then-claim): los usuarios primero envían una solicitud (bloqueando sus activos o acciones), y luego reclaman el resultado después de que la bóveda lo haya procesado.
+ERC-7540 extiende el [Estándar de bóveda tokenizada ERC-4626](/developers/docs/standards/tokens/erc-4626/) al añadir soporte para flujos asíncronos de depósito y canje. Introduce un patrón de solicitar y luego reclamar: los usuarios primero envían una solicitud (entregando sus activos o acciones a la bóveda), y luego reclaman el resultado después de que la bóveda lo haya procesado.
 
-Esto es necesario cuando una bóveda no puede liquidar instantáneamente en una sola transacción, por ejemplo:
+Esto es necesario cuando una bóveda no puede liquidarse instantáneamente en una sola transacción, por ejemplo:
 
-- Protocolos de activos del mundo real (RWA), como bonos del tesoro tokenizados, crédito privado y otros activos con ciclos de liquidación T+1 o T+2
+- Protocolos de activos del mundo real (RWA) como tesorerías tokenizadas, crédito privado y otros activos con ciclos de liquidación T+1 o T+2
 - Préstamos subcolateralizados donde las evaluaciones de crédito ocurren fuera de la cadena
 - Estrategias de bóveda intercadena donde el uso de puentes introduce retrasos
-- Tokens de staking líquido (LST) con períodos de desvinculación
+- Tokens de staking líquido con períodos de desvinculación
 
 Las bóvedas pueden elegir ser asíncronas solo en los depósitos, solo en los canjes, o en ambos. Esta flexibilidad permite a los desarrolladores de bóvedas añadir flujos asíncronos solo donde la estrategia subyacente lo requiera, mientras mantienen el otro lado síncrono.
 
@@ -25,21 +25,21 @@ Para entender mejor esta página, le recomendamos que primero lea sobre los [est
 
 En ERC-4626, un depósito se liquida de forma atómica: el inversor envía activos y recibe acciones a cambio en una sola transacción.
 
-![ERC-4626 synchronous deposit flow](./erc-4626-sync-flow.svg)
+<VaultDepositDiagram />
 
-ERC-7540 divide esto en dos pasos. El inversor primero llama a `requestDeposit()` para bloquear los activos, y luego espera a que el administrador de la bóveda procese la solicitud. Una vez cumplida, el inversor llama a `deposit()` para reclamar sus acciones. Los tipos de cambio se determinan en el momento del cumplimiento, no en el momento de la solicitud.
+ERC-7540 divide esto en dos pasos. El inversor primero llama a `requestDeposit()`, lo que transfiere sus activos a la bóveda, y luego espera a que la bóveda procese la solicitud. Cómo y cuándo sucede eso depende de la bóveda, por ejemplo, cuando se completa una liquidación fuera de la cadena. Una vez cumplida, el inversor llama a `deposit()` para reclamar sus acciones. El tipo de cambio no se fija en el momento de la solicitud: la bóveda lo establece, típicamente cuando cumple la solicitud, por lo que las acciones recibidas pueden diferir de lo que devolvió `convertToShares()` cuando se hizo la solicitud.
 
-![ERC-7540 asynchronous deposit flow](./erc-7540-async-flow.svg)
+<AsyncVaultDiagram />
 
-El flujo de canje funciona de la misma manera: `requestRedeem()` bloquea las acciones, y una vez cumplido, el inversor llama a `redeem()` para reclamar los activos.
+El flujo de canje funciona de la misma manera: `requestRedeem()` toma las acciones del inversor, y una vez cumplida, el inversor llama a `redeem()` para reclamar los activos.
 
 ## Funciones y características de ERC-7540 {#body}
 
-ERC-7540 hereda la interfaz completa de ERC-4626, pero reutiliza `deposit`/`mint`/`withdraw`/`redeem` como funciones de reclamo. Las nuevas funciones `requestDeposit` y `requestRedeem` manejan el paso de solicitud inicial.
+ERC-7540 hereda la interfaz completa de ERC-4626 pero reutiliza `deposit`/`mint`/`withdraw`/`redeem` como funciones de reclamo. Las nuevas funciones `requestDeposit` y `requestRedeem` manejan el paso de solicitud inicial.
 
-Cada solicitud pasa por tres estados: pendiente (enviada, en espera de procesamiento), reclamable (cumplida y valorada) y reclamada (el inversor ha recogido sus acciones o activos).
+Cada solicitud pasa por tres estados: pendiente (enviada, esperando procesamiento), reclamable (cumplida y con precio fijado), y reclamada (el inversor ha recogido sus acciones o activos). Una bóveda puede hacer que una solicitud sea reclamable inmediatamente, omitiendo el estado pendiente, pero reclamar siempre es una llamada separada. El estándar no define ningún evento para cuando una solicitud se vuelve reclamable.
 
-![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
+<VaultRequestDiagram />
 
 ### Flujo de solicitud de depósito {#deposit-request-flow}
 
@@ -79,7 +79,7 @@ Una vez que una solicitud de depósito se vuelve reclamable, el usuario llama a 
 function requestRedeem(uint256 shares, address controller, address owner) external returns (uint256 requestId)
 ```
 
-Bloquea `shares` de `owner` y envía una solicitud de canje. La dirección `controller` recibe el control de la solicitud.
+Toma el control de `shares` de `owner` y envía una solicitud de canje. La bóveda puede retener las acciones hasta que se reclame la solicitud o quemarlas de inmediato. La dirección `controller` recibe el control de la solicitud.
 
 #### pendingRedeemRequest {#pendingredeemrequest}
 

@@ -171,16 +171,15 @@ Las [bibliotecas de billeteras y herramientas de conexión](/developers/docs/api
 
 ## Tutoriales relacionados {#related-tutorials}
 
-- [Llamar a un contrato inteligente desde JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/)
-- [Enviar transacciones usando web3.js y Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [Enviar transacciones usando Web3.js y Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 - [Cómo ver tu NFT en tu billetera](/developers/tutorials/how-to-view-nft-in-metamask/)
 
 ## Lecturas adicionales {#further-reading}
 
-- [Documentación de Viem: Leer y escribir en contratos](https://viem.sh/docs/contract/readContract)
-- [Documentación de ethers.js: Contratos](https://docs.ethers.org/v6/api/contract/)
+- [Documentación de Viem: leer y escribir en contratos](https://viem.sh/docs/contract/readContract)
+- [Documentación de ethers.js: contratos](https://docs.ethers.org/v6/api/contract/)
 - [Especificación de la ABI de Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [¿Qué es una ABI? - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [¿Cómo funcionan las ABI de los contratos inteligentes? - Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## Temas relacionados {#related-topics}
 

@@ -383,35 +383,33 @@ Algunas redes de oráculos descentralizadas ofrecen servicios de automatización
 
 La [red Keeper](https://chain.link/keepers) de Chainlink proporciona opciones para que los contratos inteligentes subcontraten tareas de mantenimiento regulares de una manera descentralizada y con confianza minimizada. Lea la [documentación oficial de Keeper](https://docs.chain.link/docs/chainlink-keepers/introduction/) para obtener información sobre cómo hacer que su contrato sea compatible con Keeper y usar el servicio Upkeep.
 
-## Cómo usar oráculos de blockchain {#use-blockchain-oracles}
+## Cómo usar los oráculos de blockchain {#use-blockchain-oracles}
 
 Hay múltiples aplicaciones de oráculos que puede integrar en su dapp de Ethereum:
 
-**[Chainlink](https://chain.link/)**: _Las redes de oráculos descentralizadas de Chainlink proporcionan entradas, salidas y cálculos a prueba de manipulaciones para admitir contratos inteligentes avanzados en cualquier cadena de bloques._
+**[Chainlink](https://chain.link/)** - _Las redes de oráculos descentralizados de Chainlink proporcionan entradas, salidas y cálculos a prueba de manipulaciones para respaldar contratos inteligentes avanzados en cualquier cadena de bloques._
 
-**[RedStone Oracles](https://redstone.finance/)**: _RedStone es un oráculo modular descentralizado que proporciona fuentes de datos optimizadas para el gas. Se especializa en ofrecer fuentes de precios para activos emergentes, como tokens de staking líquido (LST), tokens de restaking líquido (LRT) y derivados de staking de Bitcoin._
+**[RedStone Oracles](https://redstone.finance/)** - _RedStone es un oráculo modular descentralizado que proporciona fuentes de datos optimizadas para el gas. Se especializa en ofrecer fuentes de precios para activos emergentes, como los tokens de staking líquido (LST), los tokens de restaking líquido (LRT) y los derivados de staking de Bitcoin._
 
-**[Chronicle](https://chroniclelabs.org/)**: _Chronicle supera las limitaciones actuales de la transferencia de datos en cadena mediante el desarrollo de oráculos verdaderamente escalables, rentables, descentralizados y verificables._
+**[Chronicle](https://chroniclelabs.org/)** - _Chronicle supera las limitaciones actuales de la transferencia de datos en cadena mediante el desarrollo de oráculos verdaderamente escalables, rentables, descentralizados y verificables._
 
-**[Witnet](https://witnet.io/)**: _Witnet es un oráculo sin permisos, descentralizado y resistente a la censura que ayuda a los contratos inteligentes a reaccionar a eventos del mundo real con sólidas garantías criptoeconómicas._
+**[Witnet](https://witnet.io/)** - _Witnet es un oráculo sin permisos, descentralizado y resistente a la censura que ayuda a los contratos inteligentes a reaccionar a eventos del mundo real con sólidas garantías criptoeconómicas._
 
-**[UMA Oracle](https://uma.xyz)**: _El oráculo optimista de UMA permite que los contratos inteligentes reciban rápidamente cualquier tipo de datos para diferentes aplicaciones, incluidos seguros, derivados financieros y mercados de predicción._
+**[UMA Oracle](https://uma.xyz)** - _El oráculo optimista de UMA permite a los contratos inteligentes recibir rápidamente cualquier tipo de datos para diferentes aplicaciones, incluidos seguros, derivados financieros y mercados de predicción._
 
-**[Tellor](https://tellor.io/)**: _Tellor es un protocolo de oráculo transparente y sin permisos para que su contrato inteligente obtenga fácilmente cualquier dato cuando lo necesite._
+**[Tellor](https://tellor.io/)** - _Tellor es un protocolo de oráculo transparente y sin permisos para que su contrato inteligente obtenga fácilmente cualquier dato siempre que lo necesite._
 
-**[Band Protocol](https://bandprotocol.com/)**: _Band Protocol es una plataforma de oráculo de datos intercadena que agrega y conecta datos del mundo real y API a contratos inteligentes._
+**[Band Protocol](https://bandprotocol.com/)** - _Band Protocol es una plataforma de oráculos de datos intercadena que agrega y conecta datos del mundo real y API a contratos inteligentes._
 
-**[Pyth Network](https://pyth.network/)**: _La red Pyth es una red de oráculos financieros de primera parte diseñada para publicar datos continuos del mundo real en cadena en un entorno resistente a la manipulación, descentralizado y autosostenible._
+**[Pyth Network](https://pyth.network/)** - _La red Pyth es una red de oráculos financieros de primera mano diseñada para publicar datos continuos del mundo real en cadena en un entorno resistente a la manipulación, descentralizado y autosostenible._
 
-**[API3 DAO](https://api3.org/)**: _API3 DAO ofrece soluciones de oráculos de primera parte que brindan una mayor transparencia de origen, seguridad y escalabilidad en una solución descentralizada para contratos inteligentes._
+**[API3 DAO](https://api3.org/)** - _API3 DAO ofrece soluciones de oráculos de primera mano que brindan una mayor transparencia de origen, seguridad y escalabilidad en una solución descentralizada para contratos inteligentes._
 
-**[Supra](https://supra.com/)**: Un conjunto de herramientas integrado verticalmente de soluciones intercadena que interconectan todas las cadenas de bloques, públicas (L1 y L2) o privadas (empresas), proporcionando fuentes de precios de oráculos descentralizados que se pueden utilizar para casos de uso en cadena y fuera de la cadena. 
+**[Supra](https://supra.com/)** - Un conjunto de herramientas integrado verticalmente de soluciones intercadena que interconectan todas las cadenas de bloques, públicas (L1 y L2) o privadas (empresas), proporcionando fuentes de precios de oráculos descentralizados que se pueden utilizar para casos de uso en cadena y fuera de la cadena.
 
-**[Gas Network](https://gas.network/)**: Una plataforma de oráculo distribuida que proporciona datos de precios del gas en tiempo real a través de la cadena de bloques. Al llevar los datos de los principales proveedores de datos de precios del gas a la cadena, Gas Network está ayudando a impulsar la interoperabilidad. Gas Network admite datos para más de 35 cadenas, incluida la red principal de Ethereum y muchas L2 líderes.
+**[DIA](https://www.diadata.org/)** - Una red de oráculos intercadena que ofrece fuentes de datos verificables para más de 20 000 activos en todas las clases de activos principales. DIA obtiene datos comerciales sin procesar directamente de más de 100 mercados primarios y los calcula en cadena, lo que garantiza una transparencia y verificabilidad completas de los datos con configuraciones personalizadas para cualquier caso de uso.
 
-**[DIA](https://www.diadata.org/)**: Una red de oráculos intercadena que ofrece fuentes de datos verificables para más de 20 000 activos en todas las clases de activos principales. DIA obtiene datos comerciales sin procesar directamente de más de 100 mercados primarios y los calcula en cadena, lo que garantiza una transparencia y verificabilidad completas de los datos con configuraciones personalizadas para cualquier caso de uso.
-
-**[Stork](https://stork.network)**: Stork ofrece datos de precios con una latencia ultrabaja, lo que admite una amplia gama de casos de uso, incluidos mercados perpetuos, protocolos de préstamos y ecosistemas DeFi, con nuevos activos admitidos rápidamente en el momento de su inclusión.
+**[Stork](https://stork.network)** - Stork ofrece datos de precios con una latencia ultrabaja, lo que admite una amplia gama de casos de uso, incluidos los mercados de perpetuos, los protocolos de préstamos y los ecosistemas de finanzas descentralizadas (DeFi), con nuevos activos admitidos rápidamente al momento de su cotización.
 
 ## Lecturas adicionales {#further-reading}
 

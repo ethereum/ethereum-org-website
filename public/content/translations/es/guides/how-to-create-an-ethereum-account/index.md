@@ -1,7 +1,7 @@
 ---
 title: "Cómo crear una cuenta de Ethereum"
 metaTitle: "Cómo \"crear\" una cuenta de Ethereum"
-description: "Una guía paso a paso sobre la creación de una cuenta de Ethereum usando una billetera."
+description: "Una guía paso a paso para crear una cuenta de Ethereum: elige una billetera, haz una copia de seguridad de tu frase de recuperación de forma segura y obtén tu primera dirección de Ethereum."
 lang: es
 ---
 

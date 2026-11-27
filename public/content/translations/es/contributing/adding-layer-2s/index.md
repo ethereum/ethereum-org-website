@@ -1,6 +1,6 @@
 ---
-title: Añadir capas 2
-description: La política que utilizamos al añadir una capa 2 a ethereum.org
+title: "Añadir capas 2"
+description: "La política que utilizamos al añadir una capa 2 a ethereum.org"
 lang: es
 ---
 
@@ -8,7 +8,7 @@ Queremos asegurarnos de listar los mejores recursos posibles para que los usuari
 
 Cualquiera es libre de sugerir que se añada una capa 2 en ethereum.org. Si hay alguna capa 2 que hayamos pasado por alto, **[¡por favor, sugiérela!](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)**
 
-Actualmente listamos las l2 en las siguientes páginas:
+Actualmente listamos las L2 en las siguientes páginas:
 
 - [Rollups optimistas](/developers/docs/scaling/optimistic-rollups/)
 - [Rollups de conocimiento cero](/developers/docs/scaling/zk-rollups/)
@@ -20,14 +20,14 @@ La capa 2 es un paradigma relativamente nuevo y emocionante para Ethereum. Hemos
 
 ### Criterios de inclusión: los requisitos indispensables {#criteria-for-inclusion-the-must-haves}
 
-**Estar listado en L2BEAT**
+**Listado en ETHBEAT**
 
-- Para ser considerado, este proyecto debe estar listado en [L2BEAT](https://l2beat.com). L2BEAT proporciona una sólida evaluación de riesgos de los proyectos de capa 2 en la que nos apoyamos para evaluar los proyectos de l2. **Si el proyecto no aparece en L2BEAT, no lo listaremos como una l2 en ethereum.org.**
-- [Aprende cómo añadir tu proyecto de l2 a L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- Para ser considerado, este proyecto debe estar listado en [ETHBEAT](https://ethbeat.org). ETHBEAT proporciona una sólida evaluación de riesgos de los proyectos de capa 2 en la que nos apoyamos para evaluar los proyectos de L2. **Si el proyecto no aparece en ETHBEAT, no lo listaremos como una L2 en ethereum.org.**
+- [Aprende cómo añadir tu proyecto de L2 a ETHBEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Código abierto**
 
-- Tu código debe ser accesible y deberías aceptar solicitudes de extracción (PR) de la comunidad en general.
+- Tu código debe ser accesible y debes aceptar PR de la comunidad en general.
 
 **Categoría de capa 2**
 
@@ -40,7 +40,7 @@ _No consideramos como capa 2 a otras soluciones de escalabilidad que no utilicen
 
 **Ethereum para la disponibilidad de datos**
 
-- La disponibilidad de datos es un factor diferenciador importante entre otras soluciones de escalabilidad y la capa 2. Un proyecto **debe** utilizar la red principal de Ethereum para la disponibilidad de datos para ser considerado en la lista.
+- La disponibilidad de datos es un factor diferenciador importante entre otras soluciones de escalabilidad y la capa 2. Un proyecto **debe** utilizar la red principal de Ethereum para la disponibilidad de datos para ser considerado para su inclusión.
 
 **Puentes**
 
@@ -48,7 +48,7 @@ _No consideramos como capa 2 a otras soluciones de escalabilidad que no utilicen
 
 **Fecha de lanzamiento del proyecto**
 
-- Una capa 2 que haya estado "activa" en la Red principal durante más de 6 meses
+- Una capa 2 que haya estado "activa" en la Red principal durante más de 6 meses.
 
 - Los proyectos más nuevos que no han sido probados en la práctica por los usuarios tienen menos probabilidades de ser listados.
 
@@ -58,7 +58,7 @@ _No consideramos como capa 2 a otras soluciones de escalabilidad que no utilicen
 
 **Base de usuarios sostenida**
 
-- Consideraremos métricas como el historial del valor total bloqueado (TVL), las estadísticas de transacciones y si es utilizado por empresas o proyectos conocidos
+- Consideraremos métricas como el historial del valor total bloqueado (TVL), las estadísticas de transacciones y si es utilizado por empresas o proyectos conocidos.
 
 **Equipo de desarrollo activo**
 
@@ -84,7 +84,7 @@ _No consideramos como capa 2 a otras soluciones de escalabilidad que no utilicen
 
 **Soporte nativo de billeteras**
 
-- ¿Alguna billetera soporta la l2 de forma nativa?
+- ¿Alguna billetera soporta la L2 de forma nativa?
 
 ## Añade tu capa 2 {#add-exchange}
 

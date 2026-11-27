@@ -1,18 +1,18 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/dapps/index.md",
-  "generatedAt": "2026-07-22T22:45:47.180Z",
-  "rootHash": "43307bebc6f7",
+  "generatedAt": "2026-11-27T10:13:51.012Z",
+  "rootHash": "dd69f3964a25",
   "tree": {
-    "contentHash": "44fd6c5e8506",
-    "anchorHash": "b3d1f3d39099",
+    "contentHash": "d9636645f2fc",
+    "anchorHash": "a04a8112e718",
     "children": {
       "frontmatter:title": {
         "contentHash": "6d37e71931f8",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "e3b0c44298fc",
+        "contentHash": "36daa70fba20",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -448,15 +448,15 @@
         ]
       },
       "tutorials": {
-        "contentHash": "558212865feb",
-        "anchorHash": "421f6dbfad76",
+        "contentHash": "2fe4bdfdb6e4",
+        "anchorHash": "8484b2b205fa",
         "labelHash": "8466037aee2a",
         "children": {
           "_label": {
             "contentHash": "8466037aee2a",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:5": {
+          "prose:4": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
@@ -464,7 +464,7 @@
             "contentHash": "87713332e69a",
             "anchorHash": "d1480f1cf36e"
           },
-          "prose:6": {
+          "prose:5": {
             "contentHash": "0c28d7d8fd24",
             "anchorHash": "e3b0c44298fc"
           },
@@ -472,48 +472,38 @@
             "contentHash": "cbe0c894b78e",
             "anchorHash": "bbcc8b0aa4a6"
           },
-          "prose:7": {
+          "prose:6": {
             "contentHash": "e50adc30f9ae",
             "anchorHash": "e3b0c44298fc"
           },
           "link:2": {
-            "contentHash": "72d0cd97d6d3",
-            "anchorHash": "2bb31db58ede"
-          },
-          "prose:8": {
-            "contentHash": "4a2dd3b13e79",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:3": {
             "contentHash": "56a48a830f91",
             "anchorHash": "b2aaac73b1f3"
           },
-          "prose:9": {
+          "prose:7": {
             "contentHash": "66559f845a59",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:4": {
+          "link:3": {
             "contentHash": "aaa591cec2e8",
             "anchorHash": "8d031ee158a4"
           },
-          "prose:10": {
+          "prose:8": {
             "contentHash": "7611d73cf735",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:5",
+          "prose:4",
           "link:0",
-          "prose:6",
+          "prose:5",
           "link:1",
-          "prose:7",
+          "prose:6",
           "link:2",
-          "prose:8",
+          "prose:7",
           "link:3",
-          "prose:9",
-          "link:4",
-          "prose:10"
+          "prose:8"
         ]
       }
     },
@@ -537,5 +527,5 @@
       "tutorials"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

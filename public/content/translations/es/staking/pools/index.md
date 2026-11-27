@@ -1,6 +1,6 @@
 ---
-title: Staking líquido y conjunto
-description: Una descripción general del staking líquido y conjunto en Ethereum
+title: "Staking líquido y conjunto"
+description: "¿Qué es el staking líquido? Descubre cómo los pools de staking te permiten ganar recompensas de ETH con cualquier cantidad de ETH, a menudo recibiendo un token líquido que puedes seguir usando."
 lang: es
 template: staking
 image: /images/staking/leslie-pool.png

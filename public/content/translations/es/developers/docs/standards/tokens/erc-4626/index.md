@@ -51,7 +51,7 @@ Esta función devuelve la dirección del token subyacente utilizado para la bóv
 function totalAssets() public view returns (uint256)
 ```
 
-Esta función devuelve la cantidad total de activos subyacentes que posee la bóveda.
+Esta función devuelve la cantidad total de activos subyacentes gestionados por la bóveda, incluidos los que haya puesto a trabajar en otra parte y después de cualquier comisión.
 
 #### convertToShares {#convertoshares}
 
@@ -139,7 +139,7 @@ Esta función permite a los usuarios simular los efectos de su retiro en el bloq
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-Esta función quema `shares` de `owner` y envía exactamente `assets` token de la bóveda a `receiver`.
+Esta función quema `shares` de `owner` y envía exactamente `assets` tokens de la bóveda a `receiver`.
 
 #### maxRedeem {#maxredeem}
 
@@ -183,7 +183,7 @@ Devuelve la cantidad total de participaciones de la bóveda que tiene actualment
 
 ### Mapa de la interfaz {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### Eventos {#events}
 

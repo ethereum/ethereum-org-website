@@ -38,7 +38,7 @@ _¿Conoces algún recurso de la comunidad que te haya ayudado? ¡Edita esta pág
 - [Los peligros de la integración de tokens (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _OpenZeppelin_
 ## Tutoriales relacionados {#related-tutorials}
 
-- [Lista de verificación de integración de tokens](/developers/tutorials/token-integration-checklist/) _– Una lista de verificación de aspectos a tener en cuenta al interactuar con tokens._
-- [Comprender el contrato inteligente del token ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– Una introducción a la implementación de tu primer contrato inteligente en una red de prueba de Ethereum._
-- [Transferencias y aprobación de tokens ERC20 desde un contrato inteligente en Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Cómo usar un contrato inteligente para interactuar con un token usando el lenguaje Solidity._
-- [Implementación de un mercado ERC721 [una guía práctica]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Cómo poner a la venta artículos tokenizados en un tablón de anuncios clasificados descentralizado._
+- [Lista de verificación de integración de tokens](/developers/tutorials/token-integration-checklist/) _– Una lista de verificación de aspectos a considerar al interactuar con tokens._
+- [Guía paso a paso del contrato ERC-20](/developers/tutorials/erc20-annotated-code/) _– Una guía paso a paso anotada línea por línea de la implementación del contrato ERC-20 de OpenZeppelin._
+- [Transferencias y aprobación de tokens ERC-20 desde un contrato inteligente de Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Cómo usar un contrato inteligente para interactuar con un token usando el lenguaje Solidity._
+- [Implementación de un mercado ERC-721 [una guía práctica]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Cómo poner a la venta artículos tokenizados en un tablón de anuncios clasificados descentralizado._

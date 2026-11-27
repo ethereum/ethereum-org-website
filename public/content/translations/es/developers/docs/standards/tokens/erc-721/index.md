@@ -249,4 +249,3 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [Cómo escribir y desplegar un NFT (Parte 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– Guía paso a paso para escribir y desplegar su primer contrato inteligente ERC-721._
 - [Cómo acuñar un NFT (Parte 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Cómo acuñar un NFT ERC-721 utilizando su contrato inteligente desplegado y Web3._
 - [Cómo ver su NFT en su billetera (Parte 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Cómo mostrar su NFT acuñado en MetaMask después del despliegue._
-- [Tutorial de acuñador de NFT](/developers/tutorials/nft-minter/) _– Construya una dapp de acuñación de NFT full-stack con un frontend en React, MetaMask y Alchemy._
