@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { Check, Trophy } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
@@ -427,26 +428,44 @@ const LessonPath = ({
   )
 }
 
-const PathPopover = ({
+/** Where the site nav and the sticky bar end once the bar is stuck */
+const stickyBottom = () => {
+  const bar = document.querySelector<HTMLElement>("[data-sticky-bar]")
+  return bar ? parseFloat(getComputedStyle(bar).top) + bar.offsetHeight : 0
+}
+
+const PathPopover = (props: {
+  theme: CourseTheme
+  children: React.ReactNode
+}) => (
+  <PopoverPrimitive.Portal>
+    <PathPopoverContent {...props} />
+  </PopoverPrimitive.Portal>
+)
+
+/** Only mounts while open, on the client, so it measures the page then */
+const PathPopoverContent = ({
   theme,
   children,
 }: {
   theme: CourseTheme
   children: React.ReactNode
-}) => (
-  <PopoverPrimitive.Portal>
+}) => {
+  const [top] = useState(() => stickyBottom() + 16)
+  return (
     <PopoverPrimitive.Content
       side="bottom"
       sideOffset={12}
-      collisionPadding={16}
+      collisionPadding={{ top, right: 16, bottom: 16, left: 16 }}
+      hideWhenDetached
       style={courseThemeStyle(theme)}
       className="z-popover w-72 rounded-2xl border-2 border-b-6 border-(--course-strong) bg-(--course) p-5 text-white shadow-xl outline-hidden data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95"
     >
       {children}
       <PopoverPrimitive.Arrow className="fill-(--course-strong)" />
     </PopoverPrimitive.Content>
-  </PopoverPrimitive.Portal>
-)
+  )
+}
 
 const PopoverAction = ({
   href,

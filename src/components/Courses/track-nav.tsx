@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useId, useRef, useState } from "react"
-import { Check, ChevronDown, LayoutList } from "lucide-react"
+import { Check, ChevronDown, Construction, LayoutList } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
 import type { Lang } from "@/lib/types"
@@ -32,10 +32,17 @@ const chip = cn(statChip, "py-1 text-base")
 const FADE = "2rem"
 
 /** Share of a track mastered, as a ring that turns into a check when full */
-const TrackRing = ({ share }: { share: number }) => {
+const TrackRing = ({
+  share,
+  keepEmpty,
+}: {
+  share: number
+  /** Show the bare ring before any progress, instead of nothing */
+  keepEmpty?: boolean
+}) => {
   const r = 9
   const length = 2 * Math.PI * r
-  if (share <= 0) return null
+  if (share <= 0 && !keepEmpty) return null
   if (share >= 1)
     return (
       <span className="grid size-6 shrink-0 place-items-center rounded-full bg-success text-white">
@@ -193,9 +200,7 @@ const TrackNav = ({
             <a
               href={`#${id}`}
               aria-current={id === active ? "location" : undefined}
-              aria-labelledby={
-                count ? `${uid}-${id}-title ${uid}-${id}-count` : undefined
-              }
+              aria-labelledby={`${uid}-${id}-title ${uid}-${id}-count`}
               onClick={(event) => {
                 event.preventDefault()
                 scrollToTrack(id)
@@ -210,11 +215,9 @@ const TrackNav = ({
             >
               <TrackRing share={share} />
               <span id={`${uid}-${id}-title`}>{title}</span>
-              {count && (
-                <span id={`${uid}-${id}-count`} className="sr-only">
-                  {count}
-                </span>
-              )}
+              <span id={`${uid}-${id}-count`} className="sr-only">
+                {count ?? t("page-courses-coming-soon")}
+              </span>
             </a>
           </li>
         ))}
@@ -238,33 +241,37 @@ const TrackNav = ({
           </span>
           <ChevronDown aria-hidden className="size-4 shrink-0" />
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="min-w-64">
+        <DropdownMenuContent
+          align="end"
+          collisionPadding={16}
+          className="min-w-64"
+        >
           {tracks.map(({ id, title, share, count }) => (
             <DropdownMenuItem
               key={id}
               onSelect={() => scrollToTrack(id)}
-              aria-labelledby={
-                count
-                  ? `${uid}-${id}-menu-title ${uid}-${id}-menu-count`
-                  : undefined
-              }
+              aria-labelledby={`${uid}-${id}-menu-title ${uid}-${id}-menu-count`}
               className={cn("gap-3", id === active && "text-primary")}
             >
-              {/* Holds the ring's place so the names line up */}
-              <span className="grid size-6 shrink-0 place-items-center">
-                <TrackRing share={share} />
-              </span>
+              {count ? (
+                <TrackRing share={share} keepEmpty />
+              ) : (
+                <Construction
+                  aria-hidden
+                  className="size-6 shrink-0 text-primary opacity-20"
+                />
+              )}
               <span id={`${uid}-${id}-menu-title`} className="flex-1">
                 {title}
               </span>
-              {count && (
-                <span
-                  id={`${uid}-${id}-menu-count`}
-                  className="text-sm text-body-medium tabular-nums"
-                >
-                  {count}
-                </span>
-              )}
+              <span
+                id={`${uid}-${id}-menu-count`}
+                className={
+                  count ? "text-sm text-body-medium tabular-nums" : "sr-only"
+                }
+              >
+                {count ?? t("page-courses-coming-soon")}
+              </span>
             </DropdownMenuItem>
           ))}
         </DropdownMenuContent>

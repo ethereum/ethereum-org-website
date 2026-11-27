@@ -44,8 +44,9 @@ const StickyBar = ({
     <div
       ref={ref}
       data-stuck={stuck || undefined}
+      data-sticky-bar
       className={cn(
-        "sticky top-19 z-docked flex items-center border-b border-transparent bg-background py-2 transition-colors duration-200 data-stuck:border-border",
+        "sticky top-19 z-dropdown flex items-center border-b border-transparent bg-background py-2 transition-colors duration-200 data-stuck:border-border",
         className
       )}
     >
