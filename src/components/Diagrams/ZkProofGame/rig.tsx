@@ -1,6 +1,6 @@
 "use client"
 
-import { memo, type ReactNode, useMemo } from "react"
+import { memo, type ReactNode, useId, useMemo } from "react"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -75,8 +75,6 @@ const pct = (n: number, of: number) => `${r1((n / of) * 100)}%`
 
 const CAVE_FILL = `M${CX + HALF},${JOIN_Y} A${R_OUT},${R_OUT} 0 1 0 ${CX - HALF},${JOIN_Y} V${MOUTH_Y} H${CX + HALF} Z M${CX + R_IN},${CY} A${R_IN},${R_IN} 0 1 0 ${CX - R_IN},${CY} A${R_IN},${R_IN} 0 1 0 ${CX + R_IN},${CY} Z`
 const CAVE_OUTLINE = `M${CX + HALF},${MOUTH_Y} V${JOIN_Y} A${R_OUT},${R_OUT} 0 1 0 ${CX - HALF},${JOIN_Y} V${MOUTH_Y}`
-// Halving marks: 1/2, 1/4, 1/8, 1/16 of the meter.
-const METER_TICKS = [2, 4, 8, 16].map((d) => r1(METER.x + METER.w / d))
 
 const POP =
   "origin-center animate-diagram-pop [transform-box:fill-box] motion-reduce:animate-none"
@@ -128,6 +126,7 @@ function ZkProofGameRig({
   className,
 }: ZkProofGameRigProps) {
   const { state, dimmed } = usePartState(view.litPart)
+  const meterClipId = useId()
   const { round, outcome } = view
   const caught = outcome === "caught"
 
@@ -220,7 +219,6 @@ function ZkProofGameRig({
           cx={x}
           cy={PIP_Y}
           r={MARK_R}
-          strokeDasharray={done ? undefined : "2 2"}
           style={{
             fill:
               pipState === "pass"
@@ -369,15 +367,15 @@ function ZkProofGameRig({
         </g>
 
         <g {...part("meter")}>
-          <rect
-            x={METER.x}
-            y={METER.y}
-            width={METER.w}
-            height={METER.h}
-            rx={3}
-            style={{ fill: anatomyFill("neutral", "top") }}
-            className={anatomyStroke("gas", meterState)}
-          />
+          <clipPath id={meterClipId}>
+            <rect
+              x={METER.x}
+              y={METER.y}
+              width={METER.w}
+              height={METER.h}
+              rx={3}
+            />
+          </clipPath>
           <rect
             x={METER.x}
             y={METER.y}
@@ -385,19 +383,31 @@ function ZkProofGameRig({
             height={METER.h}
             rx={3}
             stroke="none"
-            style={{
-              fill: anatomyFill("gas", "end", "lit"),
-              transform: `scaleX(${view.chance})`,
-            }}
-            className="origin-left transition-transform duration-700 ease-out [transform-box:fill-box] motion-reduce:transition-none"
+            style={{ fill: anatomyFill("neutral", "top") }}
           />
-          {METER_TICKS.map((x) => (
-            <path
-              key={x}
-              d={`M${x},${METER.y + 3} V${METER.y + METER.h - 3}`}
-              className="stroke-diagram-line"
+          <g clipPath={`url(#${meterClipId})`}>
+            <rect
+              x={METER.x}
+              y={METER.y}
+              width={METER.w}
+              height={METER.h}
+              stroke="none"
+              style={{
+                fill: anatomyFill("gas", "end", "lit"),
+                transform: `scaleX(${view.chance})`,
+              }}
+              className="origin-left transition-transform duration-700 ease-out [transform-box:fill-box] motion-reduce:transition-none"
             />
-          ))}
+          </g>
+          <rect
+            x={METER.x}
+            y={METER.y}
+            width={METER.w}
+            height={METER.h}
+            rx={3}
+            fill="none"
+            className={anatomyStroke("gas", meterState)}
+          />
         </g>
 
         <g {...part("rounds")}>{view.pips.map(pip)}</g>
@@ -475,6 +485,8 @@ function ZkProofGameRig({
         labels={labels}
         definitions={definitions}
         litId={view.litPart}
+        leaders={false}
+        tooltips
       />
     </div>
   )

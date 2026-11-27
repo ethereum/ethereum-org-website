@@ -27,11 +27,17 @@ type Story = StoryObj<typeof meta>
 
 export const Idle: Story = {}
 
-export const Round1Door: Story = { args: { initialStep: 1 } }
+export const Round1Door: Story = {
+  args: { initialPreset: "knows", initialStep: 1 },
+}
 
-export const Round2SameSide: Story = { args: { initialStep: 2 } }
+export const Round2SameSide: Story = {
+  args: { initialPreset: "knows", initialStep: 2 },
+}
 
-export const Round5Convinced: Story = { args: { initialStep: 5 } }
+export const Round5Convinced: Story = {
+  args: { initialPreset: "knows", initialStep: 5 },
+}
 
 export const FakerLucky: Story = {
   args: { initialPreset: "faking", initialStep: 2 },

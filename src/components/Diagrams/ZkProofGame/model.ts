@@ -22,7 +22,7 @@ export type ZkProofGamePart = (typeof ZK_PROOF_GAME_PARTS)[number]
 export type Side = "a" | "b"
 export const SIDES: Side[] = ["a", "b"]
 
-export const PRESET_IDS = ["knows", "faking"] as const
+export const PRESET_IDS = ["faking", "knows"] as const
 export type ZkProofGamePresetId = (typeof PRESET_IDS)[number]
 
 interface Round {

@@ -48,7 +48,7 @@ interface ZkProofGamePlayerProps {
  * the prover must come out of it; a meter shows a faker's shrinking odds.
  */
 export function ZkProofGamePlayer({
-  initialPreset = "knows",
+  initialPreset = "faking",
   initialStep = IDLE_STEP,
   fig,
   className,
@@ -67,12 +67,10 @@ export function ZkProofGamePlayer({
 
   const [presetId, setPresetId] = useState<ZkProofGamePresetId>(initialPreset)
   const last = lastStep(presetId)
-  const { step, isRunning, atEnd, run, goTo, reset } = useStepPlayer({
+  const { step, atEnd, advance, goTo, reset } = useStepPlayer({
     idle: IDLE_STEP,
     last,
     initial: initialStep,
-    dwellMs: 2600,
-    dwellReducedMs: 3200,
     paused: !inView.visible,
   })
   const view = useMemo(
@@ -121,6 +119,7 @@ export function ZkProofGamePlayer({
   return (
     <InteractiveDiagram
       className={className}
+      layout="stacked"
       caption={t("zk-proof-game-caption", odds)}
       description={t("zk-proof-game-description", {
         ...odds,
@@ -129,13 +128,7 @@ export function ZkProofGamePlayer({
       })}
       fig={fig}
       title={t("zk-proof-game-title")}
-      status={t(`zk-proof-game-status-${view.status}`)}
       parts={parts}
-      legend={[
-        { hue: "entity", label: t("zk-proof-game-legend-people") },
-        { hue: "gas", label: t("zk-proof-game-legend-odds") },
-        { hue: "neutral", label: t("zk-proof-game-legend-cave") },
-      ]}
       inViewRef={inView.ref}
       paused={!inView.visible}
       illustration={
@@ -158,6 +151,7 @@ export function ZkProofGamePlayer({
       }
       presets={
         <DiagramPresets
+          inline
           label={t("zk-proof-game-presets-label")}
           options={PRESET_IDS.map((id) => ({
             id,
@@ -173,11 +167,14 @@ export function ZkProofGamePlayer({
       }
       transport={
         <DiagramTransport
+          inline
           primary={{
-            label: t("zk-proof-game-run"),
+            label:
+              view.step === IDLE_STEP || atEnd
+                ? t("zk-proof-game-run")
+                : t("diagram-next-step"),
             icon: <DoorOpen />,
-            onClick: run,
-            disabled: isRunning,
+            onClick: advance,
           }}
           current={view.step}
           total={last}
