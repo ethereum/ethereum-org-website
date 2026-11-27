@@ -9,6 +9,8 @@ const meta = {
   title: "Components / Features / Courses / LessonPlayer",
   component: LessonPlayer,
   tags: ["autodocs"],
+  // Fixed seed: the same option order on every load
+  args: { shuffleSeed: "storybook" },
   parameters: {
     layout: "padded",
     // PoC: still changing too fast for visual snapshots to be worth the quota
