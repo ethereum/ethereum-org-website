@@ -16,8 +16,8 @@ import WidgetShell from "./widget-shell"
  * The payment sits in the last block before checkpoint 1. Blocks every 12 s,
  * a checkpoint every 32 slots (6.4 min). Each checkpoint collects votes for
  * one epoch; once checkpoints 1 and 2 are both backed by two-thirds of
- * staked ETH, checkpoint 1 and everything before it is final: 64 slots,
- * 12.8 minutes. `votes` is the share of validators that have voted on each
+ * staked ETH, checkpoint 1 and everything before it is final: 65 slots,
+ * about 13 minutes. `votes` is the share of validators that have voted on each
  * checkpoint so far (they vote once per epoch, spread evenly).
  */
 const STOPS = [
@@ -25,7 +25,7 @@ const STOPS = [
   { id: "block", blocks: 1, votes: [1 / 32, 0] },
   { id: "minute", blocks: 5, votes: [5 / 32, 0] },
   { id: "checkpoint", blocks: 33, votes: [1, 1 / 32] },
-  { id: "two", blocks: 64, votes: [1, 1] },
+  { id: "two", blocks: 65, votes: [1, 1] },
   { id: "hour", blocks: 300, votes: [1, 1] },
 ] as const
 const TARGET = 4

@@ -41,9 +41,15 @@ const nextFee = (fee: number, fill: number) =>
 const BaseFeeWidget = ({ onComplete }: WidgetProps) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
-  const gwei = numberFormat(locale, { maximumFractionDigits: 2 })
+  const gwei = numberFormat(locale, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })
   // Column labels round harder so five fit side by side at 320px
-  const short = numberFormat(locale, { maximumFractionDigits: 1 })
+  const short = numberFormat(locale, {
+    minimumFractionDigits: 1,
+    maximumFractionDigits: 1,
+  })
   const [blocks, setBlocks] = useState<Block[]>([])
   const [fee, setFee] = useState(START_FEE)
   const [last, setLast] = useState<FillId | null>(null)
