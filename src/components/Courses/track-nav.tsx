@@ -1,7 +1,13 @@
 "use client"
 
 import { useEffect, useId, useRef, useState } from "react"
-import { Check, ChevronDown, Construction, LayoutList } from "lucide-react"
+import {
+  Check,
+  ChevronDown,
+  Construction,
+  LayoutList,
+  Trophy,
+} from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
 import type { Lang } from "@/lib/types"
@@ -181,6 +187,13 @@ const TrackNav = ({
       count: courses.length
         ? `${format(done)}/${format(courses.length)}`
         : null,
+      countLabel: courses.length
+        ? t("page-courses-track-mastered", {
+            done: format(done),
+            total: format(courses.length),
+            count: courses.length,
+          })
+        : t("page-courses-coming-soon"),
     }
   })
   const current = tracks.find(({ id }) => id === active) ?? tracks[0]
@@ -195,7 +208,7 @@ const TrackNav = ({
         className="relative m-0 -my-1 hidden list-none items-center gap-2 overflow-x-auto py-1 [scrollbar-width:none] md:flex"
         style={{ maskImage: mask }}
       >
-        {tracks.map(({ id, title, share, count }) => (
+        {tracks.map(({ id, title, share, countLabel }) => (
           <li key={id} data-track={id} className="m-0 shrink-0">
             <a
               href={`#${id}`}
@@ -216,7 +229,7 @@ const TrackNav = ({
               <TrackRing share={share} />
               <span id={`${uid}-${id}-title`}>{title}</span>
               <span id={`${uid}-${id}-count`} className="sr-only">
-                {count ?? t("page-courses-coming-soon")}
+                {countLabel}
               </span>
             </a>
           </li>
@@ -246,7 +259,7 @@ const TrackNav = ({
           collisionPadding={16}
           className="min-w-64"
         >
-          {tracks.map(({ id, title, share, count }) => (
+          {tracks.map(({ id, title, share, count, countLabel }) => (
             <DropdownMenuItem
               key={id}
               onSelect={() => scrollToTrack(id)}
@@ -266,11 +279,15 @@ const TrackNav = ({
               </span>
               <span
                 id={`${uid}-${id}-menu-count`}
-                className={
-                  count ? "text-sm text-body-medium tabular-nums" : "sr-only"
-                }
+                className="flex items-center gap-1 text-sm text-body-medium tabular-nums"
               >
-                {count ?? t("page-courses-coming-soon")}
+                {count && (
+                  <>
+                    <Trophy aria-hidden className="size-4" />
+                    <span aria-hidden>{count}</span>
+                  </>
+                )}
+                <span className="sr-only">{countLabel}</span>
               </span>
             </DropdownMenuItem>
           ))}
