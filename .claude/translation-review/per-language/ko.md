@@ -1,5 +1,10 @@
 # Korean (ko) Translation Review Findings
 
+## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 8.8/10
+Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
+
+Fixed: `레이어 1 (l1)` etc. uppercased in 19 values; `L2에서 트랜잭 실행됨` to `트랜잭션`; `일(day) 셀` to `하루 셀`. Open: `{x}을(를)` particle pairs throughout; `채권` for bond; `증명` for attest.
+
 ## PR #19946 (intl/pending-dev) -- 2026-11-26 -- Score 9.2/10
 Scope: new `component-account.json` (42 keys) and 19 new `page-start.json` keys.
 

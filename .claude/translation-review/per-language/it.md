@@ -1,5 +1,10 @@
 # it Translation Review Findings
 
+## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 9.1/10
+Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
+
+Fixed: 19 values `(l1)`/`(l2)` uppercased. Open: `rollup a conoscenza zero (ZK-rollup)` expands an acronym the source leaves bare.
+
 ## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.6/10
 Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
 
