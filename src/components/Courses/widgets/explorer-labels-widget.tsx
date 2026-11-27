@@ -33,14 +33,17 @@ const TX = {
   to: "0x2c7a9e4b1d8f36a05c3e7b9d1f4a6c8e0b2d5f73",
 }
 
-const Hex = ({ children }: { children: string }) => (
-  <span dir="ltr" className="font-mono break-all">
+const Hex = ({ id, children }: { id: string; children: string }) => (
+  <span id={id} dir="ltr" className="font-mono break-all">
     {children}
   </span>
 )
 
-const Tag = ({ children }: { children: ReactNode }) => (
-  <span className="rounded-md bg-background-highlight px-2 text-sm font-bold whitespace-nowrap">
+const Tag = ({ id, children }: { id: string; children: ReactNode }) => (
+  <span
+    id={id}
+    className="rounded-md bg-background-highlight px-2 text-sm font-bold whitespace-nowrap"
+  >
     {children}
   </span>
 )
@@ -56,7 +59,9 @@ const rowClasses = cn(
 const ExplorerLabelsWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
-  const titleId = useId()
+  const uid = useId()
+  const titleId = `${uid}-title`
+  const partId = (field: Field, part: string) => `${uid}-${field}-${part}`
   const [picked, setPicked] = useState<Field | "">("")
 
   const resultFor = (id: Field): PickResult | undefined => {
@@ -78,34 +83,74 @@ const ExplorerLabelsWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
     })
   }
 
-  const values: Record<Field, ReactNode> = {
-    hash: <Hex>{TX.hash}</Hex>,
-    status: (
-      <span className="flex flex-wrap items-center gap-2">
-        <span className="flex items-center gap-1 rounded-md bg-error-light px-2 font-bold text-error dark:bg-error-dark dark:text-red-400">
-          <CircleX className="size-4 shrink-0" aria-hidden />
-          {t("page-courses-widget-explorer-failed")}
+  const values: Record<Field, { node: ReactNode; parts: string[] }> = {
+    hash: {
+      node: <Hex id={partId("hash", "value")}>{TX.hash}</Hex>,
+      parts: ["value"],
+    },
+    status: {
+      node: (
+        <span className="flex flex-wrap items-center gap-2">
+          <span
+            id={partId("status", "value")}
+            className="flex items-center gap-1 rounded-md bg-error-light px-2 font-bold text-error dark:bg-error-dark dark:text-red-400"
+          >
+            <CircleX className="size-4 shrink-0" aria-hidden />
+            {t("page-courses-widget-explorer-failed")}
+          </span>
+          <span id={partId("status", "reason")} className="text-body-medium">
+            {t("page-courses-widget-explorer-reason")}
+          </span>
         </span>
-        <span className="text-body-medium">
-          {t("page-courses-widget-explorer-reason")}
+      ),
+      parts: ["value", "reason"],
+    },
+    block: {
+      node: (
+        <span id={partId("block", "value")} className="tabular-nums">
+          {int.format(TX.block)}
         </span>
-      </span>
-    ),
-    block: <span className="tabular-nums">{int.format(TX.block)}</span>,
-    from: (
-      <span className="flex flex-wrap items-center gap-x-2">
-        <Hex>{TX.from}</Hex>
-        <Tag>{t("page-courses-widget-explorer-you")}</Tag>
-      </span>
-    ),
-    to: (
-      <span className="flex flex-wrap items-center gap-x-2">
-        <Hex>{TX.to}</Hex>
-        <Tag>{t("page-courses-widget-explorer-app")}</Tag>
-      </span>
-    ),
-    value: t("page-courses-widget-explorer-value"),
-    fee: t("page-courses-widget-explorer-fee"),
+      ),
+      parts: ["value"],
+    },
+    from: {
+      node: (
+        <span className="flex flex-wrap items-center gap-x-2">
+          <Hex id={partId("from", "value")}>{TX.from}</Hex>
+          <Tag id={partId("from", "tag")}>
+            {t("page-courses-widget-explorer-you")}
+          </Tag>
+        </span>
+      ),
+      parts: ["value", "tag"],
+    },
+    to: {
+      node: (
+        <span className="flex flex-wrap items-center gap-x-2">
+          <Hex id={partId("to", "value")}>{TX.to}</Hex>
+          <Tag id={partId("to", "tag")}>
+            {t("page-courses-widget-explorer-app")}
+          </Tag>
+        </span>
+      ),
+      parts: ["value", "tag"],
+    },
+    value: {
+      node: (
+        <span id={partId("value", "value")}>
+          {t("page-courses-widget-explorer-value")}
+        </span>
+      ),
+      parts: ["value"],
+    },
+    fee: {
+      node: (
+        <span id={partId("fee", "value")}>
+          {t("page-courses-widget-explorer-fee")}
+        </span>
+      ),
+      parts: ["value"],
+    },
   }
 
   return (
@@ -133,8 +178,15 @@ const ExplorerLabelsWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
             value={id}
             className={rowClasses}
             data-result={resultFor(id)}
+            aria-labelledby={[
+              partId(id, "label"),
+              ...values[id].parts.map((part) => partId(id, part)),
+            ].join(" ")}
           >
-            <span className="flex items-center gap-2 text-sm font-bold text-body-medium">
+            <span
+              id={partId(id, "label")}
+              className="flex items-center gap-2 text-sm font-bold text-body-medium"
+            >
               {t(`page-courses-widget-explorer-field-${id}`)}
               {locked && picked === id && (
                 <Check
@@ -143,7 +195,7 @@ const ExplorerLabelsWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
                 />
               )}
             </span>
-            <span className="min-w-0 text-md text-body">{values[id]}</span>
+            <span className="min-w-0 text-md text-body">{values[id].node}</span>
           </RadioGroup.Item>
         ))}
       </RadioGroup.Root>

@@ -1,6 +1,6 @@
 "use client"
 
-import { type ReactNode, useId, useState } from "react"
+import { type ReactElement, type ReactNode, useId, useState } from "react"
 import {
   AtSign,
   Coins,
@@ -49,10 +49,12 @@ const PickRows = ({
   rows: readonly string[]
   answer: string
   header: ReactNode
-  renderRow: (id: string) => ReactNode
+  /** The row's text parts in reading order; together they name the option */
+  renderRow: (id: string) => ReactElement[]
 }) => {
   const t = useTranslations("page-courses")
-  const listLabelId = useId()
+  const uid = useId()
+  const listLabelId = `${uid}-list`
   const [picked, setPicked] = useState("")
 
   const resultFor = (id: string): PickResult | undefined => {
@@ -87,32 +89,41 @@ const PickRows = ({
           disabled={locked}
           onValueChange={pick}
         >
-          {rows.map((id, idx) => (
-            <RadioGroup.Item
-              key={id}
-              value={id}
-              className={cn(
-                chunkyTile,
-                "group/option flex w-full cursor-pointer items-center gap-3 p-3 text-start focus-visible:outline-4 focus-visible:outline-(--course-soft)",
-                pickedTile,
-                "disabled:cursor-default disabled:active:translate-y-0 disabled:active:border-b-4"
-              )}
-              data-result={resultFor(id)}
-            >
-              <Center
-                aria-hidden
+          {rows.map((id, idx) => {
+            const parts = renderRow(id)
+            const partId = (i: number) => `${uid}-${id}-${i}`
+            return (
+              <RadioGroup.Item
+                key={id}
+                value={id}
+                aria-labelledby={parts.map((_, i) => partId(i)).join(" ")}
                 className={cn(
-                  "size-8 shrink-0 rounded-full",
-                  pickedMarker(resultFor(id))
+                  chunkyTile,
+                  "group/option flex w-full cursor-pointer items-center gap-3 p-3 text-start focus-visible:outline-4 focus-visible:outline-(--course-soft)",
+                  pickedTile,
+                  "disabled:cursor-default disabled:active:translate-y-0 disabled:active:border-b-4"
                 )}
+                data-result={resultFor(id)}
               >
-                {String.fromCharCode(65 + idx)}
-              </Center>
-              <span className="flex min-w-0 flex-1 flex-col gap-1">
-                {renderRow(id)}
-              </span>
-            </RadioGroup.Item>
-          ))}
+                <Center
+                  aria-hidden
+                  className={cn(
+                    "size-8 shrink-0 rounded-full",
+                    pickedMarker(resultFor(id))
+                  )}
+                >
+                  {String.fromCharCode(65 + idx)}
+                </Center>
+                <span className="flex min-w-0 flex-1 flex-col gap-1">
+                  {parts.map((part, i) => (
+                    <span key={part.key} id={partId(i)}>
+                      {part}
+                    </span>
+                  ))}
+                </span>
+              </RadioGroup.Item>
+            )
+          })}
         </RadioGroup.Root>
       </div>
       {locked && (
@@ -181,22 +192,20 @@ export const TokenCheckWidget = (props: WidgetProps) => {
           <Hex>{TOKEN_ADDRESS}</Hex>
         </Reference>
       }
-      renderRow={(id) => (
-        <>
-          <span className="flex items-center gap-2 font-bold">
-            <Coins className={iconClass} aria-hidden />
-            {t(
-              id === "official"
-                ? "page-courses-widget-token-check-name-official"
-                : "page-courses-widget-token-check-name"
-            )}
-          </span>
-          <span className="text-sm text-body-medium">
-            {t("page-courses-widget-token-check-contract")}
-          </span>
-          <Hex>{TOKENS[id]}</Hex>
-        </>
-      )}
+      renderRow={(id) => [
+        <span key="name" className="flex items-center gap-2 font-bold">
+          <Coins className={iconClass} aria-hidden />
+          {t(
+            id === "official"
+              ? "page-courses-widget-token-check-name-official"
+              : "page-courses-widget-token-check-name"
+          )}
+        </span>,
+        <span key="contract" className="text-sm text-body-medium">
+          {t("page-courses-widget-token-check-contract")}
+        </span>,
+        <Hex key="address">{TOKENS[id]}</Hex>,
+      ]}
     />
   )
 }
@@ -225,17 +234,18 @@ export const TokenLureWidget = (props: WidgetProps) => {
       }
       renderRow={(id) => {
         const Icon = LURE_ICONS[id as keyof typeof LURE_ICONS]
-        return (
-          <>
-            <span className="flex items-start gap-2 font-bold break-words">
-              <Icon className={cn(iconClass, "mt-0.5")} aria-hidden />
-              {t(`page-courses-widget-token-lure-name-${id}`)}
-            </span>
-            <span className="text-sm text-body-medium">
-              {t(`page-courses-widget-token-lure-from-${id}`)}
-            </span>
-          </>
-        )
+        return [
+          <span
+            key="name"
+            className="flex items-start gap-2 font-bold break-words"
+          >
+            <Icon className={cn(iconClass, "mt-0.5")} aria-hidden />
+            {t(`page-courses-widget-token-lure-name-${id}`)}
+          </span>,
+          <span key="from" className="text-sm text-body-medium">
+            {t(`page-courses-widget-token-lure-from-${id}`)}
+          </span>,
+        ]
       }}
     />
   )
@@ -265,23 +275,23 @@ export const NftProofWidget = (props: WidgetProps) => {
           {t("page-courses-widget-nft-proof-title")}
         </p>
       }
-      renderRow={(id) => (
-        <>
-          <span className="text-sm font-bold text-body-medium">
-            {t(`page-courses-widget-nft-proof-field-${id}`)}
+      renderRow={(id) => [
+        <span key="field" className="text-sm font-bold text-body-medium">
+          {t(`page-courses-widget-nft-proof-field-${id}`)}
+        </span>,
+        id === "collection" ? (
+          <Hex key="value">{COLLECTION_ADDRESS}</Hex>
+        ) : id === "picture" ? (
+          <span key="value" className="flex items-center gap-2">
+            <ImageIcon className={iconClass} aria-hidden />
+            {t("page-courses-widget-nft-proof-value-picture")}
           </span>
-          {id === "collection" ? (
-            <Hex>{COLLECTION_ADDRESS}</Hex>
-          ) : id === "picture" ? (
-            <span className="flex items-center gap-2">
-              <ImageIcon className={iconClass} aria-hidden />
-              {t("page-courses-widget-nft-proof-value-picture")}
-            </span>
-          ) : (
-            <span>{t(`page-courses-widget-nft-proof-value-${id}`)}</span>
-          )}
-        </>
-      )}
+        ) : (
+          <span key="value">
+            {t(`page-courses-widget-nft-proof-value-${id}`)}
+          </span>
+        ),
+      ]}
     />
   )
 }
@@ -311,7 +321,7 @@ export const NameCheckWidget = (props: WidgetProps) => {
           <Hex>{NAMES.real}</Hex>
         </Reference>
       }
-      renderRow={(id) => <Hex>{NAMES[id]}</Hex>}
+      renderRow={(id) => [<Hex key="name">{NAMES[id]}</Hex>]}
     />
   )
 }

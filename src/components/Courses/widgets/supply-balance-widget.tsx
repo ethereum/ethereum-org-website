@@ -81,7 +81,9 @@ const SupplyBalanceWidget = ({ onAnswer, locked }: WidgetProps) => {
       <div className="flex flex-col gap-2">
         <label htmlFor={sliderId} className="flex flex-col gap-1 font-bold">
           <span>{t("page-courses-widget-supply-label")}</span>
-          <span className={cn("text-xl", courseText)}>{levelLabel(stop)}</span>
+          <span aria-hidden className={cn("text-xl", courseText)}>
+            {levelLabel(stop)}
+          </span>
         </label>
         <input
           id={sliderId}

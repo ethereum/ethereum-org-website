@@ -90,7 +90,7 @@ const FinalityClockWidget = ({ onAnswer, locked }: WidgetProps) => {
       <div className="flex flex-col gap-2">
         <label htmlFor={sliderId} className="flex flex-col gap-1 font-bold">
           <span>{t("page-courses-widget-finality-label")}</span>
-          <span className={cn("text-xl", courseText)}>
+          <span aria-hidden className={cn("text-xl", courseText)}>
             {timeLabel(stop)}{" "}
             <span className="text-md font-semibold text-body-medium">
               ({blocksLabel})

@@ -37,7 +37,8 @@ const outcome = (limit: number) => {
 const GasLimitWidget = ({ onComplete }: WidgetProps) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
-  const sliderId = useId()
+  const uid = useId()
+  const sliderId = `${uid}-slider`
   const [stop, setStop] = useState(SUGGESTED)
   const done = useRef(false)
 
@@ -87,14 +88,21 @@ const GasLimitWidget = ({ onComplete }: WidgetProps) => {
           htmlFor={sliderId}
           className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 font-bold"
         >
-          <span>{t("page-courses-widget-limit-label")}</span>
+          <span id={`${uid}-label`}>
+            {t("page-courses-widget-limit-label")}
+          </span>
           <span className="flex items-center gap-2">
             {stop === SUGGESTED && (
-              <span className="rounded-full bg-background px-2 py-0.5 text-sm whitespace-nowrap">
+              <span
+                id={`${uid}-suggested`}
+                className="rounded-full bg-background px-2 py-0.5 text-sm whitespace-nowrap"
+              >
                 {t("page-courses-widget-limit-suggested")}
               </span>
             )}
-            <span className={courseText}>{gasLabel(limit)}</span>
+            <span aria-hidden className={courseText}>
+              {gasLabel(limit)}
+            </span>
           </span>
         </label>
         <input
@@ -105,6 +113,11 @@ const GasLimitWidget = ({ onComplete }: WidgetProps) => {
           step={1}
           value={stop}
           aria-valuetext={gasLabel(limit)}
+          aria-labelledby={
+            stop === SUGGESTED
+              ? `${uid}-label ${uid}-suggested`
+              : `${uid}-label`
+          }
           onChange={(e) => handleChange(Number(e.target.value))}
           className="w-full accent-(--course)"
         />

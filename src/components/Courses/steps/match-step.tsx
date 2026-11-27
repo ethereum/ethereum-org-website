@@ -1,6 +1,6 @@
 "use client"
 
-import { useMemo, useState } from "react"
+import { useId, useMemo, useState } from "react"
 import { useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/buttons/Button"
@@ -83,6 +83,7 @@ const MatchStep = ({
   status,
 }: MatchStepProps) => {
   const t = useTranslations("page-courses")
+  const uid = useId()
   const matches = useMemo(
     () => seededShuffle(step.pairs, step.id),
     [step.pairs, step.id]
@@ -146,6 +147,12 @@ const MatchStep = ({
                   className={tileClasses}
                   disabled={locked}
                   aria-pressed={isSelected("term", id)}
+                  aria-labelledby={[
+                    `${uid}-term-${id}-label`,
+                    paired[i] && `${uid}-term-${id}-paired`,
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
                   data-selected={isSelected("term", id) || undefined}
                   data-result={result}
                   onClick={() => tap("term", id)}
@@ -155,9 +162,9 @@ const MatchStep = ({
                     result={result}
                     outlined={!!paired[i]}
                   />
-                  <span>{termLabel(id)}</span>
+                  <span id={`${uid}-term-${id}-label`}>{termLabel(id)}</span>
                   {paired[i] && (
-                    <span className="sr-only">
+                    <span id={`${uid}-term-${id}-paired`} className="sr-only">
                       {t("page-courses-match-paired", {
                         other: matchLabel(paired[i]),
                       })}
@@ -180,6 +187,12 @@ const MatchStep = ({
                   className={tileClasses}
                   disabled={locked}
                   aria-pressed={isSelected("match", id)}
+                  aria-labelledby={[
+                    `${uid}-match-${id}-label`,
+                    termIndex >= 0 && `${uid}-match-${id}-paired`,
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
                   data-selected={isSelected("match", id) || undefined}
                   data-result={result}
                   onClick={() => tap("match", id)}
@@ -188,9 +201,9 @@ const MatchStep = ({
                     number={termIndex >= 0 ? termIndex + 1 : undefined}
                     result={result}
                   />
-                  <span>{matchLabel(id)}</span>
+                  <span id={`${uid}-match-${id}-label`}>{matchLabel(id)}</span>
                   {termIndex >= 0 && (
-                    <span className="sr-only">
+                    <span id={`${uid}-match-${id}-paired`} className="sr-only">
                       {t("page-courses-match-paired", {
                         other: termLabel(step.pairs[termIndex]),
                       })}
