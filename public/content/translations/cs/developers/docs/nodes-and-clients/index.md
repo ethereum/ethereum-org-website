@@ -15,15 +15,14 @@ Pokud je pro vás téma uzlů nové, doporučujeme si nejprve přečíst náš u
 
 ## Co jsou uzly a klienti? {#what-are-nodes-and-clients}
 
-„Uzel“ je jakákoli instance klientského softwaru Etherea, která je připojena k dalším počítačům, na kterých také běží software Etherea, čímž tvoří síť. Klient je implementace Etherea, která ověřuje data podle pravidel protokolu a udržuje síť v bezpečí. Uzel musí provozovat dva klienty: konsensuální klient a exekuční klient.
+„Uzel“ je jakákoli instance klientského softwaru Etherea, která je připojena k dalším počítačům, na nichž také běží software Etherea, a společně tak tvoří síť. Klient je implementace Etherea, která ověřuje data podle pravidel protokolu a udržuje síť v bezpečí. Uzel musí provozovat dva klienty: konsensuálního klienta a exekučního klienta.
 
 - Exekuční klient (známý také jako Execution Engine, EL klient nebo dříve klient Eth1) naslouchá novým transakcím vysílaným v síti, provádí je v EVM a uchovává nejnovější stav a databázi všech aktuálních dat Etherea.
-- Konsensuální klient (známý také jako uzel Beacon, CL klient nebo dříve klient Eth2) implementuje algoritmus konsensu důkaz podílem (PoS), který umožňuje síti dosáhnout shody na základě ověřených dat od exekučního klienta. Existuje také třetí část softwaru, známá jako „validátor“, kterou lze přidat ke konsensuálnímu klientovi, což uzlu umožňuje podílet se na zabezpečení sítě.
+- Konsensuální klient (známý také jako uzel Beacon, CL klient nebo dříve klient Eth2) implementuje algoritmus konsensu důkazu podílem (PoS), který umožňuje síti dosáhnout shody na základě ověřených dat z exekučního klienta. Existuje také třetí část softwaru, známá jako „validátor“, kterou lze přidat ke konsensuálnímu klientovi, což uzlu umožňuje podílet se na zabezpečení sítě.
 
-Tito klienti spolupracují na sledování vrcholu řetězce Etherea a umožňují uživatelům komunikovat se sítí Etherea. Modulární design s více spolupracujícími softwary se nazývá [zapouzdřená složitost](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Tento přístup usnadnil bezproblémové provedení [Merge](/roadmap/merge), usnadňuje údržbu a vývoj klientského softwaru a umožňuje opětovné použití jednotlivých klientů, například v [ekosystému vrstvy 2 (l2)](/layer-2/).
+Tito klienti spolupracují na sledování vrcholu řetězce Etherea a umožňují uživatelům komunikovat se sítí Ethereum. Modulární návrh s více vzájemně spolupracujícími částmi softwaru se nazývá [zapouzdřená složitost](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Tento přístup usnadnil bezproblémové provedení [Merge](/roadmap/merge), usnadňuje údržbu a vývoj klientského softwaru a umožňuje opětovné použití jednotlivých klientů, například v [ekosystému vrstvy 2 (L2)](/layer-2/).
 
-![Coupled execution and consensus clients](./eth1eth2client.png)
-Zjednodušený diagram propojeného exekučního a konsensuálního klienta.
+<NodeClientsDiagram />
 
 ### Klientská diverzita {#client-diversity}
 
@@ -90,16 +89,16 @@ Provozování uzlu vám umožňuje používat Ethereum přímo, v soukromí a be
 
 ### Výhody pro vás {#benefits-to-you}
 
-Provozování vlastního uzlu vám umožňuje používat Ethereum soukromým, soběstačným způsobem nevyžadujícím důvěru. Nemusíte síti důvěřovat, protože si data můžete ověřit sami pomocí svého klienta. „Nedůvěřuj, prověřuj“ je populární mantra blockchainu.
+Provozování vlastního uzlu vám umožňuje používat Ethereum soukromým, soběstačným způsobem nevyžadujícím důvěru. Nemusíte síti důvěřovat, protože si data můžete ověřit sami pomocí svého klienta. „Nedůvěřuj, ověřuj“ (Don't trust, verify) je populární mantra v oblasti blockchainu.
 
-- Váš uzel sám ověřuje všechny transakce a bloky podle pravidel konsenzu. To znamená, že se nemusíte spoléhat na žádné jiné uzly v síti ani jim plně důvěřovat.
-- S vlastním uzlem můžete používat peněženku Etherea. Můžete používat decentralizované aplikace (dapps) bezpečněji a s větším soukromím, protože nebudete muset odhalovat své adresy a zůstatky zprostředkovatelům. Vše lze zkontrolovat pomocí vašeho vlastního klienta. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) a [mnoho dalších peněženek](/wallets/find-wallet/) nabízí import RPC, což jim umožňuje používat váš uzel.
-- Můžete provozovat a sami hostovat další služby, které závisí na datech z Etherea. Může to být například validátor Beacon chainu, software jako vrstva 2 (l2), infrastruktura, průzkumníci bloků, platební procesory atd.
-- Můžete poskytovat své vlastní [RPC koncové body](/developers/docs/apis/json-rpc/). Tyto koncové body byste dokonce mohli nabídnout veřejně komunitě, abyste jí pomohli vyhnout se velkým centralizovaným poskytovatelům.
-- Ke svému uzlu se můžete připojit pomocí **meziprocesové komunikace (IPC)** nebo uzel přepsat tak, aby načítal váš program jako plugin. To zaručuje nízkou latenci, což velmi pomáhá např. při zpracování velkého množství dat pomocí knihoven Web3 nebo když potřebujete nahradit své transakce co nejrychleji (tj. frontrunning).
-- Můžete přímo stakovat ETH pro zabezpečení sítě a získávat odměny. Pro začátek se podívejte na [sólo staking](/staking/solo/).
+- Váš uzel sám ověřuje všechny transakce a bloky podle pravidel konsensu. To znamená, že se nemusíte spoléhat na žádné jiné uzly v síti ani jim plně důvěřovat.
+- S vlastním uzlem můžete používat peněženku pro Ethereum. Decentralizované aplikace (dapp) můžete používat bezpečněji a soukroměji, protože nebudete muset prozrazovat své adresy a zůstatky zprostředkovatelům. Vše lze zkontrolovat pomocí vašeho vlastního klienta. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) a [mnoho dalších peněženek](/wallets/find-wallet/) nabízejí import RPC, což jim umožňuje používat váš uzel.
+- Můžete provozovat a sami hostovat další služby, které jsou závislé na datech z Etherea. Může jít například o validátor na Beacon chainu, software jako vrstva 2 (L2), infrastrukturu, průzkumníky bloků, zpracovatele plateb atd.
+- Můžete poskytovat své vlastní [koncové body RPC](/developers/docs/apis/json-rpc/). Tyto koncové body byste dokonce mohli nabídnout veřejně komunitě, abyste jí pomohli vyhnout se velkým centralizovaným poskytovatelům.
+- K uzlu se můžete připojit pomocí **meziprocesové komunikace (IPC)** nebo uzel přepsat tak, aby načítal váš program jako plugin. To zajišťuje nízkou latenci, což velmi pomáhá např. při zpracování velkého množství dat pomocí knihoven Web3 nebo když potřebujete co nejrychleji nahradit své transakce (tj. frontrunning).
+- Můžete přímo stakovat ETH, abyste zabezpečili síť a získali odměny. Pro začátek se podívejte na [sólo staking](/staking/solo/).
 
-![How you access Ethereum via your application and nodes](./nodes.png)
+<NodeAccessDiagram />
 
 ### Výhody pro síť {#network-benefits}
 
@@ -130,22 +129,22 @@ Na druhou stranu, pokud provozujete klienta, můžete jej sdílet se svými př�
 
 ## Exekuční klienti {#execution-clients}
 
-Komunita Etherea udržuje několik open-source exekučních klientů (dříve známých jako „klienti Eth1“ nebo jen „klienti Etherea“), vyvíjených různými týmy pomocí různých programovacích jazyků. Díky tomu je síť silnější a [rozmanitější](/developers/docs/nodes-and-clients/client-diversity/). Ideálním cílem je dosáhnout diverzity bez toho, aby jakýkoli klient dominoval, čímž se sníží riziko jediného bodu selhání.
+Komunita Etherea udržuje několik open-source exekučních klientů (dříve známých jako „klienti Eth1“ nebo jen „klienti Etherea“), které vyvíjejí různé týmy v různých programovacích jazycích. Díky tomu je síť silnější a [rozmanitější](/developers/docs/nodes-and-clients/client-diversity/). Ideálním cílem je dosáhnout diverzity bez toho, aby jakýkoli klient dominoval, a omezit tak jakákoli jednotlivá místa selhání.
 
-Tato tabulka shrnuuje různé klienty. Všichni procházejí [testy klientů](https://github.com/ethereum/tests) a jsou aktivně udržováni, aby zůstali aktuální s upgrady sítě.
+Tato tabulka shrnuje různé klienty. Všichni procházejí [klientskými testy](https://github.com/ethereum/tests) a jsou aktivně udržováni, aby drželi krok s upgrady sítě.
 
-| Klient                                                                   | Jazyk      | Operační systémy      | Sítě                    | Strategie synchronizace                                    | Prořezávání stavu   |
-| ------------------------------------------------------------------------ | ---------- | --------------------- | ----------------------- | ---------------------------------------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Plná](#full-sync)                     | Archivní, Prořezaný |
-| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), Rychlá, [Plná](#full-sync)               | Archivní, Prořezaný |
-| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Rychlá](#fast-sync), [Plná](#full-sync) | Archivní, Prořezaný |
-| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Plná](#full-sync)                                         | Archivní, Prořezaný |
-| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Plná](#full-sync)                                         | Archivní, Prořezaný |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Hoodi          | [Plná](#full-sync)                                         | Prořezaný          |
+| Klient                                                                   | Jazyk      | Operační systémy      | Sítě                    | Strategie synchronizace                                    | Prořezávání stavu |
+| ------------------------------------------------------------------------ | ---------- | --------------------- | ----------------------- | ---------------------------------------------------------- | ----------------- |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Full](#full-sync)                     | Archivní, prořezaný |
+| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), Fast, [Full](#full-sync)               | Archivní, prořezaný |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Fast](#fast-sync), [Full](#full-sync) | Archivní, prořezaný |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                         | Archivní, prořezaný |
+| [ethrex](https://ethrex.xyz/)                                            | Rust       | Linux, macOS          | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Full](#full-sync)                     | Prořezaný         |
+| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                         | Archivní, prořezaný |
 
-Více o podporovaných sítích si přečtěte v části [Sítě Etherea](/developers/docs/networks/).
+Další informace o podporovaných sítích najdete v části [Sítě Etherea](/developers/docs/networks/).
 
-Každý klient má jedinečné případy použití a výhody, takže byste si měli vybrat na základě vlastních preferencí. Diverzita umožňuje, aby se implementace zaměřily na různé funkce a uživatelské publikum. Klienta si můžete vybrat na základě funkcí, podpory, programovacího jazyka nebo licencí.
+Každý klient má jedinečné případy použití a výhody, takže byste si měli vybrat na základě vlastních preferencí. Diverzita umožňuje implementacím zaměřit se na různé funkce a uživatelské publikum. Klienta si můžete vybrat na základě funkcí, podpory, programovacího jazyka nebo licencí.
 
 ### Besu {#besu}
 
@@ -155,12 +154,11 @@ Rozsáhlá [dokumentace](https://besu.hyperledger.org/en/stable/) Besu vás prov
 
 ### Erigon {#erigon}
 
-Erigon, dříve známý jako Turbo-Geth, začal jako fork Go Etherea orientovaný na rychlost a efektivitu využití místa na disku. Erigon je kompletně přepracovaná implementace Etherea, v současnosti napsaná v jazyce Go, ale s implementacemi v dalších jazycích ve vývoji. Cílem Erigonu je poskytnout rychlejší, modulárnější a optimalizovanější implementaci Etherea. Dokáže provést plnou synchronizaci archivního uzlu s využitím přibližně 2 TB místa na disku za méně než 3 dny.
-
+Erigon, dříve známý jako Turbo-Geth, začal jako fork Go Etherea zaměřený na rychlost a efektivitu využití diskového prostoru. Erigon je kompletně přepracovaná implementace Etherea, v současnosti napsaná v jazyce Go, ale s implementacemi v dalších jazycích ve vývoji. Cílem Erigonu je poskytnout rychlejší, modulárnější a optimalizovanější implementaci Etherea. Dokáže provést úplnou synchronizaci archivního uzlu s využitím méně než 3 TB diskového prostoru za méně než 3 dny.
 
 ### ethrex {#ethrex}
 
-ethrex je minimalistický, modulární exekuční klient Etherea napsaný v jazyce Rust a vyvíjený společností LambdaClass. Je postaven s ohledem na dokazování s nulovou znalostí a stejná kódová základna může běžet jak jako exekuční klient l1, tak jako ZK-Rollup s více dokazovateli (l2). Má dvojí licenci pod licencemi Apache 2.0 a MIT.
+ethrex je minimalistický, modulární exekuční klient Etherea napsaný v jazyce Rust a vyvíjený společností LambdaClass. Je postaven s ohledem na dokazování s nulovou znalostí a stejná kódová základna může běžet jak jako exekuční klient L1, tak jako ZK-Rollup s více dokazovateli (L2). Má dvojí licenci pod licencemi Apache 2.0 a MIT.
 
 Více se dozvíte v [dokumentaci ethrex](https://docs.ethrex.xyz/) nebo v [repozitáři ethrex na GitHubu](https://github.com/lambdaclass/ethrex).
 ### Go Ethereum {#geth}
@@ -187,16 +185,6 @@ Reth je připraven pro produkční nasazení a je vhodný pro použití v kritic
 
 Více se dozvíte v [Reth Book](https://reth.rs/) nebo v [repozitáři Reth na GitHubu](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
 
-### Ve vývoji {#execution-in-development}
-
-Tito klienti jsou stále v raných fázích vývoje a zatím se nedoporučují pro produkční použití.
-
-#### EthereumJS {#ethereumjs}
-
-Exekuční klient EthereumJS (EthereumJS) je napsán v TypeScriptu a skládá se z řady balíčků, včetně základních primitiv Etherea reprezentovaných třídami Block, Transaction a Merkle-Patricia Trie, a základních klientských komponent včetně implementace virtuálního stroje Etherea (EVM), třídy blockchainu a síťového stacku devp2p.
-
-Přečtěte si více v jeho [dokumentaci](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master)
-
 ## Konsensuální klienti {#consensus-clients}
 
 Existuje několik konsensuálních klientů (dříve známých jako klienti „Eth2“) pro podporu [upgradů konsensu](/roadmap/beacon-chain/). Jsou zodpovědní za veškerou logiku související s konsensem, včetně algoritmu volby forku, zpracování atestací a správy odměn a penalizací [důkazu podílem (PoS)](/developers/docs/consensus-mechanisms/pos).
@@ -218,9 +206,9 @@ Dokumentaci naleznete v [Lighthouse Book](https://lighthouse-book.sigmaprime.io/
 
 ### Lodestar {#lodestar}
 
-Lodestar je implementace konsensuálního klienta připravená pro produkci, napsaná v TypeScriptu pod licencí LGPL-3.0. Je udržován společností ChainSafe Systems a je nejnovějším z konsensuálních klientů pro sólo stakery, vývojáře a výzkumníky. Lodestar se skládá z uzlu Beacon a klienta validátoru poháněného implementacemi protokolů Etherea v JavaScriptu. Cílem Lodestaru je zlepšit použitelnost Etherea pomocí lehkých klientů, rozšířit dostupnost pro větší skupinu vývojářů a dále přispět k diverzitě ekosystému.
+Lodestar je implementace konsensuálního klienta připravená pro produkci, napsaná v jazyce TypeScript pod licencí Apache-2.0. Je udržována společností ChainSafe Systems a je nejnovějším z konsensuálních klientů pro sólo stakery, vývojáře a výzkumníky. Lodestar se skládá z uzlu Beacon a klienta validátoru poháněných implementacemi protokolů Etherea v jazyce JavaScript. Cílem Lodestaru je zlepšit použitelnost Etherea pomocí lehkých klientů, rozšířit dostupnost pro větší skupinu vývojářů a dále přispět k rozmanitosti ekosystému.
 
-Více informací naleznete na [webu Lodestar](https://lodestar.chainsafe.io/)
+Více informací naleznete na [webových stránkách Lodestar](https://lodestar.chainsafe.io/)
 
 ### Nimbus {#nimbus}
 
@@ -300,7 +288,7 @@ Režim lehkého klienta stáhne všechny hlavičky bloků, data bloků a někter
 
 Optimistická synchronizace je strategie synchronizace po Merge, navržená jako volitelná a zpětně kompatibilní, což umožňuje exekučním uzlům synchronizovat se pomocí zavedených metod. Execution engine může _optimisticky_ importovat bloky Beacon bez jejich plného ověření, najít nejnovější vrchol a poté začít synchronizovat řetězec pomocí výše uvedených metod. Poté, co exekuční klient dožene zpoždění, bude informovat konsensuálního klienta o platnosti transakcí v Beacon chainu.
 
-[Více o optimistické synchronizaci](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
+[Více o optimistické synchronizaci](https://github.com/ethereum/consensus-specs/blob/master/specs/bellatrix/optimistic-sync.md)
 
 #### Synchronizace kontrolních bodů {#checkpoint-sync}
 
@@ -322,4 +310,4 @@ Více o [synchronizaci kontrolních bodů](https://notes.ethereum.org/@djrtwo/ws
 
 ## Související návody {#related-tutorials}
 
-- [Proměňte své Raspberry Pi 4 na uzel validátoru pouhým flashnutím MicroSD karty – Průvodce instalací](/developers/tutorials/run-node-raspberry-pi/) _– Flashněte své Raspberry Pi 4, zapojte ethernetový kabel, připojte SSD disk a zapněte zařízení, abyste proměnili Raspberry Pi 4 na plný uzel Etherea provozující exekuční vrstvu (Mainnet) a/nebo vrstvu konsensu (Beacon chain / validátor)._
+- [Proměňte své Raspberry Pi 5 na uzel validátoru pouhým flashováním MicroSD karty – Průvodce instalací](/developers/tutorials/run-node-raspberry-pi/) _– Flashněte své Raspberry Pi 5, zapojte ethernetový kabel, připojte NVMe disk a zapněte zařízení, abyste proměnili Raspberry Pi 5 na plný uzel Etherea provozující exekuční vrstvu (Mainnet) a/nebo vrstvu konsensu (Beacon chain / validátor)._

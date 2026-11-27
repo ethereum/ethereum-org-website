@@ -1,6 +1,6 @@
 ---
 title: "Frameworky pro vývoj dapp"
-description: "Prozkoumejte výhody frameworků a porovnejte dostupné možnosti."
+description: "Porovnejte vývojové frameworky Etherea, jako jsou Foundry a Hardhat. Zjistěte, co vám framework nabízí pro kompilaci, testování a nasazení chytrých kontraktů."
 lang: cs
 ---
 
@@ -66,18 +66,18 @@ Než se ponoříte do frameworků, doporučujeme vám nejprve si přečíst ná�
 
 **Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem a RainbowKit s možností volby mezi Hardhat nebo Foundry: hot reload kontraktů, vlastní React hooky, jednorázová peněženka (burner wallet) a lokální faucet, a rozšiřující moduly pro full-stack vývoj decentralizovaných aplikací (dapp)._**
 
-- [Webová stránka](https://scaffoldeth.io/)
+- [Webové stránky](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Vývojová platforma pro Web3, která umožňuje blockchainovým vývojářům vytvářet, testovat, ladit, monitorovat a provozovat chytré kontrakty a zlepšovat UX dapp._**
+**Tenderly -** **_Vývojová platforma pro Web3, která umožňuje blockchainovým vývojářům vytvářet, testovat, ladit, monitorovat a provozovat chytré kontrakty a zlepšovat UX decentralizovaných aplikací (dapp)._**
 
-- [Webová stránka](https://tenderly.co/)
+- [Webové stránky](https://tenderly.co/)
 - [Dokumentace](https://docs.tenderly.co/)
 
 **The Graph -** **_The Graph pro efektivní dotazování na blockchainová data._**
 
-- [Webová stránka](https://thegraph.com/)
-- [Návod](/developers/tutorials/the-graph-fixing-web3-data-querying/)
+- [Webové stránky](https://thegraph.com/)
+- [Dokumentace](https://thegraph.com/docs/en/)
 
 **Alchemy -** **_Vývojová platforma pro Ethereum._**
 
@@ -102,9 +102,9 @@ Než se ponoříte do frameworků, doporučujeme vám nejprve si přečíst ná�
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_Podniková vývojová platforma pro Web3, která vám umožňuje vytvářet aplikace pro nezaměnitelné tokeny (NFT) na všech hlavních řetězcích, EVM řetězcích (a dalších)._**
+**Crossmint -** **_Podniková vývojová platforma pro Web3, která vám umožňuje vytvářet aplikace pro nezaměnitelné tokeny (NFT) na všech hlavních řetězcích EVM (a dalších)._**
 
-- [Webová stránka](https://www.crossmint.com)
+- [Webové stránky](https://www.crossmint.com)
 - [Dokumentace](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
 
@@ -112,7 +112,7 @@ Než se ponoříte do frameworků, doporučujeme vám nejprve si přečíst ná�
 
 - [Dokumentace](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
-- **Brownie je v současné době neudržovaný**
+- **Brownie v současné době není udržován**
 
 **OpenZeppelin SDK -** **_Ultimátní sada nástrojů pro chytré kontrakty: Sada nástrojů, která vám pomůže vyvíjet, kompilovat, aktualizovat, nasazovat a komunikovat s chytrými kontrakty._**
 
@@ -120,25 +120,25 @@ Než se ponoříte do frameworků, doporučujeme vám nejprve si přečíst ná�
 - [Komunitní fórum](https://forum.openzeppelin.com/c/support/17)
 - **Vývoj OpenZeppelin SDK byl ukončen**
 
-**Catapulta -** **_Nástroj pro nasazení chytrých kontraktů na více řetězcích, automatizuje ověřování v prohlížečích bloků, sleduje nasazené chytré kontrakty a sdílí zprávy o nasazení, plug-n-play pro projekty ve Foundry a Hardhat._**
+**Catapulta -** **_Nástroj pro nasazení chytrých kontraktů na více řetězcích, automatizuje ověřování v průzkumnících bloků, sleduje nasazené chytré kontrakty a sdílí zprávy o nasazení, plug-n-play pro projekty ve Foundry a Hardhat._**
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (poháněno Covalent) -** **_GoldRush nabízí nejkomplexnější sadu rozhraní pro programování aplikací (API) pro blockchainová data pro vývojáře, analytiky a podniky. Ať už vytváříte DeFi dashboard, peněženku, obchodního bota, AI agenta nebo platformu pro dodržování předpisů, datová API poskytují rychlý, přesný a pro vývojáře přívětivý přístup k nezbytným onchain datům, která potřebujete._**
+**GoldRush (poháněno Covalent) -** **_GoldRush nabízí nejkomplexnější sadu rozhraní pro programování aplikací (API) pro blockchainová data pro vývojáře, analytiky a podniky. Ať už vytváříte řídicí panel pro decentralizované finance (DeFi), peněženku, obchodního bota, AI agenta nebo platformu pro dodržování předpisů, datová API poskytují rychlý, přesný a pro vývojáře přívětivý přístup k nezbytným onchain datům, která potřebujete._**
 
-- [Webová stránka](https://goldrush.dev/)
+- [Webové stránky](https://goldrush.dev/)
 - [Dokumentace](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
-**Wake -** **_Komplexní framework v Pythonu pro testování kontraktů, fuzzing, nasazení, skenování zranitelností a navigaci v kódu._**
+**Wake -** **_All-in-one framework v Pythonu pro testování kontraktů, fuzzing, nasazení, skenování zranitelností a navigaci v kódu._**
 
 - [Domovská stránka](https://getwake.io/)
 - [Dokumentace](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [Rozšíření pro VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_Open source, modulární a agnostický framework, který vývojářům decentralizovaných aplikací usnadňuje zabudování decentralizovaných identit a ověřitelných pověření do jejich aplikací._**
+**Veramo -** **_Open source, modulární a agnostický framework, který vývojářům decentralizovaných aplikací (dapp) usnadňuje zabudování decentralizovaných identit a ověřitelných pověření do jejich aplikací._**
 
 - [Domovská stránka](https://veramo.io/)
 - [Dokumentace](https://veramo.io/docs/basics/introduction)
@@ -159,6 +159,6 @@ _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidej
 
 - [Nastavení lokálního vývojového prostředí](/developers/local-environment/)
 
-## Návody: Vývojové frameworky na Ethereu {#tutorials}
+## Tutoriály: Vývojové frameworky na Ethereu {#tutorials}
 
-- [Chytrý kontrakt Hello World pro začátečníky – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Vytvořte a nasaďte chytrý kontrakt hello world pomocí Hardhat a poté jej připojte k frontendu._
+- [Chytrý kontrakt Hello World pro začátečníky](/developers/tutorials/hello-world-smart-contract/) _– Vytvořte a nasaďte chytrý kontrakt hello world pomocí Hardhat._
