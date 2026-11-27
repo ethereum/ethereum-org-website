@@ -13,9 +13,14 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getTutorialsData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import { filterTutorialsByLang } from "@/lib/utils/tutorial"
+
+import externalTutorials from "@/data/externalTutorials.json"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import TutorialSubmitModal from "./_components/modal"
-import TutorialsList from "./_components/TutorialsLazy"
+import TutorialsList from "./_components/tutorials"
 import TutorialsPageJsonLD from "./page-jsonld"
 
 import heroImg from "@/public/images/doge-computer.png"
@@ -37,6 +42,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const dir = contentNotTranslated ? "ltr" : "unset"
 
   const internalTutorials = await getTutorialsData(locale)
+  const tutorials = filterTutorialsByLang(
+    internalTutorials,
+    externalTutorials,
+    (internalTutorials.length > 0 ? locale : DEFAULT_LOCALE) as Lang
+  )
 
   const { contributors } = await getAppPageContributorInfo(
     "developers/tutorials",
@@ -68,7 +78,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           className="mx-auto my-page w-full max-w-screen-lg shadow-xl"
           dir={dir}
         >
-          <TutorialsList internalTutorials={internalTutorials} />
+          <TutorialsList tutorials={tutorials} />
         </MainArticle>
       </I18nProvider>
 

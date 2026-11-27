@@ -18,6 +18,15 @@ Examples shipped:
 - SHA `a1f876f8f` — persona modal
 - SHA `355070dc7` — homepage wrapper after upgrade chain
 
+Lazy-load widgets, never content. Anything a crawler should see (copy, listings, internal links) needs a direct import:
+
+| Component holds                                            | Use                            |
+| ---------------------------------------------------------- | ------------------------------ |
+| Interactive widget, modal, simulator, chart                | `dynamic(..., { ssr: false })` |
+| Editorial copy, listings, links that drive crawl discovery | A direct import                |
+
+Dropping `ssr: false` is not enough: `dynamic()` still wraps the component in `Suspense`, so the server sends the fallback inline and the real markup in a `<div hidden>` that only a script reveals (#18977).
+
 Content swapped in by a click (a lesson's next step): a plain `next/dynamic` shows its `loading` for at least 300 ms even when the chunk is cached, because React holds a revealed Suspense fallback that long. Fetch it ahead and resolve without suspending: `preloadable()` in `src/lib/courses/preloadable.ts` (lesson widgets and course art, PR #19778).
 
 ## Asset weight
