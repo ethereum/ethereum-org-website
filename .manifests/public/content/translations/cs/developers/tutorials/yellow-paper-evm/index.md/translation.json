@@ -1,12 +1,30 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "cs",
-  "translatedAt": "2026-06-19T23:30:32.766Z",
-  "englishManifestHash": "6f3029cd946f",
+  "translatedAt": "2026-11-28T07:40:31.092Z",
+  "englishManifestHash": "e35e7b5dccc3",
   "placeholderOrder": [
     "LINK-5bdec9",
     "LINK-299230",
-    "LINK-ea13b2",
+    "LINK-ccb981",
+    "LINK-e50248",
+    "CODE-25df06",
+    "LINK-dce981",
+    "CODE-f59c3b",
+    "LINK-0395de",
+    "CODE-61268f",
+    "LINK-b0fee5",
+    "CODE-f8e43b",
+    "CODE-5ce176",
+    "LINK-44ff04",
+    "CODE-ca459e",
+    "LINK-3ed72f",
+    "CODE-9b453b",
+    "LINK-1cef2e",
+    "CODE-4d8dda",
+    "LINK-d74f37",
+    "CODE-4afb86",
+    "LINK-59b426",
     "LINK-3a0ce1",
     "LINK-fa9c2b",
     "LINK-2d8b10",
@@ -18,6 +36,9 @@
     "CODE-9bc461",
     "CODE-c34db7",
     "CODE-7d54f4",
+    "LINK-3dc2c6",
+    "CODE-f8e43b",
+    "CODE-5ce176",
     "CODE-3a6eb0",
     "CODE-6ba9f2",
     "CODE-79ebb4",
@@ -73,10 +94,10 @@
     "CODE-106fb9",
     "LINK-51882b",
     "CODE-a081e0",
-    "LINK-ce0289",
-    "CODE-25df06",
+    "LINK-4bb6ff",
+    "CODE-f59c3b",
     "CODE-97b5ad",
-    "CODE-e7d522",
+    "CODE-2c1a19",
     "LINK-44df1b",
     "CODE-c3172d",
     "LINK-e2a03d",
@@ -112,6 +133,7 @@
     "LINK-15f7a3",
     "CODE-4d693c",
     "LINK-70aa46",
+    "CODE-5ce176",
     "LINK-f4fc6d",
     "CODE-c324d8",
     "LINK-ee2570",
@@ -131,6 +153,8 @@
     "CODE-04dedf",
     "LINK-00c670",
     "CODE-4afb86",
+    "LINK-f9d571",
+    "CODE-4afb86",
     "LINK-44df1b",
     "CODE-c3172d",
     "LINK-e2a03d",
@@ -144,13 +168,67 @@
     "LINK-92ee6a",
     "CODE-e22cee",
     "LINK-40d42f",
-    "LINK-204c7c",
-    "LINK-ca4b29"
+    "LINK-dcfe79",
+    "LINK-fe30df"
   ],
   "placeholderMap": {
     "CODEBLOCK-3d2aa0": {
       "type": "code-fence",
       "values": {}
+    },
+    "CODE-25df06": {
+      "type": "inline-code",
+      "values": {
+        "content": "DIFFICULTY"
+      }
+    },
+    "CODE-f59c3b": {
+      "type": "inline-code",
+      "values": {
+        "content": "PREVRANDAO"
+      }
+    },
+    "CODE-61268f": {
+      "type": "inline-code",
+      "values": {
+        "content": "PUSH0"
+      }
+    },
+    "CODE-f8e43b": {
+      "type": "inline-code",
+      "values": {
+        "content": "TLOAD"
+      }
+    },
+    "CODE-5ce176": {
+      "type": "inline-code",
+      "values": {
+        "content": "TSTORE"
+      }
+    },
+    "CODE-ca459e": {
+      "type": "inline-code",
+      "values": {
+        "content": "MCOPY"
+      }
+    },
+    "CODE-9b453b": {
+      "type": "inline-code",
+      "values": {
+        "content": "BLOBHASH"
+      }
+    },
+    "CODE-4d8dda": {
+      "type": "inline-code",
+      "values": {
+        "content": "BLOBBASEFEE"
+      }
+    },
+    "CODE-4afb86": {
+      "type": "inline-code",
+      "values": {
+        "content": "SELFDESTRUCT"
+      }
     },
     "CODE-52e740": {
       "type": "inline-code",
@@ -350,22 +428,16 @@
         "content": "NUMBER"
       }
     },
-    "CODE-25df06": {
-      "type": "inline-code",
-      "values": {
-        "content": "DIFFICULTY"
-      }
-    },
     "CODE-97b5ad": {
       "type": "inline-code",
       "values": {
         "content": "block.number"
       }
     },
-    "CODE-e7d522": {
+    "CODE-2c1a19": {
       "type": "inline-code",
       "values": {
-        "content": "block.difficulty"
+        "content": "block.prevrandao"
       }
     },
     "CODE-c3172d": {
@@ -384,12 +456,6 @@
       "type": "inline-code",
       "values": {
         "content": "STOP"
-      }
-    },
-    "CODE-4afb86": {
-      "type": "inline-code",
-      "values": {
-        "content": "SELFDESTRUCT"
       }
     },
     "CODE-8d7dd1": {
@@ -476,10 +542,64 @@
         "url": "/eips/"
       }
     },
-    "LINK-ea13b2": {
+    "LINK-ccb981": {
       "type": "link",
       "values": {
         "url": "yellow-paper-berlin.pdf"
+      }
+    },
+    "LINK-e50248": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.github.io/yellowpaper/paper.pdf"
+      }
+    },
+    "LINK-dce981": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4399"
+      }
+    },
+    "LINK-0395de": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-3855"
+      }
+    },
+    "LINK-b0fee5": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1153"
+      }
+    },
+    "LINK-44ff04": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-5656"
+      }
+    },
+    "LINK-3ed72f": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4844"
+      }
+    },
+    "LINK-1cef2e": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7516"
+      }
+    },
+    "LINK-d74f37": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-6780"
+      }
+    },
+    "LINK-59b426": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/execution-specs"
       }
     },
     "LINK-3a0ce1": {
@@ -510,6 +630,12 @@
       "type": "link",
       "values": {
         "url": "https://docs.soliditylang.org/en/latest/yul.html"
+      }
+    },
+    "LINK-3dc2c6": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1153"
       }
     },
     "LINK-937d64": {
@@ -626,7 +752,7 @@
         "url": "https://www.evm.codes/#43"
       }
     },
-    "LINK-ce0289": {
+    "LINK-4bb6ff": {
       "type": "link",
       "values": {
         "url": "https://www.evm.codes/#44"
@@ -740,6 +866,12 @@
         "url": "<https://en.wikipedia.org/wiki/Set_(mathematics"
       }
     },
+    "LINK-f9d571": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-6780"
+      }
+    },
     "LINK-c71553": {
       "type": "link",
       "values": {
@@ -776,22 +908,22 @@
         "url": "https://github.com/ethereum/tests"
       }
     },
-    "LINK-204c7c": {
+    "LINK-dcfe79": {
       "type": "link",
       "values": {
-        "url": "https://github.com/ethereum/consensus-specs/blob/master/tests/core/pyspec/README.md"
+        "url": "https://github.com/ethereum/consensus-specs"
       }
     },
-    "LINK-ca4b29": {
+    "LINK-fe30df": {
       "type": "link",
       "values": {
-        "url": "https://ethereum.github.io/execution-specs"
+        "url": "https://github.com/ethereum/execution-specs"
       }
     }
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-19T23:30:32.766Z",
+      "translatedAt": "2026-11-28T07:40:31.092Z",
       "status": "success"
     }
   }

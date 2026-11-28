@@ -3,7 +3,7 @@ title: "Krátká ABI pro optimalizaci dat volání"
 description: "Optimalizace chytrých kontraktů pro optimistické rollupy"
 author: Ori Pomerantz
 lang: cs
-tags: ["vrstva 2 (l2)"]
+tags: ["vrstva 2 (L2)"]
 skill: intermediate
 breadcrumb: "Krátká ABI"
 published: 2022-04-01
@@ -21,46 +21,75 @@ Zde vysvětlená technika by však měla fungovat stejně dobře i pro jiné rol
 
 ### Terminologie {#terminology}
 
-Při diskuzi o rollupech se termín „vrstva 1 (l1)“ používá pro Mainnet, produkční síť Ethereum.
-Termín „vrstva 2 (l2)“ se používá pro rollup nebo jakýkoli jiný systém, který spoléhá na l1 z hlediska bezpečnosti, ale většinu svého zpracování provádí offchain.
+Při diskuzi o rollupech se termín „vrstva 1 (L1)“ používá pro Mainnet, produkční síť Ethereum.
+Termín „vrstva 2 (L2)“ se používá pro rollup nebo jakýkoli jiný systém, který spoléhá na L1 z hlediska bezpečnosti, ale většinu svého zpracování provádí offchain.
 
-## Jak můžeme dále snížit náklady na transakce na l2? {#how-can-we-further-reduce-the-cost-of-l2-transactions}
+## Jak můžeme dále snížit náklady na L2 transakce? {#how-can-we-further-reduce-the-cost-of-l2-transactions}
 
 [Optimistické rollupy](/developers/docs/scaling/optimistic-rollups) musí uchovávat záznam o každé historické transakci, aby si je kdokoli mohl projít a ověřit, že je aktuální stav správný.
-Nejlevnější způsob, jak dostat data do Ethereum Mainnetu, je zapsat je jako data volání.
+V době psaní tohoto článku byl nejlevnější způsob, jak dostat data na Ethereum Mainnet, zapsat je jako data volání.
 Toto řešení zvolily sítě [Optimism](https://docs.optimism.io/op-stack/protocol/overview) i [Arbitrum](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction).
+Od aktualizace Dencun (březen 2024) mohou rollupy místo toho zveřejňovat tato data v [blobech](/roadmap/danksharding/), což je mnohem levnější.
 
-### Náklady na transakce na l2 {#cost-of-l2-transactions}
+### Náklady na L2 transakce {#cost-of-l2-transactions}
 
-Náklady na transakce na l2 se skládají ze dvou složek:
+Náklady na L2 transakce se skládají ze dvou složek:
 
-1. Zpracování na l2, které je obvykle extrémně levné
-2. Úložiště na l1, které je vázáno na náklady na gas na Mainnetu
+1. Zpracování na L2, které je obvykle extrémně levné
+2. Úložiště na L1, které je vázáno na náklady na gas na Mainnetu
 
-V době psaní tohoto článku je na síti Optimism cena l2 gasu 0,001 [Gwei](/developers/docs/gas/#pre-london).
-Cena l1 gasu je naproti tomu přibližně 40 Gwei.
-[Aktuální ceny můžete vidět zde](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
+Když jsem psal tento článek v roce 2022, na síti Optimism byla cena L2 gasu 0,001 [Gwei](/developers/docs/gas/#what-is-gas).
+Cena L1 gasu na druhou stranu činila přibližně 40 Gwei.
 
 Bajt dat volání stojí buď 4 gas (pokud je nulový), nebo 16 gas (pokud má jakoukoli jinou hodnotu).
-Jednou z nejdražších operací v EVM je zápis do úložiště.
-Maximální cena zápisu 32bajtového slova do úložiště na l2 je 22 100 gas. V současnosti to je 22,1 Gwei.
-Takže pokud dokážeme ušetřit jediný nulový bajt dat volání, budeme moci zapsat asi 200 bajtů do úložiště a stále na tom budeme lépe.
+Jednou z nejdražších operací na EVM je zápis do úložiště.
+Maximální cena zápisu 32bajtového slova do úložiště na L2 je 22 100 gas. V té době to bylo 22,1 Gwei.
+Pokud bychom tedy dokázali ušetřit jediný nulový bajt dat volání, mohli bychom zapsat asi 200 bajtů do úložiště a stále bychom na tom byli lépe.
+
+#### Jak se změnily náklady na L2 v roce 2024 {#how-l2-costs-changed-in-2024}
+
+Vzorec pro [poplatek za data na L1](https://docs.optimism.io/op-stack/transactions/fees#l1-data-fee) v OP Stack se od napsání tohoto článku změnil dvakrát:
+
+- S [aktualizací Ecotone](https://docs.optimism.io/op-stack/transactions/fees#ecotone) (březen 2024) začaly řetězce OP Stack zveřejňovat transakční data do blobů, které jsou zpoplatněny samostatným (a obvykle mnohem nižším) základním poplatkem za blob.
+- S [aktualizací Fjord](https://docs.optimism.io/op-stack/transactions/fees#fjord) (červenec 2024) je poplatek za data na L1 založen na odhadu velikosti transakce po kompresi [FastLZ](https://github.com/ariya/FastLZ), s minimem 100 bajtů na transakci ([viz specifikace](https://specs.optimism.io/protocol/fjord/exec-engine.html)).
+
+To mění analýzu ve zbytku tohoto článku třemi způsoby:
+
+1. Nulové bajty se dobře komprimují, takže jsou téměř zdarma.
+   Níže uvedené hodnoty 4 a 16 gas za bajt představují náklady na data volání na L1, nikoli to, co dnes platíte za transakční data v řetězci OP Stack.
+2. Pod minimem 100 bajtů kratší data volání nic neušetří.
+   Například v říjnu 2026 by na OP Mainnetu standardní ERC-20 `transfer` (68 bajtů dat volání) a 23bajtová krátká verze z tohoto článku zaplatily naprosto stejný poplatek za data na L1, tedy minimum, asi 1 Gwei (10<sup>-9</sup> ETH).
+3. Protože je prostor v blobech levný, poplatek za provedení na L2 je nyní často vyšší než poplatek za data na L1.
+   Při ceně L2 gasu 0,001 Gwei stojí 1000 gas 1 Gwei, což je stejné jako celý poplatek za data na L1, takže dodatečný gas za provedení při průchodu přes proxy kontrakt může stát více než bajty, které ušetří.
+
+Princip stále platí: méně komprimovaných bajtů znamená nižší poplatek za data na L1.
+Krátká ABI dávají největší smysl u transakcí s velkým množstvím dat, která se špatně komprimují, a na řetězcích nebo v dobách, kdy jsou data na L1 drahá.
+Chcete-li zjistit, kolik by konkrétní transakce zaplatila, zavolejte `getL1Fee` na [přednasazeném kontraktu `GasPriceOracle`](https://specs.optimism.io/protocol/predeploys.html#gaspriceoracle) s nepodepsanou transakcí.
+Například pomocí `cast` z nástroje [Foundry](https://getfoundry.sh/introduction/installation/):
+
+```sh
+TX=$(cast mktx --raw-unsigned --from <your address> --chain 10 --nonce 0 --gas-limit 100000 \
+  --priority-gas-price 1000000 --gas-price 1000000 <destination address> <calldata>)
+cast call 0x420000000000000000000000000000000000000F "getL1Fee(bytes)(uint256)" $TX --rpc-url https://mainnet.optimism.io
+```
+
+Výsledek je ve Wei.
 
 ### ABI {#the-abi}
 
-Drtivá většina transakcí přistupuje ke kontraktu z externě vlastněného účtu.
-Většina kontraktů je napsána v jazyce Solidity a interpretuje své datové pole podle [aplikačního binárního rozhraní (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
+Drtivá většina transakcí přistupuje ke kontraktu z externě vlastněného účtu (EOA).
+Většina kontraktů je napsána v Solidity a interpretuje své datové pole podle [aplikačního binárního rozhraní (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
-Nicméně ABI bylo navrženo pro l1, kde bajt dat volání stojí přibližně stejně jako čtyři aritmetické operace, a ne pro l2, kde bajt dat volání stojí více než tisíc aritmetických operací.
+ABI však bylo navrženo pro L1, kde bajt dat volání stojí přibližně stejně jako čtyři aritmetické operace, a ne pro L2, kde (v cenách z roku 2022) bajt dat volání stojí více než tisíc aritmetických operací.
 Data volání jsou rozdělena takto:
 
-| Sekce | Délka | Bajty | Promarněné bajty | Promarněný gas | Nezbytné bajty | Nezbytný gas |
+| Sekce | Délka | Bajty | Zbytečné bajty | Zbytečný gas | Nezbytné bajty | Nezbytný gas |
 | ------------------- | -----: | ----: | -----------: | ---------: | --------------: | ------------: |
-| Selektor funkce |      4 |   0-3 |            3 |         48 |               1 |            16 |
-| Nuly |     12 |  4-15 |           12 |         48 |               0 |             0 |
-| Cílová adresa |     20 | 16-35 |            0 |          0 |              20 |           320 |
-| Částka |     32 | 36-67 |           17 |         64 |              15 |           240 |
-| Celkem |     68 |       |              |        160 |                 |           576 |
+| Selektor funkce | 4 | 0-3 | 3 | 48 | 1 | 16 |
+| Nuly | 12 | 4-15 | 12 | 48 | 0 | 0 |
+| Cílová adresa | 20 | 16-35 | 0 | 0 | 20 | 320 |
+| Částka | 32 | 36-67 | 17 | 68 | 15 | 240 |
+| Celkem | 68 | | | 164 | | 576 |
 
 Vysvětlení:
 
@@ -72,14 +101,27 @@ Vysvětlení:
 - **Částka**: Pokud budeme předpokládat, že v tomto kontraktu je `decimals` osmnáct (běžná hodnota) a maximální množství tokenů, které převedeme, bude 10<sup>18</sup>, dostaneme maximální částku 10<sup>36</sup>.
   256<sup>15</sup> &gt; 10<sup>36</sup>, takže patnáct bajtů stačí.
 
-Ztráta 160 gas na l1 je normálně zanedbatelná. Transakce stojí minimálně [21 000 gas](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), takže dalších 0,8 % nehraje roli.
-Na l2 je to však jiné. Téměř celé náklady na transakci tvoří její zápis na l1.
+Ztráta 164 gas na L1 je normálně zanedbatelná. Transakce stojí minimálně [21 000 gas](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), takže dalších 0,8 % nehraje roli.
+Na L2 v roce 2022 však byla situace jiná. Téměř celé náklady na transakci tvořil její zápis na L1.
 Kromě dat volání transakce je zde 109 bajtů hlavičky transakce (cílová adresa, podpis atd.).
-Celkové náklady jsou tedy `109*16+576+160=2480` a my z nich plýtváme asi 6,5 %.
+Celkové náklady jsou tedy `109*16+576+164=2484` a my z toho plýtváme asi 6,6 %.
 
-## Snižování nákladů, když nemáte pod kontrolou cíl {#reducing-costs-when-you-dont-control-the-destination}
+## Snížení nákladů, když nemáte pod kontrolou cíl {#reducing-costs-when-you-dont-control-the-destination}
 
 Za předpokladu, že nemáte kontrolu nad cílovým kontraktem, můžete stále použít řešení podobné [tomuto](https://github.com/qbzzt/ethereum.org-20220330-shortABI).
+
+Ke spuštění potřebujete [Node.js](https://nodejs.org/) a git:
+
+```sh
+git clone https://github.com/qbzzt/ethereum.org-20220330-shortABI.git
+cd ethereum.org-20220330-shortABI
+npm install
+npx hardhat test
+```
+
+Test nasadí kontrakty do vestavěné lokální sítě nástroje Hardhat, takže nepotřebujete žádné ETH.
+Repozitář používá Hardhat 2.9, takže na aktuálních verzích Node.js upozorňuje, že vaše verze Node.js není podporována, ale test přesto projde.
+
 Pojďme si projít příslušné soubory.
 
 ### Token.sol {#token-sol}
@@ -115,25 +157,26 @@ Potřebujeme funkci tokenu, abychom věděli, jak ji zavolat.
 
 ```solidity
 contract CalldataInterpreter {
+
     OrisUselessToken public immutable token;
 ```
 
-Adresa tokenu, pro který jsme proxy kontraktem.
+Adresa tokenu, pro který jsme proxy.
 
 ```solidity
 
     /**
-     * @dev Určuje adresu tokenu
-     * @param tokenAddr_ adresa kontraktu ERC-20
+     * @dev Specifikujte adresu tokenu
+     * @param tokenAddr_ adresa ERC-20 kontraktu
      */
     constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);
-    }   // constructor
+    }   // konstruktor
 ```
 
-Adresa tokenu je jediný parametr, který musíme specifikovat.
+Adresa tokenu je jediný parametr, který musíme zadat.
 
 ```solidity
     function calldataVal(uint startByte, uint length)
@@ -154,7 +197,7 @@ Přečtení hodnoty z dat volání.
 
 Načteme do paměti jedno 32bajtové (256bitové) slovo a odstraníme bajty, které nejsou součástí požadovaného pole.
 Tento algoritmus nefunguje pro hodnoty delší než 32 bajtů a samozřejmě nemůžeme číst za koncem dat volání.
-Na l1 by mohlo být nutné tyto testy přeskočit, aby se ušetřil gas, ale na l2 je gas extrémně levný, což umožňuje jakékoli kontroly správnosti, na které si vzpomeneme.
+Na L1 by mohlo být nutné tyto testy přeskočit, aby se ušetřil gas, ale na L2 je gas extrémně levný, což umožňuje jakékoli kontroly správnosti, na které si vzpomeneme.
 
 ```solidity
         assembly {
@@ -165,15 +208,15 @@ Na l1 by mohlo být nutné tyto testy přeskočit, aby se ušetřil gas, ale na 
 Mohli jsme zkopírovat data z volání do `fallback()` (viz níže), ale je snazší použít [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), jazyk symbolických adres (assembly) pro EVM.
 
 Zde používáme [operační kód CALLDATALOAD](https://www.evm.codes/#35) k načtení bajtů `startByte` až `startByte+31` do zásobníku.
-Obecně je syntaxe operačního kódu v jazyce Yul `<opcode name>(<first stack value, if any>,<second stack value, if any>...)`.
+Obecně platí, že syntaxe operačního kódu v jazyce Yul je `<opcode name>(<first stack value, if any>,<second stack value, if any>...)`.
 
 ```solidity
 
         _retVal = _retVal >> (256-length*8);
 ```
 
-Pouze nejvýznamnější bajty `length` jsou součástí pole, takže provedeme [posun vpravo](https://en.wikipedia.org/wiki/Logical_shift), abychom se zbavili ostatních hodnot.
-To má další výhodu v tom, že se hodnota přesune napravo od pole, takže je to samotná hodnota, a ne hodnota krát 256<sup>něco</sup>.
+Pouze nejvýznamnější bajty `length` jsou součástí pole, takže provedeme [posun doprava](https://en.wikipedia.org/wiki/Logical_shift), abychom se zbavili ostatních hodnot.
+To má další výhodu v tom, že se hodnota přesune na pravou stranu pole, takže jde o samotnou hodnotu, a ne o hodnotu vynásobenou 256<sup>něco</sup>.
 
 ```solidity
 
@@ -184,7 +227,7 @@ To má další výhodu v tom, že se hodnota přesune napravo od pole, takže je
     fallback() external {
 ```
 
-Když volání Solidity kontraktu neodpovídá žádnému z podpisů funkcí, zavolá [funkci `fallback()`](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function) (za předpokladu, že existuje).
+Když volání kontraktu v Solidity neodpovídá žádné z signatur funkcí, zavolá [funkci `fallback()`](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function) (za předpokladu, že existuje).
 V případě `CalldataInterpreter` se sem dostane _jakékoli_ volání, protože neexistují žádné jiné funkce `external` nebo `public`.
 
 ```solidity
@@ -194,19 +237,19 @@ V případě `CalldataInterpreter` se sem dostane _jakékoli_ volání, protože
 ```
 
 Přečtení prvního bajtu dat volání, který nám říká, o jakou funkci jde.
-Existují dva důvody, proč by zde funkce nebyla dostupná:
+Existují dva důvody, proč by zde funkce nebyla k dispozici:
 
-1. Funkce, které jsou `pure` nebo `view`, nemění stav a nestojí žádný gas (když jsou volány offchain).
+1. Funkce, které jsou `pure` nebo `view`, nemění stav a nestojí gas (když jsou volány offchain).
    Nemá smysl se snažit snížit jejich náklady na gas.
 2. Funkce, které spoléhají na [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties).
    Hodnota `msg.sender` bude adresa `CalldataInterpreter`, nikoli volajícího.
 
-Bohužel, [při pohledu na specifikace ERC-20](https://eips.ethereum.org/EIPS/eip-20) nám zbývá pouze jedna funkce, `transfer`.
-To nám ponechává pouze dvě funkce: `transfer` (protože můžeme zavolat `transferFrom`) a `faucet` (protože můžeme převést tokeny zpět tomu, kdo nás zavolal).
+Bohužel, [při pohledu na specifikace ERC-20](https://eips.ethereum.org/EIPS/eip-20) zbývá pouze jedna standardní funkce, `transfer` (protože můžeme zavolat `transferFrom`).
+Náš testovací token má také `faucet`, což můžeme podpořit, protože můžeme tokeny převést zpět tomu, kdo nás zavolal.
 
 ```solidity
 
-        // Volat metody tokenu měnící stav pomocí
+        // Zavolejte metody tokenu měnící stav pomocí
         // informací z dat volání
 
         // faucet
@@ -222,9 +265,9 @@ Volání `faucet()`, které nemá parametry.
         }
 ```
 
-Po zavolání `token.faucet()` získáme tokeny. Nicméně jako proxy kontrakt tokeny **nepotřebujeme**.
-EOA (externě vlastněný účet) nebo kontrakt, který nás zavolal, ano.
-Takže převedeme všechny naše tokeny tomu, kdo nás zavolal.
+Po zavolání `token.faucet()` získáme tokeny. Jako proxy kontrakt však tokeny **nepotřebujeme**.
+Potřebuje je EOA (externě vlastněný účet) nebo kontrakt, který nás zavolal.
+Převedeme tedy všechny naše tokeny tomu, kdo nás zavolal.
 
 ```solidity
         // převod (předpokládáme, že pro něj máme povolený limit)
@@ -238,13 +281,14 @@ Převod tokenů vyžaduje dva parametry: cílovou adresu a částku.
                 msg.sender,
 ```
 
-Volajícím umožňujeme převádět pouze tokeny, které vlastní
+Volajícím umožňujeme převádět pouze tokeny, které vlastní.
 
 ```solidity
                 address(uint160(calldataVal(1, 20))),
 ```
 
-Cílová adresa začíná na bajtu č. 1 (bajt č. 0 je funkce). Jako adresa je dlouhá 20 bajtů.
+Cílová adresa začíná na bajtu č. 1 (bajt č. 0 je funkce).
+Jako adresa je dlouhá 20 bajtů.
 
 ```solidity
                 calldataVal(21, 2)
@@ -257,24 +301,24 @@ Pro tento konkrétní kontrakt předpokládáme, že maximální počet tokenů,
         }
 ```
 
-Celkově převod zabere 35 bajtů dat volání:
+Celkově převod zabere 23 bajtů dat volání:
 
 | Sekce | Délka | Bajty |
 | ------------------- | -----: | ----: |
-| Selektor funkce |      1 |     0 |
-| Cílová adresa |     32 |  1-32 |
-| Částka |      2 | 33-34 |
+| Selektor funkce | 1 | 0 |
+| Cílová adresa | 20 | 1-20 |
+| Částka | 2 | 21-22 |
 
 ```solidity
     }   // fallback
 
-}       // contract CalldataInterpreter
+}       // kontrakt CalldataInterpreter
 ```
 
 ### test.js {#test-js}
 
 [Tento JavaScriptový jednotkový test (unit test)](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) nám ukazuje, jak tento mechanismus používat (a jak ověřit, že funguje správně).
-Budu předpokládat, že rozumíte knihovnám [chai](https://www.chaijs.com/) a [ethers](https://docs.ethers.io/v5/), a vysvětlím pouze části, které se konkrétně týkají kontraktu.
+Budu předpokládat, že rozumíte knihovnám [chai](https://www.chaijs.com/) a [ethers](https://docs.ethers.org/v5/), a vysvětlím pouze části, které se konkrétně týkají kontraktu.
 
 ```js
 const { expect } = require("chai");
@@ -322,7 +366,7 @@ Pro transakci musíme poskytnout dva parametry:
     await (await signer.sendTransaction(faucetTx)).wait()
 ```
 
-Voláme [metodu `sendTransaction` podepisujícího (signer)](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction), protože jsme již specifikovali cíl (`faucetTx.to`) a potřebujeme, aby byla transakce podepsána.
+Voláme [metodu `sendTransaction` podepisujícího (signer)](https://docs.ethers.org/v5/api/signer/#Signer-sendTransaction), protože jsme již specifikovali cíl (`faucetTx.to`) a potřebujeme, aby byla transakce podepsána.
 
 ```javascript
 // Zkontrolovat, zda faucet poskytuje tokeny správně
@@ -364,10 +408,16 @@ Vytvoření transakce převodu. První bajt je „0x02“, následovaný cílovo
 })      // describe
 ```
 
-## Snižování nákladů, když máte pod kontrolou cílový kontrakt {#reducing-the-cost-when-you-do-control-the-destination-contract}
+## Snížení nákladů, když máte pod kontrolou cílový kontrakt {#reducing-the-cost-when-you-do-control-the-destination-contract}
 
 Pokud máte kontrolu nad cílovým kontraktem, můžete vytvořit funkce, které obcházejí kontroly `msg.sender`, protože důvěřují interpretu dat volání.
-[Příklad toho, jak to funguje, můžete vidět zde, ve větvi `control-contract`](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
+[Příklad, jak to funguje, si můžete prohlédnout zde, ve větvi `control-contract`](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
+Chcete-li jej spustit, přepněte se do této větve v repozitáři, který jste si dříve naklonovali, a spusťte test znovu:
+
+```sh
+git checkout control-contract
+npx hardhat test
+```
 
 Pokud by kontrakt reagoval pouze na externí transakce, vystačili bychom si s jedním kontraktem.
 To by však narušilo [skládatelnost](/developers/docs/smart-contracts/composability/).
@@ -575,9 +625,10 @@ Všimněte si, že `transferFromTx` vyžaduje dva parametry adresy: poskytovatel
 
 ## Závěr {#conclusion}
 
-Sítě [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92) i [Arbitrum](https://developer.offchainlabs.com/docs/special_features) hledají způsoby, jak snížit velikost dat volání zapisovaných na l1, a tím i náklady na transakce.
-Nicméně jako poskytovatelé infrastruktury hledající obecná řešení jsou naše možnosti omezené.
-Jako vývojář decentralizované aplikace (dapp) máte znalosti specifické pro danou aplikaci, což vám umožňuje optimalizovat vaše data volání mnohem lépe, než bychom to dokázali my v obecném řešení.
-Doufejme, že vám tento článek pomůže najít ideální řešení pro vaše potřeby.
+Sítě [Optimism](https://docs.optimism.io/op-stack/transactions/fees#fjord) i [Arbitrum](https://docs.arbitrum.io/how-arbitrum-works/deep-dives/gas-and-fees) nyní komprimují data, která zapisují na L1, a účtují každou transakci na základě její komprimované velikosti, aby snížily náklady na transakce.
+Jako poskytovatelé infrastruktury hledající obecná řešení jsou však naše možnosti omezené.
+Jako vývojář dapp máte znalosti specifické pro danou aplikaci, což vám umožňuje optimalizovat data volání mnohem lépe, než bychom to dokázali my v obecném řešení.
+Doufáme, že vám tento článek pomůže najít ideální řešení pro vaše potřeby.
 
 [Zde najdete další mou práci](https://cryptodocguy.pro/).
+
