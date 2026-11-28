@@ -879,7 +879,7 @@
   "tokens-exam-freeze-opt-company": "The company that issues it",
   "tokens-exam-freeze-opt-anyone": "Nobody: nothing on Ethereum can be frozen",
   "tokens-exam-freeze-opt-wallet": "Your wallet app, if it spots a problem",
-  "tokens-exam-freeze-explain": "Companies that issue stablecoins can often freeze the coins at an address, for example when a law requires it. ETH has no company behind it, so nobody can freeze it.",
+  "tokens-exam-freeze-explain": "Companies that issue stablecoins can freeze the coins at an address, for example when a law requires it. ETH has no company behind it, so nobody can freeze it.",
   "tokens-exam-fee-prompt": "You hold only stablecoins and want to send some to a friend. What else do you usually need?",
   "tokens-exam-fee-opt-eth": "A little ETH for the fee",
   "tokens-exam-fee-opt-nothing": "Nothing else, since stablecoins pay their own way",
