@@ -11,19 +11,27 @@ published: 2021-03-09
 
 ## はじめに {#introduction}
 
-イーサリアムの最も一般的な用途の1つは、グループが取引可能なトークン、ある意味で独自の通貨を作成することです。これらのトークンは通常、[ERC-20](/developers/docs/standards/tokens/erc-20/)という標準に従っています。この標準により、流動性プールやウォレットなど、すべてのERC-20トークンで機能するツールを作成できるようになります。この記事では、[オープンツェッペリンのSolidityによるERC20実装](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)と、[インターフェース定義](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)を分析します。
+イーサリアムの最も一般的な用途の1つは、グループが取引可能なトークン、ある意味で独自の通貨を作成することです。これらのトークンは通常、[ERC-20](/developers/docs/standards/tokens/erc-20/)という標準に従います。この標準により、流動性プールやウォレットなど、すべてのERC-20トークンで機能するツールを作成することが可能になります。この記事では、[OpenZeppelinのSolidityによるERC20実装](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol)と、その[インターフェース定義](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol)を分析します。
 
-これは注釈付きのソースコードです。ERC-20を実装したい場合は、[こちらのチュートリアルをお読みください](https://docs.openzeppelin.com/contracts/3.x/erc20-supply)。
+これは注釈付きのソースコードです。ERC-20を実装したい場合は、[こちらのチュートリアルをお読みください](https://docs.openzeppelin.com/contracts/5.x/erc20-supply)。
+
+<Alert variant="info">
+<AlertContent>
+<AlertDescription>
+このウォークスルーでは、OpenZeppelin Contracts v3.3 (Solidity 0.6/0.7) を対象としています。現在 `@openzeppelin/contracts` をインストールすると v5.x が取得されますが、これは以下のコードとは異なります。`SafeMath` の代わりに Solidity に組み込まれたチェック付き算術演算を使用し、`_beforeTokenTransfer` と `_afterTokenTransfer` を単一の `_update` 関数に置き換え、`increaseAllowance`、`decreaseAllowance`、および `_setupDecimals` を削除し、リバート文字列の代わりにカスタムエラーで失敗を報告します。ここで説明されている概念は引き続き適用されます。現在の API については、[OpenZeppelin v5 ERC-20 ドキュメント](https://docs.openzeppelin.com/contracts/5.x/erc20)を参照してください。
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## インターフェース {#the-interface}
 
-ERC-20のような標準の目的は、ウォレットや分散型取引所などのアプリケーション間で相互運用可能な多くのトークン実装を可能にすることです。これを実現するために、[インターフェース](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/)を作成します。トークン・コントラクトを使用する必要があるコードは、メタマスクのようなウォレットであれ、etherscan.ioのような分散型アプリケーション (dapp) であれ、流動性プールのような別のコントラクトであれ、インターフェース内の同じ定義を使用することで、それを使用するすべてのトークン・コントラクトと互換性を持つことができます。
+ERC-20のような標準の目的は、ウォレットや分散型取引所などのアプリケーション間で相互運用可能な多くのトークン実装を可能にすることです。これを達成するために、[インターフェース](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/)を作成します。トークンコントラクトを使用する必要があるコードは、インターフェース内の同じ定義を使用でき、MetaMaskのようなウォレット、etherscan.ioのようなdapp、または流動性プールのような別のコントラクトであっても、それを使用するすべてのトークンコントラクトと互換性を持つことができます。
 
-![Illustration of the ERC-20 interface](erc20_interface.png)
+![ERC-20インターフェースの図](erc20_interface.png)
 
-経験豊富なプログラマーであれば、[Java](https://www.w3schools.com/java/java_interface.asp)や[C言語のヘッダーファイル](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html)で同様の構造を見たことがあるでしょう。
+経験豊富なプログラマーであれば、[Java](https://www.w3schools.com/java/java_interface.asp)や[C言語のヘッダーファイル](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html)で同様の構造を見たことがあるかもしれません。
 
-これはオープンツェッペリンによる[ERC-20インターフェース](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)の定義です。これは、[人間が読める標準](https://eips.ethereum.org/EIPS/eip-20)をSolidityコードに翻訳したものです。もちろん、インターフェース自体は_どのように_処理を行うかを定義するものではありません。それについては、以下のコントラクトのソースコードで説明されています。
+これはOpenZeppelinによる[ERC-20インターフェース](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol)の定義です。これは、[人間が読める標準](https://eips.ethereum.org/EIPS/eip-20)をSolidityコードに翻訳したものです。もちろん、インターフェース自体は_どのように_何かを行うかを定義するものではありません。それは以下のコントラクトのソースコードで説明されています。
 
 &nbsp;
 
@@ -39,17 +47,17 @@ Solidityファイルにはライセンス識別子を含めることになって
 pragma solidity >=0.6.0 <0.8.0;
 ```
 
-Solidity言語は現在も急速に進化しており、新しいバージョンは古いコードと互換性がない場合があります（[詳細はこちら](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)）。そのため、言語の最小バージョンだけでなく、コードをテストした最新のバージョンである最大バージョンも指定することをお勧めします。
+Solidity言語は依然として急速に進化しており、新しいバージョンは古いコードと互換性がない場合があります（[こちらを参照](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)）。したがって、言語の最小バージョンだけでなく、コードをテストした最新のバージョンである最大バージョンも指定することをお勧めします。
 
 &nbsp;
 
 ```solidity
 /**
- * @dev EIPで定義されているERC-20標準のインターフェース。
+ * @dev EIPで定義されているERC20標準のインターフェース。
  */
 ```
 
-コメント内の`@dev`は、ソースコードからドキュメントを生成するために使用される[NatSpecフォーマット](https://docs.soliditylang.org/en/develop/natspec-format.html)の一部です。
+コメント内の `@dev` は、ソースコードからドキュメントを生成するために使用される[NatSpecフォーマット](https://docs.soliditylang.org/en/develop/natspec-format.html)の一部です。
 
 &nbsp;
 
@@ -57,125 +65,127 @@ Solidity言語は現在も急速に進化しており、新しいバージョン
 interface IERC20 {
 ```
 
-慣例として、インターフェース名は`I`で始まります。
+慣例により、インターフェース名は `I` で始まります。
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev 存在するトークンの量を返します。
+     * @dev 存在するトークンの量を返す。
      */
     function totalSupply() external view returns (uint256);
 ```
 
-この関数は`external`であり、[コントラクトの外部からのみ呼び出すことができる](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2)ことを意味します。コントラクト内のトークンの総供給量を返します。この値は、イーサリアムで最も一般的な型である符号なし256ビット（256ビットはEVMのネイティブなワードサイズです）を使用して返されます。また、この関数は`view`でもあります。つまり、状態を変更しないため、ブロックチェーン内のすべてのノードで実行するのではなく、単一のノードで実行できます。この種の関数はトランザクションを生成せず、[ガス](/developers/docs/gas/)も消費しません。
+この関数は `external` であり、[コントラクトの外部からのみ呼び出すことができる](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2)ことを意味します。コントラクト内のトークンの総供給量を返します。この値は、イーサリアムで最も一般的な型である符号なし256ビット（256ビットはEVMのネイティブワードサイズです）を使用して返されます。この関数は `view` でもあります。つまり、状態を変更しないため、ブロックチェーン内のすべてのノードで実行する代わりに、単一のノードで実行できます。この種の関数はトランザクションを生成せず、[ガス](/developers/docs/gas/)も消費しません。
 
-**注:** 理論上は、コントラクトの作成者が実際の値よりも少ない総供給量を返すことで不正を行い、各トークンを実際よりも価値があるように見せかけることができるように思えるかもしれません。しかし、その懸念はブロックチェーンの真の性質を無視しています。ブロックチェーン上で起こるすべてのことは、すべてのノードによって検証可能です。これを実現するために、すべてのコントラクトの機械語コードとストレージはすべてのノードで利用可能になっています。コントラクトのSolidityコードを公開する義務はありませんが、ソースコードとコンパイルに使用したSolidityのバージョンを公開し、提供した機械語コードと照合して検証できるようにしない限り、誰もあなたを真剣に受け止めないでしょう。例えば、[こちらのコントラクト](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract)をご覧ください。
+**注:** 理論上は、コントラクトの作成者が実際の値よりも少ない総供給量を返すことで不正を行い、各トークンを実際よりも価値があるように見せかけることができるように思えるかもしれません。しかし、その懸念はブロックチェーンの真の性質を無視しています。ブロックチェーン上で起こるすべてのことは、すべてのノードによって検証可能です。これを達成するために、すべてのコントラクトの機械語コードとストレージはすべてのノードで利用可能です。コントラクトのSolidityコードを公開する義務はありませんが、ソースコードとコンパイルに使用したSolidityのバージョンを公開し、提供した機械語コードと照合して検証できるようにしない限り、誰もあなたを真剣に受け止めないでしょう。
+例として、[こちらのコントラクト](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract)を参照してください。
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev `account` が所有するトークンの量を返します。
+     * @dev `account` が所有するトークンの量を返す。
      */
     function balanceOf(address account) external view returns (uint256);
 ```
 
-名前が示す通り、`balanceOf`はアカウントの残高を返します。イーサリアムのアカウントは、Solidityでは160ビットを保持する`address`型を使用して識別されます。これも`external`および`view`です。
+名前が示すように、`balanceOf` はアカウントの残高を返します。イーサリアムのアカウントは、Solidityでは160ビットを保持する `address` 型を使用して識別されます。これも `external` であり `view` です。
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev 呼び出し元のアカウントから `recipient` へ `amount` 分のトークンを送金します。
+     * @dev 呼び出し元のアカウントから `recipient` へ `amount` トークンを送金する。
      *
-     * 操作が成功したかどうかを示すブール値を返します。
+     * 操作が成功したかどうかを示すブール値を返す。
      *
-     * {Transfer} イベントを発行します。
+     * {Transfer} イベントを発行する。
      */
     function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
-`transfer`関数は、呼び出し元から別のアドレスへトークンを送金します。これには状態の変更が伴うため、`view`ではありません。ユーザーがこの関数を呼び出すと、トランザクションが作成され、ガスが消費されます。また、ブロックチェーン上の全員にイベントを知らせるために、`Transfer`イベントを発行します。
+`transfer` 関数は、呼び出し元から別のアドレスへトークンを送金します。これには状態の変更が伴うため、`view` ではありません。ユーザーがこの関数を呼び出すと、トランザクションが作成され、ガスが消費されます。また、ブロックチェーン上の全員にイベントを知らせるために、`Transfer` イベントを発行します。
 
-この関数には、2つの異なるタイプの呼び出し元に対して2種類の出力があります。
+この関数には、2つの異なるタイプの呼び出し元に対して2つのタイプの出力があります。
 
-- ユーザーインターフェースから直接関数を呼び出すユーザー。通常、ユーザーはトランザクションを送信し、無期限に時間がかかる可能性のある応答を待ちません。ユーザーは、トランザクション・レシート（トランザクション・ハッシュによって識別されます）を探すか、`Transfer`イベントを探すことで、何が起こったかを確認できます。
+- ユーザーインターフェースから直接関数を呼び出すユーザー。通常、ユーザーはトランザクションを送信し、無期限に時間がかかる可能性のある応答を待ちません。ユーザーは、トランザクション・レシート（トランザクション・ハッシュによって識別されます）を探すか、`Transfer` イベントを探すことで、何が起こったかを確認できます。
 - 全体的なトランザクションの一部として関数を呼び出す他のコントラクト。これらのコントラクトは同じトランザクション内で実行されるため、結果をすぐに取得でき、関数の戻り値を使用できます。
 
-コントラクトの状態を変更する他の関数でも、同じタイプの出力が作成されます。
+コントラクトの状態を変更する他の関数によっても、同じタイプの出力が作成されます。
 
 &nbsp;
 
-アローワンスは、あるアカウントが別の所有者に属するトークンの一部を消費することを許可します。これは、例えば販売者として機能するコントラクトにとって有用です。コントラクトはイベントを監視できないため、購入者が販売者コントラクトに直接トークンを送金した場合、そのコントラクトは支払いが行われたことを知ることができません。代わりに、購入者は販売者コントラクトに一定額の消費を許可し、販売者がその額を送金します。これは販売者コントラクトが呼び出す関数を通じて行われるため、販売者コントラクトはそれが成功したかどうかを知ることができます。
+アローワンスは、アカウントが別の所有者に属するトークンの一部を消費することを許可します。これは、例えば販売者として機能するコントラクトにとって有用です。コントラクトはイベントを監視できないため、購入者が販売者コントラクトに直接トークンを送金した場合、そのコントラクトは支払いを受けたことを知ることができません。代わりに、購入者は販売者コントラクトに一定額を消費することを許可し、販売者はその額を送金します。これは販売者コントラクトが呼び出す関数を通じて行われるため、販売者コントラクトは成功したかどうかを知ることができます。
 
 ```solidity
     /**
-     * @dev `spender` が {transferFrom} を通じて `owner` の代わりに消費できるトークンの残りの数を返します。デフォルトではゼロです。
+     * @dev `spender` が `owner` に代わって {transferFrom} を通じて消費することが許可されるトークンの残量を返す。これはデフォルトではゼロである。
      *
-     * この値は {approve} または {transferFrom} が呼び出されたときに変化します。
+     * この値は {approve} または {transferFrom} が呼び出されたときに変化する。
      */
     function allowance(address owner, address spender) external view returns (uint256);
 ```
 
-`allowance`関数を使用すると、あるアドレス（`owner`）が別のアドレス（`spender`）に消費を許可しているアローワンスがいくらであるかを誰でも照会できます。
+`allowance` 関数を使用すると、あるアドレス（`owner`）が別のアドレス（`spender`）に消費を許可しているアローワンスがいくらかを誰でも照会できます。
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev 呼び出し元のトークンに対する `spender` のアローワンスとして `amount` を設定します。
+     * @dev 呼び出し元のトークンに対する `spender` のアローワンスとして `amount` を設定する。
      *
-     * 操作が成功したかどうかを示すブール値を返します。
+     * 操作が成功したかどうかを示すブール値を返す。
      *
-     * 重要: このメソッドでアローワンスを変更すると、不運なトランザクションの順序付けにより、誰かが古いアローワンスと新しいアローワンスの両方を使用するリスクがあることに注意してください。この競合状態を軽減する1つの可能な解決策は、最初にspenderのアローワンスを0に減らし、その後で目的の値を設定することです:
+     * 重要: このメソッドでアローワンスを変更すると、不運なトランザクションの順序付けにより、誰かが古いアローワンスと新しいアローワンスの両方を使用するリスクが生じることに注意すること。この競合状態を軽減する1つの可能な解決策は、まずspenderのアローワンスを0に減らし、その後で希望する値を設定することである:
      * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
      *
-     * {Approval} イベントを発行します。
+     * {Approval} イベントを発行する。
      */
     function approve(address spender, uint256 amount) external returns (bool);
 ```
 
-`approve`関数はアローワンスを作成します。これがどのように悪用される可能性があるかについてのメッセージを必ず読んでください。イーサリアムでは、自分自身のトランザクションの順序は制御できますが、相手のトランザクションが発生したのを確認するまで自分のトランザクションを送信しない限り、他人のトランザクションが実行される順序を制御することはできません。
+`approve` 関数はアローワンスを作成します。これがどのように悪用される可能性があるかについてのメッセージを必ず読んでください。イーサリアムでは、自分自身のトランザクションの順序を制御できますが、相手のトランザクションが発生したのを確認するまで自分自身のトランザクションを送信しない限り、他人のトランザクションが実行される順序を制御することはできません。
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev アローワンスのメカニズムを使用して、`sender` から `recipient` へ `amount` 分のトークンを送金します。その後、`amount` は呼び出し元のアローワンスから差し引かれます。
+     * @dev アローワンスメカニズムを使用して、`sender` から `recipient` へ `amount` トークンを送金する。その後、`amount` は呼び出し元のアローワンスから差し引かれる。
      *
-     * 操作が成功したかどうかを示すブール値を返します。
+     * 操作が成功したかどうかを示すブール値を返す。
      *
-     * {Transfer} イベントを発行します。
+     * {Transfer} イベントを発行する。
      */
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 ```
 
-最後に、`transferFrom`は、消費者が実際にアローワンスを消費するために使用されます。
+最後に、`transferFrom` は、消費者が実際にアローワンスを消費するために使用されます。
 
 &nbsp;
 
 ```solidity
 
     /**
-     * @dev `value` 分のトークンがあるアカウント (`from`) から別のアカウント (`to`) へ送金されたときに発行されます。
+     * @dev `value` トークンがあるアカウント (`from`) から別のアカウント (`to`) へ送金されたときに発行される。
      *
-     * `value` はゼロになる可能性があることに注意してください。
+     * `value` はゼロになる可能性があることに注意すること。
      */
     event Transfer(address indexed from, address indexed to, uint256 value);
 
     /**
-     * @dev {approve} の呼び出しによって `owner` に対する `spender` のアローワンスが設定されたときに発行されます。`value` は新しいアローワンスです。
+     * @dev Emitted when the allowance of a `spender` for an `owner` is set by
+     * a call to {approve}. `value` is the new allowance.
      */
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 ```
 
-これらのイベントは、ERC-20コントラクトの状態が変化したときに発行されます。
+これらのイベントは、ERC-20コントラクトの状態が変更されたときに発行されます。
 
 ## 実際のコントラクト {#the-actual-contract}
 
-これはERC-20標準を実装する実際のコントラクトであり、[こちらから引用](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)したものです。そのまま使用することを意図したものではありませんが、これを[継承](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm)して拡張することで、実用的なものにすることができます。
+これはERC-20標準を実装する実際のコントラクトであり、[こちらから引用](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol)したものです。そのまま使用することを意図したものではありませんが、これを[継承](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm)して拡張することで、実用的なものにすることができます。
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -196,7 +206,7 @@ import "../../math/SafeMath.sol";
 ```
 
 - `GSN/Context.sol`は、イーサを持たないユーザーがブロックチェーンを使用できるようにするシステムである[OpenGSN](https://opengsn.org/)を使用するために必要な定義です。これは古いバージョンであることに注意してください。OpenGSNと統合したい場合は、[こちらのチュートリアルを使用してください](https://docs.opengsn.org/javascript-client/tutorial.html)。
-- [SafeMathライブラリ](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)は、Solidityバージョン**&lt;0.8.0**での算術オーバーフロー/アンダーフローを防ぎます。Solidity ≥0.8.0では、算術演算はオーバーフロー/アンダーフロー時に自動的にリバートされるため、SafeMathは不要です。このコントラクトは、古いコンパイラバージョンとの下位互換性のためにSafeMathを使用しています。
+- [SafeMathライブラリ](https://docs.openzeppelin.com/contracts/3.x/api/math#SafeMath)は、Solidityバージョン**&lt;0.8.0**での算術オーバーフロー/アンダーフローを防ぎます。Solidity ≥0.8.0では、算術演算はオーバーフロー/アンダーフロー時に自動的にリバートされるため、SafeMathは不要です。このコントラクトは、古いコンパイラバージョンとの下位互換性のためにSafeMathを使用しています。
 
 &nbsp;
 
@@ -240,11 +250,11 @@ contract ERC20 is Context, IERC20 {
 
 ```
 
-この行は、`SafeMath`ライブラリを`uint256`型にアタッチします。このライブラリは[こちら](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol)で確認できます。
+この行は、`SafeMath`ライブラリを`uint256`型にアタッチします。このライブラリは[こちら](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/math/SafeMath.sol)で確認できます。
 
 ### 変数定義 {#variable-definitions}
 
-これらの定義は、コントラクトの状態変数を指定します。これらの変数は`private`として宣言されていますが、これはブロックチェーン上の他のコントラクトがそれらを読み取れないことを意味するだけです。_ブロックチェーン上に秘密はありません_。すべてのノードのソフトウェアは、すべてのブロックにおけるすべてのコントラクトの状態を保持しています。慣例として、状態変数の名前は`_<something>`のようになります。
+これらの定義は、コントラクトの状態変数を指定します。これらの変数は `private` として宣言されていますが、これはブロックチェーン上の他のコントラクトがそれらを読み取れないことを意味するだけです。_ブロックチェーン上に秘密はありません_。すべてのノードのソフトウェアは、すべてのブロックにおけるすべてのコントラクトの状態を保持しています。慣例により、状態変数は `_<something>` のように名付けられます。
 
 最初の2つの変数は[マッピング](https://www.tutorialspoint.com/solidity/solidity_mappings.htm)です。つまり、キーが数値であることを除けば、[連想配列](https://wikipedia.org/wiki/Associative_array)とほぼ同じように動作します。ストレージは、デフォルト（ゼロ）とは異なる値を持つエントリに対してのみ割り当てられます。
 
@@ -252,7 +262,7 @@ contract ERC20 is Context, IERC20 {
     mapping (address => uint256) private _balances;
 ```
 
-最初のマッピングである`_balances`は、アドレスとそれぞれのこのトークンの残高です。残高にアクセスするには、`_balances[<address>]`という構文を使用します。
+最初のマッピングである `_balances` は、アドレスとこのトークンのそれぞれの残高です。残高にアクセスするには、`_balances[<address>]` という構文を使用します。
 
 &nbsp;
 
@@ -260,7 +270,7 @@ contract ERC20 is Context, IERC20 {
     mapping (address => mapping (address => uint256)) private _allowances;
 ```
 
-この変数`_allowances`は、先ほど説明したアローワンスを保存します。最初のインデックスはトークンの所有者であり、2番目はアローワンスを持つコントラクトです。アドレスAがアドレスBのアカウントから消費できる金額にアクセスするには、`_allowances[B][A]`を使用します。
+この変数 `_allowances` は、先ほど説明したアローワンスを保存します。最初のインデックスはトークンの所有者であり、2番目はアローワンスを持つコントラクトです。アドレスAがアドレスBのアカウントから消費できる金額にアクセスするには、`_allowances[B][A]` を使用します。
 
 &nbsp;
 
@@ -268,7 +278,7 @@ contract ERC20 is Context, IERC20 {
     uint256 private _totalSupply;
 ```
 
-名前が示す通り、この変数はトークンの総供給量を追跡します。
+名前が示すように、この変数はトークンの総供給量を追跡します。
 
 &nbsp;
 
@@ -278,76 +288,80 @@ contract ERC20 is Context, IERC20 {
     uint8 private _decimals;
 ```
 
-これら3つの変数は可読性を向上させるために使用されます。最初の2つは説明不要ですが、`_decimals`はそうではありません。
+これら3つの変数は可読性を向上させるために使用されます。最初の2つは説明不要ですが、`_decimals` はそうではありません。
 
-一方で、イーサリアムには浮動小数点や小数の変数がありません。他方で、人間はトークンを分割できることを好みます。人々が通貨として金に落ち着いた理由の1つは、誰かがアヒル1羽分の牛を買いたいと思ったときに、お釣りを作るのが難しかったからです。
+一方で、イーサリアムには浮動小数点や小数の変数はありません。他方で、人間はトークンを分割できることを好みます。人々が通貨として金に落ち着いた理由の1つは、誰かがアヒル1羽分の牛を買いたいと思ったときにお釣りを作るのが難しかったからです。
 
-解決策は、整数を追跡しつつ、実際のトークンの代わりに、ほとんど価値のない分割されたトークンを数えることです。イーサの場合、分割されたトークンはWeiと呼ばれ、10^18 Weiが1 ETHに等しくなります。執筆時点では、10,000,000,000,000 Weiが約1米セントまたは1ユーロセントに相当します。
+解決策は、整数を追跡することですが、実際のトークンの代わりに、ほとんど価値のない小数のトークンを数えることです。イーサの場合、小数のトークンはWeiと呼ばれ、10^18 Weiが1 ETHに等しくなります。
 
-アプリケーションは、トークン残高をどのように表示するかを知る必要があります。ユーザーが3,141,000,000,000,000,000 Weiを持っている場合、それは3.14 ETHでしょうか？ 31.41 ETHでしょうか？ それとも3,141 ETHでしょうか？ イーサの場合は1 ETHあたり10^18 Weiと定義されていますが、独自のトークンでは異なる値を選択できます。トークンを分割することに意味がない場合は、`_decimals`の値をゼロにすることができます。ETHと同じ標準を使用したい場合は、値として**18**を使用します。
+アプリケーションは、トークン残高をどのように表示するかを知る必要があります。ユーザーが3,141,000,000,000,000,000 Weiを持っている場合、それは3.14 ETHでしょうか？ 31.41 ETHでしょうか？ 3,141 ETHでしょうか？ イーサの場合は1 ETHに対して10^18 Weiと定義されていますが、独自のトークンでは異なる値を選択できます。トークンを分割することが意味をなさない場合は、`_decimals` の値をゼロにすることができます。ETHと同じ標準を使用したい場合は、**18**という値を使用します。
 
 ### コンストラクタ {#the-constructor}
 
 ```solidity
     /**
-     * @dev {name} と {symbol} の値を設定し、{decimals} をデフォルト値の18で初期化します。
+     * @dev {name} と {symbol} の値を設定し、{decimals} をデフォルト値の18で初期化する。
      *
-     * {decimals} に別の値を選択するには、{_setupDecimals} を使用します。
+     * {decimals} に別の値を選択するには、{_setupDecimals} を使用する。
      *
-     * これら3つの値はすべて不変です: コンストラクタの実行中に1回だけ設定できます。
+     * これら3つの値はすべて不変である: 構築時に一度だけ設定できる。
      */
     constructor (string memory name_, string memory symbol_) public {
-        // Solidity ≥0.7.0では、'public' は暗黙的であり、省略できます。
-
         _name = name_;
         _symbol = symbol_;
         _decimals = 18;
     }
 ```
 
-コンストラクタは、コントラクトが最初に作成されたときに呼び出されます。慣例として、関数のパラメータ名は`<something>_`のようになります。
+コンストラクタは、コントラクトが最初に作成されたときに呼び出されます。慣例により、関数のパラメータは `<something>_` のように名付けられます。
+Solidity 0.7.0以降、コンストラクタの可視性（`public` または `internal`）は無視され非推奨となったため、新しいコードでは省略されています。
 
 ### ユーザーインターフェース関数 {#user-interface-functions}
 
 ```solidity
     /**
-     * @dev トークンの名前を返します。
+     * @dev トークンの名前を返す。
      */
     function name() public view returns (string memory) {
         return _name;
     }
 
     /**
-     * @dev トークンのシンボルを返します。通常は名前の短いバージョンです。
+     * @dev トークンのシンボルを返す。通常は名前の短縮版である。
      */
     function symbol() public view returns (string memory) {
         return _symbol;
     }
 
     /**
-     * @dev ユーザー表現を取得するために使用される小数点以下の桁数を返します。
-     * 例えば、`decimals` が `2` に等しい場合、`505` トークンの残高はユーザーに `5,05` (`505 / 10 ** 2`) として表示されるべきです。
+     * @dev Returns the number of decimals used to get its user representation.
+     * For example, if `decimals` equals `2`, a balance of `505` tokens should
+     * be displayed to a user as `5,05` (`505 / 10 ** 2`).
      *
-     * トークンは通常、イーサとWeiの関係を模倣して、18の値を選択します。これは、{_setupDecimals} が呼び出されない限り、{ERC20} が使用する値です。
+     * Tokens usually opt for a value of 18, imitating the relationship between
+     * ether and wei. This is the value {ERC20} uses, unless {_setupDecimals} is
+     * called.
      *
-     * 注: この情報は _表示_ 目的でのみ使用されます: {IERC20-balanceOf} や {IERC20-transfer} を含む、コントラクトのいかなる算術演算にも影響を与えません。
+     * NOTE: This information is only used for _display_ purposes: it in
+     * no way affects any of the arithmetic of the contract, including
+     * {IERC20-balanceOf} and {IERC20-transfer}.
      */
     function decimals() public view returns (uint8) {
         return _decimals;
     }
 ```
 
-これらの関数（`name`、`symbol`、および`decimals`）は、ユーザーインターフェースがコントラクトについて認識し、適切に表示できるようにするのに役立ちます。
+これらの関数、`name`、`symbol`、および `decimals` は、ユーザーインターフェースがコントラクトについて知り、適切に表示できるようにするのに役立ちます。
 
-戻り値の型は`string memory`であり、メモリに保存された文字列を返すことを意味します。文字列などの変数は、次の3つの場所に保存できます。
+戻り値の型は `string memory` であり、メモリに保存されている文字列を返すことを意味します。文字列などの変数は、次の3つの場所に保存できます。
 
-|          | ライフタイム | コントラクトのアクセス | ガス・コスト |
+|          | ライフタイム      | コントラクトのアクセス | ガス・コスト                                                       |
 | -------- | ------------- | --------------- | -------------------------------------------------------------- |
-| Memory   | 関数呼び出し | 読み取り/書き込み | 数十から数百（上位の場所ほど高くなる） |
-| Calldata | 関数呼び出し | 読み取り専用 | 戻り値の型としては使用できず、関数のパラメータ型としてのみ使用可能 |
-| Storage  | 変更されるまで | 読み取り/書き込み | 高い（読み取りに800、書き込みに20k） |
+| Memory   | 関数呼び出し | 読み取り/書き込み      | 数十または数百（高い場所ほど高くなります）                 |
+| Calldata | 関数呼び出し | 読み取り専用       | 戻り値の型としては使用できず、関数のパラメータ型としてのみ使用可能 |
+| Storage  | 変更されるまで | 読み取り/書き込み      | 高い（コールドリードで2,100、新規書き込みで20,000）           |
 
-この場合、`memory`が最良の選択です。
+この場合、`memory` が最良の選択です。
 
 ### トークン情報の読み取り {#read-token-information}
 
@@ -599,7 +613,7 @@ B:
 このコントラクトを使用するには2つの方法があります。
 
 1. 独自のコードのテンプレートとして使用する
-1. [それを継承し](https://www.bitdegree.org/learn/solidity-inheritance)、変更する必要がある関数のみをオーバーライドする
+1. [それを継承し](https://docs.soliditylang.org/en/latest/contracts.html#inheritance)、変更する必要がある関数のみをオーバーライドする
 
 オープンツェッペリンのERC-20コードはすでに監査されており、安全であることが示されているため、2番目の方法の方がはるかに優れています。継承を使用すると、変更した関数が明確になり、コントラクトを信頼してもらうために、人々はその特定の関数のみを監査すれば済みます。
 
