@@ -11,19 +11,27 @@ published: 2021-03-09
 
 ## Wprowadzenie {#introduction}
 
-Jednym z najczęstszych zastosowań Ethereum jest tworzenie przez grupę zbywalnego tokena, w pewnym sensie własnej waluty. Tokeny te zazwyczaj są zgodne ze standardem [ERC-20](/developers/docs/standards/tokens/erc-20/). Standard ten umożliwia pisanie narzędzi, takich jak pule płynności i portfele, które współpracują ze wszystkimi tokenami ERC-20. W tym artykule przeanalizujemy [implementację ERC20 w Solidity od OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), a także [definicję interfejsu](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
+Jednym z najczęstszych zastosowań Ethereum jest tworzenie przez grupę zbywalnego tokena, w pewnym sensie własnej waluty. Tokeny te zazwyczaj podążają za standardem [ERC-20](/developers/docs/standards/tokens/erc-20/). Ten standard umożliwia tworzenie narzędzi, takich jak pule płynności i portfele, które współpracują ze wszystkimi tokenami ERC-20. W tym artykule przeanalizujemy [implementację ERC20 w Solidity od OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol), a także [definicję interfejsu](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol).
 
-To jest opatrzony komentarzami kod źródłowy. Jeśli chcesz zaimplementować ERC-20, [przeczytaj ten samouczek](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
+To jest kod źródłowy z adnotacjami. Jeśli chcesz zaimplementować ERC-20, [przeczytaj ten samouczek](https://docs.openzeppelin.com/contracts/5.x/erc20-supply).
+
+<Alert variant="info">
+<AlertContent>
+<AlertDescription>
+Ten przewodnik obejmuje OpenZeppelin Contracts v3.3 (Solidity 0.6/0.7). Jeśli zainstalujesz `@openzeppelin/contracts` dzisiaj, otrzymasz wersję v5.x, która różni się od poniższego kodu: używa wbudowanej w Solidity sprawdzanej arytmetyki zamiast `SafeMath`, zastępuje `_beforeTokenTransfer` i `_afterTokenTransfer` pojedynczą funkcją `_update`, porzuca `increaseAllowance`, `decreaseAllowance` i `_setupDecimals`, a także zgłasza błędy za pomocą niestandardowych błędów (custom errors) zamiast ciągów znaków wycofania (revert strings). Wyjaśnione tutaj koncepcje nadal mają zastosowanie. Zobacz [dokumentację OpenZeppelin v5 ERC-20](https://docs.openzeppelin.com/contracts/5.x/erc20), aby zapoznać się z aktualnym API.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Interfejs {#the-interface}
 
-Celem standardu takiego jak ERC-20 jest umożliwienie wielu implementacji tokenów, które są interoperacyjne w różnych aplikacjach, takich jak portfele i zdecentralizowane giełdy. Aby to osiągnąć, tworzymy [interfejs](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/). Każdy kod, który musi użyć kontraktu tokena, może korzystać z tych samych definicji w interfejsie i być kompatybilny ze wszystkimi kontraktami tokenów, które go używają, niezależnie od tego, czy jest to portfel taki jak MetaMask, zdecentralizowana aplikacja (dapp) taka jak etherscan.io, czy inny kontrakt, taki jak pula płynności.
+Celem standardu takiego jak ERC-20 jest umożliwienie wielu implementacjom tokenów bycia interoperacyjnymi w różnych aplikacjach, takich jak portfele i zdecentralizowane giełdy. Aby to osiągnąć, tworzymy [interfejs](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/). Każdy kod, który musi użyć kontraktu tokena, może korzystać z tych samych definicji w interfejsie i być kompatybilny ze wszystkimi kontraktami tokenów, które go używają, niezależnie od tego, czy jest to portfel taki jak MetaMask, dapp taki jak etherscan.io, czy inny kontrakt, taki jak pula płynności.
 
-![Illustration of the ERC-20 interface](erc20_interface.png)
+![Ilustracja interfejsu ERC-20](erc20_interface.png)
 
-Jeśli jesteś doświadczonym programistą, prawdopodobnie pamiętasz podobne konstrukcje w [Javie](https://www.w3schools.com/java/java_interface.asp) lub nawet w [plikach nagłówkowych C](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html).
+Jeśli jesteś doświadczonym programistą, prawdopodobnie pamiętasz podobne konstrukcje w języku [Java](https://www.w3schools.com/java/java_interface.asp) lub nawet w [plikach nagłówkowych C](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html).
 
-To jest definicja [interfejsu ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) od OpenZeppelin. Jest to tłumaczenie [czytelnego dla człowieka standardu](https://eips.ethereum.org/EIPS/eip-20) na kod Solidity. Oczywiście sam interfejs nie definiuje _jak_ cokolwiek zrobić. Zostało to wyjaśnione w kodzie źródłowym kontraktu poniżej.
+To jest definicja [interfejsu ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol) od OpenZeppelin. Jest to tłumaczenie [standardu czytelnego dla człowieka](https://eips.ethereum.org/EIPS/eip-20) na kod Solidity. Oczywiście sam interfejs nie definiuje _jak_ cokolwiek zrobić. Zostało to wyjaśnione w kodzie źródłowym kontraktu poniżej.
 
 &nbsp;
 
@@ -39,7 +47,7 @@ Pliki Solidity powinny zawierać identyfikator licencji. [Listę licencji możes
 pragma solidity >=0.6.0 <0.8.0;
 ```
 
-Język Solidity wciąż szybko ewoluuje, a nowe wersje mogą nie być kompatybilne ze starym kodem ([zobacz tutaj](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Dlatego dobrym pomysłem jest określenie nie tylko minimalnej wersji języka, ale także maksymalnej wersji, czyli najnowszej, z którą testowano kod.
+Język Solidity wciąż szybko się rozwija, a nowe wersje mogą nie być kompatybilne ze starym kodem ([zobacz tutaj](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Dlatego dobrym pomysłem jest określenie nie tylko minimalnej wersji języka, ale także maksymalnej wersji, czyli najnowszej, z którą przetestowano kod.
 
 &nbsp;
 
@@ -63,20 +71,20 @@ Zgodnie z konwencją, nazwy interfejsów zaczynają się od `I`.
 
 ```solidity
     /**
-     * @dev Zwraca ilość istniejących tokenów.
+     * @dev Zwraca liczbę istniejących tokenów.
      */
     function totalSupply() external view returns (uint256);
 ```
 
-Ta funkcja to `external`, co oznacza, że [może być wywołana tylko z zewnątrz kontraktu](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2). Zwraca ona całkowitą podaż tokenów w kontrakcie. Wartość ta jest zwracana przy użyciu najpopularniejszego typu w Ethereum, 256-bitowej liczby bez znaku (256 bitów to natywny rozmiar słowa EVM). Funkcja ta jest również `view`, co oznacza, że nie zmienia stanu, więc może być wykonana na pojedynczym węźle, zamiast być uruchamiana przez każdy węzeł w blockchainie. Tego rodzaju funkcja nie generuje transakcji i nie kosztuje [gazu](/developers/docs/gas/).
+Ta funkcja to `external`, co oznacza, że [może być wywołana tylko z zewnątrz kontraktu](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2). Zwraca ona całkowitą podaż tokenów w kontrakcie. Wartość ta jest zwracana przy użyciu najpopularniejszego typu w Ethereum, 256-bitowej liczby całkowitej bez znaku (256 bitów to natywny rozmiar słowa EVM). Ta funkcja to również `view`, co oznacza, że nie zmienia stanu, więc może być wykonana na pojedynczym węźle, zamiast być uruchamiana przez każdy węzeł w blockchainie. Tego rodzaju funkcja nie generuje transakcji i nie kosztuje [gazu](/developers/docs/gas/).
 
-**Uwaga:** W teorii mogłoby się wydawać, że twórca kontraktu może oszukiwać, zwracając mniejszą całkowitą podaż niż rzeczywista wartość, sprawiając, że każdy token wydaje się cenniejszy niż jest w rzeczywistości. Jednak obawa ta ignoruje prawdziwą naturę blockchaina. Wszystko, co dzieje się na blockchainie, może zostać zweryfikowane przez każdy węzeł. Aby to osiągnąć, kod w języku maszynowym i pamięć każdego kontraktu są dostępne na każdym węźle. Chociaż nie masz obowiązku publikowania kodu Solidity swojego kontraktu, nikt nie potraktuje Cię poważnie, dopóki nie opublikujesz kodu źródłowego i wersji Solidity, w której został skompilowany, aby można go było zweryfikować z dostarczonym kodem w języku maszynowym. Na przykład, zobacz [ten kontrakt](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract).
+**Uwaga:** W teorii mogłoby się wydawać, że twórca kontraktu może oszukiwać, zwracając mniejszą całkowitą podaż niż rzeczywista wartość, sprawiając, że każdy token wydaje się bardziej wartościowy niż jest w rzeczywistości. Jednak ta obawa ignoruje prawdziwą naturę blockchaina. Wszystko, co dzieje się na blockchainie, może zostać zweryfikowane przez każdy węzeł. Aby to osiągnąć, kod w języku maszynowym i pamięć każdego kontraktu są dostępne na każdym węźle. Chociaż nie masz obowiązku publikowania kodu Solidity dla swojego kontraktu, nikt nie potraktuje cię poważnie, dopóki nie opublikujesz kodu źródłowego i wersji Solidity, w której został skompilowany, aby można go było zweryfikować z dostarczonym kodem w języku maszynowym. Na przykład, zobacz [ten kontrakt](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract).
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev Zwraca ilość tokenów posiadanych przez `account`.
+     * @dev Zwraca liczbę tokenów należących do konta `account`.
      */
     function balanceOf(address account) external view returns (uint256);
 ```
@@ -87,7 +95,7 @@ Jak sama nazwa wskazuje, `balanceOf` zwraca saldo konta. Konta Ethereum są iden
 
 ```solidity
     /**
-     * @dev Przenosi `amount` tokenów z konta wywołującego do `recipient`.
+     * @dev Przenosi `amount` tokenów z konta wywołującego na konto `recipient`.
      *
      * Zwraca wartość logiczną wskazującą, czy operacja się powiodła.
      *
@@ -96,26 +104,26 @@ Jak sama nazwa wskazuje, `balanceOf` zwraca saldo konta. Konta Ethereum są iden
     function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
-Funkcja `transfer` wykonuje transfer tokenów od wywołującego na inny adres. Wiąże się to ze zmianą stanu, więc nie jest to `view`. Kiedy użytkownik wywołuje tę funkcję, tworzy ona transakcję i kosztuje gaz. Emituje również zdarzenie, `Transfer`, aby poinformować wszystkich w blockchainie o tym zdarzeniu.
+Funkcja `transfer` transferuje tokeny od wywołującego na inny adres. Wiąże się to ze zmianą stanu, więc nie jest to `view`. Kiedy użytkownik wywołuje tę funkcję, tworzy ona transakcję i kosztuje gaz. Emituje również zdarzenie, `Transfer`, aby poinformować wszystkich na blockchainie o tym zdarzeniu.
 
 Funkcja ma dwa rodzaje wyjścia dla dwóch różnych typów wywołujących:
 
 - Użytkownicy, którzy wywołują funkcję bezpośrednio z interfejsu użytkownika. Zazwyczaj użytkownik przesyła transakcję i nie czeka na odpowiedź, co mogłoby zająć nieokreśloną ilość czasu. Użytkownik może zobaczyć, co się stało, szukając pokwitowania transakcji (które jest identyfikowane przez hash transakcji) lub szukając zdarzenia `Transfer`.
-- Inne kontrakty, które wywołują funkcję w ramach ogólnej transakcji. Kontrakty te otrzymują wynik natychmiast, ponieważ działają w tej samej transakcji, więc mogą użyć wartości zwracanej przez funkcję.
+- Inne kontrakty, które wywołują funkcję jako część ogólnej transakcji. Te kontrakty otrzymują wynik natychmiast, ponieważ działają w tej samej transakcji, więc mogą użyć wartości zwracanej przez funkcję.
 
-Ten sam typ wyjścia jest tworzony przez inne funkcje, które zmieniają stan kontraktu.
+Ten sam rodzaj wyjścia jest tworzony przez inne funkcje, które zmieniają stan kontraktu.
 
 &nbsp;
 
-Limity wydatków pozwalają kontu na wydanie pewnej ilości tokenów należących do innego właściciela. Jest to przydatne na przykład w przypadku kontraktów pełniących rolę sprzedawców. Kontrakty nie mogą monitorować zdarzeń, więc gdyby kupujący przetransferował tokeny bezpośrednio do kontraktu sprzedawcy, kontrakt ten nie wiedziałby, że otrzymał zapłatę. Zamiast tego kupujący pozwala kontraktowi sprzedawcy wydać określoną kwotę, a sprzedawca transferuje tę kwotę. Odbywa się to poprzez funkcję wywoływaną przez kontrakt sprzedawcy, dzięki czemu kontrakt sprzedawcy może wiedzieć, czy operacja się powiodła.
+Limity wydatków pozwalają kontu na wydanie pewnej ilości tokenów należących do innego właściciela. Jest to przydatne na przykład dla kontraktów, które działają jako sprzedawcy. Kontrakty nie mogą monitorować zdarzeń, więc gdyby kupujący przetransferował tokeny bezpośrednio do kontraktu sprzedawcy, ten kontrakt nie wiedziałby, że otrzymał zapłatę. Zamiast tego kupujący pozwala kontraktowi sprzedawcy wydać określoną kwotę, a sprzedawca transferuje tę kwotę. Odbywa się to poprzez funkcję wywoływaną przez kontrakt sprzedawcy, dzięki czemu kontrakt sprzedawcy może wiedzieć, czy operacja się powiodła.
 
 ```solidity
     /**
-     * @dev Zwraca pozostałą liczbę tokenów, które `spender` będzie
-     * mógł wydać w imieniu `owner` poprzez {transferFrom}. Domyślnie wynosi
+     * @dev Zwraca pozostałą liczbę tokenów, które `spender` będzie mógł
+     * wydać w imieniu `owner` poprzez {transferFrom}. Domyślnie wynosi to
      * zero.
      *
-     * Ta wartość zmienia się, gdy wywoływane są {approve} lub {transferFrom}.
+     * Ta wartość zmienia się, gdy wywołane zostanie {approve} lub {transferFrom}.
      */
     function allowance(address owner, address spender) external view returns (uint256);
 ```
@@ -130,10 +138,10 @@ Funkcja `allowance` pozwala każdemu sprawdzić, jaki jest limit wydatków, któ
      *
      * Zwraca wartość logiczną wskazującą, czy operacja się powiodła.
      *
-     * WAŻNE: Należy pamiętać, że zmiana limitu wydatków za pomocą tej metody niesie ze sobą ryzyko,
+     * WAŻNE: Należy pamiętać, że zmiana limitu wydatków tą metodą niesie ze sobą ryzyko,
      * że ktoś może wykorzystać zarówno stary, jak i nowy limit wydatków z powodu niefortunnej
      * kolejności transakcji. Jednym z możliwych rozwiązań łagodzących ten problem
-     * jest najpierw zmniejszenie limitu wydatków dla `spender` do 0, a następnie ustawienie
+     * wyścigu jest najpierw zmniejszenie limitu wydatków dla `spender` do 0, a następnie ustawienie
      * żądanej wartości:
      * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
      *
@@ -142,14 +150,14 @@ Funkcja `allowance` pozwala każdemu sprawdzić, jaki jest limit wydatków, któ
     function approve(address spender, uint256 amount) external returns (bool);
 ```
 
-Funkcja `approve` tworzy limit wydatków. Koniecznie przeczytaj wiadomość o tym, jak może to zostać nadużyte. W Ethereum kontrolujesz kolejność własnych transakcji, ale nie możesz kontrolować kolejności, w jakiej będą wykonywane transakcje innych osób, chyba że nie prześlesz własnej transakcji, dopóki nie zobaczysz, że transakcja drugiej strony została zrealizowana.
+Funkcja `approve` tworzy limit wydatków. Upewnij się, że przeczytałeś wiadomość o tym, jak może to zostać nadużyte. W Ethereum kontrolujesz kolejność własnych transakcji, ale nie możesz kontrolować kolejności, w jakiej będą wykonywane transakcje innych osób, chyba że nie prześlesz własnej transakcji, dopóki nie zobaczysz, że transakcja drugiej strony została wykonana.
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev Przenosi `amount` tokenów od `sender` do `recipient` przy użyciu
-     * mechanizmu limitu wydatków. `amount` jest następnie odejmowane od limitu wydatków
+     * @dev Przenosi `amount` tokenów od `sender` do `recipient` przy użyciu mechanizmu
+     * limitu wydatków. `amount` jest następnie odliczane od limitu wydatków
      * wywołującego.
      *
      * Zwraca wartość logiczną wskazującą, czy operacja się powiodła.
@@ -169,12 +177,12 @@ Na koniec, `transferFrom` jest używane przez wydającego do faktycznego wydania
      * @dev Emitowane, gdy `value` tokenów zostaje przeniesionych z jednego konta (`from`) na
      * drugie (`to`).
      *
-     * Należy pamiętać, że `value` może wynosić zero.
+     * Uwaga: `value` może wynosić zero.
      */
     event Transfer(address indexed from, address indexed to, uint256 value);
 
     /**
-     * @dev Emitowane, gdy limit wydatków dla `spender` od `owner` jest ustawiany przez
+     * @dev Emitowane, gdy limit wydatków dla `spender` w imieniu `owner` zostanie ustawiony przez
      * wywołanie {approve}. `value` to nowy limit wydatków.
      */
     event Approval(address indexed owner, address indexed spender, uint256 value);
@@ -185,7 +193,7 @@ Te zdarzenia są emitowane, gdy zmienia się stan kontraktu ERC-20.
 
 ## Właściwy kontrakt {#the-actual-contract}
 
-To jest właściwy kontrakt, który implementuje standard ERC-20, [pobrany stąd](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol). Nie jest on przeznaczony do użycia w obecnej postaci, ale możesz po nim [dziedziczyć](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm), aby rozszerzyć go do czegoś użytecznego.
+To jest właściwy kontrakt, który implementuje standard ERC-20, [pobrany stąd](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol). Nie jest on przeznaczony do użycia w obecnej postaci, ale możesz po nim [dziedziczyć](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm), aby rozszerzyć go do czegoś użytecznego.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -206,7 +214,7 @@ import "../../math/SafeMath.sol";
 ```
 
 - `GSN/Context.sol` to definicje wymagane do korzystania z [OpenGSN](https://opengsn.org/), systemu, który pozwala użytkownikom bez etheru na korzystanie z blockchaina. Zauważ, że jest to stara wersja, jeśli chcesz zintegrować się z OpenGSN, [skorzystaj z tego samouczka](https://docs.opengsn.org/javascript-client/tutorial.html).
-- [Biblioteka SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), która zapobiega przepełnieniom arytmetycznym (overflow/underflow) dla wersji Solidity **&lt;0.8.0**. W Solidity ≥0.8.0 operacje arytmetyczne automatycznie powodują wycofanie w przypadku przepełnienia, co czyni SafeMath niepotrzebnym. Ten kontrakt używa SafeMath dla kompatybilności wstecznej ze starszymi wersjami kompilatora.
+- [Biblioteka SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math#SafeMath), która zapobiega przepełnieniom arytmetycznym (overflow/underflow) dla wersji Solidity **&lt;0.8.0**. W Solidity ≥0.8.0 operacje arytmetyczne automatycznie powodują wycofanie w przypadku przepełnienia, co czyni SafeMath niepotrzebnym. Ten kontrakt używa SafeMath dla kompatybilności wstecznej ze starszymi wersjami kompilatora.
 
 &nbsp;
 
@@ -256,13 +264,13 @@ Ta linia określa dziedziczenie, w tym przypadku z `IERC20` z powyższego kodu o
 
 ```
 
-Ta linia dołącza bibliotekę `SafeMath` do typu `uint256`. Możesz znaleźć tę bibliotekę [tutaj](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol).
+Ta linia dołącza bibliotekę `SafeMath` do typu `uint256`. Możesz znaleźć tę bibliotekę [tutaj](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/math/SafeMath.sol).
 
 ### Definicje zmiennych {#variable-definitions}
 
-Te definicje określają zmienne stanu kontraktu. Zmienne te są zadeklarowane jako `private`, ale oznacza to tylko tyle, że inne kontrakty na blockchainie nie mogą ich odczytać. _Na blockchainie nie ma tajemnic_, oprogramowanie na każdym węźle posiada stan każdego kontraktu w każdym bloku. Zgodnie z konwencją, zmienne stanu nazywane są `_<something>`.
+Te definicje określają zmienne stanu kontraktu. Zmienne te są zadeklarowane jako `private`, ale oznacza to tylko tyle, że inne kontrakty na blockchainie nie mogą ich odczytać. _Na blockchainie nie ma tajemnic_, oprogramowanie na każdym węźle ma stan każdego kontraktu w każdym bloku. Zgodnie z konwencją, zmienne stanu są nazywane `_<something>`.
 
-Pierwsze dwie zmienne to [mapowania](https://www.tutorialspoint.com/solidity/solidity_mappings.htm), co oznacza, że zachowują się mniej więcej tak samo jak [tablice asocjacyjne](https://wikipedia.org/wiki/Associative_array), z tą różnicą, że kluczami są wartości numeryczne. Pamięć jest przydzielana tylko dla wpisów, które mają wartości inne niż domyślne (zero).
+Pierwsze dwie zmienne to [mapowania](https://www.tutorialspoint.com/solidity/solidity_mappings.htm), co oznacza, że zachowują się mniej więcej tak samo jak [tablice asocjacyjne](https://wikipedia.org/wiki/Associative_array), z tą różnicą, że kluczami są wartości liczbowe. Pamięć jest przydzielana tylko dla wpisów, które mają wartości inne niż domyślne (zero).
 
 ```solidity
     mapping (address => uint256) private _balances;
@@ -296,34 +304,32 @@ Jak sama nazwa wskazuje, ta zmienna śledzi całkowitą podaż tokenów.
 
 Te trzy zmienne służą do poprawy czytelności. Pierwsze dwie są oczywiste, ale `_decimals` nie jest.
 
-Z jednej strony Ethereum nie ma zmiennych zmiennoprzecinkowych ani ułamkowych. Z drugiej strony ludzie lubią mieć możliwość dzielenia tokenów. Jednym z powodów, dla których ludzie zdecydowali się na złoto jako walutę, było to, że trudno było wydać resztę, gdy ktoś chciał kupić krowę o wartości kaczki.
+Z jednej strony Ethereum nie ma zmiennych zmiennoprzecinkowych ani ułamkowych. Z drugiej strony ludzie lubią mieć możliwość dzielenia tokenów. Jednym z powodów, dla których ludzie zdecydowali się na złoto jako walutę, było to, że trudno było wydać resztę, gdy ktoś chciał kupić część krowy o wartości kaczki.
 
-Rozwiązaniem jest śledzenie liczb całkowitych, ale liczenie zamiast prawdziwego tokena ułamkowego tokena, który jest prawie bezwartościowy. W przypadku etheru ułamkowy token nazywa się wei, a 10^18 wei jest równe jednemu ETH. W momencie pisania tego tekstu 10 000 000 000 000 wei to w przybliżeniu jeden cent amerykański lub eurocent.
+Rozwiązaniem jest śledzenie liczb całkowitych, ale liczenie zamiast prawdziwego tokena ułamkowego tokena, który jest prawie bezwartościowy. W przypadku etheru ułamkowy token nazywa się wei, a 10^18 wei jest równe jednemu ETH.
 
-Aplikacje muszą wiedzieć, jak wyświetlić saldo tokenów. Jeśli użytkownik ma 3 141 000 000 000 000 000 wei, czy to jest 3,14 ETH? 31,41 ETH? 3 141 ETH? W przypadku etheru zdefiniowano 10^18 wei na ETH, ale dla swojego tokena możesz wybrać inną wartość. Jeśli dzielenie tokena nie ma sensu, możesz użyć wartości `_decimals` równej zero. Jeśli chcesz użyć tego samego standardu co ETH, użyj wartości **18**.
+Aplikacje muszą wiedzieć, jak wyświetlić saldo tokenów. Jeśli użytkownik ma 3 141 000 000 000 000 000 wei, czy to jest 3,14 ETH? 31,41 ETH? 3141 ETH? W przypadku etheru zdefiniowano 10^18 wei na ETH, ale dla swojego tokena możesz wybrać inną wartość. Jeśli dzielenie tokena nie ma sensu, możesz użyć wartości `_decimals` równej zero. Jeśli chcesz użyć tego samego standardu co ETH, użyj wartości **18**.
 
 ### Konstruktor {#the-constructor}
 
 ```solidity
     /**
-     * @dev Ustawia wartości dla {name} i {symbol}, inicjuje {decimals}
+     * @dev Ustawia wartości dla {name} i {symbol}, inicjuje {decimals} z
      * domyślną wartością 18.
      *
      * Aby wybrać inną wartość dla {decimals}, użyj {_setupDecimals}.
      *
-     * Wszystkie trzy z tych wartości są niezmienne: mogą zostać ustawione tylko raz w
-     * konstruktorze.
+     * Wszystkie trzy wartości są niezmienne: mogą zostać ustawione tylko raz podczas
+     * tworzenia kontraktu.
      */
     constructor (string memory name_, string memory symbol_) public {
-        // W Solidity ≥0.7.0 'public' jest domyślne i może zostać pominięte.
-
         _name = name_;
         _symbol = symbol_;
         _decimals = 18;
     }
 ```
 
-Konstruktor jest wywoływany przy pierwszym tworzeniu kontraktu. Zgodnie z konwencją, parametry funkcji nazywane są `<something>_`.
+Konstruktor jest wywoływany, gdy kontrakt jest tworzony po raz pierwszy. Zgodnie z konwencją, parametry funkcji są nazywane `<something>_`. Począwszy od Solidity 0.7.0, widoczność (`public` lub `internal`) w konstruktorach jest ignorowana i przestarzała, więc nowszy kod ją pomija.
 
 ### Funkcje interfejsu użytkownika {#user-interface-functions}
 
@@ -344,12 +350,12 @@ Konstruktor jest wywoływany przy pierwszym tworzeniu kontraktu. Zgodnie z konwe
     }
 
     /**
-     * @dev Zwraca liczbę miejsc po przecinku używaną do uzyskania reprezentacji dla użytkownika.
+     * @dev Zwraca liczbę miejsc dziesiętnych używanych do uzyskania reprezentacji dla użytkownika.
      * Na przykład, jeśli `decimals` wynosi `2`, saldo `505` tokenów powinno
      * zostać wyświetlone użytkownikowi jako `5,05` (`505 / 10 ** 2`).
      *
      * Tokeny zazwyczaj przyjmują wartość 18, naśladując relację między
-     * etherem a wei. Jest to wartość, której używa {ERC20}, chyba że wywołano
+     * ether i wei. Jest to wartość, której używa {ERC20}, chyba że wywołano
      * {_setupDecimals}.
      *
      * UWAGA: Ta informacja jest używana tylko do celów _wyświetlania_: w
@@ -361,15 +367,15 @@ Konstruktor jest wywoływany przy pierwszym tworzeniu kontraktu. Zgodnie z konwe
     }
 ```
 
-Te funkcje, `name`, `symbol` i `decimals`, pomagają interfejsom użytkownika dowiedzieć się o Twoim kontrakcie, aby mogły go poprawnie wyświetlić.
+Te funkcje, `name`, `symbol` i `decimals`, pomagają interfejsom użytkownika dowiedzieć się o twoim kontrakcie, dzięki czemu będą w stanie wyświetlić go poprawnie.
 
 Typem zwracanym jest `string memory`, co oznacza zwrócenie ciągu znaków przechowywanego w pamięci. Zmienne, takie jak ciągi znaków, mogą być przechowywane w trzech lokalizacjach:
 
-|          | Czas życia         | Dostęp z kontraktu | Koszt gazu                                                                                             |
-| -------- | ------------------ | ------------------ | ------------------------------------------------------------------------------------------------------ |
-| Pamięć (Memory)   | Wywołanie funkcji  | Odczyt/Zapis       | Dziesiątki lub setki (więcej dla wyższych lokalizacji)                                                 |
-| Dane wywołania (Calldata) | Wywołanie funkcji  | Tylko do odczytu   | Nie może być użyte jako typ zwracany, tylko jako typ parametru funkcji                                 |
-| Pamięć trwała (Storage)  | Do momentu zmiany  | Odczyt/Zapis       | Wysoki (800 za odczyt, 20k za zapis)                                                                   |
+|          | Czas życia      | Dostęp do kontraktu | Koszt gazu                                                       |
+| -------- | ------------- | --------------- | -------------------------------------------------------------- |
+| Memory   | Wywołanie funkcji | Odczyt/Zapis      | Dziesiątki lub setki (wyższy dla wyższych lokalizacji)                 |
+| Calldata | Wywołanie funkcji | Tylko do odczytu       | Nie może być użyty jako typ zwracany, tylko jako typ parametru funkcji |
+| Storage  | Do momentu zmiany | Odczyt/Zapis      | Wysoki (2100 za zimny odczyt, 20 000 za nowy zapis)           |
 
 W tym przypadku `memory` jest najlepszym wyborem.
 
@@ -629,7 +635,7 @@ Nikt tak naprawdę nie jest właścicielem adresu zerowego w Ethereum (to znaczy
 Istnieją dwa sposoby korzystania z tego kontraktu:
 
 1. Użyj go jako szablonu dla własnego kodu
-1. [Dziedzicz po nim](https://www.bitdegree.org/learn/solidity-inheritance) i nadpisz tylko te funkcje, które musisz zmodyfikować
+1. [Dziedzicz po nim](https://docs.soliditylang.org/en/latest/contracts.html#inheritance) i nadpisz tylko te funkcje, które musisz zmodyfikować
 
 Druga metoda jest znacznie lepsza, ponieważ kod ERC-20 od OpenZeppelin został już poddany audytowi i wykazano, że jest bezpieczny. Kiedy używasz dziedziczenia, jasne jest, jakie funkcje modyfikujesz, a aby zaufać Twojemu kontraktowi, ludzie muszą jedynie przeprowadzić audyt tych konkretnych funkcji.
 

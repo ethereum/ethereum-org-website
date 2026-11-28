@@ -46,7 +46,9 @@ Istnieje [wiele zdecentralizowanych giełd (DEX)](/apps/categories/defi/), któr
 
 ### OpenAI {#openai}
 
-Jako duży model językowy na początek wybrałem [OpenAI](https://openai.com/). Aby uruchomić aplikację z tego samouczka, będziesz musiał zapłacić za dostęp do API. Minimalna wpłata w wysokości 5 USD jest więcej niż wystarczająca.
+Jako duży model językowy na początek wybrałem [OpenAI](https://openai.com/). Aby uruchomić aplikację z tego samouczka, musisz zapłacić za dostęp do API. Minimalna wpłata w wysokości 5 USD jest więcej niż wystarczająca.
+
+Biblioteka OpenAI dla języka Python może również komunikować się z dowolnym innym punktem końcowym kompatybilnym z OpenAI, w tym z modelem uruchomionym na Twoim własnym komputerze. Zobacz [Interfejs z LLM](#interface-llm), aby dowiedzieć się, jak skierować ją gdzie indziej.
 
 ## Rozwój krok po kroku {#step-by-step}
 
@@ -515,12 +517,12 @@ print(make_prompt(wethusdc_quotes + wethwbtc_quotes, future_time, wethusdc_pool.
 
 Określa przyszły punkt w czasie, dla którego chcemy uzyskać szacunek, i tworzy prompt.
 
-### Komunikacja z LLM {#interface-llm}
+### Interfejs z LLM {#interface-llm}
 
-Następnie wysyłamy prompt do rzeczywistego LLM i otrzymujemy oczekiwaną przyszłą wartość. Napisałem ten program używając OpenAI, więc jeśli chcesz użyć innego dostawcy, będziesz musiał go dostosować.
+Następnie wysyłamy prompt do rzeczywistego LLM i otrzymujemy oczekiwaną przyszłą wartość. Napisałem ten program używając OpenAI, więc jeśli chcesz użyć innego dostawcy, musisz go dostosować.
 
 1. Załóż [konto OpenAI](https://auth.openai.com/create-account)
-2. [Zasil konto](https://platform.openai.com/settings/organization/billing/overview) — minimalna kwota w momencie pisania tego tekstu to 5 USD
+2. [Zasil konto](https://platform.openai.com/settings/organization/billing/overview) — minimalna kwota w momencie pisania tego tekstu wynosi 5 USD
 3. [Utwórz klucz API](https://platform.openai.com/settings/organization/api-keys)
 4. W wierszu poleceń wyeksportuj klucz API, aby Twój program mógł z niego korzystać
 
@@ -528,35 +530,52 @@ Następnie wysyłamy prompt do rzeczywistego LLM i otrzymujemy oczekiwaną przys
    export OPENAI_API_KEY=sk-<the rest of the key goes here>
    ```
 
-5. Pobierz (checkout) i uruchom agenta
+5. Pobierz agenta (checkout)
 
    ```sh
    git checkout 04-interface-llm
+   ```
+
+6. Kod w repozytorium używa modelu `gpt-4-turbo`, który [OpenAI wyłącza 23 października 2026 r.](https://developers.openai.com/api/docs/deprecations). Zmień go na `gpt-6-luna`, obecny tani model. Ponieważ `gpt-6-luna` jest modelem rozumującym (reasoning model), polecenie to wyłącza również rozumowanie (`reasoning_effort="none"`, co pozwala na użycie `temperature`) i zastępuje przestarzały parametr `max_tokens` parametrem `max_completion_tokens`.
+
+   ```sh
+   sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
+   ```
+
+7. Uruchom agenta
+
+   ```sh
    uv run agent.py
    ```
+
+Jeśli wolisz użyć innego punktu końcowego kompatybilnego z OpenAI, na przykład modelu hostowanego lokalnie, biblioteka OpenAI odczytuje punkt końcowy ze zmiennej środowiskowej `OPENAI_BASE_URL`. Ustaw ją, wpisz dowolną niepustą wartość w `OPENAI_API_KEY`, jeśli serwer nie sprawdza kluczy, i zmień `gpt-6-luna` w `agent.py` i `test-predictor.py` na nazwę modelu udostępnianego przez ten serwer. Jeśli serwer odrzuca `reasoning_effort`, usuń ten parametr.
+
+```sh
+export OPENAI_BASE_URL=http://localhost:<port>/v1
+```
 
 Oto nowy kod.
 
 ```python
 from openai import OpenAI
 
-open_ai = OpenAI()  # Klient odczytuje zmienną środowiskową OPENAI_API_KEY
+open_ai = OpenAI()  # The client reads the OPENAI_API_KEY environment variable
 ```
 
-Importuje i tworzy instancję API OpenAI.
+Zaimportuj i utwórz instancję API OpenAI. Klient odczytuje również `OPENAI_BASE_URL`, jeśli jest ustawiona, więc ten sam kod działa z innymi punktami końcowymi kompatybilnymi z OpenAI.
 
 ```python
 response = open_ai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-6-luna", reasoning_effort="none",
     messages=[
         {"role": "user", "content": prompt}
     ],
     temperature=0.0,
-    max_tokens=16,
+    max_completion_tokens=16,
 )
 ```
 
-Wywołuje API OpenAI (`open_ai.chat.completions.create`), aby utworzyć odpowiedź.
+Wywołaj API OpenAI (`open_ai.chat.completions.create`), aby utworzyć odpowiedź. Wartość `temperature` równa zero prosi o najbardziej przewidywalną odpowiedź, a `max_completion_tokens` ogranicza długość odpowiedzi, która musi zawierać tylko liczbę. W przypadku modelu rozumującego, `max_completion_tokens` zlicza również tokeny, których model używa do myślenia, co jest kolejnym powodem, aby ustawić `reasoning_effort` na `none`.
 
 ```python
 expected_price = Decimal(response.choices[0].message.content.strip())
@@ -571,7 +590,7 @@ else:
     print(f"Sell, I expect the price to go down by {current_price - expected_price} USD")
 ```
 
-Wypisuje cenę i podaje rekomendację kupna lub sprzedaży.
+Wypisz cenę i podaj rekomendację kupna lub sprzedaży.
 
 #### Testowanie przewidywań {#testing-the-predictions}
 
@@ -695,7 +714,7 @@ Używa [`filter`](https://www.w3schools.com/python/ref_func_filter.asp), aby pol
 
 ### Wysyłanie transakcji {#submit-txn}
 
-Teraz musimy faktycznie wysyłać transakcje. Nie chcę jednak na tym etapie wydawać prawdziwych pieniędzy, zanim system nie zostanie sprawdzony. Zamiast tego utworzymy lokalne rozwidlenie sieci głównej i będziemy „handlować” w tej sieci.
+Teraz musimy faktycznie wysyłać transakcje. Jednak na tym etapie, zanim system zostanie sprawdzony, nie chcę wydawać prawdziwych pieniędzy. Zamiast tego utworzymy lokalne rozwidlenie Sieci głównej i będziemy „handlować” w tej sieci.
 
 Oto kroki, aby utworzyć lokalne rozwidlenie i umożliwić trading.
 
@@ -716,7 +735,7 @@ Oto kroki, aby utworzyć lokalne rozwidlenie i umożliwić trading.
    ADDRESS=`cast wallet address $PRIVATE_KEY`
    ```
 
-4. To są kontrakty, których musimy użyć. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) to kontrakt Uniswap v3, którego używamy do faktycznego tradingu. Moglibyśmy handlować bezpośrednio przez pulę, ale to jest znacznie łatwiejsze.
+4. Oto kontrakty, których musimy użyć. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) to kontrakt Uniswap v3, którego używamy do faktycznego tradingu. Moglibyśmy handlować bezpośrednio przez pulę, ale to jest znacznie łatwiejsze.
 
    Dwie dolne zmienne to ścieżki Uniswap v3 wymagane do wymiany między WETH a USDC.
 
@@ -746,9 +765,9 @@ Oto kroki, aby utworzyć lokalne rozwidlenie i umożliwić trading.
        --private-key $PRIVATE_KEY
    ```
 
-   Wywołanie `approve` tworzy limit wydatków, który pozwala `SwapRouter` na wydanie części naszych tokenów. Kontrakty nie mogą monitorować zdarzeń, więc gdybyśmy przetransferowali tokeny bezpośrednio do kontraktu `SwapRouter`, nie wiedziałby on, że otrzymał zapłatę. Zamiast tego pozwalamy kontraktowi `SwapRouter` na wydanie określonej kwoty, a następnie `SwapRouter` to robi. Odbywa się to poprzez funkcję wywoływaną przez `SwapRouter`, dzięki czemu wie on, czy operacja się powiodła.
+   Wywołanie `approve` tworzy limit wydatków, który pozwala `SwapRouter` wydać część naszych tokenów. Kontrakty nie mogą monitorować zdarzeń, więc gdybyśmy przetransferowali tokeny bezpośrednio do kontraktu `SwapRouter`, nie wiedziałby on, że otrzymał zapłatę. Zamiast tego pozwalamy kontraktowi `SwapRouter` wydać określoną kwotę, a następnie `SwapRouter` to robi. Odbywa się to za pomocą funkcji wywoływanej przez `SwapRouter`, więc wie on, czy operacja się powiodła.
 
-7. Sprawdź, czy masz wystarczająco dużo obu tokenów.
+7. Sprawdź, czy masz wystarczającą ilość obu tokenów.
 
    ```sh
    cast call $WETH_ADDRESS "balanceOf(address)" $ADDRESS | cast from-wei
@@ -758,9 +777,12 @@ Oto kroki, aby utworzyć lokalne rozwidlenie i umożliwić trading.
 Teraz, gdy mamy WETH i USDC, możemy faktycznie uruchomić agenta.
 
 ```sh
-git checkout 05-trade
+git checkout -f 05-trade
+sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
 uv run agent.py
 ```
+
+Polecenie `-f` odrzuca zmianę modelu dokonaną w poprzedniej gałęzi, więc polecenie `sed` stosuje ją ponownie do nowej wersji `agent.py`.
 
 Wynik będzie wyglądał podobnie do:
 
@@ -804,7 +826,7 @@ Te same zmienne, których użyliśmy w kroku 4.
 WETH_TRADE_AMOUNT=1
 ```
 
-Kwota do handlu.
+Kwota do wymiany.
 
 ```python
 ERC20_ABI = [
@@ -851,7 +873,7 @@ Parametry transakcji. Potrzebujemy tutaj funkcji, ponieważ [nonce](https://en.w
 def approve_token(contract: Contract, amount: int):
 ```
 
-Zatwierdza limit wydatków tokenów dla `SwapRouter`.
+Zatwierdź limit wydatków tokenów dla `SwapRouter`.
 
 ```python
     txn = contract.functions.approve(SWAP_ROUTER_ADDRESS, amount).build_transaction(txn_params())
@@ -879,7 +901,7 @@ SELL_PARAMS = {
 }
 ```
 
-To są parametry podczas sprzedaży WETH.
+Oto parametry podczas sprzedaży WETH.
 
 ```python
 def make_buy_params(quote: Quote) -> dict:
@@ -917,7 +939,7 @@ def sell():
     print("Sell transaction mined.")
 ```
 
-Funkcje `buy()` i `sell()` są niemal identyczne. Najpierw zatwierdzamy wystarczający limit wydatków dla `SwapRouter`, a następnie wywołujemy go z odpowiednią ścieżką i kwotą.
+Funkcje `buy()` i `sell()` są prawie identyczne. Najpierw zatwierdzamy wystarczający limit wydatków dla `SwapRouter`, a następnie wywołujemy go z odpowiednią ścieżką i kwotą.
 
 ```python
 def balances():
@@ -928,7 +950,7 @@ def balances():
     print(f"{wethusdc_pool.token1.symbol} Balance: {Decimal(token1_balance) / Decimal(10 ** wethusdc_pool.token1.decimals)}")
 ```
 
-Raportuje salda użytkownika w obu walutach.
+Raportuj salda użytkownika w obu walutach.
 
 ```python
 print("Account balances before trade:")
@@ -945,7 +967,7 @@ print("Account balances after trade:")
 balances()
 ```
 
-Ten agent obecnie działa tylko raz. Możesz jednak zmienić go tak, aby działał w sposób ciągły, uruchamiając go z [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) lub opakowując linie 368-400 w pętlę i używając [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep), aby poczekać, aż nadejdzie czas na następny cykl.
+Ten agent obecnie działa tylko raz. Możesz jednak zmienić go tak, aby działał w sposób ciągły, uruchamiając go z [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) lub umieszczając linie 368-397 w pętli i używając [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep), aby poczekać, aż nadejdzie czas na następny cykl.
 
 ## Możliwe ulepszenia {#improvements}
 
@@ -959,11 +981,11 @@ Istnieją dwa ważne fakty, które agent ignoruje przy podejmowaniu decyzji, co 
   Prawdopodobnie lepiej byłoby ignorować drobne zmiany i sprzedawać w oparciu o to, jak dużego spadku ceny się spodziewamy.
 - _Obecne portfolio_. Jeśli 10% Twojego portfolio jest w WETH i uważasz, że cena wzrośnie, prawdopodobnie ma sens kupienie więcej. Ale jeśli 90% Twojego portfolio jest w WETH, możesz być wystarczająco wyeksponowany i nie ma potrzeby kupowania więcej. Odwrotna sytuacja ma miejsce, jeśli spodziewasz się spadku ceny.
 
-### Co jeśli chcesz utrzymać swoją strategię w tajemnicy? {#secret}
+### Co jeśli chcesz utrzymać swoją strategię tradingową w tajemnicy? {#secret}
 
-Dostawcy AI mogą zobaczyć zapytania, które wysyłasz do ich LLM, co mogłoby ujawnić genialny system tradingowy, który opracowałeś ze swoim agentem. System tradingowy, z którego korzysta zbyt wiele osób, jest bezwartościowy, ponieważ zbyt wiele osób próbuje kupować, kiedy Ty chcesz kupić (i cena rośnie), oraz próbuje sprzedawać, kiedy Ty chcesz sprzedać (i cena spada).
+Dostawcy AI mogą zobaczyć zapytania, które wysyłasz do ich LLM, co mogłoby ujawnić genialny system tradingowy, który opracowałeś ze swoim agentem. System tradingowy, z którego korzysta zbyt wiele osób, jest bezwartościowy, ponieważ zbyt wiele osób próbuje kupować, gdy Ty chcesz kupować (i cena rośnie), oraz próbuje sprzedawać, gdy Ty chcesz sprzedawać (i cena spada).
 
-Możesz uruchomić LLM lokalnie, na przykład używając [LM-Studio](https://lmstudio.ai/), aby uniknąć tego problemu.
+Aby uniknąć tego problemu, możesz uruchomić LLM lokalnie, na przykład używając `llama-server` z [llama.cpp](https://github.com/ggml-org/llama.cpp). Zapewnia on punkt końcowy kompatybilny z OpenAI, więc musisz tylko ustawić `OPENAI_BASE_URL` i nazwę modelu, jak wyjaśniono w sekcji [Interfejs z LLM](#interface-llm).
 
 ### Od bota AI do agenta AI {#bot-to-agent}
 

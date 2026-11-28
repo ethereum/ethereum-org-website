@@ -24,34 +24,63 @@ Jednak technika opisana tutaj powinna działać równie dobrze dla innych rollup
 Podczas omawiania rollupów, termin „warstwa 1 (L1)” jest używany w odniesieniu do sieci głównej (Mainnet), produkcyjnej sieci Ethereum.
 Termin „warstwa 2 (L2)” jest używany w odniesieniu do rollupa lub dowolnego innego systemu, który opiera się na L1 w kwestii bezpieczeństwa, ale wykonuje większość swojego przetwarzania w sposób pozałańcuchowy.
 
-## Jak możemy jeszcze bardziej obniżyć koszt transakcji w L2? {#how-can-we-further-reduce-the-cost-of-l2-transactions}
+## Jak możemy jeszcze bardziej obniżyć koszt transakcji L2? {#how-can-we-further-reduce-the-cost-of-l2-transactions}
 
-[Rollupy optymistyczne](/developers/docs/scaling/optimistic-rollups) muszą zachować rejestr każdej historycznej transakcji, aby każdy mógł je przejrzeć i zweryfikować, czy obecny stan jest poprawny.
-Najtańszym sposobem na wprowadzenie danych do sieci głównej Ethereum jest zapisanie ich jako dane wywołania (calldata).
+[Optymistyczne rollupy](/developers/docs/scaling/optimistic-rollups) muszą zachować rejestr każdej historycznej transakcji, aby każdy mógł je przejrzeć i zweryfikować, czy obecny stan jest poprawny.
+Kiedy ten artykuł był pisany, najtańszym sposobem na wprowadzenie danych do sieci głównej Ethereum było zapisanie ich jako dane wywołania.
 To rozwiązanie zostało wybrane zarówno przez [Optimism](https://docs.optimism.io/op-stack/protocol/overview), jak i [Arbitrum](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction).
+Od czasu aktualizacji Dencun (marzec 2024 r.), rollupy mogą zamiast tego publikować te dane w [blobach](/roadmap/danksharding/), które są znacznie tańsze.
 
-### Koszt transakcji w L2 {#cost-of-l2-transactions}
+### Koszt transakcji L2 {#cost-of-l2-transactions}
 
-Koszt transakcji w L2 składa się z dwóch elementów:
+Koszt transakcji L2 składa się z dwóch elementów:
 
-1. Przetwarzanie w L2, które zazwyczaj jest niezwykle tanie
-2. Przechowywanie w L1, które jest powiązane z kosztami gazu w sieci głównej
+1. Przetwarzanie L2, które zazwyczaj jest niezwykle tanie
+2. Przechowywanie L1, które jest powiązane z kosztami gazu w sieci głównej
 
-W momencie pisania tego tekstu, koszt gazu w L2 na Optimism wynosi 0,001 [gwei](/developers/docs/gas/#pre-london).
-Z kolei koszt gazu w L1 wynosi około 40 gwei.
-[Aktualne ceny możesz sprawdzić tutaj](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
+Kiedy pisałem ten artykuł w 2022 roku, na Optimism koszt gazu L2 wynosił 0,001 [gwei](/developers/docs/gas/#what-is-gas).
+Z kolei koszt gazu L1 wynosił około 40 gwei.
 
-Bajt danych wywołania kosztuje 4 jednostki gazu (jeśli wynosi zero) lub 16 jednostek gazu (jeśli ma jakąkolwiek inną wartość).
-Jedną z najdroższych operacji w EVM jest zapis do pamięci masowej (storage).
-Maksymalny koszt zapisu 32-bajtowego słowa do pamięci masowej w L2 wynosi 22100 jednostek gazu. Obecnie jest to 22,1 gwei.
-Więc jeśli uda nam się zaoszczędzić pojedynczy zerowy bajt danych wywołania, będziemy w stanie zapisać około 200 bajtów do pamięci masowej i nadal wyjść na plus.
+Bajt danych wywołania kosztuje 4 jednostki gazu (jeśli jest zerem) lub 16 jednostek gazu (jeśli ma jakąkolwiek inną wartość).
+Jedną z najdroższych operacji na EVM jest zapis do pamięci (storage).
+Maksymalny koszt zapisu 32-bajtowego słowa do pamięci na L2 wynosi 22100 jednostek gazu. W tamtym czasie było to 22,1 gwei.
+Więc gdybyśmy mogli zaoszczędzić pojedynczy zerowy bajt danych wywołania, bylibyśmy w stanie zapisać około 200 bajtów do pamięci i nadal wyjść na plus.
+
+#### Jak koszty L2 zmieniły się w 2024 roku {#how-l2-costs-changed-in-2024}
+
+Formuła [opłaty za dane L1](https://docs.optimism.io/op-stack/transactions/fees#l1-data-fee) w OP Stack zmieniła się dwukrotnie od czasu napisania tego artykułu:
+
+- Wraz z [aktualizacją Ecotone](https://docs.optimism.io/op-stack/transactions/fees#ecotone) (marzec 2024 r.), łańcuchy OP Stack zaczęły publikować dane transakcji w blobach, które są wyceniane na podstawie oddzielnej (i zazwyczaj znacznie niższej) opłaty podstawowej za bloby.
+- Wraz z [aktualizacją Fjord](https://docs.optimism.io/op-stack/transactions/fees#fjord) (lipiec 2024 r.), opłata za dane L1 opiera się na szacunkowym rozmiarze transakcji po kompresji [FastLZ](https://github.com/ariya/FastLZ), przy czym minimum wynosi 100 bajtów na transakcję ([zobacz specyfikację](https://specs.optimism.io/protocol/fjord/exec-engine.html)).
+
+Zmienia to analizę w pozostałej części tego artykułu na trzy sposoby:
+
+1. Zerowe bajty dobrze się kompresują, więc są prawie darmowe.
+   Poniższe wartości 4 i 16 jednostek gazu za bajt to koszt danych wywołania L1, a nie to, co płacisz dzisiaj za dane transakcji w łańcuchu OP Stack.
+2. Poniżej minimum 100 bajtów, krótsze dane wywołania niczego nie oszczędzają.
+   Na przykład w październiku 2026 r. w sieci głównej OP standardowy `transfer` ERC-20 (68 bajtów danych wywołania) i 23-bajtowa krótka wersja z tego artykułu zapłaciłyby dokładnie taką samą opłatę za dane L1, czyli minimum, około 1 gwei (10<sup>-9</sup> ETH).
+3. Ponieważ przestrzeń blobów jest tania, opłata za wykonanie L2 jest teraz często wyższa niż opłata za dane L1.
+   Przy cenie gazu L2 wynoszącej 0,001 gwei, 1000 jednostek gazu kosztuje 1 gwei, czyli tyle samo co cała opłata za dane L1, więc dodatkowy gaz na wykonanie przejścia przez kontrakt proxy może kosztować więcej niż bajty, które oszczędza.
+
+Zasada nadal obowiązuje: mniej skompresowanych bajtów oznacza niższą opłatę za dane L1.
+Krótkie ABI mają największy sens w przypadku transakcji z dużą ilością danych, które nie kompresują się dobrze, a także w łańcuchach lub w okresach, gdy dane L1 są drogie.
+Aby zobaczyć, ile zapłaciłaby konkretna transakcja, wywołaj `getL1Fee` na [predeployu `GasPriceOracle`](https://specs.optimism.io/protocol/predeploys.html#gaspriceoracle) z niepodpisaną transakcją.
+Na przykład, używając `cast` z [Foundry](https://getfoundry.sh/introduction/installation/):
+
+```sh
+TX=$(cast mktx --raw-unsigned --from <your address> --chain 10 --nonce 0 --gas-limit 100000 \
+  --priority-gas-price 1000000 --gas-price 1000000 <destination address> <calldata>)
+cast call 0x420000000000000000000000000000000000000F "getL1Fee(bytes)(uint256)" $TX --rpc-url https://mainnet.optimism.io
+```
+
+Wynik jest w wei.
 
 ### ABI {#the-abi}
 
-Zdecydowana większość transakcji uzyskuje dostęp do kontraktu z konta posiadanego zewnętrznie.
-Większość kontraktów jest napisana w języku Solidity i interpretuje swoje pole danych zgodnie z [binarnym interfejsem aplikacji (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
+Zdecydowana większość transakcji uzyskuje dostęp do kontraktu z konta posiadanego zewnętrznie (EOA).
+Większość kontraktów jest napisana w Solidity i interpretuje swoje pole danych zgodnie z [binarnym interfejsem aplikacji (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
-Jednakże ABI zostało zaprojektowane dla L1, gdzie bajt danych wywołania kosztuje w przybliżeniu tyle samo co cztery operacje arytmetyczne, a nie dla L2, gdzie bajt danych wywołania kosztuje więcej niż tysiąc operacji arytmetycznych.
+Jednakże ABI zostało zaprojektowane dla L1, gdzie bajt danych wywołania kosztuje w przybliżeniu tyle samo co cztery operacje arytmetyczne, a nie dla L2, gdzie (w cenach z 2022 r.) bajt danych wywołania kosztuje więcej niż tysiąc operacji arytmetycznych.
 Dane wywołania są podzielone w następujący sposób:
 
 | Sekcja | Długość | Bajty | Zmarnowane bajty | Zmarnowany gaz | Niezbędne bajty | Niezbędny gaz |
@@ -59,27 +88,40 @@ Dane wywołania są podzielone w następujący sposób:
 | Selektor funkcji | 4 | 0-3 | 3 | 48 | 1 | 16 |
 | Zera | 12 | 4-15 | 12 | 48 | 0 | 0 |
 | Adres docelowy | 20 | 16-35 | 0 | 0 | 20 | 320 |
-| Kwota | 32 | 36-67 | 17 | 64 | 15 | 240 |
-| Razem | 68 | | | 160 | | 576 |
+| Kwota | 32 | 36-67 | 17 | 68 | 15 | 240 |
+| Razem | 68 | | | 164 | | 576 |
 
 Wyjaśnienie:
 
 - **Selektor funkcji**: Kontrakt ma mniej niż 256 funkcji, więc możemy je rozróżnić za pomocą jednego bajtu.
-  Te bajty zazwyczaj są niezerowe i dlatego [kosztują szesnaście jednostek gazu](https://eips.ethereum.org/EIPS/eip-2028).
-- **Zera**: Te bajty zawsze wynoszą zero, ponieważ dwudziestobajtowy adres nie wymaga trzydziestodwubajtowego słowa do jego przechowania.
-  Bajty o wartości zero kosztują cztery jednostki gazu ([zobacz żółtą księgę](https://ethereum.github.io/yellowpaper/paper.pdf), Dodatek G,
+  Te bajty są zazwyczaj niezerowe i dlatego [kosztują szesnaście jednostek gazu](https://eips.ethereum.org/EIPS/eip-2028).
+- **Zera**: Te bajty są zawsze zerowe, ponieważ dwudziestobajtowy adres nie wymaga trzydziestodwubajtowego słowa do jego przechowania.
+  Bajty przechowujące zero kosztują cztery jednostki gazu ([zobacz żółtą księgę](https://ethereum.github.io/yellowpaper/paper.pdf), Dodatek G,
   str. 27, wartość dla `G`<sub>`txdatazero`</sub>).
-- **Kwota**: Jeśli założymy, że w tym kontrakcie `decimals` wynosi osiemnaście (standardowa wartość), a maksymalna kwota tokenów, które transferujemy, wyniesie 10<sup>18</sup>, otrzymamy maksymalną kwotę 10<sup>36</sup>.
+- **Kwota**: Jeśli założymy, że w tym kontrakcie `decimals` wynosi osiemnaście (normalna wartość), a maksymalna kwota tokenów, które transferujemy, wyniesie 10<sup>18</sup>, otrzymamy maksymalną kwotę 10<sup>36</sup>.
   256<sup>15</sup> &gt; 10<sup>36</sup>, więc piętnaście bajtów wystarczy.
 
-Strata 160 jednostek gazu w L1 jest zazwyczaj pomijalna. Transakcja kosztuje co najmniej [21 000 jednostek gazu](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), więc dodatkowe 0,8% nie ma znaczenia.
-Jednak w L2 sprawy mają się inaczej. Prawie cały koszt transakcji to jej zapis do L1.
+Zmarnowanie 164 jednostek gazu na L1 jest zazwyczaj pomijalne. Transakcja kosztuje co najmniej [21 000 jednostek gazu](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), więc dodatkowe 0,8% nie ma znaczenia.
+Jednak na L2 w 2022 roku sytuacja wyglądała inaczej. Prawie cały koszt transakcji polegał na zapisaniu jej na L1.
 Oprócz danych wywołania transakcji, istnieje 109 bajtów nagłówka transakcji (adres docelowy, podpis itp.).
-Całkowity koszt wynosi zatem `109*16+576+160=2480`, a my marnujemy z tego około 6,5%.
+Całkowity koszt wynosi zatem `109*16+576+164=2484`, a my marnujemy z tego około 6,6%.
 
-## Zmniejszanie kosztów, gdy nie kontrolujesz miejsca docelowego {#reducing-costs-when-you-dont-control-the-destination}
+## Obniżanie kosztów, gdy nie kontrolujesz miejsca docelowego {#reducing-costs-when-you-dont-control-the-destination}
 
 Zakładając, że nie masz kontroli nad kontraktem docelowym, nadal możesz użyć rozwiązania podobnego do [tego](https://github.com/qbzzt/ethereum.org-20220330-shortABI).
+
+Aby je uruchomić, potrzebujesz [Node.js](https://nodejs.org/) i git:
+
+```sh
+git clone https://github.com/qbzzt/ethereum.org-20220330-shortABI.git
+cd ethereum.org-20220330-shortABI
+npm install
+npx hardhat test
+```
+
+Test wdraża kontrakty do wbudowanej sieci lokalnej Hardhata, więc nie potrzebujesz żadnego ETH.
+Repozytorium używa Hardhat 2.9, więc w obecnych wersjach Node.js ostrzega, że Twoja wersja Node.js nie jest obsługiwana, ale test nadal kończy się powodzeniem.
+
 Przejdźmy przez odpowiednie pliki.
 
 ### Token.sol {#token-sol}
@@ -115,10 +157,11 @@ Potrzebujemy funkcji tokena, aby wiedzieć, jak ją wywołać.
 
 ```solidity
 contract CalldataInterpreter {
+
     OrisUselessToken public immutable token;
 ```
 
-Adres tokena, dla którego jesteśmy kontraktem proxy.
+Adres tokena, dla którego jesteśmy proxy.
 
 ```solidity
 
@@ -130,7 +173,7 @@ Adres tokena, dla którego jesteśmy kontraktem proxy.
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);
-    }   // constructor
+    }   // konstruktor
 ```
 
 Adres tokena to jedyny parametr, który musimy określić.
@@ -154,7 +197,7 @@ Odczytaj wartość z danych wywołania.
 
 Załadujemy pojedyncze 32-bajtowe (256-bitowe) słowo do pamięci i usuniemy bajty, które nie są częścią pożądanego przez nas pola.
 Ten algorytm nie działa dla wartości dłuższych niż 32 bajty i oczywiście nie możemy czytać poza końcem danych wywołania.
-W L1 pominięcie tych testów w celu zaoszczędzenia gazu mogłoby być konieczne, ale w L2 gaz jest niezwykle tani, co umożliwia nam przeprowadzenie dowolnych testów poprawności (sanity checks), jakie tylko przyjdą nam do głowy.
+Na L1 może być konieczne pominięcie tych testów, aby zaoszczędzić na gazie, ale na L2 gaz jest niezwykle tani, co umożliwia nam przeprowadzenie dowolnych kontroli poprawności, jakie tylko przyjdą nam do głowy.
 
 ```solidity
         assembly {
@@ -162,9 +205,9 @@ W L1 pominięcie tych testów w celu zaoszczędzenia gazu mogłoby być konieczn
         }
 ```
 
-Mogliśmy skopiować dane z wywołania do `fallback()` (zobacz poniżej), ale łatwiej jest użyć [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), języka asemblera EVM.
+Moglibyśmy skopiować dane z wywołania do `fallback()` (zobacz poniżej), ale łatwiej jest użyć [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), języka asemblera EVM.
 
-Tutaj używamy [kodu operacji CALLDATALOAD](https://www.evm.codes/#35), aby wczytać bajty od `startByte` do `startByte+31` na stos.
+Tutaj używamy [kodu operacji CALLDATALOAD](https://www.evm.codes/#35), aby odczytać bajty od `startByte` do `startByte+31` na stos.
 Ogólnie rzecz biorąc, składnia kodu operacji w Yul to `<opcode name>(<first stack value, if any>,<second stack value, if any>...)`.
 
 ```solidity
@@ -172,7 +215,7 @@ Ogólnie rzecz biorąc, składnia kodu operacji w Yul to `<opcode name>(<first s
         _retVal = _retVal >> (256-length*8);
 ```
 
-Tylko najbardziej znaczące `length` bajtów jest częścią pola, więc wykonujemy [przesunięcie bitowe w prawo](https://en.wikipedia.org/wiki/Logical_shift), aby pozbyć się pozostałych wartości.
+Tylko najbardziej znaczące `length` bajty są częścią pola, więc wykonujemy [przesunięcie w prawo](https://en.wikipedia.org/wiki/Logical_shift), aby pozbyć się pozostałych wartości.
 Ma to dodatkową zaletę polegającą na przesunięciu wartości na prawą stronę pola, więc jest to sama wartość, a nie wartość pomnożona przez 256<sup>coś</sup>.
 
 ```solidity
@@ -184,7 +227,7 @@ Ma to dodatkową zaletę polegającą na przesunięciu wartości na prawą stron
     fallback() external {
 ```
 
-Gdy wywołanie kontraktu Solidity nie pasuje do żadnej z sygnatur funkcji, wywołuje ono [funkcję `fallback()`](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function) (zakładając, że taka istnieje).
+Kiedy wywołanie kontraktu Solidity nie pasuje do żadnej z sygnatur funkcji, wywołuje [funkcję `fallback()`](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function) (zakładając, że taka istnieje).
 W przypadku `CalldataInterpreter`, _każde_ wywołanie trafia tutaj, ponieważ nie ma innych funkcji `external` ani `public`.
 
 ```solidity
@@ -193,23 +236,23 @@ W przypadku `CalldataInterpreter`, _każde_ wywołanie trafia tutaj, ponieważ n
         _func = calldataVal(0, 1);
 ```
 
-Odczytaj pierwszy bajt danych wywołania, który mówi nam, jaka to funkcja.
+Odczytaj pierwszy bajt danych wywołania, który mówi nam o funkcji.
 Istnieją dwa powody, dla których funkcja nie byłaby tutaj dostępna:
 
 1. Funkcje, które są `pure` lub `view`, nie zmieniają stanu i nie kosztują gazu (gdy są wywoływane w sposób pozałańcuchowy).
-   Próba zmniejszenia ich kosztu gazu nie ma sensu.
+   Nie ma sensu próbować obniżać ich kosztu gazu.
 2. Funkcje, które opierają się na [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties).
    Wartością `msg.sender` będzie adres `CalldataInterpreter`, a nie wywołującego.
 
-Niestety, [patrząc na specyfikację ERC-20](https://eips.ethereum.org/EIPS/eip-20), pozostawia to tylko jedną funkcję, `transfer`.
-Pozostawia nam to tylko dwie funkcje: `transfer` (ponieważ możemy wywołać `transferFrom`) oraz `faucet` (ponieważ możemy przetransferować tokeny z powrotem do tego, kto nas wywołał).
+Niestety, [patrząc na specyfikacje ERC-20](https://eips.ethereum.org/EIPS/eip-20), pozostawia to tylko jedną standardową funkcję, `transfer` (ponieważ możemy wywołać `transferFrom`).
+Nasz token testowy ma również `faucet`, co możemy obsłużyć, ponieważ możemy przetransferować tokeny z powrotem do tego, kto nas wywołał.
 
 ```solidity
 
         // Wywołaj metody zmieniające stan tokena używając
         // informacji z danych wywołania
 
-        // faucet
+        // kranik
         if (_func == 1) {
 ```
 
@@ -223,7 +266,7 @@ Wywołanie `faucet()`, które nie ma parametrów.
 ```
 
 Po wywołaniu `token.faucet()` otrzymujemy tokeny. Jednak jako kontrakt proxy nie **potrzebujemy** tokenów.
-Potrzebuje ich EOA (konto posiadane zewnętrznie) lub kontrakt, który nas wywołał.
+Potrzebuje ich konto posiadane zewnętrznie (EOA) lub kontrakt, który nas wywołał.
 Więc transferujemy wszystkie nasze tokeny do tego, kto nas wywołał.
 
 ```solidity
@@ -238,14 +281,14 @@ Transfer tokenów wymaga dwóch parametrów: adresu docelowego i kwoty.
                 msg.sender,
 ```
 
-Pozwalamy wywołującym na transfer tylko tych tokenów, które posiadają
+Pozwalamy wywołującym tylko na transfer tokenów, które posiadają
 
 ```solidity
                 address(uint160(calldataVal(1, 20))),
 ```
 
 Adres docelowy zaczyna się od bajtu nr 1 (bajt nr 0 to funkcja).
-Jako adres, ma on długość 20 bajtów.
+Jako adres ma długość 20 bajtów.
 
 ```solidity
                 calldataVal(21, 2)
@@ -258,24 +301,24 @@ Dla tego konkretnego kontraktu zakładamy, że maksymalna liczba tokenów, któr
         }
 ```
 
-Ogólnie rzecz biorąc, transfer zajmuje 35 bajtów danych wywołania:
+Ogólnie rzecz biorąc, transfer zajmuje 23 bajty danych wywołania:
 
 | Sekcja | Długość | Bajty |
 | ------------------- | -----: | ----: |
 | Selektor funkcji | 1 | 0 |
-| Adres docelowy | 32 | 1-32 |
-| Kwota | 2 | 33-34 |
+| Adres docelowy | 20 | 1-20 |
+| Kwota | 2 | 21-22 |
 
 ```solidity
     }   // fallback
 
-}       // contract CalldataInterpreter
+}       // kontrakt CalldataInterpreter
 ```
 
 ### test.js {#test-js}
 
 [Ten test jednostkowy w JavaScript](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) pokazuje nam, jak używać tego mechanizmu (i jak zweryfikować, czy działa poprawnie).
-Zakładam, że rozumiesz [chai](https://www.chaijs.com/) oraz [ethers](https://docs.ethers.io/v5/) i wyjaśnię tylko te części, które bezpośrednio dotyczą kontraktu.
+Zakładam, że rozumiesz [chai](https://www.chaijs.com/) oraz [ethers](https://docs.ethers.org/v5/) i wyjaśnię tylko te części, które bezpośrednio dotyczą kontraktu.
 
 ```js
 const { expect } = require("chai");
@@ -323,7 +366,7 @@ Są dwa parametry, które musimy podać dla transakcji:
     await (await signer.sendTransaction(faucetTx)).wait()
 ```
 
-Wywołujemy [metodę `sendTransaction` podpisującego (signer)](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction), ponieważ określiliśmy już cel (`faucetTx.to`) i potrzebujemy, aby transakcja została podpisana.
+Wywołujemy [metodę `sendTransaction` podpisującego (signer)](https://docs.ethers.org/v5/api/signer/#Signer-sendTransaction), ponieważ określiliśmy już cel (`faucetTx.to`) i potrzebujemy, aby transakcja została podpisana.
 
 ```javascript
 // Sprawdź, czy faucet poprawnie dostarcza tokeny
@@ -365,14 +408,20 @@ Utwórz transakcję transferu. Pierwszy bajt to „0x02”, po którym następuj
 })      // describe
 ```
 
-## Zmniejszanie kosztów, gdy masz kontrolę nad kontraktem docelowym {#reducing-the-cost-when-you-do-control-the-destination-contract}
+## Obniżanie kosztów, gdy kontrolujesz kontrakt docelowy {#reducing-the-cost-when-you-do-control-the-destination-contract}
 
-Jeśli masz kontrolę nad kontraktem docelowym, możesz utworzyć funkcje, które omijają sprawdzanie `msg.sender`, ponieważ ufają interpreterowi danych wywołania.
-[Przykład tego, jak to działa, możesz zobaczyć tutaj, w gałęzi `control-contract`](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
+Jeśli masz kontrolę nad kontraktem docelowym, możesz utworzyć funkcje, które omijają kontrole `msg.sender`, ponieważ ufają interpreterowi danych wywołania.
+[Możesz zobaczyć przykład, jak to działa tutaj, w gałęzi `control-contract`](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
+Aby to uruchomić, przełącz się na tę gałąź w sklonowanym wcześniej repozytorium i uruchom test ponownie:
+
+```sh
+git checkout control-contract
+npx hardhat test
+```
 
 Gdyby kontrakt odpowiadał tylko na transakcje zewnętrzne, moglibyśmy zadowolić się posiadaniem tylko jednego kontraktu.
-Jednakże zepsułoby to [kompozycyjność](/developers/docs/smart-contracts/composability/).
-O wiele lepiej jest mieć kontrakt, który odpowiada na normalne wywołania ERC-20, oraz inny kontrakt, który odpowiada na transakcje z krótkimi danymi wywołania.
+Jednakże zniszczyłoby to [kompozycyjność](/developers/docs/smart-contracts/composability/).
+Znacznie lepiej jest mieć kontrakt, który odpowiada na normalne wywołania ERC-20, oraz inny kontrakt, który odpowiada na transakcje z krótkimi danymi wywołania.
 
 ### Token.sol {#token-sol-2}
 
@@ -576,9 +625,10 @@ Zauważ, że `transferFromTx` wymaga dwóch parametrów adresowych: dawcy limitu
 
 ## Wniosek {#conclusion}
 
-Zarówno [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92), jak i [Arbitrum](https://developer.offchainlabs.com/docs/special_features) szukają sposobów na zmniejszenie rozmiaru danych wywołania zapisywanych w L1, a tym samym kosztów transakcji.
-Jednak jako dostawcy infrastruktury szukający ogólnych rozwiązań, nasze możliwości są ograniczone.
-Jako deweloper zdecentralizowanej aplikacji (dapp), posiadasz wiedzę specyficzną dla aplikacji, co pozwala Ci zoptymalizować dane wywołania znacznie lepiej, niż moglibyśmy to zrobić w ogólnym rozwiązaniu.
+Zarówno [Optimism](https://docs.optimism.io/op-stack/transactions/fees#fjord), jak i [Arbitrum](https://docs.arbitrum.io/how-arbitrum-works/deep-dives/gas-and-fees) kompresują teraz dane, które zapisują na L1, i pobierają opłatę za każdą transakcję na podstawie jej skompresowanego rozmiaru, aby obniżyć koszt transakcji.
+Jednak jako dostawcy infrastruktury poszukujący ogólnych rozwiązań, nasze możliwości są ograniczone.
+Jako deweloper dapp masz wiedzę specyficzną dla aplikacji, co pozwala Ci zoptymalizować dane wywołania znacznie lepiej, niż moglibyśmy to zrobić w ogólnym rozwiązaniu.
 Mamy nadzieję, że ten artykuł pomoże Ci znaleźć idealne rozwiązanie dla Twoich potrzeb.
 
 [Zobacz tutaj więcej moich prac](https://cryptodocguy.pro/).
+
