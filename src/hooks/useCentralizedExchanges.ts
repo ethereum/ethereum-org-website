@@ -5,7 +5,7 @@ import { useLocale, useTranslations } from "next-intl"
 import type { ImageProps } from "@/components/Image"
 import { SelectOnChange } from "@/components/Select"
 
-import { getCountryCodeName } from "@/lib/utils/intl"
+import { getCountryCodeName, safeLocale } from "@/lib/utils/intl"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import exchangeData from "@/data/exchangesByCountry"
@@ -394,7 +394,7 @@ export const useCentralizedExchanges = () => {
   const exchangesArray = Object.keys(exchanges) as ExchangeKey[]
 
   const formatList = (values: string[]): string =>
-    new Intl.ListFormat(locale, {
+    new Intl.ListFormat(safeLocale(locale), {
       style: "long",
       type: "conjunction",
     }).format(values)

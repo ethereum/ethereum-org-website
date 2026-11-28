@@ -3,6 +3,7 @@ import { useLocale } from "next-intl"
 
 import type { Lang, LocaleDisplayInfo } from "@/lib/types"
 
+import { safeLocale } from "@/lib/utils/intl"
 import { filterRealLocales } from "@/lib/utils/translations"
 
 import { LOCALES_CODES } from "@/lib/constants"
@@ -62,7 +63,7 @@ export const useLanguagePicker = (languages: LocaleDisplayInfo[]) => {
         }
 
         // Otherwise, sort alphabetically by source name using localeCompare
-        return a.sourceName.localeCompare(b.sourceName, locale)
+        return a.sourceName.localeCompare(b.sourceName, safeLocale(locale))
       })
   }, [languages, intlLocalePreferences, locale])
 

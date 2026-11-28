@@ -1,5 +1,6 @@
 import type { I18nLocale, Lang, LocaleDisplayInfo } from "@/lib/types"
 
+import { safeLocale } from "@/lib/utils/intl"
 import { languages } from "@/lib/utils/translations"
 
 export const localeToDisplayInfo = (
@@ -11,7 +12,7 @@ export const localeToDisplayInfo = (
   const englishName = i18nItem.name
 
   // Get "source" display name (Language choice displayed in language of current locale)
-  const intlSource = new Intl.DisplayNames([sourceLocale], {
+  const intlSource = new Intl.DisplayNames([safeLocale(sourceLocale)], {
     type: "language",
   }).of(localeOption)
   // For languages that do not have an Intl display name, use English name as fallback

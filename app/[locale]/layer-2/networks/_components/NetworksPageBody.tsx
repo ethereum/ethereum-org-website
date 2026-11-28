@@ -4,6 +4,7 @@ import type { CatalogNetwork } from "@/lib/types"
 
 import type { CatalogSelectOption } from "@/components/FilterableCatalog/types"
 
+import { safeLocale } from "@/lib/utils/intl"
 import { MATURITY_LEVELS, type NetworkCardData } from "@/lib/utils/networkData"
 import { getWalletSlug } from "@/lib/utils/walletData"
 
@@ -91,7 +92,7 @@ const NetworksPageBody = async ({
       }
     })
     .filter((option) => option.count > 0)
-    .sort((a, b) => a.label.localeCompare(b.label, locale))
+    .sort((a, b) => a.label.localeCompare(b.label, safeLocale(locale)))
 
   const maturityOptions: CatalogSelectOption[] = MATURITY_LEVELS.map(
     (level) => ({
