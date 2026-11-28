@@ -1,6 +1,9 @@
 name: Intl Pipeline
 
 on:
+  schedule:
+    # Daily 04:20 UTC; empty inputs fall through to pipeline defaults (dev, auto, all locales)
+    - cron: "20 4 * * *"
   workflow_dispatch:
     inputs:
       target_path:
