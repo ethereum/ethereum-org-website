@@ -13,11 +13,13 @@ published: 2022-05-15
 
 ## Qual yellow paper? {#which-yellow-paper}
 
-Como quase tudo no Ethereum, o yellow paper evolui com o tempo. Para poder me referir a uma versão específica, fiz o upload da [versão atual no momento da escrita](https://ethereum.github.io/yellowpaper/paper.pdf). Os números de seção, página e equação que uso se referirão a essa versão. É uma boa ideia mantê-lo aberto em uma janela diferente enquanto lê este documento.
+Como quase tudo no Ethereum, o yellow paper evolui com o tempo. Para poder me referir a uma versão específica, fiz o upload [da versão que era a atual no momento da escrita](yellow-paper-berlin.pdf) (a versão de Berlim, 2022). Os números de seção, página e equação neste tutorial referem-se a essa versão. [A versão mais recente](https://ethereum.github.io/yellowpaper/paper.pdf) foi atualizada desde então, portanto, seus números podem ser diferentes. É uma boa ideia mantê-la aberta em uma janela diferente enquanto lê este documento.
 
 ### Por que a EVM? {#why-the-evm}
 
-O yellow paper original foi escrito logo no início do desenvolvimento do Ethereum. Ele descreve o mecanismo de consenso original baseado em Prova de Trabalho (PoW) que foi usado inicialmente para proteger a rede. No entanto, o Ethereum desativou a Prova de Trabalho e começou a usar o consenso baseado em Prova de Participação (PoS) em setembro de 2022. Este tutorial se concentrará nas partes do yellow paper que definem a Máquina Virtual Ethereum. A EVM não foi alterada pela transição para a Prova de Participação (exceto pelo valor de retorno do opcode DIFFICULTY).
+O yellow paper original foi escrito logo no início do desenvolvimento do Ethereum. Ele descreve o mecanismo de consenso original baseado em Prova de Trabalho (PoW) que foi originalmente usado para proteger a rede. No entanto, o Ethereum desativou a Prova de Trabalho (PoW) e começou a usar o consenso baseado em Prova de Participação (PoS) em setembro de 2022. Este tutorial se concentrará nas partes do yellow paper que definem a Máquina Virtual Ethereum (EVM). A transição para a Prova de Participação (PoS) quase não alterou a EVM: o opcode `DIFFICULTY` (0x44) foi renomeado para [`PREVRANDAO`](https://eips.ethereum.org/EIPS/eip-4399) e agora retorna um valor aleatório da Beacon Chain.
+
+Atualizações posteriores da rede alteraram a EVM. Elas adicionaram opcodes como [`PUSH0`](https://eips.ethereum.org/EIPS/eip-3855), [`TLOAD` e `TSTORE`](https://eips.ethereum.org/EIPS/eip-1153) (armazenamento transitório), [`MCOPY`](https://eips.ethereum.org/EIPS/eip-5656), [`BLOBHASH`](https://eips.ethereum.org/EIPS/eip-4844) e [`BLOBBASEFEE`](https://eips.ethereum.org/EIPS/eip-7516), e mudaram o comportamento do [`SELFDESTRUCT`](https://eips.ethereum.org/EIPS/eip-6780). O yellow paper não cobre todas essas mudanças. A especificação mais atualizada é a [especificação da camada de execução em Python](https://github.com/ethereum/execution-specs).
 
 ## 9 Modelo de execução {#9-execution-model}
 
@@ -34,7 +36,7 @@ Esta seção apresenta os conceitos básicos da EVM e como ela se compara a outr
 
 Uma [máquina de pilha](https://en.wikipedia.org/wiki/Stack_machine) é um computador que armazena dados intermediários não em registradores, mas em uma [**pilha**](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>). Esta é a arquitetura preferida para máquinas virtuais porque é fácil de implementar, o que significa que bugs e vulnerabilidades de segurança são muito menos prováveis. A memória na pilha é dividida em palavras de 256 bits. Isso foi escolhido porque é conveniente para as principais operações criptográficas do Ethereum, como a geração de hash Keccak-256 e cálculos de curva elíptica. O tamanho máximo da pilha é de 1024 itens (1024 x 256 bits). Quando os opcodes são executados, eles geralmente obtêm seus parâmetros da pilha. Existem opcodes especificamente para reorganizar elementos na pilha, como `POP` (remove o item do topo da pilha), `DUP_N` (duplica o enésimo item na pilha), etc.
 
-A EVM também tem um espaço volátil chamado **memória**, que é usado para armazenar dados durante a execução. Essa memória é organizada em palavras de 32 bytes. Todos os locais de memória são inicializados com zero. Se você executar este código [Yul](https://docs.soliditylang.org/en/latest/yul.html) para adicionar uma palavra à memória, ele preencherá 32 bytes de memória preenchendo o espaço vazio na palavra com zeros, ou seja, ele cria uma palavra - com zeros nos locais 0-29, 0x60 no 30 e 0xA7 no 31.
+A EVM também possui um espaço volátil chamado **memória**, que é usado para armazenar dados durante a execução. Essa memória é organizada em palavras de 32 bytes. Todos os locais de memória são inicializados com zero. Se você executar este código [Yul](https://docs.soliditylang.org/en/latest/yul.html) para adicionar uma palavra à memória, ele preencherá 32 bytes de memória preenchendo o espaço vazio na palavra com zeros, ou seja, ele cria uma palavra - com zeros nos locais 0-29, 0x60 no 30 e 0xA7 no 31.
 
 ```yul
 mstore(0, 0x60A7)
@@ -42,11 +44,13 @@ mstore(0, 0x60A7)
 
 `mstore` é um dos três opcodes que a EVM fornece para interagir com a memória - ele carrega uma palavra na memória. Os outros dois são `mstore8`, que carrega um único byte na memória, e `mload`, que move uma palavra da memória para a pilha.
 
-A EVM também tem um modelo de **armazenamento** (storage) não volátil separado que é mantido como parte do estado do sistema - essa memória é organizada em matrizes de palavras (em oposição a matrizes de bytes endereçáveis por palavra na pilha). Esse armazenamento é onde os contratos mantêm dados persistentes - um contrato só pode interagir com seu próprio armazenamento. O armazenamento é organizado em mapeamentos de chave-valor.
+A EVM também possui um modelo de **armazenamento** não volátil separado que é mantido como parte do estado do sistema - essa memória mapeia chaves de 256 bits para valores de 256 bits (ao contrário da memória, que é um array endereçável por byte). Esse armazenamento é onde os contratos mantêm dados persistentes - um contrato só pode interagir com seu próprio armazenamento. O armazenamento é organizado em mapeamentos de chave-valor.
 
-Embora não seja mencionado nesta seção do yellow paper, também é útil saber que existe um quarto tipo de memória. **Calldata** (dados de chamada) é uma memória somente leitura endereçável por byte usada para armazenar o valor passado com o parâmetro `data` de uma transação. A EVM tem opcodes específicos para gerenciar `calldata`. `calldatasize` retorna o tamanho dos dados. `calldataload` carrega os dados na pilha. `calldatacopy` copia os dados para a memória.
+Desde a atualização Cancun, há também o **armazenamento transitório** ([EIP-1153](https://eips.ethereum.org/EIPS/eip-1153)). Ele é acessado como o armazenamento, usando os opcodes `TLOAD` e `TSTORE`, mas é limpo no final de cada transação.
 
-A [arquitetura de Von Neumann](https://en.wikipedia.org/wiki/Von_Neumann_architecture) padrão armazena código e dados na mesma memória. A EVM não segue esse padrão por motivos de segurança - compartilhar memória volátil torna possível alterar o código do programa. Em vez disso, o código é salvo no armazenamento.
+Embora não seja mencionado nesta seção do yellow paper, também é útil saber que existe mais um tipo de memória. Os **dados de chamada** são uma memória somente leitura endereçável por byte usada para armazenar o valor passado com o parâmetro `data` de uma transação. A EVM possui opcodes específicos para gerenciar `calldata`. `calldatasize` retorna o tamanho dos dados. `calldataload` carrega os dados na pilha. `calldatacopy` copia os dados para a memória.
+
+A [arquitetura de Von Neumann](https://en.wikipedia.org/wiki/Von_Neumann_architecture) padrão armazena código e dados na mesma memória. A EVM não segue esse padrão por motivos de segurança - compartilhar memória volátil torna possível alterar o código do programa. Em vez disso, o código é armazenado de forma imutável como parte da conta do contrato no estado global, separado tanto da memória quanto do armazenamento do contrato.
 
 Existem apenas dois casos em que o código é executado a partir da memória:
 
@@ -88,27 +92,28 @@ A função _C<sub>mem</sub>_ é definida na equação 328: _C<sub>mem</sub>(a) =
 
 O ambiente de execução é uma tupla, _I_, que inclui informações que não fazem parte do estado da blockchain ou da EVM.
 
-| Parâmetro       | Opcode para acessar os dados                                                                                                     | Código Solidity para acessar os dados    |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| _I<sub>a</sub>_ | [`ADDRESS`](https://www.evm.codes/#30)                                                                                           | `address(this)`                          |
-| _I<sub>o</sub>_ | [`ORIGIN`](https://www.evm.codes/#32)                                                                                            | `tx.origin`                              |
-| _I<sub>p</sub>_ | [`GASPRICE`](https://www.evm.codes/#3a)                                                                                          | `tx.gasprice`                            |
-| _I<sub>d</sub>_ | [`CALLDATALOAD`](https://www.evm.codes/#35), etc.                                                                                | `msg.data`                               |
-| _I<sub>s</sub>_ | [`CALLER`](https://www.evm.codes/#33)                                                                                            | `msg.sender`                             |
-| _I<sub>v</sub>_ | [`CALLVALUE`](https://www.evm.codes/#34)                                                                                         | `msg.value`                              |
-| _I<sub>b</sub>_ | [`CODECOPY`](https://www.evm.codes/#39)                                                                                          | `address(this).code`                     |
-| _I<sub>H</sub>_ | Campos do cabeçalho do bloco, como [`NUMBER`](https://www.evm.codes/#43) e [`DIFFICULTY`](https://www.evm.codes/#44)             | `block.number`, `block.difficulty`, etc. |
-| _I<sub>e</sub>_ | Profundidade da pilha de chamadas para chamadas entre contratos (incluindo a criação de contratos)                               |                                          |
-| _I<sub>w</sub>_ | A EVM tem permissão para alterar o estado ou está sendo executada estaticamente                                                  |                                          |
+| Parâmetro       | Opcode para acessar os dados                                                                                        | Código Solidity para acessar os dados         |
+| --------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| _I<sub>a</sub>_ | [`ADDRESS`](https://www.evm.codes/#30)                                                                           | `address(this)`                          |
+| _I<sub>o</sub>_ | [`ORIGIN`](https://www.evm.codes/#32)                                                                            | `tx.origin`                              |
+| _I<sub>p</sub>_ | [`GASPRICE`](https://www.evm.codes/#3a)                                                                          | `tx.gasprice`                            |
+| _I<sub>d</sub>_ | [`CALLDATALOAD`](https://www.evm.codes/#35), etc.                                                                | `msg.data`                               |
+| _I<sub>s</sub>_ | [`CALLER`](https://www.evm.codes/#33)                                                                            | `msg.sender`                             |
+| _I<sub>v</sub>_ | [`CALLVALUE`](https://www.evm.codes/#34)                                                                         | `msg.value`                              |
+| _I<sub>b</sub>_ | [`CODECOPY`](https://www.evm.codes/#39)                                                                          | `address(this).code`                     |
+| _I<sub>H</sub>_ | Campos do cabeçalho do bloco, como [`NUMBER`](https://www.evm.codes/#43) e [`PREVRANDAO`](https://www.evm.codes/#44) | `block.number`, `block.prevrandao`, etc. |
+| _I<sub>e</sub>_ | Profundidade da pilha de chamadas para chamadas entre contratos (incluindo a criação de contratos)                                |
+| _I<sub>w</sub>_ | A EVM tem permissão para alterar o estado ou está sendo executada estaticamente                                                  |
 
 Alguns outros parâmetros são necessários para entender o restante da seção 9:
 
-| Parâmetro | Definido na seção    | Significado                                                                                                                                                                                                                                |
-| --------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| _σ_       | 2 (p. 2, equação 1)  | O estado da blockchain                                                                                                                                                                                                                     |
-| _g_       | 9.3 (p. 14)          | Gás restante                                                                                                                                                                                                                               |
-| _A_       | 6.1 (p. 9)           | Subestado acumulado (alterações programadas para quando a transação terminar)                                                                                                                                                              |
-| _o_       | 9.3 (p. 14)          | Saída - o resultado retornado no caso de transação interna (quando um contrato chama outro) e chamadas para funções de visualização (view functions) (quando você está apenas pedindo informações, então não há necessidade de esperar por uma transação) |
+| Parâmetro | Definido na seção   | Significado                                                                                                                                                                                                                  |
+| --------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| _σ_       | 2 (p. 2, equação 1) | O estado da blockchain                                                                                                                                                                                              |
+| _g_       | 9.3 (p. 14)          | Gás restante                                                                                                                                                                                                            |
+| _A_       | 6.1 (p. 9)           | Subestado acumulado (alterações programadas para quando a transação terminar)                                                                                                                                                       |
+| _o_       | 9.3 (p. 14)          | Saída - o resultado retornado no caso de transação interna (quando um contrato chama outro) e chamadas para funções de visualização (quando você está apenas pedindo informações, então não há necessidade de esperar por uma transação) |
+
 ## 9.4 Visão geral da execução {#94-execution-overview}
 
 Agora que temos todas as preliminares, podemos finalmente começar a trabalhar em como a EVM funciona.
@@ -138,31 +143,31 @@ Como esta é uma [máquina de pilha](https://en.wikipedia.org/wiki/Stack_machine
 
 ## 9.4.2 Parada excepcional {#942-exceptional-halt}
 
-Esta seção define a função _Z_, que especifica quando temos um término anormal. Esta é uma função [booleana](https://en.wikipedia.org/wiki/Boolean_data_type), então ela usa [_∨_ para um ou lógico](https://en.wikipedia.org/wiki/Logical_disjunction) e [_∧_ para um e lógico](https://en.wikipedia.org/wiki/Logical_conjunction).
+Esta seção define a função _Z_, que especifica quando temos um término anormal. Esta é uma função [booleana](https://en.wikipedia.org/wiki/Boolean_data_type), então ela usa [_∨_ para um OU lógico](https://en.wikipedia.org/wiki/Logical_disjunction) e [_∧_ para um E lógico](https://en.wikipedia.org/wiki/Logical_conjunction).
 
 Temos uma parada excepcional se qualquer uma destas condições for verdadeira:
 
 - **_μ<sub>g</sub> < C(σ,μ,A,I)_**
-  Como vimos na seção 9.2, _C_ é a função que especifica o custo de gás. Não há gás suficiente restante para cobrir o próximo opcode.
+  Como vimos na seção 9.2, _C_ é a função que especifica o custo de gás. Não há gás restante suficiente para cobrir o próximo opcode.
 
 - **_δ<sub>w</sub>=∅_**
-  Se o número de itens retirados (popped) para um opcode for indefinido, então o próprio opcode é indefinido.
+  Se o número de itens retirados para um opcode for indefinido, então o próprio opcode é indefinido.
 
 - **_|| μ<sub>s</sub> || < δ<sub>w</sub>_**
   Underflow da pilha, não há itens suficientes na pilha para o opcode atual.
 
 - **_w = JUMP ∧ μ<sub>s</sub>[0]∉D(I<sub>b</sub>)_**
-  O opcode é [`JUMP`](https://www.evm.codes/#56) e o endereço não é um [`JUMPDEST`](https://www.evm.codes/#5b). Os saltos (jumps) são _apenas_ válidos quando o destino é um [`JUMPDEST`](https://www.evm.codes/#5b).
+  O opcode é [`JUMP`](https://www.evm.codes/#56) e o endereço não é um [`JUMPDEST`](https://www.evm.codes/#5b). Os saltos (jumps) são válidos _apenas_ quando o destino é um [`JUMPDEST`](https://www.evm.codes/#5b).
 
 - **_w = JUMPI ∧ μ<sub>s</sub>[1]≠0 ∧ μ<sub>s</sub>[0] ∉ D(I<sub>b</sub>)_**
-  O opcode é [`JUMPI`](https://www.evm.codes/#57), a condição é verdadeira (diferente de zero), então o salto deve acontecer, e o endereço não é um [`JUMPDEST`](https://www.evm.codes/#5b). Os saltos são _apenas_ válidos quando o destino é um [`JUMPDEST`](https://www.evm.codes/#5b).
+  O opcode é [`JUMPI`](https://www.evm.codes/#57), a condição é verdadeira (diferente de zero), então o salto deve acontecer, e o endereço não é um [`JUMPDEST`](https://www.evm.codes/#5b). Os saltos são válidos _apenas_ quando o destino é um [`JUMPDEST`](https://www.evm.codes/#5b).
 
 - **_w = RETURNDATACOPY ∧ μ<sub>s</sub>[1]+μ<sub>s</sub>[2]>|| μ<sub>o</sub> ||_**
-  O opcode é [`RETURNDATACOPY`](https://www.evm.codes/#3e). Neste opcode, o elemento da pilha _μ<sub>s</sub>[1]_ é o deslocamento (offset) para ler no buffer de dados de retorno, e o elemento da pilha _μ<sub>s</sub>[2]_ é o comprimento dos dados. Essa condição ocorre quando você tenta ler além do final do buffer de dados de retorno. Observe que não há uma condição semelhante para os dados de chamada (calldata) ou para o próprio código. Quando você tenta ler além do final desses buffers, você apenas obtém zeros.
+  O opcode é [`RETURNDATACOPY`](https://www.evm.codes/#3e). Neste opcode, o elemento da pilha _μ<sub>s</sub>[1]_ é o deslocamento (offset) para ler no buffer de dados de retorno, e o elemento da pilha _μ<sub>s</sub>[2]_ é o comprimento dos dados. Essa condição ocorre quando você tenta ler além do final do buffer de dados de retorno. Observe que não há uma condição semelhante para os dados de chamada ou para o próprio código. Quando você tenta ler além do final desses buffers, você apenas obtém zeros.
 
 - **_|| μ<sub>s</sub> || - δ<sub>w</sub> + α<sub>w</sub> > 1024_**
 
-  Overflow da pilha. Se a execução do opcode resultar em uma pilha de mais de 1024 itens, aborte.
+  Overflow da pilha. Se a execução do opcode resultar em uma pilha com mais de 1024 itens, aborte.
 
 - **_¬I<sub>w</sub> ∧ W(w,μ)_**
   Estamos executando estaticamente ([¬ é negação](https://en.wikipedia.org/wiki/Negation) e _I<sub>w</sub>_ é verdadeiro quando temos permissão para alterar o estado da blockchain)? Se sim, e estamos tentando uma operação de alteração de estado, ela não pode acontecer.
@@ -170,7 +175,7 @@ Temos uma parada excepcional se qualquer uma destas condições for verdadeira:
   A função _W(w,μ)_ é definida posteriormente na equação 159. _W(w,μ)_ é verdadeira se uma destas condições for verdadeira:
 
   - **_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT}_**
-    Esses opcodes alteram o estado, seja criando um novo contrato, armazenando um valor ou destruindo o contrato atual.
+    Esses opcodes alteram o estado, seja criando um novo contrato, armazenando um valor ou destruindo o contrato atual. `TSTORE`, que foi adicionado após esta versão do yellow paper, também é proibido em um contexto estático.
 
   - **_LOG0≤w ∧ w≤LOG4_**
     Se formos chamados estaticamente, não podemos emitir entradas de log.
@@ -181,6 +186,7 @@ Temos uma parada excepcional se qualquer uma destas condições for verdadeira:
 
 - **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_**
   Você não pode executar [`SSTORE`](https://www.evm.codes/#55) a menos que tenha mais de G<sub>callstipend</sub> (definido como 2300 no Apêndice G) de gás.
+
 ## 9.4.3 Validade do destino do salto {#943-jump-dest-valid}
 
 Aqui definimos formalmente quais são os opcodes [`JUMPDEST`](https://www.evm.codes/#5b). Não podemos apenas procurar pelo valor de byte 0x5B, porque ele pode estar dentro de um PUSH (e, portanto, dados e não um opcode).
@@ -195,8 +201,8 @@ Em todos os outros casos, olhamos para o resto do código indo para o próximo o
 A função de parada _H_ pode retornar três tipos de valores.
 
 - Se não estivermos em um opcode de parada, retorne _∅_, o conjunto vazio. Por convenção, esse valor é interpretado como falso booleano.
-- Se tivermos um opcode de parada que não produz saída (seja [`STOP`](https://www.evm.codes/#00) ou [`SELFDESTRUCT`](https://www.evm.codes/#ff)), retorne uma sequência de bytes de tamanho zero como valor de retorno. Observe que isso é muito diferente do conjunto vazio. Esse valor significa que a EVM realmente parou, apenas não há dados de retorno para ler.
-- Se tivermos um opcode de parada que produz saída (seja [`RETURN`](https://www.evm.codes/#f3) ou [`REVERT`](https://www.evm.codes/#fd)), retorne a sequência de bytes especificada por esse opcode. Essa sequência é retirada da memória, o valor no topo da pilha (_μ<sub>s</sub>[0]_) é o primeiro byte e o valor depois dele (_μ<sub>s</sub>[1]_) é o comprimento.
+- Se tivermos um opcode de parada que não produz saída (seja [`STOP`](https://www.evm.codes/#00) ou [`SELFDESTRUCT`](https://www.evm.codes/#ff)), retorne uma sequência de bytes de tamanho zero como o valor de retorno. Observe que isso é muito diferente do conjunto vazio. Esse valor significa que a EVM realmente parou, apenas não há dados de retorno para ler. (Observe também que, desde a [EIP-6780](https://eips.ethereum.org/EIPS/eip-6780), `SELFDESTRUCT` apenas exclui o contrato se for chamado na mesma transação que criou o contrato. Caso contrário, ele apenas transfere o ETH do contrato.)
+- Se tivermos um opcode de parada que produz saída (seja [`RETURN`](https://www.evm.codes/#f3) ou [`REVERT`](https://www.evm.codes/#fd)), retorne a sequência de bytes especificada por esse opcode. Essa sequência é retirada da memória, o valor no topo da pilha (_μ<sub>s</sub>[0]_) é o primeiro byte, e o valor depois dele (_μ<sub>s</sub>[1]_) é o comprimento.
 
 ## H.2 Conjunto de instruções {#h2-instruction-set}
 
@@ -263,7 +269,7 @@ Com isso, a EVM está totalmente definida.
 A notação matemática é precisa e permitiu que o yellow paper especificasse todos os detalhes do Ethereum. No entanto, ela tem algumas desvantagens:
 
 - Ela só pode ser entendida por humanos, o que significa que os [testes de conformidade](https://github.com/ethereum/tests) devem ser escritos manualmente.
-- Os programadores entendem código de computador.
-  Eles podem ou não entender a notação matemática.
+- Programadores entendem código de computador.
+  Eles podem ou não entender notação matemática.
 
-Talvez por esses motivos, as [especificações da camada de consenso](https://github.com/ethereum/consensus-specs/blob/master/tests/core/pyspec/README.md) mais recentes sejam escritas em Python. Existem [especificações da camada de execução em Python](https://ethereum.github.io/execution-specs), mas elas não estão completas. Até e a menos que todo o yellow paper também seja traduzido para Python ou uma linguagem semelhante, o yellow paper continuará em serviço, e é útil poder lê-lo.
+Por esses motivos, as [especificações da camada de consenso](https://github.com/ethereum/consensus-specs) são escritas em Python, assim como as [especificações da camada de execução](https://github.com/ethereum/execution-specs). A especificação da camada de execução em Python agora é a referência mantida para o funcionamento da EVM e inclui as alterações de atualizações que o yellow paper não cobre. O yellow paper ainda é uma descrição formal útil, e ser capaz de lê-lo ajuda você a ler outros artigos matemáticos relacionados.
