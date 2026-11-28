@@ -56,6 +56,12 @@ test.describe("Integration Tests", () => {
   })
 
   test.describe("processJsonFile", () => {
+    test("escapes an apostrophe that would swallow an ICU tag", () => {
+      const content = '{"key": "l\'<strong>NFT</strong>"}'
+      const result = processJsonFile("/tmp/test.json", content)
+      expect(result.content).toBe('{"key": "l\'\'<strong>NFT</strong>"}')
+    })
+
     test("removes BOM", () => {
       const content = '\uFEFF{"key": "value"}'
       const result = processJsonFile("/tmp/test.json", content)

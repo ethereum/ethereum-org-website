@@ -5458,6 +5458,19 @@ function convertSpansToJsonBidi(content: string): {
   return { content: fixed, fixCount }
 }
 
+/** ICU reads a lone `'` before `<` or `{` as a quote, so `l'<strong>` renders the tag as text. */
+function fixIcuApostropheBeforeSyntax(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+  const fixed = content.replace(/(?<!')'(?=[<{])/g, () => {
+    fixCount++
+    return "''"
+  })
+  return { content: fixed, fixCount }
+}
+
 /** fixLowercasedAcronyms per value, against the same key's English */
 function fixJsonLowercasedAcronyms(
   translatedJson: string,
@@ -5542,6 +5555,14 @@ function processJsonFile(
   if (compoundResult.fixCount > 0) {
     content = compoundResult.content
     issues.push(`Fixed ${compoundResult.fixCount} known wrong compound term(s)`)
+  }
+
+  const apostropheResult = fixIcuApostropheBeforeSyntax(content)
+  if (apostropheResult.fixCount > 0) {
+    content = apostropheResult.content
+    issues.push(
+      `Escaped ${apostropheResult.fixCount} apostrophe(s) before ICU tag/placeholder`
+    )
   }
 
   // Fix CJK ideographic full stops in JSON values
@@ -6049,6 +6070,7 @@ export const _testOnly = {
   fixEscapedQuotesInJsxAttributes,
   fixInnerQuotesInJsxAttributes,
   fixTranslatedJsonPlaceholders,
+  fixIcuApostropheBeforeSyntax,
   escapeTildeStrikethrough,
   fixBoldAdjacentNonLatin,
   fixItalicAdjacentNonLatin,

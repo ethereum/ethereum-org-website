@@ -35,7 +35,7 @@
   "page-stablecoins-crypto-backed-con-1": "Moins stable que les stablecoins adossés à des monnaies fiduciaires.",
   "page-stablecoins-crypto-backed-con-2": "Vous devez garder un œil sur la valeur du collatéral crypto.",
   "page-stablecoins-precious-metals": "Métaux précieux",
-  "page-stablecoins-precious-metals-description": "Comme les pièces adossées à des monnaies fiduciaires, ces stablecoins utilisent plutôt des ressources comme l'or pour maintenir leur valeur. Ils sont « stables » dans la mesure où leur prix est constamment indexé sur la valeur d'un autre actif, et s'apparentent à un suivi de propriété onchain d'<a href=\"/real-world-assets/\">actifs du monde réel</a>",
+  "page-stablecoins-precious-metals-description": "Comme les pièces adossées à des monnaies fiduciaires, ces stablecoins utilisent plutôt des ressources comme l'or pour maintenir leur valeur. Ils sont « stables » dans la mesure où leur prix est constamment indexé sur la valeur d'un autre actif, et s'apparentent à un suivi de propriété onchain d''<a href=\"/real-world-assets/\">actifs du monde réel</a>",
   "page-stablecoins-precious-metals-pro-1": "À l'abri de la volatilité des cryptos.",
   "page-stablecoins-precious-metals-con-1": "Centralisé – quelqu'un doit émettre les jetons.",
   "page-stablecoins-precious-metals-con-2": "Vous devez faire confiance à l'émetteur du jeton et aux réserves de métaux précieux.",

@@ -39,7 +39,13 @@ const Translation = ({
 }: TranslationProps) => {
   const t = useTranslations()
   const key = id.includes(":") ? id.replace(":", ".") : `${ns}.${id}`
-  const message = values ? t(key, values) : t.raw(key)
+  // raw skips ICU, so unescape `''` the way t() would (the sanitizer writes `l''<b>`)
+  const raw = values ? null : t.raw(key)
+  const message = values
+    ? t(key, values)
+    : typeof raw === "string"
+      ? raw.replaceAll("''", "'")
+      : raw
   // non-string raw messages (nested objects, missing keys) fall back to the id
   const translatedText = typeof message === "string" ? message : id
 

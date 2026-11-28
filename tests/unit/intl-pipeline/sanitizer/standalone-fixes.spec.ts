@@ -9,6 +9,7 @@ import { _testOnly } from "@/scripts/intl-pipeline/intl-sanitizer"
 
 const {
   fixDuplicatedHeadings,
+  fixIcuApostropheBeforeSyntax,
   fixDuplicateHeadingBlocks,
   fixBrokenMarkdownLinks,
   fixEscapedBoldAndItalic,
@@ -3490,6 +3491,26 @@ author: Ori Pomerantz
     test("does not touch the standard ERC-165 name in prose", () => {
       const input = "ERC-165 and ERC-20 are token standards"
       const { content, fixCount } = fixHyphenatedInterfaceIdentifiers(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixIcuApostropheBeforeSyntax", () => {
+    test("doubles a lone apostrophe before a tag or placeholder", () => {
+      const input =
+        '{"a": "Slashing dell\'<strong>1%</strong>", "b": "l\'{name}"}'
+      const { content, fixCount } = fixIcuApostropheBeforeSyntax(input)
+      expect(content).toBe(
+        '{"a": "Slashing dell\'\'<strong>1%</strong>", "b": "l\'\'{name}"}'
+      )
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves escaped and ordinary apostrophes alone", () => {
+      const input =
+        '{"a": "dell\'\'<strong>x</strong>", "b": "l\'esprit <b>y</b>"}'
+      const { content, fixCount } = fixIcuApostropheBeforeSyntax(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
