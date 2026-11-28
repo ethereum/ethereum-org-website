@@ -229,19 +229,14 @@ export const extractTwitterHandle = (twitterUrl: string): string | null => {
   return null
 }
 
-export const formatTorchDate = (timestamp: number): string => {
-  const date = new Date(timestamp * 1000)
-  const month = formatDateTime("en-US", date, { month: "long" })
-  const day = date.getUTCDate().toString().padStart(2, "0")
-  const time = formatDateTime("en-US", date, {
+export const formatTorchDate = (timestamp: number, locale: string): string =>
+  formatDateTime(locale, timestamp * 1000, {
+    month: "long",
+    day: "2-digit",
     hour: "numeric",
     minute: "2-digit",
-    hour12: true,
     timeZoneName: "short",
   })
-
-  return `${month} ${day}, ${time}`
-}
 
 export const getTxEtherscanUrl = (txHash: string): string => {
   return `https://etherscan.io/tx/${txHash}`
