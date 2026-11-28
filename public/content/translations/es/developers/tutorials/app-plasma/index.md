@@ -1,25 +1,28 @@
 ---
-title: "Escribe una Plasma específica de aplicación que preserve la privacidad"
-description: "En este tutorial, construimos un banco semisecreto para depósitos. El banco es un componente centralizado; conoce el saldo de cada usuario. Sin embargo, esta información no se almacena en la cadena. En su lugar, el banco publica un hash del estado. Cada vez que ocurre una transacción, el banco publica el nuevo hash, junto con una prueba de conocimiento cero de que tiene una transacción firmada que cambia el estado del hash al nuevo. Después de leer este tutorial, comprenderás no solo cómo usar las pruebas de conocimiento cero, sino también por qué las usas y cómo hacerlo de manera segura."
+title: "Escribir un Plasma específico de aplicación que preserve la privacidad"
+description: "En este tutorial, construimos un banco semisecreto para depósitos. El banco es un componente centralizado; conoce el saldo de cada usuario. Sin embargo, esta información no se almacena en cadena. En su lugar, el banco publica un hash del estado. Cada vez que ocurre una transacción, el banco publica el nuevo hash, junto con una prueba de conocimiento cero de que tiene una transacción firmada que cambia el estado del hash al nuevo. Después de leer este tutorial, entenderá no solo cómo usar pruebas de conocimiento cero, sino también por qué usarlas y cómo hacerlo de forma segura."
 author: Ori Pomerantz
-tags: ["conocimiento cero", "servidor", "fuera de la cadena", "privacidad"]
+tags:
+  - conocimiento cero
+  - servidor
+  - fuera de la cadena
+  - privacidad
 skill: advanced
-breadcrumb: "Plasma específica de aplicación"
+breadcrumb: "Plasma específico de aplicación"
 lang: es
 published: 2025-10-15
 ---
-
 ## Introducción {#introduction}
 
-A diferencia de los [rollup](/developers/docs/scaling/zk-rollups/), las [Plasma](/developers/docs/scaling/plasma) usan la red principal de Ethereum para la integridad, pero no para la disponibilidad. En este artículo, escribimos una aplicación que se comporta como una Plasma, con Ethereum garantizando la integridad (sin cambios no autorizados) pero no la disponibilidad (un componente centralizado puede fallar y deshabilitar todo el sistema).
+A diferencia de los [rollups](/developers/docs/scaling/zk-rollups/), los [Plasmas](/developers/docs/scaling/plasma) utilizan la red principal de Ethereum para la integridad, pero no para la disponibilidad. En este artículo, escribimos una aplicación que se comporta como un Plasma, con Ethereum garantizando la integridad (sin cambios no autorizados) pero no la disponibilidad (un componente centralizado puede fallar y deshabilitar todo el sistema).
 
-La aplicación que escribimos aquí es un banco que preserva la privacidad. Diferentes direcciones tienen cuentas con saldos y pueden enviar dinero (ETH) a otras cuentas. El banco publica hashes del estado (cuentas y sus saldos) y transacciones, pero mantiene los saldos reales fuera de la cadena, donde pueden permanecer privados.
+La aplicación que escribimos aquí es un banco que preserva la privacidad. Diferentes direcciones tienen cuentas con saldos, y pueden enviar dinero (ETH) a otras cuentas. El banco publica hashes del estado (cuentas y sus saldos) y transacciones, pero mantiene los saldos reales fuera de la cadena donde pueden permanecer privados.
 
 ## Diseño {#design}
 
 Este no es un sistema listo para producción, sino una herramienta de enseñanza. Como tal, está escrito con varias suposiciones simplificadoras.
 
-- Grupo fijo de cuentas. Hay un número específico de cuentas y cada cuenta pertenece a una dirección predeterminada. Esto hace que el sistema sea mucho más simple porque es difícil manejar estructuras de datos de tamaño variable en pruebas de conocimiento cero. Para un sistema listo para producción, podemos usar la [raíz de Merkle](/developers/tutorials/merkle-proofs-for-offline-data-integrity/) como el hash del estado y proporcionar pruebas de Merkle para los saldos requeridos.
+- Grupo de cuentas fijo. Hay un número específico de cuentas, y cada cuenta pertenece a una dirección predeterminada. Esto hace que el sistema sea mucho más simple porque es difícil manejar estructuras de datos de tamaño variable en pruebas de conocimiento cero. Para un sistema listo para producción, podemos usar la [raíz de Merkle](/developers/tutorials/merkle-proofs-for-offline-data-integrity/) como el hash de estado y proporcionar pruebas de Merkle para los saldos requeridos.
 
 - Almacenamiento en memoria. En un sistema de producción, necesitamos escribir todos los saldos de las cuentas en el disco para preservarlos en caso de un reinicio. Aquí, está bien si la información simplemente se pierde.
 
@@ -27,22 +30,22 @@ Este no es un sistema listo para producción, sino una herramienta de enseñanza
 
 ### Pruebas de conocimiento cero {#zero-knowledge-proofs}
 
-A un nivel fundamental, una prueba de conocimiento cero muestra que el probador conoce algunos datos, _Data<sub>private</sub>_ (datos privados), de tal manera que existe una relación _Relationship_ (relación) entre algunos datos públicos, _Data<sub>public</sub>_ (datos públicos), y _Data<sub>private</sub>_. El verificador conoce _Relationship_ y _Data<sub>public</sub>_.
+A un nivel fundamental, una prueba de conocimiento cero demuestra que el probador conoce ciertos datos, _Data<sub>private</sub>_, de tal manera que existe una relación _Relationship_ entre ciertos datos públicos, _Data<sub>public</sub>_, y _Data<sub>private</sub>_. El verificador conoce _Relationship_ y _Data<sub>public</sub>_.
 
-Para preservar la privacidad, necesitamos que los estados y las transacciones sean privados. Pero para asegurar la integridad, necesitamos que el [hash criptográfico](https://en.wikipedia.org/wiki/Cryptographic_hash_function) de los estados sea público. Para demostrar a las personas que envían transacciones que esas transacciones realmente ocurrieron, también necesitamos publicar los hashes de transacción.
+Para preservar la privacidad, necesitamos que los estados y las transacciones sean privados. Pero para garantizar la integridad, necesitamos que el [hash criptográfico](https://en.wikipedia.org/wiki/Cryptographic_hash_function) de los estados sea público. Para demostrar a las personas que envían transacciones que esas transacciones realmente ocurrieron, también necesitamos publicar los hashes de transacción.
 
-En la mayoría de los casos, _Data<sub>private</sub>_ es la entrada al programa de prueba de conocimiento cero y _Data<sub>public</sub>_ es la salida.
+En la mayoría de los casos, _Data<sub>private</sub>_ es la entrada al programa de prueba de conocimiento cero, y _Data<sub>public</sub>_ es la salida.
 
 Estos campos en _Data<sub>private</sub>_:
 
 - _State<sub>n</sub>_, el estado antiguo
 - _State<sub>n+1</sub>_, el nuevo estado
 - _Transaction_, una transacción que cambia del estado antiguo al nuevo. Esta transacción debe incluir estos campos:
-  - _Destination address_ (dirección de destino) que recibe la transferencia
-  - _Amount_ (cantidad) que se transfiere
-  - _Nonce_ para asegurar que cada transacción solo se pueda procesar una vez.
+  - _Dirección de destino_ que recibe la transferencia
+  - _Cantidad_ que se transfiere
+  - _Nonce_ para garantizar que cada transacción solo se pueda procesar una vez.
     La dirección de origen no necesita estar en la transacción, porque se puede recuperar de la firma.
-- _Signature_ (firma), una firma que está autorizada para realizar la transacción. En nuestro caso, la única dirección autorizada para realizar una transacción es la dirección de origen. Debido a que nuestro sistema de conocimiento cero funciona de la manera en que lo hace, también necesitamos la clave pública de la cuenta, además de la firma de Ethereum.
+- _Firma_, una firma que está autorizada para realizar la transacción. En nuestro caso, la única dirección autorizada para realizar una transacción es la dirección de origen. Debido a cómo funciona nuestro sistema de conocimiento cero, también necesitamos la clave pública de la cuenta, además de la firma de Ethereum.
 
 Estos son los campos en _Data<sub>public</sub>_:
 
@@ -50,24 +53,24 @@ Estos son los campos en _Data<sub>public</sub>_:
 - _Hash(State<sub>n+1</sub>)_ el hash del nuevo estado
 - _Hash(Transaction)_ el hash de la transacción que cambia el estado de _State<sub>n</sub>_ a _State<sub>n+1</sub>_.
 
-La relación verifica varias condiciones:
+La relación comprueba varias condiciones:
 
 - Los hashes públicos son de hecho los hashes correctos para los campos privados.
 - La transacción, cuando se aplica al estado antiguo, da como resultado el nuevo estado.
 - La firma proviene de la dirección de origen de la transacción.
 
-Debido a las propiedades de las funciones hash criptográficas, probar estas condiciones es suficiente para asegurar la integridad.
+Debido a las propiedades de las funciones hash criptográficas, probar estas condiciones es suficiente para garantizar la integridad.
 
 ### Estructuras de datos {#data-structures}
 
-La estructura de datos principal es el estado mantenido por el servidor. Para cada cuenta, el servidor realiza un seguimiento del saldo de la cuenta y un [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce), utilizado para prevenir [ataques de repetición](https://en.wikipedia.org/wiki/Replay_attack).
+La estructura de datos principal es el estado que mantiene el servidor. Para cada cuenta, el servidor realiza un seguimiento del saldo de la cuenta y de un [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce), utilizado para prevenir [ataques de repetición](https://en.wikipedia.org/wiki/Replay_attack).
 
 ### Componentes {#components}
 
 Este sistema requiere dos componentes:
 
-- El _servidor_ que recibe transacciones, las procesa y publica hashes en la cadena junto con las pruebas de conocimiento cero.
-- Un _contrato inteligente_ que almacena los hashes y verifica las pruebas de conocimiento cero para asegurar que las transiciones de estado sean legítimas.
+- El _servidor_ que recibe las transacciones, las procesa y publica los hashes en la cadena junto con las pruebas de conocimiento cero.
+- Un _contrato inteligente_ que almacena los hashes y verifica las pruebas de conocimiento cero para garantizar que las transiciones de estado sean legítimas.
 
 ### Flujo de datos y control {#flows}
 
@@ -77,7 +80,7 @@ Estas son las formas en que los diversos componentes se comunican para transferi
 
 2. El servidor verifica que la transacción sea válida:
 
-   - El firmante tiene una cuenta en el banco con un saldo suficiente.
+   - El firmante tiene una cuenta en el banco con saldo suficiente.
    - El destinatario tiene una cuenta en el banco.
 
 3. El servidor calcula el nuevo estado restando la cantidad transferida del saldo del firmante y sumándola al saldo del destinatario.
@@ -86,15 +89,15 @@ Estas son las formas en que los diversos componentes se comunican para transferi
 
 5. El servidor envía a Ethereum una transacción que incluye:
 
-   - El nuevo hash del estado
-   - El hash de la transacción (para que el remitente de la transacción pueda saber que ha sido procesada)
+   - El hash del nuevo estado
+   - El hash de transacción (para que el remitente de la transacción pueda saber que ha sido procesada)
    - La prueba de conocimiento cero que demuestra que la transición al nuevo estado es válida
 
 6. El contrato inteligente verifica la prueba de conocimiento cero.
 
 7. Si la prueba de conocimiento cero es correcta, el contrato inteligente realiza estas acciones:
-   - Actualiza el hash del estado actual al nuevo hash del estado
-   - Emite una entrada de registro con el nuevo hash del estado y el hash de la transacción
+   - Actualiza el hash del estado actual al hash del nuevo estado
+   - Emite una entrada de registro con el hash del nuevo estado y el hash de transacción
 
 ### Herramientas {#tools}
 
@@ -102,11 +105,20 @@ Para el código del lado del cliente, vamos a usar [Vite](https://vite.dev/), [R
 
 La mayor parte del servidor está escrita en JavaScript usando [Node](https://nodejs.org/en). La parte de conocimiento cero está escrita en [Noir](https://noir-lang.org/). Necesitamos la versión `1.0.0-beta.10`, así que después de [instalar Noir como se indica](https://noir-lang.org/docs/getting_started/quick_start), ejecuta:
 
-```
+```sh
 noirup -v 1.0.0-beta.10
 ```
 
-La cadena de bloques que usamos es `anvil`, una cadena de bloques de prueba local que es parte de [Foundry](https://getfoundry.sh/introduction/installation).
+Para crear pruebas que se puedan verificar en cadena (en la etapa 3) también necesitamos [Barretenberg](https://barretenberg.aztec.network/docs/getting_started) (`bb`), el backend probador, en la versión que coincida con esta versión de Noir. Instala `bbup`, el instalador de Barretenberg, y luego úsalo para instalar `bb` versión `0.87.0` (si no se encuentra `bbup`, abre una nueva terminal para que el `PATH` actualizado surta efecto):
+
+```sh
+curl -L https://raw.githubusercontent.com/AztecProtocol/aztec-packages/refs/heads/next/barretenberg/bbup/install | bash
+bbup -v 0.87.0
+```
+
+Este tutorial fue probado con `nargo` 1.0.0-beta.10, `bb` 0.87.0 y (en el servidor) `@noir-lang/noir_js` 1.0.0-beta.11. No uses versiones más recientes: el código de Noir no compila con las versiones candidatas 1.0 actuales, y las versiones actuales de `bb` no pueden leer circuitos compilados por `nargo` 1.0.0-beta.10 y ya no aceptan la bandera `--oracle_hash`.
+
+La cadena de bloques que usamos es `anvil`, una cadena de bloques de prueba local que forma parte de [Foundry](https://getfoundry.sh/introduction/installation).
 
 ## Implementación {#implementation}
 
@@ -118,7 +130,7 @@ Para la primera etapa, firmaremos una transacción en el navegador y luego propo
 
 Para verlo en acción:
 
-1. Asegúrate de tener [Node](https://nodejs.org/en/download) y [Noir](https://noir-lang.org/docs/installation) instalados. Preferiblemente, instálalos en un sistema UNIX como macOS, Linux o [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
+1. Asegúrate de tener instalados [Node](https://nodejs.org/en/download) y [Noir](https://noir-lang.org/docs/installation). Preferiblemente, instálalos en un sistema UNIX como macOS, Linux o [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 2. Descarga el código de la etapa 1 e inicia el servidor web para servir el código del cliente.
 
@@ -140,11 +152,11 @@ Para verlo en acción:
 
 5. Navega hasta [el código del lado del cliente](http://localhost:5173/).
 
-6. Conéctate a la billetera y selecciona tu cuenta de destino y cantidad.
+6. Conéctate a la billetera y selecciona tu cuenta de destino y la cantidad.
 
 7. Haz clic en **Sign** (Firmar) y firma la transacción.
 
-8. Bajo el encabezado **Prover.toml**, encontrarás texto. Reemplaza `server/noir/Prover.toml` con ese texto.
+8. Bajo el encabezado **Prover.toml**, encontrarás un texto. Reemplaza `server/noir/Prover.toml` con ese texto.
 
 9. Ejecuta la prueba de conocimiento cero.
 
@@ -163,7 +175,7 @@ Para verlo en acción:
    [zkBank] Circuit output: (0x199aa62af8c1d562a6ec96e66347bf3240ab2afb5d022c895e6bf6a5e617167b, 0x0cfc0a67cb7308e4e9b254026b54204e34f6c8b041be207e64c5db77d95dd82d, 0x450cf9da6e180d6159290554ae3d8787, 0x6d8bc5a15b9037e52fb59b6b98722a85)
    ```
 
-10. Compara los últimos dos valores con el hash que ves en el navegador web para ver si el mensaje se ha hasheado correctamente.
+10. Compara los dos últimos valores con el hash que ves en el navegador web para ver si el mensaje se ha hasheado correctamente.
 
 #### `server/noir/Prover.toml` {#server-noir-prover-toml}
 
@@ -175,7 +187,7 @@ message="send 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 500 finney (milliEth) 0
 
 El mensaje está en formato de texto, lo que facilita que el usuario lo entienda (lo cual es necesario al firmar) y que el código de Noir lo analice. La cantidad se cotiza en finneys para permitir transferencias fraccionarias por un lado, y ser fácilmente legible por el otro. El último número es el [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce).
 
-La cadena tiene 100 caracteres de largo. Las pruebas de conocimiento cero no manejan bien los datos de tamaño variable, por lo que a menudo es necesario rellenar los datos.
+La cadena tiene 100 caracteres de longitud. Las pruebas de conocimiento cero no manejan bien los datos de tamaño variable, por lo que a menudo es necesario rellenar los datos.
 
 ```toml
 pubKeyX=["0x83",...,"0x75"]
@@ -183,7 +195,7 @@ pubKeyY=["0x35",...,"0xa5"]
 signature=["0xb1",...,"0x0d"]
 ```
 
-Estos tres parámetros son arreglos de bytes de tamaño fijo.
+Estos tres parámetros son matrices de bytes de tamaño fijo.
 
 ```toml
 [[accounts]]
@@ -197,7 +209,7 @@ balance=100_000
 nonce=0
 ```
 
-Esta es la forma de especificar un arreglo de estructuras. Para cada entrada, especificamos la dirección, el saldo (en milliETH, también conocido como [finney](https://cryptovalleyjournal.com/glossary/finney/)) y el siguiente valor del nonce.
+Esta es la forma de especificar una matriz de estructuras. Para cada entrada, especificamos la dirección, el saldo (en milliETH, también conocido como [finney](https://cryptovalleyjournal.com/glossary/finney/)) y el siguiente valor del nonce.
 
 #### `client/src/Transfer.tsx` {#client-src-transfer-tsx}
 
@@ -230,7 +242,7 @@ Estas son las direcciones de las cuentas, las direcciones creadas por la frase d
   })
 ```
 
-Estos [hooks de Wagmi](https://wagmi.sh/react/api/hooks) nos permiten acceder a la biblioteca [viem](https://viem.sh/) y a la billetera.
+Estos [hooks de Wagmi](https://wagmi.sh/react/api/hooks) nos permiten acceder a la biblioteca [Viem](https://viem.sh/) y a la billetera.
 
 ```tsx
   const message = `send ${toAccount} ${ethAmount*1000} finney (milliEth) ${nonce}`.padEnd(100, " ")
@@ -274,7 +286,7 @@ Obtén el hash del mensaje. Es útil proporcionarlo al usuario para la depuraci�
     setPubKey(pubKey)
 ```
 
-Establece las variables de estado. Hacer esto vuelve a dibujar el componente (después de que la función `sign` sale) y muestra al usuario los valores actualizados.
+Establece las variables de estado. Hacer esto vuelve a dibujar el componente (después de que la función `sign` termina) y muestra al usuario los valores actualizados.
 
 ```tsx
     let proverToml = `
@@ -291,9 +303,9 @@ pubKeyY=${hexToArray(pubKey.slice(4+2*32))}
 
 Viem nos proporciona la clave pública como una cadena hexadecimal de 65 bytes. El primer byte es `0x04`, un marcador de versión. A esto le siguen 32 bytes para la `x` de la clave pública y luego 32 bytes para la `y` de la clave pública.
 
-Sin embargo, Noir espera obtener esta información como dos arreglos de bytes, uno para `x` y uno para `y`. Es más fácil analizarlo aquí en el cliente en lugar de como parte de la prueba de conocimiento cero.
+Sin embargo, Noir espera obtener esta información como matrices de dos bytes, una para `x` y otra para `y`. Es más fácil analizarlo aquí en el cliente en lugar de como parte de la prueba de conocimiento cero.
 
-Ten en cuenta que esto es una buena práctica en conocimiento cero en general. El código dentro de una prueba de conocimiento cero es costoso, por lo que cualquier procesamiento que se pueda hacer fuera de la prueba de conocimiento cero _debería_ hacerse fuera de la prueba de conocimiento cero.
+Ten en cuenta que esta es una buena práctica en conocimiento cero en general. El código dentro de una prueba de conocimiento cero es costoso, por lo que cualquier procesamiento que se pueda hacer fuera de la prueba de conocimiento cero _debería_ hacerse fuera de la prueba de conocimiento cero.
 
 ```tsx
 signature=${hexToArray(signature.slice(2,-2))}
@@ -334,15 +346,15 @@ use keccak256::keccak256;
 use dep::ecrecover;
 ```
 
-Estas dos funciones son bibliotecas externas, definidas en [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). Son precisamente lo que sus nombres indican, una función que calcula el [hash keccak256](https://emn178.github.io/online-tools/keccak_256.html) y una función que verifica firmas de Ethereum y recupera la dirección de Ethereum del firmante.
+Estas dos funciones son bibliotecas externas, definidas en [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). Son precisamente lo que su nombre indica, una función que calcula el [hash keccak256](https://emn178.github.io/online-tools/keccak_256.html) y una función que verifica las firmas de Ethereum y recupera la dirección de Ethereum del firmante.
 
 ```
 global ACCOUNT_NUMBER : u32 = 5;
 ```
 
-Noir está inspirado en [Rust](https://www.rust-lang.org/). Las variables, por defecto, son constantes. Así es como definimos constantes de configuración global. Específicamente, `ACCOUNT_NUMBER` es el número de cuentas que almacenamos.
+Noir está inspirado en [Rust](https://www.rust-lang.org/). Las variables, por defecto, son constantes. Así es como definimos las constantes de configuración global. Específicamente, `ACCOUNT_NUMBER` es el número de cuentas que almacenamos.
 
-Los tipos de datos llamados `u<number>` son de ese número de bits, sin signo. Los únicos tipos compatibles son `u8`, `u16`, `u32`, `u64` y `u128`.
+Los tipos de datos llamados `u<number>` son ese número de bits, sin signo. Los únicos tipos compatibles son `u8`, `u16`, `u32`, `u64` y `u128`.
 
 ```
 global FLAT_ACCOUNT_FIELDS : u32 = 2;
@@ -361,7 +373,7 @@ global ASCII_MESSAGE_LENGTH : [u8; 3] = [0x31, 0x30, 0x30];
 global HASH_BUFFER_SIZE : u32 = 26+3+MESSAGE_LENGTH;
 ```
 
-Las [firmas EIP-191](https://eips.ethereum.org/EIPS/eip-191) requieren un búfer con un prefijo de 26 bytes, seguido de la longitud del mensaje en ASCII y finalmente el mensaje en sí.
+Las [firmas EIP-191](https://eips.ethereum.org/EIPS/eip-191) requieren un búfer con un prefijo de 26 bytes, seguido de la longitud del mensaje en ASCII y, finalmente, el mensaje en sí.
 
 ```
 struct Account {
@@ -388,7 +400,7 @@ La información que almacenamos para una transacción de transferencia.
 fn flatten_account(account: Account) -> [Field; FLAT_ACCOUNT_FIELDS] {
 ```
 
-Una definición de función. El parámetro es información `Account`. El resultado es un arreglo de variables `Field`, cuya longitud es `FLAT_ACCOUNT_FIELDS`.
+Una definición de función. El parámetro es información de `Account`. El resultado es una matriz de variables `Field`, cuya longitud es `FLAT_ACCOUNT_FIELDS`
 
 ```
     let flat = [
@@ -397,7 +409,7 @@ Una definición de función. El parámetro es información `Account`. El resulta
     ];
 ```
 
-El primer valor en el arreglo es la dirección de la cuenta. El segundo incluye tanto el saldo como el nonce. Las llamadas `.into()` cambian un número al tipo de datos que necesita ser. `account.nonce` es un valor `u32`, pero para sumarlo a `account.balance << 32`, un valor `u128`, necesita ser un `u128`. Ese es el primer `.into()`. El segundo convierte el resultado `u128` en un `Field` para que encaje en el arreglo.
+El primer valor en la matriz es la dirección de la cuenta. El segundo incluye tanto el saldo como el nonce. Las llamadas a `.into()` cambian un número al tipo de datos que necesita ser. `account.nonce` es un valor `u32`, pero para agregarlo a `account.balance << 32`, un valor `u128`, necesita ser un `u128`. Ese es el primer `.into()`. El segundo convierte el resultado `u128` en un `Field` para que encaje en la matriz.
 
 ```
     flat
@@ -410,19 +422,19 @@ En Noir, las funciones solo pueden devolver un valor al final (no hay retorno an
 fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] {
 ```
 
-Esta función convierte el arreglo de cuentas en un arreglo `Field`, que se puede usar como entrada para un hash de Petersen.
+Esta función convierte la matriz de cuentas en una matriz `Field`, que se puede usar como entrada para un hash de Pedersen.
 
 ```
     let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
 ```
 
-Así es como especificas una variable mutable, es decir, _no_ una constante. Las variables en Noir siempre deben tener un valor, por lo que inicializamos esta variable con puros ceros.
+Así es como se especifica una variable mutable, es decir, _no_ una constante. Las variables en Noir siempre deben tener un valor, por lo que inicializamos esta variable con todos ceros.
 
 ```
     for i in 0..ACCOUNT_NUMBER {
 ```
 
-Este es un bucle `for`. Ten en cuenta que los límites son constantes. Los bucles de Noir deben tener sus límites conocidos en tiempo de compilación. La razón es que los circuitos aritméticos no soportan el control de flujo. Al procesar un bucle `for`, el compilador simplemente coloca el código dentro de él varias veces, una por cada iteración.
+Este es un bucle `for`. Ten en cuenta que los límites son constantes. Los bucles de Noir deben tener sus límites conocidos en tiempo de compilación. La razón es que los circuitos aritméticos no admiten el control de flujo. Al procesar un bucle `for`, el compilador simplemente coloca el código dentro de él varias veces, una por cada iteración.
 
 ```
         let fields = flatten_account(accounts[i]);
@@ -439,7 +451,7 @@ fn hash_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> Field {
 }
 ```
 
-Finalmente, llegamos a la función que hace el hash del arreglo de cuentas.
+Finalmente, llegamos a la función que hashea la matriz de cuentas.
 
 ```
 fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
@@ -469,13 +481,13 @@ _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result
 }
 ```
 
-La función [`assert`](https://noir-lang.org/docs/language/assert) hace que la prueba de conocimiento cero falle si la afirmación es falsa. En este caso, si no podemos encontrar una cuenta con la dirección relevante. Para reportar la dirección, usamos una [cadena de formato](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
+La función [`assert`](https://noir-lang.org/docs/language/assert) hace que la prueba de conocimiento cero falle si la afirmación es falsa. En este caso, si no podemos encontrar una cuenta con la dirección relevante. Para informar la dirección, usamos una [cadena de formato](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
 
 ```rust
 fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> [Account; ACCOUNT_NUMBER] {
 ```
 
-Esta función aplica una transacción de transferencia y devuelve el nuevo arreglo de cuentas.
+Esta función aplica una transacción de transferencia y devuelve la nueva matriz de cuentas.
 
 ```rust
     let from = find_account(accounts, txn.from);
@@ -485,7 +497,7 @@ Esta función aplica una transacción de transferencia y devuelve el nuevo arreg
         (txn.from, txn.amount, txn.nonce, accounts[from].nonce);
 ```
 
-No podemos acceder a los elementos de la estructura dentro de una cadena de formato en Noir, así que creamos una copia utilizable.
+No podemos acceder a los elementos de la estructura dentro de una cadena de formato en Noir, por lo que creamos una copia utilizable.
 
 ```rust
     assert (accounts[from].balance >= txn.amount,
@@ -508,7 +520,7 @@ Estas son dos condiciones que podrían hacer que una transacción sea inválida.
 }
 ```
 
-Crea el nuevo arreglo de cuentas y luego devuélvelo.
+Crea la nueva matriz de cuentas y luego devuélvela.
 
 ```rust
 fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field
@@ -523,7 +535,7 @@ Esta función lee la dirección del mensaje.
     for i in 7..47 {
 ```
 
-La dirección siempre tiene 20 bytes (también conocidos como 40 dígitos hexadecimales) de longitud y comienza en el carácter n.º 7.
+La dirección siempre tiene 20 bytes (es decir, 40 dígitos hexadecimales) de longitud y comienza en el carácter #7.
 
 ```rust
         result *= 0x10;
@@ -555,7 +567,7 @@ Lee la cantidad y el nonce del mensaje.
     let mut stillReadingNonce: bool = false;
 ```
 
-En el mensaje, el primer número después de la dirección es la cantidad de finney (también conocido como milésima de un ETH) a transferir. El segundo número es el nonce. Cualquier texto entre ellos se ignora.
+En el mensaje, el primer número después de la dirección es la cantidad de finney (es decir, la milésima parte de un ETH) a transferir. El segundo número es el nonce. Cualquier texto entre ellos se ignora.
 
 ```rust
     for i in 48..MESSAGE_LENGTH {
@@ -614,7 +626,7 @@ Esta función convierte el mensaje en bytes, luego convierte las cantidades en u
 fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
 ```
 
-Pudimos usar el hash de Pedersen para las cuentas porque solo se hashean dentro de la prueba de conocimiento cero. Sin embargo, en este código necesitamos verificar la firma del mensaje, que es generada por el navegador. Para eso, necesitamos seguir el formato de firma de Ethereum en [EIP-191](https://eips.ethereum.org/EIPS/eip-191). Esto significa que necesitamos crear un búfer combinado con un prefijo estándar, la longitud del mensaje en ASCII y el mensaje en sí, y usar el estándar keccak256 de Ethereum para hashearlo.
+Pudimos usar el hash de Pedersen para las cuentas porque solo se hashean dentro de la prueba de conocimiento cero. Sin embargo, en este código necesitamos verificar la firma del mensaje, que es generada por el navegador. Para eso, necesitamos seguir el formato de firma de Ethereum en [EIP-191](https://eips.ethereum.org/EIPS/eip-191). Esto significa que necesitamos crear un búfer combinado con un prefijo estándar, la longitud del mensaje en ASCII y el mensaje en sí, y usar el keccak256 estándar de Ethereum para hashearlo.
 
 ```rust
     // Prefijo ASCII
@@ -648,7 +660,7 @@ Pudimos usar el hash de Pedersen para las cuentas porque solo se hashean dentro 
     ];
 ```
 
-Para evitar casos en los que una aplicación le pida al usuario que firme un mensaje que se puede usar como una transacción o para algún otro propósito, EIP-191 especifica que todos los mensajes firmados comienzan con el carácter 0x19 (no es un carácter ASCII válido) seguido de `Ethereum Signed Message:` y una nueva línea.
+Para evitar casos en los que una aplicación le pide al usuario que firme un mensaje que se puede usar como una transacción o para algún otro propósito, EIP-191 especifica que todos los mensajes firmados comiencen con el carácter 0x19 (no es un carácter ASCII válido) seguido de `Ethereum Signed Message:` y una nueva línea.
 
 ```rust
     let mut buffer: [u8; HASH_BUFFER_SIZE] = [0u8; HASH_BUFFER_SIZE];
@@ -691,7 +703,7 @@ Para evitar casos en los que una aplicación le pida al usuario que firme un men
     assert(MESSAGE_LENGTH < 1000, "Messages whose length is over three digits are not supported");
 ```
 
-Maneja longitudes de mensaje de hasta 999 y falla si es mayor. Agregué este código, aunque la longitud del mensaje es una constante, porque hace que sea más fácil cambiarla. En un sistema de producción, probablemente asumirías que `MESSAGE_LENGTH` no cambia en aras de un mejor rendimiento.
+Maneja longitudes de mensaje de hasta 999 y falla si es mayor. Agregué este código, aunque la longitud del mensaje es una constante, porque hace que sea más fácil cambiarlo. En un sistema de producción, probablemente solo asumirías que `MESSAGE_LENGTH` no cambia en aras de un mejor rendimiento.
 
 ```rust
     keccak256::keccak256(buffer, HASH_BUFFER_SIZE)
@@ -710,9 +722,9 @@ fn signatureToAddressAndHash(
 {
 ```
 
-Esta función verifica la firma, que requiere el hash del mensaje. Luego nos proporciona la dirección que lo firmó y el hash del mensaje. El hash del mensaje se suministra en dos valores `Field` porque son más fáciles de usar en el resto del programa que un arreglo de bytes.
+Esta función verifica la firma, lo que requiere el hash del mensaje. Luego nos proporciona la dirección que lo firmó y el hash del mensaje. El hash del mensaje se suministra en dos valores `Field` porque son más fáciles de usar en el resto del programa que una matriz de bytes.
 
-Necesitamos usar dos valores `Field` porque los cálculos de campo se realizan [módulo](https://en.wikipedia.org/wiki/Modulo) un número grande, pero ese número es típicamente menor a 256 bits (de lo contrario, sería difícil realizar esos cálculos en la EVM).
+Necesitamos usar dos valores `Field` porque los cálculos de campo se realizan [módulo](https://en.wikipedia.org/wiki/Modulo) un número grande, pero ese número suele ser inferior a 256 bits (de lo contrario, sería difícil realizar esos cálculos en la EVM).
 
 ```rust
     let hash = hashMessage(message);
@@ -735,7 +747,7 @@ Especifica `hash1` y `hash2` como variables mutables, y escribe el hash en ellas
 Esto es similar a [`ecrecover` de Solidity](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions), con dos diferencias importantes:
 
 - Si la firma no es válida, la llamada falla un `assert` y el programa se aborta.
-- Aunque la clave pública se puede recuperar de la firma y el hash, este es un procesamiento que se puede hacer externamente y, por lo tanto, no vale la pena hacerlo dentro de la prueba de conocimiento cero. Si alguien intenta engañarnos aquí, la verificación de la firma fallará.
+- Si bien la clave pública se puede recuperar de la firma y el hash, este es un procesamiento que se puede hacer externamente y, por lo tanto, no vale la pena hacerlo dentro de la prueba de conocimiento cero. Si alguien intenta engañarnos aquí, la verificación de la firma fallará.
 
 ```rust
         hash1,
@@ -750,14 +762,14 @@ fn main(
         pubKeyY: [u8; 32],
         signature: [u8; 64],
     ) -> pub (
-        Field,  // Hash del antiguo arreglo de cuentas
-        Field,  // Hash del nuevo arreglo de cuentas
+        Field,  // Hash del array de cuentas antiguas
+        Field,  // Hash del array de cuentas nuevas
         Field,  // Primeros 16 bytes del hash del mensaje
         Field,  // Últimos 16 bytes del hash del mensaje
     )
 ```
 
-Finalmente, llegamos a la función `main`. Necesitamos probar que tenemos una transacción que cambia válidamente el hash de las cuentas del valor antiguo al nuevo. También necesitamos probar que tiene este hash de transacción específico para que la persona que la envió sepa que su transacción ha sido procesada.
+Finalmente, llegamos a la función `main`. Necesitamos probar que tenemos una transacción que cambia válidamente el hash de las cuentas del valor antiguo al nuevo. También necesitamos probar que tiene este hash de transacción específico para que la persona que lo envió sepa que su transacción ha sido procesada.
 
 ```rust
 {
@@ -804,7 +816,7 @@ Para verlo en acción:
    npm install
    ```
 
-   No es necesario compilar el código de Noir, es el mismo que el código que usaste para la etapa 1.
+   No hay necesidad de compilar el código de Noir, es el mismo código que usaste para la etapa 1.
 
 3. Inicia el servidor.
 
@@ -812,7 +824,7 @@ Para verlo en acción:
    npm run start
    ```
 
-4. En una ventana de línea de comandos separada, ejecuta Vite para servir el código del navegador.
+4. En una ventana de línea de comandos separada, comenzando desde la raíz del repositorio, ejecuta Vite para servir el código del navegador.
 
    ```sh
    cd client
@@ -821,15 +833,15 @@ Para verlo en acción:
 
 5. Navega hasta el código del cliente en [http://localhost:5173](http://localhost:5173)
 
-6. Antes de poder emitir una transacción, necesitas saber el nonce, así como la cantidad que puedes enviar. Para obtener esta información, haz clic en **Update account data** (Actualizar datos de la cuenta) y firma el mensaje.
+6. Antes de que puedas emitir una transacción, necesitas conocer el nonce, así como la cantidad que puedes enviar. Para obtener esta información, haz clic en **Update account data** (Actualizar datos de la cuenta) y firma el mensaje.
 
-   Tenemos un dilema aquí. Por un lado, no queremos firmar un mensaje que se pueda reutilizar (un [ataque de repetición](https://en.wikipedia.org/wiki/Replay_attack)), que es por lo que queremos un nonce en primer lugar. Sin embargo, aún no tenemos un nonce. La solución es elegir un nonce que solo se pueda usar una vez y que ya tengamos en ambos lados, como la hora actual.
+   Tenemos un dilema aquí. Por un lado, no queremos firmar un mensaje que pueda ser reutilizado (un [ataque de repetición](https://en.wikipedia.org/wiki/Replay_attack)), que es por lo que queremos un nonce en primer lugar. Sin embargo, aún no tenemos un nonce. La solución es elegir un nonce que se pueda usar solo una vez y que ya tengamos en ambos lados, como la hora actual.
 
-   El problema con esta solución es que el tiempo podría no estar perfectamente sincronizado. Así que, en su lugar, firmamos un valor que cambia cada minuto. Esto significa que nuestra ventana de vulnerabilidad a ataques de repetición es como máximo de un minuto. Considerando que en producción la solicitud firmada estará protegida por TLS, y que el otro lado del túnel —el servidor— ya puede revelar el saldo y el nonce (tiene que conocerlos para funcionar), este es un riesgo aceptable.
+   El problema con esta solución es que el tiempo podría no estar perfectamente sincronizado. Así que, en su lugar, firmamos un valor que cambia cada minuto. Esto significa que nuestra ventana de vulnerabilidad a los ataques de repetición es como máximo de un minuto. Considerando que en producción la solicitud firmada estará protegida por TLS, y que el otro lado del túnel---el servidor---ya puede revelar el saldo y el nonce (tiene que conocerlos para funcionar), este es un riesgo aceptable.
 
-7. Una vez que el navegador recibe de vuelta el saldo y el nonce, muestra el formulario de transferencia. Selecciona la dirección de destino y la cantidad y haz clic en **Transfer** (Transferir). Firma esta solicitud.
+7. Una vez que el navegador recupera el saldo y el nonce, muestra el formulario de transferencia. Selecciona la dirección de destino y la cantidad y haz clic en **Transfer** (Transferir). Firma esta solicitud.
 
-8. Para ver la transferencia, ya sea **Update account data** (Actualizar datos de la cuenta) o mira en la ventana donde ejecutas el servidor. El servidor registra el estado cada vez que cambia.
+8. Para ver la transferencia, ya sea **Update account data** (Actualiza los datos de la cuenta) o mira en la ventana donde ejecutas el servidor. El servidor registra el estado cada vez que cambia.
 
     ```
     ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
@@ -869,14 +881,14 @@ Para verlo en acción:
 import { Noir } from '@noir-lang/noir_js'
 ```
 
-La biblioteca [noir.js](https://www.npmjs.com/package/@noir-lang/noir_js) actúa como interfaz entre el código de JavaScript y el código de Noir.
+La biblioteca [noir.js](https://www.npmjs.com/package/@noir-lang/noir_js) sirve de interfaz entre el código de JavaScript y el código de Noir.
 
 ```js
 const circuit = JSON.parse(await fs.readFile("./noir/target/zkBank.json"))
 const noir = new Noir(circuit)
 ```
 
-Carga el circuito aritmético —el programa de Noir compilado que creamos en la etapa anterior— y prepárate para ejecutarlo.
+Carga el circuito aritmético---el programa de Noir compilado que creamos en la etapa anterior---y prepárate para ejecutarlo.
 
 ```js
 // Solo proporcionamos información de la cuenta en respuesta a una solicitud firmada
@@ -917,7 +929,7 @@ Ahora que ejecutamos JavaScript en el servidor, podemos recuperar la clave públ
         })
 ```
 
-`noir.execute` ejecuta el programa de Noir. Los parámetros son equivalentes a los proporcionados en [`Prover.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml). Ten en cuenta que los valores largos se proporcionan como un arreglo de cadenas hexadecimales (`["0x60", "0xA7"]`), no como un solo valor hexadecimal (`0x60A7`), de la forma en que lo hace Viem.
+`noir.execute` ejecuta el programa de Noir. Los parámetros son equivalentes a los proporcionados en [`Prover.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml). Ten en cuenta que los valores largos se proporcionan como una matriz de cadenas hexadecimales (`["0x60", "0xA7"]`), no como un solo valor hexadecimal (`0x60A7`), de la forma en que lo hace Viem.
 
 ```js
     } catch (err) {
@@ -945,7 +957,7 @@ let Accounts = [
     },
 ```
 
-La estructura `Accounts` inicial.
+La estructura inicial de `Accounts`.
 
 ### Etapa 3 - Contratos inteligentes de Ethereum {#stage-3}
 
@@ -994,7 +1006,7 @@ La estructura `Accounts` inicial.
    echo $ZKBANK_ADDRESS
    ```
 
-   El valor `0x199..67b` es el hash de Pederson del estado inicial de `Accounts`. Si modificas este estado inicial en `server/index.mjs`, puedes ejecutar una transacción para ver el hash inicial reportado por la prueba de conocimiento cero.
+   El valor `0x199..67b` es el hash de Pedersen del estado inicial de `Accounts`. Si modificas este estado inicial en `server/index.mjs`, puedes ejecutar una transacción para ver el hash inicial reportado por la prueba de conocimiento cero.
 
 8. Ejecuta el servidor.
 
@@ -1003,7 +1015,7 @@ La estructura `Accounts` inicial.
    npm run start
    ```
 
-9. Ejecuta el cliente en una ventana de línea de comandos diferente.
+9. Ejecuta el cliente en una ventana de línea de comandos diferente, comenzando desde la raíz del repositorio.
 
    ```sh
    cd client
@@ -1012,7 +1024,7 @@ La estructura `Accounts` inicial.
 
 10. Ejecuta algunas transacciones.
 
-11. Para verificar que el estado cambió en la cadena, reinicia el proceso del servidor. Observa que `ZkBank` ya no acepta transacciones, porque el valor hash original en las transacciones difiere del valor hash almacenado en la cadena.
+11. Para verificar que el estado cambió en cadena, reinicia el proceso del servidor. Observa que `ZkBank` ya no acepta transacciones, porque el valor hash original en las transacciones difiere del valor hash almacenado en cadena.
 
     Este es el tipo de error esperado.
 
@@ -1034,7 +1046,7 @@ La estructura `Accounts` inicial.
 
 #### `server/index.mjs` {#server-index-mjs-2}
 
-Los cambios en este archivo se relacionan principalmente con la creación de la prueba real y su envío a la cadena.
+Los cambios en este archivo se relacionan principalmente con la creación de la prueba real y su envío en cadena.
 
 ```js
 import { exec } from 'child_process'
@@ -1043,9 +1055,9 @@ import util from 'util'
 const execPromise = util.promisify(exec)
 ```
 
-Necesitamos usar [el paquete Barretenberg](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) para crear la prueba real para enviar a la cadena. Podemos usar este paquete ya sea ejecutando la interfaz de línea de comandos (`bb`) o usando la [biblioteca de JavaScript, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). La biblioteca de JavaScript es mucho más lenta que ejecutar código de forma nativa, por lo que usamos [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) aquí para usar la línea de comandos.
+Necesitamos usar [el paquete Barretenberg](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) para crear la prueba real para enviar en cadena. Podemos usar este paquete ya sea ejecutando la interfaz de línea de comandos (`bb`) o usando la [biblioteca de JavaScript, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). La biblioteca de JavaScript es mucho más lenta que ejecutar código de forma nativa, por lo que usamos [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) aquí para usar la línea de comandos.
 
-Ten en cuenta que si decides usar `bb.js`, necesitas usar una versión que sea compatible con la versión de Noir que estás usando. Al momento de escribir esto, la versión actual de Noir (1.0.0-beta.11) usa la versión 0.87 de `bb.js`.
+Ten en cuenta que si decides usar `bb.js`, necesitas usar una versión que sea compatible con la versión de Noir que estás usando. Por ejemplo, Noir 1.0.0-beta.10 y 1.0.0-beta.11 van con `bb` y `bb.js` versión 0.87.
 
 ```js
 const zkBankAddress = process.env.ZKBANK_ADDRESS || "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
@@ -1080,13 +1092,13 @@ Escribe el testigo en un archivo.
     await execPromise(`bb prove -b ./noir/target/zkBank.json -w ${fname} -o ${fileID} --oracle_hash keccak --output_format fields`)
 ```
 
-Realmente crea la prueba. Este paso también crea un archivo con las variables públicas, pero no lo necesitamos. Ya obtuvimos esas variables de `noir.execute`.
+Crea realmente la prueba. Este paso también crea un archivo con las variables públicas, pero no lo necesitamos. Ya obtuvimos esas variables de `noir.execute`.
 
 ```js
     const proof = "0x" + JSON.parse(await fs.readFile(`./${fileID}/proof_fields.json`)).reduce((a,b) => a+b, "").replace(/0x/g, "")
 ```
 
-La prueba es un arreglo JSON de valores `Field`, cada uno representado como un valor hexadecimal. Sin embargo, necesitamos enviarlo en la transacción como un solo valor `bytes`, que Viem representa mediante una gran cadena hexadecimal. Aquí cambiamos el formato concatenando todos los valores, eliminando todos los `0x` y luego agregando uno al final.
+La prueba es una matriz JSON de valores `Field`, cada uno representado como un valor hexadecimal. Sin embargo, necesitamos enviarlo en la transacción como un solo valor `bytes`, que Viem representa mediante una gran cadena hexadecimal. Aquí cambiamos el formato concatenando todos los valores, eliminando todos los `0x` y luego agregando uno al final.
 
 ```js
     await execPromise(`rm -r ${fname} ${fileID}`)
@@ -1106,13 +1118,13 @@ const processMessage = async (message, signature) => {
     const publicFields = noirResult.returnValue.map(x=>'0x' + x.slice(2).padStart(64, "0"))
 ```
 
-Los campos públicos deben ser un arreglo de valores de 32 bytes. Sin embargo, dado que necesitábamos dividir el hash de la transacción entre dos valores `Field`, aparece como un valor de 16 bytes. Aquí agregamos ceros para que Viem entienda que en realidad son 32 bytes.
+Los campos públicos deben ser una matriz de valores de 32 bytes. Sin embargo, dado que necesitábamos dividir el hash de transacción entre dos valores `Field`, aparece como un valor de 16 bytes. Aquí agregamos ceros para que Viem entienda que en realidad son 32 bytes.
 
 ```js
     const proof = await generateProof(noirResult.witness, `${fromAddress}-${nonce}`)
 ```
 
-Cada dirección solo usa cada nonce una vez para que podamos usar una combinación de `fromAddress` y `nonce` como un identificador único para el archivo del testigo y el directorio de salida.
+Cada dirección solo usa cada nonce una vez para que podamos usar una combinación de `fromAddress` y `nonce` como un identificador único para el archivo testigo y el directorio de salida.
 
 ```js
     try {
@@ -1132,7 +1144,7 @@ Envía la transacción a la cadena.
 
 #### `smart-contracts/src/ZkBank.sol` {#smart-contracts-src-zkbank-sol}
 
-Este es el código en la cadena que recibe la transacción.
+Este es el código en cadena que recibe la transacción.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -1151,7 +1163,7 @@ contract ZkBank {
     }
 ```
 
-El código en la cadena necesita llevar un registro de dos variables: el verificador (un contrato separado que es creado por `nargo`) y el hash del estado actual.
+El código en cadena necesita realizar un seguimiento de dos variables: el verificador (un contrato separado que es generado por `bb write_solidity_verifier` de Barretenberg) y el hash de estado actual.
 
 ```solidity
     event TransactionProcessed(
@@ -1170,14 +1182,14 @@ Cada vez que el estado cambia, emitimos un evento `TransactionProcessed`.
     ) public {
 ```
 
-Esta función procesa transacciones. Obtiene la prueba (como `bytes`) y las entradas públicas (como un arreglo `bytes32`), en el formato que el verificador requiere (para minimizar el procesamiento en la cadena y, por lo tanto, los costos de gas).
+Esta función procesa transacciones. Obtiene la prueba (como `bytes`) y las entradas públicas (como una matriz `bytes32`), en el formato que requiere el verificador (para minimizar el procesamiento en cadena y, por lo tanto, los costos de gas).
 
 ```solidity
-        require(_publicInputs[0] == currentStateHash,
+        require(_publicFields[0] == currentStateHash,
             "Wrong old state hash");
 ```
 
-La prueba de conocimiento cero necesita ser que la transacción cambia de nuestro hash actual a uno nuevo.
+La prueba de conocimiento cero debe ser que la transacción cambia de nuestro hash actual a uno nuevo.
 
 ```solidity
         myVerifier.verify(_proof, _publicFields);
@@ -1197,60 +1209,60 @@ Llama al contrato verificador para verificar la prueba de conocimiento cero. Est
 }
 ```
 
-Si todo es correcto, actualiza el hash del estado al nuevo valor y emite un evento `TransactionProcessed`.
+Si todo es correcto, actualiza el hash de estado al nuevo valor y emite un evento `TransactionProcessed`.
 
 ## Abusos por parte del componente centralizado {#abuses}
 
 La seguridad de la información consta de tres atributos:
 
 - _Confidencialidad_, los usuarios no pueden leer información que no están autorizados a leer.
-- _Integridad_, la información no se puede cambiar excepto por usuarios autorizados de manera autorizada.
+- _Integridad_, la información no puede ser modificada excepto por usuarios autorizados de una manera autorizada.
 - _Disponibilidad_, los usuarios autorizados pueden usar el sistema.
 
 En este sistema, la integridad se proporciona a través de pruebas de conocimiento cero. La disponibilidad es mucho más difícil de garantizar, y la confidencialidad es imposible, porque el banco tiene que conocer el saldo de cada cuenta y todas las transacciones. No hay forma de evitar que una entidad que tiene información comparta esa información.
 
-Podría ser posible crear un banco verdaderamente confidencial usando [direcciones sigilosas](https://vitalik.eth.limo/general/2023/01/20/stealth.html), pero eso está más allá del alcance de este artículo.
+Podría ser posible crear un banco verdaderamente confidencial utilizando [direcciones ocultas](https://vitalik.eth.limo/general/2023/01/20/stealth.html), pero eso está fuera del alcance de este artículo.
 
 ### Información falsa {#false-info}
 
 Una forma en que el servidor puede violar la integridad es proporcionar información falsa cuando [se solicitan datos](https://github.com/qbzzt/250911-zk-bank/blob/03-smart-contracts/server/index.mjs#L278-L291).
 
-Para resolver esto, podemos escribir un segundo programa de Noir que reciba las cuentas como una entrada privada y la dirección para la cual se solicita información como una entrada pública. La salida es el saldo y el nonce de esa dirección, y el hash de las cuentas.
+Para resolver esto, podemos escribir un segundo programa en Noir que reciba las cuentas como una entrada privada y la dirección para la cual se solicita información como una entrada pública. La salida es el saldo y el nonce de esa dirección, y el hash de las cuentas.
 
-Por supuesto, esta prueba no se puede verificar en la cadena, porque no queremos publicar nonces y saldos en la cadena. Sin embargo, puede ser verificada por el código del cliente que se ejecuta en el navegador.
+Por supuesto, esta prueba no se puede verificar en cadena, porque no queremos publicar nonces y saldos en cadena. Sin embargo, puede ser verificada por el código del cliente que se ejecuta en el navegador.
 
 ### Transacciones forzadas {#forced-txns}
 
-El mecanismo habitual para garantizar la disponibilidad y prevenir la censura en las L2 son las [transacciones forzadas](https://docs.optimism.io/stack/transactions/forced-transaction). Pero las transacciones forzadas no se combinan con las pruebas de conocimiento cero. El servidor es la única entidad que puede verificar transacciones.
+El mecanismo habitual para garantizar la disponibilidad y prevenir la censura en las L2 son las [transacciones forzadas](https://docs.optimism.io/stack/transactions/forced-transaction). Pero las transacciones forzadas no se combinan con las pruebas de conocimiento cero. El servidor es la única entidad que puede verificar las transacciones.
 
 Podemos modificar `smart-contracts/src/ZkBank.sol` para aceptar transacciones forzadas y evitar que el servidor cambie el estado hasta que se procesen. Sin embargo, esto nos expone a un simple ataque de denegación de servicio. ¿Qué pasa si una transacción forzada es inválida y, por lo tanto, imposible de procesar?
 
 La solución es tener una prueba de conocimiento cero de que una transacción forzada es inválida. Esto le da al servidor tres opciones:
 
-- Procesar la transacción forzada, proporcionando una prueba de conocimiento cero de que ha sido procesada y el nuevo hash del estado.
+- Procesar la transacción forzada, proporcionando una prueba de conocimiento cero de que ha sido procesada y el nuevo hash de estado.
 - Rechazar la transacción forzada y proporcionar una prueba de conocimiento cero al contrato de que la transacción es inválida (dirección desconocida, nonce incorrecto o saldo insuficiente).
 - Ignorar la transacción forzada. No hay forma de obligar al servidor a procesar realmente la transacción, pero significa que todo el sistema no está disponible.
 
-#### Bonos de disponibilidad {#avail-bonds}
+#### Fianzas de disponibilidad {#avail-bonds}
 
-En una implementación de la vida real, probablemente habría algún tipo de motivo de lucro para mantener el servidor en funcionamiento. Podemos fortalecer este incentivo haciendo que el servidor publique un bono de disponibilidad que cualquiera pueda quemar si una transacción forzada no se procesa dentro de un cierto período.
+En una implementación en la vida real, probablemente habría algún tipo de motivo de lucro para mantener el servidor en funcionamiento. Podemos fortalecer este incentivo haciendo que el servidor deposite una fianza de disponibilidad que cualquiera pueda quemar si una transacción forzada no se procesa dentro de un período determinado.
 
-### Código de Noir defectuoso {#bad-noir-code}
+### Mal código Noir {#bad-noir-code}
 
-Normalmente, para que la gente confíe en un contrato inteligente subimos el código fuente a un [explorador de bloques](https://eth.blockscout.com/address/0x7D16d2c4e96BCFC8f815E15b771aC847EcbDB48b?tab=contract). Sin embargo, en el caso de las pruebas de conocimiento cero, eso es insuficiente.
+Normalmente, para que la gente confíe en un contrato inteligente, subimos el código fuente a un [explorador de bloques](https://eth.blockscout.com/address/0x7D16d2c4e96BCFC8f815E15b771aC847EcbDB48b?tab=contract). Sin embargo, en el caso de las pruebas de conocimiento cero, eso es insuficiente.
 
-`Verifier.sol` contiene la clave de verificación, que es una función del programa de Noir. Sin embargo, esa clave no nos dice cuál era el programa de Noir. Para tener realmente una solución confiable, necesitas subir el programa de Noir (y la versión que lo creó). De lo contrario, las pruebas de conocimiento cero podrían reflejar un programa diferente, uno con una puerta trasera.
+`Verifier.sol` contiene la clave de verificación, que es una función del programa en Noir. Sin embargo, esa clave no nos dice cuál era el programa en Noir. Para tener realmente una solución confiable, necesitas subir el programa en Noir (y la versión que lo creó). De lo contrario, las pruebas de conocimiento cero podrían reflejar un programa diferente, uno con una puerta trasera.
 
-Hasta que los exploradores de bloques comiencen a permitirnos subir y verificar programas de Noir, deberías hacerlo tú mismo (preferiblemente en [IPFS](/developers/tutorials/ipfs-decentralized-ui/)). Entonces, los usuarios sofisticados podrán descargar el código fuente, compilarlo ellos mismos, crear `Verifier.sol` y verificar que sea idéntico al que está en la cadena.
+Hasta que los exploradores de bloques comiencen a permitirnos subir y verificar programas en Noir, deberías hacerlo tú mismo (preferiblemente en [IPFS](/developers/tutorials/ipfs-decentralized-ui/)). Entonces, los usuarios sofisticados podrán descargar el código fuente, compilarlo ellos mismos, crear `Verifier.sol` y verificar que es idéntico al que está en cadena.
 
 ## Conclusión {#conclusion}
 
-Las aplicaciones tipo Plasma requieren un componente centralizado como almacenamiento de información. Esto abre vulnerabilidades potenciales pero, a cambio, nos permite preservar la privacidad de formas que no están disponibles en la cadena de bloques en sí. Con las pruebas de conocimiento cero podemos asegurar la integridad y posiblemente hacer que sea económicamente ventajoso para quien ejecute el componente centralizado mantener la disponibilidad.
+Las aplicaciones de tipo Plasma requieren un componente centralizado como almacenamiento de información. Esto abre posibles vulnerabilidades pero, a cambio, nos permite preservar la privacidad de formas que no están disponibles en la propia cadena de bloques. Con las pruebas de conocimiento cero podemos garantizar la integridad y posiblemente hacer que sea económicamente ventajoso para quien ejecute el componente centralizado mantener la disponibilidad.
 
-[Mira aquí para más de mi trabajo](https://cryptodocguy.pro/).
+[Vea aquí más de mi trabajo](https://cryptodocguy.pro/).
 
 ## Agradecimientos {#acknowledgements}
 
-- Josh Crites leyó un borrador de este artículo y me ayudó con un espinoso problema de Noir.
+- Josh Crites leyó un borrador de este artículo y me ayudó con un problema complicado de Noir.
 
 Cualquier error restante es mi responsabilidad.
