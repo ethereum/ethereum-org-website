@@ -42,7 +42,9 @@ sidebarDepth: 3
 
 ### OpenAI {#openai}
 
-В качестве большой языковой модели (LLM) для начала я выбрал [OpenAI](https://openai.com/). Для запуска приложения из этого руководства вам потребуется оплатить доступ к API. Минимального платежа в 5 долларов будет более чем достаточно.
+В качестве большой языковой модели для начала я выбрал [OpenAI](https://openai.com/). Чтобы запустить приложение из этого руководства, вам нужно будет оплатить доступ к API. Минимального платежа в 5 долларов будет более чем достаточно.
+
+Библиотека OpenAI для Python также может взаимодействовать с любой другой конечной точкой, совместимой с OpenAI, включая модель, запущенную на вашем собственном компьютере. О том, как перенаправить ее в другое место, см. в разделе [Взаимодействие с LLM](#interface-llm).
 
 ## Разработка шаг за шагом {#step-by-step}
 
@@ -524,35 +526,52 @@ print(make_prompt(wethusdc_quotes + wethwbtc_quotes, future_time, wethusdc_pool.
    export OPENAI_API_KEY=sk-<the rest of the key goes here>
    ```
 
-5. Переключитесь на нужную ветку и запустите агента
+5. Извлеките агента
 
    ```sh
    git checkout 04-interface-llm
+   ```
+
+6. Код в репозитории использует модель `gpt-4-turbo`, которую [OpenAI отключит 23 октября 2026 года](https://developers.openai.com/api/docs/deprecations). Переключите ее на `gpt-6-luna`, текущую недорогую модель. Поскольку `gpt-6-luna` является моделью рассуждений, команда также отключает рассуждения (`reasoning_effort="none"`, что позволяет использовать `temperature`) и заменяет устаревший параметр `max_tokens` на `max_completion_tokens`.
+
+   ```sh
+   sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
+   ```
+
+7. Запустите агента
+
+   ```sh
    uv run agent.py
    ```
+
+Если вы предпочитаете использовать другую конечную точку, совместимую с OpenAI, например, модель, которую вы размещаете локально, библиотека OpenAI считывает конечную точку из переменной среды `OPENAI_BASE_URL`. Установите ее, поместите любое непустое значение в `OPENAI_API_KEY`, если сервер не проверяет ключи, и измените `gpt-6-luna` в `agent.py` и `test-predictor.py` на имя модели, которую предоставляет этот сервер. Если сервер отклоняет `reasoning_effort`, удалите этот параметр.
+
+```sh
+export OPENAI_BASE_URL=http://localhost:<port>/v1
+```
 
 Вот новый код.
 
 ```python
 from openai import OpenAI
 
-open_ai = OpenAI()  # Клиент читает переменную окружения OPENAI_API_KEY
+open_ai = OpenAI()  # The client reads the OPENAI_API_KEY environment variable
 ```
 
-Импортируем и создаем экземпляр API OpenAI.
+Импортируйте и создайте экземпляр API OpenAI. Клиент также считывает `OPENAI_BASE_URL`, если она установлена, поэтому тот же код работает с другими конечными точками, совместимыми с OpenAI.
 
 ```python
 response = open_ai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-6-luna", reasoning_effort="none",
     messages=[
         {"role": "user", "content": prompt}
     ],
     temperature=0.0,
-    max_tokens=16,
+    max_completion_tokens=16,
 )
 ```
 
-Вызываем API OpenAI (`open_ai.chat.completions.create`) для создания ответа.
+Вызовите API OpenAI (`open_ai.chat.completions.create`), чтобы создать ответ. Значение `temperature`, равное нулю, запрашивает наиболее предсказуемый ответ, а `max_completion_tokens` ограничивает длину ответа, который должен содержать только число. В модели рассуждений `max_completion_tokens` также подсчитывает токены, которые модель использует для размышлений, что является еще одной причиной установить для `reasoning_effort` значение `none`.
 
 ```python
 expected_price = Decimal(response.choices[0].message.content.strip())
@@ -567,7 +586,7 @@ else:
     print(f"Sell, I expect the price to go down by {current_price - expected_price} USD")
 ```
 
-Выводим цену и предоставляем рекомендацию о покупке или продаже.
+Выведите цену и предоставьте рекомендацию о покупке или продаже.
 
 #### Тестирование прогнозов {#testing-the-predictions}
 
@@ -703,18 +722,18 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
    anvil --fork-url https://eth.drpc.org --block-time 12
    ```
 
-   `anvil` прослушивает URL-адрес по умолчанию для Foundry, http://localhost:8545, поэтому нам не нужно указывать URL-адрес для [команды `cast`](https://getfoundry.sh/cast/overview), которую мы используем для управления блокчейном.
+   `anvil` прослушивает URL-адрес по умолчанию для Foundry, http://localhost:8545, поэтому нам не нужно указывать URL-адрес для [команды `cast`](https://getfoundry.sh/cast/overview), которую мы используем для манипуляций с блокчейном.
 
-3. При запуске в `anvil` доступно десять тестовых аккаунтов, на которых есть ETH — установите переменные среды для первого из них
+3. При запуске в `anvil` есть десять тестовых аккаунтов, на которых есть ETH — установите переменные среды для первого из них
 
    ```sh
    PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
    ADDRESS=`cast wallet address $PRIVATE_KEY`
    ```
 
-4. Это контракты, которые нам нужно использовать. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) — это контракт Юнисвоп v3, который мы используем для фактической торговли. Мы могли бы торговать напрямую через пул, но так гораздо проще.
+4. Это контракты, которые нам нужно использовать. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) — это контракт Uniswap v3, который мы используем для фактической торговли. Мы могли бы торговать напрямую через пул, но так гораздо проще.
 
-   Две нижние переменные — это пути Юнисвоп v3, необходимые для свопа между WETH и USDC.
+   Две нижние переменные — это пути Uniswap v3, необходимые для обмена между WETH и USDC.
 
    ```sh
    WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
@@ -731,7 +750,7 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
    cast send $WETH_ADDRESS "deposit()" --value 1000ether --private-key $PRIVATE_KEY
    ```
 
-6. Используйте `SwapRouter` для обмена 500 WETH на USDC.
+6. Используйте `SwapRouter`, чтобы обменять 500 WETH на USDC.
 
    ```sh
    cast send $WETH_ADDRESS "approve(address,uint256)" $SWAP_ROUTER 500ether --private-key $PRIVATE_KEY
@@ -742,7 +761,7 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
        --private-key $PRIVATE_KEY
    ```
 
-   Вызов `approve` создает разрешение, которое позволяет `SwapRouter` тратить часть наших токенов. Контракты не могут отслеживать события, поэтому, если мы переведем токены напрямую на контракт `SwapRouter`, он не узнает, что ему заплатили. Вместо этого мы разрешаем контракту `SwapRouter` потратить определенную сумму, а затем `SwapRouter` делает это. Это делается через функцию, вызываемую `SwapRouter`, поэтому он знает, была ли операция успешной.
+   Вызов `approve` создает разрешение, которое позволяет `SwapRouter` тратить часть наших токенов. Контракты не могут отслеживать события, поэтому, если бы мы перевели токены напрямую на контракт `SwapRouter`, он бы не узнал, что ему заплатили. Вместо этого мы разрешаем контракту `SwapRouter` потратить определенную сумму, а затем `SwapRouter` делает это. Это делается через функцию, вызываемую `SwapRouter`, поэтому он знает, была ли она успешной.
 
 7. Убедитесь, что у вас достаточно обоих токенов.
 
@@ -754,9 +773,12 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
 Теперь, когда у нас есть WETH и USDC, мы можем фактически запустить агента.
 
 ```sh
-git checkout 05-trade
+git checkout -f 05-trade
+sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
 uv run agent.py
 ```
+
+Команда `-f` отменяет изменение модели, которое вы сделали в предыдущей ветке, поэтому команда `sed` применяет его снова к новой версии `agent.py`.
 
 Вывод будет выглядеть примерно так:
 
@@ -777,10 +799,10 @@ USDC Balance: 929143.797116
 WETH Balance: 499
 ```
 
-Чтобы использовать его на практике, вам потребуется внести несколько незначительных изменений.
+Чтобы использовать его на практике, вам нужно внести несколько незначительных изменений.
 
 - В строке 14 измените `MAINNET_URL` на реальную точку доступа, например `https://eth.drpc.org`
-- В строке 28 измените `PRIVATE_KEY` на ваш собственный приватный ключ
+- В строке 28 измените `PRIVATE_KEY` на свой собственный приватный ключ
 - Если вы не очень богаты и не можете покупать или продавать 1 ETH каждый день для непроверенного агента, вы, вероятно, захотите изменить строку 29, чтобы уменьшить `WETH_TRADE_AMOUNT`
 
 #### Объяснение кода {#trading-code}
@@ -811,7 +833,7 @@ ERC20_ABI = [
 ]
 ```
 
-Для фактической торговли нам нужна функция `approve`. Мы также хотим показывать балансы до и после, поэтому нам также понадобится `balanceOf`.
+Для фактической торговли нам нужна функция `approve`. Мы также хотим показать балансы до и после, поэтому нам также нужна `balanceOf`.
 
 ```python
 SWAP_ROUTER_ABI = [
@@ -819,7 +841,7 @@ SWAP_ROUTER_ABI = [
 ]
 ```
 
-В ABI `SwapRouter` нам нужна только `exactInput`. Существует связанная функция `exactOutput`, которую мы могли бы использовать для покупки ровно одного WETH, но для простоты мы используем `exactInput` в обоих случаях.
+В ABI `SwapRouter` нам нужна только `exactInput`. Существует связанная функция `exactOutput`, которую мы могли бы использовать для покупки ровно одного WETH, но для простоты мы просто используем `exactInput` в обоих случаях.
 
 ```python
 account = w3.eth.account.from_key(PRIVATE_KEY)
@@ -847,7 +869,7 @@ def txn_params() -> dict:
 def approve_token(contract: Contract, amount: int):
 ```
 
-Одобряем разрешение на использование токенов для `SwapRouter`.
+Одобрить разрешение на токены для `SwapRouter`.
 
 ```python
     txn = contract.functions.approve(SWAP_ROUTER_ADDRESS, amount).build_transaction(txn_params())
@@ -863,7 +885,7 @@ def approve_token(contract: Contract, amount: int):
     print("Approve transaction mined.")
 ```
 
-[`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) ждет, пока транзакция не будет добыта. При необходимости она возвращает квитанцию.
+[`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) ожидает, пока транзакция не будет добыта. При необходимости она возвращает квитанцию.
 
 ```python
 SELL_PARAMS = {
@@ -924,7 +946,7 @@ def balances():
     print(f"{wethusdc_pool.token1.symbol} Balance: {Decimal(token1_balance) / Decimal(10 ** wethusdc_pool.token1.decimals)}")
 ```
 
-Сообщаем балансы пользователя в обеих валютах.
+Сообщить о балансах пользователя в обеих валютах.
 
 ```python
 print("Account balances before trade:")
@@ -941,7 +963,7 @@ print("Account balances after trade:")
 balances()
 ```
 
-В настоящее время этот агент срабатывает только один раз. Однако вы можете изменить его для непрерывной работы, либо запуская его из [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html), либо обернув строки 368-400 в цикл и используя [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) для ожидания времени следующего цикла.
+В настоящее время этот агент работает только один раз. Однако вы можете изменить его для непрерывной работы, либо запустив его из [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html), либо обернув строки 368-397 в цикл и используя [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) для ожидания времени следующего цикла.
 
 ## Возможные улучшения {#improvements}
 
@@ -959,7 +981,7 @@ balances()
 
 Поставщики ИИ могут видеть запросы, которые вы отправляете их LLM, что может раскрыть гениальную торговую систему, которую вы разработали с помощью своего агента. Торговая система, которую использует слишком много людей, бесполезна, потому что слишком много людей пытаются купить, когда вы хотите купить (и цена идет вверх), и пытаются продать, когда вы хотите продать (и цена идет вниз).
 
-Вы можете запустить LLM локально, например, используя [LM-Studio](https://lmstudio.ai/), чтобы избежать этой проблемы.
+Вы можете запустить LLM локально, например, используя `llama-server` из [llama.cpp](https://github.com/ggml-org/llama.cpp), чтобы избежать этой проблемы. Он предоставляет конечную точку, совместимую с OpenAI, поэтому вам нужно только установить `OPENAI_BASE_URL` и имя модели, как описано в разделе [Взаимодействие с LLM](#interface-llm).
 
 ### От ИИ-бота к ИИ-агенту {#bot-to-agent}
 
