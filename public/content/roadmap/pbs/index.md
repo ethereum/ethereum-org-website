@@ -1,6 +1,6 @@
 ---
 title: Proposer-builder separation
-description: Learn how and why Ethereum validators will split their block building and block broadcasting responsibilities.
+description: Learn how and why Ethereum validators split block building from block proposing, and how enshrined PBS (ePBS) brings this into the protocol.
 lang: en
 template: roadmap
 ---
@@ -13,7 +13,7 @@ This is an important upgrade for several reasons. First, it creates opportunitie
 
 Separating out block builders and block proposers makes it much harder for block builders to censor transactions. This is because relatively complex inclusion criteria can be added that ensure no censorship has taken place before the block is proposed. As the block proposer is a separate entity from the block builder, it can take on the role of protector against censoring block builders.
 
-For example, inclusion lists can be introduced so that when validators know about transactions but don't see them included in blocks, they can impose them as must-haves in the next block. The inclusion list is generated from the block proposers local mempool (the list of transactions it is aware of) and sent to their peers just before a block is proposed. If any of the transactions from the inclusion list are missing, the proposer could either reject the block, add the missing transactions before proposing it, or propose it and let it get rejected by other validators when they receive it. There is also a potentially more efficient version of this idea that asserts that builders must fully utilize the available block space and if they don't transactions are added from the proposer's inclusion list. This is still an area of active research and the optimal configuration for the inclusion lists has not yet been determined.
+For example, inclusion lists can be introduced so that when validators know about transactions but don't see them included in blocks, they can impose them as must-haves in the next block. The inclusion list is generated from the block proposers local mempool (the list of transactions it is aware of) and sent to their peers just before a block is proposed. If any of the transactions from the inclusion list are missing, the proposer could either reject the block, add the missing transactions before proposing it, or propose it and let it get rejected by other validators when they receive it. There is also a potentially more efficient version of this idea that asserts that builders must fully utilize the available block space and if they don't transactions are added from the proposer's inclusion list. Fork-choice enforced inclusion lists ([FOCIL](/roadmap/hegota/#focil), EIP-7805) are a headliner of the Hegotá upgrade, which is planned after Glamsterdam.
 
 [Encrypted mempools](https://www.youtube.com/watch?v=fHDjgFcha0M&list=PLpktWkixc1gUqkyc1-iE6TT0RWQTBJELe&index=3) could also make it impossible for builders and proposers to know which transactions they are including in a block until after the block was already broadcast.
 
@@ -36,11 +36,11 @@ Individuals could be incentivized to stake with pools rather than on their own d
 
 ## PBS and Danksharding {#pbs-and-danksharding}
 
-Danksharding is the way Ethereum will scale to >100,000 transactions per second and minimize fees for rollup users. It relies upon PBS because it adds to the workload for block builders, who will have to compute proofs for up to 64 MB of rollup data in less than 1 second. This will probably require specialized builders that can dedicate fairly substantial hardware to the task. However, in the current situation block building could become increasingly centralized around more sophisticated and powerful operators anyway due to MEV extraction. Proposer-builder separation is a way to embrace this reality and prevent it from exerting centralizing force on block validation (the important part) or the distribution of staking rewards. A great side-benefit is that the specialized block builders are also willing and able to compute the necessary data proofs for Danksharding.
+Danksharding is the way Ethereum will scale to >100,000 transactions per second and minimize fees for rollup users. It relies upon PBS because it adds to the workload for block builders, who will have to handle much larger amounts of blob data in every slot. This will probably require specialized builders that can dedicate fairly substantial hardware to the task. However, in the current situation block building could become increasingly centralized around more sophisticated and powerful operators anyway due to MEV extraction. Proposer-builder separation is a way to embrace this reality and prevent it from exerting centralizing force on block validation (the important part) or the distribution of staking rewards. A great side-benefit is that the specialized block builders are also willing and able to take on the extra data work that Danksharding requires.
 
 ## Current progress {#current-progress}
 
-PBS is in an advanced stage of research, but there are still some important design questions that need to be resolved before it can be prototyped in Ethereum clients. There is no finalized specification yet. This means PBS is likely a year away or more. Check the latest [state of the research](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance).
+Enshrined proposer-builder separation (ePBS, [EIP-7732](https://eips.ethereum.org/EIPS/eip-7732)) is a headliner of the [Glamsterdam upgrade](/roadmap/glamsterdam/#epbs). Glamsterdam has been live on the Sepolia testnet since October 6, 2026. No mainnet date has been set.
 
 ## Further Reading {#further-reading}
 
@@ -48,3 +48,5 @@ PBS is in an advanced stage of research, but there are still some important desi
 - [PBS-friendly fee market designs](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725)
 - [PBS and censorship resistance](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Secondary-auctions)
 - [Inclusion lists](https://notes.ethereum.org/@fradamt/forward-inclusion-lists)
+- [EIP-7732: Enshrined Proposer-Builder Separation](https://eips.ethereum.org/EIPS/eip-7732)
+- [EIP-7805: Fork-choice enforced Inclusion Lists (FOCIL)](https://eips.ethereum.org/EIPS/eip-7805)

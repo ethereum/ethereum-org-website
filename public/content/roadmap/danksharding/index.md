@@ -64,7 +64,7 @@ If someone knows the random locations used for the commitment, it is easy for th
 
 Danksharding is the full realization of the rollup scaling that began with Proto-Danksharding. Danksharding will bring massive amounts of space on Ethereum for rollups to dump their compressed transaction data. This means Ethereum will be able to support hundreds of individual rollups with ease and make millions of transactions per second a reality.
 
-The way this works is by expanding the blobs attached to blocks from six (6) in Proto-Danksharding, to 64 in full Danksharding. The rest of the changes required are all updates to the way consensus clients operate to enable them to handle the new large blobs. Several of these changes are already on the roadmap for other purposes independent of Danksharding. For example, Danksharding requires proposer-builder separation to have been implemented. This is an upgrade that separates the tasks of building blocks and proposing blocks across different validators. Similarly, data availability sampling is required for Danksharding, but it is also required for the development of very lightweight clients that do not store much historical data ("stateless clients").
+The way this works is by expanding the blobs attached to blocks from six (6) in Proto-Danksharding, to 64 in full Danksharding. The rest of the changes required are all updates to the way consensus clients operate to enable them to handle the new large blobs. Several of these changes are already on the roadmap for other purposes independent of Danksharding. For example, Danksharding requires proposer-builder separation to have been implemented. This is an upgrade that separates the tasks of building blocks and proposing blocks across different validators. Enshrined proposer-builder separation (ePBS) is scheduled for the [Glamsterdam upgrade](/roadmap/glamsterdam/#epbs). Similarly, data availability sampling is required for Danksharding, but it is also required for the development of very lightweight clients that do not store much historical data ("stateless clients").
 
 <ExpandableCard title="Why does Danksharding require proposer-builder separation?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
 
@@ -80,7 +80,11 @@ Data availability sampling is required for validators to quickly and efficiently
 
 ### Current progress {#current-progress}
 
-Full Danksharding is several years away. In the meantime, the KZG ceremony has concluded with over 140,000 contributions, and the [EIP](https://eips.ethereum.org/EIPS/eip-4844) for Proto-Danksharding has matured. This proposal has been fully implemented in all testnets, and went live on Mainnet with the Cancun-Deneb ("Dencun") network upgrade in March 2024.
+The KZG ceremony has concluded with over 140,000 contributions, and the [EIP](https://eips.ethereum.org/EIPS/eip-4844) for Proto-Danksharding went live on Mainnet with the Cancun-Deneb ("Dencun") network upgrade in March 2024.
+
+The next step, [PeerDAS](/roadmap/fusaka/peerdas/) (EIP-7594), went live with the [Fusaka upgrade](/roadmap/fusaka/) on December 3, 2025. With PeerDAS, nodes no longer download every blob; each one stores and samples a subset of the data. Two blob-parameter-only (BPO) forks then raised blob capacity: BPO1 on December 9, 2025 (target 10, max 15) and BPO2 on January 7, 2026 (target 14, max 21).
+
+Full Danksharding is still several years away. PeerDAS applies erasure coding to each blob individually; full Danksharding would extend the data in two dimensions across all the blobs in a block ([FullDAS](https://ethresear.ch/t/fulldas-towards-massive-scalability-with-32mb-blocks-and-beyond/19529)), allowing far more blob data per block.
 
 ### Further reading {#further-reading}
 

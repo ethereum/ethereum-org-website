@@ -1,27 +1,13 @@
 ---
 title: Scaling Ethereum
-description: Rollups batch transactions together offchain, reducing costs for the user. However, the way rollups currently use data is too expensive, limiting how cheap transactions can be. Proto-Danksharding fixes this.
+description: Rollups batch transactions together offchain, reducing costs for the user. Blobs, added with Proto-Danksharding and expanded with PeerDAS, make the data rollups post to Ethereum much cheaper.
 lang: en
 image: /images/roadmap/roadmap-transactions.png
 alt: "Ethereum roadmap"
 template: roadmap
 ---
 
-Ethereum is scaled using [layer 2s](/layer-2/learn/#how-does-layer-2-work) (also known as rollups), which batch transactions together and send the output to Ethereum. Even though rollups are up to eight times less expensive than Ethereum Mainnet, it's possible to optimize rollups further to reduce costs for end users. Rollups also rely on some centralized components that developers can remove as the rollups mature.
-
-<Alert variant="update">
-<AlertContent>
-<AlertTitle className="mb-4">
-  Transaction costs
-</AlertTitle>
-  <ul style={{ marginBottom: 0 }}>
-    <li>Today’s rollups are <strong>~5-20x</strong> cheaper than Ethereum layer 1</li>
-    <li>ZK-rollups will soon lower fees by <strong>~40-100x</strong></li>
-    <li>Upcoming changes to Ethereum will provide another <strong>~100-1000x</strong> of scaling</li>
-    <li style={{ marginBottom: 0 }}>Users should benefit from transactions <strong>costing less than $0.001</strong></li>
-  </ul>
-</AlertContent>
-</Alert>
+Ethereum is scaled using [layer 2s](/layer-2/learn/#how-does-layer-2-work) (also known as rollups), which batch transactions together and send the output to Ethereum. Rollups already make transactions cheaper than on Ethereum Mainnet, and it's possible to optimize them further to reduce costs for end users. Rollups also rely on some centralized components that developers can remove as the rollups mature.
 
 ## Making data cheaper {#making-data-cheaper}
 
@@ -37,7 +23,7 @@ With Proto-Danksharding, it is possible to add many blobs to Ethereum blocks. Th
 
 The second stage of expanding blob data is complicated because it requires new methods for checking rollup data is available on the network and relies on [validators](/glossary/#validator) separating their [block](/glossary/#block) building and block proposal responsibilities. It also requires a way to cryptographically prove that validators have verified small subsets of the blob data.
 
-This second step is known as ["Danksharding"](/roadmap/danksharding/). Implementation work continues, with progress being made on prerequisites like [separating block building and block proposal](/roadmap/pbs) and new network designs that enable the network to efficiently confirm that data is available by randomly sampling a few kilobytes at a time, known as [data availability sampling (DAS)](/developers/docs/data-availability).
+This second step is known as ["Danksharding"](/roadmap/danksharding/). A first form of [data availability sampling (DAS)](/developers/docs/data-availability), which lets the network confirm that data is available by randomly sampling a few kilobytes at a time, went live as [PeerDAS](/roadmap/fusaka/peerdas/) in December 2025. [Separating block building and block proposal](/roadmap/pbs) is scheduled for the Glamsterdam upgrade.
 
 <ButtonLink variant="outline" href="/roadmap/danksharding/">More on Danksharding</ButtonLink>
 
@@ -57,7 +43,7 @@ Rollups are not the only path to scale. Today every [validator](/glossary/#valid
 
 Proto-Danksharding was successfully implemented as part of the Cancun-Deneb ("Dencun") network upgrade in March 2024. Since its implementation, rollups have begun utilizing blob storage, resulting in reduced transaction costs for users and millions of transactions processed in blobs.
 
-Work on full Danksharding continues, with progress being made on its prerequisites like PBS (Proposer-Builder Separation) and DAS (Data Availability Sampling). Decentralizing rollup infrastructure is a gradual process - there are many different rollups that are building slightly different systems and will fully decentralize at different rates.
+PeerDAS, a first form of DAS (Data Availability Sampling), went live with the Fusaka upgrade on December 3, 2025. Two blob-parameter-only (BPO) forks then raised blob capacity: BPO1 on December 9, 2025 (target 10, max 15) and BPO2 on January 7, 2026 (target 14, max 21). Work on full Danksharding continues, and enshrined PBS (Proposer-Builder Separation) is scheduled for the [Glamsterdam upgrade](/roadmap/glamsterdam/#epbs). Decentralizing rollup infrastructure is a gradual process - there are many different rollups that are building slightly different systems and will fully decentralize at different rates.
 
 [More on the Dencun network upgrade and its impact](/roadmap/dencun/)
 

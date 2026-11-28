@@ -27,9 +27,9 @@ The Fusaka upgrade is only a single step in Ethereum's long-term development goa
 
 #### PeerDAS {#peerdas}
 
-This is the _headliner_ of the Fusaka fork, the main feature added in this upgrade. Layer 2s currently post their data to Ethereum in blobs, the ephemeral data type created specifically for layer 2s. Pre-Fusaka, every full node has to store every blob to ensure that the data exists. As blob throughput rises, having to download all of this data becomes untenably resource-intensive.
+This is the _headliner_ of the Fusaka fork, the main feature added in this upgrade. Layer 2s currently post their data to Ethereum in blobs, the ephemeral data type created specifically for layer 2s. Before Fusaka, every full node had to store every blob to ensure that the data exists. As blob throughput rises, having to download all of this data would become untenably resource-intensive.
 
-With [data availability sampling](https://notes.ethereum.org/@fradamt/das-fork-choice) , instead of having to store all of the blob data, each node will be responsible for a subset of the blob data. Blobs are uniformly randomly distributed across nodes in the network with each full node holding only 1/8th of the data, therefore enabling theoretical scale up to 8x. To ensure availability of the data, any portion of the data can be reconstructed from any existing 50% of the whole with methods that drive down the probability of wrong or missing data to a cryptographically negligible level (~one in 10<sup>20</sup> to one in 10<sup>24</sup>).
+With [data availability sampling](https://notes.ethereum.org/@fradamt/das-fork-choice) , instead of having to store all of the blob data, each node is responsible for a subset of the blob data. Blobs are uniformly randomly distributed across nodes in the network with each full node holding only 1/8th of the data, therefore enabling theoretical scale up to 8x. To ensure availability of the data, any portion of the data can be reconstructed from any existing 50% of the whole with methods that drive down the probability of wrong or missing data to a cryptographically negligible level (~one in 10<sup>20</sup> to one in 10<sup>24</sup>).
 
 This keeps hardware and bandwidth requirements for nodes tenable while enabling blob scaling resulting in more scale with smaller fees for layer 2s.
 
@@ -51,7 +51,7 @@ These coordinated upgrades generally include a lot of changes, require a lot of 
 
 Blob parameter only forks can be set by clients, similarly to other configuration like gas limit. Between major Ethereum upgrades, clients can agree to increase the `target` and `max` blobs to e.g. 9 and 12 and then node operators will update to take part in that tiny fork. These blob parameter only forks can be configured at any time.
 
-When blobs were first added to the network in the Dencun upgrade, the target was 3. That was increased to 6 in Pectra and, after Fusaka, that can now be increased at a sustainable rate independently of these major network upgrades.
+When blobs were first added to the network in the Dencun upgrade, the target was 3. That was increased to 6 in Pectra. Since Fusaka, it can be increased at a sustainable rate independently of these major network upgrades: BPO1 on December 9, 2025 (target 10, max 15) and BPO2 on January 7, 2026 (target 14, max 21).
 
 ![Chart showing average blob count per block and increasing targets with upgrades](./average-blob-count-per-block.webp)
 
@@ -217,14 +217,14 @@ As user or a validator, you don’t need to update your clients for each BPO and
 
 ### What is the BPO schedule? {#what-is-the-bpo-schedule}
 
-The exact schedule of BPO updates is going to be determined with Fusaka releases. Follow [Protocol announcements](https://blog.ethereum.org/category/protocol) and release notes of your clients.
-
-Example of how it might look like:
+Fusaka shipped with two planned BPO forks, both now live on Mainnet:
 
 - Before Fusaka: target 6, max 9
-- At Fusaka activation: target 6, max 9
-- BPO1, few weeks after Fusaka activation: target 10, max 15, increasing by two thirds
-- BPO2, few weeks after BPO1: target 14, max 21
+- At Fusaka activation (December 3, 2025): target 6, max 9
+- BPO1 (December 9, 2025): target 10, max 15
+- BPO2 (January 7, 2026): target 14, max 21
+
+No further BPO forks are scheduled. Any future increase will be announced in [Protocol announcements](https://blog.ethereum.org/category/protocol) and the release notes of your clients.
 
 ### Will this lower fees on Ethereum (layer 1) {#will-this-lower-gas}
 
@@ -253,7 +253,7 @@ Regular nodes without any validators will subscribe to only 4 subnets, providing
 
 If the node is used for a validator client, it has to custody more columns and therefore process more data. With a validator added, the node subscribes to at least 8 column subnets and therefore processes twice as much data as regular node but still less than before Fusaka. If the validator balance is above 287 ETH, more and more subnets will be subscribed to.
 
-For a solo staker, this means their disk usage and download bandwidth will decrease around 50%. However to build blocks locally and upload all blobs to the network, the more upload bandwidth is needed. Local builders will need 2-3 times higher upload bandwidth than before at the time of Fusaka and with the BPO2 target of 15/21 blobs, the final necessary upload bandwidth will have to be around 5 times higher, at 100Mpbs.
+For a solo staker, this means their disk usage and download bandwidth will decrease around 50%. However to build blocks locally and upload all blobs to the network, the more upload bandwidth is needed. Local builders need 2-3 times higher upload bandwidth than before at the time of Fusaka and with the BPO2 target of 14/21 blobs, the necessary upload bandwidth is around 5 times higher, at 100Mpbs.
 
 #### Large validators {#large-validators}
 
