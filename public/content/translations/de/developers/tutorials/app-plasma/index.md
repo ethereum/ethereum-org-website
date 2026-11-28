@@ -96,17 +96,26 @@ Dies sind die Arten, wie die verschiedenen Komponenten kommunizieren, um einen T
    - Aktualisierung des aktuellen Zustands-Hashes auf den neuen Zustands-Hash
    - Ausgabe eines Log-Eintrags mit dem neuen Zustands-Hash und dem Transaktions-Hash
 
-### Werkzeuge {#tools}
+### Tools {#tools}
 
-Für den clientseitigen Code werden wir [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/) und [Wagmi](https://wagmi.sh/) verwenden. Dies sind branchenübliche Tools; wenn Sie damit nicht vertraut sind, können Sie [dieses Tutorial](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) nutzen.
+Für den clientseitigen Code werden wir [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/) und [Wagmi](https://wagmi.sh/) verwenden. Dies sind branchenübliche Tools; wenn Sie nicht mit ihnen vertraut sind, können Sie [dieses Tutorial](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) nutzen.
 
-Der Großteil des Servers ist in [JavaScript](https://nodejs.org/en) mit Node geschrieben. Der Zero-Knowledge-Teil ist in [Noir](https://noir-lang.org/) geschrieben. Wir benötigen die Version `1.0.0-beta.10`, also führen Sie, nachdem Sie [Noir wie angewiesen installiert](https://noir-lang.org/docs/getting_started/quick_start) haben, Folgendes aus:
+Der Großteil des Servers ist in JavaScript unter Verwendung von [Node](https://nodejs.org/en) geschrieben. Der Zero-Knowledge-Teil ist in [Noir](https://noir-lang.org/) geschrieben. Wir benötigen die Version `1.0.0-beta.10`, also führen Sie, nachdem Sie [Noir wie angewiesen installiert haben](https://noir-lang.org/docs/getting_started/quick_start), Folgendes aus:
 
-```
+```sh
 noirup -v 1.0.0-beta.10
 ```
 
-Die von uns verwendete Blockchain ist `anvil`, eine lokale Test-Blockchain, die Teil von [Foundry](https://getfoundry.sh/introduction/installation) ist.
+Um Beweise zu erstellen, die Onchain verifiziert werden können (in Stufe 3), benötigen wir außerdem [Barretenberg](https://barretenberg.aztec.network/docs/getting_started) (`bb`), das Proving-Backend, in der Version, die zu diesem Noir-Release passt. Installieren Sie `bbup`, den Barretenberg-Installer, und verwenden Sie ihn dann, um `bb` Version `0.87.0` zu installieren (wenn `bbup` nicht gefunden wird, öffnen Sie ein neues Terminal, damit der aktualisierte `PATH` wirksam wird):
+
+```sh
+curl -L https://raw.githubusercontent.com/AztecProtocol/aztec-packages/refs/heads/next/barretenberg/bbup/install | bash
+bbup -v 0.87.0
+```
+
+Dieses Tutorial wurde mit `nargo` 1.0.0-beta.10, `bb` 0.87.0 und (auf dem Server) `@noir-lang/noir_js` 1.0.0-beta.11 getestet. Verwenden Sie keine neueren Versionen: Der Noir-Code lässt sich mit den aktuellen 1.0-Release-Kandidaten nicht kompilieren, und aktuelle Versionen von `bb` können keine Schaltkreise lesen, die von `nargo` 1.0.0-beta.10 kompiliert wurden, und akzeptieren das Flag `--oracle_hash` nicht mehr.
+
+Die Blockchain, die wir verwenden, ist `anvil`, eine lokale Test-Blockchain, die Teil von [Foundry](https://getfoundry.sh/introduction/installation) ist.
 
 ## Implementierung {#implementation}
 
@@ -327,22 +336,22 @@ Dies ist das HTML-Format (genauer gesagt [JSX](https://react.dev/learn/writing-m
 use std::hash::pedersen_hash;
 ```
 
-Der [Pedersen-Hash](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) wird mit der [Noir-Standardbibliothek](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash) geliefert. Zero-Knowledge-Beweise verwenden diese Hashfunktion häufig. Sie ist in [arithmetischen Schaltkreisen](https://rareskills.io/post/arithmetic-circuit) im Vergleich zu Standard-Hashfunktionen viel einfacher zu berechnen.
+Der [Pedersen-Hash](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) wird mit der [Noir-Standardbibliothek](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash) bereitgestellt. Zero-Knowledge-Beweise verwenden diese Hashfunktion häufig. Sie ist innerhalb von [arithmetischen Schaltkreisen](https://rareskills.io/post/arithmetic-circuit) im Vergleich zu den Standard-Hashfunktionen viel einfacher zu berechnen.
 
 ```
 use keccak256::keccak256;
 use dep::ecrecover;
 ```
 
-Diese beiden Funktionen sind externe Bibliotheken, die in [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml) definiert sind. Sie sind genau das, wonach sie benannt sind: eine Funktion, die den [keccak256-Hash](https://emn178.github.io/online-tools/keccak_256.html) berechnet, und eine Funktion, die Ethereum-Signaturen verifiziert und die Ethereum-Adresse des Unterzeichners wiederherstellt.
+Diese beiden Funktionen sind externe Bibliotheken, die in [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml) definiert sind. Sie tun genau das, wonach sie benannt sind: eine Funktion, die den [Keccak-256-Hash](https://emn178.github.io/online-tools/keccak_256.html) berechnet, und eine Funktion, die Ethereum-Signaturen verifiziert und die Ethereum-Adresse des Unterzeichners wiederherstellt.
 
 ```
 global ACCOUNT_NUMBER : u32 = 5;
 ```
 
-Noir ist von [Rust](https://www.rust-lang.org/) inspiriert. Variablen sind standardmäßig Konstanten. So definieren wir globale Konfigurationskonstanten. Genauer gesagt ist `ACCOUNT_NUMBER` die Anzahl der Konten, die wir speichern.
+Noir ist von [Rust](https://www.rust-lang.org/) inspiriert. Variablen sind standardmäßig Konstanten. So definieren wir globale Konfigurationskonstanten. Insbesondere ist `ACCOUNT_NUMBER` die Anzahl der Konten, die wir speichern.
 
-Datentypen mit dem Namen `u<number>` sind vorzeichenlos (unsigned) und haben die entsprechende Anzahl an Bits. Die einzigen unterstützten Typen sind `u8`, `u16`, `u32`, `u64` und `u128`.
+Datentypen mit dem Namen `u<number>` sind vorzeichenlos und haben die entsprechende Anzahl an Bits. Die einzigen unterstützten Typen sind `u8`, `u16`, `u32`, `u64` und `u128`.
 
 ```
 global FLAT_ACCOUNT_FIELDS : u32 = 2;
@@ -354,7 +363,7 @@ Diese Variable wird für den Pedersen-Hash der Konten verwendet, wie unten erkl�
 global MESSAGE_LENGTH : u32 = 100;
 ```
 
-Wie oben erklärt, ist die Nachrichtenlänge fest. Sie wird hier spezifiziert.
+Wie oben erklärt, ist die Nachrichtenlänge festgelegt. Sie wird hier angegeben.
 
 ```
 global ASCII_MESSAGE_LENGTH : [u8; 3] = [0x31, 0x30, 0x30];
@@ -371,7 +380,7 @@ struct Account {
 }
 ```
 
-Die Informationen, die wir über ein Konto speichern. [`Field`](https://noir-lang.org/docs/noir/concepts/data_types/fields) ist eine Zahl, typischerweise bis zu 253 Bit, die direkt in dem [arithmetischen Schaltkreis](https://rareskills.io/post/arithmetic-circuit) verwendet werden kann, der den Zero-Knowledge-Beweis implementiert. Hier verwenden wir `Field`, um eine 160-Bit-Ethereum-Adresse zu speichern.
+Die Informationen, die wir über ein Konto speichern. [`Field`](https://noir-lang.org/docs/noir/concepts/data_types/fields) ist eine Zahl, typischerweise bis zu 253 Bits, die direkt im [arithmetischen Schaltkreis](https://rareskills.io/post/arithmetic-circuit) verwendet werden kann, der den Zero-Knowledge-Beweis implementiert. Hier verwenden wir das `Field`, um eine 160-Bit-Ethereum-Adresse zu speichern.
 
 ```
 struct TransferTxn {
@@ -388,7 +397,7 @@ Die Informationen, die wir für eine Transfer-Transaktion speichern.
 fn flatten_account(account: Account) -> [Field; FLAT_ACCOUNT_FIELDS] {
 ```
 
-Eine Funktionsdefinition. Der Parameter ist eine `Account`-Information. Das Ergebnis ist ein Array von `Field`-Variablen, dessen Länge `FLAT_ACCOUNT_FIELDS` ist.
+Eine Funktionsdefinition. Der Parameter sind `Account`-Informationen. Das Ergebnis ist ein Array von `Field`-Variablen, dessen Länge `FLAT_ACCOUNT_FIELDS` ist.
 
 ```
     let flat = [
@@ -397,32 +406,32 @@ Eine Funktionsdefinition. Der Parameter ist eine `Account`-Information. Das Erge
     ];
 ```
 
-Der erste Wert im Array ist die Kontoadresse. Der zweite enthält sowohl das Guthaben als auch die Nonce. Die `.into()`-Aufrufe ändern eine Zahl in den Datentyp, der benötigt wird. `account.nonce` ist ein `u32`-Wert, aber um es zu `account.balance << 32` (einem `u128`-Wert) hinzuzufügen, muss es ein `u128` sein. Das ist das erste `.into()`. Das zweite konvertiert das `u128`-Ergebnis in ein `Field`, damit es in das Array passt.
+Der erste Wert im Array ist die Kontoadresse. Der zweite enthält sowohl das Guthaben als auch die Nonce. Die `.into()`-Aufrufe ändern eine Zahl in den Datentyp, der benötigt wird. `account.nonce` ist ein `u32`-Wert, aber um ihn zu `account.balance << 32`, einem `u128`-Wert, hinzuzufügen, muss er ein `u128` sein. Das ist das erste `.into()`. Das zweite konvertiert das `u128`-Ergebnis in ein `Field`, damit es in das Array passt.
 
 ```
     flat
 }
 ```
 
-In Noir können Funktionen nur am Ende einen Wert zurückgeben (es gibt kein early return). Um den Rückgabewert festzulegen, wertet man ihn direkt vor der schließenden Klammer der Funktion aus.
+In Noir können Funktionen nur am Ende einen Wert zurückgeben (es gibt kein vorzeitiges Zurückgeben). Um den Rückgabewert anzugeben, werten Sie ihn direkt vor der schließenden Klammer der Funktion aus.
 
 ```
 fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] {
 ```
 
-Diese Funktion wandelt das Konten-Array in ein `Field`-Array um, welches als Eingabe für einen Pedersen-Hash verwendet werden kann.
+Diese Funktion wandelt das Konten-Array in ein `Field`-Array um, das als Eingabe für einen Pedersen-Hash verwendet werden kann.
 
 ```
     let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
 ```
 
-So spezifizieren Sie eine veränderliche (mutable) Variable, also _keine_ Konstante. Variablen in Noir müssen immer einen Wert haben, daher initialisieren wir diese Variable mit Nullen.
+So geben Sie eine veränderbare Variable an, also _keine_ Konstante. Variablen in Noir müssen immer einen Wert haben, daher initialisieren wir diese Variable mit lauter Nullen.
 
 ```
     for i in 0..ACCOUNT_NUMBER {
 ```
 
-Dies ist eine `for`-Schleife. Beachten Sie, dass die Grenzen Konstanten sind. Bei Noir-Schleifen müssen die Grenzen zur Kompilierzeit bekannt sein. Der Grund dafür ist, dass arithmetische Schaltkreise keine Flusskontrolle (Flow Control) unterstützen. Bei der Verarbeitung einer `for`-Schleife kopiert der Compiler den Code in ihr einfach mehrfach, einmal für jede Iteration.
+Dies ist eine `for`-Schleife. Beachten Sie, dass die Grenzen Konstanten sind. Bei Noir-Schleifen müssen die Grenzen zur Kompilierzeit bekannt sein. Der Grund dafür ist, dass arithmetische Schaltkreise keine Kontrollflusssteuerung unterstützen. Bei der Verarbeitung einer `for`-Schleife fügt der Compiler den Code darin einfach mehrmals ein, einmal für jede Iteration.
 
 ```
         let fields = flatten_account(accounts[i]);
@@ -452,13 +461,13 @@ fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
     }
 ```
 
-Diese Funktion findet das Konto mit einer bestimmten Adresse. Diese Funktion wäre in normalem Code extrem ineffizient, da sie über alle Konten iteriert, selbst nachdem sie die Adresse gefunden hat.
+Diese Funktion findet das Konto mit einer bestimmten Adresse. Diese Funktion wäre in Standardcode furchtbar ineffizient, da sie über alle Konten iteriert, selbst nachdem sie die Adresse gefunden hat.
 
-In Zero-Knowledge-Beweisen gibt es jedoch keine Flusskontrolle. Wenn wir eine Bedingung überprüfen müssen, müssen wir sie jedes Mal überprüfen.
+In Zero-Knowledge-Beweisen gibt es jedoch keine Kontrollflusssteuerung. Wenn wir jemals eine Bedingung überprüfen müssen, müssen wir sie jedes Mal überprüfen.
 
-Ein Ähnliches geschieht mit `if`-Anweisungen. Die `if`-Anweisung in der obigen Schleife wird in diese mathematischen Anweisungen übersetzt.
+Ähnliches passiert mit `if`-Anweisungen. Die `if`-Anweisung in der obigen Schleife wird in diese mathematischen Anweisungen übersetzt.
 
-_condition<sub>result</sub> = accounts[i].address == address_ // Eins, wenn sie gleich sind, andernfalls Null
+_condition<sub>result</sub> = accounts[i].address == address_ // eins, wenn sie gleich sind, sonst null
 
 _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result</sub>)\*account<sub>old</sub>_
 
@@ -469,7 +478,7 @@ _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result
 }
 ```
 
-Die [`assert`](https://noir-lang.org/docs/language/assert)-Funktion führt dazu, dass der Zero-Knowledge-Beweis abbricht, wenn die Assertion falsch ist. In diesem Fall, wenn wir kein Konto mit der entsprechenden Adresse finden können. Um die Adresse zu melden, verwenden wir einen [Format-String](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
+Die Funktion [`assert`](https://noir-lang.org/docs/language/assert) führt dazu, dass der Zero-Knowledge-Beweis abstürzt, wenn die Behauptung falsch ist. In diesem Fall, wenn wir kein Konto mit der entsprechenden Adresse finden können. Um die Adresse zu melden, verwenden wir einen [Formatstring](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
 
 ```rust
 fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> [Account; ACCOUNT_NUMBER] {
@@ -485,7 +494,7 @@ Diese Funktion wendet eine Transfer-Transaktion an und gibt das neue Konten-Arra
         (txn.from, txn.amount, txn.nonce, accounts[from].nonce);
 ```
 
-Wir können in Noir nicht auf Strukturelemente innerhalb eines Format-Strings zugreifen, also erstellen wir eine nutzbare Kopie.
+Wir können in Noir nicht auf Strukturelemente innerhalb eines Formatstrings zugreifen, also erstellen wir eine nutzbare Kopie.
 
 ```rust
     assert (accounts[from].balance >= txn.amount,
@@ -508,13 +517,13 @@ Dies sind zwei Bedingungen, die eine Transaktion ungültig machen könnten.
 }
 ```
 
-Das neue Konten-Array erstellen und dieses dann zurückgeben.
+Das neue Konten-Array erstellen und dann zurückgeben.
 
 ```rust
 fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field
 ```
 
-Diese Funktion liest die Adresse aus der Nachricht. 
+Diese Funktion liest die Adresse aus der Nachricht.
 
 ```rust
 {
@@ -523,7 +532,7 @@ Diese Funktion liest die Adresse aus der Nachricht.
     for i in 7..47 {
 ```
 
-Die Adresse ist immer 20 Bytes (bzw. 40 hexadezimale Ziffern) lang und beginnt bei Zeichen Nr. 7.
+Die Adresse ist immer 20 Bytes (also 40 hexadezimale Ziffern) lang und beginnt bei Zeichen #7.
 
 ```rust
         result *= 0x10;
@@ -544,7 +553,7 @@ Die Adresse ist immer 20 Bytes (bzw. 40 hexadezimale Ziffern) lang und beginnt b
 fn readAmountAndNonce(messageBytes: [u8; MESSAGE_LENGTH]) -> (u128, u32)
 ```
 
-Den Betrag und die Nonce aus der Nachricht lesen. 
+Den Betrag und die Nonce aus der Nachricht lesen.
 
 ```rust
 {
@@ -555,7 +564,7 @@ Den Betrag und die Nonce aus der Nachricht lesen.
     let mut stillReadingNonce: bool = false;
 ```
 
-In der Nachricht ist die erste Zahl nach der Adresse der zu transferierende Betrag in Finney (also Tausendstel eines ETH). Die zweite Zahl ist die Nonce. Jeglicher Text dazwischen wird ignoriert.
+In der Nachricht ist die erste Zahl nach der Adresse der Betrag in Finney (also Tausendstel eines ETH), der transferiert werden soll. Die zweite Zahl ist die Nonce. Jeglicher Text dazwischen wird ignoriert.
 
 ```rust
     for i in 48..MESSAGE_LENGTH {
@@ -589,7 +598,7 @@ In der Nachricht ist die erste Zahl nach der Adresse der zu transferierende Betr
 }
 ```
 
-Das Zurückgeben eines [Tupels](https://noir-lang.org/docs/noir/concepts/data_types/tuples) ist die Art und Weise in Noir, wie mehrere Werte aus einer Funktion zurückgegeben werden.
+Die Rückgabe eines [Tupels](https://noir-lang.org/docs/noir/concepts/data_types/tuples) ist die Noir-Art, mehrere Werte aus einer Funktion zurückzugeben.
 
 ```rust
 fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn 
@@ -614,7 +623,7 @@ Diese Funktion konvertiert die Nachricht in Bytes und konvertiert dann die Betr�
 fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
 ```
 
-Wir konnten den Pedersen-Hash für die Konten verwenden, weil sie nur innerhalb des Zero-Knowledge-Beweises gehasht werden. In diesem Code müssen wir jedoch die Signatur der Nachricht überprüfen, die vom Browser generiert wird. Dazu müssen wir dem Ethereum-Signaturformat nach [EIP-191](https://eips.ethereum.org/EIPS/eip-191) folgen. Das bedeutet, wir müssen einen kombinierten Puffer mit einem Standard-Präfix, der Nachrichtenlänge in ASCII und der Nachricht selbst erstellen und den Ethereum-Standard Keccak-256 zum Hashen verwenden.
+Wir konnten den Pedersen-Hash für die Konten verwenden, da sie nur innerhalb des Zero-Knowledge-Beweises gehasht werden. In diesem Code müssen wir jedoch die Signatur der Nachricht überprüfen, die vom Browser generiert wird. Dafür müssen wir dem Ethereum-Signaturformat in [EIP-191](https://eips.ethereum.org/EIPS/eip-191) folgen. Das bedeutet, dass wir einen kombinierten Puffer mit einem Standardpräfix, der Nachrichtenlänge in ASCII und der Nachricht selbst erstellen und den Ethereum-Standard Keccak-256 verwenden müssen, um ihn zu hashen.
 
 ```rust
     // ASCII-Präfix
@@ -648,7 +657,7 @@ Wir konnten den Pedersen-Hash für die Konten verwenden, weil sie nur innerhalb 
     ];
 ```
 
-Um Fälle zu vermeiden, in denen eine Anwendung den Benutzer bittet, eine Nachricht zu signieren, die als Transaktion oder für einen anderen Zweck verwendet werden kann, spezifiziert EIP-191, dass alle signierten Nachrichten mit dem Zeichen 0x19 (kein gültiges ASCII-Zeichen) beginnen, gefolgt von `Ethereum Signed Message:` und einem Zeilenumbruch.
+Um Fälle zu vermeiden, in denen eine Anwendung den Benutzer auffordert, eine Nachricht zu signieren, die als Transaktion oder für einen anderen Zweck verwendet werden kann, legt EIP-191 fest, dass alle signierten Nachrichten mit dem Zeichen 0x19 (kein gültiges ASCII-Zeichen) beginnen, gefolgt von `Ethereum Signed Message:` und einem Zeilenumbruch.
 
 ```rust
     let mut buffer: [u8; HASH_BUFFER_SIZE] = [0u8; HASH_BUFFER_SIZE];
@@ -691,7 +700,7 @@ Um Fälle zu vermeiden, in denen eine Anwendung den Benutzer bittet, eine Nachri
     assert(MESSAGE_LENGTH < 1000, "Messages whose length is over three digits are not supported");
 ```
 
-Nachrichtenlängen bis 999 verarbeiten und fehlschlagen, wenn sie größer sind. Ich habe diesen Code hinzugefügt, obwohl die Nachrichtenlänge eine Konstante ist, weil dies Änderungen erleichtert. In einem Produktionssystem würden Sie wahrscheinlich einfach davon ausgehen, dass sich `MESSAGE_LENGTH` zugunsten einer besseren Leistung nicht ändert.
+Nachrichtenlängen bis zu 999 verarbeiten und fehlschlagen, wenn sie größer sind. Ich habe diesen Code hinzugefügt, obwohl die Nachrichtenlänge eine Konstante ist, weil es so einfacher ist, sie zu ändern. In einem Produktionssystem würden Sie wahrscheinlich einfach davon ausgehen, dass sich `MESSAGE_LENGTH` zugunsten einer besseren Leistung nicht ändert.
 
 ```rust
     keccak256::keccak256(buffer, HASH_BUFFER_SIZE)
@@ -706,13 +715,13 @@ fn signatureToAddressAndHash(
         pubKeyX: [u8; 32],
         pubKeyY: [u8; 32],
         signature: [u8; 64]
-    ) -> (Field, Field, Field)   // Adresse, erste 16 Bytes des Hashes, letzte 16 Bytes des Hashes        
+    ) -> (Field, Field, Field)   // Adresse, erste 16 Bytes des Hashs, letzte 16 Bytes des Hashs        
 {
 ```
 
-Diese Funktion verifiziert die Signatur, wofür der Nachrichten-Hash erforderlich ist. Sie liefert uns dann die Adresse, die sie signiert hat, und den Nachrichten-Hash. Der Nachrichten-Hash wird in zwei `Field`-Werten geliefert, da diese im Rest des Programms leichter zu verwenden sind als ein Byte-Array.
+Diese Funktion verifiziert die Signatur, was den Nachrichten-Hash erfordert. Sie liefert uns dann die Adresse, die sie signiert hat, und den Nachrichten-Hash. Der Nachrichten-Hash wird in zwei `Field`-Werten bereitgestellt, da diese im Rest des Programms einfacher zu verwenden sind als ein Byte-Array.
 
-Wir müssen zwei `Field`-Werte verwenden, da Feld-Berechnungen [modulo](https://en.wikipedia.org/wiki/Modulo) einer großen Zahl durchgeführt werden, diese Zahl aber normalerweise kleiner als 256 Bits ist (andernfalls wäre es schwer, diese Berechnungen in der EVM durchzuführen).
+Wir müssen zwei `Field`-Werte verwenden, da Feldberechnungen [modulo](https://en.wikipedia.org/wiki/Modulo) einer großen Zahl durchgeführt werden, diese Zahl jedoch typischerweise kleiner als 256 Bits ist (andernfalls wäre es schwierig, diese Berechnungen in der EVM durchzuführen).
 
 ```rust
     let hash = hashMessage(message);
@@ -725,17 +734,17 @@ Wir müssen zwei `Field`-Werte verwenden, da Feld-Berechnungen [modulo](https://
     }
 ```
 
-`hash1` und `hash2` als veränderliche Variablen spezifizieren und den Hash Byte für Byte in sie schreiben.
+`hash1` und `hash2` als veränderbare Variablen angeben und den Hash Byte für Byte in sie schreiben.
 
 ```rust
     (
         ecrecover::ecrecover(pubKeyX, pubKeyY, signature, hash), 
 ```
     
-Dies ähnelt der [Solidity-Funktion `ecrecover`](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions), mit zwei wichtigen Unterschieden:
+Dies ist ähnlich wie [Soliditys `ecrecover`](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions), mit zwei wichtigen Unterschieden:
 
-- Wenn die Signatur nicht gültig ist, schlägt der Aufruf bei einem `assert` fehl und das Programm wird abgebrochen.
-- Während der öffentliche Schlüssel aus der Signatur und dem Hash wiederhergestellt werden kann, handelt es sich hierbei um eine Verarbeitung, die extern durchgeführt werden kann und sich daher innerhalb des Zero-Knowledge-Beweises nicht lohnt. Wenn hier jemand versucht, uns zu betrügen, schlägt die Signaturüberprüfung fehl.
+- Wenn die Signatur nicht gültig ist, schlägt der Aufruf mit einem `assert` fehl und das Programm wird abgebrochen.
+- Während der öffentliche Schlüssel aus der Signatur und dem Hash wiederhergestellt werden kann, ist dies eine Verarbeitung, die extern durchgeführt werden kann und sich daher nicht lohnt, innerhalb des Zero-Knowledge-Beweises durchgeführt zu werden. Wenn jemand versucht, uns hier zu betrügen, wird die Signaturverifizierung fehlschlagen.
 
 ```rust
         hash1,
@@ -750,21 +759,21 @@ fn main(
         pubKeyY: [u8; 32],
         signature: [u8; 64],
     ) -> pub (
-        Field,  // Hash des alten Konten-Arrays
-        Field,  // Hash des neuen Konten-Arrays
-        Field,  // Erste 16 Bytes des Nachrichten-Hashes
-        Field,  // Letzte 16 Bytes des Nachrichten-Hashes
+        Field,  // Hash des alten Konto-Arrays
+        Field,  // Hash des neuen Konto-Arrays
+        Field,  // Erste 16 Bytes des Nachrichten-Hashs
+        Field,  // Letzte 16 Bytes des Nachrichten-Hashs
     )
 ```
 
-Schließlich erreichen wir die `main`-Funktion. Wir müssen beweisen, dass wir eine Transaktion haben, die den Hash der Konten gültig vom alten auf den neuen Wert ändert. Wir müssen auch beweisen, dass sie diesen spezifischen Transaktions-Hash hat, damit die Person, die ihn gesendet hat, weiß, dass ihre Transaktion verarbeitet wurde.
+Schließlich erreichen wir die Funktion `main`. Wir müssen beweisen, dass wir eine Transaktion haben, die den Hash der Konten gültig vom alten Wert auf den neuen ändert. Wir müssen auch beweisen, dass sie diesen spezifischen Transaktions-Hash hat, damit die Person, die sie gesendet hat, weiß, dass ihre Transaktion verarbeitet wurde.
 
 ```rust
 {
     let mut txn = readTransferTxn(message);
 ```
 
-Wir müssen `txn` veränderlich machen, weil wir die Absenderadresse (from address) nicht aus der Nachricht, sondern aus der Signatur lesen. 
+Wir benötigen, dass `txn` veränderbar ist, da wir die Absenderadresse nicht aus der Nachricht lesen, sondern aus der Signatur.
 
 ```rust
     let (fromAddress, txnHash1, txnHash2) = signatureToAddressAndHash(
@@ -786,7 +795,7 @@ Wir müssen `txn` veränderlich machen, weil wir die Absenderadresse (from addre
 }
 ```
 
-### Stufe 2 - Hinzufügen eines Servers {#stage-2}
+### Stufe 2 – Hinzufügen eines Servers {#stage-2}
 
 In der zweiten Stufe fügen wir einen Server hinzu, der Transfer-Transaktionen vom Browser empfängt und implementiert.
 
@@ -804,7 +813,7 @@ Um dies in Aktion zu sehen:
    npm install
    ```
 
-   Es besteht keine Notwendigkeit, den Noir-Code zu kompilieren. Es ist derselbe Code, den Sie für Stufe 1 verwendet haben.
+   Es ist nicht nötig, den Noir-Code zu kompilieren, es ist derselbe Code, den Sie für Stufe 1 verwendet haben.
 
 3. Starten Sie den Server.
 
@@ -812,24 +821,24 @@ Um dies in Aktion zu sehen:
    npm run start
    ```
 
-4. Führen Sie in einem separaten Befehlszeilenfenster Vite aus, um den Browser-Code bereitzustellen.
+4. Führen Sie in einem separaten Befehlszeilenfenster, ausgehend vom Repository-Stammverzeichnis, Vite aus, um den Browser-Code bereitzustellen.
 
    ```sh
    cd client
    npm run dev
    ```
 
-5. Navigieren Sie im Browser zum Client-Code unter [http://localhost:5173](http://localhost:5173)
+5. Navigieren Sie zum Client-Code unter [http://localhost:5173](http://localhost:5173)
 
-6. Bevor Sie eine Transaktion durchführen können, müssen Sie die Nonce sowie den Betrag, den Sie senden können, kennen. Um diese Informationen zu erhalten, klicken Sie auf **Update account data** (Kontodaten aktualisieren) und signieren Sie die Nachricht.
+6. Bevor Sie eine Transaktion ausgeben können, müssen Sie die Nonce sowie den Betrag kennen, den Sie senden können. Um diese Informationen zu erhalten, klicken Sie auf **Update account data** (Kontodaten aktualisieren) und signieren Sie die Nachricht.
 
-   Hier stecken wir in einem Dilemma. Einerseits wollen wir keine Nachricht signieren, die wiederverwendet werden kann (ein [Replay-Angriff](https://en.wikipedia.org/wiki/Replay_attack)), weshalb wir überhaupt erst eine Nonce benötigen. Allerdings haben wir noch keine Nonce. Die Lösung besteht darin, eine Nonce zu wählen, die nur einmal verwendet werden kann und die wir auf beiden Seiten bereits haben, wie etwa die aktuelle Uhrzeit.
+   Wir haben hier ein Dilemma. Einerseits wollen wir keine Nachricht signieren, die wiederverwendet werden kann (ein [Replay-Angriff](https://en.wikipedia.org/wiki/Replay_attack)), weshalb wir überhaupt erst eine Nonce wollen. Wir haben jedoch noch keine Nonce. Die Lösung besteht darin, eine Nonce zu wählen, die nur einmal verwendet werden kann und die wir bereits auf beiden Seiten haben, wie zum Beispiel die aktuelle Uhrzeit.
 
-   Das Problem an dieser Lösung ist, dass die Zeit möglicherweise nicht perfekt synchronisiert ist. Daher signieren wir stattdessen einen Wert, der sich jede Minute ändert. Das bedeutet, dass unser Angriffsfenster für Replay-Angriffe höchstens eine Minute beträgt. Bedenkt man, dass die signierte Anfrage in der Produktion durch TLS geschützt ist und dass die andere Seite des Tunnels – der Server – das Guthaben und die Nonce ohnehin preisgeben kann (er muss sie kennen, um zu funktionieren), ist dies ein akzeptables Risiko.
+   Das Problem bei dieser Lösung ist, dass die Zeit möglicherweise nicht perfekt synchronisiert ist. Stattdessen signieren wir also einen Wert, der sich jede Minute ändert. Das bedeutet, dass unser Zeitfenster für die Anfälligkeit gegenüber Replay-Angriffen höchstens eine Minute beträgt. In Anbetracht der Tatsache, dass die signierte Anfrage in der Produktion durch TLS geschützt sein wird und dass die andere Seite des Tunnels – der Server – das Guthaben und die Nonce bereits offenlegen kann (er muss sie kennen, um zu funktionieren), ist dies ein akzeptables Risiko.
 
-7. Sobald der Browser das Guthaben und die Nonce zurückerhält, zeigt er das Transferformular an. Wählen Sie die Zieladresse sowie den Betrag aus und klicken Sie auf **Transfer**. Signieren Sie diese Anfrage.
+7. Sobald der Browser das Guthaben und die Nonce zurückerhält, zeigt er das Transfer-Formular an. Wählen Sie die Zieladresse und den Betrag aus und klicken Sie auf **Transfer** (Transferieren). Signieren Sie diese Anfrage.
 
-8. Um den Transfer zu sehen, klicken Sie entweder auf **Update account data** oder schauen Sie in das Fenster, in dem der Server läuft. Der Server protokolliert den Zustand bei jeder Änderung.
+8. Um den Transfer zu sehen, klicken Sie entweder auf **Update account data** (Kontodaten aktualisieren) oder schauen Sie in das Fenster, in dem Sie den Server ausführen. Der Server protokolliert den Zustand jedes Mal, wenn er sich ändert.
 
     ```
     ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
@@ -947,7 +956,7 @@ let Accounts = [
 
 Die anfängliche `Accounts`-Struktur.
 
-### Stufe 3 - Ethereum Smart Contracts {#stage-3}
+### Stufe 3 – Ethereum Smart Contracts {#stage-3}
 
 1. Stoppen Sie die Server- und Client-Prozesse.
 
@@ -963,7 +972,7 @@ Die anfängliche `Accounts`-Struktur.
 
 3. Führen Sie `anvil` in einem separaten Befehlszeilenfenster aus.
 
-4. Generieren Sie den Verifizierungsschlüssel und den Solidity-Verifizierer. Kopieren Sie dann den Code des Verifizierers in das Solidity-Projekt.
+4. Generieren Sie den Verifizierungsschlüssel und den Solidity-Verifizierer und kopieren Sie dann den Verifizierer-Code in das Solidity-Projekt.
 
    ```sh
    cd noir
@@ -972,7 +981,7 @@ Die anfängliche `Accounts`-Struktur.
    cp target/Verifier.sol ../../smart-contracts/src
    ```
 
-5. Gehen Sie zu den Smart Contracts und setzen Sie die Umgebungsvariablen, um die `anvil`-Blockchain zu verwenden.
+5. Gehen Sie zu den Smart Contracts und legen Sie die Umgebungsvariablen fest, um die `anvil`-Blockchain zu verwenden.
 
    ```sh
    cd ../../smart-contracts
@@ -980,7 +989,7 @@ Die anfängliche `Accounts`-Struktur.
    ETH_PRIVATE_KEY=ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
    ```
 
-6. Stellen Sie `Verifier.sol` bereit und speichern Sie die Adresse in einer Umgebungsvariable.
+6. Stellen Sie `Verifier.sol` bereit und speichern Sie die Adresse in einer Umgebungsvariablen.
 
    ```sh
    VERIFIER_ADDRESS=`forge create src/Verifier.sol:HonkVerifier --private-key $ETH_PRIVATE_KEY --optimize --broadcast | awk '/Deployed to:/ {print $3}'`
@@ -994,7 +1003,7 @@ Die anfängliche `Accounts`-Struktur.
    echo $ZKBANK_ADDRESS
    ```
 
-   Der `0x199..67b`-Wert ist der Pedersen-Hash des Anfangszustands der `Accounts`. Wenn Sie diesen Anfangszustand in `server/index.mjs` ändern, können Sie eine Transaktion ausführen, um den durch den Zero-Knowledge-Beweis gemeldeten Anfangs-Hash zu sehen.
+   Der Wert `0x199..67b` ist der Pedersen-Hash des Anfangszustands von `Accounts`. Wenn Sie diesen Anfangszustand in `server/index.mjs` ändern, können Sie eine Transaktion ausführen, um den anfänglichen Hash zu sehen, der vom Zero-Knowledge-Beweis gemeldet wird.
 
 8. Starten Sie den Server.
 
@@ -1003,7 +1012,7 @@ Die anfängliche `Accounts`-Struktur.
    npm run start
    ```
 
-9. Starten Sie den Client in einem anderen Befehlszeilenfenster.
+9. Führen Sie den Client in einem anderen Befehlszeilenfenster aus, ausgehend vom Repository-Stammverzeichnis.
 
    ```sh
    cd client
@@ -1012,9 +1021,9 @@ Die anfängliche `Accounts`-Struktur.
 
 10. Führen Sie einige Transaktionen aus.
 
-11. Um zu verifizieren, dass sich der Zustand onchain geändert hat, starten Sie den Serverprozess neu. Sie werden sehen, dass `ZkBank` keine Transaktionen mehr akzeptiert, da der ursprüngliche Hashwert in den Transaktionen von dem onchain gespeicherten Hashwert abweicht.
+11. Um zu verifizieren, dass sich der Zustand Onchain geändert hat, starten Sie den Serverprozess neu. Sie werden sehen, dass `ZkBank` keine Transaktionen mehr akzeptiert, da sich der ursprüngliche Hash-Wert in den Transaktionen von dem Onchain gespeicherten Hash-Wert unterscheidet.
 
-    Dies ist die erwartete Art von Fehler.
+    Dies ist die Art von Fehler, die erwartet wird.
 
     ```
     ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
@@ -1034,7 +1043,7 @@ Die anfängliche `Accounts`-Struktur.
 
 #### `server/index.mjs` {#server-index-mjs-2}
 
-Die Änderungen in dieser Datei beziehen sich hauptsächlich auf die Erstellung des eigentlichen Beweises und dessen Einreichung onchain.
+Die Änderungen in dieser Datei beziehen sich hauptsächlich auf die Erstellung des eigentlichen Beweises und dessen Onchain-Übermittlung.
 
 ```js
 import { exec } from 'child_process'
@@ -1043,15 +1052,15 @@ import util from 'util'
 const execPromise = util.promisify(exec)
 ```
 
-Wir müssen [das Barretenberg-Paket](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) verwenden, um den eigentlichen Beweis zu erstellen, der onchain gesendet wird. Wir können dieses Paket entweder durch Ausführen der Kommandozeilenschnittstelle (`bb`) nutzen, oder indem wir die [JavaScript-Bibliothek `bb.js`](https://www.npmjs.com/package/@aztec/bb.js) verwenden. Die JavaScript-Bibliothek ist wesentlich langsamer als die native Ausführung des Codes, daher verwenden wir hier [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback), um die Kommandozeile zu nutzen.
+Wir müssen [das Barretenberg-Paket](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) verwenden, um den eigentlichen Beweis zu erstellen, der Onchain gesendet werden soll. Wir können dieses Paket entweder durch Ausführen der Befehlszeilenschnittstelle (`bb`) oder durch Verwendung der [JavaScript-Bibliothek `bb.js`](https://www.npmjs.com/package/@aztec/bb.js) nutzen. Die JavaScript-Bibliothek ist viel langsamer als die native Ausführung von Code, daher verwenden wir hier [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback), um die Befehlszeile zu nutzen.
 
-Beachten Sie, dass Sie eine Version verwenden müssen, die mit der von Ihnen genutzten Noir-Version kompatibel ist, falls Sie sich für `bb.js` entscheiden. Zum Zeitpunkt der Erstellung dieses Artikels nutzt die aktuelle Noir-Version (1.0.0-beta.11) die Version 0.87 von `bb.js`.
+Beachten Sie, dass Sie, wenn Sie sich für die Verwendung von `bb.js` entscheiden, eine Version verwenden müssen, die mit der von Ihnen verwendeten Noir-Version kompatibel ist. Zum Beispiel passen Noir 1.0.0-beta.10 und 1.0.0-beta.11 beide zu `bb` und `bb.js` Version 0.87.
 
 ```js
 const zkBankAddress = process.env.ZKBANK_ADDRESS || "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
 ```
 
-Die hier angegebene Adresse ist diejenige, die Sie erhalten, wenn Sie mit einem sauberen `anvil` beginnen und die obigen Anweisungen befolgen.
+Die Adresse hier ist diejenige, die Sie erhalten, wenn Sie mit einem sauberen `anvil` beginnen und den obigen Anweisungen folgen.
 
 ```js
 const walletClient = createWalletClient({ 
@@ -1061,32 +1070,32 @@ const walletClient = createWalletClient({
 })
 ```
 
-Dieser private Schlüssel gehört zu einem der vorfinanzierten Standardkonten in `anvil`. 
+Dieser private Schlüssel ist eines der standardmäßig vorfinanzierten Konten in `anvil`.
 
 ```js
 const generateProof = async (witness, fileID) => {
 ```
 
-Einen Beweis mithilfe der ausführbaren `bb`-Datei generieren.
+Einen Beweis mit der ausführbaren Datei `bb` generieren.
 
-```js 
+```js
     const fname = `witness-${fileID}.gz`    
     await fs.writeFile(fname, witness)
 ```
 
-Den Zeugen (Witness) in eine Datei schreiben.
+Den Zeugen in eine Datei schreiben.
 
 ```js
     await execPromise(`bb prove -b ./noir/target/zkBank.json -w ${fname} -o ${fileID} --oracle_hash keccak --output_format fields`)
 ```
 
-Den tatsächlichen Beweis erstellen. Dieser Schritt erstellt auch eine Datei mit den öffentlichen Variablen, aber diese benötigen wir nicht. Wir haben diese Variablen bereits aus `noir.execute` erhalten.
+Den Beweis tatsächlich erstellen. Dieser Schritt erstellt auch eine Datei mit den öffentlichen Variablen, aber diese benötigen wir nicht. Wir haben diese Variablen bereits von `noir.execute` erhalten.
 
 ```js
     const proof = "0x" + JSON.parse(await fs.readFile(`./${fileID}/proof_fields.json`)).reduce((a,b) => a+b, "").replace(/0x/g, "")
 ```
 
-Der Beweis ist ein JSON-Array von `Field`-Werten, die jeweils als Hexadezimalwert dargestellt werden. Wir müssen ihn jedoch in der Transaktion als einen einzelnen `bytes`-Wert senden, den Viem als langen Hexadezimalstring darstellt. Hier ändern wir das Format, indem wir alle Werte verketten, alle `0x`-Präfixe entfernen und dann ganz am Schluss eines hinzufügen.
+Der Beweis ist ein JSON-Array von `Field`-Werten, die jeweils als hexadezimaler Wert dargestellt werden. Wir müssen ihn jedoch in der Transaktion als einen einzigen `bytes`-Wert senden, den Viem durch einen großen hexadezimalen String darstellt. Hier ändern wir das Format, indem wir alle Werte verketten, alle `0x` entfernen und dann am Ende eines hinzufügen.
 
 ```js
     await execPromise(`rm -r ${fname} ${fileID}`)
@@ -1106,13 +1115,13 @@ const processMessage = async (message, signature) => {
     const publicFields = noirResult.returnValue.map(x=>'0x' + x.slice(2).padStart(64, "0"))
 ```
 
-Die öffentlichen Felder müssen ein Array aus 32-Byte-Werten sein. Da wir jedoch den Transaktions-Hash auf zwei `Field`-Werte aufteilen mussten, erscheint er als ein 16-Byte-Wert. Hier fügen wir Nullen hinzu, damit Viem versteht, dass es sich tatsächlich um 32 Bytes handelt.
+Die öffentlichen Felder müssen ein Array von 32-Byte-Werten sein. Da wir jedoch den Transaktions-Hash auf zwei `Field`-Werte aufteilen mussten, erscheint er als 16-Byte-Wert. Hier fügen wir Nullen hinzu, damit Viem versteht, dass es sich tatsächlich um 32 Bytes handelt.
 
 ```js
     const proof = await generateProof(noirResult.witness, `${fromAddress}-${nonce}`)
 ```
 
-Jede Adresse verwendet jede Nonce nur ein einziges Mal, sodass wir eine Kombination aus `fromAddress` und `nonce` als eindeutigen Bezeichner für die Zeugen-Datei und das Ausgabeverzeichnis verwenden können.
+Jede Adresse verwendet jede Nonce nur einmal, sodass wir eine Kombination aus `fromAddress` und `nonce` als eindeutigen Identifikator für die Zeugendatei und das Ausgabeverzeichnis verwenden können.
 
 ```js
     try {
@@ -1151,7 +1160,7 @@ contract ZkBank {
     }
 ```
 
-Der Onchain-Code muss zwei Variablen verfolgen: den Verifizierer (ein separater Vertrag, der durch `nargo` erstellt wird) und den aktuellen Zustands-Hash.
+Der Onchain-Code muss zwei Variablen verfolgen: den Verifizierer (ein separater Vertrag, der von Barretenbergs `bb write_solidity_verifier` generiert wird) und den aktuellen Zustands-Hash.
 
 ```solidity
     event TransactionProcessed(
@@ -1170,10 +1179,10 @@ Jedes Mal, wenn sich der Zustand ändert, geben wir ein `TransactionProcessed`-E
     ) public {
 ```
 
-Diese Funktion verarbeitet Transaktionen. Sie erhält den Beweis (als `bytes`) und die öffentlichen Eingaben (als `bytes32`-Array) in dem Format, das der Verifizierer benötigt (um die Verarbeitung Onchain und damit die Gaskosten zu minimieren).
+Diese Funktion verarbeitet Transaktionen. Sie erhält den Beweis (als `bytes`) und die öffentlichen Eingaben (als ein `bytes32`-Array) in dem Format, das der Verifizierer benötigt (um die Onchain-Verarbeitung und damit die Gaskosten zu minimieren).
 
 ```solidity
-        require(_publicInputs[0] == currentStateHash,
+        require(_publicFields[0] == currentStateHash,
             "Wrong old state hash");
 ```
 
@@ -1183,7 +1192,7 @@ Der Zero-Knowledge-Beweis muss belegen, dass die Transaktion von unserem aktuell
         myVerifier.verify(_proof, _publicFields);
 ```
 
-Den Verifizierer-Vertrag aufrufen, um den Zero-Knowledge-Beweis zu verifizieren. Dieser Schritt macht die Transaktion rückgängig (revert), wenn der Zero-Knowledge-Beweis falsch ist.
+Den Verifizierer-Vertrag aufrufen, um den Zero-Knowledge-Beweis zu verifizieren. Dieser Schritt macht die Transaktion rückgängig, wenn der Zero-Knowledge-Beweis falsch ist.
 
 ```solidity
         currentStateHash = _publicFields[1];
