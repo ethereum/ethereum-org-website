@@ -180,9 +180,41 @@ Some things to remember:
 
 ### Airdrop scams {#airdrop-scams}
 
-Airdrop scams involve a scam project airdropping an asset (NFT, token) into your wallet and sending you to a scam website to claim the airdropped asset. You will get prompted to sign in with your Ethereum wallet and "approve" a transaction when attempting to claim. This transaction compromises your account by sending your public and private keys to the scammer. An alternative form of this scam may have you confirm a transaction that sends funds to the scammer's account.
+Airdrop scams involve a scam project airdropping an asset (NFT, token) into your wallet and sending you to a scam website to claim the airdropped asset. You will get prompted to sign in with your Ethereum wallet and "approve" a transaction when attempting to claim. That signature doesn't send your private key anywhere, but it can hand the scammer permission to move your funds: a token approval, a signed "permit", or a delegation of your whole account (see below). An alternative form of this scam may have you confirm a transaction that sends funds to the scammer's account.
 
 [More on airdrop scams](https://www.youtube.com/watch?v=LLL_nQp1lGk)
+
+### Delegation phishing (EIP-7702) {#delegation-phishing}
+
+Since the [Pectra upgrade](/roadmap/pectra/), an Ethereum account can delegate its behavior to a smart contract using EIP-7702. Wallets use this for features like batching and gas sponsorship. Scammers use it to take over accounts: a fake site asks you to sign what looks like a routine request, and the signature actually points your account at the scammer's contract. From then on, that contract runs whenever your account is called or receives ETH, so it can move your ETH, tokens and NFTs.
+
+A delegation stays in place until you remove it, and one signed with `chain_id` set to 0 is valid on every network that supports EIP-7702.
+
+- Apps aren't supposed to ask you to sign a delegation, so a website asking for one is a red flag
+- If your wallet says a request will change your account's code, stop unless you started it yourself
+
+[How to check and remove an EIP-7702 delegation](/guides/how-to-check-and-remove-eip-7702-delegation/)
+
+### Signature (permit) phishing {#permit-phishing}
+
+Some tokens let you approve spending with a signature instead of a transaction. This is called a "permit" (ERC-2612), and many apps use a shared contract called Permit2 to do the same for almost any token. Because nothing is sent to the blockchain when you sign, it costs nothing and feels harmless. But anyone holding that signature can submit it and set an allowance on your tokens. A permit's deadline can be set so far ahead that it never really expires.
+
+- Treat any "sign to claim", "sign to verify" or "sign to log in" request that names a token, an amount or a spender as an approval
+- Read what your wallet shows before signing, especially the spender address and the amount
+- Revoke token approvals you no longer need. If you've approved Permit2, allowances set inside Permit2 are stored separately, and any that haven't expired come back into force if you approve Permit2 again later, so clear those as well
+
+[How to revoke smart contract access to your crypto funds](/guides/how-to-revoke-token-access/)
+
+### Address poisoning {#address-poisoning}
+
+Scammers create an address that starts and ends with the same characters as one you've sent to before. Then they put a transfer from that address into your history, often a zero-value transfer, a tiny "dust" amount or a fake copy of a real token. Later, when you copy an address from your history, you copy theirs by mistake and send them your funds.
+
+- Never copy an address from your transaction history
+- Save the addresses you use often in your wallet's address book
+- Check the whole address, not just the first and last few characters
+- Send a small test amount first for anything large
+
+[More on address poisoning](https://info.etherscan.com/address-poisoning-attacks-are-rising-on-ethereum)
 
 <Divider />
 

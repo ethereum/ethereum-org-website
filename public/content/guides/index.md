@@ -18,6 +18,8 @@ Do you want to start your Ethereum journey? Our practical guides lead you step-b
 
 2. [How to identify scam tokens](/guides/how-to-id-scam-tokens/) - What are scam tokens? How do they make themselves look legitimate, and how do you identify them to protect yourself and avoid being scammed?
 
+3. [How to check and remove an EIP-7702 delegation](/guides/how-to-check-and-remove-eip-7702-delegation/) - If your account was delegated to a smart contract, this guide shows you how to spot it and turn it off.
+
 ## Using Ethereum {#using-ethereum}
 
 1. [How to bridge tokens to layer 2](/guides/how-to-use-a-bridge/) - Are Ethereum transactions too costly? Consider moving to Ethereum scaling solutions called layer 2s.
