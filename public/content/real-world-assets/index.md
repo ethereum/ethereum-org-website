@@ -82,6 +82,8 @@ Some of the frontrunners in terms of setting up legal frameworks specifically to
 
 Dive into [smart contracts](/smart-contracts/) or find out more about a different token class, [non-fungible tokens (NFT)](/nft/).
 
+Protocols integrating compliant real-world asset tokens can rely on [ERC-7943](/developers/docs/standards/tokens/erc-7943/) to check transfer permissions, frozen balances and enforcement transfers in a standard way.
+
 ## Further reading {#further-reading}
 
 - [What is asset tokenization?](https://www.britannica.com/money/real-world-asset-tokenization) on Britannica
