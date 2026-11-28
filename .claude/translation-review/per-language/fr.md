@@ -1,5 +1,12 @@
 # French (fr) Translation Review Findings
 
+## PR #19993 (intl/pending-dev, runs 46112784113 / 46112790344 / 46118259298) -- 2026-11-28 -- Score 8.9/10
+Scope: `page-courses.json` (4,668 keys, first translation) + 18 tutorials/pages (changed lines); scripted placeholder/tag/ICU/digit/negation checks over all keys (clean), about 90 keys and 6 tutorial diffs read.
+
+**Fixed in this branch (13 critical):** LLM glossary-note annotations leaked into code comments in `short-abi` (169, 170, 252, 253, 255, 273, 315; restored from English/dev). `(CI)` expansion on bare English `CI` (`clear-signing` 266, 273, 307, 328, 330; now `la CI`). `(L2)` added to `couche 2` in `uniswap-v2-annotated-code:758`. Courses: `(L2)` removed from `tokens-send-intro-p2`.
+
+**Open:** `Chaque frais de base est brûlé` (`eth-exam-shrink-explain`, plural noun with `chaque`); `gwei`/`Wei` case mix in one title; `uniswap-v2` line 380 keeps English `5,030`/`140.35` separators in prose. Register is consistent `vous` (one stray `tu`-looking false positive checked). `statut (Status)` and `En attente (Pending)` keep the explorer's English UI label on purpose.
+
 ## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 9.0/10
 Scope: 15 markdown files, changed lines; 7 diffs read in full (ethash, data-structures x3, frameworks, run-a-node, transactions) plus statelessness and privacy.
 

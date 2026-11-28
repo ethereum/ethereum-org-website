@@ -16,17 +16,18 @@ lang: zh-tw
 published: 2025-03-15
 ---
 
-_區塊鏈上沒有秘密_。發布在區塊鏈上的所有內容都公開供所有人閱讀。這是必要的，因為區塊鏈的基礎是任何人都能夠驗證它。然而，遊戲通常依賴於秘密狀態。例如，如果你可以直接進入區塊鏈瀏覽器查看地圖，那麼 [踩地雷](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) 遊戲就完全沒有意義了。
+_區塊鏈上沒有秘密_。發佈在區塊鏈上的所有內容都對所有人公開。這是必要的，因為區塊鏈的基礎是任何人都能夠驗證它。然而，遊戲通常依賴於秘密狀態。例如，如果您可以直接進入區塊鏈瀏覽器查看地圖，那麼[踩地雷](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>)遊戲就完全沒有意義了。
 
 最簡單的解決方案是使用[伺服器元件](/developers/tutorials/server-components/)來保存秘密狀態。然而，我們使用區塊鏈的原因是為了防止遊戲開發者作弊。我們需要確保伺服器元件的誠實性。伺服器可以提供狀態的雜湊，並使用[零知識證明](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important)來證明用於計算移動結果的狀態是正確的。
 
-閱讀本文後，你將了解如何建立這種保存秘密狀態的伺服器、用於顯示狀態的用戶端，以及用於兩者之間通訊的鏈上元件。我們使用的主要工具將是：
+閱讀本文後，您將了解如何建立這種保存秘密狀態的伺服器、用於顯示狀態的用戶端，以及用於兩者之間通訊的鏈上元件。我們使用的主要工具將是：
 
 | 工具                                          | 用途                                                    | 驗證版本 |
 | --------------------------------------------- | ------------------------------------------------------- | ------------------: |
 | [Zokrates](https://zokrates.github.io/)       | 零知識證明及其驗證                                      |               1.1.9 |
 | [TypeScript](https://www.typescriptlang.org/) | 伺服器和用戶端的程式語言                                |               5.4.2 |
 | [Node](https://nodejs.org/en)                 | 執行伺服器                                              |             20.18.2 |
+| [Foundry](https://getfoundry.sh/)             | 本地區塊鏈與合約部署                                    |               1.0.0 |
 | [Viem](https://viem.sh/)                      | 與區塊鏈通訊                                            |              2.9.20 |
 | [MUD](https://mud.dev/)                       | 鏈上資料管理                                            |              2.0.12 |
 | [React](https://react.dev/)                   | 用戶端使用者介面                                        |              18.2.0 |
@@ -40,11 +41,28 @@ _區塊鏈上沒有秘密_。發布在區塊鏈上的所有內容都公開供所
 
 ### 執行踩地雷範例 {#running-minesweeper-example}
 
-若要執行踩地雷範例：
+要執行踩地雷範例：
 
-1. 確保您[已安裝必備軟體](https://mud.dev/quickstart#prerequisites)：[Node](https://mud.dev/quickstart#prerequisites)、[Foundry](https://book.getfoundry.sh/getting-started/installation)、[`git`](https://git-scm.com/downloads)、[`pnpm`](https://git-scm.com/downloads) 以及 [`mprocs`](https://github.com/pvolok/mprocs)。
+1. 確保您[已安裝必備軟體](https://mud.dev/quickstart#prerequisites)：[Node](https://nodejs.org/en)、[Foundry](https://getfoundry.sh/introduction/installation)、[`git`](https://git-scm.com/downloads) 和 [`pnpm`](https://pnpm.io/installation)。
 
-2. 複製 (Clone) 儲存庫。
+   此範例使用 MUD 2.0.12，它需要特定版本的 Node 和 Foundry：
+
+   - **Node 20**。MUD 2.0.12 命令列工具使用 [JSON 匯入斷言 (JSON import assertions)](https://v8.dev/features/import-attributes)，較新版本的 Node 已不再支援此功能，因此在 Node 22 或更高版本上會出現 `SyntaxError: Unexpected identifier 'assert'` 錯誤。Node 20 在 2026 年 4 月[達到生命週期結束 (end of life)](https://nodejs.org/en/about/previous-releases)，不再獲得安全性更新，因此請僅將其用於此本地範例。使用 Node 版本管理器（例如 [`fnm`](https://github.com/Schniz/fnm) 或 [`nvm`](https://github.com/nvm-sh/nvm)）可以讓您僅針對此目錄切換到 Node 20，例如：
+
+     ```sh copy
+     fnm install 20
+     fnm use 20
+     ```
+
+   - **Foundry 1.0.0**。在目前的 Foundry 版本中，部署後腳本會失敗並顯示 _Usage of `address(this)` detected in script contract_。請使用以下命令安裝經過測試的版本：
+
+     ```sh copy
+     foundryup -i 1.0.0
+     ```
+
+     完成本教學後，您可以使用 `foundryup` 返回最新版本。
+
+2. 複製儲存庫。
 
    ```sh copy
    git clone https://github.com/qbzzt/20240901-secret-state.git
@@ -55,10 +73,9 @@ _區塊鏈上沒有秘密_。發布在區塊鏈上的所有內容都公開供所
    ```sh copy
    cd 20240901-secret-state/
    pnpm install
-   npm install -g mprocs
    ```
 
-   如果 Foundry 是作為 `pnpm install` 的一部分安裝的，您需要重新啟動命令列介面。
+   [`mprocs`](https://github.com/pvolok/mprocs) 會在單一終端機中執行所有程序，它會作為其中一個套件被安裝。
 
 4. 編譯合約
 
@@ -69,19 +86,19 @@ _區塊鏈上沒有秘密_。發布在區塊鏈上的所有內容都公開供所
     ```
 
 
-5. 啟動程式（包含一個 [anvil](https://book.getfoundry.sh/anvil/) 區塊鏈）並等待。
+5. 啟動程式（包含 [anvil](https://getfoundry.sh/anvil/overview) 區塊鏈）並等待。
 
    ```sh copy
-   mprocs
+   pnpm dev
    ```
 
-   請注意，啟動需要很長時間。若要查看進度，請先使用向下箭頭捲動至 _contracts_ 索引標籤，以查看正在部署的 MUD 合約。當您看到 _Waiting for file changes…_ 訊息時，表示合約已部署，後續進度將在 _server_ 索引標籤中顯示。在那裡，請等待直到出現 _Verifier address: 0x...._ 訊息。
+   請注意，啟動需要很長時間。要查看進度，首先使用向下箭頭捲動到 _contracts_ 索引標籤，以查看正在部署的 MUD 合約。當您收到 _Waiting for file changes…_ 訊息時，表示合約已部署，後續進度將在 _server_ 索引標籤中進行。在那裡，您需要等待直到收到 _Verifier address: 0x...._ 訊息。
 
-   如果此步驟成功，您將看到 `mprocs` 畫面，左側顯示不同的處理程序，右側顯示目前所選處理程序的主控台輸出。
+   如果此步驟成功，您將看到 `mprocs` 畫面，左側顯示不同的程序，右側顯示目前所選程序的主控台輸出。
 
-   ![The mprocs screen](./mprocs.png)
+   ![mprocs 畫面](./mprocs.png)
 
-   如果 `mprocs` 發生問題，您可以手動執行這四個處理程序，每個處理程序都在各自的命令列視窗中執行：
+   如果 `mprocs` 出現問題，您可以手動執行這四個程序，每個程序都在各自的命令列視窗中執行：
 
    - **Anvil**
 
@@ -102,14 +119,14 @@ _區塊鏈上沒有秘密_。發布在區塊鏈上的所有內容都公開供所
      ```sh
      cd packages/server
      pnpm start
-     ```  
+     ```
 
    - **Client**
 
      ```sh
      cd packages/client
      pnpm run dev
-     ```  
+     ```
 
 6. 現在您可以瀏覽至[用戶端](http://localhost:3000)，點擊 **New Game**，然後開始遊玩。
 
@@ -151,26 +168,26 @@ _區塊鏈上沒有秘密_。發布在區塊鏈上的所有內容都公開供所
 
 #### 初始化 {#initialization-flow}
 
-當您執行 `mprocs` 時，會發生以下步驟：
+當您執行 `pnpm dev`（它會執行 `mprocs`）時，會發生以下步驟：
 
 1. [`mprocs`](https://github.com/pvolok/mprocs) 執行四個元件：
 
-   - [Anvil](https://book.getfoundry.sh/anvil/)，執行一個本機區塊鏈
+   - [Anvil](https://getfoundry.sh/anvil/overview)，執行本地區塊鏈
    - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts)，編譯（如果需要）並部署 MUD 的合約
-   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client)，執行 [Vite](https://vitejs.dev/) 以將 UI 和用戶端程式碼提供給網頁瀏覽器。
+   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client)，執行 [Vite](https://vitejs.dev/) 以向網頁瀏覽器提供 UI 和用戶端程式碼。
    - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server)，執行伺服器操作
 
-2. `contracts` 套件會部署 MUD 合約，然後執行[`PostDeploy.s.sol` 腳本](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol)。此腳本會設定組態。來自 GitHub 的程式碼指定了[一個 10x5 的地雷區，其中包含八顆地雷](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23)。
+2. `contracts` 套件會部署 MUD 合約，然後執行 [`PostDeploy.s.sol` 腳本](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol)。此腳本會設定組態。來自 GitHub 的程式碼指定了[一個包含八顆地雷的 10x5 地雷區](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23)。
 
-3. [伺服器](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts)首先會[設定 MUD](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6)。除此之外，這會啟動資料同步，以便在伺服器的記憶體中存在相關資料表的副本。
+3. [伺服器](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts)首先[設定 MUD](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6)。除此之外，這會啟動資料同步，以便在伺服器的記憶體中存在相關資料表的副本。
 
 4. 伺服器訂閱了一個函數，以便[在 `Configuration` 資料表變更時](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23)執行。[此函數](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168)會在 `PostDeploy.s.sol` 執行並修改資料表後被呼叫。
 
-5. 當伺服器初始化函數取得設定後，[它會呼叫 `zkFunctions`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35) 來初始化[伺服器的零知識部分](#using-zokrates-from-typescript)。這必須在我們取得設定後才能進行，因為零知識函數必須將地雷區的寬度和高度作為常數。
+5. 當伺服器初始化函數取得組態後，[它會呼叫 `zkFunctions`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35) 來初始化[伺服器的零知識部分](#using-zokrates-from-typescript)。這必須在我們取得組態後才能發生，因為零知識函數必須將地雷區的寬度和高度作為常數。
 
-6. 在伺服器的零知識部分初始化之後，下一步是[將零知識驗證者合約部署到區塊鏈](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53)，並在 MUD 中設定驗證者地址。
+6. 在伺服器的零知識部分初始化之後，下一步是[將零知識驗證合約部署到區塊鏈](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53)，並在 MUD 中設定驗證者地址。
 
-7. 最後，我們訂閱更新，這樣我們就能看到玩家何時請求[開始新遊戲](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71)或[在現有遊戲中挖掘](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108)。
+7. 最後，我們訂閱更新，以便在玩家請求[開始新遊戲](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71)或[在現有遊戲中挖掘](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108)時能夠看到。
 
 #### 新遊戲 {#new-game-flow}
 
@@ -242,7 +259,7 @@ import "utils/pack/bool/pack128.zok" as pack128;
 Zokrates 中的 field 元素通常小於 256 位元，但相差不大。為了簡化程式碼，我們將地圖限制為最多 512 位元，並對包含四個 field 的陣列進行雜湊運算，且在每個 field 中我們僅使用 128 位元。[`pack128` 函數](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok)為此目的將 128 位元的陣列轉換為 `field`。
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 這一行開始定義函數。`hashMap` 接收一個名為 `map` 的單一參數，這是一個二維的 `bool`(ean) 陣列。地圖的大小為 `width+2` 乘 `height+2`，原因將在[下方解釋](#why-map-border)。
@@ -252,7 +269,7 @@ def hashMap(bool[${width+2}][${height+2}] map) -> field {
 回傳值是一個包含雜湊的 `field`。
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 地圖是二維的。然而，`pack128` 函數不適用於二維陣列。因此，我們首先使用 `map1d` 將地圖展平為 512 位元組的陣列。預設情況下，Zokrates 變數是常數，但我們需要在迴圈中為這個陣列賦值，因此我們將其定義為 [`mut`](https://zokrates.github.io/language/variables.html#mutability)。
@@ -260,19 +277,19 @@ bool[512] mut map1d = [false; 512];
 我們需要初始化陣列，因為 Zokrates 沒有 `undefined`。`[false; 512]` 表達式代表[一個包含 512 個 `false` 值的陣列](https://zokrates.github.io/language/types.html#declaration-and-initialization)。
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 我們還需要一個計數器來區分我們已經在 `map1d` 中填入的位元和尚未填入的位元。
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 這就是在 Zokrates 中宣告 [`for` 迴圈](https://zokrates.github.io/language/control_flow.html#for-loops)的方式。Zokrates 的 `for` 迴圈必須具有固定的邊界，因為雖然它看起來像是一個迴圈，但編譯器實際上會將其「展開」。表達式 `${width+2}` 是一個編譯期常數，因為 `width` 是由 TypeScript 程式碼在呼叫編譯器之前設定的。
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -282,7 +299,7 @@ for u32 y in 0..${height+2} {
 對於地圖中的每個位置，將該值放入 `map1d` 陣列中並遞增計數器。
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -293,7 +310,7 @@ field[4] hashMe = [
 使用 `pack128` 從 `map1d` 建立一個包含四個 `field` 值的陣列。在 Zokrates 中，`array[a..b]` 代表從 `a` 開始並在 `b-1` 結束的陣列切片。
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -349,19 +366,19 @@ def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8)
 這開啟了另一個濫用的途徑。證明者可以使用正確的座標，但建立一個在該位置周圍（甚至可能在該位置本身）有任意數量地雷的地圖。為了防止這種濫用，我們讓零知識證明包含地圖的雜湊，也就是遊戲識別碼。
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 這裡的回傳值是一個元組，包含地圖雜湊陣列以及挖掘結果。
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 我們使用 255 作為特殊值，以防該位置本身有炸彈。
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -518,9 +535,9 @@ const solidityVerifier = `
 
 ### 權限 {#permissions}
 
-在這個遊戲中有一個特權實體，即伺服器。它是唯一被允許呼叫 [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) 中函數的使用者。我們可以使用 [`cast`](https://book.getfoundry.sh/cast/) 來驗證對許可制函數的呼叫是否僅限於伺服器帳戶。
+在這個遊戲中有一個特權實體，即伺服器。它是唯一被允許呼叫 [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) 中函數的使用者。我們可以使用 [`cast`](https://getfoundry.sh/cast/overview) 來驗證只有伺服器帳戶才能呼叫許可制函數。
 
-[伺服器的私鑰位於 `setupNetwork.ts` 中](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52)。
+[伺服器的私鑰位於 `setupNetwork.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52)。
 
 1. 在執行 `anvil`（區塊鏈）的電腦上，設定這些環境變數。
 
@@ -530,13 +547,15 @@ const solidityVerifier = `
    AUTHORIZED_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
    ```
 
-2. 使用 `cast` 嘗試將驗證者地址設定為未經授權的地址。
+   這個 `WORLD_ADDRESS` 是 MUD 在全新 `anvil` 上部署的地址。如果您的 `World` 位於不同的地址，請使用 `packages/contracts/worlds.json` 中的值。
+
+2. 使用 `cast` 嘗試以未經授權的地址設定驗證者地址。
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $UNAUTHORIZED_KEY
    ```
 
-   不僅 `cast` 會回報失敗，您還可以在瀏覽器上的遊戲中開啟 **MUD Dev Tools**，點擊 **Tables**，然後選擇 **app\_\_VerifierAddress**。您會看到該地址不為零。
+   不僅 `cast` 會報告失敗，您還可以在瀏覽器中的遊戲裡開啟 **MUD Dev Tools**，點擊 **Tables**，然後選擇 **app\_\_VerifierAddress**。您會看到該地址不為零。
 
 3. 將驗證者地址設定為伺服器的地址。
 
@@ -544,9 +563,9 @@ const solidityVerifier = `
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $AUTHORIZED_KEY
    ```
 
-   現在 **app\_\_VerifiedAddress** 中的地址應該為零。
+   現在 **app\_\_VerifierAddress** 中的地址應該為零。
 
-同一個 `System` 中的所有 MUD 函數都會經過相同的存取控制，因此我認為這個測試已經足夠。如果您覺得不夠，可以檢查 [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) 中的其他函數。
+同一個 `System` 中的所有 MUD 函數都經過相同的存取控制，因此我認為這個測試已經足夠。如果您覺得不夠，可以檢查 [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) 中的其他函數。
 
 ### 零知識濫用 {#zero-knowledge-abuses}
 
@@ -560,10 +579,10 @@ const solidityVerifier = `
 proof.inputs[3] = "0x" + "1".padStart(64, "0")
 ```
 
-這意味著無論正確答案為何，我們都會始終聲稱有一顆炸彈。嘗試遊玩這個版本，您會在 `pnpm dev` 畫面的 **server** 分頁中看到此錯誤：
+這意味著無論正確答案為何，我們都會始終聲稱有一顆炸彈。嘗試遊玩這個版本，您會在 `mprocs` 畫面的 **server** 分頁中看到此錯誤：
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000
@@ -680,9 +699,11 @@ proof.proof = {
 
 ### 為什麼選擇 Zokrates？ {#why-zokrates}
 
-[Zokrates](https://zokrates.github.io/) 並不是唯一可用的零知識函式庫，但它類似於一般的[指令式](https://en.wikipedia.org/wiki/Imperative_programming)程式語言，並且支援布林變數。
+[Zokrates](https://zokrates.github.io/) 並不是唯一可用的零知識函式庫，但它類似於一般的[指令式 (imperative)](https://en.wikipedia.org/wiki/Imperative_programming) 程式語言，並且支援布林變數。
 
-對於你的應用程式，如果有不同的需求，你可能會傾向使用 [Circum](https://docs.circom.io/getting-started/installation/) 或 [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/)。
+然而，Zokrates 已不再積極維護。它的最新版本 0.8.8（以及相符的 `zokrates-js` 1.1.9）發佈於 2023 年 11 月，且主分支自 2024 年 4 月以來就沒有任何提交。本教學中的程式碼仍然可以運作，但不要期望會有錯誤修復或安全性更新。對於新專案，請考慮使用有在維護的語言，例如 [Noir](https://noir-lang.org/)，[本教學](/developers/tutorials/app-plasma/)中就使用了該語言。
+
+對於具有不同需求的應用程式，您可能會更傾向於使用 [Circom](https://docs.circom.io/getting-started/installation/) 或 [Cairo](https://www.cairo-lang.org/)。
 
 ### 何時編譯 Zokrates {#when-compile-zokrates}
 

@@ -13,11 +13,19 @@ published: 2022-09-15
 lang: sw
 ---
 
-Unapotumia mikusanyiko gharama ya baiti katika muamala ni ghali zaidi kuliko gharama ya sloti ya uhifadhi. Kwa hivyo, inaleta maana kuhifadhi taarifa nyingi iwezekanavyo kwenye kache mnyororoni.
+Unapotumia mikusanyiko (rollups), kila baiti ya muamala inapaswa kuchapishwa kwenye L1. Wakati makala haya yanaandikwa, hilo lilifanya gharama ya baiti katika muamala kuwa ghali zaidi kuliko gharama ya sloti ya uhifadhi. Kwa hivyo, ilileta maana kuweka taarifa nyingi iwezekanavyo kwenye kache mnyororoni.
 
-Katika makala haya unajifunza jinsi ya kuunda na kutumia mkataba wa kache kwa njia ambayo thamani yoyote ya kigezo ambayo ina uwezekano wa kutumika mara nyingi itahifadhiwa kwenye kache na kupatikana kwa matumizi (baada ya mara ya kwanza) kwa idadi ndogo sana ya baiti, na jinsi ya kuandika msimbo wa nje ya mnyororo unaotumia kache hii.
+> **Kumbuka:** Ada za mikusanyiko zimebadilika sana tangu makala haya yaandikwe mwaka wa 2022. Tangu [maboresho ya Ecotone na Fjord](https://docs.optimism.io/op-stack/transactions/fees#l1-data-fee) (2024), minyororo ya OP Stack huchapisha data za muamala kwenye [mablobu](/roadmap/danksharding/), na ada ya data ya L1 inategemea makadirio ya saizi _iliyobanwa_ ya muamala, na kiwango cha chini cha baiti 100 kwa kila muamala ([tazama vipimo](https://specs.optimism.io/protocol/fjord/exec-engine.html)). Kutokana na hili:
+>
+> - Baiti sifuri ni karibu bure, kwa sababu zinabanwa vizuri.
+> - Miamala mifupi tayari iko kwenye kiwango cha chini cha baiti 100, kwa hivyo kufanya data zao za mwito kuwa fupi zaidi hakupunguzi ada yao.
+> - Nafasi ya blobu ni ya bei nafuu, kwa hivyo kwenye Mtandao Mkuu wa OP gesi ya utekelezaji ya L2 mara nyingi ni sehemu kubwa ya ada kuliko ada ya data ya L1. Kuandika thamani mpya kwenye kache (`SSTORE` mbili za gesi 22100 kila moja) kunaweza kugharimu zaidi ya baiti inazookoa.
+>
+> Kanuni bado inashikilia (baiti chache zilizobanwa zinamaanisha ada ya chini ya data ya L1), lakini ikiwa kuweka kwenye kache kunalipa inategemea saizi ya miamala yako na bei za sasa za gesi za L1 na L2. Unaweza kuangalia ada ya data ya L1 ya muamala mahususi kwa kuita `getL1Fee` kwenye [usambazaji wa awali wa `GasPriceOracle`](https://specs.optimism.io/protocol/predeploys.html#gaspriceoracle).
 
-Ikiwa unataka kuruka makala na kuona tu msimbo wa chanzo, [uko hapa](https://github.com/qbzzt/20220915-all-you-can-cache). Mfumo wa uundaji ni [Foundry](https://getfoundry.sh/introduction/installation/).
+Katika makala haya unajifunza jinsi ya kuunda na kutumia mkataba wa kache kwa njia ambayo thamani yoyote ya kigezo ambayo ina uwezekano wa kutumika mara nyingi itawekwa kwenye kache na kupatikana kwa matumizi (baada ya mara ya kwanza) na idadi ndogo zaidi ya baiti, na jinsi ya kuandika msimbo wa nje ya mnyororo unaotumia kache hii.
+
+Ikiwa unataka kuruka makala na kuona tu msimbo wa chanzo, [uko hapa](https://github.com/qbzzt/20220915-all-you-can-cache). Mkusanyiko wa maendeleo ni [Foundry](https://getfoundry.sh/introduction/installation/).
 
 ## Muundo wa jumla {#overall-design}
 
@@ -38,7 +46,7 @@ Kwa kurahisisha tutachukulia kuwa vigezo vyote vya muamala ni `uint256`, vyenye 
 
 ## Udhibiti wa kache {#cache-manipulation}
 
-Kache inatekelezwa katika [`Kache.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol). Hebu tuipitie mstari kwa mstari.
+Kache inatekelezwa katika [`Cache.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol). Hebu tuipitie mstari kwa mstari.
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -319,11 +327,11 @@ pragma solidity ^0.8.13;
 import "forge-std/Test.sol";
 
 
-// Unahitaji kuendesha `forge test -vv` kwa ajili ya kiweko.
+// Inahitaji kuendesha `forge test -vv` kwa ajili ya kiweko.
 import "forge-std/console.sol";
 ```
 
-Hii ni boilerplate tu ambayo ni muhimu kutumia kifurushi cha majaribio na `console.log`.
+Huu ni msimbo wa kawaida tu ambao ni muhimu kutumia kifurushi cha majaribio na `console.log`.
 
 ```solidity
 import "src/Cache.sol";
@@ -340,13 +348,13 @@ contract CacheTest is Test {
     }
 ```
 
-Kazi ya `setUp` inaitwa kabla ya kila jaribio. Katika kesi hii tunaunda tu kache mpya, ili majaribio yetu yasiathiriane.
+Kazi ya `setUp` inaitwa kabla ya kila jaribio. Katika hali hii tunaunda tu kache mpya, ili majaribio yetu yasiathiriane.
 
 ```solidity
     function testCaching() public {
 ```
 
-Majaribio ni kazi ambazo majina yake huanza na `test`. Kazi hii inakagua utendaji wa msingi wa kache, kuandika thamani na kuzisoma tena.
+Majaribio ni kazi ambazo majina yake yanaanza na `test`. Kazi hii inakagua utendaji wa msingi wa kache, kuandika thamani na kuzisoma tena.
 
 ```solidity
         for(uint i=1; i<5000; i++) {
@@ -357,7 +365,7 @@ Majaribio ni kazi ambazo majina yake huanza na `test`. Kazi hii inakagua utendaj
             assertEq(cache.cacheRead(i), i*i);
 ```
 
-Hivi ndivyo unavyofanya majaribio halisi, ukitumia [kazi za `assert...`](https://getfoundry.sh/reference/forge-std/std-assertions/). Katika kesi hii, tunathibitisha kwamba thamani tuliyoandika ndiyo tuliyosoma. Tunaweza kutupa matokeo ya `cache.cacheWrite` kwa sababu tunajua kwamba funguo za kache zinakabidhiwa kwa mstari.
+Hivi ndivyo unavyofanya majaribio halisi, ukitumia [kazi za `assert...`](https://getfoundry.sh/reference/forge-std/std-assertions/). Katika hali hii, tunathibitisha kuwa thamani tuliyoandika ndiyo tuliyoisoma. Tunaweza kupuuza matokeo ya `cache.cacheWrite` kwa sababu tunajua kuwa funguo za kache zinakabidhiwa kwa mfuatano.
 
 ```solidity
         }
@@ -384,7 +392,7 @@ Kwanza tunaandika kila thamani mara mbili kwenye kache na kuhakikisha funguo ni 
     }    // testRepeatCaching
 ```
 
-Kinadharia kunaweza kuwa na hitilafu ambayo haiathiri uandishi wa kache mfululizo. Kwa hivyo hapa tunafanya baadhi ya maandishi ambayo sio mfululizo na kuona thamani bado haziandikwi upya.
+Kinadharia kunaweza kuwa na hitilafu ambayo haiathiri uandishi wa kache unaofuatana. Kwa hivyo hapa tunafanya baadhi ya maandishi ambayo hayafuatani na kuona thamani bado haziandikwi upya.
 
 ```solidity
     // Soma uint kutoka kwenye bafa ya kumbukumbu (kuhakikisha tunapata tena vigezo
@@ -393,7 +401,7 @@ Kinadharia kunaweza kuwa na hitilafu ambayo haiathiri uandishi wa kache mfululiz
         returns (uint256)
 ```
 
-Soma neno la biti 256 kutoka kwa bafa ya `bytes memory`. Kazi hii ya matumizi inaturuhusu kuthibitisha kwamba tunapokea matokeo sahihi tunapoendesha mwito wa kazi unaotumia kache.
+Soma neno la biti 256 kutoka kwa bafa ya `bytes memory`. Kazi hii ya matumizi inaturuhusu kuthibitisha kuwa tunapokea matokeo sahihi tunapoendesha mwito wa kazi unaotumia kache.
 
 ```solidity
     {
@@ -412,7 +420,7 @@ Yul haiauni miundo ya data zaidi ya `uint256`, kwa hivyo unaporejelea muundo wa 
         return tempUint;
     }     // toUint256
 
-    // Saini ya kazi kwa fourParams(), kwa hisani ya
+    // Sahihi ya utendaji kwa fourParams(), kwa hisani ya
     // https://www.4byte.directory/signatures/?bytes4_signature=0x3edc1e6d
     bytes4 constant FOUR_PARAMS = 0x3edc1e6d;
 
@@ -446,7 +454,7 @@ Hatuwezi kutumia utaratibu wa kawaida wa ABI kuita kazi kwa kutumia kache, kwa h
             FOUR_PARAMS,
 ```
 
-Ni muhimu kwa mkataba huo huo kusaidia kazi zote mbili zilizohifadhiwa kwenye kache (kwa miito moja kwa moja kutoka kwa miamala) na kazi ambazo hazijahifadhiwa kwenye kache (kwa miito kutoka kwa mikataba mingine mahiri). Ili kufanya hivyo tunahitaji kuendelea kutegemea utaratibu wa Solidity kuita kazi sahihi, badala ya kuweka kila kitu katika [kazi ya `fallback`](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function). Kufanya hivi kunafanya utangamano kuwa rahisi sana. Baiti moja ingetosha kutambua kazi katika hali nyingi, kwa hivyo tunapoteza baiti tatu (gesi 16\*3=48). Hata hivyo, ninapoandika haya gesi hizo 48 zinagharimu senti 0.07, ambayo ni gharama nzuri ya msimbo rahisi, usio na uwezekano wa kuwa na hitilafu.
+Ni muhimu kwa mkataba huo huo kusaidia kazi zote mbili zilizowekwa kwenye kache (kwa miito moja kwa moja kutoka kwa miamala) na kazi ambazo hazijawekwa kwenye kache (kwa miito kutoka kwa mikataba mingine mahiri). Ili kufanya hivyo tunahitaji kuendelea kutegemea utaratibu wa Solidity kuita kazi sahihi, badala ya kuweka kila kitu katika [kazi ya `fallback`](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function). Kufanya hivi kunafanya utangamano kuwa rahisi sana. Baiti moja ingetosha kutambua kazi katika hali nyingi, kwa hivyo tunapoteza baiti tatu. Kwa fomula ya sasa ya ada ya OP Stack baiti hizo tatu zinaongeza sehemu ndogo sana ya senti (ikiwa ipo, tazama dokezo juu ya makala), ambayo ni gharama nzuri ya msimbo rahisi, usio na uwezekano wa kuwa na hitilafu.
 
 ```solidity
             // Thamani ya kwanza, iongeze kwenye kache
@@ -480,7 +488,7 @@ Tunatarajia mwito ufanikiwe.
 Tunaanza na kache tupu na kisha kuongeza `VAL_A` ikifuatiwa na `VAL_C`. Tungetarajia ya kwanza kuwa na ufunguo 1, na ya pili kuwa na 2.
 
 ```
-assertEq(toUint256(_callOutput,0), VAL_A);
+        assertEq(toUint256(_callOutput,0), VAL_A);
         assertEq(toUint256(_callOutput,32), VAL_B);
         assertEq(toUint256(_callOutput,64), VAL_C);
         assertEq(toUint256(_callOutput,96), VAL_C);
@@ -493,7 +501,7 @@ Towe ni vigezo nne. Hapa tunathibitisha kuwa ni sahihi.
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
-            // Thamani ya kwanza kwenye Kache
+            // Thamani ya kwanza katika Kache
             bytes1(0x01),
 ```
 
@@ -514,7 +522,7 @@ Funguo za kache chini ya 16 ni baiti moja tu.
     }   // testReadParam
 ```
 
-Majaribio baada ya mwito yanafanana na yale ya baada ya mwito wa kwanza.
+Majaribio baada ya mwito yanafanana na yale baada ya mwito wa kwanza.
 
 ```solidity
     function testEncodeVal() public {
@@ -540,15 +548,15 @@ Kazi hii inafanana na `testReadParam`, isipokuwa kwamba badala ya kuandika vigez
     }   // testEncodeVal
 ```
 
-Jaribio pekee la ziada katika `testEncodeVal()` ni kuthibitisha kwamba urefu wa `_callInput` ni sahihi. Kwa mwito wa kwanza ni 4+33\*4. Kwa wa pili, ambapo kila thamani tayari iko kwenye kache, ni 4+1\*4.
+Jaribio la pekee la ziada katika `testEncodeVal()` ni kuthibitisha kuwa urefu wa `_callInput` ni sahihi. Kwa mwito wa kwanza ni 4+33\*4. Kwa wa pili, ambapo kila thamani tayari iko kwenye kache, ni 4+1\*4.
 
 ```solidity
     // Jaribu encodeVal wakati ufunguo ni zaidi ya baiti moja
-    // Kiwango cha juu cha baiti tatu kwa sababu kujaza kache hadi baiti nne inachukua
+    // Kiwango cha juu baiti tatu kwa sababu kujaza kache hadi baiti nne inachukua
     // muda mrefu sana.
     function testEncodeValBig() public {
         // Weka idadi ya thamani kwenye kache.
-        // Ili kuweka mambo rahisi, tumia ufunguo n kwa thamani n.
+        // Ili kurahisisha mambo, tumia ufunguo n kwa thamani n.
         for(uint i=1; i<0x1FFF; i++) {
             cache.cacheWrite(i);
         }
@@ -556,7 +564,7 @@ Jaribio pekee la ziada katika `testEncodeVal()` ni kuthibitisha kwamba urefu wa 
 
 Kazi ya `testEncodeVal` hapo juu inaandika tu thamani nne kwenye kache, kwa hivyo [sehemu ya kazi inayoshughulikia thamani za baiti nyingi](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol#L144-L171) haijakaguliwa. Lakini msimbo huo ni mgumu na una uwezekano wa kuwa na makosa.
 
-Sehemu ya kwanza ya kazi hii ni kitanzi kinachoandika thamani zote kutoka 1 hadi 0x1FFF kwenye kache kwa mpangilio, kwa hivyo tutaweza kusimba thamani hizo na kujua zinakokwenda.
+Sehemu ya kwanza ya kazi hii ni kitanzi kinachoandika thamani zote kutoka 1 hadi 0x1FFF kwenye kache kwa mpangilio, kwa hivyo tutaweza kusimba thamani hizo na kujua zinaenda wapi.
 
 ```solidity
         .
@@ -582,7 +590,7 @@ Jaribu thamani za baiti moja, baiti mbili, na baiti tatu. Hatujaribu zaidi ya ha
     }    // testEncodeValBig
 
 
-    // Jaribu nini kwa bafa ndogo kupita kiasi tunapata tengua
+    // Jaribu kwamba kwa bafa ndogo kupita kiasi tunapata tengua
     function testShortCalldata() public {
 ```
 
@@ -600,7 +608,7 @@ Jaribu kile kinachotokea katika hali isiyo ya kawaida ambapo hakuna vigezo vya k
 Kwa kuwa inatengua, matokeo tunayopaswa kupata ni `false`.
 
 ```
-// Ita na funguo za kache ambazo hazipo
+    // Piga mwito na funguo za kache ambazo hazipo
     function testNoCacheKey() public {
         .
         .
@@ -625,7 +633,7 @@ Kazi hii inapata vigezo nne halali kabisa, isipokuwa kwamba kache ni tupu kwa hi
         .
         .
         .
-    // Jaribu nini kwa bafa ndefu kupita kiasi kila kitu kinafanya kazi sawa
+    // Jaribu kwamba kwa bafa ndefu kupita kiasi kila kitu kinafanya kazi sawa
     function testLongCalldata() public {
         address _cacheAddr = address(cache);
         bool _success;
@@ -722,14 +730,14 @@ Kazi ya kusoma ni `view`, kwa hivyo haihitaji muamala na haigharimu gesi. Kama m
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[Hivi (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) ndivyo tunavyobainisha katika jaribio la Foundry kwamba mwito unaofuata unapaswa kushindwa, na sababu iliyoripotiwa ya kushindwa. Hii inatumika tunapotumia sintaksia `<contract>.<function name>()` badala ya kuunda data za mwito na kuita mkataba kwa kutumia kiolesura cha kiwango cha chini (`<contract>.call()`, n.k.).
+[Hivi (`vm.expectRevert`)](https://getfoundry.sh/reference/cheatcodes/expect-revert/) ndivyo tunavyobainisha katika jaribio la Foundry kwamba mwito unaofuata unapaswa kushindwa, na sababu iliyoripotiwa ya kushindwa. Hii inatumika tunapotumia sintaksia `<contract>.<function name>()` badala ya kuunda data za mwito na kuita mkataba kwa kutumia kiolesura cha kiwango cha chini (`<contract>.call()`, n.k.).
 
 ```solidity
     function testReadWriteCached() public {
         uint cacheGoat = worm.cacheWrite(0x60A7);
 ```
 
-Hapa tunatumia ukweli kwamba `cacheWrite` inarudisha ufunguo wa kache. Hili sio jambo ambalo tungetarajia kutumia katika uzalishaji, kwa sababu `cacheWrite` inabadilisha hali, na kwa hivyo inaweza kuitwa tu wakati wa muamala. Miamala haina thamani za kurudisha, ikiwa ina matokeo matokeo hayo yanapaswa kutolewa kama matukio. Kwa hivyo thamani ya kurudisha ya `cacheWrite` inapatikana tu kutoka kwa msimbo wa mnyororoni, na msimbo wa mnyororoni hauhitaji kache ya kigezo.
+Hapa tunatumia ukweli kwamba `cacheWrite` inarudisha ufunguo wa kache. Hili sio jambo ambalo tungetarajia kutumia katika uzalishaji, kwa sababu `cacheWrite` inabadilisha hali, na kwa hivyo inaweza kuitwa tu wakati wa muamala. Miamala haina thamani za kurudisha, ikiwa ina matokeo matokeo hayo yanapaswa kutolewa kama matukio. Kwa hivyo thamani ya kurudisha ya `cacheWrite` inapatikana tu kutoka kwa msimbo wa mnyororoni, na msimbo wa mnyororoni hauhitaji kuweka vigezo kwenye kache.
 
 ```solidity
         (_success,) = address(worm).call(_callInput);
@@ -762,45 +770,66 @@ Hii ndiyo njia tunayothibitisha kwamba msimbo [unatoa tukio kwa usahihi](https:/
 
 ### Mteja {#the-client}
 
-Jambo moja ambalo hupati na majaribio ya Solidity ni msimbo wa JavaScript ambao unaweza kukata na kubandika kwenye programu yako mwenyewe. Toleo la asili la mafunzo haya lilisambaza WORM kwenye Optimism Goerli, ambayo tangu wakati huo imestaafishwa. Ili kuendesha mteja leo, sambaza tena WORM kwenye mtandao unaotumika wa OP Stack kama vile [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack), kisha utumie anwani ya mkataba inayotokana katika mteja wa JavaScript.
+Jambo moja ambalo hupati na majaribio ya Solidity ni msimbo wa JavaScript unaoweza kukata na kubandika kwenye programu tumizi yako mwenyewe. Toleo la asili la mafunzo haya lilisambaza WORM kwa Optimism Goerli, ambayo tangu wakati huo imefungwa. Hifadhi ya mfano bado inaelekeza kwa Optimism Goerli, kwa hivyo ili kuendesha mteja leo unahitaji kusambaza WORM wewe mwenyewe kwa [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack) na kuelekeza mteja kwenye usambazaji wako.
 
-[Unaweza kuona msimbo wa JavaScript kwa ajili ya mteja hapa](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Hifadhi ya mfano iliandikwa kwa ajili ya Optimism Goerli, kwa hivyo kabla ya kuiendesha, sasisha mwisho wa RPC na URL za kichunguzi katika `javascript/.env.example` na `javascript/index.js` kwa mtandao wako lengwa. Ili kuitumia:
+[Unaweza kuona msimbo wa JavaScript kwa mteja hapa](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Ili kuutumia, unahitaji [Foundry](https://getfoundry.sh/introduction/installation/), [Node.js](https://nodejs.org/), na akaunti iliyo na baadhi ya ETH za OP Sepolia. [Nyaraka za bomba za Optimism](https://docs.optimism.io/app-developers/tools-sdks/faucets) zinaorodhesha mabomba ya sasa ya mtandao wa majaribio.
 
-1. Nakili hifadhi ya git:
+1. Nakili hifadhi ya git, ikijumuisha moduli ndogo ya `forge-std`, na ujenge mikataba. Mteja anasoma ABI ya WORM na msimbo wa baiti kutoka `out/WORM.sol/WORM.json`, ambayo inapatikana tu baada ya `forge build`.
 
    ```sh
-   git clone https://github.com/qbzzt/20220915-all-you-can-cache.git
+   git clone --recurse-submodules https://github.com/qbzzt/20220915-all-you-can-cache.git
+   cd 20220915-all-you-can-cache
+   forge build
    ```
 
-2. Sakinisha vifurushi muhimu:
+   Forge inaonya kwamba `foundry.toml` inatumia jina la zamani la sehemu ya `[default]`. Unaweza kupuuza onyo hili, au kuendesha `forge config --fix`.
+
+2. Ingiza ufunguo wa siri wa akaunti yako iliyofadhiliwa kwenye hifadhi ya funguo ya Foundry iliyosimbwa kwa njia fiche, na uutumie [kusambaza WORM](https://getfoundry.sh/reference/forge/create) kwa OP Sepolia.
+
+   ```sh
+   cast wallet import op-sepolia-deployer --interactive
+   forge create src/WORM.sol:WORM --rpc-url https://sepolia.optimism.io --account op-sepolia-deployer --broadcast
+   ```
+
+   Bila `--broadcast`, `forge create` inaiga tu usambazaji. Nakili anwani kutoka kwa mstari wa `Deployed to:` wa towe.
+
+3. Hariri `javascript/index.js`. Badilisha anwani ya zamani ya Optimism Goerli katika mstari huu na anwani ya usambazaji wako:
+
+   ```javascript
+   const worm = WormFactory.attach("0xD34335b1d818ceE54e3323D3246bD31d94E6a78a")
+   ```
+
+   Unaweza pia kubadilisha `https://goerli-optimism.etherscan.io` na `https://sepolia-optimism.etherscan.io` katika mistari miwili ya `console.log`, ili viungo ambavyo mteja anachapisha vifanye kazi.
+
+4. Sakinisha vifurushi muhimu:
 
    ```sh
    cd javascript
-   yarn
+   npm install
    ```
 
-3. Nakili faili ya usanidi:
+5. Nakili faili ya usanidi:
 
    ```sh
    cp .env.example .env
    ```
 
-4. Hariri `.env` kwa ajili ya usanidi wako:
+6. Hariri `.env` kwa usanidi wako. Majina ya vigezo bado yanarejelea Optimism Goerli, lakini thamani ni za OP Sepolia:
 
-   | Kigezo              | Thamani                                                                                                                                                             |
-   | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC            | Mnemonic kwa ajili ya akaunti ambayo ina ETH ya kutosha kulipia muamala. [Nyaraka za bomba za Optimism](https://docs.optimism.io/app-developers/tools/faucets) zinaorodhesha mabomba ya sasa ya mtandao wa majaribio. |
-   | OPTIMISM_GOERLI_URL | URL ya RPC kwa mtandao ambapo unasambaza tena WORM. Kwa OP Sepolia, tumia mwisho wa RPC wa OP Sepolia kama vile `https://sepolia.optimism.io`, au mwisho mwingine kutoka kwa mtoa huduma wako.        |
+   | Kigezo           | Thamani                                                                                                   |
+   | ------------------- | ------------------------------------------------------------------------------------------------------- |
+   | MNEMONIC            | Mnemoni kwa akaunti ambayo ina ETH za kutosha za OP Sepolia kulipia muamala.                    |
+   | OPTIMISM_GOERLI_URL | URL ya RPC ya OP Sepolia, `https://sepolia.optimism.io`, au mwisho wa OP Sepolia kutoka kwa mtoa huduma mwingine. |
 
-5. Endesha `index.js`.
+7. Endesha `index.js`.
 
    ```sh
    node index.js
    ```
 
-   Programu tumizi hii ya mfano kwanza inaandika ingizo kwenye WORM, ikionyesha data za mwito na kiungo cha muamala kwenye kichunguzi cha bloku. Kisha inasoma tena ingizo hilo, na kuonyesha ufunguo inaotumia na thamani katika ingizo (thamani, nambari ya kitalu, na mwandishi).
+   Programu tumizi hii ya mfano kwanza inaandika ingizo kwa WORM, ikionyesha data za mwito na kiungo cha muamala kwenye kichunguzi cha bloku. Kisha inasoma tena ingizo hilo, na kuonyesha ufunguo inaotumia na thamani katika ingizo (thamani, nambari ya kitalu, na mwandishi).
 
-Sehemu kubwa ya mteja ni JavaScript ya kawaida ya programu tumizi iliyogatuliwa (dapp). Kwa hivyo tena tutapitia tu sehemu zinazovutia.
+Sehemu kubwa ya mteja ni JavaScript ya kawaida ya dapp. Kwa hivyo tena tutapitia tu sehemu za kuvutia.
 
 ```javascript
 .
@@ -831,13 +860,13 @@ tx.data = calldata
 sentTx = await wallet.sendTransaction(tx)
 ```
 
-Kama ilivyo kwa msimbo wa majaribio wa Solidity, hatuwezi kuita kazi iliyohifadhiwa kwenye kache kwa kawaida. Badala yake, tunahitaji kutumia utaratibu wa kiwango cha chini.
+Kama ilivyo kwa msimbo wa majaribio wa Solidity, hatuwezi kuita kazi iliyowekwa kwenye kache kwa kawaida. Badala yake, tunahitaji kutumia utaratibu wa kiwango cha chini.
 
 ```javascript
     .
     .
     .
-    // Soma ingizo lililoandikwa hivi punde
+    // Soma ingizo lililoandikwa sasa hivi
     const realKey = '0x' + key.slice(4)  // ondoa bendera ya FF
     const entryRead = await worm.readEntry(realKey)
     .
@@ -845,26 +874,28 @@ Kama ilivyo kwa msimbo wa majaribio wa Solidity, hatuwezi kuita kazi iliyohifadh
     .
 ```
 
-Kwa kusoma maingizo tunaweza kutumia utaratibu wa kawaida. Hakuna haja ya kutumia kache ya kigezo na kazi za `view`.
+Kwa kusoma maingizo tunaweza kutumia utaratibu wa kawaida. Hakuna haja ya kutumia uwekaji wa vigezo kwenye kache na kazi za `view`.
+
 ## Hitimisho {#conclusion}
 
 Msimbo katika makala haya ni uthibitisho wa dhana, madhumuni ni kufanya wazo liwe rahisi kueleweka. Kwa mfumo ulio tayari kwa uzalishaji unaweza kutaka kutekeleza utendaji wa ziada:
 
 - Kushughulikia thamani ambazo sio `uint256`. Kwa mfano, mifuatano.
-- Badala ya kache ya kimataifa, labda uwe na uchoraji ramani kati ya watumiaji na kache. Watumiaji tofauti hutumia thamani tofauti.
-- Thamani zinazotumika kwa anwani ni tofauti na zile zinazotumika kwa madhumuni mengine. Inaweza kuleta maana kuwa na kache tofauti kwa ajili ya anwani tu.
+- Badala ya kache ya kimataifa, labda kuwa na uchoraji ramani kati ya watumiaji na kache. Watumiaji tofauti hutumia thamani tofauti.
+- Thamani zinazotumika kwa anwani ni tofauti na zile zinazotumika kwa madhumuni mengine. Inaweza kuleta maana kuwa na kache tofauti kwa anwani pekee.
 - Kwa sasa, funguo za kache ziko kwenye algoriti ya "anayekuja kwanza, ufunguo mdogo zaidi". Thamani kumi na sita za kwanza zinaweza kutumwa kama baiti moja. Thamani 4080 zinazofuata zinaweza kutumwa kama baiti mbili. Thamani takriban milioni zinazofuata ni baiti tatu, n.k. Mfumo wa uzalishaji unapaswa kuweka vihesabio vya matumizi kwenye maingizo ya kache na kuyapanga upya ili thamani kumi na sita _zinazojulikana zaidi_ ziwe baiti moja, thamani 4080 zinazojulikana zaidi zinazofuata ziwe baiti mbili, n.k.
 
   Hata hivyo, hiyo ni operesheni inayoweza kuwa hatari. Fikiria mfuatano ufuatao wa matukio:
 
-  1. Noam Naive anaita `encodeVal` ili kusimba anwani anayotaka kutuma tokeni. Anwani hiyo ni mojawapo ya za kwanza kutumika kwenye programu, kwa hivyo thamani iliyosimbwa ni 0x06. Hii ni kazi ya `view`, sio muamala, kwa hivyo ni kati ya Noam na nodi anayotumia, na hakuna mtu mwingine anayejua kuihusu
+  1. Noam Naive anaita `encodeVal` ili kusimba anwani ambayo anataka kutuma tokeni. Anwani hiyo ni mojawapo ya za kwanza kutumika kwenye programu tumizi, kwa hivyo thamani iliyosimbwa ni 0x06. Hii ni kazi ya `view`, sio muamala, kwa hivyo ni kati ya Noam na nodi anayotumia, na hakuna mtu mwingine anayejua kuihusu
 
   2. Owen Owner anaendesha operesheni ya kupanga upya kache. Watu wachache sana hutumia anwani hiyo, kwa hivyo sasa imesimbwa kama 0x201122. Thamani tofauti, 10<sup>18</sup>, inakabidhiwa 0x06.
 
-  3. Noam Naive anatuma tokeni zake kwa 0x06. Zinaenda kwenye anwani `0x0000000000000000000000000de0b6b3a7640000`, na kwa kuwa hakuna anayejua ufunguo wa siri wa anwani hiyo, zinakwama tu hapo. Noam _hafurahii_.
+  3. Noam Naive anatuma tokeni zake kwa 0x06. Zinaenda kwa anwani `0x0000000000000000000000000de0b6b3a7640000`, na kwa kuwa hakuna anayejua ufunguo wa siri wa anwani hiyo, zinakwama hapo tu. Noam _hafurahii_.
 
   Kuna njia za kutatua tatizo hili, na tatizo linalohusiana la miamala ambayo iko kwenye mempool wakati wa kupanga upya kache, lakini lazima uwe na ufahamu nalo.
 
-Nilionyesha kache hapa na Optimism, kwa sababu mimi ni mfanyakazi wa Optimism na huu ndio mkusanyiko ninaoujua vizuri zaidi. Lakini inapaswa kufanya kazi na mkusanyiko wowote unaotoza gharama ndogo kwa usindikaji wa ndani, ili kwa kulinganisha kuandika data ya muamala kwa tabaka la 1 (l1) ndiyo gharama kubwa.
+Nilionyesha uwekaji kwenye kache hapa na Optimism, kwa sababu mimi ni mfanyakazi wa Optimism na hii ndiyo rollup ninayoijua vizuri zaidi. Lakini inapaswa kufanya kazi na rollup yoyote inayotoza gharama ndogo kwa usindikaji wa ndani, ili kwa kulinganisha kuandika data za muamala kwa L1 ndiyo gharama kubwa. Kama ilivyoelezwa katika dokezo juu ya makala haya, angalia ada za sasa kabla ya kuamua kuwa kuweka kwenye kache kunalipa.
 
-[Tazama hapa kwa kazi zangu zaidi](https://cryptodocguy.pro/).
+[Tazama hapa kwa kazi yangu zaidi](https://cryptodocguy.pro/).
+

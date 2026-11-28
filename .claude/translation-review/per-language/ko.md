@@ -1,5 +1,11 @@
 # Korean (ko) Translation Review Findings
 
+## PR #19993 (intl/pending-dev) -- 2026-11-28 -- Score 8.8/10
+Scope: `page-courses.json` (4,668 keys, first translation) + 17 md files (16 tutorials + community/grants), changed lines only; every courses value checked by script (ICU names, tags, hrefs), 100 courses keys and 5 tutorial diffs read.
+
+Fixed (critical): second `<strong>EIP</strong>` restored in `upgrades-eips-intro-p1` (the translation had merged it into a parenthetical, so tag counts differed from English); `(PoW)`/`(PoS)`/`(L2)` added to long forms the English writes without them (11 courses lines, plus yellow-paper-evm x2 and uniswap-v2 x1); `Slither` as 슬리더 (token-integration-checklist x2), `Goerli` as 괴를리 (all-you-can-cache x4), `Holesky` as 홀스카이 (server-components), `Launchpad` as 런치패드 (run-node-raspberry-pi x3), `Keccak-256` as 케착-256 (yellow-paper-evm x2) all back to Latin.
+Open (warnings): second-person register is mixed across the courses file: 여러분 (223), 내/내가 (104), 귀하 (about 50, mostly trading-and-lending, nfts-exam, smart-contracts-exam, widgets) and 당신 (a few); pick one (여러분 dominates) in a native pass. `package.json와` should be `package.json과` (stealth-addr); Latin glosses on terms English leaves bare (`초안(Draft)`, `배치(batch)`, `단일 장애점(single point of failure)`); `{count, plural, other {#개의 설명이}} 잘못된 …` splits one clause around the plural block (renders correctly).
+
 ## PR #19983 (intl/pending-dev) -- 2026-11-27 -- Score 9.0/10
 Scope: 15 md pages, markdown only; changed lines only; sampled 8 md diffs plus scripted sweeps (no foreign script, U+2060, SPDX).
 

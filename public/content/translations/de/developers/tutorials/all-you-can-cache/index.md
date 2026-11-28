@@ -9,7 +9,15 @@ published: 2022-09-15
 lang: de
 ---
 
-Bei der Verwendung von Rollups sind die Kosten für ein Byte in der Transaktion viel teurer als die Kosten für einen Speicher-Slot. Daher ist es sinnvoll, so viele Informationen wie möglich onchain zu cachen.
+Bei der Verwendung von Rollups muss jedes Byte der Transaktion auf L1 gepostet werden. Als dieser Artikel geschrieben wurde, machte dies die Kosten für ein Byte in der Transaktion viel teurer als die Kosten für einen Speicher-Slot. Daher war es sinnvoll, so viele Informationen wie möglich onchain zu cachen.
+
+> **Hinweis:** Die Rollup-Gebühren haben sich seit dem Verfassen dieses Artikels im Jahr 2022 stark verändert. Seit den [Ecotone- und Fjord-Upgrades](https://docs.optimism.io/op-stack/transactions/fees#l1-data-fee) (2024) posten OP-Stack-Chains Transaktionsdaten in [Blobs](/roadmap/danksharding/), und die L1-Datengebühr basiert auf einer Schätzung der _komprimierten_ Größe der Transaktion, mit einem Minimum von 100 Bytes pro Transaktion ([siehe Spezifikation](https://specs.optimism.io/protocol/fjord/exec-engine.html)). Das hat zur Folge:
+>
+> - Null-Bytes sind fast kostenlos, da sie sich gut komprimieren lassen.
+> - Kurze Transaktionen liegen bereits beim Minimum von 100 Bytes, sodass eine weitere Verkürzung ihrer Calldata ihre Gebühr nicht reduziert.
+> - Blob-Speicherplatz ist günstig, sodass im OP Mainnet das L2-Ausführungsgas oft einen größeren Teil der Gebühr ausmacht als die L1-Datengebühr. Das Schreiben eines neuen Wertes in den Cache (zwei `SSTORE`s von jeweils 22100 Gas) kann mehr kosten als die Bytes, die dadurch eingespart werden.
+>
+> Das Prinzip gilt weiterhin (weniger komprimierte Bytes bedeuten eine niedrigere L1-Datengebühr), aber ob sich Caching auszahlt, hängt von der Größe Ihrer Transaktionen und den aktuellen L1- und L2-Gaspreisen ab. Sie können die L1-Datengebühr einer bestimmten Transaktion überprüfen, indem Sie `getL1Fee` auf dem [`GasPriceOracle`-Predeploy](https://specs.optimism.io/protocol/predeploys.html#gaspriceoracle) aufrufen.
 
 In diesem Artikel lernen Sie, wie Sie einen Caching-Vertrag so erstellen und verwenden, dass jeder Parameterwert, der wahrscheinlich mehrfach verwendet wird, gecacht wird und (nach dem ersten Mal) mit einer viel geringeren Anzahl von Bytes zur Verfügung steht, und wie Sie offchain Code schreiben, der diesen Cache nutzt.
 
@@ -306,7 +314,7 @@ Wenn wir hier ankommen, bedeutet das, dass wir einen Schlüssel erhalten haben, 
 
 ### Testen des Caches {#testing-the-cache}
 
-Einer der Vorteile von Foundry ist, dass [es Ihnen ermöglicht, Tests in Solidity zu schreiben](https://getfoundry.sh/forge/tests/overview/), was das Schreiben von Unit-Tests erleichtert. Die Tests für die Klasse `Cache` finden Sie [hier](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol). Da sich der Testcode wiederholt, wie es bei Tests oft der Fall ist, erklärt dieser Artikel nur die interessanten Teile.
+Einer der Vorteile von Foundry ist, dass [es Ihnen erlaubt, Tests in Solidity zu schreiben](https://getfoundry.sh/forge/tests/overview/), was das Schreiben von Unit-Tests erleichtert. Die Tests für die Klasse `Cache` finden Sie [hier](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol). Da sich der Testcode wiederholt, wie es bei Tests oft der Fall ist, erklärt dieser Artikel nur die interessanten Teile.
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -342,7 +350,7 @@ Die Funktion `setUp` wird vor jedem Test aufgerufen. In diesem Fall erstellen wi
     function testCaching() public {
 ```
 
-Tests sind Funktionen, deren Namen mit `test` beginnen. Diese Funktion überprüft die grundlegende Cache-Funktionalität, das Schreiben von Werten und das erneute Lesen.
+Tests sind Funktionen, deren Namen mit `test` beginnen. Diese Funktion überprüft die grundlegende Cache-Funktionalität, das Schreiben von Werten und deren erneutes Lesen.
 
 ```solidity
         for(uint i=1; i<5000; i++) {
@@ -353,7 +361,7 @@ Tests sind Funktionen, deren Namen mit `test` beginnen. Diese Funktion überprü
             assertEq(cache.cacheRead(i), i*i);
 ```
 
-So führen Sie das eigentliche Testen durch, indem Sie [`assert...`-Funktionen](https://getfoundry.sh/reference/forge-std/std-assertions/) verwenden. In diesem Fall überprüfen wir, ob der Wert, den wir geschrieben haben, auch der ist, den wir gelesen haben. Wir können das Ergebnis von `cache.cacheWrite` verwerfen, da wir wissen, dass Cache-Schlüssel linear zugewiesen werden.
+So führen Sie das eigentliche Testen durch, indem Sie [`assert...`-Funktionen](https://getfoundry.sh/reference/forge-std/std-assertions/) verwenden. In diesem Fall überprüfen wir, ob der geschriebene Wert dem gelesenen entspricht. Wir können das Ergebnis von `cache.cacheWrite` verwerfen, da wir wissen, dass Cache-Schlüssel linear zugewiesen werden.
 
 ```solidity
         }
@@ -380,7 +388,7 @@ Zuerst schreiben wir jeden Wert zweimal in den Cache und stellen sicher, dass di
     }    // testRepeatCaching
 ```
 
-Theoretisch könnte es einen Fehler geben, der aufeinanderfolgende Cache-Schreibvorgänge nicht betrifft. Hier führen wir also einige Schreibvorgänge durch, die nicht aufeinanderfolgend sind, und sehen, dass die Werte immer noch nicht neu geschrieben werden.
+Theoretisch könnte es einen Fehler geben, der aufeinanderfolgende Cache-Schreibvorgänge nicht betrifft. Daher führen wir hier einige Schreibvorgänge durch, die nicht aufeinanderfolgend sind, und sehen, dass die Werte immer noch nicht überschrieben werden.
 
 ```solidity
     // Einen uint aus einem Speicherpuffer lesen (um sicherzustellen, dass wir die Parameter zurückbekommen,
@@ -389,7 +397,7 @@ Theoretisch könnte es einen Fehler geben, der aufeinanderfolgende Cache-Schreib
         returns (uint256)
 ```
 
-Ein 256-Bit-Wort aus einem `bytes memory`-Puffer lesen. Diese Hilfsfunktion ermöglicht es uns zu überprüfen, ob wir die korrekten Ergebnisse erhalten, wenn wir einen Funktionsaufruf ausführen, der den Cache nutzt.
+Ein 256-Bit-Wort aus einem `bytes memory`-Puffer lesen. Diese Hilfsfunktion ermöglicht es uns zu überprüfen, ob wir die richtigen Ergebnisse erhalten, wenn wir einen Funktionsaufruf ausführen, der den Cache verwendet.
 
 ```solidity
     {
@@ -408,7 +416,7 @@ Yul unterstützt keine Datenstrukturen über `uint256` hinaus. Wenn Sie sich als
         return tempUint;
     }     // toUint256
 
-    // Funktionssignatur für fourParams(), mit freundlicher Genehmigung von
+    // Funktionssignatur für fourParams(), mit freundlicher Unterstützung von
     // https://www.4byte.directory/signatures/?bytes4_signature=0x3edc1e6d
     bytes4 constant FOUR_PARAMS = 0x3edc1e6d;
 
@@ -425,7 +433,7 @@ Einige Konstanten, die wir zum Testen benötigen.
     function testReadParam() public {
 ```
 
-`fourParams()` aufrufen, eine Funktion, die `readParams` verwendet, um zu testen, ob wir Parameter korrekt lesen können.
+Rufen Sie `fourParams()` auf, eine Funktion, die `readParams` verwendet, um zu testen, ob wir Parameter korrekt lesen können.
 
 ```solidity
         address _cacheAddr = address(cache);
@@ -434,7 +442,7 @@ Einige Konstanten, die wir zum Testen benötigen.
         bytes memory _callOutput;
 ```
 
-Wir können nicht den normalen ABI-Mechanismus verwenden, um eine Funktion aufzurufen, die den Cache nutzt, also müssen wir den Low-Level-Mechanismus [`<address>.call()`](https://docs.soliditylang.org/en/v0.8.16/types.html#members-of-addresses) verwenden. Dieser Mechanismus nimmt ein `bytes memory` als Eingabe und gibt dieses (sowie einen booleschen Wert) als Ausgabe zurück.
+Wir können den normalen ABI-Mechanismus nicht verwenden, um eine Funktion aufzurufen, die den Cache nutzt, daher müssen wir den Low-Level-Mechanismus [`<address>.call()`](https://docs.soliditylang.org/en/v0.8.16/types.html#members-of-addresses) verwenden. Dieser Mechanismus nimmt `bytes memory` als Eingabe und gibt diese (sowie einen booleschen Wert) als Ausgabe zurück.
 
 ```solidity
         // Erster Aufruf, der Cache ist leer
@@ -442,10 +450,10 @@ Wir können nicht den normalen ABI-Mechanismus verwenden, um eine Funktion aufzu
             FOUR_PARAMS,
 ```
 
-Es ist nützlich, wenn derselbe Vertrag sowohl gecachte Funktionen (für Aufrufe direkt aus Transaktionen) als auch nicht gecachte Funktionen (für Aufrufe von anderen Smart Contracts) unterstützt. Um dies zu tun, müssen wir uns weiterhin auf den Solidity-Mechanismus verlassen, um die richtige Funktion aufzurufen, anstatt alles in [eine `fallback`-Funktion](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function) zu packen. Dies macht die Komponierbarkeit viel einfacher. Ein einzelnes Byte würde in den meisten Fällen ausreichen, um die Funktion zu identifizieren, also verschwenden wir drei Bytes (16\*3=48 Gas). Während ich dies schreibe, kosten diese 48 Gas jedoch 0,07 Cent, was ein angemessener Preis für einfacheren, weniger fehleranfälligen Code ist.
+Es ist nützlich, wenn derselbe Vertrag sowohl gecachte Funktionen (für Aufrufe direkt aus Transaktionen) als auch nicht gecachte Funktionen (für Aufrufe von anderen Smart Contracts) unterstützt. Um dies zu tun, müssen wir uns weiterhin auf den Solidity-Mechanismus verlassen, um die richtige Funktion aufzurufen, anstatt alles in [eine `fallback`-Funktion](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function) zu packen. Dies macht die Komponierbarkeit viel einfacher. Ein einzelnes Byte würde in den meisten Fällen ausreichen, um die Funktion zu identifizieren, also verschwenden wir drei Bytes. Mit der aktuellen OP-Stack-Gebührenformel fügen diese drei Bytes einen winzigen Bruchteil eines Cents hinzu (wenn überhaupt, siehe den Hinweis oben im Artikel), was angemessene Kosten für einfacheren, weniger fehleranfälligen Code sind.
 
 ```solidity
-            // Erster Wert, ihn zum Cache hinzufügen
+            // Erster Wert, zum Cache hinzufügen
             cache.INTO_CACHE(),
             bytes32(VAL_A),
 ```
@@ -476,7 +484,7 @@ Wir erwarten, dass der Aufruf erfolgreich ist.
 Wir beginnen mit einem leeren Cache und fügen dann `VAL_A` gefolgt von `VAL_C` hinzu. Wir würden erwarten, dass der erste den Schlüssel 1 und der zweite den Schlüssel 2 hat.
 
 ```
-assertEq(toUint256(_callOutput,0), VAL_A);
+        assertEq(toUint256(_callOutput,0), VAL_A);
         assertEq(toUint256(_callOutput,32), VAL_B);
         assertEq(toUint256(_callOutput,64), VAL_C);
         assertEq(toUint256(_callOutput,96), VAL_C);
@@ -496,7 +504,7 @@ Die Ausgabe sind die vier Parameter. Hier überprüfen wir, ob sie korrekt ist.
 Cache-Schlüssel unter 16 sind nur ein Byte groß.
 
 ```solidity
-            // Zweiter Wert, ihn nicht zum Cache hinzufügen
+            // Zweiter Wert, nicht zum Cache hinzufügen
             cache.DONT_CACHE(),
             bytes32(VAL_B),
 
@@ -516,7 +524,7 @@ Die Tests nach dem Aufruf sind identisch mit denen nach dem ersten Aufruf.
     function testEncodeVal() public {
 ```
 
-Diese Funktion ist ähnlich wie `testReadParam`, außer dass wir anstelle des expliziten Schreibens der Parameter `encodeVal()` verwenden.
+Diese Funktion ähnelt `testReadParam`, außer dass wir anstelle des expliziten Schreibens der Parameter `encodeVal()` verwenden.
 
 ```solidity
         .
@@ -536,23 +544,23 @@ Diese Funktion ist ähnlich wie `testReadParam`, außer dass wir anstelle des ex
     }   // testEncodeVal
 ```
 
-Der einzige zusätzliche Test in `testEncodeVal()` besteht darin zu überprüfen, ob die Länge von `_callInput` korrekt ist. Für den ersten Aufruf ist sie 4+33\*4. Für den zweiten, bei dem jeder Wert bereits im Cache ist, ist sie 4+1\*4.
+Der einzige zusätzliche Test in `testEncodeVal()` besteht darin, zu überprüfen, ob die Länge von `_callInput` korrekt ist. Für den ersten Aufruf ist sie 4+33\*4. Für den zweiten, bei dem sich jeder Wert bereits im Cache befindet, ist sie 4+1\*4.
 
 ```solidity
     // encodeVal testen, wenn der Schlüssel mehr als ein einzelnes Byte ist
-    // Maximal drei Bytes, da das Füllen des Caches auf vier Bytes zu lange
-    // dauert.
+    // Maximal drei Bytes, da das Füllen des Caches auf vier Bytes
+    // zu lange dauert.
     function testEncodeValBig() public {
         // Eine Reihe von Werten in den Cache legen.
-        // Um es einfach zu halten, Schlüssel n für Wert n verwenden.
+        // Um die Dinge einfach zu halten, Schlüssel n für Wert n verwenden.
         for(uint i=1; i<0x1FFF; i++) {
             cache.cacheWrite(i);
         }
 ```
 
-Die obige Funktion `testEncodeVal` schreibt nur vier Werte in den Cache, sodass [der Teil der Funktion, der sich mit Multi-Byte-Werten befasst](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol#L144-L171), nicht überprüft wird. Aber dieser Code ist kompliziert und fehleranfällig.
+Die obige Funktion `testEncodeVal` schreibt nur vier Werte in den Cache, sodass [der Teil der Funktion, der sich mit Multi-Byte-Werten befasst](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol#L144-L171) nicht überprüft wird. Aber dieser Code ist kompliziert und fehleranfällig.
 
-Der erste Teil dieser Funktion ist eine Schleife, die alle Werte von 1 bis 0x1FFF der Reihe nach in den Cache schreibt, sodass wir diese Werte kodieren können und wissen, wo sie landen.
+Der erste Teil dieser Funktion ist eine Schleife, die alle Werte von 1 bis 0x1FFF der Reihe nach in den Cache schreibt, sodass wir diese Werte kodieren können und wissen, wohin sie gehen.
 
 ```solidity
         .
@@ -568,7 +576,7 @@ Der erste Teil dieser Funktion ist eine Schleife, die alle Werte von 1 bis 0x1FF
         );
 ```
 
-Ein-Byte-, Zwei-Byte- und Drei-Byte-Werte testen. Wir testen nicht darüber hinaus, da es zu lange dauern würde, genügend Stack-Einträge zu schreiben (mindestens 0x10000000, etwa eine Viertelmilliarde).
+Testen Sie Ein-Byte-, Zwei-Byte- und Drei-Byte-Werte. Wir testen nicht darüber hinaus, da es zu lange dauern würde, genügend Stack-Einträge zu schreiben (mindestens 0x10000000, ungefähr eine Viertelmilliarde).
 
 ```solidity
         .
@@ -582,7 +590,7 @@ Ein-Byte-, Zwei-Byte- und Drei-Byte-Werte testen. Wir testen nicht darüber hina
     function testShortCalldata() public {
 ```
 
-Testen, was im abnormalen Fall passiert, wenn nicht genügend Parameter vorhanden sind.
+Testen Sie, was im abnormalen Fall passiert, wenn nicht genügend Parameter vorhanden sind.
 
 ```solidity
         .
@@ -593,10 +601,10 @@ Testen, was im abnormalen Fall passiert, wenn nicht genügend Parameter vorhande
     }   // testShortCalldata
 ```
 
-Da es rückgängig gemacht wird (revertiert), ist das Ergebnis, das wir erhalten sollten, `false`.
+Da er rückgängig gemacht wird (revertiert), sollte das Ergebnis, das wir erhalten, `false` sein.
 
 ```
-// Aufruf mit Cache-Schlüsseln, die nicht vorhanden sind
+    // Aufruf mit Cache-Schlüsseln, die nicht vorhanden sind
     function testNoCacheKey() public {
         .
         .
@@ -621,7 +629,7 @@ Diese Funktion erhält vier völlig legitime Parameter, außer dass der Cache le
         .
         .
         .
-    // Testen, dass mit einem übermäßig langen Puffer alles einwandfrei funktioniert
+    // Testen, dass bei einem übermäßig langen Puffer alles einwandfrei funktioniert
     function testLongCalldata() public {
         address _cacheAddr = address(cache);
         bool _success;
@@ -632,24 +640,24 @@ Diese Funktion erhält vier völlig legitime Parameter, außer dass der Cache le
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
-            // Erster Wert, ihn zum Cache hinzufügen
+            // Erster Wert, zum Cache hinzufügen
             cache.INTO_CACHE(), bytes32(VAL_A),
 
-            // Zweiter Wert, ihn zum Cache hinzufügen
+            // Zweiter Wert, zum Cache hinzufügen
             cache.INTO_CACHE(), bytes32(VAL_B),
 
-            // Dritter Wert, ihn zum Cache hinzufügen
+            // Dritter Wert, zum Cache hinzufügen
             cache.INTO_CACHE(), bytes32(VAL_C),
 
-            // Vierter Wert, ihn zum Cache hinzufügen
+            // Vierter Wert, zum Cache hinzufügen
             cache.INTO_CACHE(), bytes32(VAL_D),
 
-            // Und noch ein Wert für "viel Glück"
+            // Und ein weiterer Wert für "viel Glück"
             bytes4(0x31112233)
         );
 ```
 
-Diese Funktion sendet fünf Werte. Wir wissen, dass der fünfte Wert ignoriert wird, da es sich nicht um einen gültigen Cache-Eintrag handelt, was zu einem Revert geführt hätte, wenn er nicht enthalten gewesen wäre.
+Diese Funktion sendet fünf Werte. Wir wissen, dass der fünfte Wert ignoriert wird, da er kein gültiger Cache-Eintrag ist, was zu einem Revert geführt hätte, wenn er nicht enthalten gewesen wäre.
 
 ```solidity
         (_success, _callOutput) = _cacheAddr.call(_callInput);
@@ -718,7 +726,7 @@ Die Lesefunktion ist eine `view`-Funktion, benötigt also keine Transaktion und 
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[So (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) geben wir in einem Foundry-Test an, dass der nächste Aufruf fehlschlagen soll, sowie den gemeldeten Grund für das Fehlschlagen. Dies gilt, wenn wir die Syntax `<contract>.<function name>()` verwenden, anstatt die Calldata zu erstellen und den Vertrag über die Low-Level-Schnittstelle (`<contract>.call()` usw.) aufzurufen.
+[So (`vm.expectRevert`)](https://getfoundry.sh/reference/cheatcodes/expect-revert/) geben wir in einem Foundry-Test an, dass der nächste Aufruf fehlschlagen soll, und den gemeldeten Grund für einen Fehler. Dies gilt, wenn wir die Syntax `<contract>.<function name>()` verwenden, anstatt die Calldata zu erstellen und den Vertrag über die Low-Level-Schnittstelle (`<contract>.call()` usw.) aufzurufen.
 
 ```solidity
     function testReadWriteCached() public {
@@ -758,45 +766,66 @@ Auf diese Weise überprüfen wir in Foundry, ob Code [ein Ereignis korrekt ausgi
 
 ### Der Client {#the-client}
 
-Eine Sache, die Sie bei Solidity-Tests nicht bekommen, ist JavaScript-Code, den Sie ausschneiden und in Ihre eigene Anwendung einfügen können. Die ursprüngliche Version dieses Tutorials hat WORM auf Optimism Goerli bereitgestellt, das inzwischen eingestellt wurde. Um den Client heute auszuführen, stellen Sie WORM erneut in einem unterstützten OP-Stack-Netzwerk wie [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack) bereit und verwenden Sie dann die resultierende Vertragsadresse im JavaScript-Client.
+Eine Sache, die Sie bei Solidity-Tests nicht erhalten, ist JavaScript-Code, den Sie ausschneiden und in Ihre eigene Anwendung einfügen können. Die ursprüngliche Version dieses Tutorials stellte WORM auf Optimism Goerli bereit, das inzwischen abgeschaltet wurde. Das Beispiel-Repository verweist immer noch auf Optimism Goerli. Um den Client heute auszuführen, müssen Sie WORM selbst auf [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack) bereitstellen und den Client auf Ihre Bereitstellung verweisen.
 
-[Den JavaScript-Code für den Client finden Sie hier](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Das Beispiel-Repository wurde für Optimism Goerli geschrieben. Bevor Sie es ausführen, aktualisieren Sie daher den RPC-Endpunkt und die Explorer-URLs in `javascript/.env.example` und `javascript/index.js` für Ihr Zielnetzwerk. So verwenden Sie es:
+[Sie können den JavaScript-Code für den Client hier sehen](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Um ihn zu verwenden, benötigen Sie [Foundry](https://getfoundry.sh/introduction/installation/), [Node.js](https://nodejs.org/) und ein Konto mit etwas OP Sepolia ETH. [Die Faucet-Dokumentation von Optimism](https://docs.optimism.io/app-developers/tools-sdks/faucets) listet aktuelle Testnetz-Faucets auf.
 
-1. Klonen Sie das Git-Repository:
+1. Klonen Sie das Git-Repository, einschließlich des Submoduls `forge-std`, und kompilieren Sie die Verträge. Der Client liest die WORM-ABI und den Bytecode aus `out/WORM.sol/WORM.json`, was erst nach `forge build` existiert.
 
    ```sh
-   git clone https://github.com/qbzzt/20220915-all-you-can-cache.git
+   git clone --recurse-submodules https://github.com/qbzzt/20220915-all-you-can-cache.git
+   cd 20220915-all-you-can-cache
+   forge build
    ```
 
-2. Installieren Sie die erforderlichen Pakete:
+   Forge warnt, dass `foundry.toml` den alten Abschnittsnamen `[default]` verwendet. Sie können diese Warnung ignorieren oder `forge config --fix` ausführen.
+
+2. Importieren Sie den privaten Schlüssel Ihres aufgeladenen Kontos in einen verschlüsselten Foundry-Schlüsselspeicher und verwenden Sie ihn, um [WORM auf OP Sepolia bereitzustellen](https://getfoundry.sh/reference/forge/create).
+
+   ```sh
+   cast wallet import op-sepolia-deployer --interactive
+   forge create src/WORM.sol:WORM --rpc-url https://sepolia.optimism.io --account op-sepolia-deployer --broadcast
+   ```
+
+   Ohne `--broadcast` simuliert `forge create` die Bereitstellung nur. Kopieren Sie die Adresse aus der Zeile `Deployed to:` der Ausgabe.
+
+3. Bearbeiten Sie `javascript/index.js`. Ersetzen Sie die alte Optimism-Goerli-Adresse in dieser Zeile durch die Adresse Ihrer Bereitstellung:
+
+   ```javascript
+   const worm = WormFactory.attach("0xD34335b1d818ceE54e3323D3246bD31d94E6a78a")
+   ```
+
+   Sie können auch `https://goerli-optimism.etherscan.io` durch `https://sepolia-optimism.etherscan.io` in den beiden Zeilen `console.log` ersetzen, damit die vom Client ausgegebenen Links funktionieren.
+
+4. Installieren Sie die erforderlichen Pakete:
 
    ```sh
    cd javascript
-   yarn
+   npm install
    ```
 
-3. Kopieren Sie die Konfigurationsdatei:
+5. Kopieren Sie die Konfigurationsdatei:
 
    ```sh
    cp .env.example .env
    ```
 
-4. Bearbeiten Sie `.env` für Ihre Konfiguration:
+6. Bearbeiten Sie `.env` für Ihre Konfiguration. Die Variablennamen beziehen sich immer noch auf Optimism Goerli, aber die Werte gelten für OP Sepolia:
 
-   | Parameter           | Wert                                                                                                                                                               |
-   | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC            | Die Mnemonic für ein Konto, das über genügend ETH verfügt, um eine Transaktion zu bezahlen. [Die Faucet-Dokumentation von Optimism](https://docs.optimism.io/app-developers/tools/faucets) listet aktuelle Testnetz-Faucets auf. |
-   | OPTIMISM_GOERLI_URL | RPC-URL für das Netzwerk, in dem Sie WORM erneut bereitstellen. Verwenden Sie für OP Sepolia einen OP-Sepolia-RPC-Endpunkt wie `https://sepolia.optimism.io` oder einen anderen Endpunkt von Ihrem Anbieter.        |
+   | Parameter           | Wert                                                                                                   |
+   | ------------------- | ------------------------------------------------------------------------------------------------------- |
+   | MNEMONIC            | Die Mnemonic für ein Konto, das über genügend OP Sepolia ETH verfügt, um eine Transaktion zu bezahlen.                    |
+   | OPTIMISM_GOERLI_URL | Die OP Sepolia RPC-URL, `https://sepolia.optimism.io` oder ein OP Sepolia-Endpunkt eines anderen Anbieters. |
 
-5. Führen Sie `index.js` aus.
+7. Führen Sie `index.js` aus.
 
    ```sh
    node index.js
    ```
 
-   Diese Beispielanwendung schreibt zunächst einen Eintrag in WORM und zeigt die Calldata sowie einen Link zur Transaktion in einem Block-Explorer an. Anschließend liest sie diesen Eintrag wieder aus und zeigt den verwendeten Schlüssel sowie die Werte im Eintrag (Wert, Blocknummer und Autor) an.
+   Diese Beispielanwendung schreibt zunächst einen Eintrag in WORM und zeigt die Calldata sowie einen Link zur Transaktion in einem Block-Explorer an. Dann liest sie diesen Eintrag zurück und zeigt den verwendeten Schlüssel sowie die Werte im Eintrag an (Wert, Blocknummer und Autor).
 
-Der Großteil des Clients ist normales JavaScript für eine Dezentrale Anwendung (Dapp). Wir werden also auch hier nur auf die interessanten Teile eingehen.
+Der Großteil des Clients ist normales Dapp-JavaScript. Daher werden wir auch hier nur auf die interessanten Teile eingehen.
 
 ```javascript
 .
@@ -805,7 +834,7 @@ Der Großteil des Clients ist normales JavaScript für eine Dezentrale Anwendung
 const main = async () => {
     const func = await worm.WRITE_ENTRY_CACHED()
 
-    // Benötigt jedes Mal einen neuen Schlüssel
+    // Benötige jedes Mal einen neuen Schlüssel
     const key = await worm.encodeVal(Number(new Date()))
 ```
 
@@ -818,7 +847,7 @@ const val = await worm.encodeVal("0x600D")
 const calldata = func + key.slice(2) + val.slice(2)
 ```
 
-Ethers erwartet, dass die Aufrufdaten ein Hex-String sind, also `0x` gefolgt von einer geraden Anzahl hexadezimaler Ziffern. Da sowohl `key` als auch `val` mit `0x` beginnen, müssen wir diese Header entfernen.
+Ethers erwartet, dass die Calldata ein Hex-String sind, `0x` gefolgt von einer geraden Anzahl hexadezimaler Ziffern. Da sowohl `key` als auch `val` mit `0x` beginnen, müssen wir diese Header entfernen.
 
 ```javascript
 const tx = await worm.populateTransaction.writeEntryCached()
@@ -842,25 +871,27 @@ Wie beim Solidity-Testcode können wir eine gecachte Funktion nicht normal aufru
 ```
 
 Zum Lesen von Einträgen können wir den normalen Mechanismus verwenden. Es besteht keine Notwendigkeit, Parameter-Caching bei `view`-Funktionen zu verwenden.
+
 ## Fazit {#conclusion}
 
-Der Code in diesem Artikel ist ein Proof of Concept; der Zweck ist es, die Idee leicht verständlich zu machen. Für ein produktionsreifes System möchten Sie vielleicht einige zusätzliche Funktionen implementieren:
+Der Code in diesem Artikel ist ein Proof of Concept, dessen Zweck es ist, die Idee leicht verständlich zu machen. Für ein produktionsreifes System möchten Sie möglicherweise einige zusätzliche Funktionen implementieren:
 
-- Werte verarbeiten, die nicht `uint256` sind. Zum Beispiel Strings.
-- Anstelle eines globalen Caches vielleicht ein Mapping zwischen Benutzern und Caches haben. Verschiedene Benutzer verwenden unterschiedliche Werte.
+- Behandeln Sie Werte, die nicht `uint256` sind. Zum Beispiel Strings.
+- Anstelle eines globalen Caches könnte es ein Mapping zwischen Benutzern und Caches geben. Verschiedene Benutzer verwenden unterschiedliche Werte.
 - Werte, die für Adressen verwendet werden, unterscheiden sich von denen, die für andere Zwecke verwendet werden. Es könnte sinnvoll sein, einen separaten Cache nur für Adressen zu haben.
-- Derzeit basieren die Cache-Schlüssel auf einem "Wer zuerst kommt, erhält den kleinsten Schlüssel"-Algorithmus. Die ersten sechzehn Werte können als einzelnes Byte gesendet werden. Die nächsten 4080 Werte können als zwei Bytes gesendet werden. Die nächsten etwa eine Million Werte sind drei Bytes usw. Ein Produktionssystem sollte Nutzungszähler für Cache-Einträge führen und diese so reorganisieren, dass die sechzehn _häufigsten_ Werte ein Byte sind, die nächsten 4080 häufigsten Werte zwei Bytes usw.
+- Derzeit basieren die Cache-Schlüssel auf einem "Wer zuerst kommt, erhält den kleinsten Schlüssel"-Algorithmus. Die ersten sechzehn Werte können als ein einzelnes Byte gesendet werden. Die nächsten 4080 Werte können als zwei Bytes gesendet werden. Die nächsten etwa eine Million Werte sind drei Bytes usw. Ein Produktionssystem sollte Nutzungszähler für Cache-Einträge führen und diese so reorganisieren, dass die sechzehn _häufigsten_ Werte ein Byte sind, die nächsten 4080 häufigsten Werte zwei Bytes usw.
 
-  Das ist jedoch eine potenziell gefährliche Operation. Stellen Sie sich folgende Abfolge von Ereignissen vor:
+  Dies ist jedoch eine potenziell gefährliche Operation. Stellen Sie sich folgende Abfolge von Ereignissen vor:
 
-  1. Noam Naive ruft `encodeVal` auf, um die Adresse zu kodieren, an die er Token senden möchte. Diese Adresse ist eine der ersten, die in der Anwendung verwendet wird, daher ist der kodierte Wert 0x06. Dies ist eine `view`-Funktion, keine Transaktion, also findet sie zwischen Noam und dem von ihm genutzten Knoten statt, und niemand sonst weiß davon.
+  1. Noam Naive ruft `encodeVal` auf, um die Adresse zu kodieren, an die er Token senden möchte. Diese Adresse ist eine der ersten, die in der Anwendung verwendet wird, daher ist der kodierte Wert 0x06. Dies ist eine `view`-Funktion, keine Transaktion, also findet sie zwischen Noam und dem von ihm verwendeten Knoten statt, und niemand sonst weiß davon.
 
-  2. Owen Owner führt die Cache-Reorganisationsoperation aus. Sehr wenige Leute nutzen diese Adresse tatsächlich, also wird sie nun als 0x201122 kodiert. Einem anderen Wert, 10<sup>18</sup>, wird 0x06 zugewiesen.
+  2. Owen Owner führt die Cache-Neuordnungsoperation aus. Sehr wenige Leute verwenden diese Adresse tatsächlich, daher wird sie jetzt als 0x201122 kodiert. Einem anderen Wert, 10<sup>18</sup>, wird 0x06 zugewiesen.
 
   3. Noam Naive sendet seine Token an 0x06. Sie gehen an die Adresse `0x0000000000000000000000000de0b6b3a7640000`, und da niemand den privaten Schlüssel für diese Adresse kennt, stecken sie dort einfach fest. Noam ist _nicht glücklich_.
 
-  Es gibt Möglichkeiten, dieses Problem und das damit verbundene Problem von Transaktionen, die sich während der Cache-Reorganisation im Mempool befinden, zu lösen, aber Sie müssen sich dessen bewusst sein.
+  Es gibt Möglichkeiten, dieses Problem und das damit verbundene Problem von Transaktionen zu lösen, die sich während der Cache-Neuordnung im Mempool befinden, aber Sie müssen sich dessen bewusst sein.
 
-Ich habe Caching hier mit Optimism demonstriert, weil ich ein Optimism-Mitarbeiter bin und dies das Rollup ist, das ich am besten kenne. Aber es sollte mit jedem Rollup funktionieren, das minimale Kosten für die interne Verarbeitung berechnet, sodass im Vergleich dazu das Schreiben der Transaktionsdaten auf L1 der größte Kostenfaktor ist.
+Ich habe Caching hier mit Optimism demonstriert, weil ich ein Mitarbeiter von Optimism bin und dies das Rollup ist, das ich am besten kenne. Aber es sollte mit jedem Rollup funktionieren, das minimale Kosten für die interne Verarbeitung berechnet, sodass im Vergleich dazu das Schreiben der Transaktionsdaten auf L1 der Hauptkostenfaktor ist. Wie im Hinweis oben in diesem Artikel erklärt, überprüfen Sie die aktuellen Gebühren, bevor Sie entscheiden, ob sich Caching lohnt.
 
 [Weitere meiner Arbeiten finden Sie hier](https://cryptodocguy.pro/).
+

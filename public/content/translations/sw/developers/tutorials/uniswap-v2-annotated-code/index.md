@@ -22,7 +22,7 @@ _Wafanyabiashara_ hutuma aina moja ya tokeni kwenye bwawa na kupokea nyingine (k
 
 Wakati watoa ukwasi wanapotaka rasilimali zao zirudishwe wanaweza kuteketeza tokeni za bwawa na kupokea tena tokeni zao, ikijumuisha sehemu yao ya tuzo.
 
-[Bofya hapa kwa maelezo kamili](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
+[Bofya hapa kwa maelezo kamili](https://developers.uniswap.org/docs/protocols/v2/concepts/swapping).
 
 ### Kwa nini v2? Kwa nini si v3? {#why-v2}
 
@@ -109,7 +109,7 @@ Hii ni mikataba salama ambayo inashikilia ukwasi.
 
 ### UniswapV2Pair.sol {#uniswapv2pair}
 
-[Mkataba huu](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) unatekeleza bwawa halisi ambalo hubadilishana tokeni. Ni utendaji wa msingi wa Uniswap.
+[Mkataba huu](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol) unatekeleza bwawa halisi ambalo hubadilishana tokeni. Ni utendaji wa msingi wa Uniswap.
 
 ```solidity
 pragma solidity =0.5.16;
@@ -123,7 +123,7 @@ import './interfaces/IUniswapV2Factory.sol';
 import './interfaces/IUniswapV2Callee.sol';
 ```
 
-Hizi ni miingiliano yote ambayo mkataba unahitaji kujua, iwe kwa sababu mkataba unazitekeleza (`IUniswapV2Pair` na `UniswapV2ERC20`) au kwa sababu unaita mikataba inayoitekeleza.
+Hizi ni miingiliano yote ambayo mkataba unahitaji kujua, iwe kwa sababu mkataba unaitekeleza (`IUniswapV2Pair` na `UniswapV2ERC20`) au kwa sababu unaita mikataba inayoitekeleza.
 
 ```solidity
 contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
@@ -135,13 +135,13 @@ Mkataba huu unarithi kutoka kwa `UniswapV2ERC20`, ambayo hutoa kazi za ERC-20 kw
     using SafeMath  for uint;
 ```
 
-[Maktaba ya SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) inatumika kuepuka kufurika na kupungua. Hili ni muhimu kwa sababu vinginevyo tunaweza kuishia na hali ambapo thamani inapaswa kuwa `-1`, lakini badala yake inakuwa `2^256-1`.
+[Maktaba ya SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) inatumika kuepuka kufurika (overflows) na kupungua (underflows). Hii ni muhimu kwa sababu vinginevyo tunaweza kuishia na hali ambapo thamani inapaswa kuwa `-1`, lakini badala yake inakuwa `2^256-1`.
 
 ```solidity
     using UQ112x112 for uint224;
 ```
 
-Mahesabu mengi katika mkataba wa bwawa yanahitaji sehemu. Hata hivyo, sehemu hazitumiki na EVM.
+Hesabu nyingi katika mkataba wa bwawa zinahitaji sehemu (fractions). Hata hivyo, sehemu hazitumiki na EVM.
 Suluhisho ambalo Uniswap ilipata ni kutumia thamani za biti 224, zikiwa na biti 112 kwa sehemu ya nambari kamili, na biti 112 kwa sehemu. Kwa hivyo `1.0` inawakilishwa kama `2^112`, `1.5` inawakilishwa kama `2^112 + 2^111`, n.k.
 
 Maelezo zaidi kuhusu maktaba hii yanapatikana [baadaye katika waraka huu](#fixedpoint).
@@ -334,12 +334,12 @@ Konstrukta inahakikisha tutafuatilia anwani ya kiwanda kilichounda jozi. Taarifa
 
 Kazi hii inaruhusu kiwanda (na kiwanda pekee) kubainisha tokeni mbili za ERC-20 ambazo jozi hii itabadilishana.
 
-#### Kazi za Ndani za Usasishaji {#pair-update-internal}
+#### Kazi za Usasishaji wa Ndani {#pair-update-internal}
 
 ##### \_update
 
 ```solidity
-    // sasisha akiba na, kwenye wito wa kwanza kwa kila kitalu, vilimbikizi vya bei
+    // sasisha akiba na, kwenye wito wa kwanza kwa kila kitalu, vikusanyaji vya bei
     function _update(uint balance0, uint balance1, uint112 _reserve0, uint112 _reserve1) private {
 ```
 
@@ -349,35 +349,35 @@ Kazi hii inaitwa kila wakati tokeni zinapowekwa au kutolewa.
         require(balance0 <= uint112(-1) && balance1 <= uint112(-1), 'UniswapV2: OVERFLOW');
 ```
 
-Ikiwa balance0 au balance1 (uint256) ni kubwa kuliko uint112(-1) (=2^112-1) (kwa hivyo inafurika na kurudi kwenye 0 inapobadilishwa kuwa uint112) kataa kuendelea na \_update ili kuzuia kufurika. Kwa tokeni ya kawaida inayoweza kugawanywa katika vipande 10^18, hii inamaanisha kila badilishano lina kikomo cha takriban 5.1\*10^15 ya kila tokeni. Kufikia sasa hilo halijawa tatizo.
+Ikiwa balance0 au balance1 (uint256) ni kubwa kuliko uint112(-1) (=2^112-1) (kwa hivyo inafurika na kurudi kwenye 0 inapobadilishwa kuwa uint112) kataa kuendelea na \_update ili kuzuia kufurika. Kwa tokeni ya kawaida inayoweza kugawanywa katika vipande 10^18, hii inamaanisha kila badilishano limezuiwa kwa takriban 5.1\*10^15 ya kila tokeni. Hadi sasa hilo halijawa tatizo.
 
 ```solidity
         uint32 blockTimestamp = uint32(block.timestamp % 2**32);
-        uint32 timeElapsed = blockTimestamp - blockTimestampLast; // kufurika kunahitajika
+        uint32 timeElapsed = blockTimestamp - blockTimestampLast; // kufurika kunatakikana
         if (timeElapsed > 0 && _reserve0 != 0 && _reserve1 != 0) {
 ```
 
-Ikiwa muda uliopita sio sifuri, inamaanisha sisi ni muamala wa kwanza wa badilishano kwenye kitalu hiki. Katika hali hiyo, tunahitaji kusasisha vilimbikizi vya gharama.
+Ikiwa muda uliopita si sifuri, inamaanisha sisi ni muamala wa kwanza wa badilishano kwenye kitalu hiki. Katika hali hiyo, tunahitaji kusasisha vilimbikizi vya gharama.
 
 ```solidity
-            // * haifuriki kamwe, na + kufurika kunahitajika
+            // * haifuriki kamwe, na + kufurika kunatakikana
             price0CumulativeLast += uint(UQ112x112.encode(_reserve1).uqdiv(_reserve0)) * timeElapsed;
             price1CumulativeLast += uint(UQ112x112.encode(_reserve0).uqdiv(_reserve1)) * timeElapsed;
         }
 ```
 
-Kila kilimbikizi cha gharama kinasasishwa na gharama ya hivi punde (akiba ya tokeni nyingine/akiba ya tokeni hii) mara muda uliopita kwa sekunde. Ili kupata bei ya wastani, unasoma bei limbikizi katika pointi mbili za wakati na kugawanya kwa tofauti ya muda kati yao. Kwa mfano, chukulia mfuatano huu wa matukio:
+Kila kilimbikizi cha gharama kinasasishwa na gharama ya hivi punde (akiba ya tokeni nyingine/akiba ya tokeni hii) mara muda uliopita kwa sekunde. Ili kupata wastani wa bei, unasoma bei limbikizi katika nyakati mbili tofauti na kugawanya kwa tofauti ya muda kati yao. Kwa mfano, chukulia mfuatano huu wa matukio:
 
-| Tukio                                                    |  reserve0 |  reserve1 | mhuri wa muda | Kiwango cha ubadilishaji cha ukingoni (reserve1 / reserve0) |       price0CumulativeLast |
+| Tukio                                                    |  reserve0 |  reserve1 | mhuri wa muda | Kiwango cha ubadilishaji cha pembezoni (reserve1 / reserve0) |       price0CumulativeLast |
 | -------------------------------------------------------- | --------: | --------: | --------- | -------------------------------------------: | -------------------------: |
 | Usanidi wa awali                                            | 1,000.000 | 1,000.000 | 5,000     |                                        1.000 |                          0 |
 | Mfanyabiashara A anaweka token0 50 na kupata token1 47.619  | 1,050.000 |   952.381 | 5,020     |                                        0.907 |                         20 |
 | Mfanyabiashara B anaweka token0 10 na kupata token1 8.984   | 1,060.000 |   943.396 | 5,030     |                                        0.890 |       20+10\*0.907 = 29.07 |
 | Mfanyabiashara C anaweka token0 40 na kupata token1 34.305  | 1,100.000 |   909.090 | 5,100     |                                        0.826 |    29.07+70\*0.890 = 91.37 |
 | Mfanyabiashara D anaweka token1 100 na kupata token0 109.01 |   990.990 | 1,009.090 | 5,110     |                                        1.018 |    91.37+10\*0.826 = 99.63 |
-| Mfanyabiashara E anaweka token0 10 na kupata token1 10.079  | 1,000.990 |   999.010 | 5,150     |                                        0.998 | 99.63+40\*1.1018 = 143.702 |
+| Mfanyabiashara E anaweka token0 10 na kupata token1 10.079  | 1,000.990 |   999.010 | 5,150     |                                        0.998 |   99.63+40\*1.018 = 140.35 |
 
-Tuseme tunataka kukokotoa bei ya wastani ya **Token0** kati ya mihuri ya muda 5,030 na 5,150. Tofauti katika thamani ya `price0Cumulative` ni 143.702-29.07=114.632. Huu ni wastani katika dakika mbili (sekunde 120). Kwa hivyo bei ya wastani ni 114.632/120 = 0.955.
+Tuseme tunataka kukokotoa wastani wa bei ya **Token0** kati ya mihuri ya muda 5,030 na 5,150. Tofauti katika thamani ya `price0Cumulative` ni 140.35-29.07=111.28. Huu ni wastani katika dakika mbili (sekunde 120). Kwa hivyo wastani wa bei ni 111.28/120 = 0.927.
 
 Ukotoaji huu wa bei ndio sababu tunahitaji kujua ukubwa wa akiba za zamani.
 
@@ -398,19 +398,19 @@ Hatimaye, sasisha vigezo vya kimataifa na utoe tukio la `Sync`.
     function _mintFee(uint112 _reserve0, uint112 _reserve1) private returns (bool feeOn) {
 ```
 
-Katika Uniswap 2.0 wafanyabiashara wanalipa ada ya 0.30% kutumia soko. Sehemu kubwa ya ada hiyo (0.25% ya biashara) kila wakati huenda kwa watoa ukwasi. 0.05% iliyobaki inaweza kwenda kwa watoa ukwasi au kwa anwani iliyobainishwa na kiwanda kama ada ya itifaki, ambayo inalipa Uniswap kwa juhudi zao za maendeleo.
+Katika Uniswap 2.0 wafanyabiashara hulipa ada ya 0.30% kutumia soko. Sehemu kubwa ya ada hiyo (0.25% ya biashara) huenda kila wakati kwa watoa ukwasi. 0.05% iliyobaki inaweza kwenda kwa watoa ukwasi au kwa anwani iliyobainishwa na kiwanda kama ada ya itifaki, ambayo inailipa Uniswap kwa juhudi zao za maendeleo. Kwenye Mtandao Mkuu wa Ethereum ada hii ya itifaki imewashwa: anwani ya `feeTo` ya kiwanda imewekwa, kwa hivyo 0.05% huenda kwa anwani hiyo badala ya kwa watoa ukwasi.
 
-Ili kupunguza mahesabu (na kwa hivyo gharama za gesi), ada hii inakokotolewa tu wakati ukwasi unaongezwa au kutolewa kwenye bwawa, badala ya kila muamala.
+Ili kupunguza hesabu (na kwa hivyo gharama za gesi), ada hii inakokotolewa tu wakati ukwasi unaongezwa au kuondolewa kwenye bwawa, badala ya kila muamala.
 
 ```solidity
         address feeTo = IUniswapV2Factory(factory).feeTo();
         feeOn = feeTo != address(0);
 ```
 
-Soma marudio ya ada ya kiwanda. Ikiwa ni sifuri basi hakuna ada ya itifaki na hakuna haja ya kukokotoa ada hiyo.
+Soma mahali pa ada ya kiwanda. Ikiwa ni sifuri basi hakuna ada ya itifaki na hakuna haja ya kukokotoa ada hiyo.
 
 ```solidity
-        uint _kLast = kLast; // kuokoa gesi
+        uint _kLast = kLast; // uokoaji wa gesi
 ```
 
 Kigezo cha hali cha `kLast` kiko kwenye hifadhi, kwa hivyo kitakuwa na thamani kati ya miito tofauti kwa mkataba.
@@ -421,7 +421,7 @@ Ufikiaji wa hifadhi ni ghali zaidi kuliko ufikiaji wa kumbukumbu tete ambayo hut
             if (_kLast != 0) {
 ```
 
-Watoa ukwasi wanapata mgao wao kwa kuthaminiwa tu kwa tokeni zao za ukwasi. Lakini ada ya itifaki inahitaji tokeni mpya za ukwasi kufuliwa na kutolewa kwa anwani ya `feeTo`.
+Watoa ukwasi hupata mgao wao kwa kuthaminiwa tu kwa tokeni zao za ukwasi. Lakini ada ya itifaki inahitaji tokeni mpya za ukwasi kufuliwa na kutolewa kwa anwani ya `feeTo`.
 
 ```solidity
                 uint rootK = Math.sqrt(uint(_reserve0).mul(_reserve1));
@@ -437,7 +437,7 @@ Ikiwa kuna ukwasi mpya wa kukusanya ada ya itifaki. Unaweza kuona kazi ya kipeo 
                     uint liquidity = numerator / denominator;
 ```
 
-Ukotoaji huu mgumu wa ada umeelezwa katika [waraka mweupe](https://app.uniswap.org/whitepaper.pdf) kwenye ukurasa wa 5. Tunajua kwamba kati ya wakati `kLast` ilipokokotolewa na sasa hakuna ukwasi ulioongezwa au kutolewa (kwa sababu tunaendesha ukotoaji huu kila wakati ukwasi unapoongezwa au kutolewa, kabla haujabadilika haswa), kwa hivyo mabadiliko yoyote katika `reserve0 * reserve1` lazima yatokane na ada za muamala (bila hizo tungeweka `reserve0 * reserve1` kuwa thabiti).
+Ukotoaji huu mgumu wa ada umeelezwa katika [waraka mweupe](https://app.uniswap.org/whitepaper.pdf) kwenye ukurasa wa 5. Tunajua kwamba kati ya wakati `kLast` ilipokokotolewa na sasa hakuna ukwasi ulioongezwa au kuondolewa (kwa sababu tunaendesha ukotoaji huu kila wakati ukwasi unapoongezwa au kuondolewa, kabla haujabadilika), kwa hivyo mabadiliko yoyote katika `reserve0 * reserve1` lazima yatokane na ada za muamala (bila hizo tungehifadhi `reserve0 * reserve1` kuwa thabiti).
 
 ```solidity
                     if (liquidity > 0) _mint(feeTo, liquidity);
@@ -445,7 +445,7 @@ Ukotoaji huu mgumu wa ada umeelezwa katika [waraka mweupe](https://app.uniswap.o
             }
 ```
 
-Tumia kazi ya `UniswapV2ERC20._mint` kuunda haswa tokeni za ziada za ukwasi na kuzikabidhi kwa `feeTo`.
+Tumia kazi ya `UniswapV2ERC20._mint` kuunda tokeni za ziada za ukwasi na kuzikabidhi kwa `feeTo`.
 
 ```solidity
         } else if (_kLast != 0) {
@@ -454,8 +454,8 @@ Tumia kazi ya `UniswapV2ERC20._mint` kuunda haswa tokeni za ziada za ukwasi na k
     }
 ```
 
-Ikiwa hakuna ada weka `kLast` kuwa sifuri (ikiwa haiko hivyo tayari). Wakati mkataba huu uliandikwa kulikuwa na [kipengele cha kurejesha gesi](https://eips.ethereum.org/EIPS/eip-3298) ambacho kilihimiza mikataba kupunguza ukubwa wa jumla wa hali ya Ethereum kwa kuweka sifuri hifadhi ambayo hawakuhitaji.
-Msimbo huu unapata urejeshaji huo inapowezekana.
+Ikiwa hakuna ada iliyowekwa weka `kLast` kuwa sifuri (ikiwa haijawa hivyo tayari). Ethereum ina kipengele cha kurejesha gesi ambacho kinahimiza mikataba kupunguza ukubwa wa jumla wa hali ya Ethereum kwa kuweka sifuri kwenye hifadhi ambayo hawaihitaji.
+Msimbo huu unapata urejeshaji huo inapowezekana. Tangu sasisho la London ([EIP-3529](https://eips.ethereum.org/EIPS/eip-3529)) urejeshaji ni mdogo na umewekewa kikomo cha sehemu ya tano ya gesi ya muamala, lakini bado upo.
 
 #### Kazi Zinazofikika kwa Nje {#pair-external}
 
@@ -692,7 +692,7 @@ Katika hali hiyo kuna suluhisho mbili:
 
 ### UniswapV2Factory.sol {#uniswapv2factory}
 
-[Mkataba huu](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) unaunda mabadilishano ya jozi.
+[Mkataba huu](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Factory.sol) unaunda mabadilishano ya jozi.
 
 ```solidity
 pragma solidity =0.5.16;
@@ -706,7 +706,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
 ```
 
 Vigezo hivi vya hali ni muhimu kutekeleza ada ya itifaki (tazama [waraka mweupe](https://app.uniswap.org/whitepaper.pdf), uk. 5).
-Anwani ya `feeTo` inalimbikiza tokeni za ukwasi kwa ada ya itifaki, na `feeToSetter` ni anwani inayoruhusiwa kubadilisha `feeTo` kwa anwani tofauti.
+Anwani ya `feeTo` inakusanya tokeni za ukwasi kwa ajili ya ada ya itifaki, na `feeToSetter` ni anwani inayoruhusiwa kubadilisha `feeTo` kuwa anwani tofauti.
 
 ```solidity
     mapping(address => mapping(address => address)) public getPair;
@@ -715,17 +715,18 @@ Anwani ya `feeTo` inalimbikiza tokeni za ukwasi kwa ada ya itifaki, na `feeToSet
 
 Vigezo hivi vinafuatilia jozi, mabadilishano kati ya aina mbili za tokeni.
 
-Ya kwanza, `getPair`, ni ramani inayotambua mkataba wa badilishano la jozi kulingana na tokeni mbili za ERC-20 inazobadilishana. Tokeni za ERC-20 zinatambuliwa na anwani za mikataba inayoitekeleza, kwa hivyo funguo na thamani zote ni anwani. Ili kupata anwani ya badilishano la jozi inayokuruhusu kubadilisha kutoka `tokenA` hadi `tokenB`, unatumia `getPair[<tokenA address>][<tokenB address>]` (au kinyume chake).
+Ya kwanza, `getPair`, ni ramani inayotambulisha mkataba wa badilishano la jozi kulingana na tokeni mbili za ERC-20 inazobadilishana. Tokeni za ERC-20 zinatambulishwa na anwani za mikataba inayoziendesha, kwa hivyo funguo na thamani zote ni anwani. Ili kupata anwani ya badilishano la jozi inayokuruhusu kubadilisha kutoka `tokenA` hadi `tokenB`, unatumia `getPair[<tokenA address>][<tokenB address>]` (au kinyume chake).
 
-Kigezo cha pili, `allPairs`, ni safu inayojumuisha anwani zote za mabadilishano ya jozi yaliyoundwa na kiwanda hiki. Katika Ethereum huwezi kurudia juu ya maudhui ya ramani, au kupata orodha ya funguo zote, kwa hivyo kigezo hiki ndiyo njia pekee ya kujua ni mabadilishano yapi kiwanda hiki kinasimamia.
+Kigezo cha pili, `allPairs`, ni safu inayojumuisha anwani zote za mabadilishano ya jozi yaliyoundwa na kiwanda hiki. Katika Ethereum huwezi kupitia yaliyomo kwenye ramani, au kupata orodha ya funguo zote, kwa hivyo kigezo hiki ndiyo njia pekee ya kujua ni mabadilishano yapi kiwanda hiki kinasimamia.
 
-Kumbuka: Sababu huwezi kurudia juu ya funguo zote za ramani ni kwamba hifadhi ya data ya mkataba ni _ghali_, kwa hivyo kadiri tunavyotumia kidogo ndivyo bora, na kadiri tunavyoibadilisha mara chache ndivyo bora. Unaweza kuunda [ramani zinazounga mkono urudiaji](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol), lakini zinahitaji hifadhi ya ziada kwa orodha ya funguo. Katika programu nyingi huhitaji hilo.
+Kumbuka: Sababu huwezi kupitia funguo zote za ramani ni kwamba hifadhi ya data ya mkataba ni _ghali_, kwa hivyo kadiri tunavyotumia kidogo ndivyo inavyokuwa bora, na kadiri tunavyoibadilisha mara chache
+ndivyo inavyokuwa bora. Unaweza kuunda [ramani zinazounga mkono upitiaji](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol), lakini zinahitaji hifadhi ya ziada kwa orodha ya funguo. Katika programu nyingi huhitaji hilo.
 
 ```solidity
     event PairCreated(address indexed token0, address indexed token1, address pair, uint);
 ```
 
-Tukio hili hutolewa wakati badilishano jipya la jozi linaundwa. Linajumuisha anwani za tokeni, anwani ya badilishano la jozi, na jumla ya idadi ya mabadilishano yanayosimamiwa na kiwanda.
+Tukio hili hutolewa wakati badilishano jipya la jozi linapoundwa. Linajumuisha anwani za tokeni, anwani ya badilishano la jozi, na jumla ya idadi ya mabadilishano yanayosimamiwa na kiwanda.
 
 ```solidity
     constructor(address _feeToSetter) public {
@@ -741,7 +742,7 @@ Kitu pekee ambacho konstrukta inafanya ni kubainisha `feeToSetter`. Viwanda huan
     }
 ```
 
-Kazi hii inarudisha idadi ya jozi za badilishano.
+Kazi hii inarudisha idadi ya jozi za mabadilishano.
 
 ```solidity
     function createPair(address tokenA, address tokenB) external returns (address pair) {
@@ -754,7 +755,7 @@ Hii ndiyo kazi kuu ya kiwanda, kuunda badilishano la jozi kati ya tokeni mbili z
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Tunataka anwani ya badilishano jipya iwe ya kubainika, ili iweze kukokotolewa mapema nje ya mnyororo (hii inaweza kuwa muhimu kwa [miamala ya tabaka la 2 (l2)](/developers/docs/scaling/)).
+Tunataka anwani ya badilishano jipya iwe ya kubainika, ili iweze kukokotolewa mapema nje ya mnyororo (hii inaweza kuwa muhimu kwa [miamala ya tabaka la 2](/developers/docs/scaling/)).
 Ili kufanya hivi tunahitaji kuwa na mpangilio thabiti wa anwani za tokeni, bila kujali mpangilio ambao tumezipokea, kwa hivyo tunazipanga hapa.
 
 ```solidity
@@ -768,8 +769,8 @@ Mabwawa makubwa ya ukwasi ni bora kuliko madogo, kwa sababu yana bei thabiti zai
         bytes memory bytecode = type(UniswapV2Pair).creationCode;
 ```
 
-Ili kuunda mkataba mpya tunahitaji msimbo unaouunda (kazi ya konstrukta na msimbo unaoandika kwenye kumbukumbu msimbo wa baiti wa EVM wa mkataba halisi). Kawaida katika Solidity tunatumia tu `addr = new <name of contract>(<constructor parameters>)` na kikusanyaji kinashughulikia kila kitu kwa ajili yetu, lakini ili kuwa na anwani ya mkataba inayobainika tunahitaji kutumia [msimbo wa operesheni wa CREATE2](https://eips.ethereum.org/EIPS/eip-1014).
-Wakati msimbo huu uliandikwa msimbo huo wa operesheni ulikuwa bado hautumiki na Solidity, kwa hivyo ilikuwa muhimu kupata msimbo kwa mikono. Hili si tatizo tena, kwa sababu [Solidity sasa inasaidia CREATE2](https://docs.soliditylang.org/en/v0.8.3/control-structures.html#salted-contract-creations-create2).
+Ili kuunda mkataba mpya tunahitaji msimbo unaouunda (kazi ya konstrukta na msimbo unaoandika kwenye kumbukumbu msimbo wa baiti wa EVM wa mkataba halisi). Kwa kawaida katika Solidity tunatumia tu `addr = new <name of contract>(<constructor parameters>)` na kikusanyaji kinashughulikia kila kitu kwa ajili yetu, lakini ili kuwa na anwani ya mkataba inayobainika tunahitaji kutumia [msimbo wa operesheni wa CREATE2](https://eips.ethereum.org/EIPS/eip-1014).
+Wakati msimbo huu uliandikwa msimbo huo wa operesheni ulikuwa bado haujasaidiwa na Solidity, kwa hivyo ilikuwa muhimu kupata msimbo wenyewe. Hili si tatizo tena, kwa sababu [Solidity sasa inasaidia CREATE2](https://docs.soliditylang.org/en/v0.8.3/control-structures.html#salted-contract-creations-create2).
 
 ```solidity
         bytes32 salt = keccak256(abi.encodePacked(token0, token1));
@@ -778,17 +779,17 @@ Wakati msimbo huu uliandikwa msimbo huo wa operesheni ulikuwa bado hautumiki na 
         }
 ```
 
-Wakati msimbo wa operesheni bado hautumiki na Solidity tunaweza kuuita kwa kutumia [mkusanyiko wa ndani](https://docs.soliditylang.org/en/v0.8.3/assembly.html).
+Wakati msimbo wa operesheni hausaidiwi na Solidity bado tunaweza kuuita kwa kutumia [asembli ya ndani](https://docs.soliditylang.org/en/v0.8.3/assembly.html).
 
 ```solidity
         IUniswapV2Pair(pair).initialize(token0, token1);
 ```
 
-Ita kazi ya `initialize` ili kuambia badilishano jipya ni tokeni gani mbili inabadilishana.
+Ita kazi ya `initialize` ili kuliambia badilishano jipya ni tokeni zipi mbili inazobadilishana.
 
 ```solidity
         getPair[token0][token1] = pair;
-        getPair[token1][token0] = pair; // jaza ramani katika uelekeo wa kinyume
+        getPair[token1][token0] = pair; // jaza ramani katika mwelekeo wa kinyume
         allPairs.push(pair);
         emit PairCreated(token0, token1, pair, allPairs.length);
     }
@@ -809,14 +810,14 @@ Hifadhi taarifa mpya ya jozi katika vigezo vya hali na utoe tukio ili kuujulisha
 }
 ```
 
-Kazi hizi mbili zinaruhusu `feeSetter` kudhibiti mpokeaji wa ada (ikiwa yupo), na kubadilisha `feeSetter` kwa anwani mpya.
+Kazi hizi mbili zinaruhusu `feeSetter` kudhibiti mpokeaji wa ada (ikiwa yupo), na kubadilisha `feeSetter` kuwa anwani mpya.
 
 ### UniswapV2ERC20.sol {#uniswapv2erc20}
 
-[Mkataba huu](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) unatekeleza tokeni ya ukwasi ya ERC-20. Inafanana na [mkataba wa ERC-20 wa OpenZeppelin](/developers/tutorials/erc20-annotated-code), kwa hivyo nitaelezea tu sehemu ambayo ni tofauti, utendaji wa `permit`.
+[Mkataba huu](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2ERC20.sol) unatekeleza tokeni ya ukwasi ya ERC-20. Unafanana na [mkataba wa ERC-20 wa OpenZeppelin](/developers/tutorials/erc20-annotated-code), kwa hivyo nitaelezea tu sehemu ambayo ni tofauti, utendaji wa `permit`.
 
-Miamala kwenye Ethereum inagharimu Etha (ETH), ambayo ni sawa na pesa halisi. Ikiwa una tokeni za ERC-20 lakini huna ETH, huwezi kutuma miamala, kwa hivyo huwezi kufanya chochote nazo. Suluhisho moja la kuepuka tatizo hili ni [miamala ya meta](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions).
-Mmiliki wa tokeni anatia sahihi muamala unaoruhusu mtu mwingine kutoa tokeni nje ya mnyororo na kuutuma kwa kutumia Mtandao kwa mpokeaji. Mpokeaji, ambaye ana ETH, kisha anawasilisha kibali kwa niaba ya mmiliki.
+Miamala kwenye Ethereum inagharimu Etha (ETH), ambayo ni sawa na pesa halisi. Ikiwa una tokeni za ERC-20 lakini huna ETH, huwezi kutuma miamala, kwa hivyo huwezi kufanya chochote nazo. Suluhisho moja la kuepuka tatizo hili ni [miamala-meta](https://developers.uniswap.org/docs/protocols/v2/concepts/meta-transactions).
+Mmiliki wa tokeni anatia sahihi muamala unaoruhusu mtu mwingine kutoa tokeni nje ya mnyororo na kuutuma kwa kutumia Intaneti kwa mpokeaji. Mpokeaji, ambaye ana ETH, kisha anawasilisha kibali kwa niaba ya mmiliki.
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;
@@ -824,13 +825,13 @@ Mmiliki wa tokeni anatia sahihi muamala unaoruhusu mtu mwingine kutoa tokeni nje
     bytes32 public constant PERMIT_TYPEHASH = 0x6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c9;
 ```
 
-Heshi hii ni [kitambulisho cha aina ya muamala](https://eips.ethereum.org/EIPS/eip-712#rationale-for-typehash). Ya pekee tunayounga mkono hapa ni `Permit` na vigezo hivi.
+Heshi hii ni [kitambulisho cha aina ya muamala](https://eips.ethereum.org/EIPS/eip-712#rationale-for-typehash). Ya pekee tunayoiunga mkono hapa ni `Permit` na vigezo hivi.
 
 ```solidity
     mapping(address => uint) public nonces;
 ```
 
-Haiwezekani kwa mpokeaji kughushi sahihi ya kidijitali. Hata hivyo, ni rahisi kutuma muamala huo huo mara mbili (hii ni aina ya [shambulio la kurudia](https://wikipedia.org/wiki/Replay_attack)). Ili kuzuia hili, tunatumia [nonsi](https://wikipedia.org/wiki/Cryptographic_nonce). Ikiwa nonsi ya `Permit` mpya sio moja zaidi ya ile ya mwisho iliyotumika, tunachukulia kuwa ni batili.
+Haiwezekani kwa mpokeaji kughushi sahihi ya kidijitali. Hata hivyo, ni rahisi sana kutuma muamala ule ule mara mbili (hii ni aina ya [shambulio la kurudia](https://wikipedia.org/wiki/Replay_attack)). Ili kuzuia hili, tunatumia [nonsi](https://wikipedia.org/wiki/Cryptographic_nonce). Ikiwa nonsi ya `Permit` mpya si moja zaidi ya ile ya mwisho iliyotumika, tunachukulia kuwa ni batili.
 
 ```solidity
     constructor() public {
@@ -840,7 +841,7 @@ Haiwezekani kwa mpokeaji kughushi sahihi ya kidijitali. Hata hivyo, ni rahisi ku
         }
 ```
 
-Huu ni msimbo wa kupata [kitambulisho cha mnyororo](https://chainid.network/). Inatumia lahaja ya mkusanyiko wa EVM inayoitwa [Yul](https://docs.soliditylang.org/en/v0.8.4/yul.html). Kumbuka kwamba katika toleo la sasa la Yul lazima utumie `chainid()`, sio `chainid`.
+Huu ni msimbo wa kupata [kitambulisho cha mnyororo](https://chainid.network/). Unatumia lahaja ya asembli ya EVM inayoitwa [Yul](https://docs.soliditylang.org/en/v0.8.4/yul.html). Kumbuka kwamba katika toleo la sasa la Yul unapaswa kutumia `chainid()`, si `chainid`.
 
 ```solidity
         DOMAIN_SEPARATOR = keccak256(
@@ -861,7 +862,7 @@ Kokotoa [kitenganishi cha kikoa](https://eips.ethereum.org/EIPS/eip-712#rational
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
 ```
 
-Hii ndiyo kazi inayotekeleza ruhusa. Inapokea kama vigezo nyanja husika, na thamani tatu za skali kwa [sahihi](https://yos.io/2018/11/16/ethereum-signatures/) (v, r, na s).
+Hii ndiyo kazi inayotekeleza ruhusa. Inapokea kama vigezo nyanja husika, na thamani tatu za skela kwa [sahihi](https://yos.io/2018/11/16/ethereum-signatures/) (v, r, na s).
 
 ```solidity
         require(deadline >= block.timestamp, 'UniswapV2: EXPIRED');
@@ -887,7 +888,7 @@ Kanuni ya sahihi ya Ethereum inatarajia kupata biti 256 za kutia sahihi, kwa hiv
         address recoveredAddress = ecrecover(digest, v, r, s);
 ```
 
-Kutoka kwa muhtasari na sahihi tunaweza kupata anwani iliyotia sahihi kwa kutumia [ecrecover](https://coders-errand.com/ecrecover-signature-verification-ethereum/).
+Kutoka kwenye muhtasari na sahihi tunaweza kupata anwani iliyotia sahihi kwa kutumia [ecrecover](https://coders-errand.com/ecrecover-signature-verification-ethereum/).
 
 ```solidity
         require(recoveredAddress != address(0) && recoveredAddress == owner, 'UniswapV2: INVALID_SIGNATURE');
@@ -904,12 +905,12 @@ Mikataba ya pembezoni ni API (kiolesura cha programu ya matumizi) cha Uniswap. I
 
 ### UniswapV2Router01.sol {#uniswapv2router01}
 
-[Mkataba huu](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) una matatizo, na [hupaswi kutumiwa tena](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Kwa bahati nzuri, mikataba ya pembezoni haina hali na haishikilii rasilimali zozote, kwa hivyo ni rahisi kuiondoa na kupendekeza watu watumie mbadala wake, `UniswapV2Router02`, badala yake.
+[Mkataba huu](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router01.sol) una matatizo, na haupaswi kutumika tena. Kwa bahati nzuri, mikataba ya pembezoni haina hali na haishikilii mali yoyote, kwa hivyo ni rahisi kuacha kuitumia na kupendekeza watu watumie mbadala wake, `UniswapV2Router02`, badala yake.
 
 ### UniswapV2Router02.sol {#uniswapv2router02}
 
-Katika hali nyingi ungetumia Uniswap kupitia [mkataba huu](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
-Unaweza kuona jinsi ya kuutumia [hapa](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
+Katika hali nyingi ungetumia Uniswap kupitia [mkataba huu](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
+Unaweza kuona jinsi ya kuutumia [hapa](https://developers.uniswap.org/docs/protocols/v2/guides/swapping).
 
 ```solidity
 pragma solidity =0.6.6;
@@ -924,7 +925,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-Mengi ya haya tulikutana nayo hapo awali, au yako wazi kabisa. Upekee mmoja ni `IWETH.sol`. Uniswap v2 inaruhusu mabadilishano kwa jozi yoyote ya tokeni za ERC-20, lakini Etha (ETH) yenyewe si tokeni ya ERC-20. Ilitangulia kiwango hicho na inahamishwa kwa mifumo ya kipekee. Ili kuwezesha matumizi ya ETH katika mikataba inayotumika kwa tokeni za ERC-20 watu walikuja na mkataba wa [ether iliyofungwa (weth)](https://weth.tkn.eth.limo/). Unatuma ETH kwenye mkataba huu, na inakufua kiasi sawa cha WETH. Au unaweza kuteketeza WETH, na kupata ETH nyuma.
+Nyingi ya hizi ama tulikutana nazo hapo awali, au ziko wazi kabisa. Upekee mmoja ni `IWETH.sol`. Uniswap v2 inaruhusu mabadilishano kwa jozi yoyote ya tokeni za ERC-20, lakini Etha (ETH) yenyewe si tokeni ya ERC-20. Ilitangulia kiwango hicho na inahamishwa kwa njia za kipekee. Ili kuwezesha matumizi ya ETH katika mikataba inayotumika kwa tokeni za ERC-20 watu walikuja na mkataba wa [ether iliyofungwa (WETH)](https://weth.tkn.eth.limo/). Unatuma ETH kwenye mkataba huu, na inakufua kiasi sawa cha WETH. Au unaweza kuteketeza WETH, na kupata ETH nyuma.
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {
@@ -934,7 +935,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     address public immutable override WETH;
 ```
 
-Ruta inahitaji kujua ni kiwanda gani cha kutumia, na kwa miamala inayohitaji WETH ni mkataba gani wa WETH wa kutumia. Thamani hizi ni [zisizobadilika](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables), ikimaanisha zinaweza tu kuwekwa kwenye konstrukta. Hii inawapa watumiaji ujasiri kwamba hakuna mtu ambaye angeweza kuzibadilisha ili kuelekeza kwenye mikataba isiyo ya uaminifu.
+Ruta inahitaji kujua ni kiwanda gani cha kutumia, na kwa miamala inayohitaji WETH ni mkataba gani wa WETH wa kutumia. Thamani hizi ni [zisizobadilika](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables), ikimaanisha zinaweza kuwekwa tu kwenye konstrukta. Hii inawapa watumiaji ujasiri kwamba hakuna mtu ambaye angeweza kuzibadilisha ili kuelekeza kwenye mikataba isiyo ya uaminifu.
 
 ```solidity
     modifier ensure(uint deadline) {
@@ -943,7 +944,7 @@ Ruta inahitaji kujua ni kiwanda gani cha kutumia, na kwa miamala inayohitaji WET
     }
 ```
 
-Kirekebishaji hiki kinahakikisha kwamba miamala yenye kikomo cha muda ("fanya X kabla ya muda Y ikiwa unaweza") haifanyiki baada ya kikomo chake cha muda.
+Kirekebishaji hiki kinahakikisha kwamba miamala yenye kikomo cha muda ("fanya X kabla ya muda Y ikiwa unaweza") haifanyiki baada ya kikomo chao cha muda.
 
 ```solidity
     constructor(address _factory, address _WETH) public {
@@ -960,11 +961,11 @@ Konstrukta inaweka tu vigezo vya hali isiyobadilika.
     }
 ```
 
-Kazi hii inaitwa tunapokomboa tokeni kutoka kwenye mkataba wa WETH kurudi kwenye ETH. Ni mkataba wa WETH pekee tunaoutumia ndio ulioidhinishwa kufanya hivyo.
+Kazi hii inaitwa tunapokomboa tokeni kutoka kwenye mkataba wa WETH kurudi kwenye ETH. Mkataba wa WETH tunaoutumia pekee ndio ulioidhinishwa kufanya hivyo.
 
 #### Ongeza Ukwasi {#add-liquidity}
 
-Kazi hizi zinaongeza tokeni kwenye mabadilishano ya jozi, ambayo huongeza bwawa la ukwasi.
+Kazi hizi zinaongeza tokeni kwenye badilishano la jozi, ambalo huongeza bwawa la ukwasi.
 
 ```solidity
 
@@ -972,7 +973,7 @@ Kazi hizi zinaongeza tokeni kwenye mabadilishano ya jozi, ambayo huongeza bwawa 
     function _addLiquidity(
 ```
 
-Kazi hii inatumika kukokotoa kiasi cha tokeni za A na B ambazo zinapaswa kuwekwa kwenye mabadilishano ya jozi.
+Kazi hii inatumika kukokotoa kiasi cha tokeni za A na B ambazo zinapaswa kuwekwa kwenye badilishano la jozi.
 
 ```solidity
         address tokenA,
@@ -993,11 +994,11 @@ Hivi ni viwango ambavyo mtoa ukwasi anataka kuweka. Pia ni viwango vya juu zaidi
         uint amountBMin
 ```
 
-Hivi ni viwango vya chini vinavyokubalika kuweka. Ikiwa muamala hauwezi kufanyika kwa viwango hivi au zaidi, tengua kutoka kwake. Ikiwa hutaki kipengele hiki, taja tu sifuri.
+Hivi ni viwango vya chini vinavyokubalika kuweka. Ikiwa muamala hauwezi kufanyika kwa viwango hivi au zaidi, tengua kutoka kwake. Ikiwa hutaki kipengele hiki, bainisha tu sifuri.
 
-Watoa ukwasi hutaja kiwango cha chini, kwa kawaida, kwa sababu wanataka kuweka kikomo cha muamala kwenye kiwango cha ubadilishaji ambacho kiko karibu na kile cha sasa. Ikiwa kiwango cha ubadilishaji kinabadilika sana inaweza kumaanisha habari zinazobadilisha thamani za msingi, na wanataka kuamua wenyewe nini cha kufanya.
+Watoa ukwasi hubainisha kiwango cha chini, kwa kawaida, kwa sababu wanataka kuwekea kikomo muamala kwa kiwango cha ubadilishaji ambacho kiko karibu na kile cha sasa. Ikiwa kiwango cha ubadilishaji kinabadilika sana inaweza kumaanisha habari zinazobadilisha thamani za msingi, na wanataka kuamua wenyewe nini cha kufanya.
 
-Kwa mfano, fikiria hali ambapo kiwango cha ubadilishaji ni moja kwa moja na mtoa ukwasi anataja thamani hizi:
+Kwa mfano, fikiria hali ambapo kiwango cha ubadilishaji ni moja kwa moja na mtoa ukwasi anabainisha thamani hizi:
 
 | Kigezo      | Thamani |
 | -------------- | ----: |
@@ -1006,9 +1007,9 @@ Kwa mfano, fikiria hali ambapo kiwango cha ubadilishaji ni moja kwa moja na mtoa
 | amountAMin     |   900 |
 | amountBMin     |   800 |
 
-Ilimradi kiwango cha ubadilishaji kinabaki kati ya 0.9 na 1.25, muamala unafanyika. Ikiwa kiwango cha ubadilishaji kinatoka nje ya safu hiyo, muamala unafutwa.
+Ilimradi kiwango cha ubadilishaji kinabaki kati ya 0.9 na 1.25, muamala unafanyika. Ikiwa kiwango cha ubadilishaji kinatoka nje ya masafa hayo, muamala unafutwa.
 
-Sababu ya tahadhari hii ni kwamba miamala si ya papo hapo, unaiwasilisha na hatimaye mthibitishaji ataijumuisha kwenye kitalu (isipokuwa bei ya gesi yako ni ya chini sana, ambapo utahitaji kuwasilisha muamala mwingine wenye nonsi sawa na bei ya gesi ya juu zaidi ili kuufunika). Huwezi kudhibiti kile kinachotokea wakati wa kipindi kati ya uwasilishaji na ujumuishaji.
+Sababu ya tahadhari hii ni kwamba miamala si ya papo hapo, unaiwasilisha na hatimaye mthibitishaji ataijumuisha kwenye kitalu (isipokuwa bei yako ya gesi ni ya chini sana, ambapo utahitaji kuwasilisha muamala mwingine wenye nonsi sawa na bei ya juu ya gesi ili kuufunika). Huwezi kudhibiti kile kinachotokea wakati wa kipindi kati ya uwasilishaji na ujumuishaji.
 
 ```solidity
     ) internal virtual returns (uint amountA, uint amountB) {
@@ -1017,13 +1018,13 @@ Sababu ya tahadhari hii ni kwamba miamala si ya papo hapo, unaiwasilisha na hati
 Kazi inarudisha viwango ambavyo mtoa ukwasi anapaswa kuweka ili kuwa na uwiano sawa na uwiano wa sasa kati ya akiba.
 
 ```solidity
-        // tengeneza jozi kama bado haipo
+        // unda jozi kama bado haipo
         if (IUniswapV2Factory(factory).getPair(tokenA, tokenB) == address(0)) {
             IUniswapV2Factory(factory).createPair(tokenA, tokenB);
         }
 ```
 
-Ikiwa hakuna mabadilishano kwa jozi hii ya tokeni bado, iunde.
+Ikiwa hakuna badilishano la jozi hii ya tokeni bado, liunde.
 
 ```solidity
         (uint reserveA, uint reserveB) = UniswapV2Library.getReserves(factory, tokenA, tokenB);
@@ -1036,14 +1037,14 @@ Pata akiba za sasa kwenye jozi.
             (amountA, amountB) = (amountADesired, amountBDesired);
 ```
 
-Ikiwa akiba za sasa ni tupu basi haya ni mabadilishano mapya ya jozi. Viwango vya kuwekwa vinapaswa kuwa sawa kabisa na vile ambavyo mtoa ukwasi anataka kutoa.
+Ikiwa akiba za sasa ni tupu basi hili ni badilishano jipya la jozi. Viwango vya kuwekwa vinapaswa kuwa sawa kabisa na vile ambavyo mtoa ukwasi anataka kutoa.
 
 ```solidity
         } else {
             uint amountBOptimal = UniswapV2Library.quote(amountADesired, reserveA, reserveB);
 ```
 
-Ikiwa tunahitaji kuona viwango vitakuwa nini, tunapata kiwango bora zaidi kwa kutumia [kazi hii](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L35). Tunataka uwiano sawa na akiba za sasa.
+Ikiwa tunahitaji kuona viwango vitakuwa nini, tunapata kiasi bora zaidi kwa kutumia [kazi hii](https://github.com/Uniswap/v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L36). Tunataka uwiano sawa na akiba za sasa.
 
 ```solidity
             if (amountBOptimal <= amountBDesired) {
@@ -1051,7 +1052,7 @@ Ikiwa tunahitaji kuona viwango vitakuwa nini, tunapata kiwango bora zaidi kwa ku
                 (amountA, amountB) = (amountADesired, amountBOptimal);
 ```
 
-Ikiwa `amountBOptimal` ni ndogo kuliko kiwango ambacho mtoa ukwasi anataka kuweka inamaanisha kwamba tokeni B ina thamani zaidi kwa sasa kuliko anavyofikiri mweka ukwasi, kwa hivyo kiwango kidogo kinahitajika.
+Ikiwa `amountBOptimal` ni ndogo kuliko kiasi ambacho mtoa ukwasi anataka kuweka inamaanisha kwamba tokeni B ina thamani zaidi kwa sasa kuliko mweka ukwasi anavyofikiri, kwa hivyo kiasi kidogo kinahitajika.
 
 ```solidity
             } else {
@@ -1061,13 +1062,13 @@ Ikiwa `amountBOptimal` ni ndogo kuliko kiwango ambacho mtoa ukwasi anataka kuwek
                 (amountA, amountB) = (amountAOptimal, amountBDesired);
 ```
 
-Ikiwa kiwango bora cha B ni zaidi ya kiwango cha B kinachohitajika inamaanisha tokeni za B zina thamani ndogo kwa sasa kuliko anavyofikiri mweka ukwasi, kwa hivyo kiwango cha juu kinahitajika. Hata hivyo, kiwango kinachohitajika ni cha juu zaidi, kwa hivyo hatuwezi kufanya hivyo. Badala yake tunakokotoa idadi bora ya tokeni za A kwa kiwango kinachohitajika cha tokeni za B.
+Ikiwa kiasi bora cha B ni zaidi ya kiasi kinachohitajika cha B inamaanisha tokeni za B zina thamani ndogo kwa sasa kuliko mweka ukwasi anavyofikiri, kwa hivyo kiasi kikubwa kinahitajika. Hata hivyo, kiasi kinachohitajika ni cha juu zaidi, kwa hivyo hatuwezi kufanya hivyo. Badala yake tunakokotoa idadi bora ya tokeni za A kwa kiasi kinachohitajika cha tokeni za B.
 
-Tukiweka yote pamoja tunapata grafu hii. Chukulia unajaribu kuweka tokeni elfu moja za A (mstari wa bluu) na tokeni elfu moja za B (mstari mwekundu). Mhimili wa x ni kiwango cha ubadilishaji, A/B. Ikiwa x=1, zina thamani sawa na unaweka elfu moja ya kila moja. Ikiwa x=2, A ina thamani mara mbili ya B (unapata tokeni mbili za B kwa kila tokeni ya A) kwa hivyo unaweka tokeni elfu moja za B, lakini tokeni 500 tu za A. Ikiwa x=0.5, hali inageuzwa, tokeni elfu moja za A na tokeni mia tano za B.
+Tukiweka yote pamoja tunapata grafu hii. Chukulia unajaribu kuweka tokeni elfu moja za A (mstari wa bluu) na tokeni elfu moja za B (mstari mwekundu). Mhimili wa x ni kiwango cha ubadilishaji, A/B. Ikiwa x=1, zina thamani sawa na unaweka elfu moja ya kila moja. Ikiwa x=2, A ina thamani mara mbili ya B (unapata tokeni mbili za B kwa kila tokeni ya A) kwa hivyo unaweka tokeni elfu moja za B, lakini tokeni 500 tu za A. Ikiwa x=0.5, hali inabadilika, tokeni elfu moja za A na tokeni mia tano za B.
 
-![Graph](liquidityProviderDeposit.png)
+![Grafu](liquidityProviderDeposit.png)
 
-Unaweza kuweka ukwasi moja kwa moja kwenye mkataba mkuu (kwa kutumia [UniswapV2Pair::mint](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol#L110)), lakini mkataba mkuu unakagua tu kwamba haudanganywi wenyewe, kwa hivyo unajiweka kwenye hatari ya kupoteza thamani ikiwa kiwango cha ubadilishaji kitabadilika kati ya wakati unapowasilisha muamala wako na wakati unapotekelezwa. Ikiwa unatumia mkataba wa pembezoni, inakokotoa kiwango unachopaswa kuweka na kukiweka mara moja, kwa hivyo kiwango cha ubadilishaji hakibadiliki na hupotezi chochote.
+Unaweza kuweka ukwasi moja kwa moja kwenye mkataba mkuu (kwa kutumia [UniswapV2Pair::mint](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol#L110)), lakini mkataba mkuu unakagua tu kwamba haudanganywi wenyewe, kwa hivyo unajiweka kwenye hatari ya kupoteza thamani ikiwa kiwango cha ubadilishaji kinabadilika kati ya wakati unapowasilisha muamala wako na wakati unapotekelezwa. Ikiwa unatumia mkataba wa pembezoni, unakokotoa kiasi unachopaswa kuweka na kukiweka mara moja, kwa hivyo kiwango cha ubadilishaji hakibadiliki na hupotezi chochote.
 
 ```solidity
     function addLiquidity(
@@ -1081,10 +1082,10 @@ Unaweza kuweka ukwasi moja kwa moja kwenye mkataba mkuu (kwa kutumia [UniswapV2P
         uint deadline
 ```
 
-Kazi hii inaweza kuitwa na muamala ili kuweka ukwasi. Vigezo vingi ni sawa na katika `_addLiquidity` hapo juu, isipokuwa viwili:
+Kazi hii inaweza kuitwa na muamala kuweka ukwasi. Vigezo vingi ni sawa na katika `_addLiquidity` hapo juu, na tofauti mbili:
 
-. `to` ni anwani inayopata tokeni mpya za ukwasi zilizofuliwa ili kuonyesha sehemu ya mtoa ukwasi kwenye bwawa
-. `deadline` ni kikomo cha muda kwenye muamala
+- `to` ni anwani inayopata tokeni mpya za ukwasi zilizofufuliwa ili kuonyesha sehemu ya mtoa ukwasi kwenye bwawa
+- `deadline` ni kikomo cha muda kwenye muamala
 
 ```solidity
     ) external virtual override ensure(deadline) returns (uint amountA, uint amountB, uint liquidity) {
@@ -1092,21 +1093,21 @@ Kazi hii inaweza kuitwa na muamala ili kuweka ukwasi. Vigezo vingi ni sawa na ka
         address pair = UniswapV2Library.pairFor(factory, tokenA, tokenB);
 ```
 
-Tunakokotoa viwango vya kuweka haswa na kisha kutafuta anwani ya bwawa la ukwasi. Ili kuokoa gesi hatufanyi hivi kwa kuuliza kiwanda, bali kwa kutumia kazi ya maktaba `pairFor` (tazama hapa chini kwenye maktaba)
+Tunakokotoa viwango vya kuweka haswa na kisha kupata anwani ya bwawa la ukwasi. Ili kuokoa gesi hatufanyi hivi kwa kuuliza kiwanda, lakini kwa kutumia kazi ya maktaba ya `pairFor` (tazama hapa chini kwenye maktaba)
 
 ```solidity
         TransferHelper.safeTransferFrom(tokenA, msg.sender, pair, amountA);
         TransferHelper.safeTransferFrom(tokenB, msg.sender, pair, amountB);
 ```
 
-Hamisha viwango sahihi vya tokeni kutoka kwa mtumiaji hadi kwenye mabadilishano ya jozi.
+Hamisha viwango sahihi vya tokeni kutoka kwa mtumiaji hadi kwenye badilishano la jozi.
 
 ```solidity
         liquidity = IUniswapV2Pair(pair).mint(to);
     }
 ```
 
-Kwa malipo ipe anwani ya `to` tokeni za ukwasi kwa umiliki wa sehemu wa bwawa. Kazi ya `mint` ya mkataba mkuu inaona ni tokeni ngapi za ziada ilizonazo (ikilinganishwa na ilivyokuwa nayo mara ya mwisho ukwasi ulipobadilika) na inafua ukwasi ipasavyo.
+Kwa malipo ipe anwani ya `to` tokeni za ukwasi kwa umiliki wa sehemu ya bwawa. Kazi ya `mint` ya mkataba mkuu inaona ni tokeni ngapi za ziada inazo (ikilinganishwa na ilivyokuwa nayo mara ya mwisho ukwasi ulipobadilika) na inafua ukwasi ipasavyo.
 
 ```solidity
     function addLiquidityETH(
@@ -1114,7 +1115,7 @@ Kwa malipo ipe anwani ya `to` tokeni za ukwasi kwa umiliki wa sehemu wa bwawa. K
         uint amountTokenDesired,
 ```
 
-Wakati mtoa ukwasi anataka kutoa ukwasi kwenye mabadilishano ya jozi ya Tokeni/ETH, kuna tofauti chache. Mkataba unashughulikia kufunga ETH kwa ajili ya mtoa ukwasi. Hakuna haja ya kutaja ni ETH ngapi mtumiaji anataka kuweka, kwa sababu mtumiaji anazituma tu pamoja na muamala (kiwango kinapatikana katika `msg.value`).
+Wakati mtoa ukwasi anataka kutoa ukwasi kwenye badilishano la jozi la Tokeni/ETH, kuna tofauti chache. Mkataba unashughulikia kufunga ETH kwa ajili ya mtoa ukwasi. Hakuna haja ya kubainisha ni ETH ngapi mtumiaji anataka kuweka, kwa sababu mtumiaji anazituma tu na muamala (kiasi kinapatikana katika `msg.value`).
 
 ```solidity
         uint amountTokenMin,
@@ -1136,16 +1137,16 @@ Wakati mtoa ukwasi anataka kutoa ukwasi kwenye mabadilishano ya jozi ya Tokeni/E
         assert(IWETH(WETH).transfer(pair, amountETH));
 ```
 
-Ili kuweka ETH mkataba kwanza unaifunga kuwa WETH na kisha kuhamisha WETH kwenye jozi. Kumbuka kwamba hamisho limefungwa katika `assert`. Hii inamaanisha kwamba ikiwa hamisho litashindwa mwito huu wa mkataba pia unashindwa, na kwa hivyo kufunga hakufanyiki kweli.
+Ili kuweka ETH mkataba kwanza unaifunga kuwa WETH na kisha kuhamisha WETH kwenye jozi. Kumbuka kwamba hamisho limefungwa katika `assert`. Hii inamaanisha kwamba ikiwa hamisho litashindwa mwito huu wa mkataba pia unashindwa, na kwa hivyo ufungaji haufanyiki kweli.
 
 ```solidity
         liquidity = IUniswapV2Pair(pair).mint(to);
-        // rejesha Etha ya vumbi, kama ipo
+        // rejesha eth ya vumbi, kama ipo
         if (msg.value > amountETH) TransferHelper.safeTransferETH(msg.sender, msg.value - amountETH);
     }
 ```
 
-Mtumiaji tayari ametutumia ETH, kwa hivyo ikiwa kuna ziada yoyote iliyobaki (kwa sababu tokeni nyingine ina thamani ndogo kuliko mtumiaji alivyofikiri), tunahitaji kutoa marejesho.
+Mtumiaji tayari ametutumia ETH, kwa hivyo ikiwa kuna ziada yoyote iliyobaki (kwa sababu tokeni nyingine ina thamani ndogo kuliko mtumiaji alivyofikiri), tunahitaji kutoa rejesho.
 
 #### Ondoa Ukwasi {#remove-liquidity}
 
@@ -1312,26 +1313,26 @@ Kazi ya mwisho inachanganya ada za uhifadhi na miamala-meta.
 
 ```solidity
     // **** BADILISHANO ****
-    // inahitaji kiasi cha awali kiwe tayari kimetumwa kwenye jozi ya kwanza
+    // inahitaji kiasi cha awali kuwa tayari kimetumwa kwenye jozi ya kwanza
     function _swap(uint[] memory amounts, address[] memory path, address _to) internal virtual {
 ```
 
-Kazi hii inafanya uchakataji wa ndani ambao unahitajika kwa kazi ambazo zinawekwa wazi kwa wafanyabiashara.
+Kazi hii inafanya uchakataji wa ndani ambao unahitajika kwa kazi zinazofichuliwa kwa wafanyabiashara.
 
 ```solidity
         for (uint i; i < path.length - 1; i++) {
 ```
 
-Ninapoandika haya kuna [tokeni 388,160 za ERC-20](https://eth.blockscout.com/tokens). Kama kungekuwa na mabadilishano ya jozi kwa kila jozi ya tokeni, ingekuwa zaidi ya mabadilishano ya jozi bilioni 150. Mnyororo mzima, kwa sasa, [una 0.1% tu ya idadi hiyo ya akaunti](https://eth.blockscout.com/stats/accountsGrowth). Badala yake, kazi za badilishano zinaunga mkono dhana ya njia. Mfanyabiashara anaweza kubadilisha A kwa B, B kwa C, na C kwa D, kwa hivyo hakuna haja ya mabadilishano ya moja kwa moja ya jozi ya A-D.
+Ninapoandika haya kuna [tokeni 388,160 za ERC-20](https://eth.blockscout.com/tokens). Ikiwa kungekuwa na badilishano la jozi kwa kila jozi ya tokeni, kungekuwa na zaidi ya mabadilishano ya jozi bilioni 150. Mnyororo mzima, kwa sasa, [una 0.1% tu ya idadi hiyo ya akaunti](https://eth.blockscout.com/stats/accountsGrowth). Badala yake, kazi za badilishano zinaunga mkono dhana ya njia. Mfanyabiashara anaweza kubadilisha A kwa B, B kwa C, na C kwa D, kwa hivyo hakuna haja ya badilishano la jozi la moja kwa moja la A-D.
 
-Bei kwenye masoko haya huwa zinasawazishwa, kwa sababu zinapokuwa hazijasawazishwa inaunda fursa ya usuluhishi. Fikiria, kwa mfano, tokeni tatu, A, B, na C. Kuna mabadilishano matatu ya jozi, moja kwa kila jozi.
+Bei kwenye masoko haya huwa zinasawazishwa, kwa sababu zinapokuwa hazijasawazishwa inaunda fursa ya usuluhishi (arbitrage). Fikiria, kwa mfano, tokeni tatu, A, B, na C. Kuna mabadilishano matatu ya jozi, moja kwa kila jozi.
 
 1. Hali ya awali
 2. Mfanyabiashara anauza tokeni 24.695 za A na kupata tokeni 25.305 za B.
-3. Mfanyabiashara anauza tokeni 24.695 za B kwa tokeni 25.305 za C, akiweka takriban tokeni 0.61 za B kama faida.
-4. Kisha mfanyabiashara anauza tokeni 24.695 za C kwa tokeni 25.305 za A, akiweka takriban tokeni 0.61 za C kama faida. Mfanyabiashara pia ana tokeni 0.61 za ziada za A (zile 25.305 ambazo mfanyabiashara anamalizia nazo, ukiondoa uwekezaji wa awali wa 24.695).
+3. Mfanyabiashara anauza tokeni 24.695 za B kwa tokeni 25.305 za C, akibakiza takriban tokeni 0.61 za B kama faida.
+4. Kisha mfanyabiashara anauza tokeni 24.695 za C kwa tokeni 25.305 za A, akibakiza takriban tokeni 0.61 za C kama faida. Mfanyabiashara pia ana tokeni 0.61 za ziada za A (zile 25.305 ambazo mfanyabiashara anaishia nazo, ukiondoa uwekezaji wa awali wa 24.695).
 
-| Hatua | Mabadilishano ya A-B                | Mabadilishano ya B-C                | Mabadilishano ya A-C                |
+| Hatua | Badilishano la A-B                | Badilishano la B-C                | Badilishano la A-C                |
 | ---- | --------------------------- | --------------------------- | --------------------------- |
 | 1    | A:1000 B:1050 A/B=1.05      | B:1000 C:1050 B/C=1.05      | A:1050 C:1000 C/A=1.05      |
 | 2    | A:1024.695 B:1024.695 A/B=1 | B:1000 C:1050 B/C=1.05      | A:1050 C:1000 C/A=1.05      |
@@ -1344,19 +1345,19 @@ Bei kwenye masoko haya huwa zinasawazishwa, kwa sababu zinapokuwa hazijasawazish
             uint amountOut = amounts[i + 1];
 ```
 
-Pata jozi tunayoshughulikia kwa sasa, ipange (kwa matumizi na jozi) na upate kiwango cha pato kinachotarajiwa.
+Pata jozi tunayoshughulikia kwa sasa, ipange (kwa matumizi na jozi) na upate kiasi kinachotarajiwa cha pato.
 
 ```solidity
             (uint amount0Out, uint amount1Out) = input == token0 ? (uint(0), amountOut) : (amountOut, uint(0));
 ```
 
-Pata viwango vya pato vinavyotarajiwa, vilivyopangwa jinsi mabadilishano ya jozi yanavyotarajia viwe.
+Pata viwango vinavyotarajiwa vya pato, vilivyopangwa jinsi badilishano la jozi linavyotarajia viwe.
 
 ```solidity
             address to = i < path.length - 2 ? UniswapV2Library.pairFor(factory, output, path[i + 2]) : _to;
 ```
 
-Je, haya ni mabadilishano ya mwisho? Ikiwa ndivyo, tuma tokeni zilizopokelewa kwa biashara kwenye kituo. Ikiwa sivyo, itume kwenye mabadilishano ya jozi inayofuata.
+Je, hili ni badilishano la mwisho? Ikiwa ndivyo, tuma tokeni zilizopokelewa kwa biashara kwenye lengwa. Ikiwa sivyo, itume kwenye badilishano linalofuata la jozi.
 
 ```solidity
 
@@ -1367,13 +1368,13 @@ Je, haya ni mabadilishano ya mwisho? Ikiwa ndivyo, tuma tokeni zilizopokelewa kw
     }
 ```
 
-Kwa kweli ita mabadilishano ya jozi ili kubadilishana tokeni. Hatuhitaji mwito wa kurudi ili kuambiwa kuhusu mabadilishano, kwa hivyo hatutumi baiti zozote kwenye uwanja huo.
+Ita badilishano la jozi ili kubadilishana tokeni. Hatuhitaji mwito wa kurudi ili kuambiwa kuhusu badilishano, kwa hivyo hatutumi baiti zozote katika uwanja huo.
 
 ```solidity
     function swapExactTokensForTokens(
 ```
 
-Kazi hii inatumika moja kwa moja na wafanyabiashara kubadilishana tokeni moja kwa nyingine.
+Kazi hii inatumika moja kwa moja na wafanyabiashara kubadilisha tokeni moja kwa nyingine.
 
 ```solidity
         uint amountIn,
@@ -1381,11 +1382,11 @@ Kazi hii inatumika moja kwa moja na wafanyabiashara kubadilishana tokeni moja kw
         address[] calldata path,
 ```
 
-Kigezo hiki kina anwani za mikataba ya ERC-20. Kama ilivyoelezwa hapo juu, huu ni mfuatano kwa sababu unaweza kuhitaji kupitia mabadilishano kadhaa ya jozi ili kutoka kwenye rasilimali uliyonayo hadi kwenye rasilimali unayotaka.
+Kigezo hiki kina anwani za mikataba ya ERC-20. Kama ilivyoelezwa hapo juu, hii ni safu kwa sababu unaweza kuhitaji kupitia mabadilishano kadhaa ya jozi ili kutoka kwenye mali uliyonayo hadi kwenye mali unayotaka.
 
-Kigezo cha kazi katika Solidity kinaweza kuhifadhiwa ama katika `memory` au `calldata`. Ikiwa kazi ni sehemu ya kuingilia kwenye mkataba, inayoitwa moja kwa moja kutoka kwa mtumiaji (kwa kutumia muamala) au kutoka kwa mkataba tofauti, basi thamani ya kigezo inaweza kuchukuliwa moja kwa moja kutoka kwenye data za mwito. Ikiwa kazi inaitwa kwa ndani, kama `_swap` hapo juu, basi vigezo vinapaswa kuhifadhiwa katika `memory`. Kutoka kwa mtazamo wa mkataba ulioitwa `calldata` inasomeka tu.
+Kigezo cha kazi katika Solidity kinaweza kuhifadhiwa katika `memory` au `calldata`. Ikiwa kazi ni sehemu ya kuingilia kwenye mkataba, inayoitwa moja kwa moja kutoka kwa mtumiaji (kwa kutumia muamala) au kutoka kwa mkataba tofauti, basi thamani ya kigezo inaweza kuchukuliwa moja kwa moja kutoka kwenye data za mwito. Ikiwa kazi inaitwa kwa ndani, kama `_swap` hapo juu, basi vigezo vinapaswa kuhifadhiwa katika `memory`. Kutoka kwa mtazamo wa mkataba ulioitwa `calldata` inasomeka tu.
 
-Kwa aina za skali kama vile `uint` au `address` kikusanyaji kinashughulikia chaguo la uhifadhi kwa ajili yetu, lakini kwa mifuatano, ambayo ni mirefu na ya gharama zaidi, tunataja aina ya uhifadhi itakayotumika.
+Kwa aina za skela kama vile `uint` au `address` kikusanyaji kinashughulikia uchaguzi wa hifadhi kwa ajili yetu, lakini kwa safu, ambazo ni ndefu na ghali zaidi, tunabainisha aina ya hifadhi itakayotumika.
 
 ```solidity
         address to,
@@ -1393,14 +1394,14 @@ Kwa aina za skali kama vile `uint` au `address` kikusanyaji kinashughulikia chag
     ) external virtual override ensure(deadline) returns (uint[] memory amounts) {
 ```
 
-Thamani za kurudisha kila wakati zinarudishwa kwenye kumbukumbu.
+Thamani za kurudisha hurudishwa kila wakati kwenye kumbukumbu.
 
 ```solidity
         amounts = UniswapV2Library.getAmountsOut(factory, amountIn, path);
         require(amounts[amounts.length - 1] >= amountOutMin, 'UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT');
 ```
 
-Kokotoa kiwango cha kununuliwa katika kila badilishano. Ikiwa matokeo ni chini ya kiwango cha chini ambacho mfanyabiashara yuko tayari kukubali, tengua kutoka kwenye muamala.
+Kokotoa kiasi cha kununuliwa katika kila badilishano. Ikiwa matokeo ni chini ya kiwango cha chini ambacho mfanyabiashara yuko tayari kukubali, tengua kutoka kwenye muamala.
 
 ```solidity
         TransferHelper.safeTransferFrom(
@@ -1410,7 +1411,7 @@ Kokotoa kiwango cha kununuliwa katika kila badilishano. Ikiwa matokeo ni chini y
     }
 ```
 
-Hatimaye, hamisha tokeni ya awali ya ERC-20 kwenye akaunti kwa ajili ya mabadilishano ya kwanza ya jozi na uite `_swap`. Haya yote yanafanyika katika muamala ule ule, kwa hivyo mabadilishano ya jozi yanajua kwamba tokeni zozote zisizotarajiwa ni sehemu ya hamisho hili.
+Hatimaye, hamisha tokeni ya awali ya ERC-20 kwenye akaunti kwa ajili ya badilishano la kwanza la jozi na uite `_swap`. Haya yote yanafanyika katika muamala huo huo, kwa hivyo badilishano la jozi linajua kwamba tokeni zozote zisizotarajiwa ni sehemu ya hamisho hili.
 
 ```solidity
     function swapTokensForExactTokens(
@@ -1429,9 +1430,9 @@ Hatimaye, hamisha tokeni ya awali ya ERC-20 kwenye akaunti kwa ajili ya mabadili
     }
 ```
 
-Kazi iliyotangulia, `swapTokensForTokens`, inaruhusu mfanyabiashara kutaja idadi kamili ya tokeni za kuingiza ambazo yuko tayari kutoa na idadi ya chini ya tokeni za pato ambazo yuko tayari kupokea kwa malipo. Kazi hii inafanya badilishano la kinyume, inamruhusu mfanyabiashara kutaja idadi ya tokeni za pato anazotaka, na idadi ya juu zaidi ya tokeni za kuingiza ambazo yuko tayari kulipia.
+Kazi iliyotangulia, `swapExactTokensForTokens`, inaruhusu mfanyabiashara kubainisha idadi kamili ya tokeni za kuingiza ambazo yuko tayari kutoa na idadi ya chini ya tokeni za pato ambazo yuko tayari kupokea kwa malipo. Kazi hii inafanya badilishano la kinyume, inamruhusu mfanyabiashara kubainisha idadi ya tokeni za pato anazotaka, na idadi ya juu zaidi ya tokeni za kuingiza ambazo yuko tayari kulipia.
 
-Katika visa vyote viwili, mfanyabiashara anapaswa kuupa mkataba huu wa pembezoni kwanza kibali ili kuuruhusu kuzihamisha.
+Katika visa vyote viwili, mfanyabiashara anapaswa kuupa mkataba huu wa pembezoni kwanza kibali cha kuuruhusu kuzihamisha.
 
 ```solidity
     function swapExactETHForTokens(uint amountOutMin, address[] calldata path, address to, uint deadline)
@@ -1504,20 +1505,20 @@ Katika visa vyote viwili, mfanyabiashara anapaswa kuupa mkataba huu wa pembezoni
         IWETH(WETH).deposit{value: amounts[0]}();
         assert(IWETH(WETH).transfer(UniswapV2Library.pairFor(factory, path[0], path[1]), amounts[0]));
         _swap(amounts, path, to);
-        // rejesha Etha ya vumbi, kama ipo
+        // rejesha eth ya vumbi, kama ipo
         if (msg.value > amounts[0]) TransferHelper.safeTransferETH(msg.sender, msg.value - amounts[0]);
     }
 ```
 
-Tofauti hizi nne zote zinahusisha biashara kati ya ETH na tokeni. Tofauti pekee ni kwamba tunapokea ETH kutoka kwa mfanyabiashara na kuitumia kufua WETH, au tunapokea WETH kutoka kwenye mabadilishano ya mwisho kwenye njia na kuiteketeza, tukimtumia mfanyabiashara ETH inayotokana.
+Tofauti hizi nne zote zinahusisha biashara kati ya ETH na tokeni. Tofauti pekee ni kwamba ama tunapokea ETH kutoka kwa mfanyabiashara na kuitumia kufua WETH, au tunapokea WETH kutoka kwenye badilishano la mwisho katika njia na kuiteketeza, na kumrudishia mfanyabiashara ETH inayotokana.
 
 ```solidity
-    // **** BADILISHANO (inasaidia tokeni za ada-kwa-hamisho) ****
-    // inahitaji kiasi cha awali kiwe tayari kimetumwa kwenye jozi ya kwanza
+    // **** BADILISHANO (inayokubali tokeni za ada-kwa-hamisho) ****
+    // inahitaji kiasi cha awali kuwa tayari kimetumwa kwenye jozi ya kwanza
     function _swapSupportingFeeOnTransferTokens(address[] memory path, address _to) internal virtual {
 ```
 
-Hii ni kazi ya ndani ya kubadilishana tokeni ambazo zina ada za hamisho au uhifadhi ili kutatua ([suala hili](https://github.com/Uniswap/uniswap-interface/issues/835)).
+Hii ni kazi ya ndani ya kubadilishana tokeni ambazo zina ada za hamisho au uhifadhi ili kutatua ([suala hili](https://github.com/Uniswap/interface/issues/835)).
 
 ```solidity
         for (uint i; i < path.length - 1; i++) {
@@ -1526,16 +1527,16 @@ Hii ni kazi ya ndani ya kubadilishana tokeni ambazo zina ada za hamisho au uhifa
             IUniswapV2Pair pair = IUniswapV2Pair(UniswapV2Library.pairFor(factory, input, output));
             uint amountInput;
             uint amountOutput;
-            { // upeo ili kuepuka makosa ya staki kuwa na kina sana
+            { // wigo ili kuepuka hitilafu za staki kuwa ndefu mno
             (uint reserve0, uint reserve1,) = pair.getReserves();
             (uint reserveInput, uint reserveOutput) = input == token0 ? (reserve0, reserve1) : (reserve1, reserve0);
             amountInput = IERC20(input).balanceOf(address(pair)).sub(reserveInput);
             amountOutput = UniswapV2Library.getAmountOut(amountInput, reserveInput, reserveOutput);
 ```
 
-Kwa sababu ya ada za hamisho hatuwezi kutegemea kazi ya `getAmountsOut` kutuambia ni kiasi gani tunapata kutoka kwa kila hamisho (kama tunavyofanya kabla ya kuita `_swap` ya asili). Badala yake tunapaswa kuhamisha kwanza na kisha kuona ni tokeni ngapi tulipata nyuma.
+Kwa sababu ya ada za hamisho hatuwezi kutegemea kazi ya `getAmountsOut` kutuambia ni kiasi gani tunapata kutoka kwa kila hamisho (kama tunavyofanya kabla ya kuita `_swap` asili). Badala yake tunapaswa kuhamisha kwanza na kisha kuona ni tokeni ngapi tulipata nyuma.
 
-Kumbuka: Kinadharia tungeweza tu kutumia kazi hii badala ya `_swap`, lakini katika visa fulani (kwa mfano, ikiwa hamisho linaishia kutenguliwa kwa sababu hakuna kiasi cha kutosha mwishoni ili kufikia kiwango cha chini kinachohitajika) hiyo ingeishia kugharimu gesi zaidi. Tokeni za ada ya hamisho ni nadra sana, kwa hivyo ingawa tunahitaji kuzishughulikia hakuna haja ya mabadilishano yote kudhani yanapitia angalau moja wapo.
+Kumbuka: Kinadharia tungeweza kutumia tu kazi hii badala ya `_swap`, lakini katika visa fulani (kwa mfano, ikiwa hamisho linaishia kutenguliwa kwa sababu hakuna kiasi cha kutosha mwishoni kufikia kiwango cha chini kinachohitajika) hiyo ingeishia kugharimu gesi zaidi. Tokeni za ada ya hamisho ni nadra sana, kwa hivyo ingawa tunahitaji kuzishughulikia hakuna haja ya mabadilishano yote kudhani yanapitia angalau moja wapo.
 
 ```solidity
             }
@@ -1770,7 +1771,7 @@ import "./SafeMath.sol";
 library UniswapV2Library {
     using SafeMath for uint;
 
-    // inarejesha anwani za tokeni zilizopangwa, inatumika kushughulikia thamani za kurejesha kutoka kwenye jozi zilizopangwa kwa mpangilio huu
+    // inarejesha anwani za tokeni zilizopangwa, inayotumika kushughulikia thamani za kurejesha kutoka kwenye jozi zilizopangwa katika mpangilio huu
     function sortTokens(address tokenA, address tokenB) internal pure returns (address token0, address token1) {
         require(tokenA != tokenB, 'UniswapV2Library: IDENTICAL_ADDRESSES');
         (token0, token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
@@ -1778,7 +1779,7 @@ library UniswapV2Library {
     }
 ```
 
-Panga tokeni mbili kwa anwani, ili tuweze kupata anwani ya ubadilishanaji wa jozi kwa ajili yao. Hii ni muhimu kwa sababu vinginevyo tungekuwa na uwezekano mbili, moja kwa vigezo A,B na nyingine kwa vigezo B,A, na kusababisha mabadilishano mawili badala ya moja.
+Panga tokeni mbili kwa anwani, ili tuweze kupata anwani ya badilishano la jozi kwa ajili yao. Hii ni muhimu kwa sababu vinginevyo tungekuwa na uwezekano mbili, moja kwa vigezo A,B na nyingine kwa vigezo B,A, na kusababisha mabadilishano mawili badala ya moja.
 
 ```solidity
     // inakokotoa anwani ya CREATE2 kwa ajili ya jozi bila kufanya wito wowote wa nje
@@ -1788,12 +1789,12 @@ Panga tokeni mbili kwa anwani, ili tuweze kupata anwani ya ubadilishanaji wa joz
                 hex'ff',
                 factory,
                 keccak256(abi.encodePacked(token0, token1)),
-                hex'96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f' // heshi ya kodi ya init
+                hex'96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f' // heshi ya msimbo wa kuanzisha
             ))));
     }
 ```
 
-Kazi hii inakokotoa anwani ya ubadilishanaji wa jozi kwa tokeni mbili. Mkataba huu unaundwa kwa kutumia [msimbo wa operesheni wa CREATE2](https://eips.ethereum.org/EIPS/eip-1014), kwa hivyo tunaweza kukokotoa anwani kwa kutumia algoriti sawa ikiwa tunajua vigezo inavyotumia. Hii ni nafuu sana kuliko kuuliza kiwanda, na
+Kazi hii inakokotoa anwani ya badilishano la jozi kwa tokeni mbili. Mkataba huu unaundwa kwa kutumia [msimbo wa operesheni wa CREATE2](https://eips.ethereum.org/EIPS/eip-1014), kwa hivyo tunaweza kukokotoa anwani kwa kutumia kanuni sawa ikiwa tunajua vigezo inavyotumia. Hii ni nafuu sana kuliko kuuliza kiwanda, na haihitaji mwito wa nje.
 
 ```solidity
     // inaleta na kupanga akiba kwa ajili ya jozi
@@ -1804,10 +1805,10 @@ Kazi hii inakokotoa anwani ya ubadilishanaji wa jozi kwa tokeni mbili. Mkataba h
     }
 ```
 
-Kazi hii inarejesha akiba ya tokeni mbili ambazo ubadilishanaji wa jozi unazo. Kumbuka kwamba inaweza kupokea tokeni kwa mpangilio wowote, na kuzipanga kwa matumizi ya ndani.
+Kazi hii inarudisha akiba za tokeni mbili ambazo badilishano la jozi linazo. Kumbuka kwamba inaweza kupokea tokeni kwa mpangilio wowote, na kuzipanga kwa matumizi ya ndani.
 
 ```solidity
-    // ikizingatiwa kiasi fulani cha rasilimali na akiba za jozi, inarejesha kiasi sawa cha rasilimali nyingine
+    // kipewa kiasi fulani cha rasilimali na akiba za jozi, inarejesha kiasi sawa cha rasilimali nyingine
     function quote(uint amountA, uint reserveA, uint reserveB) internal pure returns (uint amountB) {
         require(amountA > 0, 'UniswapV2Library: INSUFFICIENT_AMOUNT');
         require(reserveA > 0 && reserveB > 0, 'UniswapV2Library: INSUFFICIENT_LIQUIDITY');
@@ -1815,14 +1816,14 @@ Kazi hii inarejesha akiba ya tokeni mbili ambazo ubadilishanaji wa jozi unazo. K
     }
 ```
 
-Kazi hii inakupa kiasi cha tokeni B utakachopata kwa kubadilishana na tokeni A ikiwa hakuna ada inayohusika. Ukokotoaji huu unazingatia kwamba hamisho hubadilisha kiwango cha ubadilishaji.
+Kazi hii inakupa kiasi cha tokeni B utakachopata kwa malipo ya tokeni A ikiwa hakuna ada inayohusika. Ukotoaji huu unazingatia kwamba hamisho linabadilisha kiwango cha ubadilishaji.
 
 ```solidity
-    // ikizingatiwa kiasi cha ingizo cha rasilimali na akiba za jozi, inarejesha kiasi cha juu zaidi cha zao la rasilimali nyingine
+    // kipewa kiasi cha kuingiza cha rasilimali na akiba za jozi, inarejesha kiasi cha juu cha kutoa cha rasilimali nyingine
     function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {
 ```
 
-Kazi ya `quote` hapo juu inafanya kazi vizuri ikiwa hakuna ada ya kutumia ubadilishanaji wa jozi. Hata hivyo, ikiwa kuna ada ya ubadilishaji ya 0.3% kiasi unachopata hasa ni cha chini. Kazi hii inakokotoa kiasi baada ya ada ya ubadilishaji.
+Kazi ya `quote` hapo juu inafanya kazi vizuri ikiwa hakuna ada ya kutumia badilishano la jozi. Hata hivyo, ikiwa kuna ada ya badilishano ya 0.3% kiasi unachopata haswa ni kidogo. Kazi hii inakokotoa kiasi baada ya ada ya badilishano.
 
 ```solidity
 
@@ -1835,10 +1836,10 @@ Kazi ya `quote` hapo juu inafanya kazi vizuri ikiwa hakuna ada ya kutumia ubadil
     }
 ```
 
-Solidity haishughulikii sehemu kiasili, kwa hivyo hatuwezi tu kuzidisha kiasi kwa 0.997. Badala yake, tunazidisha kiasi cha juu (numerator) kwa 997 na kiasi cha chini (denominator) kwa 1000, na kufikia athari sawa.
+Solidity haishughulikii sehemu kwa asili, kwa hivyo hatuwezi tu kuzidisha kiasi cha pato kwa 0.997. Badala yake, tunazidisha kiasi cha juu (numerator) kwa 997 na kiasi cha chini (denominator) kwa 1000, na kufikia athari sawa.
 
 ```solidity
-    // ikizingatiwa kiasi cha zao cha rasilimali na akiba za jozi, inarejesha kiasi kinachohitajika cha ingizo cha rasilimali nyingine
+    // kipewa kiasi cha kutoa cha rasilimali na akiba za jozi, inarejesha kiasi kinachohitajika cha kuingiza cha rasilimali nyingine
     function getAmountIn(uint amountOut, uint reserveIn, uint reserveOut) internal pure returns (uint amountIn) {
         require(amountOut > 0, 'UniswapV2Library: INSUFFICIENT_OUTPUT_AMOUNT');
         require(reserveIn > 0 && reserveOut > 0, 'UniswapV2Library: INSUFFICIENT_LIQUIDITY');
@@ -1848,11 +1849,11 @@ Solidity haishughulikii sehemu kiasili, kwa hivyo hatuwezi tu kuzidisha kiasi kw
     }
 ```
 
-Kazi hii inafanya takriban kitu kile kile, lakini inapata kiasi cha pato na kutoa ingizo.
+Kazi hii inafanya takriban kitu kile kile, lakini inapata kiasi cha pato na kutoa kiasi cha kuingiza.
 
 ```solidity
 
-    // inafanya ukokotoaji wa getAmountOut uliounganishwa kwenye idadi yoyote ya jozi
+    // inafanya kokotoo za mnyororo za getAmountOut kwenye idadi yoyote ya jozi
     function getAmountsOut(address factory, uint amountIn, address[] memory path) internal view returns (uint[] memory amounts) {
         require(path.length >= 2, 'UniswapV2Library: INVALID_PATH');
         amounts = new uint[](path.length);
@@ -1863,7 +1864,7 @@ Kazi hii inafanya takriban kitu kile kile, lakini inapata kiasi cha pato na kuto
         }
     }
 
-    // inafanya ukokotoaji wa getAmountIn uliounganishwa kwenye idadi yoyote ya jozi
+    // inafanya kokotoo za mnyororo za getAmountIn kwenye idadi yoyote ya jozi
     function getAmountsIn(address factory, uint amountOut, address[] memory path) internal view returns (uint[] memory amounts) {
         require(path.length >= 2, 'UniswapV2Library: INVALID_PATH');
         amounts = new uint[](path.length);
@@ -1876,18 +1877,18 @@ Kazi hii inafanya takriban kitu kile kile, lakini inapata kiasi cha pato na kuto
 }
 ```
 
-Kazi hizi mbili zinashughulikia kutambua thamani wakati ni lazima kupitia mabadilishano kadhaa ya jozi.
+Kazi hizi mbili zinashughulikia kutambua thamani wakati ni muhimu kupitia mabadilishano kadhaa ya jozi.
 
 ### Msaidizi wa Hamisho {#transfer-helper}
 
-[Maktaba hii](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) inaongeza ukaguzi wa mafanikio karibu na mahamisho ya ERC-20 na Ethereum ili kushughulikia tengua na urejeshaji wa thamani ya `false` kwa njia sawa.
+[Maktaba hii](https://github.com/Uniswap/solidity-lib/blob/master/contracts/libraries/TransferHelper.sol) (katika hazina ambayo sasa imehifadhiwa) inaongeza ukaguzi wa mafanikio kwenye mahamisho ya ERC-20 na Ethereum ili kushughulikia kutengua na kurudisha thamani ya `false` kwa njia sawa.
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 pragma solidity >=0.6.0;
 
-// mbinu za msaidizi kwa ajili ya kuingiliana na tokeni za ERC-20 na kutuma ETH ambazo hazirejeshi kweli/si kweli mara kwa mara
+// njia za msaada kwa ajili ya kuingiliana na tokeni za ERC-20 na kutuma ETH ambazo hazirejeshi kweli/si kweli mara kwa mara
 library TransferHelper {
     function safeApprove(
         address token,
@@ -1899,10 +1900,10 @@ library TransferHelper {
 
 ```
 
-Tunaweza kuita mkataba tofauti kwa moja ya njia mbili:
+Tunaweza kuita mkataba tofauti kwa mojawapo ya njia mbili:
 
-- Tumia ufafanuzi wa kiolesura kuunda mwito wa kazi
-- Tumia [kiolesura cha mfumo wa programu (ABI)](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html) "kwa mikono" kuunda mwito. Hivi ndivyo mwandishi wa msimbo aliamua kufanya.
+- Kutumia ufafanuzi wa kiolesura kuunda mwito wa kazi
+- Kutumia [kiolesura cha jozi cha programu (ABI)](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html) "kwa mikono" kuunda mwito. Hivi ndivyo mwandishi wa msimbo aliamua kufanya.
 
 ```solidity
         require(
@@ -1912,7 +1913,7 @@ Tunaweza kuita mkataba tofauti kwa moja ya njia mbili:
     }
 ```
 
-Kwa ajili ya utangamano wa nyuma na tokeni zilizoundwa kabla ya kiwango cha ERC-20, mwito wa ERC-20 unaweza kushindwa ama kwa kutengua (ambapo `success` ni `false`) au kwa kufanikiwa na kurejesha thamani ya `false` (ambapo kuna data ya pato, na ukiisimba kama boolean unapata `false`).
+Kwa ajili ya utangamano wa nyuma na tokeni zilizoundwa kabla ya kiwango cha ERC-20, mwito wa ERC-20 unaweza kufeli ama kwa kutengua (ambapo `success` inakuwa `false`) au kwa kufanikiwa na kurudisha thamani ya `false` (ambapo kuna data ya pato, na ukiisimbua kama boolean unapata `false`).
 
 ```solidity
 
@@ -1931,7 +1932,7 @@ Kwa ajili ya utangamano wa nyuma na tokeni zilizoundwa kabla ya kiwango cha ERC-
     }
 ```
 
-Kazi hii inatekeleza [utendaji wa hamisho wa ERC-20](https://eips.ethereum.org/EIPS/eip-20#transfer), ambao unaruhusu akaunti kutumia kibali kilichotolewa na akaunti tofauti.
+Kazi hii inatekeleza [utendaji wa hamisho wa ERC-20](https://eips.ethereum.org/EIPS/eip-20#transfer), ambao unahamisha tokeni kutoka kwa mpigaji (mkataba huu) kwenda kwa `to`.
 
 ```solidity
 
@@ -1961,7 +1962,7 @@ Kazi hii inatekeleza [utendaji wa transferFrom wa ERC-20](https://eips.ethereum.
 }
 ```
 
-Kazi hii inahamisha Etha kwenye akaunti. Mwito wowote kwa mkataba tofauti unaweza kujaribu kutuma Etha. Kwa sababu hatuhitaji kuita kazi yoyote, hatutumi data yoyote na mwito huo.
+Kazi hii inahamisha etha kwenda kwenye akaunti. Mwito wowote kwa mkataba tofauti unaweza kujaribu kutuma etha. Kwa sababu hatuhitaji kuita kazi yoyote, hatutumi data yoyote na mwito huo.
 
 ## Hitimisho {#conclusion}
 

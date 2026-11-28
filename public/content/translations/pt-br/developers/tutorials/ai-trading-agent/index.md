@@ -44,6 +44,8 @@ O [Uniswap](https://app.uniswap.org/) é uma DEX amplamente usada que podemos us
 
 Para um modelo de linguagem grande (LLM), escolhi começar com a [OpenAI](https://openai.com/). Para executar o aplicativo neste tutorial, você precisará pagar pelo acesso à API. O pagamento mínimo de US$ 5 é mais do que suficiente.
 
+A biblioteca Python da OpenAI também pode se comunicar com qualquer outro endpoint compatível com a OpenAI, incluindo um modelo que você executa no seu próprio computador. Consulte [Interface com um LLM](#interface-llm) para saber como apontá-la para outro lugar.
+
 ## Desenvolvimento, passo a passo {#step-by-step}
 
 Para simplificar o desenvolvimento, prosseguiremos em etapas. Cada etapa é uma ramificação (branch) no GitHub.
@@ -354,15 +356,15 @@ uv run agent.py
 A saída agora será um prompt para um LLM, semelhante a:
 
 ```
-Dadas estas cotações:
-Ativo: WETH/USDC
+Given these quotes:
+Asset: WETH/USDC
         2026-01-20T16:34 3016.21
         .
         .
         .
         2026-02-01T17:49 2299.10
 
-Ativo: WBTC/WETH
+Asset: WBTC/WETH
         2026-01-20T16:34 29.84
         .
         .
@@ -370,10 +372,10 @@ Ativo: WBTC/WETH
         2026-02-01T17:50 33.46
 
 
-Qual você esperaria que fosse o valor para WETH/USDC no momento 2026-02-02T17:56?
+What would you expect the value for WETH/USDC to be at time 2026-02-02T17:56?
 
-Forneça sua resposta como um único número arredondado para duas casas decimais,
-sem nenhum outro texto.
+Provide your answer as a single number rounded to two decimal places,
+without any other text.
 ```
 
 Observe que há cotações para dois ativos aqui, `WETH/USDC` e `WBTC/WETH`. Adicionar cotações de outro ativo pode melhorar a precisão da previsão.
@@ -513,7 +515,7 @@ Determine o ponto de tempo futuro para o qual queremos a estimativa e crie o pro
 
 ### Interagindo com um LLM {#interface-llm}
 
-Em seguida, solicitamos a um LLM real e recebemos um valor futuro esperado. Escrevi este programa usando a OpenAI, então se você quiser usar um provedor diferente, precisará ajustá-lo.
+Em seguida, enviamos um prompt para um LLM real e recebemos um valor futuro esperado. Escrevi este programa usando a OpenAI, então, se você quiser usar um provedor diferente, precisará ajustá-lo.
 
 1. Obtenha uma [conta da OpenAI](https://auth.openai.com/create-account)
 2. [Adicione fundos à conta](https://platform.openai.com/settings/organization/billing/overview) — o valor mínimo no momento da redação é de US$ 5
@@ -524,35 +526,52 @@ Em seguida, solicitamos a um LLM real e recebemos um valor futuro esperado. Escr
    export OPENAI_API_KEY=sk-<the rest of the key goes here>
    ```
 
-5. Faça o checkout e execute o agente
+5. Faça o checkout do agente
 
    ```sh
    git checkout 04-interface-llm
+   ```
+
+6. O código no repositório usa o modelo `gpt-4-turbo`, que a [OpenAI desativará em 23 de outubro de 2026](https://developers.openai.com/api/docs/deprecations). Mude para `gpt-6-luna`, um modelo atual de baixo custo. Como `gpt-6-luna` é um modelo de raciocínio, o comando também desativa o raciocínio (`reasoning_effort="none"`, o que mantém `temperature` utilizável) e substitui o parâmetro obsoleto `max_tokens` por `max_completion_tokens`.
+
+   ```sh
+   sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
+   ```
+
+7. Execute o agente
+
+   ```sh
    uv run agent.py
    ```
+
+Se você preferir usar um endpoint diferente compatível com a OpenAI, como um modelo hospedado localmente, a biblioteca da OpenAI lê o endpoint da variável de ambiente `OPENAI_BASE_URL`. Defina-a, coloque qualquer valor não vazio em `OPENAI_API_KEY` se o servidor não verificar chaves e altere `gpt-6-luna` em `agent.py` e `test-predictor.py` para o nome de um modelo que o servidor fornece. Se o servidor rejeitar `reasoning_effort`, remova esse parâmetro.
+
+```sh
+export OPENAI_BASE_URL=http://localhost:<port>/v1
+```
 
 Aqui está o novo código.
 
 ```python
 from openai import OpenAI
 
-open_ai = OpenAI()  # O cliente lê a variável de ambiente OPENAI_API_KEY
+open_ai = OpenAI()  # The client reads the OPENAI_API_KEY environment variable
 ```
 
-Importe e instancie a API da OpenAI.
+Importe e instancie a API da OpenAI. O cliente também lê `OPENAI_BASE_URL` se estiver definido, para que o mesmo código funcione com outros endpoints compatíveis com a OpenAI.
 
 ```python
 response = open_ai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-6-luna", reasoning_effort="none",
     messages=[
         {"role": "user", "content": prompt}
     ],
     temperature=0.0,
-    max_tokens=16,
+    max_completion_tokens=16,
 )
 ```
 
-Chame a API da OpenAI (`open_ai.chat.completions.create`) para criar a resposta.
+Chame a API da OpenAI (`open_ai.chat.completions.create`) para criar a resposta. Um `temperature` de zero pede a resposta mais previsível, e `max_completion_tokens` limita o comprimento da resposta, que só precisa conter um número. Com um modelo de raciocínio, `max_completion_tokens` também conta os tokens que o modelo usa para pensar, o que é outro motivo para definir `reasoning_effort` como `none`.
 
 ```python
 expected_price = Decimal(response.choices[0].message.content.strip())
@@ -567,7 +586,7 @@ else:
     print(f"Sell, I expect the price to go down by {current_price - expected_price} USD")
 ```
 
-Imprima o preço e forneça uma recomendação de compra ou venda.
+Produza o preço e forneça uma recomendação de compra ou venda.
 
 #### Testando as previsões {#testing-the-predictions}
 
@@ -712,9 +731,9 @@ Aqui estão as etapas para criar uma bifurcação local e habilitar a negociaç�
    ADDRESS=`cast wallet address $PRIVATE_KEY`
    ```
 
-4. Estes são os contratos que precisamos usar. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) é o contrato do Uniswap v3 que usamos para realmente negociar. Poderíamos negociar diretamente através do pool, mas isso é muito mais fácil.
+4. Estes são os contratos que precisamos usar. O [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) é o contrato do Uniswap v3 que usamos para realmente negociar. Poderíamos negociar diretamente pelo pool, mas isso é muito mais fácil.
 
-   As duas variáveis inferiores são os caminhos do Uniswap v3 necessários para trocar entre WETH e USDC.
+   As duas variáveis inferiores são os caminhos do Uniswap v3 necessários para fazer a troca entre WETH e USDC.
 
    ```sh
    WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
@@ -725,7 +744,7 @@ Aqui estão as etapas para criar uma bifurcação local e habilitar a negociaç�
    USDC_TO_WETH=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB480001F4C02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
    ```
 
-5. Cada uma das contas de teste tem 10.000 ETH. Use o contrato WETH para empacotar 1.000 ETH para obter 1.000 WETH para negociação.
+5. Cada uma das contas de teste tem 10.000 ETH. Use o contrato WETH para empacotar 1000 ETH para obter 1000 WETH para negociação.
 
    ```sh
    cast send $WETH_ADDRESS "deposit()" --value 1000ether --private-key $PRIVATE_KEY
@@ -742,7 +761,7 @@ Aqui estão as etapas para criar uma bifurcação local e habilitar a negociaç�
        --private-key $PRIVATE_KEY
    ```
 
-   A chamada `approve` cria uma permissão que permite que `SwapRouter` gaste alguns de nossos tokens. Os contratos não podem monitorar eventos, então se transferirmos tokens diretamente para o contrato `SwapRouter`, ele não saberia que foi pago. Em vez disso, permitimos que o contrato `SwapRouter` gaste uma certa quantia, e então `SwapRouter` o faz. Isso é feito através de uma função chamada por `SwapRouter`, para que ele saiba se foi bem-sucedido.
+   A chamada `approve` cria uma permissão que permite que `SwapRouter` gaste alguns de nossos tokens. Os contratos não podem monitorar eventos, então se transferirmos tokens diretamente para o contrato `SwapRouter`, ele não saberia que foi pago. Em vez disso, permitimos que o contrato `SwapRouter` gaste uma certa quantia, e então `SwapRouter` faz isso. Isso é feito por meio de uma função chamada por `SwapRouter`, para que ele saiba se foi bem-sucedido.
 
 7. Verifique se você tem o suficiente de ambos os tokens.
 
@@ -754,9 +773,12 @@ Aqui estão as etapas para criar uma bifurcação local e habilitar a negociaç�
 Agora que temos WETH e USDC, podemos realmente executar o agente.
 
 ```sh
-git checkout 05-trade
+git checkout -f 05-trade
+sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
 uv run agent.py
 ```
+
+O `-f` descarta a alteração de modelo que você fez na ramificação anterior, então o comando `sed` a aplica novamente à nova versão de `agent.py`.
 
 A saída será semelhante a:
 
@@ -779,9 +801,9 @@ WETH Balance: 499
 
 Para realmente usá-lo, você precisa de algumas pequenas alterações.
 
-- Na linha 14, mude `MAINNET_URL` para um ponto de acesso real, como `https://eth.drpc.org`
-- Na linha 28, mude `PRIVATE_KEY` para sua própria chave privada
-- A menos que você seja muito rico e possa comprar ou vender 1 ETH por dia para um agente não comprovado, você pode querer mudar a linha 29 para diminuir `WETH_TRADE_AMOUNT`
+- Na linha 14, altere `MAINNET_URL` para um ponto de acesso real, como `https://eth.drpc.org`
+- Na linha 28, altere `PRIVATE_KEY` para sua própria chave privada
+- A menos que você seja muito rico e possa comprar ou vender 1 ETH a cada dia para um agente não comprovado, você pode querer alterar a linha 29 para diminuir `WETH_TRADE_AMOUNT`
 
 #### Explicação do código {#trading-code}
 
@@ -800,7 +822,7 @@ As mesmas variáveis que usamos na etapa 4.
 WETH_TRADE_AMOUNT=1
 ```
 
-O valor a ser negociado.
+A quantia a negociar.
 
 ```python
 ERC20_ABI = [
@@ -819,7 +841,7 @@ SWAP_ROUTER_ABI = [
 ]
 ```
 
-Na ABI de `SwapRouter`, precisamos apenas de `exactInput`. Há uma função relacionada, `exactOutput`, que poderíamos usar para comprar exatamente um WETH, mas por simplicidade usamos apenas `exactInput` em ambos os casos.
+Na ABI do `SwapRouter` só precisamos de `exactInput`. Há uma função relacionada, `exactOutput`, que poderíamos usar para comprar exatamente um WETH, mas por simplicidade usamos apenas `exactInput` em ambos os casos.
 
 ```python
 account = w3.eth.account.from_key(PRIVATE_KEY)
@@ -829,7 +851,7 @@ swap_router = w3.eth.contract(
 )
 ```
 
-As definições da Web3 para o [`account`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html) e o contrato `SwapRouter`.
+As definições da Web3 para a [`account`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html) e o contrato `SwapRouter`.
 
 ```python
 def txn_params() -> dict:
@@ -888,7 +910,7 @@ def make_buy_params(quote: Quote) -> dict:
     }
 ```
 
-Em contraste com `SELL_PARAMS`, os parâmetros de compra podem mudar. O valor de entrada é o custo de 1 WETH, conforme disponível em `quote`.
+Em contraste com `SELL_PARAMS`, os parâmetros de compra podem mudar. A quantia de entrada é o custo de 1 WETH, conforme disponível em `quote`.
 
 ```python
 def buy(quote: Quote):
@@ -913,7 +935,7 @@ def sell():
     print("Sell transaction mined.")
 ```
 
-As funções `buy()` e `sell()` são quase idênticas. Primeiro aprovamos uma permissão suficiente para `SwapRouter` e, em seguida, a chamamos com o caminho e o valor corretos.
+As funções `buy()` e `sell()` são quase idênticas. Primeiro aprovamos uma permissão suficiente para `SwapRouter`, e então a chamamos com o caminho e a quantia corretos.
 
 ```python
 def balances():
@@ -941,7 +963,7 @@ print("Account balances after trade:")
 balances()
 ```
 
-Este agente atualmente funciona apenas uma vez. No entanto, você pode alterá-lo para funcionar continuamente executando-o a partir do [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) ou envolvendo as linhas 368-400 em um loop e usando [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) para aguardar até que seja a hora do próximo ciclo.
+Atualmente, este agente funciona apenas uma vez. No entanto, você pode alterá-lo para funcionar continuamente executando-o a partir do [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) ou envolvendo as linhas 368-397 em um loop e usando [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) para aguardar até que seja a hora do próximo ciclo.
 
 ## Possíveis melhorias {#improvements}
 
@@ -957,9 +979,9 @@ Há dois fatos importantes que o agente ignora ao decidir o que fazer.
 
 ### E se você quiser manter sua estratégia de negociação em segredo? {#secret}
 
-Os fornecedores de IA podem ver as consultas que você envia aos seus LLMs, o que pode expor o sistema de negociação genial que você desenvolveu com seu agente. Um sistema de negociação que muitas pessoas usam não tem valor porque muitas pessoas tentam comprar quando você quer comprar (e o preço sobe) e tentam vender quando você quer vender (e o preço cai).
+Os fornecedores de IA podem ver as consultas que você envia aos seus LLMs, o que poderia expor o sistema de negociação genial que você desenvolveu com seu agente. Um sistema de negociação que muitas pessoas usam não tem valor porque muitas pessoas tentam comprar quando você quer comprar (e o preço sobe) e tentam vender quando você quer vender (e o preço cai).
 
-Você pode executar um LLM localmente, por exemplo, usando o [LM-Studio](https://lmstudio.ai/), para evitar esse problema.
+Você pode executar um LLM localmente, por exemplo, usando o `llama-server` do [llama.cpp](https://github.com/ggml-org/llama.cpp), para evitar esse problema. Ele fornece um endpoint compatível com a OpenAI, então você só precisa definir `OPENAI_BASE_URL` e o nome do modelo, conforme explicado em [Interface com um LLM](#interface-llm).
 
 ### De bot de IA para agente de IA {#bot-to-agent}
 

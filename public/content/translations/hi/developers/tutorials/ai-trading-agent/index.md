@@ -46,7 +46,9 @@ AI के लिए सबसे व्यापक रूप से उपय�
 
 ### OpenAI {#openai}
 
-एक बड़े भाषा मॉडल (LLM) के लिए, मैंने [OpenAI](https://openai.com/) के साथ शुरुआत करना चुना। इस ट्यूटोरियल में एप्लिकेशन चलाने के लिए आपको API एक्सेस के लिए भुगतान करना होगा। $5 का न्यूनतम भुगतान पर्याप्त से अधिक है।
+एक बड़े लैंग्वेज मॉडल के लिए, मैंने [OpenAI](https://openai.com/) के साथ शुरुआत करना चुना। इस ट्यूटोरियल में एप्लिकेशन को चलाने के लिए आपको API एक्सेस के लिए भुगतान करना होगा। $5 का न्यूनतम भुगतान पर्याप्त से अधिक है।
+
+OpenAI Python लाइब्रेरी किसी भी अन्य OpenAI-संगत एंडपॉइंट से भी बात कर सकती है, जिसमें आपके अपने कंप्यूटर पर चलने वाला मॉडल भी शामिल है। इसे कहीं और कैसे पॉइंट करें, इसके लिए [LLM के साथ इंटरफेसिंग](#interface-llm) देखें।
 
 ## विकास, चरण दर चरण {#step-by-step}
 
@@ -358,15 +360,15 @@ uv run agent.py
 आउटपुट अब LLM के लिए एक प्रॉम्प्ट होने जा रहा है, जो इसके समान है:
 
 ```
-इन कोट्स को देखते हुए:
-एसेट: WETH/USDC
+Given these quotes:
+Asset: WETH/USDC
         2026-01-20T16:34 3016.21
         .
         .
         .
         2026-02-01T17:49 2299.10
 
-एसेट: WBTC/WETH
+Asset: WBTC/WETH
         2026-01-20T16:34 29.84
         .
         .
@@ -374,9 +376,10 @@ uv run agent.py
         2026-02-01T17:50 33.46
 
 
-आप 2026-02-02T17:56 समय पर WETH/USDC का मूल्य क्या होने की उम्मीद करेंगे?
+What would you expect the value for WETH/USDC to be at time 2026-02-02T17:56?
 
-अपना उत्तर बिना किसी अन्य टेक्स्ट के, दो दशमलव स्थानों तक पूर्णांकित एक एकल संख्या के रूप में प्रदान करें।
+Provide your answer as a single number rounded to two decimal places,
+without any other text.
 ```
 
 ध्यान दें कि यहाँ दो एसेट्स, `WETH/USDC` और `WBTC/WETH` के लिए कोट्स हैं। किसी अन्य एसेट से कोट्स जोड़ने से भविष्यवाणी की सटीकता में सुधार हो सकता है।
@@ -521,41 +524,58 @@ print(make_prompt(wethusdc_quotes + wethwbtc_quotes, future_time, wethusdc_pool.
 1. एक [OpenAI खाता](https://auth.openai.com/create-account) प्राप्त करें
 2. [खाते में फंड डालें](https://platform.openai.com/settings/organization/billing/overview)—लिखते समय न्यूनतम राशि $5 है
 3. [एक API कुंजी बनाएँ](https://platform.openai.com/settings/organization/api-keys)
-4. कमांड लाइन में, API कुंजी निर्यात (export) करें ताकि आपका प्रोग्राम इसका उपयोग कर सके
+4. कमांड लाइन में, API कुंजी को एक्सपोर्ट करें ताकि आपका प्रोग्राम इसका उपयोग कर सके
 
    ```sh
    export OPENAI_API_KEY=sk-<the rest of the key goes here>
    ```
 
-5. चेकआउट करें और एजेंट चलाएँ
+5. एजेंट को चेकआउट करें
 
    ```sh
    git checkout 04-interface-llm
+   ```
+
+6. रिपॉजिटरी में कोड `gpt-4-turbo` मॉडल का उपयोग करता है, जिसे [OpenAI 23 अक्टूबर, 2026 को बंद कर रहा है](https://developers.openai.com/api/docs/deprecations)। इसे `gpt-6-luna` में बदलें, जो एक वर्तमान कम लागत वाला मॉडल है। चूँकि `gpt-6-luna` एक रीज़निंग मॉडल है, कमांड रीज़निंग को भी बंद कर देता है (`reasoning_effort="none"`, जो `temperature` को उपयोग करने योग्य रखता है) और अप्रचलित `max_tokens` पैरामीटर को `max_completion_tokens` से बदल देता है।
+
+   ```sh
+   sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
+   ```
+
+7. एजेंट चलाएँ
+
+   ```sh
    uv run agent.py
    ```
+
+यदि आप किसी भिन्न OpenAI-संगत एंडपॉइंट का उपयोग करना पसंद करते हैं, जैसे कि आपके द्वारा स्थानीय रूप से होस्ट किया गया मॉडल, तो OpenAI लाइब्रेरी `OPENAI_BASE_URL` पर्यावरण चर (environment variable) से एंडपॉइंट पढ़ती है। इसे सेट करें, यदि सर्वर कुंजियों की जाँच नहीं करता है तो `OPENAI_API_KEY` में कोई भी गैर-रिक्त (non-empty) मान डालें, और `agent.py` और `test-predictor.py` में `gpt-6-luna` को उस मॉडल के नाम में बदलें जो सर्वर प्रदान करता है। यदि सर्वर `reasoning_effort` को अस्वीकार करता है, तो उस पैरामीटर को हटा दें।
+
+```sh
+export OPENAI_BASE_URL=http://localhost:<port>/v1
+```
 
 यहाँ नया कोड है।
 
 ```python
 from openai import OpenAI
 
-open_ai = OpenAI()  # क्लाइंट OPENAI_API_KEY एनवायरनमेंट वेरिएबल को पढ़ता है
+open_ai = OpenAI()  # The client reads the OPENAI_API_KEY environment variable
 ```
 
-OpenAI API को आयात करें और इंस्टेंटिएट (instantiate) करें।
+OpenAI API को इंपोर्ट और इंस्टेंशिएट करें। क्लाइंट `OPENAI_BASE_URL` को भी पढ़ता है यदि यह सेट है, इसलिए वही कोड अन्य OpenAI-संगत एंडपॉइंट्स के साथ काम करता है।
 
 ```python
 response = open_ai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-6-luna", reasoning_effort="none",
     messages=[
         {"role": "user", "content": prompt}
     ],
     temperature=0.0,
-    max_tokens=16,
+    max_completion_tokens=16,
 )
 ```
 
-प्रतिक्रिया बनाने के लिए OpenAI API (`open_ai.chat.completions.create`) को कॉल करें।
+प्रतिक्रिया बनाने के लिए OpenAI API (`open_ai.chat.completions.create`) को कॉल करें। शून्य का `temperature` सबसे अनुमानित उत्तर के लिए पूछता है, और `max_completion_tokens` उत्तर की लंबाई को सीमित करता है, जिसमें केवल एक संख्या रखने की आवश्यकता होती है। एक रीज़निंग मॉडल के साथ, `max_completion_tokens` उन टोकन को भी गिनता है जिनका उपयोग मॉडल सोचने के लिए करता है, जो `reasoning_effort` को `none` पर सेट करने का एक और कारण है।
 
 ```python
 expected_price = Decimal(response.choices[0].message.content.strip())
@@ -570,7 +590,7 @@ else:
     print(f"Sell, I expect the price to go down by {current_price - expected_price} USD")
 ```
 
-कीमत आउटपुट करें और खरीदने या बेचने का सुझाव प्रदान करें।
+कीमत आउटपुट करें और खरीदने या बेचने की सिफारिश प्रदान करें।
 
 #### भविष्यवाणियों का परीक्षण {#testing-the-predictions}
 
@@ -706,18 +726,18 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
    anvil --fork-url https://eth.drpc.org --block-time 12
    ```
 
-   `anvil` Foundry के लिए डिफ़ॉल्ट URL, http://localhost:8545 पर सुन रहा है, इसलिए हमें [`cast` कमांड](https://getfoundry.sh/cast/overview) के लिए URL निर्दिष्ट करने की आवश्यकता नहीं है जिसका उपयोग हम ब्लॉकचेन में हेरफेर करने के लिए करते हैं।
+   `anvil` Foundry के डिफ़ॉल्ट URL, http://localhost:8545 पर सुन रहा है, इसलिए हमें ब्लॉकचेन में हेरफेर करने के लिए उपयोग किए जाने वाले [`cast` कमांड](https://getfoundry.sh/cast/overview) के लिए URL निर्दिष्ट करने की आवश्यकता नहीं है।
 
-3. `anvil` में चलाते समय, दस परीक्षण खाते होते हैं जिनमें ETH होता है—पहले वाले के लिए एनवायरनमेंट वेरिएबल्स सेट करें
+3. `anvil` में चलाते समय, दस परीक्षण खाते होते हैं जिनमें ETH होता है—पहले वाले के लिए पर्यावरण चर सेट करें
 
    ```sh
    PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
    ADDRESS=`cast wallet address $PRIVATE_KEY`
    ```
 
-4. ये वे अनुबंध हैं जिनका हमें उपयोग करने की आवश्यकता है। [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) वह यूनिस्वैप v3 अनुबंध है जिसका उपयोग हम वास्तव में ट्रेड करने के लिए करते हैं। हम सीधे पूल के माध्यम से ट्रेड कर सकते हैं, लेकिन यह बहुत आसान है।
+4. ये वे अनुबंध हैं जिनका हमें उपयोग करने की आवश्यकता है। [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) Uniswap v3 अनुबंध है जिसका उपयोग हम वास्तव में ट्रेड करने के लिए करते हैं। हम सीधे पूल के माध्यम से ट्रेड कर सकते हैं, लेकिन यह बहुत आसान है।
 
-   नीचे के दो वेरिएबल WETH और USDC के बीच स्वैप करने के लिए आवश्यक यूनिस्वैप v3 पथ हैं।
+   नीचे के दो चर WETH और USDC के बीच स्वैप करने के लिए आवश्यक Uniswap v3 पथ हैं।
 
    ```sh
    WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
@@ -745,7 +765,7 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
        --private-key $PRIVATE_KEY
    ```
 
-   `approve` कॉल एक व्यय सीमा बनाती है जो `SwapRouter` को हमारे कुछ टोकन खर्च करने की अनुमति देती है। अनुबंध घटनाएँ की निगरानी नहीं कर सकते हैं, इसलिए यदि हम सीधे `SwapRouter` अनुबंध में टोकन ट्रांसफर करते हैं, तो उसे पता नहीं चलेगा कि उसे भुगतान किया गया था। इसके बजाय, हम `SwapRouter` अनुबंध को एक निश्चित राशि खर्च करने की अनुमति देते हैं, और फिर `SwapRouter` ऐसा करता है। यह `SwapRouter` द्वारा कॉल किए गए फ़ंक्शन के माध्यम से किया जाता है, इसलिए यह जानता है कि क्या यह सफल रहा।
+   `approve` कॉल एक व्यय सीमा बनाता है जो `SwapRouter` को हमारे कुछ टोकन खर्च करने की अनुमति देता है। अनुबंध इवेंट की निगरानी नहीं कर सकते हैं, इसलिए यदि हम सीधे `SwapRouter` अनुबंध में टोकन ट्रांसफर करते हैं, तो उसे पता नहीं चलेगा कि उसे भुगतान किया गया था। इसके बजाय, हम `SwapRouter` अनुबंध को एक निश्चित राशि खर्च करने की अनुमति देते हैं, और फिर `SwapRouter` ऐसा करता है। यह `SwapRouter` द्वारा कॉल किए गए फ़ंक्शन के माध्यम से किया जाता है, इसलिए उसे पता होता है कि क्या यह सफल रहा।
 
 7. सत्यापित करें कि आपके पास दोनों टोकन पर्याप्त मात्रा में हैं।
 
@@ -757,11 +777,14 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
 अब जब हमारे पास WETH और USDC हैं, तो हम वास्तव में एजेंट चला सकते हैं।
 
 ```sh
-git checkout 05-trade
+git checkout -f 05-trade
+sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
 uv run agent.py
 ```
 
-आउटपुट इसके समान दिखेगा:
+`-f` आपके द्वारा पिछली ब्रांच पर किए गए मॉडल परिवर्तन को छोड़ देता है, इसलिए `sed` कमांड इसे `agent.py` के नए संस्करण पर फिर से लागू करता है।
+
+आउटपुट कुछ इस तरह दिखेगा:
 
 ```
 (ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
@@ -782,9 +805,9 @@ WETH Balance: 499
 
 वास्तव में इसका उपयोग करने के लिए, आपको कुछ मामूली बदलावों की आवश्यकता है।
 
-- पंक्ति 14 में, `MAINNET_URL` को एक वास्तविक एक्सेस पॉइंट में बदलें, जैसे कि `https://eth.drpc.org`
-- पंक्ति 28 में, `PRIVATE_KEY` को अपनी निजी कुंजी में बदलें
-- जब तक आप बहुत अमीर नहीं हैं और एक अप्रमाणित एजेंट के लिए हर दिन 1 ETH खरीद या बेच नहीं सकते, आप `WETH_TRADE_AMOUNT` को कम करने के लिए 29 को बदलना चाह सकते हैं
+- लाइन 14 में, `MAINNET_URL` को एक वास्तविक एक्सेस पॉइंट में बदलें, जैसे कि `https://eth.drpc.org`
+- लाइन 28 में, `PRIVATE_KEY` को अपनी निजी कुंजी में बदलें
+- जब तक आप बहुत अमीर नहीं हैं और एक अप्रमाणित एजेंट के लिए हर दिन 1 ETH खरीद या बेच नहीं सकते, तब तक आप `WETH_TRADE_AMOUNT` को कम करने के लिए 29 को बदलना चाह सकते हैं
 
 #### कोड स्पष्टीकरण {#trading-code}
 
@@ -797,7 +820,7 @@ USDC_TO_WETH=bytes.fromhex("A0b86991c6218b36c1d19D4a2e9Eb0cE3606eB480001F4C02aaA
 PRIVATE_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
 ```
 
-वही वेरिएबल्स जिनका उपयोग हमने चरण 4 में किया था।
+वही चर जिनका उपयोग हमने चरण 4 में किया था।
 
 ```python
 WETH_TRADE_AMOUNT=1
@@ -844,13 +867,13 @@ def txn_params() -> dict:
     }
 ```
 
-लेन-देन पैरामीटर। हमें यहाँ एक फ़ंक्शन की आवश्यकता है क्योंकि [नॉन्स](https://en.wikipedia.org/wiki/Cryptographic_nonce) हर बार बदलना चाहिए।
+लेन-देन पैरामीटर। हमें यहाँ एक फ़ंक्शन की आवश्यकता है क्योंकि [नॉन्स (nonce)](https://en.wikipedia.org/wiki/Cryptographic_nonce) हर बार बदलना चाहिए।
 
 ```python
 def approve_token(contract: Contract, amount: int):
 ```
 
-`SwapRouter` के लिए टोकन व्यय सीमा को स्वीकृति दें।
+`SwapRouter` के लिए एक टोकन व्यय सीमा को स्वीकृति दें।
 
 ```python
     txn = contract.functions.approve(SWAP_ROUTER_ADDRESS, amount).build_transaction(txn_params())
@@ -866,7 +889,7 @@ def approve_token(contract: Contract, amount: int):
     print("Approve transaction mined.")
 ```
 
-[`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) लेन-देन के माइन होने तक प्रतीक्षा करता है। यदि आवश्यक हो तो यह रसीद देता है।
+[`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) तब तक प्रतीक्षा करता है जब तक कि लेन-देन माइन नहीं हो जाता। यदि आवश्यक हो तो यह रसीद लौटाता है।
 
 ```python
 SELL_PARAMS = {
@@ -927,7 +950,7 @@ def balances():
     print(f"{wethusdc_pool.token1.symbol} Balance: {Decimal(token1_balance) / Decimal(10 ** wethusdc_pool.token1.decimals)}")
 ```
 
-दोनों मुद्राओं में उपयोगकर्ता बैलेंस रिपोर्ट करें।
+दोनों मुद्राओं में उपयोगकर्ता बैलेंस की रिपोर्ट करें।
 
 ```python
 print("Account balances before trade:")
@@ -944,7 +967,7 @@ print("Account balances after trade:")
 balances()
 ```
 
-यह एजेंट वर्तमान में केवल एक बार काम करता है। हालाँकि, आप इसे [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) से चलाकर या 368-400 पंक्तियों को एक लूप में लपेटकर और अगले चक्र के समय तक प्रतीक्षा करने के लिए [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) का उपयोग करके लगातार काम करने के लिए बदल सकते हैं।
+यह एजेंट वर्तमान में केवल एक बार काम करता है। हालाँकि, आप इसे [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) से चलाकर या 368-397 लाइनों को एक लूप में लपेटकर और अगले चक्र के समय तक प्रतीक्षा करने के लिए [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) का उपयोग करके लगातार काम करने के लिए बदल सकते हैं।
 
 ## संभावित सुधार {#improvements}
 
@@ -960,9 +983,9 @@ balances()
 
 ### क्या होगा यदि आप अपनी ट्रेडिंग रणनीति को गुप्त रखना चाहते हैं? {#secret}
 
-AI विक्रेता आपके द्वारा उनके LLMs को भेजी गई क्वेरी देख सकते हैं, जो आपके एजेंट के साथ विकसित किए गए जीनियस ट्रेडिंग सिस्टम को उजागर कर सकता है। एक ट्रेडिंग सिस्टम जिसका बहुत से लोग उपयोग करते हैं वह बेकार है क्योंकि जब आप खरीदना चाहते हैं तो बहुत से लोग खरीदने की कोशिश करते हैं (और कीमत बढ़ जाती है) और जब आप बेचना चाहते हैं तो बेचने की कोशिश करते हैं (और कीमत कम हो जाती है)।
+AI विक्रेता उन प्रश्नों को देख सकते हैं जो आप उनके LLM को भेजते हैं, जो आपके एजेंट के साथ विकसित किए गए जीनियस ट्रेडिंग सिस्टम को उजागर कर सकता है। एक ट्रेडिंग सिस्टम जिसका बहुत से लोग उपयोग करते हैं वह बेकार है क्योंकि जब आप खरीदना चाहते हैं तो बहुत से लोग खरीदने की कोशिश करते हैं (और कीमत बढ़ जाती है) और जब आप बेचना चाहते हैं तो बेचने की कोशिश करते हैं (और कीमत कम हो जाती है)।
 
-इस समस्या से बचने के लिए आप स्थानीय रूप से एक LLM चला सकते हैं, उदाहरण के लिए, [LM-Studio](https://lmstudio.ai/) का उपयोग करके।
+आप इस समस्या से बचने के लिए स्थानीय रूप से एक LLM चला सकते हैं, उदाहरण के लिए, [llama.cpp](https://github.com/ggml-org/llama.cpp) के `llama-server` का उपयोग करके। यह एक OpenAI-संगत एंडपॉइंट प्रदान करता है, इसलिए आपको केवल `OPENAI_BASE_URL` और मॉडल का नाम सेट करने की आवश्यकता है जैसा कि [LLM के साथ इंटरफेसिंग](#interface-llm) में बताया गया है।
 
 ### एआई बॉट से एआई एजेंट तक {#bot-to-agent}
 

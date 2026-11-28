@@ -3,7 +3,7 @@ title: "콜 데이터 최적화를 위한 짧은 ABI"
 description: "옵티미스틱 롤업을 위한 스마트 컨트랙트 최적화"
 author: "오리 포메란츠"
 lang: ko
-tags: ["레이어 2 (l2)"]
+tags: ["레이어 2 (L2)"]
 skill: intermediate
 breadcrumb: "짧은 ABI"
 published: 2022-04-01
@@ -21,65 +21,106 @@ published: 2022-04-01
 
 ### 용어 {#terminology}
 
-롤업에 대해 논의할 때 '레이어 1 (l1)'이라는 용어는 프로덕션 이더리움 네트워크인 메인넷을 의미합니다.
-'레이어 2 (l2)'라는 용어는 보안을 l1에 의존하지만 대부분의 처리를 오프체인에서 수행하는 롤업이나 기타 시스템을 의미합니다.
+롤업에 대해 논의할 때 '레이어 1 (L1)'이라는 용어는 프로덕션 이더리움 네트워크인 메인넷을 의미합니다.
+'레이어 2 (L2)'라는 용어는 보안을 L1에 의존하지만 대부분의 처리를 오프체인에서 수행하는 롤업이나 기타 시스템을 의미합니다.
 
-## l2 트랜잭션 비용을 어떻게 더 줄일 수 있을까요? {#how-can-we-further-reduce-the-cost-of-l2-transactions}
+## L2 트랜잭션 비용을 어떻게 더 줄일 수 있을까요? {#how-can-we-further-reduce-the-cost-of-l2-transactions}
 
-[옵티미스틱 롤업](/developers/docs/scaling/optimistic-rollups)은 누구나 내역을 살펴보고 현재 상태가 올바른지 검증할 수 있도록 모든 과거 트랜잭션 기록을 보존해야 합니다.
-이더리움 메인넷에 데이터를 가져오는 가장 저렴한 방법은 콜 데이터로 작성하는 것입니다.
-이 솔루션은 [옵티미즘](https://docs.optimism.io/op-stack/protocol/overview)과 [아비트럼](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction) 모두에서 채택했습니다.
+[옵티미스틱 롤업](/developers/docs/scaling/optimistic-rollups)은 누구나 과거 트랜잭션을 살펴보고 현재 상태가 올바른지 검증할 수 있도록 모든 과거 트랜잭션 기록을 보존해야 합니다.
+이 글이 작성될 당시, 이더리움 메인넷에 데이터를 가져오는 가장 저렴한 방법은 콜 데이터로 작성하는 것이었습니다.
+이 솔루션은 [Optimism](https://docs.optimism.io/op-stack/protocol/overview)과 [Arbitrum](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction) 모두에서 채택했습니다.
+덴쿤 업그레이드(2024년 3월) 이후, 롤업은 이 데이터를 훨씬 저렴한 [블롭](/roadmap/danksharding/)에 게시할 수 있게 되었습니다.
 
-### l2 트랜잭션 비용 {#cost-of-l2-transactions}
+### L2 트랜잭션 비용 {#cost-of-l2-transactions}
 
-l2 트랜잭션 비용은 두 가지 요소로 구성됩니다.
+L2 트랜잭션 비용은 두 가지 요소로 구성됩니다.
 
-1. l2 처리 비용 (일반적으로 매우 저렴함)
-2. l1 저장 비용 (메인넷 가스 비용과 연관됨)
+1. L2 처리 비용 (일반적으로 매우 저렴함)
+2. L1 저장 비용 (메인넷 가스 비용과 연관됨)
 
-이 글을 쓰는 시점을 기준으로, 옵티미즘의 l2 가스 비용은 0.001 [Gwei](/developers/docs/gas/#pre-london)입니다.
-반면 l1 가스 비용은 약 40 Gwei입니다.
-[현재 가격은 여기에서 확인할 수 있습니다](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
+2022년에 이 글을 작성할 당시, Optimism의 L2 가스 비용은 0.001 [Gwei](/developers/docs/gas/#what-is-gas)였습니다.
+반면 L1 가스 비용은 약 40 Gwei였습니다.
 
 콜 데이터 1바이트의 비용은 4 가스(0인 경우) 또는 16 가스(다른 값인 경우)입니다.
-EVM에서 가장 비싼 연산 중 하나는 스토리지에 쓰는 것입니다.
-l2에서 스토리지에 32바이트 워드를 쓰는 최대 비용은 22100 가스입니다. 현재 이는 22.1 Gwei입니다.
-따라서 콜 데이터에서 0인 바이트 하나만 절약해도 스토리지에 약 200바이트를 쓰고도 이득을 볼 수 있습니다.
+EVM에서 가장 비용이 많이 드는 연산 중 하나는 스토리지에 쓰는 것입니다.
+L2에서 32바이트 단어를 스토리지에 쓰는 최대 비용은 22,100 가스입니다. 당시에는 22.1 Gwei였습니다.
+따라서 콜 데이터에서 0인 바이트 하나만 절약해도 스토리지에 약 200바이트를 쓰고도 이득을 볼 수 있었습니다.
+
+#### 2024년 L2 비용의 변화 {#how-l2-costs-changed-in-2024}
+
+OP Stack의 [L1 데이터 수수료](https://docs.optimism.io/op-stack/transactions/fees#l1-data-fee) 공식은 이 글이 작성된 이후 두 번 변경되었습니다.
+
+- [Ecotone 업그레이드](https://docs.optimism.io/op-stack/transactions/fees#ecotone)(2024년 3월)를 통해 OP Stack 체인은 트랜잭션 데이터를 블롭에 게시하기 시작했으며, 이는 별도의(그리고 일반적으로 훨씬 낮은) 블롭 기본 수수료로 가격이 책정됩니다.
+- [Fjord 업그레이드](https://docs.optimism.io/op-stack/transactions/fees#fjord)(2024년 7월)를 통해 L1 데이터 수수료는 [FastLZ](https://github.com/ariya/FastLZ) 압축 후 트랜잭션 크기 추정치를 기반으로 하며, 트랜잭션당 최소 100바이트가 적용됩니다([사양 참조](https://specs.optimism.io/protocol/fjord/exec-engine.html)).
+
+이로 인해 이 글의 나머지 부분에 대한 분석이 세 가지 측면에서 변경됩니다.
+
+1. 0인 바이트는 압축이 잘 되므로 거의 무료입니다.
+   아래의 바이트당 4 가스 및 16 가스 수치는 L1 콜 데이터의 비용이며, 현재 OP Stack 체인에서 트랜잭션 데이터에 지불하는 비용이 아닙니다.
+2. 최소 100바이트 미만에서는 콜 데이터가 짧아져도 비용이 절약되지 않습니다.
+   예를 들어, 2026년 10월 OP 메인넷에서 표준 ERC-20 `transfer`(콜 데이터 68바이트)와 이 글의 23바이트 짧은 버전은 정확히 동일한 L1 데이터 수수료인 최소 약 1 Gwei(10<sup>-9</sup> ETH)를 지불했을 것입니다.
+3. 블롭 공간이 저렴하기 때문에 이제 L2 실행 수수료가 L1 데이터 수수료보다 큰 경우가 많습니다.
+   L2 가스 가격이 0.001 Gwei일 때 1,000 가스의 비용은 1 Gwei로 전체 L1 데이터 수수료와 동일하므로, 프록시 컨트랙트를 거치는 데 드는 추가 실행 가스 비용이 절약되는 바이트 비용보다 더 클 수 있습니다.
+
+원칙은 여전히 유효합니다. 압축된 바이트 수가 적을수록 L1 데이터 수수료가 낮아집니다.
+짧은 ABI는 압축이 잘 되지 않는 데이터가 많은 트랜잭션이나 L1 데이터 비용이 비싼 체인 또는 시기에 가장 유용합니다.
+특정 트랜잭션이 지불할 비용을 확인하려면 서명되지 않은 트랜잭션과 함께 [`GasPriceOracle` 사전 배포(predeploy)](https://specs.optimism.io/protocol/predeploys.html#gaspriceoracle)에서 `getL1Fee`를 호출하세요.
+예를 들어, [Foundry](https://getfoundry.sh/introduction/installation/)의 `cast`를 사용하는 경우:
+
+```sh
+TX=$(cast mktx --raw-unsigned --from <your address> --chain 10 --nonce 0 --gas-limit 100000 \
+  --priority-gas-price 1000000 --gas-price 1000000 <destination address> <calldata>)
+cast call 0x420000000000000000000000000000000000000F "getL1Fee(bytes)(uint256)" $TX --rpc-url https://mainnet.optimism.io
+```
+
+결과는 Wei 단위입니다.
 
 ### ABI {#the-abi}
 
-대부분의 트랜잭션은 외부 소유 계정(EOA)에서 컨트랙트에 접근합니다.
-대부분의 컨트랙트는 Solidity로 작성되며 [애플리케이션 바이너리 인터페이스(ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding)에 따라 데이터 필드를 해석합니다.
+대다수의 트랜잭션은 외부 소유 계정에서 컨트랙트에 접근합니다.
+대부분의 컨트랙트는 Solidity로 작성되며 [애플리케이션 바이너리 인터페이스 (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding)에 따라 데이터 필드를 해석합니다.
 
-하지만 ABI는 콜 데이터 1바이트 비용이 1,000번 이상의 산술 연산 비용과 맞먹는 l2가 아니라, 콜 데이터 1바이트 비용이 약 4번의 산술 연산 비용과 비슷한 l1을 위해 설계되었습니다.
+하지만 ABI는 콜 데이터 1바이트의 비용이 4번의 산술 연산과 거의 동일한 L1을 위해 설계되었으며, (2022년 가격 기준) 콜 데이터 1바이트의 비용이 1,000번 이상의 산술 연산과 맞먹는 L2를 위해 설계된 것이 아닙니다.
 콜 데이터는 다음과 같이 나뉩니다.
 
 | 섹션 | 길이 | 바이트 | 낭비된 바이트 | 낭비된 가스 | 필요한 바이트 | 필요한 가스 |
 | ------------------- | -----: | ----: | -----------: | ---------: | --------------: | ------------: |
 | 함수 선택자 |      4 |   0-3 |            3 |         48 |               1 |            16 |
-| 0 (Zeroes) |     12 |  4-15 |           12 |         48 |               0 |             0 |
+| 0 |     12 |  4-15 |           12 |         48 |               0 |             0 |
 | 목적지 주소 |     20 | 16-35 |            0 |          0 |              20 |           320 |
-| 수량 |     32 | 36-67 |           17 |         64 |              15 |           240 |
-| 총합 |     68 |       |              |        160 |                 |           576 |
+| 수량 |     32 | 36-67 |           17 |         68 |              15 |           240 |
+| 합계 |     68 |       |              |        164 |                 |           576 |
 
 설명:
 
-- **함수 선택자**: 컨트랙트의 함수가 256개 미만이므로 1바이트만으로 구분할 수 있습니다.
+- **함수 선택자**: 컨트랙트의 함수가 256개 미만이므로 단일 바이트로 구분할 수 있습니다.
   이 바이트들은 일반적으로 0이 아니므로 [16 가스의 비용이 듭니다](https://eips.ethereum.org/EIPS/eip-2028).
-- **0 (Zeroes)**: 20바이트 주소를 담는 데 32바이트 워드가 필요하지 않으므로 이 바이트들은 항상 0입니다.
-  0을 담고 있는 바이트는 4 가스의 비용이 듭니다([황서](https://ethereum.github.io/yellowpaper/paper.pdf) 부록 G,
-  27페이지의 `G`<sub>`txdatazero`</sub> 값 참조).
-- **수량**: 이 컨트랙트에서 `decimals`가 18(일반적인 값)이고 전송할 토큰의 최대 수량이 10<sup>18</sup>이라고 가정하면, 최대 수량은 10<sup>36</sup>이 됩니다.
+- **0**: 20바이트 주소를 저장하는 데 32바이트 단어가 필요하지 않으므로 이 바이트들은 항상 0입니다.
+  0을 포함하는 바이트는 4 가스의 비용이 듭니다([황서](https://ethereum.github.io/yellowpaper/paper.pdf) 부록 G, 27페이지의 `G`<sub>`txdatazero`</sub> 값 참조).
+- **수량**: 이 컨트랙트에서 `decimals`가 18(일반적인 값)이고 전송할 토큰의 최대 수량이 10<sup>18</sup>이라고 가정하면 최대 수량은 10<sup>36</sup>이 됩니다.
   256<sup>15</sup> &gt; 10<sup>36</sup>이므로 15바이트면 충분합니다.
 
-l1에서 160 가스의 낭비는 보통 무시할 수 있는 수준입니다. 트랜잭션 비용이 최소 [21,000 가스](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed)이므로 0.8%가 추가되는 것은 큰 문제가 되지 않습니다.
-하지만 l2에서는 상황이 다릅니다. 트랜잭션 비용의 거의 대부분이 l1에 기록하는 데 사용됩니다.
+L1에서 164 가스의 낭비는 일반적으로 무시할 수 있는 수준입니다. 트랜잭션 비용은 최소 [21,000 가스](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed)이므로 추가 0.8%는 중요하지 않습니다.
+하지만 2022년의 L2에서는 상황이 달랐습니다. 트랜잭션 비용의 거의 대부분이 L1에 기록하는 데 사용되었습니다.
 트랜잭션 콜 데이터 외에도 109바이트의 트랜잭션 헤더(목적지 주소, 서명 등)가 있습니다.
-따라서 총 비용은 `109*16+576+160=2480`이며, 우리는 그중 약 6.5%를 낭비하고 있는 셈입니다.
+따라서 총 비용은 `109*16+576+164=2484`이며, 우리는 그 중 약 6.6%를 낭비하고 있는 셈입니다.
 
 ## 목적지를 제어할 수 없을 때 비용 줄이기 {#reducing-costs-when-you-dont-control-the-destination}
 
-목적지 컨트랙트를 제어할 수 없다고 가정하더라도, [이와 유사한](https://github.com/qbzzt/ethereum.org-20220330-shortABI) 솔루션을 사용할 수 있습니다.
+목적지 컨트랙트를 제어할 수 없다고 가정하더라도 [이와 유사한 솔루션](https://github.com/qbzzt/ethereum.org-20220330-shortABI)을 사용할 수 있습니다.
+
+이를 실행하려면 [Node.js](https://nodejs.org/)와 git이 필요합니다.
+
+```sh
+git clone https://github.com/qbzzt/ethereum.org-20220330-shortABI.git
+cd ethereum.org-20220330-shortABI
+npm install
+npx hardhat test
+```
+
+이 테스트는 Hardhat의 내장 로컬 네트워크에 컨트랙트를 배포하므로 ETH가 필요하지 않습니다.
+이 저장소는 Hardhat 2.9를 사용하므로 현재 버전의 Node.js에서는 Node.js 버전이 지원되지 않는다는 경고가 표시되지만 테스트는 여전히 통과합니다.
+
 관련 파일들을 살펴보겠습니다.
 
 ### Token.sol {#token-sol}
@@ -111,10 +152,10 @@ pragma solidity ^0.8.0;
 import { OrisUselessToken } from "./Token.sol";
 ```
 
-호출 방법을 알기 위해 토큰 함수가 필요합니다.
+토큰 함수를 호출하는 방법을 알기 위해 토큰 함수가 필요합니다.
 
 ```solidity
-CalldataInterpreter 컨트랙트 {
+contract CalldataInterpreter {
 
     OrisUselessToken public immutable token;
 ```
@@ -131,7 +172,7 @@ CalldataInterpreter 컨트랙트 {
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);
-    }   // constructor
+    }   // 생성자
 ```
 
 토큰 주소는 우리가 지정해야 할 유일한 매개변수입니다.
@@ -153,9 +194,9 @@ CalldataInterpreter 컨트랙트 {
             "calldataVal trying to read beyond calldatasize");
 ```
 
-메모리에 단일 32바이트(256비트) 워드를 로드하고 우리가 원하는 필드의 일부가 아닌 바이트를 제거할 것입니다.
+단일 32바이트(256비트) 단어를 메모리에 로드하고 우리가 원하는 필드의 일부가 아닌 바이트를 제거할 것입니다.
 이 알고리즘은 32바이트보다 긴 값에는 작동하지 않으며, 당연히 콜 데이터의 끝을 지나서 읽을 수는 없습니다.
-l1에서는 가스를 절약하기 위해 이러한 테스트를 건너뛰어야 할 수도 있지만, l2에서는 가스가 매우 저렴하므로 생각할 수 있는 모든 온전성 검사(sanity check)를 수행할 수 있습니다.
+L1에서는 가스를 절약하기 위해 이러한 테스트를 건너뛰어야 할 수도 있지만, L2에서는 가스가 매우 저렴하므로 우리가 생각할 수 있는 모든 온전성 검사(sanity check)를 수행할 수 있습니다.
 
 ```solidity
         assembly {
@@ -163,9 +204,9 @@ l1에서는 가스를 절약하기 위해 이러한 테스트를 건너뛰어야
         }
 ```
 
-`fallback()` 호출에서 데이터를 복사할 수도 있었지만(아래 참조), EVM의 어셈블리 언어인 [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html)을 사용하는 것이 더 쉽습니다.
+호출에서 `fallback()`로 데이터를 복사할 수도 있었지만(아래 참조), EVM의 어셈블리 언어인 [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html)을 사용하는 것이 더 쉽습니다.
 
-여기서는 [CALLDATALOAD 연산 코드](https://www.evm.codes/#35)를 사용하여 `startByte`부터 `startByte+31`까지의 바이트를 스택으로 읽어옵니다.
+여기서는 [CALLDATALOAD 연산 코드](https://www.evm.codes/#35)를 사용하여 `startByte`에서 `startByte+31`까지의 바이트를 스택으로 읽어옵니다.
 일반적으로 Yul에서 연산 코드의 구문은 `<opcode name>(<first stack value, if any>,<second stack value, if any>...)`입니다.
 
 ```solidity
@@ -173,8 +214,8 @@ l1에서는 가스를 절약하기 위해 이러한 테스트를 건너뛰어야
         _retVal = _retVal >> (256-length*8);
 ```
 
-가장 중요한 `length` 바이트만 필드의 일부이므로, 다른 값을 제거하기 위해 [오른쪽으로 시프트(right-shift)](https://en.wikipedia.org/wiki/Logical_shift)합니다.
-이렇게 하면 값을 필드의 오른쪽으로 이동시키는 추가적인 이점이 있으므로, 값에 256<sup>무언가</sup>를 곱한 값이 아니라 값 자체가 됩니다.
+가장 중요한 `length` 바이트만 필드의 일부이므로 [우측 시프트(right-shift)](https://en.wikipedia.org/wiki/Logical_shift)를 통해 다른 값들을 제거합니다.
+이는 값을 필드의 오른쪽으로 이동시키는 추가적인 이점이 있으므로, 값에 256<sup>무언가</sup>를 곱한 것이 아니라 값 자체가 됩니다.
 
 ```solidity
 
@@ -195,22 +236,22 @@ Solidity 컨트랙트에 대한 호출이 어떤 함수 서명과도 일치하�
 ```
 
 콜 데이터의 첫 번째 바이트를 읽어 어떤 함수인지 확인합니다.
-여기서 함수를 사용할 수 없는 이유는 두 가지가 있습니다.
+여기서 함수를 사용할 수 없는 두 가지 이유가 있습니다.
 
 1. `pure` 또는 `view`인 함수는 상태를 변경하지 않으며 (오프체인에서 호출될 때) 가스 비용이 들지 않습니다.
-   따라서 가스 비용을 줄이려는 시도는 의미가 없습니다.
+   이러한 함수의 가스 비용을 줄이려는 것은 의미가 없습니다.
 2. [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties)에 의존하는 함수.
    `msg.sender`의 값은 호출자가 아니라 `CalldataInterpreter`의 주소가 됩니다.
 
-안타깝게도 [ERC-20 사양을 살펴보면](https://eips.ethereum.org/EIPS/eip-20), 남는 함수는 `transfer` 하나뿐입니다.
-결과적으로 우리에게는 두 가지 함수만 남게 됩니다. `transfer`(`transferFrom`를 호출할 수 있기 때문)와 `faucet`(우리를 호출한 사람에게 토큰을 다시 전송할 수 있기 때문)입니다.
+안타깝게도 [ERC-20 사양을 살펴보면](https://eips.ethereum.org/EIPS/eip-20), 표준 함수는 `transfer` 하나만 남게 됩니다(`transferFrom`를 호출할 수 있기 때문입니다).
+우리의 테스트 토큰에는 `faucet`도 있는데, 우리를 호출한 사람에게 토큰을 다시 전송할 수 있으므로 이를 지원할 수 있습니다.
 
 ```solidity
 
-        // 다음을 사용하여 토큰의 상태 변경 메서드를 호출합니다
-        // 콜 데이터의 정보
+        // 토큰의 상태 변경 메서드를 호출합니다. 이때
+        // 콜 데이터의 정보를 사용합니다
 
-        // faucet
+        // 퍼싯
         if (_func == 1) {
 ```
 
@@ -223,12 +264,12 @@ Solidity 컨트랙트에 대한 호출이 어떤 함수 서명과도 일치하�
         }
 ```
 
-`token.faucet()`를 호출한 후 우리는 토큰을 얻습니다. 하지만 프록시 컨트랙트로서 우리는 토큰이 **필요하지 않습니다**.
-우리를 호출한 EOA(외부 소유 계정)나 컨트랙트가 토큰을 필요로 합니다.
-따라서 우리는 모든 토큰을 우리를 호출한 대상에게 전송합니다.
+`token.faucet()`를 호출한 후 우리는 토큰을 얻습니다. 하지만 프록시 컨트랙트로서 우리는 토큰이 **필요하지** 않습니다.
+우리를 호출한 외부 소유 계정(EOA)이나 컨트랙트가 토큰을 필요로 합니다.
+따라서 우리는 모든 토큰을 우리를 호출한 사람에게 전송합니다.
 
 ```solidity
-        // 전송 (이에 대한 허용량이 있다고 가정합니다)
+        // 전송 (이에 대한 허용량이 있다고 가정)
         if (_func == 2) {
 ```
 
@@ -252,36 +293,36 @@ Solidity 컨트랙트에 대한 호출이 어떤 함수 서명과도 일치하�
                 calldataVal(21, 2)
 ```
 
-이 특정 컨트랙트의 경우, 누군가 전송하고자 하는 토큰의 최대 수량이 2바이트(65536 미만)에 들어간다고 가정합니다.
+이 특정 컨트랙트의 경우 누군가 전송하고자 하는 토큰의 최대 수량이 2바이트(65536 미만)에 들어간다고 가정합니다.
 
 ```solidity
             );
         }
 ```
 
-전반적으로 전송에는 35바이트의 콜 데이터가 필요합니다.
+전반적으로 전송에는 23바이트의 콜 데이터가 필요합니다.
 
 | 섹션 | 길이 | 바이트 |
 | ------------------- | -----: | ----: |
 | 함수 선택자 |      1 |     0 |
-| 목적지 주소 |     32 |  1-32 |
-| 수량 |      2 | 33-34 |
+| 목적지 주소 |     20 |  1-20 |
+| 수량 |      2 | 21-22 |
 
 ```solidity
-    }   // fallback
+    }   // 폴백
 
-}       // contract CalldataInterpreter
+}       // 컨트랙트 CalldataInterpreter
 ```
 
 ### test.js {#test-js}
 
 [이 JavaScript 단위 테스트](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js)는 이 메커니즘을 사용하는 방법(그리고 올바르게 작동하는지 검증하는 방법)을 보여줍니다.
-여러분이 [chai](https://www.chaijs.com/)와 [ethers](https://docs.ethers.io/v5/)를 이해하고 있다고 가정하고, 컨트랙트에 특별히 적용되는 부분만 설명하겠습니다.
+여러분이 [chai](https://www.chaijs.com/)와 [ethers](https://docs.ethers.org/v5/)를 이해하고 있다고 가정하고, 컨트랙트에 특별히 적용되는 부분만 설명하겠습니다.
 
 ```js
 const { expect } = require("chai");
 
-contract CalldataInterpreter {
+describe("CalldataInterpreter", function () {
   it("Should let us use tokens", async function () {
     const Token = await ethers.getContractFactory("OrisUselessToken")
     const token = await Token.deploy()
@@ -324,7 +365,7 @@ contract CalldataInterpreter {
     await (await signer.sendTransaction(faucetTx)).wait()
 ```
 
-이미 목적지(`faucetTx.to`)를 지정했고 트랜잭션에 서명이 필요하므로 [서명자의 `sendTransaction` 메서드](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction)를 호출합니다.
+이미 목적지(`faucetTx.to`)를 지정했고 트랜잭션에 서명이 필요하므로 [서명자의 `sendTransaction` 메서드](https://docs.ethers.org/v5/api/signer/#Signer-sendTransaction)를 호출합니다.
 
 ```javascript
 // faucet이 토큰을 올바르게 제공하는지 확인합니다
@@ -368,12 +409,18 @@ const transferTx = {
 
 ## 목적지 컨트랙트를 제어할 수 있을 때 비용 줄이기 {#reducing-the-cost-when-you-do-control-the-destination-contract}
 
-목적지 컨트랙트를 제어할 수 있다면 콜 데이터 인터프리터를 신뢰하기 때문에 `msg.sender` 검사를 우회하는 함수를 생성할 수 있습니다.
+목적지 컨트랙트를 제어할 수 있다면 콜 데이터 인터프리터를 신뢰하기 때문에 `msg.sender` 검사를 우회하는 함수를 만들 수 있습니다.
 [이것이 어떻게 작동하는지에 대한 예제는 여기 `control-contract` 브랜치에서 확인할 수 있습니다](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
+이를 실행하려면 이전에 복제한 저장소에서 해당 브랜치로 전환하고 테스트를 다시 실행하세요.
 
-컨트랙트가 외부 트랜잭션에만 응답한다면 컨트랙트 하나만으로도 충분할 것입니다.
+```sh
+git checkout control-contract
+npx hardhat test
+```
+
+컨트랙트가 외부 트랜잭션에만 응답한다면 컨트랙트를 하나만 두어도 충분할 것입니다.
 하지만 그렇게 하면 [조합성](/developers/docs/smart-contracts/composability/)이 깨지게 됩니다.
-일반적인 ERC-20 호출에 응답하는 컨트랙트와 짧은 콜 데이터가 포함된 트랜잭션에 응답하는 또 다른 컨트랙트를 두는 것이 훨씬 좋습니다.
+일반적인 ERC-20 호출에 응답하는 컨트랙트와 짧은 콜 데이터가 있는 트랜잭션에 응답하는 또 다른 컨트랙트를 두는 것이 훨씬 좋습니다.
 
 ### Token.sol {#token-sol-2}
 
@@ -577,9 +624,10 @@ expect(await token.balanceOf(destAddr2)).to.equal(255)
 
 ## 결론 {#conclusion}
 
-[옵티미즘](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)과 [아비트럼](https://developer.offchainlabs.com/docs/special_features) 모두 l1에 기록되는 콜 데이터의 크기를 줄여 트랜잭션 비용을 낮출 방법을 찾고 있습니다.
-하지만 범용 솔루션을 찾는 인프라 제공자로서 우리의 능력에는 한계가 있습니다.
-탈중앙화 애플리케이션 (dapp) 개발자인 여러분은 애플리케이션에 특화된 지식을 가지고 있으므로, 우리가 범용 솔루션에서 할 수 있는 것보다 훨씬 더 콜 데이터를 최적화할 수 있습니다.
+[Optimism](https://docs.optimism.io/op-stack/transactions/fees#fjord)과 [Arbitrum](https://docs.arbitrum.io/how-arbitrum-works/deep-dives/gas-and-fees) 모두 이제 트랜잭션 비용을 줄이기 위해 L1에 쓰는 데이터를 압축하고 압축된 크기를 기준으로 각 트랜잭션에 요금을 부과합니다.
+하지만 일반적인 솔루션을 찾는 인프라 제공자로서 우리의 능력에는 한계가 있습니다.
+dapp 개발자인 여러분은 애플리케이션에 특화된 지식을 가지고 있으므로, 우리가 일반적인 솔루션에서 할 수 있는 것보다 훨씬 더 잘 콜 데이터를 최적화할 수 있습니다.
 이 글이 여러분의 필요에 맞는 이상적인 솔루션을 찾는 데 도움이 되기를 바랍니다.
 
-[제 작업물은 여기에서 더 볼 수 있습니다](https://cryptodocguy.pro/).
+[제 다른 작업물은 여기에서 확인하세요](https://cryptodocguy.pro/).
+

@@ -262,3 +262,15 @@ Scope: gas page, translation-program page, page-developers-index.json (3 files),
 
 - `tip` rendered `teşvik` at gas:36, :46 instead of glossary `öncelik ücreti`; left as is (tautology), the review agent called it critical -- native/maintainer call.
 - `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)
+
+## PR #19993 (intl/pending-dev) -- 2026-11-28 -- Score 8.7/10
+Scope: 17 developer tutorials (incremental updates), changed lines only; no page-courses.json for this locale.
+
+**Fixed in this branch:**
+
+- all-you-can-cache:45 inline file name `Önbellek.sol` -> `Cache.sol` (identifier translated)
+
+**Open / notes:**
+
+- `tags: ["katman 2 (L2)"]` keeps the glossary `(L2)` that English lacks (case-only change in this PR); warning.
+- `kontrat` for "contract" in short-abi (13 sites, glossary `sözleşme`) and capitalized `Token` mid-sentence are pre-existing dev style, not introduced here.

@@ -16,21 +16,22 @@ lang: sw
 published: 2025-03-15
 ---
 
-_Hakuna siri kwenye mnyororo wa vitalu_. Kila kitu kinachochapishwa kwenye mnyororo wa vitalu kiko wazi kwa kila mtu kusoma. Hili ni muhimu, kwa sababu mnyororo wa vitalu unategemea mtu yeyote kuweza kuuthibitisha. Hata hivyo, michezo mara nyingi hutegemea hali ya siri. Kwa mfano, mchezo wa [minesweeper](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) hauna maana kabisa ikiwa unaweza tu kwenda kwenye kichunguzi cha bloku na kuona ramani.
+_Hakuna siri kwenye mnyororo wa vitalu_. Kila kitu kinachochapishwa kwenye mnyororo wa vitalu kiko wazi kwa kila mtu kusoma. Hili ni muhimu, kwa sababu mnyororo wa vitalu unategemea uwezo wa mtu yeyote kuuhakiki. Hata hivyo, michezo mara nyingi inategemea hali ya siri. Kwa mfano, mchezo wa [minesweeper](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) hauna maana kabisa ikiwa unaweza tu kwenda kwenye kichunguzi cha mnyororo wa vitalu na kuona ramani.
 
-Suluhisho rahisi zaidi ni kutumia [kijenzi cha seva](/developers/tutorials/server-components/) kushikilia hali ya siri. Hata hivyo, sababu tunayotumia mnyororo wa vitalu ni kuzuia udanganyifu na msanidi wa mchezo. Tunahitaji kuhakikisha uaminifu wa kijenzi cha seva. Seva inaweza kutoa heshi ya hali, na kutumia [uthibitisho wa maarifa-sifuri](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) kuthibitisha kwamba hali iliyotumika kukokotoa matokeo ya hatua ni sahihi.
+Suluhisho rahisi zaidi ni kutumia [kijenzi cha seva](/developers/tutorials/server-components/) kushikilia hali ya siri. Hata hivyo, sababu ya kutumia mnyororo wa vitalu ni kuzuia udanganyifu unaofanywa na msanidi wa mchezo. Tunahitaji kuhakikisha uaminifu wa kijenzi cha seva. Seva inaweza kutoa heshi ya hali, na kutumia [uthibitisho wa maarifa-sifuri](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) kuthibitisha kwamba hali iliyotumika kukokotoa matokeo ya hatua ni sahihi.
 
-Baada ya kusoma makala haya utajua jinsi ya kuunda aina hii ya seva inayoshikilia hali ya siri, kiteja cha kuonyesha hali, na kijenzi cha mnyororoni kwa mawasiliano kati ya hizo mbili. Zana kuu tutakazotumia zitakuwa:
+Baada ya kusoma makala haya utajua jinsi ya kuunda aina hii ya seva inayoshikilia hali ya siri, mteja wa kuonyesha hali, na kijenzi cha mnyororoni kwa ajili ya mawasiliano kati ya hivyo viwili. Zana kuu tutakazotumia zitakuwa:
 
-| Zana                                          | Kusudi                                                  | Imethibitishwa kwenye toleo |
+| Zana                                          | Kusudi                                                 | Imethibitishwa kwenye toleo |
 | --------------------------------------------- | ------------------------------------------------------- | ------------------: |
-| [Zokrates](https://zokrates.github.io/)       | Uthibitisho wa maarifa-sifuri na uhakiki wake           |               1.1.9 |
-| [TypeScript](https://www.typescriptlang.org/) | Lugha ya programu kwa seva na kiteja                    |               5.4.2 |
-| [Node](https://nodejs.org/en)                 | Kuendesha seva                                          |             20.18.2 |
-| [Viem](https://viem.sh/)                      | Mawasiliano na Mnyororo wa vitalu                       |              2.9.20 |
-| [MUD](https://mud.dev/)                       | Usimamizi wa data mnyororoni                            |              2.0.12 |
-| [React](https://react.dev/)                   | Kiolesura cha mtumiaji cha kiteja                       |              18.2.0 |
-| [Vite](https://vitejs.dev/)                   | Kuhudumia msimbo wa kiteja                              |               4.2.1 |
+| [Zokrates](https://zokrates.github.io/)       | Uthibitisho wa maarifa-sifuri na uhakiki wake            |               1.1.9 |
+| [TypeScript](https://www.typescriptlang.org/) | Lugha ya programu kwa ajili ya seva na mteja |               5.4.2 |
+| [Node](https://nodejs.org/en)                 | Kuendesha seva                                      |             20.18.2 |
+| [Foundry](https://getfoundry.sh/)             | Mnyororo wa vitalu wa ndani na usambazaji wa mkataba                |               1.0.0 |
+| [Viem](https://viem.sh/)                      | Mawasiliano na mnyororo wa vitalu                       |              2.9.20 |
+| [MUD](https://mud.dev/)                       | Usimamizi wa data mnyororoni                                 |              2.0.12 |
+| [React](https://react.dev/)                   | Kiolesura cha mtumiaji cha mteja                                   |              18.2.0 |
+| [Vite](https://vitejs.dev/)                   | Kuhudumia msimbo wa mteja                                 |               4.2.1 |
 
 ## Mfano wa Minesweeper {#minesweeper}
 
@@ -42,9 +43,26 @@ Programu hii imeandikwa kwa kutumia [MUD](https://mud.dev/), mfumo unaoturuhusu 
 
 Ili kuendesha mfano wa minesweeper:
 
-1. Hakikisha [umesakinisha mahitaji ya awali](https://mud.dev/quickstart#prerequisites): [Node](https://mud.dev/quickstart#prerequisites), [Foundry](https://book.getfoundry.sh/getting-started/installation), [`git`](https://git-scm.com/downloads), [`pnpm`](https://git-scm.com/downloads), na [`mprocs`](https://github.com/pvolok/mprocs).
+1. Hakikisha [umesakinisha mahitaji ya awali](https://mud.dev/quickstart#prerequisites): [Node](https://nodejs.org/en), [Foundry](https://getfoundry.sh/introduction/installation), [`git`](https://git-scm.com/downloads), na [`pnpm`](https://pnpm.io/installation).
 
-2. Nakili (clone) hazina.
+   Mfano huu unatumia MUD 2.0.12, ambayo inahitaji matoleo maalum ya Node na Foundry:
+
+   - **Node 20**. Zana ya mstari wa amri ya MUD 2.0.12 inatumia [madai ya uingizaji wa JSON](https://v8.dev/features/import-attributes), ambayo matoleo mapya ya Node hayatumii tena, kwa hivyo kwenye Node 22 au matoleo mapya zaidi inashindwa na `SyntaxError: Unexpected identifier 'assert'`. Node 20 [ilifikia mwisho wa maisha](https://nodejs.org/en/about/previous-releases) mnamo Aprili 2026 na haipati tena masasisho ya usalama, kwa hivyo itumie tu kwa mfano huu wa ndani. Kidhibiti cha toleo la Node kama vile [`fnm`](https://github.com/Schniz/fnm) au [`nvm`](https://github.com/nvm-sh/nvm) kinakuruhusu kubadili hadi Node 20 kwa saraka hii pekee, kwa mfano:
+
+     ```sh copy
+     fnm install 20
+     fnm use 20
+     ```
+
+   - **Foundry 1.0.0**. Kwa matoleo ya sasa ya Foundry hati ya baada ya usambazaji inashindwa na _Usage of `address(this)` detected in script contract_. Sakinisha toleo lililojaribiwa kwa:
+
+     ```sh copy
+     foundryup -i 1.0.0
+     ```
+
+     Unapomaliza mafunzo haya, unaweza kurudi kwenye toleo la hivi karibuni kwa `foundryup`.
+
+2. Nakili hazina (clone the repository).
 
    ```sh copy
    git clone https://github.com/qbzzt/20240901-secret-state.git
@@ -55,12 +73,11 @@ Ili kuendesha mfano wa minesweeper:
    ```sh copy
    cd 20240901-secret-state/
    pnpm install
-   npm install -g mprocs
    ```
 
-   Ikiwa Foundry ilisakinishwa kama sehemu ya `pnpm install`, unahitaji kuanzisha upya ganda la mstari wa amri (command-line shell).
+   [`mprocs`](https://github.com/pvolok/mprocs), ambayo inaendesha michakato yote katika kituo kimoja (terminal), imesakinishwa kama mojawapo ya vifurushi.
 
-4. Kusanya (compile) mikataba
+4. Kusanya mikataba (Compile the contracts)
 
     ```sh copy
     cd packages/contracts
@@ -69,19 +86,19 @@ Ili kuendesha mfano wa minesweeper:
     ```
 
 
-5. Anzisha programu (ikiwa ni pamoja na mnyororo wa vitalu wa [anvil](https://book.getfoundry.sh/anvil/)) na usubiri.
+5. Anzisha programu (ikiwa ni pamoja na mnyororo wa vitalu wa [anvil](https://getfoundry.sh/anvil/overview)) na usubiri.
 
    ```sh copy
-   mprocs
+   pnpm dev
    ```
 
-   Kumbuka kwamba kuanzisha kunachukua muda mrefu. Ili kuona maendeleo, kwanza tumia mshale wa chini kusogeza hadi kwenye kichupo cha _contracts_ ili kuona mikataba ya MUD ikisambazwa. Unapopata ujumbe _Waiting for file changes…_, mikataba inasambazwa na maendeleo zaidi yatafanyika katika kichupo cha _server_. Hapo, unasubiri hadi upate ujumbe _Verifier address: 0x...._.
+   Kumbuka kwamba uanzishaji unachukua muda mrefu. Ili kuona maendeleo, kwanza tumia mshale wa chini kusogeza hadi kwenye kichupo cha _contracts_ ili kuona mikataba ya MUD ikisambazwa. Unapopata ujumbe _Waiting for file changes…_, mikataba imesambazwa na maendeleo zaidi yatafanyika katika kichupo cha _server_. Hapo, unasubiri hadi upate ujumbe _Verifier address: 0x...._.
 
    Ikiwa hatua hii imefanikiwa, utaona skrini ya `mprocs`, na michakato tofauti upande wa kushoto na matokeo ya kiweko (console output) kwa mchakato uliochaguliwa kwa sasa upande wa kulia.
 
-   ![The mprocs screen](./mprocs.png)
+   ![Skrini ya mprocs](./mprocs.png)
 
-   Ikiwa kuna tatizo na `mprocs`, unaweza kuendesha michakato minne kwa mikono, kila mmoja katika dirisha lake la mstari wa amri:
+   Ikiwa kuna tatizo na `mprocs`, unaweza kuendesha michakato minne wewe mwenyewe, kila mmoja katika dirisha lake la mstari wa amri:
 
    - **Anvil**
 
@@ -102,14 +119,14 @@ Ili kuendesha mfano wa minesweeper:
      ```sh
      cd packages/server
      pnpm start
-     ```  
+     ```
 
    - **Client**
 
      ```sh
      cd packages/client
      pnpm run dev
-     ```  
+     ```
 
 6. Sasa unaweza kuvinjari hadi [kwa mteja](http://localhost:3000), bofya **New Game**, na uanze kucheza.
 
@@ -151,26 +168,26 @@ Mitiririko hii inaratibu utekelezaji kati ya mteja, kijenzi cha mnyororoni, na s
 
 #### Uanzishaji {#initialization-flow}
 
-Unapoendesha `mprocs`, hatua hizi hufanyika:
+Unapoendesha `pnpm dev` (ambayo inaendesha `mprocs`), hatua hizi hutokea:
 
 1. [`mprocs`](https://github.com/pvolok/mprocs) inaendesha vijenzi vinne:
 
-   - [Anvil](https://book.getfoundry.sh/anvil/), ambayo inaendesha mnyororo wa vitalu wa ndani
+   - [Anvil](https://getfoundry.sh/anvil/overview), ambayo inaendesha mnyororo wa vitalu wa ndani
    - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts), ambayo inakusanya (ikiwa inahitajika) na kusambaza mikataba kwa ajili ya MUD
    - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), ambayo inaendesha [Vite](https://vitejs.dev/) ili kuhudumia UI na msimbo wa mteja kwa vivinjari vya wavuti.
-   - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server), ambayo inafanya vitendo vya seva
+   - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server), ambayo inatekeleza vitendo vya seva
 
-2. Kifurushi cha `contracts` kinasambaza mikataba ya MUD na kisha kuendesha [hati ya `PostDeploy.s.sol`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol). Hati hii inaweka usanidi. Msimbo kutoka github unabainisha [uwanja wa mabomu wa 10x5 wenye mabomu manane ndani yake](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23).
+2. Kifurushi cha `contracts` kinasambaza mikataba ya MUD na kisha kuendesha [hati ya `PostDeploy.s.sol`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol). Hati hii inaweka usanidi. Msimbo kutoka GitHub unabainisha [uwanja wa mabomu wa 10x5 wenye mabomu nane ndani yake](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23).
 
 3. [Seva](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts) inaanza kwa [kuweka MUD](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6). Miongoni mwa mambo mengine, hii inawasha usawazishaji wa data, ili nakala ya majedwali husika iwepo kwenye kumbukumbu ya seva.
 
-4. Seva inajiandikisha (subscribes) kazi itakayotekelezwa [wakati jedwali la `Configuration` linapobadilika](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23). [Kazi hii](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) inaitwa baada ya `PostDeploy.s.sol` kutekelezwa na kurekebisha jedwali.
+4. Seva inajiandikisha kwa kazi itakayotekelezwa [wakati jedwali la `Configuration` linapobadilika](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23). [Kazi hii](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) inaitwa baada ya `PostDeploy.s.sol` kutekelezwa na kurekebisha jedwali.
 
-5. Wakati kazi ya uanzishaji wa seva ina usanidi, [inaita `zkFunctions`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35) ili kuanzisha [sehemu ya sifuri-maarifa ya seva](#using-zokrates-from-typescript). Hili haliwezi kufanyika hadi tupate usanidi kwa sababu kazi za sifuri-maarifa lazima ziwe na upana na urefu wa uwanja wa mabomu kama viwango vya kudumu (constants).
+5. Wakati kazi ya uanzishaji wa seva ina usanidi, [inaita `zkFunctions`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35) ili kuanzisha [sehemu ya maarifa-sifuri ya seva](#using-zokrates-from-typescript). Hili haliwezi kutokea hadi tupate usanidi kwa sababu kazi za maarifa-sifuri lazima ziwe na upana na urefu wa uwanja wa mabomu kama viwango visivyobadilika (constants).
 
-6. Baada ya sehemu ya sifuri-maarifa ya seva kuanzishwa, hatua inayofuata ni [kusambaza mkataba wa uthibitishaji wa sifuri-maarifa kwenye mnyororo wa vitalu](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) na kuweka anwani ya anayethibitishwa katika MUD.
+6. Baada ya sehemu ya maarifa-sifuri ya seva kuanzishwa, hatua inayofuata ni [kusambaza mkataba wa uhakiki wa maarifa-sifuri kwenye mnyororo wa vitalu](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) na kuweka anwani ya mhakiki katika MUD.
 
-7. Hatimaye, tunajiandikisha kwa sasisho ili tuone wakati mchezaji anaomba ama [kuanzisha mchezo mpya](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) au [kuchimba katika mchezo uliopo](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108).
+7. Hatimaye, tunajiandikisha kwa masasisho ili tuone wakati mchezaji anaomba ama [kuanza mchezo mpya](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) au [kuchimba katika mchezo uliopo](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108).
 
 #### Mchezo mpya {#new-game-flow}
 
@@ -242,7 +259,7 @@ Mistari hii miwili inaingiza kazi mbili kutoka kwenye [maktaba ya kawaida ya Zok
 Kipengele cha uwanja katika Zokrates kwa kawaida huwa na urefu wa chini ya biti 256, lakini si kwa kiasi kikubwa. Ili kurahisisha msimbo, tunazuia ramani kuwa hadi biti 512, na kuheshi safu ya nyanja nne, na katika kila uwanja tunatumia biti 128 pekee. [Kazi ya `pack128`](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) inabadilisha safu ya biti 128 kuwa `field` kwa madhumuni haya.
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 Mstari huu unaanza ufafanuzi wa kazi. `hashMap` inapata kigezo kimoja kinachoitwa `map`, safu ya `bool`(ean) yenye vipimo viwili. Ukubwa wa ramani ni `width+2` kwa `height+2` kwa sababu ambazo [zimeelezwa hapa chini](#why-map-border).
@@ -252,7 +269,7 @@ Tunaweza kutumia `${width+2}` na `${height+2}` kwa sababu programu za Zokrates z
 Thamani inayorudishwa ni `field` ambayo ina heshi.
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 Ramani ina vipimo viwili. Hata hivyo, kazi ya `pack128` haifanyi kazi na safu za vipimo viwili. Kwa hivyo kwanza tunatandaza ramani kuwa safu ya baiti 512, tukitumia `map1d`. Kwa chaguo-msingi vigezo vya Zokrates ni vya kudumu (constants), lakini tunahitaji kugawa thamani kwenye safu hii katika kitanzi (loop), kwa hivyo tunaifafanua kama [`mut`](https://zokrates.github.io/language/variables.html#mutability).
@@ -260,19 +277,19 @@ Ramani ina vipimo viwili. Hata hivyo, kazi ya `pack128` haifanyi kazi na safu za
 Tunahitaji kuanzisha safu kwa sababu Zokrates haina `undefined`. Usemi wa `[false; 512]` unamaanisha [safu ya thamani 512 za `false`](https://zokrates.github.io/language/types.html#declaration-and-initialization).
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 Pia tunahitaji kihesabio ili kutofautisha kati ya biti ambazo tayari tumezijaza kwenye `map1d` na zile ambazo hatujajaza.
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 Hivi ndivyo unavyotangaza [kitanzi cha `for`](https://zokrates.github.io/language/control_flow.html#for-loops) katika Zokrates. Kitanzi cha `for` cha Zokrates lazima kiwe na mipaka isiyobadilika, kwa sababu ingawa kinaonekana kuwa kitanzi, kikusanyaji (compiler) kwa kweli "hukifungua" (unrolls). Usemi wa `${width+2}` ni wa kudumu wakati wa kukusanya kwa sababu `width` imewekwa na msimbo wa TypeScript kabla ya kuita kikusanyaji.
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -282,7 +299,7 @@ for u32 y in 0..${height+2} {
 Kwa kila eneo kwenye ramani, weka thamani hiyo kwenye safu ya `map1d` na uongeze kihesabio.
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -293,7 +310,7 @@ field[4] hashMe = [
 `pack128` inatumika kuunda safu ya thamani nne za `field` kutoka kwenye `map1d`. Katika Zokrates `array[a..b]` inamaanisha kipande cha safu kinachoanza kwenye `a` na kuishia kwenye `b-1`.
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -349,19 +366,19 @@ Kwa chaguo-msingi uthibitisho wa Zokrates unajumuisha pembejeo zake. Haifai kuju
 Hii inafungua njia nyingine ya matumizi mabaya. Mthibitishaji angeweza kutumia viwianishi (coordinates) sahihi, lakini akaunda ramani yenye idadi yoyote ya mabomu kuzunguka eneo hilo, na ikiwezekana kwenye eneo lenyewe. Ili kuzuia matumizi haya mabaya, tunafanya uthibitisho wa maarifa-sifuri ujumuishe heshi ya ramani, ambayo ni kitambulisho cha mchezo.
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 Thamani inayorudishwa hapa ni tapo (tuple) inayojumuisha safu ya heshi ya ramani pamoja na matokeo ya kuchimba.
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 Tunatumia 255 kama thamani maalum endapo eneo lenyewe lina bomu.
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -518,9 +535,9 @@ Majaribio ya usalama ni muhimu kwa sababu hitilafu ya utendaji hatimaye itajidhi
 
 ### Ruhusa {#permissions}
 
-Kuna huluki moja yenye upendeleo katika mchezo huu, seva. Ndiyo mtumiaji pekee anayeruhusiwa kuita kazi katika [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). Tunaweza kutumia [`cast`](https://book.getfoundry.sh/cast/) kuthibitisha miito kwa kazi zenye ruhusa inaruhusiwa tu kama akaunti ya seva.
+Kuna chombo kimoja chenye upendeleo katika mchezo huu, seva. Ni mtumiaji pekee anayeruhusiwa kuita kazi katika [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). Tunaweza kutumia [`cast`](https://getfoundry.sh/cast/overview) kuhakiki wito kwa kazi zenye ruhusa unaruhusiwa tu kama akaunti ya seva.
 
-[Ufunguo wa siri wa seva upo katika `setupNetwork.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52).
+[Ufunguo wa siri wa seva uko katika `setupNetwork.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52).
 
 1. Kwenye kompyuta inayoendesha `anvil` (mnyororo wa vitalu), weka vigezo hivi vya mazingira.
 
@@ -530,13 +547,15 @@ Kuna huluki moja yenye upendeleo katika mchezo huu, seva. Ndiyo mtumiaji pekee a
    AUTHORIZED_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
    ```
 
+   Hii `WORLD_ADDRESS` ni anwani ambayo MUD inasambaza kwenye `anvil` mpya. Ikiwa `World` yako iko kwenye anwani tofauti, tumia thamani katika `packages/contracts/worlds.json`.
+
 2. Tumia `cast` kujaribu kuweka anwani ya mhakiki kama anwani isiyoidhinishwa.
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $UNAUTHORIZED_KEY
    ```
 
-   Sio tu kwamba `cast` inaripoti kufeli, lakini unaweza kufungua **MUD Dev Tools** katika mchezo kwenye kivinjari, bofya **Tables**, na uchague **app\_\_VerifierAddress**. Utaona kwamba anwani si sifuri.
+   Sio tu kwamba `cast` inaripoti kushindwa, lakini unaweza kufungua **MUD Dev Tools** katika mchezo kwenye kivinjari, bofya **Tables**, na uchague **app\_\_VerifierAddress**. Utaona kwamba anwani sio sifuri.
 
 3. Weka anwani ya mhakiki kama anwani ya seva.
 
@@ -544,9 +563,9 @@ Kuna huluki moja yenye upendeleo katika mchezo huu, seva. Ndiyo mtumiaji pekee a
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $AUTHORIZED_KEY
    ```
 
-   Anwani katika **app\_\_VerifiedAddress** sasa inapaswa kuwa sifuri.
+   Anwani katika **app\_\_VerifierAddress** sasa inapaswa kuwa sifuri.
 
-Kazi zote za MUD katika `System` sawa hupitia udhibiti sawa wa ufikiaji, kwa hivyo ninachukulia jaribio hili kuwa la kutosha. Ikiwa hufikirii hivyo, unaweza kuangalia kazi zingine katika [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol).
+Kazi zote za MUD katika `System` sawa zinapitia udhibiti sawa wa ufikiaji, kwa hivyo ninachukulia jaribio hili kuwa la kutosha. Ikiwa huoni hivyo, unaweza kuangalia kazi zingine katika [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol).
 
 ### Matumizi mabaya ya sifuri-maarifa {#zero-knowledge-abuses}
 
@@ -560,10 +579,10 @@ Uwezekano rahisi zaidi ni kutoa jibu lisilo sahihi katika uthibitisho wa maarifa
 proof.inputs[3] = "0x" + "1".padStart(64, "0")
 ```
 
-Hii inamaanisha tutadai kila wakati kuna bomu moja, bila kujali jibu sahihi. Jaribu kucheza na toleo hili, na utaona katika kichupo cha **server** cha skrini ya `pnpm dev` kosa hili:
+Hii inamaanisha tutadai kila wakati kuna bomu moja, bila kujali jibu sahihi. Jaribu kucheza na toleo hili, na utaona katika kichupo cha **server** cha skrini ya `mprocs` kosa hili:
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000
@@ -680,9 +699,11 @@ Kama mafunzo makala haya yalihitaji mchezo mfupi ambao ni rahisi kueleweka, laki
 
 ### Kwa nini Zokrates? {#why-zokrates}
 
-[Zokrates](https://zokrates.github.io/) sio maktaba pekee ya sifuri-maarifa inayopatikana, lakini inafanana na lugha ya kawaida ya programu ya [kiamri](https://en.wikipedia.org/wiki/Imperative_programming) na inasaidia vigezo vya boolean.
+[Zokrates](https://zokrates.github.io/) sio maktaba pekee ya maarifa-sifuri inayopatikana, lakini inafanana na lugha ya kawaida ya programu, [inayoamuru (imperative)](https://en.wikipedia.org/wiki/Imperative_programming) na inasaidia vigezo vya boolean.
 
-Kwa programu yako, yenye mahitaji tofauti, unaweza kupendelea kutumia [Circum](https://docs.circom.io/getting-started/installation/) au [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/).
+Hata hivyo, Zokrates haitunzwi tena kikamilifu. Toleo lake la hivi karibuni, 0.8.8 (na `zokrates-js` inayolingana 1.1.9), ni la Novemba 2023, na tawi kuu halijapata mabadiliko (commits) tangu Aprili 2024. Msimbo katika mafunzo haya bado unafanya kazi, lakini usitegemee marekebisho ya hitilafu au masasisho ya usalama. Kwa mradi mpya, fikiria lugha inayotunzwa kama vile [Noir](https://noir-lang.org/), ambayo inatumika katika [mafunzo haya](/developers/tutorials/app-plasma/).
+
+Kwa programu yako, yenye mahitaji tofauti, unaweza kupendelea kutumia [Circom](https://docs.circom.io/getting-started/installation/) au [Cairo](https://www.cairo-lang.org/).
 
 ### Lini ya kukusanya Zokrates {#when-compile-zokrates}
 

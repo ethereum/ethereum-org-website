@@ -27,9 +27,11 @@ published: 2024-07-15
 
 - وكيل. لا يحدث شيء على سلسلة الكتل دون معاملة لتنشيطه. يمكن للخادم أن يتصرف نيابة عن المستخدم لأداء إجراءات مثل [المراجحة](/developers/docs/mev/#mev-examples-dex-arbitrage) عندما تسنح الفرصة.
 
-## برنامج نموذجي {#sample-program}
+## نموذج البرنامج {#sample-program}
 
-يمكنك رؤية خادم نموذجي [على GitHub](https://github.com/qbzzt/20240715-server-component). يستمع هذا الخادم إلى الأحداث القادمة من [هذا العقد](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code)، وهو نسخة معدلة من عقد الترحيب الخاص بـ Hardhat. عندما يتم تغيير التحية، فإنه يعيدها إلى ما كانت عليه.
+يمكنك رؤية نموذج لخادم [على GitHub](https://github.com/qbzzt/20240715-server-component). يستمع هذا الخادم إلى الأحداث القادمة من [هذا العقد](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract_code) على شبكة اختبار Sepolia، وهو نسخة معدلة من عقد Greeter الخاص بـ Hardhat. عندما يتم تغيير التحية، فإنه يعيدها إلى ما كانت عليه.
+
+هذا العقد مشترك مع برامج تعليمية أخرى، لذلك قد يقوم أشخاص آخرون (وخوادمهم) بتغيير التحية أثناء تشغيل خادمك. أوقف خادمك عند الانتهاء لتجنب إنفاق ETH الاختباري الخاص بك.
 
 لتشغيله:
 
@@ -40,25 +42,31 @@ published: 2024-07-15
    cd 20240715-server-component
    ```
 
-2. قم بتثبيت الحزم اللازمة. إذا لم يكن لديك بالفعل، [قم بتثبيت Node أولاً](https://nodejs.org/en/download/package-manager).
+2. تمت كتابة المستودع النموذجي لشبكة اختبار هوليسكي، والتي تم إغلاقها منذ ذلك الحين. قم بتحديثه لاستخدام Sepolia وعنوان عقد Sepolia.
+
+   ```sh copy
+   sed -i.bak -e 's/holesky/sepolia/g' -e 's/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA/' src/app.ts
+   ```
+
+3. قم بتثبيت الحزم اللازمة. إذا لم يكن لديك بالفعل، [قم بتثبيت Node أولاً](https://nodejs.org/en/download/package-manager).
 
    ```sh copy
    npm install
    ```
 
-3. قم بتحرير `.env` لتحديد المفتاح الخاص لحساب يمتلك <span dir="ltr">ETH</span> على شبكة اختبار هوليسكي. إذا لم يكن لديك <span dir="ltr">ETH</span> على هوليسكي، يمكنك [استخدام هذا الصنبور](https://holesky-faucet.pk910.de/).
+4. قم بتحرير `.env` لتحديد المفتاح الخاص لحساب يمتلك ETH على شبكة اختبار Sepolia. إذا لم يكن لديك ETH على Sepolia، يمكنك [استخدام هذا الصنبور](https://sepolia-faucet.pk910.de/). استخدم حسابًا جديدًا تستخدمه فقط للاختبار، ولا تستخدم أبدًا حسابًا يحتوي على أصول حقيقية.
 
    ```sh filename=".env" copy
-   PRIVATE_KEY=0x <private key goes here>
+   PRIVATE_KEY=0x<private key goes here>
    ```
 
-4. ابدأ تشغيل الخادم.
+5. ابدأ تشغيل الخادم.
 
    ```sh copy
    npm start
    ```
 
-5. انتقل إلى [مستكشف الكتل](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract)، وباستخدام عنوان مختلف عن العنوان الذي يمتلك المفتاح الخاص، قم بتعديل التحية. لاحظ أن التحية يتم تعديلها تلقائيًا للعودة إلى ما كانت عليه.
+6. انتقل إلى [مستكشف الكتل](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract)، وباستخدام عنوان مختلف عن العنوان الذي يمتلك المفتاح الخاص، قم بتعديل التحية. لاحظ أن التحية يتم تعديلها تلقائيًا للعودة إلى ما كانت عليه.
 
 ### كيف يعمل؟ {#how-it-works}
 
@@ -66,7 +74,7 @@ published: 2024-07-15
 
 #### `src/app.ts` {#src-app-ts}
 
-الغالبية العظمى من البرنامج موجودة في [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts).
+يتم احتواء الغالبية العظمى من البرنامج في [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts).
 
 ##### إنشاء الكائنات الأساسية
 
@@ -80,7 +88,7 @@ import {
 } from "viem"
 ```
 
-هذه هي كيانات [Viem](https://viem.sh/) التي نحتاجها، الدوال و[النوع `Address`](https://viem.sh/docs/glossary/types#address). هذا الخادم مكتوب بلغة [TypeScript](https://www.typescriptlang.org/)، وهي امتداد للغة JavaScript يجعلها [قوية النوع](https://en.wikipedia.org/wiki/Strong_and_weak_typing).
+هذه هي كيانات [Viem](https://viem.sh/) التي نحتاجها، الدوال و[النوع `Address`](https://viem.sh/docs/glossary/types#address). تمت كتابة هذا الخادم بلغة [TypeScript](https://www.typescriptlang.org/)، وهي امتداد للغة JavaScript يجعلها [قوية النوع](https://en.wikipedia.org/wiki/Strong_and_weak_typing).
 
 ```typescript
 import { privateKeyToAccount } from "viem/accounts"
@@ -89,21 +97,21 @@ import { privateKeyToAccount } from "viem/accounts"
 تتيح لنا [هذه الدالة](https://viem.sh/docs/accounts/privateKey) إنشاء معلومات المحفظة، بما في ذلك العنوان، المقابلة لمفتاح خاص.
 
 ```typescript
-import { holesky } from "viem/chains"
+import { sepolia } from "viem/chains"
 ```
 
-لاستخدام سلسلة الكتل في Viem، تحتاج إلى استيراد تعريفها. في هذه الحالة، نريد الاتصال بسلسلة كتل الاختبار [هوليسكي](https://github.com/eth-clients/holesky).
+لاستخدام سلسلة الكتل في Viem، تحتاج إلى استيراد تعريفها. في هذه الحالة، نريد الاتصال بسلسلة الكتل الاختبارية [Sepolia](/developers/docs/networks/#sepolia).
 
 ```typescript
-// هكذا نضيف التعريفات في .env إلى process.env.
+// هكذا نضيف التعريفات الموجودة في .env إلى process.env.
 import * as dotenv from "dotenv"
 dotenv.config()
 ```
 
-هذه هي الطريقة التي نقرأ بها `.env` في البيئة. نحتاجه من أجل المفتاح الخاص (انظر لاحقًا).
+هذه هي الطريقة التي نقرأ بها `.env` في البيئة. نحتاجها من أجل المفتاح الخاص (انظر لاحقًا).
 
 ```typescript
-const greeterAddress : Address = "0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6"
+const greeterAddress : Address = "0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA"
 const greeterABI = [
     {
         "inputs": [
@@ -135,36 +143,36 @@ const greeterABI = [
 ] as const
 ```
 
-لاستخدام عقد، نحتاج إلى عنوانه و[<span dir="ltr">ABI</span>](/glossary/#abi) الخاص به. نحن نقدم كليهما هنا.
+لاستخدام عقد، نحتاج إلى عنوانه و[ABI](/glossary/#abi) الخاص به. نحن نقدم كليهما هنا.
 
 في JavaScript (وبالتالي TypeScript) لا يمكنك تعيين قيمة جديدة لثابت، ولكن _يمكنك_ تعديل الكائن المخزن فيه. باستخدام اللاحقة `as const`، فإننا نخبر TypeScript أن القائمة نفسها ثابتة ولا يجوز تغييرها.
 
 ```typescript
 const publicClient = createPublicClient({
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
 
-قم بإنشاء [عميل عام](https://viem.sh/docs/clients/public.html) في Viem. العملاء العامون ليس لديهم مفتاح خاص مرفق، وبالتالي لا يمكنهم إرسال المعاملات. يمكنهم استدعاء [دوال `view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm)، وقراءة أرصدة الحسابات، وما إلى ذلك.
+قم بإنشاء [عميل عام](https://viem.sh/docs/clients/public) في Viem. لا يمتلك العملاء العامون مفتاحًا خاصًا مرفقًا، وبالتالي لا يمكنهم إرسال معاملات. يمكنهم استدعاء [دوال `view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm)، وقراءة أرصدة الحسابات، وما إلى ذلك.
 
 ```typescript
 const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`)
 ```
 
-متغيرات البيئة متاحة في [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). ومع ذلك، فإن TypeScript قوية النوع. يمكن أن يكون متغير البيئة أي سلسلة نصية، أو فارغًا، لذا فإن نوع متغير البيئة هو `string | undefined`. ومع ذلك، يتم تعريف المفتاح في Viem على أنه `0x${string}` (`0x` متبوعًا بسلسلة نصية). هنا نخبر TypeScript أن متغير البيئة `PRIVATE_KEY` سيكون من هذا النوع. إذا لم يكن كذلك، فسنحصل على خطأ في وقت التشغيل.
+تتوفر متغيرات البيئة في [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). ومع ذلك، فإن TypeScript قوية النوع. يمكن أن يكون متغير البيئة أي سلسلة نصية، أو فارغًا، لذا فإن نوع متغير البيئة هو `string | undefined`. ومع ذلك، يتم تعريف المفتاح في Viem على أنه `0x${string}` (`0x` متبوعًا بسلسلة نصية). هنا نخبر TypeScript أن متغير البيئة `PRIVATE_KEY` سيكون من هذا النوع. إذا لم يكن كذلك، فسنحصل على خطأ في وقت التشغيل.
 
 تستخدم الدالة [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) بعد ذلك هذا المفتاح الخاص لإنشاء كائن حساب كامل.
 
 ```typescript
 const walletClient = createWalletClient({
   account,
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
 
-بعد ذلك، نستخدم كائن الحساب لإنشاء [عميل محفظة](https://viem.sh/docs/clients/wallet). يحتوي هذا العميل على مفتاح خاص وعنوان، لذا يمكن استخدامه لإرسال المعاملات.
+بعد ذلك، نستخدم كائن الحساب لإنشاء [عميل محفظة](https://viem.sh/docs/clients/wallet). يمتلك هذا العميل مفتاحًا خاصًا وعنوانًا، لذا يمكن استخدامه لإرسال المعاملات.
 
 ```typescript
 const greeter = getContract({
@@ -174,7 +182,7 @@ const greeter = getContract({
 })
 ```
 
-الآن بعد أن أصبح لدينا جميع المتطلبات الأساسية، يمكننا أخيرًا إنشاء [نسخة عقد](https://viem.sh/docs/contract/getContract). سنستخدم نسخة العقد هذه للتواصل مع العقد على السلسلة.
+الآن بعد أن أصبح لدينا جميع المتطلبات الأساسية، يمكننا أخيرًا إنشاء [نسخة من العقد](https://viem.sh/docs/contract/getContract). سنستخدم نسخة العقد هذه للتواصل مع العقد على السلسلة.
 
 ##### القراءة من سلسلة الكتل
 
@@ -182,9 +190,9 @@ const greeter = getContract({
 console.log(`Current greeting:`, await greeter.read.greet())
 ```
 
-دوال العقد المخصصة للقراءة فقط ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) و[`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) متاحة ضمن `read`. في هذه الحالة، نستخدمها للوصول إلى الدالة [`greet`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=read_contract#cfae3217)، والتي تُرجع التحية.
+تتوفر دوال العقد المخصصة للقراءة فقط ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) و[`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) ضمن `read`. في هذه الحالة، نستخدمها للوصول إلى الدالة [`greet`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=read_contract)، والتي تُرجع التحية.
 
-لغة JavaScript أحادية المسار (single-threaded)، لذلك عندما نطلق عملية طويلة الأمد، نحتاج إلى [تحديد أننا نقوم بذلك بشكل غير متزامن](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). يتطلب استدعاء سلسلة الكتل، حتى بالنسبة لعملية القراءة فقط، رحلة ذهاب وإياب بين الكمبيوتر وعقدة سلسلة الكتل. هذا هو السبب في أننا نحدد هنا أن الكود يحتاج إلى `await` (انتظار) النتيجة.
+تعتمد JavaScript على مسار تنفيذ واحد (single-threaded)، لذا عندما نطلق عملية طويلة الأمد، نحتاج إلى [تحديد أننا نقوم بذلك بشكل غير متزامن](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). يتطلب استدعاء سلسلة الكتل، حتى بالنسبة لعملية قراءة فقط، رحلة ذهاب وإياب بين الكمبيوتر وعقدة سلسلة الكتل. هذا هو السبب في أننا نحدد هنا أن الكود يحتاج إلى `await` (الانتظار) للحصول على النتيجة.
 
 إذا كنت مهتمًا بكيفية عمل ذلك، يمكنك [القراءة عنه هنا](https://www.w3schools.com/js/js_promise.asp)، ولكن من الناحية العملية، كل ما تحتاج إلى معرفته هو أنك تستخدم `await` للنتائج إذا بدأت عملية تستغرق وقتًا طويلاً، وأن أي دالة تقوم بذلك يجب الإعلان عنها كـ `async`.
 
@@ -194,16 +202,16 @@ console.log(`Current greeting:`, await greeter.read.greet())
 const setGreeting = async (greeting: string): Promise<any> => {
 ```
 
-هذه هي الدالة التي تستدعيها لإصدار معاملة تغير التحية. نظرًا لأن هذه عملية طويلة، يتم الإعلان عن الدالة كـ `async`. بسبب التنفيذ الداخلي، تحتاج أي دالة `async` إلى إرجاع كائن `Promise`. في هذه الحالة، يعني `Promise<any>` أننا لا نحدد بالضبط ما سيتم إرجاعه في `Promise`.
+هذه هي الدالة التي تستدعيها لإصدار معاملة تغير التحية. نظرًا لأن هذه عملية طويلة، يتم الإعلان عن الدالة كـ `async`. بسبب التنفيذ الداخلي، تحتاج أي دالة `async` إلى إرجاع كائن `Promise`. في هذه الحالة، تعني `Promise<any>` أننا لا نحدد بالضبط ما سيتم إرجاعه في `Promise`.
 
 ```typescript
 const txHash = await greeter.write.setGreeting([greeting])
 ```
 
-يحتوي الحقل `write` في نسخة العقد على جميع الدوال التي تكتب في حالة سلسلة الكتل (تلك التي تتطلب إرسال معاملة)، مثل [`setGreeting`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862). يتم توفير المعلمات، إن وجدت، كقائمة، وتُرجع الدالة تجزئة المعاملة.
+يحتوي الحقل `write` في نسخة العقد على جميع الدوال التي تكتب في حالة سلسلة الكتل (تلك التي تتطلب إرسال معاملة)، مثل [`setGreeting`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract). يتم توفير المعلمات، إن وجدت، كقائمة، وتُرجع الدالة تجزئة المعاملة.
 
 ```typescript
-    console.log(`Working on a fix, see https://eth-holesky.blockscout.com/tx/${txHash}`)
+    console.log(`Working on a fix, see https://eth-sepolia.blockscout.com/tx/${txHash}`)
 
     return txHash
 }
@@ -217,7 +225,7 @@ const txHash = await greeter.write.setGreeting([greeting])
 greeter.watchEvent.SetGreeting({
 ```
 
-تتيح لك [الدالة `watchEvent`](https://viem.sh/docs/actions/public/watchEvent) تحديد دالة ليتم تشغيلها عند إصدار حدث. إذا كنت تهتم فقط بنوع واحد من الأحداث (في هذه الحالة، `SetGreeting`)، يمكنك استخدام بناء الجملة هذا لقصر نفسك على نوع الحدث هذا.
+تتيح لك [الدالة `watchEvent`](https://viem.sh/docs/actions/public/watchEvent) تحديد دالة ليتم تشغيلها عند إصدار حدث. إذا كنت تهتم فقط بنوع واحد من الأحداث (في هذه الحالة، `SetGreeting`)، يمكنك استخدام هذه الصيغة لقصر نفسك على هذا النوع من الأحداث.
 
 ```typescript
     onLogs: logs => {
@@ -248,18 +256,12 @@ console.log(
 
 ```json
 {
-  "main": "dist/index.js",
-```
-
-يحدد هذا التعريف ملف JavaScript الذي سيتم تشغيله.
-
-```json
   "scripts": {
     "start": "tsc && node dist/app.js",
   },
 ```
 
-البرامج النصية هي إجراءات تطبيق مختلفة. في هذه الحالة، الإجراء الوحيد الذي لدينا هو `start`، والذي يقوم بتجميع الخادم ثم تشغيله. الأمر `tsc` هو جزء من حزمة `typescript` ويقوم بتجميع TypeScript إلى JavaScript. إذا كنت ترغب في تشغيله يدويًا، فهو موجود في `node_modules/.bin`. الأمر الثاني يقوم بتشغيل الخادم.
+البرامج النصية (scripts) هي إجراءات تطبيق مختلفة. في هذه الحالة، الإجراء الوحيد الذي لدينا هو `start`، والذي يقوم بتجميع الخادم ثم تشغيله. الأمر `tsc` هو جزء من حزمة `typescript` ويقوم بتجميع TypeScript إلى JavaScript. إذا كنت ترغب في تشغيله يدويًا، فهو موجود في `node_modules/.bin`. الأمر الثاني يقوم بتشغيل الخادم.
 
 ```json
   "type": "module",
@@ -274,7 +276,7 @@ console.log(
   },
 ```
 
-هذه هي الحزم المطلوبة فقط للتطوير. هنا نحتاج إلى `typescript` ولأننا نستخدمه مع Node.js، فإننا نحصل أيضًا على الأنواع لمتغيرات وكائنات العقدة، مثل `process`. يعني [الترميز `^<version>`](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) هذا الإصدار أو إصدارًا أعلى لا يحتوي على تغييرات جذرية. راجع [هنا](https://semver.org) لمزيد من المعلومات حول معنى أرقام الإصدارات.
+هذه هي الحزم المطلوبة فقط للتطوير. هنا نحتاج إلى `typescript` ولأننا نستخدمها مع Node.js، فإننا نحصل أيضًا على الأنواع لمتغيرات وكائنات العقدة، مثل `process`. تعني [الصيغة `^<version>`](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) هذا الإصدار أو إصدارًا أعلى لا يحتوي على تغييرات جذرية. انظر [هنا](https://semver.org) لمزيد من المعلومات حول معنى أرقام الإصدارات.
 
 ```json
   "dependencies": {

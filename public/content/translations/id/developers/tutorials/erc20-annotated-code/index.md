@@ -11,27 +11,35 @@ published: 2021-03-09
 
 ## Pengantar {#introduction}
 
-Salah satu penggunaan paling umum untuk Ethereum adalah bagi sebuah kelompok untuk membuat token yang dapat diperdagangkan, dalam artian mata uang mereka sendiri. Token-token ini biasanya mengikuti sebuah standar,
+Salah satu penggunaan paling umum untuk Ethereum adalah bagi sebuah kelompok untuk membuat token yang dapat diperdagangkan, dalam arti mata uang mereka sendiri. Token-token ini biasanya mengikuti sebuah standar,
 [ERC-20](/developers/docs/standards/tokens/erc-20/). Standar ini memungkinkan penulisan alat, seperti kolam likuiditas dan dompet, yang berfungsi dengan semua token ERC-20. Dalam artikel ini kita akan menganalisis
-[implementasi ERC20 Solidity OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), serta
-[definisi antarmuka](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
+[implementasi ERC20 Solidity OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol), serta
+[definisi antarmuka](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol).
 
-Ini adalah kode sumber yang dianotasi. Jika Anda ingin mengimplementasikan ERC-20,
-[baca tutorial ini](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
+Ini adalah kode sumber beranotasi. Jika Anda ingin mengimplementasikan ERC-20,
+[baca tutorial ini](https://docs.openzeppelin.com/contracts/5.x/erc20-supply).
+
+<Alert variant="info">
+<AlertContent>
+<AlertDescription>
+Panduan ini mencakup OpenZeppelin Contracts v3.3 (Solidity 0.6/0.7). Jika Anda menginstal `@openzeppelin/contracts` hari ini, Anda akan mendapatkan v5.x, yang berbeda dari kode di bawah ini: ia menggunakan aritmatika yang diperiksa bawaan Solidity alih-alih `SafeMath`, menggantikan `_beforeTokenTransfer` dan `_afterTokenTransfer` dengan satu fungsi `_update`, menghapus `increaseAllowance`, `decreaseAllowance` dan `_setupDecimals`, dan melaporkan kegagalan dengan kesalahan kustom alih-alih string pengembalian. Konsep-konsep yang dijelaskan di sini masih berlaku. Lihat [dokumentasi ERC-20 OpenZeppelin v5](https://docs.openzeppelin.com/contracts/5.x/erc20) untuk API saat ini.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Antarmuka {#the-interface}
 
-Tujuan dari standar seperti ERC-20 adalah untuk memungkinkan banyak implementasi token yang interoperabel di berbagai aplikasi, seperti dompet dan bursa terdesentralisasi. Untuk mencapainya, kita membuat sebuah
+Tujuan dari standar seperti ERC-20 adalah untuk memungkinkan banyak implementasi token yang interoperabel di seluruh aplikasi, seperti dompet dan bursa terdesentralisasi. Untuk mencapai hal tersebut, kita membuat sebuah
 [antarmuka](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/). Kode apa pun yang perlu menggunakan kontrak token
 dapat menggunakan definisi yang sama di antarmuka dan kompatibel dengan semua kontrak token yang menggunakannya, baik itu dompet seperti
-MetaMask, aplikasi terdesentralisasi (dapp) seperti etherscan.io, atau kontrak yang berbeda seperti kolam likuiditas.
+MetaMask, dapp seperti etherscan.io, atau kontrak yang berbeda seperti kolam likuiditas.
 
-![Illustration of the ERC-20 interface](erc20_interface.png)
+![Ilustrasi antarmuka ERC-20](erc20_interface.png)
 
 Jika Anda adalah seorang pemrogram berpengalaman, Anda mungkin ingat pernah melihat konstruksi serupa di [Java](https://www.w3schools.com/java/java_interface.asp)
 atau bahkan di [file header C](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html).
 
-Ini adalah definisi dari [Antarmuka ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)
+Ini adalah definisi dari [Antarmuka ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol)
 dari OpenZeppelin. Ini adalah terjemahan dari [standar yang dapat dibaca manusia](https://eips.ethereum.org/EIPS/eip-20) ke dalam kode Solidity. Tentu saja,
 antarmuka itu sendiri tidak mendefinisikan _bagaimana_ melakukan sesuatu. Hal itu dijelaskan dalam kode sumber kontrak di bawah ini.
 
@@ -41,7 +49,8 @@ antarmuka itu sendiri tidak mendefinisikan _bagaimana_ melakukan sesuatu. Hal it
 // SPDX-License-Identifier: MIT
 ```
 
-File Solidity seharusnya menyertakan pengidentifikasi lisensi. [Anda dapat melihat daftar lisensi di sini](https://spdx.org/licenses/). Jika Anda memerlukan lisensi yang berbeda, jelaskan saja di komentar.
+File Solidity seharusnya menyertakan pengidentifikasi lisensi. [Anda dapat melihat daftar lisensi di sini](https://spdx.org/licenses/). Jika Anda memerlukan lisensi
+yang berbeda, cukup jelaskan di komentar.
 
 &nbsp;
 
@@ -50,17 +59,18 @@ pragma solidity >=0.6.0 <0.8.0;
 ```
 
 Bahasa Solidity masih berkembang dengan cepat, dan versi baru mungkin tidak kompatibel dengan kode lama
-([lihat di sini](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Oleh karena itu, ada baiknya untuk menentukan bukan hanya versi minimum dari bahasa tersebut, tetapi juga versi maksimum, versi terbaru yang Anda gunakan untuk menguji kode tersebut.
+([lihat di sini](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Oleh karena itu, ada baiknya untuk menentukan bukan hanya versi
+minimum dari bahasa tersebut, tetapi juga versi maksimum, yaitu versi terbaru yang Anda gunakan untuk menguji kode tersebut.
 
 &nbsp;
 
 ```solidity
 /**
- * @dev Antarmuka dari standar ERC-20 seperti yang didefinisikan dalam EIP.
+ * @dev Antarmuka dari standar ERC20 seperti yang didefinisikan dalam EIP.
  */
 ```
 
-`@dev` dalam komentar adalah bagian dari [format NatSpec](https://docs.soliditylang.org/en/develop/natspec-format.html), yang digunakan untuk menghasilkan
+`@dev` di komentar adalah bagian dari [format NatSpec](https://docs.soliditylang.org/en/develop/natspec-format.html), yang digunakan untuk menghasilkan
 dokumentasi dari kode sumber.
 
 &nbsp;
@@ -80,14 +90,14 @@ Berdasarkan konvensi, nama antarmuka dimulai dengan `I`.
     function totalSupply() external view returns (uint256);
 ```
 
-Fungsi ini adalah `external`, yang berarti [hanya dapat dipanggil dari luar kontrak](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2).
-Fungsi ini mengembalikan total pasokan token dalam kontrak. Nilai ini dikembalikan menggunakan tipe yang paling umum di Ethereum, unsigned 256 bit (256 bit adalah
-ukuran kata asli dari EVM). Fungsi ini juga merupakan `view`, yang berarti tidak mengubah state, sehingga dapat dieksekusi pada satu node alih-alih meminta
-setiap node di rantai blok untuk menjalankannya. Jenis fungsi ini tidak menghasilkan transaksi dan tidak memerlukan biaya [gas](/developers/docs/gas/).
+Fungsi ini adalah `external`, yang berarti [ia hanya dapat dipanggil dari luar kontrak](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2).
+Fungsi ini mengembalikan total pasokan token dalam kontrak. Nilai ini dikembalikan menggunakan tipe yang paling umum di Ethereum, yaitu 256 bit tak bertanda (256 bit adalah
+ukuran kata asli dari EVM). Fungsi ini juga merupakan `view`, yang berarti ia tidak mengubah state, sehingga dapat dieksekusi pada satu node alih-alih membuat
+setiap node di rantai blok menjalankannya. Jenis fungsi ini tidak menghasilkan transaksi dan tidak memerlukan biaya [gas](/developers/docs/gas/).
 
-**Catatan:** Secara teori mungkin tampak bahwa pembuat kontrak dapat berbuat curang dengan mengembalikan total pasokan yang lebih kecil dari nilai sebenarnya, membuat setiap token tampak
-lebih berharga daripada yang sebenarnya. Namun, ketakutan itu mengabaikan sifat asli dari rantai blok. Segala sesuatu yang terjadi di rantai blok dapat diverifikasi oleh
-setiap node. Untuk mencapai hal ini, kode bahasa mesin dan penyimpanan setiap kontrak tersedia di setiap node. Meskipun Anda tidak diwajibkan untuk mempublikasikan kode Solidity
+**Catatan:** Secara teori, mungkin tampak bahwa pembuat kontrak dapat berbuat curang dengan mengembalikan total pasokan yang lebih kecil dari nilai sebenarnya, membuat setiap token tampak
+lebih berharga daripada yang sebenarnya. Namun, ketakutan itu mengabaikan sifat sebenarnya dari rantai blok. Segala sesuatu yang terjadi di rantai blok dapat diverifikasi oleh
+setiap node. Untuk mencapai hal ini, kode bahasa mesin dan penyimpanan setiap kontrak tersedia di setiap node. Meskipun Anda tidak diharuskan untuk mempublikasikan kode Solidity
 untuk kontrak Anda, tidak ada yang akan menganggap Anda serius kecuali Anda mempublikasikan kode sumber dan versi Solidity yang digunakan untuk mengompilasinya, sehingga dapat
 diverifikasi terhadap kode bahasa mesin yang Anda berikan.
 Sebagai contoh, lihat [kontrak ini](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract).
@@ -96,13 +106,13 @@ Sebagai contoh, lihat [kontrak ini](https://eth.blockscout.com/address/0xa530F85
 
 ```solidity
     /**
-     * @dev Mengembalikan jumlah token yang dimiliki oleh `account`.
+     * @dev Mengembalikan jumlah token yang dimiliki oleh `akun`.
      */
     function balanceOf(address account) external view returns (uint256);
 ```
 
 Seperti namanya, `balanceOf` mengembalikan saldo dari sebuah akun. Akun Ethereum diidentifikasi di Solidity menggunakan tipe `address`, yang menampung 160 bit.
-Ini juga merupakan `external` dan `view`.
+Fungsi ini juga `external` dan `view`.
 
 &nbsp;
 
@@ -112,31 +122,31 @@ Ini juga merupakan `external` dan `view`.
      *
      * Mengembalikan nilai boolean yang menunjukkan apakah operasi berhasil.
      *
-     * Memancarkan peristiwa {Transfer}.
+     * Memancarkan kejadian {Transfer}.
      */
     function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
 Fungsi `transfer` mentransfer token dari pemanggil ke alamat yang berbeda. Ini melibatkan perubahan state, jadi ini bukan `view`.
-Ketika pengguna memanggil fungsi ini, ia membuat transaksi dan memerlukan biaya gas. Ini juga memancarkan peristiwa, `Transfer`, untuk memberi tahu semua orang di
-rantai blok tentang peristiwa tersebut.
+Ketika pengguna memanggil fungsi ini, ia membuat transaksi dan memerlukan biaya gas. Fungsi ini juga memancarkan kejadian, `Transfer`, untuk memberi tahu semua orang di
+rantai blok tentang kejadian tersebut.
 
 Fungsi ini memiliki dua jenis keluaran untuk dua jenis pemanggil yang berbeda:
 
 - Pengguna yang memanggil fungsi secara langsung dari antarmuka pengguna. Biasanya pengguna mengirimkan transaksi
   dan tidak menunggu respons, yang bisa memakan waktu yang tidak pasti. Pengguna dapat melihat apa yang terjadi
   dengan mencari tanda terima transaksi (yang diidentifikasi oleh hash transaksi) atau dengan mencari
-  peristiwa `Transfer`.
-- Kontrak lain, yang memanggil fungsi sebagai bagian dari transaksi keseluruhan. Kontrak-kontrak tersebut mendapatkan hasilnya dengan segera,
+  kejadian `Transfer`.
+- Kontrak lain, yang memanggil fungsi sebagai bagian dari transaksi keseluruhan. Kontrak-kontrak tersebut mendapatkan hasilnya segera,
   karena mereka berjalan dalam transaksi yang sama, sehingga mereka dapat menggunakan nilai kembalian fungsi.
 
 Jenis keluaran yang sama dibuat oleh fungsi lain yang mengubah state kontrak.
 
 &nbsp;
 
-Jatah mengizinkan sebuah akun untuk membelanjakan beberapa token yang merupakan milik pemilik yang berbeda.
+Jatah mengizinkan sebuah akun untuk membelanjakan beberapa token yang menjadi milik pemilik yang berbeda.
 Ini berguna, misalnya, untuk kontrak yang bertindak sebagai penjual. Kontrak tidak dapat
-memantau peristiwa, jadi jika pembeli mentransfer token ke kontrak penjual
+memantau kejadian, jadi jika pembeli mentransfer token ke kontrak penjual
 secara langsung, kontrak tersebut tidak akan tahu bahwa ia telah dibayar. Sebaliknya, pembeli mengizinkan
 kontrak penjual untuk membelanjakan jumlah tertentu, dan penjual mentransfer jumlah tersebut.
 Ini dilakukan melalui fungsi yang dipanggil oleh kontrak penjual, sehingga kontrak penjual
@@ -144,16 +154,16 @@ dapat mengetahui apakah itu berhasil.
 
 ```solidity
     /**
-     * @dev Mengembalikan sisa jumlah token yang diizinkan untuk dibelanjakan oleh `spender`
-     * atas nama `owner` melalui {transferFrom}. Nilai bawaannya adalah
-     * nol.
+     * @dev Mengembalikan sisa jumlah token yang diizinkan untuk dihabiskan oleh
+     * `spender` atas nama `owner` melalui {transferFrom}. Nilai ini
+     * adalah nol secara bawaan.
      *
      * Nilai ini berubah ketika {approve} atau {transferFrom} dipanggil.
      */
     function allowance(address owner, address spender) external view returns (uint256);
 ```
 
-Fungsi `allowance` memungkinkan siapa saja untuk melakukan kueri guna melihat berapa jatah yang diizinkan oleh satu
+Fungsi `allowance` memungkinkan siapa saja untuk menanyakan jatah apa yang diizinkan oleh satu
 alamat (`owner`) untuk dibelanjakan oleh alamat lain (`spender`).
 
 &nbsp;
@@ -164,22 +174,22 @@ alamat (`owner`) untuk dibelanjakan oleh alamat lain (`spender`).
      *
      * Mengembalikan nilai boolean yang menunjukkan apakah operasi berhasil.
      *
-     * PENTING: Berhati-hatilah karena mengubah jatah dengan metode ini membawa risiko
-     * bahwa seseorang mungkin menggunakan jatah lama dan baru karena urutan
-     * transaksi yang tidak menguntungkan. Salah satu solusi yang mungkin untuk memitigasi kondisi
+     * PENTING: Berhati-hatilah bahwa mengubah jatah dengan metode ini membawa risiko
+     * bahwa seseorang mungkin menggunakan baik jatah lama maupun baru karena urutan
+     * transaksi yang tidak menguntungkan. Salah satu solusi yang mungkin untuk mengurangi kondisi
      * balapan ini adalah dengan terlebih dahulu mengurangi jatah pembelanja menjadi 0 dan menetapkan
      * nilai yang diinginkan setelahnya:
      * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
      *
-     * Memancarkan peristiwa {Approval}.
+     * Memancarkan kejadian {Approval}.
      */
     function approve(address spender, uint256 amount) external returns (bool);
 ```
 
 Fungsi `approve` membuat sebuah jatah. Pastikan untuk membaca pesan tentang
 bagaimana hal itu dapat disalahgunakan. Di Ethereum, Anda mengontrol urutan transaksi Anda sendiri,
-tetapi Anda tidak dapat mengontrol urutan eksekusi transaksi orang lain,
-kecuali jika Anda tidak mengirimkan transaksi Anda sendiri sampai Anda melihat
+tetapi Anda tidak dapat mengontrol urutan di mana transaksi orang lain akan
+dieksekusi, kecuali Anda tidak mengirimkan transaksi Anda sendiri sampai Anda melihat
 transaksi pihak lain telah terjadi.
 
 &nbsp;
@@ -192,7 +202,7 @@ transaksi pihak lain telah terjadi.
      *
      * Mengembalikan nilai boolean yang menunjukkan apakah operasi berhasil.
      *
-     * Memancarkan peristiwa {Transfer}.
+     * Memancarkan kejadian {Transfer}.
      */
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 ```
@@ -219,12 +229,12 @@ Terakhir, `transferFrom` digunakan oleh pembelanja untuk benar-benar membelanjak
 }
 ```
 
-Peristiwa-peristiwa ini dipancarkan ketika state dari kontrak ERC-20 berubah.
+Kejadian-kejadian ini dipancarkan ketika state dari kontrak ERC-20 berubah.
 
 ## Kontrak Sebenarnya {#the-actual-contract}
 
 Ini adalah kontrak sebenarnya yang mengimplementasikan standar ERC-20,
-[diambil dari sini](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol).
+[diambil dari sini](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol).
 Ini tidak dimaksudkan untuk digunakan apa adanya, tetapi Anda dapat
 [mewarisinya](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm) untuk memperluasnya menjadi sesuatu yang dapat digunakan.
 
@@ -249,7 +259,7 @@ import "../../math/SafeMath.sol";
 - `GSN/Context.sol` adalah definisi yang diperlukan untuk menggunakan [OpenGSN](https://opengsn.org/), sebuah sistem yang memungkinkan pengguna tanpa Ether
   untuk menggunakan rantai blok. Perhatikan bahwa ini adalah versi lama, jika Anda ingin berintegrasi dengan OpenGSN
   [gunakan tutorial ini](https://docs.opengsn.org/javascript-client/tutorial.html).
-- [Pustaka SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), yang mencegah
+- [Pustaka SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math#SafeMath), yang mencegah
   limpahan/kekurangan aritmatika untuk versi Solidity **&lt;0.8.0**. Di Solidity ≥0.8.0, operasi aritmatika secara otomatis
   mengembalikan pada limpahan/kekurangan, membuat SafeMath tidak diperlukan. Kontrak ini menggunakan SafeMath untuk kompatibilitas mundur dengan
   versi kompiler yang lebih lama.
@@ -303,13 +313,13 @@ Baris ini menentukan pewarisan, dalam hal ini dari `IERC20` dari atas dan `Conte
 ```
 
 Baris ini melampirkan Pustaka `SafeMath` ke tipe `uint256`. Anda dapat menemukan Pustaka ini
-[di sini](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol).
+[di sini](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/math/SafeMath.sol).
 
 ### Definisi Variabel {#variable-definitions}
 
-Definisi ini menentukan variabel state kontrak. Variabel-variabel ini dideklarasikan sebagai `private`, tetapi
+Definisi-definisi ini menentukan variabel state kontrak. Variabel-variabel ini dideklarasikan sebagai `private`, tetapi
 itu hanya berarti bahwa kontrak lain di rantai blok tidak dapat membacanya. _Tidak ada
-rahasia di rantai blok_, perangkat lunak pada setiap node memiliki state dari setiap kontrak
+rahasia di rantai blok_, perangkat lunak di setiap node memiliki state dari setiap kontrak
 di setiap blok. Berdasarkan konvensi, variabel state dinamai `_<something>`.
 
 Dua variabel pertama adalah [pemetaan](https://www.tutorialspoint.com/solidity/solidity_mappings.htm),
@@ -331,7 +341,7 @@ saldo, gunakan sintaks ini: `_balances[<address>]`.
 ```
 
 Variabel ini, `_allowances`, menyimpan jatah yang dijelaskan sebelumnya. Indeks pertama adalah pemilik
-token, dan yang kedua adalah kontrak dengan jatah tersebut. Untuk mengakses jumlah yang dapat dibelanjakan alamat A
+token, dan yang kedua adalah kontrak dengan jatah tersebut. Untuk mengakses jumlah yang dapat dibelanjakan oleh alamat A
 dari akun alamat B, gunakan `_allowances[B][A]`.
 
 &nbsp;
@@ -350,15 +360,16 @@ Seperti namanya, variabel ini melacak total pasokan token.
     uint8 private _decimals;
 ```
 
-Ketiga variabel ini digunakan untuk meningkatkan keterbacaan. Dua yang pertama cukup jelas, tetapi `_decimals`
+Ketiga variabel ini digunakan untuk meningkatkan keterbacaan. Dua yang pertama sudah cukup jelas, tetapi `_decimals`
 tidak.
 
 Di satu sisi, Ethereum tidak memiliki variabel titik mengambang atau pecahan. Di sisi lain,
 manusia suka bisa membagi token. Salah satu alasan orang memilih emas sebagai mata uang adalah karena
 sulit untuk memberikan kembalian ketika seseorang ingin membeli sapi seharga bebek.
 
-Solusinya adalah dengan melacak bilangan bulat, tetapi menghitung token pecahan yang hampir tidak berharga alih-alih token aslinya. Dalam kasus Ether, token pecahan disebut Wei, dan 10^18 Wei sama dengan satu
-ETH. Pada saat penulisan, 10.000.000.000.000 Wei kira-kira sama dengan satu sen AS atau Euro.
+Solusinya adalah dengan melacak bilangan bulat, tetapi menghitung token pecahan yang
+hampir tidak berharga alih-alih token aslinya. Dalam kasus Ether, token pecahan disebut Wei, dan 10^18 Wei sama dengan satu
+ETH.
 
 Aplikasi perlu mengetahui cara menampilkan saldo token. Jika pengguna memiliki 3.141.000.000.000.000.000 Wei, apakah itu
 3,14 ETH? 31,41 ETH? 3.141 ETH? Dalam kasus Ether, didefinisikan 10^18 Wei untuk ETH, tetapi untuk
@@ -374,12 +385,10 @@ nilai `_decimals` sebesar nol. Jika Anda ingin menggunakan standar yang sama den
      *
      * Untuk memilih nilai yang berbeda untuk {decimals}, gunakan {_setupDecimals}.
      *
-     * Ketiga nilai ini tidak dapat diubah (immutable): hanya dapat ditetapkan sekali selama
+     * Ketiga nilai ini tidak dapat diubah: mereka hanya dapat ditetapkan sekali selama
      * konstruksi.
      */
     constructor (string memory name_, string memory symbol_) public {
-        // Dalam Solidity ≥0.7.0, 'public' bersifat implisit dan dapat dihilangkan.
-
         _name = name_;
         _symbol = symbol_;
         _decimals = 18;
@@ -387,19 +396,20 @@ nilai `_decimals` sebesar nol. Jika Anda ingin menggunakan standar yang sama den
 ```
 
 Konstruktor dipanggil saat kontrak pertama kali dibuat. Berdasarkan konvensi, parameter fungsi dinamai `<something>_`.
+Mulai dari Solidity 0.7.0, visibilitas (`public` atau `internal`) pada konstruktor diabaikan dan tidak digunakan lagi, sehingga kode yang lebih baru menghilangkannya.
 
 ### Fungsi Antarmuka Pengguna {#user-interface-functions}
 
 ```solidity
     /**
-     * @dev Mengembalikan nama token.
+     * @dev Mengembalikan nama dari token.
      */
     function name() public view returns (string memory) {
         return _name;
     }
 
     /**
-     * @dev Mengembalikan simbol token, biasanya versi yang lebih pendek dari
+     * @dev Mengembalikan simbol dari token, biasanya versi yang lebih pendek dari
      * namanya.
      */
     function symbol() public view returns (string memory) {
@@ -429,11 +439,11 @@ Fungsi-fungsi ini, `name`, `symbol`, dan `decimals` membantu antarmuka pengguna 
 Tipe kembaliannya adalah `string memory`, yang berarti mengembalikan string yang disimpan di memori. Variabel, seperti
 string, dapat disimpan di tiga lokasi:
 
-|          | Masa Pakai       | Akses Kontrak   | Biaya Gas                                                          |
-| -------- | ---------------- | --------------- | ------------------------------------------------------------------ |
-| Memori   | Panggilan fungsi | Baca/Tulis      | Puluhan atau ratusan (lebih tinggi untuk lokasi yang lebih tinggi) |
-| Calldata | Panggilan fungsi | Hanya Baca      | Tidak dapat digunakan sebagai tipe kembalian, hanya tipe parameter fungsi |
-| Penyimpanan | Sampai diubah    | Baca/Tulis      | Tinggi (800 untuk baca, 20k untuk tulis)                           |
+|          | Masa Pakai      | Akses Kontrak | Biaya Gas                                                       |
+| -------- | ------------- | --------------- | -------------------------------------------------------------- |
+| Memori   | Panggilan fungsi | Baca/Tulis      | Puluhan atau ratusan (lebih tinggi untuk lokasi yang lebih tinggi)                 |
+| Calldata | Panggilan fungsi | Hanya Baca       | Tidak dapat digunakan sebagai tipe kembalian, hanya tipe parameter fungsi |
+| Penyimpanan  | Sampai diubah | Baca/Tulis      | Tinggi (2.100 untuk pembacaan dingin, 20.000 untuk penulisan baru)           |
 
 Dalam hal ini, `memory` adalah pilihan terbaik.
 
@@ -726,7 +736,7 @@ menggagalkannya jika alamat nol digunakan sebagai pengirim atau penerima.
 Ada dua cara untuk menggunakan kontrak ini:
 
 1. Gunakan sebagai templat untuk kode Anda sendiri
-1. [Warisi dari kontrak ini](https://www.bitdegree.org/learn/solidity-inheritance), dan timpa hanya fungsi-fungsi yang perlu Anda modifikasi
+1. [Warisi dari kontrak ini](https://docs.soliditylang.org/en/latest/contracts.html#inheritance), dan timpa hanya fungsi-fungsi yang perlu Anda modifikasi
 
 Metode kedua jauh lebih baik karena kode ERC-20 OpenZeppelin telah diaudit dan terbukti aman. Saat Anda menggunakan pewarisan
 jelas fungsi apa saja yang Anda modifikasi, dan untuk memercayai kontrak Anda, orang hanya perlu mengaudit fungsi-fungsi spesifik tersebut.

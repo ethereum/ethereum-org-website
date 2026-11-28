@@ -1,5 +1,25 @@
 # Arabic (ar) Translation Review Findings
 
+## PR #19993 (intl/pending-dev) -- 2026-11-28 -- Score 8.5/10
+Scope: 17 developer tutorials (ai-trading-agent, all-you-can-cache, app-plasma, clear-signing, downsizing-contracts, erc20-annotated-code, erc20-with-safety-rails, monitoring-geth, reverse-engineering, run-node-raspberry-pi, secret-state, server-components, short-abi, stealth-addr, token-integration-checklist, uniswap-v2-annotated-code, yellow-paper-evm), changed lines only. Read 7 diffs (ai-trading-agent, all-you-can-cache, reverse-engineering, run-node, secret-state, short-abi, clear-signing) plus a word diff of uniswap. Scripted sweeps (U+3002/U+2060/CJK/Cyrillic/Indic, SPDX, span/isolate balance, anchors, components, link order, English months, English units in spans, `(ABBR)` against English, transliterated tool names) clean apart from the items below. Glossary spot checks (overflow = تجاوز السعة, token = رمز مميز) match.
+
+**Fixed in this branch:**
+
+- English dates left in spans/link text: ai-trading-agent:539 (`October 23, 2026`), downsizing:16 (`November 22, 2016`), secret-state:50 and :704 (`April 2026`, `November 2023`, `April 2024`) -> Arabic months (recurrence of #18772/#19556).
+- English unit in span: uniswap:380 `120 seconds` -> `120 ثانية`.
+- Long forms added where English has bare abbreviations (#112): clear-signing `واجهة التطبيق الثنائية (ABI)` x12, `التكامل المستمر (CI)` x7, `طلب السحب (PR)` x3, `أداة سطر الأوامر (CLI)` x2, `الملف التمهيدي (README)` x2; short-abi `ABI` x5 (heading `{#the-abi}`, body) and `(EOA)` at :81; run-node:18 `ذاكرة وصول عشوائي (RAM)`; ai-trading-agent `(LLM)` x3 (:522, :986, :988; the heading and its two link texts keep dev's form).
+- Tool re-transliterated: token-integration-checklist:73,74 `سليذر` -> `<span dir="ltr">Slither</span>` (#113).
+- Hybrid `Optimism غويرلي` x4 in all-you-can-cache (:773, :796, :817) -> `<span dir="ltr">Optimism Goerli</span>` (#44).
+- ai-trading-agent:810 `تغيير 29` lost the word "line" -> `تغيير السطر 29`.
+
+**Open (warnings):**
+
+- uniswap: `الدالة`/`الوظيفة` now mixed (37 `الوظيفة` vs 10 `الدالة`; the page and other tutorials use `دالة`); `طبقة 2 (L2)` expansion kept from dev.
+- Glosses added where English has none: `(blobs)`, `(dapp)`, `(Checkout)`, `(commits)`, `(linter)`, `(replay attack)`, `(domain separator)`; yellow-paper `(PoW)`/`(PoS)`/`(EVM)` x2 each kept from dev; `(Boolean)` link text.
+- Units left English inside spans (`100 bytes`, `256 bit`, `32 byte`, `24,576 bytes`, `22,100`); `launchpad` Latin where dev had `منصة الإطلاق`; ai-trading-agent `وقت كتابة هذا التقرير` ("this report") for "at time of writing".
+- `إيثيريوم`/`إيثريوم` spelling mixed inside yellow-paper and reverse-engineering; `خارجياً` tanween style (short-abi, #19983 open item).
+- Dropped `<span dir="ltr">` wrappers around Latin in run-node (98 spans to 4); untranslated image alt text in 4 files (pre-existing).
+
 ## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.6/10
 Scope: 13 md pages (ethash, data-structures trio, frameworks, nodes-as-a-service, run-a-node, transactions, glossary, merge, statelessness, verkle-trees, what-is-ether/supply), changed lines only; all 13 diffs read. Sweeps (U+3002/U+2060/CJK/Cyrillic/Indic, SPDX, isolate and span balance, English months, expansions) clean apart from the items below.
 

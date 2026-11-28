@@ -11,16 +11,18 @@ published: 2022-08-15
 
 ## Pengantar {#introduction}
 
-Salah satu hal hebat tentang Ethereum adalah tidak ada otoritas pusat yang dapat memodifikasi atau membatalkan transaksi Anda. Salah satu masalah besar dengan Ethereum adalah tidak ada otoritas pusat dengan kekuasaan untuk membatalkan kesalahan pengguna atau transaksi ilegal. Dalam artikel ini Anda akan mempelajari tentang beberapa kesalahan umum yang dilakukan pengguna dengan token [ERC-20](/developers/docs/standards/tokens/erc-20/), serta cara membuat kontrak ERC-20 yang membantu pengguna untuk menghindari kesalahan tersebut, atau yang memberikan otoritas pusat beberapa kekuasaan (misalnya untuk membekukan akun).
+Salah satu hal hebat tentang Ethereum adalah tidak ada otoritas pusat yang dapat memodifikasi atau membatalkan transaksi Anda. Salah satu masalah besar dengan Ethereum adalah tidak ada otoritas pusat dengan kekuatan untuk membatalkan kesalahan pengguna atau transaksi terlarang. Dalam artikel ini Anda akan mempelajari tentang beberapa kesalahan umum yang dilakukan pengguna dengan token [ERC-20](/developers/docs/standards/tokens/erc-20/), serta cara membuat kontrak ERC-20 yang membantu pengguna untuk menghindari kesalahan tersebut, atau yang memberikan otoritas pusat beberapa kekuatan (misalnya untuk membekukan akun).
 
-Perhatikan bahwa meskipun kita akan menggunakan [kontrak token ERC-20 OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20), artikel ini tidak menjelaskannya secara sangat rinci. Anda dapat menemukan informasi ini [di sini](/developers/tutorials/erc20-annotated-code).
+Perhatikan bahwa meskipun kita akan menggunakan [kontrak token ERC-20 OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20), artikel ini tidak menjelaskannya secara mendetail. Anda dapat menemukan informasi ini [di sini](/developers/tutorials/erc20-annotated-code).
 
 Jika Anda ingin melihat kode sumber lengkapnya:
 
 1. Buka [Remix IDE](https://remix.ethereum.org/).
-2. Klik ikon klon GitHub (![clone github icon](icon-clone.png)).
-3. Klon repositori GitHub `https://github.com/qbzzt/20220815-erc20-safety-rails`.
+2. Klik ikon klon github (![ikon klon github](icon-clone.png)).
+3. Klon repositori github `https://github.com/qbzzt/20220815-erc20-safety-rails`.
 4. Buka **contracts > erc20-safety-rails.sol**.
+
+Perhatikan bahwa repositori ditulis untuk OpenZeppelin Contracts 4.7.2, di mana fungsi yang ditimpa artikel ini disebut `_beforeTokenTransfer`. Artikel ini menggunakan OpenZeppelin Contracts 5.x saat ini, di mana Anda menimpa `_update` sebagai gantinya, sehingga kode dalam artikel ini sedikit berbeda dari kode di repositori.
 
 ## Membuat kontrak ERC-20 {#creating-an-erc-20-contract}
 
@@ -29,18 +31,18 @@ Sebelum kita dapat menambahkan fungsionalitas pagar pengaman, kita memerlukan ko
 1. Pilih **ERC20**.
 2. Masukkan pengaturan ini:
 
-   | Parameter      | Nilai            |
-   | -------------- | ---------------- |
-   | Nama           | SafetyRailsToken |
-   | Simbol         | SAFE             |
-   | Premint        | 1000             |
-   | Fitur          | Tidak ada        |
-   | Kontrol Akses  | Ownable          |
-   | Peningkatan    | Tidak ada        |
+   | Parameter      | Nilai                     |
+   | -------------- | ------------------------- |
+   | Name           | SafetyRailsToken          |
+   | Symbol         | SAFE                      |
+   | Premint        | 1000                      |
+   | Features       | None (hapus centang **Permit**) |
+   | Access Control | Ownable                   |
+   | Upgradability  | None                      |
 
 3. Gulir ke atas dan klik **Open in Remix** (untuk Remix) atau **Download** untuk menggunakan lingkungan yang berbeda. Saya akan berasumsi Anda menggunakan Remix, jika Anda menggunakan yang lain, buat saja perubahan yang sesuai.
 4. Kita sekarang memiliki kontrak ERC-20 yang berfungsi penuh. Anda dapat memperluas `.deps` > `npm` untuk melihat kode yang diimpor.
-5. Kompilasi, sebarkan, dan mainkan kontrak untuk melihat bahwa itu berfungsi sebagai kontrak ERC-20. Jika Anda perlu mempelajari cara menggunakan Remix, [gunakan tutorial ini](https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth).
+5. Kompilasi, menyebarkan, dan mainkan dengan kontrak untuk melihat bahwa itu berfungsi sebagai kontrak ERC-20. Jika Anda perlu mempelajari cara menggunakan Remix, [gunakan tutorial ini](https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth).
 
 ## Kesalahan umum {#common-mistakes}
 
@@ -54,16 +56,16 @@ Pengguna terkadang mengirim token ke alamat yang salah. Meskipun kita tidak dapa
 
 ### Mencegah transfer {#preventing-transfers}
 
-Kontrak ERC-20 OpenZeppelin menyertakan [sebuah hook, `_beforeTokenTransfer`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L364-L368), yang dipanggil sebelum token ditransfer. Secara bawaan hook ini tidak melakukan apa-apa, tetapi kita dapat menggantungkan fungsionalitas kita sendiri padanya, seperti pemeriksaan yang mengembalikan jika ada masalah.
+Dalam kontrak ERC-20 OpenZeppelin, setiap perubahan saldo, baik itu transfer, cetak, atau bakar, melewati [fungsi internal, `_update`](https://docs.openzeppelin.com/contracts/5.x/api/token/erc20#ERC20-_update-address-address-uint256-). Kita dapat menimpanya untuk menggantungkan fungsionalitas kita sendiri padanya, seperti pemeriksaan yang mengembalikan jika ada masalah.
 
-Untuk menggunakan hook, tambahkan fungsi ini setelah konstruktor:
+Untuk melakukannya, tambahkan fungsi ini setelah konstruktor:
 
 ```solidity
-    function _beforeTokenTransfer(address from, address to, uint256 amount)
+    function _update(address from, address to, uint256 value)
         internal virtual
         override(ERC20)
     {
-        super._beforeTokenTransfer(from, to, amount);
+        super._update(from, to, value);
     }
 ```
 
@@ -79,24 +81,47 @@ Kata kunci `virtual` berarti bahwa sama seperti kita mewarisi fungsionalitas dar
         override(ERC20)
 ```
 
-Kita harus menentukan secara eksplisit bahwa kita [menimpa](https://docs.soliditylang.org/en/v0.8.15/contracts.html#function-overriding) definisi token ERC20 dari `_beforeTokenTransfer`. Secara umum, definisi eksplisit jauh lebih baik, dari sudut pandang keamanan, daripada yang implisit - Anda tidak bisa lupa bahwa Anda telah melakukan sesuatu jika itu ada tepat di depan Anda. Itu juga alasan kita perlu menentukan `_beforeTokenTransfer` dari superclass mana yang kita timpa.
+Kita harus menentukan secara eksplisit bahwa kita [menimpa](https://docs.soliditylang.org/en/latest/contracts.html#function-overriding) definisi token ERC20 dari `_update`. Secara umum, definisi eksplisit jauh lebih baik, dari sudut pandang keamanan, daripada yang implisit - Anda tidak dapat melupakan bahwa Anda telah melakukan sesuatu jika itu ada tepat di depan Anda. Itu juga alasan kita perlu menentukan `_update` dari superkelas mana yang kita timpa.
 
 ```solidity
-        super._beforeTokenTransfer(from, to, amount);
+        super._update(from, to, value);
 ```
 
-Baris ini memanggil fungsi `_beforeTokenTransfer` dari kontrak atau kontrak-kontrak yang kita warisi yang memilikinya. Dalam hal ini, itu hanya `ERC20`, `Ownable` tidak memiliki hook ini. Meskipun saat ini `ERC20._beforeTokenTransfer` tidak melakukan apa-apa, kita memanggilnya untuk berjaga-jaga jika fungsionalitas ditambahkan di masa mendatang (dan kita kemudian memutuskan untuk menyebarkan ulang kontrak, karena kontrak tidak berubah setelah penyebaran).
+Baris ini memanggil fungsi `_update` dari kontrak atau kontrak-kontrak yang kita warisi yang memilikinya. Dalam hal ini, itu hanya `ERC20`, `Ownable` tidak memiliki fungsi ini. Tidak seperti *hook* kosong, `ERC20._update` adalah apa yang sebenarnya memindahkan token, jadi sangat penting untuk memanggilnya. Pemeriksaan kita dilakukan sebelum panggilan ini, sehingga mereka dapat mengembalikan sebelum ada perubahan saldo.
 
 ### Mengodekan persyaratan {#coding-the-requirements}
 
-Kita ingin menambahkan persyaratan ini ke fungsi:
+Kita ingin menambahkan persyaratan ini ke fungsi tersebut. Karena `_update` juga dipanggil ketika token dibakar, dengan `to` diatur ke `address(0)`, kita hanya memeriksa `to` ketika itu bukan `address(0)`:
 
 - Alamat `to` tidak boleh sama dengan `address(this)`, alamat dari kontrak ERC-20 itu sendiri.
 - Alamat `to` tidak boleh kosong, itu harus berupa salah satu dari:
-  - Akun yang dimiliki secara eksternal (EOA). Kita tidak dapat memeriksa apakah sebuah alamat adalah EOA secara langsung, tetapi kita dapat memeriksa saldo ETH dari sebuah alamat. EOA hampir selalu memiliki saldo, bahkan jika tidak lagi digunakan - sulit untuk mengosongkannya hingga Wei terakhir.
-  - Kontrak pintar. Menguji apakah sebuah alamat adalah kontrak pintar sedikit lebih sulit. Ada sebuah opcode yang memeriksa panjang kode eksternal, yang disebut [`EXTCODESIZE`](https://www.evm.codes/#3b), tetapi itu tidak tersedia secara langsung di Solidity. Kita harus menggunakan [Yul](https://docs.soliditylang.org/en/v0.8.15/yul.html), yang merupakan assembly EVM, untuk itu. Ada nilai lain yang bisa kita gunakan dari Solidity ([`<address>.code` dan `<address>.codehash`](https://docs.soliditylang.org/en/v0.8.15/units-and-global-variables.html#members-of-address-types)), tetapi biayanya lebih mahal.
+  - Akun milik eksternal (EOA). Kita tidak dapat memeriksa apakah sebuah alamat adalah EOA secara langsung, tetapi kita dapat memeriksa saldo ETH dari sebuah alamat. EOA hampir selalu memiliki saldo, bahkan jika mereka tidak lagi digunakan - sulit untuk mengosongkannya hingga Wei terakhir.
+  - Kontrak pintar. Menguji apakah sebuah alamat adalah kontrak pintar sedikit lebih sulit. Ada sebuah opcode yang memeriksa panjang kode eksternal, yang disebut [`EXTCODESIZE`](https://www.evm.codes/#3b). Di Solidity Anda bisa mendapatkannya dengan [`<address>.code.length`](https://docs.soliditylang.org/en/latest/units-and-global-variables.html#members-of-address-types), yang diubah oleh kompiler menjadi `EXTCODESIZE`. Di sini kita menggunakan [Yul](https://docs.soliditylang.org/en/latest/yul.html), yang merupakan *assembly* EVM, untuk menunjukkan cara memanggil opcode secara langsung. Perhatikan bahwa sejak [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) sebuah EOA juga dapat memiliki kode (sebuah pendelegasian ke sebuah kontrak), jadi pemeriksaan ini mengidentifikasi akun dengan kode, bukan secara ketat kontrak. Untuk tujuan kita, menolak alamat kosong, itu tidak masalah.
 
-Mari kita bahas kode baru ini baris demi baris:
+Berikut adalah fungsi lengkapnya:
+
+```solidity
+    function _update(address from, address to, uint256 value)
+        internal virtual
+        override(ERC20)
+    {
+        // Pembakaran mengirim token ke address(0), jangan diblokir
+        if (to != address(0)) {
+            require(to != address(this), "Can't send tokens to the contract address");
+
+            bool isToContract;
+            assembly {
+               isToContract := gt(extcodesize(to), 0)
+            }
+
+            require(to.balance != 0 || isToContract, "Can't send tokens to an empty address");
+        }
+
+        super._update(from, to, value);
+    }
+```
+
+Mari kita bahas kode baru tersebut baris demi baris:
 
 ```solidity
         require(to != address(this), "Can't send tokens to the contract address");
@@ -111,7 +136,7 @@ Ini adalah persyaratan pertama, periksa bahwa `to` dan `this(address)` bukanlah 
         }
 ```
 
-Ini adalah cara kita memeriksa apakah sebuah alamat adalah kontrak. Kita tidak dapat menerima keluaran secara langsung dari Yul, jadi sebagai gantinya kita mendefinisikan sebuah variabel untuk menampung hasilnya (`isToContract` dalam hal ini). Cara kerja Yul adalah setiap opcode dianggap sebagai fungsi. Jadi pertama-tama kita memanggil [`EXTCODESIZE`](https://www.evm.codes/#3b) untuk mendapatkan ukuran kontrak, dan kemudian menggunakan [`GT`](https://www.evm.codes/#11) untuk memeriksa bahwa itu bukan nol (kita berurusan dengan bilangan bulat tak bertanda, jadi tentu saja tidak bisa negatif). Kita kemudian menulis hasilnya ke `isToContract`.
+Ini adalah cara kita memeriksa apakah sebuah alamat adalah kontrak. Kita tidak dapat menerima keluaran secara langsung dari Yul, jadi sebagai gantinya kita mendefinisikan sebuah variabel untuk menampung hasilnya (`isToContract` dalam hal ini). Cara kerja Yul adalah setiap opcode dianggap sebagai sebuah fungsi. Jadi pertama-tama kita memanggil [`EXTCODESIZE`](https://www.evm.codes/#3b) untuk mendapatkan ukuran kontrak, dan kemudian menggunakan [`GT`](https://www.evm.codes/#11) untuk memeriksa bahwa itu bukan nol (kita berurusan dengan bilangan bulat tak bertanda, jadi tentu saja itu tidak bisa negatif). Kita kemudian menulis hasilnya ke `isToContract`.
 
 ```solidity
         require(to.balance != 0 || isToContract, "Can't send tokens to an empty address");
@@ -132,7 +157,7 @@ Terkadang berguna untuk memiliki administrator yang dapat membatalkan kesalahan.
 
 OpenZeppelin menyediakan dua mekanisme untuk mengaktifkan akses administratif:
 
-- Kontrak [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable) memiliki pemilik tunggal. Fungsi yang memiliki [pengubah](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) `onlyOwner` hanya dapat dipanggil oleh pemilik tersebut. Pemilik dapat mentransfer kepemilikan kepada orang lain atau melepaskannya sepenuhnya. Hak dari semua akun lain biasanya identik.
+- Kontrak [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable) memiliki pemilik tunggal. Fungsi yang memiliki [pengubah](https://docs.soliditylang.org/en/latest/contracts.html#function-modifiers) `onlyOwner` hanya dapat dipanggil oleh pemilik tersebut. Pemilik dapat mentransfer kepemilikan kepada orang lain atau melepaskannya sepenuhnya. Hak dari semua akun lain biasanya identik.
 - Kontrak [`AccessControl`](https://docs.openzeppelin.com/contracts/5.x/access-control#role-based-access-control) memiliki [kontrol akses berbasis peran (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control).
 
 Demi kesederhanaan, dalam artikel ini kita menggunakan `Ownable`.
@@ -141,18 +166,18 @@ Demi kesederhanaan, dalam artikel ini kita menggunakan `Ownable`.
 
 Membekukan dan mencairkan kontrak memerlukan beberapa perubahan:
 
-- Sebuah [pemetaan](https://www.tutorialspoint.com/solidity/solidity_mappings.htm) dari alamat ke [boolean](https://en.wikipedia.org/wiki/Boolean_data_type) untuk melacak alamat mana yang dibekukan. Semua nilai pada awalnya adalah nol, yang untuk nilai boolean ditafsirkan sebagai salah (false). Inilah yang kita inginkan karena secara bawaan akun tidak dibekukan.
+- Sebuah [pemetaan](https://docs.soliditylang.org/en/latest/types.html#mapping-types) dari alamat ke [boolean](https://en.wikipedia.org/wiki/Boolean_data_type) untuk melacak alamat mana yang dibekukan. Semua nilai pada awalnya adalah nol, yang untuk nilai boolean ditafsirkan sebagai salah (*false*). Ini adalah apa yang kita inginkan karena secara bawaan akun tidak dibekukan.
 
   ```solidity
       mapping(address => bool) public frozenAccounts;
   ```
 
-- [Peristiwa](https://www.tutorialspoint.com/solidity/solidity_events.htm) untuk memberi tahu siapa pun yang berkepentingan ketika sebuah akun dibekukan atau dicairkan. Secara teknis peristiwa tidak diperlukan untuk tindakan ini, tetapi ini membantu kode offchain untuk dapat mendengarkan peristiwa ini dan mengetahui apa yang sedang terjadi. Dianggap sebagai tata krama yang baik bagi kontrak pintar untuk memancarkannya ketika sesuatu yang mungkin relevan bagi orang lain terjadi.
+- [Kejadian](https://docs.soliditylang.org/en/latest/contracts.html#events) untuk memberi tahu siapa pun yang tertarik ketika sebuah akun dibekukan atau dicairkan. Secara teknis kejadian tidak diperlukan untuk tindakan ini, tetapi ini membantu kode offchain untuk dapat mendengarkan kejadian ini dan mengetahui apa yang sedang terjadi. Dianggap sebagai tata krama yang baik bagi sebuah kontrak pintar untuk memancarkannya ketika sesuatu yang mungkin relevan bagi orang lain terjadi.
 
-  Peristiwa tersebut diindeks sehingga akan memungkinkan untuk mencari semua waktu ketika sebuah akun telah dibekukan atau dicairkan.
+  Kejadian tersebut diindeks sehingga akan memungkinkan untuk mencari semua waktu sebuah akun telah dibekukan atau dicairkan.
 
   ```solidity
-    // Ketika akun dibekukan atau tidak dibekukan
+    // Ketika akun dibekukan atau dicairkan
     event AccountFrozen(address indexed _addr);
     event AccountThawed(address indexed _addr);
   ```
@@ -165,7 +190,7 @@ Membekukan dan mencairkan kontrak memerlukan beberapa perubahan:
         onlyOwner
   ```
 
-  Fungsi yang ditandai [`public`](https://www.tutorialspoint.com/solidity/solidity_contracts.htm) dapat dipanggil dari kontrak pintar lain atau secara langsung oleh sebuah transaksi.
+  Fungsi yang ditandai [`public`](https://docs.soliditylang.org/en/latest/contracts.html#function-visibility) dapat dipanggil dari kontrak pintar lain atau secara langsung oleh sebuah transaksi.
 
   ```solidity
     {
@@ -175,9 +200,9 @@ Membekukan dan mencairkan kontrak memerlukan beberapa perubahan:
     }  // freezeAccount
   ```
 
-  Jika akun sudah dibekukan, mengembalikan. Jika tidak, bekukan dan `emit` sebuah peristiwa.
+  Jika akun sudah dibekukan, mengembalikan. Jika tidak, bekukan dan `emit` sebuah kejadian.
 
-- Ubah `_beforeTokenTransfer` untuk mencegah uang dipindahkan dari akun yang dibekukan. Perhatikan bahwa uang masih dapat ditransfer ke dalam akun yang dibekukan.
+- Ubah `_update` untuk mencegah uang dipindahkan dari akun yang dibekukan. Perhatikan bahwa uang masih dapat ditransfer ke akun yang dibekukan. Letakkan baris ini di awal fungsi, di luar blok `if`, sehingga ini juga mencegah pembakaran token dari akun yang dibekukan.
 
   ```solidity
        require(!frozenAccounts[from], "The account is frozen");
@@ -185,7 +210,7 @@ Membekukan dan mencairkan kontrak memerlukan beberapa perubahan:
 
 ### Pembersihan aset {#asset-cleanup}
 
-Untuk melepaskan token ERC-20 yang dipegang oleh kontrak ini, kita perlu memanggil sebuah fungsi pada kontrak token tempat mereka berada, baik [`transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer) atau [`approve`](https://eips.ethereum.org/EIPS/eip-20#approve). Tidak ada gunanya membuang-buang gas dalam kasus ini untuk kelonggaran (allowance), kita sebaiknya mentransfer secara langsung.
+Untuk melepaskan token ERC-20 yang dipegang oleh kontrak ini, kita perlu memanggil sebuah fungsi pada kontrak token tempat mereka berada, baik [`transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer) atau [`approve`](https://eips.ethereum.org/EIPS/eip-20#approve). Tidak ada gunanya membuang-buang gas dalam kasus ini untuk jatah (*allowance*), kita sebaiknya mentransfer secara langsung.
 
 ```solidity
     function cleanupERC20(
@@ -198,7 +223,11 @@ Untuk melepaskan token ERC-20 yang dipegang oleh kontrak ini, kita perlu memangg
         IERC20 token = IERC20(erc20);
 ```
 
-Ini adalah sintaks untuk membuat objek bagi sebuah kontrak ketika kita menerima alamat. Kita dapat melakukan ini karena kita memiliki definisi untuk token ERC20 sebagai bagian dari kode sumber (lihat baris 4), dan berkas tersebut menyertakan [definisi untuk IERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol), antarmuka untuk kontrak ERC-20 OpenZeppelin.
+Ini adalah sintaks untuk membuat sebuah objek untuk sebuah kontrak ketika kita menerima alamatnya. Untuk menggunakannya kita memerlukan [definisi untuk IERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol), antarmuka untuk kontrak ERC-20 OpenZeppelin. Baris `import {ERC20} from ...` dari Wizard hanya membawa `ERC20`, jadi tambahkan baris ini di sebelah impor lainnya di bagian atas berkas:
+
+```solidity
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+```
 
 ```solidity
         uint balance = token.balanceOf(address(this));

@@ -9,11 +9,19 @@ published: 2022-09-15
 lang: tr
 ---
 
-Toplamalar kullanıldığında, işlemdeki bir baytın maliyeti bir depolama slotunun maliyetinden çok daha pahalıdır. Bu nedenle, zincir içi olarak mümkün olduğunca fazla bilgiyi önbelleğe almak mantıklıdır.
+Toplamalar (rollups) kullanıldığında, işlemin her baytının L1'e gönderilmesi gerekir. Bu makale yazıldığında, bu durum işlemdeki bir baytın maliyetini bir depolama slotunun maliyetinden çok daha pahalı hale getiriyordu. Bu nedenle, mümkün olduğunca çok bilgiyi zincir içi önbelleğe almak mantıklıydı.
 
-Bu makalede, birden çok kez kullanılması muhtemel herhangi bir parametre değerinin önbelleğe alınacağı ve (ilk seferden sonra) çok daha az sayıda bayt ile kullanıma sunulacağı şekilde bir önbelleğe alma sözleşmesinin nasıl oluşturulup kullanılacağını ve bu önbelleği kullanan zincir dışı kodun nasıl yazılacağını öğreneceksiniz.
+> **Not:** Bu makalenin yazıldığı 2022 yılından bu yana Rollup ücretleri çok değişti. [Ecotone ve Fjord yükseltmelerinden](https://docs.optimism.io/op-stack/transactions/fees#l1-data-fee) (2024) bu yana, OP Stack zincirleri işlem verilerini [blob'lara](/roadmap/danksharding/) gönderiyor ve L1 veri ücreti, işlem başına minimum 100 bayt olmak üzere işlemin _sıkıştırılmış_ boyutunun bir tahminine dayanıyor ([spesifikasyona bakın](https://specs.optimism.io/protocol/fjord/exec-engine.html)). Sonuç olarak:
+>
+> - Sıfır baytlar neredeyse ücretsizdir, çünkü iyi sıkıştırılırlar.
+> - Kısa işlemler zaten 100 baytlık minimum sınırdadır, bu nedenle çağrı verilerini daha da kısaltmak ücretlerini düşürmez.
+> - Blob alanı ucuzdur, bu nedenle OP Ana Ağında L2 yürütme Gazı genellikle ücretin L1 veri ücretinden daha büyük bir parçasıdır. Önbelleğe yeni bir değer yazmak (her biri 22100 Gaz olan iki `SSTORE`), tasarruf ettiği baytlardan daha pahalıya mal olabilir.
+>
+> Prensip hala geçerlidir (daha az sıkıştırılmış bayt, daha düşük bir L1 veri ücreti anlamına gelir), ancak önbelleğe almanın karşılığını verip vermeyeceği işlemlerinizin boyutuna ve mevcut L1 ve L2 Gaz fiyatlarına bağlıdır. Belirli bir işlemin L1 veri ücretini, [`GasPriceOracle` ön dağıtımında](https://specs.optimism.io/protocol/predeploys.html#gaspriceoracle) `getL1Fee` çağırarak kontrol edebilirsiniz.
 
-Makaleyi atlayıp sadece kaynak kodunu görmek isterseniz, [buradadır](https://github.com/qbzzt/20220915-all-you-can-cache). Geliştirme yığını [Foundry](https://getfoundry.sh/introduction/installation/)'dir.
+Bu makalede, birden çok kez kullanılması muhtemel herhangi bir parametre değerinin önbelleğe alınacağı ve (ilk seferden sonra) çok daha az sayıda baytla kullanıma hazır olacağı şekilde bir önbelleğe alma Sözleşmesinin nasıl oluşturulacağını ve kullanılacağını ve bu önbelleği kullanan zincir dışı kodun nasıl yazılacağını öğreneceksiniz.
+
+Makaleyi atlayıp sadece kaynak kodunu görmek isterseniz, [burada bulabilirsiniz](https://github.com/qbzzt/20220915-all-you-can-cache). Geliştirme yığını [Foundry](https://getfoundry.sh/introduction/installation/)'dir.
 
 ## Genel tasarım {#overall-design}
 
@@ -34,7 +42,7 @@ Basitlik adına tüm işlem parametrelerinin `uint256` yani 32 bayt uzunluğunda
 
 ## Önbellek manipülasyonu {#cache-manipulation}
 
-Önbellek [`Önbellek.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol) içinde uygulanmıştır. Satır satır üzerinden geçelim.
+Önbellek [`Cache.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol) içinde uygulanmıştır. Satır satır üzerinden geçelim.
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -306,7 +314,7 @@ Buraya gelirsek, 16\*256<sup>15</sup>'ten küçük olmayan bir anahtar aldığı
 
 ### Önbelleği test etme {#testing-the-cache}
 
-Foundry'nin avantajlarından biri, [testleri Solidity'de yazmanıza izin vermesidir](https://getfoundry.sh/forge/tests/overview/), bu da birim testleri yazmayı kolaylaştırır. `Cache` sınıfı için testler [buradadır](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol). Test kodu, testlerin doğası gereği tekrarlayıcı olduğundan, bu makale yalnızca ilginç kısımları açıklamaktadır.
+Foundry'nin avantajlarından biri, [testleri Solidity'de yazmanıza izin vermesidir](https://getfoundry.sh/forge/tests/overview/), bu da birim testleri yazmayı kolaylaştırır. `Cache` sınıfı için testler [buradadır](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol). Test kodları, testlerin doğası gereği tekrarlayıcı olduğundan, bu makale yalnızca ilginç kısımları açıklamaktadır.
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -315,17 +323,17 @@ pragma solidity ^0.8.13;
 import "forge-std/Test.sol";
 
 
-// Konsol için `forge test -vv` çalıştırmak gerekir.
+// Konsol için `forge test -vv` çalıştırmak gerekiyor.
 import "forge-std/console.sol";
 ```
 
-Bu, test paketini ve `console.log`'yi kullanmak için gerekli olan standart bir koddur (boilerplate).
+Bu, test paketini ve `console.log` kullanmak için gerekli olan standart bir koddur (boilerplate).
 
 ```solidity
 import "src/Cache.sol";
 ```
 
-Test ettiğimiz sözleşmeyi bilmemiz gerekiyor.
+Test ettiğimiz Sözleşmeyi bilmemiz gerekiyor.
 
 ```solidity
 contract CacheTest is Test {
@@ -342,7 +350,7 @@ contract CacheTest is Test {
     function testCaching() public {
 ```
 
-Testler, adları `test` ile başlayan işlevlerdir. Bu işlev, değerleri yazıp tekrar okuyarak temel önbellek işlevselliğini kontrol eder.
+Testler, adları `test` ile başlayan işlevlerdir. Bu işlev, değerleri yazarak ve tekrar okuyarak temel önbellek işlevselliğini kontrol eder.
 
 ```solidity
         for(uint i=1; i<5000; i++) {
@@ -353,15 +361,15 @@ Testler, adları `test` ile başlayan işlevlerdir. Bu işlev, değerleri yazıp
             assertEq(cache.cacheRead(i), i*i);
 ```
 
-Gerçek testi [`assert...` işlevlerini](https://getfoundry.sh/reference/forge-std/std-assertions/) kullanarak bu şekilde yaparsınız. Bu durumda, yazdığımız değerin okuduğumuz değer olduğunu kontrol ediyoruz. Önbellek anahtarlarının doğrusal olarak atandığını bildiğimiz için `cache.cacheWrite` sonucunu göz ardı edebiliriz.
+[`assert...` işlevlerini](https://getfoundry.sh/reference/forge-std/std-assertions/) kullanarak asıl testi bu şekilde yaparsınız. Bu durumda, yazdığımız değerin okuduğumuz değer olup olmadığını kontrol ediyoruz. Önbellek anahtarlarının doğrusal olarak atandığını bildiğimiz için `cache.cacheWrite` sonucunu göz ardı edebiliriz.
 
 ```solidity
         }
     }    // testCaching
 
 
-    // Aynı değeri birden çok kez önbelleğe al, anahtarın aynı kaldığından
-    // emin ol
+    // Aynı değeri birden fazla kez önbelleğe alın, anahtarın
+    // aynı kaldığından emin olun
     function testRepeatCaching() public {
         for(uint i=1; i<100; i++) {
             uint _key1 = cache.cacheWrite(i);
@@ -370,7 +378,7 @@ Gerçek testi [`assert...` işlevlerini](https://getfoundry.sh/reference/forge-s
         }
 ```
 
-Önce her değeri önbelleğe iki kez yazarız ve anahtarların aynı olduğundan emin oluruz (bu, ikinci yazmanın aslında gerçekleşmediği anlamına gelir).
+Önce her değeri önbelleğe iki kez yazarız ve anahtarların aynı olduğundan emin oluruz (yani ikinci yazma işlemi aslında gerçekleşmemiştir).
 
 ```solidity
         for(uint i=1; i<100; i+=3) {
@@ -380,11 +388,11 @@ Gerçek testi [`assert...` işlevlerini](https://getfoundry.sh/reference/forge-s
     }    // testRepeatCaching
 ```
 
-Teorik olarak ardışık önbellek yazmalarını etkilemeyen bir hata olabilir. Bu yüzden burada ardışık olmayan bazı yazmalar yapıyoruz ve değerlerin hala yeniden yazılmadığını görüyoruz.
+Teorik olarak ardışık önbellek yazmalarını etkilemeyen bir hata (bug) olabilir. Bu yüzden burada ardışık olmayan bazı yazmalar yapıyoruz ve değerlerin hala yeniden yazılmadığını görüyoruz.
 
 ```solidity
-    // Bir bellek arabelleğinden bir uint oku (gönderdiğimiz parametreleri geri aldığımızdan
-    // emin olmak için)
+    // Bir bellek arabelleğinden bir uint okuyun (gönderdiğimiz parametreleri
+    // geri aldığımızdan emin olmak için)
     function toUint256(bytes memory _bytes, uint256 _start) internal pure
         returns (uint256)
 ```
@@ -401,7 +409,7 @@ Bir `bytes memory` arabelleğinden 256 bitlik bir kelime okuyun. Bu yardımcı i
         }
 ```
 
-Yul, `uint256` ötesindeki veri yapılarını desteklemez, bu nedenle bellek arabelleği `_bytes` gibi daha karmaşık bir veri yapısına başvurduğunuzda, o yapının adresini alırsınız. Solidity, `bytes memory` değerlerini uzunluğu içeren 32 baytlık bir kelime ve ardından gerçek baytlar olarak depolar, bu nedenle `_start` numaralı baytı elde etmek için `_bytes+32+_start` hesaplamamız gerekir.
+Yul, `uint256` ötesindeki veri yapılarını desteklemez, bu nedenle bellek arabelleği `_bytes` gibi daha karmaşık bir veri yapısına başvurduğunuzda, o yapının Adresini alırsınız. Solidity, `bytes memory` değerlerini uzunluğu ve ardından gerçek baytları içeren 32 baytlık bir kelime olarak depolar, bu nedenle `_start` numaralı baytı elde etmek için `_bytes+32+_start` hesaplamamız gerekir.
 
 ```solidity
 
@@ -419,13 +427,13 @@ Yul, `uint256` ötesindeki veri yapılarını desteklemez, bu nedenle bellek ara
     uint256 constant VAL_D = 0x600D60A7;
 ```
 
-Test için ihtiyaç duyduğumuz bazı sabitler.
+Test için ihtiyacımız olan bazı sabitler.
 
 ```solidity
     function testReadParam() public {
 ```
 
-Parametreleri doğru okuyabildiğimizi test etmek için `readParams` kullanan bir işlev olan `fourParams()`'yı çağırın.
+Parametreleri doğru okuyabildiğimizi test etmek için `readParams` kullanan bir işlev olan `fourParams()`'i çağırın.
 
 ```solidity
         address _cacheAddr = address(cache);
@@ -442,7 +450,7 @@ Parametreleri doğru okuyabildiğimizi test etmek için `readParams` kullanan bi
             FOUR_PARAMS,
 ```
 
-Aynı sözleşmenin hem önbelleğe alınmış işlevleri (doğrudan işlemlerden gelen çağrılar için) hem de önbelleğe alınmamış işlevleri (diğer akıllı sözleşmelerden gelen çağrılar için) desteklemesi yararlıdır. Bunu yapmak için, her şeyi [bir `fallback` işlevine](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function) koymak yerine, doğru işlevi çağırmak için Solidity mekanizmasına güvenmeye devam etmemiz gerekir. Bunu yapmak birleştirilebilirliği çok daha kolay hale getirir. Çoğu durumda işlevi tanımlamak için tek bir bayt yeterli olacaktır, bu nedenle üç bayt (16\*3=48 gaz) israf ediyoruz. Ancak, ben bunu yazarken bu 48 gazın maliyeti 0.07 senttir, ki bu daha basit, hataya daha az açık bir kod için makul bir maliyettir.
+Aynı Sözleşmenin hem önbelleğe alınmış işlevleri (doğrudan işlemlerden gelen çağrılar için) hem de önbelleğe alınmamış işlevleri (diğer akıllı Sözleşmelerden gelen çağrılar için) desteklemesi yararlıdır. Bunu yapmak için, her şeyi [bir `fallback` işlevine](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function) koymak yerine, doğru işlevi çağırmak için Solidity mekanizmasına güvenmeye devam etmemiz gerekir. Bunu yapmak birleştirilebilirliği çok daha kolay hale getirir. Çoğu durumda işlevi tanımlamak için tek bir bayt yeterli olacaktır, bu yüzden üç baytı boşa harcıyoruz. Mevcut OP Stack ücret formülüyle bu üç bayt, bir sentin çok küçük bir kısmını ekler (eğer eklerse, makalenin başındaki nota bakın), bu da daha basit, hataya daha az açık bir kodun makul bir maliyetidir.
 
 ```solidity
             // İlk değer, onu önbelleğe ekle
@@ -450,7 +458,7 @@ Aynı sözleşmenin hem önbelleğe alınmış işlevleri (doğrudan işlemlerde
             bytes32(VAL_A),
 ```
 
-İlk değer: Önbelleğe yazılması gereken tam bir değer olduğunu belirten bir bayrak ve ardından değerin 32 baytı. Diğer üç değer de benzerdir, tek fark `VAL_B`'nin önbelleğe yazılmaması ve `VAL_C`'nın hem üçüncü hem de dördüncü parametre olmasıdır.
+İlk değer: Önbelleğe yazılması gereken tam bir değer olduğunu belirten bir bayrak ve ardından değerin 32 baytı. Diğer üç değer de benzerdir, ancak `VAL_B` önbelleğe yazılmaz ve `VAL_C` hem üçüncü hem de dördüncü parametredir.
 
 ```solidity
              .
@@ -460,7 +468,7 @@ Aynı sözleşmenin hem önbelleğe alınmış işlevleri (doğrudan işlemlerde
         (_success, _callOutput) = _cacheAddr.call(_callInput);
 ```
 
-Burası aslında `Cache` sözleşmesini çağırdığımız yerdir.
+Burası `Cache` Sözleşmesini gerçekten çağırdığımız yerdir.
 
 ```solidity
         assertEq(_success, true);
@@ -476,7 +484,7 @@ Burası aslında `Cache` sözleşmesini çağırdığımız yerdir.
 Boş bir önbellekle başlıyoruz ve ardından `VAL_A` ve sonrasında `VAL_C` ekliyoruz. İlkinin 1, ikincisinin ise 2 anahtarına sahip olmasını bekleriz.
 
 ```
-assertEq(toUint256(_callOutput,0), VAL_A);
+        assertEq(toUint256(_callOutput,0), VAL_A);
         assertEq(toUint256(_callOutput,32), VAL_B);
         assertEq(toUint256(_callOutput,64), VAL_C);
         assertEq(toUint256(_callOutput,96), VAL_C);
@@ -516,7 +524,7 @@ assertEq(toUint256(_callOutput,0), VAL_A);
     function testEncodeVal() public {
 ```
 
-Bu işlev, parametreleri açıkça yazmak yerine `encodeVal()` kullanmamız dışında `testReadParam` ile benzerdir.
+Bu işlev `testReadParam`'e benzer, ancak parametreleri açıkça yazmak yerine `encodeVal()` kullanırız.
 
 ```solidity
         .
@@ -539,12 +547,12 @@ Bu işlev, parametreleri açıkça yazmak yerine `encodeVal()` kullanmamız dı�
 `testEncodeVal()` içindeki tek ek test, `_callInput` uzunluğunun doğru olduğunu doğrulamaktır. İlk çağrı için bu 4+33\*4'tür. Her değerin zaten önbellekte olduğu ikinci çağrı için ise 4+1\*4'tür.
 
 ```solidity
-    // Anahtar tek bir bayttan fazla olduğunda encodeVal'i test et
-    // Maksimum üç bayt çünkü önbelleği dört bayta kadar doldurmak çok
-    // uzun sürer.
+    // Anahtar tek bir bayttan fazla olduğunda encodeVal'i test edin
+    // Maksimum üç bayt çünkü önbelleği dört bayta doldurmak
+    // çok uzun sürüyor.
     function testEncodeValBig() public {
-        // Önbelleğe bir dizi değer koy.
-        // İşleri basit tutmak için, n değeri için n anahtarını kullan.
+        // Önbelleğe birkaç değer koyun.
+        // İşleri basit tutmak için, n değeri için n anahtarını kullanın.
         for(uint i=1; i<0x1FFF; i++) {
             cache.cacheWrite(i);
         }
@@ -552,7 +560,7 @@ Bu işlev, parametreleri açıkça yazmak yerine `encodeVal()` kullanmamız dı�
 
 Yukarıdaki `testEncodeVal` işlevi önbelleğe yalnızca dört değer yazar, bu nedenle [işlevin çok baytlı değerlerle ilgilenen kısmı](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol#L144-L171) kontrol edilmez. Ancak bu kod karmaşıktır ve hataya açıktır.
 
-Bu işlevin ilk kısmı, 1'den 0x1FFF'ye kadar olan tüm değerleri sırayla önbelleğe yazan bir döngüdür, böylece bu değerleri kodlayabilecek ve nereye gittiklerini bilebileceğiz.
+Bu işlevin ilk kısmı, 1'den 0x1FFF'ye kadar olan tüm değerleri sırayla önbelleğe yazan bir döngüdür, böylece bu değerleri kodlayabilecek ve nereye gittiklerini bileceğiz.
 
 ```solidity
         .
@@ -568,7 +576,7 @@ Bu işlevin ilk kısmı, 1'den 0x1FFF'ye kadar olan tüm değerleri sırayla ön
         );
 ```
 
-Bir baytlık, iki baytlık ve üç baytlık değerleri test edin. Bunun ötesini test etmiyoruz çünkü yeterli yığın girdisi yazmak çok uzun sürer (en az 0x10000000, yaklaşık çeyrek milyar).
+Bir baytlık, iki baytlık ve üç baytlık değerleri test edin. Bunun ötesini test etmiyoruz çünkü yeterli yığın (stack) girdisi yazmak çok uzun sürerdi (en az 0x10000000, yaklaşık çeyrek milyar).
 
 ```solidity
         .
@@ -578,7 +586,7 @@ Bir baytlık, iki baytlık ve üç baytlık değerleri test edin. Bunun ötesini
     }    // testEncodeValBig
 
 
-    // Aşırı küçük bir arabellek ile geri al aldığımızı test et
+    // Aşırı küçük bir arabellek ile bir geri al aldığımızı test edin
     function testShortCalldata() public {
 ```
 
@@ -593,10 +601,10 @@ Yeterli parametrenin olmadığı anormal durumda ne olacağını test edin.
     }   // testShortCalldata
 ```
 
-Geri alındığı için almamız gereken sonuç `false` olmalıdır.
+Geri alındığı (revert) için almamız gereken sonuç `false`'dir.
 
 ```
-// Call with cache keys that aren't there
+    // Orada olmayan önbellek anahtarları ile çağrı yapın
     function testNoCacheKey() public {
         .
         .
@@ -608,20 +616,20 @@ Geri alındığı için almamız gereken sonuç `false` olmalıdır.
             cache.INTO_CACHE(),
             bytes32(VAL_A),
 
-            // Second value
+            // İkinci değer
             bytes1(0x0F),
             bytes2(0x1234),
             bytes11(0xA10102030405060708090A)
         );
 ```
 
-Bu işlev, önbelleğin boş olması ve okunacak hiçbir değer olmaması dışında tamamen geçerli dört parametre alır.
+Bu işlev, önbelleğin boş olması ve okunacak hiçbir değer olmaması dışında tamamen meşru dört parametre alır.
 
 ```solidity
         .
         .
         .
-    // Aşırı uzun bir arabellek ile her şeyin düzgün çalıştığını test et
+    // Aşırı uzun bir arabellek ile her şeyin düzgün çalıştığını test edin
     function testLongCalldata() public {
         address _cacheAddr = address(cache);
         bool _success;
@@ -632,7 +640,7 @@ Bu işlev, önbelleğin boş olması ve okunacak hiçbir değer olmaması dış�
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
-            // First value, add it to the cache
+            // İlk değer, onu önbelleğe ekle
             cache.INTO_CACHE(), bytes32(VAL_A),
 
             // İkinci değer, onu önbelleğe ekle
@@ -649,7 +657,7 @@ Bu işlev, önbelleğin boş olması ve okunacak hiçbir değer olmaması dış�
         );
 ```
 
-Bu işlev beş değer gönderir. Beşinci değerin geçerli bir önbellek girdisi olmadığı için göz ardı edildiğini biliyoruz, ki bu dahil edilmeseydi bir geri almaya neden olurdu.
+Bu işlev beş değer gönderir. Beşinci değerin geçerli bir önbellek girdisi olmadığı için göz ardı edildiğini biliyoruz, eğer dahil edilmeseydi bu bir geri almaya (revert) neden olurdu.
 
 ```solidity
         (_success, _callOutput) = _cacheAddr.call(_callInput);
@@ -708,7 +716,7 @@ Okuma işlevi bir `view` işlevidir, bu nedenle bir işlem gerektirmez ve gaz ma
 
 ### Test kodu {#the-testing-code}
 
-[Bu, sözleşme için test kodudur](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/WORM.t.sol). Yine, sadece ilginç olanlara bakalım.
+[Bu, Sözleşme için test kodudur](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/WORM.t.sol). Yine, sadece ilginç olanlara bakalım.
 
 ```solidity
     function testWReadWrite() public {
@@ -718,20 +726,20 @@ Okuma işlevi bir `view` işlevidir, bu nedenle bir işlem gerektirmez ve gaz ma
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[Bu (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert), bir Foundry testinde bir sonraki çağrının başarısız olması gerektiğini ve başarısızlık için bildirilen nedeni nasıl belirttiğimizdir. Bu, çağrı verisini oluşturmak ve düşük seviyeli arayüzü (`<contract>.call()` vb.) kullanarak sözleşmeyi çağırmak yerine `<contract>.<function name>()` sözdizimini kullandığımızda geçerlidir.
+Bir Foundry testinde bir sonraki çağrının başarısız olması gerektiğini ve başarısızlık için bildirilen nedeni [bu şekilde (`vm.expectRevert`)](https://getfoundry.sh/reference/cheatcodes/expect-revert/) belirtiriz. Bu, çağrı verisini oluşturmak ve düşük seviyeli arayüzü (`<contract>.call()` vb.) kullanarak Sözleşmeyi çağırmak yerine `<contract>.<function name>()` sözdizimini kullandığımızda geçerlidir.
 
 ```solidity
     function testReadWriteCached() public {
         uint cacheGoat = worm.cacheWrite(0x60A7);
 ```
 
-Burada `cacheWrite`'ın önbellek anahtarını döndürdüğü gerçeğini kullanıyoruz. Bu, üretimde kullanmayı beklediğimiz bir şey değildir, çünkü `cacheWrite` durumu değiştirir ve bu nedenle yalnızca bir işlem sırasında çağrılabilir. İşlemlerin dönüş değerleri yoktur, eğer sonuçları varsa bu sonuçların olaylar olarak yayınlanması (emit) gerekir. Bu nedenle `cacheWrite` dönüş değerine yalnızca zincir içi koddan erişilebilir ve zincir içi kodun parametre önbelleğe almaya ihtiyacı yoktur.
+Burada `cacheWrite`'ın önbellek anahtarını döndürmesi gerçeğini kullanıyoruz. Bu, üretimde kullanmayı beklediğimiz bir şey değildir, çünkü `cacheWrite` durumu değiştirir ve bu nedenle yalnızca bir işlem sırasında çağrılabilir. İşlemlerin dönüş değerleri yoktur, eğer sonuçları varsa bu sonuçların olaylar olarak yayınlanması (emit) gerekir. Bu nedenle `cacheWrite` dönüş değerine yalnızca zincir içi koddan erişilebilir ve zincir içi kodun parametre önbelleğe almaya ihtiyacı yoktur.
 
 ```solidity
         (_success,) = address(worm).call(_callInput);
 ```
 
-Bu, Solidity'ye `<contract address>.call()`'un iki dönüş değeri olmasına rağmen yalnızca ilkiyle ilgilendiğimizi söyleme şeklimizdir.
+Solidity'ye `<contract address>.call()`'in iki dönüş değeri olmasına rağmen sadece ilkiyle ilgilendiğimizi bu şekilde söyleriz.
 
 ```solidity
         (_success,) = address(worm).call(_callInput);
@@ -754,49 +762,70 @@ Düşük seviyeli `<address>.call()` işlevini kullandığımız için `vm.expec
         (_success,) = address(worm).call(_callInput);
 ```
 
-Bu, Foundry'de kodun [bir olayı doğru bir şekilde yayınladığını](https://getfoundry.sh/reference/cheatcodes/expect-emit/) doğrulama yöntemimizdir.
+Foundry'de kodun [bir olayı doğru şekilde yayınladığını (emit)](https://getfoundry.sh/reference/cheatcodes/expect-emit/) bu şekilde doğrularız.
 
 ### İstemci {#the-client}
 
-Solidity testleriyle elde edemeyeceğiniz bir şey, kendi uygulamanıza kesip yapıştırabileceğiniz JavaScript kodudur. Bu eğitimin orijinal sürümü WORM'u, o zamandan beri kullanımdan kaldırılan Optimism Goerli'ye dağıtmıştı. İstemciyi bugün çalıştırmak için WORM'u [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack) gibi desteklenen bir OP Stack ağına yeniden dağıtın, ardından ortaya çıkan sözleşme adresini JavaScript istemcisinde kullanın.
+Solidity testleriyle elde edemeyeceğiniz şeylerden biri, kendi uygulamanıza kesip yapıştırabileceğiniz JavaScript kodudur. Bu eğitimin orijinal sürümü WORM'u, o zamandan beri kapatılmış olan Optimism Goerli'ye dağıtmıştı. Örnek depo hala Optimism Goerli'yi işaret ediyor, bu nedenle istemciyi bugün çalıştırmak için WORM'u kendiniz [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack)'ya dağıtmanız ve istemciyi dağıtımınıza yönlendirmeniz gerekir.
 
-[İstemci için JavaScript kodunu buradan görebilirsiniz](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Örnek depo Optimism Goerli için yazılmıştır, bu nedenle çalıştırmadan önce hedef ağınız için `javascript/.env.example` ve `javascript/index.js` içindeki RPC uç noktasını ve gezgin URL'lerini güncelleyin. Kullanmak için:
+[İstemci için JavaScript kodunu burada görebilirsiniz](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Bunu kullanmak için [Foundry](https://getfoundry.sh/introduction/installation/), [Node.js](https://nodejs.org/) ve bir miktar OP Sepolia ETH'si olan bir Hesaba ihtiyacınız var. [Optimism'in musluk belgeleri](https://docs.optimism.io/app-developers/tools-sdks/faucets) mevcut test ağı musluklarını listeler.
 
-1. Git deposunu klonlayın:
+1. `forge-std` alt modülü de dahil olmak üzere git deposunu klonlayın ve Sözleşmeleri derleyin. İstemci, WORM ABI'sini ve baytkodunu yalnızca `forge build` işleminden sonra var olan `out/WORM.sol/WORM.json`'dan okur.
 
    ```sh
-   git clone https://github.com/qbzzt/20220915-all-you-can-cache.git
+   git clone --recurse-submodules https://github.com/qbzzt/20220915-all-you-can-cache.git
+   cd 20220915-all-you-can-cache
+   forge build
    ```
 
-2. Gerekli paketleri yükleyin:
+   Forge, `foundry.toml`'nin eski `[default]` bölüm adını kullandığı konusunda uyarır. Bu uyarıyı göz ardı edebilir veya `forge config --fix` çalıştırabilirsiniz.
+
+2. Fonlanmış Hesabınızın özel anahtarını şifrelenmiş bir Foundry anahtar deposuna aktarın ve bunu WORM'u OP Sepolia'ya [dağıtmak](https://getfoundry.sh/reference/forge/create) için kullanın.
+
+   ```sh
+   cast wallet import op-sepolia-deployer --interactive
+   forge create src/WORM.sol:WORM --rpc-url https://sepolia.optimism.io --account op-sepolia-deployer --broadcast
+   ```
+
+   `--broadcast` olmadan, `forge create` yalnızca dağıtımı simüle eder. Çıktının `Deployed to:` satırından Adresi kopyalayın.
+
+3. `javascript/index.js` dosyasını düzenleyin. Bu satırdaki eski Optimism Goerli Adresini dağıtımınızın Adresiyle değiştirin:
+
+   ```javascript
+   const worm = WormFactory.attach("0xD34335b1d818ceE54e3323D3246bD31d94E6a78a")
+   ```
+
+   İstemcinin yazdırdığı bağlantıların çalışması için iki `console.log` satırındaki `https://goerli-optimism.etherscan.io`'i `https://sepolia-optimism.etherscan.io` ile de değiştirebilirsiniz.
+
+4. Gerekli paketleri yükleyin:
 
    ```sh
    cd javascript
-   yarn
+   npm install
    ```
 
-3. Yapılandırma dosyasını kopyalayın:
+5. Yapılandırma dosyasını kopyalayın:
 
    ```sh
    cp .env.example .env
    ```
 
-4. Yapılandırmanız için `.env` dosyasını düzenleyin:
+6. Yapılandırmanız için `.env` dosyasını düzenleyin. Değişken adları hala Optimism Goerli'ye atıfta bulunuyor, ancak değerler OP Sepolia içindir:
 
-   | Parametre           | Değer                                                                                                                                                               |
-   | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC            | Bir işlem için ödeme yapmaya yetecek kadar ETH'ye sahip bir hesap için anımsatıcı (mnemonic). [Optimism'in musluk belgeleri](https://docs.optimism.io/app-developers/tools/faucets) mevcut test ağı musluklarını listeler. |
-   | OPTIMISM_GOERLI_URL | WORM'u yeniden dağıttığınız ağ için RPC URL'si. OP Sepolia için, `https://sepolia.optimism.io` gibi bir OP Sepolia RPC uç noktası veya sağlayıcınızdan başka bir uç nokta kullanın.        |
+   | Parametre           | Değer                                                                                                   |
+   | ------------------- | ------------------------------------------------------------------------------------------------------- |
+   | MNEMONIC            | Bir işlem için ödeme yapmaya yetecek kadar OP Sepolia ETH'si olan bir Hesap için anımsatıcı (mnemonic). |
+   | OPTIMISM_GOERLI_URL | OP Sepolia RPC URL'si, `https://sepolia.optimism.io` veya başka bir sağlayıcıdan bir OP Sepolia uç noktası. |
 
-5. `index.js` dosyasını çalıştırın.
+7. `index.js` çalıştırın.
 
    ```sh
    node index.js
    ```
 
-   Bu örnek uygulama önce WORM'a bir girdi yazar, çağrı verisini ve bir blok gezgini üzerinde işleme giden bir bağlantıyı görüntüler. Ardından bu girdiyi geri okur ve kullandığı anahtarı ve girdideki değerleri (değer, blok numarası ve yazar) görüntüler.
+   Bu örnek uygulama önce WORM'a bir girdi yazar, çağrı verisini ve bir blok gezgininde işleme giden bir bağlantıyı görüntüler. Ardından bu girdiyi geri okur ve kullandığı anahtarı ve girdideki değerleri (değer, Blok numarası ve yazar) görüntüler.
 
-İstemcinin çoğu normal merkeziyetsiz uygulama (dapp) JavaScript'idir. Bu yüzden yine sadece ilginç kısımların üzerinden geçeceğiz.
+İstemcinin çoğu normal dapp JavaScript'idir. Bu yüzden yine sadece ilginç kısımların üzerinden geçeceğiz.
 
 ```javascript
 .
@@ -805,7 +834,7 @@ Solidity testleriyle elde edemeyeceğiniz bir şey, kendi uygulamanıza kesip ya
 const main = async () => {
     const func = await worm.WRITE_ENTRY_CACHED()
 
-    // Her seferinde yeni bir anahtara ihtiyaç var
+    // Her seferinde yeni bir anahtar gerekiyor
     const key = await worm.encodeVal(Number(new Date()))
 ```
 
@@ -814,11 +843,11 @@ Belirli bir slota yalnızca bir kez yazılabilir, bu nedenle slotları yeniden k
 ```javascript
 const val = await worm.encodeVal("0x600D")
 
-// Bir girdi yaz
+// Bir girdi yazın
 const calldata = func + key.slice(2) + val.slice(2)
 ```
 
-Ethers, çağrı verisinin bir onaltılık (hex) dize olmasını, `0x` ve ardından çift sayıda onaltılık basamak gelmesini bekler. `key` ve `val`'in her ikisi de `0x` ile başladığından, bu başlıkları kaldırmamız gerekir.
+Ethers, çağrı verisinin bir onaltılık (hex) dize olmasını bekler, `0x` ve ardından çift sayıda onaltılık basamak. `key` ve `val`'in her ikisi de `0x` ile başladığından, bu başlıkları kaldırmamız gerekir.
 
 ```javascript
 const tx = await worm.populateTransaction.writeEntryCached()
@@ -833,8 +862,8 @@ Solidity test kodunda olduğu gibi, önbelleğe alınmış bir işlevi normal ş
     .
     .
     .
-    // Az önce yazılan girdiyi oku
-    const realKey = '0x' + key.slice(4)  // FF bayrağını kaldır
+    // Az önce yazılan girdiyi okuyun
+    const realKey = '0x' + key.slice(4)  // FF bayrağını kaldırın
     const entryRead = await worm.readEntry(realKey)
     .
     .
@@ -842,25 +871,27 @@ Solidity test kodunda olduğu gibi, önbelleğe alınmış bir işlevi normal ş
 ```
 
 Girdileri okumak için normal mekanizmayı kullanabiliriz. `view` işlevleriyle parametre önbelleğe almayı kullanmaya gerek yoktur.
+
 ## Sonuç {#conclusion}
 
 Bu makaledeki kod bir kavram kanıtıdır (proof of concept), amacı fikrin anlaşılmasını kolaylaştırmaktır. Üretime hazır bir sistem için bazı ek işlevler uygulamak isteyebilirsiniz:
 
 - `uint256` olmayan değerleri işleyin. Örneğin, dizeler (strings).
-- Küresel bir önbellek yerine, belki kullanıcılar ve önbellekler arasında bir eşleme yapın. Farklı kullanıcılar farklı değerler kullanır.
-- Adresler için kullanılan değerler, diğer amaçlar için kullanılanlardan farklıdır. Sadece adresler için ayrı bir önbelleğe sahip olmak mantıklı olabilir.
-- Şu anda önbellek anahtarları "ilk gelen, en küçük anahtarı alır" algoritmasındadır. İlk on altı değer tek bir bayt olarak gönderilebilir. Sonraki 4080 değer iki bayt olarak gönderilebilir. Sonraki yaklaşık bir milyon değer üç bayttır vb. Bir üretim sistemi, önbellek girdilerinde kullanım sayaçları tutmalı ve bunları _en yaygın_ on altı değer bir bayt, sonraki en yaygın 4080 değer iki bayt vb. olacak şekilde yeniden düzenlemelidir.
+- Küresel bir önbellek yerine, belki kullanıcılar ve önbellekler arasında bir eşleme (mapping) olabilir. Farklı kullanıcılar farklı değerler kullanır.
+- Adresler için kullanılan değerler, diğer amaçlar için kullanılanlardan farklıdır. Sadece Adresler için ayrı bir önbelleğe sahip olmak mantıklı olabilir.
+- Şu anda önbellek anahtarları "ilk gelen, en küçük anahtar" algoritmasındadır. İlk on altı değer tek bir bayt olarak gönderilebilir. Sonraki 4080 değer iki bayt olarak gönderilebilir. Sonraki yaklaşık bir milyon değer üç bayttır vb. Bir üretim sistemi, önbellek girdilerinde kullanım sayaçları tutmalı ve bunları _en yaygın_ on altı değer bir bayt, sonraki en yaygın 4080 değer iki bayt vb. olacak şekilde yeniden düzenlemelidir.
 
-  Ancak, bu potansiyel olarak tehlikeli bir işlemdir. Aşağıdaki olaylar dizisini hayal edin:
+  Ancak bu potansiyel olarak tehlikeli bir işlemdir. Aşağıdaki olaylar dizisini hayal edin:
 
-  1. Noam Naive, token göndermek istediği adresi kodlamak için `encodeVal` çağırır. Bu adres uygulamada ilk kullanılanlardan biridir, bu nedenle kodlanmış değer 0x06'dır. Bu bir `view` işlevidir, bir işlem değildir, bu yüzden Noam ile kullandığı düğüm arasındadır ve başka kimse bunu bilmez.
+  1. Saf Noam, token göndermek istediği Adresi kodlamak için `encodeVal` çağırır. Bu Adres uygulamada ilk kullanılanlardan biridir, bu nedenle kodlanmış değer 0x06'dır. Bu bir `view` işlevidir, bir işlem değildir, bu nedenle Noam ile kullandığı Düğüm arasındadır ve başka kimse bunu bilmez.
 
-  2. Owen Owner önbellek yeniden sıralama işlemini çalıştırır. Aslında çok az kişi bu adresi kullanır, bu yüzden artık 0x201122 olarak kodlanmıştır. Farklı bir değere, 10<sup>18</sup>'e, 0x06 atanır.
+  2. Sahip Owen, önbellek yeniden sıralama işlemini çalıştırır. Aslında çok az kişi bu Adresi kullanır, bu yüzden artık 0x201122 olarak kodlanmıştır. Farklı bir değere, 10<sup>18</sup>'e 0x06 atanır.
 
-  3. Noam Naive token'larını 0x06'ya gönderir. `0x0000000000000000000000000de0b6b3a7640000` adresine giderler ve kimse bu adresin özel anahtarını bilmediği için orada öylece sıkışıp kalırlar. Noam _hiç mutlu değildir_.
+  3. Saf Noam token'larını 0x06'ya gönderir. `0x0000000000000000000000000de0b6b3a7640000` Adresine giderler ve kimse o Adres için özel anahtarı bilmediğinden, orada öylece sıkışıp kalırlar. Noam _hiç mutlu değildir_.
 
   Bu sorunu ve önbellek yeniden sıralaması sırasında bellek havuzunda (mempool) bulunan işlemlerle ilgili sorunu çözmenin yolları vardır, ancak bunun farkında olmalısınız.
 
-Burada önbelleğe almayı Optimism ile gösterdim, çünkü ben bir Optimism çalışanıyım ve en iyi bildiğim Rollup bu. Ancak, dahili işleme için minimum bir maliyet talep eden herhangi bir Rollup ile çalışmalıdır, böylece karşılaştırmalı olarak işlem verilerini L1'e yazmak ana masraf olur.
+Burada önbelleğe almayı Optimism ile gösterdim, çünkü ben bir Optimism çalışanıyım ve en iyi bildiğim Rollup bu. Ancak, dahili işleme için minimum bir maliyet talep eden herhangi bir Rollup ile çalışmalıdır, böylece karşılaştırmalı olarak işlem verilerini L1'e yazmak en büyük masraf olur. Bu makalenin başındaki notta açıklandığı gibi, önbelleğe almanın buna değip değmeyeceğine karar vermeden önce mevcut ücretleri kontrol edin.
 
 [Çalışmalarımın daha fazlası için buraya bakın](https://cryptodocguy.pro/).
+

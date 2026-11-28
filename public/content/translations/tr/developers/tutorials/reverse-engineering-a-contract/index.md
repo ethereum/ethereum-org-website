@@ -42,9 +42,9 @@ Bu işlevin bize onaltılık değeri vermesine ihtiyacımız var çünkü atlama
 
 ## Giriş Noktası (0x00) {#the-entry-point-0x00}
 
-Sözleşmeler her zaman ilk bayttan itibaren yürütülür. Bu, kodun başlangıç kısmıdır:
+Sözleşmeler her zaman ilk bayttan itibaren çalıştırılır. Bu, kodun başlangıç kısmıdır:
 
-| Ofset | İşlem kodu       | Yığın (işlem kodundan sonra) |
+| Ofset | İşlem kodu   | Yığın (işlem kodundan sonra) |
 | -----: | ------------ | ------------------------ |
 |      0 | PUSH1 0x80   | 0x80                     |
 |      2 | PUSH1 0x40   | 0x40, 0x80               |
@@ -57,23 +57,33 @@ Sözleşmeler her zaman ilk bayttan itibaren yürütülür. Bu, kodun başlangı
 
 Bu kod iki şey yapar:
 
-1. 0x40-0x5F bellek konumlarına 32 baytlık bir değer olarak 0x80 yazar (0x80, 0x5F'de depolanır ve 0x40-0x5E'nin tamamı sıfırdır).
-2. Çağrı verisi boyutunu okur. Normalde bir Ethereum sözleşmesi için çağrı verisi, işlev seçici için en az dört bayt gerektiren [ABI'yi (uygulama ikili arayüzü)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html) izler. Çağrı verisi boyutu dörtten küçükse, 0x5E'ye atlar.
+1. 0x80'i 32 baytlık bir değer olarak 0x40-0x5F bellek konumlarına yazar (0x80, 0x5F'de saklanır ve 0x40-0x5E'nin tamamı sıfırdır).
+2. Çağrı verisi boyutunu okur. Normalde bir Ethereum sözleşmesi için çağrı verisi, fonksiyon seçici için en az dört bayt gerektiren [ABI'yi (uygulama ikili arayüzü)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html) takip eder. Çağrı verisi boyutu dörtten küçükse, 0x5E'ye atlar.
 
-![Flowchart for this portion](flowchart-entry.png)
+<Flowchart>
 
-### 0x5E'deki İşleyici (ABI olmayan çağrı verisi için) {#the-handler-at-0x5e-for-non-abi-call-data}
+- Giriş noktası (0x00)
+  - Çağrı verisi dört bayttan kısa mı?
+    - **Evet** ABI dışı çağrılar (0x5E)
+      - Herhangi bir çağrı verisi var mı?
+        - **Evet** 0x7C (amacı şu ana kadar bilinmiyor)
+        - **Hayır** ETH transferi (0x64): taşma durumunda geri al, aksi takdirde çağrı değerini `Storage[6]` (`Value*`) değerine ekle ve dur
+    - **Hayır** ABI çağrıları (0x0D)
 
-| Ofset | İşlem kodu       |
+</Flowchart>
+
+### 0x5E'deki İşleyici (ABI dışı çağrı verisi için) {#the-handler-at-0x5e-for-non-abi-call-data}
+
+| Ofset | İşlem kodu   |
 | -----: | ------------ |
 |     5E | JUMPDEST     |
 |     5F | CALLDATASIZE |
 |     60 | PUSH2 0x007c |
 |     63 | JUMPI        |
 
-Bu kod parçacığı bir `JUMPDEST` ile başlar. EVM (Ethereum sanal makinesi) programları, `JUMPDEST` olmayan bir işlem koduna atlarsanız bir istisna fırlatır. Ardından CALLDATASIZE'a bakar ve eğer "doğru" ise (yani sıfır değilse) 0x7C'ye atlar. Buna aşağıda değineceğiz.
+Bu kod parçacığı bir `JUMPDEST` ile başlar. EVM (Ethereum Sanal Makinesi) programları, `JUMPDEST` olmayan bir işlem koduna atlarsanız bir istisna fırlatır. Ardından CALLDATASIZE'a bakar ve eğer "doğru" ise (yani sıfır değilse) 0x7C'ye atlar. Buna aşağıda değineceğiz.
 
-| Ofset | İşlem kodu     | Yığın (işlem kodundan sonra)                                                       |
+| Ofset | İşlem kodu | Yığın (işlem kodundan sonra)                                                       |
 | -----: | ---------- | -------------------------------------------------------------------------- |
 |     64 | CALLVALUE  | Çağrı tarafından sağlanan [Wei](/glossary/#wei). Solidity'de `msg.value` olarak adlandırılır |
 |     65 | PUSH1 0x06 | 6 CALLVALUE                                                                |
@@ -82,19 +92,19 @@ Bu kod parçacığı bir `JUMPDEST` ile başlar. EVM (Ethereum sanal makinesi) p
 |     6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                  |
 |     6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                         |
 
-Yani çağrı verisi olmadığında Storage[6] değerini okuruz. Bu değerin ne olduğunu henüz bilmiyoruz, ancak sözleşmenin çağrı verisi olmadan aldığı işlemleri arayabiliriz. Herhangi bir çağrı verisi (ve dolayısıyla hiçbir yöntem) olmadan sadece ETH transfer eden işlemler Etherscan'de `Transfer` yöntemine sahiptir. Aslında, [sözleşmenin aldığı ilk işlem](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) bir transferdir.
+Yani çağrı verisi olmadığında Storage[6] değerini okuruz. Bu değerin ne olduğunu henüz bilmiyoruz, ancak sözleşmenin çağrı verisi olmadan aldığı işlemleri arayabiliriz. Herhangi bir çağrı verisi (ve dolayısıyla hiçbir metot) olmadan sadece ETH transfer eden işlemler Etherscan'de `Transfer` metoduna sahiptir. Aslında, [sözleşmenin aldığı ilk işlem](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) bir transferdir.
 
-O işleme bakıp **Click to see More** (Daha Fazlasını Görmek İçin Tıklayın) seçeneğine tıklarsak, girdi verisi olarak adlandırılan çağrı verisinin gerçekten boş olduğunu (`0x`) görürüz. Ayrıca değerin 1.559 ETH olduğuna dikkat edin, bu daha sonra önemli olacaktır.
+O işleme bakıp **Click to see More** (Daha Fazlasını Görmek İçin Tıklayın) seçeneğine tıklarsak, girdi verisi olarak adlandırılan çağrı verisinin gerçekten boş olduğunu (`0x`) görürüz. Ayrıca değerin 1,559 ETH olduğuna dikkat edin, bu daha sonra önemli olacaktır.
 
-![The call data is empty](calldata-empty.png)
+![Çağrı verisi boş](calldata-empty.png)
 
-Ardından, **State** (Durum) sekmesine tıklayın ve tersine mühendislik yaptığımız sözleşmeyi (0x2510...) genişletin. İşlem sırasında `Storage[6]`'nın değiştiğini görebilirsiniz ve Hex'i **Number** (Sayı) olarak değiştirirseniz, wei cinsinden transfer edilen değere (netlik için virgülleri ben ekledim) karşılık gelen 1.559.000.000.000.000.000 olduğunu görürsünüz, bu da bir sonraki sözleşme değerine karşılık gelir.
+Ardından, **State** (Durum) sekmesine tıklayın ve tersine mühendislik uyguladığımız sözleşmeyi (0x2510...) genişletin. İşlem sırasında `Storage[6]` değerinin değiştiğini görebilirsiniz ve Hex'i **Number** (Sayı) olarak değiştirirseniz, Wei cinsinden transfer edilen değere (anlaşılırlık için virgülleri ben ekledim) karşılık gelen 1.559.000.000.000.000.000 olduğunu görürsünüz.
 
-![Storage[6]'daki değişiklik](storage6.png)
+![Storage[6] içindeki değişiklik](storage6.png)
 
-[Aynı dönemdeki diğer `Transfer` işlemlerinin](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange) neden olduğu durum değişikliklerine bakarsak, `Storage[6]`'nın bir süre sözleşmenin değerini izlediğini görürüz. Şimdilik buna `Value*` diyeceğiz. Yıldız işareti (`*`) bize bu değişkenin ne yaptığını henüz _bilmediğimizi_ hatırlatır, ancak sadece sözleşme değerini izlemek için olamaz çünkü hesap bakiyenizi `ADDRESS BALANCE` kullanarak alabiliyorken çok pahalı olan depolamayı kullanmaya gerek yoktur. İlk işlem kodu sözleşmenin kendi adresini iter. İkincisi, yığının en üstündeki adresi okur ve onu o adresin bakiyesiyle değiştirir.
+[Aynı dönemdeki diğer `Transfer` işlemlerinin](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange) neden olduğu durum değişikliklerine bakarsak, `Storage[6]` değerinin bir süre sözleşmenin değerini takip ettiğini görürüz. Şimdilik buna `Value*` diyeceğiz. Yıldız işareti (`*`), bu değişkenin ne yaptığını henüz _bilmediğimizi_ hatırlatır, ancak sadece sözleşme değerini takip etmek için olamaz çünkü hesap bakiyenizi `ADDRESS BALANCE` kullanarak alabiliyorken çok pahalı olan depolamayı kullanmaya gerek yoktur. İlk işlem kodu sözleşmenin kendi adresini yığına ekler. İkincisi, yığının en üstündeki adresi okur ve onu o adresin bakiyesiyle değiştirir.
 
-| Ofset | İşlem kodu       | Yığın                                       |
+| Ofset | İşlem kodu   | Yığın                                       |
 | -----: | ------------ | ------------------------------------------- |
 |     6C | PUSH2 0x0075 | 0x75 Value\* CALLVALUE 0 6 CALLVALUE        |
 |     6F | SWAP2        | CALLVALUE Value\* 0x75 0 6 CALLVALUE        |
@@ -104,7 +114,7 @@ Ardından, **State** (Durum) sekmesine tıklayın ve tersine mühendislik yaptı
 
 Bu kodu atlama hedefinde izlemeye devam edeceğiz.
 
-| Ofset | İşlem kodu     | Yığın                                                       |
+| Ofset | İşlem kodu | Yığın                                                       |
 | -----: | ---------- | ----------------------------------------------------------- |
 |    1A7 | JUMPDEST   | Value\* CALLVALUE 0x75 0 6 CALLVALUE                        |
 |    1A8 | PUSH1 0x00 | 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE                   |
@@ -113,7 +123,7 @@ Bu kodu atlama hedefinde izlemeye devam edeceğiz.
 
 `NOT` bitseldir, bu nedenle çağrı değerindeki her bitin değerini tersine çevirir.
 
-| Ofset | İşlem kodu       | Yığın                                                                       |
+| Ofset | İşlem kodu   | Yığın                                                                       |
 | -----: | ------------ | --------------------------------------------------------------------------- |
 |    1AC | DUP3         | Value\* 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
 |    1AD | GT           | Value\*>2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
@@ -121,11 +131,11 @@ Bu kodu atlama hedefinde izlemeye devam edeceğiz.
 |    1AF | PUSH2 0x01df | 0x01DF Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 |    1B2 | JUMPI        |
 
-`Value*`, 2^256-CALLVALUE-1'den küçük veya ona eşitse atlarız. Bu, taşmayı önlemeye yönelik bir mantık gibi görünüyor. Ve gerçekten de, birkaç anlamsız işlemden sonra (örneğin belleğe yazma işleminin silinmek üzere olması) 0x01DE ofsetinde, taşma tespit edilirse sözleşmenin geri alındığını görüyoruz, ki bu normal bir davranıştır.
+`Value*`, 2^256-CALLVALUE-1'den küçük veya ona eşitse atlarız. Bu, taşmayı önlemeye yönelik bir mantık gibi görünüyor. Ve gerçekten de, birkaç anlamsız işlemden sonra (örneğin belleğe yazma işleminin silinmek üzere olması) 0x01DE ofsetinde, taşma tespit edilirse sözleşmenin geri alındığını görüyoruz ki bu normal bir davranıştır.
 
-Böyle bir taşmanın son derece düşük bir ihtimal olduğunu unutmayın, çünkü çağrı değeri artı `Value*`'ın 2^256 wei'ye, yani yaklaşık 10^59 ETH'ye kıyaslanabilir olmasını gerektirir. [Yazının yazıldığı sırada toplam ETH arzı iki yüz milyondan azdır](https://etherscan.io/stat/supply).
+Böyle bir taşmanın son derece düşük bir ihtimal olduğunu unutmayın, çünkü çağrı değeri artı `Value*` değerinin 2^256 Wei'ye, yani yaklaşık 10^59 ETH'ye yakın olmasını gerektirir. [Yazının yazıldığı sırada toplam ETH arzı iki yüz milyondan azdır](https://etherscan.io/stat/supply).
 
-| Ofset | İşlem kodu   | Yığın                                     |
+| Ofset | İşlem kodu | Yığın                                     |
 | -----: | -------- | ----------------------------------------- |
 |    1DF | JUMPDEST | 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 |    1E0 | POP      | Value\* CALLVALUE 0x75 0 6 CALLVALUE      |
@@ -133,16 +143,16 @@ Böyle bir taşmanın son derece düşük bir ihtimal olduğunu unutmayın, çü
 |    1E2 | SWAP1    | 0x75 Value\*+CALLVALUE 0 6 CALLVALUE      |
 |    1E3 | JUMP     |
 
-Buraya ulaştıysak, `Value* + CALLVALUE`'i alın ve 0x75 ofsetine atlayın.
+Buraya ulaştıysak, `Value* + CALLVALUE` değerini alın ve 0x75 ofsetine atlayın.
 
-| Ofset | İşlem kodu   | Yığın                           |
+| Ofset | İşlem kodu | Yığın                           |
 | -----: | -------- | ------------------------------- |
 |     75 | JUMPDEST | Value\*+CALLVALUE 0 6 CALLVALUE |
 |     76 | SWAP1    | 0 Value\*+CALLVALUE 6 CALLVALUE |
 |     77 | SWAP2    | 6 Value\*+CALLVALUE 0 CALLVALUE |
 |     78 | SSTORE   | 0 CALLVALUE                     |
 
-Buraya ulaşırsak (ki bu çağrı verisinin boş olmasını gerektirir), `Value*`'a çağrı değerini ekleriz. Bu, `Transfer` işlemlerinin yaptığını söylediğimiz şeyle tutarlıdır.
+Buraya ulaşırsak (ki bu çağrı verisinin boş olmasını gerektirir), `Value*` değerine çağrı değerini ekleriz. Bu, `Transfer` işlemlerinin yaptığını söylediğimiz şeyle tutarlıdır.
 
 | Ofset | İşlem kodu |
 | -----: | ------ |
@@ -150,11 +160,21 @@ Buraya ulaşırsak (ki bu çağrı verisinin boş olmasını gerektirir), `Value
 |     7A | POP    |
 |     7B | STOP   |
 
-Son olarak, yığını temizleyin (ki bu gerekli değildir) ve işlemin başarılı bir şekilde sona erdiğini bildirin.
+Son olarak, yığını temizleyin (ki bu gerekli değildir) ve işlemin başarıyla sona erdiğini bildirin.
 
 Özetlemek gerekirse, işte başlangıç kodu için bir akış şeması.
 
-![Entry point flowchart](flowchart-entry.png)
+<Flowchart>
+
+- Giriş noktası (0x00)
+  - Çağrı verisi dört bayttan kısa mı?
+    - **Evet** ABI dışı çağrılar (0x5E)
+      - Herhangi bir çağrı verisi var mı?
+        - **Evet** 0x7C (amacı şu ana kadar bilinmiyor)
+        - **Hayır** ETH transferi (0x64): taşma durumunda geri al, aksi takdirde çağrı değerini `Storage[6]` (`Value*`) değerine ekle ve dur
+    - **Hayır** ABI çağrıları (0x0D)
+
+</Flowchart>
 
 ## 0x7C'deki İşleyici {#the-handler-at-0x7c}
 
@@ -250,43 +270,55 @@ Yani çağrıdan sonra dönüş verisini 0x80 - 0x80+RETURNDATASIZE arabelleğin
 
 ### DELEGATECALL Başarısız Oldu {#delegatecall-failed}
 
-Eğer buraya, 0xC0'a gelirsek, bu çağırdığımız sözleşmenin geri alındığı anlamına gelir. O sözleşme için sadece bir vekil kontrat olduğumuzdan, aynı veriyi döndürmek ve aynı zamanda geri almak istiyoruz.
+Buraya, yani 0xC0'a ulaşırsak, bu çağırdığımız sözleşmenin geri alındığı anlamına gelir. O sözleşme için sadece bir vekil olduğumuzdan, aynı veriyi döndürmek ve ayrıca geri almak istiyoruz.
 
-| Ofset | İşlem Kodu | Yığın                                                                                                               |
+| Ofset | İşlem kodu | Yığın                                                                                                               |
 | -----: | -------- | ------------------------------------------------------------------------------------------------------------------- |
-|     C0 | JUMPDEST | (((çağrı başarısı/başarısızlığı))) RETURNDATASIZE (((çağrı başarısı/başarısızlığı))) 0x80 Storage[3]-as-address                     |
-|     C1 | DUP2     | RETURNDATASIZE (((çağrı başarısı/başarısızlığı))) RETURNDATASIZE (((çağrı başarısı/başarısızlığı))) 0x80 Storage[3]-as-address      |
-|     C2 | DUP5     | 0x80 RETURNDATASIZE (((çağrı başarısı/başarısızlığı))) RETURNDATASIZE (((çağrı başarısı/başarısızlığı))) 0x80 Storage[3]-as-address |
+|     C0 | JUMPDEST | (((çağrı başarısı/başarısızlığı))) RETURNDATASIZE (((çağrı başarısı/başarısızlığı))) 0x80 adres-olarak-Storage[3]                     |
+|     C1 | DUP2     | RETURNDATASIZE (((çağrı başarısı/başarısızlığı))) RETURNDATASIZE (((çağrı başarısı/başarısızlığı))) 0x80 adres-olarak-Storage[3]      |
+|     C2 | DUP5     | 0x80 RETURNDATASIZE (((çağrı başarısı/başarısızlığı))) RETURNDATASIZE (((çağrı başarısı/başarısızlığı))) 0x80 adres-olarak-Storage[3] |
 |     C3 | REVERT   |
 
-Böylece daha önce `RETURN` için kullandığımız aynı arabellek ile `REVERT` yapıyoruz: 0x80 - 0x80+RETURNDATASIZE
+Yani daha önce `RETURN` için kullandığımız aynı arabellek ile `REVERT` yapıyoruz: 0x80 - 0x80+RETURNDATASIZE
 
-![Call to proxy flowchart](flowchart-proxy.png)
+<Flowchart>
+
+- Çağrı verisi bir ila üç bayt uzunluğunda veya bilinmeyen bir metot
+  - Vekil işleyici (0x7C)
+    - Vekil adresi olan `Storage[3]` değerini oku
+      - Çağrı verisini belleğe kopyala
+        - Vekil adresine `DELEGATECALL` yap
+          - Dönüş verisini belleğe kopyala
+            - Çağrı başarısız oldu mu?
+              - **Evet** Dönüş verisi ile `REVERT` yap (0xC0)
+              - **Hayır** Dönüş verisini `RETURN` yap (0xBD)
+
+</Flowchart>
 
 ## ABI çağrıları {#abi-calls}
 
-Eğer çağrı verisi boyutu dört bayt veya daha fazlaysa, bu geçerli bir ABI çağrısı olabilir.
+Çağrı verisi boyutu dört bayt veya daha fazlaysa bu geçerli bir ABI çağrısı olabilir.
 
-| Ofset | İşlem kodu       | Yığın                                             |
+| Ofset | İşlem kodu   | Yığın                                             |
 | -----: | ------------ | ------------------------------------------------- |
 |      D | PUSH1 0x00   | 0x00                                              |
 |      F | CALLDATALOAD | (((Çağrı verisinin ilk kelimesi (256 bit))))      |
 |     10 | PUSH1 0xe0   | 0xE0 (((Çağrı verisinin ilk kelimesi (256 bit)))) |
 |     12 | SHR          | (((çağrı verisinin ilk 32 biti (4 bayt))))    |
 
-Etherscan bize `1C`'nin bilinmeyen bir işlem kodu olduğunu söylüyor, çünkü [Etherscan bu özelliği yazdıktan sonra eklendi](https://eips.ethereum.org/EIPS/eip-145) ve henüz güncellemediler. [Güncel bir işlem kodu tablosu](https://github.com/wolflo/evm-opcodes) bize bunun sağa kaydırma olduğunu gösteriyor.
+Etherscan bize `1C` değerinin bilinmeyen bir işlem kodu olduğunu söyler, çünkü [Etherscan bu özelliği yazdıktan sonra eklenmiştir](https://eips.ethereum.org/EIPS/eip-145) ve henüz güncellememişlerdir. [Güncel bir işlem kodu tablosu](https://github.com/wolflo/evm-opcodes) bize bunun sağa kaydırma olduğunu gösterir
 
-| Ofset | İşlem kodu           | Yığın                                                                                                    |
+| Ofset | İşlem kodu       | Yığın                                                                                                    |
 | -----: | ---------------- | -------------------------------------------------------------------------------------------------------- |
 |     13 | DUP1             | (((çağrı verisinin ilk 32 biti (4 bayt)))) (((çağrı verisinin ilk 32 biti (4 bayt))))            |
 |     14 | PUSH4 0x3cd8045e | 0x3CD8045E (((çağrı verisinin ilk 32 biti (4 bayt)))) (((çağrı verisinin ilk 32 biti (4 bayt)))) |
-|     19 | GT               | 0x3CD8045E>cagri-verisinin-ilk-32-biti (((çağrı verisinin ilk 32 biti (4 bayt))))                 |
-|     1A | PUSH2 0x0043     | 0x43 0x3CD8045E>cagri-verisinin-ilk-32-biti (((çağrı verisinin ilk 32 biti (4 bayt))))            |
+|     19 | GT               | 0x3CD8045E>çağrı-verisinin-ilk-32-biti (((çağrı verisinin ilk 32 biti (4 bayt))))                 |
+|     1A | PUSH2 0x0043     | 0x43 0x3CD8045E>çağrı-verisinin-ilk-32-biti (((çağrı verisinin ilk 32 biti (4 bayt))))            |
 |     1D | JUMPI            | (((çağrı verisinin ilk 32 biti (4 bayt))))                                                           |
 
-Yöntem imzası eşleştirme testlerini bu şekilde ikiye bölmek, ortalama olarak testlerin yarısından tasarruf sağlar. Bunu hemen takip eden kod ve 0x43'teki kod aynı kalıbı izler: çağrı verisinin ilk 32 bitini `DUP1` ile kopyala, `PUSH4 (((method signature>` ekle, eşitliği kontrol etmek için `EQ` çalıştır ve ardından yöntem imzası eşleşirse `JUMPI` ile atla. İşte yöntem imzaları, adresleri ve biliniyorsa [ilgili yöntem tanımı](https://www.4byte.directory/):
+Metot imzası eşleştirme testlerini bu şekilde ikiye bölmek, ortalama olarak testlerin yarısından tasarruf sağlar. Bunu hemen takip eden kod ve 0x43'teki kod aynı modeli izler: çağrı verisinin ilk 32 bitini `DUP1` yap, `PUSH4 (((method signature>` yap, eşitliği kontrol etmek için `EQ` çalıştır ve ardından metot imzası eşleşirse `JUMPI` yap. İşte metot imzaları, adresleri ve biliniyorsa [ilgili metot tanımı](https://www.4byte.directory/):
 
-| Yöntem                                                                                 | Yöntem imzası | Atlanacak ofset |
+| Metot                                                                                 | Metot imzası | Atlanacak ofset |
 | -------------------------------------------------------------------------------------- | ---------------- | ------------------- |
 | [splitter()](https://www.4byte.directory/signatures/?bytes4_signature=0x3cd8045e)      | 0x3cd8045e       | 0x0103              |
 | ???                                                                                    | 0x81e580d3       | 0x0138              |
@@ -294,9 +326,28 @@ Yöntem imzası eşleştirme testlerini bu şekilde ikiye bölmek, ortalama olar
 | ???                                                                                    | 0x1f135823       | 0x00C4              |
 | [merkleRoot()](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab)    | 0x2eb4a7ab       | 0x00ED              |
 
-Eğer eşleşme bulunamazsa kod, vekili olduğumuz sözleşmede bir eşleşme olması umuduyla [0x7C'deki vekil işleyiciye](#the-handler-at-0x7c) atlar.
+Eşleşme bulunamazsa, vekili olduğumuz sözleşmede bir eşleşme olması umuduyla kod [0x7C'deki vekil işleyiciye](#the-handler-at-0x7c) atlar.
 
-![ABI calls flowchart](flowchart-abi.png)
+<Flowchart>
+
+- Çağrı verisinin ilk dört baytı olan metot seçiciyi oku (0x0D)
+  - Seçici `0x3cd8045e` değerinin altında mı?
+    - **Evet** Düşük seçiciler (0x43)
+      - `0x1f135823` mi?
+        - **Evet** 0xC4'teki fonksiyon
+        - **Hayır** `0x2eb4a7ab` mi?
+          - **Evet** 0xED'de `merkleRoot()`
+          - **Hayır** [Vekil işleyici (0x7C)](#the-handler-at-0x7c)
+    - **Hayır** Yüksek seçiciler (0x1E)
+      - `0x3cd8045e` mu?
+        - **Evet** 0x0103'te `splitter()`
+        - **Hayır** `0x81e580d3` mi?
+          - **Evet** 0x0138'deki fonksiyon
+          - **Hayır** `0xba0bafb4` mi?
+            - **Evet** 0x0158'de `currentWindow()`
+            - **Hayır** [Vekil işleyici (0x7C)](#the-handler-at-0x7c)
+
+</Flowchart>
 
 ## splitter() {#splitter}
 

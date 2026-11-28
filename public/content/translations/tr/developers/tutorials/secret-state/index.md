@@ -16,21 +16,22 @@ lang: tr
 published: 2025-03-15
 ---
 
-_Blokzincirde sır yoktur_. Blokzincirde yayınlanan her şey herkesin okumasına açıktır. Bu gereklidir, çünkü Blokzincir herkesin onu doğrulayabilmesine dayanır. Ancak, oyunlar genellikle gizli duruma dayanır. Örneğin, bir blok gezginine gidip haritayı görebiliyorsanız [mayın tarlası](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) oyununun hiçbir anlamı kalmaz.
+_Blokzincirde sır yoktur_. Blokzincirde yayınlanan her şey herkesin okumasına açıktır. Bu gereklidir, çünkü Blokzincir herkesin onu doğrulayabilmesine dayanır. Ancak oyunlar genellikle gizli duruma dayanır. Örneğin, [mayın tarlası](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) oyunu, sadece bir Blokzincir gezginine gidip haritayı görebiliyorsanız kesinlikle hiçbir anlam ifade etmez.
 
-En basit çözüm, gizli durumu tutmak için bir [sunucu bileşeni](/developers/tutorials/server-components/) kullanmaktır. Ancak, Blokzincir kullanmamızın nedeni oyun geliştiricisinin hile yapmasını önlemektir. Sunucu bileşeninin dürüstlüğünden emin olmalıyız. Sunucu, durumun bir hash'ini sağlayabilir ve bir hamlenin sonucunu hesaplamak için kullanılan durumun doğru olduğunu kanıtlamak için [sıfır bilgi ispatları](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) kullanabilir.
+En basit çözüm, gizli durumu tutmak için bir [sunucu bileşeni](/developers/tutorials/server-components/) kullanmaktır. Ancak, Blokzincir kullanmamızın nedeni oyun geliştiricisinin hile yapmasını önlemektir. Sunucu bileşeninin dürüstlüğünden emin olmamız gerekir. Sunucu, durumun bir hash'ini sağlayabilir ve bir hamlenin sonucunu hesaplamak için kullanılan durumun doğru olduğunu ispatlamak için [sıfır bilgi ispatlarını](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) kullanabilir.
 
-Bu makaleyi okuduktan sonra, bu tür gizli durum tutan bir sunucu, durumu göstermek için bir istemci ve ikisi arasındaki iletişim için zincir içi bir bileşen oluşturmayı öğreneceksiniz. Kullanacağımız ana araçlar şunlar olacaktır:
+Bu makaleyi okuduktan sonra, bu tür gizli durum tutan bir sunucuyu, durumu göstermek için bir istemciyi ve ikisi arasındaki iletişim için zincir içi bir bileşeni nasıl oluşturacağınızı öğreneceksiniz. Kullanacağımız ana araçlar şunlar olacaktır:
 
-| Araç                                          | Amaç                                                 | Doğrulanan sürüm |
+| Araç                                          | Amaç                                                    | Doğrulanan sürüm |
 | --------------------------------------------- | ------------------------------------------------------- | ------------------: |
-| [Zokrates](https://zokrates.github.io/)       | Sıfır bilgi ispatları ve bunların doğrulanması            |               1.1.9 |
-| [TypeScript](https://www.typescriptlang.org/) | Hem sunucu hem de istemci için programlama dili |               5.4.2 |
-| [Node](https://nodejs.org/en)                 | Sunucuyu çalıştırma                                      |             20.18.2 |
-| [Viem](https://viem.sh/)                      | Blokzincir ile iletişim                       |              2.9.20 |
-| [MUD](https://mud.dev/)                       | Zincir içi veri yönetimi                                 |              2.0.12 |
-| [React](https://react.dev/)                   | İstemci kullanıcı arayüzü                                   |              18.2.0 |
-| [Vite](https://vitejs.dev/)                   | İstemci kodunu sunma                                 |               4.2.1 |
+| [Zokrates](https://zokrates.github.io/)       | Sıfır bilgi ispatları ve bunların doğrulanması          |               1.1.9 |
+| [TypeScript](https://www.typescriptlang.org/) | Hem sunucu hem de istemci için programlama dili         |               5.4.2 |
+| [Node](https://nodejs.org/en)                 | Sunucuyu çalıştırma                                     |             20.18.2 |
+| [Foundry](https://getfoundry.sh/)             | Yerel Blokzincir ve Sözleşme dağıtımı                   |               1.0.0 |
+| [Viem](https://viem.sh/)                      | Blokzincir ile iletişim                                 |              2.9.20 |
+| [MUD](https://mud.dev/)                       | Zincir içi veri yönetimi                                |              2.0.12 |
+| [React](https://react.dev/)                   | İstemci kullanıcı arayüzü                               |              18.2.0 |
+| [Vite](https://vitejs.dev/)                   | İstemci kodunu sunma                                    |               4.2.1 |
 
 ## Mayın Tarlası örneği {#minesweeper}
 
@@ -38,11 +39,28 @@ Bu makaleyi okuduktan sonra, bu tür gizli durum tutan bir sunucu, durumu göste
 
 Bu uygulama, verileri bir [anahtar-değer veritabanı](https://aws.amazon.com/nosql/key-value/) kullanarak zincir içi depolamamızı ve bu verileri zincir dışı bileşenlerle otomatik olarak senkronize etmemizi sağlayan bir çerçeve olan [MUD](https://mud.dev/) kullanılarak yazılmıştır. Senkronizasyona ek olarak MUD, erişim kontrolü sağlamayı ve diğer kullanıcıların uygulamamızı izinsiz bir şekilde [genişletmesini](https://mud.dev/guides/extending-a-world) kolaylaştırır.
 
-### Mayın tarlası örneğini çalıştırma {#running-minesweeper-example}
+### Mayın Tarlası örneğini çalıştırma {#running-minesweeper-example}
 
-Mayın tarlası örneğini çalıştırmak için:
+Mayın Tarlası örneğini çalıştırmak için:
 
-1. [Ön koşulların kurulu olduğundan](https://mud.dev/quickstart#prerequisites) emin olun: [Node](https://mud.dev/quickstart#prerequisites), [Foundry](https://book.getfoundry.sh/getting-started/installation), [`git`](https://git-scm.com/downloads), [`pnpm`](https://git-scm.com/downloads) ve [`mprocs`](https://github.com/pvolok/mprocs).
+1. [Ön koşulların kurulu olduğundan](https://mud.dev/quickstart#prerequisites) emin olun: [Node](https://nodejs.org/en), [Foundry](https://getfoundry.sh/introduction/installation), [`git`](https://git-scm.com/downloads) ve [`pnpm`](https://pnpm.io/installation).
+
+   Bu örnek, Node ve Foundry'nin belirli sürümlerine ihtiyaç duyan MUD 2.0.12'yi kullanır:
+
+   - **Node 20**. MUD 2.0.12 komut satırı aracı, Node'un daha yeni sürümlerinin artık desteklemediği [JSON içe aktarma iddialarını (import assertions)](https://v8.dev/features/import-attributes) kullanır, bu nedenle Node 22 veya sonraki sürümlerde `SyntaxError: Unexpected identifier 'assert'` hatasıyla başarısız olur. Node 20, Nisan 2026'da [ömrünün sonuna ulaştı](https://nodejs.org/en/about/previous-releases) ve artık güvenlik güncellemeleri almıyor, bu nedenle onu yalnızca bu yerel örnek için kullanın. [`fnm`](https://github.com/Schniz/fnm) veya [`nvm`](https://github.com/nvm-sh/nvm) gibi bir Node sürüm yöneticisi, yalnızca bu dizin için Node 20'ye geçmenizi sağlar, örneğin:
+
+     ```sh copy
+     fnm install 20
+     fnm use 20
+     ```
+
+   - **Foundry 1.0.0**. Mevcut Foundry sürümlerinde dağıtım sonrası betiği _Usage of `address(this)` detected in script contract_ hatasıyla başarısız olur. Test edilen sürümü şu şekilde kurun:
+
+     ```sh copy
+     foundryup -i 1.0.0
+     ```
+
+     Bu eğitimle işiniz bittiğinde, `foundryup` ile en son sürüme dönebilirsiniz.
 
 2. Depoyu klonlayın.
 
@@ -55,10 +73,9 @@ Mayın tarlası örneğini çalıştırmak için:
    ```sh copy
    cd 20240901-secret-state/
    pnpm install
-   npm install -g mprocs
    ```
 
-   Eğer Foundry, `pnpm install`'nin bir parçası olarak kurulduysa, komut satırı kabuğunu yeniden başlatmanız gerekir.
+   Tüm süreçleri tek bir terminalde çalıştıran [`mprocs`](https://github.com/pvolok/mprocs), paketlerden biri olarak kurulur.
 
 4. Sözleşmeleri derleyin
 
@@ -69,15 +86,15 @@ Mayın tarlası örneğini çalıştırmak için:
     ```
 
 
-5. Programı başlatın (bir [anvil](https://book.getfoundry.sh/anvil/) blokzinciri dahil) ve bekleyin.
+5. Programı (bir [anvil](https://getfoundry.sh/anvil/overview) Blokzinciri dahil) başlatın ve bekleyin.
 
    ```sh copy
-   mprocs
+   pnpm dev
    ```
 
-   Başlatmanın uzun sürdüğünü unutmayın. İlerlemeyi görmek için, dağıtılan MUD sözleşmelerini görmek üzere aşağı oku kullanarak _contracts_ sekmesine kaydırın. _Waiting for file changes…_ mesajını aldığınızda, sözleşmeler dağıtılmış demektir ve daha fazla ilerleme _server_ sekmesinde gerçekleşecektir. Orada, _Verifier address: 0x...._ mesajını alana kadar beklersiniz.
+   Başlatmanın uzun sürdüğünü unutmayın. İlerlemeyi görmek için, önce MUD Sözleşmelerinin dağıtıldığını görmek üzere _contracts_ sekmesine kaydırmak için aşağı okunu kullanın. _Waiting for file changes…_ mesajını aldığınızda, Sözleşmeler dağıtılmış demektir ve daha fazla ilerleme _server_ sekmesinde gerçekleşecektir. Orada, _Verifier address: 0x...._ mesajını alana kadar beklersiniz.
 
-   Bu adım başarılı olursa, solda farklı süreçlerin ve sağda o an seçili sürecin konsol çıktısının bulunduğu `mprocs` ekranını göreceksiniz.
+   Bu adım başarılı olursa, solda farklı süreçlerin ve sağda o anda seçili olan sürecin konsol çıktısının bulunduğu `mprocs` ekranını göreceksiniz.
 
    ![The mprocs screen](./mprocs.png)
 
@@ -90,28 +107,28 @@ Mayın tarlası örneğini çalıştırmak için:
      anvil --base-fee 0 --block-time 2
      ```
 
-   - **Sözleşmeler** 
+   - **Contracts** 
 
      ```sh
      cd packages/contracts
      pnpm mud dev-contracts --rpc http://127.0.0.1:8545
      ```
 
-   - **Sunucu**
+   - **Server**
 
      ```sh
      cd packages/server
      pnpm start
-     ```  
+     ```
 
-   - **İstemci**
+   - **Client**
 
      ```sh
      cd packages/client
      pnpm run dev
-     ```  
+     ```
 
-6. Artık [istemciye](http://localhost:3000) göz atabilir, **New Game** (Yeni Oyun) düğmesine tıklayabilir ve oynamaya başlayabilirsiniz.
+6. Artık [istemciye](http://localhost:3000) göz atabilir, **New Game**'e tıklayabilir ve oynamaya başlayabilirsiniz.
 
 ### Tablolar {#tables}
 
@@ -151,16 +168,16 @@ Bu akışlar istemci, zincir içi bileşen ve sunucu arasındaki yürütmeyi koo
 
 #### Başlatma {#initialization-flow}
 
-`mprocs` çalıştırdığınızda şu adımlar gerçekleşir:
+`pnpm dev` çalıştırdığınızda (`mprocs` çalıştırır), şu adımlar gerçekleşir:
 
-1. [`mprocs`](https://github.com/pvolok/mprocs) dört bileşen çalıştırır:
+1. [`mprocs`](https://github.com/pvolok/mprocs) dört bileşeni çalıştırır:
 
-   - Yerel bir blokzinciri çalıştıran [Anvil](https://book.getfoundry.sh/anvil/)
-   - MUD için sözleşmeleri derleyen (gerekirse) ve dağıtan [Sözleşmeler](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts)
-   - Kullanıcı arayüzünü ve istemci kodunu web tarayıcılarına sunmak için [Vite](https://vitejs.dev/) çalıştıran [İstemci](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client).
-   - Sunucu eylemlerini gerçekleştiren [Sunucu](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server)
+   - Yerel bir Blokzincir çalıştıran [Anvil](https://getfoundry.sh/anvil/overview)
+   - MUD için Sözleşmeleri derleyen (gerekirse) ve dağıtan [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts)
+   - Kullanıcı arayüzünü ve istemci kodunu web tarayıcılarına sunmak için [Vite](https://vitejs.dev/)'ı çalıştıran [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client).
+   - Sunucu eylemlerini gerçekleştiren [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server)
 
-2. `contracts` paketi MUD sözleşmelerini dağıtır ve ardından [`PostDeploy.s.sol` betiğini](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol) çalıştırır. Bu betik yapılandırmayı ayarlar. GitHub'daki kod, [içinde sekiz mayın bulunan 10x5'lik bir mayın tarlası](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23) belirtir.
+2. `contracts` paketi MUD Sözleşmelerini dağıtır ve ardından [`PostDeploy.s.sol` betiğini](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol) çalıştırır. Bu betik yapılandırmayı ayarlar. GitHub'daki kod, [içinde sekiz mayın bulunan 10x5'lik bir mayın tarlası](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23) belirtir.
 
 3. [Sunucu](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts), [MUD'u kurarak](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6) başlar. Diğer şeylerin yanı sıra bu, veri senkronizasyonunu etkinleştirir, böylece ilgili tabloların bir kopyası sunucunun belleğinde bulunur.
 
@@ -168,9 +185,9 @@ Bu akışlar istemci, zincir içi bileşen ve sunucu arasındaki yürütmeyi koo
 
 5. Sunucu başlatma fonksiyonu yapılandırmayı aldığında, [sunucunun sıfır bilgi kısmını](#using-zokrates-from-typescript) başlatmak için [`zkFunctions` çağrısı yapar](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35). Bu, yapılandırmayı alana kadar gerçekleşemez çünkü sıfır bilgi fonksiyonlarının mayın tarlasının genişliğini ve yüksekliğini sabit olarak alması gerekir.
 
-6. Sunucunun sıfır bilgi kısmı başlatıldıktan sonraki adım, [sıfır bilgi doğrulama sözleşmesini blokzincirine dağıtmak](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) ve MUD'da doğrulayıcı adresi ayarlamaktır.
+6. Sunucunun sıfır bilgi kısmı başlatıldıktan sonraki adım, [sıfır bilgi doğrulama Sözleşmesini Blokzincire dağıtmak](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) ve MUD'da doğrulayıcı adresini ayarlamaktır.
 
-7. Son olarak, bir oyuncunun [yeni bir oyun başlatmayı](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) veya [mevcut bir oyunda kazı yapmayı](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108) ne zaman talep ettiğini görmek için güncellemelere abone oluruz.
+7. Son olarak, bir oyuncunun [yeni bir oyun başlatmayı](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) veya [mevcut bir oyunda kazı yapmayı](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108) talep ettiğini görmek için güncellemelere abone oluruz.
 
 #### Yeni oyun {#new-game-flow}
 
@@ -242,7 +259,7 @@ Bu iki satır, [Zokrates standart kütüphanesinden](https://zokrates.github.io/
 Zokrates'teki alan (field) elemanı tipik olarak 256 bitten daha kısadır, ancak çok da kısa değildir. Kodu basitleştirmek için haritayı 512 bite kadar sınırlandırıyoruz ve dört alandan oluşan bir diziyi hashliyoruz ve her alanda yalnızca 128 bit kullanıyoruz. [`pack128` fonksiyonu](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) bu amaçla 128 bitlik bir diziyi bir `field` değerine dönüştürür.
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 Bu satır bir fonksiyon tanımını başlatır. `hashMap`, iki boyutlu bir `bool`(ean) dizisi olan `map` adında tek bir parametre alır. Haritanın boyutu, [aşağıda açıklanan](#why-map-border) nedenlerden dolayı `width+2`'e `height+2`'dir.
@@ -252,7 +269,7 @@ Zokrates programları bu uygulamada [şablon dizeleri (template strings)](https:
 Dönüş değeri, hash'i içeren bir `field` değeridir.
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 Harita iki boyutludur. Ancak, `pack128` fonksiyonu iki boyutlu dizilerle çalışmaz. Bu yüzden önce `map1d` kullanarak haritayı 512 baytlık bir diziye düzleştiriyoruz. Varsayılan olarak Zokrates değişkenleri sabittir, ancak bir döngü içinde bu diziye değerler atamamız gerekir, bu yüzden onu [`mut`](https://zokrates.github.io/language/variables.html#mutability) olarak tanımlarız.
@@ -260,19 +277,19 @@ Harita iki boyutludur. Ancak, `pack128` fonksiyonu iki boyutlu dizilerle çalı�
 Zokrates'te `undefined` olmadığı için diziyi başlatmamız gerekir. `[false; 512]` ifadesi, [512 adet `false` değerinden oluşan bir dizi](https://zokrates.github.io/language/types.html#declaration-and-initialization) anlamına gelir.
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 Ayrıca `map1d` içinde zaten doldurduğumuz bitler ile doldurmadıklarımızı ayırt etmek için bir sayaca ihtiyacımız var.
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 Zokrates'te bir [`for` döngüsü](https://zokrates.github.io/language/control_flow.html#for-loops) bu şekilde bildirilir. Bir Zokrates `for` döngüsünün sabit sınırları olmalıdır, çünkü bir döngü gibi görünse de derleyici aslında onu "açar" (unroll). `${width+2}` ifadesi bir derleme zamanı sabitidir çünkü `width`, derleyiciyi çağırmadan önce TypeScript kodu tarafından ayarlanır.
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -282,7 +299,7 @@ for u32 y in 0..${height+2} {
 Haritadaki her konum için, o değeri `map1d` dizisine koyun ve sayacı artırın.
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -293,7 +310,7 @@ field[4] hashMe = [
 `map1d`'den dört `field` değerinden oluşan bir dizi oluşturmak için `pack128` kullanılır. Zokrates'te `array[a..b]`, dizinin `a`'da başlayan ve `b-1`'de biten dilimi anlamına gelir.
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -349,19 +366,19 @@ Varsayılan olarak Zokrates ispatları girdilerini içerir. Hangi nokta olduğun
 Bu, suistimal için başka bir yol açar. Kanıtlayıcı doğru koordinatları kullanabilir, ancak konumun etrafında ve muhtemelen konumun kendisinde herhangi bir sayıda mayın içeren bir harita oluşturabilir. Bu suistimali önlemek için, sıfır bilgi ispatının oyun tanımlayıcısı olan haritanın hash'ini içermesini sağlıyoruz.
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 Buradaki dönüş değeri, harita hash dizisinin yanı sıra kazı sonucunu da içeren bir demettir (tuple).
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 Konumun kendisinde bir bomba olması durumunda özel bir değer olarak 255 kullanıyoruz.
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -518,11 +535,11 @@ Güvenlik testleri önemlidir çünkü işlevsel bir hata eninde sonunda kendini
 
 ### İzinler {#permissions}
 
-Bu oyunda ayrıcalıklı tek bir varlık vardır, o da sunucudur. [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) içindeki fonksiyonları çağırmasına izin verilen tek kullanıcıdır. İzinli fonksiyonlara yapılan çağrıların yalnızca sunucu hesabı olarak yapılmasına izin verildiğini doğrulamak için [`cast`](https://book.getfoundry.sh/cast/) kullanabiliriz.
+Bu oyunda ayrıcalıklı bir varlık vardır, o da sunucudur. [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) içindeki fonksiyonları çağırmasına izin verilen tek kullanıcıdır. İzinli fonksiyonlara yapılan çağrıların yalnızca sunucu Hesabı olarak yapılmasına izin verildiğini doğrulamak için [`cast`](https://getfoundry.sh/cast/overview) kullanabiliriz.
 
 [Sunucunun özel anahtarı `setupNetwork.ts` içindedir](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52).
 
-1. `anvil` (blokzincir) çalıştıran bilgisayarda bu ortam değişkenlerini ayarlayın.
+1. `anvil` (Blokzincir) çalıştıran bilgisayarda, bu ortam değişkenlerini ayarlayın.
 
    ```sh copy
    WORLD_ADDRESS=0x8d8b6b8414e1e3dcfd4168561b9be6bd3bf6ec4b
@@ -530,21 +547,23 @@ Bu oyunda ayrıcalıklı tek bir varlık vardır, o da sunucudur. [`ServerSystem
    AUTHORIZED_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
    ```
 
-2. Doğrulayıcı adresini yetkisiz bir adres olarak ayarlamayı denemek için `cast` kullanın.
+   Bu `WORLD_ADDRESS`, MUD'un yeni bir `anvil` üzerinde dağıtım yaptığı Adrestir. Eğer `World` farklı bir Adresteyse, `packages/contracts/worlds.json` içindeki değeri kullanın.
+
+2. Doğrulayıcı adresini yetkisiz bir Adres olarak ayarlamayı denemek için `cast` kullanın.
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $UNAUTHORIZED_KEY
    ```
 
-   `cast` sadece bir hata bildirmekle kalmaz, aynı zamanda tarayıcıdaki oyunda **MUD Dev Tools**'u açabilir, **Tables**'a tıklayabilir ve **app\_\_VerifierAddress**'i seçebilirsiniz. Adresin sıfır olmadığını görün.
+   `cast` sadece bir başarısızlık bildirmekle kalmaz, aynı zamanda tarayıcıdaki oyunda **MUD Dev Tools**'u açabilir, **Tables**'a tıklayabilir ve **app\_\_VerifierAddress**'i seçebilirsiniz. Adresin sıfır olmadığını görün.
 
-3. Doğrulayıcı adresini sunucunun adresi olarak ayarlayın.
+3. Doğrulayıcı adresini sunucunun Adresi olarak ayarlayın.
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $AUTHORIZED_KEY
    ```
 
-   **app\_\_VerifiedAddress** içindeki adres artık sıfır olmalıdır.
+   **app\_\_VerifierAddress** içindeki Adres artık sıfır olmalıdır.
 
 Aynı `System` içindeki tüm MUD fonksiyonları aynı erişim kontrolünden geçer, bu yüzden bu testi yeterli buluyorum. Yeterli bulmuyorsanız, [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) içindeki diğer fonksiyonları kontrol edebilirsiniz.
 
@@ -560,10 +579,10 @@ En basit olasılık, sıfır bilgi ispatında yanlış cevap vermektir. Bunu yap
 proof.inputs[3] = "0x" + "1".padStart(64, "0")
 ```
 
-Bu, doğru cevap ne olursa olsun her zaman bir bomba olduğunu talep edeceğimiz anlamına gelir. Bu sürümle oynamayı deneyin ve `pnpm dev` ekranının **server** sekmesinde şu hatayı göreceksiniz:
+Bu, doğru cevap ne olursa olsun her zaman bir bomba olduğunu talep edeceğimiz anlamına gelir. Bu sürümle oynamayı deneyin ve `mprocs` ekranının **server** sekmesinde şu hatayı göreceksiniz:
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000
@@ -680,9 +699,11 @@ Bir eğitim olarak bu makalenin anlaşılması kolay kısa bir oyuna ihtiyacı v
 
 ### Neden Zokrates? {#why-zokrates}
 
-[Zokrates](https://zokrates.github.io/) mevcut tek sıfır bilgi kütüphanesi değildir, ancak normal, [emirsel](https://en.wikipedia.org/wiki/Imperative_programming) bir programlama diline benzer ve boolean değişkenleri destekler.
+[Zokrates](https://zokrates.github.io/) mevcut tek sıfır bilgi Kütüphanesi değildir, ancak normal, [emirsel (imperative)](https://en.wikipedia.org/wiki/Imperative_programming) bir programlama diline benzer ve boolean değişkenleri destekler.
 
-Farklı gereksinimlere sahip uygulamanız için [Circum](https://docs.circom.io/getting-started/installation/) veya [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/) kullanmayı tercih edebilirsiniz.
+Ancak, Zokrates artık aktif olarak sürdürülmemektedir. En son sürümü olan 0.8.8 (ve eşleşen `zokrates-js` 1.1.9) Kasım 2023'tendir ve ana dal (main branch) Nisan 2024'ten bu yana hiçbir commit almamıştır. Bu eğitimdeki kod hala çalışmaktadır, ancak hata düzeltmeleri veya güvenlik güncellemeleri beklemeyin. Yeni bir proje için, [bu eğitimde](/developers/tutorials/app-plasma/) kullanılan [Noir](https://noir-lang.org/) gibi bakımı yapılan bir dili düşünün.
+
+Farklı gereksinimlere sahip uygulamanız için [Circom](https://docs.circom.io/getting-started/installation/) veya [Cairo](https://www.cairo-lang.org/) kullanmayı tercih edebilirsiniz.
 
 ### Zokrates ne zaman derlenmeli {#when-compile-zokrates}
 

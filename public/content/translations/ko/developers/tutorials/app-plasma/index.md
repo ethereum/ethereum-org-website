@@ -98,13 +98,22 @@ published: 2025-10-15
 
 ### 도구 {#tools}
 
-클라이언트 측 코드의 경우 [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/), [Wagmi](https://wagmi.sh/)를 사용할 것입니다. 이들은 업계 표준 도구입니다. 익숙하지 않다면 [이 튜토리얼](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)을 사용할 수 있습니다.
+클라이언트 측 코드의 경우 [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/) 및 [Wagmi](https://wagmi.sh/)를 사용할 것입니다. 이들은 업계 표준 도구입니다. 익숙하지 않다면 [이 튜토리얼](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)을 사용할 수 있습니다.
 
-서버의 대부분은 [Node](https://nodejs.org/en)를 사용하여 JavaScript로 작성되었습니다. 영지식 부분은 [Noir](https://noir-lang.org/)로 작성되었습니다. `1.0.0-beta.10` 버전이 필요하므로, [지침에 따라 Noir를 설치](https://noir-lang.org/docs/getting_started/quick_start)한 후 다음을 실행하세요:
+서버의 대부분은 [Node](https://nodejs.org/en)를 사용하여 JavaScript로 작성되었습니다. 영지식 부분은 [Noir](https://noir-lang.org/)로 작성되었습니다. `1.0.0-beta.10` 버전이 필요하므로 [안내에 따라 Noir를 설치](https://noir-lang.org/docs/getting_started/quick_start)한 후 다음을 실행하세요:
 
-```
+```sh
 noirup -v 1.0.0-beta.10
 ```
+
+온체인에서 검증할 수 있는 증명을 생성하려면(3단계에서) 이 Noir 릴리스와 일치하는 버전의 증명 백엔드인 [Barretenberg](https://barretenberg.aztec.network/docs/getting_started)(`bb`)도 필요합니다. Barretenberg 설치 프로그램인 `bbup`를 설치한 다음, 이를 사용하여 `bb` 버전 `0.87.0`를 설치하세요(`bbup`를 찾을 수 없는 경우 업데이트된 `PATH`가 적용되도록 새 터미널을 엽니다):
+
+```sh
+curl -L https://raw.githubusercontent.com/AztecProtocol/aztec-packages/refs/heads/next/barretenberg/bbup/install | bash
+bbup -v 0.87.0
+```
+
+이 튜토리얼은 `nargo` 1.0.0-beta.10, `bb` 0.87.0 및 (서버에서) `@noir-lang/noir_js` 1.0.0-beta.11로 테스트되었습니다. 최신 버전을 사용하지 마세요. Noir 코드는 현재 1.0 릴리스 후보로 컴파일되지 않으며, 현재 버전의 `bb`는 `nargo` 1.0.0-beta.10으로 컴파일된 회로를 읽을 수 없고 더 이상 `--oracle_hash` 플래그를 허용하지 않습니다.
 
 우리가 사용하는 블록체인은 [Foundry](https://getfoundry.sh/introduction/installation)의 일부인 로컬 테스트 블록체인 `anvil`입니다.
 
@@ -340,9 +349,9 @@ use dep::ecrecover;
 global ACCOUNT_NUMBER : u32 = 5;
 ```
 
-Noir는 [Rust](https://www.rust-lang.org/)에서 영감을 받았습니다. 변수는 기본적으로 상수입니다. 이것이 전역 구성 상수를 정의하는 방법입니다. 구체적으로 `ACCOUNT_NUMBER`는 우리가 저장하는 계정의 수입니다.
+Noir는 [Rust](https://www.rust-lang.org/)에서 영감을 받았습니다. 변수는 기본적으로 상수입니다. 이것이 전역 구성 상수를 정의하는 방법입니다. 구체적으로 `ACCOUNT_NUMBER`은 우리가 저장하는 계정의 수입니다.
 
-`u<number>`라는 이름의 데이터 유형은 해당 비트 수의 부호 없는 정수입니다. 지원되는 유형은 `u8`, `u16`, `u32`, `u64`, `u128`뿐입니다.
+`u<number>`라는 이름의 데이터 유형은 해당 비트 수의 부호 없는 정수입니다. 지원되는 유형은 `u8`, `u16`, `u32`, `u64` 및 `u128`뿐입니다.
 
 ```
 global FLAT_ACCOUNT_FIELDS : u32 = 2;
@@ -361,7 +370,7 @@ global ASCII_MESSAGE_LENGTH : [u8; 3] = [0x31, 0x30, 0x30];
 global HASH_BUFFER_SIZE : u32 = 26+3+MESSAGE_LENGTH;
 ```
 
-[EIP-191 서명](https://eips.ethereum.org/EIPS/eip-191)은 26바이트 접두사, ASCII 형식의 메시지 길이, 마지막으로 메시지 자체가 포함된 버퍼가 필요합니다.
+[EIP-191 서명](https://eips.ethereum.org/EIPS/eip-191)에는 26바이트 접두사, ASCII 형식의 메시지 길이, 마지막으로 메시지 자체가 포함된 버퍼가 필요합니다.
 
 ```
 struct Account {
@@ -371,7 +380,7 @@ struct Account {
 }
 ```
 
-계정에 대해 저장하는 정보입니다. [`Field`](https://noir-lang.org/docs/noir/concepts/data_types/fields)는 일반적으로 최대 253비트의 숫자로, 영지식 증명을 구현하는 [산술 회로](https://rareskills.io/post/arithmetic-circuit)에서 직접 사용할 수 있습니다. 여기서는 160비트 이더리움 주소를 저장하기 위해 `Field`를 사용합니다.
+계정에 대해 저장하는 정보입니다. [`Field`](https://noir-lang.org/docs/noir/concepts/data_types/fields)은 일반적으로 최대 253비트의 숫자로, 영지식 증명을 구현하는 [산술 회로](https://rareskills.io/post/arithmetic-circuit)에서 직접 사용할 수 있습니다. 여기서는 160비트 이더리움 주소를 저장하기 위해 `Field`를 사용합니다.
 
 ```
 struct TransferTxn {
@@ -382,7 +391,7 @@ struct TransferTxn {
 }
 ```
 
-전송 트랜잭션을 위해 저장하는 정보입니다.
+전송 트랜잭션에 대해 저장하는 정보입니다.
 
 ```
 fn flatten_account(account: Account) -> [Field; FLAT_ACCOUNT_FIELDS] {
@@ -397,7 +406,7 @@ fn flatten_account(account: Account) -> [Field; FLAT_ACCOUNT_FIELDS] {
     ];
 ```
 
-배열의 첫 번째 값은 계정 주소입니다. 두 번째 값에는 잔액과 논스가 모두 포함됩니다. `.into()` 호출은 숫자를 필요한 데이터 유형으로 변경합니다. `account.nonce`는 `u32` 값이지만, `u128` 값인 `account.balance << 32`에 더하려면 `u128`여야 합니다. 그것이 첫 번째 `.into()`입니다. 두 번째는 `u128` 결과를 `Field`로 변환하여 배열에 맞게 합니다.
+배열의 첫 번째 값은 계정 주소입니다. 두 번째 값에는 잔액과 논스가 모두 포함됩니다. `.into()` 호출은 숫자를 필요한 데이터 유형으로 변경합니다. `account.nonce`는 `u32` 값이지만, `u128` 값인 `account.balance << 32`에 더하려면 `u128`이어야 합니다. 그것이 첫 번째 `.into()`입니다. 두 번째는 `u128` 결과를 배열에 맞도록 `Field`로 변환합니다.
 
 ```
     flat
@@ -410,19 +419,19 @@ Noir에서 함수는 끝에서만 값을 반환할 수 있습니다(조기 반�
 fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] {
 ```
 
-이 함수는 계정 배열을 `Field` 배열로 변환하여 페더슨 해시의 입력으로 사용할 수 있게 합니다.
+이 함수는 계정 배열을 페더슨 해시의 입력으로 사용할 수 있는 `Field` 배열로 변환합니다.
 
 ```
     let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
 ```
 
-이것은 가변 변수, 즉 상수가 _아닌_ 변수를 지정하는 방법입니다. Noir의 변수는 항상 값을 가져야 하므로 이 변수를 모두 0으로 초기화합니다.
+이것은 상수가 _아닌_ 가변 변수를 지정하는 방법입니다. Noir의 변수는 항상 값을 가져야 하므로 이 변수를 모두 0으로 초기화합니다.
 
 ```
     for i in 0..ACCOUNT_NUMBER {
 ```
 
-이것은 `for` 루프입니다. 경계가 상수라는 점에 유의하세요. Noir 루프는 컴파일 타임에 경계를 알아야 합니다. 그 이유는 산술 회로가 흐름 제어를 지원하지 않기 때문입니다. `for` 루프를 처리할 때 컴파일러는 단순히 그 안의 코드를 각 반복마다 한 번씩 여러 번 넣습니다.
+이것은 `for` 루프입니다. 경계는 상수라는 점에 유의하세요. Noir 루프는 컴파일 타임에 경계를 알아야 합니다. 그 이유는 산술 회로가 흐름 제어를 지원하지 않기 때문입니다. `for` 루프를 처리할 때 컴파일러는 단순히 각 반복마다 한 번씩 코드를 여러 번 넣습니다.
 
 ```
         let fields = flatten_account(accounts[i]);
@@ -439,7 +448,7 @@ fn hash_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> Field {
 }
 ```
 
-마침내 계정 배열을 해시하는 함수에 도달했습니다.
+마지막으로 계정 배열을 해시하는 함수에 도달했습니다.
 
 ```
 fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
@@ -454,9 +463,9 @@ fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
 
 이 함수는 특정 주소를 가진 계정을 찾습니다. 이 함수는 주소를 찾은 후에도 모든 계정을 반복하기 때문에 표준 코드에서는 매우 비효율적일 것입니다.
 
-하지만 영지식 증명에는 흐름 제어가 없습니다. 조건을 확인해야 할 경우 매번 확인해야 합니다.
+그러나 영지식 증명에는 흐름 제어가 없습니다. 조건을 확인해야 하는 경우 매번 확인해야 합니다.
 
-`if` 문에서도 비슷한 일이 발생합니다. 위 루프의 `if` 문은 다음 수학적 문장으로 변환됩니다.
+`if` 문에서도 비슷한 일이 발생합니다. 위 루프의 `if` 문은 이러한 수학적 문으로 변환됩니다.
 
 _condition<sub>result</sub> = accounts[i].address == address_ // 같으면 1, 그렇지 않으면 0
 
@@ -469,13 +478,13 @@ _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result
 }
 ```
 
-[`assert`](https://noir-lang.org/docs/language/assert) 함수는 어설션이 거짓인 경우 영지식 증명을 중단시킵니다. 이 경우 관련 주소가 있는 계정을 찾을 수 없는 경우입니다. 주소를 보고하기 위해 [형식 문자열](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings)을 사용합니다.
+[`assert`](https://noir-lang.org/docs/language/assert) 함수는 어설션이 거짓인 경우 영지식 증명을 중단시킵니다. 이 경우 관련 주소가 있는 계정을 찾을 수 없는 경우입니다. 주소를 보고하기 위해 [형식 문자열(format string)](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings)을 사용합니다.
 
 ```rust
 fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> [Account; ACCOUNT_NUMBER] {
 ```
 
-이 함수는 전송 트랜잭션을 적용하고 새로운 계정 배열을 반환합니다.
+이 함수는 전송 트랜잭션을 적용하고 새 계정 배열을 반환합니다.
 
 ```rust
     let from = find_account(accounts, txn.from);
@@ -485,7 +494,7 @@ fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> 
         (txn.from, txn.amount, txn.nonce, accounts[from].nonce);
 ```
 
-Noir의 형식 문자열 내부에서는 구조체 요소에 액세스할 수 없으므로 사용 가능한 복사본을 만듭니다.
+Noir에서는 형식 문자열 내부의 구조체 요소에 액세스할 수 없으므로 사용 가능한 복사본을 만듭니다.
 
 ```rust
     assert (accounts[from].balance >= txn.amount,
@@ -508,13 +517,13 @@ Noir의 형식 문자열 내부에서는 구조체 요소에 액세스할 수 �
 }
 ```
 
-새로운 계정 배열을 생성한 다음 반환합니다.
+새 계정 배열을 만든 다음 반환합니다.
 
 ```rust
 fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field
 ```
 
-이 함수는 메시지에서 주소를 읽습니다. 
+이 함수는 메시지에서 주소를 읽습니다.
 
 ```rust
 {
@@ -523,7 +532,7 @@ fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field
     for i in 7..47 {
 ```
 
-주소는 항상 20바이트(일명 40자리 16진수) 길이이며 7번째 문자에서 시작합니다.
+주소는 항상 20바이트(즉, 40개의 16진수 숫자) 길이이며 7번째 문자에서 시작합니다.
 
 ```rust
         result *= 0x10;
@@ -544,7 +553,7 @@ fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field
 fn readAmountAndNonce(messageBytes: [u8; MESSAGE_LENGTH]) -> (u128, u32)
 ```
 
-메시지에서 금액과 논스를 읽습니다. 
+메시지에서 금액과 논스를 읽습니다.
 
 ```rust
 {
@@ -555,7 +564,7 @@ fn readAmountAndNonce(messageBytes: [u8; MESSAGE_LENGTH]) -> (u128, u32)
     let mut stillReadingNonce: bool = false;
 ```
 
-메시지에서 주소 뒤의 첫 번째 숫자는 전송할 피니(일명 ETH의 1000분의 1) 금액입니다. 두 번째 숫자는 논스입니다. 그 사이의 텍스트는 무시됩니다.
+메시지에서 주소 뒤의 첫 번째 숫자는 전송할 피니(즉, ETH의 1000분의 1) 금액입니다. 두 번째 숫자는 논스입니다. 그 사이의 텍스트는 무시됩니다.
 
 ```rust
     for i in 48..MESSAGE_LENGTH {
@@ -589,7 +598,7 @@ fn readAmountAndNonce(messageBytes: [u8; MESSAGE_LENGTH]) -> (u128, u32)
 }
 ```
 
-[튜플](https://noir-lang.org/docs/noir/concepts/data_types/tuples)을 반환하는 것은 Noir에서 함수로부터 여러 값을 반환하는 방법입니다.
+[튜플(tuple)](https://noir-lang.org/docs/noir/concepts/data_types/tuples)을 반환하는 것은 함수에서 여러 값을 반환하는 Noir의 방식입니다.
 
 ```rust
 fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn 
@@ -614,7 +623,7 @@ fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn
 fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
 ```
 
-계정은 영지식 증명 내부에서만 해시되기 때문에 페더슨 해시를 사용할 수 있었습니다. 하지만 이 코드에서는 브라우저에서 생성된 메시지의 서명을 확인해야 합니다. 이를 위해 [EIP-191](https://eips.ethereum.org/EIPS/eip-191)의 이더리움 서명 형식을 따라야 합니다. 즉, 표준 접두사, ASCII 형식의 메시지 길이, 메시지 자체가 포함된 결합된 버퍼를 만들고 이더리움 표준 keccak256을 사용하여 해시해야 합니다.
+계정은 영지식 증명 내부에서만 해시되기 때문에 계정에 페더슨 해시를 사용할 수 있었습니다. 그러나 이 코드에서는 브라우저에서 생성된 메시지의 서명을 확인해야 합니다. 이를 위해 [EIP-191](https://eips.ethereum.org/EIPS/eip-191)의 이더리움 서명 형식을 따라야 합니다. 즉, 표준 접두사, ASCII 형식의 메시지 길이 및 메시지 자체가 포함된 결합된 버퍼를 만들고 이더리움 표준 keccak256을 사용하여 해시해야 합니다.
 
 ```rust
     // ASCII 접두사
@@ -648,7 +657,7 @@ fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
     ];
 ```
 
-애플리케이션이 사용자에게 트랜잭션이나 다른 목적으로 사용될 수 있는 메시지에 서명하도록 요청하는 경우를 피하기 위해, EIP-191은 모든 서명된 메시지가 문자 0x19(유효한 ASCII 문자가 아님)로 시작하고 그 뒤에 `Ethereum Signed Message:`와 줄바꿈이 오도록 지정합니다.
+애플리케이션이 사용자에게 트랜잭션이나 다른 목적으로 사용할 수 있는 메시지에 서명하도록 요청하는 경우를 방지하기 위해 EIP-191은 서명된 모든 메시지가 문자 0x19(유효한 ASCII 문자가 아님)로 시작하고 그 뒤에 `Ethereum Signed Message:`와 줄 바꿈이 오도록 지정합니다.
 
 ```rust
     let mut buffer: [u8; HASH_BUFFER_SIZE] = [0u8; HASH_BUFFER_SIZE];
@@ -691,7 +700,7 @@ fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
     assert(MESSAGE_LENGTH < 1000, "Messages whose length is over three digits are not supported");
 ```
 
-최대 999까지의 메시지 길이를 처리하고 그보다 크면 실패합니다. 메시지 길이가 상수임에도 불구하고 이 코드를 추가한 이유는 변경하기 쉽기 때문입니다. 프로덕션 시스템에서는 더 나은 성능을 위해 `MESSAGE_LENGTH`가 변경되지 않는다고 가정할 것입니다.
+최대 999까지의 메시지 길이를 처리하고 그보다 크면 실패합니다. 메시지 길이가 상수임에도 불구하고 이 코드를 추가한 이유는 변경하기 쉽게 만들기 위해서입니다. 프로덕션 시스템에서는 더 나은 성능을 위해 `MESSAGE_LENGTH`가 변경되지 않는다고 가정할 것입니다.
 
 ```rust
     keccak256::keccak256(buffer, HASH_BUFFER_SIZE)
@@ -710,9 +719,9 @@ fn signatureToAddressAndHash(
 {
 ```
 
-이 함수는 서명을 검증하며, 이를 위해 메시지 해시가 필요합니다. 그런 다음 서명한 주소와 메시지 해시를 제공합니다. 메시지 해시는 두 개의 `Field` 값으로 제공되는데, 이는 바이트 배열보다 프로그램의 나머지 부분에서 사용하기 더 쉽기 때문입니다.
+이 함수는 서명을 검증하며, 이를 위해 메시지 해시가 필요합니다. 그런 다음 서명한 주소와 메시지 해시를 제공합니다. 메시지 해시는 바이트 배열보다 프로그램의 나머지 부분에서 사용하기 더 쉽기 때문에 두 개의 `Field` 값으로 제공됩니다.
 
-필드 계산은 큰 수에 대한 [모듈로](https://en.wikipedia.org/wiki/Modulo) 연산으로 수행되지만, 그 수는 일반적으로 256비트 미만이기 때문에(그렇지 않으면 EVM에서 해당 계산을 수행하기 어려울 것입니다) 두 개의 `Field` 값을 사용해야 합니다.
+필드 계산은 큰 숫자의 [모듈로(modulo)](https://en.wikipedia.org/wiki/Modulo)로 수행되지만 해당 숫자는 일반적으로 256비트 미만이기 때문에(그렇지 않으면 EVM에서 해당 계산을 수행하기 어려울 것입니다) 두 개의 `Field` 값을 사용해야 합니다.
 
 ```rust
     let hash = hashMessage(message);
@@ -725,7 +734,7 @@ fn signatureToAddressAndHash(
     }
 ```
 
-`hash1`와 `hash2`를 가변 변수로 지정하고 해시를 바이트 단위로 씁니다.
+`hash1` 및 `hash2`를 가변 변수로 지정하고 해시를 바이트 단위로 씁니다.
 
 ```rust
     (
@@ -757,14 +766,14 @@ fn main(
     )
 ```
 
-마침내 `main` 함수에 도달했습니다. 우리는 계정의 해시를 이전 값에서 새로운 값으로 유효하게 변경하는 트랜잭션이 있음을 증명해야 합니다. 또한 트랜잭션을 보낸 사람이 자신의 트랜잭션이 처리되었음을 알 수 있도록 이 특정 트랜잭션 해시가 있음을 증명해야 합니다.
+마지막으로 `main` 함수에 도달합니다. 트랜잭션이 계정의 해시를 이전 값에서 새 값으로 유효하게 변경한다는 것을 증명해야 합니다. 또한 트랜잭션을 보낸 사람이 자신의 트랜잭션이 처리되었음을 알 수 있도록 이 특정 트랜잭션 해시가 있음을 증명해야 합니다.
 
 ```rust
 {
     let mut txn = readTransferTxn(message);
 ```
 
-메시지에서 출발지 주소를 읽는 것이 아니라 서명에서 읽기 때문에 `txn`가 가변적이어야 합니다. 
+메시지에서 발신자 주소를 읽지 않고 서명에서 읽기 때문에 `txn`가 가변적이어야 합니다.
 
 ```rust
     let (fromAddress, txnHash1, txnHash2) = signatureToAddressAndHash(
@@ -790,9 +799,9 @@ fn main(
 
 두 번째 단계에서는 브라우저에서 전송 트랜잭션을 수신하고 구현하는 서버를 추가합니다.
 
-작동 방식을 확인하려면:
+실행 중인 모습을 보려면:
 
-1. Vite가 실행 중이면 중지합니다.
+1. Vite가 실행 중인 경우 중지합니다.
 
 2. 서버가 포함된 브랜치를 다운로드하고 필요한 모든 모듈이 있는지 확인합니다.
 
@@ -812,24 +821,24 @@ fn main(
    npm run start
    ```
 
-4. 별도의 명령줄 창에서 Vite를 실행하여 브라우저 코드를 제공합니다.
+4. 별도의 명령줄 창에서 리포지토리 루트부터 시작하여 Vite를 실행하여 브라우저 코드를 제공합니다.
 
    ```sh
    cd client
    npm run dev
    ```
 
-5. [http://localhost:5173](http://localhost:5173)의 클라이언트 코드로 이동합니다.
+5. [http://localhost:5173](http://localhost:5173)에서 클라이언트 코드로 이동합니다.
 
 6. 트랜잭션을 발행하기 전에 보낼 수 있는 금액과 논스를 알아야 합니다. 이 정보를 얻으려면 <strong>Update account data</strong>를 클릭하고 메시지에 서명하세요.
 
-   여기에 딜레마가 있습니다. 한편으로는 재사용될 수 있는 메시지([재전송 공격](https://en.wikipedia.org/wiki/Replay_attack))에 서명하고 싶지 않으며, 이것이 애초에 논스를 원하는 이유입니다. 하지만 아직 논스가 없습니다. 해결책은 현재 시간과 같이 한 번만 사용할 수 있고 양쪽 모두 이미 가지고 있는 논스를 선택하는 것입니다.
+   여기서 딜레마가 있습니다. 한편으로는 재사용할 수 있는 메시지([재전송 공격(replay attack)](https://en.wikipedia.org/wiki/Replay_attack))에 서명하고 싶지 않기 때문에 애초에 논스를 원합니다. 그러나 아직 논스가 없습니다. 해결책은 한 번만 사용할 수 있고 현재 시간과 같이 양쪽 모두에 이미 있는 논스를 선택하는 것입니다.
 
-   이 해결책의 문제는 시간이 완벽하게 동기화되지 않을 수 있다는 것입니다. 그래서 대신 매분 변경되는 값에 서명합니다. 이는 재전송 공격에 대한 취약성 창이 최대 1분임을 의미합니다. 프로덕션 환경에서는 서명된 요청이 TLS로 보호되고, 터널의 반대편인 서버가 이미 잔액과 논스를 공개할 수 있다는 점(작동하려면 이를 알아야 함)을 고려하면 이는 허용 가능한 위험입니다.
+   이 해결책의 문제는 시간이 완벽하게 동기화되지 않을 수 있다는 것입니다. 그래서 대신 매분 변경되는 값에 서명합니다. 이는 재전송 공격에 대한 취약성 창이 최대 1분임을 의미합니다. 프로덕션 환경에서는 서명된 요청이 TLS로 보호되고 터널의 반대편인 서버가 이미 잔액과 논스를 공개할 수 있다는 점(작동하려면 이를 알아야 함)을 고려할 때 이는 허용 가능한 위험입니다.
 
-7. 브라우저가 잔액과 논스를 다시 받으면 전송 양식이 표시됩니다. 목적지 주소와 금액을 선택하고 <strong>Transfer</strong>를 클릭합니다. 이 요청에 서명합니다.
+7. 브라우저가 잔액과 논스를 다시 받으면 전송 양식이 표시됩니다. 목적지 주소와 금액을 선택하고 <strong>Transfer</strong>를 클릭합니다. 이 요청에 서명하세요.
 
-8. 전송을 확인하려면 <strong>Update account data</strong>를 클릭하거나 서버를 실행하는 창을 확인하세요. 서버는 상태가 변경될 때마다 상태를 기록합니다.
+8. 전송을 보려면 <strong>Update account data</strong>를 클릭하거나 서버를 실행하는 창을 확인하세요. 서버는 상태가 변경될 때마다 상태를 로그에 기록합니다.
 
     ```
     ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
@@ -1003,7 +1012,7 @@ let Accounts = [
    npm run start
    ```
 
-9. 다른 명령줄 창에서 클라이언트를 실행합니다.
+9. 리포지토리 루트부터 시작하여 다른 명령줄 창에서 클라이언트를 실행합니다.
 
    ```sh
    cd client
@@ -1012,7 +1021,7 @@ let Accounts = [
 
 10. 몇 가지 트랜잭션을 실행합니다.
 
-11. 온체인에서 상태가 변경되었는지 확인하려면 서버 프로세스를 다시 시작하세요. 트랜잭션의 원래 해시 값이 온체인에 저장된 해시 값과 다르기 때문에 `ZkBank`가 더 이상 트랜잭션을 수락하지 않는 것을 확인하세요.
+11. 상태가 온체인에서 변경되었는지 확인하려면 서버 프로세스를 다시 시작하세요. 트랜잭션의 원래 해시 값이 온체인에 저장된 해시 값과 다르기 때문에 `ZkBank`가 더 이상 트랜잭션을 허용하지 않는 것을 확인하세요.
 
     이것은 예상되는 오류 유형입니다.
 
@@ -1043,9 +1052,9 @@ import util from 'util'
 const execPromise = util.promisify(exec)
 ```
 
-온체인으로 보낼 실제 증명을 생성하려면 [Barretenberg 패키지](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg)를 사용해야 합니다. 이 패키지는 명령줄 인터페이스(`bb`)를 실행하거나 [JavaScript 라이브러리인 `bb.js`](https://www.npmjs.com/package/@aztec/bb.js)를 사용하여 사용할 수 있습니다. JavaScript 라이브러리는 코드를 기본적으로 실행하는 것보다 훨씬 느리므로 여기서는 명령줄을 사용하기 위해 [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback)를 사용합니다.
+온체인으로 보낼 실제 증명을 생성하려면 [Barretenberg 패키지](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg)를 사용해야 합니다. 명령줄 인터페이스(`bb`)를 실행하거나 [JavaScript 라이브러리인 `bb.js`](https://www.npmjs.com/package/@aztec/bb.js)를 사용하여 이 패키지를 사용할 수 있습니다. JavaScript 라이브러리는 코드를 기본적으로 실행하는 것보다 훨씬 느리므로 여기서는 명령줄을 사용하기 위해 [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback)를 사용합니다.
 
-`bb.js`를 사용하기로 결정한 경우 사용 중인 Noir 버전과 호환되는 버전을 사용해야 합니다. 작성 당시 현재 Noir 버전(1.0.0-beta.11)은 `bb.js` 버전 0.87을 사용합니다.
+`bb.js`를 사용하기로 결정한 경우 사용 중인 Noir 버전과 호환되는 버전을 사용해야 합니다. 예를 들어 Noir 1.0.0-beta.10 및 1.0.0-beta.11은 모두 `bb` 및 `bb.js` 버전 0.87과 함께 사용됩니다.
 
 ```js
 const zkBankAddress = process.env.ZKBANK_ADDRESS || "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
@@ -1061,7 +1070,7 @@ const walletClient = createWalletClient({
 })
 ```
 
-이 개인 키는 `anvil`의 기본 사전 자금 지원 계정 중 하나입니다. 
+이 개인 키는 `anvil`의 기본 사전 자금 지원 계정 중 하나입니다.
 
 ```js
 const generateProof = async (witness, fileID) => {
@@ -1069,7 +1078,7 @@ const generateProof = async (witness, fileID) => {
 
 `bb` 실행 파일을 사용하여 증명을 생성합니다.
 
-```js 
+```js
     const fname = `witness-${fileID}.gz`    
     await fs.writeFile(fname, witness)
 ```
@@ -1080,13 +1089,13 @@ const generateProof = async (witness, fileID) => {
     await execPromise(`bb prove -b ./noir/target/zkBank.json -w ${fname} -o ${fileID} --oracle_hash keccak --output_format fields`)
 ```
 
-실제로 증명을 생성합니다. 이 단계에서는 공개 변수가 있는 파일도 생성되지만 필요하지 않습니다. 우리는 이미 `noir.execute`에서 해당 변수를 얻었습니다.
+실제로 증명을 생성합니다. 이 단계에서는 공개 변수가 포함된 파일도 생성하지만 필요하지 않습니다. 이미 `noir.execute`에서 해당 변수를 가져왔습니다.
 
 ```js
     const proof = "0x" + JSON.parse(await fs.readFile(`./${fileID}/proof_fields.json`)).reduce((a,b) => a+b, "").replace(/0x/g, "")
 ```
 
-증명은 각각 16진수 값으로 표시되는 `Field` 값의 JSON 배열입니다. 하지만 트랜잭션에서 단일 `bytes` 값으로 보내야 하며, Viem은 이를 큰 16진수 문자열로 나타냅니다. 여기서는 모든 값을 연결하고 모든 `0x`를 제거한 다음 끝에 하나를 추가하여 형식을 변경합니다.
+증명은 각각 16진수 값으로 표시되는 `Field` 값의 JSON 배열입니다. 그러나 트랜잭션에서 단일 `bytes` 값으로 보내야 하며, Viem은 이를 큰 16진수 문자열로 나타냅니다. 여기서는 모든 값을 연결하고 모든 `0x`를 제거한 다음 끝에 하나를 추가하여 형식을 변경합니다.
 
 ```js
     await execPromise(`rm -r ${fname} ${fileID}`)
@@ -1106,7 +1115,7 @@ const processMessage = async (message, signature) => {
     const publicFields = noirResult.returnValue.map(x=>'0x' + x.slice(2).padStart(64, "0"))
 ```
 
-공개 필드는 32바이트 값의 배열이어야 합니다. 하지만 트랜잭션 해시를 두 개의 `Field` 값으로 나누어야 했기 때문에 16바이트 값으로 나타납니다. 여기서는 Viem이 실제로 32바이트임을 이해할 수 있도록 0을 추가합니다.
+공개 필드는 32바이트 값의 배열이어야 합니다. 그러나 트랜잭션 해시를 두 개의 `Field` 값으로 나누어야 했기 때문에 16바이트 값으로 나타납니다. 여기서는 Viem이 실제로 32바이트임을 이해할 수 있도록 0을 추가합니다.
 
 ```js
     const proof = await generateProof(noirResult.witness, `${fromAddress}-${nonce}`)
@@ -1151,7 +1160,7 @@ contract ZkBank {
     }
 ```
 
-온체인 코드는 검증자(`nargo`에 의해 생성된 별도의 컨트랙트)와 현재 상태 해시라는 두 가지 변수를 추적해야 합니다.
+온체인 코드는 검증자(Barretenberg의 `bb write_solidity_verifier`에 의해 생성된 별도의 컨트랙트)와 현재 상태 해시라는 두 가지 변수를 추적해야 합니다.
 
 ```solidity
     event TransactionProcessed(
@@ -1170,14 +1179,14 @@ contract ZkBank {
     ) public {
 ```
 
-이 함수는 트랜잭션을 처리합니다. 검증자가 요구하는 형식으로 증명(`bytes`)과 공개 입력(`bytes32` 배열)을 가져옵니다(온체인 처리 및 가스 비용을 최소화하기 위해).
+이 함수는 트랜잭션을 처리합니다. 검증자가 요구하는 형식으로 증명(`bytes`)과 공개 입력(`bytes32` 배열)을 가져옵니다(온체인 처리를 최소화하여 가스 비용을 줄이기 위해).
 
 ```solidity
-        require(_publicInputs[0] == currentStateHash,
+        require(_publicFields[0] == currentStateHash,
             "Wrong old state hash");
 ```
 
-영지식 증명은 트랜잭션이 현재 해시에서 새로운 해시로 변경된다는 것이어야 합니다.
+영지식 증명은 트랜잭션이 현재 해시에서 새 해시로 변경된다는 것이어야 합니다.
 
 ```solidity
         myVerifier.verify(_proof, _publicFields);
@@ -1197,7 +1206,7 @@ contract ZkBank {
 }
 ```
 
-모든 것이 확인되면 상태 해시를 새로운 값으로 업데이트하고 `TransactionProcessed` 이벤트를 발생시킵니다.
+모든 것이 확인되면 상태 해시를 새 값으로 업데이트하고 `TransactionProcessed` 이벤트를 발생시킵니다.
 
 ## 중앙화된 구성 요소에 의한 남용 {#abuses}
 

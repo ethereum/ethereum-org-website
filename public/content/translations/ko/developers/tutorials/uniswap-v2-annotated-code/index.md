@@ -22,7 +22,7 @@ lang: ko
 
 유동성 공급자가 자산을 돌려받고자 할 때는 풀 토큰을 소각하고 보상 중 자신의 몫을 포함하여 토큰을 돌려받을 수 있습니다.
 
-[더 자세한 설명은 여기를 클릭하세요](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
+[더 자세한 설명은 여기를 클릭하세요](https://developers.uniswap.org/docs/protocols/v2/concepts/swapping).
 
 ### 왜 v3가 아닌 v2인가요? {#why-v2}
 
@@ -109,7 +109,7 @@ lang: ko
 
 ### UniswapV2Pair.sol {#uniswapv2pair}
 
-[이 컨트랙트](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol)는 토큰을 교환하는 실제 풀을 구현합니다. 이는 유니스왑의 핵심 기능입니다.
+[이 컨트랙트](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol)는 토큰을 교환하는 실제 풀을 구현합니다. 이것은 핵심 Uniswap 기능입니다.
 
 ```solidity
 pragma solidity =0.5.16;
@@ -123,26 +123,26 @@ import './interfaces/IUniswapV2Factory.sol';
 import './interfaces/IUniswapV2Callee.sol';
 ```
 
-이것들은 컨트랙트가 직접 구현하거나(`IUniswapV2Pair` 및 `UniswapV2ERC20`) 이를 구현하는 컨트랙트를 호출하기 때문에 컨트랙트가 알아야 하는 모든 인터페이스입니다.
+이것들은 컨트랙트가 구현하거나(`IUniswapV2Pair` 및 `UniswapV2ERC20`) 이를 구현하는 컨트랙트를 호출하기 때문에 컨트랙트가 알아야 하는 모든 인터페이스입니다.
 
 ```solidity
 contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 ```
 
-이 컨트랙트는 유동성 토큰을 위한 ERC-20 기능을 제공하는 `UniswapV2ERC20`을 상속합니다.
+이 컨트랙트는 유동성 토큰을 위한 ERC-20 함수를 제공하는 `UniswapV2ERC20`를 상속합니다.
 
 ```solidity
     using SafeMath  for uint;
 ```
 
-[SafeMath 라이브러리](https://docs.openzeppelin.com/contracts/3.x/api/math)는 오버플로우와 언더플로우를 방지하는 데 사용됩니다. 그렇지 않으면 값이 `-1`이어야 하는데 대신 `2^256-1`이 되는 상황이 발생할 수 있으므로 이는 중요합니다.
+[SafeMath 라이브러리](https://docs.openzeppelin.com/contracts/3.x/api/math)는 오버플로 및 언더플로를 방지하는 데 사용됩니다. 그렇지 않으면 값이 `-1`이어야 하지만 대신 `2^256-1`가 되는 상황이 발생할 수 있으므로 이는 중요합니다.
 
 ```solidity
     using UQ112x112 for uint224;
 ```
 
-풀 컨트랙트의 많은 계산에는 분수가 필요합니다. 하지만 EVM은 분수를 지원하지 않습니다.
-유니스왑이 찾은 해결책은 224비트 값을 사용하여 정수 부분에 112비트, 소수 부분에 112비트를 할당하는 것입니다. 따라서 `1.0`는 `2^112`로, `1.5`는 `2^112 + 2^111`로 표현됩니다.
+풀 컨트랙트의 많은 계산에는 분수가 필요합니다. 그러나 분수는 EVM에서 지원되지 않습니다.
+Uniswap이 찾은 해결책은 정수 부분에 112비트, 분수 부분에 112비트를 사용하는 224비트 값을 사용하는 것입니다. 따라서 `1.0`는 `2^112`으로, `1.5`은 `2^112 + 2^111`로 표현됩니다.
 
 이 라이브러리에 대한 자세한 내용은 [문서의 뒷부분](#fixedpoint)에서 확인할 수 있습니다.
 
@@ -339,7 +339,7 @@ ERC-20 전송 호출이 실패를 보고하는 방법에는 두 가지가 있습
 ##### \_update
 
 ```solidity
-    // reserve를 업데이트하고, 블록당 첫 번째 호출 시 가격 누적기를 업데이트함
+    // 준비금을 업데이트하고, 블록당 첫 번째 호출 시 가격 누적기를 업데이트합니다.
     function _update(uint balance0, uint balance1, uint112 _reserve0, uint112 _reserve1) private {
 ```
 
@@ -349,18 +349,18 @@ ERC-20 전송 호출이 실패를 보고하는 방법에는 두 가지가 있습
         require(balance0 <= uint112(-1) && balance1 <= uint112(-1), 'UniswapV2: OVERFLOW');
 ```
 
-balance0 또는 balance1(uint256)이 uint112(-1) (=2^112-1)보다 크면(따라서 uint112로 변환될 때 오버플로우가 발생하여 0으로 되돌아가는 경우) 오버플로우를 방지하기 위해 \_update를 계속하는 것을 거부합니다. 10^18 단위로 세분화될 수 있는 일반 토큰의 경우, 이는 각 교환이 각 토큰의 약 5.1\*10^15개로 제한됨을 의미합니다. 지금까지는 이것이 문제가 되지 않았습니다.
+balance0 또는 balance1(uint256)이 uint112(-1) (=2^112-1)보다 크면(따라서 uint112로 변환될 때 오버플로가 발생하여 0으로 돌아감) 오버플로를 방지하기 위해 \_update를 계속하는 것을 거부합니다. 10^18 단위로 세분화할 수 있는 일반 토큰의 경우, 이는 각 교환소가 각 토큰의 약 5.1\*10^15개로 제한됨을 의미합니다. 지금까지는 이것이 문제가 되지 않았습니다.
 
 ```solidity
         uint32 blockTimestamp = uint32(block.timestamp % 2**32);
-        uint32 timeElapsed = blockTimestamp - blockTimestampLast; // 오버플로우가 의도됨
+        uint32 timeElapsed = blockTimestamp - blockTimestampLast; // 오버플로우를 의도함
         if (timeElapsed > 0 && _reserve0 != 0 && _reserve1 != 0) {
 ```
 
-경과 시간이 0이 아니면, 우리가 이 블록의 첫 번째 교환 트랜잭션임을 의미합니다. 이 경우 비용 누적기를 업데이트해야 합니다.
+경과 시간이 0이 아니면, 이 블록에서 첫 번째 교환 트랜잭션임을 의미합니다. 이 경우 비용 누적기를 업데이트해야 합니다.
 
 ```solidity
-            // *는 절대 오버플로우되지 않으며, + 오버플로우는 의도됨
+            // *는 절대 오버플로우되지 않으며, + 오버플로우를 의도함
             price0CumulativeLast += uint(UQ112x112.encode(_reserve1).uqdiv(_reserve0)) * timeElapsed;
             price1CumulativeLast += uint(UQ112x112.encode(_reserve0).uqdiv(_reserve1)) * timeElapsed;
         }
@@ -371,15 +371,15 @@ balance0 또는 balance1(uint256)이 uint112(-1) (=2^112-1)보다 크면(따라�
 | 이벤트                                                    |  reserve0 |  reserve1 | 타임스탬프 | 한계 환율 (reserve1 / reserve0) |       price0CumulativeLast |
 | -------------------------------------------------------- | --------: | --------: | --------- | -------------------------------------------: | -------------------------: |
 | 초기 설정                                            | 1,000.000 | 1,000.000 | 5,000     |                                        1.000 |                          0 |
-| 트레이더 A가 50 token0을 예치하고 47.619 token1을 돌려받음  | 1,050.000 |   952.381 | 5,020     |                                        0.907 |                         20 |
-| 트레이더 B가 10 token0을 예치하고 8.984 token1을 돌려받음   | 1,060.000 |   943.396 | 5,030     |                                        0.890 |       20+10\*0.907 = 29.07 |
-| 트레이더 C가 40 token0을 예치하고 34.305 token1을 돌려받음  | 1,100.000 |   909.090 | 5,100     |                                        0.826 |    29.07+70\*0.890 = 91.37 |
-| 트레이더 D가 100 token1을 예치하고 109.01 token0을 돌려받음 |   990.990 | 1,009.090 | 5,110     |                                        1.018 |    91.37+10\*0.826 = 99.63 |
-| 트레이더 E가 10 token0을 예치하고 10.079 token1을 돌려받음  | 1,000.990 |   999.010 | 5,150     |                                        0.998 | 99.63+40\*1.1018 = 143.702 |
+| 트레이더 A가 50 token0을 예치하고 47.619 token1을 받음  | 1,050.000 |   952.381 | 5,020     |                                        0.907 |                         20 |
+| 트레이더 B가 10 token0을 예치하고 8.984 token1을 받음   | 1,060.000 |   943.396 | 5,030     |                                        0.890 |       20+10\*0.907 = 29.07 |
+| 트레이더 C가 40 token0을 예치하고 34.305 token1을 받음  | 1,100.000 |   909.090 | 5,100     |                                        0.826 |    29.07+70\*0.890 = 91.37 |
+| 트레이더 D가 100 token1을 예치하고 109.01 token0을 받음 |   990.990 | 1,009.090 | 5,110     |                                        1.018 |    91.37+10\*0.826 = 99.63 |
+| 트레이더 E가 10 token0을 예치하고 10.079 token1을 받음  | 1,000.990 |   999.010 | 5,150     |                                        0.998 |   99.63+40\*1.018 = 140.35 |
 
-타임스탬프 5,030과 5,150 사이의 **Token0** 평균 가격을 계산한다고 가정해 보겠습니다. `price0Cumulative` 값의 차이는 143.702-29.07=114.632입니다. 이것은 2분(120초) 동안의 평균입니다. 따라서 평균 가격은 114.632/120 = 0.955입니다.
+타임스탬프 5,030과 5,150 사이의 <strong>Token0</strong>의 평균 가격을 계산하고 싶다고 가정해 보겠습니다. `price0Cumulative` 값의 차이는 140.35-29.07=111.28입니다. 이것은 2분(120초) 동안의 평균입니다. 따라서 평균 가격은 111.28/120 = 0.927입니다.
 
-이 가격 계산이 우리가 이전 준비금 규모를 알아야 하는 이유입니다.
+이 가격 계산이 이전 준비금 크기를 알아야 하는 이유입니다.
 
 ```solidity
         reserve0 = uint112(balance0);
@@ -394,13 +394,13 @@ balance0 또는 balance1(uint256)이 uint112(-1) (=2^112-1)보다 크면(따라�
 ##### \_mintFee
 
 ```solidity
-    // 수수료가 켜져 있는 경우, sqrt(k) 증가분의 1/6에 해당하는 유동성을 발행
+    // 수수료가 켜져 있는 경우, sqrt(k) 증가분의 1/6에 해당하는 유동성을 발행합니다.
     function _mintFee(uint112 _reserve0, uint112 _reserve1) private returns (bool feeOn) {
 ```
 
-유니스왑 2.0에서 트레이더는 시장을 이용하기 위해 0.30%의 수수료를 지불합니다. 그 수수료의 대부분(거래의 0.25%)은 항상 유동성 공급자에게 돌아갑니다. 나머지 0.05%는 유동성 공급자에게 가거나 팩토리가 프로토콜 수수료로 지정한 주소로 갈 수 있으며, 이는 유니스왑의 개발 노력에 대한 보상으로 지급됩니다.
+Uniswap 2.0에서 트레이더는 시장을 이용하기 위해 0.30%의 수수료를 지불합니다. 이 수수료의 대부분(거래의 0.25%)은 항상 유동성 공급자에게 돌아갑니다. 나머지 0.05%는 유동성 공급자에게 가거나 팩토리가 프로토콜 수수료로 지정한 주소로 갈 수 있으며, 이는 Uniswap의 개발 노력에 대한 대가로 지불됩니다. 이더리움 메인넷에서는 이 프로토콜 수수료가 켜져 있습니다. 팩토리의 `feeTo` 주소가 설정되어 있으므로 0.05%는 유동성 공급자가 아닌 해당 주소로 이동합니다.
 
-계산(및 그에 따른 가스 비용)을 줄이기 위해, 이 수수료는 각 트랜잭션마다가 아니라 풀에 유동성이 추가되거나 제거될 때만 계산됩니다.
+계산(및 가스 비용)을 줄이기 위해 이 수수료는 각 트랜잭션에서가 아니라 풀에 유동성이 추가되거나 제거될 때만 계산됩니다.
 
 ```solidity
         address feeTo = IUniswapV2Factory(factory).feeTo();
@@ -413,15 +413,15 @@ balance0 또는 balance1(uint256)이 uint112(-1) (=2^112-1)보다 크면(따라�
         uint _kLast = kLast; // 가스 절약
 ```
 
-`kLast` 상태 변수는 스토리지에 위치하므로 컨트랙트에 대한 여러 호출 사이에서 값을 유지합니다.
-스토리지에 접근하는 것은 컨트랙트에 대한 함수 호출이 끝날 때 해제되는 휘발성 메모리에 접근하는 것보다 훨씬 비싸기 때문에, 가스를 절약하기 위해 내부 변수를 사용합니다.
+`kLast` 상태 변수는 스토리지에 위치하므로 컨트랙트에 대한 다른 호출 간에 값을 갖게 됩니다.
+스토리지에 대한 접근은 컨트랙트에 대한 함수 호출이 끝날 때 해제되는 휘발성 메모리에 대한 접근보다 훨씬 비싸므로 가스를 절약하기 위해 내부 변수를 사용합니다.
 
 ```solidity
         if (feeOn) {
             if (_kLast != 0) {
 ```
 
-유동성 공급자는 단순히 유동성 토큰의 가치 상승을 통해 자신의 몫을 얻습니다. 하지만 프로토콜 수수료는 새로운 유동성 토큰을 발행하여 `feeTo` 주소로 제공해야 합니다.
+유동성 공급자는 단순히 유동성 토큰의 가치 상승을 통해 몫을 얻습니다. 그러나 프로토콜 수수료는 새로운 유동성 토큰을 발행하여 `feeTo` 주소에 제공해야 합니다.
 
 ```solidity
                 uint rootK = Math.sqrt(uint(_reserve0).mul(_reserve1));
@@ -437,7 +437,7 @@ balance0 또는 balance1(uint256)이 uint112(-1) (=2^112-1)보다 크면(따라�
                     uint liquidity = numerator / denominator;
 ```
 
-이 복잡한 수수료 계산은 [백서](https://app.uniswap.org/whitepaper.pdf) 5페이지에 설명되어 있습니다. 우리는 `kLast`가 계산된 시점과 현재 사이에 유동성이 추가되거나 제거되지 않았음을 알고 있으므로(유동성이 실제로 변경되기 전에 유동성이 추가되거나 제거될 때마다 이 계산을 실행하기 때문입니다), `reserve0 * reserve1`의 모든 변경은 트랜잭션 수수료에서 비롯되어야 합니다(수수료가 없다면 `reserve0 * reserve1`를 일정하게 유지할 것입니다).
+이 복잡한 수수료 계산은 [백서](https://app.uniswap.org/whitepaper.pdf) 5페이지에 설명되어 있습니다. `kLast`가 계산된 시점과 현재 사이에 유동성이 추가되거나 제거되지 않았음을 알고 있으므로(유동성이 추가되거나 제거될 때마다 실제로 변경되기 전에 이 계산을 실행하기 때문), `reserve0 * reserve1`의 모든 변경은 트랜잭션 수수료에서 비롯되어야 합니다(수수료가 없다면 `reserve0 * reserve1`을 일정하게 유지했을 것입니다).
 
 ```solidity
                     if (liquidity > 0) _mint(feeTo, liquidity);
@@ -454,8 +454,8 @@ balance0 또는 balance1(uint256)이 uint112(-1) (=2^112-1)보다 크면(따라�
     }
 ```
 
-수수료가 설정되지 않은 경우 `kLast`를 0으로 설정합니다(아직 0이 아닌 경우). 이 컨트랙트가 작성될 당시에는 필요하지 않은 스토리지를 0으로 만들어 이더리움 상태의 전체 크기를 줄이도록 컨트랙트를 장려하는 [가스 환불 기능](https://eips.ethereum.org/EIPS/eip-3298)이 있었습니다.
-이 코드는 가능할 때 해당 환불을 받습니다.
+수수료가 설정되지 않은 경우 `kLast`을 0으로 설정합니다(아직 0이 아닌 경우). 이더리움에는 컨트랙트가 필요하지 않은 스토리지를 0으로 만들어 이더리움 상태의 전체 크기를 줄이도록 장려하는 가스 환불 기능이 있습니다.
+이 코드는 가능할 때 그 환불을 받습니다. 런던 업그레이드([EIP-3529](https://eips.ethereum.org/EIPS/eip-3529)) 이후 환불액은 더 작아지고 트랜잭션 가스의 5분의 1로 제한되지만 여전히 존재합니다.
 
 #### 외부에서 접근 가능한 함수 {#pair-external}
 
@@ -692,7 +692,7 @@ balance0 또는 balance1(uint256)이 uint112(-1) (=2^112-1)보다 크면(따라�
 
 ### UniswapV2Factory.sol {#uniswapv2factory}
 
-[이 컨트랙트](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol)는 페어 교환소를 생성합니다.
+[이 컨트랙트](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Factory.sol)는 페어 교환소를 생성합니다.
 
 ```solidity
 pragma solidity =0.5.16;
@@ -705,8 +705,8 @@ contract UniswapV2Factory is IUniswapV2Factory {
     address public feeToSetter;
 ```
 
-이 상태 변수들은 프로토콜 수수료를 구현하는 데 필요합니다([백서](https://app.uniswap.org/whitepaper.pdf) 5페이지 참조).
-`feeTo` 주소는 프로토콜 수수료를 위한 유동성 토큰을 누적하며, `feeToSetter`는 `feeTo`를 다른 주소로 변경할 수 있는 권한을 가진 주소입니다.
+이러한 상태 변수는 프로토콜 수수료를 구현하는 데 필요합니다([백서](https://app.uniswap.org/whitepaper.pdf) 5페이지 참조).
+`feeTo` 주소는 프로토콜 수수료를 위한 유동성 토큰을 누적하며, `feeToSetter`은 `feeTo`를 다른 주소로 변경할 수 있는 권한이 있는 주소입니다.
 
 ```solidity
     mapping(address => mapping(address => address)) public getPair;
@@ -715,9 +715,9 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 이 변수들은 두 토큰 유형 간의 교환소인 페어를 추적합니다.
 
-첫 번째인 `getPair`는 교환하는 두 ERC-20 토큰을 기반으로 페어 교환소 컨트랙트를 식별하는 매핑입니다. ERC-20 토큰은 이를 구현하는 컨트랙트의 주소로 식별되므로 키와 값은 모두 주소입니다. `tokenA`에서 `tokenB`로 변환할 수 있는 페어 교환소의 주소를 얻으려면 `getPair[<tokenA address>][<tokenB address>]`를 사용합니다(또는 그 반대).
+첫 번째인 `getPair`은 교환하는 두 ERC-20 토큰을 기반으로 페어 교환소 컨트랙트를 식별하는 매핑입니다. ERC-20 토큰은 이를 구현하는 컨트랙트의 주소로 식별되므로 키와 값은 모두 주소입니다. `tokenA`에서 `tokenB`로 변환할 수 있는 페어 교환소의 주소를 얻으려면 `getPair[<tokenA address>][<tokenB address>]`을 사용합니다(또는 그 반대).
 
-두 번째 변수인 `allPairs`는 이 팩토리가 생성한 페어 교환소의 모든 주소를 포함하는 배열입니다. 이더리움에서는 매핑의 내용을 반복하거나 모든 키의 목록을 얻을 수 없으므로, 이 변수가 이 팩토리가 관리하는 교환소를 알 수 있는 유일한 방법입니다.
+두 번째 변수인 `allPairs`은 이 팩토리가 생성한 페어 교환소의 모든 주소를 포함하는 배열입니다. 이더리움에서는 매핑의 내용을 반복하거나 모든 키의 목록을 얻을 수 없으므로, 이 변수는 이 팩토리가 관리하는 교환소를 알 수 있는 유일한 방법입니다.
 
 참고: 매핑의 모든 키를 반복할 수 없는 이유는 컨트랙트 데이터 스토리지가 _비싸기_ 때문입니다. 따라서 적게 사용할수록 좋고, 덜 자주 변경할수록 좋습니다. [반복을 지원하는 매핑](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol)을 생성할 수 있지만, 키 목록을 위한 추가 스토리지가 필요합니다. 대부분의 애플리케이션에서는 이것이 필요하지 않습니다.
 
@@ -733,7 +733,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
     }
 ```
 
-생성자가 하는 유일한 일은 `feeToSetter`를 지정하는 것입니다. 팩토리는 수수료 없이 시작하며, 오직 `feeSetter`만이 이를 변경할 수 있습니다.
+생성자가 하는 유일한 일은 `feeToSetter`를 지정하는 것입니다. 팩토리는 수수료 없이 시작하며, `feeSetter`만이 이를 변경할 수 있습니다.
 
 ```solidity
     function allPairsLength() external view returns (uint) {
@@ -747,29 +747,29 @@ contract UniswapV2Factory is IUniswapV2Factory {
     function createPair(address tokenA, address tokenB) external returns (address pair) {
 ```
 
-이것은 두 ERC-20 토큰 간의 페어 교환소를 생성하는 팩토리의 메인 함수입니다. 누구나 이 함수를 호출할 수 있다는 점에 유의하세요. 새로운 페어 교환소를 생성하기 위해 유니스왑의 허가가 필요하지 않습니다.
+이것은 두 ERC-20 토큰 간의 페어 교환소를 생성하는 팩토리의 주요 함수입니다. 누구나 이 함수를 호출할 수 있다는 점에 유의하세요. 새로운 페어 교환소를 생성하기 위해 Uniswap의 허가가 필요하지 않습니다.
 
 ```solidity
         require(tokenA != tokenB, 'UniswapV2: IDENTICAL_ADDRESSES');
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-우리는 새로운 교환소의 주소가 결정론적이기를 원하므로, 오프체인에서 미리 계산할 수 있습니다(이는 [레이어 2 (l2) 트랜잭션](/developers/docs/scaling/)에 유용할 수 있습니다).
-이를 위해서는 토큰 주소를 받은 순서에 관계없이 일관된 순서를 가져야 하므로 여기서 정렬합니다.
+우리는 새로운 교환소의 주소가 결정론적이기를 원하므로 오프체인에서 미리 계산할 수 있습니다(이는 [레이어 2 트랜잭션](/developers/docs/scaling/)에 유용할 수 있습니다).
+이를 위해 토큰 주소를 받은 순서에 관계없이 일관된 순서를 가져야 하므로 여기서 정렬합니다.
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
-        require(getPair[token0][token1] == address(0), 'UniswapV2: PAIR_EXISTS'); // 단일 확인으로 충분함
+        require(getPair[token0][token1] == address(0), 'UniswapV2: PAIR_EXISTS'); // 한 번의 확인으로 충분함
 ```
 
-대규모 유동성 풀은 가격이 더 안정적이기 때문에 소규모 풀보다 낫습니다. 우리는 토큰 페어당 단일 유동성 풀 이상을 갖는 것을 원하지 않습니다. 이미 교환소가 있다면 동일한 페어에 대해 다른 교환소를 생성할 필요가 없습니다.
+큰 유동성 풀은 가격이 더 안정적이기 때문에 작은 풀보다 낫습니다. 우리는 토큰 페어당 단일 유동성 풀 이상을 원하지 않습니다. 이미 교환소가 있다면 동일한 페어에 대해 다른 교환소를 생성할 필요가 없습니다.
 
 ```solidity
         bytes memory bytecode = type(UniswapV2Pair).creationCode;
 ```
 
-새로운 컨트랙트를 생성하려면 이를 생성하는 코드(생성자 함수와 실제 컨트랙트의 EVM 바이트코드를 메모리에 쓰는 코드 모두)가 필요합니다. 일반적으로 Solidity에서는 `addr = new <name of contract>(<constructor parameters>)`를 사용하면 컴파일러가 모든 것을 처리해주지만, 결정론적인 컨트랙트 주소를 가지려면 [CREATE2 연산 코드](https://eips.ethereum.org/EIPS/eip-1014)를 사용해야 합니다.
-이 코드가 작성될 당시에는 해당 연산 코드가 Solidity에서 아직 지원되지 않았기 때문에 수동으로 코드를 가져와야 했습니다. 이제 [Solidity가 CREATE2를 지원](https://docs.soliditylang.org/en/v0.8.3/control-structures.html#salted-contract-creations-create2)하므로 이는 더 이상 문제가 되지 않습니다.
+새로운 컨트랙트를 생성하려면 이를 생성하는 코드(생성자 함수와 실제 컨트랙트의 EVM 바이트코드를 메모리에 쓰는 코드 모두)가 필요합니다. 일반적으로 Solidity에서는 `addr = new <name of contract>(<constructor parameters>)`을 사용하고 컴파일러가 모든 것을 처리하지만, 결정론적 컨트랙트 주소를 가지려면 [CREATE2 연산 코드](https://eips.ethereum.org/EIPS/eip-1014)를 사용해야 합니다.
+이 코드가 작성될 당시에는 해당 연산 코드가 Solidity에서 아직 지원되지 않았기 때문에 수동으로 코드를 가져와야 했습니다. [Solidity가 이제 CREATE2를 지원](https://docs.soliditylang.org/en/v0.8.3/control-structures.html#salted-contract-creations-create2)하므로 이는 더 이상 문제가 되지 않습니다.
 
 ```solidity
         bytes32 salt = keccak256(abi.encodePacked(token0, token1));
@@ -788,7 +788,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 ```solidity
         getPair[token0][token1] = pair;
-        getPair[token1][token0] = pair; // 역방향으로 매핑을 채움
+        getPair[token1][token0] = pair; // 역방향으로 매핑을 채웁니다.
         allPairs.push(pair);
         emit PairCreated(token0, token1, pair, allPairs.length);
     }
@@ -813,10 +813,10 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 ### UniswapV2ERC20.sol {#uniswapv2erc20}
 
-[이 컨트랙트](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol)는 ERC-20 유동성 토큰을 구현합니다. [오픈제플린 ERC-20 컨트랙트](/developers/tutorials/erc20-annotated-code)와 유사하므로, 다른 부분인 `permit` 기능만 설명하겠습니다.
+[이 컨트랙트](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2ERC20.sol)는 ERC-20 유동성 토큰을 구현합니다. [OpenZeppelin ERC-20 컨트랙트](/developers/tutorials/erc20-annotated-code)와 유사하므로 다른 부분인 `permit` 기능만 설명하겠습니다.
 
-이더리움의 트랜잭션에는 실제 돈과 같은 이더(ETH)가 비용으로 듭니다. ERC-20 토큰은 있지만 ETH가 없다면 트랜잭션을 보낼 수 없으므로 아무것도 할 수 없습니다. 이 문제를 피하기 위한 한 가지 해결책은 [메타 트랜잭션](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions)입니다.
-토큰 소유자는 다른 사람이 오프체인에서 토큰을 인출할 수 있도록 허용하는 트랜잭션에 서명하고 인터넷을 사용하여 수신자에게 보냅니다. 그런 다음 ETH를 가지고 있는 수신자가 소유자를 대신하여 허가를 제출합니다.
+이더리움의 트랜잭션에는 실제 돈과 동일한 이더(ETH)가 듭니다. ERC-20 토큰은 있지만 ETH가 없다면 트랜잭션을 보낼 수 없으므로 토큰으로 아무것도 할 수 없습니다. 이 문제를 피하기 위한 한 가지 해결책은 [메타 트랜잭션](https://developers.uniswap.org/docs/protocols/v2/concepts/meta-transactions)입니다.
+토큰 소유자는 다른 사람이 오프체인에서 토큰을 인출할 수 있도록 허용하는 트랜잭션에 서명하고 인터넷을 사용하여 수신자에게 보냅니다. 그런 다음 ETH를 가지고 있는 수신자가 소유자를 대신하여 허가(permit)를 제출합니다.
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;
@@ -824,13 +824,13 @@ contract UniswapV2Factory is IUniswapV2Factory {
     bytes32 public constant PERMIT_TYPEHASH = 0x6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c9;
 ```
 
-이 해시는 [트랜잭션 유형에 대한 식별자](https://eips.ethereum.org/EIPS/eip-712#rationale-for-typehash)입니다. 여기서 지원하는 유일한 것은 이러한 매개변수를 가진 `Permit`입니다.
+이 해시는 [트랜잭션 유형의 식별자](https://eips.ethereum.org/EIPS/eip-712#rationale-for-typehash)입니다. 여기서 지원하는 유일한 것은 이러한 매개변수가 있는 `Permit`입니다.
 
 ```solidity
     mapping(address => uint) public nonces;
 ```
 
-수신자가 디지털 서명을 위조하는 것은 불가능합니다. 하지만 동일한 트랜잭션을 두 번 보내는 것은 아주 쉽습니다(이는 [재전송 공격](https://wikipedia.org/wiki/Replay_attack)의 한 형태입니다). 이를 방지하기 위해 [논스](https://wikipedia.org/wiki/Cryptographic_nonce)를 사용합니다. 새로운 `Permit`의 논스가 마지막으로 사용된 것보다 1만큼 크지 않다면 유효하지 않은 것으로 간주합니다.
+수신자가 디지털 서명을 위조하는 것은 불가능합니다. 그러나 동일한 트랜잭션을 두 번 보내는 것은 아주 쉽습니다(이것은 [재전송 공격(replay attack)](https://wikipedia.org/wiki/Replay_attack)의 한 형태입니다). 이를 방지하기 위해 [논스](https://wikipedia.org/wiki/Cryptographic_nonce)를 사용합니다. 새로운 `Permit`의 논스가 마지막으로 사용된 것보다 1 크지 않으면 유효하지 않은 것으로 간주합니다.
 
 ```solidity
     constructor() public {
@@ -855,19 +855,19 @@ contract UniswapV2Factory is IUniswapV2Factory {
     }
 ```
 
-EIP-712에 대한 [도메인 구분자](https://eips.ethereum.org/EIPS/eip-712#rationale-for-domainseparator)를 계산합니다.
+EIP-712에 대한 [도메인 구분자(domain separator)](https://eips.ethereum.org/EIPS/eip-712#rationale-for-domainseparator)를 계산합니다.
 
 ```solidity
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
 ```
 
-이것은 권한을 구현하는 함수입니다. 관련 필드와 [서명](https://yos.io/2018/11/16/ethereum-signatures/)에 대한 세 가지 스칼라 값(v, r, s)을 매개변수로 받습니다.
+이것은 권한을 구현하는 함수입니다. 관련 필드와 [서명](https://yos.io/2018/11/16/ethereum-signatures/)을 위한 세 가지 스칼라 값(v, r, s)을 매개변수로 받습니다.
 
 ```solidity
         require(deadline >= block.timestamp, 'UniswapV2: EXPIRED');
 ```
 
-기한이 지난 트랜잭션은 수락하지 않습니다.
+마감일 이후에는 트랜잭션을 수락하지 않습니다.
 
 ```solidity
         bytes32 digest = keccak256(
@@ -879,7 +879,7 @@ EIP-712에 대한 [도메인 구분자](https://eips.ethereum.org/EIPS/eip-712#r
         );
 ```
 
-`abi.encodePacked(...)`는 우리가 받을 것으로 예상하는 메시지입니다. 논스가 무엇이어야 하는지 알고 있으므로 매개변수로 받을 필요가 없습니다.
+`abi.encodePacked(...)`는 우리가 받을 것으로 예상하는 메시지입니다. 우리는 논스가 무엇이어야 하는지 알고 있으므로 매개변수로 받을 필요가 없습니다.
 
 이더리움 서명 알고리즘은 서명할 256비트를 받을 것으로 예상하므로 `keccak256` 해시 함수를 사용합니다.
 
@@ -904,12 +904,12 @@ EIP-712에 대한 [도메인 구분자](https://eips.ethereum.org/EIPS/eip-712#r
 
 ### UniswapV2Router01.sol {#uniswapv2router01}
 
-[이 컨트랙트](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol)에는 문제가 있으므로 [더 이상 사용해서는 안 됩니다](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). 다행히 주변부 컨트랙트는 무상태(stateless)이며 자산을 보유하지 않으므로, 이를 더 이상 사용하지 않도록(deprecate) 하고 사람들에게 대체재인 `UniswapV2Router02`를 사용하도록 제안하기 쉽습니다.
+[이 컨트랙트](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router01.sol)에는 문제가 있으므로 더 이상 사용해서는 안 됩니다. 다행히 주변부 컨트랙트는 상태가 없고(stateless) 자산을 보유하지 않으므로, 이를 더 이상 사용하지 않도록(deprecate) 하고 사람들에게 대체재인 `UniswapV2Router02`를 대신 사용하도록 제안하기 쉽습니다.
 
 ### UniswapV2Router02.sol {#uniswapv2router02}
 
-대부분의 경우 [이 컨트랙트](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol)를 통해 유니스왑을 사용하게 됩니다.
-사용 방법은 [여기](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02)에서 확인할 수 있습니다.
+대부분의 경우 [이 컨트랙트](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router02.sol)를 통해 Uniswap을 사용하게 됩니다.
+사용 방법은 [여기](https://developers.uniswap.org/docs/protocols/v2/guides/swapping)에서 확인할 수 있습니다.
 
 ```solidity
 pragma solidity =0.6.6;
@@ -924,7 +924,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-이들 중 대부분은 이전에 접했거나 꽤 명확합니다. 한 가지 예외는 `IWETH.sol`입니다. 유니스왑 v2는 모든 ERC-20 토큰 쌍의 교환을 허용하지만, 이더(ETH) 자체는 ERC-20 토큰이 아닙니다. 이더는 해당 표준보다 먼저 존재했으며 고유한 메커니즘에 의해 전송됩니다. ERC-20 토큰에 적용되는 컨트랙트에서 ETH를 사용할 수 있도록 사람들은 [래핑된 이더 (weth)](https://weth.tkn.eth.limo/) 컨트랙트를 고안했습니다. 이 컨트랙트에 ETH를 전송하면, 동일한 양의 WETH를 발행해 줍니다. 또는 WETH를 소각하고 ETH를 돌려받을 수도 있습니다.
+이들 중 대부분은 이전에 접했거나 꽤 명확합니다. 한 가지 예외는 `IWETH.sol`입니다. Uniswap v2는 모든 ERC-20 토큰 페어에 대한 교환을 허용하지만, 이더(ETH) 자체는 ERC-20 토큰이 아닙니다. 이는 표준보다 먼저 나왔으며 고유한 메커니즘에 의해 전송됩니다. ERC-20 토큰에 적용되는 컨트랙트에서 ETH를 사용할 수 있도록 사람들은 [래핑된 이더 (WETH)](https://weth.tkn.eth.limo/) 컨트랙트를 고안했습니다. 이 컨트랙트에 ETH를 보내면 동등한 양의 WETH를 발행해 줍니다. 또는 WETH를 소각하고 ETH를 돌려받을 수 있습니다.
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {
@@ -934,7 +934,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     address public immutable override WETH;
 ```
 
-라우터는 어떤 팩토리를 사용할지, 그리고 WETH가 필요한 트랜잭션의 경우 어떤 WETH 컨트랙트를 사용할지 알아야 합니다. 이러한 값은 [불변](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables)이며, 이는 생성자에서만 설정할 수 있음을 의미합니다. 이를 통해 사용자는 아무도 이 값을 덜 정직한 컨트랙트를 가리키도록 변경할 수 없다는 확신을 가질 수 있습니다.
+라우터는 어떤 팩토리를 사용할지, 그리고 WETH가 필요한 트랜잭션의 경우 어떤 WETH 컨트랙트를 사용할지 알아야 합니다. 이 값들은 [불변](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables)이며, 이는 생성자에서만 설정할 수 있음을 의미합니다. 이는 아무도 덜 정직한 컨트랙트를 가리키도록 이를 변경할 수 없다는 확신을 사용자에게 줍니다.
 
 ```solidity
     modifier ensure(uint deadline) {
@@ -956,7 +956,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 
 ```solidity
     receive() external payable {
-        assert(msg.sender == WETH); // WETH 컨트랙트의 폴백을 통해서만 ETH를 수락함
+        assert(msg.sender == WETH); // WETH 컨트랙트의 폴백을 통해서만 ETH를 수락합니다.
     }
 ```
 
@@ -964,7 +964,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 
 #### 유동성 추가 {#add-liquidity}
 
-이 함수들은 쌍 교환(pair exchange)에 토큰을 추가하여 유동성 풀을 증가시킵니다.
+이 함수들은 페어 교환소에 토큰을 추가하여 유동성 풀을 증가시킵니다.
 
 ```solidity
 
@@ -972,7 +972,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     function _addLiquidity(
 ```
 
-이 함수는 쌍 교환에 예치해야 할 A 및 B 토큰의 양을 계산하는 데 사용됩니다.
+이 함수는 페어 교환소에 예치해야 할 A 및 B 토큰의 양을 계산하는 데 사용됩니다.
 
 ```solidity
         address tokenA,
@@ -986,20 +986,20 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         uint amountBDesired,
 ```
 
-이것들은 유동성 공급자가 예치하고자 하는 양입니다. 또한 예치될 A와 B의 최대 양이기도 합니다.
+이것들은 유동성 공급자가 예치하고자 하는 금액입니다. 또한 예치할 A와 B의 최대 금액이기도 합니다.
 
 ```solidity
         uint amountAMin,
         uint amountBMin
 ```
 
-이것들은 예치할 수 있는 최소 허용 양입니다. 이 양 이상으로 트랜잭션이 발생할 수 없다면, 트랜잭션을 되돌리기(revert) 합니다. 이 기능을 원하지 않는다면 0을 지정하면 됩니다.
+이것들은 예치할 수 있는 최소 허용 금액입니다. 이 금액 이상으로 트랜잭션이 이루어질 수 없다면 되돌리기(revert)를 수행합니다. 이 기능을 원하지 않으면 0을 지정하면 됩니다.
 
-유동성 공급자는 일반적으로 현재 환율에 가까운 환율로 트랜잭션을 제한하기 위해 최소값을 지정합니다. 환율이 너무 많이 변동하면 기초 가치를 변경하는 뉴스가 있다는 의미일 수 있으며, 이 경우 수동으로 무엇을 할지 결정하고 싶어 하기 때문입니다.
+유동성 공급자는 일반적으로 트랜잭션을 현재 환율에 가까운 환율로 제한하기 위해 최소값을 지정합니다. 환율이 너무 많이 변동하면 기초 가치를 변경하는 뉴스를 의미할 수 있으며, 그들은 무엇을 할지 수동으로 결정하기를 원합니다.
 
-예를 들어, 환율이 1대 1이고 유동성 공급자가 다음 값을 지정하는 경우를 상상해 보십시오.
+예를 들어, 환율이 1대 1이고 유동성 공급자가 다음 값을 지정하는 경우를 상상해 보세요.
 
-| 매개변수      | 값 |
+| 매개변수       | 값 |
 | -------------- | ----: |
 | amountADesired |  1000 |
 | amountBDesired |  1000 |
@@ -1008,42 +1008,42 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 
 환율이 0.9에서 1.25 사이에 머무는 한 트랜잭션이 발생합니다. 환율이 그 범위를 벗어나면 트랜잭션이 취소됩니다.
 
-이러한 예방 조치를 취하는 이유는 트랜잭션이 즉각적이지 않기 때문입니다. 트랜잭션을 제출하면 결국 검증자가 이를 블록에 포함시킵니다(가스 가격이 매우 낮지 않은 한 그렇습니다. 가스 가격이 매우 낮다면 동일한 논스와 더 높은 가스 가격으로 다른 트랜잭션을 제출하여 덮어써야 합니다). 제출과 포함 사이의 간격 동안 일어나는 일은 제어할 수 없습니다.
+이러한 예방 조치를 취하는 이유는 트랜잭션이 즉각적이지 않기 때문입니다. 트랜잭션을 제출하면 결국 검증자가 이를 블록에 포함시킬 것입니다(가스 가격이 매우 낮지 않은 한, 이 경우 동일한 논스와 더 높은 가스 가격으로 다른 트랜잭션을 제출하여 덮어써야 합니다). 제출과 포함 사이의 간격 동안 일어나는 일은 통제할 수 없습니다.
 
 ```solidity
     ) internal virtual returns (uint amountA, uint amountB) {
 ```
 
-이 함수는 유동성 공급자가 준비금 간의 현재 비율과 동일한 비율을 갖기 위해 예치해야 하는 양을 반환합니다.
+이 함수는 준비금 간의 현재 비율과 동일한 비율을 갖기 위해 유동성 공급자가 예치해야 하는 금액을 반환합니다.
 
 ```solidity
-        // 페어가 아직 존재하지 않으면 생성함
+        // 페어가 아직 존재하지 않으면 생성합니다.
         if (IUniswapV2Factory(factory).getPair(tokenA, tokenB) == address(0)) {
             IUniswapV2Factory(factory).createPair(tokenA, tokenB);
         }
 ```
 
-이 토큰 쌍에 대한 교환소가 아직 없다면 생성합니다.
+이 토큰 페어에 대한 교환소가 아직 없다면 생성합니다.
 
 ```solidity
         (uint reserveA, uint reserveB) = UniswapV2Library.getReserves(factory, tokenA, tokenB);
 ```
 
-쌍의 현재 준비금을 가져옵니다.
+페어의 현재 준비금을 가져옵니다.
 
 ```solidity
         if (reserveA == 0 && reserveB == 0) {
             (amountA, amountB) = (amountADesired, amountBDesired);
 ```
 
-현재 준비금이 비어 있다면 이는 새로운 쌍 교환입니다. 예치할 양은 유동성 공급자가 제공하고자 하는 양과 정확히 같아야 합니다.
+현재 준비금이 비어 있다면 이것은 새로운 페어 교환소입니다. 예치할 금액은 유동성 공급자가 제공하고자 하는 금액과 정확히 같아야 합니다.
 
 ```solidity
         } else {
             uint amountBOptimal = UniswapV2Library.quote(amountADesired, reserveA, reserveB);
 ```
 
-금액이 어떻게 될지 확인해야 하는 경우, [이 함수](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L35)를 사용하여 최적의 양을 얻습니다. 우리는 현재 준비금과 동일한 비율을 원합니다.
+금액이 어떻게 될지 확인해야 하는 경우 [이 함수](https://github.com/Uniswap/v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L36)를 사용하여 최적의 금액을 얻습니다. 우리는 현재 준비금과 동일한 비율을 원합니다.
 
 ```solidity
             if (amountBOptimal <= amountBDesired) {
@@ -1051,7 +1051,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
                 (amountA, amountB) = (amountADesired, amountBOptimal);
 ```
 
-`amountBOptimal`가 유동성 공급자가 예치하고자 하는 양보다 작다면, 이는 현재 토큰 B가 유동성 예치자가 생각하는 것보다 더 가치 있다는 것을 의미하므로 더 적은 양이 필요합니다.
+`amountBOptimal`가 유동성 공급자가 예치하고자 하는 금액보다 작다면, 이는 토큰 B가 현재 유동성 예치자가 생각하는 것보다 더 가치 있다는 것을 의미하므로 더 적은 금액이 필요합니다.
 
 ```solidity
             } else {
@@ -1061,13 +1061,13 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
                 (amountA, amountB) = (amountAOptimal, amountBDesired);
 ```
 
-최적의 B 양이 원하는 B 양보다 많다면, 이는 현재 B 토큰이 유동성 예치자가 생각하는 것보다 덜 가치 있다는 것을 의미하므로 더 많은 양이 필요합니다. 하지만 원하는 양이 최대값이므로 그렇게 할 수 없습니다. 대신 원하는 B 토큰 양에 대한 최적의 A 토큰 수를 계산합니다.
+최적의 B 금액이 원하는 B 금액보다 많다면, 이는 B 토큰이 현재 유동성 예치자가 생각하는 것보다 덜 가치 있다는 것을 의미하므로 더 많은 금액이 필요합니다. 그러나 원하는 금액은 최대값이므로 그렇게 할 수 없습니다. 대신 원하는 B 토큰 금액에 대한 최적의 A 토큰 수를 계산합니다.
 
-이 모든 것을 종합하면 이 그래프를 얻을 수 있습니다. 1,000개의 A 토큰(파란색 선)과 1,000개의 B 토큰(빨간색 선)을 예치하려고 한다고 가정해 보겠습니다. x축은 환율인 A/B입니다. x=1이면 가치가 동일하므로 각각 1,000개씩 예치합니다. x=2이면 A가 B 가치의 두 배이므로(A 토큰 하나당 B 토큰 두 개를 얻음) 1,000개의 B 토큰을 예치하지만 A 토큰은 500개만 예치합니다. x=0.5이면 상황이 반전되어 1,000개의 A 토큰과 500개의 B 토큰을 예치합니다.
+이 모든 것을 종합하면 이 그래프를 얻을 수 있습니다. 1,000개의 A 토큰(파란색 선)과 1,000개의 B 토큰(빨간색 선)을 예치하려고 한다고 가정해 보겠습니다. x축은 환율인 A/B입니다. x=1이면 가치가 같고 각각 1,000개씩 예치합니다. x=2이면 A가 B 가치의 두 배이므로(A 토큰 하나당 B 토큰 두 개를 얻음) 1,000개의 B 토큰을 예치하지만 A 토큰은 500개만 예치합니다. x=0.5이면 상황이 반전되어 1,000개의 A 토큰과 500개의 B 토큰을 예치합니다.
 
-![Graph](liquidityProviderDeposit.png)
+![그래프](liquidityProviderDeposit.png)
 
-코어 컨트랙트에 직접 유동성을 예치할 수도 있지만([UniswapV2Pair::mint](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol#L110) 사용), 코어 컨트랙트는 자체적으로 속임수를 당하지 않는지만 확인하므로 트랜잭션을 제출한 시점과 실행되는 시점 사이에 환율이 변경되면 가치를 잃을 위험이 있습니다. 주변부 컨트랙트를 사용하면 예치해야 할 양을 파악하고 즉시 예치하므로 환율이 변경되지 않고 아무것도 잃지 않습니다.
+코어 컨트랙트에 직접 유동성을 예치할 수 있지만([UniswapV2Pair::mint](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol#L110) 사용), 코어 컨트랙트는 자신이 속지 않는지만 확인하므로 트랜잭션을 제출한 시점과 실행되는 시점 사이에 환율이 변경되면 가치를 잃을 위험이 있습니다. 주변부 컨트랙트를 사용하면 예치해야 할 금액을 파악하고 즉시 예치하므로 환율이 변경되지 않고 아무것도 잃지 않습니다.
 
 ```solidity
     function addLiquidity(
@@ -1081,10 +1081,10 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         uint deadline
 ```
 
-이 함수는 유동성을 예치하기 위해 트랜잭션에 의해 호출될 수 있습니다. 대부분의 매개변수는 위의 `_addLiquidity`와 동일하지만 두 가지 예외가 있습니다.
+이 함수는 유동성을 예치하기 위해 트랜잭션에 의해 호출될 수 있습니다. 대부분의 매개변수는 위의 `_addLiquidity`과 동일하지만 두 가지 예외가 있습니다.
 
-. `to`는 풀에서 유동성 공급자의 몫을 나타내기 위해 새로 발행된 유동성 토큰을 받는 주소입니다.
-. `deadline`는 트랜잭션의 시간 제한입니다.
+- `to`는 풀에서 유동성 공급자의 몫을 보여주기 위해 새로 발행된 유동성 토큰을 받는 주소입니다.
+- `deadline`는 트랜잭션의 시간 제한입니다.
 
 ```solidity
     ) external virtual override ensure(deadline) returns (uint amountA, uint amountB, uint liquidity) {
@@ -1092,21 +1092,21 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         address pair = UniswapV2Library.pairFor(factory, tokenA, tokenB);
 ```
 
-실제로 예치할 양을 계산한 다음 유동성 풀의 주소를 찾습니다. 가스를 절약하기 위해 팩토리에 요청하는 대신 라이브러리 함수 `pairFor`를 사용합니다(아래 라이브러리 섹션 참조).
+실제로 예치할 금액을 계산한 다음 유동성 풀의 주소를 찾습니다. 가스를 절약하기 위해 팩토리에 묻지 않고 라이브러리 함수 `pairFor`를 사용합니다(아래 라이브러리 참조).
 
 ```solidity
         TransferHelper.safeTransferFrom(tokenA, msg.sender, pair, amountA);
         TransferHelper.safeTransferFrom(tokenB, msg.sender, pair, amountB);
 ```
 
-사용자로부터 올바른 양의 토큰을 쌍 교환으로 전송합니다.
+사용자로부터 페어 교환소로 올바른 양의 토큰을 전송합니다.
 
 ```solidity
         liquidity = IUniswapV2Pair(pair).mint(to);
     }
 ```
 
-그 대가로 `to` 주소에 풀의 부분 소유권에 대한 유동성 토큰을 제공합니다. 코어 컨트랙트의 `mint` 함수는 (마지막으로 유동성이 변경되었을 때와 비교하여) 얼마나 많은 추가 토큰이 있는지 확인하고 그에 따라 유동성을 발행합니다.
+그 대가로 `to` 주소에 풀의 부분 소유권에 대한 유동성 토큰을 제공합니다. 코어 컨트랙트의 `mint` 함수는 (마지막으로 유동성이 변경되었을 때 가졌던 것과 비교하여) 얼마나 많은 추가 토큰을 가지고 있는지 확인하고 그에 따라 유동성을 발행합니다.
 
 ```solidity
     function addLiquidityETH(
@@ -1114,7 +1114,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         uint amountTokenDesired,
 ```
 
-유동성 공급자가 토큰/ETH 쌍 교환에 유동성을 제공하고자 할 때 몇 가지 차이점이 있습니다. 컨트랙트는 유동성 공급자를 위해 ETH 래핑을 처리합니다. 사용자가 트랜잭션과 함께 ETH를 보내기만 하면 되므로 사용자가 예치하고자 하는 ETH의 양을 지정할 필요가 없습니다(해당 양은 `msg.value`에서 확인할 수 있습니다).
+유동성 공급자가 토큰/ETH 페어 교환소에 유동성을 제공하고자 할 때 몇 가지 차이점이 있습니다. 컨트랙트는 유동성 공급자를 위해 ETH를 래핑하는 것을 처리합니다. 사용자가 트랜잭션과 함께 ETH를 보내기만 하면 되므로(금액은 `msg.value`에서 사용 가능) 사용자가 예치하고자 하는 ETH의 양을 지정할 필요가 없습니다.
 
 ```solidity
         uint amountTokenMin,
@@ -1136,16 +1136,16 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         assert(IWETH(WETH).transfer(pair, amountETH));
 ```
 
-ETH를 예치하기 위해 컨트랙트는 먼저 이를 WETH로 래핑한 다음 WETH를 쌍으로 전송합니다. 전송이 `assert`로 래핑되어 있다는 점에 유의하십시오. 이는 전송이 실패하면 이 컨트랙트 호출도 실패하며, 따라서 래핑이 실제로 발생하지 않음을 의미합니다.
+ETH를 예치하기 위해 컨트랙트는 먼저 이를 WETH로 래핑한 다음 WETH를 페어로 전송합니다. 전송이 `assert`로 래핑되어 있다는 점에 유의하세요. 이는 전송이 실패하면 이 컨트랙트 호출도 실패하고 따라서 래핑이 실제로 일어나지 않음을 의미합니다.
 
 ```solidity
         liquidity = IUniswapV2Pair(pair).mint(to);
-        // 더스트 ETH가 있는 경우 환불함
+        // 더스트 ETH가 있다면 환불합니다.
         if (msg.value > amountETH) TransferHelper.safeTransferETH(msg.sender, msg.value - amountETH);
     }
 ```
 
-사용자가 이미 우리에게 ETH를 보냈으므로, (다른 토큰이 사용자가 생각한 것보다 덜 가치 있어서) 남은 금액이 있다면 환불을 발행해야 합니다.
+사용자가 이미 우리에게 ETH를 보냈으므로, (다른 토큰이 사용자가 생각한 것보다 덜 가치 있기 때문에) 남은 금액이 있다면 환불을 발행해야 합니다.
 
 #### 유동성 제거 {#remove-liquidity}
 
@@ -1312,7 +1312,7 @@ ETH에 대한 유동성 제거는 거의 동일하지만, WETH 토큰을 받은 
 
 ```solidity
     // **** 스왑 ****
-    // 초기 금액이 이미 첫 번째 페어로 전송되었어야 함
+    // 초기 금액이 이미 첫 번째 페어로 전송되었어야 합니다.
     function _swap(uint[] memory amounts, address[] memory path, address _to) internal virtual {
 ```
 
@@ -1322,16 +1322,16 @@ ETH에 대한 유동성 제거는 거의 동일하지만, WETH 토큰을 받은 
         for (uint i; i < path.length - 1; i++) {
 ```
 
-이 글을 쓰는 시점에 [388,160개의 ERC-20 토큰](https://eth.blockscout.com/tokens)이 있습니다. 각 토큰 쌍에 대한 쌍 교환이 있다면 1,500억 개 이상의 쌍 교환이 될 것입니다. 현재 전체 체인에는 [그 계정 수의 0.1%만 존재합니다](https://eth.blockscout.com/stats/accountsGrowth). 대신 스왑 함수는 경로(path)의 개념을 지원합니다. 트레이더는 A를 B로, B를 C로, C를 D로 교환할 수 있으므로 직접적인 A-D 쌍 교환이 필요하지 않습니다.
+이 글을 쓰는 시점에 [388,160개의 ERC-20 토큰](https://eth.blockscout.com/tokens)이 있습니다. 각 토큰 페어에 대한 페어 교환소가 있다면 1,500억 개가 넘는 페어 교환소가 있을 것입니다. 현재 전체 체인에는 [그 계정 수의 0.1%만 있습니다](https://eth.blockscout.com/stats/accountsGrowth). 대신 스왑 함수는 경로(path)의 개념을 지원합니다. 트레이더는 A를 B로, B를 C로, C를 D로 교환할 수 있으므로 직접적인 A-D 페어 교환소가 필요하지 않습니다.
 
-이러한 시장의 가격은 동기화되는 경향이 있습니다. 동기화되지 않으면 차익 거래(arbitrage)의 기회가 생기기 때문입니다. 예를 들어 A, B, C 세 개의 토큰이 있다고 상상해 보십시오. 각 쌍에 대해 하나씩 세 개의 쌍 교환이 있습니다.
+이러한 시장의 가격은 동기화되는 경향이 있습니다. 동기화되지 않으면 차익 거래의 기회가 생기기 때문입니다. 예를 들어 A, B, C 세 개의 토큰이 있다고 상상해 보세요. 각 페어에 하나씩 세 개의 페어 교환소가 있습니다.
 
 1. 초기 상황
 2. 트레이더가 24.695개의 A 토큰을 팔고 25.305개의 B 토큰을 얻습니다.
-3. 트레이더가 24.695개의 B 토큰을 25.305개의 C 토큰으로 팔고, 약 0.61개의 B 토큰을 이익으로 남깁니다.
-4. 그런 다음 트레이더는 24.695개의 C 토큰을 25.305개의 A 토큰으로 팔고, 약 0.61개의 C 토큰을 이익으로 남깁니다. 트레이더는 또한 0.61개의 추가 A 토큰을 갖게 됩니다(최종적으로 얻은 25.305개에서 원래 투자한 24.695개를 뺀 값).
+3. 트레이더가 24.695개의 B 토큰을 25.305개의 C 토큰으로 팔고 약 0.61개의 B 토큰을 이익으로 남깁니다.
+4. 그런 다음 트레이더가 24.695개의 C 토큰을 25.305개의 A 토큰으로 팔고 약 0.61개의 C 토큰을 이익으로 남깁니다. 트레이더는 또한 0.61개의 추가 A 토큰을 갖게 됩니다(트레이더가 최종적으로 갖게 되는 25.305개에서 원래 투자한 24.695개를 뺀 값).
 
-| 단계 | A-B 교환                | B-C 교환                | A-C 교환                |
+| 단계 | A-B 교환소                  | B-C 교환소                  | A-C 교환소                  |
 | ---- | --------------------------- | --------------------------- | --------------------------- |
 | 1    | A:1000 B:1050 A/B=1.05      | B:1000 C:1050 B/C=1.05      | A:1050 C:1000 C/A=1.05      |
 | 2    | A:1024.695 B:1024.695 A/B=1 | B:1000 C:1050 B/C=1.05      | A:1050 C:1000 C/A=1.05      |
@@ -1344,19 +1344,19 @@ ETH에 대한 유동성 제거는 거의 동일하지만, WETH 토큰을 받은 
             uint amountOut = amounts[i + 1];
 ```
 
-현재 처리 중인 쌍을 가져와서 (쌍과 함께 사용하기 위해) 정렬하고 예상 출력 양을 가져옵니다.
+현재 처리 중인 페어를 가져와서 (페어와 함께 사용하기 위해) 정렬하고 예상 출력 금액을 가져옵니다.
 
 ```solidity
             (uint amount0Out, uint amount1Out) = input == token0 ? (uint(0), amountOut) : (amountOut, uint(0));
 ```
 
-쌍 교환이 예상하는 방식으로 정렬된 예상 출력 양을 가져옵니다.
+페어 교환소가 예상하는 방식으로 정렬된 예상 출력 금액을 가져옵니다.
 
 ```solidity
             address to = i < path.length - 2 ? UniswapV2Library.pairFor(factory, output, path[i + 2]) : _to;
 ```
 
-이것이 마지막 교환입니까? 그렇다면 거래를 위해 받은 토큰을 목적지로 보냅니다. 그렇지 않다면 다음 쌍 교환으로 보냅니다.
+이것이 마지막 교환인가요? 그렇다면 거래를 위해 받은 토큰을 목적지로 보냅니다. 그렇지 않다면 다음 페어 교환소로 보냅니다.
 
 ```solidity
 
@@ -1367,7 +1367,7 @@ ETH에 대한 유동성 제거는 거의 동일하지만, WETH 토큰을 받은 
     }
 ```
 
-실제로 쌍 교환을 호출하여 토큰을 스왑합니다. 교환에 대해 알려주는 콜백이 필요하지 않으므로 해당 필드에 바이트를 보내지 않습니다.
+실제로 페어 교환소를 호출하여 토큰을 스왑합니다. 교환에 대해 알려주는 콜백이 필요하지 않으므로 해당 필드에 바이트를 보내지 않습니다.
 
 ```solidity
     function swapExactTokensForTokens(
@@ -1381,11 +1381,11 @@ ETH에 대한 유동성 제거는 거의 동일하지만, WETH 토큰을 받은 
         address[] calldata path,
 ```
 
-이 매개변수에는 ERC-20 컨트랙트의 주소가 포함되어 있습니다. 위에서 설명한 바와 같이, 보유한 자산에서 원하는 자산으로 이동하기 위해 여러 쌍 교환을 거쳐야 할 수 있으므로 이는 배열입니다.
+이 매개변수에는 ERC-20 컨트랙트의 주소가 포함되어 있습니다. 위에서 설명한 것처럼, 가지고 있는 자산에서 원하는 자산으로 가기 위해 여러 페어 교환소를 거쳐야 할 수 있으므로 이것은 배열입니다.
 
-Solidity에서 함수 매개변수는 `memory` 또는 `calldata`에 저장될 수 있습니다. 함수가 사용자(트랜잭션 사용) 또는 다른 컨트랙트에서 직접 호출되는 컨트랙트의 진입점인 경우, 매개변수의 값은 콜 데이터에서 직접 가져올 수 있습니다. 위의 `_swap`와 같이 함수가 내부적으로 호출되는 경우 매개변수는 `memory`에 저장되어야 합니다. 호출된 컨트랙트의 관점에서 `calldata`는 읽기 전용입니다.
+Solidity의 함수 매개변수는 `memory` 또는 `calldata`에 저장될 수 있습니다. 함수가 사용자로부터 직접(트랜잭션을 사용하여) 또는 다른 컨트랙트에서 호출되는 컨트랙트의 진입점인 경우 매개변수의 값은 콜 데이터에서 직접 가져올 수 있습니다. 위의 `_swap`와 같이 함수가 내부적으로 호출되는 경우 매개변수는 `memory`에 저장되어야 합니다. 호출된 컨트랙트의 관점에서 `calldata`는 읽기 전용입니다.
 
-`uint` 또는 `address`와 같은 스칼라 유형의 경우 컴파일러가 스토리지를 선택해 주지만, 더 길고 비용이 많이 드는 배열의 경우 사용할 스토리지 유형을 지정해야 합니다.
+`uint` 또는 `address`과 같은 스칼라 유형의 경우 컴파일러가 스토리지 선택을 처리하지만, 더 길고 비싼 배열의 경우 사용할 스토리지 유형을 지정합니다.
 
 ```solidity
         address to,
@@ -1393,14 +1393,14 @@ Solidity에서 함수 매개변수는 `memory` 또는 `calldata`에 저장될 �
     ) external virtual override ensure(deadline) returns (uint[] memory amounts) {
 ```
 
-반환 값은 항상 메모리(memory)로 반환됩니다.
+반환 값은 항상 메모리에 반환됩니다.
 
 ```solidity
         amounts = UniswapV2Library.getAmountsOut(factory, amountIn, path);
         require(amounts[amounts.length - 1] >= amountOutMin, 'UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT');
 ```
 
-각 스왑에서 구매할 양을 계산합니다. 결과가 트레이더가 수락할 의향이 있는 최소값보다 작으면 트랜잭션을 되돌리기(revert) 합니다.
+각 스왑에서 구매할 금액을 계산합니다. 결과가 트레이더가 수락할 의향이 있는 최소값보다 작으면 트랜잭션을 되돌리기(revert) 합니다.
 
 ```solidity
         TransferHelper.safeTransferFrom(
@@ -1410,7 +1410,7 @@ Solidity에서 함수 매개변수는 `memory` 또는 `calldata`에 저장될 �
     }
 ```
 
-마지막으로 초기 ERC-20 토큰을 첫 번째 쌍 교환을 위한 계정으로 전송하고 `_swap`를 호출합니다. 이 모든 것이 동일한 트랜잭션에서 발생하므로 쌍 교환은 예상치 못한 토큰이 이 전송의 일부임을 알 수 있습니다.
+마지막으로 초기 ERC-20 토큰을 첫 번째 페어 교환소의 계정으로 전송하고 `_swap`를 호출합니다. 이 모든 것이 동일한 트랜잭션에서 발생하므로 페어 교환소는 예상치 못한 토큰이 이 전송의 일부임을 알 수 있습니다.
 
 ```solidity
     function swapTokensForExactTokens(
@@ -1429,9 +1429,9 @@ Solidity에서 함수 매개변수는 `memory` 또는 `calldata`에 저장될 �
     }
 ```
 
-이전 함수인 `swapTokensForTokens`는 트레이더가 제공할 의향이 있는 정확한 입력 토큰 수와 그 대가로 받을 의향이 있는 최소 출력 토큰 수를 지정할 수 있게 해줍니다. 이 함수는 역방향 스왑을 수행하여 트레이더가 원하는 출력 토큰 수와 이를 위해 지불할 의향이 있는 최대 입력 토큰 수를 지정할 수 있게 해줍니다.
+이전 함수인 `swapExactTokensForTokens`은 트레이더가 제공할 의향이 있는 정확한 입력 토큰 수와 그 대가로 받을 의향이 있는 최소 출력 토큰 수를 지정할 수 있게 해줍니다. 이 함수는 역방향 스왑을 수행하여 트레이더가 원하는 출력 토큰 수와 그에 대해 지불할 의향이 있는 최대 입력 토큰 수를 지정할 수 있게 해줍니다.
 
-두 경우 모두 트레이더는 먼저 이 주변부 컨트랙트가 토큰을 전송할 수 있도록 허용량(allowance)을 부여해야 합니다.
+두 경우 모두 트레이더는 먼저 이 주변부 컨트랙트에 토큰을 전송할 수 있도록 허용량을 부여해야 합니다.
 
 ```solidity
     function swapExactETHForTokens(uint amountOutMin, address[] calldata path, address to, uint deadline)
@@ -1504,20 +1504,20 @@ Solidity에서 함수 매개변수는 `memory` 또는 `calldata`에 저장될 �
         IWETH(WETH).deposit{value: amounts[0]}();
         assert(IWETH(WETH).transfer(UniswapV2Library.pairFor(factory, path[0], path[1]), amounts[0]));
         _swap(amounts, path, to);
-        // 더스트 ETH가 있는 경우 환불함
+        // 더스트 ETH가 있다면 환불합니다.
         if (msg.value > amounts[0]) TransferHelper.safeTransferETH(msg.sender, msg.value - amounts[0]);
     }
 ```
 
-이 네 가지 변형은 모두 ETH와 토큰 간의 거래를 포함합니다. 유일한 차이점은 트레이더로부터 ETH를 받아 WETH를 발행하는 데 사용하거나, 경로의 마지막 교환에서 WETH를 받아 소각하고 그 결과로 얻은 ETH를 트레이더에게 다시 보낸다는 것입니다.
+이 네 가지 변형은 모두 ETH와 토큰 간의 거래를 포함합니다. 유일한 차이점은 트레이더로부터 ETH를 받아 WETH를 발행하는 데 사용하거나, 경로의 마지막 교환소에서 WETH를 받아 소각하고 결과 ETH를 트레이더에게 돌려보낸다는 것입니다.
 
 ```solidity
     // **** 스왑 (전송 시 수수료가 부과되는 토큰 지원) ****
-    // 초기 금액이 이미 첫 번째 페어로 전송되었어야 함
+    // 초기 금액이 이미 첫 번째 페어로 전송되었어야 합니다.
     function _swapSupportingFeeOnTransferTokens(address[] memory path, address _to) internal virtual {
 ```
 
-이것은 전송 또는 스토리지 수수료가 있는 토큰을 스왑하여 ([이 문제](https://github.com/Uniswap/uniswap-interface/issues/835))를 해결하기 위한 내부 함수입니다.
+이것은 전송 또는 스토리지 수수료가 있는 토큰을 스왑하여 ([이 문제](https://github.com/Uniswap/interface/issues/835))를 해결하기 위한 내부 함수입니다.
 
 ```solidity
         for (uint i; i < path.length - 1; i++) {
@@ -1526,16 +1526,16 @@ Solidity에서 함수 매개변수는 `memory` 또는 `calldata`에 저장될 �
             IUniswapV2Pair pair = IUniswapV2Pair(UniswapV2Library.pairFor(factory, input, output));
             uint amountInput;
             uint amountOutput;
-            { // 스택이 너무 깊은 오류를 방지하기 위한 스코프
+            { // 스택이 너무 깊어지는 오류를 피하기 위한 스코프입니다.
             (uint reserve0, uint reserve1,) = pair.getReserves();
             (uint reserveInput, uint reserveOutput) = input == token0 ? (reserve0, reserve1) : (reserve1, reserve0);
             amountInput = IERC20(input).balanceOf(address(pair)).sub(reserveInput);
             amountOutput = UniswapV2Library.getAmountOut(amountInput, reserveInput, reserveOutput);
 ```
 
-전송 수수료 때문에 (원래의 `_swap`를 호출하기 전에 하는 방식처럼) 각 전송에서 얼마나 얻을 수 있는지 알려주는 `getAmountsOut` 함수에 의존할 수 없습니다. 대신 먼저 전송을 한 다음 얼마나 많은 토큰을 돌려받았는지 확인해야 합니다.
+전송 수수료 때문에 (원래 `_swap`를 호출하기 전에 하는 방식처럼) 각 전송에서 얼마나 얻을 수 있는지 알려주는 `getAmountsOut` 함수에 의존할 수 없습니다. 대신 먼저 전송한 다음 얼마나 많은 토큰을 돌려받았는지 확인해야 합니다.
 
-참고: 이론적으로는 `_swap` 대신 이 함수를 사용할 수 있지만, 특정 경우(예를 들어, 마지막에 요구되는 최소값을 충족하기에 충분하지 않아 전송이 되돌리기(revert) 되는 경우) 가스 비용이 더 많이 들게 됩니다. 전송 수수료 토큰은 꽤 드물기 때문에 이를 수용해야 하긴 하지만, 모든 스왑이 최소한 그 중 하나를 거친다고 가정할 필요는 없습니다.
+참고: 이론적으로 `_swap` 대신 이 함수를 사용할 수 있지만, 특정 경우(예: 필요한 최소값을 충족하기에 끝에 충분하지 않아 전송이 결국 되돌려지는 경우) 가스 비용이 더 많이 들 수 있습니다. 전송 수수료 토큰은 매우 드물기 때문에 이를 수용해야 하지만 모든 스왑이 적어도 하나를 거친다고 가정할 필요는 없습니다.
 
 ```solidity
             }
@@ -1614,7 +1614,7 @@ Solidity에서 함수 매개변수는 `memory` 또는 `calldata`에 저장될 �
     }
 ```
 
-이것들은 일반 토큰에 사용되는 것과 동일한 변형이지만, 대신 `_swapSupportingFeeOnTransferTokens`를 호출합니다.
+이것들은 일반 토큰에 사용되는 것과 동일한 변형이지만 대신 `_swapSupportingFeeOnTransferTokens`를 호출합니다.
 
 ```solidity
     // **** 라이브러리 함수 ****
@@ -1758,7 +1758,7 @@ y는 `uint112`이므로, 가질 수 있는 최댓값은 2^112-1입니다. 이 �
 
 ### UniswapV2Library {#uniswapv2library}
 
-이 라이브러리는 주변(periphery) 컨트랙트에서만 사용됩니다.
+이 라이브러리는 주변부 컨트랙트에서만 사용됩니다.
 
 ```solidity
 pragma solidity >=0.5.0;
@@ -1770,7 +1770,7 @@ import "./SafeMath.sol";
 library UniswapV2Library {
     using SafeMath for uint;
 
-    // 정렬된 토큰 주소를 반환하며, 이 순서대로 정렬된 페어의 반환 값을 처리하는 데 사용됨
+    // 정렬된 토큰 주소를 반환하며, 이 순서대로 정렬된 페어의 반환 값을 처리하는 데 사용됩니다.
     function sortTokens(address tokenA, address tokenB) internal pure returns (address token0, address token1) {
         require(tokenA != tokenB, 'UniswapV2Library: IDENTICAL_ADDRESSES');
         (token0, token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
@@ -1778,10 +1778,10 @@ library UniswapV2Library {
     }
 ```
 
-두 토큰을 주소별로 정렬하여, 해당 토큰들에 대한 페어 거래소의 주소를 얻을 수 있도록 합니다. 이렇게 하지 않으면 매개변수 A, B에 대한 경우와 매개변수 B, A에 대한 경우 두 가지 가능성이 생겨 하나의 거래소 대신 두 개의 거래소가 생성될 수 있으므로 이 과정이 필요합니다.
+두 토큰을 주소별로 정렬하여 해당 토큰에 대한 페어 교환소의 주소를 얻을 수 있도록 합니다. 그렇지 않으면 매개변수 A, B에 대한 가능성과 매개변수 B, A에 대한 가능성 두 가지가 생겨 하나의 교환소 대신 두 개의 교환소가 생기기 때문에 이는 필요합니다.
 
 ```solidity
-    // 외부 호출을 하지 않고 페어에 대한 CREATE2 주소를 계산함
+    // 외부 호출을 하지 않고 페어의 CREATE2 주소를 계산합니다.
     function pairFor(address factory, address tokenA, address tokenB) internal pure returns (address pair) {
         (address token0, address token1) = sortTokens(tokenA, tokenB);
         pair = address(uint(keccak256(abi.encodePacked(
@@ -1793,10 +1793,10 @@ library UniswapV2Library {
     }
 ```
 
-이 함수는 두 토큰에 대한 페어 거래소의 주소를 계산합니다. 이 컨트랙트는 [CREATE2 연산 코드](https://eips.ethereum.org/EIPS/eip-1014)를 사용하여 생성되므로, 사용되는 매개변수를 알면 동일한 알고리즘을 사용하여 주소를 계산할 수 있습니다. 이는 팩토리에 요청하는 것보다 훨씬 저렴하며,
+이 함수는 두 토큰에 대한 페어 교환소의 주소를 계산합니다. 이 컨트랙트는 [CREATE2 연산 코드](https://eips.ethereum.org/EIPS/eip-1014)를 사용하여 생성되므로, 사용하는 매개변수를 안다면 동일한 알고리즘을 사용하여 주소를 계산할 수 있습니다. 이는 팩토리에 묻는 것보다 훨씬 저렴하며 외부 호출이 필요하지 않습니다.
 
 ```solidity
-    // 페어에 대한 reserve를 가져오고 정렬함
+    // 페어의 준비금을 가져오고 정렬합니다.
     function getReserves(address factory, address tokenA, address tokenB) internal view returns (uint reserveA, uint reserveB) {
         (address token0,) = sortTokens(tokenA, tokenB);
         (uint reserve0, uint reserve1,) = IUniswapV2Pair(pairFor(factory, tokenA, tokenB)).getReserves();
@@ -1804,10 +1804,10 @@ library UniswapV2Library {
     }
 ```
 
-이 함수는 페어 거래소가 보유한 두 토큰의 준비금을 반환합니다. 토큰을 어떤 순서로든 받을 수 있으며, 내부 사용을 위해 정렬한다는 점에 유의하세요.
+이 함수는 페어 교환소가 가지고 있는 두 토큰의 준비금을 반환합니다. 토큰을 어느 순서로든 받을 수 있으며 내부 사용을 위해 정렬한다는 점에 유의하세요.
 
 ```solidity
-    // 자산의 일정 금액과 페어 reserve가 주어지면, 다른 자산의 동등한 금액을 반환함
+    // 자산의 일정량과 페어 준비금이 주어지면, 다른 자산의 동등한 양을 반환합니다.
     function quote(uint amountA, uint reserveA, uint reserveB) internal pure returns (uint amountB) {
         require(amountA > 0, 'UniswapV2Library: INSUFFICIENT_AMOUNT');
         require(reserveA > 0 && reserveB > 0, 'UniswapV2Library: INSUFFICIENT_LIQUIDITY');
@@ -1815,14 +1815,14 @@ library UniswapV2Library {
     }
 ```
 
-이 함수는 수수료가 없을 경우 토큰 A에 대한 대가로 받을 토큰 B의 수량을 알려줍니다. 이 계산은 전송으로 인해 교환 비율이 변경된다는 점을 고려합니다.
+이 함수는 수수료가 포함되지 않은 경우 토큰 A에 대한 대가로 얻을 토큰 B의 양을 제공합니다. 이 계산은 전송이 환율을 변경한다는 점을 고려합니다.
 
 ```solidity
-    // 자산의 입력 금액과 페어 reserve가 주어지면, 다른 자산의 최대 출력 금액을 반환함
+    // 자산의 입력량과 페어 준비금이 주어지면, 다른 자산의 최대 출력량을 반환합니다.
     function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {
 ```
 
-위의 `quote` 함수는 페어 거래소 사용에 수수료가 없는 경우에 잘 작동합니다. 하지만 0.3%의 거래 수수료가 있다면 실제로 받는 수량은 더 적어집니다. 이 함수는 거래 수수료를 제외한 후의 수량을 계산합니다.
+위의 `quote` 함수는 페어 교환소를 사용하는 데 수수료가 없는 경우 훌륭하게 작동합니다. 그러나 0.3%의 교환 수수료가 있는 경우 실제로 얻는 금액은 더 낮습니다. 이 함수는 교환 수수료 이후의 금액을 계산합니다.
 
 ```solidity
 
@@ -1835,10 +1835,10 @@ library UniswapV2Library {
     }
 ```
 
-Solidity는 기본적으로 분수를 처리하지 않으므로, 수량에 단순히 0.997을 곱할 수 없습니다. 대신 분자에 997을 곱하고 분모에 1000을 곱하여 동일한 효과를 얻습니다.
+Solidity는 분수를 기본적으로 처리하지 않으므로 출력 금액에 0.997을 곱할 수 없습니다. 대신 분자에 997을 곱하고 분모에 1000을 곱하여 동일한 효과를 얻습니다.
 
 ```solidity
-    // 자산의 출력 금액과 페어 reserve가 주어지면, 다른 자산의 필요한 입력 금액을 반환함
+    // 자산의 출력량과 페어 준비금이 주어지면, 다른 자산의 필요한 입력량을 반환합니다.
     function getAmountIn(uint amountOut, uint reserveIn, uint reserveOut) internal pure returns (uint amountIn) {
         require(amountOut > 0, 'UniswapV2Library: INSUFFICIENT_OUTPUT_AMOUNT');
         require(reserveIn > 0 && reserveOut > 0, 'UniswapV2Library: INSUFFICIENT_LIQUIDITY');
@@ -1848,11 +1848,11 @@ Solidity는 기본적으로 분수를 처리하지 않으므로, 수량에 단�
     }
 ```
 
-이 함수는 거의 동일한 작업을 수행하지만, 출력량을 받아 입력량을 제공합니다.
+이 함수는 대략 동일한 작업을 수행하지만 출력 금액을 얻고 입력을 제공합니다.
 
 ```solidity
 
-    // 임의의 수의 페어에 대해 체인으로 연결된 getAmountOut 계산을 수행함
+    // 임의의 수의 페어에 대해 체인으로 연결된 getAmountOut 계산을 수행합니다.
     function getAmountsOut(address factory, uint amountIn, address[] memory path) internal view returns (uint[] memory amounts) {
         require(path.length >= 2, 'UniswapV2Library: INVALID_PATH');
         amounts = new uint[](path.length);
@@ -1863,7 +1863,7 @@ Solidity는 기본적으로 분수를 처리하지 않으므로, 수량에 단�
         }
     }
 
-    // 임의의 수의 페어에 대해 체인으로 연결된 getAmountIn 계산을 수행함
+    // 임의의 수의 페어에 대해 체인으로 연결된 getAmountIn 계산을 수행합니다.
     function getAmountsIn(address factory, uint amountOut, address[] memory path) internal view returns (uint[] memory amounts) {
         require(path.length >= 2, 'UniswapV2Library: INVALID_PATH');
         amounts = new uint[](path.length);
@@ -1876,18 +1876,18 @@ Solidity는 기본적으로 분수를 처리하지 않으므로, 수량에 단�
 }
 ```
 
-이 두 함수는 여러 페어 거래소를 거쳐야 할 때 값을 식별하는 작업을 처리합니다.
+이 두 함수는 여러 페어 교환소를 거쳐야 할 때 값을 식별하는 것을 처리합니다.
 
-### Transfer Helper {#transfer-helper}
+### 전송 헬퍼(Transfer Helper) {#transfer-helper}
 
-[이 라이브러리](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol)는 ERC-20 및 이더리움 전송에 대한 성공 여부 검사를 추가하여, 되돌리기(revert)와 `false` 값 반환을 동일한 방식으로 처리합니다.
+[이 라이브러리](https://github.com/Uniswap/solidity-lib/blob/master/contracts/libraries/TransferHelper.sol)(현재 보관 처리된 리포지토리에 있음)는 ERC-20 및 이더리움 전송에 대한 성공 확인을 추가하여 되돌리기와 `false` 값 반환을 동일한 방식으로 처리합니다.
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 pragma solidity >=0.6.0;
 
-// 일관되게 true/false를 반환하지 않는 ERC-20 토큰과의 상호작용 및 ETH 전송을 위한 헬퍼 메서드
+// 일관되게 true/false를 반환하지 않는 ERC-20 토큰과의 상호작용 및 ETH 전송을 위한 헬퍼 메서드입니다.
 library TransferHelper {
     function safeApprove(
         address token,
@@ -1899,10 +1899,10 @@ library TransferHelper {
 
 ```
 
-다음 두 가지 방법 중 하나로 다른 컨트랙트를 호출할 수 있습니다.
+우리는 두 가지 방법 중 하나로 다른 컨트랙트를 호출할 수 있습니다:
 
 - 인터페이스 정의를 사용하여 함수 호출 생성
-- [애플리케이션 바이너리 인터페이스(ABI)](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html)를 "수동으로" 사용하여 호출 생성. 이 코드의 작성자는 이 방법을 선택했습니다.
+- [애플리케이션 바이너리 인터페이스 (ABI)](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html)를 "수동으로" 사용하여 호출 생성. 이것이 코드 작성자가 선택한 방식입니다.
 
 ```solidity
         require(
@@ -1912,7 +1912,7 @@ library TransferHelper {
     }
 ```
 
-ERC-20 표준 이전에 생성된 토큰과의 하위 호환성을 위해, ERC-20 호출은 되돌리기(이 경우 `success`가 `false`임)를 통해 실패하거나, 성공하여 `false` 값을 반환(이 경우 출력 데이터가 있으며, 이를 불리언으로 디코딩하면 `false`를 얻음)하는 방식으로 실패할 수 있습니다.
+ERC-20 표준 이전에 생성된 토큰과의 하위 호환성을 위해, ERC-20 호출은 되돌리기(이 경우 `success`는 `false`가 됨)를 통해 실패하거나, 성공적으로 실행되었지만 `false` 값을 반환(이 경우 출력 데이터가 있으며, 이를 불리언으로 디코딩하면 `false`를 얻음)하는 방식으로 실패할 수 있습니다.
 
 ```solidity
 
@@ -1931,7 +1931,7 @@ ERC-20 표준 이전에 생성된 토큰과의 하위 호환성을 위해, ERC-2
     }
 ```
 
-이 함수는 계정이 다른 계정에서 제공한 허용량을 사용할 수 있게 해주는 [ERC-20의 transfer 기능](https://eips.ethereum.org/EIPS/eip-20#transfer)을 구현합니다.
+이 함수는 호출자(이 컨트랙트)에서 `to`(으)로 토큰을 이동시키는 [ERC-20의 전송 기능](https://eips.ethereum.org/EIPS/eip-20#transfer)을 구현합니다.
 
 ```solidity
 
@@ -1950,7 +1950,7 @@ ERC-20 표준 이전에 생성된 토큰과의 하위 호환성을 위해, ERC-2
     }
 ```
 
-이 함수는 계정이 다른 계정에서 제공한 허용량을 사용할 수 있게 해주는 [ERC-20의 transferFrom 기능](https://eips.ethereum.org/EIPS/eip-20#transferfrom)을 구현합니다.
+이 함수는 한 계정이 다른 계정에서 제공한 허용량을 사용할 수 있게 해주는 [ERC-20의 transferFrom 기능](https://eips.ethereum.org/EIPS/eip-20#transferfrom)을 구현합니다.
 
 ```solidity
 
@@ -1961,7 +1961,7 @@ ERC-20 표준 이전에 생성된 토큰과의 하위 호환성을 위해, ERC-2
 }
 ```
 
-이 함수는 이더를 계정으로 전송합니다. 다른 컨트랙트에 대한 모든 호출은 이더 전송을 시도할 수 있습니다. 실제로 어떤 함수도 호출할 필요가 없으므로, 호출 시 데이터를 보내지 않습니다.
+이 함수는 이더를 계정으로 전송합니다. 다른 컨트랙트에 대한 모든 호출은 이더 전송을 시도할 수 있습니다. 실제로 어떤 함수도 호출할 필요가 없기 때문에, 호출과 함께 데이터를 보내지 않습니다.
 
 ## 결론 {#conclusion}
 

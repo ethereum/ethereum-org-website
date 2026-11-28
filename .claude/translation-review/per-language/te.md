@@ -1,5 +1,12 @@
 # Telugu (te) Translation Review Findings
 
+## PR #19993 (intl/pending-dev, runs 46112784113/46112790344/46118259298) -- 2026-11-28 -- Score 8.4/10
+Scope: 16 developer tutorials (incremental updates), changed lines only; read 5 diffs (token-integration-checklist, all-you-can-cache, erc20-with-safety-rails, stealth-addr, plus sweeps over all) and scripted sweeps. No JSON.
+
+Fixed (critical): ETHGlossary notes leaked as English into code comments (erc20-with-safety-rails:108 four notes incl. `(Literal translation of 'burn' ...)` with `address(0)` rendered `చిరునామా(0)`, :180 and :200 `ఖాతా (A digital identity on Ethereum ...)`; token-integration-checklist:40 appended `(In Solidity code, use 'require'.)`); `స్లిదర్` -> `Slither` (token-integration-checklist:77-78).
+
+Open (warnings): `ఈథీరియం` once (reverse-engineering:84) vs tree-dominant `ఎథీరియం`; `(EVM)` after the long form (yellow-paper-evm:20), `(L2)` after `layer 2`; `స్లిదర్` on about 40 unchanged lines in other tutorials; `OpenZeppelin` 4 of 8 prose uses Latin (erc20-annotated-code, unchanged); `మెటామాస్క్` app-plasma:142 unchanged from dev; injected English glosses.
+
 ## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.4/10
 Scope: 15 markdown pages, changed lines only; read 8 diffs (nodes-and-clients, run-a-node, statelessness, privacy, supply, patricia, frameworks via sweeps, nodes-as-a-service) plus scripted sweeps. No JSON in this PR. U+3002/U+2060/foreign-script/SPDX/untranslated sweeps clean.
 

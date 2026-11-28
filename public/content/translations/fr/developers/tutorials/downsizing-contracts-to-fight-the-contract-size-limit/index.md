@@ -13,15 +13,19 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 
 ## Pourquoi y a-t-il une limite ? {#why-is-there-a-limit}
 
-Le [22 novembre 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon), le hard fork Spurious Dragon a introduit l'[EIP-170](https://eips.ethereum.org/EIPS/eip-170) qui a ajouté une limite de taille de contrat intelligent de 24,576 ko. Pour vous, en tant que développeur Solidity, cela signifie que lorsque vous ajoutez de plus en plus de fonctionnalités à votre contrat, vous atteindrez à un moment donné la limite et, lors du déploiement, vous verrez l'erreur :
+Le [22 novembre 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon), le hard fork Spurious Dragon a introduit l'[EIP-170](https://eips.ethereum.org/EIPS/eip-170) qui a ajouté une limite de taille de contrat intelligent de 24 576 octets (24 Kio). Pour vous, en tant que développeur Solidity, cela signifie que lorsque vous ajoutez de plus en plus de fonctionnalités à votre contrat, à un moment donné, vous atteindrez la limite et le compilateur vous avertira :
 
-`Warning: Contract code size exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low "runs" value!), turning off revert strings, or using libraries.`
+`Warning: Contract code size is 25000 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low "runs" value!), turning off revert strings, or using libraries.`
 
-Cette limite a été introduite pour prévenir les attaques par déni de service (DOS). Tout appel à un contrat est relativement peu coûteux en termes de gaz. Cependant, l'impact d'un appel de contrat pour les nœuds Ethereum augmente de manière disproportionnée en fonction de la taille du code du contrat appelé (lecture du code depuis le disque, prétraitement du code, ajout de données à la preuve de Merkle). Chaque fois que vous vous trouvez dans une situation où l'attaquant a besoin de peu de ressources pour causer beaucoup de travail aux autres, vous avez un potentiel d'attaques DOS.
+Il existe un avertissement similaire pour le code de déploiement (initcode), que l'[EIP-3860](https://eips.ethereum.org/EIPS/eip-3860) a limité à 49 152 octets lors de la mise à jour Shanghai.
 
-À l'origine, c'était moins un problème car une limite naturelle de taille de contrat est la limite de gaz du bloc. Évidemment, un contrat doit être déployé au sein d'une transaction qui contient tout le bytecode du contrat. Si vous n'incluez que cette seule transaction dans un bloc, vous pouvez utiliser tout ce gaz, mais il n'est pas infini. Depuis la [mise à niveau London](/ethereum-forks/#london), la limite de gaz du bloc a pu varier entre 15M et 30M d'unités en fonction de la demande du réseau.
+La limite n'est pas permanente. L'[EIP-7954](https://eips.ethereum.org/EIPS/eip-7954) l'augmente à 65 536 octets (64 Kio), et la limite de l'initcode à 131 072 octets, et elle est prévue pour la [mise à jour Glamsterdam](/roadmap/glamsterdam/). Jusqu'à ce que cette mise à jour soit activée sur le réseau sur lequel vous déployez, la limite y est de 24 576 octets, et même après, les contrats plus petits restent moins chers à déployer et plus faciles à auditer.
 
-Dans ce qui suit, nous examinerons quelques méthodes classées selon leur impact potentiel. Pensez-y en termes de perte de poids. La meilleure stratégie pour que quelqu'un atteigne son poids cible (dans notre cas 24 ko) est de se concentrer d'abord sur les méthodes à fort impact. Dans la plupart des cas, il suffit de corriger son alimentation pour y parvenir, mais parfois il en faut un peu plus. Ensuite, vous pourriez ajouter un peu d'exercice (impact moyen) ou même des suppléments (faible impact).
+Cette limite a été introduite pour prévenir les attaques par déni de service (DOS). Tout appel à un contrat est relativement peu coûteux en termes de gaz. Cependant, l'impact d'un appel de contrat pour les nœuds Ethereum augmente de manière disproportionnée en fonction de la taille du code du contrat appelé (lecture du code depuis le disque, prétraitement du code, ajout de données à la preuve de Merkle). Chaque fois que vous avez une telle situation où l'attaquant nécessite peu de ressources pour causer beaucoup de travail aux autres, vous obtenez un potentiel d'attaques DOS.
+
+À l'origine, c'était moins un problème car une limite naturelle de taille de contrat est la limite de gaz du bloc. Évidemment, un contrat doit être déployé au sein d'une transaction qui contient tout le bytecode du contrat. Si vous n'incluez que cette seule transaction dans un bloc, vous pouvez utiliser tout ce gaz, mais ce n'est pas infini. Aujourd'hui, la limite de gaz du bloc est de plusieurs dizaines de millions de gaz et a été augmentée à plusieurs reprises par les validateurs, donc à elle seule, elle permettrait de très grands contrats. Depuis la [mise à jour Fusaka](/roadmap/fusaka/), une seule transaction est également plafonnée à 16 777 216 gaz ([EIP-7825](https://eips.ethereum.org/EIPS/eip-7825)), mais cela reste bien au-dessus de ce que coûte le déploiement d'un contrat de 24 Kio, c'est pourquoi une limite de taille explicite est nécessaire.
+
+Dans ce qui suit, nous examinerons certaines méthodes classées selon leur impact potentiel. Pensez-y en termes de perte de poids. La meilleure stratégie pour quelqu'un qui souhaite atteindre son poids cible (dans notre cas 24 ko) est de se concentrer d'abord sur les méthodes à fort impact. Dans la plupart des cas, il suffit de corriger votre alimentation pour y parvenir, mais parfois vous avez besoin d'un peu plus. Ensuite, vous pourriez ajouter un peu d'exercice (impact moyen) ou même des suppléments (faible impact).
 
 ## Fort impact {#big-impact}
 
@@ -35,11 +39,11 @@ Cela devrait toujours être votre première approche. Comment pouvez-vous sépar
 
 ### Bibliothèques {#libraries}
 
-Une façon simple d'éloigner le code des fonctionnalités du stockage est d'utiliser une [bibliothèque](https://solidity.readthedocs.io/en/v0.6.10/contracts.html#libraries). Ne déclarez pas les fonctions de la bibliothèque comme internes car elles seront [ajoutées au contrat](https://ethereum.stackexchange.com/questions/12975/are-internal-functions-in-libraries-not-covered-by-linking) directement lors de la compilation. Mais si vous utilisez des fonctions publiques, alors celles-ci seront en fait dans un contrat de bibliothèque séparé. Envisagez d'utiliser [using for](https://solidity.readthedocs.io/en/v0.6.10/contracts.html#using-for) pour rendre l'utilisation des bibliothèques plus pratique.
+Une façon simple d'éloigner le code des fonctionnalités du stockage est d'utiliser une [bibliothèque](https://docs.soliditylang.org/en/latest/contracts.html#libraries). Ne déclarez pas les fonctions de la bibliothèque comme internes car elles seront [ajoutées au contrat](https://ethereum.stackexchange.com/questions/12975/are-internal-functions-in-libraries-not-covered-by-linking) directement lors de la compilation. Mais si vous utilisez des fonctions publiques, alors celles-ci seront en fait dans un contrat de bibliothèque séparé. Envisagez d'utiliser [using for](https://docs.soliditylang.org/en/latest/contracts.html#using-for) pour rendre l'utilisation des bibliothèques plus pratique.
 
-### Proxys {#proxies}
+### Proxies {#proxies}
 
-Une stratégie plus avancée serait un système de proxy. Les bibliothèques utilisent `DELEGATECALL` en arrière-plan, ce qui exécute simplement la fonction d'un autre contrat avec l'état du contrat appelant. Consultez [cet article de blog](https://hackernoon.com/how-to-make-smart-contracts-upgradable-2612e771d5a2) pour en savoir plus sur les systèmes de proxy. Ils vous offrent plus de fonctionnalités, par exemple, ils permettent la mise à niveau, mais ils ajoutent également beaucoup de complexité. Je ne les ajouterais pas uniquement pour réduire la taille des contrats, à moins que ce ne soit votre seule option pour une raison quelconque.
+Une stratégie plus avancée serait un système de proxy. Les bibliothèques utilisent `DELEGATECALL` en arrière-plan, ce qui exécute simplement la fonction d'un autre contrat avec l'état du contrat appelant. Consultez la section sur la [mise à niveau des contrats intelligents](/developers/docs/smart-contracts/upgrading/) pour en savoir plus sur les systèmes de proxy. Ils vous offrent plus de fonctionnalités, par exemple, ils permettent la mise à niveau, mais ils ajoutent également beaucoup de complexité. Je ne les ajouterais pas uniquement pour réduire la taille des contrats, à moins que ce ne soit votre seule option pour une raison quelconque.
 
 ## Impact moyen {#medium-impact}
 
@@ -53,19 +57,26 @@ Celle-ci devrait être évidente. Les fonctions augmentent considérablement la 
 ### Éviter les variables supplémentaires {#avoid-additional-variables}
 
 ```solidity
-function get(uint id) returns (address,address) {
+struct MyStruct {
+    address addr1;
+    address addr2;
+}
+
+mapping(uint => MyStruct) myStructs;
+
+function get(uint id) public view returns (address, address) {
     MyStruct memory myStruct = myStructs[id];
     return (myStruct.addr1, myStruct.addr2);
 }
 ```
 
 ```solidity
-function get(uint id) returns (address,address) {
+function get(uint id) public view returns (address, address) {
     return (myStructs[id].addr1, myStructs[id].addr2);
 }
 ```
 
-Un simple changement comme celui-ci fait une différence de **0,28 ko**. Il y a de fortes chances que vous puissiez trouver de nombreuses situations similaires dans vos contrats et celles-ci peuvent vraiment s'additionner pour atteindre des montants significatifs.
+Un simple changement comme celui-ci a fait une différence de **0,28 ko** au moment où cet article a été écrit. Les économies exactes dépendent de la version de votre compilateur et de vos paramètres (avec Solidity 0.8.37, c'est environ 0,1 ko sans l'optimiseur et beaucoup moins avec), alors mesurez toujours. Il y a de fortes chances que vous puissiez trouver de nombreuses situations similaires dans vos contrats et celles-ci peuvent vraiment s'additionner pour atteindre des montants significatifs.
 
 ### Raccourcir les messages d'erreur {#shorten-error-message}
 
@@ -81,42 +92,44 @@ require(msg.sender == owner, "OW1");
 
 ### Utiliser des erreurs personnalisées au lieu de messages d'erreur {#use-custom-errors-instead-of-error-messages}
 
-Les erreurs personnalisées ont été introduites dans [Solidity 0.8.4](https://blog.soliditylang.org/2021/04/21/custom-errors/). Elles constituent un excellent moyen de réduire la taille de vos contrats, car elles sont encodées dans l'ABI en tant que sélecteurs (tout comme le sont les fonctions).
+Les erreurs personnalisées ont été introduites dans [Solidity 0.8.4](https://blog.soliditylang.org/2021/04/21/custom-errors/). Elles constituent un excellent moyen de réduire la taille de vos contrats, car elles sont encodées dans l'ABI sous forme de sélecteurs (tout comme le sont les fonctions).
 
 ```solidity
 error Unauthorized();
 
-if (msg.sender != owner) {
-    revert Unauthorized();
+function doSomething() public view {
+    if (msg.sender != owner) {
+        revert Unauthorized();
+    }
 }
 ```
 
 ### Envisager une valeur d'exécution faible dans l'optimiseur {#consider-a-low-run-value-in-the-optimizer}
 
-Vous pouvez également modifier les paramètres de l'optimiseur. La valeur par défaut de 200 signifie qu'il essaie d'optimiser le bytecode comme si une fonction était appelée 200 fois. Si vous la changez à 1, vous dites essentiellement à l'optimiseur d'optimiser pour le cas où chaque fonction n'est exécutée qu'une seule fois. Une fonction optimisée pour ne s'exécuter qu'une seule fois signifie qu'elle est optimisée pour le déploiement lui-même. Sachez que **cela augmente les [coûts en gaz](/developers/docs/gas/) pour l'exécution des fonctions**, vous pourriez donc ne pas vouloir le faire.
+Vous pouvez également modifier les paramètres de l'optimiseur. La valeur par défaut de 200 signifie qu'il essaie d'optimiser le bytecode comme si une fonction était appelée 200 fois. Si vous la changez à 1, vous dites essentiellement à l'optimiseur d'optimiser pour le cas où chaque fonction n'est exécutée qu'une seule fois. Une fonction optimisée pour n'être exécutée qu'une seule fois signifie qu'elle est optimisée pour le déploiement lui-même. Sachez que **cela augmente les [coûts en gaz](/developers/docs/gas/) pour l'exécution des fonctions**, vous pourriez donc ne pas vouloir le faire. Si vous compilez avec `viaIR` activé, vérifiez la taille avec et sans, car le générateur de code basé sur l'IR peut produire des tailles de bytecode sensiblement différentes. Consultez les [options de l'optimiseur](https://docs.soliditylang.org/en/latest/using-the-compiler.html#optimizer-options) pour plus de détails.
 
 ## Faible impact {#small-impact}
 
 ### Éviter de passer des structures aux fonctions {#avoid-passing-structs-to-functions}
 
-Si vous utilisez l'[ABIEncoderV2](https://solidity.readthedocs.io/en/v0.6.10/layout-of-source-files.html#abiencoderv2), il peut être utile de ne pas passer de structures (structs) à une fonction. Au lieu de passer le paramètre sous forme de structure, passez directement les paramètres requis. Dans cet exemple, nous avons économisé **0,1 ko** supplémentaire.
+Si vous utilisez l'[ABI coder v2](https://docs.soliditylang.org/en/latest/layout-of-source-files.html#abi-coder-pragma) (la valeur par défaut depuis Solidity 0.8.0), il peut être utile de ne pas passer de structures à une fonction. Au lieu de passer le paramètre sous forme de structure, passez directement les paramètres requis. Dans cet exemple, nous avons économisé **0,1 ko** supplémentaire.
 
 ```solidity
-function get(uint id) returns (address,address) {
-    return _get(myStruct);
+function get(uint id) public view returns (address, address) {
+    return _get(myStructs[id]);
 }
 
-function _get(MyStruct memory myStruct) private view returns(address,address) {
+function _get(MyStruct memory myStruct) private pure returns (address, address) {
     return (myStruct.addr1, myStruct.addr2);
 }
 ```
 
 ```solidity
-function get(uint id) returns(address,address) {
+function get(uint id) public view returns (address, address) {
     return _get(myStructs[id].addr1, myStructs[id].addr2);
 }
 
-function _get(address addr1, address addr2) private view returns(address,address) {
+function _get(address addr1, address addr2) private pure returns (address, address) {
     return (addr1, addr2);
 }
 ```
@@ -128,18 +141,25 @@ function _get(address addr1, address addr2) private view returns(address,address
 
 ### Supprimer les modificateurs {#remove-modifiers}
 
-Les modificateurs (modifiers), surtout lorsqu'ils sont utilisés intensément, pourraient avoir un impact significatif sur la taille du contrat. Envisagez de les supprimer et d'utiliser plutôt des fonctions.
+Les modificateurs, en particulier lorsqu'ils sont utilisés intensément, pourraient avoir un impact significatif sur la taille du contrat. Envisagez de les supprimer et d'utiliser des fonctions à la place.
 
 ```solidity
-modifier checkStuff() {}
+modifier checkStuff() {
+    require(msg.sender == owner, "OW1");
+    _;
+}
 
-function doSomething() checkStuff {}
+function doSomething() public checkStuff {}
 ```
 
 ```solidity
-function checkStuff() private {}
+function checkStuff() private view {
+    require(msg.sender == owner, "OW1");
+}
 
-function doSomething() { checkStuff(); }
+function doSomething() public view {
+    checkStuff();
+}
 ```
 
-Ces conseils devraient vous aider à réduire considérablement la taille du contrat. Encore une fois, je ne saurais trop insister sur ce point : concentrez-vous toujours sur la division des contrats si possible pour obtenir le plus grand impact.
+Ces conseils devraient vous aider à réduire considérablement la taille du contrat. Encore une fois, je ne saurais trop insister, concentrez-vous toujours sur la division des contrats si possible pour obtenir le plus grand impact.

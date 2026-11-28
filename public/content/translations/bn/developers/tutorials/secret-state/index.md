@@ -16,21 +16,22 @@ lang: bn
 published: 2025-03-15
 ---
 
-_ব্লকচেইনে কোনো গোপনীয়তা নেই_। ব্লকচেইনে পোস্ট করা সবকিছু সবার পড়ার জন্য উন্মুক্ত। এটি প্রয়োজনীয়, কারণ ব্লকচেইন এমন একটি ব্যবস্থার ওপর ভিত্তি করে তৈরি যেখানে যে কেউ এটি যাচাই করতে পারে। তবে, গেমগুলো প্রায়শই গোপন স্টেটের ওপর নির্ভর করে। উদাহরণস্বরূপ, [মাইনসুইপার](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) গেমটির কোনো অর্থই থাকে না যদি আপনি কেবল একটি ব্লক এক্সপ্লোরারে গিয়ে ম্যাপটি দেখতে পান।
+_ব্লকচেইনে কোনো গোপনীয়তা নেই_। ব্লকচেইনে পোস্ট করা সবকিছু সবার পড়ার জন্য উন্মুক্ত। এটি প্রয়োজনীয়, কারণ ব্লকচেইন এমন একটি ব্যবস্থার ওপর ভিত্তি করে তৈরি যেখানে যে কেউ এটি যাচাই করতে পারে। তবে, গেমগুলো প্রায়ই গোপন স্টেটের ওপর নির্ভর করে। উদাহরণস্বরূপ, [মাইনসুইপার](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) গেমটির কোনো অর্থই থাকে না যদি আপনি কেবল একটি ব্লকচেইন এক্সপ্লোরারে গিয়ে ম্যাপটি দেখতে পান।
 
-সবচেয়ে সহজ সমাধান হলো গোপন স্টেটটি ধরে রাখার জন্য একটি [সার্ভার কম্পোনেন্ট](/developers/tutorials/server-components/) ব্যবহার করা। তবে, আমরা ব্লকচেইন ব্যবহার করার কারণ হলো গেম ডেভেলপারের প্রতারণা রোধ করা। আমাদের সার্ভার কম্পোনেন্টের সততা নিশ্চিত করতে হবে। সার্ভার স্টেটের একটি হ্যাশ প্রদান করতে পারে এবং একটি চালের ফলাফল গণনা করতে ব্যবহৃত স্টেটটি যে সঠিক, তা প্রমাণ করতে [শূন্য-জ্ঞান প্রমাণ](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) ব্যবহার করতে পারে।
+সবচেয়ে সহজ সমাধান হলো গোপন স্টেট ধরে রাখার জন্য একটি [সার্ভার উপাদান](/developers/tutorials/server-components/) ব্যবহার করা। তবে, আমরা ব্লকচেইন ব্যবহার করি গেম ডেভেলপারের প্রতারণা রোধ করার জন্য। আমাদের সার্ভার উপাদানের সততা নিশ্চিত করতে হবে। সার্ভার স্টেটের একটি হ্যাশ প্রদান করতে পারে এবং একটি চালের ফলাফল গণনা করতে ব্যবহৃত স্টেটটি যে সঠিক, তা প্রমাণ করতে [শূন্য-জ্ঞান প্রমাণ](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) ব্যবহার করতে পারে।
 
-এই নিবন্ধটি পড়ার পর আপনি জানতে পারবেন কীভাবে এই ধরনের গোপন স্টেট ধারণকারী সার্ভার, স্টেট দেখানোর জন্য একটি ক্লায়েন্ট এবং এই দুটির মধ্যে যোগাযোগের জন্য একটি অনচেইন কম্পোনেন্ট তৈরি করতে হয়। আমরা যে প্রধান টুলগুলো ব্যবহার করব সেগুলো হলো:
+এই নিবন্ধটি পড়ার পর আপনি জানতে পারবেন কীভাবে এই ধরনের গোপন স্টেট ধারণকারী সার্ভার, স্টেট দেখানোর জন্য একটি ক্লায়েন্ট এবং এই দুটির মধ্যে যোগাযোগের জন্য একটি অনচেইন উপাদান তৈরি করতে হয়। আমরা প্রধানত যে টুলগুলো ব্যবহার করব সেগুলো হলো:
 
 | টুল | উদ্দেশ্য | যাচাইকৃত সংস্করণ |
-| --------------------------------------------- | ------------------------------------------------------- | ------------------: |
+| --- | --- | ---: |
 | [Zokrates](https://zokrates.github.io/) | শূন্য-জ্ঞান প্রমাণ এবং তাদের যাচাইকরণ | 1.1.9 |
 | [TypeScript](https://www.typescriptlang.org/) | সার্ভার এবং ক্লায়েন্ট উভয়ের জন্য প্রোগ্রামিং ভাষা | 5.4.2 |
 | [Node](https://nodejs.org/en) | সার্ভার চালানো | 20.18.2 |
+| [Foundry](https://getfoundry.sh/) | লোকাল ব্লকচেইন এবং কন্ট্রাক্ট ডিপ্লয়মেন্ট | 1.0.0 |
 | [Viem](https://viem.sh/) | ব্লকচেইনের সাথে যোগাযোগ | 2.9.20 |
-| [MUD](https://mud.dev/) | অনচেইন ডেটা ব্যবস্থাপনা | 2.0.12 |
+| [MUD](https://mud.dev/) | অনচেইন ডেটা ম্যানেজমেন্ট | 2.0.12 |
 | [React](https://react.dev/) | ক্লায়েন্ট ইউজার ইন্টারফেস | 18.2.0 |
-| [Vite](https://vitejs.dev/) | ক্লায়েন্ট কোড পরিবেশন করা | 4.2.1 |
+| [Vite](https://vitejs.dev/) | ক্লায়েন্ট কোড সার্ভ করা | 4.2.1 |
 
 ## মাইনসুইপার (Minesweeper) উদাহরণ {#minesweeper}
 
@@ -40,9 +41,26 @@ _ব্লকচেইনে কোনো গোপনীয়তা নেই_
 
 ### মাইনসুইপার উদাহরণটি চালানো {#running-minesweeper-example}
 
-মাইনসুইপার উদাহরণটি চালাতে:
+মাইনসুইপার উদাহরণটি চালানোর জন্য:
 
-1. নিশ্চিত করুন যে আপনার [প্রয়োজনীয় জিনিসগুলো ইনস্টল করা আছে](https://mud.dev/quickstart#prerequisites): [Node](https://mud.dev/quickstart#prerequisites), [Foundry](https://book.getfoundry.sh/getting-started/installation), [`git`](https://git-scm.com/downloads), [`pnpm`](https://git-scm.com/downloads), এবং [`mprocs`](https://github.com/pvolok/mprocs)।
+1. নিশ্চিত করুন যে আপনার [প্রয়োজনীয় জিনিসগুলো ইনস্টল করা আছে](https://mud.dev/quickstart#prerequisites): [Node](https://nodejs.org/en), [Foundry](https://getfoundry.sh/introduction/installation), [`git`](https://git-scm.com/downloads), এবং [`pnpm`](https://pnpm.io/installation)।
+
+   এই উদাহরণটি MUD 2.0.12 ব্যবহার করে, যার জন্য Node এবং Foundry-এর নির্দিষ্ট সংস্করণ প্রয়োজন:
+
+   - **Node 20**। MUD 2.0.12 কমান্ড লাইন টুলটি [JSON import assertions](https://v8.dev/features/import-attributes) ব্যবহার করে, যা Node-এর নতুন সংস্করণগুলো আর সমর্থন করে না, তাই Node 22 বা তার পরের সংস্করণে এটি `SyntaxError: Unexpected identifier 'assert'` এর সাথে ব্যর্থ হয়। Node 20 এপ্রিল 2026-এ [এন্ড অফ লাইফে পৌঁছেছে](https://nodejs.org/en/about/previous-releases) এবং আর কোনো সিকিউরিটি আপডেট পায় না, তাই এটি শুধুমাত্র এই লোকাল উদাহরণের জন্য ব্যবহার করুন। একটি Node ভার্সন ম্যানেজার যেমন [`fnm`](https://github.com/Schniz/fnm) বা [`nvm`](https://github.com/nvm-sh/nvm) আপনাকে শুধুমাত্র এই ডিরেক্টরির জন্য Node 20-এ স্যুইচ করতে দেয়, উদাহরণস্বরূপ:
+
+     ```sh copy
+     fnm install 20
+     fnm use 20
+     ```
+
+   - **Foundry 1.0.0**। বর্তমান Foundry সংস্করণগুলোর সাথে পোস্ট-ডিপ্লয়মেন্ট স্ক্রিপ্টটি _Usage of `address(this)` detected in script contract_ ত্রুটির সাথে ব্যর্থ হয়। পরীক্ষিত সংস্করণটি ইনস্টল করুন:
+
+     ```sh copy
+     foundryup -i 1.0.0
+     ```
+
+     এই টিউটোরিয়ালটি শেষ করার পর, আপনি `foundryup` দিয়ে সর্বশেষ সংস্করণে ফিরে যেতে পারেন।
 
 2. রিপোজিটরিটি ক্লোন করুন।
 
@@ -55,10 +73,9 @@ _ব্লকচেইনে কোনো গোপনীয়তা নেই_
    ```sh copy
    cd 20240901-secret-state/
    pnpm install
-   npm install -g mprocs
    ```
 
-   যদি Foundry `pnpm install` এর অংশ হিসেবে ইনস্টল করা হয়ে থাকে, তবে আপনাকে কমান্ড-লাইন শেলটি রিস্টার্ট করতে হবে।
+   [`mprocs`](https://github.com/pvolok/mprocs), যা একটি একক টার্মিনালে সমস্ত প্রসেস চালায়, প্যাকেজগুলোর একটি হিসেবে ইনস্টল করা হয়।
 
 4. কন্ট্রাক্টগুলো কম্পাইল করুন
 
@@ -68,18 +85,17 @@ _ব্লকচেইনে কোনো গোপনীয়তা নেই_
     cd ../..
     ```
 
-
-5. প্রোগ্রামটি চালু করুন (একটি [anvil](https://book.getfoundry.sh/anvil/) ব্লকচেইন সহ) এবং অপেক্ষা করুন।
+5. প্রোগ্রামটি শুরু করুন (একটি [anvil](https://getfoundry.sh/anvil/overview) ব্লকচেইন সহ) এবং অপেক্ষা করুন।
 
    ```sh copy
-   mprocs
+   pnpm dev
    ```
 
-   মনে রাখবেন যে স্টার্টআপ হতে দীর্ঘ সময় লাগে। অগ্রগতি দেখতে, প্রথমে ডাউন অ্যারো ব্যবহার করে _contracts_ ট্যাবে স্ক্রোল করুন যাতে MUD কন্ট্রাক্টগুলো ডিপ্লয় হতে দেখা যায়। যখন আপনি _Waiting for file changes…_ বার্তাটি পাবেন, তখন কন্ট্রাক্টগুলো ডিপ্লয় হয়ে গেছে এবং পরবর্তী অগ্রগতি _server_ ট্যাবে ঘটবে। সেখানে, আপনি _Verifier address: 0x...._ বার্তাটি না পাওয়া পর্যন্ত অপেক্ষা করুন।
+   মনে রাখবেন যে স্টার্টআপে দীর্ঘ সময় লাগে। অগ্রগতি দেখতে, প্রথমে ডাউন অ্যারো ব্যবহার করে _contracts_ ট্যাবে স্ক্রোল করুন যাতে MUD কন্ট্রাক্টগুলো ডিপ্লয় হতে দেখা যায়। যখন আপনি _Waiting for file changes…_ বার্তাটি পাবেন, তখন কন্ট্রাক্টগুলো ডিপ্লয় হয়ে গেছে এবং পরবর্তী অগ্রগতি _server_ ট্যাবে ঘটবে। সেখানে, আপনি _Verifier address: 0x...._ বার্তাটি না পাওয়া পর্যন্ত অপেক্ষা করুন।
 
-   যদি এই ধাপটি সফল হয়, তবে আপনি `mprocs` স্ক্রিনটি দেখতে পাবেন, যার বাম দিকে বিভিন্ন প্রসেস এবং ডান দিকে বর্তমানে নির্বাচিত প্রসেসের কনসোল আউটপুট থাকবে।
+   যদি এই ধাপটি সফল হয়, আপনি `mprocs` স্ক্রিনটি দেখতে পাবেন, যার বাম দিকে বিভিন্ন প্রসেস এবং ডান দিকে বর্তমানে নির্বাচিত প্রসেসের কনসোল আউটপুট থাকবে।
 
-   ![The mprocs screen](./mprocs.png)
+   ![mprocs স্ক্রিন](./mprocs.png)
 
    যদি `mprocs` এর সাথে কোনো সমস্যা হয়, তবে আপনি চারটি প্রসেস ম্যানুয়ালি চালাতে পারেন, প্রতিটির জন্য আলাদা কমান্ড লাইন উইন্ডো ব্যবহার করে:
 
@@ -102,16 +118,16 @@ _ব্লকচেইনে কোনো গোপনীয়তা নেই_
      ```sh
      cd packages/server
      pnpm start
-     ```  
+     ```
 
    - **Client**
 
      ```sh
      cd packages/client
      pnpm run dev
-     ```  
+     ```
 
-6. এখন আপনি [ক্লায়েন্ট](http://localhost:3000)-এ ব্রাউজ করতে পারেন, **New Game**-এ ক্লিক করুন এবং খেলা শুরু করুন।
+6. এখন আপনি [ক্লায়েন্টে](http://localhost:3000) ব্রাউজ করতে পারেন, **New Game**-এ ক্লিক করুন এবং খেলা শুরু করুন।
 
 ### টেবিল {#tables}
 
@@ -151,26 +167,26 @@ _ব্লকচেইনে কোনো গোপনীয়তা নেই_
 
 #### ইনিশিয়ালাইজেশন {#initialization-flow}
 
-যখন আপনি `mprocs` চালান, তখন এই ধাপগুলো ঘটে:
+যখন আপনি `pnpm dev` চালান (যা `mprocs` চালায়), তখন এই ধাপগুলো ঘটে:
 
 1. [`mprocs`](https://github.com/pvolok/mprocs) চারটি উপাদান চালায়:
 
-   - [Anvil](https://book.getfoundry.sh/anvil/), যা একটি লোকাল ব্লকচেইন চালায়
-   - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts), যা MUD-এর জন্য কন্ট্রাক্টগুলো কম্পাইল (প্রয়োজন হলে) এবং ডিপ্লয় করে
-   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), যা ওয়েব ব্রাউজারে UI এবং ক্লায়েন্ট কোড পরিবেশন করতে [Vite](https://vitejs.dev/) চালায়।
+   - [Anvil](https://getfoundry.sh/anvil/overview), যা একটি লোকাল ব্লকচেইন চালায়
+   - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts), যা MUD-এর জন্য কন্ট্রাক্টগুলো কম্পাইল করে (যদি প্রয়োজন হয়) এবং ডিপ্লয় করে
+   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), যা ওয়েব ব্রাউজারে UI এবং ক্লায়েন্ট কোড সার্ভ করার জন্য [Vite](https://vitejs.dev/) চালায়।
    - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server), যা সার্ভারের কাজগুলো সম্পাদন করে
 
 2. `contracts` প্যাকেজটি MUD কন্ট্রাক্টগুলো ডিপ্লয় করে এবং তারপর [`PostDeploy.s.sol` স্ক্রিপ্টটি](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol) চালায়। এই স্ক্রিপ্টটি কনফিগারেশন সেট করে। GitHub-এর কোডটি [আটটি মাইন সহ একটি 10x5 মাইনফিল্ড](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23) নির্দিষ্ট করে।
 
-3. [সার্ভারটি](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts) [MUD সেট আপ](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6) করার মাধ্যমে শুরু হয়। অন্যান্য জিনিসের মধ্যে, এটি ডেটা সিঙ্ক্রোনাইজেশন সক্রিয় করে, যাতে প্রাসঙ্গিক টেবিলগুলোর একটি কপি সার্ভারের মেমরিতে থাকে।
+3. [সার্ভারটি](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts) [MUD সেট আপ করার](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6) মাধ্যমে শুরু হয়। অন্যান্য জিনিসের মধ্যে, এটি ডেটা সিঙ্ক্রোনাইজেশন সক্রিয় করে, যাতে সার্ভারের মেমরিতে প্রাসঙ্গিক টেবিলগুলোর একটি কপি থাকে।
 
 4. সার্ভার একটি ফাংশন সাবস্ক্রাইব করে যা [`Configuration` টেবিল পরিবর্তিত হলে](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23) এক্সিকিউট হবে। `PostDeploy.s.sol` এক্সিকিউট হওয়ার এবং টেবিলটি পরিবর্তন করার পর [এই ফাংশনটি](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) কল করা হয়।
 
-5. যখন সার্ভার ইনিশিয়ালাইজেশন ফাংশনটি কনফিগারেশন পেয়ে যায়, তখন এটি [সার্ভারের জিরো-নলেজ অংশটি](#using-zokrates-from-typescript) ইনিশিয়ালাইজ করতে [`zkFunctions` কল করে](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35)। কনফিগারেশন না পাওয়া পর্যন্ত এটি হতে পারে না কারণ জিরো-নলেজ ফাংশনগুলোতে মাইনফিল্ডের প্রস্থ এবং উচ্চতা ধ্রুবক হিসেবে থাকতে হয়।
+5. যখন সার্ভার ইনিশিয়ালাইজেশন ফাংশনটি কনফিগারেশন পেয়ে যায়, তখন এটি [সার্ভারের জিরো-নলেজ অংশটি](#using-zokrates-from-typescript) ইনিশিয়ালাইজ করার জন্য [`zkFunctions` কল করে](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35)। আমরা কনফিগারেশন না পাওয়া পর্যন্ত এটি ঘটতে পারে আসতে পারে না কারণ জিরো-নলেজ ফাংশনগুলোতে মাইনফিল্ডের প্রস্থ এবং উচ্চতা ধ্রুবক হিসেবে থাকতে হয়।
 
-6. সার্ভারের জিরো-নলেজ অংশটি ইনিশিয়ালাইজ হওয়ার পর, পরবর্তী ধাপ হলো [ব্লকচেইনে জিরো-নলেজ ভেরিফিকেশন কন্ট্রাক্ট ডিপ্লয় করা](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) এবং MUD-এ যাচাইকারীর ঠিকানা সেট করা।
+6. সার্ভারের জিরো-নলেজ অংশটি ইনিশিয়ালাইজ হওয়ার পর, পরবর্তী ধাপ হলো [জিরো-নলেজ যাচাইকরণ কন্ট্রাক্টটি ব্লকচেইনে ডিপ্লয় করা](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) এবং MUD-এ যাচাইকারীর ঠিকানা সেট করা।
 
-7. সবশেষে, আমরা আপডেটের জন্য সাবস্ক্রাইব করি যাতে আমরা দেখতে পারি কখন একজন খেলোয়াড় [নতুন গেম শুরু করার](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) অথবা [বিদ্যমান গেমে খনন করার](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108) অনুরোধ করে।
+7. সবশেষে, আমরা আপডেটগুলো সাবস্ক্রাইব করি যাতে আমরা দেখতে পারি কখন একজন খেলোয়াড় [একটি নতুন গেম শুরু করার](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) অথবা [বিদ্যমান গেমে খনন করার](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108) অনুরোধ করে।
 
 #### নতুন গেম {#new-game-flow}
 
@@ -242,7 +258,7 @@ import "utils/pack/bool/pack128.zok" as pack128;
 Zokrates-এ ফিল্ড উপাদান সাধারণত 256 বিটের চেয়ে কম দীর্ঘ হয়, তবে খুব বেশি কম নয়। কোডটি সহজ করার জন্য, আমরা ম্যাপটিকে 512 বিট পর্যন্ত সীমাবদ্ধ করি এবং চারটি ফিল্ডের একটি অ্যারেকে হ্যাশ করি, যেখানে প্রতিটি ফিল্ডে আমরা শুধুমাত্র 128 বিট ব্যবহার করি। এই উদ্দেশ্যে [`pack128` ফাংশনটি](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) 128 বিটের একটি অ্যারেকে একটি `field`-এ পরিবর্তন করে।
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 এই লাইনটি একটি ফাংশন ডেফিনিশন শুরু করে। `hashMap` একটি মাত্র প্যারামিটার পায় যার নাম `map`, যা একটি দ্বিমাত্রিক `bool`(ean) অ্যারে। ম্যাপের আকার হলো `width+2` বাই `height+2`, যার কারণ [নিচে ব্যাখ্যা করা হয়েছে](#why-map-border)।
@@ -252,7 +268,7 @@ def hashMap(bool[${width+2}][${height+2}] map) -> field {
 রিটার্ন ভ্যালু হলো একটি `field` যা হ্যাশ ধারণ করে।
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 ম্যাপটি দ্বিমাত্রিক। তবে, `pack128` ফাংশনটি দ্বিমাত্রিক অ্যারের সাথে কাজ করে না। তাই আমরা প্রথমে `map1d` ব্যবহার করে ম্যাপটিকে একটি 512-বাইট অ্যারেতে ফ্ল্যাটেন বা সমতল করি। ডিফল্টভাবে Zokrates ভেরিয়েবলগুলো ধ্রুবক (constant) হয়, কিন্তু আমাদের একটি লুপের মধ্যে এই অ্যারেতে মান নির্ধারণ করতে হবে, তাই আমরা এটিকে [`mut`](https://zokrates.github.io/language/variables.html#mutability) হিসেবে সংজ্ঞায়িত করি।
@@ -260,19 +276,19 @@ bool[512] mut map1d = [false; 512];
 আমাদের অ্যারেটি ইনিশিয়ালাইজ করতে হবে কারণ Zokrates-এ `undefined` নেই। `[false; 512]` এক্সপ্রেশনটির অর্থ হলো [512টি `false` মানের একটি অ্যারে](https://zokrates.github.io/language/types.html#declaration-and-initialization)।
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 আমরা `map1d`-এ ইতিমধ্যে যে বিটগুলো পূরণ করেছি এবং যেগুলো করিনি, সেগুলোর মধ্যে পার্থক্য করার জন্য আমাদের একটি কাউন্টারও প্রয়োজন।
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 এভাবেই আপনি Zokrates-এ একটি [`for` লুপ](https://zokrates.github.io/language/control_flow.html#for-loops) ডিক্লেয়ার বা ঘোষণা করতে পারেন। একটি Zokrates `for` লুপের নির্দিষ্ট সীমা থাকতে হয়, কারণ এটি দেখতে লুপের মতো হলেও, কম্পাইলার আসলে এটিকে "আনরোল" করে। `${width+2}` এক্সপ্রেশনটি একটি কম্পাইল টাইম ধ্রুবক কারণ কম্পাইলারকে কল করার আগে TypeScript কোড দ্বারা `width` সেট করা হয়।
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -282,7 +298,7 @@ for u32 y in 0..${height+2} {
 ম্যাপের প্রতিটি লোকেশনের জন্য, সেই মানটি `map1d` অ্যারেতে রাখুন এবং কাউন্টারটি বৃদ্ধি করুন।
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -293,7 +309,7 @@ field[4] hashMe = [
 `map1d` থেকে চারটি `field` মানের একটি অ্যারে তৈরি করতে `pack128` ব্যবহার করা হয়। Zokrates-এ `array[a..b]` মানে হলো অ্যারের সেই স্লাইস বা অংশ যা `a` থেকে শুরু হয় এবং `b-1`-এ শেষ হয়।
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -349,19 +365,19 @@ def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8)
 এটি অপব্যবহারের আরেকটি পথ খুলে দেয়। প্রমাণকারী সঠিক স্থানাঙ্কগুলো ব্যবহার করতে পারে, কিন্তু লোকেশনের চারপাশে এবং সম্ভবত লোকেশনটিতেই যেকোনো সংখ্যক মাইন দিয়ে একটি ম্যাপ তৈরি করতে পারে। এই অপব্যবহার রোধ করতে, আমরা শূন্য-জ্ঞান প্রমাণে ম্যাপের হ্যাশ অন্তর্ভুক্ত করি, যা হলো গেম আইডেন্টিফায়ার।
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 এখানে রিটার্ন ভ্যালু হলো একটি টাপল (tuple) যা ম্যাপ হ্যাশ অ্যারের পাশাপাশি খননের ফলাফল অন্তর্ভুক্ত করে।
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 লোকেশনটিতে যদি বোমা থাকে তবে আমরা একটি বিশেষ মান হিসেবে 255 ব্যবহার করি।
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -516,13 +532,13 @@ const solidityVerifier = `
 
 নিরাপত্তা পরীক্ষা গুরুত্বপূর্ণ কারণ একটি কার্যকারিতা বাগ শেষ পর্যন্ত নিজেই প্রকাশ পাবে। কিন্তু অ্যাপ্লিকেশনটি যদি অনিরাপদ হয়, তবে কেউ প্রতারণা করে অন্যের সম্পদ হাতিয়ে নেওয়ার মাধ্যমে তা প্রকাশ করার আগে পর্যন্ত এটি দীর্ঘ সময়ের জন্য লুকিয়ে থাকার সম্ভাবনা থাকে।
 
-### অনুমতি {#permissions}
+### অনুমতি (Permissions) {#permissions}
 
-এই গেমে একটি বিশেষ সুবিধাপ্রাপ্ত সত্তা রয়েছে, সার্ভার। এটি একমাত্র ব্যবহারকারী যাকে [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol)-এর ফাংশনগুলো কল করার অনুমতি দেওয়া হয়েছে। আমরা [`cast`](https://book.getfoundry.sh/cast/) ব্যবহার করে যাচাই করতে পারি যে অনুমতিসাপেক্ষ ফাংশনগুলোতে কল করার অনুমতি শুধুমাত্র সার্ভার অ্যাকাউন্ট হিসেবেই দেওয়া হয়েছে।
+এই গেমে একটি বিশেষ সুবিধাপ্রাপ্ত সত্তা রয়েছে, সেটি হলো সার্ভার। এটি একমাত্র ব্যবহারকারী যাকে [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol)-এর ফাংশনগুলো কল করার অনুমতি দেওয়া হয়েছে। আমরা [`cast`](https://getfoundry.sh/cast/overview) ব্যবহার করে যাচাই করতে পারি যে অনুমতিসাপেক্ষ ফাংশনগুলোতে কলগুলো শুধুমাত্র সার্ভার অ্যাকাউন্ট হিসেবে অনুমোদিত।
 
 [সার্ভারের প্রাইভেট কী `setupNetwork.ts`-এ রয়েছে](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52)।
 
-1. যে কম্পিউটারে `anvil` (ব্লকচেইন) চলছে, সেখানে এই এনভায়রনমেন্ট ভেরিয়েবলগুলো সেট করুন।
+1. যে কম্পিউটারে `anvil` (ব্লকচেইন) চলে, সেখানে এই এনভায়রনমেন্ট ভেরিয়েবলগুলো সেট করুন।
 
    ```sh copy
    WORLD_ADDRESS=0x8d8b6b8414e1e3dcfd4168561b9be6bd3bf6ec4b
@@ -530,7 +546,9 @@ const solidityVerifier = `
    AUTHORIZED_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
    ```
 
-2. যাচাইকারীর ঠিকানা একটি অননুমোদিত ঠিকানা হিসেবে সেট করার চেষ্টা করতে `cast` ব্যবহার করুন।
+   এই `WORLD_ADDRESS` হলো সেই ঠিকানা যেখানে MUD একটি নতুন `anvil`-এ ডিপ্লয় করে। যদি আপনার `World` একটি ভিন্ন ঠিকানায় থাকে, তবে `packages/contracts/worlds.json`-এর মানটি ব্যবহার করুন।
+
+2. একটি অননুমোদিত ঠিকানা হিসেবে যাচাইকারীর ঠিকানা সেট করার চেষ্টা করতে `cast` ব্যবহার করুন।
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $UNAUTHORIZED_KEY
@@ -538,15 +556,15 @@ const solidityVerifier = `
 
    `cast` শুধু একটি ব্যর্থতার রিপোর্টই করে না, বরং আপনি ব্রাউজারে গেমের মধ্যে **MUD Dev Tools** খুলতে পারেন, **Tables**-এ ক্লিক করতে পারেন এবং **app\_\_VerifierAddress** নির্বাচন করতে পারেন। দেখুন যে ঠিকানাটি শূন্য নয়।
 
-3. যাচাইকারীর ঠিকানা সার্ভারের ঠিকানা হিসেবে সেট করুন।
+3. যাচাইকারীর ঠিকানাটি সার্ভারের ঠিকানা হিসেবে সেট করুন।
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $AUTHORIZED_KEY
    ```
 
-   **app\_\_VerifiedAddress**-এর ঠিকানা এখন শূন্য হওয়া উচিত।
+   **app\_\_VerifierAddress**-এর ঠিকানাটি এখন শূন্য হওয়া উচিত।
 
-একই `System`-এর সমস্ত MUD ফাংশন একই অ্যাক্সেস কন্ট্রোলের মধ্য দিয়ে যায়, তাই আমি এই পরীক্ষাকে যথেষ্ট বলে মনে করি। আপনি যদি তা মনে না করেন, তবে আপনি [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol)-এর অন্যান্য ফাংশনগুলো পরীক্ষা করে দেখতে পারেন।
+একই `System`-এর সমস্ত MUD ফাংশন একই অ্যাক্সেস কন্ট্রোলের মধ্য দিয়ে যায়, তাই আমি এই পরীক্ষাটিকে যথেষ্ট বলে মনে করি। যদি আপনি তা মনে না করেন, তবে আপনি [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol)-এর অন্যান্য ফাংশনগুলো পরীক্ষা করতে পারেন।
 
 ### জিরো-নলেজ অপব্যবহার {#zero-knowledge-abuses}
 
@@ -560,10 +578,10 @@ Zokrates যাচাই করার গণিত এই টিউটোরি�
 proof.inputs[3] = "0x" + "1".padStart(64, "0")
 ```
 
-এর মানে হলো সঠিক উত্তর যাই হোক না কেন, আমরা সবসময় দাবি করব যে একটি বোমা আছে। এই সংস্করণটি দিয়ে খেলার চেষ্টা করুন, এবং আপনি `pnpm dev` স্ক্রিনের **server** ট্যাবে এই ত্রুটিটি দেখতে পাবেন:
+এর মানে হলো সঠিক উত্তর যাই হোক না কেন, আমরা সবসময় দাবি করব যে একটি বোমা আছে। এই সংস্করণটি দিয়ে খেলার চেষ্টা করুন, এবং আপনি `mprocs` স্ক্রিনের **server** ট্যাবে এই ত্রুটিটি দেখতে পাবেন:
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000
@@ -678,11 +696,13 @@ proof.proof = {
 
 একটি টিউটোরিয়াল হিসাবে এই নিবন্ধটির জন্য একটি ছোট গেমের প্রয়োজন ছিল যা বোঝা সহজ, তবে এই কৌশলটি দীর্ঘ গেমগুলির জন্য সবচেয়ে বেশি কার্যকর।
 
-### কেন Zokrates? {#why-zokrates}
+### Zokrates কেন? {#why-zokrates}
 
-[Zokrates](https://zokrates.github.io/) একমাত্র উপলব্ধ জিরো-নলেজ লাইব্রেরি নয়, তবে এটি একটি সাধারণ, [ইম্পারেটিভ](https://en.wikipedia.org/wiki/Imperative_programming) প্রোগ্রামিং ভাষার মতো এবং বুলিয়ান ভেরিয়েবল সমর্থন করে।
+[Zokrates](https://zokrates.github.io/) একমাত্র উপলব্ধ জিরো-নলেজ লাইব্রেরি নয়, তবে এটি একটি সাধারণ, [ইম্পারেটিভ (imperative)](https://en.wikipedia.org/wiki/Imperative_programming) প্রোগ্রামিং ভাষার মতো এবং বুলিয়ান ভেরিয়েবল সমর্থন করে।
 
-আপনার অ্যাপ্লিকেশনের জন্য, বিভিন্ন প্রয়োজনীয়তার সাথে, আপনি [Circum](https://docs.circom.io/getting-started/installation/) বা [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/) ব্যবহার করতে পছন্দ করতে পারেন।
+তবে, ZoKrates আর সক্রিয়ভাবে রক্ষণাবেক্ষণ করা হয় না। এর সর্বশেষ রিলিজ, 0.8.8 (এবং এর সাথে মিলে যাওয়া `zokrates-js` 1.1.9), 2023 সালের নভেম্বরের, এবং 2024 সালের এপ্রিল থেকে মূল ব্রাঞ্চে কোনো কমিট হয়নি। এই টিউটোরিয়ালের কোডটি এখনও কাজ করে, তবে বাগ ফিক্স বা সিকিউরিটি আপডেটের আশা করবেন না। একটি নতুন প্রজেক্টের জন্য, [Noir](https://noir-lang.org/)-এর মতো একটি রক্ষণাবেক্ষণ করা ভাষা বিবেচনা করুন, যা [এই টিউটোরিয়ালে](/developers/tutorials/app-plasma/) ব্যবহৃত হয়েছে।
+
+আপনার অ্যাপ্লিকেশনের জন্য, ভিন্ন প্রয়োজনীয়তার সাথে, আপনি [Circom](https://docs.circom.io/getting-started/installation/) বা [Cairo](https://www.cairo-lang.org/) ব্যবহার করতে পছন্দ করতে পারেন।
 
 ### কখন Zokrates কম্পাইল করবেন {#when-compile-zokrates}
 

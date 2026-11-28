@@ -29,7 +29,9 @@ published: 2024-07-15
 
 ## نمونہ پروگرام {#sample-program}
 
-آپ [<span dir="ltr">GitHub</span> پر](https://github.com/qbzzt/20240715-server-component) ایک نمونہ سرور دیکھ سکتے ہیں۔ یہ سرور [اس کنٹریکٹ](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code) سے آنے والے ایونٹس کو سنتا ہے، جو <span dir="ltr">Hardhat</span> کے Greeter کا ایک ترمیم شدہ ورژن ہے۔ جب سلام (greeting) کو تبدیل کیا جاتا ہے، تو یہ اسے واپس تبدیل کر دیتا ہے۔
+آپ [GitHub پر](https://github.com/qbzzt/20240715-server-component) ایک نمونہ سرور دیکھ سکتے ہیں۔ یہ سرور Sepolia آزمائشی نیٹ ورک پر [اس کنٹریکٹ](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract_code) سے آنے والے ایونٹس کو سنتا ہے، جو Hardhat کے Greeter کا ایک ترمیم شدہ ورژن ہے۔ جب سلام (greeting) کو تبدیل کیا جاتا ہے، تو یہ اسے واپس تبدیل کر دیتا ہے۔
+
+یہ کنٹریکٹ دیگر ٹیوٹوریلز کے ساتھ شیئر کیا گیا ہے، لہذا جب آپ کا سرور چل رہا ہو تو دوسرے لوگ (اور ان کے سرورز) سلام کو تبدیل کر سکتے ہیں۔ جب آپ کا کام مکمل ہو جائے تو اپنے سرور کو روک دیں تاکہ آپ کا آزمائشی ETH خرچ ہونے سے بچ سکے۔
 
 اسے چلانے کے لیے:
 
@@ -40,25 +42,31 @@ published: 2024-07-15
    cd 20240715-server-component
    ```
 
-2. ضروری پیکجز انسٹال کریں۔ اگر آپ کے پاس یہ پہلے سے نہیں ہے، تو [پہلے <span dir="ltr">Node</span> انسٹال کریں](https://nodejs.org/en/download/package-manager)۔
+2. نمونہ ریپوزٹری ہولسکی آزمائشی نیٹ ورک کے لیے لکھی گئی تھی، جسے اب بند کر دیا گیا ہے۔ اسے Sepolia اور Sepolia کنٹریکٹ کا پتہ استعمال کرنے کے لیے اپ ڈیٹ کریں۔
+
+   ```sh copy
+   sed -i.bak -e 's/holesky/sepolia/g' -e 's/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA/' src/app.ts
+   ```
+
+3. ضروری پیکجز انسٹال کریں۔ اگر آپ کے پاس یہ پہلے سے نہیں ہے، تو [پہلے Node انسٹال کریں](https://nodejs.org/en/download/package-manager)۔
 
    ```sh copy
    npm install
    ```
 
-3. ایک ایسے اکاؤنٹ کی نجی کلید کی وضاحت کرنے کے لیے `.env` میں ترمیم کریں جس کے پاس ہولسکی آزمائشی نیٹ ورک پر <span dir="ltr">ETH</span> ہو۔ اگر آپ کے پاس ہولسکی پر <span dir="ltr">ETH</span> نہیں ہے، تو آپ [یہ فوسٹ استعمال کر سکتے ہیں](https://holesky-faucet.pk910.de/)۔
+4. Sepolia آزمائشی نیٹ ورک پر ETH رکھنے والے اکاؤنٹ کی نجی کلید بتانے کے لیے `.env` میں ترمیم کریں۔ اگر آپ کے پاس Sepolia پر ETH نہیں ہے، تو آپ [یہ فوسٹ استعمال کر سکتے ہیں](https://sepolia-faucet.pk910.de/)۔ ایک نیا اکاؤنٹ استعمال کریں جسے آپ صرف ٹیسٹنگ کے لیے استعمال کرتے ہیں، کبھی بھی ایسا اکاؤنٹ استعمال نہ کریں جس میں حقیقی اثاثے ہوں۔
 
    ```sh filename=".env" copy
-   PRIVATE_KEY=0x <private key goes here>
+   PRIVATE_KEY=0x<private key goes here>
    ```
 
-4. سرور شروع کریں۔
+5. سرور شروع کریں۔
 
    ```sh copy
    npm start
    ```
 
-5. ایک [بلاک ایکسپلورر](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract) پر جائیں، اور اس پتے سے مختلف پتہ استعمال کرتے ہوئے جس کے پاس نجی کلید ہے، سلام (greeting) میں ترمیم کریں۔ دیکھیں کہ سلام خود بخود واپس تبدیل ہو جاتا ہے۔
+6. [ایک بلاک ایکسپلورر](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract) پر جائیں، اور اس پتے سے مختلف پتہ استعمال کرتے ہوئے جس کی نجی کلید آپ کے پاس ہے، سلام میں ترمیم کریں۔ دیکھیں کہ سلام خود بخود واپس تبدیل ہو جاتا ہے۔
 
 ### یہ کیسے کام کرتا ہے؟ {#how-it-works}
 
@@ -68,7 +76,7 @@ published: 2024-07-15
 
 پروگرام کی اکثریت [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts) میں موجود ہے۔
 
-##### ضروری آبجیکٹس بنانا
+##### ضروری اشیاء بنانا
 
 ```typescript
 import {
@@ -80,30 +88,30 @@ import {
 } from "viem"
 ```
 
-یہ وہ [<span dir="ltr">Viem</span>](https://viem.sh/) اینٹیٹیز ہیں جن کی ہمیں ضرورت ہے، فنکشنز اور [`Address` قسم](https://viem.sh/docs/glossary/types#address)۔ یہ سرور [<span dir="ltr">TypeScript</span>](https://www.typescriptlang.org/) میں لکھا گیا ہے، جو <span dir="ltr">JavaScript</span> کی ایک توسیع ہے جو اسے [مضبوطی سے ٹائپ شدہ (strongly typed)](https://en.wikipedia.org/wiki/Strong_and_weak_typing) بناتی ہے۔
+یہ وہ [Viem](https://viem.sh/) اینٹیٹیز ہیں جن کی ہمیں ضرورت ہے، فنکشنز اور [`Address` قسم](https://viem.sh/docs/glossary/types#address)۔ یہ سرور [TypeScript](https://www.typescriptlang.org/) میں لکھا گیا ہے، جو JavaScript کی ایک توسیع ہے جو اسے [مضبوطی سے ٹائپ شدہ (strongly typed)](https://en.wikipedia.org/wiki/Strong_and_weak_typing) بناتی ہے۔
 
 ```typescript
 import { privateKeyToAccount } from "viem/accounts"
 ```
 
-[یہ فنکشن](https://viem.sh/docs/accounts/privateKey) ہمیں ایک نجی کلید کے مطابق والیٹ کی معلومات، بشمول پتہ، تیار کرنے دیتا ہے۔
+[یہ فنکشن](https://viem.sh/docs/accounts/privateKey) ہمیں نجی کلید کے مطابق والیٹ کی معلومات، بشمول پتہ، تیار کرنے کی سہولت دیتا ہے۔
 
 ```typescript
-import { holesky } from "viem/chains"
+import { sepolia } from "viem/chains"
 ```
 
-<span dir="ltr">Viem</span> میں بلاک چین استعمال کرنے کے لیے آپ کو اس کی تعریف درآمد کرنے کی ضرورت ہے۔ اس صورت میں، ہم [ہولسکی](https://github.com/eth-clients/holesky) آزمائشی بلاک چین سے جڑنا چاہتے ہیں۔
+Viem میں بلاک چین استعمال کرنے کے لیے آپ کو اس کی تعریف (definition) درآمد کرنے کی ضرورت ہے۔ اس صورت میں، ہم [Sepolia](/developers/docs/networks/#sepolia) آزمائشی بلاک چین سے جڑنا چاہتے ہیں۔
 
 ```typescript
-// اس طرح ہم .env میں موجود تعریفات کو process.env میں شامل کرتے ہیں۔
+// اس طرح ہم .env میں موجود ڈیفینیشنز کو process.env میں شامل کرتے ہیں۔
 import * as dotenv from "dotenv"
 dotenv.config()
 ```
 
-اس طرح ہم ماحول میں `.env` کو پڑھتے ہیں۔ ہمیں نجی کلید کے لیے اس کی ضرورت ہے (بعد میں دیکھیں)۔
+اس طرح ہم `.env` کو ماحول (environment) میں پڑھتے ہیں۔ ہمیں نجی کلید کے لیے اس کی ضرورت ہے (بعد میں دیکھیں)۔
 
 ```typescript
-const greeterAddress : Address = "0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6"
+const greeterAddress : Address = "0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA"
 const greeterABI = [
     {
         "inputs": [
@@ -135,31 +143,31 @@ const greeterABI = [
 ] as const
 ```
 
-ایک کنٹریکٹ استعمال کرنے کے لیے ہمیں اس کا پتہ اور اس کے لیے [<span dir="ltr">ABI</span>](/glossary/#abi) درکار ہے۔ ہم یہاں دونوں فراہم کرتے ہیں۔
+کسی کنٹریکٹ کو استعمال کرنے کے لیے ہمیں اس کا پتہ اور اس کے لیے [ABI](/glossary/#abi) درکار ہے۔ ہم یہاں دونوں فراہم کرتے ہیں۔
 
-<span dir="ltr">JavaScript</span> (اور اس وجہ سے <span dir="ltr">TypeScript</span>) میں آپ کسی مستقل (constant) کو نئی قدر تفویض نہیں کر سکتے، لیکن آپ اس میں محفوظ کردہ آبجیکٹ میں ترمیم _کر سکتے ہیں_۔ لاحقہ `as const` استعمال کر کے ہم <span dir="ltr">TypeScript</span> کو بتا رہے ہیں کہ فہرست بذات خود مستقل ہے اور اسے تبدیل نہیں کیا جا سکتا۔
+JavaScript (اور اس وجہ سے TypeScript) میں آپ کسی مستقل (constant) کو نئی قدر (value) تفویض نہیں کر سکتے، لیکن آپ اس میں محفوظ کردہ آبجیکٹ میں ترمیم _کر سکتے ہیں_۔ لاحقہ `as const` استعمال کر کے ہم TypeScript کو بتا رہے ہیں کہ فہرست بذات خود مستقل ہے اور اسے تبدیل نہیں کیا جا سکتا۔
 
 ```typescript
 const publicClient = createPublicClient({
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
 
-ایک <span dir="ltr">Viem</span> [پبلک کلائنٹ](https://viem.sh/docs/clients/public.html) بنائیں۔ پبلک کلائنٹس کے ساتھ کوئی نجی کلید منسلک نہیں ہوتی، اور اس لیے وہ ٹرانزیکشنز نہیں بھیج سکتے۔ وہ [`view` فنکشنز](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) کو کال کر سکتے ہیں، اکاؤنٹ بیلنس پڑھ سکتے ہیں، وغیرہ۔
+ایک Viem [پبلک کلائنٹ](https://viem.sh/docs/clients/public) بنائیں۔ پبلک کلائنٹس کے ساتھ کوئی نجی کلید منسلک نہیں ہوتی، اور اس لیے وہ ٹرانزیکشنز نہیں بھیج سکتے۔ وہ [`view` فنکشنز](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) کو کال کر سکتے ہیں، اکاؤنٹ کے بیلنس پڑھ سکتے ہیں، وغیرہ۔
 
 ```typescript
 const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`)
 ```
 
-ماحولیاتی متغیرات (environment variables) [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env) میں دستیاب ہیں۔ تاہم، <span dir="ltr">TypeScript</span> مضبوطی سے ٹائپ شدہ ہے۔ ایک ماحولیاتی متغیر کوئی بھی سٹرنگ، یا خالی ہو سکتا ہے، لہذا ماحولیاتی متغیر کی قسم `string | undefined` ہے۔ تاہم، <span dir="ltr">Viem</span> میں ایک کلید کو `0x${string}` (`0x` کے بعد ایک سٹرنگ) کے طور پر بیان کیا گیا ہے۔ یہاں ہم <span dir="ltr">TypeScript</span> کو بتاتے ہیں کہ `PRIVATE_KEY` ماحولیاتی متغیر اس قسم کا ہوگا۔ اگر ایسا نہیں ہے، تو ہمیں رن ٹائم ایرر ملے گا۔
+ماحولیاتی متغیرات (environment variables) [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env) میں دستیاب ہیں۔ تاہم، TypeScript مضبوطی سے ٹائپ شدہ ہے۔ ایک ماحولیاتی متغیر کوئی بھی سٹرنگ، یا خالی ہو سکتا ہے، لہذا ماحولیاتی متغیر کی قسم `string | undefined` ہے۔ تاہم، Viem میں ایک کلید کو `0x${string}` کے طور پر بیان کیا گیا ہے (`0x` کے بعد ایک سٹرنگ)۔ یہاں ہم TypeScript کو بتاتے ہیں کہ `PRIVATE_KEY` ماحولیاتی متغیر اس قسم کا ہوگا۔ اگر ایسا نہیں ہے، تو ہمیں رن ٹائم ایرر ملے گا۔
 
 پھر [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) فنکشن اس نجی کلید کا استعمال کرتے ہوئے ایک مکمل اکاؤنٹ آبجیکٹ بناتا ہے۔
 
 ```typescript
 const walletClient = createWalletClient({
   account,
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
@@ -174,7 +182,7 @@ const greeter = getContract({
 })
 ```
 
-اب جب کہ ہمارے پاس تمام ضروریات موجود ہیں، ہم آخر کار ایک [کنٹریکٹ کی مثال (instance)](https://viem.sh/docs/contract/getContract) بنا سکتے ہیں۔ ہم اس کنٹریکٹ کی مثال کو آن چین کنٹریکٹ کے ساتھ بات چیت کرنے کے لیے استعمال کریں گے۔
+اب جب کہ ہمارے پاس تمام ضروری چیزیں موجود ہیں، ہم بالآخر ایک [کنٹریکٹ انسٹینس (contract instance)](https://viem.sh/docs/contract/getContract) بنا سکتے ہیں۔ ہم اس کنٹریکٹ انسٹینس کو آن چین کنٹریکٹ کے ساتھ بات چیت کرنے کے لیے استعمال کریں گے۔
 
 ##### بلاک چین سے پڑھنا
 
@@ -182,11 +190,11 @@ const greeter = getContract({
 console.log(`Current greeting:`, await greeter.read.greet())
 ```
 
-کنٹریکٹ کے وہ فنکشنز جو صرف پڑھنے کے لیے ہیں ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) اور [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) `read` کے تحت دستیاب ہیں۔ اس صورت میں، ہم اسے [`greet`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=read_contract#cfae3217) فنکشن تک رسائی حاصل کرنے کے لیے استعمال کرتے ہیں، جو سلام (greeting) واپس کرتا ہے۔
+کنٹریکٹ کے وہ فنکشنز جو صرف پڑھنے کے لیے ہیں ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) اور [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) `read` کے تحت دستیاب ہیں۔ اس صورت میں، ہم اسے [`greet`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=read_contract) فنکشن تک رسائی حاصل کرنے کے لیے استعمال کرتے ہیں، جو سلام واپس کرتا ہے۔
 
-<span dir="ltr">JavaScript</span> سنگل تھریڈڈ ہے، لہذا جب ہم کوئی طویل چلنے والا عمل شروع کرتے ہیں تو ہمیں [یہ بتانے کی ضرورت ہوتی ہے کہ ہم اسے غیر ہم آہنگ (asynchronously) طور پر کرتے ہیں](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE)۔ بلاک چین کو کال کرنے کے لیے، یہاں تک کہ صرف پڑھنے کے عمل کے لیے بھی، کمپیوٹر اور بلاک چین نوڈ کے درمیان ایک راؤنڈ ٹرپ کی ضرورت ہوتی ہے۔ یہی وجہ ہے کہ ہم یہاں بتاتے ہیں کہ کوڈ کو نتیجے کے لیے `await` کرنے کی ضرورت ہے۔
+JavaScript سنگل تھریڈڈ ہے، لہذا جب ہم کوئی طویل چلنے والا عمل شروع کرتے ہیں تو ہمیں [یہ بتانے کی ضرورت ہوتی ہے کہ ہم اسے غیر ہم وقتی (asynchronously) طور پر کرتے ہیں](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE)۔ بلاک چین کو کال کرنے کے لیے، یہاں تک کہ صرف پڑھنے کے آپریشن کے لیے بھی، کمپیوٹر اور بلاک چین نوڈ کے درمیان ایک راؤنڈ ٹرپ کی ضرورت ہوتی ہے۔ یہی وجہ ہے کہ ہم یہاں بتاتے ہیں کہ کوڈ کو نتیجے کے لیے `await` کرنے کی ضرورت ہے۔
 
-اگر آپ اس میں دلچسپی رکھتے ہیں کہ یہ کیسے کام کرتا ہے تو آپ [اس کے بارے میں یہاں پڑھ سکتے ہیں](https://www.w3schools.com/js/js_promise.asp)، لیکن عملی لحاظ سے آپ کو صرف یہ جاننے کی ضرورت ہے کہ اگر آپ کوئی ایسا عمل شروع کرتے ہیں جس میں زیادہ وقت لگتا ہے تو آپ نتائج کا `await` کرتے ہیں، اور یہ کہ ایسا کرنے والے کسی بھی فنکشن کو `async` کے طور پر قرار دیا جانا چاہیے۔
+اگر آپ اس میں دلچسپی رکھتے ہیں کہ یہ کیسے کام کرتا ہے تو آپ [اس کے بارے میں یہاں پڑھ سکتے ہیں](https://www.w3schools.com/js/js_promise.asp)، لیکن عملی لحاظ سے آپ کو صرف یہ جاننے کی ضرورت ہے کہ اگر آپ کوئی ایسا آپریشن شروع کرتے ہیں جس میں زیادہ وقت لگتا ہے تو آپ نتائج کا `await` کرتے ہیں، اور ایسا کرنے والے کسی بھی فنکشن کو `async` کے طور پر ڈکلیئر کرنا ضروری ہے۔
 
 ##### ٹرانزیکشنز جاری کرنا
 
@@ -194,22 +202,22 @@ console.log(`Current greeting:`, await greeter.read.greet())
 const setGreeting = async (greeting: string): Promise<any> => {
 ```
 
-یہ وہ فنکشن ہے جسے آپ سلام (greeting) تبدیل کرنے والی ٹرانزیکشن جاری کرنے کے لیے کال کرتے ہیں۔ چونکہ یہ ایک طویل عمل ہے، اس لیے فنکشن کو `async` کے طور پر قرار دیا گیا ہے۔ اندرونی نفاذ کی وجہ سے، کسی بھی `async` فنکشن کو ایک `Promise` آبجیکٹ واپس کرنے کی ضرورت ہوتی ہے۔ اس صورت میں، `Promise<any>` کا مطلب ہے کہ ہم یہ واضح نہیں کرتے کہ `Promise` میں بالکل کیا واپس کیا جائے گا۔
+یہ وہ فنکشن ہے جسے آپ سلام کو تبدیل کرنے والی ٹرانزیکشن جاری کرنے کے لیے کال کرتے ہیں۔ چونکہ یہ ایک طویل آپریشن ہے، اس لیے فنکشن کو `async` کے طور پر ڈکلیئر کیا گیا ہے۔ اندرونی نفاذ (implementation) کی وجہ سے، کسی بھی `async` فنکشن کو `Promise` آبجیکٹ واپس کرنے کی ضرورت ہوتی ہے۔ اس صورت میں، `Promise<any>` کا مطلب ہے کہ ہم یہ متعین نہیں کرتے کہ `Promise` میں بالکل کیا واپس کیا جائے گا۔
 
 ```typescript
 const txHash = await greeter.write.setGreeting([greeting])
 ```
 
-کنٹریکٹ کی مثال کے `write` فیلڈ میں وہ تمام فنکشنز ہوتے ہیں جو بلاک چین کی حالت میں لکھتے ہیں (وہ جن کے لیے ٹرانزیکشن بھیجنے کی ضرورت ہوتی ہے)، جیسے کہ [`setGreeting`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862)۔ پیرامیٹرز، اگر کوئی ہوں، ایک فہرست کے طور پر فراہم کیے جاتے ہیں، اور فنکشن ٹرانزیکشن کا ہیش واپس کرتا ہے۔
+کنٹریکٹ انسٹینس کے `write` فیلڈ میں وہ تمام فنکشنز ہوتے ہیں جو بلاک چین کی حالت میں لکھتے ہیں (جن کے لیے ٹرانزیکشن بھیجنے کی ضرورت ہوتی ہے)، جیسے کہ [`setGreeting`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract)۔ پیرامیٹرز، اگر کوئی ہوں، ایک فہرست کے طور پر فراہم کیے جاتے ہیں، اور فنکشن ٹرانزیکشن کا ہیش واپس کرتا ہے۔
 
 ```typescript
-    console.log(`Working on a fix, see https://eth-holesky.blockscout.com/tx/${txHash}`)
+    console.log(`Working on a fix, see https://eth-sepolia.blockscout.com/tx/${txHash}`)
 
     return txHash
 }
 ```
 
-ٹرانزیکشن کے ہیش کی اطلاع دیں (اسے دیکھنے کے لیے بلاک ایکسپلورر کے <span dir="ltr">URL</span> کے حصے کے طور پر) اور اسے واپس کریں۔
+ٹرانزیکشن کے ہیش کی اطلاع دیں (اسے دیکھنے کے لیے بلاک ایکسپلورر کے URL کے حصے کے طور پر) اور اسے واپس کریں۔
 
 ##### ایونٹس کا جواب دینا
 
@@ -217,13 +225,13 @@ const txHash = await greeter.write.setGreeting([greeting])
 greeter.watchEvent.SetGreeting({
 ```
 
-[`watchEvent` فنکشن](https://viem.sh/docs/actions/public/watchEvent) آپ کو یہ بتانے دیتا ہے کہ جب کوئی ایونٹ خارج ہوتا ہے تو ایک فنکشن چلنا ہے۔ اگر آپ کو صرف ایک قسم کے ایونٹ کی پرواہ ہے (اس صورت میں، `SetGreeting`)، تو آپ خود کو اس ایونٹ کی قسم تک محدود رکھنے کے لیے یہ نحو (syntax) استعمال کر سکتے ہیں۔
+[`watchEvent` فنکشن](https://viem.sh/docs/actions/public/watchEvent) آپ کو یہ بتانے کی سہولت دیتا ہے کہ جب کوئی ایونٹ خارج (emit) ہو تو ایک فنکشن چلنا چاہیے۔ اگر آپ کو صرف ایک قسم کے ایونٹ کی پرواہ ہے (اس صورت میں، `SetGreeting`)، تو آپ خود کو اس ایونٹ کی قسم تک محدود رکھنے کے لیے یہ نحو (syntax) استعمال کر سکتے ہیں۔
 
 ```typescript
     onLogs: logs => {
 ```
 
-جب لاگ اندراجات ہوتے ہیں تو `onLogs` فنکشن کو کال کیا جاتا ہے۔ ایتھیریم میں "لاگ" اور "ایونٹ" عام طور پر ایک دوسرے کی جگہ استعمال ہوتے ہیں۔
+جب لاگ اندراجات (log entries) ہوتے ہیں تو `onLogs` فنکشن کو کال کیا جاتا ہے۔ ایتھیریم میں "لاگ" اور "ایونٹ" عام طور پر ایک دوسرے کی جگہ استعمال ہوتے ہیں۔
 
 ```typescript
 console.log(
@@ -240,32 +248,26 @@ console.log(
 })
 ```
 
-اگر بھیجنے والا یہ سرور _نہیں_ ہے، تو سلام (greeting) تبدیل کرنے کے لیے `setGreeting` کا استعمال کریں۔
+اگر بھیجنے والا یہ سرور _نہیں_ ہے، تو سلام کو تبدیل کرنے کے لیے `setGreeting` استعمال کریں۔
 
 #### `package.json` {#package-json}
 
-[یہ فائل](https://github.com/qbzzt/20240715-server-component/blob/main/package.json) [<span dir="ltr">Node.js</span>](https://nodejs.org/en) کی ترتیب کو کنٹرول کرتی ہے۔ یہ مضمون صرف اہم تعریفوں کی وضاحت کرتا ہے۔
+[یہ فائل](https://github.com/qbzzt/20240715-server-component/blob/main/package.json) [Node.js](https://nodejs.org/en) کنفیگریشن کو کنٹرول کرتی ہے۔ یہ مضمون صرف اہم تعریفوں کی وضاحت کرتا ہے۔
 
 ```json
 {
-  "main": "dist/index.js",
-```
-
-یہ تعریف بتاتی ہے کہ کون سی <span dir="ltr">JavaScript</span> فائل چلانی ہے۔
-
-```json
   "scripts": {
     "start": "tsc && node dist/app.js",
   },
 ```
 
-سکرپٹس مختلف ایپلی کیشن کے اعمال ہیں۔ اس صورت میں، ہمارے پاس صرف ایک `start` ہے، جو مرتب (compile) کرتا ہے اور پھر سرور چلاتا ہے۔ `tsc` کمانڈ `typescript` پیکج کا حصہ ہے اور <span dir="ltr">TypeScript</span> کو <span dir="ltr">JavaScript</span> میں مرتب کرتی ہے۔ اگر آپ اسے دستی طور پر چلانا چاہتے ہیں، تو یہ `node_modules/.bin` میں واقع ہے۔ دوسری کمانڈ سرور چلاتی ہے۔
+سکرپٹس مختلف ایپلیکیشن ایکشنز ہیں۔ اس صورت میں، ہمارے پاس صرف ایک `start` ہے، جو سرور کو مرتب (compile) کرتا ہے اور پھر چلاتا ہے۔ `tsc` کمانڈ `typescript` پیکج کا حصہ ہے اور TypeScript کو JavaScript میں مرتب کرتی ہے۔ اگر آپ اسے دستی طور پر چلانا چاہتے ہیں، تو یہ `node_modules/.bin` میں واقع ہے۔ دوسری کمانڈ سرور کو چلاتی ہے۔
 
 ```json
   "type": "module",
 ```
 
-<span dir="ltr">JavaScript</span> نوڈ ایپلی کیشنز کی متعدد اقسام ہیں۔ `module` قسم ہمیں ٹاپ لیول کوڈ میں `await` رکھنے دیتی ہے، جو اس وقت اہم ہوتا ہے جب آپ سست (اور اس لیے غیر ہم آہنگ) کام کرتے ہیں۔
+JavaScript نوڈ ایپلیکیشنز کی متعدد اقسام ہیں۔ `module` قسم ہمیں ٹاپ لیول کوڈ میں `await` رکھنے کی سہولت دیتی ہے، جو اس وقت اہم ہوتا ہے جب آپ سست (اور اس لیے غیر ہم وقتی) آپریشنز کرتے ہیں۔
 
 ```json
   "devDependencies": {
@@ -274,7 +276,7 @@ console.log(
   },
 ```
 
-یہ وہ پیکجز ہیں جو صرف ڈیولپمنٹ کے لیے درکار ہیں۔ یہاں ہمیں `typescript` کی ضرورت ہے اور چونکہ ہم اسے <span dir="ltr">Node.js</span> کے ساتھ استعمال کر رہے ہیں، اس لیے ہم نوڈ متغیرات اور آبجیکٹس کی اقسام بھی حاصل کر رہے ہیں، جیسے کہ `process`۔ [`^<version>` اشارے](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) کا مطلب ہے وہ ورژن یا اس سے اعلیٰ ورژن جس میں بریکنگ تبدیلیاں نہ ہوں۔ ورژن نمبرز کے معنی کے بارے میں مزید معلومات کے لیے [یہاں](https://semver.org) دیکھیں۔
+یہ وہ پیکجز ہیں جو صرف ڈیولپمنٹ کے لیے درکار ہیں۔ یہاں ہمیں `typescript` کی ضرورت ہے اور چونکہ ہم اسے Node.js کے ساتھ استعمال کر رہے ہیں، اس لیے ہم نوڈ متغیرات اور اشیاء کے لیے اقسام بھی حاصل کر رہے ہیں، جیسے کہ `process`۔ [`^<version>` اشارے (notation)](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) کا مطلب ہے وہ ورژن یا اس سے اعلیٰ ورژن جس میں بریکنگ تبدیلیاں (breaking changes) نہ ہوں۔ ورژن نمبرز کے معنی کے بارے میں مزید معلومات کے لیے [یہاں](https://semver.org) دیکھیں۔
 
 ```json
   "dependencies": {

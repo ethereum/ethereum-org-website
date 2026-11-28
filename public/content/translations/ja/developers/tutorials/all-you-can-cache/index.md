@@ -13,11 +13,19 @@ published: 2022-09-15
 lang: ja
 ---
 
-ロールアップを使用する場合、トランザクション内の1バイトのコストは、ストレージスロットのコストよりもはるかに高くなります。したがって、可能な限り多くの情報をオンチェーンにキャッシュすることは理にかなっています。
+ロールアップを使用する場合、トランザクションのすべてのバイトをL1にポストする必要があります。この記事が書かれた時点では、トランザクション内の1バイトのコストは、ストレージスロットのコストよりもはるかに高価でした。そのため、できるだけ多くの情報をオンチェーンにキャッシュすることが理にかなっていました。
 
-この記事では、複数回使用される可能性のあるパラメータ値をキャッシュし、（初回以降は）はるかに少ないバイト数で使用できるようにするキャッシングコントラクトの作成と使用方法、およびこのキャッシュを使用するオフチェーンコードの記述方法について学びます。
+> **注:** ロールアップの手数料は、この記事が書かれた2022年以降、大きく変化しました。[EcotoneおよびFjordアップグレード](https://docs.optimism.io/op-stack/transactions/fees#l1-data-fee)（2024年）以降、OP Stackチェーンはトランザクションデータを[ブロブ](/roadmap/danksharding/)にポストするようになり、L1データ手数料はトランザクションの_圧縮_サイズの推定値に基づいて計算され、トランザクションあたり最低100バイトとなります（[仕様を参照](https://specs.optimism.io/protocol/fjord/exec-engine.html)）。その結果、以下のようになります。
+>
+> - ゼロバイトは圧縮率が高いため、ほぼ無料です。
+> - 短いトランザクションはすでに100バイトの最小値に達しているため、コールデータをさらに短くしても手数料は下がりません。
+> - ブロブのスペースは安価であるため、OP Mainnetでは、L2実行ガスがL1データ手数料よりも手数料の大部分を占めることがよくあります。キャッシュに新しい値を書き込む（それぞれ22100ガスの2つの`SSTORE`）と、節約できるバイト数よりもコストがかかる場合があります。
+>
+> 原則は依然として有効ですが（圧縮されたバイト数が少ないほどL1データ手数料は低くなります）、キャッシュが割に合うかどうかは、トランザクションのサイズと現在のL1およびL2のガス価格に依存します。特定のトランザクションのL1データ手数料は、[`GasPriceOracle` プレデプロイ](https://specs.optimism.io/protocol/predeploys.html#gaspriceoracle)で`getL1Fee`を呼び出すことで確認できます。
 
-記事をスキップしてソースコードだけを見たい場合は、[こちら](https://github.com/qbzzt/20220915-all-you-can-cache)をご覧ください。開発スタックは[Foundry](https://getfoundry.sh/introduction/installation/)です。
+この記事では、複数回使用される可能性のあるパラメータ値がキャッシュされ、（初回以降は）はるかに少ないバイト数で使用できるようにするキャッシングコントラクトの作成方法と使用方法、およびこのキャッシュを使用するオフチェーンコードの記述方法について学びます。
+
+記事を飛ばしてソースコードだけを見たい場合は、[こちら](https://github.com/qbzzt/20220915-all-you-can-cache)にあります。開発スタックは[Foundry](https://getfoundry.sh/introduction/installation/)です。
 
 ## 全体的な設計 {#overall-design}
 
@@ -310,7 +318,7 @@ Foundryの大きな利点の1つは、テストをSolidityで記述できるこ�
 
 ### キャッシュのテスト {#testing-the-cache}
 
-Foundryの利点の1つは、[テストをSolidityで記述できること](https://getfoundry.sh/forge/tests/overview/)であり、これにより単体テストの記述が容易になります。`Cache`クラスのテストは[こちら](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol)にあります。テストコードは反復的になりがちであるため、この記事では興味深い部分のみを説明します。
+Foundryの利点の1つは、[Solidityでテストを書ける](https://getfoundry.sh/forge/tests/overview/)ことであり、これによりユニットテストの作成が容易になります。`Cache`クラスのテストは[こちら](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol)にあります。テストコードは反復的になりがちであるため、この記事では興味深い部分のみを説明します。
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -319,17 +327,17 @@ pragma solidity ^0.8.13;
 import "forge-std/Test.sol";
 
 
-// コンソールのために`forge test -vv`を実行する必要がある。
+// コンソールのために `forge test -vv` を実行する必要があります。
 import "forge-std/console.sol";
 ```
 
-これは、テストパッケージと`console.log`を使用するために必要な定型コードです。
+これは、テストパッケージと`console.log`を使用するために必要な単なるボイラープレートです。
 
 ```solidity
 import "src/Cache.sol";
 ```
 
-テストするコントラクトを知る必要があります。
+テスト対象のコントラクトを知る必要があります。
 
 ```solidity
 contract CacheTest is Test {
@@ -340,7 +348,7 @@ contract CacheTest is Test {
     }
 ```
 
-`setUp`関数は、各テストの前に呼び出されます。この場合、テストが互いに影響を与えないように、新しいキャッシュを作成するだけです。
+`setUp`関数は各テストの前に呼び出されます。この場合、テストが互いに影響を与えないように、新しいキャッシュを作成するだけです。
 
 ```solidity
     function testCaching() public {
@@ -357,7 +365,7 @@ contract CacheTest is Test {
             assertEq(cache.cacheRead(i), i*i);
 ```
 
-これが、[`assert...`関数](https://getfoundry.sh/reference/forge-std/std-assertions/)を使用して実際のテストを行う方法です。この場合、書き込んだ値が読み取った値であることを確認します。キャッシュキーが線形に割り当てられることがわかっているため、`cache.cacheWrite`の結果は破棄できます。
+これが、[`assert...`関数](https://getfoundry.sh/reference/forge-std/std-assertions/)を使用して実際のテストを行う方法です。この場合、書き込んだ値が読み取った値と同じであることを確認します。キャッシュキーが線形に割り当てられることがわかっているため、`cache.cacheWrite`の結果は破棄できます。
 
 ```solidity
         }
@@ -365,7 +373,7 @@ contract CacheTest is Test {
 
 
     // 同じ値を複数回キャッシュし、鍵が
-    // 同じままであることを確認する
+    // 同じままであることを確認します
     function testRepeatCaching() public {
         for(uint i=1; i<100; i++) {
             uint _key1 = cache.cacheWrite(i);
@@ -374,7 +382,7 @@ contract CacheTest is Test {
         }
 ```
 
-まず、各値をキャッシュに2回書き込み、キーが同じであることを確認します（つまり、2回目の書き込みは実際には行われませんでした）。
+まず、各値をキャッシュに2回書き込み、キーが同じであること（つまり、2回目の書き込みが実際には行われなかったこと）を確認します。
 
 ```solidity
         for(uint i=1; i<100; i+=3) {
@@ -384,16 +392,16 @@ contract CacheTest is Test {
     }    // testRepeatCaching
 ```
 
-理論的には、連続したキャッシュの書き込みに影響を与えないバグが存在する可能性があります。そのため、ここでは連続していない書き込みをいくつか行い、値が書き換えられていないことを確認します。
+理論的には、連続したキャッシュの書き込みに影響を与えないバグが存在する可能性があります。そのため、ここでは連続していない書き込みをいくつか行い、値が依然として書き換えられないことを確認します。
 
 ```solidity
-    // メモリバッファからuintを読み取る（送信したパラメータが
-    // 確実に戻ってくるようにするため）
+    // メモリバッファからuintを読み取ります（送信したパラメータが
+    // 正しく返ってくることを確認するため）
     function toUint256(bytes memory _bytes, uint256 _start) internal pure
         returns (uint256)
 ```
 
-`bytes memory`バッファから256ビットのワードを読み取ります。このユーティリティ関数を使用すると、キャッシュを使用する関数呼び出しを実行したときに正しい結果を受け取ることを検証できます。
+`bytes memory`バッファから256ビットのワードを読み取ります。このユーティリティ関数を使用すると、キャッシュを使用する関数呼び出しを実行したときに正しい結果が得られることを確認できます。
 
 ```solidity
     {
@@ -412,11 +420,11 @@ Yulは`uint256`を超えるデータ構造をサポートしていないため�
         return tempUint;
     }     // toUint256
 
-    // fourParams()の関数シグネチャ、提供元:
+    // fourParams() の関数シグネチャ、提供元:
     // https://www.4byte.directory/signatures/?bytes4_signature=0x3edc1e6d
     bytes4 constant FOUR_PARAMS = 0x3edc1e6d;
 
-    // 正しい値が返ってくるかを確認するためのいくつかの定数値
+    // 正しい値が返ってきているかを確認するための、いくつかの定数値
     uint256 constant VAL_A = 0xDEAD60A7;
     uint256 constant VAL_B =     0xBEEF;
     uint256 constant VAL_C =     0x600D;
@@ -441,20 +449,20 @@ Yulは`uint256`を超えるデータ構造をサポートしていないため�
 キャッシュを使用する関数を呼び出すために通常のABIメカニズムを使用することはできないため、低レベルの[`<address>.call()`](https://docs.soliditylang.org/en/v0.8.16/types.html#members-of-addresses)メカニズムを使用する必要があります。このメカニズムは`bytes memory`を入力として受け取り、それ（およびブール値）を出力として返します。
 
 ```solidity
-        // 最初の呼び出し、キャッシュは空である
+        // 最初の呼び出し、キャッシュは空です
         _callInput = bytes.concat(
             FOUR_PARAMS,
 ```
 
-同じコントラクトが、キャッシュされた関数（トランザクションからの直接呼び出し用）とキャッシュされていない関数（他のスマート・コントラクトからの呼び出し用）の両方をサポートすることは有用です。そのためには、すべてを[`fallback`関数](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function)に入れるのではなく、正しい関数を呼び出すためにSolidityのメカニズムに依存し続ける必要があります。これにより、コンポーザビリティがはるかに容易になります。ほとんどの場合、関数を識別するには1バイトで十分であるため、3バイト（16\*3=48ガス）を無駄にしています。しかし、これを書いている時点では、その48ガスのコストは0.07セントであり、よりシンプルでバグの発生しにくいコードのコストとしては妥当です。
+同じコントラクトが、キャッシュされた関数（トランザクションからの直接呼び出し用）とキャッシュされていない関数（他のスマートコントラクトからの呼び出し用）の両方をサポートすることは有用です。これを行うには、すべてを[`fallback`関数](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function)に配置するのではなく、正しい関数を呼び出すためにSolidityのメカニズムに引き続き依存する必要があります。これにより、コンポーザビリティがはるかに容易になります。ほとんどの場合、関数を識別するには1バイトで十分であるため、3バイトを無駄にしています。現在のOP Stackの手数料計算式では、これらの3バイトは1セントのほんのわずかな割合（記事の冒頭の注記を参照）を追加するだけであり、よりシンプルでバグの少ないコードのコストとしては妥当です。
 
 ```solidity
-            // 最初の値、キャッシュに追加する
+            // 最初の値、キャッシュに追加します
             cache.INTO_CACHE(),
             bytes32(VAL_A),
 ```
 
-最初の値：キャッシュに書き込む必要がある完全な値であることを示すフラグの後に、値の32バイトが続きます。他の3つの値も同様ですが、`VAL_B`はキャッシュに書き込まれず、`VAL_C`は3番目のパラメータと4番目のパラメータの両方である点が異なります。
+最初の値: キャッシュに書き込む必要がある完全な値であることを示すフラグの後に、値の32バイトが続きます。他の3つの値も同様ですが、`VAL_B`はキャッシュに書き込まれず、`VAL_C`は3番目のパラメータと4番目のパラメータの両方である点が異なります。
 
 ```solidity
              .
@@ -477,19 +485,19 @@ Yulは`uint256`を超えるデータ構造をサポートしていないため�
         assertEq(cache.cacheRead(2), VAL_C);
 ```
 
-空のキャッシュから開始し、`VAL_A`を追加して、その後に`VAL_C`を追加します。最初のキーは1、2番目のキーは2になることが期待されます。
+空のキャッシュから開始し、`VAL_A`を追加して、その後に`VAL_C`を追加します。最初のキーは1になり、2番目のキーは2になることが予想されます。
 
 ```
-assertEq(toUint256(_callOutput,0), VAL_A);
+        assertEq(toUint256(_callOutput,0), VAL_A);
         assertEq(toUint256(_callOutput,32), VAL_B);
         assertEq(toUint256(_callOutput,64), VAL_C);
         assertEq(toUint256(_callOutput,96), VAL_C);
 ```
 
-出力は4つのパラメータです。ここでそれが正しいことを検証します。
+出力は4つのパラメータです。ここでそれが正しいことを確認します。
 
 ```solidity
-        // 2回目の呼び出し、キャッシュを使用できる
+        // 2回目の呼び出し、キャッシュを使用できます
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
@@ -500,11 +508,11 @@ assertEq(toUint256(_callOutput,0), VAL_A);
 16未満のキャッシュキーはわずか1バイトです。
 
 ```solidity
-            // 2番目の値、キャッシュに追加しない
+            // 2番目の値、キャッシュには追加しません
             cache.DONT_CACHE(),
             bytes32(VAL_B),
 
-            // 3番目と4番目の値、同じ値
+            // 3番目と4番目の値、同じ値です
             bytes1(0x02),
             bytes1(0x02)
         );
@@ -540,15 +548,15 @@ assertEq(toUint256(_callOutput,0), VAL_A);
     }   // testEncodeVal
 ```
 
-`testEncodeVal()`の唯一の追加テストは、`_callInput`の長さが正しいことを検証することです。最初の呼び出しでは4+33\*4です。すべての値がすでにキャッシュにある2回目の呼び出しでは、4+1\*4です。
+`testEncodeVal()`の唯一の追加テストは、`_callInput`の長さが正しいことを確認することです。最初の呼び出しでは4+33\*4です。すべての値がすでにキャッシュにある2回目の呼び出しでは、4+1\*4です。
 
 ```solidity
-    // 鍵が単一バイトより大きい場合のencodeValをテストする
+    // 鍵が1バイトより大きい場合の encodeVal をテストします
     // キャッシュを4バイトまで埋めるには時間がかかりすぎるため、
-    // 最大3バイトとする。
+    // 最大3バイトとします。
     function testEncodeValBig() public {
-        // キャッシュにいくつかの値を入れる。
-        // シンプルにするため、値nには鍵nを使用する。
+        // キャッシュにいくつかの値を入れます。
+        // シンプルにするため、値 n に対して鍵 n を使用します。
         for(uint i=1; i<0x1FFF; i++) {
             cache.cacheWrite(i);
         }
@@ -556,7 +564,7 @@ assertEq(toUint256(_callOutput,0), VAL_A);
 
 上記の`testEncodeVal`関数はキャッシュに4つの値しか書き込まないため、[マルチバイト値を処理する関数の部分](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol#L144-L171)はチェックされません。しかし、そのコードは複雑でエラーが発生しやすいです。
 
-この関数の最初の部分は、1から0x1FFFまでのすべての値を順番にキャッシュに書き込むループであるため、これらの値をエンコードして、どこに保存されるかを知ることができます。
+この関数の最初の部分は、1から0x1FFFまでのすべての値を順番にキャッシュに書き込むループであるため、これらの値をエンコードして、どこに配置されるかを知ることができます。
 
 ```solidity
         .
@@ -582,11 +590,11 @@ assertEq(toUint256(_callOutput,0), VAL_A);
     }    // testEncodeValBig
 
 
-    // 極端に小さいバッファでリバートが発生することをテストする
+    // バッファが極端に小さい場合にリバートが発生することをテストします
     function testShortCalldata() public {
 ```
 
-パラメータが不足している異常なケースで何が起こるかをテストします。
+パラメータが足りないという異常なケースで何が起こるかをテストします。
 
 ```solidity
         .
@@ -600,7 +608,7 @@ assertEq(toUint256(_callOutput,0), VAL_A);
 リバートされるため、得られる結果は`false`になるはずです。
 
 ```
-// 存在しないキャッシュキーで呼び出す
+    // 存在しないキャッシュの鍵で呼び出します
     function testNoCacheKey() public {
         .
         .
@@ -608,7 +616,7 @@ assertEq(toUint256(_callOutput,0), VAL_A);
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
-            // 最初の値、キャッシュに追加する
+            // 最初の値、キャッシュに追加します
             cache.INTO_CACHE(),
             bytes32(VAL_A),
 
@@ -619,36 +627,36 @@ assertEq(toUint256(_callOutput,0), VAL_A);
         );
 ```
 
-この関数は、キャッシュが空で読み取る値がないことを除いて、4つの完全に正当なパラメータを取得します。
+この関数は4つの完全に正当なパラメータを取得しますが、キャッシュが空であるため、読み取る値がありません。
 
 ```solidity
         .
         .
         .
-    // 極端に長いバッファでもすべて正常に機能することをテストする
+    // バッファが極端に長くてもすべて正常に機能することをテストします
     function testLongCalldata() public {
         address _cacheAddr = address(cache);
         bool _success;
         bytes memory _callInput;
         bytes memory _callOutput;
 
-        // 最初の呼び出し、キャッシュは空である
+        // 最初の呼び出し、キャッシュは空です
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
-            // 最初の値、キャッシュに追加する
+            // 最初の値、キャッシュに追加します
             cache.INTO_CACHE(), bytes32(VAL_A),
 
-            // 2番目の値、キャッシュに追加する
+            // 2番目の値、キャッシュに追加します
             cache.INTO_CACHE(), bytes32(VAL_B),
 
-            // 3番目の値、キャッシュに追加する
+            // 3番目の値、キャッシュに追加します
             cache.INTO_CACHE(), bytes32(VAL_C),
 
-            // 4番目の値、キャッシュに追加する
+            // 4番目の値、キャッシュに追加します
             cache.INTO_CACHE(), bytes32(VAL_D),
 
-            // そして「念のため」のもう一つの値
+            // そして「念のため」もう一つの値
             bytes4(0x31112233)
         );
 ```
@@ -722,27 +730,27 @@ ABI仕様に従っていないため、`writeEntryCached`を呼び出す外部�
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[これ（`vm.expectRevert`）](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert)は、Foundryテストで次の呼び出しが失敗するはずであること、および報告される失敗の理由を指定する方法です。これは、コールデータを構築して低レベルインターフェース（`<contract>.call()`など）を使用してコントラクトを呼び出すのではなく、`<contract>.<function name>()`構文を使用する場合に適用されます。
+[これ（`vm.expectRevert`）](https://getfoundry.sh/reference/cheatcodes/expect-revert/)は、Foundryのテストで次の呼び出しが失敗するはずであること、および報告される失敗の理由を指定する方法です。これは、コールデータを構築して低レベルのインターフェース（`<contract>.call()`など）を使用してコントラクトを呼び出すのではなく、`<contract>.<function name>()`という構文を使用する場合に適用されます。
 
 ```solidity
     function testReadWriteCached() public {
         uint cacheGoat = worm.cacheWrite(0x60A7);
 ```
 
-ここでは、`cacheWrite`がキャッシュキーを返すという事実を使用します。`cacheWrite`は状態を変更するため、トランザクション中にのみ呼び出すことができるため、これは本番環境で使用することが期待されるものではありません。トランザクションには戻り値がなく、結果がある場合、それらの結果はイベントとして発行されることになっています。したがって、`cacheWrite`の戻り値はオンチェーンコードからのみアクセス可能であり、オンチェーンコードはパラメータのキャッシングを必要としません。
+ここでは、`cacheWrite`がキャッシュキーを返すという事実を利用しています。`cacheWrite`は状態を変更するため、トランザクション中にのみ呼び出すことができるため、これは本番環境で使用することが想定されるものではありません。トランザクションには戻り値がなく、結果がある場合、それらの結果はイベントとして発行されることになっています。したがって、`cacheWrite`の戻り値はオンチェーンコードからのみアクセス可能であり、オンチェーンコードはパラメータのキャッシュを必要としません。
 
 ```solidity
         (_success,) = address(worm).call(_callInput);
 ```
 
-これは、`<contract address>.call()`には2つの戻り値があるが、最初の戻り値のみを気にするということをSolidityに伝える方法です。
+これは、`<contract address>.call()`には2つの戻り値がありますが、最初の戻り値のみを気にするということをSolidityに伝える方法です。
 
 ```solidity
         (_success,) = address(worm).call(_callInput);
         assertEq(_success, false);
 ```
 
-低レベルの`<address>.call()`関数を使用するため、`vm.expectRevert()`を使用できず、呼び出しから得られるブール値の成功値を確認する必要があります。
+低レベルの`<address>.call()`関数を使用しているため、`vm.expectRevert()`を使用できず、呼び出しから得られるブール値の成功値を確認する必要があります。
 
 ```solidity
     event EntryWritten(uint indexed key, uint indexed value);
@@ -758,47 +766,68 @@ ABI仕様に従っていないため、`writeEntryCached`を呼び出す外部�
         (_success,) = address(worm).call(_callInput);
 ```
 
-これは、Foundryでコードが[イベントを正しく発行する](https://getfoundry.sh/reference/cheatcodes/expect-emit/)ことを検証する方法です。
+これが、Foundryでコードが[イベントを正しく発行する](https://getfoundry.sh/reference/cheatcodes/expect-emit/)ことを確認する方法です。
 
 ### クライアント {#the-client}
 
-Solidityのテストで得られないものの1つは、独自のアプリケーションにカットアンドペーストできるJavaScriptコードです。このチュートリアルの元のバージョンでは、WORMをオプティミズムのゴエリにデプロイしていましたが、その後廃止されました。今日クライアントを実行するには、[OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack)などのサポートされているOP StackネットワークにWORMを再デプロイし、結果のコントラクトアドレスをJavaScriptクライアントで使用します。
+Solidityのテストでは得られないものの1つは、独自のアプリケーションにカットアンドペーストできるJavaScriptコードです。このチュートリアルの元のバージョンでは、WORMをOptimism Goerliにデプロイしていましたが、その後シャットダウンされました。サンプルリポジトリは依然としてOptimism Goerliを指しているため、現在クライアントを実行するには、WORMを自分で[OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack)にデプロイし、クライアントをそのデプロイメントに向ける必要があります。
 
-[クライアントのJavaScriptコードはこちらで確認できます](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js)。サンプルリポジトリはオプティミズムのゴエリ用に書かれているため、実行する前に、ターゲットネットワークに合わせて`javascript/.env.example`と`javascript/index.js`のRPCエンドポイントとエクスプローラーのURLを更新してください。使用方法は以下の通りです。
+[クライアントのJavaScriptコードはこちらで確認できます](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js)。これを使用するには、[Foundry](https://getfoundry.sh/introduction/installation/)、[Node.js](https://nodejs.org/)、およびいくらかのOP Sepolia ETHを持つアカウントが必要です。[Optimismのフォーセットドキュメント](https://docs.optimism.io/app-developers/tools-sdks/faucets)には、現在のテストネットのフォーセットがリストされています。
 
-1. gitリポジトリをクローンします。
+1. `forge-std`サブモジュールを含むgitリポジトリをクローンし、コントラクトをビルドします。クライアントは`out/WORM.sol/WORM.json`からWORMのABIとバイトコードを読み取りますが、これは`forge build`の後にのみ存在します。
 
    ```sh
-   git clone https://github.com/qbzzt/20220915-all-you-can-cache.git
+   git clone --recurse-submodules https://github.com/qbzzt/20220915-all-you-can-cache.git
+   cd 20220915-all-you-can-cache
+   forge build
    ```
 
-2. 必要なパッケージをインストールします。
+   Forgeは、`foundry.toml`が古い`[default]`セクション名を使用していると警告します。この警告は無視するか、`forge config --fix`を実行できます。
+
+2. 資金のあるアカウントの秘密鍵を暗号化されたFoundryキーストアにインポートし、それを使用してWORMをOP Sepoliaに[デプロイ](https://getfoundry.sh/reference/forge/create)します。
+
+   ```sh
+   cast wallet import op-sepolia-deployer --interactive
+   forge create src/WORM.sol:WORM --rpc-url https://sepolia.optimism.io --account op-sepolia-deployer --broadcast
+   ```
+
+   `--broadcast`がない場合、`forge create`はデプロイメントをシミュレートするだけです。出力の`Deployed to:`行からアドレスをコピーします。
+
+3. `javascript/index.js`を編集します。この行の古いOptimism Goerliアドレスを、デプロイメントのアドレスに置き換えます。
+
+   ```javascript
+   const worm = WormFactory.attach("0xD34335b1d818ceE54e3323D3246bD31d94E6a78a")
+   ```
+
+   また、2つの`console.log`行の`https://goerli-optimism.etherscan.io`を`https://sepolia-optimism.etherscan.io`に置き換えることで、クライアントが出力するリンクが機能するようになります。
+
+4. 必要なパッケージをインストールします。
 
    ```sh
    cd javascript
-   yarn
+   npm install
    ```
 
-3. 設定ファイルをコピーします。
+5. 設定ファイルをコピーします。
 
    ```sh
    cp .env.example .env
    ```
 
-4. 設定に合わせて`.env`を編集します。
+6. 設定に合わせて`.env`を編集します。変数名は依然としてOptimism Goerliを参照していますが、値はOP Sepolia用です。
 
-   | パラメータ           | 値                                                                                                                                                               |
-   | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC            | トランザクションの支払いに十分なETHを持つアカウントのニーモニック。[オプティミズムのフォーセットドキュメント](https://docs.optimism.io/app-developers/tools/faucets)には、現在のテストネットのフォーセットがリストされています。 |
-   | OPTIMISM_GOERLI_URL | WORMを再デプロイするネットワークのRPC URL。OP Sepoliaの場合は、`https://sepolia.optimism.io`などのOP Sepolia RPCエンドポイント、またはプロバイダーの別のエンドポイントを使用します。        |
+   | パラメータ           | 値                                                                                                   |
+   | ------------------- | ------------------------------------------------------------------------------------------------------- |
+   | MNEMONIC            | トランザクションの支払いに十分なOP Sepolia ETHを持つアカウントのニーモニック。                    |
+   | OPTIMISM_GOERLI_URL | OP SepoliaのRPC URL、`https://sepolia.optimism.io`、または別のプロバイダーのOP Sepoliaエンドポイント。 |
 
-5. `index.js`を実行します。
+7. `index.js`を実行します。
 
    ```sh
    node index.js
    ```
 
-   このサンプルアプリケーションは、最初にWORMにエントリを書き込み、コールデータとブロック・エクスプローラー上のトランザクションへのリンクを表示します。次に、そのエントリを読み戻し、使用する鍵とエントリ内の値（値、ブロック番号、および作成者）を表示します。
+   このサンプルアプリケーションは、まずWORMにエントリを書き込み、コールデータとブロック・エクスプローラー上のトランザクションへのリンクを表示します。次に、そのエントリを読み戻し、使用しているキーとエントリ内の値（値、ブロック番号、および作成者）を表示します。
 
 クライアントの大部分は通常のdappのJavaScriptです。そのため、ここでも興味深い部分のみを見ていきます。
 
@@ -809,7 +838,7 @@ Solidityのテストで得られないものの1つは、独自のアプリケ�
 const main = async () => {
     const func = await worm.WRITE_ENTRY_CACHED()
 
-    // 毎回新しい鍵が必要
+    // 毎回新しい鍵が必要です
     const key = await worm.encodeVal(Number(new Date()))
 ```
 
@@ -818,11 +847,11 @@ const main = async () => {
 ```javascript
 const val = await worm.encodeVal("0x600D")
 
-// エントリを書き込む
+// エントリを書き込みます
 const calldata = func + key.slice(2) + val.slice(2)
 ```
 
-Ethersは、コールデータが16進数文字列、つまり`0x`の後に偶数個の16進数が続く形式であることを期待しています。`key`と`val`はどちらも`0x`で始まるため、これらのヘッダーを削除する必要があります。
+Ethersは、コールデータが16進文字列であり、`0x`の後に偶数個の16進数が続くことを想定しています。`key`と`val`はどちらも`0x`で始まるため、これらのヘッダーを削除する必要があります。
 
 ```javascript
 const tx = await worm.populateTransaction.writeEntryCached()
@@ -837,34 +866,36 @@ Solidityのテストコードと同様に、キャッシュされた関数を通
     .
     .
     .
-    // 書き込んだばかりのエントリを読み取る
-    const realKey = '0x' + key.slice(4)  // FFフラグを削除する
+    // 書き込んだばかりのエントリを読み取ります
+    const realKey = '0x' + key.slice(4)  // FFフラグを削除します
     const entryRead = await worm.readEntry(realKey)
     .
     .
     .
 ```
 
-エントリの読み取りには、通常のメカニズムを使用できます。`view`関数でパラメータのキャッシングを使用する必要はありません。
+エントリの読み取りには、通常のメカニズムを使用できます。`view`関数でパラメータのキャッシュを使用する必要はありません。
+
 ## 結論 {#conclusion}
 
-この記事のコードは概念実証であり、目的はアイデアを理解しやすくすることです。本番環境に対応したシステムでは、いくつかの追加機能を実装することをお勧めします。
+この記事のコードは概念実証であり、目的はアイデアを理解しやすくすることです。本番環境に対応したシステムでは、いくつかの追加機能を実装したいと考えるかもしれません。
 
-- `uint256`ではない値を処理する。たとえば、文字列など。
-- グローバルキャッシュの代わりに、ユーザーとキャッシュの間のマッピングを持たせる。異なるユーザーは異なる値を使用します。
-- アドレスに使用される値は、他の目的に使用される値とは異なります。アドレス専用の個別のキャッシュを用意することは理にかなっているかもしれません。
-- 現在、キャッシュキーは「先着順、最小キー」アルゴリズムに基づいています。最初の16個の値は1バイトとして送信できます。次の4080個の値は2バイトとして送信できます。次の約100万個の値は3バイトなどです。本番システムでは、キャッシュエントリの使用カウンターを保持し、_最も一般的な_16個の値が1バイト、次の4080個の最も一般的な値が2バイトになるように再編成する必要があります。
+- `uint256`ではない値（文字列など）を処理する。
+- グローバルキャッシュの代わりに、ユーザーとキャッシュの間のマッピングを持つ。異なるユーザーは異なる値を使用します。
+- アドレスに使用される値は、他の目的に使用される値とは異なります。アドレス専用のキャッシュを個別に持つことが理にかなっているかもしれません。
+- 現在、キャッシュキーは「先着順、最小キー」のアルゴリズムに基づいています。最初の16個の値は1バイトで送信できます。次の4080個の値は2バイトで送信できます。次の約100万個の値は3バイトです。本番システムでは、キャッシュエントリの使用カウンターを保持し、_最も一般的な_16個の値が1バイト、次の4080個の最も一般的な値が2バイトになるように再編成する必要があります。
 
-  ただし、これは潜在的に危険な操作です。次の一連のイベントを想像してみてください。
+  ただし、これは潜在的に危険な操作です。次のような一連のイベントを想像してみてください。
 
-  1. ノーム・ナイーブは、トークンを送信したいアドレスをエンコードするために`encodeVal`を呼び出します。そのアドレスはアプリケーションで最初に使用されたものの1つであるため、エンコードされた値は0x06です。これはトランザクションではなく`view`関数であるため、ノームと彼が使用するノードの間でのみ行われ、他の誰もそれを知りません。
+  1. Noam Naiveは、トークンを送信したいアドレスをエンコードするために`encodeVal`を呼び出します。そのアドレスはアプリケーションで最初に使用されたものの1つであるため、エンコードされた値は0x06です。これは`view`関数であり、トランザクションではないため、Noamと彼が使用するノードの間でのみ行われ、他の誰もそれについて知りません。
 
-  2. オーウェン・オーナーはキャッシュの再編成操作を実行します。そのアドレスを実際に使用する人はごくわずかであるため、現在は0x201122としてエンコードされています。別の値である10<sup>18</sup>に0x06が割り当てられます。
+  2. Owen Ownerはキャッシュの再編成操作を実行します。そのアドレスを実際に使用する人はごくわずかであるため、現在は0x201122としてエンコードされています。別の値である10<sup>18</sup>に0x06が割り当てられます。
 
-  3. ノーム・ナイーブはトークンを0x06に送信します。それらはアドレス`0x0000000000000000000000000de0b6b3a7640000`に送られますが、そのアドレスの秘密鍵を誰も知らないため、そこで動けなくなります。ノームは_不満_です。
+  3. Noam Naiveはトークンを0x06に送信します。それらはアドレス`0x0000000000000000000000000de0b6b3a7640000`に送られますが、そのアドレスの秘密鍵を知っている人は誰もいないため、そこでスタックしてしまいます。Noamは_不満_です。
 
   この問題や、キャッシュの再編成中にメンプールにあるトランザクションの関連問題を解決する方法はありますが、それを認識しておく必要があります。
 
-私はオプティミズムの従業員であり、これが私が最もよく知っているロールアップであるため、ここではオプティミズムを使用してキャッシングをデモンストレーションしました。しかし、内部処理に最小限のコストしかかからず、比較してトランザクションデータをレイヤー1 (L1) に書き込むことが主な費用となるようなロールアップであれば、どれでも機能するはずです。
+私はOptimismの従業員であり、これが私が最もよく知っているロールアップであるため、ここではOptimismを使用してキャッシングをデモンストレーションしました。しかし、内部処理に最小限のコストしかかからず、それに比べてトランザクションデータをL1に書き込むことが主な費用となるようなロールアップであれば、どれでも機能するはずです。この記事の冒頭の注記で説明したように、キャッシングが割に合うかどうかを決定する前に、現在の料金を確認してください。
 
-[私の他の作品はこちらをご覧ください](https://cryptodocguy.pro/)。
+[私の他の作品についてはこちらをご覧ください](https://cryptodocguy.pro/)。
+

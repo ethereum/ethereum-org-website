@@ -46,7 +46,9 @@ sidebarDepth: 3
 
 ### OpenAI {#openai}
 
-بالنسبة للنموذج اللغوي الكبير، اخترت البدء باستخدام [OpenAI](https://openai.com/). لتشغيل التطبيق في هذا البرنامج التعليمي، ستحتاج إلى الدفع مقابل الوصول إلى واجهة برمجة التطبيقات (API). الحد الأدنى للدفع وهو <span dir="ltr">$5</span> أكثر من كافٍ.
+بالنسبة للنموذج اللغوي الكبير، اخترت البدء باستخدام [OpenAI](https://openai.com/). لتشغيل التطبيق في هذا البرنامج التعليمي، ستحتاج إلى الدفع مقابل الوصول إلى API. الحد الأدنى للدفع وهو <span dir="ltr">$5</span> أكثر من كافٍ.
+
+يمكن لمكتبة Python الخاصة بـ OpenAI أيضًا التحدث إلى أي نقطة نهاية أخرى متوافقة مع OpenAI، بما في ذلك نموذج تقوم بتشغيله على جهاز الكمبيوتر الخاص بك. راجع [التفاعل مع نموذج لغوي كبير (LLM)](#interface-llm) لمعرفة كيفية توجيهه إلى مكان آخر.
 
 ## التطوير، خطوة بخطوة {#step-by-step}
 
@@ -358,15 +360,15 @@ uv run agent.py
 سيكون الإخراج الآن عبارة عن مطالبة لنموذج لغوي كبير، مشابهة لـ:
 
 ```
-بناءً على هذه الأسعار:
-الأصل: WETH/USDC
+Given these quotes:
+Asset: WETH/USDC
         2026-01-20T16:34 3016.21
         .
         .
         .
         2026-02-01T17:49 2299.10
 
-الأصل: WBTC/WETH
+Asset: WBTC/WETH
         2026-01-20T16:34 29.84
         .
         .
@@ -374,10 +376,10 @@ uv run agent.py
         2026-02-01T17:50 33.46
 
 
-ما هي القيمة التي تتوقعها لـ WETH/USDC في الوقت 2026-02-02T17:56؟
+What would you expect the value for WETH/USDC to be at time 2026-02-02T17:56?
 
-قدم إجابتك كرقم واحد مقرب إلى منزلتين عشريتين،
-بدون أي نص آخر.
+Provide your answer as a single number rounded to two decimal places,
+without any other text.
 ```
 
 لاحظ أن هناك أسعارًا لأصلين هنا، `WETH/USDC` و `WBTC/WETH`. قد تؤدي إضافة أسعار من أصل آخر إلى تحسين دقة التنبؤ.
@@ -520,20 +522,37 @@ print(make_prompt(wethusdc_quotes + wethwbtc_quotes, future_time, wethusdc_pool.
 بعد ذلك، نقوم بمطالبة نموذج لغوي كبير فعلي ونتلقى قيمة مستقبلية متوقعة. لقد كتبت هذا البرنامج باستخدام OpenAI، لذا إذا كنت ترغب في استخدام مزود مختلف، فستحتاج إلى تعديله.
 
 1. احصل على [حساب OpenAI](https://auth.openai.com/create-account)
-2. [قم بتمويل الحساب](https://platform.openai.com/settings/organization/billing/overview) — الحد الأدنى للمبلغ في وقت الكتابة هو <span dir="ltr">$5</span>
-3. [أنشئ مفتاح API](https://platform.openai.com/settings/organization/api-keys)
+2. [قم بتمويل الحساب](https://platform.openai.com/settings/organization/billing/overview) — الحد الأدنى للمبلغ وقت كتابة هذا التقرير هو <span dir="ltr">$5</span>
+3. [قم بإنشاء مفتاح API](https://platform.openai.com/settings/organization/api-keys)
 4. في سطر الأوامر، قم بتصدير مفتاح API حتى يتمكن برنامجك من استخدامه
 
    ```sh
    export OPENAI_API_KEY=sk-<the rest of the key goes here>
    ```
 
-5. قم بالتبديل (Checkout) وتشغيل الوكيل
+5. قم بجلب الوكيل (Checkout)
 
    ```sh
    git checkout 04-interface-llm
+   ```
+
+6. يستخدم الكود الموجود في المستودع نموذج `gpt-4-turbo`، والذي [ستقوم OpenAI بإيقافه في <span dir="ltr">23</span> أكتوبر <span dir="ltr">2026</span>](https://developers.openai.com/api/docs/deprecations). قم بتبديله إلى `gpt-6-luna`، وهو نموذج حالي منخفض التكلفة. نظرًا لأن `gpt-6-luna` هو نموذج استنتاجي، فإن الأمر يقوم أيضًا بإيقاف تشغيل الاستنتاج (`reasoning_effort="none"`، مما يحافظ على قابلية استخدام `temperature`) ويستبدل المعلمة المهملة `max_tokens` بـ `max_completion_tokens`.
+
+   ```sh
+   sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
+   ```
+
+7. قم بتشغيل الوكيل
+
+   ```sh
    uv run agent.py
    ```
+
+إذا كنت تفضل استخدام نقطة نهاية مختلفة متوافقة مع OpenAI، مثل نموذج تستضيفه محليًا، فإن مكتبة OpenAI تقرأ نقطة النهاية من متغير البيئة `OPENAI_BASE_URL`. قم بتعيينه، وضع أي قيمة غير فارغة في `OPENAI_API_KEY` إذا كان الخادم لا يتحقق من المفاتيح، وقم بتغيير `gpt-6-luna` في `agent.py` و `test-predictor.py` إلى اسم النموذج الذي يوفره ذلك الخادم. إذا رفض الخادم `reasoning_effort`، فقم بإزالة تلك المعلمة.
+
+```sh
+export OPENAI_BASE_URL=http://localhost:<port>/v1
+```
 
 إليك الكود الجديد.
 
@@ -543,20 +562,20 @@ from openai import OpenAI
 open_ai = OpenAI()  # يقرأ العميل متغير البيئة OPENAI_API_KEY
 ```
 
-استيراد وإنشاء مثيل لواجهة برمجة تطبيقات OpenAI.
+استيراد وإنشاء مثيل لـ API الخاص بـ OpenAI. يقرأ العميل أيضًا `OPENAI_BASE_URL` إذا تم تعيينه، لذا يعمل نفس الكود مع نقاط النهاية الأخرى المتوافقة مع OpenAI.
 
 ```python
 response = open_ai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-6-luna", reasoning_effort="none",
     messages=[
         {"role": "user", "content": prompt}
     ],
     temperature=0.0,
-    max_tokens=16,
+    max_completion_tokens=16,
 )
 ```
 
-استدعاء واجهة برمجة تطبيقات OpenAI (`open_ai.chat.completions.create`) لإنشاء الاستجابة.
+استدعاء API الخاص بـ OpenAI (`open_ai.chat.completions.create`) لإنشاء الاستجابة. تطلب `temperature` بقيمة صفر الإجابة الأكثر قابلية للتنبؤ، وتحد `max_completion_tokens` من طول الإجابة، والتي تحتاج فقط إلى احتواء رقم. مع نموذج استنتاجي، تحسب `max_completion_tokens` أيضًا الرموز المميزة التي يستخدمها النموذج للتفكير، وهو سبب آخر لتعيين `reasoning_effort` إلى `none`.
 
 ```python
 expected_price = Decimal(response.choices[0].message.content.strip())
@@ -695,19 +714,19 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
 
 ### إرسال المعاملات {#submit-txn}
 
-الآن نحتاج إلى إرسال المعاملات فعليًا. ومع ذلك، لا أريد إنفاق أموال حقيقية في هذه المرحلة، قبل إثبات كفاءة النظام. بدلاً من ذلك، سنقوم بإنشاء تفرع محلي من الشبكة الرئيسية، و"التداول" على تلك الشبكة.
+الآن نحتاج إلى إرسال المعاملات فعليًا. ومع ذلك، لا أريد إنفاق أموال حقيقية في هذه المرحلة، قبل إثبات النظام. بدلاً من ذلك، سنقوم بإنشاء تفرع محلي للشبكة الرئيسية، و"التداول" على تلك الشبكة.
 
 إليك خطوات إنشاء تفرع محلي وتمكين التداول.
 
 1. قم بتثبيت [Foundry](https://getfoundry.sh/introduction/installation)
 
-2. ابدأ تشغيل [`anvil`](https://getfoundry.sh/anvil/overview)
+2. ابدأ [`anvil`](https://getfoundry.sh/anvil/overview)
 
    ```sh
    anvil --fork-url https://eth.drpc.org --block-time 12
    ```
 
-   يستمع `anvil` على الرابط الافتراضي لـ Foundry، وهو http://localhost:8545، لذلك لا نحتاج إلى تحديد الرابط لـ [أمر `cast`](https://getfoundry.sh/cast/overview) الذي نستخدمه لمعالجة سلسلة الكتل.
+   يستمع `anvil` على عنوان URL الافتراضي لـ Foundry، وهو http://localhost:8545، لذا لا نحتاج إلى تحديد عنوان URL لـ [أمر `cast`](https://getfoundry.sh/cast/overview) الذي نستخدمه لمعالجة سلسلة الكتل.
 
 3. عند التشغيل في `anvil`، هناك عشرة حسابات اختبار تحتوي على ETH — قم بتعيين متغيرات البيئة للحساب الأول
 
@@ -716,9 +735,9 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
    ADDRESS=`cast wallet address $PRIVATE_KEY`
    ```
 
-4. هذه هي العقود التي نحتاج إلى استخدامها. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) هو عقد يونيسواب <span dir="ltr">v3</span> الذي نستخدمه للتداول الفعلي. يمكننا التداول مباشرة من خلال المجمع، ولكن هذا أسهل بكثير.
+4. هذه هي العقود التي نحتاج إلى استخدامها. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) هو عقد Uniswap <span dir="ltr">v3</span> الذي نستخدمه للتداول الفعلي. يمكننا التداول مباشرة من خلال المجمع، ولكن هذا أسهل بكثير.
 
-   المتغيران السفليان هما مسارات يونيسواب <span dir="ltr">v3</span> المطلوبة للمبادلة بين WETH و USDC.
+   المتغيران السفليان هما مسارات Uniswap <span dir="ltr">v3</span> المطلوبة للمبادلة بين WETH و USDC.
 
    ```sh
    WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
@@ -735,7 +754,7 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
    cast send $WETH_ADDRESS "deposit()" --value 1000ether --private-key $PRIVATE_KEY
    ```
 
-6. استخدم `SwapRouter` لمبادلة <span dir="ltr">500 WETH</span> مقابل USDC.
+6. استخدم `SwapRouter` لتداول <span dir="ltr">500 WETH</span> مقابل USDC.
 
    ```sh
    cast send $WETH_ADDRESS "approve(address,uint256)" $SWAP_ROUTER 500ether --private-key $PRIVATE_KEY
@@ -746,7 +765,7 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
        --private-key $PRIVATE_KEY
    ```
 
-   يُنشئ استدعاء `approve` سماحية تسمح لـ `SwapRouter` بإنفاق بعض الرموز المميزة الخاصة بنا. لا يمكن للعقود مراقبة الأحداث، لذلك إذا قمنا بتحويل الرموز المميزة مباشرة إلى عقد `SwapRouter`، فلن يعرف أنه تم الدفع له. بدلاً من ذلك، نسمح لعقد `SwapRouter` بإنفاق مبلغ معين، ثم يقوم `SwapRouter` بذلك. يتم ذلك من خلال دالة يستدعيها `SwapRouter`، لذلك يعرف ما إذا كانت ناجحة.
+   ينشئ استدعاء `approve` سماحية تسمح لـ `SwapRouter` بإنفاق بعض الرموز المميزة الخاصة بنا. لا يمكن للعقود مراقبة الأحداث، لذا إذا قمنا بتحويل الرموز المميزة مباشرة إلى عقد `SwapRouter`، فلن يعرف أنه تم الدفع له. بدلاً من ذلك، نسمح لعقد `SwapRouter` بإنفاق مبلغ معين، ثم يقوم `SwapRouter` بذلك. يتم ذلك من خلال دالة يستدعيها `SwapRouter`، لذا فهو يعرف ما إذا كان ناجحًا.
 
 7. تحقق من أن لديك ما يكفي من كلا الرمزين المميزين.
 
@@ -758,9 +777,12 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
 الآن بعد أن أصبح لدينا WETH و USDC، يمكننا تشغيل الوكيل فعليًا.
 
 ```sh
-git checkout 05-trade
+git checkout -f 05-trade
+sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
 uv run agent.py
 ```
+
+يتجاهل `-f` تغيير النموذج الذي أجريته في الفرع السابق، لذا يطبقه أمر `sed` مرة أخرى على الإصدار الجديد من `agent.py`.
 
 سيبدو الإخراج مشابهًا لـ:
 
@@ -815,7 +837,7 @@ ERC20_ABI = [
 ]
 ```
 
-للتداول الفعلي، نحتاج إلى دالة `approve`. نريد أيضًا إظهار الأرصدة قبل وبعد، لذلك نحتاج أيضًا إلى `balanceOf`.
+للتداول الفعلي، نحتاج إلى دالة `approve`. نريد أيضًا إظهار الأرصدة قبل وبعد، لذا نحتاج أيضًا إلى `balanceOf`.
 
 ```python
 SWAP_ROUTER_ABI = [
@@ -823,7 +845,7 @@ SWAP_ROUTER_ABI = [
 ]
 ```
 
-في ABI الخاص بـ `SwapRouter` نحتاج فقط إلى `exactInput`. هناك دالة ذات صلة، `exactOutput`، يمكننا استخدامها لشراء WETH واحد بالضبط، ولكن للتبسيط نستخدم فقط `exactInput` في كلتا الحالتين.
+في ABI الخاص بـ `SwapRouter` نحتاج فقط إلى `exactInput`. هناك دالة ذات صلة، `exactOutput`، يمكننا استخدامها لشراء واحد WETH بالضبط، ولكن للتبسيط نستخدم فقط `exactInput` في كلتا الحالتين.
 
 ```python
 account = w3.eth.account.from_key(PRIVATE_KEY)
@@ -845,7 +867,7 @@ def txn_params() -> dict:
     }
 ```
 
-معاملات المعاملة. نحتاج إلى دالة هنا لأن [الرقم الفريد (nonce)](https://en.wikipedia.org/wiki/Cryptographic_nonce) يجب أن يتغير في كل مرة.
+معلمات المعاملة. نحتاج إلى دالة هنا لأن [الرقم الفريد (nonce)](https://en.wikipedia.org/wiki/Cryptographic_nonce) يجب أن يتغير في كل مرة.
 
 ```python
 def approve_token(contract: Contract, amount: int):
@@ -867,7 +889,7 @@ def approve_token(contract: Contract, amount: int):
     print("Approve transaction mined.")
 ```
 
-ينتظر [`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) حتى يتم تعدين المعاملة. ويُرجع الإيصال إذا لزم الأمر.
+ينتظر [`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) حتى يتم تعدين المعاملة. ويعيد الإيصال إذا لزم الأمر.
 
 ```python
 SELL_PARAMS = {
@@ -879,7 +901,7 @@ SELL_PARAMS = {
 }
 ```
 
-هذه هي المعاملات عند بيع WETH.
+هذه هي المعلمات عند بيع WETH.
 
 ```python
 def make_buy_params(quote: Quote) -> dict:
@@ -892,7 +914,7 @@ def make_buy_params(quote: Quote) -> dict:
     }
 ```
 
-على عكس `SELL_PARAMS`، يمكن أن تتغير معاملات الشراء. مبلغ الإدخال هو تكلفة <span dir="ltr">1 WETH</span>، كما هو متاح في `quote`.
+على عكس `SELL_PARAMS`، يمكن أن تتغير معلمات الشراء. مبلغ الإدخال هو تكلفة <span dir="ltr">1 WETH</span>، كما هو متاح في `quote`.
 
 ```python
 def buy(quote: Quote):
@@ -917,7 +939,7 @@ def sell():
     print("Sell transaction mined.")
 ```
 
-الدالتان `buy()` و `sell()` متطابقتان تقريبًا. أولاً نوافق على سماحية كافية لـ `SwapRouter`، ثم نستدعيه بالمسار والمبلغ الصحيحين.
+الدالتان `buy()` و `sell()` متطابقتان تقريبًا. أولاً نوافق على سماحية كافية لـ `SwapRouter`، ثم نستدعيها بالمسار والمبلغ الصحيحين.
 
 ```python
 def balances():
@@ -945,7 +967,7 @@ print("Account balances after trade:")
 balances()
 ```
 
-يعمل هذا الوكيل حاليًا مرة واحدة فقط. ومع ذلك، يمكنك تغييره ليعمل بشكل مستمر إما عن طريق تشغيله من [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) أو عن طريق تغليف الأسطر 368-400 في حلقة واستخدام [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) للانتظار حتى يحين وقت الدورة التالية.
+يعمل هذا الوكيل حاليًا مرة واحدة فقط. ومع ذلك، يمكنك تغييره ليعمل بشكل مستمر إما عن طريق تشغيله من [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) أو عن طريق تغليف الأسطر 368-397 في حلقة واستخدام [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) للانتظار حتى يحين وقت الدورة التالية.
 
 ## تحسينات محتملة {#improvements}
 
@@ -961,9 +983,9 @@ balances()
 
 ### ماذا لو كنت تريد الحفاظ على سرية استراتيجية التداول الخاصة بك؟ {#secret}
 
-يمكن لموردي الذكاء الاصطناعي رؤية الاستعلامات التي ترسلها إلى نماذجهم اللغوية الكبيرة، مما قد يكشف عن نظام التداول العبقري الذي طورته مع وكيلك. نظام التداول الذي يستخدمه عدد كبير جدًا من الأشخاص لا قيمة له لأن الكثير من الأشخاص يحاولون الشراء عندما تريد الشراء (ويرتفع السعر) ويحاولون البيع عندما تريد البيع (وينخفض السعر).
+يمكن لموردي الذكاء الاصطناعي رؤية الاستعلامات التي ترسلها إلى النماذج اللغوية الكبيرة الخاصة بهم، مما قد يكشف عن نظام التداول العبقري الذي طورته مع وكيلك. نظام التداول الذي يستخدمه عدد كبير جدًا من الأشخاص لا قيمة له لأن الكثير من الأشخاص يحاولون الشراء عندما تريد الشراء (ويرتفع السعر) ويحاولون البيع عندما تريد البيع (وينخفض السعر).
 
-يمكنك تشغيل نموذج لغوي كبير محليًا، على سبيل المثال، باستخدام [LM-Studio](https://lmstudio.ai/)، لتجنب هذه المشكلة.
+يمكنك تشغيل نموذج لغوي كبير محليًا، على سبيل المثال، باستخدام `llama-server` الخاص بـ [llama.cpp](https://github.com/ggml-org/llama.cpp)، لتجنب هذه المشكلة. فهو يوفر نقطة نهاية متوافقة مع OpenAI، لذا تحتاج فقط إلى تعيين `OPENAI_BASE_URL` واسم النموذج كما هو موضح في [التفاعل مع نموذج لغوي كبير (LLM)](#interface-llm).
 
 ### من روبوت ذكاء اصطناعي إلى وكيل ذكاء اصطناعي {#bot-to-agent}
 

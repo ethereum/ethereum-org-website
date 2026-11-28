@@ -11,19 +11,27 @@ published: 2021-03-09
 
 ## 简介 {#introduction}
 
-以太坊最常见的用途之一是让一个群体创建可交易的代币，在某种意义上就是他们自己的货币。这些代币通常遵循一个标准，即 [ERC-20](/developers/docs/standards/tokens/erc-20/)。该标准使得编写能够与所有 ERC-20 代币配合使用的工具（如流动性池和钱包）成为可能。在本文中，我们将分析 [欧本齐柏林 Solidity ERC20 实现](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)，以及[接口定义](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)。
+以太坊最常见的用途之一是让一个群体创建一种可交易的代币，在某种意义上就是他们自己的货币。这些代币通常遵循一个标准，即 [ERC-20](/developers/docs/standards/tokens/erc-20/)。该标准使得编写能够与所有 ERC-20 代币配合使用的工具（如流动性池和钱包）成为可能。在本文中，我们将分析 [OpenZeppelin Solidity ERC20 实现](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol)以及[接口定义](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol)。
 
-这是带有注释的源代码。如果你想实现 ERC-20，请[阅读本教程](https://docs.openzeppelin.com/contracts/3.x/erc20-supply)。
+这是带注释的源代码。如果你想实现 ERC-20，请[阅读本教程](https://docs.openzeppelin.com/contracts/5.x/erc20-supply)。
+
+<Alert variant="info">
+<AlertContent>
+<AlertDescription>
+本演练涵盖 OpenZeppelin Contracts v3.3（Solidity 0.6/0.7）。如果你今天安装 `@openzeppelin/contracts`，你将获得 v5.x，它与下面的代码有所不同：它使用 Solidity 内置的检查算术而不是 `SafeMath`，将 `_beforeTokenTransfer` 和 `_afterTokenTransfer` 替换为单个 `_update` 函数，删除了 `increaseAllowance`、`decreaseAllowance` 和 `_setupDecimals`，并使用自定义错误而不是回退字符串来报告失败。这里解释的概念仍然适用。有关当前的 API，请参阅 [OpenZeppelin v5 ERC-20 文档](https://docs.openzeppelin.com/contracts/5.x/erc20)。
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## 接口 {#the-interface}
 
-像 ERC-20 这样的标准的目的是允许多种代币实现在不同应用（如钱包和去中心化交易所）之间可互操作。为了实现这一点，我们创建了一个[接口](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/)。任何需要使用代币合约的代码都可以使用接口中相同的定义，并与所有使用该接口的代币合约兼容，无论是像梅塔马斯克这样的钱包、像 etherscan.io 这样的去中心化应用 (dapp)，还是像流动性池这样的其他合约。
+像 ERC-20 这样的标准的目的是允许许多代币实现在跨应用程序（如钱包和去中心化交易所）时可互操作。为了实现这一点，我们创建了一个[接口](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/)。任何需要使用代币合约的代码都可以使用接口中相同的定义，并与所有使用该接口的代币合约兼容，无论是像 MetaMask 这样的钱包、像 etherscan.io 这样的 dapp，还是像流动性池这样的不同合约。
 
-![Illustration of the ERC-20 interface](erc20_interface.png)
+![ERC-20 接口图解](erc20_interface.png)
 
-如果你是一位经验丰富的程序员，你可能记得在 [Java](https://www.w3schools.com/java/java_interface.asp) 甚至 [C 语言头文件](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html)中看到过类似的结构。
+如果你是一位经验丰富的程序员，你可能记得在 [Java](https://www.w3schools.com/java/java_interface.asp) 甚至 [C 头文件](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html)中看到过类似的结构。
 
-这是欧本齐柏林提供的 [ERC-20 接口](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)定义。它是将[人类可读的标准](https://eips.ethereum.org/EIPS/eip-20)翻译成 Solidity 代码的结果。当然，接口本身并不定义*如何*执行任何操作。这将在下面的合约源代码中解释。
+这是来自 OpenZeppelin 的 [ERC-20 接口](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol)定义。它是将[人类可读的标准](https://eips.ethereum.org/EIPS/eip-20)转换为 Solidity 代码。当然，接口本身并不定义*如何*做任何事情。这在下面的合约源代码中进行了解释。
 
 &nbsp;
 
@@ -31,7 +39,7 @@ published: 2021-03-09
 // SPDX-License-Identifier: MIT
 ```
 
-Solidity 文件应该包含一个许可证标识符。[你可以在这里查看许可证列表](https://spdx.org/licenses/)。如果你需要不同的许可证，只需在注释中说明即可。
+Solidity 文件应该包含一个许可证标识符。[你可以在此处查看许可证列表](https://spdx.org/licenses/)。如果你需要不同的许可证，只需在注释中解释即可。
 
 &nbsp;
 
@@ -39,13 +47,13 @@ Solidity 文件应该包含一个许可证标识符。[你可以在这里查看�
 pragma solidity >=0.6.0 <0.8.0;
 ```
 
-Solidity 语言仍在快速发展，新版本可能与旧代码不兼容（[见此处](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)）。因此，最好不仅指定语言的最低版本，还要指定最高版本，即你测试代码时使用的最新版本。
+Solidity 语言仍在快速发展，新版本可能与旧代码不兼容（[参见此处](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)）。因此，最好不仅指定语言的最低版本，还要指定最高版本，即你测试代码所用的最新版本。
 
 &nbsp;
 
 ```solidity
 /**
- * @dev EIP中定义的ERC-20标准接口。
+ * @dev EIP 中定义的 ERC-20 标准接口。
  */
 ```
 
@@ -63,63 +71,57 @@ interface IERC20 {
 
 ```solidity
     /**
-     * @dev 返回已存在的代币数量。
+     * @dev 返回存在的代币数量。
      */
     function totalSupply() external view returns (uint256);
 ```
 
-此函数是 `external`，意味着[它只能从合约外部调用](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2)。
-它返回合约中代币的总供应量。此值使用以太坊中最常见的类型（无符号 256 位）返回（256 位是 EVM 的原生字长）。此函数也是一个 `view`，这意味着它不会改变状态，因此它可以在单个节点上执行，而无需区块链中的每个节点都运行它。这种函数不会生成交易，也不消耗 [Gas](/developers/docs/gas/)。
+此函数是 `external`，这意味着[它只能从合约外部调用](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2)。它返回合约中代币的总供应量。此值使用以太坊中最常见的类型返回，即无符号 256 位（256 位是 EVM 的原生字长）。此函数也是一个 `view`，这意味着它不会改变状态，因此它可以在单个节点上执行，而无需让区块链中的每个节点都运行它。这种函数不会生成交易，也不消耗 [Gas](/developers/docs/gas/)。
 
-**注意：** 理论上，合约的创建者似乎可以通过返回比实际值更小的总供应量来作弊，使每个代币看起来比实际更有价值。然而，这种担忧忽略了区块链的真实本质。区块链上发生的一切都可以被每个节点验证。为了实现这一点，每个合约的机器语言代码和存储在每个节点上都是可用的。虽然你不必发布合约的 Solidity 代码，但除非你发布源代码以及编译它所用的 Solidity 版本，以便可以根据你提供的机器语言代码进行验证，否则没有人会认真对待你。
-例如，请参阅[此合约](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract)。
+**注意：** 理论上，合约的创建者似乎可以通过返回比实际值更小的总供应量来作弊，使每个代币看起来比实际更有价值。然而，这种担忧忽略了区块链的真实性质。区块链上发生的一切都可以由每个节点验证。为了实现这一点，每个合约的机器语言代码和存储在每个节点上都可用。虽然你不必发布合约的 Solidity 代码，但除非你发布源代码以及编译它所用的 Solidity 版本，以便可以根据你提供的机器语言代码对其进行验证，否则没有人会认真对待你。例如，请参阅[此合约](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract)。
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev 返回`account`拥有的代币数量。
+     * @dev 返回 `account` 拥有的代币数量。
      */
     function balanceOf(address account) external view returns (uint256);
 ```
 
-顾名思义，`balanceOf` 返回账户的余额。在 Solidity 中，以太坊账户使用 `address` 类型进行标识，该类型占用 160 位。
-它也是 `external` 和 `view`。
+顾名思义，`balanceOf` 返回账户的余额。以太坊账户在 Solidity 中使用 `address` 类型进行标识，该类型包含 160 位。它也是 `external` 和 `view`。
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev 将`amount`数量的代币从调用者的账户转账到`recipient`。
+     * @dev 将 `amount` 个代币从调用者的账户转账到 `recipient`。
      *
      * 返回一个布尔值，指示操作是否成功。
      *
-     * 触发{Transfer}事件。
+     * 触发 {Transfer} 事件。
      */
     function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
-`transfer` 函数将代币从调用者转账到不同的地址。这涉及状态的改变，因此它不是 `view`。
-当用户调用此函数时，它会创建一笔交易并消耗 Gas。它还会触发一个事件 `Transfer`，以通知区块链上的所有人该事件的发生。
+`transfer` 函数将代币从调用者转账到不同的地址。这涉及状态的改变，因此它不是 `view`。当用户调用此函数时，它会创建一笔交易并消耗 Gas。它还会触发一个事件 `Transfer`，以将该事件通知区块链上的所有人。
 
 该函数为两种不同类型的调用者提供两种类型的输出：
 
-- 直接从用户界面调用该函数的用户。通常，用户提交交易后不会等待响应，因为这可能需要无限长的时间。用户可以通过查找交易收据（由交易哈希标识）或查找 `Transfer` 事件来查看发生了什么。
-- 其他合约，它们作为整体交易的一部分调用该函数。这些合约会立即获得结果，因为它们在同一笔交易中运行，因此它们可以使用函数的返回值。
+- 直接从用户界面调用该函数的用户。通常，用户提交一笔交易并且不等待响应，这可能需要无限长的时间。用户可以通过查找交易收据（由交易哈希标识）或查找 `Transfer` 事件来查看发生了什么。
+- 其他合约，它们作为整体交易的一部分调用该函数。这些合约会立即获得结果，因为它们在同一笔交易中运行，因此它们可以使用函数返回值。
 
-其他改变合约状态的函数也会产生相同类型的输出。
+其他改变合约状态的函数也会创建相同类型的输出。
 
 &nbsp;
 
-授权额度允许一个账户花费属于不同所有者的一些代币。
-例如，这对于充当卖方的合约非常有用。合约无法监控事件，因此如果买方直接将代币转账给卖方合约，该合约将不知道自己已收到付款。相反，买方允许卖方合约花费一定金额，然后卖方转账该金额。
-这是通过卖方合约调用的函数完成的，因此卖方合约可以知道它是否成功。
+授权额度允许一个账户花费属于不同所有者的一些代币。例如，这对于充当卖方的合约很有用。合约无法监控事件，因此如果买方直接将代币转账给卖方合约，该合约将不知道它已收到付款。相反，买方允许卖方合约花费一定金额，然后卖方转账该金额。这是通过卖方合约调用的函数完成的，因此卖方合约可以知道它是否成功。
 
 ```solidity
     /**
-     * @dev 返回`spender`将被允许通过{transferFrom}代表`owner`花费的剩余代币数量。默认值为零。
+     * @dev 返回 `spender` 将被允许通过 {transferFrom} 代表 `owner` 消费的剩余代币数量。默认为零。
      *
-     * 当调用{approve}或{transferFrom}时，此值会发生变化。
+     * 当调用 {approve} 或 {transferFrom} 时，此值会发生变化。
      */
     function allowance(address owner, address spender) external view returns (uint256);
 ```
@@ -130,29 +132,29 @@ interface IERC20 {
 
 ```solidity
     /**
-     * @dev 将`amount`设置为`spender`对调用者代币的授权额度。
+     * @dev 将 `amount` 设置为 `spender` 对调用者代币的授权额度。
      *
      * 返回一个布尔值，指示操作是否成功。
      *
-     * 重要提示：请注意，使用此方法更改授权额度会带来风险，即由于不幸的交易顺序，某人可能会同时使用旧的和新的授权额度。缓解这种竞争条件的一种可能解决方案是首先将花费者的授权额度降至0，然后再设置所需的值：
+     * 重要提示：请注意，使用此方法更改授权额度会带来风险，因为不幸的交易顺序可能导致某人同时使用旧的和新的授权额度。缓解这种竞争条件的一种可能解决方案是，首先将花费者的授权额度降至 0，然后再设置所需的值：
      * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
      *
-     * 触发{Approval}事件。
+     * 触发 {Approval} 事件。
      */
     function approve(address spender, uint256 amount) external returns (bool);
 ```
 
-`approve` 函数创建一个授权额度。请务必阅读有关它如何被滥用的消息。在以太坊中，你可以控制自己交易的顺序，但你无法控制其他人交易的执行顺序，除非你等到看到对方的交易发生后才提交自己的交易。
+`approve` 函数创建一个授权额度。请务必阅读有关它如何被滥用的消息。在以太坊中，你可以控制自己交易的顺序，但你无法控制其他人交易的执行顺序，除非你直到看到对方的交易发生后才提交自己的交易。
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev 使用授权额度机制将`amount`数量的代币从`sender`转账到`recipient`。然后从调用者的授权额度中扣除`amount`。
+     * @dev 使用授权额度机制将 `amount` 个代币从 `sender` 转账到 `recipient`。然后从调用者的授权额度中扣除 `amount`。
      *
      * 返回一个布尔值，指示操作是否成功。
      *
-     * 触发{Transfer}事件。
+     * 触发 {Transfer} 事件。
      */
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 ```
@@ -164,14 +166,15 @@ interface IERC20 {
 ```solidity
 
     /**
-     * @dev 当`value`数量的代币从一个账户（`from`）转账到另一个账户（`to`）时触发。
+     * @dev 当 `value` 个代币从一个账户 (`from`) 转账到另一个账户 (`to`) 时触发。
      *
-     * 请注意，`value`可能为零。
+     * 请注意，`value` 可以为零。
      */
     event Transfer(address indexed from, address indexed to, uint256 value);
 
     /**
-     * @dev 当通过调用{approve}设置`spender`对`owner`的授权额度时触发。`value`是新的授权额度。
+     * @dev Emitted when the allowance of a `spender` for an `owner` is set by
+     * a call to {approve}. `value` is the new allowance.
      */
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
@@ -181,7 +184,7 @@ interface IERC20 {
 
 ## 实际合约 {#the-actual-contract}
 
-这是实现 ERC-20 标准的实际合约，[取自此处](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)。
+这是实现 ERC-20 标准的实际合约，[取自此处](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol)。
 它并不打算按原样使用，但你可以从中[继承](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm)以将其扩展为可用的内容。
 
 ```solidity
@@ -203,7 +206,7 @@ import "../../math/SafeMath.sol";
 ```
 
 - `GSN/Context.sol` 是使用 [OpenGSN](https://opengsn.org/) 所需的定义，该系统允许没有以太币的用户使用区块链。请注意，这是一个旧版本，如果你想与 OpenGSN 集成，请[使用本教程](https://docs.opengsn.org/javascript-client/tutorial.html)。
-- [SafeMath 库](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)，它可防止 Solidity 版本 **&lt;0.8.0** 发生算术溢出/下溢。在 Solidity ≥0.8.0 中，算术运算在溢出/下溢时会自动回退，因此不再需要 SafeMath。此合约使用 SafeMath 是为了向后兼容旧的编译器版本。
+- [SafeMath 库](https://docs.openzeppelin.com/contracts/3.x/api/math#SafeMath)，它可防止 Solidity 版本 **&lt;0.8.0** 发生算术溢出/下溢。在 Solidity ≥0.8.0 中，算术运算在溢出/下溢时会自动回退，因此不再需要 SafeMath。此合约使用 SafeMath 是为了向后兼容旧的编译器版本。
 
 &nbsp;
 
@@ -245,19 +248,19 @@ contract ERC20 is Context, IERC20 {
 
 ```
 
-此行将 `SafeMath` 库附加到 `uint256` 类型。你可以在[此处](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol)找到此库。
+此行将 `SafeMath` 库附加到 `uint256` 类型。你可以在[此处](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/math/SafeMath.sol)找到此库。
 
 ### 变量定义 {#variable-definitions}
 
 这些定义指定了合约的状态变量。这些变量被声明为 `private`，但这仅仅意味着区块链上的其他合约无法读取它们。*区块链上没有秘密*，每个节点上的软件都拥有每个区块中每个合约的状态。按照惯例，状态变量被命名为 `_<something>`。
 
-前两个变量是[映射](https://www.tutorialspoint.com/solidity/solidity_mappings.htm)，这意味着它们的行为与[关联数组](https://wikipedia.org/wiki/Associative_array)大致相同，只是键是数值。仅为值不同于默认值（零）的条目分配存储空间。
+前两个变量是[映射](https://www.tutorialspoint.com/solidity/solidity_mappings.htm)，这意味着它们的行为与[关联数组](https://wikipedia.org/wiki/Associative_array)大致相同，只是键是数值。仅为具有不同于默认值（零）的值的条目分配存储空间。
 
 ```solidity
     mapping (address => uint256) private _balances;
 ```
 
-第一个映射 `_balances` 是地址及其各自的该代币余额。要访问余额，请使用此语法：`_balances[<address>]`。
+第一个映射 `_balances` 是地址及其各自的此代币余额。要访问余额，请使用此语法：`_balances[<address>]`。
 
 &nbsp;
 
@@ -265,7 +268,7 @@ contract ERC20 is Context, IERC20 {
     mapping (address => mapping (address => uint256)) private _allowances;
 ```
 
-此变量 `_allowances` 存储前面解释的授权额度。第一个索引是代币的所有者，第二个是拥有授权额度的合约。要访问地址 A 可以从地址 B 的账户中花费的金额，请使用 `_allowances[B][A]`。
+此变量 `_allowances` 存储前面解释的授权额度。第一个索引是代币的所有者，第二个是具有授权额度的合约。要访问地址 A 可以从地址 B 的账户中花费的金额，请使用 `_allowances[B][A]`。
 
 &nbsp;
 
@@ -287,30 +290,28 @@ contract ERC20 is Context, IERC20 {
 
 一方面，以太坊没有浮点数或小数变量。另一方面，人类喜欢能够分割代币。人们选择黄金作为货币的原因之一是，当有人想买一只鸭子价值的牛时，很难找零。
 
-解决方案是跟踪整数，但计算的不是真实的代币，而是几乎毫无价值的代币分数单位。以以太币为例，分数单位称为 Wei，10^18 Wei 等于 1 ETH。在撰写本文时，10,000,000,000,000 Wei 约等于一美分或一欧分。
+解决方案是跟踪整数，但计算的不是真实的代币，而是几乎毫无价值的代币的最小单位。在以太币的情况下，最小单位称为 Wei，10^18 Wei 等于 1 ETH。
 
-应用程序需要知道如何显示代币余额。如果用户有 3,141,000,000,000,000,000 Wei，那是 3.14 ETH 吗？31.41 ETH？3,141 ETH？在以太币的情况下，定义为 10^18 Wei 等于 1 ETH，但对于你的代币，你可以选择不同的值。如果分割代币没有意义，你可以使用 `_decimals` 值为零。如果你想使用与 ETH 相同的标准，请使用值 **18**。
+应用程序需要知道如何显示代币余额。如果用户有 3,141,000,000,000,000,000 Wei，那是 3.14 ETH 吗？31.41 ETH？3,141 ETH？在以太币的情况下，它被定义为 10^18 Wei 等于 1 ETH，但对于你的代币，你可以选择不同的值。如果分割代币没有意义，你可以使用 `_decimals` 值为零。如果你想使用与 ETH 相同的标准，请使用值 **18**。
 
 ### 构造函数 {#the-constructor}
 
 ```solidity
     /**
-     * @dev 设置{name}和{symbol}的值，使用默认值18初始化{decimals}。
+     * @dev 设置 {name} 和 {symbol} 的值，将 {decimals} 初始化为默认值 18。
      *
-     * 要为{decimals}选择不同的值，请使用{_setupDecimals}。
+     * 要为 {decimals} 选择不同的值，请使用 {_setupDecimals}。
      *
      * 这三个值都是不可变的：它们只能在构造期间设置一次。
      */
     constructor (string memory name_, string memory symbol_) public {
-        // 在Solidity ≥0.7.0中，'public'是隐式的，可以省略。
-
         _name = name_;
         _symbol = symbol_;
         _decimals = 18;
     }
 ```
 
-构造函数在首次创建合约时被调用。按照惯例，函数参数被命名为 `<something>_`。
+构造函数在合约首次创建时被调用。按照惯例，函数参数被命名为 `<something>_`。从 Solidity 0.7.0 开始，构造函数上的可见性（`public` 或 `internal`）被忽略并弃用，因此较新的代码会省略它。
 
 ### 用户界面函数 {#user-interface-functions}
 
@@ -323,19 +324,24 @@ contract ERC20 is Context, IERC20 {
     }
 
     /**
-     * @dev 返回代币的符号，通常是名称的简写版本。
+     * @dev 返回代币的符号，通常是名称的缩写版本。
      */
     function symbol() public view returns (string memory) {
         return _symbol;
     }
 
     /**
-     * @dev 返回用于获取其用户表示形式的小数位数。
-     * 例如，如果`decimals`等于`2`，则`505`个代币的余额应向用户显示为`5,05`（`505 / 10 ** 2`）。
+     * @dev Returns the number of decimals used to get its user representation.
+     * For example, if `decimals` equals `2`, a balance of `505` tokens should
+     * be displayed to a user as `5,05` (`505 / 10 ** 2`).
      *
-     * 代币通常选择值为18，模仿以太币和Wei之间的关系。这是{ERC20}使用的值，除非调用了{_setupDecimals}。
+     * Tokens usually opt for a value of 18, imitating the relationship between
+     * ether and wei. This is the value {ERC20} uses, unless {_setupDecimals} is
+     * called.
      *
-     * 注意：此信息仅用于_显示_目的：它绝不会影响合约的任何算术运算，包括{IERC20-balanceOf}和{IERC20-transfer}。
+     * NOTE: This information is only used for _display_ purposes: it in
+     * no way affects any of the arithmetic of the contract, including
+     * {IERC20-balanceOf} and {IERC20-transfer}.
      */
     function decimals() public view returns (uint8) {
         return _decimals;
@@ -344,13 +350,13 @@ contract ERC20 is Context, IERC20 {
 
 这些函数 `name`、`symbol` 和 `decimals` 帮助用户界面了解你的合约，以便它们能够正确显示它。
 
-返回类型是 `string memory`，意味着返回一个存储在内存中的字符串。变量（如字符串）可以存储在三个位置：
+返回类型是 `string memory`，这意味着返回一个存储在内存中的字符串。变量（如字符串）可以存储在三个位置：
 
-|          | 生命周期      | 合约访问权限 | Gas 成本                                                       |
+|          | 生命周期      | 合约访问 | Gas 成本                                                       |
 | -------- | ------------- | --------------- | -------------------------------------------------------------- |
 | 内存   | 函数调用 | 读/写      | 几十或几百（位置越高成本越高）                 |
 | 调用数据 | 函数调用 | 只读       | 不能用作返回类型，只能用作函数参数类型 |
-| 存储  | 直到被更改 | 读/写      | 高（读取 800，写入 20k）                             |
+| 存储  | 直到改变 | 读/写      | 高（冷读取为 2,100，新写入为 20,000）           |
 
 在这种情况下，`memory` 是最佳选择。
 
@@ -604,7 +610,7 @@ B：
 有两种方法可以使用此合约：
 
 1. 将其用作你自己代码的模板
-1. [从中继承](https://www.bitdegree.org/learn/solidity-inheritance)，并仅覆盖你需要修改的那些函数
+1. [从中继承](https://docs.soliditylang.org/en/latest/contracts.html#inheritance)，并仅覆盖你需要修改的那些函数
 
 第二种方法要好得多，因为欧本齐柏林 ERC-20 代码已经过审计并被证明是安全的。当你使用继承时，你修改了哪些函数一目了然，为了信任你的合约，人们只需要审计那些特定的函数。
 

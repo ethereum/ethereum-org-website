@@ -11,9 +11,9 @@ published: 2022-08-15
 
 ## 简介 {#introduction}
 
-以太坊的一大优势在于，没有中央机构可以修改或撤销你的交易。以太坊的一大问题也在于，没有中央机构有权撤销用户的错误或非法交易。在本文中，你将了解用户在使用 [ERC-20](/developers/docs/standards/tokens/erc-20/) 代币时常犯的一些错误，以及如何创建 ERC-20 合约来帮助用户避免这些错误，或者赋予中央机构一定的权力（例如冻结账户）。
+以太坊的一大优点是没有中央机构可以修改或撤销你的交易。而以太坊的一大问题也是没有中央机构有权撤销用户的错误或非法交易。在本文中，你将了解用户在使用 [ERC-20](/developers/docs/standards/tokens/erc-20/) 代币时常犯的一些错误，以及如何创建 ERC-20 合约来帮助用户避免这些错误，或者赋予中央机构一些权力（例如冻结账户）。
 
-请注意，虽然我们将使用 [欧本齐柏林 ERC-20 代币合约](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20)，但本文不会对其进行详细解释。你可以在[此处](/developers/tutorials/erc20-annotated-code)找到相关信息。
+请注意，虽然我们将使用 [OpenZeppelin ERC-20 代币合约](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20)，但本文不会对其进行详细解释。你可以在[此处](/developers/tutorials/erc20-annotated-code)找到相关信息。
 
 如果你想查看完整的源代码：
 
@@ -22,24 +22,26 @@ published: 2022-08-15
 3. 克隆 GitHub 仓库 `https://github.com/qbzzt/20220815-erc20-safety-rails`。
 4. 打开 **contracts > erc20-safety-rails.sol**。
 
+请注意，该仓库是为 OpenZeppelin Contracts 4.7.2 编写的，在那个版本中，本文重写的函数名为 `_beforeTokenTransfer`。本文使用的是当前的 OpenZeppelin Contracts 5.x，你需要重写的是 `_update`，因此本文中的代码与仓库中的代码略有不同。
+
 ## 创建 ERC-20 合约 {#creating-an-erc-20-contract}
 
-在添加安全护栏功能之前，我们需要一个 ERC-20 合约。在本文中，我们将使用 [欧本齐柏林合约向导](https://docs.openzeppelin.com/contracts/5.x/wizard)。在另一个浏览器中打开它并按照以下说明操作：
+在添加安全护栏功能之前，我们需要一个 ERC-20 合约。在本文中，我们将使用 [OpenZeppelin Contracts Wizard](https://docs.openzeppelin.com/contracts/5.x/wizard)。在另一个浏览器中打开它并按照以下说明操作：
 
 1. 选择 **ERC20**。
 2. 输入以下设置：
 
    | 参数 | 值 |
-   | -------------- | ---------------- |
-   | 名称 | SafetyRailsToken |
-   | 符号 | SAFE |
-   | 预铸造 | 1000 |
-   | 功能 | None |
-   | 访问控制 | Ownable |
-   | 可升级性 | None |
+   | -------------- | ------------------------- |
+   | Name | SafetyRailsToken |
+   | Symbol | SAFE |
+   | Premint | 1000 |
+   | Features | None（取消勾选 **Permit**） |
+   | Access Control | Ownable |
+   | Upgradability | None |
 
-3. 向上滚动并点击 **Open in Remix**（适用于 Remix）或 **Download** 以使用其他环境。我假设你使用的是 Remix，如果你使用其他环境，只需进行相应的更改即可。
-4. 现在我们有了一个功能齐全的 ERC-20 合约。你可以展开 `.deps` > `npm` 来查看导入的代码。
+3. 向上滚动并点击 **Open in Remix**（如果使用 Remix）或 **Download** 以使用其他环境。我假设你使用的是 Remix，如果你使用其他环境，只需进行相应的更改即可。
+4. 我们现在有了一个功能齐全的 ERC-20 合约。你可以展开 `.deps` > `npm` 来查看导入的代码。
 5. 编译、部署并试用该合约，看看它是否能作为 ERC-20 合约正常运行。如果你需要学习如何使用 Remix，请[参考本教程](https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth)。
 
 ## 常见错误 {#common-mistakes}
@@ -54,47 +56,70 @@ published: 2022-08-15
 
 ### 阻止转账 {#preventing-transfers}
 
-欧本齐柏林 ERC-20 合约包含[一个钩子 `_beforeTokenTransfer`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L364-L368)，它会在代币转账之前被调用。默认情况下，这个钩子不执行任何操作，但我们可以将自己的功能挂载到它上面，例如在出现问题时进行回退的检查。
+在 OpenZeppelin ERC-20 合约中，余额的每一次变化，无论是转账、铸造还是销毁，都会经过[一个内部函数 `_update`](https://docs.openzeppelin.com/contracts/5.x/api/token/erc20#ERC20-_update-address-address-uint256-)。我们可以重写它，将我们自己的功能挂载到它上面，例如在出现问题时回退的检查。
 
-要使用该钩子，请在构造函数之后添加此函数：
+为此，请在构造函数之后添加此函数：
 
 ```solidity
-    function _beforeTokenTransfer(address from, address to, uint256 amount)
+    function _update(address from, address to, uint256 value)
         internal virtual
         override(ERC20)
     {
-        super._beforeTokenTransfer(from, to, amount);
+        super._update(from, to, value);
     }
 ```
 
-如果你对 Solidity 不是很熟悉，这个函数的一些部分可能对你来说是新的：
+如果你对 Solidity 不是很熟悉，这个函数的某些部分可能是新的：
 
 ```solidity
         internal virtual
 ```
 
-`virtual` 关键字意味着，正如我们从 `ERC20` 继承功能并重写了此函数一样，其他合约也可以从我们这里继承并重写此函数。
+`virtual` 关键字意味着，就像我们从 `ERC20` 继承功能并重写此函数一样，其他合约也可以从我们这里继承并重写此函数。
 
 ```solidity
         override(ERC20)
 ```
 
-我们必须明确指定我们正在[重写](https://docs.soliditylang.org/en/v0.8.15/contracts.html#function-overriding) ERC20 代币定义的 `_beforeTokenTransfer`。一般来说，从安全角度来看，显式定义比隐式定义要好得多——如果它就在你面前，你就不会忘记你做过什么。这也是我们需要指定我们要重写哪个超类的 `_beforeTokenTransfer` 的原因。
+我们必须明确指定我们正在[重写](https://docs.soliditylang.org/en/latest/contracts.html#function-overriding) ERC20 代币对 `_update` 的定义。一般来说，从安全角度来看，显式定义比隐式定义要好得多——如果它就在你面前，你就不会忘记你做过什么。这也是我们需要指定我们要重写哪个超类的 `_update` 的原因。
 
 ```solidity
-        super._beforeTokenTransfer(from, to, amount);
+        super._update(from, to, value);
 ```
 
-这一行调用了我们继承的、包含该函数的合约的 `_beforeTokenTransfer` 函数。在这种情况下，只有 `ERC20` 包含该函数，`Ownable` 没有这个钩子。即使目前 `ERC20._beforeTokenTransfer` 不执行任何操作，我们也会调用它，以防将来添加了功能（然后我们决定重新部署合约，因为合约在部署后无法更改）。
+此行调用我们继承的、具有该函数的合约的 `_update` 函数。在这种情况下，只有 `ERC20`，`Ownable` 没有此函数。与空钩子不同，`ERC20._update` 是实际移动代币的函数，因此调用它是必不可少的。我们的检查在此调用之前进行，因此它们可以在任何余额更改之前回退。
 
 ### 编写需求代码 {#coding-the-requirements}
 
-我们希望向该函数添加以下需求：
+我们希望将这些要求添加到函数中。因为在销毁代币时也会调用 `_update`，此时 `to` 设置为 `address(0)`，所以我们仅在 `to` 不为 `address(0)` 时才检查它：
 
-- `to` 地址不能等于 `address(this)`，即 ERC-20 合约自身的地址。
+- `to` 地址不能等于 `address(this)`，即 ERC-20 合约本身的地址。
 - `to` 地址不能为空，它必须是以下之一：
-  - 外部拥有账户 (EOA)。我们无法直接检查一个地址是否为 EOA，但我们可以检查该地址的 ETH 余额。EOA 几乎总是拥有余额，即使它们不再被使用——很难将它们清空到最后一 Wei。
-  - 智能合约。测试一个地址是否为智能合约要困难一些。有一个操作码可以检查外部代码长度，称为 [`EXTCODESIZE`](https://www.evm.codes/#3b)，但它不能在 Solidity 中直接使用。我们必须为此使用 [Yul](https://docs.soliditylang.org/en/v0.8.15/yul.html)（即 EVM 汇编）。我们可以使用 Solidity 中的其他值（[`<address>.code` 和 `<address>.codehash`](https://docs.soliditylang.org/en/v0.8.15/units-and-global-variables.html#members-of-address-types)），但它们消耗的 Gas 更多。
+  - 外部拥有账户 (EOA)。我们无法直接检查地址是否为外部拥有账户 (EOA)，但我们可以检查地址的 ETH 余额。外部拥有账户 (EOA) 几乎总是有余额，即使它们不再被使用——很难将它们清空到最后一 Wei。
+  - 智能合约。测试地址是否为智能合约要困难一些。有一个操作码可以检查外部代码长度，称为 [`EXTCODESIZE`](https://www.evm.codes/#3b)。在 Solidity 中，你可以使用 [`<address>.code.length`](https://docs.soliditylang.org/en/latest/units-and-global-variables.html#members-of-address-types) 获取它，编译器会将其转换为 `EXTCODESIZE`。在这里，我们使用 [Yul](https://docs.soliditylang.org/en/latest/yul.html)（即 EVM 汇编）来展示如何直接调用该操作码。请注意，自 [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) 以来，外部拥有账户 (EOA) 也可以拥有代码（对合约的委托），因此此检查识别的是带有代码的账户，而不仅仅是合约。对于我们拒绝空地址的目的来说，这已经足够了。
+
+这是完整的函数：
+
+```solidity
+    function _update(address from, address to, uint256 value)
+        internal virtual
+        override(ERC20)
+    {
+        // 销毁会将代币发送到地址(0)，不要阻止它
+        if (to != address(0)) {
+            require(to != address(this), "Can't send tokens to the contract address");
+
+            bool isToContract;
+            assembly {
+               isToContract := gt(extcodesize(to), 0)
+            }
+
+            require(to.balance != 0 || isToContract, "Can't send tokens to an empty address");
+        }
+
+        super._update(from, to, value);
+    }
+```
 
 让我们逐行查看新代码：
 
@@ -102,7 +127,7 @@ published: 2022-08-15
         require(to != address(this), "Can't send tokens to the contract address");
 ```
 
-这是第一个需求，检查 `to` 和 `this(address)` 是否不相同。
+这是第一个要求，检查 `to` 和 `this(address)` 是否不相同。
 
 ```solidity
         bool isToContract;
@@ -132,7 +157,7 @@ published: 2022-08-15
 
 欧本齐柏林提供了两种机制来启用管理员访问权限：
 
-- [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable) 合约拥有单一所有者。带有 `onlyOwner` [修饰符](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm)的函数只能由该所有者调用。所有者可以将所有权转移给其他人或完全放弃所有权。所有其他账户的权利通常是相同的。
+- [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable) 合约拥有单一所有者。带有 `onlyOwner` [修饰符](https://docs.soliditylang.org/en/latest/contracts.html#function-modifiers)的函数只能由该所有者调用。所有者可以将所有权转移给其他人或完全放弃所有权。所有其他账户的权利通常是相同的。
 - [`AccessControl`](https://docs.openzeppelin.com/contracts/5.x/access-control#role-based-access-control) 合约具有[基于角色的访问控制 (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control)。
 
 为了简单起见，在本文中我们使用 `Ownable`。
@@ -141,15 +166,15 @@ published: 2022-08-15
 
 冻结和解冻合约需要进行几项更改：
 
-- 一个从地址到[布尔值](https://en.wikipedia.org/wiki/Boolean_data_type)的[映射](https://www.tutorialspoint.com/solidity/solidity_mappings.htm)，用于跟踪哪些地址被冻结。所有值最初都为零，对于布尔值来说，这被解释为 false。这正是我们想要的，因为默认情况下账户是不被冻结的。
+- 一个从地址到[布尔值](https://en.wikipedia.org/wiki/Boolean_data_type)的[映射](https://docs.soliditylang.org/en/latest/types.html#mapping-types)，用于跟踪哪些地址被冻结。所有值最初都为零，对于布尔值来说，这被解释为 false。这正是我们想要的，因为默认情况下账户是不被冻结的。
 
   ```solidity
       mapping(address => bool) public frozenAccounts;
   ```
 
-- [事件](https://www.tutorialspoint.com/solidity/solidity_events.htm)，用于在账户被冻结或解冻时通知任何感兴趣的人。从技术上讲，这些操作不需要事件，但它有助于链下代码能够监听这些事件并了解正在发生的事情。当可能与其他人相关的事情发生时，智能合约触发事件被认为是一种良好的规范。
+- [事件](https://docs.soliditylang.org/en/latest/contracts.html#events)，用于在账户被冻结或解冻时通知任何感兴趣的人。从技术上讲，这些操作不需要事件，但它有助于链下代码能够监听这些事件并了解正在发生的事情。当发生可能与其他人相关的事情时，智能合约触发事件被认为是一种良好的做法。
 
-  这些事件被索引，因此可以搜索一个账户被冻结或解冻的所有时间记录。
+  这些事件被索引，因此可以搜索账户被冻结或解冻的所有时间。
 
   ```solidity
     // 当账户被冻结或解冻时
@@ -157,7 +182,7 @@ published: 2022-08-15
     event AccountThawed(address indexed _addr);
   ```
 
-- 用于冻结和解冻账户的函数。这两个函数几乎完全相同，因此我们只讨论冻结函数。
+- 用于冻结和解冻账户的函数。这两个函数几乎相同，因此我们只讨论冻结函数。
 
   ```solidity
       function freezeAccount(address addr)
@@ -165,7 +190,7 @@ published: 2022-08-15
         onlyOwner
   ```
 
-  标记为 [`public`](https://www.tutorialspoint.com/solidity/solidity_contracts.htm) 的函数可以从其他智能合约调用，也可以直接通过交易调用。
+  标记为 [`public`](https://docs.soliditylang.org/en/latest/contracts.html#function-visibility) 的函数可以从其他智能合约调用，也可以由交易直接调用。
 
   ```solidity
     {
@@ -177,7 +202,7 @@ published: 2022-08-15
 
   如果账户已被冻结，则回退。否则，冻结它并 `emit` 一个事件。
 
-- 更改 `_beforeTokenTransfer` 以防止资金从冻结账户中转出。请注意，资金仍然可以转账到冻结账户中。
+- 更改 `_update` 以防止资金从冻结账户中移出。请注意，资金仍然可以转账到冻结账户中。将此行放在函数的开头，在 `if` 块之外，这样它也可以防止从冻结账户中销毁代币。
 
   ```solidity
        require(!frozenAccounts[from], "The account is frozen");
@@ -185,7 +210,7 @@ published: 2022-08-15
 
 ### 资产清理 {#asset-cleanup}
 
-要释放该合约持有的 ERC-20 代币，我们需要调用它们所属的代币合约上的函数，即 [`transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer) 或 [`approve`](https://eips.ethereum.org/EIPS/eip-20#approve)。在这种情况下，将 Gas 浪费在授权上毫无意义，我们不妨直接转账。
+要释放此合约持有的 ERC-20 代币，我们需要调用它们所属的代币合约上的函数，即 [`transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer) 或 [`approve`](https://eips.ethereum.org/EIPS/eip-20#approve)。在这种情况下，没有必要在配额上浪费 Gas，我们不如直接转账。
 
 ```solidity
     function cleanupERC20(
@@ -198,7 +223,11 @@ published: 2022-08-15
         IERC20 token = IERC20(erc20);
 ```
 
-这是我们在收到地址时为合约创建对象的语法。我们之所以能这样做，是因为我们将 ERC20 代币的定义作为源代码的一部分（见第 4 行），并且该文件包含 [IERC20 的定义](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)，即欧本齐柏林 ERC-20 合约的接口。
+这是在收到地址时为合约创建对象的语法。要使用它，我们需要 [IERC20 的定义](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)，即 OpenZeppelin ERC-20 合约的接口。向导的 `import {ERC20} from ...` 行仅引入了 `ERC20`，因此请将此行添加到文件顶部其他导入的旁边：
+
+```solidity
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+```
 
 ```solidity
         uint balance = token.balanceOf(address(this));
@@ -206,7 +235,7 @@ published: 2022-08-15
     }
 ```
 
-这是一个清理函数，因此我们大概率不想留下任何代币。与其手动从用户那里获取余额，我们不如将该过程自动化。
+这是一个清理函数，因此我们大概不想留下任何代币。与其手动从用户那里获取余额，不如将该过程自动化。
 
 ## 结论 {#conclusion}
 

@@ -1,5 +1,11 @@
 # Simplified Chinese (zh) Translation Review Findings
 
+## PR #19993 (intl/pending-dev) -- 2026-11-28 -- Score 9.3/10
+Scope: `page-courses.json` (4,668 keys, first translation) + 15 developer tutorials (incremental), changed lines only; every courses value checked by script (ICU names, tags, hrefs), 100 courses keys and 5 tutorial diffs read. Register is uniform (你 only, no 您).
+
+Fixed (critical): `<strong>tip</strong>` dropped in `gas-fees-intro-p1` (restored as `<strong>优先费</strong>，也称<strong>小费</strong>`); two U+200B inside `blockchains-exam-link-prompt`; `(L2)` added to `二层网络` in 32 courses values, `(PoW)`/`(PoS)` in 10, `(EOA)` in short-abi, `(L2)` in uniswap-v2.
+Open (warnings): `斑点` for blob matches the zh tree (dev) but reads oddly; `Rollup`/`汇总` mixed (汇总 as the noun in titles and prose, `Rollup` elsewhere; glossary says `Rollup`); lowercase `gas` in a few strings against glossary `Gas`; `<strong>` followed by a space in a few values (`<strong>提案作者</strong> 写下`); Latin glosses on terms English leaves bare (`兑换 (Swap)`, `复刻 (Fork)`, `草案 (Draft)`).
+
 ## PR #19983 (intl/pending-dev) -- 2026-11-27 -- Score 9.0/10
 Scope: 15 md pages, markdown only; changed lines only; sampled 8 md diffs plus scripted sweeps (no foreign script, U+2060, SPDX; emphasis flanking not re-checked beyond the changed lines read).
 

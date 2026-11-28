@@ -1,5 +1,12 @@
 # Hindi (hi) -- Translation Review Findings
 
+## PR #19993 (intl/pending-dev, runs 46112784113/46112790344/46118259298) -- 2026-11-28 -- Score 9.0/10
+Scope: 17 developer tutorials (incremental updates), changed lines only; read 5 diffs in full (clear-signing, short-abi, erc20-with-safety-rails, secret-state, token-integration-checklist) plus scripted sweeps over all 17 (U+3002/U+2060/foreign script/native digits, `(ABBR)` against English, fence-vs-English, glossary-variant counts, leaked glossary notes). No JSON.
+
+Fixed (critical): U+3002 ending a code comment (erc20-annotated-code:99) -> `।`; `स्लिथर के` -> `Slither के` (token-integration-checklist:73-74); added `(EOA)` after the spelled-out long form (short-abi:80) and `(PoW)`/`(PoS)` after spelled-out proof-of-work/stake (yellow-paper-evm:20) removed.
+
+Open (warnings): `कॉन्ट्रैक्ट` x27 in short-abi (dev already used it; file-internal consistency kept) vs glossary `अनुबंध`; `लेनदेन हैश` (app-plasma:571); injected English glosses (`(exploits)`, `(raw hex calldata)`, `(compromised)`, `(skeleton)`, `(clear signing implementations)`); `Uniswap` still `यूनिस्वैप` on 11 unchanged uniswap-v2 lines, `ओपनजेपेलिन` on 8 unchanged erc20-annotated-code lines, `मेटामास्क` app-plasma:146 (unchanged from dev).
+
 ## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.5/10
 Scope: 15 markdown pages (adds nodes-and-clients index), changed lines only; read 9 diffs (run-a-node, nodes-and-clients, ethash, patricia, statelessness, verkle, supply, privacy, nodes-as-a-service) plus scripted sweeps. No JSON in this PR. U+3002/U+2060/foreign-script/SPDX/untranslated sweeps clean.
 

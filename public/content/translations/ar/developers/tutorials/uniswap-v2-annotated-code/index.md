@@ -22,7 +22,7 @@ lang: ar
 
 عندما يرغب مزودو السيولة في استعادة أصولهم، يمكنهم حرق رموز المجمع واستعادة رموزهم المميزة، بما في ذلك حصتهم من المكافآت.
 
-[انقر هنا للحصول على وصف أكمل](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
+[انقر هنا للحصول على وصف أكمل](https://developers.uniswap.org/docs/protocols/v2/concepts/swapping).
 
 ### لماذا <span dir="ltr">v2</span>؟ ولماذا ليس <span dir="ltr">v3</span>؟ {#why-v2}
 
@@ -109,7 +109,7 @@ lang: ar
 
 ### UniswapV2Pair.sol {#uniswapv2pair}
 
-[هذا العقد](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) ينفذ المجمع الفعلي الذي يبادل الرموز المميزة. إنه الوظيفة الأساسية لبروتوكول يونيسواب.
+ينفذ [هذا العقد](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol) المجمع الفعلي الذي يبادل الرموز المميزة. إنها الوظيفة الأساسية لـ Uniswap.
 
 ```solidity
 pragma solidity =0.5.16;
@@ -135,14 +135,14 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
     using SafeMath  for uint;
 ```
 
-تُستخدم [مكتبة SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) لتجنب تجاوز السعة (overflows) والنقصان (underflows). هذا مهم لأنه بخلاف ذلك قد ينتهي بنا الأمر إلى موقف يجب أن تكون فيه القيمة `-1`، ولكنها بدلاً من ذلك `2^256-1`.
+تُستخدم [مكتبة SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) لتجنب تجاوز السعة (overflows) والنقصان (underflows). هذا مهم لأنه بخلاف ذلك قد ينتهي بنا المطاف في موقف يجب أن تكون فيه القيمة `-1`، ولكنها بدلاً من ذلك `2^256-1`.
 
 ```solidity
     using UQ112x112 for uint224;
 ```
 
-تتطلب الكثير من الحسابات في عقد المجمع كسورًا. ومع ذلك، فإن الكسور غير مدعومة من قبل جهاز إيثيريوم الظاهري (EVM).
-الحل الذي وجده يونيسواب هو استخدام قيم بحجم <span dir="ltr">224 bit</span>، مع <span dir="ltr">112 bits</span> للجزء الصحيح، و <span dir="ltr">112 bits</span> للكسر. لذلك يتم تمثيل `1.0` كـ `2^112`، ويتم تمثيل `1.5` كـ `2^112 + 2^111`، إلخ.
+تتطلب الكثير من الحسابات في عقد المجمع كسورًا. ومع ذلك، فإن الكسور غير مدعومة بواسطة EVM.
+الحل الذي وجدته Uniswap هو استخدام قيم <span dir="ltr">224 bit</span>، مع <span dir="ltr">112 bits</span> للجزء الصحيح، و <span dir="ltr">112 bits</span> للكسر. لذلك يتم تمثيل `1.0` كـ `2^112`، ويتم تمثيل `1.5` كـ `2^112 + 2^111`، إلخ.
 
 تتوفر المزيد من التفاصيل حول هذه المكتبة [لاحقًا في المستند](#fixedpoint).
 
@@ -349,18 +349,18 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
         require(balance0 <= uint112(-1) && balance1 <= uint112(-1), 'UniswapV2: OVERFLOW');
 ```
 
-إذا كان balance0 أو balance1 (uint256) أعلى من uint112(-1) (=2^112-1) (بحيث يتجاوز السعة ويعود إلى 0 عند تحويله إلى uint112) ارفض الاستمرار في \_update لمنع تجاوز السعة. مع رمز مميز عادي يمكن تقسيمه إلى 10^18 وحدة، هذا يعني أن كل مبادلة تقتصر على حوالي 5.1\*10^15 من كل رمز مميز. حتى الآن لم تكن هذه مشكلة.
+إذا كان balance0 أو balance1 (uint256) أعلى من <span dir="ltr">uint112(-1) (=2^112-1)</span> (بحيث يتجاوز السعة ويعود إلى 0 عند تحويله إلى uint112) ارفض الاستمرار في \_update لمنع تجاوز السعة. مع رمز مميز عادي يمكن تقسيمه إلى <span dir="ltr">10^18</span> وحدة، هذا يعني أن كل مبادلة تقتصر على حوالي <span dir="ltr">5.1\*10^15</span> من كل رمز مميز. حتى الآن لم تكن هذه مشكلة.
 
 ```solidity
         uint32 blockTimestamp = uint32(block.timestamp % 2**32);
-        uint32 timeElapsed = blockTimestamp - blockTimestampLast; // الطفح مطلوب
+        uint32 timeElapsed = blockTimestamp - blockTimestampLast; // تجاوز السعة مطلوب
         if (timeElapsed > 0 && _reserve0 != 0 && _reserve1 != 0) {
 ```
 
 إذا لم يكن الوقت المنقضي صفرًا، فهذا يعني أننا أول معاملة مبادلة في هذه الكتلة. في هذه الحالة، نحتاج إلى تحديث مجمعات التكلفة.
 
 ```solidity
-            // * لا يطفح أبدًا، وطفح + مطلوب
+            // * لا يتجاوز السعة أبدًا، وتجاوز السعة لـ + مطلوب
             price0CumulativeLast += uint(UQ112x112.encode(_reserve1).uqdiv(_reserve0)) * timeElapsed;
             price1CumulativeLast += uint(UQ112x112.encode(_reserve0).uqdiv(_reserve1)) * timeElapsed;
         }
@@ -370,14 +370,14 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 
 | الحدث | reserve0 | reserve1 | الطابع الزمني | سعر الصرف الهامشي (reserve1 / reserve0) | price0CumulativeLast |
 | -------------------------------------------------------- | --------: | --------: | --------- | -------------------------------------------: | -------------------------: |
-| الإعداد الأولي | <span dir="ltr">1,000.000</span> | <span dir="ltr">1,000.000</span> | <span dir="ltr">5,000</span> | <span dir="ltr">1.000</span> | 0 |
-| المتداول أ يودع 50 token0 ويسترد 47.619 token1 | <span dir="ltr">1,050.000</span> | <span dir="ltr">952.381</span> | <span dir="ltr">5,020</span> | <span dir="ltr">0.907</span> | 20 |
+| الإعداد الأولي | <span dir="ltr">1,000.000</span> | <span dir="ltr">1,000.000</span> | <span dir="ltr">5,000</span> | <span dir="ltr">1.000</span> | <span dir="ltr">0</span> |
+| المتداول أ يودع 50 token0 ويسترد 47.619 token1 | <span dir="ltr">1,050.000</span> | <span dir="ltr">952.381</span> | <span dir="ltr">5,020</span> | <span dir="ltr">0.907</span> | <span dir="ltr">20</span> |
 | المتداول ب يودع 10 token0 ويسترد 8.984 token1 | <span dir="ltr">1,060.000</span> | <span dir="ltr">943.396</span> | <span dir="ltr">5,030</span> | <span dir="ltr">0.890</span> | <span dir="ltr">20+10\*0.907 = 29.07</span> |
 | المتداول ج يودع 40 token0 ويسترد 34.305 token1 | <span dir="ltr">1,100.000</span> | <span dir="ltr">909.090</span> | <span dir="ltr">5,100</span> | <span dir="ltr">0.826</span> | <span dir="ltr">29.07+70\*0.890 = 91.37</span> |
 | المتداول د يودع 100 token1 ويسترد 109.01 token0 | <span dir="ltr">990.990</span> | <span dir="ltr">1,009.090</span> | <span dir="ltr">5,110</span> | <span dir="ltr">1.018</span> | <span dir="ltr">91.37+10\*0.826 = 99.63</span> |
-| المتداول هـ يودع 10 token0 ويسترد 10.079 token1 | <span dir="ltr">1,000.990</span> | <span dir="ltr">999.010</span> | <span dir="ltr">5,150</span> | <span dir="ltr">0.998</span> | <span dir="ltr">99.63+40\*1.1018 = 143.702</span> |
+| المتداول هـ يودع 10 token0 ويسترد 10.079 token1 | <span dir="ltr">1,000.990</span> | <span dir="ltr">999.010</span> | <span dir="ltr">5,150</span> | <span dir="ltr">0.998</span> | <span dir="ltr">99.63+40\*1.018 = 140.35</span> |
 
-لنفترض أننا نريد حساب متوسط سعر **Token0** بين الطوابع الزمنية <span dir="ltr">5,030</span> و <span dir="ltr">5,150</span>. الفرق في قيمة `price0Cumulative` هو <span dir="ltr">143.702-29.07=114.632</span>. هذا هو المتوسط عبر دقيقتين (120 ثانية). إذن متوسط السعر هو <span dir="ltr">114.632/120 = 0.955</span>.
+لنفترض أننا نريد حساب متوسط سعر **Token0** بين الطوابع الزمنية <span dir="ltr">5,030</span> و <span dir="ltr">5,150</span>. الفرق في قيمة `price0Cumulative` هو <span dir="ltr">140.35-29.07=111.28</span>. هذا هو المتوسط عبر دقيقتين (<span dir="ltr">120</span> ثانية). لذا فإن متوسط السعر هو <span dir="ltr">111.28/120 = 0.927</span>.
 
 حساب السعر هذا هو السبب في أننا بحاجة إلى معرفة أحجام الاحتياطي القديمة.
 
@@ -394,11 +394,11 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 ##### \_mintFee
 
 ```solidity
-    // إذا كانت الرسوم مفعلة، سك سيولة تعادل سدس النمو في sqrt(k)
+    // إذا كانت الرسوم مفعلة، قم بسك سيولة تعادل 1/6 من النمو في sqrt(k)
     function _mintFee(uint112 _reserve0, uint112 _reserve1) private returns (bool feeOn) {
 ```
 
-في يونيسواب 2.0، يدفع المتداولون رسومًا بنسبة <span dir="ltr">0.30%</span> لاستخدام السوق. يذهب معظم هذه الرسوم (<span dir="ltr">0.25%</span> من التداول) دائمًا إلى مزودي السيولة. يمكن أن تذهب النسبة المتبقية البالغة <span dir="ltr">0.05%</span> إما إلى مزودي السيولة أو إلى عنوان يحدده المصنع كرسوم بروتوكول، والتي تدفع ليونيسواب مقابل جهود التطوير الخاصة بهم.
+في Uniswap 2.0، يدفع المتداولون رسومًا بنسبة <span dir="ltr">0.30%</span> لاستخدام السوق. يذهب معظم هذه الرسوم (<span dir="ltr">0.25%</span> من التداول) دائمًا إلى مزودي السيولة. يمكن أن تذهب النسبة المتبقية البالغة <span dir="ltr">0.05%</span> إما إلى مزودي السيولة أو إلى عنوان يحدده المصنع كرسوم بروتوكول، والتي تدفع لـ Uniswap مقابل جهود التطوير الخاصة بهم. على شبكة إيثيريوم الرئيسية، يتم تشغيل رسوم البروتوكول هذه: يتم تعيين عنوان `feeTo` الخاص بالمصنع، لذا تذهب نسبة <span dir="ltr">0.05%</span> إلى هذا العنوان بدلاً من مزودي السيولة.
 
 لتقليل الحسابات (وبالتالي تكاليف الغاز)، يتم حساب هذه الرسوم فقط عند إضافة السيولة أو إزالتها من المجمع، بدلاً من كل معاملة.
 
@@ -407,14 +407,14 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
         feeOn = feeTo != address(0);
 ```
 
-اقرأ وجهة الرسوم للمصنع. إذا كانت صفرًا، فلا توجد رسوم بروتوكول ولا حاجة لحساب تلك الرسوم.
+اقرأ وجهة الرسوم الخاصة بالمصنع. إذا كانت صفرًا، فلا توجد رسوم بروتوكول ولا حاجة لحساب تلك الرسوم.
 
 ```solidity
         uint _kLast = kLast; // توفير الغاز
 ```
 
-يقع متغير الحالة `kLast` في التخزين، لذلك سيكون له قيمة بين الاستدعاءات المختلفة للعقد.
-يعد الوصول إلى التخزين أكثر تكلفة بكثير من الوصول إلى الذاكرة المتطايرة التي يتم تحريرها عند انتهاء استدعاء الوظيفة للعقد، لذلك نستخدم متغيرًا داخليًا لتوفير الغاز.
+يقع متغير الحالة `kLast` في التخزين، لذا سيكون له قيمة بين الاستدعاءات المختلفة للعقد.
+الوصول إلى التخزين أكثر تكلفة بكثير من الوصول إلى الذاكرة المتطايرة التي يتم تحريرها عند انتهاء استدعاء الوظيفة للعقد، لذلك نستخدم متغيرًا داخليًا لتوفير الغاز.
 
 ```solidity
         if (feeOn) {
@@ -429,7 +429,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
                 if (rootK > rootKLast) {
 ```
 
-إذا كانت هناك سيولة جديدة يمكن تحصيل رسوم بروتوكول عليها. يمكنك رؤية وظيفة الجذر التربيعي [لاحقًا في هذه المقالة](#math)
+إذا كانت هناك سيولة جديدة يمكن تحصيل رسوم بروتوكول عليها. يمكنك رؤية دالة الجذر التربيعي [لاحقًا في هذه المقالة](#math)
 
 ```solidity
                     uint numerator = totalSupply.mul(rootK.sub(rootKLast));
@@ -437,7 +437,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
                     uint liquidity = numerator / denominator;
 ```
 
-تم شرح هذا الحساب المعقد للرسوم في [الورقة البيضاء](https://app.uniswap.org/whitepaper.pdf) في الصفحة 5. نحن نعلم أنه بين الوقت الذي تم فيه حساب `kLast` والوقت الحاضر لم تتم إضافة أو إزالة أي سيولة (لأننا نجري هذا الحساب في كل مرة تتم فيها إضافة السيولة أو إزالتها، قبل أن تتغير فعليًا)، لذلك يجب أن يأتي أي تغيير في `reserve0 * reserve1` من رسوم المعاملات (بدونها سنبقي `reserve0 * reserve1` ثابتًا).
+تم شرح هذا الحساب المعقد للرسوم في [الورقة البيضاء](https://app.uniswap.org/whitepaper.pdf) في الصفحة 5. نحن نعلم أنه بين الوقت الذي تم فيه حساب `kLast` والوقت الحاضر لم تتم إضافة أو إزالة أي سيولة (لأننا نجري هذا الحساب في كل مرة تتم فيها إضافة أو إزالة السيولة، قبل أن تتغير فعليًا)، لذا فإن أي تغيير في `reserve0 * reserve1` يجب أن يأتي من رسوم المعاملة (بدونها سنبقي `reserve0 * reserve1` ثابتًا).
 
 ```solidity
                     if (liquidity > 0) _mint(feeTo, liquidity);
@@ -454,8 +454,8 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
     }
 ```
 
-إذا لم تكن هناك رسوم، فقم بتعيين `kLast` إلى الصفر (إذا لم يكن كذلك بالفعل). عندما تمت كتابة هذا العقد، كانت هناك [ميزة استرداد الغاز](https://eips.ethereum.org/EIPS/eip-3298) التي شجعت العقود على تقليل الحجم الإجمالي لحالة إيثيريوم عن طريق تصفير التخزين الذي لا يحتاجون إليه.
-يحصل هذا الرمز على هذا الاسترداد عندما يكون ذلك ممكنًا.
+إذا لم تكن هناك رسوم، فقم بتعيين `kLast` إلى الصفر (إذا لم يكن كذلك بالفعل). تمتلك إيثيريوم ميزة استرداد الغاز التي تشجع العقود على تقليل الحجم الإجمالي لحالة إيثيريوم عن طريق تصفير التخزين الذي لا تحتاجه.
+يحصل هذا الرمز على هذا الاسترداد عندما يكون ذلك ممكنًا. منذ ترقية لندن ([<span dir="ltr">EIP-3529</span>](https://eips.ethereum.org/EIPS/eip-3529))، أصبح الاسترداد أصغر ومقيدًا بخُمس غاز المعاملة، لكنه لا يزال موجودًا.
 
 #### الوظائف التي يمكن الوصول إليها خارجيًا {#pair-external}
 
@@ -692,7 +692,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 
 ### UniswapV2Factory.sol {#uniswapv2factory}
 
-[هذا العقد](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) ينشئ مبادلات الأزواج.
+ينشئ [هذا العقد](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Factory.sol) مبادلات الأزواج.
 
 ```solidity
 pragma solidity =0.5.16;
@@ -715,17 +715,17 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 تتتبع هذه المتغيرات الأزواج، وهي المبادلات بين نوعين من الرموز المميزة.
 
-الأول، `getPair`، هو تعيين (mapping) يحدد عقد مبادلة الزوج بناءً على رمزي <span dir="ltr">ERC-20</span> اللذين يبادلهما. يتم تحديد رموز <span dir="ltr">ERC-20</span> من خلال عناوين العقود التي تنفذها، لذلك فإن المفاتيح والقيمة كلها عناوين. للحصول على عنوان مبادلة الزوج الذي يتيح لك التحويل من `tokenA` إلى `tokenB`، يمكنك استخدام `getPair[<tokenA address>][<tokenB address>]` (أو العكس).
+الأول، `getPair`، هو تعيين يحدد عقد مبادلة الزوج بناءً على رمزي <span dir="ltr">ERC-20</span> اللذين يبادلهما. يتم تحديد رموز <span dir="ltr">ERC-20</span> المميزة من خلال عناوين العقود التي تنفذها، لذا فإن المفاتيح والقيمة كلها عناوين. للحصول على عنوان مبادلة الزوج الذي يتيح لك التحويل من `tokenA` إلى `tokenB`، يمكنك استخدام `getPair[<tokenA address>][<tokenB address>]` (أو العكس).
 
-المتغير الثاني، `allPairs`، هو مصفوفة تتضمن جميع عناوين مبادلات الأزواج التي أنشأها هذا المصنع. في إيثيريوم، لا يمكنك التكرار (iterate) عبر محتوى التعيين، أو الحصول على قائمة بجميع المفاتيح، لذلك هذا المتغير هو الطريقة الوحيدة لمعرفة المبادلات التي يديرها هذا المصنع.
+المتغير الثاني، `allPairs`، هو مصفوفة تتضمن جميع عناوين مبادلات الأزواج التي أنشأها هذا المصنع. في إيثيريوم، لا يمكنك التكرار عبر محتوى التعيين، أو الحصول على قائمة بجميع المفاتيح، لذا فإن هذا المتغير هو الطريقة الوحيدة لمعرفة المبادلات التي يديرها هذا المصنع.
 
-ملاحظة: السبب في عدم قدرتك على التكرار عبر جميع مفاتيح التعيين هو أن تخزين بيانات العقد _مكلف_، لذلك كلما قل استخدامنا له كان ذلك أفضل، وكلما قل تغييرنا له كان ذلك أفضل. يمكنك إنشاء [تعيينات تدعم التكرار](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol)، لكنها تتطلب تخزينًا إضافيًا لقائمة المفاتيح. في معظم التطبيقات لا تحتاج إلى ذلك.
+ملاحظة: السبب في عدم قدرتك على التكرار عبر جميع مفاتيح التعيين هو أن تخزين بيانات العقد _مكلف_، لذا كلما قل استخدامنا له كان ذلك أفضل، وكلما قل تغييرنا له كان ذلك أفضل. يمكنك إنشاء [تعيينات تدعم التكرار](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol)، لكنها تتطلب تخزينًا إضافيًا لقائمة المفاتيح. في معظم التطبيقات، لا تحتاج إلى ذلك.
 
 ```solidity
     event PairCreated(address indexed token0, address indexed token1, address pair, uint);
 ```
 
-يتم إصدار هذا الحدث عند إنشاء مبادلة زوج جديد. يتضمن عناوين الرموز المميزة، وعنوان مبادلة الزوج، والعدد الإجمالي للمبادلات التي يديرها المصنع.
+يتم إصدار هذا الحدث عند إنشاء مبادلة زوج جديدة. ويتضمن عناوين الرموز المميزة، وعنوان مبادلة الزوج، والعدد الإجمالي للمبادلات التي يديرها المصنع.
 
 ```solidity
     constructor(address _feeToSetter) public {
@@ -733,7 +733,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
     }
 ```
 
-الشيء الوحيد الذي يفعله المُنشئ هو تحديد `feeToSetter`. تبدأ المصانع بدون رسوم، وفقط `feeSetter` يمكنه تغيير ذلك.
+الشيء الوحيد الذي يفعله المُنشئ هو تحديد `feeToSetter`. تبدأ المصانع بدون رسوم، ولا يمكن تغيير ذلك إلا بواسطة `feeSetter`.
 
 ```solidity
     function allPairsLength() external view returns (uint) {
@@ -747,19 +747,19 @@ contract UniswapV2Factory is IUniswapV2Factory {
     function createPair(address tokenA, address tokenB) external returns (address pair) {
 ```
 
-هذه هي الوظيفة الرئيسية للمصنع، لإنشاء مبادلة زوج بين رمزين مميزين من نوع <span dir="ltr">ERC-20</span>. لاحظ أنه يمكن لأي شخص استدعاء هذه الوظيفة. لا تحتاج إلى إذن من يونيسواب لإنشاء مبادلة زوج جديد.
+هذه هي الوظيفة الرئيسية للمصنع، لإنشاء مبادلة زوج بين رمزين مميزين من نوع <span dir="ltr">ERC-20</span>. لاحظ أنه يمكن لأي شخص استدعاء هذه الوظيفة. لا تحتاج إلى إذن من Uniswap لإنشاء مبادلة زوج جديدة.
 
 ```solidity
         require(tokenA != tokenB, 'UniswapV2: IDENTICAL_ADDRESSES');
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-نريد أن يكون عنوان المبادلة الجديدة حتميًا (deterministic)، بحيث يمكن حسابه مسبقًا خارج السلسلة (يمكن أن يكون هذا مفيدًا لـ [معاملات طبقة 2 (L2)](/developers/docs/scaling/)).
+نريد أن يكون عنوان المبادلة الجديدة حتميًا، بحيث يمكن حسابه مسبقًا خارج السلسلة (يمكن أن يكون هذا مفيدًا لـ [معاملات طبقة 2 (L2)](/developers/docs/scaling/)).
 للقيام بذلك، نحتاج إلى ترتيب ثابت لعناوين الرموز المميزة، بغض النظر عن الترتيب الذي تلقيناها به، لذلك نقوم بفرزها هنا.
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
-        require(getPair[token0][token1] == address(0), 'UniswapV2: PAIR_EXISTS'); // فحص واحد كافٍ
+        require(getPair[token0][token1] == address(0), 'UniswapV2: PAIR_EXISTS'); // فحص واحد يكفي
 ```
 
 مجمعات السيولة الكبيرة أفضل من الصغيرة، لأن أسعارها أكثر استقرارًا. لا نريد أن يكون لدينا أكثر من مجمع سيولة واحد لكل زوج من الرموز المميزة. إذا كانت هناك مبادلة بالفعل، فلا داعي لإنشاء واحدة أخرى لنفس الزوج.
@@ -768,7 +768,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
         bytes memory bytecode = type(UniswapV2Pair).creationCode;
 ```
 
-لإنشاء عقد جديد، نحتاج إلى الرمز الذي ينشئه (كل من وظيفة المُنشئ والرمز الذي يكتب في الذاكرة رمز البايت لجهاز إيثيريوم الظاهري (EVM) للعقد الفعلي). عادةً في Solidity نستخدم فقط `addr = new <name of contract>(<constructor parameters>)` ويعتني المترجم بكل شيء من أجلنا، ولكن للحصول على عنوان عقد حتمي نحتاج إلى استخدام [رمز التشغيل CREATE2](https://eips.ethereum.org/EIPS/eip-1014).
+لإنشاء عقد جديد، نحتاج إلى الرمز الذي ينشئه (كل من وظيفة المُنشئ والرمز الذي يكتب في الذاكرة رمز البايت الخاص بـ EVM للعقد الفعلي). عادةً في Solidity نستخدم فقط `addr = new <name of contract>(<constructor parameters>)` ويتولى المترجم كل شيء نيابة عنا، ولكن للحصول على عنوان عقد حتمي نحتاج إلى استخدام [رمز التشغيل CREATE2](https://eips.ethereum.org/EIPS/eip-1014).
 عندما تمت كتابة هذا الرمز، لم يكن رمز التشغيل هذا مدعومًا بعد بواسطة Solidity، لذلك كان من الضروري الحصول على الرمز يدويًا. لم يعد هذا يمثل مشكلة، لأن [Solidity تدعم الآن CREATE2](https://docs.soliditylang.org/en/v0.8.3/control-structures.html#salted-contract-creations-create2).
 
 ```solidity
@@ -788,13 +788,13 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 ```solidity
         getPair[token0][token1] = pair;
-        getPair[token1][token0] = pair; // ملء التعيين في الاتجاه العكسي
+        getPair[token1][token0] = pair; // ملء التعيين في الاتجاه المعاكس
         allPairs.push(pair);
         emit PairCreated(token0, token1, pair, allPairs.length);
     }
 ```
 
-احفظ معلومات الزوج الجديد في متغيرات الحالة وأصدر حدثًا لإعلام العالم بمبادلة الزوج الجديد.
+احفظ معلومات الزوج الجديد في متغيرات الحالة وأصدر حدثًا لإعلام العالم بمبادلة الزوج الجديدة.
 
 ```solidity
     function setFeeTo(address _feeTo) external {
@@ -813,9 +813,9 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 ### UniswapV2ERC20.sol {#uniswapv2erc20}
 
-[هذا العقد](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) ينفذ رمز السيولة <span dir="ltr">ERC-20</span>. إنه مشابه لـ [عقد أوبن زبلن <span dir="ltr">ERC-20</span>](/developers/tutorials/erc20-annotated-code)، لذلك سأشرح فقط الجزء المختلف، وهو وظيفة `permit`.
+ينفذ [هذا العقد](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2ERC20.sol) رمز السيولة <span dir="ltr">ERC-20</span>. إنه مشابه لـ [عقد OpenZeppelin <span dir="ltr">ERC-20</span>](/developers/tutorials/erc20-annotated-code)، لذا سأشرح فقط الجزء المختلف، وهو وظيفة `permit`.
 
-تكلف المعاملات على إيثيريوم إيثر (ETH)، وهو ما يعادل أموالاً حقيقية. إذا كان لديك رموز <span dir="ltr">ERC-20</span> ولكن ليس لديك ETH، فلا يمكنك إرسال معاملات، لذلك لا يمكنك فعل أي شيء بها. أحد الحلول لتجنب هذه المشكلة هو [المعاملات الوصفية (meta-transactions)](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions).
+تكلف المعاملات على إيثيريوم إيثر (ETH)، وهو ما يعادل أموالاً حقيقية. إذا كان لديك رموز <span dir="ltr">ERC-20</span> مميزة ولكن ليس لديك ETH، فلا يمكنك إرسال معاملات، لذا لا يمكنك فعل أي شيء بها. أحد الحلول لتجنب هذه المشكلة هو [المعاملات الوصفية (meta-transactions)](https://developers.uniswap.org/docs/protocols/v2/concepts/meta-transactions).
 يوقع مالك الرموز المميزة على معاملة تسمح لشخص آخر بسحب الرموز المميزة خارج السلسلة ويرسلها باستخدام الإنترنت إلى المستلم. ثم يقوم المستلم، الذي يمتلك ETH، بتقديم التصريح نيابة عن المالك.
 
 ```solidity
@@ -824,13 +824,13 @@ contract UniswapV2Factory is IUniswapV2Factory {
     bytes32 public constant PERMIT_TYPEHASH = 0x6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c9;
 ```
 
-هذه التجزئة هي [المعرف لنوع المعاملة](https://eips.ethereum.org/EIPS/eip-712#rationale-for-typehash). النوع الوحيد الذي ندعمه هنا هو `Permit` مع هذه المعلمات.
+هذه التجزئة هي [المعرف لنوع المعاملة](https://eips.ethereum.org/EIPS/eip-712#rationale-for-typehash). النوع الوحيد الذي ندعمه هنا هو `Permit` بهذه المعلمات.
 
 ```solidity
     mapping(address => uint) public nonces;
 ```
 
-ليس من الممكن للمستلم تزوير توقيع رقمي. ومع ذلك، من السهل إرسال نفس المعاملة مرتين (هذا شكل من أشكال [هجوم إعادة التشغيل](https://wikipedia.org/wiki/Replay_attack)). لمنع ذلك، نستخدم [رقم فريد](https://wikipedia.org/wiki/Cryptographic_nonce). إذا لم يكن الرقم الفريد لـ `Permit` جديد أكبر بواحد من آخر رقم تم استخدامه، فإننا نفترض أنه غير صالح.
+ليس من الممكن للمستلم تزوير توقيع رقمي. ومع ذلك، من السهل إرسال نفس المعاملة مرتين (هذا شكل من أشكال [هجوم إعادة التشغيل (replay attack)](https://wikipedia.org/wiki/Replay_attack)). لمنع ذلك، نستخدم [رقم فريد](https://wikipedia.org/wiki/Cryptographic_nonce). إذا لم يكن الرقم الفريد لـ `Permit` الجديد أكبر بواحد من آخر رقم تم استخدامه، فإننا نفترض أنه غير صالح.
 
 ```solidity
     constructor() public {
@@ -855,13 +855,13 @@ contract UniswapV2Factory is IUniswapV2Factory {
     }
 ```
 
-احسب [فاصل النطاق](https://eips.ethereum.org/EIPS/eip-712#rationale-for-domainseparator) لـ <span dir="ltr">EIP-712</span>.
+احسب [فاصل النطاق (domain separator)](https://eips.ethereum.org/EIPS/eip-712#rationale-for-domainseparator) لـ <span dir="ltr">EIP-712</span>.
 
 ```solidity
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
 ```
 
-هذه هي الوظيفة التي تنفذ الأذونات. تتلقى كمعلمات الحقول ذات الصلة، والقيم العددية الثلاث لـ [التوقيع](https://yos.io/2018/11/16/ethereum-signatures/) (v و r و s).
+هذه هي الوظيفة التي تنفذ الأذونات. تتلقى كمعلمات الحقول ذات الصلة، والقيم العددية الثلاث لـ [التوقيع](https://yos.io/2018/11/16/ethereum-signatures/) (v، و r، و s).
 
 ```solidity
         require(deadline >= block.timestamp, 'UniswapV2: EXPIRED');
@@ -879,7 +879,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
         );
 ```
 
-`abi.encodePacked(...)` هي الرسالة التي نتوقع الحصول عليها. نحن نعرف ما يجب أن يكون عليه الرقم الفريد، لذلك لا داعي للحصول عليه كمعلمة.
+`abi.encodePacked(...)` هي الرسالة التي نتوقع الحصول عليها. نحن نعرف ما يجب أن يكون عليه الرقم الفريد، لذا لا داعي للحصول عليه كمعلمة.
 
 تتوقع خوارزمية توقيع إيثيريوم الحصول على <span dir="ltr">256 bits</span> للتوقيع، لذلك نستخدم دالة تجزئة `keccak256`.
 
@@ -904,12 +904,12 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 ### UniswapV2Router01.sol {#uniswapv2router01}
 
-[هذا العقد](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) به مشاكل، و[يجب ألا يُستخدم بعد الآن](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). لحسن الحظ، العقود المحيطية عديمة الحالة ولا تحتفظ بأي أصول، لذلك من السهل إيقاف استخدامها واقتراح استخدام البديل، `UniswapV2Router02`، بدلاً منها.
+يحتوي [هذا العقد](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router01.sol) على مشاكل، ولا ينبغي استخدامه بعد الآن. لحسن الحظ، العقود المحيطية عديمة الحالة ولا تحتفظ بأي أصول، لذا من السهل إيقاف استخدامها واقتراح أن يستخدم الأشخاص البديل، `UniswapV2Router02`، بدلاً من ذلك.
 
 ### UniswapV2Router02.sol {#uniswapv2router02}
 
-في معظم الحالات، ستستخدم يونيسواب من خلال [هذا العقد](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
-يمكنك معرفة كيفية استخدامه [هنا](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
+في معظم الحالات، ستستخدم Uniswap من خلال [هذا العقد](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
+يمكنك معرفة كيفية استخدامه [هنا](https://developers.uniswap.org/docs/protocols/v2/guides/swapping).
 
 ```solidity
 pragma solidity =0.6.6;
@@ -924,7 +924,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-معظم هذه الأشياء إما واجهناها من قبل، أو أنها واضحة إلى حد ما. الاستثناء الوحيد هو `IWETH.sol`. يسمح الإصدار الثاني من يونيسواب (<span dir="ltr">Uniswap v2</span>) بإجراء مبادلات لأي زوج من رموز <span dir="ltr">ERC-20</span> المميزة، ولكن الإيثر (<span dir="ltr">ETH</span>) نفسه ليس رمزًا مميزًا من نوع <span dir="ltr">ERC-20</span>. إنه يسبق المعيار ويتم تحويله بآليات فريدة. لتمكين استخدام <span dir="ltr">ETH</span> في العقود التي تنطبق على رموز <span dir="ltr">ERC-20</span> المميزة، ابتكر الناس عقد [الإيثر المغلف (WETH)](https://weth.tkn.eth.limo/). أنت ترسل <span dir="ltr">ETH</span> إلى هذا العقد، ويقوم بسك كمية معادلة من <span dir="ltr">WETH</span> لك. أو يمكنك حرق <span dir="ltr">WETH</span>، واسترداد <span dir="ltr">ETH</span>.
+معظم هذه الأشياء إما واجهناها من قبل، أو أنها واضحة إلى حد ما. الاستثناء الوحيد هو `IWETH.sol`. يسمح Uniswap v2 بالمبادلات لأي زوج من رموز <span dir="ltr">ERC-20</span> المميزة، لكن إيثر (ETH) نفسه ليس رمزًا مميزًا من نوع <span dir="ltr">ERC-20</span>. إنه يسبق المعيار ويتم تحويله بآليات فريدة. لتمكين استخدام ETH في العقود التي تنطبق على رموز <span dir="ltr">ERC-20</span> المميزة، ابتكر الأشخاص عقد [إيثر مغلف (WETH)](https://weth.tkn.eth.limo/). أنت ترسل ETH إلى هذا العقد، ويقوم بسك كمية معادلة من WETH لك. أو يمكنك حرق WETH، واسترداد ETH.
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {
@@ -934,7 +934,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     address public immutable override WETH;
 ```
 
-يحتاج الموجه (<span dir="ltr">router</span>) إلى معرفة المصنع الذي يجب استخدامه، وبالنسبة للمعاملات التي تتطلب <span dir="ltr">WETH</span>، ما هو عقد <span dir="ltr">WETH</span> الذي يجب استخدامه. هذه القيم [غير قابلة للتغيير](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables)، مما يعني أنه لا يمكن تعيينها إلا في المُنشئ. هذا يمنح المستخدمين الثقة بأنه لن يتمكن أحد من تغييرها للإشارة إلى عقود أقل نزاهة.
+يحتاج الموجه (router) إلى معرفة المصنع الذي يجب استخدامه، وبالنسبة للمعاملات التي تتطلب WETH، ما هو عقد WETH الذي يجب استخدامه. هذه القيم [غير قابلة للتغيير](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables)، مما يعني أنه لا يمكن تعيينها إلا في المُنشئ. هذا يمنح المستخدمين الثقة بأنه لن يتمكن أحد من تغييرها للإشارة إلى عقود أقل نزاهة.
 
 ```solidity
     modifier ensure(uint deadline) {
@@ -943,7 +943,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     }
 ```
 
-يضمن هذا المُعدِّل أن المعاملات المحددة بوقت ("افعل X قبل الوقت Y إذا استطعت") لا تحدث بعد انتهاء المهلة الزمنية المحددة لها.
+يتأكد هذا المُعدِّل من أن المعاملات المحددة بوقت ("افعل X قبل الوقت Y إذا استطعت") لا تحدث بعد الحد الزمني الخاص بها.
 
 ```solidity
     constructor(address _factory, address _WETH) public {
@@ -960,11 +960,11 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     }
 ```
 
-يتم استدعاء هذه الدالة عندما نسترد الرموز المميزة من عقد <span dir="ltr">WETH</span> مرة أخرى إلى <span dir="ltr">ETH</span>. فقط عقد <span dir="ltr">WETH</span> الذي نستخدمه هو المصرح له بالقيام بذلك.
+يتم استدعاء هذه الوظيفة عندما نسترد الرموز المميزة من عقد WETH مرة أخرى إلى ETH. فقط عقد WETH الذي نستخدمه مصرح له بالقيام بذلك.
 
 #### إضافة سيولة {#add-liquidity}
 
-تضيف هذه الدوال الرموز المميزة إلى مبادلة الزوج، مما يزيد من مجمع السيولة.
+تضيف هذه الوظائف رموزًا مميزة إلى مبادلة الزوج، مما يزيد من مجمع السيولة.
 
 ```solidity
 
@@ -972,14 +972,14 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     function _addLiquidity(
 ```
 
-تُستخدم هذه الدالة لحساب كمية الرموز المميزة A و B التي يجب إيداعها في مبادلة الزوج.
+تُستخدم هذه الوظيفة لحساب كمية الرموز المميزة A و B التي يجب إيداعها في مبادلة الزوج.
 
 ```solidity
         address tokenA,
         address tokenB,
 ```
 
-هذه هي عناوين عقود رموز <span dir="ltr">ERC-20</span> المميزة.
+هذه هي عناوين عقود الرموز المميزة <span dir="ltr">ERC-20</span>.
 
 ```solidity
         uint amountADesired,
@@ -993,28 +993,28 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         uint amountBMin
 ```
 
-هذه هي الحد الأدنى للمبالغ المقبولة للإيداع. إذا لم يكن من الممكن إتمام المعاملة بهذه المبالغ أو أكثر، يتم التراجع عنها. إذا كنت لا تريد هذه الميزة، فما عليك سوى تحديد صفر.
+هذه هي الحد الأدنى للمبالغ المقبولة للإيداع. إذا لم يكن من الممكن إجراء المعاملة بهذه المبالغ أو أكثر، فتراجع عنها. إذا كنت لا تريد هذه الميزة، فما عليك سوى تحديد الصفر.
 
-يحدد مزودو السيولة حدًا أدنى، عادةً، لأنهم يريدون قصر المعاملة على سعر صرف قريب من السعر الحالي. إذا تقلب سعر الصرف كثيرًا، فقد يعني ذلك وجود أخبار تغير القيم الأساسية، ويريدون أن يقرروا يدويًا ما يجب القيام به.
+يحدد مزودو السيولة حدًا أدنى، عادةً، لأنهم يريدون قصر المعاملة على سعر صرف قريب من السعر الحالي. إذا تقلب سعر الصرف كثيرًا، فقد يعني ذلك أخبارًا تغير القيم الأساسية، ويريدون أن يقرروا يدويًا ما يجب فعله.
 
 على سبيل المثال، تخيل حالة يكون فيها سعر الصرف واحدًا لواحد ويحدد مزود السيولة هذه القيم:
 
 | المعلمة | القيمة |
 | -------------- | ----: |
-| amountADesired |  1000 |
-| amountBDesired |  1000 |
-| amountAMin     |   900 |
-| amountBMin     |   800 |
+| amountADesired | <span dir="ltr">1000</span> |
+| amountBDesired | <span dir="ltr">1000</span> |
+| amountAMin | <span dir="ltr">900</span> |
+| amountBMin | <span dir="ltr">800</span> |
 
 طالما ظل سعر الصرف بين <span dir="ltr">0.9</span> و <span dir="ltr">1.25</span>، تتم المعاملة. إذا خرج سعر الصرف عن هذا النطاق، يتم إلغاء المعاملة.
 
-السبب في هذا الاحتياط هو أن المعاملات ليست فورية، فأنت ترسلها وفي النهاية سيقوم مُدَقِّق بتضمينها في كتلة (ما لم يكن سعر الغاز الخاص بك منخفضًا جدًا، وفي هذه الحالة ستحتاج إلى إرسال معاملة أخرى بنفس الرقم الفريد وسعر غاز أعلى للكتابة فوقها). لا يمكنك التحكم فيما يحدث خلال الفترة الفاصلة بين الإرسال والتضمين.
+السبب في هذا الاحتياط هو أن المعاملات ليست فورية، فأنت ترسلها وفي النهاية سيقوم مُدَقِّق بتضمينها في كتلة (ما لم يكن سعر الغاز الخاص بك منخفضًا جدًا، وفي هذه الحالة ستحتاج إلى إرسال معاملة أخرى بنفس الرقم الفريد وسعر غاز أعلى للكتابة فوقها). لا يمكنك التحكم في ما يحدث خلال الفترة الفاصلة بين الإرسال والتضمين.
 
 ```solidity
     ) internal virtual returns (uint amountA, uint amountB) {
 ```
 
-تُرجع الدالة المبالغ التي يجب على مزود السيولة إيداعها للحصول على نسبة مساوية للنسبة الحالية بين الاحتياطيات.
+تُرجع الوظيفة المبالغ التي يجب على مزود السيولة إيداعها للحصول على نسبة مساوية للنسبة الحالية بين الاحتياطيات.
 
 ```solidity
         // إنشاء الزوج إذا لم يكن موجودًا بعد
@@ -1043,7 +1043,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
             uint amountBOptimal = UniswapV2Library.quote(amountADesired, reserveA, reserveB);
 ```
 
-إذا كنا بحاجة إلى معرفة المبالغ التي ستكون عليها، فإننا نحصل على المبلغ الأمثل باستخدام [هذه الدالة](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L35). نريد نفس النسبة مثل الاحتياطيات الحالية.
+إذا كنا بحاجة إلى معرفة المبالغ التي ستكون عليها، فإننا نحصل على المبلغ الأمثل باستخدام [هذه الوظيفة](https://github.com/Uniswap/v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L36). نريد نفس النسبة مثل الاحتياطيات الحالية.
 
 ```solidity
             if (amountBOptimal <= amountBDesired) {
@@ -1051,7 +1051,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
                 (amountA, amountB) = (amountADesired, amountBOptimal);
 ```
 
-إذا كان `amountBOptimal` أصغر من المبلغ الذي يريد مزود السيولة إيداعه، فهذا يعني أن الرمز المميز B أكثر قيمة حاليًا مما يعتقده مودع السيولة، لذلك يلزم مبلغ أصغر.
+إذا كان `amountBOptimal` أصغر من المبلغ الذي يريد مزود السيولة إيداعه، فهذا يعني أن الرمز المميز B أكثر قيمة حاليًا مما يعتقده مودع السيولة، لذا يلزم مبلغ أصغر.
 
 ```solidity
             } else {
@@ -1061,13 +1061,13 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
                 (amountA, amountB) = (amountAOptimal, amountBDesired);
 ```
 
-إذا كان المبلغ الأمثل من B أكثر من المبلغ المطلوب من B، فهذا يعني أن الرموز المميزة B أقل قيمة حاليًا مما يعتقده مودع السيولة، لذلك يلزم مبلغ أعلى. ومع ذلك، فإن المبلغ المطلوب هو الحد الأقصى، لذلك لا يمكننا القيام بذلك. بدلاً من ذلك، نحسب العدد الأمثل من الرموز المميزة A للمبلغ المطلوب من الرموز المميزة B.
+إذا كان مبلغ B الأمثل أكبر من مبلغ B المطلوب، فهذا يعني أن الرموز المميزة B أقل قيمة حاليًا مما يعتقده مودع السيولة، لذا يلزم مبلغ أعلى. ومع ذلك، فإن المبلغ المطلوب هو الحد الأقصى، لذا لا يمكننا القيام بذلك. بدلاً من ذلك، نحسب العدد الأمثل من الرموز المميزة A للمبلغ المطلوب من الرموز المميزة B.
 
-بجمع كل ذلك معًا نحصل على هذا الرسم البياني. افترض أنك تحاول إيداع ألف رمز مميز A (الخط الأزرق) وألف رمز مميز B (الخط الأحمر). المحور السيني (x) هو سعر الصرف، A/B. إذا كان <span dir="ltr">x=1</span>، فهما متساويان في القيمة وتقوم بإيداع ألف من كل منهما. إذا كان <span dir="ltr">x=2</span>، فإن A يمثل ضعف قيمة B (تحصل على رمزين مميزين من B مقابل كل رمز مميز من A) لذلك تقوم بإيداع ألف رمز مميز من B، ولكن فقط <span dir="ltr">500</span> رمز مميز من A. إذا كان <span dir="ltr">x=0.5</span>، فإن الوضع ينعكس، ألف رمز مميز من A وخمسمائة رمز مميز من B.
+بجمع كل ذلك معًا نحصل على هذا الرسم البياني. افترض أنك تحاول إيداع ألف رمز مميز A (الخط الأزرق) وألف رمز مميز B (الخط الأحمر). المحور السيني (x) هو سعر الصرف، A/B. إذا كان <span dir="ltr">x=1</span>، فهما متساويان في القيمة وتودع ألفًا من كل منهما. إذا كان <span dir="ltr">x=2</span>، فإن A يمثل ضعف قيمة B (تحصل على رمزين مميزين B لكل رمز مميز A) لذا تودع ألف رمز مميز B، ولكن <span dir="ltr">500</span> رمز مميز A فقط. إذا كان <span dir="ltr">x=0.5</span>، ينعكس الوضع، ألف رمز مميز A وخمسمائة رمز مميز B.
 
-![Graph](liquidityProviderDeposit.png)
+![رسم بياني](liquidityProviderDeposit.png)
 
-يمكنك إيداع السيولة مباشرة في العقد الأساسي (باستخدام [UniswapV2Pair::mint](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol#L110))، ولكن العقد الأساسي يتحقق فقط من أنه لا يتعرض للاحتيال بنفسه، لذلك فإنك تخاطر بفقدان القيمة إذا تغير سعر الصرف بين وقت إرسال معاملتك ووقت تنفيذها. إذا كنت تستخدم العقد المحيطي، فإنه يكتشف المبلغ الذي يجب عليك إيداعه ويقوم بإيداعه على الفور، لذلك لا يتغير سعر الصرف ولا تفقد أي شيء.
+يمكنك إيداع السيولة مباشرة في العقد الأساسي (باستخدام [UniswapV2Pair::mint](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol#L110))، لكن العقد الأساسي يتحقق فقط من أنه لا يتعرض للاحتيال بنفسه، لذا فإنك تخاطر بفقدان القيمة إذا تغير سعر الصرف بين الوقت الذي ترسل فيه معاملتك والوقت الذي يتم فيه تنفيذها. إذا كنت تستخدم العقد المحيطي، فإنه يكتشف المبلغ الذي يجب عليك إيداعه ويودعه على الفور، لذا لا يتغير سعر الصرف ولا تفقد أي شيء.
 
 ```solidity
     function addLiquidity(
@@ -1081,10 +1081,10 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         uint deadline
 ```
 
-يمكن استدعاء هذه الدالة بواسطة معاملة لإيداع السيولة. معظم المعلمات هي نفسها كما في `_addLiquidity` أعلاه، مع استثناءين:
+يمكن استدعاء هذه الوظيفة بواسطة معاملة لإيداع السيولة. معظم المعلمات هي نفسها كما في `_addLiquidity` أعلاه، مع استثناءين:
 
-. `to` هو العنوان الذي يحصل على رموز السيولة الجديدة التي تم سكها لإظهار حصة مزود السيولة في المجمع
-. `deadline` هو حد زمني للمعاملة
+- `to` هو العنوان الذي يحصل على رموز السيولة الجديدة التي تم سكها لإظهار حصة مزود السيولة في المجمع
+- `deadline` هو حد زمني للمعاملة
 
 ```solidity
     ) external virtual override ensure(deadline) returns (uint amountA, uint amountB, uint liquidity) {
@@ -1092,21 +1092,21 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         address pair = UniswapV2Library.pairFor(factory, tokenA, tokenB);
 ```
 
-نحسب المبالغ التي سيتم إيداعها فعليًا ثم نجد عنوان مجمع السيولة. لتوفير الغاز، لا نقوم بذلك عن طريق سؤال المصنع، ولكن باستخدام دالة المكتبة `pairFor` (انظر أدناه في المكتبات)
+نحسب المبالغ التي سيتم إيداعها فعليًا ثم نجد عنوان مجمع السيولة. لتوفير الغاز، لا نقوم بذلك عن طريق سؤال المصنع، ولكن باستخدام وظيفة المكتبة `pairFor` (انظر أدناه في المكتبات)
 
 ```solidity
         TransferHelper.safeTransferFrom(tokenA, msg.sender, pair, amountA);
         TransferHelper.safeTransferFrom(tokenB, msg.sender, pair, amountB);
 ```
 
-تحويل المبالغ الصحيحة من الرموز المميزة من المستخدم إلى مبادلة الزوج.
+قم بتحويل المبالغ الصحيحة من الرموز المميزة من المستخدم إلى مبادلة الزوج.
 
 ```solidity
         liquidity = IUniswapV2Pair(pair).mint(to);
     }
 ```
 
-في المقابل، امنح عنوان `to` رموز السيولة للملكية الجزئية للمجمع. ترى دالة `mint` في العقد الأساسي عدد الرموز المميزة الإضافية التي يمتلكها (مقارنة بما كان لديه في آخر مرة تغيرت فيها السيولة) وتقوم بسك السيولة وفقًا لذلك.
+في المقابل، امنح عنوان `to` رموز السيولة للملكية الجزئية للمجمع. ترى وظيفة `mint` للعقد الأساسي عدد الرموز المميزة الإضافية التي يمتلكها (مقارنة بما كان لديه في المرة الأخيرة التي تغيرت فيها السيولة) وتقوم بسك السيولة وفقًا لذلك.
 
 ```solidity
     function addLiquidityETH(
@@ -1114,7 +1114,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         uint amountTokenDesired,
 ```
 
-عندما يريد مزود السيولة توفير السيولة لمبادلة زوج من الرموز المميزة/<span dir="ltr">ETH</span>، هناك بعض الاختلافات. يتعامل العقد مع تغليف <span dir="ltr">ETH</span> لمزود السيولة. ليست هناك حاجة لتحديد مقدار <span dir="ltr">ETH</span> الذي يريد المستخدم إيداعه، لأن المستخدم يرسله ببساطة مع المعاملة (المبلغ متاح في `msg.value`).
+عندما يريد مزود السيولة توفير السيولة لمبادلة زوج Token/ETH، هناك بعض الاختلافات. يتعامل العقد مع تغليف ETH لمزود السيولة. ليست هناك حاجة لتحديد مقدار ETH الذي يريد المستخدم إيداعه، لأن المستخدم يرسله ببساطة مع المعاملة (المبلغ متاح في `msg.value`).
 
 ```solidity
         uint amountTokenMin,
@@ -1136,16 +1136,16 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         assert(IWETH(WETH).transfer(pair, amountETH));
 ```
 
-لإيداع <span dir="ltr">ETH</span>، يقوم العقد أولاً بتغليفه إلى <span dir="ltr">WETH</span> ثم يحول <span dir="ltr">WETH</span> إلى الزوج. لاحظ أن التحويل مغلف في `assert`. هذا يعني أنه إذا فشل التحويل، فإن استدعاء هذا العقد يفشل أيضًا، وبالتالي فإن التغليف لا يحدث في الواقع.
+لإيداع ETH، يقوم العقد أولاً بتغليفه في WETH ثم يحول WETH إلى الزوج. لاحظ أن التحويل مغلف في `assert`. هذا يعني أنه إذا فشل التحويل، فإن استدعاء العقد هذا يفشل أيضًا، وبالتالي فإن التغليف لا يحدث حقًا.
 
 ```solidity
         liquidity = IUniswapV2Pair(pair).mint(to);
-        // استرداد غبار الإيثر، إن وجد
+        // استرداد غبار ETH، إن وجد
         if (msg.value > amountETH) TransferHelper.safeTransferETH(msg.sender, msg.value - amountETH);
     }
 ```
 
-لقد أرسل لنا المستخدم بالفعل <span dir="ltr">ETH</span>، لذلك إذا كان هناك أي فائض متبقي (لأن الرمز المميز الآخر أقل قيمة مما اعتقده المستخدم)، فنحن بحاجة إلى إصدار استرداد.
+لقد أرسل لنا المستخدم بالفعل ETH، لذا إذا كان هناك أي فائض متبقي (لأن الرمز المميز الآخر أقل قيمة مما اعتقده المستخدم)، فنحن بحاجة إلى إصدار استرداد.
 
 #### إزالة السيولة {#remove-liquidity}
 
@@ -1316,27 +1316,27 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     function _swap(uint[] memory amounts, address[] memory path, address _to) internal virtual {
 ```
 
-تؤدي هذه الدالة المعالجة الداخلية المطلوبة للدوال المعروضة للمتداولين.
+تؤدي هذه الوظيفة المعالجة الداخلية المطلوبة للوظائف المعروضة للمتداولين.
 
 ```solidity
         for (uint i; i < path.length - 1; i++) {
 ```
 
-أثناء كتابتي لهذا، هناك [<span dir="ltr">388,160</span> رمزًا مميزًا من نوع <span dir="ltr">ERC-20</span>](https://eth.blockscout.com/tokens). إذا كانت هناك مبادلة زوج لكل زوج من الرموز المميزة، فسيكون هناك أكثر من <span dir="ltr">150</span> مليار مبادلة زوج. السلسلة بأكملها، في الوقت الحالي، [لديها فقط <span dir="ltr">0.1%</span> من هذا العدد من الحسابات](https://eth.blockscout.com/stats/accountsGrowth). بدلاً من ذلك، تدعم دوال المبادلة مفهوم المسار. يمكن للمتداول مبادلة A بـ B، و B بـ C، و C بـ D، لذلك ليست هناك حاجة لمبادلة زوج مباشرة بين A و D.
+أثناء كتابتي لهذا، هناك [<span dir="ltr">388,160</span> رمزًا مميزًا من نوع <span dir="ltr">ERC-20</span>](https://eth.blockscout.com/tokens). إذا كانت هناك مبادلة زوج لكل زوج من الرموز المميزة، فسيكون هناك أكثر من <span dir="ltr">150</span> مليار مبادلة زوج. السلسلة بأكملها، في الوقت الحالي، [لديها فقط <span dir="ltr">0.1%</span> من هذا العدد من الحسابات](https://eth.blockscout.com/stats/accountsGrowth). بدلاً من ذلك، تدعم وظائف المبادلة مفهوم المسار. يمكن للمتداول مبادلة A بـ B، و B بـ C، و C بـ D، لذا لا توجد حاجة لمبادلة زوج A-D مباشرة.
 
-تميل الأسعار في هذه الأسواق إلى أن تكون متزامنة، لأنه عندما تكون غير متزامنة فإنها تخلق فرصة للمراجحة (<span dir="ltr">arbitrage</span>). تخيل، على سبيل المثال، ثلاثة رموز مميزة، A و B و C. هناك ثلاث مبادلات أزواج، واحدة لكل زوج.
+تميل الأسعار في هذه الأسواق إلى أن تكون متزامنة، لأنه عندما تكون غير متزامنة فإنها تخلق فرصة للمراجحة (arbitrage). تخيل، على سبيل المثال، ثلاثة رموز مميزة، A، و B، و C. هناك ثلاث مبادلات أزواج، واحدة لكل زوج.
 
 1. الوضع الأولي
-2. يبيع المتداول <span dir="ltr">24.695</span> رمزًا مميزًا من A ويحصل على <span dir="ltr">25.305</span> رمزًا مميزًا من B.
-3. يبيع المتداول <span dir="ltr">24.695</span> رمزًا مميزًا من B مقابل <span dir="ltr">25.305</span> رمزًا مميزًا من C، مع الاحتفاظ بحوالي <span dir="ltr">0.61</span> رمز مميز من B كربح.
-4. ثم يبيع المتداول <span dir="ltr">24.695</span> رمزًا مميزًا من C مقابل <span dir="ltr">25.305</span> رمزًا مميزًا من A، مع الاحتفاظ بحوالي <span dir="ltr">0.61</span> رمز مميز من C كربح. يمتلك المتداول أيضًا <span dir="ltr">0.61</span> رمز مميز إضافي من A (الـ <span dir="ltr">25.305</span> التي ينتهي بها المتداول، ناقص الاستثمار الأصلي البالغ <span dir="ltr">24.695</span>).
+2. يبيع المتداول <span dir="ltr">24.695</span> رمزًا مميزًا A ويحصل على <span dir="ltr">25.305</span> رمزًا مميزًا B.
+3. يبيع المتداول <span dir="ltr">24.695</span> رمزًا مميزًا B مقابل <span dir="ltr">25.305</span> رمزًا مميزًا C، مع الاحتفاظ بحوالي <span dir="ltr">0.61</span> رمزًا مميزًا B كربح.
+4. ثم يبيع المتداول <span dir="ltr">24.695</span> رمزًا مميزًا C مقابل <span dir="ltr">25.305</span> رمزًا مميزًا A، مع الاحتفاظ بحوالي <span dir="ltr">0.61</span> رمزًا مميزًا C كربح. يمتلك المتداول أيضًا <span dir="ltr">0.61</span> رمزًا مميزًا A إضافيًا (الـ <span dir="ltr">25.305</span> التي ينتهي بها المتداول، ناقص الاستثمار الأصلي البالغ <span dir="ltr">24.695</span>).
 
 | الخطوة | مبادلة A-B | مبادلة B-C | مبادلة A-C |
 | ---- | --------------------------- | --------------------------- | --------------------------- |
-| 1 | A:1000 B:1050 A/B=1.05 | B:1000 C:1050 B/C=1.05 | A:1050 C:1000 C/A=1.05 |
-| 2 | A:1024.695 B:1024.695 A/B=1 | B:1000 C:1050 B/C=1.05 | A:1050 C:1000 C/A=1.05 |
-| 3 | A:1024.695 B:1024.695 A/B=1 | B:1024.695 C:1024.695 B/C=1 | A:1050 C:1000 C/A=1.05 |
-| 4 | A:1024.695 B:1024.695 A/B=1 | B:1024.695 C:1024.695 B/C=1 | A:1024.695 C:1024.695 C/A=1 |
+| 1 | <span dir="ltr">A:1000 B:1050 A/B=1.05</span> | <span dir="ltr">B:1000 C:1050 B/C=1.05</span> | <span dir="ltr">A:1050 C:1000 C/A=1.05</span> |
+| 2 | <span dir="ltr">A:1024.695 B:1024.695 A/B=1</span> | <span dir="ltr">B:1000 C:1050 B/C=1.05</span> | <span dir="ltr">A:1050 C:1000 C/A=1.05</span> |
+| 3 | <span dir="ltr">A:1024.695 B:1024.695 A/B=1</span> | <span dir="ltr">B:1024.695 C:1024.695 B/C=1</span> | <span dir="ltr">A:1050 C:1000 C/A=1.05</span> |
+| 4 | <span dir="ltr">A:1024.695 B:1024.695 A/B=1</span> | <span dir="ltr">B:1024.695 C:1024.695 B/C=1</span> | <span dir="ltr">A:1024.695 C:1024.695 C/A=1</span> |
 
 ```solidity
             (address input, address output) = (path[i], path[i + 1]);
@@ -1367,13 +1367,13 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     }
 ```
 
-قم فعليًا باستدعاء مبادلة الزوج لمبادلة الرموز المميزة. لا نحتاج إلى استدعاء عكسي (<span dir="ltr">callback</span>) لإبلاغنا بالمبادلة، لذلك لا نرسل أي بايتات في هذا الحقل.
+استدعِ مبادلة الزوج فعليًا لمبادلة الرموز المميزة. لا نحتاج إلى استدعاء (callback) لإخبارنا عن المبادلة، لذا لا نرسل أي بايتات في هذا الحقل.
 
 ```solidity
     function swapExactTokensForTokens(
 ```
 
-تُستخدم هذه الدالة مباشرة من قبل المتداولين لمبادلة رمز مميز بآخر.
+تُستخدم هذه الوظيفة مباشرة من قبل المتداولين لمبادلة رمز مميز بآخر.
 
 ```solidity
         uint amountIn,
@@ -1383,9 +1383,9 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 
 تحتوي هذه المعلمة على عناوين عقود <span dir="ltr">ERC-20</span>. كما هو موضح أعلاه، هذه مصفوفة لأنك قد تحتاج إلى المرور عبر عدة مبادلات أزواج للانتقال من الأصل الذي لديك إلى الأصل الذي تريده.
 
-يمكن تخزين معلمة الدالة في <span dir="ltr">Solidity</span> إما في `memory` أو في `calldata`. إذا كانت الدالة نقطة دخول إلى العقد، يتم استدعاؤها مباشرة من مستخدم (باستخدام معاملة) أو من عقد مختلف، فيمكن أخذ قيمة المعلمة مباشرة من بيانات الاستدعاء. إذا تم استدعاء الدالة داخليًا، مثل `_swap` أعلاه، فيجب تخزين المعلمات في `memory`. من منظور العقد المستدعى، تكون `calldata` للقراءة فقط.
+يمكن تخزين معلمة الوظيفة في Solidity إما في `memory` أو `calldata`. إذا كانت الوظيفة نقطة دخول إلى العقد، يتم استدعاؤها مباشرة من مستخدم (باستخدام معاملة) أو من عقد مختلف، فيمكن أخذ قيمة المعلمة مباشرة من بيانات الاستدعاء. إذا تم استدعاء الوظيفة داخليًا، مثل `_swap` أعلاه، فيجب تخزين المعلمات في `memory`. من منظور العقد المستدعى، تكون `calldata` للقراءة فقط.
 
-مع الأنواع العددية مثل `uint` أو `address`، يتعامل المترجم (<span dir="ltr">compiler</span>) مع اختيار التخزين نيابة عنا، ولكن مع المصفوفات، التي تكون أطول وأكثر تكلفة، نحدد نوع التخزين الذي سيتم استخدامه.
+مع الأنواع العددية مثل `uint` أو `address`، يتعامل المترجم مع اختيار التخزين نيابة عنا، ولكن مع المصفوفات، التي تكون أطول وأكثر تكلفة، نحدد نوع التخزين الذي سيتم استخدامه.
 
 ```solidity
         address to,
@@ -1393,14 +1393,14 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     ) external virtual override ensure(deadline) returns (uint[] memory amounts) {
 ```
 
-يتم دائمًا إرجاع قيم الإرجاع في الذاكرة.
+يتم إرجاع القيم المرجعة دائمًا في الذاكرة.
 
 ```solidity
         amounts = UniswapV2Library.getAmountsOut(factory, amountIn, path);
         require(amounts[amounts.length - 1] >= amountOutMin, 'UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT');
 ```
 
-احسب المبلغ الذي سيتم شراؤه في كل مبادلة. إذا كانت النتيجة أقل من الحد الأدنى الذي يرغب المتداول في قبوله، يتم التراجع عن المعاملة.
+احسب المبلغ الذي سيتم شراؤه في كل مبادلة. إذا كانت النتيجة أقل من الحد الأدنى الذي يرغب المتداول في قبوله، فتراجع عن المعاملة.
 
 ```solidity
         TransferHelper.safeTransferFrom(
@@ -1410,7 +1410,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     }
 ```
 
-أخيرًا، قم بتحويل رمز <span dir="ltr">ERC-20</span> المميز الأولي إلى الحساب الخاص بمبادلة الزوج الأولى واستدعِ `_swap`. يحدث كل هذا في نفس المعاملة، لذلك تعرف مبادلة الزوج أن أي رموز مميزة غير متوقعة هي جزء من هذا التحويل.
+أخيرًا، قم بتحويل رمز <span dir="ltr">ERC-20</span> المميز الأولي إلى الحساب لمبادلة الزوج الأولى واستدعِ `_swap`. يحدث كل هذا في نفس المعاملة، لذا تعرف مبادلة الزوج أن أي رموز مميزة غير متوقعة هي جزء من هذا التحويل.
 
 ```solidity
     function swapTokensForExactTokens(
@@ -1429,9 +1429,9 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     }
 ```
 
-تسمح الدالة السابقة، `swapTokensForTokens`، للمتداول بتحديد عدد دقيق من الرموز المميزة المدخلة التي يرغب في تقديمها والحد الأدنى لعدد الرموز المميزة المخرجة التي يرغب في تلقيها في المقابل. تقوم هذه الدالة بالمبادلة العكسية، فهي تتيح للمتداول تحديد عدد الرموز المميزة المخرجة التي يريدها، والحد الأقصى لعدد الرموز المميزة المدخلة التي يرغب في دفعها مقابلها.
+تسمح الوظيفة السابقة، `swapExactTokensForTokens`، للمتداول بتحديد عدد دقيق من الرموز المميزة المدخلة التي يرغب في تقديمها والحد الأدنى لعدد الرموز المميزة المخرجة التي يرغب في تلقيها في المقابل. تقوم هذه الوظيفة بالمبادلة العكسية، فهي تتيح للمتداول تحديد عدد الرموز المميزة المخرجة التي يريدها، والحد الأقصى لعدد الرموز المميزة المدخلة التي يرغب في دفعها مقابلها.
 
-في كلتا الحالتين، يجب على المتداول أن يمنح هذا العقد المحيطي أولاً سماحية للسماح له بتحويلها.
+في كلتا الحالتين، يتعين على المتداول إعطاء هذا العقد المحيطي أولاً سماحية للسماح له بتحويلها.
 
 ```solidity
     function swapExactETHForTokens(uint amountOutMin, address[] calldata path, address to, uint deadline)
@@ -1504,12 +1504,12 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         IWETH(WETH).deposit{value: amounts[0]}();
         assert(IWETH(WETH).transfer(UniswapV2Library.pairFor(factory, path[0], path[1]), amounts[0]));
         _swap(amounts, path, to);
-        // استرداد غبار الإيثر، إن وجد
+        // استرداد غبار ETH، إن وجد
         if (msg.value > amounts[0]) TransferHelper.safeTransferETH(msg.sender, msg.value - amounts[0]);
     }
 ```
 
-تتضمن هذه المتغيرات الأربعة جميعها التداول بين <span dir="ltr">ETH</span> والرموز المميزة. الفرق الوحيد هو أننا إما نتلقى <span dir="ltr">ETH</span> من المتداول ونستخدمه لسك <span dir="ltr">WETH</span>، أو نتلقى <span dir="ltr">WETH</span> من المبادلة الأخيرة في المسار ونقوم بحرقه، ونعيد <span dir="ltr">ETH</span> الناتج إلى المتداول.
+تتضمن هذه المتغيرات الأربعة جميعها التداول بين ETH والرموز المميزة. الاختلاف الوحيد هو أننا إما نتلقى ETH من المتداول ونستخدمه لسك WETH، أو نتلقى WETH من المبادلة الأخيرة في المسار ونقوم بحرقه، ونرسل للمتداول ETH الناتج.
 
 ```solidity
     // **** مبادلة (دعم الرموز المميزة ذات الرسوم عند التحويل) ****
@@ -1517,7 +1517,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     function _swapSupportingFeeOnTransferTokens(address[] memory path, address _to) internal virtual {
 ```
 
-هذه هي الدالة الداخلية لمبادلة الرموز المميزة التي لها رسوم تحويل أو تخزين لحل ([هذه المشكلة](https://github.com/Uniswap/uniswap-interface/issues/835)).
+هذه هي الوظيفة الداخلية لمبادلة الرموز المميزة التي تحتوي على رسوم تحويل أو تخزين لحل ([هذه المشكلة](https://github.com/Uniswap/interface/issues/835)).
 
 ```solidity
         for (uint i; i < path.length - 1; i++) {
@@ -1526,16 +1526,16 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
             IUniswapV2Pair pair = IUniswapV2Pair(UniswapV2Library.pairFor(factory, input, output));
             uint amountInput;
             uint amountOutput;
-            { // نطاق لتجنب أخطاء المكدس العميق جدًا
+            { // تحديد النطاق لتجنب أخطاء المكدس العميق جدًا
             (uint reserve0, uint reserve1,) = pair.getReserves();
             (uint reserveInput, uint reserveOutput) = input == token0 ? (reserve0, reserve1) : (reserve1, reserve0);
             amountInput = IERC20(input).balanceOf(address(pair)).sub(reserveInput);
             amountOutput = UniswapV2Library.getAmountOut(amountInput, reserveInput, reserveOutput);
 ```
 
-بسبب رسوم التحويل، لا يمكننا الاعتماد على دالة `getAmountsOut` لإخبارنا بمقدار ما نحصل عليه من كل تحويل (بالطريقة التي نفعلها قبل استدعاء `_swap` الأصلية). بدلاً من ذلك، يتعين علينا التحويل أولاً ثم معرفة عدد الرموز المميزة التي استرددناها.
+بسبب رسوم التحويل، لا يمكننا الاعتماد على وظيفة `getAmountsOut` لإخبارنا بالمقدار الذي نحصل عليه من كل تحويل (بالطريقة التي نفعلها قبل استدعاء `_swap` الأصلي). بدلاً من ذلك، يتعين علينا التحويل أولاً ثم معرفة عدد الرموز المميزة التي استرددناها.
 
-ملاحظة: من الناحية النظرية، يمكننا فقط استخدام هذه الدالة بدلاً من `_swap`، ولكن في حالات معينة (على سبيل المثال، إذا انتهى الأمر بالتراجع عن التحويل لعدم وجود ما يكفي في النهاية لتلبية الحد الأدنى المطلوب) فإن ذلك سيكلف المزيد من الغاز. تعتبر الرموز المميزة ذات رسوم التحويل نادرة جدًا، لذلك بينما نحتاج إلى استيعابها، ليست هناك حاجة لجميع المبادلات لافتراض أنها تمر عبر واحد منها على الأقل.
+ملاحظة: من الناحية النظرية، يمكننا فقط استخدام هذه الوظيفة بدلاً من `_swap`، ولكن في حالات معينة (على سبيل المثال، إذا انتهى الأمر بالتراجع عن التحويل لعدم وجود ما يكفي في النهاية لتلبية الحد الأدنى المطلوب) فإن ذلك سيكلف المزيد من الغاز. الرموز المميزة لرسوم التحويل نادرة جدًا، لذا بينما نحتاج إلى استيعابها، ليست هناك حاجة لجميع المبادلات لافتراض أنها تمر عبر واحدة منها على الأقل.
 
 ```solidity
             }
@@ -1617,7 +1617,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 هذه هي نفس المتغيرات المستخدمة للرموز المميزة العادية، لكنها تستدعي `_swapSupportingFeeOnTransferTokens` بدلاً من ذلك.
 
 ```solidity
-    // **** دوال المكتبة ****
+    // **** دوال مكتبة ****
     function quote(uint amountA, uint reserveA, uint reserveB) public pure virtual override returns (uint amountB) {
         return UniswapV2Library.quote(amountA, reserveA, reserveB);
     }
@@ -1664,7 +1664,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 }
 ```
 
-هذه الدوال هي مجرد وكلاء (<span dir="ltr">proxies</span>) تستدعي [دوال UniswapV2Library](#uniswapv2library).
+هذه الوظائف هي مجرد وكلاء (proxies) تستدعي [وظائف UniswapV2Library](#uniswapv2library).
 
 ### UniswapV2Migrator.sol {#uniswapv2migrator}
 
@@ -1756,7 +1756,7 @@ library UQ112x112 {
 
 إذا قسمنا قيمتين من نوع `UQ112x112`، فلن يتم ضرب النتيجة في <span dir="ltr">2^112</span>. لذا بدلاً من ذلك نأخذ عددًا صحيحًا للمقام. كنا سنحتاج إلى استخدام حيلة مشابهة لإجراء عملية الضرب، لكننا لا نحتاج إلى إجراء عملية ضرب لقيم `UQ112x112`.
 
-### مكتبة UniswapV2Library {#uniswapv2library}
+### UniswapV2Library {#uniswapv2library}
 
 تُستخدم هذه المكتبة فقط بواسطة العقود المحيطية
 
@@ -1770,7 +1770,7 @@ import "./SafeMath.sol";
 library UniswapV2Library {
     using SafeMath for uint;
 
-    // يُرجع عناوين الرموز المميزة مرتبة، ويُستخدم للتعامل مع القيم المرجعة من الأزواج المرتبة بهذا الترتيب
+    // يُرجع عناوين رموز مميزة مرتبة، ويُستخدم للتعامل مع القيم المرجعة من الأزواج المرتبة بهذا الترتيب
     function sortTokens(address tokenA, address tokenB) internal pure returns (address token0, address token1) {
         require(tokenA != tokenB, 'UniswapV2Library: IDENTICAL_ADDRESSES');
         (token0, token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
@@ -1778,7 +1778,7 @@ library UniswapV2Library {
     }
 ```
 
-قم بفرز الرمزين المميزين حسب العنوان، حتى نتمكن من الحصول على عنوان تبادل الزوج لهما. هذا ضروري لأنه بخلاف ذلك سيكون لدينا احتمالان، أحدهما للمعلمات <span dir="ltr">A,B</span> والآخر للمعلمات <span dir="ltr">B,A</span>، مما يؤدي إلى تبادلين بدلاً من واحد.
+قم بفرز الرمزين المميزين حسب العنوان، حتى نتمكن من الحصول على عنوان مبادلة الزوج لهما. هذا ضروري لأنه بخلاف ذلك سيكون لدينا احتمالان، أحدهما للمعلمات A,B والآخر للمعلمات B,A، مما يؤدي إلى مبادلتين بدلاً من واحدة.
 
 ```solidity
     // يحسب عنوان CREATE2 لزوج دون إجراء أي استدعاءات خارجية
@@ -1793,10 +1793,10 @@ library UniswapV2Library {
     }
 ```
 
-تحسب هذه الدالة عنوان تبادل الزوج للرمزين المميزين. يتم إنشاء هذا العقد باستخدام [رمز التشغيل CREATE2](https://eips.ethereum.org/EIPS/eip-1014)، لذا يمكننا حساب العنوان باستخدام نفس الخوارزمية إذا كنا نعرف المعلمات التي يستخدمها. هذا أرخص بكثير من سؤال المصنع، و
+تحسب هذه الوظيفة عنوان مبادلة الزوج للرمزين المميزين. يتم إنشاء هذا العقد باستخدام [رمز التشغيل CREATE2](https://eips.ethereum.org/EIPS/eip-1014)، لذا يمكننا حساب العنوان باستخدام نفس الخوارزمية إذا كنا نعرف المعلمات التي يستخدمها. هذا أرخص بكثير من سؤال المصنع، ولا يتطلب استدعاءً خارجيًا.
 
 ```solidity
-    // يجلب ويفرز الاحتياطيات لزوج
+    // يجلب ويرتب الاحتياطيات لزوج
     function getReserves(address factory, address tokenA, address tokenB) internal view returns (uint reserveA, uint reserveB) {
         (address token0,) = sortTokens(tokenA, tokenB);
         (uint reserve0, uint reserve1,) = IUniswapV2Pair(pairFor(factory, tokenA, tokenB)).getReserves();
@@ -1804,7 +1804,7 @@ library UniswapV2Library {
     }
 ```
 
-تُرجع هذه الدالة احتياطيات الرمزين المميزين التي يمتلكها تبادل الزوج. لاحظ أنه يمكنها استقبال الرموز المميزة بأي ترتيب، وتقوم بفرزها للاستخدام الداخلي.
+تُرجع هذه الوظيفة احتياطيات الرمزين المميزين التي تمتلكها مبادلة الزوج. لاحظ أنه يمكنها تلقي الرموز المميزة بأي ترتيب، وتقوم بفرزها للاستخدام الداخلي.
 
 ```solidity
     // بالنظر إلى مقدار معين من أصل واحتياطيات الزوج، يُرجع مقدارًا معادلًا من الأصل الآخر
@@ -1815,14 +1815,14 @@ library UniswapV2Library {
     }
 ```
 
-تمنحك هذه الدالة مقدار الرمز المميز B الذي ستحصل عليه مقابل الرمز المميز A إذا لم تكن هناك رسوم متضمنة. يأخذ هذا الحساب في الاعتبار أن التحويل يغير سعر الصرف.
+تمنحك هذه الوظيفة كمية الرمز المميز B التي ستحصل عليها مقابل الرمز المميز A إذا لم تكن هناك رسوم متضمنة. يأخذ هذا الحساب في الاعتبار أن التحويل يغير سعر الصرف.
 
 ```solidity
-    // بالنظر إلى مقدار إدخال من أصل واحتياطيات الزوج، يُرجع الحد الأقصى لمقدار الإخراج من الأصل الآخر
+    // بالنظر إلى مقدار مُدخل من أصل واحتياطيات الزوج، يُرجع الحد الأقصى للمقدار المُخرج من الأصل الآخر
     function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {
 ```
 
-تعمل الدالة `quote` أعلاه بشكل رائع إذا لم تكن هناك رسوم لاستخدام تبادل الزوج. ومع ذلك، إذا كانت هناك رسوم تبادل بنسبة <span dir="ltr">0.3%</span>، فإن المبلغ الذي تحصل عليه فعليًا يكون أقل. تحسب هذه الدالة المبلغ بعد رسوم التبادل.
+تعمل وظيفة `quote` أعلاه بشكل رائع إذا لم تكن هناك رسوم لاستخدام مبادلة الزوج. ومع ذلك، إذا كانت هناك رسوم مبادلة بنسبة <span dir="ltr">0.3%</span>، فإن المبلغ الذي تحصل عليه فعليًا يكون أقل. تحسب هذه الوظيفة المبلغ بعد رسوم المبادلة.
 
 ```solidity
 
@@ -1835,10 +1835,10 @@ library UniswapV2Library {
     }
 ```
 
-لا تتعامل لغة Solidity مع الكسور بشكل أصلي، لذا لا يمكننا ببساطة ضرب المبلغ في <span dir="ltr">0.997</span>. بدلاً من ذلك، نضرب البسط في <span dir="ltr">997</span> والمقام في <span dir="ltr">1000</span>، مما يحقق نفس التأثير.
+لا تتعامل Solidity مع الكسور بشكل أصلي، لذا لا يمكننا ببساطة ضرب المبلغ المخرج في <span dir="ltr">0.997</span>. بدلاً من ذلك، نضرب البسط في <span dir="ltr">997</span> والمقام في <span dir="ltr">1000</span>، لتحقيق نفس التأثير.
 
 ```solidity
-    // بالنظر إلى مقدار إخراج من أصل واحتياطيات الزوج، يُرجع مقدار الإدخال المطلوب من الأصل الآخر
+    // بالنظر إلى مقدار مُخرج من أصل واحتياطيات الزوج، يُرجع المقدار المُدخل المطلوب من الأصل الآخر
     function getAmountIn(uint amountOut, uint reserveIn, uint reserveOut) internal pure returns (uint amountIn) {
         require(amountOut > 0, 'UniswapV2Library: INSUFFICIENT_OUTPUT_AMOUNT');
         require(reserveIn > 0 && reserveOut > 0, 'UniswapV2Library: INSUFFICIENT_LIQUIDITY');
@@ -1848,11 +1848,11 @@ library UniswapV2Library {
     }
 ```
 
-تقوم هذه الدالة بنفس الشيء تقريبًا، لكنها تحصل على مقدار المخرجات وتوفر المدخلات.
+تقوم هذه الوظيفة بنفس الشيء تقريبًا، لكنها تحصل على كمية المخرجات وتوفر المدخلات.
 
 ```solidity
 
-    // يُجري حسابات getAmountOut المتسلسلة على أي عدد من الأزواج
+    // ينفذ حسابات getAmountOut المتسلسلة على أي عدد من الأزواج
     function getAmountsOut(address factory, uint amountIn, address[] memory path) internal view returns (uint[] memory amounts) {
         require(path.length >= 2, 'UniswapV2Library: INVALID_PATH');
         amounts = new uint[](path.length);
@@ -1863,7 +1863,7 @@ library UniswapV2Library {
         }
     }
 
-    // يُجري حسابات getAmountIn المتسلسلة على أي عدد من الأزواج
+    // ينفذ حسابات getAmountIn المتسلسلة على أي عدد من الأزواج
     function getAmountsIn(address factory, uint amountOut, address[] memory path) internal view returns (uint[] memory amounts) {
         require(path.length >= 2, 'UniswapV2Library: INVALID_PATH');
         amounts = new uint[](path.length);
@@ -1876,18 +1876,18 @@ library UniswapV2Library {
 }
 ```
 
-تتعامل هاتان الدالتان مع تحديد القيم عندما يكون من الضروري المرور عبر عدة تبادلات للأزواج.
+تتعامل هاتان الوظيفتان مع تحديد القيم عندما يكون من الضروري المرور عبر عدة مبادلات أزواج.
 
 ### مساعد التحويل {#transfer-helper}
 
-تضيف [هذه المكتبة](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) فحوصات نجاح حول تحويلات <span dir="ltr">ERC-20</span> وإيثيريوم للتعامل مع التراجع وإرجاع قيمة `false` بنفس الطريقة.
+تضيف [هذه المكتبة](https://github.com/Uniswap/solidity-lib/blob/master/contracts/libraries/TransferHelper.sol) (في مستودع تمت أرشفته الآن) فحوصات نجاح حول تحويلات <span dir="ltr">ERC-20</span> وإيثيريوم للتعامل مع التراجع وإرجاع قيمة `false` بنفس الطريقة.
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 pragma solidity >=0.6.0;
 
-// طرق مساعدة للتفاعل مع رموز ERC-20 المميزة وإرسال ETH التي لا تُرجع true/false بشكل ثابت
+// طرق مساعدة للتفاعل مع رموز مميزة ERC-20 وإرسال ETH التي لا تُرجع true/false بشكل ثابت
 library TransferHelper {
     function safeApprove(
         address token,
@@ -1912,7 +1912,7 @@ library TransferHelper {
     }
 ```
 
-من أجل التوافق مع الإصدارات السابقة للرموز المميزة التي تم إنشاؤها قبل معيار <span dir="ltr">ERC-20</span>، يمكن أن يفشل استدعاء <span dir="ltr">ERC-20</span> إما عن طريق التراجع (وفي هذه الحالة يكون `success` هو `false`) أو من خلال كونه ناجحًا وإرجاع قيمة `false` (وفي هذه الحالة توجد بيانات مخرجات، وإذا قمت بفك تشفيرها كقيمة منطقية ستحصل على `false`).
+من أجل التوافق مع الإصدارات السابقة مع الرموز المميزة التي تم إنشاؤها قبل معيار <span dir="ltr">ERC-20</span>، يمكن أن يفشل استدعاء <span dir="ltr">ERC-20</span> إما عن طريق التراجع (وفي هذه الحالة يكون `success` هو `false`) أو من خلال كونه ناجحًا وإرجاع قيمة `false` (وفي هذه الحالة توجد بيانات مخرجات، وإذا قمت بفك تشفيرها كقيمة منطقية، فستحصل على `false`).
 
 ```solidity
 
@@ -1931,7 +1931,7 @@ library TransferHelper {
     }
 ```
 
-تنفذ هذه الدالة [وظيفة التحويل الخاصة بـ <span dir="ltr">ERC-20</span>](https://eips.ethereum.org/EIPS/eip-20#transfer)، والتي تسمح لحساب بإنفاق السماحية المقدمة من حساب مختلف.
+تنفذ هذه الدالة [وظيفة التحويل الخاصة بـ <span dir="ltr">ERC-20</span>](https://eips.ethereum.org/EIPS/eip-20#transfer)، والتي تنقل الرموز المميزة من المستدعي (هذا العقد) إلى `to`.
 
 ```solidity
 
@@ -1950,7 +1950,7 @@ library TransferHelper {
     }
 ```
 
-تنفذ هذه الدالة [وظيفة transferFrom الخاصة بـ <span dir="ltr">ERC-20</span>](https://eips.ethereum.org/EIPS/eip-20#transferfrom)، والتي تسمح لحساب بإنفاق السماحية المقدمة من حساب مختلف.
+تنفذ هذه الدالة [وظيفة <span dir="ltr">transferFrom</span> الخاصة بـ <span dir="ltr">ERC-20</span>](https://eips.ethereum.org/EIPS/eip-20#transferfrom)، والتي تسمح لحساب بإنفاق السماحية المقدمة من حساب مختلف.
 
 ```solidity
 
@@ -1961,7 +1961,7 @@ library TransferHelper {
 }
 ```
 
-تقوم هذه الدالة بتحويل إيثر إلى حساب. يمكن لأي استدعاء لعقد مختلف أن يحاول إرسال إيثر. نظرًا لأننا لا نحتاج فعليًا إلى استدعاء أي دالة، فإننا لا نرسل أي بيانات مع الاستدعاء.
+تقوم هذه الدالة بتحويل الإيثر إلى حساب. يمكن لأي استدعاء لعقد مختلف أن يحاول إرسال إيثر. نظرًا لأننا لا نحتاج فعليًا إلى استدعاء أي دالة، فإننا لا نرسل أي بيانات مع الاستدعاء.
 
 ## الخاتمة {#conclusion}
 

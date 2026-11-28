@@ -9,21 +9,22 @@ lang: ko
 published: 2025-03-15
 ---
 
-_블록체인에는 비밀이 없습니다_. 블록체인에 게시된 모든 내용은 누구나 읽을 수 있도록 공개됩니다. 블록체인은 누구나 검증할 수 있다는 점을 기반으로 하므로 이는 필수적입니다. 하지만 게임은 종종 비밀 상태에 의존합니다. 예를 들어, [지뢰찾기](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) 게임은 블록 탐색기에 들어가서 지도를 볼 수 있다면 전혀 의미가 없습니다.
+_블록체인에는 비밀이 없습니다_. 블록체인에 게시된 모든 내용은 누구나 읽을 수 있도록 공개되어 있습니다. 블록체인은 누구나 검증할 수 있다는 점을 기반으로 하기 때문에 이는 필수적입니다. 하지만 게임은 종종 비밀 상태에 의존합니다. 예를 들어, 블록체인 탐색기에 들어가서 지도를 볼 수 있다면 [지뢰찾기](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) 게임은 전혀 의미가 없습니다.
 
-가장 간단한 해결책은 비밀 상태를 유지하기 위해 [서버 컴포넌트](/developers/tutorials/server-components/)를 사용하는 것입니다. 하지만 우리가 블록체인을 사용하는 이유는 게임 개발자의 부정행위를 방지하기 위해서입니다. 우리는 서버 컴포넌트의 정직성을 보장해야 합니다. 서버는 상태의 해시를 제공할 수 있으며, [영지식 증명](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important)을 사용하여 이동 결과를 계산하는 데 사용된 상태가 올바른 상태임을 증명할 수 있습니다.
+가장 간단한 해결책은 [서버 컴포넌트](/developers/tutorials/server-components/)를 사용하여 비밀 상태를 보관하는 것입니다. 하지만 우리가 블록체인을 사용하는 이유는 게임 개발자의 부정행위를 방지하기 위해서입니다. 우리는 서버 컴포넌트의 정직성을 보장해야 합니다. 서버는 상태의 해시를 제공하고, [영지식 증명](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important)을 사용하여 이동 결과를 계산하는 데 사용된 상태가 올바른 상태임을 증명할 수 있습니다.
 
-이 글을 읽고 나면 이러한 종류의 비밀 상태 유지 서버, 상태를 보여주는 클라이언트, 그리고 이 둘 사이의 통신을 위한 온체인 컴포넌트를 만드는 방법을 알게 될 것입니다. 우리가 사용할 주요 도구는 다음과 같습니다:
+이 글을 읽고 나면 이러한 종류의 비밀 상태를 보관하는 서버, 상태를 보여주는 클라이언트, 그리고 이 둘 사이의 통신을 위한 온체인 컴포넌트를 만드는 방법을 알게 될 것입니다. 우리가 사용할 주요 도구는 다음과 같습니다.
 
-| 도구                                          | 목적                                                 | 검증된 버전 |
+| 도구                                          | 목적                                                    | 검증된 버전 |
 | --------------------------------------------- | ------------------------------------------------------- | ------------------: |
-| [Zokrates](https://zokrates.github.io/)       | 영지식 증명 및 그 검증            |               1.1.9 |
-| [TypeScript](https://www.typescriptlang.org/) | 서버와 클라이언트 모두를 위한 프로그래밍 언어 |               5.4.2 |
-| [Node](https://nodejs.org/en)                 | 서버 실행                                      |             20.18.2 |
-| [Viem](https://viem.sh/)                      | 블록체인과의 통신                       |              2.9.20 |
-| [MUD](https://mud.dev/)                       | 온체인 데이터 관리                                 |              2.0.12 |
-| [React](https://react.dev/)                   | 클라이언트 사용자 인터페이스                                   |              18.2.0 |
-| [Vite](https://vitejs.dev/)                   | 클라이언트 코드 제공                                 |               4.2.1 |
+| [Zokrates](https://zokrates.github.io/)       | 영지식 증명 및 검증                                     |               1.1.9 |
+| [TypeScript](https://www.typescriptlang.org/) | 서버와 클라이언트 모두를 위한 프로그래밍 언어           |               5.4.2 |
+| [Node](https://nodejs.org/en)                 | 서버 실행                                               |             20.18.2 |
+| [Foundry](https://getfoundry.sh/)             | 로컬 블록체인 및 컨트랙트 배포                          |               1.0.0 |
+| [Viem](https://viem.sh/)                      | 블록체인과의 통신                                       |              2.9.20 |
+| [MUD](https://mud.dev/)                       | 온체인 데이터 관리                                      |              2.0.12 |
+| [React](https://react.dev/)                   | 클라이언트 사용자 인터페이스                            |              18.2.0 |
+| [Vite](https://vitejs.dev/)                   | 클라이언트 코드 제공                                    |               4.2.1 |
 
 ## 지뢰찾기 예제 {#minesweeper}
 
@@ -35,9 +36,26 @@ _블록체인에는 비밀이 없습니다_. 블록체인에 게시된 모든 �
 
 지뢰찾기 예제를 실행하려면 다음을 수행하세요.
 
-1. [Node](https://mud.dev/quickstart#prerequisites), [Foundry](https://book.getfoundry.sh/getting-started/installation), [`git`](https://git-scm.com/downloads), [`pnpm`](https://git-scm.com/downloads), [`mprocs`](https://github.com/pvolok/mprocs)와 같은 [필수 구성 요소가 설치되어 있는지 확인](https://mud.dev/quickstart#prerequisites)합니다.
+1. [필수 구성 요소가 설치되어 있는지 확인](https://mud.dev/quickstart#prerequisites)합니다. [Node](https://nodejs.org/en), [Foundry](https://getfoundry.sh/introduction/installation), [`git`](https://git-scm.com/downloads), 그리고 [`pnpm`](https://pnpm.io/installation)가 필요합니다.
 
-2. 리포지토리를 클론합니다.
+   이 예제는 MUD 2.0.12를 사용하며, 특정 버전의 Node와 Foundry가 필요합니다.
+
+   - **Node 20**. MUD 2.0.12 명령줄 도구는 [JSON 가져오기 어서션(JSON import assertions)](https://v8.dev/features/import-attributes)을 사용하는데, 최신 버전의 Node에서는 더 이상 이를 지원하지 않으므로 Node 22 이상에서는 `SyntaxError: Unexpected identifier 'assert'` 오류와 함께 실패합니다. Node 20은 2026년 4월에 [수명 종료(end of life)에 도달](https://nodejs.org/en/about/previous-releases)하여 더 이상 보안 업데이트를 받지 못하므로, 이 로컬 예제에서만 사용하세요. [`fnm`](https://github.com/Schniz/fnm) 또는 [`nvm`](https://github.com/nvm-sh/nvm)와 같은 Node 버전 관리자를 사용하면 이 디렉터리에 대해서만 Node 20으로 전환할 수 있습니다. 예를 들면 다음과 같습니다.
+
+     ```sh copy
+     fnm install 20
+     fnm use 20
+     ```
+
+   - **Foundry 1.0.0**. 현재 Foundry 버전에서는 배포 후 스크립트가 _Usage of `address(this)` detected in script contract_ 오류와 함께 실패합니다. 다음 명령을 사용하여 테스트된 버전을 설치하세요.
+
+     ```sh copy
+     foundryup -i 1.0.0
+     ```
+
+     이 튜토리얼을 마치면 `foundryup` 명령을 사용하여 최신 버전으로 돌아갈 수 있습니다.
+
+2. 리포지토리를 복제합니다.
 
    ```sh copy
    git clone https://github.com/qbzzt/20240901-secret-state.git
@@ -48,10 +66,9 @@ _블록체인에는 비밀이 없습니다_. 블록체인에 게시된 모든 �
    ```sh copy
    cd 20240901-secret-state/
    pnpm install
-   npm install -g mprocs
    ```
 
-   Foundry가 `pnpm install`의 일부로 설치된 경우, 명령줄 셸을 다시 시작해야 합니다.
+   단일 터미널에서 모든 프로세스를 실행하는 [`mprocs`](https://github.com/pvolok/mprocs)가 패키지 중 하나로 설치됩니다.
 
 4. 컨트랙트를 컴파일합니다.
 
@@ -62,13 +79,13 @@ _블록체인에는 비밀이 없습니다_. 블록체인에 게시된 모든 �
     ```
 
 
-5. 프로그램([anvil](https://book.getfoundry.sh/anvil/) 블록체인 포함)을 시작하고 기다립니다.
+5. 프로그램([anvil](https://getfoundry.sh/anvil/overview) 블록체인 포함)을 시작하고 기다립니다.
 
    ```sh copy
-   mprocs
+   pnpm dev
    ```
 
-   시작하는 데 시간이 오래 걸린다는 점에 유의하세요. 진행 상황을 보려면 먼저 아래쪽 화살표를 사용하여 _contracts_ 탭으로 스크롤하여 MUD 컨트랙트가 배포되는 것을 확인합니다. _Waiting for file changes…_ 메시지가 표시되면 컨트랙트가 배포된 것이며, 추가 진행 상황은 _server_ 탭에서 확인할 수 있습니다. 거기서 _Verifier address: 0x...._ 메시지가 표시될 때까지 기다립니다.
+   시작하는 데 시간이 오래 걸린다는 점에 유의하세요. 진행 상황을 보려면 먼저 아래쪽 화살표를 사용하여 _contracts_ 탭으로 스크롤하여 MUD 컨트랙트가 배포되는 것을 확인합니다. _Waiting for file changes…_ 메시지가 표시되면 컨트랙트가 배포된 것이며, 이후 진행 상황은 _server_ 탭에서 확인할 수 있습니다. 거기서 _Verifier address: 0x...._ 메시지가 표시될 때까지 기다립니다.
 
    이 단계가 성공하면 왼쪽에 여러 프로세스가 있고 오른쪽에 현재 선택된 프로세스의 콘솔 출력이 있는 `mprocs` 화면이 표시됩니다.
 
@@ -95,14 +112,14 @@ _블록체인에는 비밀이 없습니다_. 블록체인에 게시된 모든 �
      ```sh
      cd packages/server
      pnpm start
-     ```  
+     ```
 
    - **Client**
 
      ```sh
      cd packages/client
      pnpm run dev
-     ```  
+     ```
 
 6. 이제 [클라이언트](http://localhost:3000)로 이동하여 <strong>New Game</strong>을 클릭하고 게임을 시작할 수 있습니다.
 
@@ -144,26 +161,26 @@ _블록체인에는 비밀이 없습니다_. 블록체인에 게시된 모든 �
 
 #### 초기화 {#initialization-flow}
 
-`mprocs`를 실행하면 다음 단계가 발생합니다.
+`pnpm dev`(`mprocs`를 실행함)를 실행하면 다음 단계가 수행됩니다.
 
 1. [`mprocs`](https://github.com/pvolok/mprocs)는 4개의 컴포넌트를 실행합니다.
 
-   - 로컬 블록체인을 실행하는 [Anvil](https://book.getfoundry.sh/anvil/)
-   - MUD용 컨트랙트를 컴파일(필요한 경우)하고 배포하는 [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts)
-   - 웹 브라우저에 UI 및 클라이언트 코드를 제공하기 위해 [Vite](https://vitejs.dev/)를 실행하는 [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client)
-   - 서버 작업을 수행하는 [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server)
+   - [Anvil](https://getfoundry.sh/anvil/overview): 로컬 블록체인을 실행합니다.
+   - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts): MUD용 컨트랙트를 컴파일(필요한 경우)하고 배포합니다.
+   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client): [Vite](https://vitejs.dev/)를 실행하여 웹 브라우저에 UI 및 클라이언트 코드를 제공합니다.
+   - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server): 서버 작업을 수행합니다.
 
 2. `contracts` 패키지는 MUD 컨트랙트를 배포한 다음 [`PostDeploy.s.sol` 스크립트](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol)를 실행합니다. 이 스크립트는 구성을 설정합니다. GitHub의 코드는 [8개의 지뢰가 있는 10x5 지뢰밭](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23)을 지정합니다.
 
 3. [서버](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts)는 [MUD를 설정](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6)하는 것으로 시작합니다. 무엇보다도 이는 데이터 동기화를 활성화하여 관련 테이블의 복사본이 서버의 메모리에 존재하도록 합니다.
 
-4. 서버는 [`Configuration` 테이블이 변경될 때](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23) 실행될 함수를 구독합니다. [이 함수](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168)는 `PostDeploy.s.sol`가 실행되고 테이블을 수정한 후에 호출됩니다.
+4. 서버는 [`Configuration` 테이블이 변경될 때](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23) 실행될 함수를 구독합니다. [이 함수](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168)는 `PostDeploy.s.sol`가 실행되어 테이블을 수정한 후에 호출됩니다.
 
-5. 서버 초기화 함수가 구성을 가져오면 [`zkFunctions`를 호출](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35)하여 [서버의 영지식 부분](#using-zokrates-from-typescript)을 초기화합니다. 영지식 함수는 지뢰밭의 너비와 높이를 상수로 가져야 하므로 구성을 얻기 전에는 이 작업이 발생할 수 없습니다.
+5. 서버 초기화 함수가 구성을 가져오면, [`zkFunctions`를 호출](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35)하여 [서버의 영지식 부분](#using-zokrates-from-typescript)을 초기화합니다. 영지식 함수는 지뢰밭의 너비와 높이를 상수로 가져야 하므로 구성을 가져올 때까지 이 작업은 수행될 수 없습니다.
 
-6. 서버의 영지식 부분이 초기화된 후 다음 단계는 [영지식 검증 컨트랙트를 블록체인에 배포](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53)하고 MUD에 검증자 주소를 설정하는 것입니다.
+6. 서버의 영지식 부분이 초기화된 후 다음 단계는 [영지식 검증자 컨트랙트를 블록체인에 배포](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53)하고 MUD에서 검증자 주소를 설정하는 것입니다.
 
-7. 마지막으로 업데이트를 구독하여 플레이어가 [새 게임 시작](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) 또는 [기존 게임에서 파내기](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108)를 요청할 때 확인할 수 있도록 합니다.
+7. 마지막으로, 플레이어가 [새 게임 시작](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) 또는 [기존 게임에서 파내기](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108)를 요청할 때 확인할 수 있도록 업데이트를 구독합니다.
 
 #### 새 게임 {#new-game-flow}
 
@@ -235,7 +252,7 @@ import "utils/pack/bool/pack128.zok" as pack128;
 Zokrates의 필드 요소는 일반적으로 256비트보다 작지만, 그 차이가 크지는 않습니다. 코드를 단순화하기 위해 맵을 최대 512비트로 제한하고, 4개의 필드로 구성된 배열을 해시하며, 각 필드에서는 128비트만 사용합니다. [`pack128` 함수](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok)는 이 목적을 위해 128비트 배열을 `field`로 변환합니다.
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 이 줄은 함수 정의를 시작합니다. `hashMap`는 `map`이라는 단일 매개변수를 받는데, 이는 2차원 `bool`(ean) 배열입니다. 맵의 크기가 `width+2` 곱하기 `height+2`인 이유는 [아래에 설명되어 있습니다](#why-map-border).
@@ -245,7 +262,7 @@ Zokrates 프로그램이 이 애플리케이션에서 [템플릿 문자열](http
 반환 값은 해시를 포함하는 `field`입니다.
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 맵은 2차원입니다. 하지만 `pack128` 함수는 2차원 배열에서 작동하지 않습니다. 따라서 먼저 `map1d`을 사용하여 맵을 512바이트 배열로 평탄화합니다. 기본적으로 Zokrates 변수는 상수이지만, 루프 내에서 이 배열에 값을 할당해야 하므로 이를 [`mut`](https://zokrates.github.io/language/variables.html#mutability)로 정의합니다.
@@ -253,19 +270,19 @@ bool[512] mut map1d = [false; 512];
 Zokrates에는 `undefined`가 없기 때문에 배열을 초기화해야 합니다. `[false; 512]` 표현식은 [512개의 `false` 값으로 구성된 배열](https://zokrates.github.io/language/types.html#declaration-and-initialization)을 의미합니다.
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 또한 `map1d`에 이미 채운 비트와 아직 채우지 않은 비트를 구분하기 위한 카운터도 필요합니다.
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 이것이 Zokrates에서 [`for` 루프](https://zokrates.github.io/language/control_flow.html#for-loops)를 선언하는 방법입니다. Zokrates의 `for` 루프는 고정된 경계를 가져야 합니다. 루프처럼 보이지만 컴파일러가 실제로는 이를 "풀어서(unroll)" 처리하기 때문입니다. `width`는 컴파일러를 호출하기 전에 TypeScript 코드에 의해 설정되므로 `${width+2}` 표현식은 컴파일 타임 상수입니다.
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -275,7 +292,7 @@ for u32 y in 0..${height+2} {
 맵의 모든 위치에 대해 해당 값을 `map1d` 배열에 넣고 카운터를 증가시킵니다.
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -286,7 +303,7 @@ field[4] hashMe = [
 `map1d`에서 4개의 `field` 값으로 구성된 배열을 생성하기 위해 `pack128`를 사용합니다. Zokrates에서 `array[a..b]`는 `a`에서 시작하여 `b-1`에서 끝나는 배열의 슬라이스를 의미합니다.
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -342,19 +359,19 @@ def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8)
 이는 또 다른 악용의 여지를 엽니다. 증명자가 올바른 좌표를 사용하되, 해당 위치 주변이나 심지어 그 위치 자체에 임의의 개수의 지뢰가 있는 맵을 생성할 수 있습니다. 이러한 악용을 방지하기 위해 영지식 증명에 게임 식별자인 맵의 해시를 포함시킵니다.
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 여기서 반환 값은 파내기 결과뿐만 아니라 맵 해시 배열을 포함하는 튜플입니다.
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 해당 위치 자체에 폭탄이 있는 경우를 위한 특수 값으로 255를 사용합니다.
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -511,7 +528,7 @@ Solidity 검증자는 블록체인에 배포하여 `digCompiled.program`에 의�
 
 ### 권한 {#permissions}
 
-이 게임에는 서버라는 하나의 특권 엔티티가 있습니다. 서버는 [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol)의 함수를 호출할 수 있는 유일한 사용자입니다. [`cast`](https://book.getfoundry.sh/cast/)를 사용하여 허가형(permissioned) 함수에 대한 호출이 서버 계정으로만 허용되는지 확인할 수 있습니다.
+이 게임에는 권한을 가진 단일 엔티티인 서버가 있습니다. 서버는 [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol)의 함수를 호출할 수 있는 유일한 사용자입니다. [`cast`](https://getfoundry.sh/cast/overview)를 사용하여 허가형 함수에 대한 호출이 서버 계정으로만 허용되는지 확인할 수 있습니다.
 
 [서버의 개인 키는 `setupNetwork.ts`에 있습니다](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52).
 
@@ -523,13 +540,15 @@ Solidity 검증자는 블록체인에 배포하여 `digCompiled.program`에 의�
    AUTHORIZED_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
    ```
 
-2. `cast`를 사용하여 검증자 주소를 승인되지 않은 주소로 설정해 봅니다.
+   이 `WORLD_ADDRESS`는 새로운 `anvil`에서 MUD가 배포되는 주소입니다. `World`가 다른 주소에 있는 경우 `packages/contracts/worlds.json`의 값을 사용하세요.
+
+2. `cast`를 사용하여 승인되지 않은 주소로 검증자 주소를 설정해 봅니다.
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $UNAUTHORIZED_KEY
    ```
 
-   `cast`가 실패를 보고할 뿐만 아니라, 브라우저의 게임에서 <strong>MUD Dev Tools</strong>를 열고 <strong>Tables</strong>를 클릭한 다음 <strong>app\_\_VerifierAddress</strong>를 선택하여 확인할 수도 있습니다. 주소가 0이 아닌 것을 확인하세요.
+   `cast`가 실패를 보고할 뿐만 아니라, 브라우저의 게임에서 <strong>MUD Dev Tools</strong>를 열고 <strong>Tables</strong>를 클릭한 다음 <strong>app\_\_VerifierAddress</strong>를 선택하여 확인할 수도 있습니다. 주소가 0이 아님을 확인하세요.
 
 3. 검증자 주소를 서버의 주소로 설정합니다.
 
@@ -537,9 +556,9 @@ Solidity 검증자는 블록체인에 배포하여 `digCompiled.program`에 의�
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $AUTHORIZED_KEY
    ```
 
-   이제 <strong>app\_\_VerifiedAddress</strong>의 주소는 0이어야 합니다.
+   이제 <strong>app\_\_VerifierAddress</strong>의 주소는 0이어야 합니다.
 
-동일한 `System` 내의 모든 MUD 함수는 동일한 접근 제어를 거치므로, 이 테스트만으로 충분하다고 생각합니다. 그렇지 않다면 [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol)에 있는 다른 함수들을 확인할 수 있습니다.
+동일한 `System`에 있는 모든 MUD 함수는 동일한 접근 제어를 거치므로 이 테스트로 충분하다고 생각합니다. 그렇지 않다면 [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol)에 있는 다른 함수들을 확인할 수 있습니다.
 
 ### 영지식 악용 {#zero-knowledge-abuses}
 
@@ -553,10 +572,10 @@ Zokrates를 검증하는 수학은 이 튜토리얼의 범위(그리고 제 능�
 proof.inputs[3] = "0x" + "1".padStart(64, "0")
 ```
 
-이는 정답에 관계없이 항상 폭탄이 하나 있다고 청구한다는 의미입니다. 이 버전으로 플레이해 보면 `pnpm dev` 화면의 **server** 탭에서 다음과 같은 오류를 볼 수 있습니다.
+이는 정답에 관계없이 항상 폭탄이 하나 있다고 청구한다는 의미입니다. 이 버전으로 플레이해 보면 `mprocs` 화면의 **server** 탭에서 다음과 같은 오류를 볼 수 있습니다.
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000
@@ -673,9 +692,11 @@ proof.proof = {
 
 ### 왜 Zokrates인가? {#why-zokrates}
 
-[Zokrates](https://zokrates.github.io/)가 사용 가능한 유일한 영지식 라이브러리는 아니지만, 일반적인 [명령형](https://en.wikipedia.org/wiki/Imperative_programming) 프로그래밍 언어와 유사하며 불리언(boolean) 변수를 지원합니다.
+[Zokrates](https://zokrates.github.io/)가 사용 가능한 유일한 영지식 라이브러리는 아니지만, 일반적인 [명령형(imperative)](https://en.wikipedia.org/wiki/Imperative_programming) 프로그래밍 언어와 유사하며 부울 변수를 지원합니다.
 
-요구 사항이 다른 여러분의 애플리케이션에서는 [Circum](https://docs.circom.io/getting-started/installation/)이나 [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/)를 사용하는 것을 선호할 수도 있습니다.
+하지만 Zokrates는 더 이상 활발하게 유지 관리되지 않습니다. 최신 릴리스인 0.8.8(및 일치하는 `zokrates-js` 1.1.9)은 2023년 11월에 출시되었으며, 메인 브랜치에는 2024년 4월 이후 커밋이 없습니다. 이 튜토리얼의 코드는 여전히 작동하지만 버그 수정이나 보안 업데이트는 기대하지 마세요. 새 프로젝트의 경우 [이 튜토리얼](/developers/tutorials/app-plasma/)에서 사용되는 [Noir](https://noir-lang.org/)와 같이 유지 관리되는 언어를 고려해 보세요.
+
+요구 사항이 다른 애플리케이션의 경우 [Circom](https://docs.circom.io/getting-started/installation/) 또는 [Cairo](https://www.cairo-lang.org/)를 사용하는 것을 선호할 수 있습니다.
 
 ### Zokrates 컴파일 시점 {#when-compile-zokrates}
 

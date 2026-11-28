@@ -1,28 +1,28 @@
 ---
-title: "Uniswap-v2-Vertrag im Detail"
+title: "Uniswap-v2-Vertrag: Schritt-für-Schritt-Anleitung"
 description: Wie funktioniert der Uniswap-v2-Vertrag? Warum ist er so geschrieben?
 author: Ori Pomerantz
 tags: ["Solidity", "dapps"]
 skill: intermediate
-breadcrumb: Uniswap-v2-Walkthrough
+breadcrumb: "Uniswap v2 Schritt-für-Schritt-Anleitung"
 published: 2021-05-01
 lang: de
 ---
 ## Einführung {#introduction}
 
-[Uniswap v2](https://app.uniswap.org/whitepaper.pdf) kann einen Tauschmarkt zwischen zwei beliebigen ERC-20-Token erstellen. In diesem Artikel werden wir den Quellcode für die Verträge durchgehen, die dieses Protokoll implementieren, und sehen, warum sie auf diese Weise geschrieben sind.
+[Uniswap v2](https://app.uniswap.org/whitepaper.pdf) kann einen Tauschmarkt zwischen beliebigen zwei ERC-20-Token erstellen. In diesem Artikel werden wir den Quellcode für die Verträge durchgehen, die dieses Protokoll implementieren, und sehen, warum sie auf diese Weise geschrieben sind.
 
 ### Was macht Uniswap? {#what-does-uniswap-do}
 
 Grundsätzlich gibt es zwei Arten von Benutzern: Liquiditätsanbieter und Händler.
 
-Die _Liquiditätsanbieter_ stellen dem Pool die beiden Token zur Verfügung, die getauscht werden können (wir nennen sie **Token0** und **Token1**). Im Gegenzug erhalten sie einen dritten Token, der einen teilweisen Besitz am Pool darstellt und _Liquiditäts-Token_ genannt wird.
+Die _Liquiditätsanbieter_ stellen dem Pool die beiden Token zur Verfügung, die getauscht werden können (wir nennen sie **Token0** und **Token1**). Im Gegenzug erhalten sie einen dritten Token, der das teilweise Eigentum am Pool repräsentiert und _Liquiditäts-Token_ genannt wird.
 
 _Händler_ senden eine Art von Token an den Pool und erhalten die andere (zum Beispiel senden sie **Token0** und erhalten **Token1**) aus dem Pool, der von den Liquiditätsanbietern bereitgestellt wird. Der Wechselkurs wird durch die relative Anzahl von **Token0** und **Token1** bestimmt, die der Pool hat. Darüber hinaus nimmt der Pool einen kleinen Prozentsatz als Belohnung für den Liquiditätspool.
 
 Wenn Liquiditätsanbieter ihre Vermögenswerte zurückhaben möchten, können sie die Pool-Token verbrennen und ihre Token zurückerhalten, einschließlich ihres Anteils an den Belohnungen.
 
-[Klicken Sie hier für eine ausführlichere Beschreibung](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
+[Klicken Sie hier für eine ausführlichere Beschreibung](https://developers.uniswap.org/docs/protocols/v2/concepts/swapping).
 
 ### Warum v2? Warum nicht v3? {#why-v2}
 
@@ -47,23 +47,23 @@ Dies ist der häufigste Ablauf, der von Händlern verwendet wird:
 #### Aufrufer {#caller}
 
 1. Dem Peripherie-Konto einen Freigabebetrag in Höhe des zu tauschenden Betrags zur Verfügung stellen.
-2. Eine der vielen Tausch-Funktionen des Peripherievertrags aufrufen (welche genau, hängt davon ab, ob ETH involviert ist oder nicht, ob der Händler die Menge der einzuzahlenden Token oder die Menge der zurückzuerhaltenden Token angibt usw.).
-   Jede Tausch-Funktion akzeptiert einen `path`, ein Array von Tauschbörsen, die durchlaufen werden sollen.
+2. Eine der vielen Tausch-Funktionen des Peripherie-Vertrags aufrufen (welche, hängt davon ab, ob ETH involviert ist oder nicht, ob der Händler die Menge der einzuzahlenden Token oder die Menge der zurückzuerhaltenden Token angibt usw.).
+   Jede Tausch-Funktion akzeptiert einen `path`, ein Array von Börsen, die durchlaufen werden sollen.
 
-#### Im Peripherievertrag (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02-sol}
+#### Im Peripherie-Vertrag (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02-sol}
 
-3. Die Beträge ermitteln, die an jeder Tauschbörse entlang des Pfades gehandelt werden müssen.
-4. Über den Pfad iterieren. Für jede Tauschbörse auf dem Weg sendet er den Eingabe-Token und ruft dann die Funktion `swap` der Tauschbörse auf.
-   In den meisten Fällen ist die Zieladresse für die Token das nächste Tauschpaar auf dem Pfad. Bei der letzten Tauschbörse ist es die vom Händler angegebene Adresse.
+3. Die Beträge ermitteln, die an jeder Börse entlang des Pfades gehandelt werden müssen.
+4. Über den Pfad iterieren. Für jede Börse auf dem Weg wird der Eingabe-Token gesendet und dann die Funktion `swap` der Börse aufgerufen.
+   In den meisten Fällen ist die Zieladresse für die Token das nächste Tauschpaar auf dem Pfad. Bei der letzten Börse ist es die vom Händler angegebene Adresse.
 
-#### Im Kernvertrag (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### Im Kern-Vertrag (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
 
-5. Überprüfen, dass der Kernvertrag nicht betrogen wird und nach dem Tausch ausreichend Liquidität aufrechterhalten kann.
+5. Überprüfen, ob der Kern-Vertrag nicht betrogen wird und nach dem Tausch ausreichend Liquidität aufrechterhalten kann.
 6. Prüfen, wie viele zusätzliche Token wir zusätzlich zu den bekannten Reserven haben. Dieser Betrag ist die Anzahl der Eingabe-Token, die wir zum Tausch erhalten haben.
 7. Die Ausgabe-Token an das Ziel senden.
 8. `_update` aufrufen, um die Reservebeträge zu aktualisieren
 
-#### Zurück im Peripherievertrag (UniswapV2Router02.sol) {#back-in-the-periphery-contract-uniswapv2router02-sol}
+#### Zurück im Peripherie-Vertrag (UniswapV2Router02.sol) {#back-in-the-periphery-contract-uniswapv2router02-sol}
 
 9. Notwendige Bereinigungen durchführen (zum Beispiel WETH-Token verbrennen, um ETH zurückzuerhalten und an den Händler zu senden)
 
@@ -72,16 +72,16 @@ Dies ist der häufigste Ablauf, der von Händlern verwendet wird:
 #### Aufrufer {#caller-2}
 
 1. Dem Peripherie-Konto einen Freigabebetrag in Höhe der Beträge zur Verfügung stellen, die dem Liquiditätspool hinzugefügt werden sollen.
-2. Eine der `addLiquidity`-Funktionen des Peripherievertrags aufrufen.
+2. Eine der `addLiquidity`-Funktionen des Peripherie-Vertrags aufrufen.
 
-#### Im Peripherievertrag (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-2}
+#### Im Peripherie-Vertrag (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-2}
 
 3. Bei Bedarf ein neues Tauschpaar erstellen
-4. Wenn bereits ein Tauschpaar existiert, die Menge der hinzuzufügenden Token berechnen. Dies soll für beide Token der gleiche Wert sein, also das gleiche Verhältnis von neuen Token zu bestehenden Token.
-5. Prüfen, ob die Beträge akzeptabel sind (Aufrufer können einen Mindestbetrag angeben, unterhalb dessen sie lieber keine Liquidität hinzufügen möchten)
-6. Den Kernvertrag aufrufen.
+4. Wenn ein bestehendes Tauschpaar vorhanden ist, die Menge der hinzuzufügenden Token berechnen. Dies soll für beide Token ein identischer Wert sein, also das gleiche Verhältnis von neuen Token zu bestehenden Token.
+5. Überprüfen, ob die Beträge akzeptabel sind (Aufrufer können einen Mindestbetrag angeben, unterhalb dessen sie lieber keine Liquidität hinzufügen möchten)
+6. Den Kern-Vertrag aufrufen.
 
-#### Im Kernvertrag (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2-2}
+#### Im Kern-Vertrag (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2-2}
 
 7. Liquiditäts-Token prägen und an den Aufrufer senden
 8. `_update` aufrufen, um die Reservebeträge zu aktualisieren
@@ -91,15 +91,15 @@ Dies ist der häufigste Ablauf, der von Händlern verwendet wird:
 #### Aufrufer {#caller-3}
 
 1. Dem Peripherie-Konto einen Freigabebetrag an Liquiditäts-Token zur Verfügung stellen, die im Austausch gegen die zugrunde liegenden Token verbrannt werden sollen.
-2. Eine der `removeLiquidity`-Funktionen des Peripherievertrags aufrufen.
+2. Eine der `removeLiquidity`-Funktionen des Peripherie-Vertrags aufrufen.
 
-#### Im Peripherievertrag (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-3}
+#### Im Peripherie-Vertrag (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-3}
 
 3. Die Liquiditäts-Token an das Tauschpaar senden
 
-#### Im Kernvertrag (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-3}
+#### Im Kern-Vertrag (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-3}
 
-4. Die zugrunde liegenden Token im Verhältnis zu den verbrannten Token an die Zieladresse senden. Wenn sich beispielsweise 1000 A-Token, 500 B-Token und 90 Liquiditäts-Token im Pool befinden und wir 9 Token zum Verbrennen erhalten, verbrennen wir 10 % der Liquiditäts-Token, sodass wir dem Benutzer 100 A-Token und 50 B-Token zurücksenden.
+4. Der Zieladresse die zugrunde liegenden Token im Verhältnis zu den verbrannten Token senden. Wenn sich beispielsweise 1000 A-Token, 500 B-Token und 90 Liquiditäts-Token im Pool befinden und wir 9 Token zum Verbrennen erhalten, verbrennen wir 10 % der Liquiditäts-Token, sodass wir dem Benutzer 100 A-Token und 50 B-Token zurücksenden.
 5. Die Liquiditäts-Token verbrennen
 6. `_update` aufrufen, um die Reservebeträge zu aktualisieren
 
@@ -109,7 +109,7 @@ Dies sind die sicheren Verträge, die die Liquidität halten.
 
 ### UniswapV2Pair.sol {#uniswapv2pair}
 
-[Dieser Vertrag](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) implementiert den eigentlichen Pool, der Token tauscht. Er ist die Kernfunktionalität von Uniswap.
+[Dieser Vertrag](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol) implementiert den eigentlichen Pool, der Token tauscht. Es ist die Kernfunktionalität von Uniswap.
 
 ```solidity
 pragma solidity =0.5.16;
@@ -135,14 +135,14 @@ Dieser Vertrag erbt von `UniswapV2ERC20`, was die ERC-20-Funktionen für die Liq
     using SafeMath  for uint;
 ```
 
-Die [SafeMath-Bibliothek](https://docs.openzeppelin.com/contracts/3.x/api/math) wird verwendet, um Über- und Unterläufe zu vermeiden. Dies ist wichtig, da wir sonst in eine Situation geraten könnten, in der ein Wert `-1` sein sollte, aber stattdessen `2^256-1` ist.
+Die [SafeMath-Bibliothek](https://docs.openzeppelin.com/contracts/3.x/api/math) wird verwendet, um Überläufe und Unterläufe zu vermeiden. Dies ist wichtig, da wir sonst in eine Situation geraten könnten, in der ein Wert `-1` sein sollte, stattdessen aber `2^256-1` ist.
 
 ```solidity
     using UQ112x112 for uint224;
 ```
 
 Viele Berechnungen im Pool-Vertrag erfordern Brüche. Brüche werden jedoch von der EVM nicht unterstützt.
-Die Lösung, die Uniswap gefunden hat, besteht darin, 224-Bit-Werte zu verwenden, wobei 112 Bit für den ganzzahligen Teil und 112 Bit für den Bruchteil vorgesehen sind. So wird `1.0` als `2^112` dargestellt, `1.5` als `2^112 + 2^111` usw.
+Die Lösung, die Uniswap gefunden hat, besteht darin, 224-Bit-Werte zu verwenden, mit 112 Bits für den ganzzahligen Teil und 112 Bits für den Bruch. So wird `1.0` als `2^112` dargestellt, `1.5` als `2^112 + 2^111` usw.
 
 Weitere Details zu dieser Bibliothek finden Sie [später in diesem Dokument](#fixedpoint).
 
@@ -158,35 +158,35 @@ Um Fälle von Division durch Null zu vermeiden, gibt es eine Mindestanzahl von L
     bytes4 private constant SELECTOR = bytes4(keccak256(bytes('transfer(address,uint256)')));
 ```
 
-Dies ist der ABI-Selektor für die ERC-20-Transfer-Funktion. Er wird verwendet, um ERC-20-Token in den beiden Token-Konten zu transferieren.
+Dies ist der ABI-Selektor für die ERC-20-Transfer-Funktion. Er wird verwendet, um ERC-20-Token in den beiden Token-Konten zu übertragen.
 
 ```solidity
     address public factory;
 ```
 
-Dies ist der Factory-Vertrag, der diesen Pool erstellt hat. Jeder Pool ist ein Tausch zwischen zwei ERC-20-Token, die Factory ist ein zentraler Punkt, der all diese Pools verbindet.
+Dies ist der Factory-Vertrag, der diesen Pool erstellt hat. Jeder Pool ist ein Tausch zwischen zwei ERC-20-Token, die Factory ist ein zentraler Punkt, der alle diese Pools verbindet.
 
 ```solidity
     address public token0;
     address public token1;
 ```
 
-Dies sind die Adressen der Verträge für die beiden Arten von ERC-20-Token, die durch diesen Pool getauscht werden können.
+Hier sind die Adressen der Verträge für die beiden Arten von ERC-20-Token, die durch diesen Pool getauscht werden können.
 
 ```solidity
-    uint112 private reserve0;           // verwendet einen einzelnen Speicherplatz, zugänglich über getReserves
-    uint112 private reserve1;           // verwendet einen einzelnen Speicherplatz, zugänglich über getReserves
+    uint112 private reserve0;           // nutzt einen einzigen Speicherplatz, zugänglich über getReserves
+    uint112 private reserve1;           // nutzt einen einzigen Speicherplatz, zugänglich über getReserves
 ```
 
 Die Reserven, die der Pool für jeden Token-Typ hat. Wir gehen davon aus, dass beide den gleichen Wert repräsentieren, und daher ist jeder token0 reserve1/reserve0 token1 wert.
 
 ```solidity
-    uint32  private blockTimestampLast; // verwendet einen einzelnen Speicherplatz, zugänglich über getReserves
+    uint32  private blockTimestampLast; // nutzt einen einzigen Speicherplatz, zugänglich über getReserves
 ```
 
-Der Zeitstempel für den letzten Block, in dem ein Tausch stattfand, wird verwendet, um Wechselkurse im Laufe der Zeit zu verfolgen.
+Der Zeitstempel für den letzten Block, in dem ein Tausch stattfand, wird verwendet, um Wechselkurse über die Zeit zu verfolgen.
 
-Eine der größten Gas-Ausgaben von Ethereum-Verträgen ist der Speicher (Storage), der von einem Aufruf des Vertrags zum nächsten bestehen bleibt. Jede Speicherzelle ist 256 Bit lang. Daher werden drei Variablen, `reserve0`, `reserve1` und `blockTimestampLast`, so zugewiesen, dass ein einzelner Speicherwert alle drei umfassen kann (112+112+32=256).
+Eine der größten Gas-Ausgaben von Ethereum-Verträgen ist der Speicher, der von einem Aufruf des Vertrags zum nächsten bestehen bleibt. Jede Speicherzelle ist 256 Bits lang. Daher werden drei Variablen, `reserve0`, `reserve1` und `blockTimestampLast`, so zugewiesen, dass ein einzelner Speicherwert alle drei umfassen kann (112+112+32=256).
 
 ```solidity
     uint public price0CumulativeLast;
@@ -196,7 +196,7 @@ Eine der größten Gas-Ausgaben von Ethereum-Verträgen ist der Speicher (Storag
 Diese Variablen enthalten die kumulierten Kosten für jeden Token (jeweils in Bezug auf den anderen). Sie können verwendet werden, um den durchschnittlichen Wechselkurs über einen bestimmten Zeitraum zu berechnen.
 
 ```solidity
-    uint public kLast; // reserve0 * reserve1, Stand unmittelbar nach dem jüngsten Liquiditätsereignis
+    uint public kLast; // reserve0 * reserve1, unmittelbar nach dem jüngsten Liquiditäts-Ereignis
 ```
 
 Die Art und Weise, wie der Paar-Tausch über den Wechselkurs zwischen token0 und token1 entscheidet, besteht darin, das Vielfache der beiden Reserven während der Trades konstant zu halten. `kLast` ist dieser Wert. Er ändert sich, wenn ein Liquiditätsanbieter Token einzahlt oder abhebt, und er steigt aufgrund der Marktgebühr von 0,3 % leicht an.
@@ -205,12 +205,12 @@ Hier ist ein einfaches Beispiel. Beachten Sie, dass die Tabelle der Einfachheit 
 
 | Ereignis                                    |  reserve0 |  reserve1 | reserve0 \* reserve1 | Durchschnittlicher Wechselkurs (token1 / token0) |
 | ------------------------------------------- | --------: | --------: | -------------------: | --------------------------------------- |
-| Initiale Einrichtung                        | 1.000,000 | 1.000,000 |            1.000.000 |                                         |
-| Händler A tauscht 50 token0 gegen 47,619 token1  | 1.050,000 |   952,381 |            1.000.000 | 0,952                                   |
-| Händler B tauscht 10 token0 gegen 8,984 token1   | 1.060,000 |   943,396 |            1.000.000 | 0,898                                   |
-| Händler C tauscht 40 token0 gegen 34,305 token1  | 1.100,000 |   909,090 |            1.000.000 | 0,858                                   |
-| Händler D tauscht 100 token1 gegen 109,01 token0 |   990,990 | 1.009,090 |            1.000.000 | 0,917                                   |
-| Händler E tauscht 10 token0 gegen 10,079 token1  | 1.000,990 |   999,010 |            1.000.000 | 1,008                                   |
+| Initiale Einrichtung                        | 1,000.000 | 1,000.000 |            1,000,000 |                                         |
+| Händler A tauscht 50 token0 gegen 47.619 token1  | 1,050.000 |   952.381 |            1,000,000 | 0.952                                   |
+| Händler B tauscht 10 token0 gegen 8.984 token1   | 1,060.000 |   943.396 |            1,000,000 | 0.898                                   |
+| Händler C tauscht 40 token0 gegen 34.305 token1  | 1,100.000 |   909.090 |            1,000,000 | 0.858                                   |
+| Händler D tauscht 100 token1 gegen 109.01 token0 |   990.990 | 1,009.090 |            1,000,000 | 0.917                                   |
+| Händler E tauscht 10 token0 gegen 10.079 token1  | 1,000.990 |   999.010 |            1,000,000 | 1.008                                   |
 
 Wenn Händler mehr von token0 bereitstellen, steigt der relative Wert von token1 und umgekehrt, basierend auf Angebot und Nachfrage.
 
@@ -220,27 +220,27 @@ Wenn Händler mehr von token0 bereitstellen, steigt der relative Wert von token1
     uint private unlocked = 1;
 ```
 
-Es gibt eine Klasse von Sicherheitslücken, die auf dem [Missbrauch durch Wiedereintritt](https://medium.com/coinmonks/ethernaut-lvl-10-re-entrancy-walkthrough-how-to-abuse-execution-ordering-and-reproduce-the-dao-7ec88b912c14) basieren. Uniswap muss beliebige ERC-20-Token transferieren, was bedeutet, dass ERC-20-Verträge aufgerufen werden, die versuchen könnten, den Uniswap-Markt, der sie aufruft, zu missbrauchen.
+Es gibt eine Klasse von Sicherheitslücken, die auf dem [Missbrauch durch Wiedereintritt](https://medium.com/coinmonks/ethernaut-lvl-10-re-entrancy-walkthrough-how-to-abuse-execution-ordering-and-reproduce-the-dao-7ec88b912c14) basieren. Uniswap muss beliebige ERC-20-Token übertragen, was bedeutet, dass ERC-20-Verträge aufgerufen werden, die versuchen könnten, den Uniswap-Markt, der sie aufruft, zu missbrauchen.
 Indem wir eine `unlocked`-Variable als Teil des Vertrags haben, können wir verhindern, dass Funktionen aufgerufen werden, während sie ausgeführt werden (innerhalb derselben Transaktion).
 
 ```solidity
     modifier lock() {
 ```
 
-Diese Funktion ist ein [Modifikator](https://docs.soliditylang.org/en/v0.8.3/contracts.html#function-modifiers), eine Funktion, die eine normale Funktion umschließt, um ihr Verhalten in irgendeiner Weise zu ändern.
+Diese Funktion ist ein [Modifier](https://docs.soliditylang.org/en/v0.8.3/contracts.html#function-modifiers), eine Funktion, die eine normale Funktion umschließt, um ihr Verhalten in irgendeiner Weise zu ändern.
 
 ```solidity
         require(unlocked == 1, 'UniswapV2: LOCKED');
         unlocked = 0;
 ```
 
-Wenn `unlocked` gleich eins ist, setze es auf null. Wenn es bereits null ist, mache den Aufruf rückgängig (revert), lass ihn fehlschlagen.
+Wenn `unlocked` gleich eins ist, setze es auf null. Wenn es bereits null ist, mache den Aufruf rückgängig, lass ihn fehlschlagen.
 
 ```solidity
         _;
 ```
 
-In einem Modifikator ist `_;` der ursprüngliche Funktionsaufruf (mit allen Parametern). Hier bedeutet dies, dass der Funktionsaufruf nur stattfindet, wenn `unlocked` beim Aufruf eins war, und während er ausgeführt wird, ist der Wert von `unlocked` null.
+In einem Modifier ist `_;` der ursprüngliche Funktionsaufruf (mit allen Parametern). Hier bedeutet dies, dass der Funktionsaufruf nur stattfindet, wenn `unlocked` beim Aufruf eins war, und während er ausgeführt wird, ist der Wert von `unlocked` null.
 
 ```solidity
         unlocked = 1;
@@ -266,9 +266,9 @@ Diese Funktion liefert Aufrufern den aktuellen Zustand des Tauschs. Beachten Sie
         (bool success, bytes memory data) = token.call(abi.encodeWithSelector(SELECTOR, to, value));
 ```
 
-Diese interne Funktion transferiert eine Menge an ERC-20-Token vom Tausch an jemand anderen. `SELECTOR` gibt an, dass die Funktion, die wir aufrufen, `transfer(address,uint)` ist (siehe Definition oben).
+Diese interne Funktion überträgt eine Menge an ERC-20-Token vom Tausch an jemand anderen. `SELECTOR` gibt an, dass die Funktion, die wir aufrufen, `transfer(address,uint)` ist (siehe Definition oben).
 
-Um zu vermeiden, dass wir eine Schnittstelle für die Token-Funktion importieren müssen, erstellen wir den Aufruf "manuell" unter Verwendung einer der [ABI-Funktionen](https://docs.soliditylang.org/en/v0.8.3/units-and-global-variables.html#abi-encoding-and-decoding-functions).
+Um zu vermeiden, dass eine Schnittstelle für die Token-Funktion importiert werden muss, erstellen wir den Aufruf „manuell“ unter Verwendung einer der [ABI-Funktionen](https://docs.soliditylang.org/en/v0.8.3/units-and-global-variables.html#abi-encoding-and-decoding-functions).
 
 ```solidity
         require(success && (data.length == 0 || abi.decode(data, (bool))), 'UniswapV2: TRANSFER_FAILED');
@@ -278,7 +278,7 @@ Um zu vermeiden, dass wir eine Schnittstelle für die Token-Funktion importieren
 Es gibt zwei Möglichkeiten, wie ein ERC-20-Transfer-Aufruf einen Fehler melden kann:
 
 1. Rückgängig machen (Revert). Wenn ein Aufruf an einen externen Vertrag rückgängig gemacht wird, ist der boolesche Rückgabewert `false`
-2. Normal beenden, aber einen Fehler melden. In diesem Fall hat der Rückgabewert-Puffer eine Länge ungleich null, und wenn er als boolescher Wert decodiert wird, ist er `false`
+2. Normal beenden, aber einen Fehler melden. In diesem Fall hat der Rückgabewert-Puffer eine Länge ungleich Null, und wenn er als boolescher Wert decodiert wird, ist er `false`
 
 Wenn eine dieser Bedingungen eintritt, mache es rückgängig.
 
@@ -289,7 +289,7 @@ Wenn eine dieser Bedingungen eintritt, mache es rückgängig.
     event Burn(address indexed sender, uint amount0, uint amount1, address indexed to);
 ```
 
-Diese beiden Ereignisse werden ausgegeben, wenn ein Liquiditätsanbieter entweder Liquidität einzahlt (`Mint`) oder sie abhebt (`Burn`). In beiden Fällen sind die Mengen von token0 und token1, die eingezahlt oder abgehoben werden, Teil des Ereignisses, ebenso wie die Identität des Kontos, das uns aufgerufen hat (`sender`). Im Falle einer Abhebung enthält das Ereignis auch das Ziel, das die Token erhalten hat (`to`), was möglicherweise nicht mit dem Absender identisch ist.
+Diese beiden Ereignisse werden ausgegeben, wenn ein Liquiditätsanbieter entweder Liquidität einzahlt (`Mint`) oder abhebt (`Burn`). In beiden Fällen sind die Mengen von token0 und token1, die eingezahlt oder abgehoben werden, Teil des Ereignisses, ebenso wie die Identität des Kontos, das uns aufgerufen hat (`sender`). Im Falle einer Abhebung enthält das Ereignis auch das Ziel, das die Token erhalten hat (`to`), was möglicherweise nicht mit dem Absender identisch ist.
 
 ```solidity
     event Swap(
@@ -324,7 +324,7 @@ Diese Funktionen sollen einmal aufgerufen werden, wenn der neue Paar-Tausch eing
 Der Konstruktor stellt sicher, dass wir die Adresse der Factory, die das Paar erstellt hat, im Auge behalten. Diese Information wird für `initialize` und für die Factory-Gebühr (falls vorhanden) benötigt.
 
 ```solidity
-    // wird einmalig von der Factory zum Zeitpunkt des Deployments aufgerufen
+    // wird einmalig von der Factory zum Zeitpunkt der Bereitstellung aufgerufen
     function initialize(address _token0, address _token1) external {
         require(msg.sender == factory, 'UniswapV2: FORBIDDEN'); // ausreichende Prüfung
         token0 = _token0;
@@ -366,20 +366,20 @@ Wenn die verstrichene Zeit nicht null ist, bedeutet dies, dass wir die erste Tau
         }
 ```
 
-Jeder Kostenakkumulator wird mit den neuesten Kosten (Reserve des anderen Tokens/Reserve dieses Tokens) multipliziert mit der verstrichenen Zeit in Sekunden aktualisiert. Um einen Durchschnittspreis zu erhalten, lesen Sie den kumulierten Preis zu zwei Zeitpunkten ab und dividieren ihn durch die Zeitdifferenz zwischen ihnen. Nehmen wir zum Beispiel diese Abfolge von Ereignissen an:
+Jeder Kostenakkumulator wird mit den neuesten Kosten (Reserve des anderen Tokens/Reserve dieses Tokens) multipliziert mit der verstrichenen Zeit in Sekunden aktualisiert. Um einen Durchschnittspreis zu erhalten, liest man den kumulierten Preis zu zwei Zeitpunkten ab und teilt ihn durch die Zeitdifferenz zwischen ihnen. Nehmen wir zum Beispiel diese Abfolge von Ereignissen an:
 
 | Ereignis                                                 |  reserve0 |  reserve1 | Zeitstempel | Grenz-Wechselkurs (reserve1 / reserve0) |       price0CumulativeLast |
 | -------------------------------------------------------- | --------: | --------: | --------- | -------------------------------------------: | -------------------------: |
-| Initiale Einrichtung                                            | 1.000,000 | 1.000,000 | 5.000     |                                        1,000 |                          0 |
-| Händler A zahlt 50 token0 ein und erhält 47,619 token1 zurück  | 1.050,000 |   952,381 | 5.020     |                                        0,907 |                         20 |
-| Händler B zahlt 10 token0 ein und erhält 8,984 token1 zurück   | 1.060,000 |   943,396 | 5.030     |                                        0,890 |       20+10\*0,907 = 29,07 |
-| Händler C zahlt 40 token0 ein und erhält 34,305 token1 zurück  | 1.100,000 |   909,090 | 5.100     |                                        0,826 |    29,07+70\*0,890 = 91,37 |
-| Händler D zahlt 100 token1 ein und erhält 109,01 token0 zurück |   990,990 | 1.009,090 | 5.110     |                                        1,018 |    91,37+10\*0,826 = 99,63 |
-| Händler E zahlt 10 token0 ein und erhält 10,079 token1 zurück  | 1.000,990 |   999,010 | 5.150     |                                        0,998 | 99,63+40\*1,1018 = 143,702 |
+| Initiale Einrichtung                                     | 1,000.000 | 1,000.000 | 5,000     |                                        1.000 |                          0 |
+| Händler A zahlt 50 token0 ein und erhält 47.619 token1 zurück  | 1,050.000 |   952.381 | 5,020     |                                        0.907 |                         20 |
+| Händler B zahlt 10 token0 ein und erhält 8.984 token1 zurück   | 1,060.000 |   943.396 | 5,030     |                                        0.890 |       20+10\*0.907 = 29.07 |
+| Händler C zahlt 40 token0 ein und erhält 34.305 token1 zurück  | 1,100.000 |   909.090 | 5,100     |                                        0.826 |    29.07+70\*0.890 = 91.37 |
+| Händler D zahlt 100 token1 ein und erhält 109.01 token0 zurück |   990.990 | 1,009.090 | 5,110     |                                        1.018 |    91.37+10\*0.826 = 99.63 |
+| Händler E zahlt 10 token0 ein und erhält 10.079 token1 zurück  | 1,000.990 |   999.010 | 5,150     |                                        0.998 |   99.63+40\*1.018 = 140.35 |
 
-Nehmen wir an, wir möchten den Durchschnittspreis von **Token0** zwischen den Zeitstempeln 5.030 und 5.150 berechnen. Die Differenz im Wert von `price0Cumulative` beträgt 143,702-29,07=114,632. Dies ist der Durchschnitt über zwei Minuten (120 Sekunden). Der Durchschnittspreis beträgt also 114,632/120 = 0,955.
+Nehmen wir an, wir möchten den Durchschnittspreis von **Token0** zwischen den Zeitstempeln 5.030 und 5.150 berechnen. Die Differenz im Wert von `price0Cumulative` beträgt 140,35-29,07=111,28. Dies ist der Durchschnitt über zwei Minuten (120 Sekunden). Der Durchschnittspreis beträgt also 111,28/120 = 0,927.
 
-Diese Preisberechnung ist der Grund, warum wir die alten Reservegrößen kennen müssen.
+Diese Preisberechnung ist der Grund, warum wir die alten Reservengrößen kennen müssen.
 
 ```solidity
         reserve0 = uint112(balance0);
@@ -389,18 +389,18 @@ Diese Preisberechnung ist der Grund, warum wir die alten Reservegrößen kennen 
     }
 ```
 
-Aktualisieren Sie schließlich die globalen Variablen und geben Sie ein `Sync`-Ereignis aus.
+Aktualisiere schließlich die globalen Variablen und gib ein `Sync`-Ereignis aus.
 
 ##### \_mintFee
 
 ```solidity
-    // wenn Gebühr aktiviert ist, präge Liquidität entsprechend 1/6 des Wachstums von sqrt(k)
+    // wenn Gebühr aktiviert ist, erfolgt die Prägung von Liquidität entsprechend 1/6 des Wachstums von sqrt(k)
     function _mintFee(uint112 _reserve0, uint112 _reserve1) private returns (bool feeOn) {
 ```
 
-In Uniswap 2.0 zahlen Händler eine Gebühr von 0,30 %, um den Markt zu nutzen. Der Großteil dieser Gebühr (0,25 % des Trades) geht immer an die Liquiditätsanbieter. Die restlichen 0,05 % können entweder an die Liquiditätsanbieter oder an eine von der Factory als Protokollgebühr angegebene Adresse gehen, die Uniswap für ihren Entwicklungsaufwand bezahlt.
+In Uniswap 2.0 zahlen Händler eine Gebühr von 0,30 %, um den Markt zu nutzen. Der Großteil dieser Gebühr (0,25 % des Trades) geht immer an die Liquiditätsanbieter. Die restlichen 0,05 % können entweder an die Liquiditätsanbieter oder an eine von der Factory als Protokollgebühr angegebene Adresse gehen, die Uniswap für ihren Entwicklungsaufwand bezahlt. Im Ethereum Mainnet ist diese Protokollgebühr aktiviert: Die `feeTo`-Adresse der Factory ist festgelegt, sodass die 0,05 % an diese Adresse gehen und nicht an die Liquiditätsanbieter.
 
-Um Berechnungen (und damit Gaskosten) zu reduzieren, wird diese Gebühr nur berechnet, wenn Liquidität zum Pool hinzugefügt oder daraus entfernt wird, und nicht bei jeder Transaktion.
+Um Berechnungen (und damit Gas-Kosten) zu reduzieren, wird diese Gebühr nur berechnet, wenn Liquidität zum Pool hinzugefügt oder daraus entfernt wird, und nicht bei jeder Transaktion.
 
 ```solidity
         address feeTo = IUniswapV2Factory(factory).feeTo();
@@ -410,18 +410,18 @@ Um Berechnungen (und damit Gaskosten) zu reduzieren, wird diese Gebühr nur bere
 Lies das Gebührenziel der Factory. Wenn es null ist, gibt es keine Protokollgebühr und es ist nicht nötig, diese Gebühr zu berechnen.
 
 ```solidity
-        uint _kLast = kLast; // Gaseinsparungen
+        uint _kLast = kLast; // Gas-Einsparungen
 ```
 
-Die Zustandsvariable `kLast` befindet sich im Speicher (Storage), sodass sie zwischen verschiedenen Aufrufen des Vertrags einen Wert hat.
-Der Zugriff auf den Speicher ist viel teurer als der Zugriff auf den flüchtigen Speicher (Memory), der freigegeben wird, wenn der Funktionsaufruf an den Vertrag endet, daher verwenden wir eine interne Variable, um Gas zu sparen.
+Die Zustandsvariable `kLast` befindet sich im Speicher, sodass sie zwischen verschiedenen Aufrufen des Vertrags einen Wert hat.
+Der Zugriff auf den Speicher ist viel teurer als der Zugriff auf den flüchtigen Speicher, der freigegeben wird, wenn der Funktionsaufruf an den Vertrag endet, daher verwenden wir eine interne Variable, um Gas zu sparen.
 
 ```solidity
         if (feeOn) {
             if (_kLast != 0) {
 ```
 
-Die Liquiditätsanbieter erhalten ihren Anteil einfach durch die Wertsteigerung ihrer Liquiditäts-Token. Die Protokollgebühr erfordert jedoch, dass neue Liquiditäts-Token geprägt und der Adresse `feeTo` zur Verfügung gestellt werden.
+Die Liquiditätsanbieter erhalten ihren Anteil einfach durch die Wertsteigerung ihrer Liquiditäts-Token. Die Protokollgebühr erfordert jedoch, dass neue Liquiditäts-Token geprägt und der `feeTo`-Adresse zur Verfügung gestellt werden.
 
 ```solidity
                 uint rootK = Math.sqrt(uint(_reserve0).mul(_reserve1));
@@ -445,7 +445,7 @@ Diese komplizierte Berechnung der Gebühren wird im [Whitepaper](https://app.uni
             }
 ```
 
-Verwenden Sie die Funktion `UniswapV2ERC20._mint`, um die zusätzlichen Liquiditäts-Token tatsächlich zu erstellen und sie `feeTo` zuzuweisen.
+Verwende die Funktion `UniswapV2ERC20._mint`, um die zusätzlichen Liquiditäts-Token tatsächlich zu erstellen und sie `feeTo` zuzuweisen.
 
 ```solidity
         } else if (_kLast != 0) {
@@ -454,8 +454,8 @@ Verwenden Sie die Funktion `UniswapV2ERC20._mint`, um die zusätzlichen Liquidit
     }
 ```
 
-Wenn keine Gebühr festgelegt ist, setze `kLast` auf null (falls es das nicht schon ist). Als dieser Vertrag geschrieben wurde, gab es eine [Gas-Rückerstattungsfunktion](https://eips.ethereum.org/EIPS/eip-3298), die Verträge dazu ermutigte, die Gesamtgröße des Ethereum-Zustands zu reduzieren, indem sie Speicher, den sie nicht benötigten, auf null setzten.
-Dieser Code holt sich diese Rückerstattung, wenn möglich.
+Wenn keine Gebühr festgelegt ist, setze `kLast` auf null (falls es das nicht schon ist). Ethereum verfügt über eine Gas-Rückerstattungsfunktion, die Verträge dazu ermutigt, die Gesamtgröße des Ethereum-Zustands zu reduzieren, indem sie Speicher, den sie nicht benötigen, auf null setzen.
+Dieser Code erhält diese Rückerstattung, wenn möglich. Seit dem London-Upgrade ([EIP-3529](https://eips.ethereum.org/EIPS/eip-3529)) ist die Rückerstattung kleiner und auf ein Fünftel des Gases der Transaktion begrenzt, aber sie existiert immer noch.
 
 #### Von außen zugängliche Funktionen {#pair-external}
 
@@ -468,10 +468,10 @@ Beachten Sie, dass zwar jede Transaktion oder jeder Vertrag diese Funktionen auf
     function mint(address to) external lock returns (uint liquidity) {
 ```
 
-Diese Funktion wird aufgerufen, wenn ein Liquiditätsanbieter dem Pool Liquidität hinzufügt. Sie prägt zusätzliche Liquiditäts-Token als Belohnung. Sie sollte von [einem Peripherie-Vertrag](#uniswapv2router02) aufgerufen werden, der sie nach dem Hinzufügen der Liquidität in derselben Transaktion aufruft (damit niemand sonst eine Transaktion einreichen kann, die die neue Liquidität vor dem rechtmäßigen Eigentümer beansprucht).
+Diese Funktion wird aufgerufen, wenn ein Liquiditätsanbieter dem Pool Liquidität hinzufügt. Sie prägt zusätzliche Liquiditäts-Token als Belohnung. Sie sollte von [einem Peripherie-Vertrag](#uniswapv2router02) aufgerufen werden, der sie nach dem Hinzufügen der Liquidität in derselben Transaktion aufruft (sodass niemand sonst eine Transaktion einreichen könnte, die die neue Liquidität vor dem rechtmäßigen Eigentümer beansprucht).
 
 ```solidity
-        (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // Gaseinsparungen
+        (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // Gas-Einsparungen
 ```
 
 Dies ist die Art und Weise, die Ergebnisse einer Solidity-Funktion zu lesen, die mehrere Werte zurückgibt. Wir verwerfen den letzten zurückgegebenen Wert, den Block-Zeitstempel, da wir ihn nicht benötigen.
@@ -483,31 +483,31 @@ Dies ist die Art und Weise, die Ergebnisse einer Solidity-Funktion zu lesen, die
         uint amount1 = balance1.sub(_reserve1);
 ```
 
-Holen Sie sich die aktuellen Salden und sehen Sie, wie viel von jedem Token-Typ hinzugefügt wurde.
+Hole die aktuellen Salden und sieh nach, wie viel von jedem Token-Typ hinzugefügt wurde.
 
 ```solidity
         bool feeOn = _mintFee(_reserve0, _reserve1);
 ```
 
-Berechnen Sie die zu erhebenden Protokollgebühren, falls vorhanden, und prägen Sie entsprechend Liquiditäts-Token. Da die Parameter für `_mintFee` die alten Reservewerte sind, wird die Gebühr genau berechnet, basierend nur auf Pool-Änderungen aufgrund von Gebühren.
+Berechne die zu erhebenden Protokollgebühren, falls vorhanden, und präge entsprechend Liquiditäts-Token. Da die Parameter für `_mintFee` die alten Reservenwerte sind, wird die Gebühr genau berechnet, basierend nur auf Pool-Änderungen aufgrund von Gebühren.
 
 ```solidity
-        uint _totalSupply = totalSupply; // Gaseinsparungen, muss hier definiert werden, da sich totalSupply in _mintFee aktualisieren kann
+        uint _totalSupply = totalSupply; // Gas-Einsparungen, muss hier definiert werden, da totalSupply in _mintFee aktualisiert werden kann
         if (_totalSupply == 0) {
             liquidity = Math.sqrt(amount0.mul(amount1)).sub(MINIMUM_LIQUIDITY);
-           _mint(address(0), MINIMUM_LIQUIDITY); // sperrt die ersten MINIMUM_LIQUIDITY Token dauerhaft
+           _mint(address(0), MINIMUM_LIQUIDITY); // sperrt dauerhaft die ersten MINIMUM_LIQUIDITY Token
 ```
 
-Wenn dies die erste Einzahlung ist, erstelle `MINIMUM_LIQUIDITY` Token und sende sie an die Adresse null, um sie zu sperren. Sie können niemals eingelöst werden, was bedeutet, dass der Pool niemals vollständig geleert wird (dies bewahrt uns an einigen Stellen vor einer Division durch null). Der Wert von `MINIMUM_LIQUIDITY` ist eintausend, was in Anbetracht der Tatsache, dass die meisten ERC-20 in Einheiten von 10^-18 eines Tokens unterteilt sind, so wie ETH in Wei unterteilt ist, 10^-15 des Wertes eines einzelnen Tokens entspricht. Keine hohen Kosten.
+Wenn dies die erste Einzahlung ist, erstelle `MINIMUM_LIQUIDITY` Token und sende sie an die Adresse Null, um sie zu sperren. Sie können niemals eingelöst werden, was bedeutet, dass der Pool niemals vollständig geleert wird (dies bewahrt uns an einigen Stellen vor einer Division durch Null). Der Wert von `MINIMUM_LIQUIDITY` ist eintausend, was in Anbetracht der Tatsache, dass die meisten ERC-20 in Einheiten von 10^-18 eines Tokens unterteilt sind, so wie ETH in Wei unterteilt ist, 10^-15 des Wertes eines einzelnen Tokens entspricht. Keine hohen Kosten.
 
 Zum Zeitpunkt der ersten Einzahlung kennen wir den relativen Wert der beiden Token nicht, also multiplizieren wir einfach die Beträge und ziehen eine Quadratwurzel, in der Annahme, dass die Einzahlung uns in beiden Token den gleichen Wert liefert.
 
 Wir können darauf vertrauen, da es im Interesse des Einzahlers liegt, den gleichen Wert bereitzustellen, um keinen Wert durch Arbitrage zu verlieren.
 Nehmen wir an, der Wert der beiden Token ist identisch, aber unser Einzahler hat viermal so viel von **Token1** wie von **Token0** eingezahlt. Ein Händler kann die Tatsache nutzen, dass der Paar-Tausch denkt, dass **Token0** wertvoller ist, um Wert daraus zu ziehen.
 
-| Ereignis                                                        | reserve0 | reserve1 | reserve0 \* reserve1 | Wert des Pools (reserve0 + reserve1) |
+| Ereignis                                                     | reserve0 | reserve1 | reserve0 \* reserve1 | Wert des Pools (reserve0 + reserve1) |
 | ------------------------------------------------------------ | -------: | -------: | -------------------: | --------------------------------------: |
-| Initiale Einrichtung                                                |        8 |       32 |                  256 |                                      40 |
+| Initiale Einrichtung                                         |        8 |       32 |                  256 |                                      40 |
 | Händler zahlt 8 **Token0**-Token ein, erhält 16 **Token1** zurück |       16 |       16 |                  256 |                                      32 |
 
 Wie Sie sehen können, hat der Händler zusätzliche 8 Token verdient, die aus einer Verringerung des Wertes des Pools stammen, was dem Einzahler schadet, dem er gehört.
@@ -519,15 +519,15 @@ Wie Sie sehen können, hat der Händler zusätzliche 8 Token verdient, die aus e
 
 Bei jeder nachfolgenden Einzahlung kennen wir bereits den Wechselkurs zwischen den beiden Vermögenswerten und erwarten, dass Liquiditätsanbieter in beiden den gleichen Wert bereitstellen. Wenn sie dies nicht tun, geben wir ihnen als Strafe Liquiditäts-Token basierend auf dem geringeren Wert, den sie bereitgestellt haben.
 
-Unabhängig davon, ob es sich um die erste Einzahlung oder eine nachfolgende handelt, entspricht die Anzahl der von uns bereitgestellten Liquiditäts-Token der Quadratwurzel der Änderung in `reserve0*reserve1` und der Wert des Liquiditäts-Tokens ändert sich nicht (es sei denn, wir erhalten eine Einzahlung, die nicht gleiche Werte beider Typen aufweist, in welchem Fall die "Strafe" verteilt wird). Hier ist ein weiteres Beispiel mit zwei Token, die den gleichen Wert haben, mit drei guten Einzahlungen und einer schlechten (Einzahlung von nur einem Token-Typ, sodass keine Liquiditäts-Token produziert werden).
+Egal, ob es sich um die erste Einzahlung oder eine nachfolgende handelt, die Anzahl der von uns bereitgestellten Liquiditäts-Token entspricht der Quadratwurzel der Änderung in `reserve0*reserve1` und der Wert des Liquiditäts-Tokens ändert sich nicht (es sei denn, wir erhalten eine Einzahlung, die nicht gleiche Werte beider Typen aufweist, in welchem Fall die „Strafe“ verteilt wird). Hier ist ein weiteres Beispiel mit zwei Token, die den gleichen Wert haben, mit drei guten Einzahlungen und einer schlechten (Einzahlung von nur einem Token-Typ, sodass sie keine Liquiditäts-Token erzeugt).
 
-| Ereignis                     | reserve0 | reserve1 | reserve0 \* reserve1 | Pool-Wert (reserve0 + reserve1) | Für diese Einzahlung geprägte Liquiditäts-Token | Gesamte Liquiditäts-Token | Wert jedes Liquiditäts-Tokens |
+| Ereignis                  | reserve0 | reserve1 | reserve0 \* reserve1 | Pool-Wert (reserve0 + reserve1) | Für diese Einzahlung geprägte Liquiditäts-Token | Gesamte Liquiditäts-Token | Wert jedes Liquiditäts-Tokens |
 | ------------------------- | -------: | -------: | -------------------: | -------------------------------: | ---------------------------------------: | ---------------------: | ----------------------------: |
-| Initiale Einrichtung             |    8,000 |    8,000 |                   64 |                           16,000 |                                        8 |                      8 |                         2,000 |
-| Einzahlung von vier jedes Typs |   12,000 |   12,000 |                  144 |                           24,000 |                                        4 |                     12 |                         2,000 |
-| Einzahlung von zwei jedes Typs  |   14,000 |   14,000 |                  196 |                           28,000 |                                        2 |                     14 |                         2,000 |
-| Einzahlung mit ungleichem Wert     |   18,000 |   14,000 |                  252 |                           32,000 |                                        0 |                     14 |                        ~2,286 |
-| Nach Arbitrage           |  ~15,874 |  ~15,874 |                  252 |                          ~31,748 |                                        0 |                     14 |                        ~2,267 |
+| Initiale Einrichtung      |    8.000 |    8.000 |                   64 |                           16.000 |                                        8 |                      8 |                         2.000 |
+| Einzahlung von vier jedes Typs |   12.000 |   12.000 |                  144 |                           24.000 |                                        4 |                     12 |                         2.000 |
+| Einzahlung von zwei jedes Typs |   14.000 |   14.000 |                  196 |                           28.000 |                                        2 |                     14 |                         2.000 |
+| Einzahlung mit ungleichem Wert |   18.000 |   14.000 |                  252 |                           32.000 |                                        0 |                     14 |                        ~2.286 |
+| Nach Arbitrage            |  ~15.874 |  ~15.874 |                  252 |                          ~31.748 |                                        0 |                     14 |                        ~2.267 |
 
 ```solidity
         }
@@ -535,7 +535,7 @@ Unabhängig davon, ob es sich um die erste Einzahlung oder eine nachfolgende han
         _mint(to, liquidity);
 ```
 
-Verwenden Sie die Funktion `UniswapV2ERC20._mint`, um die zusätzlichen Liquiditäts-Token tatsächlich zu erstellen und sie dem richtigen Konto zu geben.
+Verwende die Funktion `UniswapV2ERC20._mint`, um die zusätzlichen Liquiditäts-Token tatsächlich zu erstellen und sie dem richtigen Konto zu geben.
 
 ```solidity
 
@@ -545,7 +545,7 @@ Verwenden Sie die Funktion `UniswapV2ERC20._mint`, um die zusätzlichen Liquidit
     }
 ```
 
-Aktualisieren Sie die Zustandsvariablen (`reserve0`, `reserve1` und bei Bedarf `kLast`) und geben Sie das entsprechende Ereignis aus.
+Aktualisiere die Zustandsvariablen (`reserve0`, `reserve1` und bei Bedarf `kLast`) und gib das entsprechende Ereignis aus.
 
 ##### burn
 
@@ -558,19 +558,19 @@ Diese Funktion wird aufgerufen, wenn Liquidität abgehoben wird und die entsprec
 Sie sollte ebenfalls [von einem Peripherie-Konto](#uniswapv2router02) aufgerufen werden.
 
 ```solidity
-        (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // Gaseinsparungen
-        address _token0 = token0;                                // Gaseinsparungen
-        address _token1 = token1;                                // Gaseinsparungen
+        (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // Gas-Einsparungen
+        address _token0 = token0;                                // Gas-Einsparungen
+        address _token1 = token1;                                // Gas-Einsparungen
         uint balance0 = IERC20(_token0).balanceOf(address(this));
         uint balance1 = IERC20(_token1).balanceOf(address(this));
         uint liquidity = balanceOf[address(this)];
 ```
 
-Der Peripherie-Vertrag hat die zu verbrennende Liquidität vor dem Aufruf an diesen Vertrag transferiert. Auf diese Weise wissen wir, wie viel Liquidität verbrannt werden muss, und wir können sicherstellen, dass sie verbrannt wird.
+Der Peripherie-Vertrag hat die zu verbrennende Liquidität vor dem Aufruf an diesen Vertrag übertragen. Auf diese Weise wissen wir, wie viel Liquidität verbrannt werden muss, und wir können sicherstellen, dass sie verbrannt wird.
 
 ```solidity
         bool feeOn = _mintFee(_reserve0, _reserve1);
-        uint _totalSupply = totalSupply; // Gaseinsparungen, muss hier definiert werden, da sich totalSupply in _mintFee aktualisieren kann
+        uint _totalSupply = totalSupply; // Gas-Einsparungen, muss hier definiert werden, da totalSupply in _mintFee aktualisiert werden kann
         amount0 = liquidity.mul(balance0) / _totalSupply; // die Verwendung von Salden stellt eine anteilige Verteilung sicher
         amount1 = liquidity.mul(balance1) / _totalSupply; // die Verwendung von Salden stellt eine anteilige Verteilung sicher
         require(amount0 > 0 && amount1 > 0, 'UniswapV2: INSUFFICIENT_LIQUIDITY_BURNED');
@@ -605,32 +605,32 @@ Diese Funktion soll ebenfalls von [einem Peripherie-Vertrag](#uniswapv2router02)
 
 ```solidity
         require(amount0Out > 0 || amount1Out > 0, 'UniswapV2: INSUFFICIENT_OUTPUT_AMOUNT');
-        (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // Gaseinsparungen
+        (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // Gas-Einsparungen
         require(amount0Out < _reserve0 && amount1Out < _reserve1, 'UniswapV2: INSUFFICIENT_LIQUIDITY');
 
         uint balance0;
         uint balance1;
-        { // Gültigkeitsbereich für _token{0,1}, vermeidet 'stack too deep'-Fehler
+        { // Gültigkeitsbereich für _token{0,1}, vermeidet 'Stack too deep'-Fehler
 ```
 
-Lokale Variablen können entweder im Speicher (Memory) oder, wenn es nicht zu viele sind, direkt auf dem Stack gespeichert werden.
+Lokale Variablen können entweder im Speicher oder, wenn es nicht zu viele davon gibt, direkt auf dem Stack gespeichert werden.
 Wenn wir die Anzahl begrenzen können, sodass wir den Stack verwenden, verbrauchen wir weniger Gas. Weitere Details finden Sie im [Yellow Paper, den formalen Ethereum-Spezifikationen](https://ethereum.github.io/yellowpaper/paper.pdf), S. 26, Gleichung 298.
 
 ```solidity
             address _token0 = token0;
             address _token1 = token1;
             require(to != _token0 && to != _token1, 'UniswapV2: INVALID_TO');
-            if (amount0Out > 0) _safeTransfer(_token0, to, amount0Out); // Token optimistisch transferieren
-            if (amount1Out > 0) _safeTransfer(_token1, to, amount1Out); // Token optimistisch transferieren
+            if (amount0Out > 0) _safeTransfer(_token0, to, amount0Out); // optimistischer Transfer von Token
+            if (amount1Out > 0) _safeTransfer(_token1, to, amount1Out); // optimistischer Transfer von Token
 ```
 
-Dieser Transfer ist optimistisch, da wir transferieren, bevor wir sicher sind, dass alle Bedingungen erfüllt sind. Dies ist in Ethereum in Ordnung, denn wenn die Bedingungen später im Aufruf nicht erfüllt sind, machen wir ihn rückgängig (revert) und alle dadurch verursachten Änderungen werden verworfen.
+Dieser Transfer ist optimistisch, da wir übertragen, bevor wir sicher sind, dass alle Bedingungen erfüllt sind. Dies ist in Ethereum in Ordnung, denn wenn die Bedingungen später im Aufruf nicht erfüllt sind, machen wir ihn und alle von ihm erstellten Änderungen rückgängig.
 
 ```solidity
             if (data.length > 0) IUniswapV2Callee(to).uniswapV2Call(msg.sender, amount0Out, amount1Out, data);
 ```
 
-Informieren Sie den Empfänger auf Anfrage über den Tausch.
+Informiere den Empfänger auf Anfrage über den Tausch.
 
 ```solidity
             balance0 = IERC20(_token0).balanceOf(address(this));
@@ -638,13 +638,13 @@ Informieren Sie den Empfänger auf Anfrage über den Tausch.
         }
 ```
 
-Holen Sie sich die aktuellen Salden. Der Peripherie-Vertrag sendet uns die Token, bevor er uns für den Tausch aufruft. Dies macht es dem Vertrag leicht zu überprüfen, dass er nicht betrogen wird, eine Überprüfung, die im Kernvertrag stattfinden _muss_ (da wir von anderen Entitäten als unserem Peripherie-Vertrag aufgerufen werden können).
+Hole die aktuellen Salden. Der Peripherie-Vertrag sendet uns die Token, bevor er uns für den Tausch aufruft. Dies macht es für den Vertrag einfach zu überprüfen, dass er nicht betrogen wird, eine Überprüfung, die im Kernvertrag stattfinden _muss_ (da wir von anderen Entitäten als unserem Peripherie-Vertrag aufgerufen werden können).
 
 ```solidity
         uint amount0In = balance0 > _reserve0 - amount0Out ? balance0 - (_reserve0 - amount0Out) : 0;
         uint amount1In = balance1 > _reserve1 - amount1Out ? balance1 - (_reserve1 - amount1Out) : 0;
         require(amount0In > 0 || amount1In > 0, 'UniswapV2: INSUFFICIENT_INPUT_AMOUNT');
-        { // Gültigkeitsbereich für reserve{0,1}Adjusted, vermeidet 'stack too deep'-Fehler
+        { // Gültigkeitsbereich für reserve{0,1}Adjusted, vermeidet 'Stack too deep'-Fehler
             uint balance0Adjusted = balance0.mul(1000).sub(amount0In.mul(3));
             uint balance1Adjusted = balance1.mul(1000).sub(amount1In.mul(3));
             require(balance0Adjusted.mul(balance1Adjusted) >= uint(_reserve0).mul(_reserve1).mul(1000**2), 'UniswapV2: K');
@@ -660,12 +660,12 @@ Dies ist eine Plausibilitätsprüfung, um sicherzustellen, dass wir durch den Ta
     }
 ```
 
-Aktualisieren Sie `reserve0` und `reserve1` und bei Bedarf die Preisakkumulatoren und den Zeitstempel und geben Sie ein Ereignis aus.
+Aktualisiere `reserve0` und `reserve1` und bei Bedarf die Preisakkumulatoren und den Zeitstempel und gib ein Ereignis aus.
 
 ##### Sync oder Skim
 
-Es ist möglich, dass die tatsächlichen Salden nicht mehr mit den Reserven synchron sind, von denen der Paar-Tausch glaubt, dass er sie hat.
-Es gibt keine Möglichkeit, Token ohne die Zustimmung des Vertrags abzuheben, aber Einzahlungen sind eine andere Sache. Ein Konto kann Token an den Tausch transferieren, ohne entweder `mint` oder `swap` aufzurufen.
+Es ist möglich, dass die tatsächlichen Salden nicht mehr mit den Reserven synchron sind, von denen der Paar-Tausch annimmt, dass er sie hat.
+Es gibt keine Möglichkeit, Token ohne die Zustimmung des Vertrags abzuheben, aber Einzahlungen sind eine andere Sache. Ein Konto kann Token an den Tausch übertragen, ohne entweder `mint` oder `swap` aufzurufen.
 
 In diesem Fall gibt es zwei Lösungen:
 
@@ -675,8 +675,8 @@ In diesem Fall gibt es zwei Lösungen:
 ```solidity
     // erzwingt, dass Salden den Reserven entsprechen
     function skim(address to) external lock {
-        address _token0 = token0; // Gaseinsparungen
-        address _token1 = token1; // Gaseinsparungen
+        address _token0 = token0; // Gas-Einsparungen
+        address _token1 = token1; // Gas-Einsparungen
         _safeTransfer(_token0, to, IERC20(_token0).balanceOf(address(this)).sub(reserve0));
         _safeTransfer(_token1, to, IERC20(_token1).balanceOf(address(this)).sub(reserve1));
     }
@@ -692,7 +692,7 @@ In diesem Fall gibt es zwei Lösungen:
 
 ### UniswapV2Factory.sol {#uniswapv2factory}
 
-[Dieser Vertrag](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) erstellt die Paar-Tausche.
+[Dieser Vertrag](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Factory.sol) erstellt die Paar-Tausche.
 
 ```solidity
 pragma solidity =0.5.16;
@@ -719,8 +719,7 @@ Die erste, `getPair`, ist ein Mapping, das einen Paar-Tausch-Vertrag basierend a
 
 Die zweite Variable, `allPairs`, ist ein Array, das alle Adressen von Paar-Tauschen enthält, die von dieser Factory erstellt wurden. In Ethereum können Sie nicht über den Inhalt eines Mappings iterieren oder eine Liste aller Schlüssel erhalten, daher ist diese Variable die einzige Möglichkeit zu wissen, welche Tausche diese Factory verwaltet.
 
-Hinweis: Der Grund, warum Sie nicht über alle Schlüssel eines Mappings iterieren können, ist, dass die Datenspeicherung von Verträgen _teuer_ ist. Je weniger wir davon verwenden, desto besser, und je seltener wir sie ändern,
-desto besser. Sie können [Mappings erstellen, die Iteration unterstützen](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol), aber sie erfordern zusätzlichen Speicher für eine Liste von Schlüsseln. In den meisten Anwendungen benötigen Sie das nicht.
+Hinweis: Der Grund, warum Sie nicht über alle Schlüssel eines Mappings iterieren können, ist, dass die Datenspeicherung von Verträgen _teuer_ ist. Je weniger wir davon verwenden, desto besser, und je seltener wir sie ändern, desto besser. Sie können [Mappings erstellen, die Iteration unterstützen](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol), aber sie erfordern zusätzlichen Speicher für eine Liste von Schlüsseln. In den meisten Anwendungen benötigen Sie das nicht.
 
 ```solidity
     event PairCreated(address indexed token0, address indexed token1, address pair, uint);
@@ -734,7 +733,7 @@ Dieses Ereignis wird ausgegeben, wenn ein neuer Paar-Tausch erstellt wird. Es en
     }
 ```
 
-Das Einzige, was der Konstruktor tut, ist die Angabe von `feeToSetter`. Factorys starten ohne Gebühr, und nur `feeSetter` kann das ändern.
+Das Einzige, was der Konstruktor tut, ist die Angabe von `feeToSetter`. Factories starten ohne Gebühr, und nur `feeSetter` kann das ändern.
 
 ```solidity
     function allPairsLength() external view returns (uint) {
@@ -742,7 +741,7 @@ Das Einzige, was der Konstruktor tut, ist die Angabe von `feeToSetter`. Factorys
     }
 ```
 
-Diese Funktion gibt die Anzahl der Tauschpaare zurück.
+Diese Funktion gibt die Anzahl der Tausch-Paare zurück.
 
 ```solidity
     function createPair(address tokenA, address tokenB) external returns (address pair) {
@@ -756,7 +755,7 @@ Dies ist die Hauptfunktion der Factory, um einen Paar-Tausch zwischen zwei ERC-2
 ```
 
 Wir möchten, dass die Adresse des neuen Tauschs deterministisch ist, damit sie im Voraus offchain berechnet werden kann (dies kann für [Layer-2-Transaktionen](/developers/docs/scaling/) nützlich sein).
-Dazu benötigen wir eine konsistente Reihenfolge der Token-Adressen, unabhängig von der Reihenfolge, in der wir sie erhalten haben, also sortieren wir sie hier.
+Dazu müssen wir eine konsistente Reihenfolge der Token-Adressen haben, unabhängig von der Reihenfolge, in der wir sie erhalten haben, also sortieren wir sie hier.
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
@@ -779,13 +778,13 @@ Als dieser Code geschrieben wurde, wurde dieser Opcode noch nicht von Solidity u
         }
 ```
 
-Wenn ein Opcode noch nicht von Solidity unterstützt wird, können wir ihn mithilfe von [Inline-Assembly](https://docs.soliditylang.org/en/v0.8.3/assembly.html) aufrufen.
+Wenn ein Opcode noch nicht von Solidity unterstützt wird, können wir ihn über [Inline-Assembly](https://docs.soliditylang.org/en/v0.8.3/assembly.html) aufrufen.
 
 ```solidity
         IUniswapV2Pair(pair).initialize(token0, token1);
 ```
 
-Rufen Sie die Funktion `initialize` auf, um dem neuen Tausch mitzuteilen, welche zwei Token er tauscht.
+Rufe die Funktion `initialize` auf, um dem neuen Tausch mitzuteilen, welche zwei Token er tauscht.
 
 ```solidity
         getPair[token0][token1] = pair;
@@ -795,7 +794,7 @@ Rufen Sie die Funktion `initialize` auf, um dem neuen Tausch mitzuteilen, welche
     }
 ```
 
-Speichern Sie die neuen Paar-Informationen in den Zustandsvariablen und geben Sie ein Ereignis aus, um die Welt über den neuen Paar-Tausch zu informieren.
+Speichere die neuen Paar-Informationen in den Zustandsvariablen und gib ein Ereignis aus, um die Welt über den neuen Paar-Tausch zu informieren.
 
 ```solidity
     function setFeeTo(address _feeTo) external {
@@ -814,9 +813,9 @@ Diese beiden Funktionen ermöglichen es `feeSetter`, den Gebührenempfänger (fa
 
 ### UniswapV2ERC20.sol {#uniswapv2erc20}
 
-[Dieser Vertrag](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implementiert den ERC-20-Liquiditäts-Token. Er ähnelt dem [OpenZeppelin-ERC-20-Vertrag](/developers/tutorials/erc20-annotated-code), daher werde ich nur den Teil erklären, der anders ist, die `permit`-Funktionalität.
+[Dieser Vertrag](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2ERC20.sol) implementiert den ERC-20-Liquiditäts-Token. Er ähnelt dem [OpenZeppelin-ERC-20-Vertrag](/developers/tutorials/erc20-annotated-code), daher werde ich nur den Teil erklären, der anders ist, die `permit`-Funktionalität.
 
-Transaktionen auf Ethereum kosten Ether (ETH), was echtem Geld entspricht. Wenn Sie ERC-20-Token, aber keine ETH haben, können Sie keine Transaktionen senden, also können Sie nichts damit anfangen. Eine Lösung zur Vermeidung dieses Problems sind [Meta-Transaktionen](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions).
+Transaktionen auf Ethereum kosten Ether (ETH), was echtem Geld entspricht. Wenn Sie ERC-20-Token, aber keine ETH haben, können Sie keine Transaktionen senden, also können Sie nichts damit anfangen. Eine Lösung zur Vermeidung dieses Problems sind [Meta-Transaktionen](https://developers.uniswap.org/docs/protocols/v2/concepts/meta-transactions).
 Der Eigentümer der Token signiert eine Transaktion, die es jemand anderem ermöglicht, Token offchain abzuheben, und sendet sie über das Internet an den Empfänger. Der Empfänger, der über ETH verfügt, reicht dann die Genehmigung im Namen des Eigentümers ein.
 
 ```solidity
@@ -831,7 +830,7 @@ Dieser Hash ist der [Identifikator für den Transaktionstyp](https://eips.ethere
     mapping(address => uint) public nonces;
 ```
 
-Es ist für einen Empfänger nicht machbar, eine digitale Signatur zu fälschen. Es ist jedoch trivial, dieselbe Transaktion zweimal zu senden (dies ist eine Form der [Replay-Attacke](https://wikipedia.org/wiki/Replay_attack)). Um dies zu verhindern, verwenden wir eine [Nonce](https://wikipedia.org/wiki/Cryptographic_nonce). Wenn die Nonce eines neuen `Permit` nicht um eins größer ist als die zuletzt verwendete, gehen wir davon aus, dass sie ungültig ist.
+Es ist für einen Empfänger nicht machbar, eine digitale Signatur zu fälschen. Es ist jedoch trivial, dieselbe Transaktion zweimal zu senden (dies ist eine Form der [Replay-Attacke](https://wikipedia.org/wiki/Replay_attack)). Um dies zu verhindern, verwenden wir eine [Nonce](https://wikipedia.org/wiki/Cryptographic_nonce). Wenn die Nonce eines neuen `Permit` nicht um eins höher ist als die zuletzt verwendete, gehen wir davon aus, dass sie ungültig ist.
 
 ```solidity
     constructor() public {
@@ -856,7 +855,7 @@ Dies ist der Code zum Abrufen des [Chain-Identifikators](https://chainid.network
     }
 ```
 
-Berechnen Sie den [Domain-Separator](https://eips.ethereum.org/EIPS/eip-712#rationale-for-domainseparator) für EIP-712.
+Berechne den [Domain-Separator](https://eips.ethereum.org/EIPS/eip-712#rationale-for-domainseparator) für EIP-712.
 
 ```solidity
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
@@ -868,7 +867,7 @@ Dies ist die Funktion, die die Berechtigungen implementiert. Sie erhält als Par
         require(deadline >= block.timestamp, 'UniswapV2: EXPIRED');
 ```
 
-Akzeptieren Sie keine Transaktionen nach Ablauf der Frist.
+Akzeptiere keine Transaktionen nach Ablauf der Frist.
 
 ```solidity
         bytes32 digest = keccak256(
@@ -882,13 +881,13 @@ Akzeptieren Sie keine Transaktionen nach Ablauf der Frist.
 
 `abi.encodePacked(...)` ist die Nachricht, die wir erwarten. Wir wissen, wie die Nonce lauten sollte, daher müssen wir sie nicht als Parameter erhalten.
 
-Der Ethereum-Signaturalgorithmus erwartet 256 Bit zum Signieren, daher verwenden wir die Hashfunktion `keccak256`.
+Der Ethereum-Signaturalgorithmus erwartet 256 Bits zum Signieren, daher verwenden wir die Hashfunktion `keccak256`.
 
 ```solidity
         address recoveredAddress = ecrecover(digest, v, r, s);
 ```
 
-Aus dem Digest und der Signatur können wir die Adresse, die sie signiert hat, mithilfe von [ecrecover](https://coders-errand.com/ecrecover-signature-verification-ethereum/) ermitteln.
+Aus dem Digest und der Signatur können wir die Adresse, die sie signiert hat, mithilfe von [ecrecover](https://coders-errand.com/ecrecover-signature-verification-ethereum/) erhalten.
 
 ```solidity
         require(recoveredAddress != address(0) && recoveredAddress == owner, 'UniswapV2: INVALID_SIGNATURE');
@@ -897,20 +896,20 @@ Aus dem Digest und der Signatur können wir die Adresse, die sie signiert hat, m
 
 ```
 
-Wenn alles in Ordnung ist, behandeln Sie dies als [eine ERC-20-Genehmigung (approve)](https://eips.ethereum.org/EIPS/eip-20#approve).
+Wenn alles in Ordnung ist, behandle dies als [eine ERC-20-Genehmigung](https://eips.ethereum.org/EIPS/eip-20#approve).
 
 ## Die Peripherie-Verträge {#periphery-contracts}
 
-Die Peripherie-Verträge sind die API (Application Programming Interface) für Uniswap. Sie stehen für externe Aufrufe zur Verfügung, entweder von anderen Verträgen oder dezentralen Anwendungen (dapps). Sie könnten die Kernverträge direkt aufrufen, aber das ist komplizierter und Sie könnten Werte verlieren, wenn Sie einen Fehler machen. Die Kernverträge enthalten nur Tests, um sicherzustellen, dass sie nicht betrogen werden, aber keine Plausibilitätsprüfungen für andere. Diese befinden sich in der Peripherie, damit sie bei Bedarf aktualisiert werden können.
+Die Peripherie-Verträge sind die API (Application Programming Interface) für Uniswap. Sie stehen für externe Aufrufe zur Verfügung, entweder von anderen Verträgen oder dezentralen Anwendungen. Man könnte die Kernverträge direkt aufrufen, aber das ist komplizierter und man könnte bei einem Fehler Werte verlieren. Die Kernverträge enthalten nur Tests, um sicherzustellen, dass sie nicht betrogen werden, aber keine Plausibilitätsprüfungen für andere. Diese befinden sich in der Peripherie, damit sie bei Bedarf aktualisiert werden können.
 
 ### UniswapV2Router01.sol {#uniswapv2router01}
 
-[Dieser Vertrag](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) hat Probleme und [sollte nicht mehr verwendet werden](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Glücklicherweise sind die Peripherie-Verträge zustandslos und halten keine Vermögenswerte, sodass es einfach ist, ihn als veraltet zu markieren und den Leuten vorzuschlagen, stattdessen den Ersatz, `UniswapV2Router02`, zu verwenden.
+[Dieser Vertrag](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router01.sol) hat Probleme und sollte nicht mehr verwendet werden. Glücklicherweise sind die Peripherie-Verträge zustandslos und halten keine Vermögenswerte, sodass es einfach ist, ihn als veraltet zu markieren und den Leuten vorzuschlagen, stattdessen den Ersatz, `UniswapV2Router02`, zu verwenden.
 
 ### UniswapV2Router02.sol {#uniswapv2router02}
 
-In den meisten Fällen würden Sie Uniswap über [diesen Vertrag](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol) nutzen.
-Wie man ihn verwendet, können Sie [hier](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02) sehen.
+In den meisten Fällen würde man Uniswap über [diesen Vertrag](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router02.sol) nutzen.
+Wie man ihn verwendet, kann man [hier](https://developers.uniswap.org/docs/protocols/v2/guides/swapping) sehen.
 
 ```solidity
 pragma solidity =0.6.6;
@@ -925,7 +924,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-Die meisten davon sind uns entweder schon begegnet oder ziemlich offensichtlich. Die einzige Ausnahme ist `IWETH.sol`. Uniswap v2 ermöglicht den Tausch für jedes Paar von ERC-20-Token, aber Ether (ETH) selbst ist kein ERC-20-Token. Er ist älter als der Standard und wird durch einzigartige Mechanismen transferiert. Um die Verwendung von ETH in Verträgen zu ermöglichen, die für ERC-20-Token gelten, wurde der Vertrag für [Wrapped Ether (WETH)](https://weth.tkn.eth.limo/) entwickelt. Sie senden diesem Vertrag ETH, und er prägt Ihnen eine entsprechende Menge an WETH. Oder Sie können WETH verbrennen und erhalten ETH zurück.
+Den meisten davon sind wir entweder schon begegnet oder sie sind ziemlich offensichtlich. Die einzige Ausnahme ist `IWETH.sol`. Uniswap v2 ermöglicht den Tausch für jedes Paar von ERC-20-Token, aber Ether (ETH) selbst ist kein ERC-20-Token. Es ist älter als der Standard und wird durch einzigartige Mechanismen transferiert. Um die Verwendung von ETH in Verträgen zu ermöglichen, die für ERC-20-Token gelten, wurde der Vertrag für [Wrapped Ether (WETH)](https://weth.tkn.eth.limo/) entwickelt. Man sendet diesem Vertrag ETH und er prägt einem eine entsprechende Menge an WETH. Oder man kann WETH verbrennen und erhält ETH zurück.
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {
@@ -935,7 +934,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     address public immutable override WETH;
 ```
 
-Der Router muss wissen, welche Factory verwendet werden soll, und für Transaktionen, die WETH erfordern, welcher WETH-Vertrag verwendet werden soll. Diese Werte sind [unveränderlich](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables), was bedeutet, dass sie nur im Konstruktor festgelegt werden können. Dies gibt den Benutzern die Gewissheit, dass niemand sie ändern kann, um auf weniger ehrliche Verträge zu verweisen.
+Der Router muss wissen, welche Factory verwendet werden soll, und für Transaktionen, die WETH erfordern, welcher WETH-Vertrag verwendet werden soll. Diese Werte sind [unveränderlich](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables), was bedeutet, dass sie nur im Konstruktor festgelegt werden können. Dies gibt den Nutzern die Gewissheit, dass niemand sie ändern kann, um auf weniger ehrliche Verträge zu verweisen.
 
 ```solidity
     modifier ensure(uint deadline) {
@@ -944,7 +943,7 @@ Der Router muss wissen, welche Factory verwendet werden soll, und für Transakti
     }
 ```
 
-Dieser Modifikator stellt sicher, dass zeitlich begrenzte Transaktionen („mache X vor Zeitpunkt Y, wenn du kannst“) nicht nach Ablauf ihres Zeitlimits stattfinden.
+Dieser Modifikator stellt sicher, dass zeitlich begrenzte Transaktionen ("mache X vor Zeitpunkt Y, wenn du kannst") nicht nach ihrem Zeitlimit stattfinden.
 
 ```solidity
     constructor(address _factory, address _WETH) public {
@@ -961,11 +960,11 @@ Der Konstruktor setzt lediglich die unveränderlichen Zustandsvariablen.
     }
 ```
 
-Diese Funktion wird aufgerufen, wenn wir Token aus dem WETH-Vertrag wieder in ETH einlösen. Nur der von uns verwendete WETH-Vertrag ist dazu autorisiert.
+Diese Funktion wird aufgerufen, wenn wir Token aus dem WETH-Vertrag wieder in ETH einlösen. Nur der von uns verwendete WETH-Vertrag ist dazu berechtigt.
 
 #### Liquidität hinzufügen {#add-liquidity}
 
-Diese Funktionen fügen dem Tauschpaar Token hinzu, was den Liquiditätspool vergrößert.
+Diese Funktionen fügen dem Paar-Tausch Token hinzu, was den Liquiditätspool vergrößert.
 
 ```solidity
 
@@ -973,7 +972,7 @@ Diese Funktionen fügen dem Tauschpaar Token hinzu, was den Liquiditätspool ver
     function _addLiquidity(
 ```
 
-Diese Funktion wird verwendet, um die Menge an A- und B-Token zu berechnen, die in das Tauschpaar eingezahlt werden sollen.
+Diese Funktion wird verwendet, um die Menge an A- und B-Token zu berechnen, die in den Paar-Tausch eingezahlt werden sollen.
 
 ```solidity
         address tokenA,
@@ -994,11 +993,11 @@ Dies sind die Beträge, die der Liquiditätsanbieter einzahlen möchte. Sie sind
         uint amountBMin
 ```
 
-Dies sind die minimal akzeptablen Einzahlungsbeträge. Wenn die Transaktion nicht mit diesen oder höheren Beträgen stattfinden kann, wird sie rückgängig gemacht. Wenn Sie diese Funktion nicht wünschen, geben Sie einfach null an.
+Dies sind die minimal akzeptablen Einzahlungsbeträge. Wenn die Transaktion nicht mit diesen oder höheren Beträgen stattfinden kann, wird sie rückgängig gemacht. Wenn man diese Funktion nicht möchte, gibt man einfach null an.
 
-Liquiditätsanbieter geben in der Regel ein Minimum an, weil sie die Transaktion auf einen Wechselkurs beschränken wollen, der nahe am aktuellen liegt. Wenn der Wechselkurs zu stark schwankt, könnte das auf Neuigkeiten hindeuten, die die zugrunde liegenden Werte verändern, und sie möchten manuell entscheiden, was zu tun ist.
+Liquiditätsanbieter geben typischerweise ein Minimum an, weil sie die Transaktion auf einen Wechselkurs beschränken wollen, der nahe am aktuellen liegt. Wenn der Wechselkurs zu stark schwankt, könnte das auf Neuigkeiten hindeuten, die die zugrunde liegenden Werte verändern, und sie möchten manuell entscheiden, was zu tun ist.
 
-Stellen Sie sich zum Beispiel einen Fall vor, in dem der Wechselkurs eins zu eins ist und der Liquiditätsanbieter diese Werte angibt:
+Stellen wir uns zum Beispiel einen Fall vor, in dem der Wechselkurs eins zu eins ist und der Liquiditätsanbieter diese Werte angibt:
 
 | Parameter      | Wert |
 | -------------- | ----: |
@@ -1009,7 +1008,7 @@ Stellen Sie sich zum Beispiel einen Fall vor, in dem der Wechselkurs eins zu ein
 
 Solange der Wechselkurs zwischen 0,9 und 1,25 bleibt, findet die Transaktion statt. Wenn der Wechselkurs diesen Bereich verlässt, wird die Transaktion abgebrochen.
 
-Der Grund für diese Vorsichtsmaßnahme ist, dass Transaktionen nicht sofort erfolgen; Sie reichen sie ein und schließlich wird ein Validator sie in einen Block aufnehmen (es sei denn, Ihr Gaspreis ist sehr niedrig, in welchem Fall Sie eine weitere Transaktion mit derselben Nonce und einem höheren Gaspreis einreichen müssen, um sie zu überschreiben). Sie können nicht kontrollieren, was in der Zeit zwischen Einreichung und Aufnahme passiert.
+Der Grund für diese Vorsichtsmaßnahme ist, dass Transaktionen nicht sofort erfolgen; man reicht sie ein und irgendwann wird ein Validator sie in einen Block aufnehmen (es sei denn, der Gaspreis ist sehr niedrig, in welchem Fall man eine weitere Transaktion mit derselben Nonce und einem höheren Gaspreis einreichen muss, um sie zu überschreiben). Man kann nicht kontrollieren, was in der Zeit zwischen Einreichung und Aufnahme passiert.
 
 ```solidity
     ) internal virtual returns (uint amountA, uint amountB) {
@@ -1024,27 +1023,27 @@ Die Funktion gibt die Beträge zurück, die der Liquiditätsanbieter einzahlen s
         }
 ```
 
-Wenn es noch keinen Tausch für dieses Token-Paar gibt, erstellen Sie ihn.
+Wenn es noch keinen Tausch für dieses Token-Paar gibt, wird er erstellt.
 
 ```solidity
         (uint reserveA, uint reserveB) = UniswapV2Library.getReserves(factory, tokenA, tokenB);
 ```
 
-Rufen Sie die aktuellen Reserven im Paar ab.
+Die aktuellen Reserven im Paar abrufen.
 
 ```solidity
         if (reserveA == 0 && reserveB == 0) {
             (amountA, amountB) = (amountADesired, amountBDesired);
 ```
 
-Wenn die aktuellen Reserven leer sind, handelt es sich um ein neues Tauschpaar. Die einzuzahlenden Beträge sollten genau den Beträgen entsprechen, die der Liquiditätsanbieter bereitstellen möchte.
+Wenn die aktuellen Reserven leer sind, handelt es sich um einen neuen Paar-Tausch. Die einzuzahlenden Beträge sollten genau denen entsprechen, die der Liquiditätsanbieter bereitstellen möchte.
 
 ```solidity
         } else {
             uint amountBOptimal = UniswapV2Library.quote(amountADesired, reserveA, reserveB);
 ```
 
-Wenn wir sehen müssen, wie hoch die Beträge sein werden, ermitteln wir den optimalen Betrag mit [dieser Funktion](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L35). Wir wollen das gleiche Verhältnis wie bei den aktuellen Reserven.
+Wenn wir sehen müssen, wie hoch die Beträge sein werden, ermitteln wir den optimalen Betrag mit [dieser Funktion](https://github.com/Uniswap/v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L36). Wir wollen das gleiche Verhältnis wie bei den aktuellen Reserven.
 
 ```solidity
             if (amountBOptimal <= amountBDesired) {
@@ -1052,7 +1051,7 @@ Wenn wir sehen müssen, wie hoch die Beträge sein werden, ermitteln wir den opt
                 (amountA, amountB) = (amountADesired, amountBOptimal);
 ```
 
-Wenn `amountBOptimal` kleiner ist als der Betrag, den der Liquiditätsanbieter einzahlen möchte, bedeutet dies, dass Token B derzeit wertvoller ist, als der Liquiditätseinleger denkt, sodass ein kleinerer Betrag erforderlich ist.
+Wenn `amountBOptimal` kleiner ist als der Betrag, den der Liquiditätsanbieter einzahlen möchte, bedeutet das, dass Token B derzeit wertvoller ist, als der Liquiditätseinleger denkt, sodass ein kleinerer Betrag erforderlich ist.
 
 ```solidity
             } else {
@@ -1062,13 +1061,13 @@ Wenn `amountBOptimal` kleiner ist als der Betrag, den der Liquiditätsanbieter e
                 (amountA, amountB) = (amountAOptimal, amountBDesired);
 ```
 
-Wenn der optimale B-Betrag höher ist als der gewünschte B-Betrag, bedeutet dies, dass B-Token derzeit weniger wertvoll sind, als der Liquiditätseinleger denkt, sodass ein höherer Betrag erforderlich ist. Der gewünschte Betrag ist jedoch ein Maximum, daher können wir das nicht tun. Stattdessen berechnen wir die optimale Anzahl von A-Token für die gewünschte Menge an B-Token.
+Wenn der optimale B-Betrag größer ist als der gewünschte B-Betrag, bedeutet das, dass B-Token derzeit weniger wertvoll sind, als der Liquiditätseinleger denkt, sodass ein höherer Betrag erforderlich ist. Der gewünschte Betrag ist jedoch ein Maximum, also können wir das nicht tun. Stattdessen berechnen wir die optimale Anzahl an A-Token für die gewünschte Menge an B-Token.
 
-Zusammengenommen ergibt sich dieses Diagramm. Nehmen wir an, Sie versuchen, tausend A-Token (blaue Linie) und tausend B-Token (rote Linie) einzuzahlen. Die x-Achse ist der Wechselkurs, A/B. Wenn x=1, sind sie gleich viel wert und Sie zahlen von jedem tausend ein. Wenn x=2, ist A doppelt so viel wert wie B (Sie erhalten zwei B-Token für jeden A-Token), also zahlen Sie tausend B-Token ein, aber nur 500 A-Token. Wenn x=0,5, ist die Situation umgekehrt: tausend A-Token und fünfhundert B-Token.
+Zusammengenommen ergibt sich dieses Diagramm. Angenommen, man versucht, tausend A-Token (blaue Linie) und tausend B-Token (rote Linie) einzuzahlen. Die x-Achse ist der Wechselkurs, A/B. Wenn x=1, sind sie gleich viel wert und man zahlt von jedem tausend ein. Wenn x=2, ist A doppelt so viel wert wie B (man bekommt zwei B-Token für jeden A-Token), also zahlt man tausend B-Token ein, aber nur 500 A-Token. Wenn x=0,5, ist die Situation umgekehrt: tausend A-Token und fünfhundert B-Token.
 
 ![Graph](liquidityProviderDeposit.png)
 
-Sie könnten Liquidität direkt in den Kernvertrag einzahlen (mit [UniswapV2Pair::mint](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol#L110)), aber der Kernvertrag prüft nur, ob er selbst nicht betrogen wird. Sie gehen also das Risiko ein, an Wert zu verlieren, wenn sich der Wechselkurs zwischen dem Zeitpunkt der Einreichung Ihrer Transaktion und dem Zeitpunkt ihrer Ausführung ändert. Wenn Sie den Peripherie-Vertrag verwenden, berechnet er den Betrag, den Sie einzahlen sollten, und zahlt ihn sofort ein, sodass sich der Wechselkurs nicht ändert und Sie nichts verlieren.
+Man könnte Liquidität direkt in den Kernvertrag einzahlen (mit [UniswapV2Pair::mint](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol#L110)), aber der Kernvertrag prüft nur, ob er selbst nicht betrogen wird. Man geht also das Risiko ein, Werte zu verlieren, wenn sich der Wechselkurs zwischen dem Zeitpunkt der Einreichung der Transaktion und dem Zeitpunkt ihrer Ausführung ändert. Wenn man den Peripherie-Vertrag verwendet, berechnet dieser den Betrag, den man einzahlen sollte, und zahlt ihn sofort ein, sodass sich der Wechselkurs nicht ändert und man nichts verliert.
 
 ```solidity
     function addLiquidity(
@@ -1084,8 +1083,8 @@ Sie könnten Liquidität direkt in den Kernvertrag einzahlen (mit [UniswapV2Pair
 
 Diese Funktion kann durch eine Transaktion aufgerufen werden, um Liquidität einzuzahlen. Die meisten Parameter sind die gleichen wie in `_addLiquidity` oben, mit zwei Ausnahmen:
 
-. `to` ist die Adresse, für die die neuen Liquiditäts-Token geprägt werden, um den Anteil des Liquiditätsanbieters am Pool anzuzeigen
-. `deadline` ist ein Zeitlimit für die Transaktion
+- `to` ist die Adresse, für die die neuen Liquiditäts-Token geprägt werden, um den Anteil des Liquiditätsanbieters am Pool anzuzeigen
+- `deadline` ist ein Zeitlimit für die Transaktion
 
 ```solidity
     ) external virtual override ensure(deadline) returns (uint amountA, uint amountB, uint liquidity) {
@@ -1093,21 +1092,21 @@ Diese Funktion kann durch eine Transaktion aufgerufen werden, um Liquidität ein
         address pair = UniswapV2Library.pairFor(factory, tokenA, tokenB);
 ```
 
-Wir berechnen die tatsächlich einzuzahlenden Beträge und ermitteln dann die Adresse des Liquiditätspools. Um Gas zu sparen, tun wir dies nicht, indem wir die Factory abfragen, sondern indem wir die Bibliotheksfunktion `pairFor` verwenden (siehe unten unter Bibliotheken).
+Wir berechnen die tatsächlich einzuzahlenden Beträge und ermitteln dann die Adresse des Liquiditätspools. Um Gas zu sparen, tun wir dies nicht durch eine Anfrage an die Factory, sondern verwenden die Bibliotheksfunktion `pairFor` (siehe unten bei Bibliotheken).
 
 ```solidity
         TransferHelper.safeTransferFrom(tokenA, msg.sender, pair, amountA);
         TransferHelper.safeTransferFrom(tokenB, msg.sender, pair, amountB);
 ```
 
-Transferieren Sie die korrekten Token-Beträge vom Benutzer in das Tauschpaar.
+Die korrekten Token-Beträge vom Nutzer in den Paar-Tausch transferieren.
 
 ```solidity
         liquidity = IUniswapV2Pair(pair).mint(to);
     }
 ```
 
-Im Gegenzug erhält die Adresse `to` Liquiditäts-Token für den teilweisen Besitz des Pools. Die Funktion `mint` des Kernvertrags prüft, wie viele zusätzliche Token er hat (im Vergleich zum letzten Mal, als sich die Liquidität geändert hat), und prägt entsprechend Liquidität.
+Im Gegenzug erhält die Adresse `to` Liquiditäts-Token für den anteiligen Besitz am Pool. Die Funktion `mint` des Kernvertrags sieht, wie viele zusätzliche Token er hat (im Vergleich zum letzten Mal, als sich die Liquidität geändert hat), und prägt entsprechend Liquidität.
 
 ```solidity
     function addLiquidityETH(
@@ -1115,7 +1114,7 @@ Im Gegenzug erhält die Adresse `to` Liquiditäts-Token für den teilweisen Besi
         uint amountTokenDesired,
 ```
 
-Wenn ein Liquiditätsanbieter Liquidität für einen Token/ETH-Paar-Tausch bereitstellen möchte, gibt es einige Unterschiede. Der Vertrag übernimmt das Wrapping der ETH für den Liquiditätsanbieter. Es ist nicht nötig anzugeben, wie viele ETH der Benutzer einzahlen möchte, da der Benutzer sie einfach mit der Transaktion sendet (der Betrag ist in `msg.value` verfügbar).
+Wenn ein Liquiditätsanbieter Liquidität für einen Token/ETH-Paar-Tausch bereitstellen möchte, gibt es einige Unterschiede. Der Vertrag übernimmt das Wrapping der ETH für den Liquiditätsanbieter. Es ist nicht nötig anzugeben, wie viele ETH der Nutzer einzahlen möchte, da der Nutzer sie einfach mit der Transaktion sendet (der Betrag ist in `msg.value` verfügbar).
 
 ```solidity
         uint amountTokenMin,
@@ -1137,16 +1136,16 @@ Wenn ein Liquiditätsanbieter Liquidität für einen Token/ETH-Paar-Tausch berei
         assert(IWETH(WETH).transfer(pair, amountETH));
 ```
 
-Um die ETH einzuzahlen, verpackt der Vertrag sie zunächst in WETH und transferiert die WETH dann in das Paar. Beachten Sie, dass der Transfer in ein `assert` eingebettet ist. Das bedeutet, dass bei einem Fehlschlagen des Transfers auch dieser Vertragsaufruf fehlschlägt und das Wrapping somit nicht wirklich stattfindet.
+Um die ETH einzuzahlen, verpackt der Vertrag sie zunächst in WETH und transferiert die WETH dann in das Paar. Man beachte, dass der Transfer in eine `assert` eingewickelt ist. Das bedeutet, dass bei einem Fehlschlagen des Transfers auch dieser Vertragsaufruf fehlschlägt und das Wrapping somit nicht wirklich stattfindet.
 
 ```solidity
         liquidity = IUniswapV2Pair(pair).mint(to);
-        // erstattet Dust-Ether, falls vorhanden
+        // erstattet Dust-ETH, falls vorhanden
         if (msg.value > amountETH) TransferHelper.safeTransferETH(msg.sender, msg.value - amountETH);
     }
 ```
 
-Der Benutzer hat uns die ETH bereits gesendet. Wenn also etwas übrig bleibt (weil der andere Token weniger wertvoll ist, als der Benutzer dachte), müssen wir eine Rückerstattung veranlassen.
+Der Nutzer hat uns die ETH bereits gesendet. Wenn also etwas übrig bleibt (weil der andere Token weniger wertvoll ist, als der Nutzer dachte), müssen wir eine Rückerstattung veranlassen.
 
 #### Liquidität entfernen {#remove-liquidity}
 
@@ -1173,7 +1172,7 @@ Der einfachste Fall der Liquiditätsentfernung. Es gibt einen Mindestbetrag für
         (uint amount0, uint amount1) = IUniswapV2Pair(pair).burn(to);
 ```
 
-Die Funktion `burn` des Kernvertrags übernimmt die Rückzahlung der Token an den Benutzer.
+Die Funktion `burn` des Kernvertrags übernimmt die Rückzahlung der Token an den Nutzer.
 
 ```solidity
         (address token0,) = UniswapV2Library.sortTokens(tokenA, tokenB);
@@ -1185,7 +1184,7 @@ Wenn eine Funktion mehrere Werte zurückgibt, wir aber nur an einigen davon inte
         (amountA, amountB) = tokenA == token0 ? (amount0, amount1) : (amount1, amount0);
 ```
 
-Übersetzen Sie die Beträge von der Art und Weise, wie der Kernvertrag sie zurückgibt (Token mit der niedrigeren Adresse zuerst), in die Art und Weise, wie der Benutzer sie erwartet (entsprechend `tokenA` und `tokenB`).
+Die Beträge von der Art und Weise, wie der Kernvertrag sie zurückgibt (Token mit der niedrigeren Adresse zuerst), in die Art und Weise übersetzen, wie der Nutzer sie erwartet (entsprechend `tokenA` und `tokenB`).
 
 ```solidity
         require(amountA >= amountAMin, 'UniswapV2Router: INSUFFICIENT_A_AMOUNT');
@@ -1193,7 +1192,7 @@ Wenn eine Funktion mehrere Werte zurückgibt, wir aber nur an einigen davon inte
     }
 ```
 
-Es ist in Ordnung, zuerst den Transfer durchzuführen und dann zu überprüfen, ob er legitim ist, denn wenn dies nicht der Fall ist, machen wir alle Zustandsänderungen rückgängig.
+Es ist in Ordnung, zuerst den Transfer durchzuführen und dann zu überprüfen, ob er legitim ist, denn wenn er es nicht ist, werden wir alle Zustandsänderungen rückgängig machen.
 
 ```solidity
     function removeLiquidityETH(
@@ -1255,11 +1254,11 @@ Das Entfernen von Liquidität für ETH ist fast dasselbe, außer dass wir die WE
     }
 ```
 
-Diese Funktionen leiten Meta-Transaktionen weiter, um Benutzern ohne Ether die Abhebung aus dem Pool zu ermöglichen, wobei [der Permit-Mechanismus](#uniswapv2erc20) verwendet wird.
+Diese Funktionen leiten Meta-Transaktionen weiter, um Nutzern ohne Ether die Auszahlung aus dem Pool zu ermöglichen, wobei [der Permit-Mechanismus](#uniswapv2erc20) verwendet wird.
 
 ```solidity
 
-    // **** LIQUIDITÄT ENTFERNEN (unterstützt Token mit Gebühr bei Transfer) ****
+    // **** LIQUIDITÄT ENTFERNEN (unterstützt Token mit Gebühr beim Transfer) ****
     function removeLiquidityETHSupportingFeeOnTransferTokens(
         address token,
         uint liquidity,
@@ -1313,7 +1312,7 @@ Die letzte Funktion kombiniert Speichergebühren mit Meta-Transaktionen.
 
 ```solidity
     // **** TAUSCH ****
-    // setzt voraus, dass der anfängliche Betrag bereits an das erste Paar gesendet wurde
+    // erfordert, dass der anfängliche Betrag bereits an das erste Paar gesendet wurde
     function _swap(uint[] memory amounts, address[] memory path, address _to) internal virtual {
 ```
 
@@ -1323,16 +1322,16 @@ Diese Funktion führt interne Verarbeitungen durch, die für die Funktionen erfo
         for (uint i; i < path.length - 1; i++) {
 ```
 
-Während ich dies schreibe, gibt es [388.160 ERC-20-Token](https://eth.blockscout.com/tokens). Wenn es für jedes Token-Paar ein Tauschpaar gäbe, wären das über 150 Milliarden Tauschpaare. Die gesamte Chain hat im Moment [nur 0,1 % dieser Anzahl an Konten](https://eth.blockscout.com/stats/accountsGrowth). Stattdessen unterstützen die Tausch-Funktionen das Konzept eines Pfades. Ein Händler kann A gegen B, B gegen C und C gegen D tauschen, sodass kein direktes A-D-Tauschpaar erforderlich ist.
+Während ich dies schreibe, gibt es [388.160 ERC-20-Token](https://eth.blockscout.com/tokens). Wenn es für jedes Token-Paar einen Paar-Tausch gäbe, wären das über 150 Milliarden Paar-Tausche. Die gesamte Chain hat im Moment [nur 0,1 % dieser Anzahl an Konten](https://eth.blockscout.com/stats/accountsGrowth). Stattdessen unterstützen die Tausch-Funktionen das Konzept eines Pfades. Ein Händler kann A gegen B, B gegen C und C gegen D tauschen, sodass kein direkter A-D-Paar-Tausch erforderlich ist.
 
-Die Preise auf diesen Märkten sind in der Regel synchronisiert, denn wenn sie nicht synchron sind, entsteht eine Möglichkeit für Arbitrage. Stellen Sie sich zum Beispiel drei Token vor: A, B und C. Es gibt drei Tauschpaare, eines für jedes Paar.
+Die Preise auf diesen Märkten neigen dazu, synchronisiert zu sein, denn wenn sie nicht synchron sind, entsteht eine Gelegenheit für Arbitrage. Stellen wir uns zum Beispiel drei Token vor: A, B und C. Es gibt drei Paar-Tausche, einen für jedes Paar.
 
 1. Die Ausgangssituation
-2. Ein Händler verkauft 24,695 A-Token und erhält 25,305 B-Token.
-3. Der Händler verkauft 24,695 B-Token für 25,305 C-Token und behält etwa 0,61 B-Token als Gewinn.
-4. Dann verkauft der Händler 24,695 C-Token für 25,305 A-Token und behält etwa 0,61 C-Token als Gewinn. Der Händler hat außerdem 0,61 zusätzliche A-Token (die 25,305, die der Händler am Ende hat, abzüglich der ursprünglichen Investition von 24,695).
+2. Ein Händler verkauft 24.695 A-Token und erhält 25.305 B-Token.
+3. Der Händler verkauft 24.695 B-Token für 25.305 C-Token und behält etwa 0,61 B-Token als Gewinn.
+4. Dann verkauft der Händler 24.695 C-Token für 25.305 A-Token und behält etwa 0,61 C-Token als Gewinn. Der Händler hat außerdem 0,61 zusätzliche A-Token (die 25.305, mit denen der Händler am Ende dasteht, abzüglich der ursprünglichen Investition von 24.695).
 
-| Schritt | A-B Tausch                | B-C Tausch                | A-C Tausch                |
+| Schritt | A-B-Tausch                  | B-C-Tausch                  | A-C-Tausch                  |
 | ---- | --------------------------- | --------------------------- | --------------------------- |
 | 1    | A:1000 B:1050 A/B=1.05      | B:1000 C:1050 B/C=1.05      | A:1050 C:1000 C/A=1.05      |
 | 2    | A:1024.695 B:1024.695 A/B=1 | B:1000 C:1050 B/C=1.05      | A:1050 C:1000 C/A=1.05      |
@@ -1345,19 +1344,19 @@ Die Preise auf diesen Märkten sind in der Regel synchronisiert, denn wenn sie n
             uint amountOut = amounts[i + 1];
 ```
 
-Rufen Sie das Paar ab, das wir gerade bearbeiten, sortieren Sie es (zur Verwendung mit dem Paar) und rufen Sie den erwarteten Ausgabebetrag ab.
+Das Paar abrufen, das wir gerade bearbeiten, es sortieren (zur Verwendung mit dem Paar) und den erwarteten Ausgabebetrag abrufen.
 
 ```solidity
             (uint amount0Out, uint amount1Out) = input == token0 ? (uint(0), amountOut) : (amountOut, uint(0));
 ```
 
-Rufen Sie die erwarteten Ausgabebeträge ab, sortiert so, wie das Tauschpaar sie erwartet.
+Die erwarteten Ausgabebeträge abrufen, sortiert so, wie der Paar-Tausch sie erwartet.
 
 ```solidity
             address to = i < path.length - 2 ? UniswapV2Library.pairFor(factory, output, path[i + 2]) : _to;
 ```
 
-Ist dies der letzte Tausch? Wenn ja, senden Sie die für den Handel erhaltenen Token an das Ziel. Wenn nicht, senden Sie sie an das nächste Tauschpaar.
+Ist dies der letzte Tausch? Wenn ja, die für den Handel erhaltenen Token an das Ziel senden. Wenn nicht, an den nächsten Paar-Tausch senden.
 
 ```solidity
 
@@ -1368,7 +1367,7 @@ Ist dies der letzte Tausch? Wenn ja, senden Sie die für den Handel erhaltenen T
     }
 ```
 
-Rufen Sie tatsächlich das Tauschpaar auf, um die Token zu tauschen. Wir benötigen keinen Callback, um über den Tausch informiert zu werden, daher senden wir keine Bytes in diesem Feld.
+Tatsächlich den Paar-Tausch aufrufen, um die Token zu tauschen. Wir benötigen keinen Callback, um über den Tausch informiert zu werden, daher senden wir keine Bytes in diesem Feld.
 
 ```solidity
     function swapExactTokensForTokens(
@@ -1382,9 +1381,9 @@ Diese Funktion wird direkt von Händlern verwendet, um einen Token gegen einen a
         address[] calldata path,
 ```
 
-Dieser Parameter enthält die Adressen der ERC-20-Verträge. Wie oben erklärt, handelt es sich um ein Array, da Sie möglicherweise mehrere Tauschpaare durchlaufen müssen, um von dem Vermögenswert, den Sie haben, zu dem Vermögenswert zu gelangen, den Sie möchten.
+Dieser Parameter enthält die Adressen der ERC-20-Verträge. Wie oben erklärt, handelt es sich um ein Array, da man möglicherweise mehrere Paar-Tausche durchlaufen muss, um von dem Vermögenswert, den man hat, zu dem Vermögenswert zu gelangen, den man möchte.
 
-Ein Funktionsparameter in Solidity kann entweder im `memory` oder in den `calldata` gespeichert werden. Wenn die Funktion ein Einstiegspunkt in den Vertrag ist, der direkt von einem Benutzer (über eine Transaktion) oder von einem anderen Vertrag aufgerufen wird, kann der Wert des Parameters direkt aus den Aufrufdaten entnommen werden. Wenn die Funktion intern aufgerufen wird, wie `_swap` oben, müssen die Parameter im `memory` gespeichert werden. Aus der Perspektive des aufgerufenen Vertrags sind die `calldata` schreibgeschützt.
+Ein Funktionsparameter in Solidity kann entweder in `memory` oder in den `calldata` gespeichert werden. Wenn die Funktion ein Einstiegspunkt in den Vertrag ist, der direkt von einem Nutzer (über eine Transaktion) oder von einem anderen Vertrag aufgerufen wird, kann der Wert des Parameters direkt aus den Aufrufdaten entnommen werden. Wenn die Funktion intern aufgerufen wird, wie `_swap` oben, müssen die Parameter in `memory` gespeichert werden. Aus der Perspektive des aufgerufenen Vertrags sind `calldata` schreibgeschützt.
 
 Bei skalaren Typen wie `uint` oder `address` übernimmt der Compiler die Wahl des Speichers für uns, aber bei Arrays, die länger und teurer sind, geben wir die Art des zu verwendenden Speichers an.
 
@@ -1394,14 +1393,14 @@ Bei skalaren Typen wie `uint` oder `address` übernimmt der Compiler die Wahl de
     ) external virtual override ensure(deadline) returns (uint[] memory amounts) {
 ```
 
-Rückgabewerte werden immer im Memory zurückgegeben.
+Rückgabewerte werden immer im Speicher (Memory) zurückgegeben.
 
 ```solidity
         amounts = UniswapV2Library.getAmountsOut(factory, amountIn, path);
         require(amounts[amounts.length - 1] >= amountOutMin, 'UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT');
 ```
 
-Berechnen Sie den Betrag, der bei jedem Tausch gekauft werden soll. Wenn das Ergebnis geringer ist als das Minimum, das der Händler zu akzeptieren bereit ist, machen Sie die Transaktion rückgängig.
+Den Betrag berechnen, der bei jedem Tausch gekauft werden soll. Wenn das Ergebnis kleiner ist als das Minimum, das der Händler zu akzeptieren bereit ist, wird die Transaktion rückgängig gemacht.
 
 ```solidity
         TransferHelper.safeTransferFrom(
@@ -1411,7 +1410,7 @@ Berechnen Sie den Betrag, der bei jedem Tausch gekauft werden soll. Wenn das Erg
     }
 ```
 
-Transferieren Sie schließlich den anfänglichen ERC-20-Token auf das Konto für das erste Tauschpaar und rufen Sie `_swap` auf. Dies geschieht alles in derselben Transaktion, sodass das Tauschpaar weiß, dass alle unerwarteten Token Teil dieses Transfers sind.
+Schließlich den anfänglichen ERC-20-Token auf das Konto für den ersten Paar-Tausch transferieren und `_swap` aufrufen. Dies geschieht alles in derselben Transaktion, sodass der Paar-Tausch weiß, dass alle unerwarteten Token Teil dieses Transfers sind.
 
 ```solidity
     function swapTokensForExactTokens(
@@ -1430,7 +1429,7 @@ Transferieren Sie schließlich den anfänglichen ERC-20-Token auf das Konto für
     }
 ```
 
-Die vorherige Funktion, `swapTokensForTokens`, ermöglicht es einem Händler, eine genaue Anzahl von Eingabe-Token anzugeben, die er zu geben bereit ist, und die Mindestanzahl von Ausgabe-Token, die er im Gegenzug zu erhalten bereit ist. Diese Funktion führt den umgekehrten Tausch durch: Sie lässt einen Händler die Anzahl der gewünschten Ausgabe-Token und die maximale Anzahl der Eingabe-Token angeben, die er dafür zu zahlen bereit ist.
+Die vorherige Funktion, `swapExactTokensForTokens`, ermöglicht es einem Händler, eine genaue Anzahl von Eingabe-Token anzugeben, die er zu geben bereit ist, und die Mindestanzahl von Ausgabe-Token, die er im Gegenzug zu erhalten bereit ist. Diese Funktion führt den umgekehrten Tausch durch: Sie lässt einen Händler die Anzahl der gewünschten Ausgabe-Token und die maximale Anzahl der Eingabe-Token angeben, die er dafür zu zahlen bereit ist.
 
 In beiden Fällen muss der Händler diesem Peripherie-Vertrag zunächst einen Freigabebetrag gewähren, damit dieser sie transferieren kann.
 
@@ -1505,20 +1504,20 @@ In beiden Fällen muss der Händler diesem Peripherie-Vertrag zunächst einen Fr
         IWETH(WETH).deposit{value: amounts[0]}();
         assert(IWETH(WETH).transfer(UniswapV2Library.pairFor(factory, path[0], path[1]), amounts[0]));
         _swap(amounts, path, to);
-        // erstattet Dust-Ether, falls vorhanden
+        // erstattet Dust-ETH, falls vorhanden
         if (msg.value > amounts[0]) TransferHelper.safeTransferETH(msg.sender, msg.value - amounts[0]);
     }
 ```
 
-Diese vier Varianten beinhalten alle den Handel zwischen ETH und Token. Der einzige Unterschied besteht darin, dass wir entweder ETH vom Händler erhalten und diese verwenden, um WETH zu prägen, oder wir erhalten WETH vom letzten Tausch im Pfad und verbrennen sie, um dem Händler die resultierenden ETH zurückzusenden.
+Diese vier Varianten beinhalten alle den Handel zwischen ETH und Token. Der einzige Unterschied besteht darin, dass wir entweder ETH vom Händler erhalten und diese verwenden, um WETH zu prägen, oder wir erhalten WETH vom letzten Tausch im Pfad und verbrennen sie, wobei wir dem Händler die resultierenden ETH zurücksenden.
 
 ```solidity
-    // **** TAUSCH (unterstützt Token mit Gebühr bei Transfer) ****
-    // setzt voraus, dass der anfängliche Betrag bereits an das erste Paar gesendet wurde
+    // **** TAUSCH (unterstützt Token mit Gebühr beim Transfer) ****
+    // erfordert, dass der anfängliche Betrag bereits an das erste Paar gesendet wurde
     function _swapSupportingFeeOnTransferTokens(address[] memory path, address _to) internal virtual {
 ```
 
-Dies ist die interne Funktion zum Tauschen von Token, die Transfer- oder Speichergebühren haben, um ([dieses Problem](https://github.com/Uniswap/uniswap-interface/issues/835)) zu lösen.
+Dies ist die interne Funktion zum Tauschen von Token, die Transfer- oder Speichergebühren haben, um ([dieses Problem](https://github.com/Uniswap/interface/issues/835)) zu lösen.
 
 ```solidity
         for (uint i; i < path.length - 1; i++) {
@@ -1527,7 +1526,7 @@ Dies ist die interne Funktion zum Tauschen von Token, die Transfer- oder Speiche
             IUniswapV2Pair pair = IUniswapV2Pair(UniswapV2Library.pairFor(factory, input, output));
             uint amountInput;
             uint amountOutput;
-            { // Gültigkeitsbereich, um 'stack too deep'-Fehler zu vermeiden
+            { // Gültigkeitsbereich, um 'Stack too deep'-Fehler zu vermeiden
             (uint reserve0, uint reserve1,) = pair.getReserves();
             (uint reserveInput, uint reserveOutput) = input == token0 ? (reserve0, reserve1) : (reserve1, reserve0);
             amountInput = IERC20(input).balanceOf(address(pair)).sub(reserveInput);
@@ -1615,7 +1614,7 @@ Hinweis: Theoretisch könnten wir einfach diese Funktion anstelle von `_swap` ve
     }
 ```
 
-Dies sind dieselben Varianten, die für normale Token verwendet werden, aber sie rufen stattdessen `_swapSupportingFeeOnTransferTokens` auf.
+Dies sind die gleichen Varianten, die für normale Token verwendet werden, aber sie rufen stattdessen `_swapSupportingFeeOnTransferTokens` auf.
 
 ```solidity
     // **** BIBLIOTHEKSFUNKTIONEN ****
@@ -1689,7 +1688,7 @@ library Math {
         z = x < y ? x : y;
     }
 
-    // babylonische Methode (https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
+    // babylonisches Verfahren (https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
     function sqrt(uint y) internal pure returns (uint z) {
         if (y > 3) {
             z = y;
@@ -1704,7 +1703,7 @@ Beginnen Sie mit x als Schätzwert, der höher als die Quadratwurzel ist (das is
                 x = (y / x + x) / 2;
 ```
 
-Ermitteln Sie einen genaueren Schätzwert: den Durchschnitt aus dem vorherigen Schätzwert und der Zahl, deren Quadratwurzel wir suchen, geteilt durch den vorherigen Schätzwert. Wiederholen Sie dies, bis der neue Schätzwert nicht mehr niedriger als der bestehende ist. Weitere Details [finden Sie hier](https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method).
+Ermitteln Sie einen genaueren Schätzwert, den Durchschnitt aus dem vorherigen Schätzwert und der Zahl, deren Quadratwurzel wir suchen, geteilt durch den vorherigen Schätzwert. Wiederholen Sie dies, bis der neue Schätzwert nicht mehr niedriger als der bestehende ist. Weitere Details [finden Sie hier](https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method).
 
 ```solidity
             }
@@ -1712,7 +1711,7 @@ Ermitteln Sie einen genaueren Schätzwert: den Durchschnitt aus dem vorherigen S
             z = 1;
 ```
 
-Wir sollten niemals die Quadratwurzel von null benötigen. Die Quadratwurzeln von eins, zwei und drei sind ungefähr eins (wir verwenden Ganzzahlen, ignorieren also den Bruchteil).
+Wir sollten niemals die Quadratwurzel von null benötigen. Die Quadratwurzeln von eins, zwei und drei sind ungefähr eins (wir verwenden Ganzzahlen, also ignorieren wir den Bruchteil).
 
 ```solidity
         }
@@ -1720,7 +1719,7 @@ Wir sollten niemals die Quadratwurzel von null benötigen. Die Quadratwurzeln vo
 }
 ```
 
-### Festkommabruchteile (UQ112x112) {#fixedpoint}
+### Festkommabrüche (UQ112x112) {#fixedpoint}
 
 Diese Bibliothek verarbeitet Brüche, die normalerweise nicht Teil der Ethereum-Arithmetik sind. Sie tut dies, indem sie die Zahl _x_ als _x\*2^112_ kodiert. Dadurch können wir die ursprünglichen Additions- und Subtraktions-Opcodes ohne Änderung verwenden.
 
@@ -1729,7 +1728,7 @@ pragma solidity =0.5.16;
 
 // eine Bibliothek zur Handhabung binärer Festkommazahlen (https://wikipedia.org/wiki/Q_(number_format))
 
-// Bereich: [0, 2**112 - 1]
+// Wertebereich: [0, 2**112 - 1]
 // Auflösung: 1 / 2**112
 
 library UQ112x112 {
@@ -1755,7 +1754,7 @@ Da y `uint112` ist, kann es höchstens 2^112-1 sein. Diese Zahl kann immer noch 
 }
 ```
 
-Wenn wir zwei `UQ112x112`-Werte dividieren, wird das Ergebnis nicht mehr mit 2^112 multipliziert. Stattdessen nehmen wir also eine Ganzzahl für den Nenner. Wir hätten einen ähnlichen Trick für die Multiplikation anwenden müssen, aber wir müssen keine Multiplikation von `UQ112x112`-Werten durchführen.
+Wenn wir zwei `UQ112x112`-Werte dividieren, wird das Ergebnis nicht mehr mit 2^112 multipliziert. Stattdessen nehmen wir eine Ganzzahl für den Nenner. Wir hätten einen ähnlichen Trick anwenden müssen, um eine Multiplikation durchzuführen, aber wir müssen keine Multiplikation von `UQ112x112`-Werten durchführen.
 
 ### UniswapV2Library {#uniswapv2library}
 
@@ -1779,7 +1778,7 @@ library UniswapV2Library {
     }
 ```
 
-Sortieren Sie die beiden Token nach Adresse, damit wir die Adresse des Paar-Tauschs für sie erhalten können. Dies ist notwendig, da wir sonst zwei Möglichkeiten hätten, eine für die Parameter A,B und eine weitere für die Parameter B,A, was zu zwei Tauschvorgängen statt einem führen würde.
+Sortieren Sie die beiden Token nach Adresse, damit wir die Adresse der Paar-Exchange für sie erhalten können. Dies ist notwendig, da wir sonst zwei Möglichkeiten hätten, eine für die Parameter A,B und eine weitere für die Parameter B,A, was zu zwei Exchanges statt einer führen würde.
 
 ```solidity
     // berechnet die CREATE2-Adresse für ein Paar, ohne externe Aufrufe zu tätigen
@@ -1794,7 +1793,7 @@ Sortieren Sie die beiden Token nach Adresse, damit wir die Adresse des Paar-Taus
     }
 ```
 
-Diese Funktion berechnet die Adresse des Paar-Tauschs für die beiden Token. Dieser Vertrag wird mit [dem CREATE2-Opcode](https://eips.ethereum.org/EIPS/eip-1014) erstellt, sodass wir die Adresse mit demselben Algorithmus berechnen können, wenn wir die verwendeten Parameter kennen. Dies ist viel günstiger, als die Factory abzufragen, und
+Diese Funktion berechnet die Adresse der Paar-Exchange für die beiden Token. Dieser Vertrag wird mit [dem CREATE2-Opcode](https://eips.ethereum.org/EIPS/eip-1014) erstellt, sodass wir die Adresse mit demselben Algorithmus berechnen können, wenn wir die verwendeten Parameter kennen. Dies ist viel günstiger, als die Factory abzufragen, und erfordert keinen externen Aufruf.
 
 ```solidity
     // ruft die Reserven für ein Paar ab und sortiert sie
@@ -1805,7 +1804,7 @@ Diese Funktion berechnet die Adresse des Paar-Tauschs für die beiden Token. Die
     }
 ```
 
-Diese Funktion gibt die Reserven der beiden Token zurück, über die der Paar-Tausch verfügt. Beachten Sie, dass sie die Token in beliebiger Reihenfolge empfangen kann und sie für die interne Verwendung sortiert.
+Diese Funktion gibt die Reserven der beiden Token zurück, über die die Paar-Exchange verfügt. Beachten Sie, dass sie die Token in beliebiger Reihenfolge empfangen kann und sie für die interne Verwendung sortiert.
 
 ```solidity
     // gibt bei einer bestimmten Menge eines Vermögenswerts und Paar-Reserven eine äquivalente Menge des anderen Vermögenswerts zurück
@@ -1823,7 +1822,7 @@ Diese Funktion gibt Ihnen die Menge an Token B an, die Sie im Gegenzug für Toke
     function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {
 ```
 
-Die obige Funktion `quote` funktioniert hervorragend, wenn für die Nutzung des Paar-Tauschs keine Gebühr anfällt. Wenn jedoch eine Tauschgebühr von 0,3 % anfällt, ist der Betrag, den Sie tatsächlich erhalten, geringer. Diese Funktion berechnet den Betrag nach Abzug der Tauschgebühr.
+Die obige Funktion `quote` funktioniert hervorragend, wenn für die Nutzung der Paar-Exchange keine Gebühr anfällt. Wenn jedoch eine Tauschgebühr von 0,3 % anfällt, ist der Betrag, den Sie tatsächlich erhalten, geringer. Diese Funktion berechnet den Betrag nach Abzug der Tauschgebühr.
 
 ```solidity
 
@@ -1877,18 +1876,18 @@ Diese Funktion macht in etwa dasselbe, aber sie erhält den Ausgabebetrag und li
 }
 ```
 
-Diese beiden Funktionen übernehmen die Identifizierung der Werte, wenn es notwendig ist, mehrere Paar-Tauschvorgänge zu durchlaufen.
+Diese beiden Funktionen übernehmen die Identifizierung der Werte, wenn es notwendig ist, mehrere Paar-Exchanges zu durchlaufen.
 
 ### Transfer Helper {#transfer-helper}
 
-[Diese Bibliothek](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) fügt Erfolgsprüfungen rund um ERC-20- und Ethereum-Transfers hinzu, um einen Revert und die Rückgabe eines `false`-Wertes auf die gleiche Weise zu behandeln.
+[Diese Bibliothek](https://github.com/Uniswap/solidity-lib/blob/master/contracts/libraries/TransferHelper.sol) (in einem Repository, das jetzt archiviert ist) fügt Erfolgsprüfungen rund um ERC-20- und Ethereum-Transfers hinzu, um ein Rückgängigmachen und eine `false`-Wertrückgabe auf die gleiche Weise zu behandeln.
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 pragma solidity >=0.6.0;
 
-// Hilfsmethoden für die Interaktion mit ERC20-Token und das Senden von ETH, die nicht konsistent true/false zurückgeben
+// Hilfsmethoden für die Interaktion mit ERC-20-Token und das Senden von ETH, die nicht konsistent true/false zurückgeben
 library TransferHelper {
     function safeApprove(
         address token,
@@ -1902,8 +1901,8 @@ library TransferHelper {
 
 Wir können einen anderen Vertrag auf eine von zwei Arten aufrufen:
 
-- Eine Schnittstellendefinition verwenden, um einen Funktionsaufruf zu erstellen
-- Die [Application Binary Interface (ABI)](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html) „manuell“ verwenden, um den Aufruf zu erstellen. Genau dafür hat sich der Autor des Codes entschieden.
+- Verwenden einer Schnittstellendefinition, um einen Funktionsaufruf zu erstellen
+- Verwenden der [Application Binary Interface (ABI)](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html) „manuell“, um den Aufruf zu erstellen. Dies ist der Weg, für den sich der Autor des Codes entschieden hat.
 
 ```solidity
         require(
@@ -1932,7 +1931,7 @@ Aus Gründen der Abwärtskompatibilität mit Token, die vor dem ERC-20-Standard 
     }
 ```
 
-Diese Funktion implementiert die [Transfer-Funktionalität von ERC-20](https://eips.ethereum.org/EIPS/eip-20#transfer), die es einem Konto ermöglicht, den von einem anderen Konto bereitgestellten Freigabebetrag auszugeben.
+Diese Funktion implementiert [die Transfer-Funktionalität von ERC-20](https://eips.ethereum.org/EIPS/eip-20#transfer), die Token vom Aufrufer (diesem Vertrag) zu `to` verschiebt.
 
 ```solidity
 
@@ -1951,7 +1950,7 @@ Diese Funktion implementiert die [Transfer-Funktionalität von ERC-20](https://e
     }
 ```
 
-Diese Funktion implementiert die [transferFrom-Funktionalität von ERC-20](https://eips.ethereum.org/EIPS/eip-20#transferfrom), die es einem Konto ermöglicht, den von einem anderen Konto bereitgestellten Freigabebetrag auszugeben.
+Diese Funktion implementiert [die transferFrom-Funktionalität von ERC-20](https://eips.ethereum.org/EIPS/eip-20#transferfrom), die es einem Konto ermöglicht, den von einem anderen Konto bereitgestellten Freigabebetrag auszugeben.
 
 ```solidity
 
@@ -1962,12 +1961,12 @@ Diese Funktion implementiert die [transferFrom-Funktionalität von ERC-20](https
 }
 ```
 
-Diese Funktion transferiert Ether an ein Konto. Jeder Aufruf an einen anderen Vertrag kann versuchen, Ether zu senden. Da wir eigentlich keine Funktion aufrufen müssen, senden wir keine Daten mit dem Aufruf.
+Diese Funktion transferiert Ether auf ein Konto. Jeder Aufruf an einen anderen Vertrag kann versuchen, Ether zu senden. Da wir eigentlich keine Funktion aufrufen müssen, senden wir keine Daten mit dem Aufruf.
 
 ## Fazit {#conclusion}
 
-Dies ist ein langer Artikel mit etwa 50 Seiten. Wenn du es bis hierher geschafft hast: Herzlichen Glückwunsch! Hoffentlich hast du inzwischen die Überlegungen verstanden, die beim Schreiben einer echten Anwendung (im Gegensatz zu kurzen Beispielprogrammen) eine Rolle spielen, und bist nun besser in der Lage, Verträge für deine eigenen Anwendungsfälle zu schreiben.
+Dies ist ein langer Artikel von etwa 50 Seiten. Wenn du es bis hierher geschafft hast, herzlichen Glückwunsch! Hoffentlich hast du inzwischen verstanden, worauf es beim Schreiben einer realen Anwendung ankommt (im Gegensatz zu kurzen Beispielprogrammen), und bist nun besser in der Lage, Verträge für deine eigenen Anwendungsfälle zu schreiben.
 
 Geh nun, schreibe etwas Nützliches und beeindrucke uns.
 
-[Weitere Arbeiten von mir findest du hier](https://cryptodocguy.pro/).
+[Hier findest du weitere meiner Arbeiten](https://cryptodocguy.pro/).

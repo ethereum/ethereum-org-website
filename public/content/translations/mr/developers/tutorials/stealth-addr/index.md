@@ -93,9 +93,29 @@ sidebarDepth: 3
 
 आपण [Vite](https://vite.dev/) आणि [React](https://react.dev/) वापरणार आहोत. ही उद्योग-मानक साधने आहेत; जर तुम्हाला त्यांची माहिती नसेल, तर तुम्ही [हे ट्युटोरियल](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) वापरू शकता. Vite वापरण्यासाठी, आपल्याला Node ची आवश्यकता आहे.
 
-### छुपे पत्ते कृतीत पहा {#in-action}
+### छुपे पत्ते प्रत्यक्ष कृतीत पहा {#in-action}
 
-1. आवश्यक साधने स्थापित करा: [Rust](https://rust-lang.org/tools/install/) आणि [Node](https://nodejs.org/en/download).
+1. आवश्यक साधने स्थापित करा: [Rust](https://rust-lang.org/tools/install/), [Node](https://nodejs.org/en/download) (आवृत्ती 20.19 किंवा 22.12 किंवा नंतरची), आणि एक [Clang](https://clang.llvm.org/) C कंपायलर जो WebAssembly ला लक्ष्य करू शकतो. आपण वापरत असलेली Rust लायब्ररी [`secp256k1-sys`](https://crates.io/crates/secp256k1-sys) वर अवलंबून आहे, जी C कोड संकलित करते, त्यामुळे Clang गहाळ असल्यास `wasm-pack build` हे `failed to find tool "clang"` सह अयशस्वी होते. GCC WebAssembly मध्ये संकलित करू शकत नाही.
+
+   - Debian किंवा Ubuntu वर:
+
+     ```sh
+     sudo apt install clang
+     ```
+
+   - Fedora वर:
+
+     ```sh
+     sudo dnf install clang
+     ```
+
+   - macOS वर, Xcode सोबत येणारा Clang WebAssembly मध्ये संकलित करू शकत नाही. [Homebrew](https://brew.sh/) वरून LLVM स्थापित करा आणि Rust बिल्डला WebAssembly लक्ष्यासाठी ते वापरण्यास सांगा. तुम्ही पायरी 3 साठी वापरत असलेल्या त्याच टर्मिनलमध्ये `export` कमांड्स चालवा.
+
+     ```sh
+     brew install llvm
+     export CC_wasm32_unknown_unknown="$(brew --prefix llvm)/bin/clang"
+     export AR_wasm32_unknown_unknown="$(brew --prefix llvm)/bin/llvm-ar"
+     ```
 
 2. GitHub रिपॉझिटरी क्लोन करा.
 
@@ -121,7 +141,7 @@ sidebarDepth: 3
    npm run dev
    ```
 
-5. [ॲप्लिकेशन](http://localhost:5173/) ब्राउझ करा. या ॲप्लिकेशन पेजवर दोन फ्रेम्स आहेत: एक ॲलिसच्या युजर इंटरफेससाठी आणि दुसरी बिलच्या. या दोन फ्रेम्स एकमेकांशी संवाद साधत नाहीत; त्या केवळ सोयीसाठी एकाच पेजवर आहेत.
+5. [ॲप्लिकेशन](http://localhost:5173/) वर ब्राउझ करा. या ॲप्लिकेशन पेजवर दोन फ्रेम्स आहेत: एक ॲलिसच्या युजर इंटरफेससाठी आणि दुसरी बिलच्या. या दोन फ्रेम्स एकमेकांशी संवाद साधत नाहीत; त्या केवळ सोयीसाठी एकाच पेजवर आहेत.
 
 6. ॲलिस म्हणून, **Generate a Stealth Meta-Address** वर क्लिक करा. हे नवीन छुपा पत्ता आणि संबंधित खाजगी की प्रदर्शित करेल. छुपा मेटा-पत्ता क्लिपबोर्डवर कॉपी करा.
 
@@ -135,11 +155,11 @@ sidebarDepth: 3
 
 #### WASM घटक {#wasm}
 
-WASM मध्ये संकलित होणारा सोर्स कोड [Rust](https://rust-lang.org/) मध्ये लिहिला आहे. तुम्ही तो [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs) मध्ये पाहू शकता. हा कोड प्रामुख्याने JavaScript कोड आणि [`eth-stealth-addresses` लायब्ररी](https://github.com/kassandraoftroy/eth-stealth-addresses) यांच्यातील इंटरफेस आहे.
+WASM मध्ये संकलित होणारा सोर्स कोड [Rust](https://rust-lang.org/) मध्ये लिहिला आहे. तुम्ही तो [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs) मध्ये पाहू शकता. हा कोड प्रामुख्याने JavaScript कोड आणि [`eth-stealth-addresses` लायब्ररी](https://github.com/kassandraoftroy/eth-stealth-addresses) यांच्यातील एक इंटरफेस आहे.
 
 **`Cargo.toml`**
 
-Rust मधील [`Cargo.toml`](https://doc.rust-lang.org/cargo/reference/manifest.html) हे JavaScript मधील [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) च्या समान आहे. यात पॅकेजची माहिती, डिपेंडन्सी डिक्लेरेशन्स इत्यादी असतात.
+Rust मधील [`Cargo.toml`](https://doc.rust-lang.org/cargo/reference/manifest.html) हे JavaScript मधील [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) च्या समान आहे. यात पॅकेजची माहिती, अवलंबित्व घोषणा इत्यादी असतात.
 
 ```toml
 [package]
@@ -154,13 +174,13 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-[`getrandom`](https://docs.rs/getrandom/latest/getrandom/) पॅकेजला रँडम व्हॅल्यूज तयार करण्याची आवश्यकता असते. ते केवळ अल्गोरिदमिक मार्गांनी केले जाऊ शकत नाही; त्यासाठी एंट्रॉपीचा स्रोत म्हणून भौतिक प्रक्रियेत प्रवेश आवश्यक आहे. ही व्याख्या निर्दिष्ट करते की आपण ज्या ब्राउझरमध्ये चालवत आहोत त्याला विचारून आपण ती एंट्रॉपी मिळवू.
+[`getrandom`](https://docs.rs/getrandom/latest/getrandom/) पॅकेजला यादृच्छिक मूल्ये तयार करण्याची आवश्यकता असते. ते केवळ अल्गोरिदमिक मार्गांनी केले जाऊ शकत नाही; त्यासाठी एंट्रॉपीचा स्रोत म्हणून भौतिक प्रक्रियेत प्रवेश आवश्यक आहे. ही व्याख्या निर्दिष्ट करते की आपण ज्या ब्राउझरमध्ये चालवत आहोत त्याला विचारून आपण ती एंट्रॉपी मिळवू.
 
 ```toml
 console_error_panic_hook = "0.1.7"
 ```
 
-जेव्हा WASM कोड पॅनिक होतो आणि पुढे चालू शकत नाही, तेव्हा [ही लायब्ररी](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) आपल्याला अधिक अर्थपूर्ण एरर मेसेजेस देते.
+जेव्हा WASM कोड पॅनिक होतो आणि पुढे चालू शकत नाही तेव्हा [ही लायब्ररी](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) आपल्याला अधिक अर्थपूर्ण त्रुटी संदेश देते.
 
 ```toml
 [lib]
@@ -193,7 +213,7 @@ use eth_stealth_addresses::{
 use hex::{decode,encode};
 ```
 
-Rust सामान्यतः व्हॅल्यूजसाठी बाइट [अ‍ॅरे](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`) वापरते. परंतु JavaScript मध्ये, आपण सामान्यतः हेक्साडेसिमल स्ट्रिंग्स वापरतो. [`hex` लायब्ररी](https://docs.rs/hex/latest/hex/) आपल्यासाठी एका सादरीकरणातून दुसऱ्या सादरीकरणात भाषांतर करते.
+Rust सामान्यतः मूल्यांसाठी बाइट [ॲरे](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`) वापरते. परंतु JavaScript मध्ये, आपण सामान्यतः हेक्साडेसिमल स्ट्रिंग्स वापरतो. [`hex` लायब्ररी](https://docs.rs/hex/latest/hex/) आपल्यासाठी एका सादरीकरणातून दुसऱ्या सादरीकरणात भाषांतर करते.
 
 ```rust
 #[wasm_bindgen]
@@ -205,7 +225,7 @@ JavaScript मधून हे फंक्शन कॉल करण्या�
 pub fn wasm_generate_stealth_meta_address() -> String {
 ```
 
-एकाधिक फील्ड्ससह ऑब्जेक्ट परत करण्याचा सर्वात सोपा मार्ग म्हणजे JSON स्ट्रिंग परत करणे. 
+एकाधिक फील्ड्स असलेला ऑब्जेक्ट परत करण्याचा सर्वात सोपा मार्ग म्हणजे JSON स्ट्रिंग परत करणे. 
 
 ```rust
     let (address, spend_private_key, view_private_key) = 
@@ -215,10 +235,10 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) तीन फील्ड्स परत करते:
 
 - मेटा-पत्ता (*K<sub>pub</sub>* आणि *V<sub>pub</sub>*)
-- पाहण्याची खाजगी की (*V<sub>priv</sub>*)
 - खर्च करण्याची खाजगी की (*K<sub>priv</sub>*)
+- पाहण्याची खाजगी की (*V<sub>priv</sub>*)
 
-[ट्यूपल (tuple)](https://doc.rust-lang.org/std/primitive.tuple.html) सिंटॅक्स आपल्याला त्या व्हॅल्यूज पुन्हा वेगळे करू देतो.
+[ट्यूपल](https://doc.rust-lang.org/std/primitive.tuple.html) सिंटॅक्स आपल्याला ती मूल्ये पुन्हा वेगळी करू देतो.
 
 ```rust
     format!("{{\"address\":\"{}\",\"view_private_key\":\"{}\",\"spend_private_key\":\"{}\"}}",
@@ -229,30 +249,30 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 }
 ```
 
-JSON-एनकोडेड स्ट्रिंग तयार करण्यासाठी [`format!`](https://doc.rust-lang.org/std/fmt/index.html) मॅक्रो वापरा. अ‍ॅरेला हेक्स स्ट्रिंग्समध्ये बदलण्यासाठी [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) वापरा.
+JSON-एनकोड केलेली स्ट्रिंग तयार करण्यासाठी [`format!`](https://doc.rust-lang.org/std/fmt/index.html) मॅक्रो वापरा. ॲरेला हेक्स स्ट्रिंग्समध्ये बदलण्यासाठी [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) वापरा.
 
 ```rust
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 ```
 
-हे फंक्शन (JavaScript द्वारे प्रदान केलेल्या) हेक्स स्ट्रिंगला बाइट अ‍ॅरेमध्ये बदलते. JavaScript कोडद्वारे प्रदान केलेल्या व्हॅल्यूज पार्स करण्यासाठी आपण याचा वापर करतो. Rust अ‍ॅरे आणि वेक्टर्स कसे हाताळते यामुळे हे फंक्शन गुंतागुंतीचे आहे.
+हे फंक्शन (JavaScript द्वारे प्रदान केलेल्या) हेक्स स्ट्रिंगला बाइट ॲरेमध्ये बदलते. JavaScript कोडद्वारे प्रदान केलेली मूल्ये पार्स करण्यासाठी आपण याचा वापर करतो. Rust ॲरे आणि वेक्टर्स कसे हाताळते यामुळे हे फंक्शन गुंतागुंतीचे आहे.
 
-`<const N: usize>` एक्स्प्रेशनला [जेनेरिक (generic)](https://doc.rust-lang.org/book/ch10-01-syntax.html) म्हटले जाते. `N` हा एक पॅरामीटर आहे जो परत केलेल्या अ‍ॅरेची लांबी नियंत्रित करतो. फंक्शनला प्रत्यक्षात `str_to_array::<n>` म्हटले जाते, जिथे `n` ही अ‍ॅरेची लांबी असते.
+`<const N: usize>` एक्स्प्रेशनला [जेनेरिक](https://doc.rust-lang.org/book/ch10-01-syntax.html) म्हटले जाते. `N` हा एक पॅरामीटर आहे जो परत केलेल्या ॲरेची लांबी नियंत्रित करतो. फंक्शनला प्रत्यक्षात `str_to_array::<n>` म्हटले जाते, जिथे `n` ही ॲरेची लांबी असते.
 
-परत केलेली व्हॅल्यू `Option<[u8; N]>` आहे, ज्याचा अर्थ परत केलेला अ‍ॅरे [पर्यायी (optional)](https://doc.rust-lang.org/std/option/) आहे. अयशस्वी होऊ शकणाऱ्या फंक्शन्ससाठी Rust मधील हा एक सामान्य पॅटर्न आहे.
+परत केलेले मूल्य `Option<[u8; N]>` आहे, ज्याचा अर्थ परत केलेला ॲरे [पर्यायी](https://doc.rust-lang.org/std/option/) आहे. अयशस्वी होऊ शकणाऱ्या फंक्शन्ससाठी Rust मधील हा एक सामान्य पॅटर्न आहे.
 
-उदाहरणार्थ, जर आपण `str_to_array::10("bad060a7")` कॉल केले, तर फंक्शनने दहा-व्हॅल्यूचा अ‍ॅरे परत करणे अपेक्षित आहे, परंतु इनपुट फक्त चार बाइट्स आहे. फंक्शन अयशस्वी होणे आवश्यक आहे, आणि ते `None` परत करून तसे करते. `str_to_array::4("bad060a7")` साठी परत केलेली व्हॅल्यू `Some<[0xba, 0xd0, 0x60, 0xa7]>` असेल.
+उदाहरणार्थ, जर आपण `str_to_array::<10>("bad060a7")` कॉल केले, तर फंक्शनने दहा-मूल्यांचा ॲरे परत करणे अपेक्षित आहे, परंतु इनपुट फक्त चार बाइट्स आहे. फंक्शन अयशस्वी होणे आवश्यक आहे, आणि ते `None` परत करून तसे करते. `str_to_array::<4>("bad060a7")` साठी परत केलेले मूल्य `Some([0xba, 0xd0, 0x60, 0xa7])` असेल.
 
 ```rust
-    // डिकोड Result<Vec<u8>, _> परत करते
+    // decode हे Result<Vec<u8>, _> परत करते
     let vec = decode(s).ok()?;
 ```
 
-[`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) फंक्शन `Result<Vec<u8>, FromHexError>` परत करते. [`Result`](https://doc.rust-lang.org/std/result/) प्रकारात एकतर यशस्वी निकाल (`Ok(value)`) किंवा एरर (`Err(error)`) असू शकतो.
+[`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) फंक्शन `Result<Vec<u8>, FromHexError>` परत करते. [`Result`](https://doc.rust-lang.org/std/result/) प्रकारात एकतर यशस्वी परिणाम (`Ok(value)`) किंवा त्रुटी (`Err(error)`) असू शकते.
 
-`.ok()` पद्धत `Result` ला `Option` मध्ये बदलते, ज्याची व्हॅल्यू यशस्वी झाल्यास `Ok()` व्हॅल्यू असते किंवा नसल्यास `None` असते. शेवटी, [प्रश्नचिन्ह ऑपरेटर](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) वर्तमान फंक्शन्स रद्द करतो आणि `Option` रिक्त असल्यास `None` परत करतो. अन्यथा, तो व्हॅल्यू अनरॅप करतो आणि ती परत करतो (या प्रकरणात, `vec` ला व्हॅल्यू नियुक्त करण्यासाठी).
+`.ok()` पद्धत `Result` ला `Option` मध्ये बदलते, ज्याचे मूल्य यशस्वी झाल्यास `Ok()` मूल्य असते किंवा नसल्यास `None` असते. शेवटी, [प्रश्नचिन्ह ऑपरेटर](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) वर्तमान फंक्शन रद्द करतो आणि `Option` रिक्त असल्यास `None` परत करतो. अन्यथा, ते मूल्य अनरॅप करते आणि ते परत करते (या प्रकरणात, `vec` ला मूल्य नियुक्त करण्यासाठी).
 
-एरर्स हाताळण्याची ही एक विचित्रपणे गुंतागुंतीची पद्धत वाटते, परंतु `Result` आणि `Option` हे सुनिश्चित करतात की सर्व एरर्स एका किंवा दुसऱ्या मार्गाने हाताळल्या जातात.
+त्रुटी हाताळण्याची ही एक विचित्रपणे गुंतागुंतीची पद्धत वाटते, परंतु `Result` आणि `Option` हे सुनिश्चित करतात की सर्व त्रुटी एका किंवा दुसऱ्या मार्गाने हाताळल्या जातात.
 
 ```rust
     if vec.len() != N { return None; }
@@ -261,27 +281,27 @@ fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 जर बाइट्सची संख्या चुकीची असेल, तर ते अपयश आहे, आणि आपण `None` परत करतो.
 
 ```rust
-    // try_into vec वापरते आणि [u8; N] बनवण्याचा प्रयत्न करते
+    // try_into हे vec वापरते आणि [u8; N] बनवण्याचा प्रयत्न करते
     let array: [u8; N] = vec.try_into().ok()?;
 ```
 
-Rust मध्ये दोन अ‍ॅरे प्रकार आहेत. [अ‍ॅरे (Arrays)](https://doc.rust-lang.org/std/primitive.array.html) चा आकार निश्चित असतो. [वेक्टर्स (Vectors)](https://doc.rust-lang.org/std/vec/index.html) वाढू आणि कमी होऊ शकतात. `hex::decode` वेक्टर परत करते, परंतु `eth_stealth_addresses` लायब्ररीला अ‍ॅरे प्राप्त करायचे असतात. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) व्हॅल्यूला दुसऱ्या प्रकारात रूपांतरित करते, उदाहरणार्थ, वेक्टरला अ‍ॅरेमध्ये.
+Rust मध्ये दोन ॲरे प्रकार आहेत. [ॲरे](https://doc.rust-lang.org/std/primitive.array.html) चा आकार निश्चित असतो. [वेक्टर्स](https://doc.rust-lang.org/std/vec/index.html) वाढू आणि कमी होऊ शकतात. `hex::decode` वेक्टर परत करते, परंतु `eth_stealth_addresses` लायब्ररीला ॲरे प्राप्त करायचे आहेत. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) मूल्याला दुसऱ्या प्रकारात रूपांतरित करते, उदाहरणार्थ, वेक्टरला ॲरेमध्ये.
 
 ```rust
     Some(array)
 }
 ```
 
-फंक्शनच्या शेवटी व्हॅल्यू परत करताना Rust ला तुम्ही [`return`](https://doc.rust-lang.org/std/keyword.return.html) कीवर्ड वापरण्याची आवश्यकता नसते.
+फंक्शनच्या शेवटी मूल्य परत करताना Rust ला तुम्ही [`return`](https://doc.rust-lang.org/std/keyword.return.html) कीवर्ड वापरणे आवश्यक नाही.
 
 ```rust
 #[wasm_bindgen]
 pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 ```
 
-या फंक्शनला सार्वजनिक मेटा-पत्ता प्राप्त होतो, ज्यामध्ये *V<sub>pub</sub>* आणि *K<sub>pub</sub>* दोन्ही समाविष्ट असतात. हे छुपा पत्ता, प्रकाशित करण्यासाठी सार्वजनिक की (*R<sub>pub</sub>*), आणि एक-बाइट स्कॅन व्हॅल्यू परत करते जे कोणते प्रकाशित पत्ते ॲलिसचे असू शकतात हे ओळखण्यास गती देते.
+या फंक्शनला सार्वजनिक मेटा-पत्ता प्राप्त होतो, ज्यामध्ये *V<sub>pub</sub>* आणि *K<sub>pub</sub>* दोन्ही समाविष्ट असतात. हे छुपा पत्ता, प्रकाशित करण्यासाठी सार्वजनिक की (*R<sub>pub</sub>*), आणि एक-बाइट स्कॅन मूल्य परत करते जे प्रकाशित केलेल्या पत्त्यांपैकी कोणते पत्ते ॲलिसचे असू शकतात हे ओळखण्यास गती देते.
 
-स्कॅन व्हॅल्यू सामायिक गुपिताचा (*S = GR<sub>priv</sub>V<sub>priv</sub>*) भाग आहे. ही व्हॅल्यू ॲलिसला उपलब्ध आहे, आणि *f(K<sub>pub</sub>+G\*hash(S))* प्रकाशित पत्त्याच्या समान आहे की नाही हे तपासण्यापेक्षा ती तपासणे खूप जलद आहे.
+स्कॅन मूल्य हे सामायिक रहस्याचा (*S = GR<sub>priv</sub>V<sub>priv</sub>*) भाग आहे. हे मूल्य ॲलिसला उपलब्ध आहे, आणि *f(K<sub>pub</sub>+G\*hash(S))* प्रकाशित पत्त्याच्या समान आहे की नाही हे तपासण्यापेक्षा ते तपासणे खूप जलद आहे.
 
 ```rust
     let (address, r_pub, scan) = 
@@ -299,7 +319,7 @@ pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 }
 ```
 
-JSON-एनकोडेड आउटपुट स्ट्रिंग तयार करा.
+JSON-एनकोड केलेली आउटपुट स्ट्रिंग तयार करा.
 
 ```rust
 #[wasm_bindgen]
@@ -315,7 +335,7 @@ pub fn wasm_compute_stealth_key(
 }
 ```
 
-हे फंक्शन पत्त्यावरून पैसे काढण्यासाठी खाजगी की (*R<sub>priv</sub>*) मोजण्यासाठी लायब्ररीचे [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) वापरते. या गणनेसाठी या व्हॅल्यूज आवश्यक आहेत:
+हे फंक्शन पत्त्यावरून पैसे काढण्यासाठी खाजगी की (*P<sub>priv</sub>*) मोजण्यासाठी लायब्ररीचे [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) वापरते. या गणनेसाठी या मूल्यांची आवश्यकता आहे:
 
 - पत्ता (*Address=f(P<sub>pub</sub>)*)
 - बिलने तयार केलेली सार्वजनिक की (*R<sub>pub</sub>*)
@@ -334,7 +354,7 @@ pub fn main() {
 }
 ```
 
-हा कोड निर्दिष्ट करतो की पॅनिक आउटपुट JavaScript कन्सोलवर पाठवले जावे. ते कृतीत पाहण्यासाठी, ॲप्लिकेशन वापरा आणि बिलला अवैध मेटा-पत्ता द्या (फक्त एक हेक्साडेसिमल अंक बदला). तुम्हाला JavaScript कन्सोलमध्ये ही एरर दिसेल:
+हा कोड निर्दिष्ट करतो की पॅनिक आउटपुट JavaScript कन्सोलवर पाठवले जावे. ते प्रत्यक्ष कृतीत पाहण्यासाठी, ॲप्लिकेशन वापरा आणि बिलला अवैध मेटा-पत्ता द्या (फक्त एक हेक्साडेसिमल अंक बदला). तुम्हाला JavaScript कन्सोलमध्ये ही त्रुटी दिसेल:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
@@ -343,24 +363,24 @@ assertion `left == right` failed
  right: 1
 ```
 
-त्यानंतर स्टॅक ट्रेस. नंतर बिलला वैध मेटा-पत्ता द्या, आणि ॲलिसला एकतर अवैध पत्ता किंवा अवैध सार्वजनिक की द्या. तुम्हाला ही एरर दिसेल:
+त्यानंतर स्टॅक ट्रेस दिसेल. नंतर बिलला वैध मेटा-पत्ता द्या, आणि ॲलिसला एकतर अवैध पत्ता किंवा अवैध सार्वजनिक की द्या. तुम्हाला ही त्रुटी दिसेल:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eth-stealth-addresses-0.1.0/src/lib.rs:78:9:
 keys do not generate stealth address
 ```
 
-पुन्हा, त्यानंतर स्टॅक ट्रेस.
+पुन्हा, त्यानंतर स्टॅक ट्रेस दिसेल.
 
 #### युजर इंटरफेस {#ui}
 
-युजर इंटरफेस [React](https://react.dev/) वापरून लिहिला आहे आणि [Vite](https://vite.dev/) द्वारे सर्व्ह केला जातो. तुम्ही [या ट्युटोरियल](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) चा वापर करून त्यांच्याबद्दल जाणून घेऊ शकता. येथे [Wagmi](https://wagmi.sh/) ची आवश्यकता नाही कारण आपण थेट ब्लॉकचेन किंवा वॉलेटशी संवाद साधत नाही.
+युजर इंटरफेस [React](https://react.dev/) वापरून लिहिला आहे आणि [Vite](https://vite.dev/) द्वारे सर्व्ह केला जातो. तुम्ही [हे ट्युटोरियल](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) वापरून त्यांच्याबद्दल जाणून घेऊ शकता. येथे [WAGMI](https://wagmi.sh/) ची आवश्यकता नाही कारण आपण थेट ब्लॉकचेन किंवा वॉलेटशी संवाद साधत नाही.
 
 युजर इंटरफेसचा एकमेव गैर-स्पष्ट भाग म्हणजे WASM कनेक्टिव्हिटी. ते कसे कार्य करते ते येथे आहे.
 
 **`vite.config.js`**
 
-या फाईलमध्ये [Vite कॉन्फिगरेशन](https://vite.dev/config/) आहे.
+या फाइलमध्ये [Vite कॉन्फिगरेशन](https://vite.dev/config/) आहे.
 
 ```js
 import { defineConfig } from 'vite'
@@ -377,13 +397,13 @@ export default defineConfig({
 
 **`App.jsx`**
 
-ही फाईल ॲप्लिकेशनचा मुख्य घटक आहे. हे एक कंटेनर आहे ज्यामध्ये दोन घटक समाविष्ट आहेत: `Alice` आणि `Bill`, त्या युजर्ससाठी युजर इंटरफेस. WASM साठी संबंधित भाग म्हणजे इनिशिएलायझेशन कोड.
+ही फाइल ॲप्लिकेशनचा मुख्य घटक आहे. हे एक कंटेनर आहे ज्यामध्ये दोन घटक समाविष्ट आहेत: `Alice` आणि `Bill`, त्या वापरकर्त्यांसाठी युजर इंटरफेस. WASM साठी संबंधित भाग म्हणजे इनिशिएलायझेशन कोड.
 
 ```jsx
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-जेव्हा आपण [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/) वापरतो, तेव्हा ते आपण येथे वापरत असलेल्या दोन फाईल्स तयार करते: प्रत्यक्ष कोड असलेली wasm फाईल (येथे, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) आणि ती वापरण्यासाठी व्याख्या असलेली JavaScript फाईल (येथे, `src/rust-wasm/pkg/rust_wasm.js`). त्या JavaScript फाईलचा डीफॉल्ट एक्सपोर्ट हा कोड आहे जो WASM सुरू करण्यासाठी चालवणे आवश्यक आहे.
+जेव्हा आपण [`wasm-pack`](https://wasm-bindgen.github.io/wasm-pack/book/) वापरतो, तेव्हा ते आपण येथे वापरत असलेल्या दोन फाइल्स तयार करते: वास्तविक कोड असलेली wasm फाइल (येथे, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) आणि ती वापरण्यासाठी व्याख्या असलेली JavaScript फाइल (येथे, `src/rust-wasm/pkg/rust_wasm.js`). त्या JavaScript फाइलची डीफॉल्ट एक्सपोर्ट हा कोड आहे जो WASM सुरू करण्यासाठी चालवणे आवश्यक आहे.
 
 ```jsx
 function App() {
@@ -406,9 +426,9 @@ function App() {
   )
 ```
 
-[`useEffect` हूक](https://react.dev/reference/react/useEffect) तुम्हाला एक फंक्शन निर्दिष्ट करू देतो जे स्थिती व्हेरिएबल्स बदलल्यावर कार्यान्वित होते. येथे, स्थिती व्हेरिएबल्सची सूची रिक्त (`[]`) आहे, त्यामुळे हे फंक्शन पेज लोड झाल्यावर फक्त एकदाच कार्यान्वित होते.
+[`useEffect` हूक](https://react.dev/reference/react/useEffect) तुम्हाला एक फंक्शन निर्दिष्ट करू देतो जे स्थिती व्हेरिएबल्स बदलल्यावर कार्यान्वित होते. येथे, स्थिती व्हेरिएबल्सची सूची रिक्त आहे (`[]`), त्यामुळे हे फंक्शन पेज लोड झाल्यावर फक्त एकदाच कार्यान्वित होते.
 
-इफेक्ट फंक्शनने त्वरित परत करणे आवश्यक आहे. WASM `init` (ज्याला `.wasm` फाईल लोड करावी लागते आणि त्यामुळे वेळ लागतो) सारखा असिंक्रोनस कोड वापरण्यासाठी आपण एक अंतर्गत [`async`](https://en.wikipedia.org/wiki/Async/await) फंक्शन परिभाषित करतो आणि ते `await` शिवाय चालवतो.
+इफेक्ट फंक्शनने त्वरित परत येणे आवश्यक आहे. असिंक्रोनस कोड वापरण्यासाठी, जसे की WASM `init` (ज्याला `.wasm` फाइल लोड करावी लागते आणि त्यामुळे वेळ लागतो) आपण एक अंतर्गत [`async`](https://en.wikipedia.org/wiki/Async/await) फंक्शन परिभाषित करतो आणि ते `await` शिवाय चालवतो.
 
 **`Bill.jsx`**
 
@@ -426,7 +446,7 @@ import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
             }}>
 ```
 
-WASM फंक्शन्स कॉल करण्यासाठी, आपण फक्त `wasm-pack` द्वारे तयार केलेल्या JavaScript फाईलद्वारे एक्सपोर्ट केलेले फंक्शन कॉल करतो.
+WASM फंक्शन्स कॉल करण्यासाठी, आपण फक्त `wasm-pack` द्वारे तयार केलेल्या JavaScript फाइलद्वारे एक्सपोर्ट केलेले फंक्शन कॉल करतो.
 
 **`Alice.jsx`**
 
@@ -437,6 +457,6 @@ WASM फंक्शन्स कॉल करण्यासाठी, आप�
 
 ## निष्कर्ष {#conclusion}
 
-छुपे पत्ते हा रामबाण उपाय नाही; ते [योग्यरित्या वापरले](#go-wrong) गेले पाहिजेत. परंतु योग्यरित्या वापरल्यास, ते सार्वजनिक ब्लॉकचेनवर गोपनीयता सक्षम करू शकतात.
+छुपे पत्ते हा रामबाण उपाय नाही; ते [योग्यरित्या वापरले गेले पाहिजेत](#go-wrong). परंतु जेव्हा ते योग्यरित्या वापरले जातात, तेव्हा ते सार्वजनिक ब्लॉकचेनवर गोपनीयता सक्षम करू शकतात.
 
 [माझ्या अधिक कामासाठी येथे पहा](https://cryptodocguy.pro/).

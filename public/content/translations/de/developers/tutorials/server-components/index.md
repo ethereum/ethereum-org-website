@@ -29,7 +29,9 @@ Es gibt mehrere mögliche Aufgaben, die ein solcher Server erfüllen könnte.
 
 ## Beispielprogramm {#sample-program}
 
-Du kannst dir einen Beispielserver [auf GitHub ansehen](https://github.com/qbzzt/20240715-server-component). Dieser Server lauscht auf Ereignisse, die von [diesem Vertrag](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code) kommen, einer modifizierten Version von Hardhats Greeter. Wenn die Begrüßung geändert wird, ändert er sie wieder zurück.
+Du kannst dir einen Beispielserver [auf GitHub](https://github.com/qbzzt/20240715-server-component) ansehen. Dieser Server lauscht auf Ereignisse, die von [diesem Vertrag](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract_code) im Sepolia-Testnetz kommen, einer modifizierten Version von Hardhats Greeter. Wenn die Begrüßung geändert wird, ändert er sie wieder zurück.
+
+Dieser Vertrag wird mit anderen Tutorials geteilt, sodass andere Personen (und deren Server) die Begrüßung ändern können, während deiner läuft. Stoppe deinen Server, wenn du fertig bist, um zu vermeiden, dass du deine Test-ETH ausgibst.
 
 Um ihn auszuführen:
 
@@ -40,25 +42,31 @@ Um ihn auszuführen:
    cd 20240715-server-component
    ```
 
-2. Installiere die notwendigen Pakete. Falls du es noch nicht hast, [installiere zuerst Node](https://nodejs.org/en/download/package-manager).
+2. Das Beispiel-Repository wurde für das Holesky-Testnetz geschrieben, das inzwischen abgeschaltet wurde. Aktualisiere es, um Sepolia und die Sepolia-Vertragsadresse zu verwenden.
+
+   ```sh copy
+   sed -i.bak -e 's/holesky/sepolia/g' -e 's/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA/' src/app.ts
+   ```
+
+3. Installiere die erforderlichen Pakete. Falls du es noch nicht hast, [installiere zuerst Node](https://nodejs.org/en/download/package-manager).
 
    ```sh copy
    npm install
    ```
 
-3. Bearbeite `.env`, um den privaten Schlüssel eines Kontos anzugeben, das ETH im Holesky-Testnetz hat. Wenn du keine ETH auf Holesky hast, kannst du [dieses Faucet verwenden](https://holesky-faucet.pk910.de/).
+4. Bearbeite `.env`, um den privaten Schlüssel eines Kontos anzugeben, das ETH im Sepolia-Testnetz hat. Wenn du keine ETH auf Sepolia hast, kannst du [dieses Faucet verwenden](https://sepolia-faucet.pk910.de/). Verwende ein neues Konto, das du nur zum Testen nutzt, niemals eines, das echte Vermögenswerte hält.
 
    ```sh filename=".env" copy
-   PRIVATE_KEY=0x <private key goes here>
+   PRIVATE_KEY=0x<private key goes here>
    ```
 
-4. Starte den Server.
+5. Starte den Server.
 
    ```sh copy
    npm start
    ```
 
-5. Gehe zu [einem Block-Explorer](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract) und ändere die Begrüßung mit einer anderen Adresse als der, die den privaten Schlüssel hat. Du wirst sehen, dass die Begrüßung automatisch wieder zurückgeändert wird.
+6. Gehe zu [einem Block-Explorer](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract) und ändere die Begrüßung mit einer anderen Adresse als der, die den privaten Schlüssel hat. Du wirst sehen, dass die Begrüßung automatisch wieder zurückgeändert wird.
 
 ### Wie funktioniert das? {#how-it-works}
 
@@ -80,19 +88,19 @@ import {
 } from "viem"
 ```
 
-Dies sind die [Viem](https://viem.sh/)-Entitäten, die wir benötigen: Funktionen und [der Typ `Address`](https://viem.sh/docs/glossary/types#address). Dieser Server ist in [TypeScript](https://www.typescriptlang.org/) geschrieben, einer Erweiterung von JavaScript, die es [streng typisiert](https://en.wikipedia.org/wiki/Strong_and_weak_typing) macht.
+Dies sind die [Viem](https://viem.sh/)-Entitäten, die wir benötigen, Funktionen und [der Typ `Address`](https://viem.sh/docs/glossary/types#address). Dieser Server ist in [TypeScript](https://www.typescriptlang.org/) geschrieben, einer Erweiterung von JavaScript, die es [streng typisiert](https://en.wikipedia.org/wiki/Strong_and_weak_typing) macht.
 
 ```typescript
 import { privateKeyToAccount } from "viem/accounts"
 ```
 
-[Diese Funktion](https://viem.sh/docs/accounts/privateKey) ermöglicht es uns, die Wallet-Informationen, einschließlich der Adresse, passend zu einem privaten Schlüssel zu generieren.
+[Diese Funktion](https://viem.sh/docs/accounts/privateKey) ermöglicht es uns, die Wallet-Informationen, einschließlich der Adresse, zu generieren, die einem privaten Schlüssel entsprechen.
 
 ```typescript
-import { holesky } from "viem/chains"
+import { sepolia } from "viem/chains"
 ```
 
-Um eine Blockchain in Viem zu verwenden, musst du ihre Definition importieren. In diesem Fall möchten wir uns mit der [Holesky](https://github.com/eth-clients/holesky)-Test-Blockchain verbinden.
+Um eine Blockchain in Viem zu verwenden, musst du ihre Definition importieren. In diesem Fall möchten wir uns mit der [Sepolia](/developers/docs/networks/#sepolia)-Test-Blockchain verbinden.
 
 ```typescript
 // So fügen wir die Definitionen in .env zu process.env hinzu.
@@ -103,7 +111,7 @@ dotenv.config()
 So lesen wir `.env` in die Umgebung ein. Wir benötigen es für den privaten Schlüssel (siehe später).
 
 ```typescript
-const greeterAddress : Address = "0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6"
+const greeterAddress : Address = "0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA"
 const greeterABI = [
     {
         "inputs": [
@@ -137,16 +145,16 @@ const greeterABI = [
 
 Um einen Vertrag zu verwenden, benötigen wir seine Adresse und die [ABI](/glossary/#abi) dafür. Wir stellen hier beides zur Verfügung.
 
-In JavaScript (und damit auch in TypeScript) kannst du einer Konstante keinen neuen Wert zuweisen, aber du _kannst_ das darin gespeicherte Objekt modifizieren. Durch die Verwendung des Suffixes `as const` teilen wir TypeScript mit, dass die Liste selbst konstant ist und nicht geändert werden darf.
+In JavaScript (und damit auch in TypeScript) kannst du einer Konstanten keinen neuen Wert zuweisen, aber du _kannst_ das darin gespeicherte Objekt ändern. Durch die Verwendung des Suffixes `as const` teilen wir TypeScript mit, dass die Liste selbst konstant ist und nicht geändert werden darf.
 
 ```typescript
 const publicClient = createPublicClient({
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
 
-Erstelle einen [öffentlichen Client](https://viem.sh/docs/clients/public.html) in Viem. Öffentliche Clients haben keinen angehängten privaten Schlüssel und können daher keine Transaktionen senden. Sie können [`view`-Funktionen](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) aufrufen, Kontostände lesen usw.
+Erstelle einen [öffentlichen Client](https://viem.sh/docs/clients/public) in Viem. Öffentliche Clients haben keinen angehängten privaten Schlüssel und können daher keine Transaktionen senden. Sie können [`view`-Funktionen](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) aufrufen, Kontostände lesen usw.
 
 ```typescript
 const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`)
@@ -159,12 +167,12 @@ Die Funktion [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) v
 ```typescript
 const walletClient = createWalletClient({
   account,
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
 
-Als Nächstes verwenden wir das Konto-Objekt, um einen [Wallet-Client](https://viem.sh/docs/clients/wallet) zu erstellen. Dieser Client verfügt über einen privaten Schlüssel und eine Adresse, sodass er zum Senden von Transaktionen verwendet werden kann.
+Als Nächstes verwenden wir das Konto-Objekt, um einen [Wallet-Client](https://viem.sh/docs/clients/wallet). Dieser Client verfügt über einen privaten Schlüssel und eine Adresse, sodass er zum Senden von Transaktionen verwendet werden kann.
 
 ```typescript
 const greeter = getContract({
@@ -176,17 +184,17 @@ const greeter = getContract({
 
 Da wir nun alle Voraussetzungen haben, können wir endlich eine [Vertragsinstanz](https://viem.sh/docs/contract/getContract) erstellen. Wir werden diese Vertragsinstanz verwenden, um mit dem Onchain-Vertrag zu kommunizieren.
 
-##### Lesen von der Blockchain
+##### Lesen aus der Blockchain
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
 ```
 
-Die Vertragsfunktionen, die nur lesend sind ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) und [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)), sind unter `read` verfügbar. In diesem Fall verwenden wir es, um auf die Funktion [`greet`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=read_contract#cfae3217) zuzugreifen, die die Begrüßung zurückgibt.
+Die Vertragsfunktionen, die nur lesbar sind ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) und [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)), sind unter `read` verfügbar. In diesem Fall verwenden wir sie, um auf die Funktion [`greet`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=read_contract) zuzugreifen, die die Begrüßung zurückgibt.
 
 JavaScript ist Single-Threaded. Wenn wir also einen lang laufenden Prozess anstoßen, müssen wir [angeben, dass wir dies asynchron tun](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). Der Aufruf der Blockchain, selbst für eine reine Leseoperation, erfordert einen Roundtrip zwischen dem Computer und einem Blockchain-Knoten. Das ist der Grund, warum wir hier angeben, dass der Code auf das Ergebnis `await` (warten) muss.
 
-Wenn du dich dafür interessierst, wie das funktioniert, kannst du [hier darüber lesen](https://www.w3schools.com/js/js_promise.asp). In der Praxis musst du jedoch nur wissen, dass du auf die Ergebnisse `await` musst, wenn du eine Operation startest, die lange dauert, und dass jede Funktion, die dies tut, als `async` deklariert werden muss.
+Wenn du dich dafür interessierst, wie das funktioniert, kannst du [hier darüber lesen](https://www.w3schools.com/js/js_promise.asp). In der Praxis musst du jedoch nur wissen, dass du die Ergebnisse mit `await` abwartest, wenn du eine Operation startest, die lange dauert, und dass jede Funktion, die dies tut, als `async` deklariert werden muss.
 
 ##### Ausgeben von Transaktionen
 
@@ -194,22 +202,22 @@ Wenn du dich dafür interessierst, wie das funktioniert, kannst du [hier darübe
 const setGreeting = async (greeting: string): Promise<any> => {
 ```
 
-Dies ist die Funktion, die du aufrufst, um eine Transaktion auszugeben, die die Begrüßung ändert. Da dies eine lange Operation ist, wird die Funktion als `async` deklariert. Aufgrund der internen Implementierung muss jede `async`-Funktion ein `Promise`-Objekt zurückgeben. In diesem Fall bedeutet `Promise<any>`, dass wir nicht genau spezifizieren, was im `Promise` zurückgegeben wird.
+Dies ist die Funktion, die du aufrufst, um eine Transaktion auszugeben, die die Begrüßung ändert. Da dies eine lange Operation ist, wird die Funktion als `async` deklariert. Aufgrund der internen Implementierung muss jede `async`-Funktion ein `Promise`-Objekt zurückgeben. In diesem Fall bedeutet `Promise<any>`, dass wir nicht genau angeben, was im `Promise` zurückgegeben wird.
 
 ```typescript
 const txHash = await greeter.write.setGreeting([greeting])
 ```
 
-Das Feld `write` der Vertragsinstanz enthält alle Funktionen, die in den Blockchain-Zustand schreiben (diejenigen, die das Senden einer Transaktion erfordern), wie z. B. [`setGreeting`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862). Die Parameter, falls vorhanden, werden als Liste bereitgestellt, und die Funktion gibt den Hash der Transaktion zurück.
+Das Feld `write` der Vertragsinstanz enthält alle Funktionen, die in den Blockchain-Zustand schreiben (diejenigen, die das Senden einer Transaktion erfordern), wie z. B. [`setGreeting`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract). Die Parameter, falls vorhanden, werden als Liste bereitgestellt, und die Funktion gibt den Hash der Transaktion zurück.
 
 ```typescript
-    console.log(`Working on a fix, see https://eth-holesky.blockscout.com/tx/${txHash}`)
+    console.log(`Working on a fix, see https://eth-sepolia.blockscout.com/tx/${txHash}`)
 
     return txHash
 }
 ```
 
-Melde den Hash der Transaktion (als Teil einer URL zum Block-Explorer, um sie anzusehen) und gib ihn zurück.
+Melde den Hash der Transaktion (als Teil einer URL zum Block-Explorer, um ihn anzuzeigen) und gib ihn zurück.
 
 ##### Reagieren auf Ereignisse
 
@@ -217,13 +225,13 @@ Melde den Hash der Transaktion (als Teil einer URL zum Block-Explorer, um sie an
 greeter.watchEvent.SetGreeting({
 ```
 
-[Die Funktion `watchEvent`](https://viem.sh/docs/actions/public/watchEvent) ermöglicht es dir anzugeben, dass eine Funktion ausgeführt werden soll, wenn ein Ereignis ausgelöst wird. Wenn du dich nur für einen Ereignistyp interessierst (in diesem Fall `SetGreeting`), kannst du diese Syntax verwenden, um dich auf diesen Ereignistyp zu beschränken.
+[Die Funktion `watchEvent`](https://viem.sh/docs/actions/public/watchEvent) ermöglicht es dir anzugeben, dass eine Funktion ausgeführt werden soll, wenn ein Ereignis ausgelöst wird. Wenn du dich nur für eine Art von Ereignis interessierst (in diesem Fall `SetGreeting`), kannst du diese Syntax verwenden, um dich auf diesen Ereignistyp zu beschränken.
 
 ```typescript
     onLogs: logs => {
 ```
 
-Die Funktion `onLogs` wird aufgerufen, wenn es Log-Einträge gibt. In Ethereum sind „Log“ und „Ereignis“ (Event) normalerweise austauschbar.
+Die Funktion `onLogs` wird aufgerufen, wenn es Log-Einträge gibt. In Ethereum sind „Log“ und „Ereignis“ normalerweise austauschbar.
 
 ```typescript
 console.log(
@@ -231,7 +239,7 @@ console.log(
 )
 ```
 
-Es könnte mehrere Ereignisse geben, aber der Einfachheit halber kümmern wir uns nur um das erste. `logs[0].args` sind die Argumente des Ereignisses, in diesem Fall `sender` und `greeting`.
+Es könnte mehrere Ereignisse geben, aber der Einfachheit halber interessieren wir uns nur für das erste. `logs[0].args` sind die Argumente des Ereignisses, in diesem Fall `sender` und `greeting`.
 
 ```typescript
         if (logs[0].args.sender != account.address)
@@ -248,24 +256,18 @@ Wenn der Absender _nicht_ dieser Server ist, verwende `setGreeting`, um die Begr
 
 ```json
 {
-  "main": "dist/index.js",
-```
-
-Diese Definition gibt an, welche JavaScript-Datei ausgeführt werden soll.
-
-```json
   "scripts": {
     "start": "tsc && node dist/app.js",
   },
 ```
 
-Die Skripte sind verschiedene Anwendungsaktionen. In diesem Fall haben wir nur `start`, das den Server kompiliert und dann ausführt. Der Befehl `tsc` ist Teil des Pakets `typescript` und kompiliert TypeScript zu JavaScript. Wenn du ihn manuell ausführen möchtest, befindet er sich in `node_modules/.bin`. Der zweite Befehl führt den Server aus.
+Die Skripte sind verschiedene Anwendungsaktionen. In diesem Fall haben wir nur `start`, das den Server kompiliert und dann ausführt. Der Befehl `tsc` ist Teil des Pakets `typescript` und kompiliert TypeScript in JavaScript. Wenn du ihn manuell ausführen möchtest, befindet er sich in `node_modules/.bin`. Der zweite Befehl führt den Server aus.
 
 ```json
   "type": "module",
 ```
 
-Es gibt mehrere Arten von JavaScript-Node-Anwendungen. Der Typ `module` ermöglicht es uns, `await` im Top-Level-Code zu haben, was wichtig ist, wenn du langsame (und daher asynchrone) Operationen durchführst.
+Es gibt mehrere Arten von JavaScript-Node-Anwendungen. Der Typ `module` ermöglicht es uns, `await` im Code auf oberster Ebene zu haben, was wichtig ist, wenn du langsame (und daher asynchrone) Operationen durchführst.
 
 ```json
   "devDependencies": {
@@ -274,7 +276,7 @@ Es gibt mehrere Arten von JavaScript-Node-Anwendungen. Der Typ `module` ermögli
   },
 ```
 
-Dies sind Pakete, die nur für die Entwicklung benötigt werden. Hier benötigen wir `typescript` und da wir es mit Node.js verwenden, holen wir uns auch die Typen für Node-Variablen und -Objekte, wie z. B. `process`. [Die Notation `^<version>`](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) bedeutet diese Version oder eine höhere Version, die keine Breaking Changes (inkompatible Änderungen) aufweist. Siehe [hier](https://semver.org) für weitere Informationen über die Bedeutung von Versionsnummern.
+Dies sind Pakete, die nur für die Entwicklung benötigt werden. Hier benötigen wir `typescript`, und da wir es mit Node.js verwenden, erhalten wir auch die Typen für Node-Variablen und -Objekte, wie z. B. `process`. [Die Notation `^<version>`](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) bedeutet diese Version oder eine höhere Version, die keine Breaking Changes aufweist. Siehe [hier](https://semver.org) für weitere Informationen zur Bedeutung von Versionsnummern.
 
 ```json
   "dependencies": {

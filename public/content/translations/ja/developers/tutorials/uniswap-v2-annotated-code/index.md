@@ -22,7 +22,7 @@ lang: ja
 
 流動性プロバイダーが資産を返してほしい場合、プールトークンをバーンして、報酬の取り分を含めた自分のトークンを受け取ることができます。
 
-[詳細な説明についてはこちらをクリックしてください](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/)。
+[詳細な説明についてはこちらをクリックしてください](https://developers.uniswap.org/docs/protocols/v2/concepts/swapping)。
 
 ### なぜv3ではなくv2なのか？ {#why-v2}
 
@@ -109,7 +109,7 @@ lang: ja
 
 ### UniswapV2Pair.sol {#uniswapv2pair}
 
-[このコントラクト](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol)は、トークンを交換する実際のプールを実装しています。これはユニスワップのコア機能です。
+[このコントラクト](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol)は、トークンを交換する実際のプールを実装しています。これはUniswapのコア機能です。
 
 ```solidity
 pragma solidity =0.5.16;
@@ -135,14 +135,14 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
     using SafeMath  for uint;
 ```
 
-オーバーフローとアンダーフローを避けるために、[SafeMathライブラリ](https://docs.openzeppelin.com/contracts/3.x/api/math)が使用されています。これは重要です。なぜなら、そうしないと値が`-1`になるべきところで、代わりに`2^256-1`になってしまう状況に陥る可能性があるからです。
+[SafeMathライブラリ](https://docs.openzeppelin.com/contracts/3.x/api/math)は、オーバーフローとアンダーフローを回避するために使用されます。これは重要です。なぜなら、そうしないと値が`-1`になるべきところが、代わりに`2^256-1`になってしまう状況に陥る可能性があるからです。
 
 ```solidity
     using UQ112x112 for uint224;
 ```
 
 プールコントラクトでの多くの計算には分数が含まれます。しかし、分数はEVMではサポートされていません。
-ユニスワップが見つけた解決策は、224ビットの値を使用し、整数部分に112ビット、分数部分に112ビットを割り当てることです。したがって、`1.0`は`2^112`として表され、`1.5`は`2^112 + 2^111`として表されます。
+Uniswapが見つけた解決策は、整数部分に112ビット、分数部分に112ビットを持つ224ビットの値を使用することです。したがって、`1.0`は`2^112`として表され、`1.5`は`2^112 + 2^111`として表される、といった具合です。
 
 このライブラリの詳細については、[このドキュメントの後半](#fixedpoint)で説明します。
 
@@ -349,7 +349,7 @@ ERC-20の送金呼び出しが失敗を報告する方法は2つあります。
         require(balance0 <= uint112(-1) && balance1 <= uint112(-1), 'UniswapV2: OVERFLOW');
 ```
 
-balance0またはbalance1（uint256）のいずれかがuint112(-1)（=2^112-1）よりも大きい場合（したがって、uint112に変換されたときにオーバーフローして0に戻る場合）、オーバーフローを防ぐために\_updateの続行を拒否します。10^18単位に細分化できる通常のトークンの場合、これは各交換所が各トークンの約5.1\*10^15に制限されることを意味します。これまでのところ、それは問題になっていません。
+balance0またはbalance1（uint256）のいずれかがuint112(-1)（=2^112-1）よりも大きい場合（つまり、uint112に変換されたときにオーバーフローして0に戻る場合）、オーバーフローを防ぐために\_updateの続行を拒否します。10^18単位に細分化できる通常のトークンの場合、これは各交換が各トークンの約5.1\*10^15に制限されることを意味します。これまでのところ、それは問題になっていません。
 
 ```solidity
         uint32 blockTimestamp = uint32(block.timestamp % 2**32);
@@ -357,7 +357,7 @@ balance0またはbalance1（uint256）のいずれかがuint112(-1)（=2^112-1�
         if (timeElapsed > 0 && _reserve0 != 0 && _reserve1 != 0) {
 ```
 
-経過時間がゼロでない場合、それは私たちがこのブロックでの最初の交換トランザクションであることを意味します。その場合、コストアキュムレータを更新する必要があります。
+経過時間がゼロでない場合、それはこのブロックでの最初の交換トランザクションであることを意味します。その場合、コストアキュムレータを更新する必要があります。
 
 ```solidity
             // * は決してオーバーフローせず、+ のオーバーフローは意図されている
@@ -366,7 +366,7 @@ balance0またはbalance1（uint256）のいずれかがuint112(-1)（=2^112-1�
         }
 ```
 
-各コストアキュムレータは、最新のコスト（他のトークンの準備金/このトークンの準備金）に経過時間（秒）を掛けたもので更新されます。平均価格を取得するには、2つの時点での累積価格を読み取り、それらの間の時間差で割ります。たとえば、次の一連のイベントを想定します。
+各コストアキュムレータは、最新のコスト（他のトークンの準備金 / このトークンの準備金）に経過時間（秒）を掛けたもので更新されます。平均価格を取得するには、2つの時点での累積価格を読み取り、それらの間の時間差で割ります。たとえば、次の一連のイベントを想定します。
 
 | イベント | reserve0 | reserve1 | タイムスタンプ | 限界為替レート (reserve1 / reserve0) | price0CumulativeLast |
 | -------------------------------------------------------- | --------: | --------: | --------- | -------------------------------------------: | -------------------------: |
@@ -375,9 +375,9 @@ balance0またはbalance1（uint256）のいずれかがuint112(-1)（=2^112-1�
 | トレーダーBが10 token0を預け入れ、8.984 token1を受け取る | 1,060.000 | 943.396 | 5,030 | 0.890 | 20+10\*0.907 = 29.07 |
 | トレーダーCが40 token0を預け入れ、34.305 token1を受け取る | 1,100.000 | 909.090 | 5,100 | 0.826 | 29.07+70\*0.890 = 91.37 |
 | トレーダーDが100 token1を預け入れ、109.01 token0を受け取る | 990.990 | 1,009.090 | 5,110 | 1.018 | 91.37+10\*0.826 = 99.63 |
-| トレーダーEが10 token0を預け入れ、10.079 token1を受け取る | 1,000.990 | 999.010 | 5,150 | 0.998 | 99.63+40\*1.1018 = 143.702 |
+| トレーダーEが10 token0を預け入れ、10.079 token1を受け取る | 1,000.990 | 999.010 | 5,150 | 0.998 | 99.63+40\*1.018 = 140.35 |
 
-タイムスタンプ5,030と5,150の間の**Token0**の平均価格を計算したいとします。`price0Cumulative`の値の差は143.702-29.07=114.632です。これは2分間（120秒）の平均です。したがって、平均価格は114.632/120 = 0.955になります。
+タイムスタンプ5,030と5,150の間の**Token0**の平均価格を計算したいとします。`price0Cumulative`の値の差は140.35-29.07=111.28です。これは2分間（120秒）の平均です。したがって、平均価格は111.28/120 = 0.927になります。
 
 この価格計算が、古い準備金のサイズを知る必要がある理由です。
 
@@ -398,7 +398,7 @@ balance0またはbalance1（uint256）のいずれかがuint112(-1)（=2^112-1�
     function _mintFee(uint112 _reserve0, uint112 _reserve1) private returns (bool feeOn) {
 ```
 
-ユニスワップ 2.0では、トレーダーは市場を利用するために0.30%の手数料を支払います。その手数料の大部分（取引の0.25%）は常に流動性プロバイダーに支払われます。残りの0.05%は、流動性プロバイダーに支払われるか、またはファクトリーによってプロトコル手数料として指定されたアドレスに支払われ、ユニスワップの開発努力に対する報酬となります。
+Uniswap 2.0では、トレーダーは市場を利用するために0.30%の手数料を支払います。その手数料の大部分（取引の0.25%）は常に流動性プロバイダーに支払われます。残りの0.05%は、流動性プロバイダーに支払われるか、ファクトリーによってプロトコル手数料として指定されたアドレスに支払われ、Uniswapの開発努力に対する報酬となります。イーサリアム・メインネットでは、このプロトコル手数料が有効になっています。ファクトリーの`feeTo`アドレスが設定されているため、0.05%は流動性プロバイダーではなくそのアドレスに支払われます。
 
 計算（およびそれに伴うガス費用）を減らすために、この手数料は各トランザクションごとではなく、プールに流動性が追加または削除されたときにのみ計算されます。
 
@@ -407,7 +407,7 @@ balance0またはbalance1（uint256）のいずれかがuint112(-1)（=2^112-1�
         feeOn = feeTo != address(0);
 ```
 
-ファクトリーの手数料の宛先を読み取ります。それがゼロの場合、プロトコル手数料はなく、その手数料を計算する必要はありません。
+ファクトリーの手数料の宛先を読み取ります。ゼロの場合、プロトコル手数料はなく、その手数料を計算する必要はありません。
 
 ```solidity
         uint _kLast = kLast; // ガスの節約
@@ -421,7 +421,7 @@ balance0またはbalance1（uint256）のいずれかがuint112(-1)（=2^112-1�
             if (_kLast != 0) {
 ```
 
-流動性プロバイダーは、流動性トークンの価値上昇によって単に彼らの取り分を得ます。しかし、プロトコル手数料は、新しい流動性トークンがミントされ、`feeTo`アドレスに提供されることを必要とします。
+流動性プロバイダーは、流動性トークンの価値上昇によって単に利益を得ます。しかし、プロトコル手数料は、新しい流動性トークンをミントして`feeTo`アドレスに提供する必要があります。
 
 ```solidity
                 uint rootK = Math.sqrt(uint(_reserve0).mul(_reserve1));
@@ -429,7 +429,7 @@ balance0またはbalance1（uint256）のいずれかがuint112(-1)（=2^112-1�
                 if (rootK > rootKLast) {
 ```
 
-プロトコル手数料を徴収するための新しい流動性がある場合。平方根関数については、[この記事の後半](#math)で確認できます。
+プロトコル手数料を徴収する新しい流動性がある場合。平方根関数については、[この記事の後半](#math)で確認できます。
 
 ```solidity
                     uint numerator = totalSupply.mul(rootK.sub(rootKLast));
@@ -437,7 +437,7 @@ balance0またはbalance1（uint256）のいずれかがuint112(-1)（=2^112-1�
                     uint liquidity = numerator / denominator;
 ```
 
-この複雑な手数料の計算は、[ホワイトペーパー](https://app.uniswap.org/whitepaper.pdf)の5ページで説明されています。`kLast`が計算された時点から現在までの間に流動性が追加または削除されていないことがわかっているため（流動性が追加または削除されるたびに、実際に変更される前にこの計算を実行するため）、`reserve0 * reserve1`の変更はトランザクション手数料から生じたものでなければなりません（それがなければ`reserve0 * reserve1`は一定に保たれます）。
+この複雑な手数料の計算は、[ホワイトペーパー](https://app.uniswap.org/whitepaper.pdf)の5ページで説明されています。`kLast`が計算された時点から現在までの間に流動性が追加または削除されていないことがわかっているため（流動性が実際に変更される前に、追加または削除されるたびにこの計算を実行するため）、`reserve0 * reserve1`の変更はトランザクション手数料から生じたものでなければなりません（それがなければ`reserve0 * reserve1`は一定に保たれます）。
 
 ```solidity
                     if (liquidity > 0) _mint(feeTo, liquidity);
@@ -445,7 +445,7 @@ balance0またはbalance1（uint256）のいずれかがuint112(-1)（=2^112-1�
             }
 ```
 
-`UniswapV2ERC20._mint`関数を使用して、実際に追加の流動性トークンを作成し、それらを`feeTo`に割り当てます。
+`UniswapV2ERC20._mint`関数を使用して、追加の流動性トークンを実際に作成し、それらを`feeTo`に割り当てます。
 
 ```solidity
         } else if (_kLast != 0) {
@@ -454,8 +454,8 @@ balance0またはbalance1（uint256）のいずれかがuint112(-1)（=2^112-1�
     }
 ```
 
-手数料が設定されていない場合は、`kLast`をゼロに設定します（まだゼロでない場合）。このコントラクトが書かれたときには、不要なストレージをゼロにすることでイーサリアムの状態の全体的なサイズを縮小することをコントラクトに奨励する[ガス払い戻し機能](https://eips.ethereum.org/EIPS/eip-3298)がありました。
-このコードは、可能な場合にその払い戻しを受け取ります。
+手数料が設定されていない場合は、`kLast`をゼロに設定します（まだゼロでない場合）。イーサリアムには、コントラクトが必要としないストレージをゼロにすることで、イーサリアムの状態の全体的なサイズを縮小することを奨励するガス払い戻し機能があります。
+このコードは、可能な場合にその払い戻しを受け取ります。ロンドンアップグレード（[EIP-3529](https://eips.ethereum.org/EIPS/eip-3529)）以降、払い戻しは小さくなり、トランザクションのガスの5分の1に制限されていますが、依然として存在します。
 
 #### 外部からアクセス可能な関数 {#pair-external}
 
@@ -692,7 +692,7 @@ balance0またはbalance1（uint256）のいずれかがuint112(-1)（=2^112-1�
 
 ### UniswapV2Factory.sol {#uniswapv2factory}
 
-[このコントラクト](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol)はペア交換所を作成します。
+[このコントラクト](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Factory.sol)は、ペア交換所を作成します。
 
 ```solidity
 pragma solidity =0.5.16;
@@ -715,11 +715,11 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 これらの変数は、ペア、つまり2つのトークンタイプ間の交換所を追跡します。
 
-最初の`getPair`は、交換する2つのERC-20トークンに基づいてペア交換コントラクトを識別するマッピングです。ERC-20トークンはそれらを実装するコントラクトのアドレスによって識別されるため、キーと値はすべてアドレスです。`tokenA`から`tokenB`に変換できるペア交換所のアドレスを取得するには、`getPair[<tokenA address>][<tokenB address>]`を使用します（またはその逆）。
+最初の`getPair`は、交換する2つのERC-20トークンに基づいてペア交換コントラクトを識別するマッピングです。ERC-20トークンは、それらを実装するコントラクトのアドレスによって識別されるため、キーと値はすべてアドレスです。`tokenA`から`tokenB`に変換できるペア交換所のアドレスを取得するには、`getPair[<tokenA address>][<tokenB address>]`を使用します（またはその逆）。
 
-2番目の変数`allPairs`は、このファクトリーによって作成されたペア交換所のすべてのアドレスを含む配列です。イーサリアムでは、マッピングのコンテンツを反復処理したり、すべてのキーのリストを取得したりすることはできないため、この変数はこのファクトリーが管理する交換所を知る唯一の方法です。
+2番目の変数`allPairs`は、このファクトリーによって作成されたペア交換所のすべてのアドレスを含む配列です。イーサリアムでは、マッピングの内容を反復処理したり、すべてのキーのリストを取得したりすることはできないため、この変数はこのファクトリーが管理する交換所を知る唯一の方法です。
 
-注：マッピングのすべてのキーを反復処理できない理由は、コントラクトのデータストレージが_高価_であるため、使用する量が少ないほど良く、変更する頻度が少ないほど良いからです。[反復をサポートするマッピング](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol)を作成することはできますが、キーのリストのための追加のストレージが必要です。ほとんどのアプリケーションではそれは必要ありません。
+注：マッピングのすべてのキーを反復処理できない理由は、コントラクトのデータストレージが_高価_であるため、使用量が少ないほど良く、変更頻度が少ないほど良いからです。[反復をサポートするマッピング](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol)を作成することはできますが、キーのリストのための追加のストレージが必要です。ほとんどのアプリケーションでは、それは必要ありません。
 
 ```solidity
     event PairCreated(address indexed token0, address indexed token1, address pair, uint);
@@ -741,35 +741,35 @@ contract UniswapV2Factory is IUniswapV2Factory {
     }
 ```
 
-この関数は交換ペアの数を返します。
+この関数は、交換ペアの数を返します。
 
 ```solidity
     function createPair(address tokenA, address tokenB) external returns (address pair) {
 ```
 
-これはファクトリーのメイン関数であり、2つのERC-20トークン間のペア交換所を作成します。誰でもこの関数を呼び出すことができることに注意してください。新しいペア交換所を作成するためにユニスワップからの許可は必要ありません。
+これはファクトリーのメイン関数であり、2つのERC-20トークン間のペア交換所を作成します。誰でもこの関数を呼び出すことができることに注意してください。新しいペア交換所を作成するためにUniswapからの許可は必要ありません。
 
 ```solidity
         require(tokenA != tokenB, 'UniswapV2: IDENTICAL_ADDRESSES');
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-新しい交換所のアドレスを決定論的にして、オフチェーンで事前に計算できるようにしたいと考えています（これは[レイヤー2 (L2) トランザクション](/developers/docs/scaling/)に役立ちます）。
+新しい交換所のアドレスを決定論的にしたいので、オフチェーンで事前に計算できるようにします（これは[レイヤー2トランザクション](/developers/docs/scaling/)に役立ちます）。
 これを行うには、トークンアドレスを受け取った順序に関係なく、一貫した順序にする必要があるため、ここでそれらをソートします。
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
-        require(getPair[token0][token1] == address(0), 'UniswapV2: PAIR_EXISTS'); // 単一のチェックで十分である
+        require(getPair[token0][token1] == address(0), 'UniswapV2: PAIR_EXISTS'); // 1回のチェックで十分である
 ```
 
-大規模な流動性プールは、価格がより安定しているため、小規模なものよりも優れています。トークンのペアごとに複数の流動性プールを持ちたくありません。すでに交換所がある場合、同じペアのために別の交換所を作成する必要はありません。
+大規模な流動性プールは、価格がより安定しているため、小規模なものよりも優れています。トークンのペアごとに複数の流動性プールを持ちたくありません。すでに交換所がある場合は、同じペアに対して別の交換所を作成する必要はありません。
 
 ```solidity
         bytes memory bytecode = type(UniswapV2Pair).creationCode;
 ```
 
-新しいコントラクトを作成するには、それを作成するコード（コンストラクタ関数と、実際のコントラクトのEVMバイトコードをメモリに書き込むコードの両方）が必要です。通常、Solidityでは単に`addr = new <name of contract>(<constructor parameters>)`を使用し、コンパイラがすべてを処理してくれますが、決定論的なコントラクトアドレスを持つためには[CREATE2オペコード](https://eips.ethereum.org/EIPS/eip-1014)を使用する必要があります。
-このコードが書かれたとき、そのオペコードはまだSolidityでサポートされていなかったため、手動でコードを取得する必要がありました。現在では[SolidityがCREATE2をサポートしている](https://docs.soliditylang.org/en/v0.8.3/control-structures.html#salted-contract-creations-create2)ため、これはもはや問題ではありません。
+新しいコントラクトを作成するには、それを作成するコード（コンストラクタ関数と、実際のコントラクトのEVMバイトコードをメモリに書き込むコードの両方）が必要です。通常、Solidityでは単に`addr = new <name of contract>(<constructor parameters>)`を使用し、コンパイラがすべてを処理してくれますが、決定論的なコントラクトアドレスを持つには、[CREATE2オペコード](https://eips.ethereum.org/EIPS/eip-1014)を使用する必要があります。
+このコードが書かれた時点では、そのオペコードはまだSolidityでサポートされていなかったため、手動でコードを取得する必要がありました。[SolidityがCREATE2をサポートするようになった](https://docs.soliditylang.org/en/v0.8.3/control-structures.html#salted-contract-creations-create2)ため、これはもはや問題ではありません。
 
 ```solidity
         bytes32 salt = keccak256(abi.encodePacked(token0, token1));
@@ -794,7 +794,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
     }
 ```
 
-新しいペア情報を状態変数に保存し、新しいペア交換所を世界に知らせるためにイベントを発行します。
+新しいペアの情報を状態変数に保存し、新しいペア交換所を世界に知らせるためにイベントを発行します。
 
 ```solidity
     function setFeeTo(address _feeTo) external {
@@ -809,14 +809,14 @@ contract UniswapV2Factory is IUniswapV2Factory {
 }
 ```
 
-これら2つの関数により、`feeSetter`は手数料の受取人（存在する場合）を制御し、`feeSetter`を新しいアドレスに変更できます。
+これらの2つの関数により、`feeSetter`は手数料の受取人（存在する場合）を制御し、`feeSetter`を新しいアドレスに変更できます。
 
 ### UniswapV2ERC20.sol {#uniswapv2erc20}
 
-[このコントラクト](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol)はERC-20流動性トークンを実装しています。これは[オープンツェッペリンのERC-20コントラクト](/developers/tutorials/erc20-annotated-code)に似ているため、異なる部分である`permit`機能についてのみ説明します。
+[このコントラクト](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2ERC20.sol)は、ERC-20流動性トークンを実装しています。これは[OpenZeppelinのERC-20コントラクト](/developers/tutorials/erc20-annotated-code)に似ているため、異なる部分である`permit`機能についてのみ説明します。
 
-イーサリアム上のトランザクションには、現実のお金に相当するイーサ（ETH）がかかります。ERC-20トークンを持っていてもETHを持っていない場合、トランザクションを送信できないため、それらを使って何もすることができません。この問題を回避するための1つの解決策は[メタトランザクション](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions)です。
-トークンの所有者は、他の誰かがオフチェーンでトークンを引き出すことを許可するトランザクションに署名し、インターネットを使用してそれを受信者に送信します。ETHを持っている受信者は、所有者に代わって許可を提出します。
+イーサリアムでのトランザクションにはイーサ（ETH）がかかり、これは現実のお金に相当します。ERC-20トークンを持っていてもETHを持っていない場合、トランザクションを送信できないため、それらを使って何もすることができません。この問題を回避するための1つの解決策は、[メタトランザクション](https://developers.uniswap.org/docs/protocols/v2/concepts/meta-transactions)です。
+トークンの所有者は、他の誰かがオフチェーンでトークンを引き出すことを許可するトランザクションに署名し、インターネットを使用してそれを受取人に送信します。ETHを持っている受取人は、所有者に代わって許可を提出します。
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;
@@ -824,13 +824,13 @@ contract UniswapV2Factory is IUniswapV2Factory {
     bytes32 public constant PERMIT_TYPEHASH = 0x6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c9;
 ```
 
-このハッシュは[トランザクションタイプの識別子](https://eips.ethereum.org/EIPS/eip-712#rationale-for-typehash)です。ここでサポートしているのは、これらのパラメータを持つ`Permit`のみです。
+このハッシュは、[トランザクションタイプの識別子](https://eips.ethereum.org/EIPS/eip-712#rationale-for-typehash)です。ここでサポートしているのは、これらのパラメータを持つ`Permit`のみです。
 
 ```solidity
     mapping(address => uint) public nonces;
 ```
 
-受信者がデジタル署名を偽造することは不可能です。しかし、同じトランザクションを2回送信することは簡単です（これは[リプレイ攻撃](https://wikipedia.org/wiki/Replay_attack)の一形態です）。これを防ぐために、[ナンス](https://wikipedia.org/wiki/Cryptographic_nonce)を使用します。新しい`Permit`のナンスが最後に使用されたものより1つ多くない場合、それは無効であると見なします。
+受取人がデジタル署名を偽造することは不可能です。しかし、同じトランザクションを2回送信することは簡単です（これは[リプレイ攻撃](https://wikipedia.org/wiki/Replay_attack)の一形態です）。これを防ぐために、[ナンス](https://wikipedia.org/wiki/Cryptographic_nonce)を使用します。新しい`Permit`のナンスが最後に使用されたものより1つ多くない場合、それは無効であると見なします。
 
 ```solidity
     constructor() public {
@@ -840,7 +840,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
         }
 ```
 
-これは[チェーン識別子](https://chainid.network/)を取得するためのコードです。これは[Yul](https://docs.soliditylang.org/en/v0.8.4/yul.html)と呼ばれるEVMアセンブリの方言を使用します。現在のバージョンのYulでは、`chainid`ではなく`chainid()`を使用する必要があることに注意してください。
+これは[チェーン識別子](https://chainid.network/)を取得するためのコードです。[Yul](https://docs.soliditylang.org/en/v0.8.4/yul.html)と呼ばれるEVMアセンブリの方言を使用します。現在のバージョンのYulでは、`chainid`ではなく`chainid()`を使用する必要があることに注意してください。
 
 ```solidity
         DOMAIN_SEPARATOR = keccak256(
@@ -861,7 +861,7 @@ EIP-712の[ドメインセパレータ](https://eips.ethereum.org/EIPS/eip-712#r
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
 ```
 
-これは権限を実装する関数です。関連するフィールドと、[署名](https://yos.io/2018/11/16/ethereum-signatures/)のための3つのスカラー値（v、r、およびs）をパラメータとして受け取ります。
+これは権限を実装する関数です。関連するフィールドと、[署名](https://yos.io/2018/11/16/ethereum-signatures/)のための3つのスカラー値（v、r、s）をパラメータとして受け取ります。
 
 ```solidity
         require(deadline >= block.timestamp, 'UniswapV2: EXPIRED');
@@ -879,7 +879,7 @@ EIP-712の[ドメインセパレータ](https://eips.ethereum.org/EIPS/eip-712#r
         );
 ```
 
-`abi.encodePacked(...)`は私たちが取得することを期待しているメッセージです。ナンスがどうあるべきかはわかっているので、パラメータとして取得する必要はありません。
+`abi.encodePacked(...)`は、私たちが受け取ることを期待しているメッセージです。ナンスがどうあるべきかはわかっているので、パラメータとして取得する必要はありません。
 
 イーサリアムの署名アルゴリズムは署名するために256ビットを取得することを期待しているため、`keccak256`ハッシュ関数を使用します。
 
@@ -896,22 +896,7 @@ EIP-712の[ドメインセパレータ](https://eips.ethereum.org/EIPS/eip-712#r
 
 ```
 
-すべてがOKであれば、これを[ERC-20の承認](https://eips.ethereum.org/EIPS/eip-20#approve)として扱います。
-
-```yaml
----
-title: "ユニスワップ v2 注釈付きコード - ペリフェリ・コントラクト"
-description: "ユニスワップ v2 ペリフェリ・コントラクトの詳細な解説"
-author: "qbzzt"
-tags:
-  - "スマートコントラクト"
-skill: advanced
-lang: ja
-published: 2021-05-18
-source: Uniswap
-sourceUrl: https://uniswap.org/docs/v2/smart-contracts/router02/
----
-```
+すべてが正常であれば、これを[ERC-20の承認する（approve）](https://eips.ethereum.org/EIPS/eip-20#approve)として扱います。
 
 ## ペリフェリ・コントラクト {#periphery-contracts}
 
@@ -919,12 +904,12 @@ sourceUrl: https://uniswap.org/docs/v2/smart-contracts/router02/
 
 ### UniswapV2Router01.sol {#uniswapv2router01}
 
-[このコントラクト](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol)には問題があり、[もはや使用すべきではありません](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01)。幸いなことに、ペリフェリ・コントラクトはステートレスであり、資産を保持していないため、非推奨にして、代わりに代替の`UniswapV2Router02`を使用するよう人々に提案するのは簡単です。
+[このコントラクト](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router01.sol)には問題があり、もはや使用されるべきではありません。幸いなことに、ペリフェリ・コントラクトはステートレスであり、資産を保持していないため、これを非推奨にして、代わりに代替の`UniswapV2Router02`を使用するように人々に提案するのは簡単です。
 
 ### UniswapV2Router02.sol {#uniswapv2router02}
 
-ほとんどの場合、[このコントラクト](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol)を通じてユニスワップを使用します。
-その使用方法は[こちら](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02)で確認できます。
+ほとんどの場合、[このコントラクト](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router02.sol)を通じてUniswapを使用します。
+その使用方法については[こちら](https://developers.uniswap.org/docs/protocols/v2/guides/swapping)をご覧ください。
 
 ```solidity
 pragma solidity =0.6.6;
@@ -939,7 +924,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-これらのほとんどは、以前に遭遇したものか、かなり明白なものです。唯一の例外は`IWETH.sol`です。ユニスワップ v2は、任意のERC-20トークンのペアの交換を許可しますが、イーサ (ETH) 自体はERC-20トークンではありません。それは標準よりも前に存在し、独自のメカニズムによって送金されます。ERC-20トークンに適用されるコントラクトでETHを使用できるようにするために、人々は[ラップド・イーサ (WETH)](https://weth.tkn.eth.limo/)コントラクトを考案しました。このコントラクトにETHを送金すると、同量のWETHがミントされます。または、WETHをバーンして、ETHを取り戻すこともできます。
+これらのほとんどは、以前に遭遇したことがあるか、かなり明白なものです。唯一の例外は`IWETH.sol`です。Uniswap v2は任意のERC-20トークンのペアの交換を許可しますが、イーサ（ETH）自体はERC-20トークンではありません。それは標準よりも前に存在し、独自のメカニズムによって送金されます。ERC-20トークンに適用されるコントラクトでETHを使用できるようにするために、人々は[ラップド・イーサ（WETH）](https://weth.tkn.eth.limo/)コントラクトを考案しました。このコントラクトにETHを送信すると、同量のWETHがミントされます。または、WETHをバーンしてETHを取り戻すこともできます。
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {
@@ -949,7 +934,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     address public immutable override WETH;
 ```
 
-ルーターは、どのファクトリーを使用するか、そしてWETHを必要とするトランザクションのためにどのWETHコントラクトを使用するかを知る必要があります。これらの値は[イミュータブル](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables)であり、コンストラクタでのみ設定できることを意味します。これにより、誰もそれらを変更して不正なコントラクトを指すようにできないという確信をユーザーに与えます。
+ルーターは、どのファクトリーを使用するか、およびWETHを必要とするトランザクションにはどのWETHコントラクトを使用するかを知る必要があります。これらの値は[イミュータブル](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables)であり、コンストラクタでのみ設定できることを意味します。これにより、誰もそれらを変更して不正なコントラクトを指すようにすることはできないという確信をユーザーに与えます。
 
 ```solidity
     modifier ensure(uint deadline) {
@@ -958,7 +943,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     }
 ```
 
-この修飾子は、時間制限のあるトランザクション（「可能であれば時間Yの前にXを行う」）が制限時間後に発生しないようにします。
+この修飾子は、時間制限のあるトランザクション（「可能であれば時間Yの前にXを実行する」）が制限時間後に発生しないようにします。
 
 ```solidity
     constructor(address _factory, address _WETH) public {
@@ -967,11 +952,11 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     }
 ```
 
-コンストラクタは、イミュータブルな状態変数を設定するだけです。
+コンストラクタは単にイミュータブルな状態変数を設定します。
 
 ```solidity
     receive() external payable {
-        assert(msg.sender == WETH); // WETHコントラクトからのフォールバック経由でのみETHを受け入れる
+        assert(msg.sender == WETH); // WETHコントラクトからのフォールバック経由でのみETHを受け付ける
     }
 ```
 
@@ -979,7 +964,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 
 #### 流動性の追加 {#add-liquidity}
 
-これらの関数は、ペア交換にトークンを追加し、流動性プールを増加させます。
+これらの関数はペア交換所にトークンを追加し、流動性プールを増加させます。
 
 ```solidity
 
@@ -987,7 +972,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     function _addLiquidity(
 ```
 
-この関数は、ペア交換に預け入れるべきAおよびBトークンの量を計算するために使用されます。
+この関数は、ペア交換所に預け入れるべきAおよびBトークンの量を計算するために使用されます。
 
 ```solidity
         address tokenA,
@@ -1001,35 +986,35 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         uint amountBDesired,
 ```
 
-これらは、流動性プロバイダーが預け入れたい量です。これらはまた、預け入れられるAおよびBの最大量でもあります。
+これらは流動性プロバイダーが預け入れたい量です。これらはまた、預け入れられるAおよびBの最大量でもあります。
 
 ```solidity
         uint amountAMin,
         uint amountBMin
 ```
 
-これらは、預け入れ可能な最小量です。これらの量以上でトランザクションを実行できない場合は、リバートします。この機能が不要な場合は、単にゼロを指定します。
+これらは預け入れるための許容される最小量です。これらの量以上でトランザクションを実行できない場合は、リバートします。この機能が不要な場合は、単にゼロを指定します。
 
-流動性プロバイダーが最小値を指定するのは、通常、トランザクションを現在の為替レートに近いものに制限したいからです。為替レートが大きく変動する場合、それは基礎となる価値を変えるニュースを意味する可能性があり、彼らは手動でどうするかを決定したいと考えます。
+流動性プロバイダーが最小値を指定するのは、通常、トランザクションを現在の為替レートに近い為替レートに制限したいからです。為替レートが大きく変動する場合、それは基礎となる価値を変えるニュースを意味する可能性があり、彼らは手動でどうするかを決定したいと考えます。
 
-例えば、為替レートが1対1で、流動性プロバイダーが以下の値を指定した場合を想像してください。
+たとえば、為替レートが1対1であり、流動性プロバイダーが次の値を指定した場合を想像してください。
 
-| Parameter      | Value |
+| パラメータ | 値 |
 | -------------- | ----: |
-| amountADesired |  1000 |
-| amountBDesired |  1000 |
-| amountAMin     |   900 |
-| amountBMin     |   800 |
+| amountADesired | 1000 |
+| amountBDesired | 1000 |
+| amountAMin | 900 |
+| amountBMin | 800 |
 
 為替レートが0.9から1.25の間にとどまる限り、トランザクションは実行されます。為替レートがその範囲から外れた場合、トランザクションはキャンセルされます。
 
-この予防措置の理由は、トランザクションが即時ではないためです。トランザクションを送信すると、最終的にバリデータがそれをブロックに含めます（ガス価格が非常に低い場合を除き、その場合は同じナンスとより高いガス価格で別のトランザクションを送信して上書きする必要があります）。送信から含まれるまでの間に何が起こるかを制御することはできません。
+この予防措置の理由は、トランザクションが即時ではないためです。トランザクションを送信すると、最終的にバリデータがそれらをブロックに含めます（ガス価格が非常に低い場合を除き、その場合は同じナンスとより高いガス価格で別のトランザクションを送信して上書きする必要があります）。送信から含まれるまでの間に何が起こるかを制御することはできません。
 
 ```solidity
     ) internal virtual returns (uint amountA, uint amountB) {
 ```
 
-この関数は、準備金間の現在の比率と等しい比率にするために、流動性プロバイダーが預け入れるべき量を返します。
+この関数は、準備金間の現在の比率と等しい比率にするために流動性プロバイダーが預け入れるべき量を返します。
 
 ```solidity
         // ペアがまだ存在しない場合は作成する
@@ -1038,7 +1023,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         }
 ```
 
-このトークンペアの交換がまだ存在しない場合は、作成します。
+このトークンペアの交換所がまだない場合は、作成します。
 
 ```solidity
         (uint reserveA, uint reserveB) = UniswapV2Library.getReserves(factory, tokenA, tokenB);
@@ -1051,14 +1036,14 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
             (amountA, amountB) = (amountADesired, amountBDesired);
 ```
 
-現在の準備金が空の場合、これは新しいペア交換です。預け入れる量は、流動性プロバイダーが提供したい量と完全に同じであるべきです。
+現在の準備金が空の場合、これは新しいペア交換所です。預け入れる量は、流動性プロバイダーが提供したい量とまったく同じである必要があります。
 
 ```solidity
         } else {
             uint amountBOptimal = UniswapV2Library.quote(amountADesired, reserveA, reserveB);
 ```
 
-量がどうなるかを確認する必要がある場合、[この関数](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L35)を使用して最適な量を取得します。現在の準備金と同じ比率を求めます。
+量がどうなるかを確認する必要がある場合は、[この関数](https://github.com/Uniswap/v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L36)を使用して最適な量を取得します。現在の準備金と同じ比率にしたいと考えています。
 
 ```solidity
             if (amountBOptimal <= amountBDesired) {
@@ -1066,7 +1051,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
                 (amountA, amountB) = (amountADesired, amountBOptimal);
 ```
 
-もし`amountBOptimal`が流動性プロバイダーが預け入れたい量よりも小さい場合、それはトークンBが現在、流動性預け入れ者が考えているよりも価値があることを意味するため、より少ない量が必要になります。
+`amountBOptimal`が流動性プロバイダーが預け入れたい量よりも小さい場合、それはトークンBが現在、流動性預金者が考えているよりも価値があることを意味するため、より少ない量が必要になります。
 
 ```solidity
             } else {
@@ -1076,13 +1061,13 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
                 (amountA, amountB) = (amountAOptimal, amountBDesired);
 ```
 
-最適なBの量が希望するBの量よりも多い場合、それはBトークンが現在、流動性預け入れ者が考えているよりも価値が低いことを意味するため、より多くの量が必要になります。しかし、希望する量は最大値であるため、それを行うことはできません。代わりに、希望するBトークンの量に対する最適なAトークンの数を計算します。
+最適なBの量が希望するBの量よりも多い場合、それはBトークンが現在、流動性預金者が考えているよりも価値が低いことを意味するため、より多くの量が必要になります。ただし、希望する量は最大値であるため、それを行うことはできません。代わりに、希望するBトークンの量に対する最適なAトークンの数を計算します。
 
-これらをすべてまとめると、このグラフになります。1000個のAトークン（青い線）と1000個のBトークン（赤い線）を預け入れようとしていると仮定します。x軸は為替レート、A/Bです。x=1の場合、それらは価値が等しく、それぞれ1000個ずつ預け入れます。x=2の場合、AはBの2倍の価値がある（Aトークン1つにつきBトークン2つを得る）ため、1000個のBトークンを預け入れますが、Aトークンは500個だけです。x=0.5の場合、状況は逆転し、1000個のAトークンと500個のBトークンになります。
+すべてをまとめると、このグラフになります。1,000個のAトークン（青い線）と1,000個のBトークン（赤い線）を預け入れようとしていると仮定します。x軸は為替レート、A/Bです。x=1の場合、それらは価値が等しく、それぞれ1,000個ずつ預け入れます。x=2の場合、AはBの2倍の価値があるため（Aトークン1つにつきBトークン2つを受け取ります）、1,000個のBトークンを預け入れますが、Aトークンは500個だけです。x=0.5の場合、状況は逆転し、1,000個のAトークンと500個のBトークンになります。
 
-![Graph](liquidityProviderDeposit.png)
+![グラフ](liquidityProviderDeposit.png)
 
-コア・コントラクトに直接流動性を預け入れることもできます（[UniswapV2Pair::mint](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol#L110)を使用）が、コア・コントラクトは自身が不正されていないことしか確認しないため、トランザクションを送信してから実行されるまでの間に為替レートが変動した場合、価値を失うリスクがあります。ペリフェリ・コントラクトを使用すると、預け入れるべき量を計算し、即座に預け入れるため、為替レートは変わらず、何も失うことはありません。
+コア・コントラクトに直接流動性を預け入れることもできますが（[UniswapV2Pair::mint](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol#L110)を使用）、コア・コントラクトは自身が不正されていないことのみをチェックするため、トランザクションを送信してから実行されるまでの間に為替レートが変更された場合、価値を失うリスクがあります。ペリフェリ・コントラクトを使用すると、預け入れるべき量を計算してすぐに預け入れるため、為替レートは変更されず、何も失うことはありません。
 
 ```solidity
     function addLiquidity(
@@ -1098,8 +1083,8 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 
 この関数は、流動性を預け入れるためのトランザクションによって呼び出すことができます。ほとんどのパラメータは上記の`_addLiquidity`と同じですが、2つの例外があります。
 
-. `to` は、流動性プロバイダーのプールの割合を示すためにミントされた新しい流動性トークンを受け取るアドレスです。
-. `deadline` はトランザクションの制限時間です。
+- `to`は、プールの流動性プロバイダーの持分を示すためにミントされた新しい流動性トークンを受け取るアドレスです。
+- `deadline`はトランザクションの制限時間です。
 
 ```solidity
     ) external virtual override ensure(deadline) returns (uint amountA, uint amountB, uint liquidity) {
@@ -1114,14 +1099,14 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         TransferHelper.safeTransferFrom(tokenB, msg.sender, pair, amountB);
 ```
 
-ユーザーからペア交換へ正しい量のトークンを送金します。
+ユーザーからペア交換所に正しい量のトークンを送金します。
 
 ```solidity
         liquidity = IUniswapV2Pair(pair).mint(to);
     }
 ```
 
-その見返りとして、プールの部分的な所有権を示す流動性トークンを`to`アドレスに与えます。コア・コントラクトの`mint`関数は、（前回流動性が変更されたときと比較して）どれだけの余分なトークンがあるかを確認し、それに応じて流動性をミントします。
+見返りとして、プールの部分的な所有権のための流動性トークンを`to`アドレスに与えます。コア・コントラクトの`mint`関数は、どれだけの余分なトークンがあるか（前回流動性が変更されたときに持っていたものと比較して）を確認し、それに応じて流動性をミントします。
 
 ```solidity
     function addLiquidityETH(
@@ -1129,7 +1114,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         uint amountTokenDesired,
 ```
 
-流動性プロバイダーがトークン/ETHペア交換に流動性を提供したい場合、いくつかの違いがあります。コントラクトは、流動性プロバイダーのためにETHのラッピングを処理します。ユーザーはトランザクションと一緒にETHを送信するだけなので（量は`msg.value`で利用可能）、ユーザーが預け入れたいETHの量を指定する必要はありません。
+流動性プロバイダーがトークン/ETHペア交換所に流動性を提供したい場合、いくつかの違いがあります。コントラクトは、流動性プロバイダーのためにETHのラッピングを処理します。ユーザーはトランザクションと一緒にETHを送信するだけなので、ユーザーが預け入れたいETHの数を指定する必要はありません（量は`msg.value`で利用可能です）。
 
 ```solidity
         uint amountTokenMin,
@@ -1151,11 +1136,11 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         assert(IWETH(WETH).transfer(pair, amountETH));
 ```
 
-ETHを預け入れるために、コントラクトはまずそれをWETHにラップし、次にWETHをペアに送金します。送金が`assert`でラップされていることに注意してください。これは、送金が失敗した場合、このコントラクト呼び出しも失敗し、したがってラッピングは実際には行われないことを意味します。
+ETHを預け入れるために、コントラクトはまずそれをWETHにラップし、次にWETHをペアに送金します。送金は`assert`でラップされていることに注意してください。これは、送金が失敗した場合、このコントラクト呼び出しも失敗し、したがってラッピングが実際には行われないことを意味します。
 
 ```solidity
         liquidity = IUniswapV2Pair(pair).mint(to);
-        // ダストETHがあれば返金する
+        // ダストETHがある場合は返金する
         if (msg.value > amountETH) TransferHelper.safeTransferETH(msg.sender, msg.value - amountETH);
     }
 ```
@@ -1323,11 +1308,11 @@ ETHの流動性の削除はほぼ同じですが、WETHトークンを受け取�
 
 最後の関数は、ストレージ手数料とメタトランザクションを組み合わせたものです。
 
-#### トレード {#trade}
+#### 取引 {#trade}
 
 ```solidity
     // **** スワップ ****
-    // 初期金額がすでに最初のペアに送金されている必要がある
+    // 初期金額がすでに最初のペアに送金されていることをリクワイアする
     function _swap(uint[] memory amounts, address[] memory path, address _to) internal virtual {
 ```
 
@@ -1337,21 +1322,21 @@ ETHの流動性の削除はほぼ同じですが、WETHトークンを受け取�
         for (uint i; i < path.length - 1; i++) {
 ```
 
-これを書いている時点で、[388,160個のERC-20トークン](https://eth.blockscout.com/tokens)が存在します。各トークンペアにペア交換があった場合、1500億以上のペア交換になります。現在、チェーン全体には[その数の0.1%のアカウントしかありません](https://eth.blockscout.com/stats/accountsGrowth)。代わりに、スワップ関数はパスの概念をサポートしています。トレーダーはAをBに、BをCに、CをDに交換できるため、直接的なA-Dペア交換は必要ありません。
+これを書いている時点で、[388,160のERC-20トークン](https://eth.blockscout.com/tokens)があります。各トークンペアにペア交換所があった場合、1,500億以上のペア交換所になります。現在、チェーン全体には[そのアカウント数の0.1%しかありません](https://eth.blockscout.com/stats/accountsGrowth)。代わりに、スワップ関数はパスの概念をサポートしています。トレーダーはAをBに、BをCに、CをDに交換できるため、直接のA-Dペア交換所は必要ありません。
 
-これらの市場の価格は同期する傾向があります。なぜなら、同期が取れていない場合、アービトラージの機会が生まれるからです。例えば、A、B、Cの3つのトークンを想像してください。各ペアに1つずつ、合計3つのペア交換があります。
+これらの市場の価格は同期する傾向があります。なぜなら、同期が取れていないとアービトラージの機会が生まれるからです。たとえば、A、B、Cの3つのトークンを想像してください。各ペアに1つずつ、3つのペア交換所があります。
 
 1. 初期状況
-2. トレーダーが24.695個のAトークンを売り、25.305個のBトークンを得る。
-3. トレーダーが24.695個のBトークンを25.305個のCトークンで売り、約0.61個のBトークンを利益として保持する。
-4. その後、トレーダーが24.695個のCトークンを25.305個のAトークンで売り、約0.61個のCトークンを利益として保持する。トレーダーはまた、0.61個の余分なAトークン（最終的に得た25.305から元の投資額24.695を引いたもの）を持っている。
+2. トレーダーが24.695のAトークンを売り、25.305のBトークンを受け取ります。
+3. トレーダーが24.695のBトークンを25.305のCトークンで売り、約0.61のBトークンを利益として保持します。
+4. 次に、トレーダーが24.695のCトークンを25.305のAトークンで売り、約0.61のCトークンを利益として保持します。トレーダーはまた、0.61の余分なAトークンを持っています（トレーダーが最終的に手にする25.305から、元の投資額である24.695を引いたもの）。
 
-| Step | A-B Exchange                | B-C Exchange                | A-C Exchange                |
+| ステップ | A-B交換所 | B-C交換所 | A-C交換所 |
 | ---- | --------------------------- | --------------------------- | --------------------------- |
-| 1    | A:1000 B:1050 A/B=1.05      | B:1000 C:1050 B/C=1.05      | A:1050 C:1000 C/A=1.05      |
-| 2    | A:1024.695 B:1024.695 A/B=1 | B:1000 C:1050 B/C=1.05      | A:1050 C:1000 C/A=1.05      |
-| 3    | A:1024.695 B:1024.695 A/B=1 | B:1024.695 C:1024.695 B/C=1 | A:1050 C:1000 C/A=1.05      |
-| 4    | A:1024.695 B:1024.695 A/B=1 | B:1024.695 C:1024.695 B/C=1 | A:1024.695 C:1024.695 C/A=1 |
+| 1 | A:1000 B:1050 A/B=1.05 | B:1000 C:1050 B/C=1.05 | A:1050 C:1000 C/A=1.05 |
+| 2 | A:1024.695 B:1024.695 A/B=1 | B:1000 C:1050 B/C=1.05 | A:1050 C:1000 C/A=1.05 |
+| 3 | A:1024.695 B:1024.695 A/B=1 | B:1024.695 C:1024.695 B/C=1 | A:1050 C:1000 C/A=1.05 |
+| 4 | A:1024.695 B:1024.695 A/B=1 | B:1024.695 C:1024.695 B/C=1 | A:1024.695 C:1024.695 C/A=1 |
 
 ```solidity
             (address input, address output) = (path[i], path[i + 1]);
@@ -1359,19 +1344,19 @@ ETHの流動性の削除はほぼ同じですが、WETHトークンを受け取�
             uint amountOut = amounts[i + 1];
 ```
 
-現在処理しているペアを取得し、ソートして（ペアで使用するため）、期待される出力額を取得します。
+現在処理しているペアを取得し、（ペアで使用するために）ソートして、予想される出力量を取得します。
 
 ```solidity
             (uint amount0Out, uint amount1Out) = input == token0 ? (uint(0), amountOut) : (amountOut, uint(0));
 ```
 
-ペア交換が期待する方法でソートされた、期待される出力額を取得します。
+ペア交換所が期待する方法でソートされた、予想される出力量を取得します。
 
 ```solidity
             address to = i < path.length - 2 ? UniswapV2Library.pairFor(factory, output, path[i + 2]) : _to;
 ```
 
-これが最後の交換ですか？もしそうなら、トレードで受け取ったトークンを宛先に送金します。そうでない場合は、次のペア交換に送金します。
+これが最後の交換ですか？もしそうなら、取引のために受け取ったトークンを宛先に送信します。そうでない場合は、次のペア交換所に送信します。
 
 ```solidity
 
@@ -1382,7 +1367,7 @@ ETHの流動性の削除はほぼ同じですが、WETHトークンを受け取�
     }
 ```
 
-実際にペア交換を呼び出してトークンをスワップします。交換について通知されるコールバックは必要ないため、そのフィールドにはバイトを送信しません。
+実際にペア交換所を呼び出してトークンをスワップします。交換について通知するためのコールバックは必要ないため、そのフィールドにはバイトを送信しません。
 
 ```solidity
     function swapExactTokensForTokens(
@@ -1396,11 +1381,11 @@ ETHの流動性の削除はほぼ同じですが、WETHトークンを受け取�
         address[] calldata path,
 ```
 
-このパラメータには、ERC-20コントラクトのアドレスが含まれています。上記で説明したように、持っている資産から欲しい資産を得るために複数のペア交換を経由する必要があるかもしれないため、これは配列になっています。
+このパラメータには、ERC-20コントラクトのアドレスが含まれています。上記で説明したように、持っている資産から欲しい資産に到達するために複数のペア交換所を経由する必要があるかもしれないため、これは配列になっています。
 
-Solidityの関数パラメータは、`memory`または`calldata`のいずれかに保存できます。関数がコントラクトのエントリポイントであり、ユーザーから直接（トランザクションを使用して）または別のコントラクトから呼び出される場合、パラメータの値はコールデータから直接取得できます。関数が上記の`_swap`のように内部的に呼び出される場合、パラメータは`memory`に保存される必要があります。呼び出されたコントラクトの観点からは、`calldata`は読み取り専用です。
+Solidityの関数パラメータは、`memory`または`calldata`のいずれかに保存できます。関数がコントラクトへのエントリポイントであり、ユーザーから直接（トランザクションを使用して）または別のコントラクトから呼び出される場合、パラメータの値はコールデータから直接取得できます。上記の`_swap`のように関数が内部的に呼び出される場合、パラメータは`memory`に保存する必要があります。呼び出されたコントラクトの観点からは、`calldata`は読み取り専用です。
 
-`uint`や`address`のようなスカラー型の場合、コンパイラがストレージの選択を処理してくれますが、より長く高価な配列の場合は、使用するストレージのタイプを指定します。
+`uint`や`address`などのスカラー型の場合、コンパイラがストレージの選択を処理してくれますが、より長く高価な配列の場合は、使用するストレージのタイプを指定します。
 
 ```solidity
         address to,
@@ -1408,14 +1393,14 @@ Solidityの関数パラメータは、`memory`または`calldata`のいずれか
     ) external virtual override ensure(deadline) returns (uint[] memory amounts) {
 ```
 
-戻り値は常にメモリで返されます。
+戻り値は常にメモリに返されます。
 
 ```solidity
         amounts = UniswapV2Library.getAmountsOut(factory, amountIn, path);
         require(amounts[amounts.length - 1] >= amountOutMin, 'UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT');
 ```
 
-各スワップで購入される量を計算します。結果がトレーダーが受け入れる最小値を下回る場合、トランザクションをリバートします。
+各スワップで購入する量を計算します。結果がトレーダーが受け入れる意思のある最小値を下回る場合、トランザクションをリバートします。
 
 ```solidity
         TransferHelper.safeTransferFrom(
@@ -1425,7 +1410,7 @@ Solidityの関数パラメータは、`memory`または`calldata`のいずれか
     }
 ```
 
-最後に、最初のERC-20トークンを最初のペア交換のアカウントに送金し、`_swap`を呼び出します。これはすべて同じトランザクション内で発生しているため、ペア交換は予期しないトークンがこの送金の一部であることを知っています。
+最後に、最初のERC-20トークンを最初のペア交換所のアカウントに送金し、`_swap`を呼び出します。これはすべて同じトランザクション内で発生しているため、ペア交換所は予期しないトークンがこの送金の一部であることを知っています。
 
 ```solidity
     function swapTokensForExactTokens(
@@ -1444,9 +1429,9 @@ Solidityの関数パラメータは、`memory`または`calldata`のいずれか
     }
 ```
 
-前の関数`swapTokensForTokens`は、トレーダーが提供してもよい入力トークンの正確な数と、その見返りとして受け取ってもよい出力トークンの最小数を指定できるようにします。この関数は逆のスワップを行い、トレーダーが欲しい出力トークンの数と、そのために支払ってもよい入力トークンの最大数を指定できるようにします。
+前の関数`swapExactTokensForTokens`では、トレーダーが提供する意思のある入力トークンの正確な数と、見返りに受け取る意思のある出力トークンの最小数を指定できます。この関数は逆のスワップを行い、トレーダーが欲しい出力トークンの数と、それに対して支払う意思のある入力トークンの最大数を指定できるようにします。
 
-どちらの場合も、トレーダーはまずこのペリフェリ・コントラクトにアローワンスを与え、送金できるようにする必要があります。
+どちらの場合も、トレーダーはまずこのペリフェリ・コントラクトに送金を許可するためのアローワンスを与える必要があります。
 
 ```solidity
     function swapExactETHForTokens(uint amountOutMin, address[] calldata path, address to, uint deadline)
@@ -1519,20 +1504,20 @@ Solidityの関数パラメータは、`memory`または`calldata`のいずれか
         IWETH(WETH).deposit{value: amounts[0]}();
         assert(IWETH(WETH).transfer(UniswapV2Library.pairFor(factory, path[0], path[1]), amounts[0]));
         _swap(amounts, path, to);
-        // ダストETHがあれば返金する
+        // ダストETHがある場合は返金する
         if (msg.value > amounts[0]) TransferHelper.safeTransferETH(msg.sender, msg.value - amounts[0]);
     }
 ```
 
-これら4つのバリアントはすべて、ETHとトークン間のトレードを含みます。唯一の違いは、トレーダーからETHを受け取ってWETHをミントするために使用するか、パスの最後の交換からWETHを受け取ってそれをバーンし、結果として得られたETHをトレーダーに送り返すかです。
+これらの4つのバリアントはすべて、ETHとトークン間の取引を含みます。唯一の違いは、トレーダーからETHを受け取ってWETHをミントするために使用するか、パスの最後の交換所からWETHを受け取ってそれをバーンし、結果のETHをトレーダーに送り返すかです。
 
 ```solidity
-    // **** スワップ（送金時手数料トークンをサポート） ****
-    // 初期金額がすでに最初のペアに送金されている必要がある
+    // **** スワップ (送金時手数料をサポートするトークン用) ****
+    // 初期金額がすでに最初のペアに送金されていることをリクワイアする
     function _swapSupportingFeeOnTransferTokens(address[] memory path, address _to) internal virtual {
 ```
 
-これは、送金手数料やストレージ手数料があるトークンをスワップして（[この問題](https://github.com/Uniswap/uniswap-interface/issues/835)）を解決するための内部関数です。
+これは、送金手数料またはストレージ手数料があるトークンをスワップして（[この問題](https://github.com/Uniswap/interface/issues/835)）を解決するための内部関数です。
 
 ```solidity
         for (uint i; i < path.length - 1; i++) {
@@ -1548,9 +1533,9 @@ Solidityの関数パラメータは、`memory`または`calldata`のいずれか
             amountOutput = UniswapV2Library.getAmountOut(amountInput, reserveInput, reserveOutput);
 ```
 
-送金手数料のため、各送金からどれだけ得られるかを知るために`getAmountsOut`関数に依存することはできません（元の`_swap`を呼び出す前に行う方法）。代わりに、最初に送金を行い、その後でどれだけのトークンが戻ってきたかを確認する必要があります。
+送金手数料があるため、各送金からどれだけ得られるかを知るために`getAmountsOut`関数に依存することはできません（元の`_swap`を呼び出す前に行う方法）。代わりに、最初に送金を行ってから、どれだけのトークンが戻ってきたかを確認する必要があります。
 
-注：理論的には、`_swap`の代わりにこの関数を使用することもできますが、特定のケース（例えば、最後に必要な最小値を満たすのに十分な量がないために送金がリバートされる場合など）では、結果的により多くのガスがかかることになります。送金手数料トークンはかなりまれであるため、それらに対応する必要はありますが、すべてのスワップが少なくとも1つの送金手数料トークンを経由すると想定する必要はありません。
+注：理論的には、`_swap`の代わりにこの関数を使用することもできますが、特定の場合（たとえば、必要な最小値を満たすのに十分な量が最後にないために送金がリバートされる場合）、より多くのガスがかかることになります。送金手数料トークンは非常にまれであるため、それらに対応する必要はありますが、すべてのスワップが少なくとも1つの送金手数料トークンを経由すると想定する必要はありません。
 
 ```solidity
             }
@@ -1773,7 +1758,7 @@ yは `uint112` であるため、最大値は2^112-1になります。この数�
 
 ### UniswapV2Library {#uniswapv2library}
 
-このライブラリは周辺（periphery）コントラクトでのみ使用されます。
+このライブラリはペリフェリ・コントラクトによってのみ使用されます。
 
 ```solidity
 pragma solidity >=0.5.0;
@@ -1785,7 +1770,7 @@ import "./SafeMath.sol";
 library UniswapV2Library {
     using SafeMath for uint;
 
-    // ソートされたトークンのアドレスを返す。この順序でソートされたペアからの戻り値を処理するために使用される
+    // ソートされたトークンアドレスを返す。この順序でソートされたペアからの戻り値を処理するために使用される
     function sortTokens(address tokenA, address tokenB) internal pure returns (address token0, address token1) {
         require(tokenA != tokenB, 'UniswapV2Library: IDENTICAL_ADDRESSES');
         (token0, token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
@@ -1793,7 +1778,7 @@ library UniswapV2Library {
     }
 ```
 
-2つのトークンをアドレスでソートし、それらのペア取引所のアドレスを取得できるようにします。これが必要な理由は、そうしないとパラメータA,BとパラメータB,Aの2つの可能性が生じ、1つではなく2つの取引所ができてしまうためです。
+2つのトークンをアドレスでソートし、それらのペア交換所のアドレスを取得できるようにします。これが必要なのは、そうしないとパラメータA,BとパラメータB,Aの2つの可能性があり、1つではなく2つの交換所につながるからです。
 
 ```solidity
     // 外部呼び出しを行わずにペアのCREATE2アドレスを計算する
@@ -1803,12 +1788,12 @@ library UniswapV2Library {
                 hex'ff',
                 factory,
                 keccak256(abi.encodePacked(token0, token1)),
-                hex'96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f' // 初期化コードハッシュ
+                hex'96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f' // 初期化コードのハッシュ
             ))));
     }
 ```
 
-この関数は、2つのトークンのペア取引所のアドレスを計算します。このコントラクトは [CREATE2オペコード](https://eips.ethereum.org/EIPS/eip-1014) を使用して作成されるため、使用されるパラメータがわかれば、同じアルゴリズムを使用してアドレスを計算できます。これはファクトリーに問い合わせるよりもはるかに安価であり、
+この関数は、2つのトークンのペア交換所のアドレスを計算します。このコントラクトは[CREATE2オペコード](https://eips.ethereum.org/EIPS/eip-1014)を使用して作成されるため、使用するパラメータがわかっていれば、同じアルゴリズムを使用してアドレスを計算できます。これはファクトリーに尋ねるよりもはるかに安価であり、外部呼び出しを必要としません。
 
 ```solidity
     // ペアのリザーブを取得してソートする
@@ -1819,7 +1804,7 @@ library UniswapV2Library {
     }
 ```
 
-この関数は、ペア取引所が持つ2つのトークンの準備金（リザーブ）を返します。トークンはどちらの順序でも受け取ることができ、内部で使用するためにソートされることに注意してください。
+この関数は、ペア交換所が持っている2つのトークンの準備金を返します。どちらの順序でもトークンを受け取ることができ、内部使用のためにそれらをソートすることに注意してください。
 
 ```solidity
     // ある資産の量とペアのリザーブが与えられた場合、もう一方の資産の等価量を返す
@@ -1830,14 +1815,14 @@ library UniswapV2Library {
     }
 ```
 
-この関数は、手数料が関与しない場合に、トークンAの代わりに受け取るトークンBの量を提供します。この計算では、送金によって為替レートが変化することが考慮されています。
+この関数は、手数料が関与していない場合に、トークンAの見返りとして得られるトークンBの量を提供します。この計算は、送金が為替レートを変更することを考慮に入れています。
 
 ```solidity
     // ある資産の入力量とペアのリザーブが与えられた場合、もう一方の資産の最大出力量を返す
     function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {
 ```
 
-上記の `quote` 関数は、ペア取引所の利用に手数料がかからない場合にはうまく機能します。しかし、0.3%の取引手数料がある場合、実際に受け取る金額は少なくなります。この関数は、取引手数料を差し引いた後の金額を計算します。
+上記の`quote`関数は、ペア交換所を使用するための手数料がない場合にうまく機能します。しかし、0.3%の交換手数料がある場合、実際に得られる量は少なくなります。この関数は、交換手数料後の量を計算します。
 
 ```solidity
 
@@ -1850,7 +1835,7 @@ library UniswapV2Library {
     }
 ```
 
-Solidityはネイティブで分数を処理しないため、単に金額に0.997を掛けることはできません。代わりに、分子に997を掛け、分母に1000を掛けることで、同じ効果を得ます。
+Solidityは分数をネイティブに処理しないため、出力量に単に0.997を掛けることはできません。代わりに、分子に997を掛け、分母に1000を掛けることで、同じ効果を達成します。
 
 ```solidity
     // ある資産の出力量とペアのリザーブが与えられた場合、もう一方の資産の必要な入力量を返す
@@ -1863,11 +1848,11 @@ Solidityはネイティブで分数を処理しないため、単に金額に0.9
     }
 ```
 
-この関数はほぼ同じことを行いますが、出力額を取得して入力額を提供します。
+この関数はほぼ同じことを行いますが、出力量を取得して入力を提供します。
 
 ```solidity
 
-    // 任意の数のペアに対して連鎖的なgetAmountOut計算を実行する
+    // 任意の数のペアに対してチェーン化されたgetAmountOut計算を実行する
     function getAmountsOut(address factory, uint amountIn, address[] memory path) internal view returns (uint[] memory amounts) {
         require(path.length >= 2, 'UniswapV2Library: INVALID_PATH');
         amounts = new uint[](path.length);
@@ -1878,7 +1863,7 @@ Solidityはネイティブで分数を処理しないため、単に金額に0.9
         }
     }
 
-    // 任意の数のペアに対して連鎖的なgetAmountIn計算を実行する
+    // 任意の数のペアに対してチェーン化されたgetAmountIn計算を実行する
     function getAmountsIn(address factory, uint amountOut, address[] memory path) internal view returns (uint[] memory amounts) {
         require(path.length >= 2, 'UniswapV2Library: INVALID_PATH');
         amounts = new uint[](path.length);
@@ -1891,18 +1876,18 @@ Solidityはネイティブで分数を処理しないため、単に金額に0.9
 }
 ```
 
-これら2つの関数は、複数のペア取引所を経由する必要がある場合に、値を特定する処理を行います。
+これらの2つの関数は、複数のペア交換所を経由する必要がある場合に値を識別する処理を行います。
 
 ### Transfer Helper {#transfer-helper}
 
-[このライブラリ](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol)は、ERC-20およびイーサリアムの送金に関する成功チェックを追加し、リバートと `false` 値の戻り値を同じように扱います。
+[このライブラリ](https://github.com/Uniswap/solidity-lib/blob/master/contracts/libraries/TransferHelper.sol)（現在はアーカイブされたリポジトリにあります）は、ERC-20およびイーサリアムの送金に関する成功チェックを追加し、リバートと`false`値の戻り値を同じように扱います。
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 pragma solidity >=0.6.0;
 
-// 一貫してtrue/falseを返さないERC-20トークンとの対話およびETHの送金のためのヘルパーメソッド
+// 常にtrue/falseを返すとは限らない、ERC-20トークンとのやり取りやETHの送金のためのヘルパーメソッド
 library TransferHelper {
     function safeApprove(
         address token,
@@ -1914,10 +1899,10 @@ library TransferHelper {
 
 ```
 
-別のコントラクトを呼び出すには、次の2つの方法のいずれかを使用します。
+別のコントラクトを呼び出すには、次の2つの方法のいずれかを使用できます。
 
 - インターフェース定義を使用して関数呼び出しを作成する
-- [アプリケーション・バイナリ・インターフェース (ABI)](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html) を「手動」で使用して呼び出しを作成する。これが、コードの作成者が選択した方法です。
+- [アプリケーション・バイナリ・インターフェース (ABI)](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html)を「手動」で使用して呼び出しを作成する。このコードの作成者はこの方法を選択しました。
 
 ```solidity
         require(
@@ -1927,7 +1912,7 @@ library TransferHelper {
     }
 ```
 
-ERC-20標準より前に作成されたトークンとの下位互換性を保つため、ERC-20の呼び出しは、リバートする（この場合 `success` は `false` になります）か、成功して `false` 値を返す（この場合、出力データが存在し、それをブール値としてデコードすると `false` になります）かのいずれかで失敗する可能性があります。
+ERC-20標準より前に作成されたトークンとの下位互換性を保つため、ERC-20の呼び出しは、リバートする（この場合、`success`は`false`になります）か、成功して`false`値を返す（この場合、出力データがあり、それをブール値としてデコードすると`false`になります）かのいずれかで失敗する可能性があります。
 
 ```solidity
 
@@ -1946,7 +1931,7 @@ ERC-20標準より前に作成されたトークンとの下位互換性を保�
     }
 ```
 
-この関数は、[ERC-20のtransfer機能](https://eips.ethereum.org/EIPS/eip-20#transfer)を実装しています。これにより、アカウントは別のアカウントから提供されたアローワンスを消費することができます。
+この関数は、[ERC-20の送金機能](https://eips.ethereum.org/EIPS/eip-20#transfer)を実装しており、呼び出し元（このコントラクト）から`to`へトークンを移動させます。
 
 ```solidity
 
@@ -1965,7 +1950,7 @@ ERC-20標準より前に作成されたトークンとの下位互換性を保�
     }
 ```
 
-この関数は、[ERC-20のtransferFrom機能](https://eips.ethereum.org/EIPS/eip-20#transferfrom)を実装しています。これにより、アカウントは別のアカウントから提供されたアローワンスを消費することができます。
+この関数は、[ERC-20のtransferFrom機能](https://eips.ethereum.org/EIPS/eip-20#transferfrom)を実装しており、アカウントが別のアカウントによって提供されたアローワンスを消費できるようにします。
 
 ```solidity
 

@@ -42,7 +42,9 @@ Ethereum üzerinde Token alım satımı yapmanızı sağlayan [birçok merkeziye
 
 ### OpenAI {#openai}
 
-Büyük bir dil modeli (LLM) için [OpenAI](https://openai.com/) ile başlamayı seçtim. Bu eğitimdeki uygulamayı çalıştırmak için API erişimi için ödeme yapmanız gerekecektir. Minimum 5 dolarlık ödeme fazlasıyla yeterlidir.
+Büyük bir dil modeli için [OpenAI](https://openai.com/) ile başlamayı seçtim. Bu eğitimdeki uygulamayı çalıştırmak için API erişimi için ödeme yapmanız gerekecektir. Minimum 5$'lık ödeme fazlasıyla yeterlidir.
+
+OpenAI Python kütüphanesi, kendi bilgisayarınızda çalıştırdığınız bir model de dahil olmak üzere OpenAI uyumlu diğer herhangi bir uç noktayla da iletişim kurabilir. Başka bir yere nasıl yönlendireceğinizi öğrenmek için [Bir YDM ile arayüz oluşturma](#interface-llm) bölümüne bakın.
 
 ## Adım adım geliştirme {#step-by-step}
 
@@ -354,15 +356,15 @@ uv run agent.py
 Çıktı artık bir YDM'ye yönelik, şuna benzer bir istem olacaktır:
 
 ```
-Bu fiyat teklifleri göz önüne alındığında:
-Varlık: WETH/USDC
+Given these quotes:
+Asset: WETH/USDC
         2026-01-20T16:34 3016.21
         .
         .
         .
         2026-02-01T17:49 2299.10
 
-Varlık: WBTC/WETH
+Asset: WBTC/WETH
         2026-01-20T16:34 29.84
         .
         .
@@ -370,10 +372,10 @@ Varlık: WBTC/WETH
         2026-02-01T17:50 33.46
 
 
-2026-02-02T17:56 zamanında WETH/USDC değerinin ne olmasını beklersiniz?
+What would you expect the value for WETH/USDC to be at time 2026-02-02T17:56?
 
-Cevabınızı başka hiçbir metin olmadan, iki ondalık basamağa yuvarlanmış
-tek bir sayı olarak verin.
+Provide your answer as a single number rounded to two decimal places,
+without any other text.
 ```
 
 Burada iki varlık için fiyat teklifleri olduğuna dikkat edin: `WETH/USDC` ve `WBTC/WETH`. Başka bir varlıktan fiyat teklifleri eklemek tahmin doğruluğunu artırabilir.
@@ -513,10 +515,10 @@ Tahmini istediğimiz gelecekteki zaman noktasını belirleyin ve istemi oluştur
 
 ### Bir YDM ile arayüz oluşturma {#interface-llm}
 
-Ardından, gerçek bir YDM'ye istem göndeririz ve beklenen bir gelecek değeri alırız. Bu programı OpenAI kullanarak yazdım, bu nedenle farklı bir sağlayıcı kullanmak isterseniz onu ayarlamanız gerekecektir.
+Sırada, gerçek bir YDM'ye istem gönderip beklenen bir gelecekteki değeri alıyoruz. Bu programı OpenAI kullanarak yazdım, bu nedenle farklı bir sağlayıcı kullanmak isterseniz onu ayarlamanız gerekecektir.
 
 1. Bir [OpenAI hesabı](https://auth.openai.com/create-account) edinin
-2. [Hesaba para yatırın](https://platform.openai.com/settings/organization/billing/overview)—yazının yazıldığı sıradaki minimum tutar 5 dolardır
+2. [Hesaba fon ekleyin](https://platform.openai.com/settings/organization/billing/overview)—yazının yazıldığı sıradaki minimum tutar 5$'dır
 3. [Bir API anahtarı oluşturun](https://platform.openai.com/settings/organization/api-keys)
 4. Komut satırında, programınızın kullanabilmesi için API anahtarını dışa aktarın
 
@@ -524,35 +526,52 @@ Ardından, gerçek bir YDM'ye istem göndeririz ve beklenen bir gelecek değeri 
    export OPENAI_API_KEY=sk-<the rest of the key goes here>
    ```
 
-5. Ajanı kontrol edin ve çalıştırın
+5. Ajan dalına geçin
 
    ```sh
    git checkout 04-interface-llm
+   ```
+
+6. Depodaki kod, [OpenAI'ın 23 Ekim 2026'da kapatacağı](https://developers.openai.com/api/docs/deprecations) `gpt-4-turbo` modelini kullanır. Bunu mevcut düşük maliyetli bir model olan `gpt-6-luna` ile değiştirin. `gpt-6-luna` bir akıl yürütme modeli olduğundan, komut ayrıca akıl yürütmeyi kapatır (`temperature` parametresini kullanılabilir tutan `reasoning_effort="none"`) ve kullanımdan kaldırılan `max_tokens` parametresini `max_completion_tokens` ile değiştirir.
+
+   ```sh
+   sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
+   ```
+
+7. Ajanı çalıştırın
+
+   ```sh
    uv run agent.py
    ```
+
+Yerel olarak barındırdığınız bir model gibi farklı bir OpenAI uyumlu uç nokta kullanmayı tercih ederseniz, OpenAI kütüphanesi uç noktayı `OPENAI_BASE_URL` ortam değişkeninden okur. Bunu ayarlayın, sunucu anahtarları kontrol etmiyorsa `OPENAI_API_KEY` içine boş olmayan herhangi bir değer koyun ve `agent.py` ile `test-predictor.py` içindeki `gpt-6-luna` değerini sunucunun sağladığı bir modelin adıyla değiştirin. Sunucu `reasoning_effort` parametresini reddederse, o parametreyi kaldırın.
+
+```sh
+export OPENAI_BASE_URL=http://localhost:<port>/v1
+```
 
 İşte yeni kod.
 
 ```python
 from openai import OpenAI
 
-open_ai = OpenAI()  # İstemci, OPENAI_API_KEY ortam değişkenini okur
+open_ai = OpenAI()  # The client reads the OPENAI_API_KEY environment variable
 ```
 
-OpenAI API'sini içe aktarın ve örneğini oluşturun.
+OpenAI API'sini içe aktarın ve örneklendirin. İstemci ayrıca ayarlanmışsa `OPENAI_BASE_URL` değişkenini de okur, böylece aynı kod diğer OpenAI uyumlu uç noktalarla da çalışır.
 
 ```python
 response = open_ai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-6-luna", reasoning_effort="none",
     messages=[
         {"role": "user", "content": prompt}
     ],
     temperature=0.0,
-    max_tokens=16,
+    max_completion_tokens=16,
 )
 ```
 
-Yanıtı oluşturmak için OpenAI API'sini (`open_ai.chat.completions.create`) çağırın.
+Yanıtı oluşturmak için OpenAI API'sini (`open_ai.chat.completions.create`) çağırın. Sıfır değerindeki bir `temperature`, en öngörülebilir yanıtı ister ve `max_completion_tokens`, yalnızca bir sayı tutması gereken yanıtın uzunluğunu sınırlar. Bir akıl yürütme modeliyle, `max_completion_tokens` ayrıca modelin düşünmek için kullandığı Token'ları da sayar, bu da `reasoning_effort` değerini `none` olarak ayarlamak için başka bir nedendir.
 
 ```python
 expected_price = Decimal(response.choices[0].message.content.strip())
@@ -693,7 +712,7 @@ Kârlı günlerin sayısını ve maliyetli günlerin sayısını saymak için [`
 
 Şimdi gerçekten işlemleri göndermemiz gerekiyor. Ancak, sistem kanıtlanmadan önce bu noktada gerçek para harcamak istemiyorum. Bunun yerine, Ana Ağ'ın yerel bir çatallanmasını oluşturacağız ve o ağ üzerinde "alım satım" yapacağız.
 
-Yerel bir çatallanma oluşturma ve alım satımı etkinleştirme adımları şunlardır.
+İşte yerel bir çatallanma oluşturma ve alım satımı etkinleştirme adımları.
 
 1. [Foundry](https://getfoundry.sh/introduction/installation) kurun
 
@@ -703,9 +722,9 @@ Yerel bir çatallanma oluşturma ve alım satımı etkinleştirme adımları şu
    anvil --fork-url https://eth.drpc.org --block-time 12
    ```
 
-   `anvil`, Foundry için varsayılan URL olan http://localhost:8545 üzerinde dinliyor, bu nedenle Blokzincir'i manipüle etmek için kullandığımız [`cast` komutu](https://getfoundry.sh/cast/overview) için URL'yi belirtmemize gerek yoktur.
+   `anvil`, Foundry için varsayılan URL olan http://localhost:8545 adresini dinliyor, bu nedenle Blokzincir'i manipüle etmek için kullandığımız [`cast` komutu](https://getfoundry.sh/cast/overview) için URL'yi belirtmemize gerek yoktur.
 
-3. `anvil` içinde çalışırken, ETH'ye sahip on test Hesabı vardır—ilki için ortam değişkenlerini ayarlayın
+3. `anvil` içinde çalıştırırken, ETH'si olan on test Hesabı vardır—ilki için ortam değişkenlerini ayarlayın
 
    ```sh
    PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
@@ -714,7 +733,7 @@ Yerel bir çatallanma oluşturma ve alım satımı etkinleştirme adımları şu
 
 4. Bunlar kullanmamız gereken Sözleşmelerdir. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol), gerçekten alım satım yapmak için kullandığımız Uniswap v3 Sözleşmesidir. Doğrudan havuz üzerinden alım satım yapabilirdik, ancak bu çok daha kolaydır.
 
-   Alttaki iki değişken, WETH ve USDC arasında takas yapmak için gereken Uniswap v3 yollarıdır.
+   En alttaki iki değişken, WETH ve USDC arasında takas yapmak için gereken Uniswap v3 yollarıdır.
 
    ```sh
    WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
@@ -742,7 +761,7 @@ Yerel bir çatallanma oluşturma ve alım satımı etkinleştirme adımları şu
        --private-key $PRIVATE_KEY
    ```
 
-   `approve` çağrısı, `SwapRouter`'ın Token'larımızın bir kısmını harcamasına izin veren bir harcama izni oluşturur. Sözleşmeler olayları izleyemez, bu nedenle Token'ları doğrudan `SwapRouter` Sözleşmesine transfer edersek, ödendiğini bilemez. Bunun yerine, `SwapRouter` Sözleşmesinin belirli bir miktar harcamasına izin veririz ve ardından `SwapRouter` bunu yapar. Bu, `SwapRouter` tarafından çağrılan bir işlev aracılığıyla yapılır, böylece başarılı olup olmadığını bilir.
+   `approve` çağrısı, `SwapRouter`'ın Token'larımızın bir kısmını harcamasına izin veren bir harcama izni oluşturur. Sözleşmeler olayları izleyemez, bu nedenle Token'ları doğrudan `SwapRouter` Sözleşmesine transfer edersek, ödendiğini bilemez. Bunun yerine, `SwapRouter` Sözleşmesinin belirli bir miktarı harcamasına izin veririz ve ardından `SwapRouter` bunu yapar. Bu, `SwapRouter` tarafından çağrılan bir işlev aracılığıyla yapılır, böylece başarılı olup olmadığını bilir.
 
 7. Her iki Token'dan da yeterince sahip olduğunuzu doğrulayın.
 
@@ -754,9 +773,12 @@ Yerel bir çatallanma oluşturma ve alım satımı etkinleştirme adımları şu
 Artık WETH ve USDC'ye sahip olduğumuza göre, ajanı gerçekten çalıştırabiliriz.
 
 ```sh
-git checkout 05-trade
+git checkout -f 05-trade
+sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
 uv run agent.py
 ```
+
+`-f`, önceki dalda yaptığınız model değişikliğini atar, bu nedenle `sed` komutu bunu `agent.py`'nin yeni sürümüne tekrar uygular.
 
 Çıktı şuna benzer olacaktır:
 
@@ -777,11 +799,11 @@ USDC Balance: 929143.797116
 WETH Balance: 499
 ```
 
-Gerçekten kullanmak için birkaç küçük değişikliğe ihtiyacınız var.
+Bunu gerçekten kullanmak için birkaç küçük değişikliğe ihtiyacınız var.
 
-- 14. satırda, `MAINNET_URL`'yi `https://eth.drpc.org` gibi gerçek bir erişim noktasıyla değiştirin
-- 28. satırda, `PRIVATE_KEY`'ü kendi özel anahtarınızla değiştirin
-- Çok zengin değilseniz ve kanıtlanmamış bir ajan için her gün 1 ETH alıp satamıyorsanız, `WETH_TRADE_AMOUNT` miktarını azaltmak için 29'u değiştirmek isteyebilirsiniz
+- 14. satırda, `MAINNET_URL` değerini `https://eth.drpc.org` gibi gerçek bir erişim noktasıyla değiştirin
+- 28. satırda, `PRIVATE_KEY` değerini kendi özel anahtarınızla değiştirin
+- Çok zengin değilseniz ve kanıtlanmamış bir ajan için her gün 1 ETH alıp satamıyorsanız, `WETH_TRADE_AMOUNT` değerini azaltmak için 29'u değiştirmek isteyebilirsiniz
 
 #### Kod açıklaması {#trading-code}
 
@@ -811,7 +833,7 @@ ERC20_ABI = [
 ]
 ```
 
-Gerçekten alım satım yapmak için `approve` işlevine ihtiyacımız var. Ayrıca öncesi ve sonrası bakiyeleri de göstermek istiyoruz, bu yüzden `balanceOf`'ye de ihtiyacımız var.
+Gerçekten alım satım yapmak için `approve` işlevine ihtiyacımız var. Ayrıca öncesi ve sonrası bakiyeleri de göstermek istiyoruz, bu yüzden `balanceOf` işlevine de ihtiyacımız var.
 
 ```python
 SWAP_ROUTER_ABI = [
@@ -819,7 +841,7 @@ SWAP_ROUTER_ABI = [
 ]
 ```
 
-`SwapRouter` ABI'sinde sadece `exactInput`'a ihtiyacımız var. Tam olarak bir WETH satın almak için kullanabileceğimiz ilgili bir işlev olan `exactOutput` vardır, ancak basitlik için her iki durumda da sadece `exactInput` kullanıyoruz.
+`SwapRouter` ABI'sinde sadece `exactInput` işlevine ihtiyacımız var. Tam olarak bir WETH satın almak için kullanabileceğimiz ilgili bir işlev olan `exactOutput` vardır, ancak basitlik adına her iki durumda da sadece `exactInput` kullanıyoruz.
 
 ```python
 account = w3.eth.account.from_key(PRIVATE_KEY)
@@ -888,7 +910,7 @@ def make_buy_params(quote: Quote) -> dict:
     }
 ```
 
-`SELL_PARAMS`'nın aksine, alım parametreleri değişebilir. Girdi miktarı, `quote` içinde mevcut olduğu gibi 1 WETH'nin maliyetidir.
+`SELL_PARAMS`'nin aksine, alım parametreleri değişebilir. Girdi miktarı, `quote` içinde mevcut olduğu gibi 1 WETH'nin maliyetidir.
 
 ```python
 def buy(quote: Quote):
@@ -924,7 +946,7 @@ def balances():
     print(f"{wethusdc_pool.token1.symbol} Balance: {Decimal(token1_balance) / Decimal(10 ** wethusdc_pool.token1.decimals)}")
 ```
 
-Her iki para biriminde de kullanıcı bakiyelerini raporlayın.
+Kullanıcı bakiyelerini her iki para biriminde de raporlayın.
 
 ```python
 print("Account balances before trade:")
@@ -941,7 +963,7 @@ print("Account balances after trade:")
 balances()
 ```
 
-Bu ajan şu anda yalnızca bir kez çalışır. Ancak, onu [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) üzerinden çalıştırarak veya 368-400 satırlarını bir döngüye sarıp bir sonraki döngü zamanı gelene kadar beklemek için [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) kullanarak sürekli çalışacak şekilde değiştirebilirsiniz.
+Bu ajan şu anda yalnızca bir kez çalışır. Ancak, onu [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) üzerinden çalıştırarak veya 368-397 satırlarını bir döngüye sarıp bir sonraki döngü zamanı gelene kadar beklemek için [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) kullanarak sürekli çalışacak şekilde değiştirebilirsiniz.
 
 ## Olası iyileştirmeler {#improvements}
 
@@ -959,7 +981,7 @@ Ajanın ne yapacağına karar verirken göz ardı ettiği iki önemli gerçek va
 
 Yapay zeka satıcıları, YDM'lerine gönderdiğiniz sorguları görebilir, bu da ajanınızla geliştirdiğiniz dahi alım satım sistemini açığa çıkarabilir. Çok fazla kişinin kullandığı bir alım satım sistemi değersizdir çünkü siz satın almak istediğinizde çok fazla kişi satın almaya çalışır (ve fiyat yükselir) ve siz satmak istediğinizde satmaya çalışır (ve fiyat düşer).
 
-Bu sorunu önlemek için, örneğin [LM-Studio](https://lmstudio.ai/) kullanarak bir YDM'yi yerel olarak çalıştırabilirsiniz.
+Bu sorunu önlemek için, örneğin [llama.cpp](https://github.com/ggml-org/llama.cpp)'nin `llama-server`'ını kullanarak bir YDM'yi yerel olarak çalıştırabilirsiniz. OpenAI uyumlu bir uç nokta sağlar, bu nedenle yalnızca [Bir YDM ile arayüz oluşturma](#interface-llm) bölümünde açıklandığı gibi `OPENAI_BASE_URL` değişkenini ve model adını ayarlamanız yeterlidir.
 
 ### Yapay zeka botundan yapay zeka ajanına {#bot-to-agent}
 

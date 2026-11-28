@@ -13,25 +13,33 @@ published: 2021-03-09
 
 Moja ya matumizi ya kawaida ya Ethereum ni kwa kikundi kuunda tokeni inayoweza kuuzwa, kwa maana fulani sarafu yao wenyewe. Tokeni hizi kwa kawaida hufuata kiwango,
 [ERC-20](/developers/docs/standards/tokens/erc-20/). Kiwango hiki hufanya iwezekane kuandika zana, kama vile mabwawa ya ukwasi na mikoba, zinazofanya kazi na tokeni zote za ERC-20. Katika makala haya tutachambua
-[utekelezaji wa ERC20 wa Solidity wa OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), pamoja na
-[ufafanuzi wa kiolesura](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
+[utekelezaji wa ERC20 wa Solidity wa OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol), pamoja na
+[ufafanuzi wa kiolesura](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol).
 
 Huu ni msimbo wa chanzo uliofafanuliwa. Ikiwa unataka kutekeleza ERC-20,
-[soma mafunzo haya](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
+[soma mafunzo haya](https://docs.openzeppelin.com/contracts/5.x/erc20-supply).
+
+<Alert variant="info">
+<AlertContent>
+<AlertDescription>
+Mwongozo huu unashughulikia Mikataba ya OpenZeppelin v3.3 (Solidity 0.6/0.7). Ikiwa utasakinisha `@openzeppelin/contracts` leo utapata v5.x, ambayo inatofautiana na msimbo ulio hapa chini: inatumia hesabu iliyokaguliwa iliyojengewa ndani ya Solidity badala ya `SafeMath`, inabadilisha `_beforeTokenTransfer` na `_afterTokenTransfer` na kazi moja ya `_update`, inaondoa `increaseAllowance`, `decreaseAllowance` na `_setupDecimals`, na inaripoti kufeli kwa makosa maalum badala ya kamba za kutengua. Dhana zilizoelezwa hapa bado zinatumika. Tazama [nyaraka za ERC-20 za OpenZeppelin v5](https://docs.openzeppelin.com/contracts/5.x/erc20) kwa API ya sasa.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Kiolesura {#the-interface}
 
-Kusudi la kiwango kama ERC-20 ni kuruhusu utekelezaji wa tokeni nyingi zinazoingiliana katika programu, kama vile mikoba na mabadilishano yaliyogatuliwa. Ili kufanikisha hilo, tunaunda
+Madhumuni ya kiwango kama ERC-20 ni kuruhusu utekelezaji wa tokeni nyingi ambazo zinaingiliana katika programu mbalimbali, kama vile mikoba na mabadilishano yaliyogatuliwa. Ili kufanikisha hilo, tunaunda
 [kiolesura](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/). Msimbo wowote unaohitaji kutumia mkataba wa tokeni
 unaweza kutumia ufafanuzi sawa katika kiolesura na kuendana na mikataba yote ya tokeni inayoitumia, iwe ni mkoba kama vile
-MetaMask, programu tumizi iliyogatuliwa (dapp) kama vile etherscan.io, au mkataba tofauti kama vile bwawa la ukwasi.
+MetaMask, dapp kama vile etherscan.io, au mkataba tofauti kama vile bwawa la ukwasi.
 
-![Illustration of the ERC-20 interface](erc20_interface.png)
+![Kielelezo cha kiolesura cha ERC-20](erc20_interface.png)
 
 Ikiwa wewe ni mtayarishaji programu mzoefu, labda unakumbuka kuona miundo sawa katika [Java](https://www.w3schools.com/java/java_interface.asp)
 au hata katika [faili za kichwa za C](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html).
 
-Huu ni ufafanuzi wa [Kiolesura cha ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)
+Huu ni ufafanuzi wa [Kiolesura cha ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol)
 kutoka OpenZeppelin. Ni tafsiri ya [kiwango kinachosomeka na binadamu](https://eips.ethereum.org/EIPS/eip-20) kuwa msimbo wa Solidity. Bila shaka,
 kiolesura chenyewe hakifafanui _jinsi_ ya kufanya chochote. Hilo linaelezwa katika msimbo wa chanzo wa mkataba hapa chini.
 
@@ -41,8 +49,8 @@ kiolesura chenyewe hakifafanui _jinsi_ ya kufanya chochote. Hilo linaelezwa kati
 // SPDX-License-Identifier: MIT
 ```
 
-Faili za Solidity zinapaswa kujumuisha kitambulisho cha leseni. [Unaweza kuona orodha ya leseni hapa](https://spdx.org/licenses/). Ikiwa unahitaji leseni tofauti,
-ieleze tu kwenye maoni.
+Faili za Solidity zinapaswa kujumuisha kitambulisho cha leseni. [Unaweza kuona orodha ya leseni hapa](https://spdx.org/licenses/). Ikiwa unahitaji leseni
+tofauti, ieleze tu kwenye maoni.
 
 &nbsp;
 
@@ -51,7 +59,8 @@ pragma solidity >=0.6.0 <0.8.0;
 ```
 
 Lugha ya Solidity bado inabadilika haraka, na matoleo mapya yanaweza yasiendane na msimbo wa zamani
-([tazama hapa](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Kwa hivyo, ni wazo zuri kubainisha sio tu toleo la chini la lugha, bali pia toleo la juu zaidi, la hivi punde ambalo ulijaribu msimbo nalo.
+([tazama hapa](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Kwa hivyo, ni wazo zuri kubainisha sio tu toleo la chini
+la lugha, bali pia toleo la juu zaidi, la hivi punde ambalo ulijaribu msimbo nalo.
 
 &nbsp;
 
@@ -83,13 +92,13 @@ Kwa kawaida, majina ya kiolesura huanza na `I`.
 
 Kazi hii ni `external`, ikimaanisha [inaweza tu kuitwa kutoka nje ya mkataba](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2).
 Inarudisha jumla ya usambazaji wa tokeni katika mkataba. Thamani hii inarudishwa kwa kutumia aina ya kawaida zaidi katika Ethereum, biti 256 zisizo na saini (biti 256 ni
-saizi ya neno asili ya EVM). Kazi hii pia ni `view`, ambayo inamaanisha kuwa haibadilishi hali, kwa hivyo inaweza kutekelezwa kwenye nodi moja badala ya kuwa na
+ukubwa wa neno asili la EVM). Kazi hii pia ni `view`, ambayo inamaanisha kuwa haibadilishi hali, kwa hivyo inaweza kutekelezwa kwenye nodi moja badala ya kuwa na
 kila nodi katika mnyororo wa vitalu kuiendesha. Aina hii ya kazi haizalishi muamala na haigharimu [gesi](/developers/docs/gas/).
 
-**Kumbuka:** Kinadharia inaweza kuonekana kuwa muundaji wa mkataba anaweza kudanganya kwa kurudisha jumla ya usambazaji mdogo kuliko thamani halisi, na kufanya kila tokeni ionekane
+**Kumbuka:** Kinadharia inaweza kuonekana kuwa muundaji wa mkataba anaweza kudanganya kwa kurudisha jumla ya usambazaji mdogo kuliko thamani halisi, na kufanya kila tokeni kuonekana
 ya thamani zaidi kuliko ilivyo kweli. Hata hivyo, hofu hiyo inapuuza asili ya kweli ya mnyororo wa vitalu. Kila kitu kinachotokea kwenye mnyororo wa vitalu kinaweza kuthibitishwa na
-kila nodi. Ili kufanikisha hili, msimbo wa lugha ya mashine ya kila mkataba na hifadhi inapatikana kwenye kila nodi. Ingawa hauhitajiki kuchapisha msimbo wa Solidity
-kwa mkataba wako, hakuna mtu atakayekuchukulia kwa uzito isipokuwa uchapishe msimbo wa chanzo na toleo la Solidity ambalo lilikusanywa nalo, ili iweze
+kila nodi. Ili kufanikisha hili, msimbo wa lugha ya mashine ya kila mkataba na hifadhi inapatikana kwenye kila nodi. Ingawa hulazimiki kuchapisha msimbo wa Solidity
+kwa mkataba wako, hakuna mtu ambaye angekuchukulia kwa uzito isipokuwa uchapishe msimbo wa chanzo na toleo la Solidity ambalo lilikusanywa nalo, ili iweze
 kuthibitishwa dhidi ya msimbo wa lugha ya mashine uliotoa.
 Kwa mfano, tazama [mkataba huu](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract).
 
@@ -109,17 +118,17 @@ Pia ni `external` na `view`.
 
 ```solidity
     /**
-     * @dev Inahamisha tokeni `amount` kutoka kwenye akaunti ya mpigaji kwenda kwa `recipient`.
+     * @dev Inahamisha tokeni `amount` kutoka kwenye akaunti ya anayeita kwenda kwa `recipient`.
      *
      * Inarejesha thamani ya boolean inayoonyesha ikiwa operesheni imefaulu.
      *
-     * Inatoa tukio la {hamisho}.
+     * Inatoa tukio la {Hamisho}.
      */
     function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
 Kazi ya `transfer` inahamisha tokeni kutoka kwa mpigaji kwenda kwa anwani tofauti. Hii inahusisha mabadiliko ya hali, kwa hivyo sio `view`.
-Mtumiaji anapoita kazi hii inaunda muamala na kugharimu gesi. Pia inatoa tukio, `Transfer`, ili kuarifu kila mtu kwenye
+Mtumiaji anapoita kazi hii inaunda muamala na kugharimu gesi. Pia inatoa tukio, `Transfer`, ili kuwajulisha kila mtu kwenye
 mnyororo wa vitalu kuhusu tukio hilo.
 
 Kazi ina aina mbili za matokeo kwa aina mbili tofauti za wapigaji:
@@ -128,19 +137,19 @@ Kazi ina aina mbili za matokeo kwa aina mbili tofauti za wapigaji:
   na hasubiri jibu, ambalo linaweza kuchukua muda usiojulikana. Mtumiaji anaweza kuona kilichotokea
   kwa kutafuta stakabadhi ya muamala (ambayo inatambuliwa na heshi ya muamala) au kwa kutafuta
   tukio la `Transfer`.
-- Mikataba mingine, ambayo huita kazi kama sehemu ya muamala wa jumla. Mikataba hiyo hupata matokeo mara moja,
-  kwa sababu inaendeshwa katika muamala huo huo, kwa hivyo inaweza kutumia thamani ya kurudi ya kazi.
+- Mikataba mingine, ambayo inaita kazi kama sehemu ya muamala wa jumla. Mikataba hiyo hupata matokeo mara moja,
+  kwa sababu inaendeshwa katika muamala huo huo, kwa hivyo inaweza kutumia thamani ya kurudisha ya kazi.
 
 Aina sawa ya matokeo inaundwa na kazi zingine zinazobadilisha hali ya mkataba.
 
 &nbsp;
 
-Vibali huruhusu akaunti kutumia baadhi ya tokeni ambazo ni za mmiliki tofauti.
+Vibali vinaruhusu akaunti kutumia baadhi ya tokeni ambazo ni za mmiliki tofauti.
 Hii ni muhimu, kwa mfano, kwa mikataba inayofanya kazi kama wauzaji. Mikataba haiwezi
 kufuatilia matukio, kwa hivyo ikiwa mnunuzi angehamisha tokeni kwa mkataba wa muuzaji
-moja kwa moja mkataba huo usingejua umelipwa. Badala yake, mnunuzi anaruhusu
+moja kwa moja mkataba huo usingejua kuwa umelipwa. Badala yake, mnunuzi anaruhusu
 mkataba wa muuzaji kutumia kiasi fulani, na muuzaji anahamisha kiasi hicho.
-Hii inafanywa kupitia kazi ambayo mkataba wa muuzaji unaita, ili mkataba wa muuzaji
+Hili linafanywa kupitia kazi ambayo mkataba wa muuzaji unaita, ili mkataba wa muuzaji
 uweze kujua ikiwa ulifanikiwa.
 
 ```solidity
@@ -154,21 +163,21 @@ uweze kujua ikiwa ulifanikiwa.
     function allowance(address owner, address spender) external view returns (uint256);
 ```
 
-Kazi ya `allowance` inaruhusu mtu yeyote kuuliza ili kuona ni kibali gani ambacho
-anwani moja (`owner`) inaruhusu anwani nyingine (`spender`) kutumia.
+Kazi ya `allowance` inaruhusu mtu yeyote kuuliza ili kuona ni kibali gani ambacho anwani
+moja (`owner`) inaruhusu anwani nyingine (`spender`) kutumia.
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev Inaweka `amount` kama kibali cha `spender` juu ya tokeni za mpigaji.
+     * @dev Inaweka `amount` kama kibali cha `spender` juu ya tokeni za anayeita.
      *
      * Inarejesha thamani ya boolean inayoonyesha ikiwa operesheni imefaulu.
      *
-     * MUHIMU: Jihadharini kwamba kubadilisha kibali kwa njia hii kunaleta hatari
+     * MUHIMU: Kuwa mwangalifu kwamba kubadilisha kibali kwa njia hii kunaleta hatari
      * kwamba mtu anaweza kutumia kibali cha zamani na kipya kwa mpangilio mbaya
      * wa muamala. Suluhisho moja linalowezekana la kupunguza hali hii ya
-     * ushindani ni kwanza kupunguza kibali cha mtumiaji hadi 0 na kuweka
+     * ushindani ni kwanza kupunguza kibali cha `spender` hadi 0 na kuweka
      * thamani inayotakikana baadaye:
      * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
      *
@@ -177,11 +186,11 @@ anwani moja (`owner`) inaruhusu anwani nyingine (`spender`) kutumia.
     function approve(address spender, uint256 amount) external returns (bool);
 ```
 
-Kazi ya `approve` inaunda kibali. Hakikisha unasoma ujumbe kuhusu
+Kazi ya `approve` inaunda kibali. Hakikisha kusoma ujumbe kuhusu
 jinsi inavyoweza kutumiwa vibaya. Katika Ethereum unadhibiti mpangilio wa miamala yako mwenyewe,
 lakini huwezi kudhibiti mpangilio ambao miamala ya watu wengine
-itatekelezwa, isipokuwa usipowasilisha muamala wako mwenyewe hadi uone
-muamala wa upande mwingine umetokea.
+itatekelezwa, isipokuwa usiwajilishe muamala wako mwenyewe hadi uone
+muamala wa upande mwingine umefanyika.
 
 &nbsp;
 
@@ -189,23 +198,23 @@ muamala wa upande mwingine umetokea.
     /**
      * @dev Inahamisha tokeni `amount` kutoka kwa `sender` kwenda kwa `recipient` kwa kutumia
      * utaratibu wa kibali. `amount` kisha inakatwa kutoka kwenye kibali
-     * cha mpigaji.
+     * cha anayeita.
      *
      * Inarejesha thamani ya boolean inayoonyesha ikiwa operesheni imefaulu.
      *
-     * Inatoa tukio la {hamisho}.
+     * Inatoa tukio la {Hamisho}.
      */
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 ```
 
-Hatimaye, `transferFrom` inatumiwa na mtumiaji kutumia kibali hicho.
+Hatimaye, `transferFrom` inatumiwa na mtumiaji kutumia kibali haswa.
 
 &nbsp;
 
 ```solidity
 
     /**
-     * @dev Inatolewa wakati tokeni `value` zinahamishwa kutoka akaunti moja (`from`) kwenda
+     * @dev Inatolewa wakati tokeni `value` zinapohamishwa kutoka akaunti moja (`from`) kwenda
      * nyingine (`to`).
      *
      * Kumbuka kwamba `value` inaweza kuwa sifuri.
@@ -213,19 +222,19 @@ Hatimaye, `transferFrom` inatumiwa na mtumiaji kutumia kibali hicho.
     event Transfer(address indexed from, address indexed to, uint256 value);
 
     /**
-     * @dev Inatolewa wakati kibali cha `spender` kwa `owner` kinawekwa na
+     * @dev Inatolewa wakati kibali cha `spender` kwa ajili ya `owner` kinawekwa na
      * wito kwa {idhinisha}. `value` ni kibali kipya.
      */
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 ```
 
-Matukio haya hutolewa wakati hali ya mkataba wa ERC-20 inabadilika.
+Matukio haya yanatolewa wakati hali ya mkataba wa ERC-20 inabadilika.
 
 ## Mkataba Halisi {#the-actual-contract}
 
 Huu ndio mkataba halisi unaotekeleza kiwango cha ERC-20,
-[uliochukuliwa kutoka hapa](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol).
+[uliochukuliwa kutoka hapa](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol).
 Haukusudiwi kutumiwa kama ulivyo, lakini unaweza
 [kurithi](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm) kutoka kwake ili kuupanua kuwa kitu kinachoweza kutumika.
 
@@ -250,7 +259,7 @@ import "../../math/SafeMath.sol";
 - `GSN/Context.sol` ni ufafanuzi unaohitajika kutumia [OpenGSN](https://opengsn.org/), mfumo unaoruhusu watumiaji wasio na Etha
   kutumia mnyororo wa vitalu. Kumbuka kuwa hili ni toleo la zamani, ikiwa unataka kuunganisha na OpenGSN
   [tumia mafunzo haya](https://docs.opengsn.org/javascript-client/tutorial.html).
-- [Maktaba ya SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), ambayo inazuia
+- [Maktaba ya SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math#SafeMath), ambayo inazuia
   mizidio/upungufu wa hesabu kwa matoleo ya Solidity **&lt;0.8.0**. Katika Solidity ≥0.8.0, shughuli za hesabu hutengua kiotomatiki
   kwenye mzidio/upungufu, na kufanya SafeMath isiwe ya lazima. Mkataba huu unatumia SafeMath kwa utangamano wa nyuma na
   matoleo ya zamani ya kikusanyaji.
@@ -304,14 +313,14 @@ Mstari huu unabainisha urithi, katika kesi hii kutoka kwa `IERC20` kutoka hapo j
 ```
 
 Mstari huu unaambatanisha maktaba ya `SafeMath` kwenye aina ya `uint256`. Unaweza kupata maktaba hii
-[hapa](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol).
+[hapa](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/math/SafeMath.sol).
 
 ### Ufafanuzi wa Vigezo {#variable-definitions}
 
-Ufafanuzi huu unabainisha vigezo vya hali ya mkataba. Vigezo hivi vimetangazwa kama `private`, lakini
+Ufafanuzi huu unabainisha vigezo vya hali ya mkataba. Vigezo hivi vinatangazwa `private`, lakini
 hiyo inamaanisha tu kwamba mikataba mingine kwenye mnyororo wa vitalu haiwezi kuvisoma. _Hakuna
 siri kwenye mnyororo wa vitalu_, programu kwenye kila nodi ina hali ya kila mkataba
-katika kila kitalu. Kwa kawaida, vigezo vya hali hupewa jina `_<something>`.
+kwa kila kitalu. Kwa kawaida, vigezo vya hali vinapewa jina `_<something>`.
 
 Vigezo viwili vya kwanza ni [ramani](https://www.tutorialspoint.com/solidity/solidity_mappings.htm),
 ikimaanisha vinafanya kazi takriban sawa na [safu shirikishi](https://wikipedia.org/wiki/Associative_array),
@@ -322,7 +331,7 @@ na chaguo-msingi (sifuri).
     mapping (address => uint256) private _balances;
 ```
 
-Ramani ya kwanza, `_balances`, ni anwani na salio zao husika za tokeni hii. Ili kufikia
+Ramani ya kwanza, `_balances`, ni anwani na salio lao husika la tokeni hii. Ili kufikia
 salio, tumia sintaksia hii: `_balances[<address>]`.
 
 &nbsp;
@@ -341,7 +350,7 @@ kutumia kutoka kwa akaunti ya anwani B, tumia `_allowances[B][A]`.
     uint256 private _totalSupply;
 ```
 
-Kama jina linavyopendekeza, kigezo hiki hufuatilia jumla ya usambazaji wa tokeni.
+Kama jina linavyopendekeza, kigezo hiki kinafuatilia jumla ya usambazaji wa tokeni.
 
 &nbsp;
 
@@ -354,15 +363,15 @@ Kama jina linavyopendekeza, kigezo hiki hufuatilia jumla ya usambazaji wa tokeni
 Vigezo hivi vitatu vinatumika kuboresha usomaji. Viwili vya kwanza vinajieleza, lakini `_decimals`
 haijielezi.
 
-Kwa upande mmoja, Ethereum haina vigezo vya nambari za desimali au sehemu. Kwa upande mwingine,
-binadamu wanapenda kuweza kugawanya tokeni. Sababu moja iliyofanya watu wakubaliane kutumia dhahabu kwa sarafu ni kwamba
-ilikuwa vigumu kutoa chenji wakati mtu alipotaka kununua ng'ombe kwa thamani ya bata.
+Kwa upande mmoja, Ethereum haina vigezo vya uhakika wa kuelea au sehemu. Kwa upande mwingine,
+binadamu wanapenda kuweza kugawanya tokeni. Sababu moja iliyofanya watu wakubaliane na dhahabu kwa sarafu ilikuwa kwamba
+ilikuwa ngumu kutoa chenji wakati mtu alitaka kununua ng'ombe wa thamani ya bata.
 
-Suluhisho ni kufuatilia nambari kamili, lakini kuhesabu badala ya tokeni halisi tokeni ya sehemu ambayo inakaribia
-kukosa thamani. Katika kesi ya Etha, tokeni ya sehemu inaitwa Wei, na Wei 10^18 ni sawa na
-ETH moja. Wakati wa kuandika, Wei 10,000,000,000,000 ni takriban senti moja ya Marekani au Euro.
+Suluhisho ni kufuatilia nambari kamili, lakini kuhesabu badala ya tokeni halisi tokeni ya sehemu ambayo
+karibu haina thamani. Katika kesi ya Etha, tokeni ya sehemu inaitwa Wei, na Wei 10^18 ni sawa na
+ETH moja.
 
-Programu zinahitaji kujua jinsi ya kuonyesha salio la tokeni. Ikiwa mtumiaji ana Wei 3,141,000,000,000,000,000, je, hiyo ni
+Programu zinahitaji kujua jinsi ya kuonyesha salio la tokeni. Ikiwa mtumiaji ana Wei 3,141,000,000,000,000,000, je hiyo ni
 ETH 3.14? ETH 31.41? ETH 3,141? Katika kesi ya Etha inafafanuliwa Wei 10^18 kwa ETH, lakini kwa
 tokeni yako unaweza kuchagua thamani tofauti. Ikiwa kugawanya tokeni hakuna maana, unaweza kutumia
 thamani ya `_decimals` ya sifuri. Ikiwa unataka kutumia kiwango sawa na ETH, tumia thamani **18**.
@@ -376,19 +385,18 @@ thamani ya `_decimals` ya sifuri. Ikiwa unataka kutumia kiwango sawa na ETH, tum
      *
      * Ili kuchagua thamani tofauti kwa {decimals}, tumia {_setupDecimals}.
      *
-     * Thamani zote tatu hizi hazibadiliki: zinaweza tu kuwekwa mara moja wakati
-     * wa ujenzi.
+     * Thamani zote tatu ni za kudumu: zinaweza kuwekwa mara moja tu wakati wa
+     * ujenzi.
      */
     constructor (string memory name_, string memory symbol_) public {
-        // Katika Solidity ≥0.7.0, 'public' inaeleweka na inaweza kuachwa.
-
         _name = name_;
         _symbol = symbol_;
         _decimals = 18;
     }
 ```
 
-Konstrukta inaitwa wakati mkataba unaundwa kwa mara ya kwanza. Kwa kawaida, vigezo vya kazi hupewa jina `<something>_`.
+Konstrukta inaitwa wakati mkataba unaundwa kwa mara ya kwanza. Kwa kawaida, vigezo vya kazi vinapewa jina `<something>_`.
+Kuanzia na Solidity 0.7.0, mwonekano (`public` au `internal`) kwenye konstrukta unapuuzwa na kuachwa, kwa hivyo msimbo mpya unauacha.
 
 ### Kazi za Kiolesura cha Mtumiaji {#user-interface-functions}
 
@@ -414,27 +422,27 @@ Konstrukta inaitwa wakati mkataba unaundwa kwa mara ya kwanza. Kwa kawaida, vige
      * kuonyeshwa kwa mtumiaji kama `5,05` (`505 / 10 ** 2`).
      *
      * Kwa kawaida tokeni huchagua thamani ya 18, kuiga uhusiano kati ya
-     * Etha na Wei. Hii ndiyo thamani ambayo {ERC-20} inatumia, isipokuwa {_setupDecimals} iitwe.
+     * Etha na Wei. Hii ndiyo thamani ambayo {ERC20} inatumia, isipokuwa {_setupDecimals} iitwe.
      *
      * KUMBUKA: Taarifa hii inatumika tu kwa madhumuni ya _kuonyesha_: kwa
      * vyovyote vile haiathiri hesabu yoyote ya mkataba, ikiwa ni pamoja na
-     * {IERC20-balanceOf} na {IERC20-transfer}.
+     * {IERC20-balanceOf} na {IERC20-hamisho}.
      */
     function decimals() public view returns (uint8) {
         return _decimals;
     }
 ```
 
-Kazi hizi, `name`, `symbol`, na `decimals` husaidia violesura vya mtumiaji kujua kuhusu mkataba wako ili viweze kuuonyesha ipasavyo.
+Kazi hizi, `name`, `symbol`, na `decimals` zinasaidia violesura vya mtumiaji kujua kuhusu mkataba wako ili viweze kuuonyesha vizuri.
 
-Aina ya kurudi ni `string memory`, ikimaanisha kurudisha mfuatano ambao umehifadhiwa kwenye kumbukumbu. Vigezo, kama vile
-mifuatano, vinaweza kuhifadhiwa katika maeneo matatu:
+Aina ya kurudisha ni `string memory`, ikimaanisha kurudisha kamba ambayo imehifadhiwa kwenye kumbukumbu. Vigezo, kama vile
+kamba, vinaweza kuhifadhiwa katika maeneo matatu:
 
-|          | Muda wa Kuishi | Ufikiaji wa Mkataba | Gharama ya Gesi                                                                             |
-| -------- | -------------- | ------------------- | ------------------------------------------------------------------------------------------- |
-| Memory   | Mwito wa kazi  | Soma/Andika         | Makumi au mamia (juu zaidi kwa maeneo ya juu)                                               |
-| Calldata | Mwito wa kazi  | Soma Tu             | Haiwezi kutumika kama aina ya kurudi, tu kama aina ya kigezo cha kazi                       |
-| Storage  | Hadi ibadilishwe | Soma/Andika         | Juu (800 kwa kusoma, 20k kwa kuandika)                                                      |
+|          | Muda wa Maisha | Ufikiaji wa Mkataba | Gharama ya Gesi                                                |
+| -------- | -------------- | ------------------- | -------------------------------------------------------------- |
+| Kumbukumbu | Mwito wa kazi  | Soma/Andika         | Makumi au mamia (juu zaidi kwa maeneo ya juu)                  |
+| Data za mwito | Mwito wa kazi  | Soma Tu             | Haiwezi kutumika kama aina ya kurudisha, tu aina ya kigezo cha kazi |
+| Hifadhi  | Hadi ibadilishwe | Soma/Andika         | Juu (2,100 kwa usomaji baridi, 20,000 kwa uandishi mpya)       |
 
 Katika kesi hii, `memory` ndio chaguo bora.
 
@@ -727,7 +735,7 @@ tunashindwa ikiwa anwani sifuri inatumiwa kama mtumaji au mpokeaji.
 Kuna njia mbili za kutumia mkataba huu:
 
 1. Uitumie kama kiolezo kwa msimbo wako mwenyewe
-1. [Urithi kutoka kwake](https://www.bitdegree.org/learn/solidity-inheritance), na ubatilishe tu kazi zile unazohitaji kurekebisha
+1. [Urithi kutoka kwake](https://docs.soliditylang.org/en/latest/contracts.html#inheritance), na ubatilishe tu kazi zile unazohitaji kurekebisha
 
 Njia ya pili ni bora zaidi kwa sababu msimbo wa ERC-20 wa OpenZeppelin tayari umekaguliwa na kuonyeshwa kuwa salama. Unapotumia urithi
 inakuwa wazi ni kazi gani unazorekebisha, na ili kuamini mkataba wako watu wanahitaji tu kukagua kazi hizo maalum.

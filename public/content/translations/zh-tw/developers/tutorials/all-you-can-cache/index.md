@@ -9,9 +9,17 @@ published: 2022-09-15
 lang: zh-tw
 ---
 
-使用匯總時，交易中一個位元組的成本比儲存時槽的成本昂貴許多。因此，盡可能將更多資訊快取在鏈上是合理的。
+使用匯總時，交易的每個位元組都必須發佈到 L1。在撰寫本文時，這使得交易中一個位元組的成本比儲存時槽的成本昂貴得多。因此，盡可能將更多資訊快取在鏈上是合理的。
 
-在本文中，您將了解如何建立與使用快取合約，使得任何可能被多次使用的參數值都能被快取，並在（第一次之後）以少許的位元組數量供後續使用，以及如何撰寫使用此快取的鏈下程式碼。
+> **注意：** 自本文於 2022 年撰寫以來，匯總費用發生了很大變化。自從 [Ecotone 和 Fjord 升級](https://docs.optimism.io/op-stack/transactions/fees#l1-data-fee) (2024) 以來，OP Stack 鏈將交易資料發佈到[資料塊](/roadmap/danksharding/)，且 L1 資料費用是基於交易_壓縮後_大小的估計值，每筆交易最少 100 個位元組（[請參閱規格](https://specs.optimism.io/protocol/fjord/exec-engine.html)）。因此：
+>
+> - 零位元組幾乎是免費的，因為它們很容易壓縮。
+> - 較短的交易已經達到 100 個位元組的下限，因此讓它們的呼叫資料變得更短並不會降低其費用。
+> - 資料塊空間很便宜，因此在 OP Mainnet 上，L2 執行燃料通常佔費用的比例大於 L1 資料費用。將新值寫入快取（兩次各 22100 燃料的 `SSTORE`）的成本可能高於它所節省的位元組成本。
+>
+> 這個原則仍然成立（壓縮後的位元組越少，L1 資料費用就越低），但快取是否划算取決於您的交易大小以及當前的 L1 和 L2 燃料價格。您可以透過在 [`GasPriceOracle` 預先部署](https://specs.optimism.io/protocol/predeploys.html#gaspriceoracle) 上呼叫 `getL1Fee` 來檢查特定交易的 L1 資料費用。
+
+在本文中，您將學習如何建立和使用快取合約，使得任何可能被多次使用的參數值都會被快取，並在（第一次之後）以少得多的位元組數供使用，以及如何撰寫使用此快取的鏈下程式碼。
 
 如果您想跳過本文直接查看原始碼，[請點擊這裡](https://github.com/qbzzt/20220915-all-you-can-cache)。開發堆疊為 [Foundry](https://getfoundry.sh/introduction/installation/)。
 
@@ -306,7 +314,7 @@ Foundry 的一大優勢是它允許使用 Solidity 撰寫測試（[請參閱下�
 
 ### 測試快取 {#testing-the-cache}
 
-Foundry 的優勢之一是 [它讓您可以使用 Solidity 撰寫測試](https://getfoundry.sh/forge/tests/overview/)，這使得撰寫單元測試變得更容易。`Cache` 類別的測試在 [這裡](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol)。因為測試程式碼通常是重複的，所以本文只解釋有趣的部分。
+Foundry 的一大優勢是[它允許您使用 Solidity 撰寫測試](https://getfoundry.sh/forge/tests/overview/)，這使得撰寫單元測試變得更加容易。`Cache` 類別的測試在[這裡](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol)。因為測試程式碼通常是重複的，所以本文只解釋有趣的部分。
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -315,11 +323,11 @@ pragma solidity ^0.8.13;
 import "forge-std/Test.sol";
 
 
-// 需要執行 `forge test -vv` 才能在主控台顯示。
+// 需要執行 `forge test -vv` 以使用主控台。
 import "forge-std/console.sol";
 ```
 
-這只是使用測試套件和 `console.log` 所需的樣板程式碼。
+這只是使用測試套件和 `console.log` 所必需的樣板程式碼。
 
 ```solidity
 import "src/Cache.sol";
@@ -336,7 +344,7 @@ contract CacheTest is Test {
     }
 ```
 
-`setUp` 函式會在每次測試之前被呼叫。在這種情況下，我們只是建立一個新的快取，這樣我們的測試就不會互相影響。
+`setUp` 函式在每次測試之前被呼叫。在這種情況下，我們只是建立一個新的快取，這樣我們的測試就不會互相影響。
 
 ```solidity
     function testCaching() public {
@@ -380,11 +388,11 @@ contract CacheTest is Test {
     }    // testRepeatCaching
 ```
 
-理論上，可能存在一個不影響連續快取寫入的錯誤。因此，我們在這裡進行一些不連續的寫入，並觀察這些值仍然沒有被重寫。
+理論上，可能存在一個不影響連續快取寫入的錯誤。因此，我們在這裡進行一些不連續的寫入，並查看這些值是否仍然沒有被重寫。
 
 ```solidity
-    // 從記憶體緩衝區讀取 uint（以確保我們取回
-    // 我們送出的參數）
+    // 從記憶體緩衝區讀取一個 uint（以確保我們能取回
+    // 送出的參數）
     function toUint256(bytes memory _bytes, uint256 _start) internal pure
         returns (uint256)
 ```
@@ -401,18 +409,18 @@ contract CacheTest is Test {
         }
 ```
 
-Yul 不支援 `uint256` 以外的資料結構，因此當您參照更複雜的資料結構（例如記憶體緩衝區 `_bytes`）時，您會得到該結構的地址。Solidity 將 `bytes memory` 值儲存為一個包含長度的 32 位元組字組，後面跟著實際的位元組，因此要取得第 `_start` 個位元組，我們需要計算 `_bytes+32+_start`。
+Yul 不支援 `uint256` 以外的資料結構，因此當您參考更複雜的資料結構（例如記憶體緩衝區 `_bytes`）時，您會得到該結構的地址。Solidity 將 `bytes memory` 值儲存為一個 32 位元組的字組，其中包含長度，後面跟著實際的位元組，因此要取得第 `_start` 個位元組，我們需要計算 `_bytes+32+_start`。
 
 ```solidity
 
         return tempUint;
     }     // toUint256
 
-    // fourParams() 的函式簽章，由以下提供
+    // fourParams() 的函式簽章，由以下提供：
     // https://www.4byte.directory/signatures/?bytes4_signature=0x3edc1e6d
     bytes4 constant FOUR_PARAMS = 0x3edc1e6d;
 
-    // 只是一些常數值，以查看我們是否取回了正確的值
+    // 只是些常數值，用來確認我們取回了正確的值
     uint256 constant VAL_A = 0xDEAD60A7;
     uint256 constant VAL_B =     0xBEEF;
     uint256 constant VAL_C =     0x600D;
@@ -442,7 +450,7 @@ Yul 不支援 `uint256` 以外的資料結構，因此當您參照更複雜的�
             FOUR_PARAMS,
 ```
 
-讓同一個合約同時支援快取函式（用於直接來自交易的呼叫）和非快取函式（用於來自其他智能合約的呼叫）是很有用的。為此，我們需要繼續依賴 Solidity 機制來呼叫正確的函式，而不是將所有內容都放入 [一個 `fallback` 函式](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function) 中。這樣做使得可組合性變得容易許多。在大多數情況下，單一位元組就足以識別函式，因此我們浪費了三個位元組（16\*3=48 燃料）。然而，在我撰寫本文時，這 48 燃料的成本為 0.07 美分，對於更簡單、更不容易出錯的程式碼來說，這是一個合理的成本。
+同一個合約同時支援快取函式（用於直接來自交易的呼叫）和非快取函式（用於來自其他智能合約的呼叫）是很有用的。為此，我們需要繼續依賴 Solidity 機制來呼叫正確的函式，而不是將所有內容都放在 [一個 `fallback` 函式](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function) 中。這樣做會使可組合性變得容易許多。在大多數情況下，一個位元組就足以識別函式，因此我們浪費了三個位元組。在目前的 OP Stack 費用公式下，這三個位元組只會增加不到一美分的費用（如果有的話，請參閱文章頂部的注意事項），這是為了獲得更簡單、更不容易出錯的程式碼而付出的合理成本。
 
 ```solidity
             // 第一個值，將其加入快取
@@ -450,7 +458,7 @@ Yul 不支援 `uint256` 以外的資料結構，因此當您參照更複雜的�
             bytes32(VAL_A),
 ```
 
-第一個值：一個旗標，表示這是一個需要寫入快取的完整值，後面跟著該值的 32 個位元組。其他三個值類似，除了 `VAL_B` 不會寫入快取，且 `VAL_C` 同時是第三個和第四個參數。
+第一個值：一個標記，表示這是一個需要寫入快取的完整值，後面跟著該值的 32 個位元組。其他三個值類似，除了 `VAL_B` 不會寫入快取，且 `VAL_C` 同時是第三個和第四個參數。
 
 ```solidity
              .
@@ -460,7 +468,7 @@ Yul 不支援 `uint256` 以外的資料結構，因此當您參照更複雜的�
         (_success, _callOutput) = _cacheAddr.call(_callInput);
 ```
 
-這是我們實際呼叫 `Cache` 合約的地方。
+這就是我們實際呼叫 `Cache` 合約的地方。
 
 ```solidity
         assertEq(_success, true);
@@ -476,13 +484,13 @@ Yul 不支援 `uint256` 以外的資料結構，因此當您參照更複雜的�
 我們從一個空的快取開始，然後新增 `VAL_A`，接著是 `VAL_C`。我們預期第一個金鑰為 1，第二個金鑰為 2。
 
 ```
-assertEq(toUint256(_callOutput,0), VAL_A);
+        assertEq(toUint256(_callOutput,0), VAL_A);
         assertEq(toUint256(_callOutput,32), VAL_B);
         assertEq(toUint256(_callOutput,64), VAL_C);
         assertEq(toUint256(_callOutput,96), VAL_C);
 ```
 
-輸出是這四個參數。在這裡我們驗證它是正確的。
+輸出是四個參數。在這裡我們驗證它是正確的。
 
 ```solidity
         // 第二次呼叫，我們可以使用快取
@@ -516,7 +524,7 @@ assertEq(toUint256(_callOutput,0), VAL_A);
     function testEncodeVal() public {
 ```
 
-此函式類似於 `testReadParam`，差別在於我們不直接寫出參數，而是使用 `encodeVal()`。
+此函式類似於 `testReadParam`，不同之處在於我們不直接寫入參數，而是使用 `encodeVal()`。
 
 ```solidity
         .
@@ -536,21 +544,21 @@ assertEq(toUint256(_callOutput,0), VAL_A);
     }   // testEncodeVal
 ```
 
-`testEncodeVal()` 中唯一額外的測試是驗證 `_callInput` 的長度是否正確。對於第一次呼叫，它是 4+33\*4。對於第二次呼叫（每個值都已經在快取中），它是 4+1\*4。
+`testEncodeVal()` 中唯一的額外測試是驗證 `_callInput` 的長度是否正確。對於第一次呼叫，它是 4+33\*4。對於第二次呼叫（每個值都已經在快取中），它是 4+1\*4。
 
 ```solidity
-    // 當金鑰超過單個位元組時測試 encodeVal
-    // 最多三個位元組，因為將快取填滿到四個位元組需要
-    // 太長時間。
+    // 測試當金鑰超過單一位元組時的 encodeVal
+    // 最多三個位元組，因為將快取填滿至四個位元組需要
+    // 太長的時間。
     function testEncodeValBig() public {
-        // 將一些值放入快取中。
+        // 將多個值放入快取中。
         // 為了保持簡單，對值 n 使用金鑰 n。
         for(uint i=1; i<0x1FFF; i++) {
             cache.cacheWrite(i);
         }
 ```
 
-上面的 `testEncodeVal` 函式只將四個值寫入快取，因此 [處理多位元組值的部分函式](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol#L144-L171) 沒有被檢查到。但該程式碼很複雜且容易出錯。
+上面的 `testEncodeVal` 函式只將四個值寫入快取，因此[處理多位元組值的函式部分](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol#L144-L171)沒有被檢查到。但那段程式碼很複雜且容易出錯。
 
 此函式的第一部分是一個迴圈，它將從 1 到 0x1FFF 的所有值依序寫入快取，這樣我們就能夠編碼這些值並知道它們的去向。
 
@@ -568,7 +576,7 @@ assertEq(toUint256(_callOutput,0), VAL_A);
         );
 ```
 
-測試一個位元組、兩個位元組和三個位元組的值。我們不測試超過這個範圍的值，因為寫入足夠的堆疊項目（至少 0x10000000，大約 2.5 億個）需要花費太長時間。
+測試一個位元組、兩個位元組和三個位元組的值。我們不測試超過這個範圍的值，因為寫入足夠的堆疊項目（至少 0x10000000，大約 2.5 億個）需要太長時間。
 
 ```solidity
         .
@@ -578,7 +586,7 @@ assertEq(toUint256(_callOutput,0), VAL_A);
     }    // testEncodeValBig
 
 
-    // 測試使用過小的緩衝區時我們會得到回滾
+    // 測試使用過小的緩衝區時，我們會得到一個回滾
     function testShortCalldata() public {
 ```
 
@@ -593,10 +601,10 @@ assertEq(toUint256(_callOutput,0), VAL_A);
     }   // testShortCalldata
 ```
 
-由於它會回滾，我們應該得到的結果是 `false`。
+因為它會回滾，所以我們應該得到的結果是 `false`。
 
 ```
-// Call with cache keys that aren't there
+    // 使用不存在的快取金鑰進行呼叫
     function testNoCacheKey() public {
         .
         .
@@ -608,20 +616,20 @@ assertEq(toUint256(_callOutput,0), VAL_A);
             cache.INTO_CACHE(),
             bytes32(VAL_A),
 
-            // Second value
+            // 第二個值
             bytes1(0x0F),
             bytes2(0x1234),
             bytes11(0xA10102030405060708090A)
         );
 ```
 
-此函式獲得四個完全合法的參數，只是快取是空的，因此沒有值可供讀取。
+此函式獲得四個完全合法的參數，只是快取是空的，所以沒有值可以讀取。
 
 ```solidity
         .
         .
         .
-    // 測試使用過長的緩衝區時一切運作正常
+    // 測試使用過長的緩衝區時，一切運作正常
     function testLongCalldata() public {
         address _cacheAddr = address(cache);
         bool _success;
@@ -632,7 +640,7 @@ assertEq(toUint256(_callOutput,0), VAL_A);
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
-            // First value, add it to the cache
+            // 第一個值，將其加入快取
             cache.INTO_CACHE(), bytes32(VAL_A),
 
             // 第二個值，將其加入快取
@@ -644,12 +652,12 @@ assertEq(toUint256(_callOutput,0), VAL_A);
             // 第四個值，將其加入快取
             cache.INTO_CACHE(), bytes32(VAL_D),
 
-            // 以及另一個為了「好運」的值
+            // 再加上另一個值以求「好運」
             bytes4(0x31112233)
         );
 ```
 
-此函式傳送五個值。我們知道第五個值會被忽略，因為它不是有效的快取項目，如果沒有包含它，就會導致回滾。
+此函式傳送五個值。我們知道第五個值會被忽略，因為它不是有效的快取項目，如果包含它就會導致回滾。
 
 ```solidity
         (_success, _callOutput) = _cacheAddr.call(_callInput);
@@ -708,7 +716,7 @@ contract WORM is Cache {
 
 ### 測試程式碼 {#the-testing-code}
 
-[這是合約的測試程式碼](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/WORM.t.sol)。同樣地，讓我們只看有趣的部分。
+[這是合約的測試程式碼](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/WORM.t.sol)。同樣地，我們只看有趣的部分。
 
 ```solidity
     function testWReadWrite() public {
@@ -718,27 +726,27 @@ contract WORM is Cache {
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[這 (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) 是我們在 Foundry 測試中指定下一次呼叫應該失敗的方式，以及回報的失敗原因。這適用於我們使用 `<contract>.<function name>()` 語法，而不是建立呼叫資料並使用低階介面（`<contract>.call()` 等）呼叫合約的情況。
+[這 (`vm.expectRevert`)](https://getfoundry.sh/reference/cheatcodes/expect-revert/) 是我們在 Foundry 測試中指定下一次呼叫應該失敗的方式，以及報告的失敗原因。這適用於我們使用語法 `<contract>.<function name>()`，而不是建立呼叫資料並使用低階介面（`<contract>.call()` 等）呼叫合約的情況。
 
 ```solidity
     function testReadWriteCached() public {
         uint cacheGoat = worm.cacheWrite(0x60A7);
 ```
 
-在這裡，我們利用了 `cacheWrite` 會回傳快取金鑰的事實。這不是我們預期在正式環境中使用的東西，因為 `cacheWrite` 會改變狀態，因此只能在交易期間呼叫。交易沒有回傳值，如果它們有結果，這些結果應該作為事件發出。因此，`cacheWrite` 的回傳值只能從鏈上程式碼存取，而鏈上程式碼不需要參數快取。
+在這裡，我們利用了 `cacheWrite` 會回傳快取金鑰的事實。這不是我們預期在生產環境中使用的東西，因為 `cacheWrite` 會改變狀態，因此只能在交易期間呼叫。交易沒有回傳值，如果它們有結果，這些結果應該作為事件發出。因此，`cacheWrite` 的回傳值只能從鏈上程式碼存取，而鏈上程式碼不需要參數快取。
 
 ```solidity
         (_success,) = address(worm).call(_callInput);
 ```
 
-這就是我們告訴 Solidity 雖然 `<contract address>.call()` 有兩個回傳值，但我們只關心第一個的方式。
+這就是我們告訴 Solidity 的方式：雖然 `<contract address>.call()` 有兩個回傳值，但我們只關心第一個。
 
 ```solidity
         (_success,) = address(worm).call(_callInput);
         assertEq(_success, false);
 ```
 
-由於我們使用低階的 `<address>.call()` 函式，我們無法使用 `vm.expectRevert()`，而必須查看從呼叫中獲得的布林成功值。
+因為我們使用低階的 `<address>.call()` 函式，所以我們不能使用 `vm.expectRevert()`，而必須查看從呼叫中獲得的布林成功值。
 
 ```solidity
     event EntryWritten(uint indexed key, uint indexed value);
@@ -754,49 +762,70 @@ contract WORM is Cache {
         (_success,) = address(worm).call(_callInput);
 ```
 
-這是我們在 Foundry 中驗證程式碼 [正確發出事件](https://getfoundry.sh/reference/cheatcodes/expect-emit/) 的方式。
+這就是我們在 Foundry 中驗證程式碼是否[正確發出事件](https://getfoundry.sh/reference/cheatcodes/expect-emit/)的方式。
 
 ### 客戶端 {#the-client}
 
-使用 Solidity 測試時，您無法獲得可以複製並貼上到您自己應用程式中的 JavaScript 程式碼。本教學的原始版本將 WORM 部署到 Optimism Goerli，該網路現已退役。若要立即執行客戶端，請將 WORM 重新部署到受支援的 OP Stack 網路（例如 [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack)），然後在 JavaScript 客戶端中使用產生的合約地址。
+Solidity 測試無法提供的一件事是您可以剪下並貼上到您自己應用程式中的 JavaScript 程式碼。本教學的原始版本將 WORM 部署到 Optimism Goerli，該網路現已關閉。範例儲存庫仍然指向 Optimism Goerli，因此要立即執行客戶端，您需要自己將 WORM 部署到 [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack)，並將客戶端指向您的部署。
 
-[您可以在此處查看客戶端的 JavaScript 程式碼](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js)。該範例儲存庫是為 Optimism Goerli 撰寫的，因此在執行之前，請在 `javascript/.env.example` 和 `javascript/index.js` 中為您的目標網路更新 RPC 端點和瀏覽器 URL。使用方式：
+[您可以在這裡看到客戶端的 JavaScript 程式碼](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js)。要使用它，您需要 [Foundry](https://getfoundry.sh/introduction/installation/)、[Node.js](https://nodejs.org/) 以及一個擁有一些 OP Sepolia ETH 的帳戶。[Optimism 的水龍頭文件](https://docs.optimism.io/app-developers/tools-sdks/faucets)列出了目前的測試網水龍頭。
 
-1. 複製 git 儲存庫：
+1. 複製 git 儲存庫，包括 `forge-std` 子模組，並建置合約。客戶端從 `out/WORM.sol/WORM.json` 讀取 WORM ABI 和位元組碼，這只有在 `forge build` 之後才會存在。
 
    ```sh
-   git clone https://github.com/qbzzt/20220915-all-you-can-cache.git
+   git clone --recurse-submodules https://github.com/qbzzt/20220915-all-you-can-cache.git
+   cd 20220915-all-you-can-cache
+   forge build
    ```
 
-2. 安裝必要的套件：
+   Forge 警告 `foundry.toml` 使用了舊的 `[default]` 區段名稱。您可以忽略此警告，或執行 `forge config --fix`。
+
+2. 將您已注資帳戶的私鑰匯入加密的 Foundry 金鑰庫中，並使用它將 WORM [部署](https://getfoundry.sh/reference/forge/create)到 OP Sepolia。
+
+   ```sh
+   cast wallet import op-sepolia-deployer --interactive
+   forge create src/WORM.sol:WORM --rpc-url https://sepolia.optimism.io --account op-sepolia-deployer --broadcast
+   ```
+
+   如果沒有 `--broadcast`，`forge create` 只會模擬部署。從輸出的 `Deployed to:` 行複製地址。
+
+3. 編輯 `javascript/index.js`。將此行中舊的 Optimism Goerli 地址替換為您的部署地址：
+
+   ```javascript
+   const worm = WormFactory.attach("0xD34335b1d818ceE54e3323D3246bD31d94E6a78a")
+   ```
+
+   您也可以在兩行 `console.log` 中將 `https://goerli-optimism.etherscan.io` 替換為 `https://sepolia-optimism.etherscan.io`，這樣客戶端印出的連結就能正常運作。
+
+4. 安裝必要的套件：
 
    ```sh
    cd javascript
-   yarn
+   npm install
    ```
 
-3. 複製設定檔：
+5. 複製設定檔：
 
    ```sh
    cp .env.example .env
    ```
 
-4. 編輯 `.env` 以符合您的設定：
+6. 根據您的設定編輯 `.env`。變數名稱仍然指向 Optimism Goerli，但值是針對 OP Sepolia 的：
 
-   | 參數 | 值 | 
-   | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC | 擁有足夠 ETH 以支付交易費用的帳戶助記詞。[Optimism 的水龍頭文件](https://docs.optimism.io/app-developers/tools/faucets) 列出了目前的測試網水龍頭。 |
-   | OPTIMISM_GOERLI_URL | 您重新部署 WORM 的網路的 RPC URL。對於 OP Sepolia，請使用 OP Sepolia RPC 端點，例如 `https://sepolia.optimism.io`，或來自您提供者的其他端點。 |
+   | 參數                | 值                                                                                                      |
+   | ------------------- | ------------------------------------------------------------------------------------------------------- |
+   | MNEMONIC            | 擁有足夠 OP Sepolia ETH 來支付交易費用的帳戶助記詞。                                                    |
+   | OPTIMISM_GOERLI_URL | OP Sepolia RPC URL、`https://sepolia.optimism.io`，或來自其他供應商的 OP Sepolia 端點。 |
 
-5. 執行 `index.js`。
+7. 執行 `index.js`。
 
    ```sh
    node index.js
    ```
 
-   此範例應用程式首先將一個項目寫入 WORM，並顯示呼叫資料以及區塊鏈瀏覽器上的交易連結。然後它會讀回該項目，並顯示其使用的金鑰以及項目中的值（值、區塊號碼和作者）。
+   此範例應用程式首先將一個項目寫入 WORM，顯示呼叫資料以及區塊鏈瀏覽器上的交易連結。然後它會讀回該項目，並顯示它使用的金鑰以及項目中的值（值、區塊號碼和作者）。
 
-大部分的客戶端都是一般的去中心化應用程式 (dapp) JavaScript。因此，我們同樣只會探討有趣的部分。
+客戶端的大部分內容都是一般的 dapp JavaScript。因此，我們同樣只會探討有趣的部分。
 
 ```javascript
 .
@@ -809,7 +838,7 @@ const main = async () => {
     const key = await worm.encodeVal(Number(new Date()))
 ```
 
-特定的時槽只能寫入一次，因此我們使用時間戳記來確保我們不會重複使用時槽。
+給定的時槽只能寫入一次，因此我們使用時間戳記來確保我們不會重複使用時槽。
 
 ```javascript
 const val = await worm.encodeVal("0x600D")
@@ -818,7 +847,7 @@ const val = await worm.encodeVal("0x600D")
 const calldata = func + key.slice(2) + val.slice(2)
 ```
 
-Ethers 預期呼叫資料為十六進位字串，即 `0x` 後面跟著偶數個十六進位數字。由於 `key` 和 `val` 都以 `0x` 開頭，我們需要移除這些標頭。
+Ethers 預期呼叫資料是一個十六進位字串，即 `0x` 後面跟著偶數個十六進位數字。由於 `key` 和 `val` 都以 `0x` 開頭，我們需要移除這些標頭。
 
 ```javascript
 const tx = await worm.populateTransaction.writeEntryCached()
@@ -842,25 +871,27 @@ sentTx = await wallet.sendTransaction(tx)
 ```
 
 對於讀取項目，我們可以使用一般機制。不需要對 `view` 函式使用參數快取。
+
 ## 結論 {#conclusion}
 
-本文中的程式碼是一個概念驗證，目的是讓這個想法容易理解。對於可用於正式環境的系統，您可能需要實作一些額外的功能：
+本文中的程式碼是一個概念驗證，目的是讓這個想法容易理解。對於一個可用於生產環境的系統，您可能需要實作一些額外的功能：
 
 - 處理不是 `uint256` 的值。例如，字串。
 - 與其使用全域快取，不如在使用者和快取之間建立對應關係。不同的使用者使用不同的值。
 - 用於地址的值與用於其他目的的值是不同的。為地址建立一個獨立的快取可能是合理的。
-- 目前，快取金鑰採用「先到先得，金鑰最小」的演算法。前 16 個值可以作為單一位元組傳送。接下來的 4080 個值可以作為兩個位元組傳送。接下來的大約一百萬個值是三個位元組，依此類推。正式系統應該在快取項目上保留使用計數器並重新組織它們，以便 16 個_最常見_的值是一個位元組，接下來 4080 個最常見的值是兩個位元組，依此類推。
+- 目前，快取金鑰採用「先到先得，金鑰最小」的演算法。前 16 個值可以作為單一位元組傳送。接下來的 4080 個值可以作為兩個位元組傳送。接下來大約一百萬個值是三個位元組，依此類推。生產系統應該在快取項目上保留使用計數器，並重新組織它們，使得 16 個_最常見_的值是一個位元組，接下來 4080 個最常見的值是兩個位元組，依此類推。
 
-  然而，這是一個潛在危險的操作。想像以下事件序列：
+  然而，這是一個潛在的危險操作。想像以下事件序列：
 
-  1. Noam Naive 呼叫 `encodeVal` 來編碼他想要傳送代幣的地址。該地址是應用程式上最早使用的地址之一，因此編碼值為 0x06。這是一個 `view` 函式，而不是一筆交易，因此它只發生在 Noam 和他使用的節點之間，沒有其他人知道這件事。
+  1. Noam Naive 呼叫 `encodeVal` 來編碼他想要傳送代幣的地址。該地址是應用程式上最早使用的地址之一，因此編碼值為 0x06。這是一個 `view` 函式，而不是一筆交易，所以這只發生在 Noam 和他使用的節點之間，沒有其他人知道。
 
   2. Owen Owner 執行快取重新排序操作。實際上很少人使用該地址，因此它現在被編碼為 0x201122。另一個不同的值 10<sup>18</sup> 被分配為 0x06。
 
-  3. Noam Naive 將他的代幣傳送到 0x06。它們會進入地址 `0x0000000000000000000000000de0b6b3a7640000`，而且因為沒有人知道該地址的私鑰，它們就卡在那裡了。Noam _很不高興_。
+  3. Noam Naive 將他的代幣傳送到 0x06。它們會進入地址 `0x0000000000000000000000000de0b6b3a7640000`，由於沒有人知道該地址的私鑰，它們就卡在那裡了。Noam _很不高興_。
 
   有方法可以解決這個問題，以及在快取重新排序期間處於記憶體池中的交易的相關問題，但您必須意識到這一點。
 
-我在這裡使用 Optimism 示範快取，因為我是 Optimism 的員工，這是我最了解的匯總。但它應該適用於任何對內部處理收取極低成本的匯總，因此相較之下，將交易資料寫入第一層 (L1) 才是主要的開銷。
+我在這裡使用 Optimism 示範了快取，因為我是 Optimism 的員工，這是我最了解的匯總。但它應該適用於任何對內部處理收取極低成本的匯總，因此相比之下，將交易資料寫入 L1 是主要開銷。正如本文頂部的注意事項中所解釋的，在您決定快取是否值得之前，請檢查目前的費用。
 
-[請點擊這裡查看我更多的作品](https://cryptodocguy.pro/)。
+[點擊這裡查看我的更多作品](https://cryptodocguy.pro/)。
+

@@ -1,5 +1,12 @@
 # Marathi (mr) Translation Review Findings
 
+## PR #19993 (intl/pending-dev, runs 46112784113/46112790344/46118259298) -- 2026-11-28 -- Score 8.6/10
+Scope: 17 developer tutorials plus community/grants (restructured page; headings and anchors match English), changed lines only; read 5 diffs (clear-signing, stealth-addr, token-integration-checklist, reverse-engineering-a-contract, grants) plus scripted sweeps. No JSON.
+
+Fixed (critical): Devanagari digits -> Western (`स्तर २ (L2)`/`स्तर १ (L1)` short-abi:6,24,25; `स्तर २` uniswap-v2:759); `स्लिदरचे` -> `Slither चे` (token-integration-checklist:73-74).
+
+Open (warnings): added `(EOA)`/`(PoW)`/`(PoS)`/`(L2)` after spelled-out long forms kept under the mr first-mention allowance (erc20-with-safety-rails:98-99 repeats `(EOA)` x4, short-abi:80/269, yellow-paper-evm:20); `मुख्यनेट` (glossary) and `मेननेट` mixed in short-abi; heading `द एंट्री पॉइंट` vs `एंट्री पॉइंट` in the flowchart (reverse-engineering:43/65); `सहमती` (tree-dominant) vs glossary `एकमत`; injected English glosses; `मेटामास्क` app-plasma:142 and `ऑप्टिमिझम्` erc20-with-safety-rails:53 unchanged from dev.
+
 ## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.4/10
 Scope: 15 markdown pages, changed lines only; read 8 diffs (nodes-and-clients, run-a-node, transactions, merge, privacy, supply, statelessness, patricia) plus scripted sweeps. No JSON in this PR. U+3002/U+2060/foreign-script/SPDX/untranslated sweeps clean.
 

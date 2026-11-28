@@ -237,3 +237,16 @@ Scope: gas page, translation-program page, page-developers-index.json (3 files),
 
 - `inatambuliwa` for "determined" (dev had `inabainishwa`); `ufungamanisho` used for "no obligation"; msanidi/wasanidi drift.
 - `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)
+
+## PR #19993 (intl/pending-dev) -- 2026-11-28 -- Score 8.4/10
+Scope: 16 developer tutorials (incremental updates), changed lines only; no page-courses.json for this locale.
+
+**Fixed in this branch:**
+
+- all-you-can-cache:49 inline file name `Kache.sol` -> `Cache.sol` (identifier translated)
+- secret-state:170 `kiolesura cha mtumiaji (UI)` -> `UI` (English leaves UI bare; known-patterns #112)
+
+**Open / notes:**
+
+- `tags: ["tabaka la 2 (L2)"]` keeps the glossary `(L2)` that English lacks (case-only change in this PR); warning.
+- Glossary entries conflict internally (`block` = `kitalu`, `block builder` = `mjenga kizuizi`); see known-patterns #113.

@@ -40,11 +40,11 @@ Trong `A1`, hãy đặt độ lệch đầu tiên là 0. Sau đó, trong `A2`, h
 
 Chúng ta cần hàm này cung cấp cho chúng ta giá trị hệ thập lục phân vì các giá trị được đẩy vào trước các lệnh nhảy (`JUMP` và `JUMPI`) được cung cấp cho chúng ta ở hệ thập lục phân.
 
-## Điểm vào (0x00) {#the-entry-point-0x00}
+## Điểm bắt đầu (0x00) {#the-entry-point-0x00}
 
 Các hợp đồng luôn được thực thi từ byte đầu tiên. Đây là phần đầu của mã:
 
-| Offset | Mã lệnh      | Ngăn xếp (sau mã lệnh) |
+| Độ lệch | Mã lệnh      | Ngăn xếp (sau mã lệnh) |
 | -----: | ------------ | ------------------------ |
 |      0 | PUSH1 0x80   | 0x80                     |
 |      2 | PUSH1 0x40   | 0x40, 0x80               |
@@ -55,25 +55,35 @@ Các hợp đồng luôn được thực thi từ byte đầu tiên. Đây là p
 |      9 | PUSH2 0x005e | 0x5E CALLDATASIZE\<4      |
 |      C | JUMPI        | Trống                    |
 
-Đoạn mã này thực hiện hai việc:
+Mã này thực hiện hai việc:
 
-1. Ghi 0x80 dưới dạng giá trị 32 byte vào các vị trí bộ nhớ 0x40-0x5F (0x80 được lưu trữ ở 0x5F và 0x40-0x5E đều là các số không).
+1. Ghi 0x80 dưới dạng giá trị 32 byte vào các vị trí bộ nhớ 0x40-0x5F (0x80 được lưu trữ trong 0x5F và 0x40-0x5E đều là các số không).
 2. Đọc kích thước dữ liệu lệnh gọi. Thông thường, dữ liệu lệnh gọi cho một hợp đồng Ethereum tuân theo [ABI (giao diện nhị phân ứng dụng)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html), yêu cầu tối thiểu bốn byte cho bộ chọn hàm. Nếu kích thước dữ liệu lệnh gọi nhỏ hơn bốn, hãy nhảy đến 0x5E.
 
-![Flowchart for this portion](flowchart-entry.png)
+<Flowchart>
 
-### Trình xử lý tại 0x5E (dành cho dữ liệu lệnh gọi không thuộc ABI) {#the-handler-at-0x5e-for-non-abi-call-data}
+- Điểm bắt đầu (0x00)
+  - Dữ liệu lệnh gọi có ngắn hơn bốn byte không?
+    - **Có** Các lệnh gọi không phải ABI (0x5E)
+      - Có bất kỳ dữ liệu lệnh gọi nào không?
+        - **Có** 0x7C (mục đích cho đến nay vẫn chưa rõ)
+        - **Không** Chuyển ETH (0x64): hoàn nguyên khi tràn số, nếu không thì thêm giá trị lệnh gọi vào `Storage[6]` (`Value*`) và dừng lại
+    - **Không** Các lệnh gọi ABI (0x0D)
 
-| Offset | Mã lệnh      |
+</Flowchart>
+
+### Trình xử lý tại 0x5E (dành cho dữ liệu lệnh gọi không phải ABI) {#the-handler-at-0x5e-for-non-abi-call-data}
+
+| Độ lệch | Mã lệnh      |
 | -----: | ------------ |
 |     5E | JUMPDEST     |
 |     5F | CALLDATASIZE |
 |     60 | PUSH2 0x007c |
 |     63 | JUMPI        |
 
-Đoạn mã này bắt đầu bằng một `JUMPDEST`. Các chương trình EVM (Máy ảo Ethereum) sẽ ném ra một ngoại lệ nếu bạn nhảy đến một mã lệnh không phải là `JUMPDEST`. Sau đó, nó xem xét CALLDATASIZE và nếu là "true" (tức là không phải số không) thì sẽ nhảy đến 0x7C. Chúng ta sẽ tìm hiểu điều đó ở bên dưới.
+Đoạn mã này bắt đầu bằng một `JUMPDEST`. Các chương trình EVM (Máy ảo Ethereum) sẽ ném ra một ngoại lệ nếu bạn nhảy đến một mã lệnh không phải là `JUMPDEST`. Sau đó, nó xem xét CALLDATASIZE và nếu là "true" (tức là không phải số không) thì nhảy đến 0x7C. Chúng ta sẽ tìm hiểu điều đó ở phần dưới.
 
-| Offset | Mã lệnh    | Ngăn xếp (sau mã lệnh)                                                     |
+| Độ lệch | Mã lệnh    | Ngăn xếp (sau mã lệnh)                                                     |
 | -----: | ---------- | -------------------------------------------------------------------------- |
 |     64 | CALLVALUE  | [Wei](/glossary/#wei) được cung cấp bởi lệnh gọi. Được gọi là `msg.value` trong Solidity |
 |     65 | PUSH1 0x06 | 6 CALLVALUE                                                                |
@@ -82,19 +92,19 @@ Các hợp đồng luôn được thực thi từ byte đầu tiên. Đây là p
 |     6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                  |
 |     6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                         |
 
-Vì vậy, khi không có dữ liệu lệnh gọi, chúng ta đọc giá trị của Storage[6]. Chúng ta chưa biết giá trị này là gì, nhưng chúng ta có thể tìm kiếm các giao dịch mà hợp đồng đã nhận mà không có dữ liệu lệnh gọi. Các giao dịch chỉ chuyển ETH mà không có bất kỳ dữ liệu lệnh gọi nào (và do đó không có phương thức) sẽ có phương thức `Transfer` trên Etherscan. Trên thực tế, [giao dịch đầu tiên mà hợp đồng nhận được](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) là một khoản chuyển.
+Vì vậy, khi không có dữ liệu lệnh gọi, chúng ta đọc giá trị của Storage[6]. Chúng ta chưa biết giá trị này là gì, nhưng chúng ta có thể tìm kiếm các giao dịch mà hợp đồng đã nhận được mà không có dữ liệu lệnh gọi. Các giao dịch chỉ chuyển ETH mà không có bất kỳ dữ liệu lệnh gọi nào (và do đó không có phương thức) sẽ có phương thức `Transfer` trên Etherscan. Trên thực tế, [giao dịch đầu tiên mà hợp đồng nhận được](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) là một giao dịch chuyển.
 
-Nếu chúng ta xem xét giao dịch đó và nhấp vào **Click to see More** (Nhấp để xem thêm), chúng ta thấy rằng dữ liệu lệnh gọi, được gọi là dữ liệu đầu vào, thực sự trống (`0x`). Cũng lưu ý rằng giá trị là 1.559 ETH, điều này sẽ liên quan ở phần sau.
+Nếu chúng ta xem xét giao dịch đó và nhấp vào **Click to see More**, chúng ta thấy rằng dữ liệu lệnh gọi, được gọi là dữ liệu đầu vào, thực sự trống (`0x`). Cũng lưu ý rằng giá trị là 1.559 ETH, điều này sẽ liên quan ở phần sau.
 
-![The call data is empty](calldata-empty.png)
+![Dữ liệu lệnh gọi trống](calldata-empty.png)
 
-Tiếp theo, nhấp vào tab **State** (Trạng thái) và mở rộng hợp đồng mà chúng ta đang dịch ngược (0x2510...). Bạn có thể thấy rằng `Storage[6]` đã thay đổi trong quá trình giao dịch và nếu bạn đổi Hex thành **Number** (Số), bạn sẽ thấy nó trở thành 1,559,000,000,000,000,000, giá trị được chuyển tính bằng wei (tôi đã thêm dấu phẩy cho rõ ràng), tương ứng với giá trị hợp đồng tiếp theo.
+Tiếp theo, nhấp vào tab **State** và mở rộng hợp đồng mà chúng ta đang dịch ngược (0x2510...). Bạn có thể thấy rằng `Storage[6]` đã thay đổi trong quá trình giao dịch và nếu bạn đổi Hex thành **Number**, bạn sẽ thấy nó trở thành 1,559,000,000,000,000,000, giá trị được chuyển tính bằng wei (tôi đã thêm dấu phẩy cho rõ ràng), tương ứng với giá trị hợp đồng tiếp theo.
 
 ![Sự thay đổi trong Storage[6]](storage6.png)
 
-Nếu chúng ta xem xét các thay đổi trạng thái do [các giao dịch `Transfer` khác từ cùng thời kỳ](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange) gây ra, chúng ta thấy rằng `Storage[6]` đã theo dõi giá trị của hợp đồng trong một thời gian. Hiện tại, chúng ta sẽ gọi nó là `Value*`. Dấu hoa thị (`*`) nhắc nhở chúng ta rằng chúng ta chưa _biết_ biến này làm gì, nhưng nó không thể chỉ để theo dõi giá trị hợp đồng vì không cần thiết phải sử dụng bộ nhớ lưu trữ (storage), vốn rất đắt đỏ, khi bạn có thể lấy số dư tài khoản của mình bằng cách sử dụng `ADDRESS BALANCE`. Mã lệnh đầu tiên đẩy địa chỉ của chính hợp đồng. Mã lệnh thứ hai đọc địa chỉ ở trên cùng của ngăn xếp và thay thế nó bằng số dư của địa chỉ đó.
+Nếu chúng ta xem xét các thay đổi trạng thái do [các giao dịch `Transfer` khác từ cùng thời kỳ](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange) gây ra, chúng ta thấy rằng `Storage[6]` đã theo dõi giá trị của hợp đồng trong một thời gian. Hiện tại, chúng ta sẽ gọi nó là `Value*`. Dấu hoa thị (`*`) nhắc nhở chúng ta rằng chúng ta chưa _biết_ biến này làm gì, nhưng nó không thể chỉ để theo dõi giá trị hợp đồng vì không cần phải sử dụng bộ nhớ lưu trữ, vốn rất đắt đỏ, khi bạn có thể lấy số dư tài khoản của mình bằng cách sử dụng `ADDRESS BALANCE`. Mã lệnh đầu tiên đẩy địa chỉ của chính hợp đồng. Mã lệnh thứ hai đọc địa chỉ ở trên cùng của ngăn xếp và thay thế nó bằng số dư của địa chỉ đó.
 
-| Offset | Mã lệnh      | Ngăn xếp                                    |
+| Độ lệch | Mã lệnh      | Ngăn xếp                                    |
 | -----: | ------------ | ------------------------------------------- |
 |     6C | PUSH2 0x0075 | 0x75 Value\* CALLVALUE 0 6 CALLVALUE        |
 |     6F | SWAP2        | CALLVALUE Value\* 0x75 0 6 CALLVALUE        |
@@ -102,18 +112,18 @@ Nếu chúng ta xem xét các thay đổi trạng thái do [các giao dịch `Tr
 |     71 | PUSH2 0x01a7 | 0x01A7 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 |     74 | JUMP         |
 
-Chúng ta sẽ tiếp tục theo dõi đoạn mã này tại đích nhảy.
+Chúng ta sẽ tiếp tục theo dõi mã này tại đích nhảy.
 
-| Offset | Mã lệnh    | Ngăn xếp                                                    |
+| Độ lệch | Mã lệnh    | Ngăn xếp                                                    |
 | -----: | ---------- | ----------------------------------------------------------- |
 |    1A7 | JUMPDEST   | Value\* CALLVALUE 0x75 0 6 CALLVALUE                        |
 |    1A8 | PUSH1 0x00 | 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE                   |
 |    1AA | DUP3       | CALLVALUE 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
 |    1AB | NOT        | 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 
-`NOT` là phép toán bitwise (thao tác bit), vì vậy nó đảo ngược giá trị của mọi bit trong giá trị lệnh gọi.
+`NOT` là phép toán bitwise, vì vậy nó đảo ngược giá trị của mọi bit trong giá trị lệnh gọi.
 
-| Offset | Mã lệnh      | Ngăn xếp                                                                    |
+| Độ lệch | Mã lệnh      | Ngăn xếp                                                                    |
 | -----: | ------------ | --------------------------------------------------------------------------- |
 |    1AC | DUP3         | Value\* 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
 |    1AD | GT           | Value\*>2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
@@ -121,11 +131,11 @@ Chúng ta sẽ tiếp tục theo dõi đoạn mã này tại đích nhảy.
 |    1AF | PUSH2 0x01df | 0x01DF Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 |    1B2 | JUMPI        |
 
-Chúng ta nhảy nếu `Value*` nhỏ hơn 2^256-CALLVALUE-1 hoặc bằng nó. Điều này có vẻ giống như logic để ngăn chặn tràn số (overflow). Và thực sự, chúng ta thấy rằng sau một vài thao tác vô nghĩa (ví dụ như ghi vào bộ nhớ sắp bị xóa) tại offset 0x01DE, hợp đồng sẽ hoàn nguyên nếu phát hiện tràn số, đây là hành vi bình thường.
+Chúng ta nhảy nếu `Value*` nhỏ hơn 2^256-CALLVALUE-1 hoặc bằng nó. Điều này có vẻ giống như logic để ngăn chặn tràn số. Và thực sự, chúng ta thấy rằng sau một vài thao tác vô nghĩa (ví dụ: ghi vào bộ nhớ sắp bị xóa) tại độ lệch 0x01DE, hợp đồng sẽ hoàn nguyên nếu phát hiện tràn số, đây là hành vi bình thường.
 
-Lưu ý rằng việc tràn số như vậy là cực kỳ khó xảy ra, vì nó sẽ yêu cầu giá trị lệnh gọi cộng với `Value*` phải tương đương với 2^256 wei, khoảng 10^59 ETH. [Tổng nguồn cung ETH, tại thời điểm viết bài, là chưa đến hai trăm triệu](https://etherscan.io/stat/supply).
+Lưu ý rằng việc tràn số như vậy là cực kỳ khó xảy ra, vì nó sẽ yêu cầu giá trị lệnh gọi cộng với `Value*` phải tương đương với 2^256 wei, khoảng 10^59 ETH. [Tổng nguồn cung ETH, tại thời điểm viết bài, là dưới hai trăm triệu](https://etherscan.io/stat/supply).
 
-| Offset | Mã lệnh  | Ngăn xếp                                  |
+| Độ lệch | Mã lệnh  | Ngăn xếp                                  |
 | -----: | -------- | ----------------------------------------- |
 |    1DF | JUMPDEST | 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 |    1E0 | POP      | Value\* CALLVALUE 0x75 0 6 CALLVALUE      |
@@ -133,9 +143,9 @@ Lưu ý rằng việc tràn số như vậy là cực kỳ khó xảy ra, vì n�
 |    1E2 | SWAP1    | 0x75 Value\*+CALLVALUE 0 6 CALLVALUE      |
 |    1E3 | JUMP     |
 
-Nếu chúng ta đến được đây, hãy lấy `Value* + CALLVALUE` và nhảy đến offset 0x75.
+Nếu chúng ta đến được đây, hãy lấy `Value* + CALLVALUE` và nhảy đến độ lệch 0x75.
 
-| Offset | Mã lệnh  | Ngăn xếp                        |
+| Độ lệch | Mã lệnh  | Ngăn xếp                        |
 | -----: | -------- | ------------------------------- |
 |     75 | JUMPDEST | Value\*+CALLVALUE 0 6 CALLVALUE |
 |     76 | SWAP1    | 0 Value\*+CALLVALUE 6 CALLVALUE |
@@ -144,7 +154,7 @@ Nếu chúng ta đến được đây, hãy lấy `Value* + CALLVALUE` và nhả
 
 Nếu chúng ta đến được đây (điều này yêu cầu dữ liệu lệnh gọi phải trống), chúng ta sẽ cộng thêm giá trị lệnh gọi vào `Value*`. Điều này nhất quán với những gì chúng ta nói về các giao dịch `Transfer`.
 
-| Offset | Mã lệnh |
+| Độ lệch | Mã lệnh |
 | -----: | ------ |
 |     79 | POP    |
 |     7A | POP    |
@@ -152,9 +162,19 @@ Nếu chúng ta đến được đây (điều này yêu cầu dữ liệu lện
 
 Cuối cùng, xóa ngăn xếp (điều này không cần thiết) và báo hiệu kết thúc giao dịch thành công.
 
-Tóm lại, đây là lưu đồ cho đoạn mã ban đầu.
+Tóm lại, đây là lưu đồ cho mã ban đầu.
 
-![Entry point flowchart](flowchart-entry.png)
+<Flowchart>
+
+- Điểm bắt đầu (0x00)
+  - Dữ liệu lệnh gọi có ngắn hơn bốn byte không?
+    - **Có** Các lệnh gọi không phải ABI (0x5E)
+      - Có bất kỳ dữ liệu lệnh gọi nào không?
+        - **Có** 0x7C (mục đích cho đến nay vẫn chưa rõ)
+        - **Không** Chuyển ETH (0x64): hoàn nguyên khi tràn số, nếu không thì thêm giá trị lệnh gọi vào `Storage[6]` (`Value*`) và dừng lại
+    - **Không** Các lệnh gọi ABI (0x0D)
+
+</Flowchart>
 
 ## Trình xử lý tại 0x7C {#the-handler-at-0x7c}
 
@@ -248,26 +268,38 @@ Bây giờ mọi thứ đã rõ ràng hơn nhiều. Hợp đồng này có thể
 
 Vì vậy, sau lệnh gọi, chúng ta sao chép dữ liệu trả về vào bộ đệm 0x80 - 0x80+RETURNDATASIZE, và nếu lệnh gọi thành công, sau đó chúng ta `RETURN` với chính xác bộ đệm đó.
 
-### DELEGATECALL Thất bại {#delegatecall-failed}
+### DELEGATECALL thất bại {#delegatecall-failed}
 
-Nếu chúng ta đến đây, tại 0xC0, điều đó có nghĩa là hợp đồng mà chúng ta đã gọi đã hoàn nguyên. Vì chúng ta chỉ là một hợp đồng proxy cho hợp đồng đó, chúng ta muốn trả về cùng một dữ liệu và cũng hoàn nguyên.
+Nếu chúng ta đến được đây, tại 0xC0, điều đó có nghĩa là hợp đồng mà chúng ta đã gọi đã hoàn nguyên. Vì chúng ta chỉ là một proxy cho hợp đồng đó, chúng ta muốn trả về cùng một dữ liệu và cũng hoàn nguyên.
 
-| Offset | Mã lệnh   | Ngăn xếp                                                                                                               |
+| Độ lệch | Mã lệnh  | Ngăn xếp                                                                                                            |
 | -----: | -------- | ------------------------------------------------------------------------------------------------------------------- |
-|     C0 | JUMPDEST | (((gọi thành công/thất bại))) RETURNDATASIZE (((gọi thành công/thất bại))) 0x80 Storage[3]-dưới-dạng-địa-chỉ                     |
-|     C1 | DUP2     | RETURNDATASIZE (((gọi thành công/thất bại))) RETURNDATASIZE (((gọi thành công/thất bại))) 0x80 Storage[3]-dưới-dạng-địa-chỉ      |
-|     C2 | DUP5     | 0x80 RETURNDATASIZE (((gọi thành công/thất bại))) RETURNDATASIZE (((gọi thành công/thất bại))) 0x80 Storage[3]-dưới-dạng-địa-chỉ |
+|     C0 | JUMPDEST | (((lệnh gọi thành công/thất bại))) RETURNDATASIZE (((lệnh gọi thành công/thất bại))) 0x80 Storage[3]-dưới-dạng-địa-chỉ                     |
+|     C1 | DUP2     | RETURNDATASIZE (((lệnh gọi thành công/thất bại))) RETURNDATASIZE (((lệnh gọi thành công/thất bại))) 0x80 Storage[3]-dưới-dạng-địa-chỉ      |
+|     C2 | DUP5     | 0x80 RETURNDATASIZE (((lệnh gọi thành công/thất bại))) RETURNDATASIZE (((lệnh gọi thành công/thất bại))) 0x80 Storage[3]-dưới-dạng-địa-chỉ |
 |     C3 | REVERT   |
 
 Vì vậy, chúng ta `REVERT` với cùng một bộ đệm mà chúng ta đã sử dụng cho `RETURN` trước đó: 0x80 - 0x80+RETURNDATASIZE
 
-![Call to proxy flowchart](flowchart-proxy.png)
+<Flowchart>
+
+- Dữ liệu lệnh gọi dài từ một đến ba byte, hoặc một phương thức không xác định
+  - Trình xử lý proxy (0x7C)
+    - Đọc `Storage[3]`, địa chỉ proxy
+      - Sao chép dữ liệu lệnh gọi vào bộ nhớ
+        - `DELEGATECALL` địa chỉ proxy
+          - Sao chép dữ liệu trả về vào bộ nhớ
+            - Lệnh gọi có thất bại không?
+              - **Có** `REVERT` với dữ liệu trả về (0xC0)
+              - **Không** `RETURN` dữ liệu trả về (0xBD)
+
+</Flowchart>
 
 ## Các lệnh gọi ABI {#abi-calls}
 
 Nếu kích thước dữ liệu lệnh gọi là bốn byte trở lên, đây có thể là một lệnh gọi ABI hợp lệ.
 
-| Offset | Mã lệnh      | Ngăn xếp                                          |
+| Độ lệch | Mã lệnh      | Ngăn xếp                                          |
 | -----: | ------------ | ------------------------------------------------- |
 |      D | PUSH1 0x00   | 0x00                                              |
 |      F | CALLDATALOAD | (((Từ đầu tiên (256 bit) của dữ liệu lệnh gọi)))      |
@@ -276,7 +308,7 @@ Nếu kích thước dữ liệu lệnh gọi là bốn byte trở lên, đây c
 
 Etherscan cho chúng ta biết rằng `1C` là một mã lệnh không xác định, bởi vì [nó đã được thêm vào sau khi Etherscan viết tính năng này](https://eips.ethereum.org/EIPS/eip-145) và họ chưa cập nhật nó. Một [bảng mã lệnh cập nhật](https://github.com/wolflo/evm-opcodes) cho chúng ta thấy rằng đây là phép dịch phải
 
-| Offset | Mã lệnh          | Ngăn xếp                                                                                                    |
+| Độ lệch | Mã lệnh          | Ngăn xếp                                                                                                 |
 | -----: | ---------------- | -------------------------------------------------------------------------------------------------------- |
 |     13 | DUP1             | (((32 bit (4 byte) đầu tiên của dữ liệu lệnh gọi))) (((32 bit (4 byte) đầu tiên của dữ liệu lệnh gọi)))            |
 |     14 | PUSH4 0x3cd8045e | 0x3CD8045E (((32 bit (4 byte) đầu tiên của dữ liệu lệnh gọi))) (((32 bit (4 byte) đầu tiên của dữ liệu lệnh gọi))) |
@@ -284,9 +316,9 @@ Etherscan cho chúng ta biết rằng `1C` là một mã lệnh không xác đ�
 |     1A | PUSH2 0x0043     | 0x43 0x3CD8045E>32-bit-đầu-tiên-của-dữ-liệu-lệnh-gọi (((32 bit (4 byte) đầu tiên của dữ liệu lệnh gọi)))            |
 |     1D | JUMPI            | (((32 bit (4 byte) đầu tiên của dữ liệu lệnh gọi)))                                                           |
 
-Bằng cách chia các bài kiểm tra khớp chữ ký phương thức làm hai như thế này sẽ tiết kiệm trung bình một nửa số bài kiểm tra. Mã ngay sau phần này và mã ở 0x43 tuân theo cùng một mẫu: `DUP1` 32 bit đầu tiên của dữ liệu lệnh gọi, `PUSH4 (((method signature>`, chạy `EQ` để kiểm tra tính bằng nhau, và sau đó `JUMPI` nếu chữ ký phương thức khớp. Dưới đây là các chữ ký phương thức, địa chỉ của chúng và nếu biết [định nghĩa phương thức tương ứng](https://www.4byte.directory/):
+Bằng cách chia các bài kiểm tra khớp chữ ký phương thức thành hai phần như thế này sẽ tiết kiệm trung bình một nửa số bài kiểm tra. Mã ngay sau phần này và mã ở 0x43 tuân theo cùng một mẫu: `DUP1` 32 bit đầu tiên của dữ liệu lệnh gọi, `PUSH4 (((method signature>`, chạy `EQ` để kiểm tra sự bằng nhau, và sau đó `JUMPI` nếu chữ ký phương thức khớp. Dưới đây là các chữ ký phương thức, địa chỉ của chúng và nếu biết [định nghĩa phương thức tương ứng](https://www.4byte.directory/):
 
-| Phương thức                                                                                 | Chữ ký phương thức | Offset để nhảy tới |
+| Phương thức                                                                            | Chữ ký phương thức | Độ lệch để nhảy vào |
 | -------------------------------------------------------------------------------------- | ---------------- | ------------------- |
 | [splitter()](https://www.4byte.directory/signatures/?bytes4_signature=0x3cd8045e)      | 0x3cd8045e       | 0x0103              |
 | ???                                                                                    | 0x81e580d3       | 0x0138              |
@@ -294,9 +326,28 @@ Bằng cách chia các bài kiểm tra khớp chữ ký phương thức làm hai
 | ???                                                                                    | 0x1f135823       | 0x00C4              |
 | [merkleRoot()](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab)    | 0x2eb4a7ab       | 0x00ED              |
 
-Nếu không tìm thấy kết quả khớp nào, mã sẽ nhảy tới [trình xử lý proxy tại 0x7C](#the-handler-at-0x7c), với hy vọng rằng hợp đồng mà chúng ta đang làm proxy có kết quả khớp.
+Nếu không tìm thấy kết quả khớp nào, mã sẽ nhảy đến [trình xử lý proxy tại 0x7C](#the-handler-at-0x7c), với hy vọng rằng hợp đồng mà chúng ta đang làm proxy có kết quả khớp.
 
-![ABI calls flowchart](flowchart-abi.png)
+<Flowchart>
+
+- Đọc bộ chọn phương thức, bốn byte đầu tiên của dữ liệu lệnh gọi (0x0D)
+  - Bộ chọn có nằm dưới `0x3cd8045e` không?
+    - **Có** Các bộ chọn thấp (0x43)
+      - Nó có phải là `0x1f135823` không?
+        - **Có** Hàm tại 0xC4
+        - **Không** Nó có phải là `0x2eb4a7ab` không?
+          - **Có** `merkleRoot()` tại 0xED
+          - **Không** [Trình xử lý proxy (0x7C)](#the-handler-at-0x7c)
+    - **Không** Các bộ chọn cao (0x1E)
+      - Nó có phải là `0x3cd8045e` không?
+        - **Có** `splitter()` tại 0x0103
+        - **Không** Nó có phải là `0x81e580d3` không?
+          - **Có** Hàm tại 0x0138
+          - **Không** Nó có phải là `0xba0bafb4` không?
+            - **Có** `currentWindow()` tại 0x0158
+            - **Không** [Trình xử lý proxy (0x7C)](#the-handler-at-0x7c)
+
+</Flowchart>
 
 ## splitter() {#splitter}
 

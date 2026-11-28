@@ -42,7 +42,9 @@ AI साठी सर्वात जास्त वापरली जाण�
 
 ### OpenAI {#openai}
 
-लार्ज लँग्वेज मॉडेलसाठी, मी [OpenAI](https://openai.com/) सह सुरुवात करण्याचे निवडले. या ट्युटोरियलमधील ॲप्लिकेशन चालवण्यासाठी तुम्हाला API ॲक्सेससाठी पैसे द्यावे लागतील. $5 चे किमान पेमेंट पुरेसे आहे.
+लार्ज लँग्वेज मॉडेलसाठी, मी [OpenAI](https://openai.com/) सह सुरुवात करण्याचे ठरवले. या ट्युटोरियलमधील ॲप्लिकेशन चालवण्यासाठी तुम्हाला API ॲक्सेससाठी पैसे द्यावे लागतील. $5 चे किमान पेमेंट पुरेसे आहे.
+
+OpenAI Python लायब्ररी इतर कोणत्याही OpenAI-सुसंगत एंडपॉइंटशी देखील संवाद साधू शकते, ज्यामध्ये तुम्ही तुमच्या स्वतःच्या संगणकावर चालवत असलेल्या मॉडेलचा समावेश आहे. ते इतरत्र कसे निर्देशित करायचे यासाठी [LLM सह इंटरफेसिंग](#interface-llm) पहा.
 
 ## डेव्हलपमेंट, टप्प्याटप्प्याने {#step-by-step}
 
@@ -354,15 +356,15 @@ uv run agent.py
 आउटपुट आता LLM साठी एक प्रॉम्प्ट असणार आहे, यासारखे:
 
 ```
-हे कोट्स दिल्यास:
-ॲसेट: WETH/USDC
+Given these quotes:
+Asset: WETH/USDC
         2026-01-20T16:34 3016.21
         .
         .
         .
         2026-02-01T17:49 2299.10
 
-ॲसेट: WBTC/WETH
+Asset: WBTC/WETH
         2026-01-20T16:34 29.84
         .
         .
@@ -370,9 +372,10 @@ uv run agent.py
         2026-02-01T17:50 33.46
 
 
-2026-02-02T17:56 या वेळेत WETH/USDC चे मूल्य काय असेल अशी तुमची अपेक्षा आहे?
+What would you expect the value for WETH/USDC to be at time 2026-02-02T17:56?
 
-तुमचे उत्तर इतर कोणत्याही मजकुराशिवाय, दोन दशांश स्थानांपर्यंत पूर्ण केलेला एकच क्रमांक म्हणून द्या.
+Provide your answer as a single number rounded to two decimal places,
+without any other text.
 ```
 
 लक्षात घ्या की येथे दोन ॲसेट्ससाठी कोट्स आहेत, `WETH/USDC` आणि `WBTC/WETH`. दुसऱ्या ॲसेटमधील कोट्स जोडल्याने अंदाजाची अचूकता सुधारू शकते.
@@ -512,46 +515,63 @@ print(make_prompt(wethusdc_quotes + wethwbtc_quotes, future_time, wethusdc_pool.
 
 ### LLM शी इंटरफेस करणे {#interface-llm}
 
-पुढे, आपण प्रत्यक्ष LLM ला प्रॉम्प्ट देतो आणि अपेक्षित भविष्यातील मूल्य प्राप्त करतो. मी हा प्रोग्राम OpenAI वापरून लिहिला आहे, त्यामुळे जर तुम्हाला वेगळा प्रदाता वापरायचा असेल, तर तुम्हाला त्यात बदल करावे लागतील.
+पुढे, आपण एका वास्तविक LLM ला प्रॉम्प्ट देतो आणि अपेक्षित भविष्यातील मूल्य प्राप्त करतो. मी हा प्रोग्राम OpenAI वापरून लिहिला आहे, त्यामुळे तुम्हाला वेगळा प्रदाता वापरायचा असल्यास, तुम्हाला त्यात बदल करावे लागतील.
 
-1. [OpenAI खाते](https://auth.openai.com/create-account) मिळवा
-2. [खात्यात निधी जमा करा](https://platform.openai.com/settings/organization/billing/overview)—लिहिण्याच्या वेळी किमान रक्कम $5 आहे
-3. [API की तयार करा](https://platform.openai.com/settings/organization/api-keys)
+1. एक [OpenAI खाते](https://auth.openai.com/create-account) मिळवा
+2. [खात्यात निधी जमा करा](https://platform.openai.com/settings/organization/billing/overview)—हे लिहिताना किमान रक्कम $5 आहे
+3. [एक API की तयार करा](https://platform.openai.com/settings/organization/api-keys)
 4. कमांड लाइनमध्ये, API की एक्सपोर्ट करा जेणेकरून तुमचा प्रोग्राम ती वापरू शकेल
 
    ```sh
    export OPENAI_API_KEY=sk-<the rest of the key goes here>
    ```
 
-5. चेकआउट करा आणि एजंट रन करा
+5. एजंट चेकआउट करा
 
    ```sh
    git checkout 04-interface-llm
+   ```
+
+6. रिपॉझिटरीमधील कोड `gpt-4-turbo` मॉडेल वापरतो, जे [OpenAI 23 ऑक्टोबर 2026 रोजी बंद करत आहे](https://developers.openai.com/api/docs/deprecations). ते `gpt-6-luna` वर स्विच करा, जे सध्याचे कमी किमतीचे मॉडेल आहे. कारण `gpt-6-luna` हे एक रिझनिंग मॉडेल आहे, ही कमांड रिझनिंग देखील बंद करते (`reasoning_effort="none"`, जे `temperature` वापरण्यायोग्य ठेवते) आणि नापसंत (deprecated) `max_tokens` पॅरामीटरला `max_completion_tokens` ने बदलते.
+
+   ```sh
+   sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
+   ```
+
+7. एजंट चालवा
+
+   ```sh
    uv run agent.py
    ```
+
+तुम्हाला वेगळा OpenAI-सुसंगत एंडपॉइंट वापरायचा असल्यास, जसे की तुम्ही लोकली होस्ट केलेले मॉडेल, OpenAI लायब्ररी `OPENAI_BASE_URL` एन्व्हायर्नमेंट व्हेरिएबलमधून एंडपॉइंट वाचते. ते सेट करा, सर्व्हर की तपासत नसल्यास `OPENAI_API_KEY` मध्ये कोणतेही नॉन-एम्प्टी मूल्य टाका, आणि `agent.py` आणि `test-predictor.py` मधील `gpt-6-luna` ला त्या सर्व्हरद्वारे प्रदान केलेल्या मॉडेलच्या नावाने बदला. जर सर्व्हर `reasoning_effort` नाकारत असेल, तर ते पॅरामीटर काढून टाका.
+
+```sh
+export OPENAI_BASE_URL=http://localhost:<port>/v1
+```
 
 येथे नवीन कोड आहे.
 
 ```python
 from openai import OpenAI
 
-open_ai = OpenAI()  # क्लायंट OPENAI_API_KEY एन्व्हायर्नमेंट व्हेरिएबल वाचतो
+open_ai = OpenAI()  # The client reads the OPENAI_API_KEY environment variable
 ```
 
-OpenAI API इम्पोर्ट करा आणि इन्स्टॅन्शिएट करा.
+OpenAI API इम्पोर्ट करा आणि इन्स्टॅन्शिएट करा. क्लायंट `OPENAI_BASE_URL` सेट केलेले असल्यास ते देखील वाचतो, त्यामुळे तोच कोड इतर OpenAI-सुसंगत एंडपॉइंट्ससह कार्य करतो.
 
 ```python
 response = open_ai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-6-luna", reasoning_effort="none",
     messages=[
         {"role": "user", "content": prompt}
     ],
     temperature=0.0,
-    max_tokens=16,
+    max_completion_tokens=16,
 )
 ```
 
-प्रतिसाद तयार करण्यासाठी OpenAI API (`open_ai.chat.completions.create`) ला कॉल करा.
+प्रतिसाद तयार करण्यासाठी OpenAI API (`open_ai.chat.completions.create`) ला कॉल करा. शून्य `temperature` सर्वात अंदाजित उत्तराची मागणी करते, आणि `max_completion_tokens` उत्तराची लांबी मर्यादित करते, ज्यामध्ये फक्त एक संख्या असणे आवश्यक आहे. रिझनिंग मॉडेलसह, `max_completion_tokens` मॉडेल विचार करण्यासाठी वापरत असलेल्या टोकन्सची देखील गणना करते, जे `reasoning_effort` ला `none` वर सेट करण्याचे आणखी एक कारण आहे.
 
 ```python
 expected_price = Decimal(response.choices[0].message.content.strip())
@@ -566,7 +586,7 @@ else:
     print(f"Sell, I expect the price to go down by {current_price - expected_price} USD")
 ```
 
-किंमत आउटपुट करा आणि खरेदी किंवा विक्रीची शिफारस द्या.
+किंमत आउटपुट करा आणि खरेदी किंवा विक्रीची शिफारस प्रदान करा.
 
 #### अंदाजांची चाचणी करणे {#testing-the-predictions}
 
@@ -690,7 +710,7 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
 
 ### व्यवहार सबमिट करणे {#submit-txn}
 
-आता आपल्याला प्रत्यक्षात व्यवहार सबमिट करणे आवश्यक आहे. तथापि, सिस्टीम सिद्ध होण्यापूर्वी, मला या टप्प्यावर खरे पैसे खर्च करायचे नाहीत. त्याऐवजी, आपण मुख्यनेटचा एक स्थानिक फोर्क तयार करू आणि त्या नेटवर्कवर "व्यापार" करू.
+आता आपल्याला प्रत्यक्षात व्यवहार सबमिट करणे आवश्यक आहे. तथापि, सिस्टम सिद्ध होण्यापूर्वी, मला या टप्प्यावर खरे पैसे खर्च करायचे नाहीत. त्याऐवजी, आपण मुख्यनेटचा एक स्थानिक फोर्क तयार करू आणि त्या नेटवर्कवर "व्यापार" करू.
 
 स्थानिक फोर्क तयार करण्यासाठी आणि ट्रेडिंग सक्षम करण्यासाठी येथे पायऱ्या आहेत.
 
@@ -704,16 +724,16 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
 
    `anvil` Foundry च्या डीफॉल्ट URL, http://localhost:8545 वर ऐकत आहे, त्यामुळे ब्लॉकचेन हाताळण्यासाठी आपण वापरत असलेल्या [`cast` कमांडसाठी](https://getfoundry.sh/cast/overview) आपल्याला URL निर्दिष्ट करण्याची आवश्यकता नाही.
 
-3. `anvil` मध्ये रन करताना, ETH असलेली दहा चाचणी खाती असतात—पहिल्या खात्यासाठी एन्व्हायर्नमेंट व्हेरिएबल्स सेट करा
+3. `anvil` मध्ये चालवताना, दहा चाचणी खाती आहेत ज्यांच्याकडे ETH आहे—पहिल्या खात्यासाठी एन्व्हायर्नमेंट व्हेरिएबल्स सेट करा
 
    ```sh
    PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
    ADDRESS=`cast wallet address $PRIVATE_KEY`
    ```
 
-4. हे कॉन्ट्रॅक्ट्स आपल्याला वापरणे आवश्यक आहे. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) हे युनिस्वॅप v3 कॉन्ट्रॅक्ट आहे जे आपण प्रत्यक्षात व्यापार करण्यासाठी वापरतो. आपण थेट पूलद्वारे व्यापार करू शकतो, परंतु हे खूप सोपे आहे.
+4. हे कॉन्ट्रॅक्ट्स आपल्याला वापरणे आवश्यक आहे. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) हे Uniswap v3 कॉन्ट्रॅक्ट आहे जे आपण प्रत्यक्षात व्यापार करण्यासाठी वापरतो. आपण थेट पूलद्वारे व्यापार करू शकतो, परंतु हे खूप सोपे आहे.
 
-   तळाचे दोन व्हेरिएबल्स हे WETH आणि USDC मध्ये अदलाबदल करण्यासाठी आवश्यक असलेले युनिस्वॅप v3 पाथ्स आहेत.
+   तळाचे दोन व्हेरिएबल्स WETH आणि USDC दरम्यान अदलाबदल करण्यासाठी आवश्यक असलेले Uniswap v3 पाथ्स आहेत.
 
    ```sh
    WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
@@ -741,21 +761,24 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
        --private-key $PRIVATE_KEY
    ```
 
-   `approve` कॉल एक मंजुरी तयार करतो जी `SwapRouter` ला आपले काही टोकन्स खर्च करण्याची परवानगी देते. कॉन्ट्रॅक्ट्स घटनांवर लक्ष ठेवू शकत नाहीत, त्यामुळे जर आपण थेट `SwapRouter` कॉन्ट्रॅक्टमध्ये टोकन्स हस्तांतरित केले, तर त्याला पैसे दिले गेले आहेत हे कळणार नाही. त्याऐवजी, आपण `SwapRouter` कॉन्ट्रॅक्टला ठराविक रक्कम खर्च करण्याची परवानगी देतो आणि नंतर `SwapRouter` ते करते. हे `SwapRouter` द्वारे कॉल केलेल्या फंक्शनद्वारे केले जाते, त्यामुळे ते यशस्वी झाले की नाही हे त्याला समजते.
+   `approve` कॉल एक मंजुरी तयार करतो जी `SwapRouter` ला आपले काही टोकन खर्च करण्याची परवानगी देते. कॉन्ट्रॅक्ट्स घटनांवर लक्ष ठेवू शकत नाहीत, त्यामुळे जर आपण थेट `SwapRouter` कॉन्ट्रॅक्टमध्ये टोकन हस्तांतरित केले, तर त्याला पैसे दिले गेले आहेत हे समजणार नाही. त्याऐवजी, आपण `SwapRouter` कॉन्ट्रॅक्टला ठराविक रक्कम खर्च करण्याची परवानगी देतो, आणि नंतर `SwapRouter` ते करते. हे `SwapRouter` द्वारे कॉल केलेल्या फंक्शनद्वारे केले जाते, त्यामुळे ते यशस्वी झाले की नाही हे त्याला समजते.
 
-7. तुमच्याकडे दोन्ही टोकन्स पुरेशा प्रमाणात आहेत याची खात्री करा.
+7. तुमच्याकडे दोन्ही टोकन्स पुरेशा प्रमाणात असल्याची खात्री करा.
 
    ```sh
    cast call $WETH_ADDRESS "balanceOf(address)" $ADDRESS | cast from-wei
    echo `cast call $USDC_ADDRESS "balanceOf(address)" $ADDRESS | cast to-dec`/10^6 | bc
    ```
 
-आता आपल्याकडे WETH आणि USDC असल्याने, आपण प्रत्यक्षात एजंट रन करू शकतो.
+आता आपल्याकडे WETH आणि USDC असल्याने, आपण प्रत्यक्षात एजंट चालवू शकतो.
 
 ```sh
-git checkout 05-trade
+git checkout -f 05-trade
+sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
 uv run agent.py
 ```
+
+`-f` तुम्ही मागील शाखेवर केलेला मॉडेल बदल काढून टाकते, त्यामुळे `sed` कमांड तो पुन्हा `agent.py` च्या नवीन आवृत्तीवर लागू करते.
 
 आउटपुट यासारखे दिसेल:
 
@@ -776,9 +799,9 @@ USDC Balance: 929143.797116
 WETH Balance: 499
 ```
 
-प्रत्यक्षात ते वापरण्यासाठी, तुम्हाला काही किरकोळ बदल करावे लागतील.
+प्रत्यक्षात ते वापरण्यासाठी, तुम्हाला काही किरकोळ बदलांची आवश्यकता आहे.
 
-- ओळ 14 मध्ये, `MAINNET_URL` ला वास्तविक ॲक्सेस पॉइंटमध्ये बदला, जसे की `https://eth.drpc.org`
+- ओळ 14 मध्ये, `MAINNET_URL` ला वास्तविक ॲक्सेस पॉईंटमध्ये बदला, जसे की `https://eth.drpc.org`
 - ओळ 28 मध्ये, `PRIVATE_KEY` ला तुमच्या स्वतःच्या खाजगी की मध्ये बदला
 - जोपर्यंत तुम्ही खूप श्रीमंत नाही आणि सिद्ध न झालेल्या एजंटसाठी दररोज 1 ETH खरेदी किंवा विक्री करू शकत नाही, तोपर्यंत तुम्हाला `WETH_TRADE_AMOUNT` कमी करण्यासाठी 29 बदलण्याची इच्छा असू शकते
 
@@ -799,7 +822,7 @@ PRIVATE_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
 WETH_TRADE_AMOUNT=1
 ```
 
-व्यापार करायची रक्कम.
+व्यापार करण्याची रक्कम.
 
 ```python
 ERC20_ABI = [
@@ -810,7 +833,7 @@ ERC20_ABI = [
 ]
 ```
 
-प्रत्यक्षात व्यापार करण्यासाठी, आपल्याला `approve` फंक्शनची आवश्यकता आहे. आपल्याला आधीची आणि नंतरची शिल्लक देखील दाखवायची आहे, त्यामुळे आपल्याला `balanceOf` ची देखील आवश्यकता आहे.
+प्रत्यक्षात व्यापार करण्यासाठी, आपल्याला `approve` फंक्शनची आवश्यकता आहे. आपल्याला आधी आणि नंतरचे बॅलन्स देखील दाखवायचे आहेत, त्यामुळे आपल्याला `balanceOf` ची देखील आवश्यकता आहे.
 
 ```python
 SWAP_ROUTER_ABI = [
@@ -818,7 +841,7 @@ SWAP_ROUTER_ABI = [
 ]
 ```
 
-`SwapRouter` ABI मध्ये आपल्याला फक्त `exactInput` ची आवश्यकता आहे. एक संबंधित फंक्शन आहे, `exactOutput`, जे आपण नेमके एक WETH खरेदी करण्यासाठी वापरू शकतो, परंतु साधेपणासाठी आपण दोन्ही प्रकरणांमध्ये फक्त `exactInput` वापरतो.
+`SwapRouter` ABI मध्ये आपल्याला फक्त `exactInput` ची आवश्यकता आहे. एक संबंधित फंक्शन आहे, `exactOutput`, जे आपण अचूक एक WETH खरेदी करण्यासाठी वापरू शकतो, परंतु साधेपणासाठी आपण दोन्ही प्रकरणांमध्ये फक्त `exactInput` वापरतो.
 
 ```python
 account = w3.eth.account.from_key(PRIVATE_KEY)
@@ -840,7 +863,7 @@ def txn_params() -> dict:
     }
 ```
 
-व्यवहार पॅरामीटर्स. आपल्याला येथे एका फंक्शनची आवश्यकता आहे कारण [नॉन्स](https://en.wikipedia.org/wiki/Cryptographic_nonce) प्रत्येक वेळी बदलला पाहिजे.
+व्यवहार पॅरामीटर्स. आपल्याला येथे एका फंक्शनची आवश्यकता आहे कारण [नॉन्स](https://en.wikipedia.org/wiki/Cryptographic_nonce) प्रत्येक वेळी बदलणे आवश्यक आहे.
 
 ```python
 def approve_token(contract: Contract, amount: int):
@@ -854,7 +877,7 @@ def approve_token(contract: Contract, amount: int):
     tx_hash = w3.eth.send_raw_transaction(signed_txn.raw_transaction)
 ```
 
-Web3 मध्ये आपण अशा प्रकारे व्यवहार पाठवतो. प्रथम आपण व्यवहार तयार करण्यासाठी [`Contract` ऑब्जेक्ट](https://web3py.readthedocs.io/en/stable/web3.contract.html) वापरतो. नंतर आपण `PRIVATE_KEY` वापरून, व्यवहारावर स्वाक्षरी करण्यासाठी [`web3.eth.account.sign_transaction`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction) वापरतो. शेवटी, आपण व्यवहार पाठवण्यासाठी [`w3.eth.send_raw_transaction`](https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction) वापरतो.
+अशा प्रकारे आपण Web3 मध्ये व्यवहार पाठवतो. प्रथम आपण व्यवहार तयार करण्यासाठी [`Contract` ऑब्जेक्ट](https://web3py.readthedocs.io/en/stable/web3.contract.html) वापरतो. नंतर आपण `PRIVATE_KEY` वापरून, व्यवहारावर स्वाक्षरी करण्यासाठी [`web3.eth.account.sign_transaction`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction) वापरतो. शेवटी, आपण व्यवहार पाठवण्यासाठी [`w3.eth.send_raw_transaction`](https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction) वापरतो.
 
 ```python
     print(f"Approve transaction sent: {tx_hash.hex()}")
@@ -862,7 +885,7 @@ Web3 मध्ये आपण अशा प्रकारे व्यवह�
     print("Approve transaction mined.")
 ```
 
-[`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) व्यवहार माइन होईपर्यंत वाट पाहते. आवश्यक असल्यास ते पावती परत करते.
+[`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) व्यवहार माइन होईपर्यंत प्रतीक्षा करते. आवश्यक असल्यास ते पावती परत करते.
 
 ```python
 SELL_PARAMS = {
@@ -887,7 +910,7 @@ def make_buy_params(quote: Quote) -> dict:
     }
 ```
 
-`SELL_PARAMS` च्या तुलनेत, खरेदी पॅरामीटर्स बदलू शकतात. इनपुट रक्कम ही 1 WETH ची किंमत आहे, जी `quote` मध्ये उपलब्ध आहे.
+`SELL_PARAMS` च्या विपरीत, खरेदी पॅरामीटर्स बदलू शकतात. इनपुट रक्कम 1 WETH ची किंमत आहे, जसे `quote` मध्ये उपलब्ध आहे.
 
 ```python
 def buy(quote: Quote):
@@ -912,7 +935,7 @@ def sell():
     print("Sell transaction mined.")
 ```
 
-`buy()` आणि `sell()` फंक्शन्स जवळजवळ सारखीच आहेत. प्रथम आपण `SwapRouter` साठी पुरेशी मंजुरी मंजूर करतो आणि नंतर आपण योग्य पाथ आणि रकमेसह त्याला कॉल करतो.
+`buy()` आणि `sell()` फंक्शन्स जवळजवळ एकसारखी आहेत. प्रथम आपण `SwapRouter` साठी पुरेशी मंजुरी मंजूर करतो, आणि नंतर आपण योग्य पाथ आणि रकमेसह त्याला कॉल करतो.
 
 ```python
 def balances():
@@ -923,7 +946,7 @@ def balances():
     print(f"{wethusdc_pool.token1.symbol} Balance: {Decimal(token1_balance) / Decimal(10 ** wethusdc_pool.token1.decimals)}")
 ```
 
-दोन्ही चलनांमधील वापरकर्त्याच्या शिल्लक रकमेचा अहवाल द्या.
+दोन्ही चलनांमध्ये वापरकर्त्याचे बॅलन्स नोंदवा.
 
 ```python
 print("Account balances before trade:")
@@ -940,7 +963,7 @@ print("Account balances after trade:")
 balances()
 ```
 
-हा एजंट सध्या फक्त एकदाच काम करतो. तथापि, तुम्ही त्याला [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) वरून रन करून किंवा ओळी 368-400 एका लूपमध्ये गुंडाळून आणि पुढील सायकलची वेळ येईपर्यंत वाट पाहण्यासाठी [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) वापरून सतत काम करण्यासाठी बदलू शकता.
+हा एजंट सध्या फक्त एकदाच काम करतो. तथापि, तुम्ही त्याला [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) मधून चालवून किंवा 368-397 ओळी लूपमध्ये गुंडाळून आणि पुढील सायकलची वेळ येईपर्यंत प्रतीक्षा करण्यासाठी [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) वापरून सतत काम करण्यासाठी बदलू शकता.
 
 ## संभाव्य सुधारणा {#improvements}
 
@@ -956,9 +979,9 @@ balances()
 
 ### जर तुम्हाला तुमची ट्रेडिंग रणनीती गुप्त ठेवायची असेल तर काय? {#secret}
 
-AI विक्रेते तुम्ही त्यांच्या LLMs ला पाठवलेल्या क्वेरीज पाहू शकतात, ज्यामुळे तुम्ही तुमच्या एजंटसोबत विकसित केलेली उत्कृष्ट ट्रेडिंग सिस्टीम उघड होऊ शकते. खूप लोक वापरत असलेली ट्रेडिंग सिस्टीम निरुपयोगी असते कारण जेव्हा तुम्हाला खरेदी करायची असते तेव्हा खूप लोक खरेदी करण्याचा प्रयत्न करतात (आणि किंमत वाढते) आणि जेव्हा तुम्हाला विक्री करायची असते तेव्हा विक्री करण्याचा प्रयत्न करतात (आणि किंमत कमी होते).
+AI विक्रेते तुम्ही त्यांच्या LLMs ला पाठवलेल्या क्वेरीज पाहू शकतात, ज्यामुळे तुम्ही तुमच्या एजंटसोबत विकसित केलेली उत्कृष्ट ट्रेडिंग सिस्टम उघड होऊ शकते. खूप जास्त लोक वापरत असलेली ट्रेडिंग सिस्टम निरुपयोगी असते कारण जेव्हा तुम्हाला खरेदी करायची असते तेव्हा खूप लोक खरेदी करण्याचा प्रयत्न करतात (आणि किंमत वाढते) आणि जेव्हा तुम्हाला विक्री करायची असते तेव्हा विक्री करण्याचा प्रयत्न करतात (आणि किंमत कमी होते).
 
-ही समस्या टाळण्यासाठी तुम्ही स्थानिक पातळीवर LLM रन करू शकता, उदाहरणार्थ, [LM-Studio](https://lmstudio.ai/) वापरून.
+ही समस्या टाळण्यासाठी तुम्ही लोकली LLM चालवू शकता, उदाहरणार्थ, [llama.cpp](https://github.com/ggml-org/llama.cpp) चे `llama-server` वापरून. हे एक OpenAI-सुसंगत एंडपॉइंट प्रदान करते, त्यामुळे तुम्हाला फक्त `OPENAI_BASE_URL` आणि मॉडेलचे नाव सेट करणे आवश्यक आहे जसे [LLM सह इंटरफेसिंग](#interface-llm) मध्ये स्पष्ट केले आहे.
 
 ### एआय बॉट कडून एआय एजंट कडे {#bot-to-agent}
 

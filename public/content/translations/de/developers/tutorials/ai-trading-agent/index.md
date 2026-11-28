@@ -46,7 +46,9 @@ Es gibt [viele dezentrale Börsen (DEX)](/apps/categories/defi/), die es Ihnen e
 
 ### OpenAI {#openai}
 
-Für ein großes Sprachmodell (Large Language Model, LLM) habe ich mich für den Einstieg mit [OpenAI](https://openai.com/) entschieden. Um die Anwendung in diesem Tutorial auszuführen, müssen Sie für den API-Zugang bezahlen. Die Mindestzahlung von 5 $ ist mehr als ausreichend.
+Für ein großes Sprachmodell habe ich mich für den Einstieg für [OpenAI](https://openai.com/) entschieden. Um die Anwendung in diesem Tutorial auszuführen, müssen Sie für den API-Zugang bezahlen. Die Mindestzahlung von 5 $ ist mehr als ausreichend.
+
+Die Python-Bibliothek von OpenAI kann auch mit jedem anderen OpenAI-kompatiblen Endpunkt kommunizieren, einschließlich eines Modells, das Sie auf Ihrem eigenen Computer ausführen. Unter [Interaktion mit einem LLM](#interface-llm) erfahren Sie, wie Sie sie auf einen anderen Endpunkt verweisen.
 
 ## Entwicklung, Schritt für Schritt {#step-by-step}
 
@@ -358,7 +360,7 @@ uv run agent.py
 Die Ausgabe wird nun ein Prompt für ein LLM sein, ähnlich wie:
 
 ```
-Angesichts dieser Preisangebote:
+Given these quotes:
 Asset: WETH/USDC
         2026-01-20T16:34 3016.21
         .
@@ -374,10 +376,10 @@ Asset: WBTC/WETH
         2026-02-01T17:50 33.46
 
 
-Welchen Wert würden Sie für WETH/USDC zum Zeitpunkt 2026-02-02T17:56 erwarten?
+What would you expect the value for WETH/USDC to be at time 2026-02-02T17:56?
 
-Geben Sie Ihre Antwort als einzelne Zahl an, gerundet auf zwei Dezimalstellen,
-ohne weiteren Text.
+Provide your answer as a single number rounded to two decimal places,
+without any other text.
 ```
 
 Beachten Sie, dass es hier Preisangebote für zwei Assets gibt, `WETH/USDC` und `WBTC/WETH`. Das Hinzufügen von Preisangeboten eines weiteren Assets könnte die Vorhersagegenauigkeit verbessern.
@@ -515,11 +517,11 @@ print(make_prompt(wethusdc_quotes + wethwbtc_quotes, future_time, wethusdc_pool.
 
 Bestimmen Sie den zukünftigen Zeitpunkt, für den wir die Schätzung wünschen, und erstellen Sie den Prompt.
 
-### Schnittstelle zu einem LLM {#interface-llm}
+### Interaktion mit einem LLM {#interface-llm}
 
-Als Nächstes fordern wir ein echtes LLM auf und erhalten einen erwarteten zukünftigen Wert. Ich habe dieses Programm mit OpenAI geschrieben. Wenn Sie also einen anderen Anbieter verwenden möchten, müssen Sie es anpassen.
+Als Nächstes geben wir einem echten LLM einen Prompt und erhalten einen erwarteten zukünftigen Wert. Ich habe dieses Programm mit OpenAI geschrieben. Wenn Sie also einen anderen Anbieter verwenden möchten, müssen Sie es anpassen.
 
-1. Holen Sie sich ein [OpenAI-Konto](https://auth.openai.com/create-account)
+1. Erstellen Sie ein [OpenAI-Konto](https://auth.openai.com/create-account)
 2. [Laden Sie das Konto auf](https://platform.openai.com/settings/organization/billing/overview) – der Mindestbetrag zum Zeitpunkt des Schreibens beträgt 5 $
 3. [Erstellen Sie einen API-Schlüssel](https://platform.openai.com/settings/organization/api-keys)
 4. Exportieren Sie den API-Schlüssel in der Befehlszeile, damit Ihr Programm ihn verwenden kann
@@ -528,35 +530,52 @@ Als Nächstes fordern wir ein echtes LLM auf und erhalten einen erwarteten zukü
    export OPENAI_API_KEY=sk-<the rest of the key goes here>
    ```
 
-5. Checken Sie den Agenten aus und führen Sie ihn aus
+5. Checken Sie den Agenten aus
 
    ```sh
    git checkout 04-interface-llm
+   ```
+
+6. Der Code im Repository verwendet das Modell `gpt-4-turbo`, das [OpenAI am 23. Oktober 2026 abschaltet](https://developers.openai.com/api/docs/deprecations). Wechseln Sie zu `gpt-6-luna`, einem aktuellen, kostengünstigen Modell. Da `gpt-6-luna` ein Reasoning-Modell ist, schaltet der Befehl auch das Reasoning aus (`reasoning_effort="none"`, wodurch `temperature` nutzbar bleibt) und ersetzt den veralteten Parameter `max_tokens` durch `max_completion_tokens`.
+
+   ```sh
+   sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
+   ```
+
+7. Führen Sie den Agenten aus
+
+   ```sh
    uv run agent.py
    ```
+
+Wenn Sie lieber einen anderen OpenAI-kompatiblen Endpunkt verwenden möchten, z. B. ein Modell, das Sie lokal hosten, liest die OpenAI-Bibliothek den Endpunkt aus der Umgebungsvariablen `OPENAI_BASE_URL`. Legen Sie diese fest, geben Sie einen beliebigen nicht leeren Wert in `OPENAI_API_KEY` ein, falls der Server keine Schlüssel überprüft, und ändern Sie `gpt-6-luna` in `agent.py` und `test-predictor.py` in den Namen eines Modells, das dieser Server bereitstellt. Wenn der Server `reasoning_effort` ablehnt, entfernen Sie diesen Parameter.
+
+```sh
+export OPENAI_BASE_URL=http://localhost:<port>/v1
+```
 
 Hier ist der neue Code.
 
 ```python
 from openai import OpenAI
 
-open_ai = OpenAI()  # Der Client liest die Umgebungsvariable OPENAI_API_KEY
+open_ai = OpenAI()  # The client reads the OPENAI_API_KEY environment variable
 ```
 
-Importieren und instanziieren Sie die OpenAI-API.
+Importieren und instanziieren Sie die OpenAI-API. Der Client liest auch `OPENAI_BASE_URL`, falls diese festgelegt ist, sodass derselbe Code mit anderen OpenAI-kompatiblen Endpunkten funktioniert.
 
 ```python
 response = open_ai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-6-luna", reasoning_effort="none",
     messages=[
         {"role": "user", "content": prompt}
     ],
     temperature=0.0,
-    max_tokens=16,
+    max_completion_tokens=16,
 )
 ```
 
-Rufen Sie die OpenAI-API (`open_ai.chat.completions.create`) auf, um die Antwort zu erstellen.
+Rufen Sie die OpenAI-API (`open_ai.chat.completions.create`) auf, um die Antwort zu erstellen. Ein `temperature` von null fordert die am besten vorhersehbare Antwort an, und `max_completion_tokens` begrenzt die Länge der Antwort, die nur eine Zahl enthalten muss. Bei einem Reasoning-Modell zählt `max_completion_tokens` auch die Token, die das Modell zum Denken verwendet, was ein weiterer Grund ist, `reasoning_effort` auf `none` zu setzen.
 
 ```python
 expected_price = Decimal(response.choices[0].message.content.strip())
@@ -693,9 +712,9 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
 
 Verwenden Sie [`filter`](https://www.w3schools.com/python/ref_func_filter.asp), um die Anzahl der profitablen Tage und die Anzahl der verlustreichen Tage zu zählen. Das Ergebnis ist ein Filterobjekt, das wir in eine Liste umwandeln müssen, um die Länge zu erhalten.
 
-### Einreichen von Transaktionen {#submit-txn}
+### Transaktionen einreichen {#submit-txn}
 
-Jetzt müssen wir tatsächlich Transaktionen einreichen. Ich möchte jedoch zu diesem Zeitpunkt kein echtes Geld ausgeben, bevor sich das System bewährt hat. Stattdessen werden wir einen lokalen Fork des Mainnets erstellen und in diesem Netzwerk „handeln“.
+Jetzt müssen wir tatsächlich Transaktionen einreichen. Ich möchte jedoch zu diesem Zeitpunkt kein echtes Geld ausgeben, bevor sich das System bewährt hat. Stattdessen erstellen wir einen lokalen Fork des Mainnet und „handeln“ in diesem Netzwerk.
 
 Hier sind die Schritte, um einen lokalen Fork zu erstellen und den Handel zu ermöglichen.
 
@@ -746,7 +765,7 @@ Hier sind die Schritte, um einen lokalen Fork zu erstellen und den Handel zu erm
        --private-key $PRIVATE_KEY
    ```
 
-   Der Aufruf von `approve` erstellt einen Freigabebetrag, der es `SwapRouter` erlaubt, einige unserer Token auszugeben. Verträge können keine Ereignisse überwachen. Wenn wir also Token direkt an den Vertrag `SwapRouter` übertragen, wüsste dieser nicht, dass er bezahlt wurde. Stattdessen genehmigen wir dem Vertrag `SwapRouter`, einen bestimmten Betrag auszugeben, und dann tut `SwapRouter` dies. Dies geschieht über eine von `SwapRouter` aufgerufene Funktion, sodass er weiß, ob es erfolgreich war.
+   Der Aufruf `approve` erstellt einen Freigabebetrag, der es `SwapRouter` ermöglicht, einige unserer Token auszugeben. Verträge können keine Ereignisse überwachen. Wenn wir also Token direkt an den Vertrag `SwapRouter` übertragen, wüsste dieser nicht, dass er bezahlt wurde. Stattdessen genehmigen wir dem Vertrag `SwapRouter`, einen bestimmten Betrag auszugeben, und dann tut `SwapRouter` dies. Dies geschieht über eine Funktion, die von `SwapRouter` aufgerufen wird, sodass er weiß, ob er erfolgreich war.
 
 7. Überprüfen Sie, ob Sie von beiden Token genug haben.
 
@@ -758,9 +777,12 @@ Hier sind die Schritte, um einen lokalen Fork zu erstellen und den Handel zu erm
 Da wir nun WETH und USDC haben, können wir den Agenten tatsächlich ausführen.
 
 ```sh
-git checkout 05-trade
+git checkout -f 05-trade
+sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
 uv run agent.py
 ```
+
+Das `-f` verwirft die Modelländerung, die Sie im vorherigen Branch vorgenommen haben, sodass der Befehl `sed` sie erneut auf die neue Version von `agent.py` anwendet.
 
 Die Ausgabe wird ähnlich aussehen wie:
 
@@ -781,11 +803,11 @@ USDC Balance: 929143.797116
 WETH Balance: 499
 ```
 
-Um ihn tatsächlich zu nutzen, benötigen Sie ein paar kleine Änderungen.
+Um ihn tatsächlich zu verwenden, benötigen Sie ein paar kleine Änderungen.
 
 - Ändern Sie in Zeile 14 `MAINNET_URL` in einen echten Zugangspunkt, wie z. B. `https://eth.drpc.org`
 - Ändern Sie in Zeile 28 `PRIVATE_KEY` in Ihren eigenen privaten Schlüssel
-- Sofern Sie nicht sehr wohlhabend sind und jeden Tag 1 ETH für einen unbewiesenen Agenten kaufen oder verkaufen können, möchten Sie vielleicht Zeile 29 ändern, um `WETH_TRADE_AMOUNT` zu verringern
+- Wenn Sie nicht sehr wohlhabend sind und jeden Tag 1 ETH für einen unbewiesenen Agenten kaufen oder verkaufen können, möchten Sie vielleicht Zeile 29 ändern, um `WETH_TRADE_AMOUNT` zu verringern
 
 #### Code-Erklärung {#trading-code}
 
@@ -815,7 +837,7 @@ ERC20_ABI = [
 ]
 ```
 
-Um tatsächlich zu handeln, benötigen wir die Funktion `approve`. Wir möchten auch die Guthaben davor und danach anzeigen, also benötigen wir auch `balanceOf`.
+Um tatsächlich zu handeln, benötigen wir die Funktion `approve`. Wir möchten auch die Salden davor und danach anzeigen, also benötigen wir auch `balanceOf`.
 
 ```python
 SWAP_ROUTER_ABI = [
@@ -823,7 +845,7 @@ SWAP_ROUTER_ABI = [
 ]
 ```
 
-In der `SwapRouter`-ABI benötigen wir nur `exactInput`. Es gibt eine verwandte Funktion, `exactOutput`, die wir verwenden könnten, um genau einen WETH zu kaufen, aber der Einfachheit halber verwenden wir in beiden Fällen einfach `exactInput`.
+In der ABI von `SwapRouter` benötigen wir nur `exactInput`. Es gibt eine verwandte Funktion, `exactOutput`, die wir verwenden könnten, um genau einen WETH zu kaufen, aber der Einfachheit halber verwenden wir in beiden Fällen einfach `exactInput`.
 
 ```python
 account = w3.eth.account.from_key(PRIVATE_KEY)
@@ -833,7 +855,7 @@ swap_router = w3.eth.contract(
 )
 ```
 
-Die Web3-Definitionen für den [`account`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html) und den Vertrag `SwapRouter`.
+Die Web3-Definitionen für das [`account`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html) und den Vertrag `SwapRouter`.
 
 ```python
 def txn_params() -> dict:
@@ -859,7 +881,7 @@ Genehmigen Sie einen Freigabebetrag für `SwapRouter`.
     tx_hash = w3.eth.send_raw_transaction(signed_txn.raw_transaction)
 ```
 
-So senden wir eine Transaktion in Web3. Zuerst verwenden wir [das `Contract`-Objekt](https://web3py.readthedocs.io/en/stable/web3.contract.html), um die Transaktion zu erstellen. Dann verwenden wir [`web3.eth.account.sign_transaction`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction), um die Transaktion mit `PRIVATE_KEY` zu signieren. Schließlich verwenden wir [`w3.eth.send_raw_transaction`](https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction), um die Transaktion zu senden.
+So senden wir eine Transaktion in Web3. Zuerst verwenden wir [das Objekt `Contract`](https://web3py.readthedocs.io/en/stable/web3.contract.html), um die Transaktion zu erstellen. Dann verwenden wir [`web3.eth.account.sign_transaction`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction), um die Transaktion mit `PRIVATE_KEY` zu signieren. Schließlich verwenden wir [`w3.eth.send_raw_transaction`](https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction), um die Transaktion zu senden.
 
 ```python
     print(f"Approve transaction sent: {tx_hash.hex()}")
@@ -867,7 +889,7 @@ So senden wir eine Transaktion in Web3. Zuerst verwenden wir [das `Contract`-Obj
     print("Approve transaction mined.")
 ```
 
-[`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) wartet, bis die Transaktion gemint ist. Es gibt bei Bedarf den Transaktionsbeleg zurück.
+[`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) wartet, bis die Transaktion gemint wurde. Es gibt bei Bedarf den Transaktionsbeleg zurück.
 
 ```python
 SELL_PARAMS = {
@@ -892,7 +914,7 @@ def make_buy_params(quote: Quote) -> dict:
     }
 ```
 
-Im Gegensatz zu `SELL_PARAMS` können sich die Kaufparameter ändern. Der Eingabebetrag ist der Preis für 1 WETH, wie in `quote` verfügbar.
+Im Gegensatz zu `SELL_PARAMS` können sich die Kaufparameter ändern. Der Eingabebetrag sind die Kosten für 1 WETH, wie in `quote` verfügbar.
 
 ```python
 def buy(quote: Quote):
@@ -917,7 +939,7 @@ def sell():
     print("Sell transaction mined.")
 ```
 
-Die Funktionen `buy()` und `sell()` sind nahezu identisch. Zuerst genehmigen wir einen ausreichenden Freigabebetrag für `SwapRouter`, und dann rufen wir ihn mit dem korrekten Pfad und Betrag auf.
+Die Funktionen `buy()` und `sell()` sind nahezu identisch. Zuerst genehmigen wir einen ausreichenden Freigabebetrag für `SwapRouter` und rufen ihn dann mit dem richtigen Pfad und Betrag auf.
 
 ```python
 def balances():
@@ -928,7 +950,7 @@ def balances():
     print(f"{wethusdc_pool.token1.symbol} Balance: {Decimal(token1_balance) / Decimal(10 ** wethusdc_pool.token1.decimals)}")
 ```
 
-Berichten Sie die Benutzerguthaben in beiden Währungen.
+Melden Sie die Benutzersalden in beiden Währungen.
 
 ```python
 print("Account balances before trade:")
@@ -945,7 +967,7 @@ print("Account balances after trade:")
 balances()
 ```
 
-Dieser Agent funktioniert derzeit nur einmal. Sie können ihn jedoch so ändern, dass er kontinuierlich arbeitet, indem Sie ihn entweder über [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) ausführen oder die Zeilen 368-400 in eine Schleife packen und [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) verwenden, um zu warten, bis es Zeit für den nächsten Zyklus ist.
+Dieser Agent funktioniert derzeit nur einmal. Sie können ihn jedoch so ändern, dass er kontinuierlich funktioniert, indem Sie ihn entweder über [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) ausführen oder die Zeilen 368-397 in eine Schleife packen und [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) verwenden, um zu warten, bis es Zeit für den nächsten Zyklus ist.
 
 ## Mögliche Verbesserungen {#improvements}
 
@@ -959,11 +981,11 @@ Es gibt zwei wichtige Fakten, die der Agent bei der Entscheidung, was zu tun ist
   Es wäre wohl besser, geringfügige Änderungen zu ignorieren und basierend darauf zu verkaufen, wie stark der Preis voraussichtlich fallen wird.
 - _Das aktuelle Portfolio_. Wenn 10 % Ihres Portfolios in WETH sind und Sie glauben, dass der Preis steigen wird, macht es wahrscheinlich Sinn, mehr zu kaufen. Wenn jedoch 90 % Ihres Portfolios in WETH sind, sind Sie möglicherweise ausreichend exponiert und es besteht keine Notwendigkeit, mehr zu kaufen. Das Gegenteil gilt, wenn Sie erwarten, dass der Preis sinkt.
 
-### Was ist, wenn Sie Ihre Trading-Strategie geheim halten wollen? {#secret}
+### Was ist, wenn Sie Ihre Handelsstrategie geheim halten möchten? {#secret}
 
-KI-Anbieter können die Abfragen sehen, die Sie an ihre LLMs senden, was das geniale Trading-System offenlegen könnte, das Sie mit Ihrem Agenten entwickelt haben. Ein Trading-System, das von zu vielen Menschen genutzt wird, ist wertlos, da zu viele Menschen versuchen zu kaufen, wenn Sie kaufen wollen (und der Preis steigt), und versuchen zu verkaufen, wenn Sie verkaufen wollen (und der Preis sinkt).
+KI-Anbieter können die Abfragen sehen, die Sie an ihre LLMs senden, was das geniale Handelssystem offenlegen könnte, das Sie mit Ihrem Agenten entwickelt haben. Ein Handelssystem, das von zu vielen Menschen genutzt wird, ist wertlos, da zu viele Menschen versuchen zu kaufen, wenn Sie kaufen möchten (und der Preis steigt), und versuchen zu verkaufen, wenn Sie verkaufen möchten (und der Preis sinkt).
 
-Sie können ein LLM lokal ausführen, zum Beispiel mit [LM-Studio](https://lmstudio.ai/), um dieses Problem zu vermeiden.
+Sie können ein LLM lokal ausführen, zum Beispiel mit `llama-server` von [llama.cpp](https://github.com/ggml-org/llama.cpp), um dieses Problem zu vermeiden. Es bietet einen OpenAI-kompatiblen Endpunkt, sodass Sie nur `OPENAI_BASE_URL` und den Modellnamen festlegen müssen, wie unter [Interaktion mit einem LLM](#interface-llm) erklärt.
 
 ### Vom KI-Bot zum KI-Agenten {#bot-to-agent}
 

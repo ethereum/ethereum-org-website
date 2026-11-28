@@ -9,16 +9,16 @@ breadcrumb: Przejrzyste podpisywanie
 published: 2026-05-11
 ---
 
-Większość głównych ataków na Ethereum miała ten sam ostatni krok: użytkownik zatwierdzający transakcję, której nie mógł w pełni zrozumieć. Portfele sprzętowe pokazują surowe dane wywołania (calldata) w formacie szesnastkowym, a co gorsza, wymuszają włączenie ślepego podpisywania (blind signing). Portfele programowe pokazują zdekodowane pola, ale tylko wtedy, gdy rozpoznają kontrakt. Kiedy tego nie robią, czy to dlatego, że protokół jest nowy, aplikacja została skompromitowana, czy urządzenie jest offline, użytkownicy podpisują w ciemno.
+Większość głównych exploitów na Ethereum miała ten sam ostatni krok: użytkownik zatwierdzał transakcję, której nie mógł w pełni zrozumieć. Portfele sprzętowe pokazują surowe dane wywołania w formacie szesnastkowym, a co gorsza, zmuszają do włączenia ślepego podpisywania (blind signing). Portfele programowe pokazują zdekodowane pola, ale tylko wtedy, gdy rozpoznają kontrakt. Kiedy tego nie robią, czy to dlatego, że protokół jest nowy, aplikacja jest skompromitowana, czy urządzenie jest offline, użytkownicy podpisują w ciemno.
 
-[ERC-7730](https://eips.ethereum.org/EIPS/eip-7730) definiuje standardowy format JSON do opisywania, co *oznaczają* wywołania funkcji Twojego kontraktu. 
+[ERC-7730](https://eips.ethereum.org/EIPS/eip-7730) definiuje standardowy format JSON do opisywania, co *oznaczają* wywołania funkcji Twojego kontraktu.
 
 Portfel obsługujący ERC-7730 odczytuje Twój deskryptor i pokazuje:
 
 > **Wymiana**  
 > Wyślij: 1,000 USDC  
 > Otrzymaj minimum: 0.42 WETH  
-> Protokół: Uniswap V3
+> Protokół: Uniswap V2
 
 Albo pojedyncze, skonstruowane zdanie czytelne zarówno dla ludzi, jak i agentów:
 
@@ -26,14 +26,14 @@ Albo pojedyncze, skonstruowane zdanie czytelne zarówno dla ludzi, jak i agentó
 
 Zamiast selektora funkcji i listy surowych wartości całkowitych.
 
-To jest [przejrzyste podpisywanie](https://clearsigning.org/) — „Podpisujesz to, co widzisz” (What You See Is What You Sign). Ten samouczek przeprowadzi Cię przez proces pisania deskryptora dla Twojego własnego kontraktu, walidacji go za pomocą oficjalnego narzędzia CLI i przesłania go do otwartego rejestru.
+To jest [przejrzyste podpisywanie](https://clearsigning.org/) (clear signing) — „Widzisz to, co podpisujesz” (What You See Is What You Sign). Ten samouczek przeprowadzi Cię przez proces pisania deskryptora dla własnego kontraktu, walidacji go za pomocą oficjalnego narzędzia CLI i przesłania go do otwartego rejestru.
 
 ## Wymagania wstępne {#prerequisites}
 
 - Znajomość języka Solidity i ABI inteligentnych kontraktów
-- Wdrożony inteligentny kontrakt ze zweryfikowanym ABI (weryfikacja w [Sourcify](https://sourcify.dev) jest wymagana przed zaakceptowaniem deskryptora w rejestrze) 
-- Python 3.12+ dla narzędzia CLI do walidacji 
-- Podstawowa znajomość formatu JSON
+- Wdrożony inteligentny kontrakt ze zweryfikowanym ABI (weryfikacja w [Sourcify](https://sourcify.dev) jest wymagana przed zaakceptowaniem deskryptora w rejestrze)
+- Python 3.12 dla CLI do walidacji (przypięty pakiet `erc7730` nie instaluje się w Pythonie 3.13 lub nowszym). Jeśli systemowy Python jest w innej wersji, [uv](https://docs.astral.sh/uv/) może pobrać i uruchomić Pythona 3.12 za Ciebie
+- Podstawowa znajomość JSON
 
 ## Czym jest deskryptor ERC-7730? {#what-is-an-erc-7730-descriptor}
 
@@ -49,8 +49,7 @@ Ponieważ deskryptor jest oddzielony od samego kontraktu, możesz dodać obsług
 
 ## Krok 1: Utworzenie szkieletu pliku {#step-1-create-the-file-skeleton}
 
-Utwórz plik o nazwie `calldata-<contractname>-<descriptorversion>.json`. Przedrostek `calldata-` informuje rejestr, że ten deskryptor obejmuje wywołania funkcji kontraktu, w przeciwieństwie do `eip712-` dla wiadomości z typowanymi danymi (typed-data). Pole `descriptorversion` informuje rejestr o wersji pliku deskryptora, domyślnie 0, jeśli nie podano wersji.
-
+Utwórz plik o nazwie `calldata-<ContractName>.json`, na przykład `calldata-SwapRouter.json`. Przedrostek `calldata-` informuje rejestr, że ten deskryptor obejmuje wywołania funkcji kontraktu, w przeciwieństwie do `eip712-` dla wiadomości z typowanymi danymi (typed-data). Jeśli musisz opisać kilka wersji kontraktu, uwzględnij wersję kontraktu w nazwie, tak jak w `calldata-UniswapV3Router02.json` w rejestrze.
 
 ```json
 {
@@ -65,11 +64,11 @@ Utwórz plik o nazwie `calldata-<contractname>-<descriptorversion>.json`. Przedr
 
 ## Krok 2: Napisanie sekcji kontekstu {#step-2-write-the-context-section}
 
-Sekcja `context` wiąże deskryptor z jednym lub wieloma wdrożeniami kontraktu. Portfele używają tego do dopasowania przychodzącej transakcji do odpowiedniego deskryptora.
+Sekcja `context` wiąże deskryptor z jednym lub kilkoma wdrożeniami kontraktu. Portfele używają tego do dopasowania przychodzącej transakcji do odpowiedniego deskryptora.
 
 ```json
 "context": {
-  "$id": "uniswap-v3-router-mainnet",
+  "$id": "example-swap-router",
   "contract": {
     "deployments": [
       { "chainId": 1, "address": "0xYourContractAddressOnMainnet" },
@@ -84,7 +83,7 @@ Sekcja `context` wiąże deskryptor z jednym lub wieloma wdrożeniami kontraktu.
 - `context.$id` — Unikalny identyfikator dla tego dokumentu deskryptora lub konfiguracji wdrożenia.
 - `contract.deployments` — Zestaw wdrożeń, do których ma zastosowanie ten deskryptor.
 - `deployments[].chainId` — Identyfikator łańcucha (chain ID) EVM dla wdrożenia. Uwzględnij każdy łańcuch, w którym wdrożono Twój kontrakt.
-- `deployments[].address` — Adres kontraktu, który portfele powinny powiązać z tym deskryptorem. Użyj adresu implementacji, który zawiera logikę wykonawczą.
+- `deployments[].address` — Adres kontraktu, który portfele powinny powiązać z tym deskryptorem. Jest to adres, na który użytkownicy faktycznie wysyłają transakcje. Jeśli Twój kontrakt można aktualizować (upgradeable), jest to adres proxy, a nie adres implementacji, podczas gdy sygnatury funkcji w `display.formats` pochodzą z ABI implementacji.
 
 ## Krok 3: Napisanie sekcji metadanych {#step-3-write-the-metadata-section}
 
@@ -115,6 +114,8 @@ Każdy klucz to czytelny dla człowieka fragment ABI — sygnatura funkcji zawie
 
 ### Przykład: Opisanie wymiany tokenów {#eg-describing-token-swap}
 
+Ten przykład opisuje `swapExactTokensForTokens` z kontraktu `Router02` Uniswap V2. Token wejściowy jest pierwszym elementem `path`, a token wyjściowy jest ostatnim (`path` może mieć więcej niż dwa elementy w przypadku wymiany wieloetapowej (multi-hop swap)).
+
 ```json
 "display": {
   "formats": {
@@ -127,7 +128,7 @@ Każdy klucz to czytelny dla człowieka fragment ABI — sygnatura funkcji zawie
           "label": "Send",
           "format": "tokenAmount",
           "params": {
-            "tokenPath": "#.path[0]"
+            "tokenPath": "#.path.[0]"
           }
         },
         {
@@ -135,7 +136,7 @@ Każdy klucz to czytelny dla człowieka fragment ABI — sygnatura funkcji zawie
           "label": "Receive minimum",
           "format": "tokenAmount",
           "params": {
-            "tokenPath": "#.path[1]"
+            "tokenPath": "#.path.[-1]"
           }
         },
         {
@@ -159,17 +160,16 @@ Każdy klucz to czytelny dla człowieka fragment ABI — sygnatura funkcji zawie
     }
   }
 }
-
 ```
 
 ### Pola wyświetlania {#display-fields}
 
-- **`intent`** — **(Wymagane)** Krótki, przyjazny dla użytkownika opis akcji, taki jak „Wymiana” (Swap).
-- **`interpolatedIntent`** — **(Zalecane)** Bogatszy szablon zdania, który osadza sformatowane wartości pól, taki jak `"Swap {amountIn} for at least {amountOutMin}"`. Dołącz to obok `intent`, aby zapewnić jeszcze bardziej przyjazny dla użytkownika deskryptor, który portfele mogą zdecydować się wyświetlić, biorąc pod uwagę ewentualne ograniczenia wyświetlania.
+- **`intent`** — **(Wymagane)** Krótki, przyjazny dla użytkownika opis akcji, taki jak „Wymiana”.
+- **`interpolatedIntent`** — **(Zalecane)** Bogatszy szablon zdania, który osadza sformatowane wartości pól, taki jak `"Swap {amountIn} for at least {amountOutMin}"`. Dołącz to obok `intent`, aby zapewnić jeszcze bardziej przyjazny dla użytkownika deskryptor, który portfele mogą zdecydować się wyświetlić, o ile pozwalają na to ograniczenia wyświetlania.
 - **`fields`** — **(Wymagane)** Uporządkowana lista pól transakcji, które portfele powinny wyświetlać użytkownikom.
-  - **`path`** — **(Wymagane)** Odniesienie do danych transakcji. `#.fieldName` wskazuje na zdekodowany parametr danych wywołania (calldata) według nazwy w ABI. `@.value` odnosi się do wartości ETH wysłanej wraz z transakcją.
+  - **`path`** — **(Wymagane)** Odniesienie do danych transakcji. `#.fieldName` wskazuje na zdekodowany parametr danych wywołania według nazwy w ABI. `@.value` odnosi się do wartości ETH wysłanej wraz z transakcją. Elementy tablicy są zapisywane z `.` przed nawiasami: `#.path.[0]` to pierwszy element, a `#.path.[-1]` to ostatni. `#.path[0]` (bez kropki) jest odrzucane przez linter.
   - **`label`** — **(Wymagane)** Czytelna dla człowieka etykieta wyświetlana obok wartości.
-  - **`format`** — **(Zalecane)** Kontroluje sposób renderowania wartości. Typowe formaty obejmują:
+  - **`format`** — **(Zalecane)** Kontroluje sposób renderowania wartości. Typowe formaty to:
     - `tokenAmount`
     - `addressName`
     - `date`
@@ -177,17 +177,19 @@ Każdy klucz to czytelny dla człowieka fragment ABI — sygnatura funkcji zawie
     Użyj `raw`, gdy nie jest potrzebne żadne dodatkowe formatowanie. Niektóre formaty akceptują dodatkową konfigurację **`params`**. Na przykład:
 
     - `tokenAmount` może użyć `tokenPath`, aby zidentyfikować, który adres tokena dostarcza metadane dotyczące miejsc dziesiętnych i symbolu (ticker).
-    - `date` może użyć `encoding`, aby opisać, w jaki sposób zakodowany jest znacznik czasu (timestamp).
+    - `date` może użyć `encoding`, aby opisać, jak zakodowany jest znacznik czasu.
 
     Jeśli wybrany format nie wymaga dodatkowych informacji, pomiń `params`.
 
 ## Kompletny deskryptor {#the-complete-descriptor}
 
+Zastąp adresy zastępcze adresami swojego wdrożonego kontraktu. Linter sprawdza deskryptor pod kątem zweryfikowanego ABI pod tymi adresami, więc będzie zgłaszał błędy, dopóki tego nie zrobisz.
+
 ```json
 {
   "$schema": "https://eips.ethereum.org/assets/eip-7730/erc7730-v2.schema.json",
   "context": {
-    "$id": "uniswap-v3-router-mainnet",
+    "$id": "example-swap-router",
     "contract": {
       "deployments": [
         {
@@ -219,7 +221,7 @@ Każdy klucz to czytelny dla człowieka fragment ABI — sygnatura funkcji zawie
             "label": "Send",
             "format": "tokenAmount",
             "params": {
-              "tokenPath": "#.path[0]"
+              "tokenPath": "#.path.[0]"
             }
           },
           {
@@ -227,7 +229,7 @@ Każdy klucz to czytelny dla człowieka fragment ABI — sygnatura funkcji zawie
             "label": "Receive minimum",
             "format": "tokenAmount",
             "params": {
-              "tokenPath": "#.path[1]"
+              "tokenPath": "#.path.[-1]"
             }
           },
           {
@@ -258,13 +260,74 @@ Każdy klucz to czytelny dla człowieka fragment ABI — sygnatura funkcji zawie
 
 [Rejestr ERC-7730](https://github.com/ethereum/clear-signing-erc7730-registry) to otwarte repozytorium hostowane przez [Fundację Ethereum](/foundation/) jako neutralnego zarządcę. Każdy może je sklonować i hostować samodzielnie — portfele niezależnie decydują, którym instancjom rejestru ufają.
 
-1. Utwórz rozwidlenie repozytorium na GitHubie  
-2. Utwórz folder w `registry/<your-project-name>/`  
-3. Umieść w nim swój plik: `registry/myproject/calldata-mycontract-0_0.json`  
-4. Zaktualizuj pole `$schema` na ścieżkę względną używaną w repozytorium: `"../../specs/erc7730-v2.schema.json"`  
-5. Otwórz pull request (żądanie ściągnięcia)
+1. Zrób rozwidlenie (fork) repozytorium na GitHubie
+2. Utwórz folder w `registry/<your-project-name>/`
+3. Umieść w nim swój plik: `registry/myproject/calldata-SwapRouter.json`
+4. Zaktualizuj pole `$schema` na ścieżkę względną używaną w repozytorium: `"../../specs/erc7730-v2.schema.json"`. CI odrzuci tutaj adres URL.
+5. Dodaj plik testowy (zobacz poniżej)
+6. Zweryfikuj swoje pliki lokalnie (zobacz poniżej)
+7. Otwórz pull request. Każdy pull request może zmienić tylko jeden folder w `registry/`
 
-Kiedy otworzysz PR, CI automatycznie uruchamia walidację schematu, sprawdza, czy sygnatury funkcji generują prawidłowe selektory, potwierdza, że adres kontraktu jest zweryfikowany w Sourcify i oflagowuje niespójności ABI. Wyniki sprawdzania pojawiają się bezpośrednio w PR. Opiekunowie rejestru sprawdzają zgłoszenia pod kątem zniekształconych lub potencjalnie złośliwych deskryptorów. Włączenie do rejestru nie oznacza audytu ani poparcia.
+### Dodanie pliku testowego {#add-a-test-file}
+
+Każdy dodawany lub zmieniany deskryptor wymaga pliku testowego, aby można było sprawdzić z nim implementacje przejrzystego podpisywania. Utwórz `registry/<your-project-name>/testsv2/calldata-<ContractName>.tests.json` z co najmniej jednym przypadkiem testowym dla każdej funkcji w `display.formats`. CI wyprowadza selektor funkcji każdego formatu i kończy się niepowodzeniem, jeśli żadna transakcja testowa go nie wywołuje.
+
+```json
+{
+  "$schema": "../../../specs/erc7730-tests-v2.schema.json",
+  "descriptor": "../calldata-SwapRouter.json",
+  "dataProvider": {
+    "tokens": {
+      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": { "symbol": "USDC", "decimals": 6, "name": "USD Coin" },
+      "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": { "symbol": "WETH", "decimals": 18, "name": "Wrapped Ether" }
+    }
+  },
+  "tests": [
+    {
+      "description": "Swap 1,000 USDC for at least 0.42 WETH",
+      "rawTx": "0x02f9012f0180843b9aca00...",
+      "expected": {
+        "intent": "Swap",
+        "interpolatedIntent": "Swap 1000 USDC for at least 0.42 WETH",
+        "owner": "Example Swap Protocol",
+        "fields": [
+          { "label": "Send", "value": "1000 USDC" },
+          { "label": "Receive minimum", "value": "0.42 WETH" },
+          { "label": "Recipient", "value": "0x1234567890123456789012345678901234567890" },
+          { "label": "Expires", "value": "2026-01-01 00:00:00Z" }
+        ]
+      }
+    }
+  ]
+}
+```
+
+- `rawTx` to pełna zserializowana **niepodpisana** transakcja (tutaj skrócona), a nie tylko dane wywołania. Prawdziwe transakcje do Twojego kontraktu są najlepszymi przypadkami testowymi.
+- `dataProvider` dostarcza metadane tokena (oraz opcjonalnie adres i nazwy ENS), dzięki czemu testy nie wymagają dostępu do sieci.
+- `expected` to to, co powinien wyświetlić portfel. CI renderuje każdy przypadek testowy z implementacjami przejrzystego podpisywania i zgłasza wszelkie różnice w pull requeście.
+
+Zobacz [Referencyjne przypadki testowe](https://github.com/ethereum/clear-signing-erc7730-registry#reference-test-cases) w pliku README rejestru, aby zapoznać się z pełnym formatem, w tym plikami testowymi dla deskryptorów EIP-712.
+
+### Walidacja lokalna {#validate-locally}
+
+Rejestr sprawdza deskryptory za pomocą narzędzia wiersza poleceń [`erc7730`](https://github.com/sourcifyeth/python-erc7730), przypiętego w `.github/requirements.txt`. Uruchom je z katalogu głównego swojego rozwidlenia, w środowisku Python 3.12:
+
+```sh
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install -r .github/requirements.txt
+erc7730 lint registry/myproject/calldata-SwapRouter.json
+```
+
+Jeśli używasz [uv](https://docs.astral.sh/uv/), możesz pominąć środowisko wirtualne, a uv pobierze Pythona 3.12 w razie potrzeby:
+
+```sh
+uvx --python 3.12 --from "$(cat .github/requirements.txt)" erc7730 lint registry/myproject/calldata-SwapRouter.json
+```
+
+Linter sprawdza deskryptor pod kątem schematu i zweryfikowanego ABI Twojego kontraktu. Napraw każdy błąd. Ostrzeżenia takie jak `Missing display format` oznaczają, że kontrakt ma funkcje, których Twój deskryptor jeszcze nie opisuje. Aby sprawdzić również ścieżki `$schema` i plik testowy w sposób, w jaki robi to CI, zobacz [Jak walidować](https://github.com/ethereum/clear-signing-erc7730-registry#how-to-validate) w pliku README rejestru.
+
+Po otwarciu PR, CI automatycznie uruchamia walidację schematu, sprawdza, czy sygnatury funkcji generują prawidłowe selektory, potwierdza, że adres kontraktu jest zweryfikowany w Sourcify i flaguje niespójności ABI. Wyniki sprawdzania pojawiają się w linii w PR. Opiekunowie rejestru sprawdzają zgłoszenia pod kątem zniekształconych lub potencjalnie złośliwych deskryptorów. Włączenie do rejestru nie oznacza audytu ani poparcia.
 
 <Alert variant="info">
 <AlertContent>
@@ -276,7 +339,7 @@ Kiedy otworzysz PR, CI automatycznie uruchamia walidację schematu, sprawdza, cz
 
 ## Co się dzieje po scaleniu (merge)? {#what-happens-after-merging}
 
-Wszystkie deskryptory w rejestrze są otwarte dla audytorów. Po scaleniu Twojego PR, każdy audytor może przejrzeć Twój deskryptor i opublikować kryptograficzne poświadczenie (zgodnie z [ERC-8176](https://github.com/ethereum/ERCs/pull/1576)) potwierdzające jego dokładność. 
+Wszystkie deskryptory w rejestrze są otwarte dla audytorów. Po scaleniu Twojego PR, każdy audytor może przejrzeć Twój deskryptor i opublikować kryptograficzne poświadczenie (zgodnie z [ERC-8176](https://eips.ethereum.org/EIPS/eip-8176)) potwierdzające jego dokładność. 
 
 Te sygnały poświadczeń pozwalają portfelom stosować własne zasady zaufania — deskryptor z wieloma niezależnymi poświadczeniami ma większą wagę niż ten bez nich. Możesz skontaktować się ze społecznością audytorów za pośrednictwem [clearsigning.org](https://clearsigning.org).
 
@@ -289,3 +352,4 @@ Portfele wybierają, który rejestr będą obsługiwać. Gdy Twój deskryptor zn
 - [clearsigning.org](https://clearsigning.org) — narzędzia, status ekosystemu i zarządzanie  
 - [Weryfikacja kontraktów w Sourcify](https://sourcify.dev)  
 - [Inicjatywa Trillion Dollar Security](https://trilliondollarsecurity.org)
+

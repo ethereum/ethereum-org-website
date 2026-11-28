@@ -26,60 +26,102 @@ Der Begriff „Layer 2“ (L2) wird für das Rollup oder jedes andere System ver
 
 ## Wie können wir die Kosten für L2-Transaktionen weiter senken? {#how-can-we-further-reduce-the-cost-of-l2-transactions}
 
-[Optimistic Rollups](/developers/docs/scaling/optimistic-rollups) müssen eine Aufzeichnung jeder historischen Transaktion aufbewahren, damit jeder sie durchgehen und verifizieren kann, dass der aktuelle Zustand korrekt ist.
-Der günstigste Weg, Daten in das Ethereum Mainnet zu bekommen, ist, sie als Calldata (Aufrufdaten) zu schreiben.
+[Optimistic Rollups](/developers/docs/scaling/optimistic-rollups) müssen eine Aufzeichnung jeder historischen Transaktion aufbewahren, damit jeder sie durchgehen und überprüfen kann, ob der aktuelle Zustand korrekt ist.
+Als dieser Artikel geschrieben wurde, war der günstigste Weg, Daten in das Ethereum Mainnet zu bekommen, sie als Calldata zu schreiben.
 Diese Lösung wurde sowohl von [Optimism](https://docs.optimism.io/op-stack/protocol/overview) als auch von [Arbitrum](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction) gewählt.
+Seit dem Dencun-Upgrade (März 2024) können Rollups diese Daten stattdessen in [Blobs](/roadmap/danksharding/) posten, die viel günstiger sind.
 
 ### Kosten von L2-Transaktionen {#cost-of-l2-transactions}
 
 Die Kosten von L2-Transaktionen setzen sich aus zwei Komponenten zusammen:
 
 1. L2-Verarbeitung, die normalerweise extrem günstig ist
-2. L1-Speicher, der an die Gas-Kosten des Mainnets gebunden ist
+2. L1-Speicherung, die an die Gaskosten des Mainnets gebunden ist
 
-Während ich dies schreibe, betragen die Kosten für L2-Gas auf Optimism 0,001 [Gwei](/developers/docs/gas/#pre-london).
-Die Kosten für L1-Gas liegen hingegen bei etwa 40 Gwei.
-[Sie können die aktuellen Preise hier einsehen](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
+Als ich diesen Artikel im Jahr 2022 schrieb, betrugen die Kosten für L2-Gas auf Optimism 0,001 [Gwei](/developers/docs/gas/#what-is-gas).
+Die Kosten für L1-Gas lagen hingegen bei etwa 40 Gwei.
 
-Ein Byte Calldata kostet entweder 4 Gas (wenn es null ist) oder 16 Gas (wenn es ein anderer Wert ist).
+Ein Byte Calldata kostet entweder 4 Gas (wenn es null ist) oder 16 Gas (wenn es ein beliebiger anderer Wert ist).
 Eine der teuersten Operationen auf der EVM ist das Schreiben in den Speicher (Storage).
-Die maximalen Kosten für das Schreiben eines 32-Byte-Wortes in den Speicher auf L2 betragen 22.100 Gas. Derzeit sind das 22,1 Gwei.
-Wenn wir also ein einziges Null-Byte an Calldata einsparen können, können wir etwa 200 Bytes in den Speicher schreiben und machen immer noch Gewinn.
+Die maximalen Kosten für das Schreiben eines 32-Byte-Wortes in den Speicher auf L2 betragen 22100 Gas. Zu dieser Zeit waren das 22,1 Gwei.
+Wenn wir also ein einziges Null-Byte an Calldata einsparen könnten, könnten wir etwa 200 Bytes in den Speicher schreiben und hätten immer noch einen Vorteil.
+
+#### Wie sich die L2-Kosten im Jahr 2024 verändert haben {#how-l2-costs-changed-in-2024}
+
+Die Formel für die [L1-Datengebühr](https://docs.optimism.io/op-stack/transactions/fees#l1-data-fee) des OP Stacks hat sich seit dem Schreiben dieses Artikels zweimal geändert:
+
+- Mit dem [Ecotone-Upgrade](https://docs.optimism.io/op-stack/transactions/fees#ecotone) (März 2024) begannen OP Stack-Chains, Transaktionsdaten in Blobs zu posten, die durch eine separate (und normalerweise viel niedrigere) Blob-Grundgebühr bepreist werden.
+- Mit dem [Fjord-Upgrade](https://docs.optimism.io/op-stack/transactions/fees#fjord) (Juli 2024) basiert die L1-Datengebühr auf einer Schätzung der Größe der Transaktion nach der [FastLZ](https://github.com/ariya/FastLZ)-Komprimierung, mit einem Minimum von 100 Bytes pro Transaktion ([siehe Spezifikation](https://specs.optimism.io/protocol/fjord/exec-engine.html)).
+
+Dies ändert die Analyse im Rest dieses Artikels auf drei Arten:
+
+1. Null-Bytes lassen sich gut komprimieren, daher sind sie fast kostenlos.
+   Die unten genannten Zahlen von 4 und 16 Gas pro Byte sind die Kosten für L1-Calldata, nicht das, was Sie heute für Transaktionsdaten auf einer OP Stack-Chain bezahlen.
+2. Unterhalb des Minimums von 100 Bytes sparen kürzere Calldata nichts ein.
+   Zum Beispiel hätten im Oktober 2026 auf dem OP Mainnet ein Standard-ERC-20-`transfer` (68 Bytes Calldata) und die 23-Byte-Kurzversion in diesem Artikel genau die gleiche L1-Datengebühr bezahlt, nämlich das Minimum, etwa 1 Gwei (10<sup>-9</sup> ETH).
+3. Da Blob-Speicherplatz günstig ist, ist die L2-Ausführungsgebühr jetzt oft höher als die L1-Datengebühr.
+   Bei einem L2-Gaspreis von 0,001 Gwei kosten 1000 Gas 1 Gwei, genauso viel wie diese gesamte L1-Datengebühr, sodass das zusätzliche Ausführungsgas für den Weg über einen Proxy-Contract mehr kosten kann als die Bytes, die dadurch eingespart werden.
+
+Das Prinzip gilt weiterhin: Weniger komprimierte Bytes bedeuten eine niedrigere L1-Datengebühr.
+Kurze ABIs sind am sinnvollsten für Transaktionen mit vielen Daten, die sich nicht gut komprimieren lassen, und auf Chains oder zu Zeiten, in denen L1-Daten teuer sind.
+Um zu sehen, was eine bestimmte Transaktion kosten würde, rufen Sie `getL1Fee` auf dem [`GasPriceOracle`-Predeploy](https://specs.optimism.io/protocol/predeploys.html#gaspriceoracle) mit der unsignierten Transaktion auf.
+Zum Beispiel mit `cast` von [Foundry](https://getfoundry.sh/introduction/installation/):
+
+```sh
+TX=$(cast mktx --raw-unsigned --from <your address> --chain 10 --nonce 0 --gas-limit 100000 \
+  --priority-gas-price 1000000 --gas-price 1000000 <destination address> <calldata>)
+cast call 0x420000000000000000000000000000000000000F "getL1Fee(bytes)(uint256)" $TX --rpc-url https://mainnet.optimism.io
+```
+
+Das Ergebnis ist in Wei.
 
 ### Die ABI {#the-abi}
 
-Die überwiegende Mehrheit der Transaktionen greift von einem externen Konto (Externally Owned Account, EOA) auf einen Vertrag zu.
+Die überwiegende Mehrheit der Transaktionen greift von einem externen Konto auf einen Vertrag zu.
 Die meisten Verträge sind in Solidity geschrieben und interpretieren ihr Datenfeld gemäß [der Application Binary Interface (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
-Die ABI wurde jedoch für L1 entwickelt, wo ein Byte Calldata ungefähr so viel kostet wie vier arithmetische Operationen, und nicht für L2, wo ein Byte Calldata mehr als tausend arithmetische Operationen kostet.
+Die ABI wurde jedoch für L1 entwickelt, wo ein Byte Calldata ungefähr so viel kostet wie vier arithmetische Operationen, und nicht für L2, wo (zu Preisen von 2022) ein Byte Calldata mehr als tausend arithmetische Operationen kostet.
 Die Calldata sind wie folgt aufgeteilt:
 
-| Abschnitt         | Länge | Bytes | Verschwendete Bytes | Verschwendetes Gas | Notwendige Bytes | Notwendiges Gas |
-| ----------------- | ----: | ----: | ------------------: | -----------------: | ---------------: | --------------: |
-| Funktionsselektor |     4 |   0-3 |                   3 |                 48 |                1 |              16 |
-| Nullen            |    12 |  4-15 |                  12 |                 48 |                0 |               0 |
-| Zieladresse       |    20 | 16-35 |                   0 |                  0 |               20 |             320 |
-| Betrag            |    32 | 36-67 |                  17 |                 64 |               15 |             240 |
-| Gesamt            |    68 |       |                     |                160 |                  |             576 |
+| Abschnitt | Länge | Bytes | Verschwendete Bytes | Verschwendetes Gas | Notwendige Bytes | Notwendiges Gas |
+| ------------------- | -----: | ----: | -----------: | ---------: | --------------: | ------------: |
+| Funktionsselektor | 4 | 0-3 | 3 | 48 | 1 | 16 |
+| Nullen | 12 | 4-15 | 12 | 48 | 0 | 0 |
+| Zieladresse | 20 | 16-35 | 0 | 0 | 20 | 320 |
+| Betrag | 32 | 36-67 | 17 | 68 | 15 | 240 |
+| Gesamt | 68 | | | 164 | | 576 |
 
 Erklärung:
 
 - **Funktionsselektor**: Der Vertrag hat weniger als 256 Funktionen, sodass wir sie mit einem einzigen Byte unterscheiden können.
-  Diese Bytes sind typischerweise ungleich null und [kosten daher 16 Gas](https://eips.ethereum.org/EIPS/eip-2028).
-- **Nullen**: Diese Bytes sind immer null, da eine 20-Byte-Adresse kein 32-Byte-Wort benötigt, um sie zu speichern.
-  Bytes, die null enthalten, kosten vier Gas ([siehe das Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf), Anhang G,
+  Diese Bytes sind typischerweise ungleich null und [kosten daher sechzehn Gas](https://eips.ethereum.org/EIPS/eip-2028).
+- **Nullen**: Diese Bytes sind immer null, da eine zwanzig Byte lange Adresse kein zweiunddreißig Byte langes Wort benötigt, um sie aufzunehmen.
+  Bytes, die null enthalten, kosten vier Gas ([siehe Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf), Anhang G,
   S. 27, der Wert für `G`<sub>`txdatazero`</sub>).
-- **Betrag**: Wenn wir annehmen, dass in diesem Vertrag `decimals` achtzehn ist (der normale Wert) und der maximale Betrag an Token, den wir transferieren, 10<sup>18</sup> sein wird, erhalten wir einen maximalen Betrag von 10<sup>36</sup>.
+- **Betrag**: Wenn wir annehmen, dass in diesem Vertrag `decimals` achtzehn ist (der normale Wert) und die maximale Menge an Token, die wir transferieren, 10<sup>18</sup> beträgt, erhalten wir einen maximalen Betrag von 10<sup>36</sup>.
   256<sup>15</sup> &gt; 10<sup>36</sup>, also sind fünfzehn Bytes ausreichend.
 
-Eine Verschwendung von 160 Gas auf L1 ist normalerweise vernachlässigbar. Eine Transaktion kostet mindestens [21.000 Gas](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), also spielen zusätzliche 0,8 % keine Rolle.
-Auf L2 sieht die Sache jedoch anders aus. Fast die gesamten Kosten der Transaktion entstehen durch das Schreiben auf L1.
+Eine Verschwendung von 164 Gas auf L1 ist normalerweise vernachlässigbar. Eine Transaktion kostet mindestens [21.000 Gas](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), also spielen zusätzliche 0,8 % keine Rolle.
+Auf L2 im Jahr 2022 sah die Sache jedoch anders aus. Fast die gesamten Kosten der Transaktion bestanden darin, sie auf L1 zu schreiben.
 Zusätzlich zu den Transaktions-Calldata gibt es 109 Bytes an Transaktions-Header (Zieladresse, Signatur usw.).
-Die Gesamtkosten betragen daher `109*16+576+160=2480`, und wir verschwenden etwa 6,5 % davon.
+Die Gesamtkosten betragen daher `109*16+576+164=2484`, und wir verschwenden etwa 6,6 % davon.
 
 ## Kosten senken, wenn Sie das Ziel nicht kontrollieren {#reducing-costs-when-you-dont-control-the-destination}
 
-Unter der Annahme, dass Sie keine Kontrolle über den Zielvertrag haben, können Sie dennoch eine Lösung ähnlich [dieser hier](https://github.com/qbzzt/ethereum.org-20220330-shortABI) verwenden.
+Angenommen, Sie haben keine Kontrolle über den Zielvertrag, können Sie dennoch eine Lösung ähnlich [dieser hier](https://github.com/qbzzt/ethereum.org-20220330-shortABI) verwenden.
+
+Um sie auszuführen, benötigen Sie [Node.js](https://nodejs.org/) und git:
+
+```sh
+git clone https://github.com/qbzzt/ethereum.org-20220330-shortABI.git
+cd ethereum.org-20220330-shortABI
+npm install
+npx hardhat test
+```
+
+Der Test stellt die Verträge im integrierten lokalen Netzwerk von Hardhat bereit, sodass Sie keine ETH benötigen.
+Das Repository verwendet Hardhat 2.9, daher warnt es bei aktuellen Versionen von Node.js, dass Ihre Node.js-Version nicht unterstützt wird, aber der Test ist dennoch erfolgreich.
+
 Lassen Sie uns die relevanten Dateien durchgehen.
 
 ### Token.sol {#token-sol}
@@ -115,22 +157,23 @@ Wir benötigen die Token-Funktion, um zu wissen, wie wir sie aufrufen können.
 
 ```solidity
 contract CalldataInterpreter {
+
     OrisUselessToken public immutable token;
 ```
 
-Die Adresse des Tokens, für den wir ein Proxy sind.
+Die Adresse des Tokens, für das wir ein Proxy sind.
 
 ```solidity
 
     /**
-     * @dev Spezifiziert die Token-Adresse
+     * @dev Geben Sie die Token-Adresse an
      * @param tokenAddr_ ERC-20 Vertragsadresse
      */
     constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);
-    }   // constructor
+    }   // Konstruktor
 ```
 
 Die Token-Adresse ist der einzige Parameter, den wir angeben müssen.
@@ -162,7 +205,7 @@ Auf L1 könnte es notwendig sein, diese Tests zu überspringen, um Gas zu sparen
         }
 ```
 
-Wir hätten die Daten aus dem Aufruf nach `fallback()` kopieren können (siehe unten), aber es ist einfacher, [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), die Assemblersprache der EVM, zu verwenden.
+Wir hätten die Daten aus dem Aufruf in `fallback()` kopieren können (siehe unten), aber es ist einfacher, [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), die Assemblersprache der EVM, zu verwenden.
 
 Hier verwenden wir [den CALLDATALOAD-Opcode](https://www.evm.codes/#35), um die Bytes `startByte` bis `startByte+31` in den Stack zu lesen.
 Im Allgemeinen lautet die Syntax eines Opcodes in Yul `<opcode name>(<first stack value, if any>,<second stack value, if any>...)`.
@@ -173,7 +216,7 @@ Im Allgemeinen lautet die Syntax eines Opcodes in Yul `<opcode name>(<first stac
 ```
 
 Nur die höchstwertigen `length` Bytes sind Teil des Feldes, also führen wir eine [Rechtsverschiebung (Right-Shift)](https://en.wikipedia.org/wiki/Logical_shift) durch, um die anderen Werte loszuwerden.
-Dies hat den zusätzlichen Vorteil, dass der Wert an den rechten Rand des Feldes verschoben wird, sodass es der Wert selbst ist und nicht der Wert mal 256<sup>irgendwas</sup>.
+Dies hat den zusätzlichen Vorteil, dass der Wert an das rechte Ende des Feldes verschoben wird, sodass es der Wert selbst ist und nicht der Wert mal 256<sup>irgendwas</sup>.
 
 ```solidity
 
@@ -201,12 +244,12 @@ Es gibt zwei Gründe, warum eine Funktion hier nicht verfügbar sein könnte:
 2. Funktionen, die sich auf [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties) verlassen.
    Der Wert von `msg.sender` wird die Adresse von `CalldataInterpreter` sein, nicht die des Aufrufers.
 
-Leider bleibt [beim Blick auf die ERC-20-Spezifikationen](https://eips.ethereum.org/EIPS/eip-20) nur eine Funktion übrig: `transfer`.
-Damit bleiben uns nur zwei Funktionen: `transfer` (weil wir `transferFrom` aufrufen können) und `faucet` (weil wir die Token an denjenigen zurücktransferieren können, der uns aufgerufen hat).
+Wenn man sich [die ERC-20-Spezifikationen ansieht](https://eips.ethereum.org/EIPS/eip-20), bleibt leider nur eine Standardfunktion übrig, `transfer` (da wir `transferFrom` aufrufen können).
+Unser Test-Token hat auch `faucet`, was wir unterstützen können, da wir die Token an denjenigen zurücktransferieren können, der uns aufgerufen hat.
 
 ```solidity
 
-        // Ruft die zustandsändernden Methoden des Tokens auf unter Verwendung von
+        // Rufe die zustandsändernden Methoden des Tokens auf unter Verwendung von
         // Informationen aus den Aufrufdaten
 
         // faucet
@@ -222,8 +265,8 @@ Ein Aufruf von `faucet()`, der keine Parameter hat.
         }
 ```
 
-Nachdem wir `token.faucet()` aufgerufen haben, erhalten wir Token. Als Proxy-Contract **brauchen** wir jedoch keine Token.
-Das EOA (Externally Owned Account) oder der Vertrag, der uns aufgerufen hat, hingegen schon.
+Nachdem wir `token.faucet()` aufgerufen haben, erhalten wir Token. Als Proxy-Contract **benötigen** wir jedoch keine Token.
+Das externe Konto (EOA) oder der Vertrag, der uns aufgerufen hat, hingegen schon.
 Also transferieren wir alle unsere Token an denjenigen, der uns aufgerufen hat.
 
 ```solidity
@@ -251,23 +294,23 @@ Als Adresse ist sie 20 Bytes lang.
                 calldataVal(21, 2)
 ```
 
-Für diesen speziellen Vertrag nehmen wir an, dass die maximale Anzahl an Token, die jemand transferieren möchte, in zwei Bytes passt (weniger als 65536).
+Für diesen speziellen Vertrag gehen wir davon aus, dass die maximale Anzahl an Token, die jemand transferieren möchte, in zwei Bytes passt (weniger als 65536).
 
 ```solidity
             );
         }
 ```
 
-Insgesamt benötigt ein Transfer 35 Bytes an Calldata:
+Insgesamt benötigt ein Transfer 23 Bytes an Calldata:
 
-| Abschnitt         | Länge | Bytes |
-| ----------------- | ----: | ----: |
-| Funktionsselektor |     1 |     0 |
-| Zieladresse       |    32 |  1-32 |
-| Betrag            |     2 | 33-34 |
+| Abschnitt | Länge | Bytes |
+| ------------------- | -----: | ----: |
+| Funktionsselektor | 1 | 0 |
+| Zieladresse | 20 | 1-20 |
+| Betrag | 2 | 21-22 |
 
 ```solidity
-    }   // fallback
+    }   // Fallback
 
 }       // contract CalldataInterpreter
 ```
@@ -275,7 +318,7 @@ Insgesamt benötigt ein Transfer 35 Bytes an Calldata:
 ### test.js {#test-js}
 
 [Dieser JavaScript-Unit-Test](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) zeigt uns, wie wir diesen Mechanismus verwenden (und wie wir überprüfen, ob er korrekt funktioniert).
-Ich gehe davon aus, dass Sie [chai](https://www.chaijs.com/) und [ethers](https://docs.ethers.io/v5/) verstehen, und erkläre nur die Teile, die sich speziell auf den Vertrag beziehen.
+Ich gehe davon aus, dass Sie [chai](https://www.chaijs.com/) und [ethers](https://docs.ethers.org/v5/) verstehen, und erkläre nur die Teile, die sich speziell auf den Vertrag beziehen.
 
 ```js
 const { expect } = require("chai");
@@ -323,7 +366,7 @@ Es gibt zwei Parameter, die wir für die Transaktion bereitstellen müssen:
     await (await signer.sendTransaction(faucetTx)).wait()
 ```
 
-Wir rufen [die `sendTransaction`-Methode des Signers](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction) auf, da wir das Ziel (`faucetTx.to`) bereits angegeben haben und die Transaktion signiert werden muss.
+Wir rufen [die `sendTransaction`-Methode des Signers](https://docs.ethers.org/v5/api/signer/#Signer-sendTransaction) auf, da wir das Ziel (`faucetTx.to`) bereits angegeben haben und die Transaktion signiert werden muss.
 
 ```javascript
 // Überprüfen, ob das Faucet die Token korrekt bereitstellt
@@ -369,6 +412,12 @@ Erstellen Sie eine Transfer-Transaktion. Das erste Byte ist „0x02“, gefolgt 
 
 Wenn Sie die Kontrolle über den Zielvertrag haben, können Sie Funktionen erstellen, die die `msg.sender`-Prüfungen umgehen, da sie dem Calldata-Interpreter vertrauen.
 [Ein Beispiel dafür, wie das funktioniert, finden Sie hier im `control-contract`-Branch](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
+Um es auszuführen, wechseln Sie in dem zuvor geklonten Repository zu diesem Branch und führen Sie den Test erneut aus:
+
+```sh
+git checkout control-contract
+npx hardhat test
+```
 
 Wenn der Vertrag nur auf externe Transaktionen reagieren würde, kämen wir mit nur einem Vertrag aus.
 Das würde jedoch die [Komponierbarkeit](/developers/docs/smart-contracts/composability/) beeinträchtigen.
@@ -576,9 +625,10 @@ Beachten Sie, dass `transferFromTx` zwei Adressparameter erfordert: den Geber de
 
 ## Fazit {#conclusion}
 
-Sowohl [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92) als auch [Arbitrum](https://developer.offchainlabs.com/docs/special_features) suchen nach Wegen, die Größe der auf L1 geschriebenen Calldata und damit die Kosten von Transaktionen zu reduzieren.
+Sowohl [Optimism](https://docs.optimism.io/op-stack/transactions/fees#fjord) als auch [Arbitrum](https://docs.arbitrum.io/how-arbitrum-works/deep-dives/gas-and-fees) komprimieren nun die Daten, die sie auf L1 schreiben, und berechnen jede Transaktion basierend auf ihrer komprimierten Größe, um die Transaktionskosten zu senken.
 Als Infrastrukturanbieter, die nach generischen Lösungen suchen, sind unsere Möglichkeiten jedoch begrenzt.
-Als Entwickler einer dezentrale Anwendung (Dapp) verfügen Sie über anwendungsspezifisches Wissen, das es Ihnen ermöglicht, Ihre Calldata viel besser zu optimieren, als wir es in einer generischen Lösung könnten.
+Als dapp-Entwickler verfügen Sie über anwendungsspezifisches Wissen, mit dem Sie Ihre Calldata viel besser optimieren können, als wir es in einer generischen Lösung könnten.
 Hoffentlich hilft Ihnen dieser Artikel dabei, die ideale Lösung für Ihre Bedürfnisse zu finden.
 
 [Weitere meiner Arbeiten finden Sie hier](https://cryptodocguy.pro/).
+

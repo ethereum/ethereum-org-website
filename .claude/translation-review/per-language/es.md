@@ -1,5 +1,12 @@
 # Spanish (es) Translation Review Findings
 
+## PR #19993 (intl/pending-dev, runs 46112784113 / 46112790344 / 46118259298) -- 2026-11-28 -- Score 8.7/10
+Scope: `page-courses.json` (4,668 keys, first translation) + 17 tutorials (changed lines); scripted placeholder/tag/ICU/digit/negation checks over all keys, about 90 keys and 6 tutorial diffs read.
+
+**Fixed in this branch (14 critical):** LLM glossary-note annotations leaked into code comments: `stealth-addr:385`, `token-integration-checklist:36`, `erc20-with-safety-rails` 108/180/200, `all-you-can-cache` 371/550/555/607/837 (restored from English/dev). Added `(CI)` expansion on bare English `CI` (`clear-signing` 266, 273) and `(LLM)` after a spelled-out phrase (`ai-trading-agent:45`). Courses: `(PoW)`, `(PoS)` (`proof-of-stake-exam-deposit-explain`, `page-courses-xp-level-finney-fact`) and `(L2)` (`tokens-send-intro-p2`) removed where English spells the term out.
+
+**Open:** `gas-fees-intro-p1` drops the English "or tip" second `<strong>` (ETHGlossary maps tip to `tarifa de prioridad`, so the clause collapses; tag count 4 vs 6). `cadena de bloques` (105) vs `blockchain` (172) mixed across courses. Register is consistent `tu`. Decimals keep `.` throughout courses (consistent, LatAm style).
+
 ## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.9/10
 Scope: 15 markdown files, changed lines; 8 diffs read in full, sweeps over all 15.
 

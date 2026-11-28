@@ -11,19 +11,37 @@ published: 2021-03-09
 
 ## Introduzione {#introduction}
 
-Uno degli usi più comuni di Ethereum è la creazione di un token scambiabile da parte di un gruppo, in un certo senso la propria valuta. Questi token seguono tipicamente uno standard, l'[ERC-20](/developers/docs/standards/tokens/erc-20/). Questo standard rende possibile scrivere strumenti, come pool di liquidità e portafogli, che funzionano con tutti i token ERC-20. In questo articolo analizzeremo l'[implementazione ERC20 in Solidity di OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), così come la [definizione dell'interfaccia](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
+Uno degli usi più comuni di Ethereum è la creazione da parte di un gruppo di un token scambiabile, in un certo senso la propria valuta. Questi token seguono tipicamente uno standard,
+[ERC-20](/developers/docs/standards/tokens/erc-20/). Questo standard rende possibile scrivere strumenti, come pool di liquidità e portafogli, che funzionano con tutti i token ERC-20. In questo articolo analizzeremo
+[l'implementazione ERC20 in Solidity di OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol), così come la
+[definizione dell'interfaccia](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol).
 
-Questo è codice sorgente annotato. Se vuoi implementare l'ERC-20, [leggi questo tutorial](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
+Questo è codice sorgente annotato. Se vuoi implementare l'ERC-20,
+[leggi questo tutorial](https://docs.openzeppelin.com/contracts/5.x/erc20-supply).
+
+<Alert variant="info">
+<AlertContent>
+<AlertDescription>
+Questa guida dettagliata copre OpenZeppelin Contracts v3.3 (Solidity 0.6/0.7). Se installi `@openzeppelin/contracts` oggi ottieni la v5.x, che differisce dal codice sottostante: utilizza l'aritmetica controllata integrata di Solidity invece di `SafeMath`, sostituisce `_beforeTokenTransfer` e `_afterTokenTransfer` con una singola funzione `_update`, abbandona `increaseAllowance`, `decreaseAllowance` e `_setupDecimals`, e segnala i fallimenti con errori personalizzati invece di stringhe di revert. I concetti spiegati qui si applicano ancora. Consulta la [documentazione ERC-20 di OpenZeppelin v5](https://docs.openzeppelin.com/contracts/5.x/erc20) per l'API attuale.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## L'interfaccia {#the-interface}
 
-Lo scopo di uno standard come l'ERC-20 è consentire molte implementazioni di token che siano interoperabili tra le applicazioni, come portafogli ed exchange decentralizzati. Per ottenere ciò, creiamo un'[interfaccia](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/). Qualsiasi codice che debba utilizzare il contratto del token può usare le stesse definizioni nell'interfaccia ed essere compatibile con tutti i contratti di token che la utilizzano, che si tratti di un portafoglio come MetaMask, di un'applicazione decentralizzata (dapp) come etherscan.io, o di un contratto diverso come una pool di liquidità.
+Lo scopo di uno standard come l'ERC-20 è consentire molte implementazioni di token che siano interoperabili tra le applicazioni, come portafogli ed exchange decentralizzati. Per raggiungere questo obiettivo, creiamo
+[un'interfaccia](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/). Qualsiasi codice che debba utilizzare il contratto del token
+può utilizzare le stesse definizioni nell'interfaccia ed essere compatibile con tutti i contratti di token che la utilizzano, che si tratti di un portafoglio come
+MetaMask, di una dapp come etherscan.io o di un contratto diverso come una pool di liquidità.
 
-![Illustration of the ERC-20 interface](erc20_interface.png)
+![Illustrazione dell'interfaccia ERC-20](erc20_interface.png)
 
-Se sei un programmatore esperto, probabilmente ricordi di aver visto costrutti simili in [Java](https://www.w3schools.com/java/java_interface.asp) o persino nei [file header del C](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html).
+Se sei un programmatore esperto, probabilmente ricordi di aver visto costrutti simili in [Java](https://www.w3schools.com/java/java_interface.asp)
+o persino nei [file header C](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html).
 
-Questa è una definizione dell'[Interfaccia ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) di OpenZeppelin. È una traduzione dello [standard leggibile dall'uomo](https://eips.ethereum.org/EIPS/eip-20) in codice Solidity. Naturalmente, l'interfaccia stessa non definisce _come_ fare qualcosa. Questo è spiegato nel codice sorgente del contratto qui sotto.
+Questa è una definizione dell'[Interfaccia ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol)
+di OpenZeppelin. È una traduzione dello [standard leggibile dall'uomo](https://eips.ethereum.org/EIPS/eip-20) in codice Solidity. Naturalmente,
+l'interfaccia stessa non definisce _come_ fare nulla. Questo è spiegato nel codice sorgente del contratto sottostante.
 
 &nbsp;
 
@@ -31,7 +49,8 @@ Questa è una definizione dell'[Interfaccia ERC-20](https://github.com/OpenZeppe
 // SPDX-License-Identifier: MIT
 ```
 
-I file Solidity dovrebbero includere un identificatore di licenza. [Puoi vedere l'elenco delle licenze qui](https://spdx.org/licenses/). Se hai bisogno di una licenza diversa, spiegalo semplicemente nei commenti.
+I file Solidity dovrebbero includere un identificatore di licenza. [Puoi vedere l'elenco delle licenze qui](https://spdx.org/licenses/). Se hai bisogno di una licenza
+diversa, spiegalo semplicemente nei commenti.
 
 &nbsp;
 
@@ -39,7 +58,9 @@ I file Solidity dovrebbero includere un identificatore di licenza. [Puoi vedere 
 pragma solidity >=0.6.0 <0.8.0;
 ```
 
-Il linguaggio Solidity si sta ancora evolvendo rapidamente e le nuove versioni potrebbero non essere compatibili con il vecchio codice ([vedi qui](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Pertanto, è una buona idea specificare non solo una versione minima del linguaggio, ma anche una versione massima, l'ultima con cui hai testato il codice.
+Il linguaggio Solidity si sta ancora evolvendo rapidamente e le nuove versioni potrebbero non essere compatibili con il vecchio codice
+([vedi qui](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Pertanto, è una buona idea specificare non solo una versione
+minima del linguaggio, ma anche una versione massima, l'ultima con cui hai testato il codice.
 
 &nbsp;
 
@@ -49,7 +70,8 @@ Il linguaggio Solidity si sta ancora evolvendo rapidamente e le nuove versioni p
  */
 ```
 
-Il `@dev` nel commento fa parte del [formato NatSpec](https://docs.soliditylang.org/en/develop/natspec-format.html), utilizzato per produrre documentazione dal codice sorgente.
+Il `@dev` nel commento fa parte del [formato NatSpec](https://docs.soliditylang.org/en/develop/natspec-format.html), utilizzato per produrre
+documentazione dal codice sorgente.
 
 &nbsp;
 
@@ -68,9 +90,17 @@ Per convenzione, i nomi delle interfacce iniziano con `I`.
     function totalSupply() external view returns (uint256);
 ```
 
-Questa funzione è `external`, il che significa che [può essere chiamata solo dall'esterno del contratto](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2). Restituisce la fornitura totale di token nel contratto. Questo valore viene restituito utilizzando il tipo più comune in Ethereum, 256 bit senza segno (256 bit è la dimensione della parola nativa dell'EVM). Questa funzione è anche una `view`, il che significa che non modifica lo stato, quindi può essere eseguita su un singolo nodo invece di farla eseguire a ogni nodo della blockchain. Questo tipo di funzione non genera una transazione e non costa [gas](/developers/docs/gas/).
+Questa funzione è `external`, il che significa che [può essere chiamata solo dall'esterno del contratto](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2).
+Restituisce la fornitura totale di token nel contratto. Questo valore viene restituito utilizzando il tipo più comune in Ethereum, 256 bit senza segno (256 bit è la
+dimensione nativa della parola dell'EVM). Questa funzione è anche una `view`, il che significa che non cambia lo stato, quindi può essere eseguita su un singolo nodo invece di farla
+eseguire a ogni nodo della blockchain. Questo tipo di funzione non genera una transazione e non costa [gas](/developers/docs/gas/).
 
-**Nota:** In teoria potrebbe sembrare che il creatore di un contratto possa imbrogliare restituendo una fornitura totale inferiore al valore reale, facendo apparire ogni token più prezioso di quanto non sia in realtà. Tuttavia, questo timore ignora la vera natura della blockchain. Tutto ciò che accade sulla blockchain può essere verificato da ogni nodo. Per ottenere ciò, il codice in linguaggio macchina e l'archiviazione di ogni contratto sono disponibili su ogni nodo. Sebbene non sia obbligatorio pubblicare il codice Solidity per il tuo contratto, nessuno ti prenderebbe sul serio a meno che tu non pubblichi il codice sorgente e la versione di Solidity con cui è stato compilato, in modo che possa essere verificato rispetto al codice in linguaggio macchina che hai fornito. Ad esempio, vedi [questo contratto](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract).
+**Nota:** In teoria potrebbe sembrare che il creatore di un contratto possa imbrogliare restituendo una fornitura totale inferiore al valore reale, facendo apparire ogni token
+più prezioso di quanto non sia in realtà. Tuttavia, questo timore ignora la vera natura della blockchain. Tutto ciò che accade sulla blockchain può essere verificato da
+ogni nodo. Per ottenere questo, il codice in linguaggio macchina e l'archiviazione di ogni contratto sono disponibili su ogni nodo. Sebbene non ti sia richiesto di pubblicare il codice
+Solidity per il tuo contratto, nessuno ti prenderebbe sul serio a meno che tu non pubblichi il codice sorgente e la versione di Solidity con cui è stato compilato, in modo che possa
+essere verificato rispetto al codice in linguaggio macchina che hai fornito.
+Ad esempio, vedi [questo contratto](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract).
 
 &nbsp;
 
@@ -81,7 +111,8 @@ Questa funzione è `external`, il che significa che [può essere chiamata solo d
     function balanceOf(address account) external view returns (uint256);
 ```
 
-Come dice il nome, `balanceOf` restituisce il saldo di un account. Gli account Ethereum sono identificati in Solidity utilizzando il tipo `address`, che contiene 160 bit. È anche `external` e `view`.
+Come dice il nome, `balanceOf` restituisce il saldo di un account. Gli account Ethereum sono identificati in Solidity utilizzando il tipo `address`, che contiene 160 bit.
+È anche `external` e `view`.
 
 &nbsp;
 
@@ -96,18 +127,30 @@ Come dice il nome, `balanceOf` restituisce il saldo di un account. Gli account E
     function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
-La funzione `transfer` esegue il trasferimento di token dal chiamante a un indirizzo diverso. Ciò comporta un cambiamento di stato, quindi non è una `view`. Quando un utente chiama questa funzione, crea una transazione e costa gas. Emette anche un evento, `Transfer`, per informare tutti sulla blockchain dell'evento.
+La funzione `transfer` trasferisce dei token dal chiamante a un indirizzo diverso. Questo comporta un cambiamento di stato, quindi non è una `view`.
+Quando un utente chiama questa funzione, crea una transazione e costa gas. Emette anche un evento, `Transfer`, per informare tutti sulla
+blockchain dell'evento.
 
 La funzione ha due tipi di output per due diversi tipi di chiamanti:
 
-- Utenti che chiamano la funzione direttamente da un'interfaccia utente. In genere l'utente invia una transazione e non attende una risposta, che potrebbe richiedere un periodo di tempo indefinito. L'utente può vedere cosa è successo cercando la ricevuta della transazione (che è identificata dall'hash della transazione) o cercando l'evento `Transfer`.
-- Altri contratti, che chiamano la funzione come parte di una transazione complessiva. Quei contratti ottengono il risultato immediatamente, perché vengono eseguiti nella stessa transazione, quindi possono utilizzare il valore di ritorno della funzione.
+- Utenti che chiamano la funzione direttamente da un'interfaccia utente. Tipicamente l'utente invia una transazione
+  e non aspetta una risposta, che potrebbe richiedere un tempo indefinito. L'utente può vedere cosa è successo
+  cercando la ricevuta della transazione (che è identificata dall'hash della transazione) o cercando l'evento
+  `Transfer`.
+- Altri contratti, che chiamano la funzione come parte di una transazione complessiva. Quei contratti ottengono il risultato immediatamente,
+  perché vengono eseguiti nella stessa transazione, quindi possono utilizzare il valore di ritorno della funzione.
 
 Lo stesso tipo di output viene creato dalle altre funzioni che modificano lo stato del contratto.
 
 &nbsp;
 
-Le autorizzazioni di spesa permettono a un account di spendere alcuni token che appartengono a un proprietario diverso. Questo è utile, ad esempio, per i contratti che agiscono come venditori. I contratti non possono monitorare gli eventi, quindi se un acquirente dovesse trasferire i token direttamente al contratto del venditore, quel contratto non saprebbe di essere stato pagato. Invece, l'acquirente permette al contratto del venditore di spendere un certo importo e il venditore trasferisce quell'importo. Questo viene fatto tramite una funzione chiamata dal contratto del venditore, in modo che il contratto del venditore possa sapere se ha avuto successo.
+Le autorizzazioni di spesa consentono a un account di spendere alcuni token che appartengono a un proprietario diverso.
+Questo è utile, ad esempio, per i contratti che agiscono come venditori. I contratti non possono
+monitorare gli eventi, quindi se un acquirente dovesse trasferire i token direttamente al contratto del venditore,
+quel contratto non saprebbe di essere stato pagato. Invece, l'acquirente consente al
+contratto del venditore di spendere un certo importo e il venditore trasferisce quell'importo.
+Questo viene fatto tramite una funzione chiamata dal contratto del venditore, in modo che il contratto del venditore
+possa sapere se ha avuto successo.
 
 ```solidity
     /**
@@ -120,7 +163,8 @@ Le autorizzazioni di spesa permettono a un account di spendere alcuni token che 
     function allowance(address owner, address spender) external view returns (uint256);
 ```
 
-La funzione `allowance` consente a chiunque di interrogare per vedere qual è l'autorizzazione di spesa che un indirizzo (`owner`) lascia spendere a un altro indirizzo (`spender`).
+La funzione `allowance` consente a chiunque di interrogare per vedere qual è l'autorizzazione di spesa che un
+indirizzo (`owner`) consente a un altro indirizzo (`spender`) di spendere.
 
 &nbsp;
 
@@ -134,7 +178,7 @@ La funzione `allowance` consente a chiunque di interrogare per vedere qual è l'
      * che qualcuno possa utilizzare sia la vecchia che la nuova autorizzazione di spesa a causa di uno sfortunato
      * ordinamento della transazione. Una possibile soluzione per mitigare questa race
      * condition è ridurre prima l'autorizzazione di spesa dello spender a 0 e impostare il
-     * valore desiderato in seguito:
+     * valore desiderato successivamente:
      * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
      *
      * Emette un evento {Approval}.
@@ -142,7 +186,11 @@ La funzione `allowance` consente a chiunque di interrogare per vedere qual è l'
     function approve(address spender, uint256 amount) external returns (bool);
 ```
 
-La funzione `approve` crea un'autorizzazione di spesa. Assicurati di leggere il messaggio su come può essere abusata. In Ethereum controlli l'ordine delle tue transazioni, ma non puoi controllare l'ordine in cui verranno eseguite le transazioni di altre persone, a meno che tu non invii la tua transazione finché non vedi che la transazione dell'altra parte è avvenuta.
+La funzione `approve` crea un'autorizzazione di spesa. Assicurati di leggere il messaggio su
+come può essere abusata. In Ethereum controlli l'ordine delle tue transazioni,
+ma non puoi controllare l'ordine in cui verranno eseguite le transazioni di altre persone,
+a meno che tu non invii la tua transazione finché non vedi che
+la transazione dell'altra parte è avvenuta.
 
 &nbsp;
 
@@ -175,7 +223,7 @@ Infine, `transferFrom` viene utilizzata da chi spende per spendere effettivament
 
     /**
      * @dev Emesso quando l'autorizzazione di spesa di uno `spender` per un `owner` viene impostata da
-     * una chiamata ad {approve}. `value` è la nuova autorizzazione di spesa.
+     * una chiamata a {approve}. `value` è la nuova autorizzazione di spesa.
      */
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
@@ -185,7 +233,7 @@ Questi eventi vengono emessi quando lo stato del contratto ERC-20 cambia.
 
 ## Il contratto effettivo {#the-actual-contract}
 
-Questo è il contratto effettivo che implementa lo standard ERC-20, [preso da qui](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol). Non è pensato per essere utilizzato così com'è, ma puoi [ereditare](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm) da esso per estenderlo a qualcosa di utilizzabile.
+Questo è il contratto effettivo che implementa lo standard ERC-20, [preso da qui](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol). Non è pensato per essere utilizzato così com'è, ma puoi [ereditare](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm) da esso per estenderlo a qualcosa di utilizzabile.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -206,7 +254,7 @@ import "../../math/SafeMath.sol";
 ```
 
 - `GSN/Context.sol` sono le definizioni necessarie per utilizzare [OpenGSN](https://opengsn.org/), un sistema che consente agli utenti senza ether di utilizzare la blockchain. Nota che questa è una vecchia versione, se vuoi integrarti con OpenGSN [usa questo tutorial](https://docs.opengsn.org/javascript-client/tutorial.html).
-- [La libreria SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), che previene overflow/underflow aritmetici per le versioni di Solidity **&lt;0.8.0**. In Solidity ≥0.8.0, le operazioni aritmetiche eseguono automaticamente il revert in caso di overflow/underflow, rendendo SafeMath non necessaria. Questo contratto utilizza SafeMath per la retrocompatibilità con le versioni precedenti del compilatore.
+- [La libreria SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math#SafeMath), che previene overflow/underflow aritmetici per le versioni di Solidity **&lt;0.8.0**. In Solidity ≥0.8.0, le operazioni aritmetiche eseguono automaticamente il revert in caso di overflow/underflow, rendendo SafeMath non necessaria. Questo contratto utilizza SafeMath per la retrocompatibilità con le versioni precedenti del compilatore.
 
 &nbsp;
 
@@ -256,19 +304,26 @@ Questa riga specifica l'ereditarietà, in questo caso da `IERC20` di cui sopra e
 
 ```
 
-Questa riga collega la libreria `SafeMath` al tipo `uint256`. Puoi trovare questa libreria [qui](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol).
+Questa riga collega la libreria `SafeMath` al tipo `uint256`. Puoi trovare questa libreria [qui](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/math/SafeMath.sol).
 
 ### Definizioni delle variabili {#variable-definitions}
 
-Queste definizioni specificano le variabili di stato del contratto. Queste variabili sono dichiarate `private`, ma ciò significa solo che altri contratti sulla blockchain non possono leggerle. _Non ci sono segreti sulla blockchain_, il software su ogni nodo ha lo stato di ogni contratto a ogni blocco. Per convenzione, le variabili di stato sono chiamate `_<something>`.
+Queste definizioni specificano le variabili di stato del contratto. Queste variabili sono dichiarate `private`, ma
+ciò significa solo che altri contratti sulla blockchain non possono leggerle. _Non ci sono
+segreti sulla blockchain_, il software su ogni nodo ha lo stato di ogni contratto
+a ogni blocco. Per convenzione, le variabili di stato sono chiamate `_<something>`.
 
-Le prime due variabili sono [mappature](https://www.tutorialspoint.com/solidity/solidity_mappings.htm), il che significa che si comportano all'incirca come gli [array associativi](https://wikipedia.org/wiki/Associative_array), tranne per il fatto che le chiavi sono valori numerici. L'archiviazione viene allocata solo per le voci che hanno valori diversi da quello predefinito (zero).
+Le prime due variabili sono [mappature](https://www.tutorialspoint.com/solidity/solidity_mappings.htm),
+il che significa che si comportano all'incirca come gli [array associativi](https://wikipedia.org/wiki/Associative_array),
+tranne per il fatto che le chiavi sono valori numerici. L'archiviazione viene allocata solo per le voci che hanno valori diversi
+da quello predefinito (zero).
 
 ```solidity
     mapping (address => uint256) private _balances;
 ```
 
-La prima mappatura, `_balances`, riguarda gli indirizzi e i rispettivi saldi di questo token. Per accedere al saldo, usa questa sintassi: `_balances[<address>]`.
+La prima mappatura, `_balances`, riguarda gli indirizzi e i rispettivi saldi di questo token. Per accedere
+al saldo, usa questa sintassi: `_balances[<address>]`.
 
 &nbsp;
 
@@ -276,7 +331,9 @@ La prima mappatura, `_balances`, riguarda gli indirizzi e i rispettivi saldi di 
     mapping (address => mapping (address => uint256)) private _allowances;
 ```
 
-Questa variabile, `_allowances`, memorizza le autorizzazioni di spesa spiegate in precedenza. Il primo indice è il proprietario dei token e il secondo è il contratto con l'autorizzazione di spesa. Per accedere all'importo che l'indirizzo A può spendere dall'account dell'indirizzo B, usa `_allowances[B][A]`.
+Questa variabile, `_allowances`, memorizza le autorizzazioni di spesa spiegate in precedenza. Il primo indice è il proprietario
+dei token e il secondo è il contratto con l'autorizzazione di spesa. Per accedere all'importo che l'indirizzo A può
+spendere dall'account dell'indirizzo B, usa `_allowances[B][A]`.
 
 &nbsp;
 
@@ -294,13 +351,21 @@ Come suggerisce il nome, questa variabile tiene traccia della fornitura totale d
     uint8 private _decimals;
 ```
 
-Queste tre variabili vengono utilizzate per migliorare la leggibilità. Le prime due si spiegano da sole, ma `_decimals` no.
+Queste tre variabili vengono utilizzate per migliorare la leggibilità. Le prime due si spiegano da sole, ma `_decimals`
+no.
 
-Da un lato, Ethereum non ha variabili a virgola mobile o frazionarie. Dall'altro, agli esseri umani piace poter dividere i token. Uno dei motivi per cui le persone hanno scelto l'oro come valuta è che era difficile dare il resto quando qualcuno voleva comprare l'equivalente di un'anatra in mucca.
+Da un lato, Ethereum non ha variabili a virgola mobile o frazionarie. Dall'altro,
+agli esseri umani piace poter dividere i token. Uno dei motivi per cui le persone hanno scelto l'oro come valuta è che
+era difficile dare il resto quando qualcuno voleva comprare l'equivalente di un'anatra in mucca.
 
-La soluzione è tenere traccia dei numeri interi, ma contare invece del token reale un token frazionario che è quasi privo di valore. Nel caso dell'ether, il token frazionario si chiama Wei e 10^18 Wei equivalgono a un ETH. Al momento in cui scriviamo, 10.000.000.000.000 di Wei equivalgono a circa un centesimo di dollaro USA o di euro.
+La soluzione è tenere traccia dei numeri interi, ma contare invece del token reale un token frazionario che è
+quasi privo di valore. Nel caso dell'ether, il token frazionario si chiama Wei e 10^18 Wei equivalgono a un
+ETH.
 
-Le applicazioni devono sapere come visualizzare il saldo del token. Se un utente ha 3.141.000.000.000.000.000 di Wei, sono 3,14 ETH? 31,41 ETH? 3.141 ETH? Nel caso dell'ether è definito 10^18 Wei per ETH, ma per il tuo token puoi selezionare un valore diverso. Se dividere il token non ha senso, puoi usare un valore `_decimals` pari a zero. Se vuoi usare lo stesso standard dell'ETH, usa il valore **18**.
+Le applicazioni devono sapere come visualizzare il saldo del token. Se un utente ha 3.141.000.000.000.000.000 Wei, sono
+3,14 ETH? 31,41 ETH? 3.141 ETH? Nel caso dell'ether è definito 10^18 Wei per ETH, ma per il tuo
+token puoi selezionare un valore diverso. Se dividere il token non ha senso, puoi usare un
+valore `_decimals` pari a zero. Se vuoi usare lo stesso standard dell'ETH, usa il valore **18**.
 
 ### Il costruttore {#the-constructor}
 
@@ -309,14 +374,12 @@ Le applicazioni devono sapere come visualizzare il saldo del token. Se un utente
      * @dev Imposta i valori per {name} e {symbol}, inizializza {decimals} con
      * un valore predefinito di 18.
      *
-     * Per selezionare un valore diverso per {decimals}, utilizza {_setupDecimals}.
+     * Per selezionare un valore diverso per {decimals}, utilizzare {_setupDecimals}.
      *
      * Tutti e tre questi valori sono immutabili: possono essere impostati solo una volta durante
      * la costruzione.
      */
     constructor (string memory name_, string memory symbol_) public {
-        // In Solidity ≥0.7.0, 'public' è implicito e può essere omesso.
-
         _name = name_;
         _symbol = symbol_;
         _decimals = 18;
@@ -324,6 +387,7 @@ Le applicazioni devono sapere come visualizzare il saldo del token. Se un utente
 ```
 
 Il costruttore viene chiamato quando il contratto viene creato per la prima volta. Per convenzione, i parametri della funzione sono chiamati `<something>_`.
+A partire da Solidity 0.7.0, la visibilità (`public` o `internal`) sui costruttori viene ignorata ed è deprecata, quindi il codice più recente la omette.
 
 ### Funzioni dell'interfaccia utente {#user-interface-functions}
 
@@ -345,15 +409,15 @@ Il costruttore viene chiamato quando il contratto viene creato per la prima volt
 
     /**
      * @dev Restituisce il numero di decimali utilizzati per ottenere la sua rappresentazione utente.
-     * Ad esempio, se `decimals` è uguale a `2`, un saldo di `505` token dovrebbe
+     * Per esempio, se `decimals` è uguale a `2`, un saldo di `505` token dovrebbe
      * essere mostrato a un utente come `5,05` (`505 / 10 ** 2`).
      *
      * I token di solito optano per un valore di 18, imitando la relazione tra
      * ether e Wei. Questo è il valore che {ERC20} utilizza, a meno che non venga chiamato
      * {_setupDecimals}.
      *
-     * NOTA: Questa informazione è utilizzata solo a scopo di _visualizzazione_: non
-     * influisce in alcun modo sull'aritmetica del contratto, inclusi
+     * NOTA: Questa informazione è utilizzata solo a scopi di _visualizzazione_: non
+     * influenza in alcun modo l'aritmetica del contratto, inclusi
      * {IERC20-balanceOf} e {IERC20-transfer}.
      */
     function decimals() public view returns (uint8) {
@@ -361,15 +425,16 @@ Il costruttore viene chiamato quando il contratto viene creato per la prima volt
     }
 ```
 
-Queste funzioni, `name`, `symbol` e `decimals` aiutano le interfacce utente a conoscere il tuo contratto in modo che possano visualizzarlo correttamente.
+Queste funzioni, `name`, `symbol` e `decimals` aiutano le interfacce utente a conoscere il tuo contratto in modo che siano in grado di visualizzarlo correttamente.
 
-Il tipo di ritorno è `string memory`, il che significa restituire una stringa che è memorizzata in memoria. Le variabili, come le stringhe, possono essere memorizzate in tre posizioni:
+Il tipo di ritorno è `string memory`, il che significa restituire una stringa che è memorizzata in memoria. Le variabili, come
+le stringhe, possono essere memorizzate in tre posizioni:
 
-|          | Durata               | Accesso al contratto | Costo del gas                                                                                             |
-| -------- | -------------------- | -------------------- | --------------------------------------------------------------------------------------------------------- |
-| Memoria  | Chiamata di funzione | Lettura/Scrittura    | Decine o centinaia (più alto per posizioni più alte)                                                      |
-| Calldata | Chiamata di funzione | Sola lettura         | Non può essere usato come tipo di ritorno, solo come tipo di parametro di funzione                        |
-| Storage  | Fino a modifica      | Lettura/Scrittura    | Alto (800 per la lettura, 20k per la scrittura)                                                           |
+|          | Durata      | Accesso al contratto | Costo del gas                                                       |
+| -------- | ------------- | --------------- | -------------------------------------------------------------- |
+| Memoria   | Chiamata di funzione | Lettura/Scrittura      | Decine o centinaia (più alto per posizioni più alte)                 |
+| Dati di chiamata | Chiamata di funzione | Sola lettura       | Non può essere utilizzato come tipo di ritorno, solo come tipo di parametro di funzione |
+| Archiviazione  | Fino a modifica | Lettura/Scrittura      | Alto (2.100 per una lettura a freddo, 20.000 per una nuova scrittura)           |
 
 In questo caso, `memory` è la scelta migliore.
 
@@ -629,7 +694,7 @@ Nessuno possiede effettivamente l'indirizzo zero in Ethereum (cioè, nessuno con
 Ci sono due modi per usare questo contratto:
 
 1. Usarlo come modello per il tuo codice
-1. [Ereditare da esso](https://www.bitdegree.org/learn/solidity-inheritance) e sovrascrivere solo le funzioni che devi modificare
+1. [Ereditare da esso](https://docs.soliditylang.org/en/latest/contracts.html#inheritance) e sovrascrivere solo le funzioni che devi modificare
 
 Il secondo metodo è molto meglio perché il codice ERC-20 di OpenZeppelin è già stato verificato e si è dimostrato sicuro. Quando usi l'ereditarietà è chiaro quali sono le funzioni che modifichi e, per fidarsi del tuo contratto, le persone devono solo verificare quelle funzioni specifiche.
 

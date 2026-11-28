@@ -1,5 +1,11 @@
 # Japanese (ja) Translation Review Findings
 
+## PR #19993 (intl/pending-dev) -- 2026-11-28 -- Score 9.2/10
+Scope: `page-courses.json` (4,668 keys, first translation) + 16 developer tutorials (incremental), changed lines only; every courses value checked by script for ICU names, tags and hrefs (0 mismatches), 100 courses keys and 5 tutorial diffs read.
+
+Fixed (critical): `(PoW)`/`(PoS)`/`(EOA)` added to long forms the English writes without them (6 courses values; the `(NFT)` case was already fixed by the coordinator); `(L2)` in uniswap-v2 and `(DoS)` in app-plasma; `Slither` transliterated to スリザー (token-integration-checklist x2); `Goerli` transliterated to ゴエリ (all-you-can-cache x4 lines) and `Holesky` to ホルスキー (server-components); `ケチャック・256` back to `Keccak-256` (yellow-paper-evm x2); three English headings/sentences left untranslated on changed lines (app-plasma `#abuses`, secret-state `#user-verify-zero-trust`).
+Open (warnings): courses mixes plain `する` list/option endings with です/ます prose (acceptable list style); `Pedersen` rendered ペダーセン・ハッシュ (person-derived primitive name, 5 lines in app-plasma); Latin glosses on terms English leaves bare (`Draft（草案）`, `ハル・フィニー（Hal Finney）`, `保留中（Pending）`); plural `=0` branches added to sort-hint keys that only render for count 1 or more (harmless).
+
 ## PR #19983 (intl/pending-dev) -- 2026-11-27 -- Score 8.8/10
 Scope: 15 md pages (nodes-and-clients + subpages, frameworks, glossary, roadmap privacy/merge/statelessness/verkle, supply, data-structures, transactions, ethash), markdown only; changed lines only; sampled 8 md diffs plus scripted sweeps (no foreign script, U+2060, SPDX or untranslated sentences).
 

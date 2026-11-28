@@ -58,9 +58,19 @@ Kontrak selalu dieksekusi dari bita pertama. Ini adalah bagian awal dari kode:
 Kode ini melakukan dua hal:
 
 1. Menulis 0x80 sebagai nilai 32 bita ke lokasi memori 0x40-0x5F (0x80 disimpan di 0x5F, dan 0x40-0x5E semuanya nol).
-2. Membaca ukuran data panggilan. Biasanya data panggilan untuk kontrak Ethereum mengikuti [ABI (antarmuka biner aplikasi)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html), yang setidaknya membutuhkan empat bita untuk pemilih fungsi. Jika ukuran data panggilan kurang dari empat, lompat ke 0x5E.
+2. Membaca ukuran data panggilan. Biasanya data panggilan untuk kontrak Ethereum mengikuti [ABI (antarmuka biner aplikasi)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html), yang setidaknya memerlukan empat bita untuk pemilih fungsi. Jika ukuran data panggilan kurang dari empat, lompat ke 0x5E.
 
-![Flowchart for this portion](flowchart-entry.png)
+<Flowchart>
+
+- Titik masuk (0x00)
+  - Apakah data panggilan lebih pendek dari empat bita?
+    - **Ya** Panggilan non-ABI (0x5E)
+      - Apakah ada data panggilan?
+        - **Ya** 0x7C (tujuannya belum diketahui sejauh ini)
+        - **Tidak** Transfer ETH (0x64): mengembalikan pada limpahan, jika tidak tambahkan nilai panggilan ke `Storage[6]` (`Value*`) dan berhenti
+    - **Tidak** Panggilan ABI (0x0D)
+
+</Flowchart>
 
 ### Penangan di 0x5E (untuk data panggilan non-ABI) {#the-handler-at-0x5e-for-non-abi-call-data}
 
@@ -71,28 +81,28 @@ Kode ini melakukan dua hal:
 |     60 | PUSH2 0x007c |
 |     63 | JUMPI        |
 
-Potongan kode ini dimulai dengan `JUMPDEST`. Program EVM (mesin virtual Ethereum) akan memunculkan pengecualian jika Anda melompat ke opcode yang bukan `JUMPDEST`. Kemudian ia melihat CALLDATASIZE, dan jika bernilai "benar" (yaitu, bukan nol) ia akan melompat ke 0x7C. Kita akan membahasnya di bawah.
+Potongan kode ini dimulai dengan `JUMPDEST`. Program EVM (Mesin Virtual Ethereum) akan memunculkan pengecualian jika Anda melompat ke opcode yang bukan `JUMPDEST`. Kemudian ia melihat CALLDATASIZE, dan jika bernilai "benar" (yaitu, bukan nol) ia akan melompat ke 0x7C. Kita akan membahasnya di bawah.
 
 | Offset | Opcode     | Stack (setelah opcode)                                                       |
 | -----: | ---------- | -------------------------------------------------------------------------- |
-|     64 | CALLVALUE  | [Wei](/glossary/#wei) yang disediakan oleh panggilan. Disebut `msg.value` di Solidity |
+|     64 | CALLVALUE  | [Wei](/glossary/#wei) yang diberikan oleh panggilan. Disebut `msg.value` di Solidity |
 |     65 | PUSH1 0x06 | 6 CALLVALUE                                                                |
 |     67 | PUSH1 0x00 | 0 6 CALLVALUE                                                              |
 |     69 | DUP3       | CALLVALUE 0 6 CALLVALUE                                                    |
 |     6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                  |
 |     6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                         |
 
-Jadi ketika tidak ada data panggilan, kita membaca nilai dari Storage[6]. Kita belum tahu apa nilai ini, tetapi kita dapat mencari transaksi yang diterima kontrak tanpa data panggilan. Transaksi yang hanya mentransfer ETH tanpa data panggilan (dan karenanya tidak ada metode) memiliki metode `Transfer` di Etherscan. Faktanya, [transaksi pertama yang diterima kontrak](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) adalah sebuah transfer.
+Jadi ketika tidak ada data panggilan, kita membaca nilai Storage[6]. Kita belum tahu apa nilai ini, tetapi kita dapat mencari transaksi yang diterima kontrak tanpa data panggilan. Transaksi yang hanya mentransfer ETH tanpa data panggilan apa pun (dan karenanya tidak ada metode) memiliki metode `Transfer` di Etherscan. Faktanya, [transaksi pertama yang diterima kontrak](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) adalah sebuah transfer.
 
-Jika kita melihat transaksi tersebut dan mengeklik **Click to see More**, kita melihat bahwa data panggilan, yang disebut data masukan, memang kosong (`0x`). Perhatikan juga bahwa nilainya adalah 1,559 ETH, yang akan relevan nanti.
+Jika kita melihat transaksi tersebut dan mengeklik **Click to see More**, kita melihat bahwa data panggilan, yang disebut data input, memang kosong (`0x`). Perhatikan juga bahwa nilainya adalah 1,559 ETH, yang akan relevan nanti.
 
 ![The call data is empty](calldata-empty.png)
 
-Selanjutnya, klik tab **State** dan perluas kontrak yang sedang kita rekayasa balik (0x2510...). Anda dapat melihat bahwa `Storage[6]` memang berubah selama transaksi, dan jika Anda mengubah Hex menjadi **Number**, Anda melihatnya menjadi 1.559.000.000.000.000.000, nilai yang ditransfer dalam wei (saya menambahkan titik untuk kejelasan), yang sesuai dengan nilai kontrak berikutnya.
+Selanjutnya, klik tab **State** dan perluas kontrak yang sedang kita rekayasa balik (0x2510...). Anda dapat melihat bahwa `Storage[6]` memang berubah selama transaksi, dan jika Anda mengubah Hex menjadi **Number**, Anda akan melihatnya menjadi 1.559.000.000.000.000.000, nilai yang ditransfer dalam Wei (saya menambahkan titik untuk kejelasan), yang sesuai dengan nilai kontrak berikutnya.
 
-![Perubahan pada Storage[6]](storage6.png)
+![The change in Storage[6]](storage6.png)
 
-Jika kita melihat perubahan state yang disebabkan oleh [transaksi `Transfer` lainnya dari periode yang sama](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange) kita melihat bahwa `Storage[6]` melacak nilai kontrak untuk sementara waktu. Untuk saat ini kita akan menyebutnya `Value*`. Tanda bintang (`*`) mengingatkan kita bahwa kita belum _tahu_ apa yang dilakukan variabel ini, tetapi itu tidak mungkin hanya untuk melacak nilai kontrak karena tidak perlu menggunakan penyimpanan, yang sangat mahal, ketika Anda bisa mendapatkan saldo akun Anda menggunakan `ADDRESS BALANCE`. Opcode pertama mendorong alamat kontrak itu sendiri. Yang kedua membaca alamat di bagian atas stack dan menggantinya dengan saldo dari alamat tersebut.
+Jika kita melihat perubahan state yang disebabkan oleh [transaksi `Transfer` lainnya dari periode yang sama](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange) kita melihat bahwa `Storage[6]` melacak nilai kontrak untuk sementara waktu. Untuk saat ini kita akan menyebutnya `Value*`. Tanda bintang (`*`) mengingatkan kita bahwa kita belum _tahu_ apa yang dilakukan variabel ini, tetapi ini tidak mungkin hanya untuk melacak nilai kontrak karena tidak perlu menggunakan penyimpanan, yang sangat mahal, ketika Anda bisa mendapatkan saldo akun Anda menggunakan `ADDRESS BALANCE`. Opcode pertama mendorong alamat kontrak itu sendiri. Yang kedua membaca alamat di bagian atas stack dan menggantinya dengan saldo alamat tersebut.
 
 | Offset | Opcode       | Stack                                       |
 | -----: | ------------ | ------------------------------------------- |
@@ -111,7 +121,7 @@ Kita akan terus menelusuri kode ini di tujuan lompatan.
 |    1AA | DUP3       | CALLVALUE 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
 |    1AB | NOT        | 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 
-`NOT` adalah operasi bitwise, sehingga ia membalikkan nilai setiap bit dalam nilai panggilan.
+`NOT` bersifat bitwise, sehingga ia membalikkan nilai setiap bit dalam nilai panggilan.
 
 | Offset | Opcode       | Stack                                                                       |
 | -----: | ------------ | --------------------------------------------------------------------------- |
@@ -121,9 +131,9 @@ Kita akan terus menelusuri kode ini di tujuan lompatan.
 |    1AF | PUSH2 0x01df | 0x01DF Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 |    1B2 | JUMPI        |
 
-Kita melompat jika `Value*` lebih kecil dari 2^256-CALLVALUE-1 atau sama dengannya. Ini terlihat seperti logika untuk mencegah overflow. Dan memang, kita melihat bahwa setelah beberapa operasi yang tidak masuk akal (menulis ke memori yang akan segera dihapus, misalnya) pada offset 0x01DE kontrak mengembalikan transaksi jika overflow terdeteksi, yang merupakan perilaku normal.
+Kita melompat jika `Value*` lebih kecil dari 2^256-CALLVALUE-1 atau sama dengannya. Ini terlihat seperti logika untuk mencegah limpahan. Dan memang, kita melihat bahwa setelah beberapa operasi yang tidak masuk akal (menulis ke memori yang akan segera dihapus, misalnya) pada offset 0x01DE kontrak mengembalikan jika limpahan terdeteksi, yang merupakan perilaku normal.
 
-Perhatikan bahwa overflow semacam itu sangat tidak mungkin terjadi, karena itu akan membutuhkan nilai panggilan ditambah `Value*` agar sebanding dengan 2^256 wei, sekitar 10^59 ETH. [Total pasokan ETH, pada saat penulisan, kurang dari dua ratus juta](https://etherscan.io/stat/supply).
+Perhatikan bahwa limpahan semacam itu sangat tidak mungkin terjadi, karena itu akan membutuhkan nilai panggilan ditambah `Value*` agar sebanding dengan 2^256 Wei, sekitar 10^59 ETH. [Total pasokan ETH, saat artikel ini ditulis, kurang dari dua ratus juta](https://etherscan.io/stat/supply).
 
 | Offset | Opcode   | Stack                                     |
 | -----: | -------- | ----------------------------------------- |
@@ -142,7 +152,7 @@ Jika kita sampai di sini, dapatkan `Value* + CALLVALUE` dan lompat ke offset 0x7
 |     77 | SWAP2    | 6 Value\*+CALLVALUE 0 CALLVALUE |
 |     78 | SSTORE   | 0 CALLVALUE                     |
 
-Jika kita sampai di sini (yang mengharuskan data panggilan kosong) kita menambahkan nilai panggilan ke `Value*`. Ini konsisten dengan apa yang kita katakan tentang apa yang dilakukan oleh transaksi `Transfer`.
+Jika kita sampai di sini (yang mengharuskan data panggilan kosong) kita menambahkan nilai panggilan ke `Value*`. Ini konsisten dengan apa yang kita katakan tentang apa yang dilakukan transaksi `Transfer`.
 
 | Offset | Opcode |
 | -----: | ------ |
@@ -152,9 +162,19 @@ Jika kita sampai di sini (yang mengharuskan data panggilan kosong) kita menambah
 
 Terakhir, bersihkan stack (yang sebenarnya tidak perlu) dan beri sinyal akhir transaksi yang berhasil.
 
-Singkatnya, berikut adalah diagram alur untuk kode awal tersebut.
+Singkatnya, berikut adalah diagram alur untuk kode awal.
 
-![Entry point flowchart](flowchart-entry.png)
+<Flowchart>
+
+- Titik masuk (0x00)
+  - Apakah data panggilan lebih pendek dari empat bita?
+    - **Ya** Panggilan non-ABI (0x5E)
+      - Apakah ada data panggilan?
+        - **Ya** 0x7C (tujuannya belum diketahui sejauh ini)
+        - **Tidak** Transfer ETH (0x64): mengembalikan pada limpahan, jika tidak tambahkan nilai panggilan ke `Storage[6]` (`Value*`) dan berhenti
+    - **Tidak** Panggilan ABI (0x0D)
+
+</Flowchart>
 
 ## Handler di 0x7C {#the-handler-at-0x7c}
 
@@ -250,39 +270,51 @@ Jadi setelah panggilan, kita menyalin data kembalian ke buffer 0x80 - 0x80+RETUR
 
 ### DELEGATECALL Gagal {#delegatecall-failed}
 
-Jika kita sampai di sini, ke 0xC0, itu berarti kontrak yang kita panggil mengembalikan. Karena kita hanyalah proksi untuk kontrak tersebut, kita ingin mengembalikan data yang sama dan juga mengembalikan.
+Jika kita sampai di sini, ke 0xC0, itu berarti kontrak yang kita panggil dikembalikan. Karena kita hanyalah proksi untuk kontrak tersebut, kita ingin mengembalikan data yang sama dan juga mengembalikan.
 
 | Offset | Opcode   | Stack                                                                                                               |
 | -----: | -------- | ------------------------------------------------------------------------------------------------------------------- |
-|     C0 | JUMPDEST | (((keberhasilan/kegagalan panggilan))) RETURNDATASIZE (((keberhasilan/kegagalan panggilan))) 0x80 Storage[3]-as-address                     |
-|     C1 | DUP2     | RETURNDATASIZE (((keberhasilan/kegagalan panggilan))) RETURNDATASIZE (((keberhasilan/kegagalan panggilan))) 0x80 Storage[3]-as-address      |
-|     C2 | DUP5     | 0x80 RETURNDATASIZE (((keberhasilan/kegagalan panggilan))) RETURNDATASIZE (((keberhasilan/kegagalan panggilan))) 0x80 Storage[3]-as-address |
+|     C0 | JUMPDEST | (((keberhasilan/kegagalan panggilan))) RETURNDATASIZE (((keberhasilan/kegagalan panggilan))) 0x80 Storage[3]-sebagai-alamat                     |
+|     C1 | DUP2     | RETURNDATASIZE (((keberhasilan/kegagalan panggilan))) RETURNDATASIZE (((keberhasilan/kegagalan panggilan))) 0x80 Storage[3]-sebagai-alamat      |
+|     C2 | DUP5     | 0x80 RETURNDATASIZE (((keberhasilan/kegagalan panggilan))) RETURNDATASIZE (((keberhasilan/kegagalan panggilan))) 0x80 Storage[3]-sebagai-alamat |
 |     C3 | REVERT   |
 
 Jadi kita `REVERT` dengan buffer yang sama yang kita gunakan untuk `RETURN` sebelumnya: 0x80 - 0x80+RETURNDATASIZE
 
-![Call to proxy flowchart](flowchart-proxy.png)
+<Flowchart>
+
+- Data panggilan sepanjang satu hingga tiga bita, atau metode yang tidak diketahui
+  - Penangan proksi (0x7C)
+    - Baca `Storage[3]`, alamat proksi
+      - Salin data panggilan ke memori
+        - `DELEGATECALL` alamat proksi
+          - Salin data kembalian ke memori
+            - Apakah panggilan gagal?
+              - **Ya** `REVERT` dengan data kembalian (0xC0)
+              - **Tidak** `RETURN` data kembalian (0xBD)
+
+</Flowchart>
 
 ## Panggilan ABI {#abi-calls}
 
-Jika ukuran data panggilan adalah empat byte atau lebih, ini mungkin merupakan panggilan ABI yang valid.
+Jika ukuran data panggilan adalah empat bita atau lebih, ini mungkin merupakan panggilan ABI yang valid.
 
 | Offset | Opcode       | Stack                                             |
 | -----: | ------------ | ------------------------------------------------- |
 |      D | PUSH1 0x00   | 0x00                                              |
 |      F | CALLDATALOAD | (((Kata pertama (256 bit) dari data panggilan)))      |
 |     10 | PUSH1 0xe0   | 0xE0 (((Kata pertama (256 bit) dari data panggilan))) |
-|     12 | SHR          | (((32 bit pertama (4 byte) dari data panggilan)))    |
+|     12 | SHR          | (((32 bit pertama (4 bita) dari data panggilan)))    |
 
-Etherscan memberi tahu kita bahwa `1C` adalah opcode yang tidak diketahui, karena [itu ditambahkan setelah Etherscan menulis fitur ini](https://eips.ethereum.org/EIPS/eip-145) dan mereka belum memperbaruinya. Sebuah [tabel opcode yang terbaru](https://github.com/wolflo/evm-opcodes) menunjukkan kepada kita bahwa ini adalah shift right
+Etherscan memberi tahu kita bahwa `1C` adalah opcode yang tidak diketahui, karena [opcode ini ditambahkan setelah Etherscan menulis fitur ini](https://eips.ethereum.org/EIPS/eip-145) dan mereka belum memperbaruinya. Sebuah [tabel opcode yang terbaru](https://github.com/wolflo/evm-opcodes) menunjukkan kepada kita bahwa ini adalah geser kanan (shift right)
 
 | Offset | Opcode           | Stack                                                                                                    |
 | -----: | ---------------- | -------------------------------------------------------------------------------------------------------- |
-|     13 | DUP1             | (((32 bit pertama (4 byte) dari data panggilan))) (((32 bit pertama (4 byte) dari data panggilan)))            |
-|     14 | PUSH4 0x3cd8045e | 0x3CD8045E (((32 bit pertama (4 byte) dari data panggilan))) (((32 bit pertama (4 byte) dari data panggilan))) |
-|     19 | GT               | 0x3CD8045E>32-bit-pertama-dari-data-panggilan (((32 bit pertama (4 byte) dari data panggilan)))                 |
-|     1A | PUSH2 0x0043     | 0x43 0x3CD8045E>32-bit-pertama-dari-data-panggilan (((32 bit pertama (4 byte) dari data panggilan)))            |
-|     1D | JUMPI            | (((32 bit pertama (4 byte) dari data panggilan)))                                                           |
+|     13 | DUP1             | (((32 bit pertama (4 bita) dari data panggilan))) (((32 bit pertama (4 bita) dari data panggilan)))            |
+|     14 | PUSH4 0x3cd8045e | 0x3CD8045E (((32 bit pertama (4 bita) dari data panggilan))) (((32 bit pertama (4 bita) dari data panggilan))) |
+|     19 | GT               | 0x3CD8045E>32-bit-pertama-dari-data-panggilan (((32 bit pertama (4 bita) dari data panggilan)))                 |
+|     1A | PUSH2 0x0043     | 0x43 0x3CD8045E>32-bit-pertama-dari-data-panggilan (((32 bit pertama (4 bita) dari data panggilan)))            |
+|     1D | JUMPI            | (((32 bit pertama (4 bita) dari data panggilan)))                                                           |
 
 Dengan membagi pengujian pencocokan tanda tangan metode menjadi dua seperti ini, rata-rata akan menghemat separuh pengujian. Kode yang segera mengikuti ini dan kode di 0x43 mengikuti pola yang sama: `DUP1` 32 bit pertama dari data panggilan, `PUSH4 (((method signature>`, jalankan `EQ` untuk memeriksa kesetaraan, dan kemudian `JUMPI` jika tanda tangan metode cocok. Berikut adalah tanda tangan metode, alamatnya, dan jika diketahui [definisi metode yang sesuai](https://www.4byte.directory/):
 
@@ -294,9 +326,28 @@ Dengan membagi pengujian pencocokan tanda tangan metode menjadi dua seperti ini,
 | ???                                                                                    | 0x1f135823       | 0x00C4              |
 | [merkleRoot()](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab)    | 0x2eb4a7ab       | 0x00ED              |
 
-Jika tidak ada kecocokan yang ditemukan, kode melompat ke [penangan proksi di 0x7C](#the-handler-at-0x7c), dengan harapan bahwa kontrak yang kita proksikan memiliki kecocokan.
+Jika tidak ada kecocokan yang ditemukan, kode melompat ke [penangan proksi di 0x7C](#the-handler-at-0x7c), dengan harapan bahwa kontrak yang mana kita adalah proksinya memiliki kecocokan.
 
-![ABI calls flowchart](flowchart-abi.png)
+<Flowchart>
+
+- Baca pemilih metode, empat bita pertama dari data panggilan (0x0D)
+  - Apakah pemilih di bawah `0x3cd8045e`?
+    - **Ya** Pemilih rendah (0x43)
+      - Apakah itu `0x1f135823`?
+        - **Ya** Fungsi di 0xC4
+        - **Tidak** Apakah itu `0x2eb4a7ab`?
+          - **Ya** `merkleRoot()` di 0xED
+          - **Tidak** [Penangan proksi (0x7C)](#the-handler-at-0x7c)
+    - **Tidak** Pemilih tinggi (0x1E)
+      - Apakah itu `0x3cd8045e`?
+        - **Ya** `splitter()` di 0x0103
+        - **Tidak** Apakah itu `0x81e580d3`?
+          - **Ya** Fungsi di 0x0138
+          - **Tidak** Apakah itu `0xba0bafb4`?
+            - **Ya** `currentWindow()` di 0x0158
+            - **Tidak** [Penangan proksi (0x7C)](#the-handler-at-0x7c)
+
+</Flowchart>
 
 ## splitter() {#splitter}
 

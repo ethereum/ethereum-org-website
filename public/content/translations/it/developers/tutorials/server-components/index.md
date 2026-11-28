@@ -33,7 +33,9 @@ Ci sono diverse possibili attività che un server del genere potrebbe svolgere.
 
 ## Programma di esempio {#sample-program}
 
-Puoi vedere un server di esempio [su GitHub](https://github.com/qbzzt/20240715-server-component). Questo server ascolta gli eventi provenienti da [questo contratto](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code), una versione modificata del Greeter di Hardhat. Quando il saluto viene modificato, lo ripristina.
+Puoi vedere un server di esempio [su GitHub](https://github.com/qbzzt/20240715-server-component). Questo server ascolta gli eventi provenienti da [questo contratto](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract_code) sulla testnet Sepolia, una versione modificata del Greeter di Hardhat. Quando il saluto viene modificato, lo ripristina.
+
+Questo contratto è condiviso con altri tutorial, quindi altre persone (e i loro server) potrebbero modificare il saluto mentre il tuo è in esecuzione. Ferma il tuo server quando hai finito per evitare di spendere i tuoi ETH di prova.
 
 Per eseguirlo:
 
@@ -44,25 +46,31 @@ Per eseguirlo:
    cd 20240715-server-component
    ```
 
-2. Installa i pacchetti necessari. Se non lo hai già fatto, [installa prima Node](https://nodejs.org/en/download/package-manager).
+2. Il repository di esempio è stato scritto per la testnet Holesky, che da allora è stata chiusa. Aggiornalo per utilizzare Sepolia e l'indirizzo del contratto su Sepolia.
+
+   ```sh copy
+   sed -i.bak -e 's/holesky/sepolia/g' -e 's/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA/' src/app.ts
+   ```
+
+3. Installa i pacchetti necessari. Se non lo hai già, [installa prima Node](https://nodejs.org/en/download/package-manager).
 
    ```sh copy
    npm install
    ```
 
-3. Modifica `.env` per specificare la chiave privata di un account che possiede ETH sulla testnet Holesky. Se non hai ETH su Holesky, puoi [usare questo faucet](https://holesky-faucet.pk910.de/).
+4. Modifica `.env` per specificare la chiave privata di un account che ha ETH sulla testnet Sepolia. Se non hai ETH su Sepolia, puoi [utilizzare questo faucet](https://sepolia-faucet.pk910.de/). Usa un nuovo account che utilizzi solo per i test, mai uno che contiene asset reali.
 
    ```sh filename=".env" copy
-   PRIVATE_KEY=0x <private key goes here>
+   PRIVATE_KEY=0x<private key goes here>
    ```
 
-4. Avvia il server.
+5. Avvia il server.
 
    ```sh copy
    npm start
    ```
 
-5. Vai su [un block explorer](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract) e, utilizzando un indirizzo diverso da quello che possiede la chiave privata, modifica il saluto. Vedrai che il saluto viene automaticamente ripristinato.
+6. Vai su [un block explorer](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract) e, utilizzando un indirizzo diverso da quello che ha la chiave privata, modifica il saluto. Vedrai che il saluto viene automaticamente ripristinato.
 
 ### Come funziona? {#how-it-works}
 
@@ -84,7 +92,7 @@ import {
 } from "viem"
 ```
 
-Queste sono le entità [Viem](https://viem.sh/) di cui abbiamo bisogno, le funzioni e [il tipo `Address`](https://viem.sh/docs/glossary/types#address). Questo server è scritto in [TypeScript](https://www.typescriptlang.org/), che è un'estensione di JavaScript che lo rende [fortemente tipizzato](https://en.wikipedia.org/wiki/Strong_and_weak_typing).
+Queste sono le entità di [Viem](https://viem.sh/) di cui abbiamo bisogno, le funzioni e [il tipo `Address`](https://viem.sh/docs/glossary/types#address). Questo server è scritto in [TypeScript](https://www.typescriptlang.org/), che è un'estensione di JavaScript che lo rende [fortemente tipizzato](https://en.wikipedia.org/wiki/Strong_and_weak_typing).
 
 ```typescript
 import { privateKeyToAccount } from "viem/accounts"
@@ -93,10 +101,10 @@ import { privateKeyToAccount } from "viem/accounts"
 [Questa funzione](https://viem.sh/docs/accounts/privateKey) ci consente di generare le informazioni del portafoglio, incluso l'indirizzo, corrispondenti a una chiave privata.
 
 ```typescript
-import { holesky } from "viem/chains"
+import { sepolia } from "viem/chains"
 ```
 
-Per utilizzare una blockchain in Viem è necessario importarne la definizione. In questo caso, vogliamo connetterci alla blockchain di test [Holesky](https://github.com/eth-clients/holesky).
+Per utilizzare una blockchain in Viem è necessario importarne la definizione. In questo caso, vogliamo connetterci alla blockchain di test [Sepolia](/developers/docs/networks/#sepolia).
 
 ```typescript
 // Ecco come aggiungiamo le definizioni in .env a process.env.
@@ -104,10 +112,10 @@ import * as dotenv from "dotenv"
 dotenv.config()
 ```
 
-Ecco come leggiamo `.env` nell'ambiente. Ne abbiamo bisogno per la chiave privata (vedi in seguito).
+Questo è il modo in cui leggiamo `.env` nell'ambiente. Ne abbiamo bisogno per la chiave privata (vedi in seguito).
 
 ```typescript
-const greeterAddress : Address = "0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6"
+const greeterAddress : Address = "0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA"
 const greeterABI = [
     {
         "inputs": [
@@ -141,34 +149,34 @@ const greeterABI = [
 
 Per utilizzare un contratto abbiamo bisogno del suo indirizzo e della sua [ABI](/glossary/#abi). Li forniamo entrambi qui.
 
-In JavaScript (e quindi in TypeScript) non è possibile assegnare un nuovo valore a una costante, ma _puoi_ modificare l'oggetto in essa memorizzato. Utilizzando il suffisso `as const` stiamo dicendo a TypeScript che l'elenco stesso è costante e non può essere modificato.
+In JavaScript (e quindi in TypeScript) non è possibile assegnare un nuovo valore a una costante, ma è _possibile_ modificare l'oggetto in essa memorizzato. Utilizzando il suffisso `as const` stiamo dicendo a TypeScript che l'elenco stesso è costante e non può essere modificato.
 
 ```typescript
 const publicClient = createPublicClient({
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
 
-Crea un [client pubblico](https://viem.sh/docs/clients/public.html) Viem. I client pubblici non hanno una chiave privata associata e pertanto non possono inviare transazioni. Possono chiamare [funzioni `view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm), leggere i saldi degli account, ecc.
+Crea un [client pubblico](https://viem.sh/docs/clients/public) di Viem. I client pubblici non hanno una chiave privata associata e pertanto non possono inviare transazioni. Possono chiamare [funzioni `view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm), leggere i saldi degli account, ecc.
 
 ```typescript
 const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`)
 ```
 
-Le variabili d'ambiente sono disponibili in [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). Tuttavia, TypeScript è fortemente tipizzato. Una variabile d'ambiente può essere una stringa qualsiasi, o vuota, quindi il tipo per una variabile d'ambiente è `string | undefined`. Tuttavia, una chiave è definita in Viem come `0x${string}` (`0x` seguito da una stringa). Qui diciamo a TypeScript che la variabile d'ambiente `PRIVATE_KEY` sarà di quel tipo. In caso contrario, otterremo un errore di runtime.
+Le variabili d'ambiente sono disponibili in [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). Tuttavia, TypeScript è fortemente tipizzato. Una variabile d'ambiente può essere qualsiasi stringa, o vuota, quindi il tipo per una variabile d'ambiente è `string | undefined`. Tuttavia, una chiave è definita in Viem come `0x${string}` (`0x` seguito da una stringa). Qui diciamo a TypeScript che la variabile d'ambiente `PRIVATE_KEY` sarà di quel tipo. In caso contrario, otterremo un errore a runtime.
 
 La funzione [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) utilizza quindi questa chiave privata per creare un oggetto account completo.
 
 ```typescript
 const walletClient = createWalletClient({
   account,
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
 
-Successivamente, utilizziamo l'oggetto account per creare un [client del portafoglio](https://viem.sh/docs/clients/wallet). Questo client ha una chiave privata e un indirizzo, quindi può essere utilizzato per inviare transazioni.
+Successivamente, utilizziamo l'oggetto account per creare un [client portafoglio](https://viem.sh/docs/clients/wallet). Questo client ha una chiave privata e un indirizzo, quindi può essere utilizzato per inviare transazioni.
 
 ```typescript
 const greeter = getContract({
@@ -186,11 +194,11 @@ Ora che abbiamo tutti i prerequisiti, possiamo finalmente creare un'[istanza del
 console.log(`Current greeting:`, await greeter.read.greet())
 ```
 
-Le funzioni del contratto di sola lettura ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) e [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) sono disponibili in `read`. In questo caso, lo utilizziamo per accedere alla funzione [`greet`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=read_contract#cfae3217), che restituisce il saluto.
+Le funzioni del contratto di sola lettura ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) e [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) sono disponibili in `read`. In questo caso, lo utilizziamo per accedere alla funzione [`greet`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=read_contract), che restituisce il saluto.
 
-JavaScript è a thread singolo, quindi quando avviamo un processo di lunga durata dobbiamo [specificare che lo facciamo in modo asincrono](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). Chiamare la blockchain, anche per un'operazione di sola lettura, richiede un viaggio di andata e ritorno tra il computer e un nodo della blockchain. Questo è il motivo per cui specifichiamo qui che il codice deve attendere (`await`) il risultato.
+JavaScript è single-thread, quindi quando avviamo un processo di lunga durata dobbiamo [specificare che lo facciamo in modo asincrono](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). Chiamare la blockchain, anche per un'operazione di sola lettura, richiede un viaggio di andata e ritorno tra il computer e un nodo della blockchain. Questo è il motivo per cui specifichiamo qui che il codice deve attendere (`await`) il risultato.
 
-Se sei interessato a come funziona, puoi [leggerne di più qui](https://www.w3schools.com/js/js_promise.asp), ma in termini pratici tutto ciò che devi sapere è che devi usare `await` per i risultati se avvii un'operazione che richiede molto tempo, e che qualsiasi funzione che lo fa deve essere dichiarata come `async`.
+Se sei interessato a come funziona, puoi [leggerlo qui](https://www.w3schools.com/js/js_promise.asp), ma in termini pratici tutto ciò che devi sapere è che devi attendere (`await`) i risultati se avvii un'operazione che richiede molto tempo e che qualsiasi funzione che lo fa deve essere dichiarata come `async`.
 
 ##### Emissione di transazioni
 
@@ -204,16 +212,16 @@ Questa è la funzione che chiami per emettere una transazione che modifica il sa
 const txHash = await greeter.write.setGreeting([greeting])
 ```
 
-Il campo `write` dell'istanza del contratto contiene tutte le funzioni che scrivono nello stato della blockchain (quelle che richiedono l'invio di una transazione), come [`setGreeting`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862). I parametri, se presenti, vengono forniti come elenco e la funzione restituisce l'hash della transazione.
+Il campo `write` dell'istanza del contratto contiene tutte le funzioni che scrivono nello stato della blockchain (quelle che richiedono l'invio di una transazione), come [`setGreeting`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract). I parametri, se presenti, vengono forniti come elenco e la funzione restituisce l'hash della transazione.
 
 ```typescript
-    console.log(`Working on a fix, see https://eth-holesky.blockscout.com/tx/${txHash}`)
+    console.log(`Working on a fix, see https://eth-sepolia.blockscout.com/tx/${txHash}`)
 
     return txHash
 }
 ```
 
-Segnala l'hash della transazione (come parte di un URL al block explorer per visualizzarlo) e restituiscilo.
+Segnala l'hash della transazione (come parte di un URL al block explorer per visualizzarla) e restituiscilo.
 
 ##### Risposta agli eventi
 
@@ -221,7 +229,7 @@ Segnala l'hash della transazione (come parte di un URL al block explorer per vis
 greeter.watchEvent.SetGreeting({
 ```
 
-[La funzione `watchEvent`](https://viem.sh/docs/actions/public/watchEvent) ti consente di specificare che una funzione deve essere eseguita quando viene emesso un evento. Se ti interessa solo un tipo di evento (in questo caso, `SetGreeting`), puoi utilizzare questa sintassi per limitarti a quel tipo di evento.
+[La funzione `watchEvent`](https://viem.sh/docs/actions/public/watchEvent) consente di specificare che una funzione deve essere eseguita quando viene emesso un evento. Se ti interessa solo un tipo di evento (in questo caso, `SetGreeting`), puoi utilizzare questa sintassi per limitarti a quel tipo di evento.
 
 ```typescript
     onLogs: logs => {
@@ -252,12 +260,6 @@ Se il mittente _non_ è questo server, usa `setGreeting` per modificare il salut
 
 ```json
 {
-  "main": "dist/index.js",
-```
-
-Questa definizione specifica quale file JavaScript eseguire.
-
-```json
   "scripts": {
     "start": "tsc && node dist/app.js",
   },
@@ -269,7 +271,7 @@ Gli script sono varie azioni dell'applicazione. In questo caso, l'unico che abbi
   "type": "module",
 ```
 
-Esistono diversi tipi di applicazioni Node JavaScript. Il tipo `module` ci consente di avere `await` nel codice di livello superiore, il che è importante quando si eseguono operazioni lente (e quindi asincrone).
+Esistono diversi tipi di applicazioni node JavaScript. Il tipo `module` ci consente di avere `await` nel codice di livello superiore, il che è importante quando si eseguono operazioni lente (e quindi asincrone).
 
 ```json
   "devDependencies": {
@@ -278,7 +280,7 @@ Esistono diversi tipi di applicazioni Node JavaScript. Il tipo `module` ci conse
   },
 ```
 
-Questi sono pacchetti richiesti solo per lo sviluppo. Qui abbiamo bisogno di `typescript` e, poiché lo stiamo utilizzando con Node.js, stiamo ottenendo anche i tipi per le variabili e gli oggetti di Node, come `process`. [La notazione `^<version>`](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) indica quella versione o una versione successiva che non presenta modifiche incompatibili (breaking changes). Vedi [qui](https://semver.org) per maggiori informazioni sul significato dei numeri di versione.
+Questi sono pacchetti richiesti solo per lo sviluppo. Qui abbiamo bisogno di `typescript` e poiché lo stiamo utilizzando con Node.js, stiamo anche ottenendo i tipi per le variabili e gli oggetti di node, come `process`. [La notazione `^<version>`](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) indica quella versione o una versione superiore che non presenta modifiche incompatibili. Vedi [qui](https://semver.org) per maggiori informazioni sul significato dei numeri di versione.
 
 ```json
   "dependencies": {
@@ -288,7 +290,7 @@ Questi sono pacchetti richiesti solo per lo sviluppo. Qui abbiamo bisogno di `ty
 }
 ```
 
-Questi sono i pacchetti richiesti in fase di esecuzione, quando si esegue `dist/app.js`.
+Questi sono i pacchetti richiesti a runtime, quando si esegue `dist/app.js`.
 
 ## Conclusione {#conclusion}
 

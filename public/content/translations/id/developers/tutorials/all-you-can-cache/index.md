@@ -9,11 +9,19 @@ published: 2022-09-15
 lang: id
 ---
 
-Saat menggunakan rollup, biaya satu byte dalam transaksi jauh lebih mahal daripada biaya slot penyimpanan. Oleh karena itu, masuk akal untuk melakukan cache sebanyak mungkin informasi secara onchain.
+Saat menggunakan rollup, setiap byte dari transaksi harus diposting ke L1. Saat artikel ini ditulis, hal itu membuat biaya satu byte dalam transaksi jauh lebih mahal daripada biaya slot penyimpanan. Oleh karena itu, masuk akal untuk melakukan cache sebanyak mungkin informasi secara onchain.
 
-Dalam artikel ini Anda akan mempelajari cara membuat dan menggunakan kontrak caching sedemikian rupa sehingga setiap nilai parameter yang kemungkinan akan digunakan berkali-kali akan di-cache dan tersedia untuk digunakan (setelah pertama kali) dengan jumlah byte yang jauh lebih kecil, dan cara menulis kode offchain yang menggunakan cache ini.
+> **Catatan:** Biaya rollup telah banyak berubah sejak artikel ini ditulis pada tahun 2022. Sejak [peningkatan Ecotone dan Fjord](https://docs.optimism.io/op-stack/transactions/fees#l1-data-fee) (2024), rantai OP Stack memposting data transaksi ke [blob](/roadmap/danksharding/), dan biaya data L1 didasarkan pada perkiraan ukuran _terkompresi_ transaksi, dengan minimum 100 byte per transaksi ([lihat spesifikasinya](https://specs.optimism.io/protocol/fjord/exec-engine.html)). Akibatnya:
+>
+> - Nol byte hampir gratis, karena dapat dikompresi dengan baik.
+> - Transaksi pendek sudah berada pada batas minimum 100 byte, sehingga membuat data panggilan mereka menjadi lebih pendek tidak mengurangi biayanya.
+> - Ruang blob murah, sehingga di OP Mainnet gas eksekusi L2 sering kali menjadi bagian yang lebih besar dari biaya daripada biaya data L1. Menulis nilai baru ke dalam cache (dua `SSTORE` masing-masing sebesar 22100 gas) dapat memakan biaya lebih besar daripada byte yang dihematnya.
+>
+> Prinsipnya masih berlaku (lebih sedikit byte terkompresi berarti biaya data L1 yang lebih rendah), tetapi apakah caching membuahkan hasil bergantung pada ukuran transaksi Anda dan pada harga gas L1 dan L2 saat ini. Anda dapat memeriksa biaya data L1 dari transaksi tertentu dengan memanggil `getL1Fee` pada [prasebar `GasPriceOracle`](https://specs.optimism.io/protocol/predeploys.html#gaspriceoracle).
 
-Jika Anda ingin melewati artikel ini dan langsung melihat kode sumbernya, [ada di sini](https://github.com/qbzzt/20220915-all-you-can-cache). Stack pengembangannya adalah [Foundry](https://getfoundry.sh/introduction/installation/).
+Dalam artikel ini Anda mempelajari cara membuat dan menggunakan kontrak caching sedemikian rupa sehingga setiap nilai parameter yang kemungkinan akan digunakan beberapa kali akan di-cache dan tersedia untuk digunakan (setelah pertama kali) dengan jumlah byte yang jauh lebih kecil, dan cara menulis kode offchain yang menggunakan cache ini.
+
+Jika Anda ingin melewati artikel ini dan hanya melihat kode sumbernya, [ada di sini](https://github.com/qbzzt/20220915-all-you-can-cache). Tumpukan pengembangannya adalah [Foundry](https://getfoundry.sh/introduction/installation/).
 
 ## Desain keseluruhan {#overall-design}
 
@@ -342,7 +350,7 @@ Fungsi `setUp` dipanggil sebelum setiap pengujian. Dalam hal ini kita hanya memb
     function testCaching() public {
 ```
 
-Pengujian adalah fungsi yang namanya dimulai dengan `test`. Fungsi ini memeriksa fungsionalitas cache dasar, menulis nilai dan membacanya lagi.
+Pengujian adalah fungsi yang namanya dimulai dengan `test`. Fungsi ini memeriksa fungsionalitas cache dasar, menulis nilai dan membacanya kembali.
 
 ```solidity
         for(uint i=1; i<5000; i++) {
@@ -353,14 +361,14 @@ Pengujian adalah fungsi yang namanya dimulai dengan `test`. Fungsi ini memeriksa
             assertEq(cache.cacheRead(i), i*i);
 ```
 
-Beginilah cara Anda melakukan pengujian yang sebenarnya, menggunakan [fungsi `assert...`](https://getfoundry.sh/reference/forge-std/std-assertions/). Dalam hal ini, kita memeriksa bahwa nilai yang kita tulis adalah nilai yang kita baca. Kita dapat membuang hasil `cache.cacheWrite` karena kita tahu bahwa kunci cache ditetapkan secara linier.
+Beginilah cara Anda melakukan pengujian yang sebenarnya, menggunakan [fungsi `assert...`](https://getfoundry.sh/reference/forge-std/std-assertions/). Dalam hal ini, kita memeriksa bahwa nilai yang kita tulis adalah nilai yang kita baca. Kita dapat mengabaikan hasil dari `cache.cacheWrite` karena kita tahu bahwa kunci cache ditetapkan secara linier.
 
 ```solidity
         }
     }    // testCaching
 
 
-    // Cache nilai yang sama beberapa kali, pastikan kunci tetap
+    // Simpan nilai yang sama ke dalam cache beberapa kali, pastikan bahwa kunci tetap
     // sama
     function testRepeatCaching() public {
         for(uint i=1; i<100; i++) {
@@ -370,7 +378,7 @@ Beginilah cara Anda melakukan pengujian yang sebenarnya, menggunakan [fungsi `as
         }
 ```
 
-Pertama kita menulis setiap nilai dua kali ke cache dan memastikan kuncinya sama (artinya penulisan kedua tidak benar-benar terjadi).
+Pertama-tama kita menulis setiap nilai dua kali ke cache dan memastikan kuncinya sama (artinya penulisan kedua tidak benar-benar terjadi).
 
 ```solidity
         for(uint i=1; i<100; i+=3) {
@@ -380,10 +388,10 @@ Pertama kita menulis setiap nilai dua kali ke cache dan memastikan kuncinya sama
     }    // testRepeatCaching
 ```
 
-Secara teori mungkin ada bug yang tidak memengaruhi penulisan cache yang berurutan. Jadi di sini kita melakukan beberapa penulisan yang tidak berurutan dan melihat nilainya masih belum ditulis ulang.
+Secara teori bisa saja ada bug yang tidak memengaruhi penulisan cache yang berurutan. Jadi di sini kita melakukan beberapa penulisan yang tidak berurutan dan melihat nilainya tetap tidak ditulis ulang.
 
 ```solidity
-    // Baca uint dari buffer memori (untuk memastikan kita mendapatkan kembali parameter
+    // Baca sebuah uint dari buffer memori (untuk memastikan kita mendapatkan kembali parameter
     // yang kita kirimkan)
     function toUint256(bytes memory _bytes, uint256 _start) internal pure
         returns (uint256)
@@ -401,25 +409,25 @@ Membaca kata 256 bit dari buffer `bytes memory`. Fungsi utilitas ini memungkinka
         }
 ```
 
-Yul tidak mendukung struktur data di luar `uint256`, jadi saat Anda merujuk ke struktur data yang lebih canggih, seperti buffer memori `_bytes`, Anda mendapatkan alamat struktur tersebut. Solidity menyimpan nilai `bytes memory` sebagai kata 32 byte yang berisi panjang, diikuti oleh byte sebenarnya, jadi untuk mendapatkan nomor byte `_start` kita perlu menghitung `_bytes+32+_start`.
+Yul tidak mendukung struktur data selain `uint256`, jadi saat Anda merujuk ke struktur data yang lebih canggih, seperti buffer memori `_bytes`, Anda mendapatkan alamat struktur tersebut. Solidity menyimpan nilai `bytes memory` sebagai kata 32 byte yang berisi panjangnya, diikuti oleh byte yang sebenarnya, jadi untuk mendapatkan byte nomor `_start` kita perlu menghitung `_bytes+32+_start`.
 
 ```solidity
 
         return tempUint;
     }     // toUint256
 
-    // Tanda tangan fungsi untuk fourParams(), atas kebaikan
+    // Tanda tangan fungsi untuk fourParams(), milik
     // https://www.4byte.directory/signatures/?bytes4_signature=0x3edc1e6d
     bytes4 constant FOUR_PARAMS = 0x3edc1e6d;
 
-    // Hanya beberapa nilai konstan untuk melihat kita mendapatkan kembali nilai yang benar
+    // Hanya beberapa nilai konstan untuk melihat apakah kita mendapatkan kembali nilai yang benar
     uint256 constant VAL_A = 0xDEAD60A7;
     uint256 constant VAL_B =     0xBEEF;
     uint256 constant VAL_C =     0x600D;
     uint256 constant VAL_D = 0x600D60A7;
 ```
 
-Beberapa konstanta yang kita butuhkan untuk pengujian.
+Beberapa konstanta yang kita perlukan untuk pengujian.
 
 ```solidity
     function testReadParam() public {
@@ -442,15 +450,15 @@ Kita tidak dapat menggunakan mekanisme ABI normal untuk memanggil fungsi menggun
             FOUR_PARAMS,
 ```
 
-Sangat berguna bagi kontrak yang sama untuk mendukung fungsi yang di-cache (untuk panggilan langsung dari transaksi) dan fungsi yang tidak di-cache (untuk panggilan dari kontrak pintar lainnya). Untuk melakukannya, kita perlu terus mengandalkan mekanisme Solidity untuk memanggil fungsi yang benar, alih-alih memasukkan semuanya ke dalam [fungsi `fallback`](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function). Melakukan hal ini membuat komposabilitas jauh lebih mudah. Satu byte akan cukup untuk mengidentifikasi fungsi dalam banyak kasus, jadi kita membuang tiga byte (16\*3=48 gas). Namun, saat saya menulis ini, 48 gas tersebut berharga 0,07 sen, yang merupakan biaya yang wajar untuk kode yang lebih sederhana dan tidak rentan terhadap bug.
+Sangat berguna bagi kontrak yang sama untuk mendukung fungsi yang di-cache (untuk panggilan langsung dari transaksi) dan fungsi yang tidak di-cache (untuk panggilan dari kontrak pintar lainnya). Untuk melakukannya, kita perlu terus mengandalkan mekanisme Solidity untuk memanggil fungsi yang benar, alih-alih memasukkan semuanya ke dalam [fungsi `fallback`](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function). Melakukan hal ini membuat komposabilitas jauh lebih mudah. Satu byte sudah cukup untuk mengidentifikasi fungsi dalam banyak kasus, jadi kita membuang-buang tiga byte. Dengan formula biaya OP Stack saat ini, ketiga byte tersebut menambahkan sebagian kecil dari satu sen (jika ada, lihat catatan di bagian atas artikel), yang merupakan biaya yang wajar untuk kode yang lebih sederhana dan tidak rentan terhadap bug.
 
 ```solidity
-            // Nilai pertama, tambahkan ke cache
+            // Nilai pertama, tambahkan ke dalam cache
             cache.INTO_CACHE(),
             bytes32(VAL_A),
 ```
 
-Nilai pertama: Bendera yang mengatakan bahwa ini adalah nilai penuh yang perlu ditulis ke cache, diikuti oleh 32 byte dari nilai tersebut. Tiga nilai lainnya serupa, kecuali bahwa `VAL_B` tidak ditulis ke cache dan `VAL_C` adalah parameter ketiga dan keempat.
+Nilai pertama: Sebuah tanda yang menyatakan bahwa ini adalah nilai penuh yang perlu ditulis ke cache, diikuti oleh 32 byte dari nilai tersebut. Tiga nilai lainnya serupa, kecuali bahwa `VAL_B` tidak ditulis ke cache dan `VAL_C` adalah parameter ketiga sekaligus keempat.
 
 ```solidity
              .
@@ -476,13 +484,13 @@ Kita mengharapkan panggilan tersebut berhasil.
 Kita mulai dengan cache kosong dan kemudian menambahkan `VAL_A` diikuti oleh `VAL_C`. Kita mengharapkan yang pertama memiliki kunci 1, dan yang kedua memiliki 2.
 
 ```
-assertEq(toUint256(_callOutput,0), VAL_A);
+        assertEq(toUint256(_callOutput,0), VAL_A);
         assertEq(toUint256(_callOutput,32), VAL_B);
         assertEq(toUint256(_callOutput,64), VAL_C);
         assertEq(toUint256(_callOutput,96), VAL_C);
 ```
 
-Outputnya adalah empat parameter. Di sini kita memverifikasi bahwa itu benar.
+Outputnya adalah keempat parameter tersebut. Di sini kita memverifikasi bahwa itu benar.
 
 ```solidity
         // Panggilan kedua, kita dapat menggunakan cache
@@ -496,7 +504,7 @@ Outputnya adalah empat parameter. Di sini kita memverifikasi bahwa itu benar.
 Kunci cache di bawah 16 hanya satu byte.
 
 ```solidity
-            // Nilai kedua, jangan tambahkan ke cache
+            // Nilai kedua, jangan tambahkan ke dalam cache
             cache.DONT_CACHE(),
             bytes32(VAL_B),
 
@@ -539,7 +547,7 @@ Fungsi ini mirip dengan `testReadParam`, kecuali bahwa alih-alih menulis paramet
 Satu-satunya pengujian tambahan di `testEncodeVal()` adalah memverifikasi bahwa panjang `_callInput` sudah benar. Untuk panggilan pertama adalah 4+33\*4. Untuk yang kedua, di mana setiap nilai sudah ada di cache, adalah 4+1\*4.
 
 ```solidity
-    // Uji encodeVal saat kunci lebih dari satu byte tunggal
+    // Uji encodeVal ketika kunci lebih dari satu byte
     // Maksimum tiga byte karena mengisi cache hingga empat byte membutuhkan waktu
     // terlalu lama.
     function testEncodeValBig() public {
@@ -550,9 +558,9 @@ Satu-satunya pengujian tambahan di `testEncodeVal()` adalah memverifikasi bahwa 
         }
 ```
 
-Fungsi `testEncodeVal` di atas hanya menulis empat nilai ke dalam cache, jadi [bagian fungsi yang menangani nilai multi-byte](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol#L144-L171) tidak diperiksa. Tetapi kode itu rumit dan rentan terhadap kesalahan.
+Fungsi `testEncodeVal` di atas hanya menulis empat nilai ke dalam cache, jadi [bagian fungsi yang menangani nilai multi-byte](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol#L144-L171) tidak diperiksa. Namun kode tersebut rumit dan rentan terhadap kesalahan.
 
-Bagian pertama dari fungsi ini adalah loop yang menulis semua nilai dari 1 hingga 0x1FFF ke cache secara berurutan, sehingga kita akan dapat menyandikan nilai-nilai tersebut dan mengetahui ke mana arahnya.
+Bagian pertama dari fungsi ini adalah loop yang menulis semua nilai dari 1 hingga 0x1FFF ke cache secara berurutan, sehingga kita dapat menyandikan nilai-nilai tersebut dan mengetahui ke mana arahnya.
 
 ```solidity
         .
@@ -596,7 +604,7 @@ Uji apa yang terjadi dalam kasus abnormal di mana tidak ada cukup parameter.
 Karena ini mengembalikan, hasil yang seharusnya kita dapatkan adalah `false`.
 
 ```
-// Panggil dengan kunci cache yang tidak ada
+    // Panggil dengan kunci cache yang tidak ada
     function testNoCacheKey() public {
         .
         .
@@ -604,7 +612,7 @@ Karena ini mengembalikan, hasil yang seharusnya kita dapatkan adalah `false`.
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
-            // Nilai pertama, tambahkan ke cache
+            // Nilai pertama, tambahkan ke dalam cache
             cache.INTO_CACHE(),
             bytes32(VAL_A),
 
@@ -615,7 +623,7 @@ Karena ini mengembalikan, hasil yang seharusnya kita dapatkan adalah `false`.
         );
 ```
 
-Fungsi ini mendapatkan empat parameter yang sepenuhnya sah, kecuali bahwa cache kosong sehingga tidak ada nilai di sana untuk dibaca.
+Fungsi ini mendapatkan empat parameter yang sangat sah, kecuali bahwa cache-nya kosong sehingga tidak ada nilai di sana untuk dibaca.
 
 ```solidity
         .
@@ -632,24 +640,24 @@ Fungsi ini mendapatkan empat parameter yang sepenuhnya sah, kecuali bahwa cache 
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
-            // Nilai pertama, tambahkan ke cache
+            // Nilai pertama, tambahkan ke dalam cache
             cache.INTO_CACHE(), bytes32(VAL_A),
 
-            // Nilai kedua, tambahkan ke cache
+            // Nilai kedua, tambahkan ke dalam cache
             cache.INTO_CACHE(), bytes32(VAL_B),
 
-            // Nilai ketiga, tambahkan ke cache
+            // Nilai ketiga, tambahkan ke dalam cache
             cache.INTO_CACHE(), bytes32(VAL_C),
 
-            // Nilai keempat, tambahkan ke cache
+            // Nilai keempat, tambahkan ke dalam cache
             cache.INTO_CACHE(), bytes32(VAL_D),
 
-            // Dan nilai lain untuk "semoga berhasil"
+            // Dan nilai lainnya untuk "semoga berhasil"
             bytes4(0x31112233)
         );
 ```
 
-Fungsi ini mengirimkan lima nilai. Kita tahu bahwa nilai kelima diabaikan karena bukan entri cache yang valid, yang akan menyebabkan pengembalian seandainya tidak disertakan.
+Fungsi ini mengirimkan lima nilai. Kita tahu bahwa nilai kelima diabaikan karena bukan entri cache yang valid, yang akan menyebabkan pengembalian jika tidak disertakan.
 
 ```solidity
         (_success, _callOutput) = _cacheAddr.call(_callInput);
@@ -708,7 +716,7 @@ Fungsi baca adalah `view`, sehingga tidak memerlukan transaksi dan tidak memerlu
 
 ### Kode pengujian {#the-testing-code}
 
-[Ini adalah kode pengujian untuk kontrak](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/WORM.t.sol). Sekali lagi, mari kita lihat hanya pada apa yang menarik.
+[Ini adalah kode pengujian untuk kontrak tersebut](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/WORM.t.sol). Sekali lagi, mari kita lihat hanya pada bagian yang menarik.
 
 ```solidity
     function testWReadWrite() public {
@@ -718,14 +726,14 @@ Fungsi baca adalah `view`, sehingga tidak memerlukan transaksi dan tidak memerlu
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[Ini (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) adalah cara kita menentukan dalam pengujian Foundry bahwa panggilan berikutnya harus gagal, dan alasan kegagalan yang dilaporkan. Ini berlaku saat kita menggunakan sintaks `<contract>.<function name>()` daripada membangun calldata dan memanggil kontrak menggunakan antarmuka tingkat rendah (`<contract>.call()`, dll.).
+[Ini (`vm.expectRevert`)](https://getfoundry.sh/reference/cheatcodes/expect-revert/) adalah cara kita menentukan dalam pengujian Foundry bahwa panggilan berikutnya harus gagal, dan alasan kegagalan yang dilaporkan. Ini berlaku saat kita menggunakan sintaks `<contract>.<function name>()` alih-alih membangun data panggilan dan memanggil kontrak menggunakan antarmuka tingkat rendah (`<contract>.call()`, dll.).
 
 ```solidity
     function testReadWriteCached() public {
         uint cacheGoat = worm.cacheWrite(0x60A7);
 ```
 
-Di sini kita menggunakan fakta bahwa `cacheWrite` mengembalikan kunci cache. Ini bukanlah sesuatu yang kita harapkan untuk digunakan dalam produksi, karena `cacheWrite` mengubah state, dan oleh karena itu hanya dapat dipanggil selama transaksi. Transaksi tidak memiliki nilai kembalian, jika memiliki hasil, hasil tersebut seharusnya dipancarkan sebagai peristiwa. Jadi nilai kembalian `cacheWrite` hanya dapat diakses dari kode onchain, dan kode onchain tidak memerlukan caching parameter.
+Di sini kita menggunakan fakta bahwa `cacheWrite` mengembalikan kunci cache. Ini bukanlah sesuatu yang kita harapkan untuk digunakan dalam produksi, karena `cacheWrite` mengubah state, dan oleh karena itu hanya dapat dipanggil selama transaksi. Transaksi tidak memiliki nilai kembalian, jika memiliki hasil, hasil tersebut seharusnya dipancarkan sebagai kejadian. Jadi nilai kembalian `cacheWrite` hanya dapat diakses dari kode onchain, dan kode onchain tidak memerlukan caching parameter.
 
 ```solidity
         (_success,) = address(worm).call(_callInput);
@@ -754,47 +762,68 @@ Karena kita menggunakan fungsi `<address>.call()` tingkat rendah, kita tidak dap
         (_success,) = address(worm).call(_callInput);
 ```
 
-Ini adalah cara kita memverifikasi bahwa kode [memancarkan peristiwa dengan benar](https://getfoundry.sh/reference/cheatcodes/expect-emit/) di Foundry.
+Ini adalah cara kita memverifikasi bahwa kode [memancarkan kejadian dengan benar](https://getfoundry.sh/reference/cheatcodes/expect-emit/) di Foundry.
 
 ### Klien {#the-client}
 
-Satu hal yang tidak Anda dapatkan dengan pengujian Solidity adalah kode JavaScript yang dapat Anda potong dan tempel ke dalam aplikasi Anda sendiri. Versi asli dari tutorial ini men-deploy WORM ke Optimism Goerli, yang sejak saat itu telah dihentikan. Untuk menjalankan klien saat ini, deploy ulang WORM ke jaringan OP Stack yang didukung seperti [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack), lalu gunakan alamat kontrak yang dihasilkan di klien JavaScript.
+Satu hal yang tidak Anda dapatkan dengan pengujian Solidity adalah kode JavaScript yang dapat Anda potong dan tempel ke dalam aplikasi Anda sendiri. Versi asli dari tutorial ini menyebarkan WORM ke Optimism Goerli, yang sejak itu telah ditutup. Repositori sampel masih mengarah ke Optimism Goerli, jadi untuk menjalankan klien hari ini Anda perlu menyebarkan WORM sendiri ke [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack) dan mengarahkan klien ke penyebaran Anda.
 
-[Anda dapat melihat kode JavaScript untuk klien di sini](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Repositori sampel ditulis untuk Optimism Goerli, jadi sebelum menjalankannya, perbarui titik akhir RPC dan URL penjelajah di `javascript/.env.example` dan `javascript/index.js` untuk jaringan target Anda. Untuk menggunakannya:
+[Anda dapat melihat kode JavaScript untuk klien di sini](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Untuk menggunakannya, Anda memerlukan [Foundry](https://getfoundry.sh/introduction/installation/), [Node.js](https://nodejs.org/), dan akun dengan sejumlah ETH OP Sepolia. [Dokumentasi faucet Optimism](https://docs.optimism.io/app-developers/tools-sdks/faucets) mencantumkan faucet testnet saat ini.
 
-1. Kloning repositori git:
+1. Kloning repositori git, termasuk submodul `forge-std`, dan bangun kontraknya. Klien membaca ABI dan kode bita WORM dari `out/WORM.sol/WORM.json`, yang hanya ada setelah `forge build`.
 
    ```sh
-   git clone https://github.com/qbzzt/20220915-all-you-can-cache.git
+   git clone --recurse-submodules https://github.com/qbzzt/20220915-all-you-can-cache.git
+   cd 20220915-all-you-can-cache
+   forge build
    ```
 
-2. Instal paket yang diperlukan:
+   Forge memperingatkan bahwa `foundry.toml` menggunakan nama bagian `[default]` yang lama. Anda dapat mengabaikan peringatan ini, atau menjalankan `forge config --fix`.
+
+2. Impor kunci privat dari akun Anda yang didanai ke dalam penyimpanan kunci Foundry yang dienkripsi, dan gunakan untuk [menyebarkan WORM](https://getfoundry.sh/reference/forge/create) ke OP Sepolia.
+
+   ```sh
+   cast wallet import op-sepolia-deployer --interactive
+   forge create src/WORM.sol:WORM --rpc-url https://sepolia.optimism.io --account op-sepolia-deployer --broadcast
+   ```
+
+   Tanpa `--broadcast`, `forge create` hanya menyimulasikan penyebaran. Salin alamat dari baris `Deployed to:` pada output.
+
+3. Edit `javascript/index.js`. Ganti alamat Optimism Goerli yang lama di baris ini dengan alamat penyebaran Anda:
+
+   ```javascript
+   const worm = WormFactory.attach("0xD34335b1d818ceE54e3323D3246bD31d94E6a78a")
+   ```
+
+   Anda juga dapat mengganti `https://goerli-optimism.etherscan.io` dengan `https://sepolia-optimism.etherscan.io` di dua baris `console.log`, sehingga tautan yang dicetak klien berfungsi.
+
+4. Instal paket yang diperlukan:
 
    ```sh
    cd javascript
-   yarn
+   npm install
    ```
 
-3. Salin file konfigurasi:
+5. Salin file konfigurasi:
 
    ```sh
    cp .env.example .env
    ```
 
-4. Edit `.env` untuk konfigurasi Anda:
+6. Edit `.env` untuk konfigurasi Anda. Nama variabel masih merujuk ke Optimism Goerli, tetapi nilainya untuk OP Sepolia:
 
-   | Parameter           | Nilai                                                                                                                                                               |
-   | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC            | Mnemonic untuk akun yang memiliki cukup ETH untuk membayar transaksi. [Dokumentasi faucet Optimism](https://docs.optimism.io/app-developers/tools/faucets) mencantumkan faucet testnet saat ini. |
-   | OPTIMISM_GOERLI_URL | URL RPC untuk jaringan tempat Anda men-deploy ulang WORM. Untuk OP Sepolia, gunakan titik akhir RPC OP Sepolia seperti `https://sepolia.optimism.io`, atau titik akhir lain dari penyedia Anda.        |
+   | Parameter           | Nilai                                                                                                   |
+   | ------------------- | ------------------------------------------------------------------------------------------------------- |
+   | MNEMONIC            | Mnemonic untuk akun yang memiliki cukup ETH OP Sepolia untuk membayar transaksi.                    |
+   | OPTIMISM_GOERLI_URL | URL RPC OP Sepolia, `https://sepolia.optimism.io`, atau titik akhir OP Sepolia dari penyedia lain. |
 
-5. Jalankan `index.js`.
+7. Jalankan `index.js`.
 
    ```sh
    node index.js
    ```
 
-   Aplikasi sampel ini pertama-tama menulis entri ke WORM, menampilkan calldata dan tautan ke transaksi di penjelajah blok. Kemudian aplikasi ini membaca kembali entri tersebut, dan menampilkan kunci yang digunakannya serta nilai-nilai dalam entri tersebut (nilai, nomor blok, dan penulis).
+   Aplikasi sampel ini pertama-tama menulis entri ke WORM, menampilkan data panggilan dan tautan ke transaksi di penjelajah blok. Kemudian ia membaca kembali entri tersebut, dan menampilkan kunci yang digunakannya serta nilai-nilai dalam entri tersebut (nilai, nomor blok, dan penulis).
 
 Sebagian besar klien adalah JavaScript dapp normal. Jadi sekali lagi kita hanya akan membahas bagian-bagian yang menarik.
 
@@ -805,16 +834,16 @@ Sebagian besar klien adalah JavaScript dapp normal. Jadi sekali lagi kita hanya 
 const main = async () => {
     const func = await worm.WRITE_ENTRY_CACHED()
 
-    // Membutuhkan kunci baru setiap saat
+    // Perlu kunci baru setiap saat
     const key = await worm.encodeVal(Number(new Date()))
 ```
 
-Slot tertentu hanya dapat ditulis satu kali, jadi kita menggunakan stempel waktu untuk memastikan kita tidak menggunakan ulang slot.
+Slot tertentu hanya dapat ditulis satu kali, jadi kita menggunakan stempel waktu untuk memastikan kita tidak menggunakan kembali slot.
 
 ```javascript
 const val = await worm.encodeVal("0x600D")
 
-// Tulis entri
+// Tulis sebuah entri
 const calldata = func + key.slice(2) + val.slice(2)
 ```
 
@@ -827,14 +856,14 @@ tx.data = calldata
 sentTx = await wallet.sendTransaction(tx)
 ```
 
-Seperti halnya kode pengujian Solidity, kita tidak dapat memanggil fungsi yang di-cache secara normal. Sebaliknya, kita perlu menggunakan mekanisme tingkat yang lebih rendah.
+Sama seperti kode pengujian Solidity, kita tidak dapat memanggil fungsi yang di-cache secara normal. Sebaliknya, kita perlu menggunakan mekanisme tingkat yang lebih rendah.
 
 ```javascript
     .
     .
     .
     // Baca entri yang baru saja ditulis
-    const realKey = '0x' + key.slice(4)  // hapus bendera FF
+    const realKey = '0x' + key.slice(4)  // hapus flag FF
     const entryRead = await worm.readEntry(realKey)
     .
     .
@@ -842,6 +871,7 @@ Seperti halnya kode pengujian Solidity, kita tidak dapat memanggil fungsi yang d
 ```
 
 Untuk membaca entri, kita dapat menggunakan mekanisme normal. Tidak perlu menggunakan caching parameter dengan fungsi `view`.
+
 ## Kesimpulan {#conclusion}
 
 Kode dalam artikel ini adalah bukti konsep, tujuannya adalah untuk membuat ide tersebut mudah dipahami. Untuk sistem yang siap produksi, Anda mungkin ingin mengimplementasikan beberapa fungsionalitas tambahan:
@@ -849,18 +879,19 @@ Kode dalam artikel ini adalah bukti konsep, tujuannya adalah untuk membuat ide t
 - Menangani nilai yang bukan `uint256`. Misalnya, string.
 - Alih-alih cache global, mungkin memiliki pemetaan antara pengguna dan cache. Pengguna yang berbeda menggunakan nilai yang berbeda.
 - Nilai yang digunakan untuk alamat berbeda dari yang digunakan untuk tujuan lain. Mungkin masuk akal untuk memiliki cache terpisah hanya untuk alamat.
-- Saat ini, kunci cache menggunakan algoritma "datang pertama, kunci terkecil". Enam belas nilai pertama dapat dikirim sebagai satu byte. 4080 nilai berikutnya dapat dikirim sebagai dua byte. Sekitar satu juta nilai berikutnya adalah tiga byte, dll. Sistem produksi harus menyimpan penghitung penggunaan pada entri cache dan mengatur ulangnya sehingga enam belas nilai _paling umum_ adalah satu byte, 4080 nilai paling umum berikutnya adalah dua byte, dll.
+- Saat ini, kunci cache menggunakan algoritma "datang pertama, kunci terkecil". Enam belas nilai pertama dapat dikirim sebagai satu byte. 4080 nilai berikutnya dapat dikirim sebagai dua byte. Sekitar satu juta nilai berikutnya adalah tiga byte, dll. Sistem produksi harus menyimpan penghitung penggunaan pada entri cache dan mengatur ulangnya sehingga enam belas nilai _paling umum_ adalah satu byte, 4080 nilai paling umum berikutnya dua byte, dll.
 
-  Namun, itu adalah operasi yang berpotensi berbahaya. Bayangkan urutan peristiwa berikut:
+  Namun, itu adalah operasi yang berpotensi berbahaya. Bayangkan urutan kejadian berikut:
 
   1. Noam Naive memanggil `encodeVal` untuk menyandikan alamat tujuan pengiriman tokennya. Alamat tersebut adalah salah satu yang pertama digunakan pada aplikasi, sehingga nilai yang disandikan adalah 0x06. Ini adalah fungsi `view`, bukan transaksi, jadi ini antara Noam dan node yang digunakannya, dan tidak ada orang lain yang mengetahuinya
 
-  2. Owen Owner menjalankan operasi penataan ulang cache. Sangat sedikit orang yang benar-benar menggunakan alamat tersebut, sehingga sekarang disandikan sebagai 0x201122. Nilai yang berbeda, 10<sup>18</sup>, ditetapkan 0x06.
+  2. Owen Owner menjalankan operasi pengaturan ulang cache. Sangat sedikit orang yang benar-benar menggunakan alamat tersebut, sehingga sekarang disandikan sebagai 0x201122. Nilai yang berbeda, 10<sup>18</sup>, ditetapkan 0x06.
 
   3. Noam Naive mengirimkan tokennya ke 0x06. Token tersebut masuk ke alamat `0x0000000000000000000000000de0b6b3a7640000`, dan karena tidak ada yang mengetahui kunci privat untuk alamat tersebut, token tersebut hanya tertahan di sana. Noam _tidak senang_.
 
-  Ada beberapa cara untuk memecahkan masalah ini, dan masalah terkait transaksi yang ada di mempool selama penataan ulang cache, tetapi Anda harus menyadarinya.
+  Ada cara untuk menyelesaikan masalah ini, dan masalah terkait transaksi yang ada di mempool selama pengaturan ulang cache, tetapi Anda harus menyadarinya.
 
-Saya mendemonstrasikan caching di sini dengan Optimism, karena saya adalah karyawan Optimism dan ini adalah rollup yang paling saya ketahui. Tetapi ini seharusnya berfungsi dengan rollup apa pun yang membebankan biaya minimal untuk pemrosesan internal, sehingga sebagai perbandingan, menulis data transaksi ke L1 adalah pengeluaran utama.
+Saya mendemonstrasikan caching di sini dengan Optimism, karena saya adalah karyawan Optimism dan ini adalah rollup yang paling saya ketahui. Namun ini seharusnya berfungsi dengan rollup apa pun yang membebankan biaya minimal untuk pemrosesan internal, sehingga sebagai perbandingan, menulis data transaksi ke L1 adalah pengeluaran utama. Seperti yang dijelaskan dalam catatan di bagian atas artikel ini, periksa biaya saat ini sebelum Anda memutuskan bahwa caching sepadan.
 
 [Lihat di sini untuk karya saya yang lain](https://cryptodocguy.pro/).
+

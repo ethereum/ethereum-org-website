@@ -98,15 +98,24 @@ Bu sistem iki bileşen gerektirir:
 
 ### Araçlar {#tools}
 
-İstemci tarafı kodu için [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/) ve [Wagmi](https://wagmi.sh/) kullanacağız. Bunlar endüstri standardı araçlardır; aşina değilseniz [bu eğitimi](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) kullanabilirsiniz.
+İstemci tarafı kodu için [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/) ve [Wagmi](https://wagmi.sh/) kullanacağız. Bunlar endüstri standardı araçlardır; eğer bunlara aşina değilseniz, [bu öğreticiyi](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) kullanabilirsiniz.
 
-Sunucunun büyük bir kısmı [Node](https://nodejs.org/en) kullanılarak JavaScript ile yazılmıştır. Sıfır bilgi kısmı [Noir](https://noir-lang.org/) ile yazılmıştır. `1.0.0-beta.10` sürümüne ihtiyacımız var, bu nedenle Noir'ı [talimatlara uygun şekilde kurduktan](https://noir-lang.org/docs/getting_started/quick_start) sonra şunu çalıştırın:
+Sunucunun büyük bir kısmı [Node](https://nodejs.org/en) kullanılarak JavaScript ile yazılmıştır. Sıfır bilgi kısmı [Noir](https://noir-lang.org/) ile yazılmıştır. `1.0.0-beta.10` sürümüne ihtiyacımız var, bu yüzden [Noir'ı talimatlara göre kurduktan](https://noir-lang.org/docs/getting_started/quick_start) sonra şunu çalıştırın:
 
-```
+```sh
 noirup -v 1.0.0-beta.10
 ```
 
-Kullandığımız blokzincir, [Foundry](https://getfoundry.sh/introduction/installation)'nin bir parçası olan yerel test blokzinciri `anvil`'dir.
+Zincir içi doğrulanabilen ispatlar oluşturmak için (aşama 3'te) ayrıca bu Noir sürümüyle eşleşen ispat arka ucu olan [Barretenberg](https://barretenberg.aztec.network/docs/getting_started) (`bb`) aracına da ihtiyacımız var. Barretenberg yükleyicisi olan `bbup`'i kurun ve ardından bunu kullanarak `bb` sürüm `0.87.0`'i kurun (eğer `bbup` bulunamazsa, güncellenmiş `PATH`'in etkili olması için yeni bir terminal açın):
+
+```sh
+curl -L https://raw.githubusercontent.com/AztecProtocol/aztec-packages/refs/heads/next/barretenberg/bbup/install | bash
+bbup -v 0.87.0
+```
+
+Bu öğretici `nargo` 1.0.0-beta.10, `bb` 0.87.0 ve (sunucuda) `@noir-lang/noir_js` 1.0.0-beta.11 ile test edilmiştir. Daha yeni sürümleri kullanmayın: Noir kodu mevcut 1.0 sürüm adaylarıyla derlenmez ve `bb`'in mevcut sürümleri `nargo` 1.0.0-beta.10 tarafından derlenen devreleri okuyamaz ve artık `--oracle_hash` bayrağını kabul etmez.
+
+Kullandığımız blokzincir, [Foundry](https://getfoundry.sh/introduction/installation)'nin bir parçası olan yerel bir test blokzinciri olan `anvil`'dir.
 
 ## Uygulama {#implementation}
 
@@ -321,28 +330,28 @@ Bu, bileşenin HTML (daha doğrusu [JSX](https://react.dev/learn/writing-markup-
 
 #### `server/noir/src/main.nr` {#server-noir-src-main-nr}
 
-[Bu dosya](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/src/main.nr), asıl sıfır bilgi kodudur.
+[Bu dosya](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/src/main.nr) asıl sıfır bilgi kodudur.
 
 ```
 use std::hash::pedersen_hash;
 ```
 
-[Pedersen hash'i](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/), [Noir standart kütüphanesi](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash) ile sağlanır. Sıfır bilgi ispatları yaygın olarak bu hash fonksiyonunu kullanır. Standart hash fonksiyonlarına kıyasla [aritmetik devrelerin](https://rareskills.io/post/arithmetic-circuit) içinde hesaplanması çok daha kolaydır.
+[Pedersen hash](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/), [Noir standart kütüphanesi](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash) ile birlikte sağlanır. Sıfır bilgi ispatları genellikle bu hash fonksiyonunu kullanır. Standart hash fonksiyonlarına kıyasla [aritmetik devreler](https://rareskills.io/post/arithmetic-circuit) içinde hesaplanması çok daha kolaydır.
 
 ```
 use keccak256::keccak256;
 use dep::ecrecover;
 ```
 
-Bu iki fonksiyon, [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml) içinde tanımlanan harici kütüphanelerdir. İsimlerinin hakkını tam olarak verirler; biri [keccak256 hash'ini](https://emn178.github.io/online-tools/keccak_256.html) hesaplayan bir fonksiyon, diğeri ise Ethereum imzalarını doğrulayan ve imzalayanın Ethereum adresini kurtaran bir fonksiyondur.
+Bu iki fonksiyon, [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml) içinde tanımlanan harici kütüphanelerdir. Tam olarak adlandırıldıkları işi yaparlar; biri [keccak256 hash'ini](https://emn178.github.io/online-tools/keccak_256.html) hesaplayan bir fonksiyon, diğeri ise Ethereum imzalarını doğrulayan ve imzalayanın Ethereum adresini kurtaran bir fonksiyondur.
 
 ```
 global ACCOUNT_NUMBER : u32 = 5;
 ```
 
-Noir, [Rust](https://www.rust-lang.org/)'tan ilham almıştır. Değişkenler varsayılan olarak sabitlerdir. Küresel yapılandırma sabitlerini bu şekilde tanımlarız. Özellikle, `ACCOUNT_NUMBER` depoladığımız hesap sayısıdır.
+Noir, [Rust](https://www.rust-lang.org/)'tan ilham almıştır. Değişkenler varsayılan olarak sabittir. Küresel yapılandırma sabitlerini bu şekilde tanımlarız. Özellikle, `ACCOUNT_NUMBER` sakladığımız hesap sayısıdır.
 
-`u<number>` olarak adlandırılan veri türleri belirtilen bit sayısındadır ve işaretsizdir. Desteklenen tek türler `u8`, `u16`, `u32`, `u64` ve `u128`'dir.
+`u<number>` olarak adlandırılan veri türleri, o sayıda bit içeren işaretsiz (unsigned) türlerdir. Desteklenen tek türler `u8`, `u16`, `u32`, `u64` ve `u128`'dir.
 
 ```
 global FLAT_ACCOUNT_FIELDS : u32 = 2;
@@ -361,7 +370,7 @@ global ASCII_MESSAGE_LENGTH : [u8; 3] = [0x31, 0x30, 0x30];
 global HASH_BUFFER_SIZE : u32 = 26+3+MESSAGE_LENGTH;
 ```
 
-[EIP-191 imzaları](https://eips.ethereum.org/EIPS/eip-191), 26 baytlık bir önek, ardından ASCII formatında mesaj uzunluğu ve son olarak mesajın kendisi bulunan bir tampon (buffer) gerektirir.
+[EIP-191 imzaları](https://eips.ethereum.org/EIPS/eip-191), 26 baytlık bir önek, ardından ASCII formatında mesaj uzunluğu ve son olarak mesajın kendisini içeren bir arabellek gerektirir.
 
 ```
 struct Account {
@@ -371,7 +380,7 @@ struct Account {
 }
 ```
 
-Bir hesap hakkında depoladığımız bilgi. [`Field`](https://noir-lang.org/docs/noir/concepts/data_types/fields), sıfır bilgi ispatını uygulayan [aritmetik devrede](https://rareskills.io/post/arithmetic-circuit) doğrudan kullanılabilen, genellikle 253 bite kadar bir sayıdır. Burada, 160 bitlik bir Ethereum adresini depolamak için `Field` kullanıyoruz.
+Bir hesap hakkında sakladığımız bilgiler. [`Field`](https://noir-lang.org/docs/noir/concepts/data_types/fields), sıfır bilgi ispatını uygulayan [aritmetik devrede](https://rareskills.io/post/arithmetic-circuit) doğrudan kullanılabilen, genellikle 253 bite kadar olan bir sayıdır. Burada 160 bitlik bir Ethereum adresini saklamak için `Field` kullanıyoruz.
 
 ```
 struct TransferTxn {
@@ -382,13 +391,13 @@ struct TransferTxn {
 }
 ```
 
-Bir transfer işlemi için depoladığımız bilgi.
+Bir transfer işlemi için sakladığımız bilgiler.
 
 ```
 fn flatten_account(account: Account) -> [Field; FLAT_ACCOUNT_FIELDS] {
 ```
 
-Bir fonksiyon tanımı. Parametre, `Account` bilgisidir. Sonuç, uzunluğu `FLAT_ACCOUNT_FIELDS` olan bir `Field` değişken dizisidir.
+Bir fonksiyon tanımı. Parametre `Account` bilgisidir. Sonuç, uzunluğu `FLAT_ACCOUNT_FIELDS` olan bir `Field` değişkenleri dizisidir.
 
 ```
     let flat = [
@@ -397,32 +406,32 @@ Bir fonksiyon tanımı. Parametre, `Account` bilgisidir. Sonuç, uzunluğu `FLAT
     ];
 ```
 
-Dizideki ilk değer hesap adresidir. İkincisi, bakiye ve nonce'u içerir. `.into()` çağrıları, bir sayıyı olması gereken veri türüne dönüştürür. `account.nonce` bir `u32` değeridir, ancak onu bir `u128` değeri olan `account.balance << 32` ile toplayabilmek için `u128` olması gerekir. Bu ilk `.into()`'dur. İkincisi, diziye sığması için `u128` sonucunu bir `Field`'e dönüştürür.
+Dizideki ilk değer hesap adresidir. İkincisi hem bakiyeyi hem de nonce'u içerir. `.into()` çağrıları, bir sayıyı olması gereken veri türüne dönüştürür. `account.nonce` bir `u32` değeridir, ancak onu bir `u128` değeri olan `account.balance << 32`'ye eklemek için bir `u128` olması gerekir. Bu ilk `.into()`'dir. İkincisi, `u128` sonucunu diziye sığması için bir `Field`'e dönüştürür.
 
 ```
     flat
 }
 ```
 
-Noir'da, fonksiyonlar yalnızca sonunda bir değer döndürebilir (erken dönüş yoktur). Dönüş değerini belirtmek için, fonksiyonun kapanış parantezinden hemen önce değerlendirirsiniz.
+Noir'da fonksiyonlar yalnızca sonunda bir değer döndürebilir (erken dönüş yoktur). Dönüş değerini belirtmek için, onu fonksiyonun kapanış parantezinden hemen önce değerlendirirsiniz.
 
 ```
 fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] {
 ```
 
-Bu fonksiyon, hesap dizisini bir Petersen Hash'ine girdi olarak kullanılabilecek bir `Field` dizisine dönüştürür.
+Bu fonksiyon, hesaplar dizisini bir Pedersen hash'ine girdi olarak kullanılabilecek bir `Field` dizisine dönüştürür.
 
 ```
     let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
 ```
 
-Bu, değiştirilebilir (mutable), yani sabit _olmayan_ bir değişkeni belirleme yöntemidir. Noir'daki değişkenlerin her zaman bir değeri olmalıdır, bu nedenle bu değişkeni tamamen sıfırlarla başlatırız.
+Değiştirilebilir (mutable), yani sabit _olmayan_ bir değişkeni bu şekilde belirtirsiniz. Noir'daki değişkenlerin her zaman bir değeri olmalıdır, bu yüzden bu değişkeni tamamen sıfırlarla başlatıyoruz.
 
 ```
     for i in 0..ACCOUNT_NUMBER {
 ```
 
-Bu bir `for` döngüsüdür. Sınırların sabit olduğuna dikkat edin. Noir döngülerinin sınırları derleme zamanında bilinmelidir. Bunun nedeni, aritmetik devrelerin akış kontrolünü (flow control) desteklememesidir. Bir `for` döngüsünü işlerken, derleyici basitçe kodu onun içine, her yineleme için bir tane olacak şekilde birden çok kez yerleştirir.
+Bu bir `for` döngüsüdür. Sınırların sabit olduğuna dikkat edin. Noir döngülerinin sınırlarının derleme zamanında bilinmesi gerekir. Bunun nedeni, aritmetik devrelerin akış kontrolünü desteklememesidir. Bir `for` döngüsünü işlerken, derleyici içindeki kodu her yineleme için bir kez olmak üzere birden çok kez yerleştirir.
 
 ```
         let fields = flatten_account(accounts[i]);
@@ -439,7 +448,7 @@ fn hash_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> Field {
 }
 ```
 
-Sonunda, hesap dizisini hash'leyen fonksiyona geldik.
+Son olarak, hesaplar dizisini hash'leyen fonksiyona geldik.
 
 ```
 fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
@@ -452,11 +461,11 @@ fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
     }
 ```
 
-Bu fonksiyon, belirli bir adrese sahip hesabı bulur. Standart kodda bu fonksiyon, adresi bulduktan sonra bile tüm hesaplar üzerinde yineleme yapacağı için son derece verimsiz olurdu.
+Bu fonksiyon, belirli bir adrese sahip hesabı bulur. Bu fonksiyon standart kodda son derece verimsiz olurdu çünkü adresi bulduktan sonra bile tüm hesaplar üzerinde yinelenir.
 
-Ancak sıfır bilgi ispatlarında akış kontrolü yoktur. Eğer bir koşulu kontrol etmemiz gerekiyorsa, onu her zaman kontrol etmek zorundayız.
+Ancak sıfır bilgi ispatlarında akış kontrolü yoktur. Eğer bir koşulu kontrol etmemiz gerekirse, bunu her seferinde kontrol etmeliyiz.
 
-Benzer bir durum `if` ifadelerinde de olur. Yukarıdaki döngüdeki `if` ifadesi şu matematiksel ifadelere çevrilir:
+Benzer bir durum `if` ifadelerinde de yaşanır. Yukarıdaki döngüdeki `if` ifadesi şu matematiksel ifadelere çevrilir:
 
 _koşul<sub>sonucu</sub> = hesaplar[i].adres == adres_ // eşitlerse bir, aksi takdirde sıfır
 
@@ -469,13 +478,13 @@ _hesap<sub>yeni</sub> = koşul<sub>sonucu</sub>\*i + (1-koşul<sub>sonucu</sub>)
 }
 ```
 
-[`assert`](https://noir-lang.org/docs/language/assert) fonksiyonu, iddia yanlışsa sıfır bilgi ispatının çökmesine neden olur. Bu durumda, ilgili adrese sahip bir hesap bulamazsak. Adresi bildirmek için bir [format dizesi](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings) kullanıyoruz.
+[`assert`](https://noir-lang.org/docs/language/assert) fonksiyonu, iddia (assertion) yanlışsa sıfır bilgi ispatının çökmesine neden olur. Bu durumda, ilgili adrese sahip bir hesap bulamazsak. Adresi bildirmek için bir [biçim dizesi (format string)](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings) kullanırız.
 
 ```rust
 fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> [Account; ACCOUNT_NUMBER] {
 ```
 
-Bu fonksiyon bir transfer işlemi uygular ve yeni hesap dizisini döndürür.
+Bu fonksiyon bir transfer işlemi uygular ve yeni hesaplar dizisini döndürür.
 
 ```rust
     let from = find_account(accounts, txn.from);
@@ -485,7 +494,7 @@ Bu fonksiyon bir transfer işlemi uygular ve yeni hesap dizisini döndürür.
         (txn.from, txn.amount, txn.nonce, accounts[from].nonce);
 ```
 
-Noir'da bir format dizesi içindeki yapı (structure) öğelerine erişemeyiz, bu yüzden kullanılabilir bir kopya oluşturuyoruz.
+Noir'da bir biçim dizesi içindeki yapı elemanlarına erişemeyiz, bu yüzden kullanılabilir bir kopya oluştururuz.
 
 ```rust
     assert (accounts[from].balance >= txn.amount,
@@ -508,13 +517,13 @@ Bunlar, bir işlemi geçersiz kılabilecek iki koşuldur.
 }
 ```
 
-Yeni hesap dizisini oluşturun ve ardından onu döndürün.
+Yeni hesaplar dizisini oluşturun ve ardından onu döndürün.
 
 ```rust
 fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field
 ```
 
-Bu fonksiyon mesajdan adresi okur. 
+Bu fonksiyon adresi mesajdan okur.
 
 ```rust
 {
@@ -523,7 +532,7 @@ Bu fonksiyon mesajdan adresi okur.
     for i in 7..47 {
 ```
 
-Adres her zaman 20 bayt (yani 40 onaltılı basamak) uzunluğundadır ve 7. karakterden başlar.
+Adres her zaman 20 bayt (diğer adıyla 40 onaltılı basamak) uzunluğundadır ve 7. karakterden başlar.
 
 ```rust
         result *= 0x10;
@@ -544,7 +553,7 @@ Adres her zaman 20 bayt (yani 40 onaltılı basamak) uzunluğundadır ve 7. kara
 fn readAmountAndNonce(messageBytes: [u8; MESSAGE_LENGTH]) -> (u128, u32)
 ```
 
-Mesajdan miktar ve nonce'u okuyun. 
+Miktarı ve nonce'u mesajdan okuyun.
 
 ```rust
 {
@@ -555,7 +564,7 @@ Mesajdan miktar ve nonce'u okuyun.
     let mut stillReadingNonce: bool = false;
 ```
 
-Mesajda, adresten sonraki ilk sayı, transfer edilecek finney (yani bir ETH'nin binde biri) miktarıdır. İkinci sayı nonce'dur. Aralarındaki herhangi bir metin yok sayılır.
+Mesajda, adresten sonraki ilk sayı transfer edilecek finney (diğer adıyla ETH'nin binde biri) miktarıdır. İkinci sayı nonce'dur. Aralarındaki herhangi bir metin yok sayılır.
 
 ```rust
     for i in 48..MESSAGE_LENGTH {
@@ -589,7 +598,7 @@ Mesajda, adresten sonraki ilk sayı, transfer edilecek finney (yani bir ETH'nin 
 }
 ```
 
-Bir [demet (tuple)](https://noir-lang.org/docs/noir/concepts/data_types/tuples) döndürmek, Noir'da bir fonksiyondan birden çok değer döndürmenin yoludur.
+Bir [demet (tuple)](https://noir-lang.org/docs/noir/concepts/data_types/tuples) döndürmek, Noir'da bir fonksiyondan birden fazla değer döndürmenin yoludur.
 
 ```rust
 fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn 
@@ -606,7 +615,7 @@ fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn
 }
 ```
 
-Bu fonksiyon mesajı baytlara dönüştürür, ardından miktarları bir `TransferTxn` formatına dönüştürür.
+Bu fonksiyon mesajı baytlara dönüştürür, ardından miktarları bir `TransferTxn`'e dönüştürür.
 
 ```rust
 // Viem'in hashMessage eşdeğeri
@@ -614,7 +623,7 @@ Bu fonksiyon mesajı baytlara dönüştürür, ardından miktarları bir `Transf
 fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
 ```
 
-Hesaplar için Pedersen Hash'i kullanabildik çünkü sadece sıfır bilgi ispatı içinde hash'leniyorlar. Ancak bu kodda, tarayıcı tarafından üretilen mesajın imzasını kontrol etmemiz gerekiyor. Bunun için [EIP 191](https://eips.ethereum.org/EIPS/eip-191)'deki Ethereum imzalama formatını takip etmeliyiz. Bu, standart bir önek, ASCII formatında mesaj uzunluğu ve mesajın kendisinden oluşan birleşik bir tampon oluşturmamız ve bunu hash'lemek için Ethereum standardı olan keccak256'yı kullanmamız gerektiği anlamına gelir.
+Hesaplar için Pedersen Hash kullanabildik çünkü bunlar yalnızca sıfır bilgi ispatı içinde hash'lenir. Ancak bu kodda, tarayıcı tarafından oluşturulan mesajın imzasını kontrol etmemiz gerekiyor. Bunun için [EIP-191](https://eips.ethereum.org/EIPS/eip-191)'deki Ethereum imzalama formatını izlememiz gerekir. Bu, standart bir önek, ASCII formatında mesaj uzunluğu ve mesajın kendisini içeren birleşik bir arabellek oluşturmamız ve bunu hash'lemek için Ethereum standardı keccak256'yı kullanmamız gerektiği anlamına gelir.
 
 ```rust
     // ASCII öneki
@@ -648,7 +657,7 @@ Hesaplar için Pedersen Hash'i kullanabildik çünkü sadece sıfır bilgi ispat
     ];
 ```
 
-Bir uygulamanın kullanıcıdan işlem olarak veya başka bir amaçla kullanılabilecek bir mesajı imzalamasını istediği durumlardan kaçınmak için EIP 191, tüm imzalı mesajların 0x19 karakteriyle (geçerli bir ASCII karakteri değil), ardından `Ethereum Signed Message:` ve bir yeni satır karakteri ile başlamasını belirtir.
+Bir uygulamanın kullanıcıdan bir işlem veya başka bir amaç için kullanılabilecek bir mesajı imzalamasını istediği durumlardan kaçınmak için EIP-191, imzalanan tüm mesajların 0x19 karakteriyle (geçerli bir ASCII karakteri değil) başlamasını, ardından `Ethereum Signed Message:` ve bir yeni satır gelmesini belirtir.
 
 ```rust
     let mut buffer: [u8; HASH_BUFFER_SIZE] = [0u8; HASH_BUFFER_SIZE];
@@ -691,14 +700,14 @@ Bir uygulamanın kullanıcıdan işlem olarak veya başka bir amaçla kullanıla
     assert(MESSAGE_LENGTH < 1000, "Messages whose length is over three digits are not supported");
 ```
 
-999'a kadar olan mesaj uzunluklarını ele alın ve daha büyükse başarısız olun. Mesaj uzunluğu bir sabit olsa da, değiştirmeyi kolaylaştırdığı için bu kodu ekledim. Bir üretim sisteminde, daha iyi performans sağlamak adına muhtemelen `MESSAGE_LENGTH` değerinin değişmeyeceğini varsayarsınız.
+999'a kadar olan mesaj uzunluklarını işleyin ve daha büyükse başarısız olun. Mesaj uzunluğu sabit olmasına rağmen bu kodu ekledim çünkü değiştirmeyi kolaylaştırıyor. Bir üretim sisteminde, daha iyi performans adına muhtemelen `MESSAGE_LENGTH`'un değişmediğini varsayarsınız.
 
 ```rust
     keccak256::keccak256(buffer, HASH_BUFFER_SIZE)
 }
 ```
 
-Ethereum standardı olan `keccak256` fonksiyonunu kullanın.
+Ethereum standardı `keccak256` fonksiyonunu kullanın.
 
 ```rust
 fn signatureToAddressAndHash(
@@ -710,9 +719,9 @@ fn signatureToAddressAndHash(
 {
 ```
 
-Bu fonksiyon, mesaj hash'ini gerektiren imzayı doğrular. Ardından, onu imzalayan adresi ve mesaj hash'ini bize sağlar. Mesaj hash'i iki `Field` değeri olarak sağlanır çünkü bunların programın geri kalanında kullanılması bir bayt dizisine göre daha kolaydır.
+Bu fonksiyon, mesaj hash'ini gerektiren imzayı doğrular. Daha sonra bize onu imzalayan adresi ve mesaj hash'ini sağlar. Mesaj hash'i iki `Field` değeri olarak sağlanır çünkü bunların programın geri kalanında kullanımı bir bayt dizisinden daha kolaydır.
 
-Alan (field) hesaplamaları, büyük bir sayının [modülüne](https://en.wikipedia.org/wiki/Modulo) göre yapıldığından iki `Field` değeri kullanmalıyız, ancak bu sayı tipik olarak 256 bitten küçüktür (aksi takdirde EVM'de bu hesaplamaları yapmak zor olurdu).
+İki `Field` değeri kullanmamız gerekiyor çünkü alan hesaplamaları büyük bir sayının [modülüne (modulo)](https://en.wikipedia.org/wiki/Modulo) göre yapılır, ancak bu sayı genellikle 256 bitten küçüktür (aksi takdirde bu hesaplamaları EVM'de yapmak zor olurdu).
 
 ```rust
     let hash = hashMessage(message);
@@ -725,17 +734,17 @@ Alan (field) hesaplamaları, büyük bir sayının [modülüne](https://en.wikip
     }
 ```
 
-`hash1` ve `hash2` değerlerini değiştirilebilir değişkenler olarak belirtin ve hash'i içlerine bayt bayt yazın.
+`hash1` ve `hash2`'i değiştirilebilir değişkenler olarak belirtin ve hash'i bayt bayt içlerine yazın.
 
 ```rust
     (
         ecrecover::ecrecover(pubKeyX, pubKeyY, signature, hash), 
 ```
     
-Bu, iki önemli farkla [Solidity'nin `ecrecover`](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions) fonksiyonuna benzer:
+Bu, [Solidity'nin `ecrecover`](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions) fonksiyonuna benzer, ancak iki önemli farkı vardır:
 
-- İmza geçerli değilse, çağrı `assert` ile başarısız olur ve program iptal edilir.
-- Açık anahtar, imza ve hash'ten kurtarılabilirken, bu harici olarak yapılabilecek bir işlemdir ve bu nedenle sıfır bilgi ispatının içinde yapmaya değmez. Eğer birisi bizi burada aldatmaya çalışırsa, imza doğrulaması başarısız olacaktır.
+- İmza geçerli değilse, çağrı bir `assert` ile başarısız olur ve program iptal edilir.
+- Açık anahtar imza ve hash'ten kurtarılabilse de, bu harici olarak yapılabilecek bir işlemdir ve bu nedenle sıfır bilgi ispatı içinde yapmaya değmez. Eğer birisi burada bizi kandırmaya çalışırsa, imza doğrulaması başarısız olacaktır.
 
 ```rust
         hash1,
@@ -757,14 +766,14 @@ fn main(
     )
 ```
 
-Son olarak, `main` fonksiyonuna ulaşıyoruz. Hesap hash'ini eski değerden yeni değere geçerli bir şekilde değiştiren bir işlemimiz olduğunu kanıtlamamız gerekir. Ayrıca, gönderen kişinin işleminin işlendiğini bilmesi için bu belirli işlem hash'ine sahip olduğunu da kanıtlamamız gerekir.
+Son olarak `main` fonksiyonuna ulaşıyoruz. Hesapların hash'ini eski değerden yeni değere geçerli bir şekilde değiştiren bir işlemimiz olduğunu kanıtlamamız gerekiyor. Ayrıca, gönderen kişinin işleminin işlendiğini bilmesi için bu belirli işlem hash'ine sahip olduğunu da kanıtlamamız gerekiyor.
 
 ```rust
 {
     let mut txn = readTransferTxn(message);
 ```
 
-`txn` değerinin değiştirilebilir olmasına ihtiyacımız var çünkü gönderici (from) adresini mesajdan okumuyoruz, imzadan okuyoruz. 
+`txn`'un değiştirilebilir olmasına ihtiyacımız var çünkü gönderen adresini mesajdan okumuyoruz, imzadan okuyoruz.
 
 ```rust
     let (fromAddress, txnHash1, txnHash2) = signatureToAddressAndHash(
@@ -790,9 +799,9 @@ Son olarak, `main` fonksiyonuna ulaşıyoruz. Hesap hash'ini eski değerden yeni
 
 İkinci aşamada, tarayıcıdan gelen transfer işlemlerini alan ve uygulayan bir sunucu ekliyoruz.
 
-Çalışırken görmek için:
+Bunu çalışırken görmek için:
 
-1. Eğer Vite çalışıyorsa durdurun.
+1. Çalışıyorsa Vite'ı durdurun.
 
 2. Sunucuyu içeren dalı indirin ve gerekli tüm modüllere sahip olduğunuzdan emin olun.
 
@@ -804,7 +813,7 @@ Son olarak, `main` fonksiyonuna ulaşıyoruz. Hesap hash'ini eski değerden yeni
    npm install
    ```
 
-   Noir kodunu derlemeye gerek yoktur, 1. aşama için kullandığınız kodla aynıdır.
+   Noir kodunu derlemeye gerek yoktur, aşama 1 için kullandığınız kodla aynıdır.
 
 3. Sunucuyu başlatın.
 
@@ -812,24 +821,24 @@ Son olarak, `main` fonksiyonuna ulaşıyoruz. Hesap hash'ini eski değerden yeni
    npm run start
    ```
 
-4. Ayrı bir komut satırı penceresinde, tarayıcı kodunu sunmak için Vite'ı çalıştırın.
+4. Ayrı bir komut satırı penceresinde, depo kökünden başlayarak tarayıcı kodunu sunmak için Vite'ı çalıştırın.
 
    ```sh
    cd client
    npm run dev
    ```
 
-5. [http://localhost:5173](http://localhost:5173) adresinden istemci koduna gidin
+5. [http://localhost:5173](http://localhost:5173) adresindeki istemci koduna göz atın.
 
-6. Bir işlem başlatmadan önce nonce değerinin yanı sıra gönderebileceğiniz miktarı da bilmeniz gerekir. Bu bilgiyi almak için **Hesap verilerini güncelle** (Update account data) seçeneğine tıklayın ve mesajı imzalayın.
+6. Bir işlem başlatmadan önce, gönderebileceğiniz miktarın yanı sıra nonce'u da bilmeniz gerekir. Bu bilgiyi almak için **Hesap verilerini güncelle** (Update account data) seçeneğine tıklayın ve mesajı imzalayın.
 
-   Burada bir ikilemimiz var. Bir yandan yeniden kullanılabilecek bir mesajı imzalamak istemiyoruz (bir [tekrarlama saldırısı](https://en.wikipedia.org/wiki/Replay_attack)), bu nedenle ilk etapta bir nonce istiyoruz. Ancak henüz bir nonce'umuz yok. Çözüm, sadece bir kez kullanılabilecek ve mevcut zaman gibi her iki tarafta da sahip olduğumuz bir nonce seçmektir.
+   Burada bir ikilemimiz var. Bir yandan, yeniden kullanılabilecek bir mesajı imzalamak istemiyoruz (bir [tekrarlama saldırısı (replay attack)](https://en.wikipedia.org/wiki/Replay_attack)), bu yüzden en başta bir nonce istiyoruz. Ancak henüz bir nonce'umuz yok. Çözüm, yalnızca bir kez kullanılabilecek ve her iki tarafta da zaten sahip olduğumuz, örneğin geçerli zaman gibi bir nonce seçmektir.
 
-   Bu çözümün sorunu, zamanın mükemmel bir şekilde senkronize olmayabileceğidir. Bu yüzden bunun yerine her dakika değişen bir değeri imzalıyoruz. Bu, tekrarlama saldırılarına karşı savunmasızlık penceremizin en fazla bir dakika olduğu anlamına gelir. Üretimde imzalanmış isteğin TLS ile korunacağı ve tünelin diğer ucunun---sunucunun---zaten bakiye ve nonce'u (çalışması için bilmesi gerekir) ifşa edebileceği düşünüldüğünde, bu kabul edilebilir bir risktir.
+   Bu çözümle ilgili sorun, zamanın mükemmel bir şekilde senkronize olmaması ihtimalidir. Bu yüzden bunun yerine, her dakika değişen bir değeri imzalıyoruz. Bu, tekrarlama saldırılarına karşı güvenlik açığı penceremizin en fazla bir dakika olduğu anlamına gelir. Üretimde imzalı isteğin TLS ile korunacağı ve tünelin diğer tarafının (sunucunun) bakiye ve nonce'u zaten ifşa edebileceği (çalışması için bunları bilmesi gerekir) göz önüne alındığında, bu kabul edilebilir bir risktir.
 
-7. Tarayıcı bakiye ve nonce'u geri aldıktan sonra transfer formunu gösterir. Hedef adresi ve miktarı seçip **Transfer** seçeneğine tıklayın. Bu isteği imzalayın.
+7. Tarayıcı bakiye ve nonce'u geri aldığında, transfer formunu gösterir. Hedef adresi ve miktarı seçin ve **Transfer**'e tıklayın. Bu isteği imzalayın.
 
-8. Transferi görmek için **Hesap verilerini güncelle** (Update account data) seçeneğini kullanın veya sunucuyu çalıştırdığınız pencereye bakın. Sunucu, durum her değiştiğinde günlüğe kaydeder.
+8. Transferi görmek için ya **Hesap verilerini güncelle** (Update account data) seçeneğine tıklayın ya da sunucuyu çalıştırdığınız pencereye bakın. Sunucu, her değiştiğinde durumu günlüğe kaydeder.
 
     ```
     ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
@@ -961,9 +970,9 @@ Başlangıçtaki `Accounts` yapısı.
    npm install
    ```
 
-3. `anvil` uygulamasını ayrı bir komut satırı penceresinde çalıştırın.
+3. Ayrı bir komut satırı penceresinde `anvil` çalıştırın.
 
-4. Doğrulama anahtarını ve solidity doğrulayıcısını oluşturun, ardından doğrulayıcı kodunu Solidity projesine kopyalayın.
+4. Doğrulama anahtarını ve Solidity doğrulayıcısını oluşturun, ardından doğrulayıcı kodunu Solidity projesine kopyalayın.
 
    ```sh
    cd noir
@@ -972,7 +981,7 @@ Başlangıçtaki `Accounts` yapısı.
    cp target/Verifier.sol ../../smart-contracts/src
    ```
 
-5. Akıllı sözleşmelere gidin ve ortam değişkenlerini `anvil` blokzincirini kullanacak şekilde ayarlayın.
+5. Akıllı sözleşmelere gidin ve `anvil` blokzincirini kullanmak için ortam değişkenlerini ayarlayın.
 
    ```sh
    cd ../../smart-contracts
@@ -980,7 +989,7 @@ Başlangıçtaki `Accounts` yapısı.
    ETH_PRIVATE_KEY=ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
    ```
 
-6. `Verifier.sol`'ı dağıtın ve adresi bir ortam değişkeninde saklayın.
+6. `Verifier.sol`'i dağıtın ve adresi bir ortam değişkeninde saklayın.
 
    ```sh
    VERIFIER_ADDRESS=`forge create src/Verifier.sol:HonkVerifier --private-key $ETH_PRIVATE_KEY --optimize --broadcast | awk '/Deployed to:/ {print $3}'`
@@ -994,7 +1003,7 @@ Başlangıçtaki `Accounts` yapısı.
    echo $ZKBANK_ADDRESS
    ```
 
-   `0x199..67b` değeri, `Accounts` öğesinin başlangıç durumunun Pederson hash'idir. `server/index.mjs` içindeki bu başlangıç durumunu değiştirirseniz, sıfır bilgi ispatı tarafından rapor edilen ilk hash'i görmek için bir işlem çalıştırabilirsiniz.
+   `0x199..67b` değeri, `Accounts`'in başlangıç durumunun Pedersen hash'idir. Bu başlangıç durumunu `server/index.mjs` içinde değiştirirseniz, sıfır bilgi ispatı tarafından bildirilen başlangıç hash'ini görmek için bir işlem çalıştırabilirsiniz.
 
 8. Sunucuyu çalıştırın.
 
@@ -1003,7 +1012,7 @@ Başlangıçtaki `Accounts` yapısı.
    npm run start
    ```
 
-9. İstemciyi farklı bir komut satırı penceresinde çalıştırın.
+9. İstemciyi, depo kökünden başlayarak farklı bir komut satırı penceresinde çalıştırın.
 
    ```sh
    cd client
@@ -1012,9 +1021,9 @@ Başlangıçtaki `Accounts` yapısı.
 
 10. Bazı işlemler çalıştırın.
 
-11. Durumun zincir içi değiştiğini doğrulamak için sunucu sürecini yeniden başlatın. İşlemlerdeki orijinal hash değeri, zincir içi depolanan hash değerinden farklı olduğu için `ZkBank`'in artık işlemleri kabul etmediğini göreceksiniz.
+11. Durumun zincir içi değiştiğini doğrulamak için sunucu sürecini yeniden başlatın. İşlemlerdeki orijinal hash değeri zincir içi saklanan hash değerinden farklı olduğu için `ZkBank`'in artık işlemleri kabul etmediğini görün.
 
-    Beklenen hata türü budur.
+    Bu beklenen türde bir hatadır.
 
     ```
     ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
@@ -1034,7 +1043,7 @@ Başlangıçtaki `Accounts` yapısı.
 
 #### `server/index.mjs` {#server-index-mjs-2}
 
-Bu dosyadaki değişiklikler daha çok asıl ispatın oluşturulması ve zincir içine sunulmasıyla ilgilidir.
+Bu dosyadaki değişiklikler çoğunlukla asıl ispatı oluşturmak ve onu zincir içi göndermekle ilgilidir.
 
 ```js
 import { exec } from 'child_process'
@@ -1043,9 +1052,9 @@ import util from 'util'
 const execPromise = util.promisify(exec)
 ```
 
-Zincir içi gönderilecek asıl ispatı oluşturmak için [Barretenberg paketini](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) kullanmalıyız. Bu paketi komut satırı arayüzünü (`bb`) çalıştırarak veya [JavaScript kütüphanesi olan `bb.js`](https://www.npmjs.com/package/@aztec/bb.js) kullanarak kullanabiliriz. JavaScript kütüphanesi, kodu yerel (natively) çalıştırmaktan çok daha yavaştır, bu nedenle komut satırını kullanmak için burada [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) kullanıyoruz.
+Zincir içi gönderilecek asıl ispatı oluşturmak için [Barretenberg paketini](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) kullanmamız gerekiyor. Bu paketi ya komut satırı arayüzünü (`bb`) çalıştırarak ya da [JavaScript kütüphanesi olan `bb.js`'i](https://www.npmjs.com/package/@aztec/bb.js) kullanarak kullanabiliriz. JavaScript kütüphanesi, kodu yerel olarak çalıştırmaktan çok daha yavaştır, bu yüzden komut satırını kullanmak için burada [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) kullanıyoruz.
 
-`bb.js` kullanmaya karar verirseniz, kullandığınız Noir sürümüyle uyumlu bir sürüm kullanmanız gerektiğini unutmayın. Bu yazının yazıldığı sırada mevcut Noir sürümü (1.0.0-beta.11), `bb.js` sürüm 0.87'yi kullanmaktadır.
+Eğer `bb.js` kullanmaya karar verirseniz, kullandığınız Noir sürümüyle uyumlu bir sürüm kullanmanız gerektiğini unutmayın. Örneğin, Noir 1.0.0-beta.10 ve 1.0.0-beta.11'in her ikisi de `bb` ve `bb.js` sürüm 0.87 ile uyumludur.
 
 ```js
 const zkBankAddress = process.env.ZKBANK_ADDRESS || "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
@@ -1061,15 +1070,15 @@ const walletClient = createWalletClient({
 })
 ```
 
-Bu özel anahtar, `anvil` içinde önceden finanse edilmiş varsayılan hesaplardan biridir. 
+Bu özel anahtar, `anvil` içindeki varsayılan önceden fonlanmış hesaplardan biridir.
 
 ```js
 const generateProof = async (witness, fileID) => {
 ```
 
-`bb` çalıştırılabilir dosyasını kullanarak bir ispat oluşturun.
+`bb` yürütülebilir dosyasını kullanarak bir ispat oluşturun.
 
-```js 
+```js
     const fname = `witness-${fileID}.gz`    
     await fs.writeFile(fname, witness)
 ```
@@ -1080,13 +1089,13 @@ Tanığı bir dosyaya yazın.
     await execPromise(`bb prove -b ./noir/target/zkBank.json -w ${fname} -o ${fileID} --oracle_hash keccak --output_format fields`)
 ```
 
-Aslında ispatı oluşturun. Bu adım ayrıca genel değişkenleri içeren bir dosya oluşturur, ancak buna ihtiyacımız yoktur. Bu değişkenleri `noir.execute` dosyasından zaten aldık.
+Asıl ispatı oluşturun. Bu adım ayrıca genel değişkenleri içeren bir dosya da oluşturur, ancak buna ihtiyacımız yok. Bu değişkenleri zaten `noir.execute`'dan aldık.
 
 ```js
     const proof = "0x" + JSON.parse(await fs.readFile(`./${fileID}/proof_fields.json`)).reduce((a,b) => a+b, "").replace(/0x/g, "")
 ```
 
-İspat, her biri onaltılı bir değer olarak temsil edilen `Field` değerlerinden oluşan bir JSON dizisidir. Ancak bunu, işlemde Viem'in büyük bir onaltılı dizeyle temsil ettiği tek bir `bytes` değeri olarak göndermemiz gerekir. Burada tüm değerleri birleştirerek, tüm `0x` değerlerini kaldırarak ve sonra en sona bir tane ekleyerek formatı değiştiriyoruz.
+İspat, her biri onaltılı bir değer olarak temsil edilen `Field` değerlerinden oluşan bir JSON dizisidir. Ancak, bunu işlemde Viem'in büyük bir onaltılı dize ile temsil ettiği tek bir `bytes` değeri olarak göndermemiz gerekiyor. Burada tüm değerleri birleştirerek, tüm `0x`'leri kaldırarak ve ardından sonuna bir tane ekleyerek formatı değiştiriyoruz.
 
 ```js
     await execPromise(`rm -r ${fname} ${fileID}`)
@@ -1106,13 +1115,13 @@ const processMessage = async (message, signature) => {
     const publicFields = noirResult.returnValue.map(x=>'0x' + x.slice(2).padStart(64, "0"))
 ```
 
-Genel alanların 32 baytlık değerlerden oluşan bir dizi olması gerekir. Ancak işlem hash'ini iki `Field` değeri arasında bölmemiz gerektiğinden 16 baytlık bir değer olarak görünür. Burada sıfırlar ekliyoruz ki Viem bunun aslında 32 bayt olduğunu anlayabilsin.
+Genel alanların 32 baytlık değerlerden oluşan bir dizi olması gerekir. Ancak, işlem hash'ini iki `Field` değeri arasında bölmemiz gerektiğinden, 16 baytlık bir değer olarak görünür. Burada Viem'in bunun aslında 32 bayt olduğunu anlaması için sıfırlar ekliyoruz.
 
 ```js
     const proof = await generateProof(noirResult.witness, `${fromAddress}-${nonce}`)
 ```
 
-Her adres, her nonce'u yalnızca bir kez kullanır, böylece tanık dosyası ve çıktı dizini için benzersiz bir tanımlayıcı olarak `fromAddress` ve `nonce` kombinasyonunu kullanabiliriz.
+Her adres her nonce'u yalnızca bir kez kullanır, böylece tanık dosyası ve çıktı dizini için benzersiz bir tanımlayıcı olarak `fromAddress` ve `nonce` kombinasyonunu kullanabiliriz.
 
 ```js
     try {
@@ -1151,7 +1160,7 @@ contract ZkBank {
     }
 ```
 
-Zincir içi kodun iki değişkeni izlemesi gerekir: doğrulayıcı (`nargo` tarafından oluşturulan ayrı bir sözleşme) ve mevcut durum hash'i.
+Zincir içi kodun iki değişkeni takip etmesi gerekir: doğrulayıcı (Barretenberg'in `bb write_solidity_verifier` komutu tarafından oluşturulan ayrı bir sözleşme) ve mevcut durum hash'i.
 
 ```solidity
     event TransactionProcessed(
@@ -1161,7 +1170,7 @@ Zincir içi kodun iki değişkeni izlemesi gerekir: doğrulayıcı (`nargo` tara
     );
 ```
 
-Durum her değiştiğinde bir `TransactionProcessed` olayı yayarız.
+Durum her değiştiğinde, bir `TransactionProcessed` olayı yayarız.
 
 ```solidity
     function processTransaction(
@@ -1170,20 +1179,20 @@ Durum her değiştiğinde bir `TransactionProcessed` olayı yayarız.
     ) public {
 ```
 
-Bu fonksiyon işlemleri işler. Doğrulayıcının (zincir içi işlemeyi ve dolayısıyla gaz maliyetlerini en aza indirmek için) gerektirdiği formatta ispatı (`bytes` olarak) ve genel girdileri (bir `bytes32` dizisi olarak) alır.
+Bu fonksiyon işlemleri işler. İspatı (`bytes` olarak) ve genel girdileri (bir `bytes32` dizisi olarak), doğrulayıcının gerektirdiği formatta (zincir içi işlemeyi ve dolayısıyla gaz maliyetlerini en aza indirmek için) alır.
 
 ```solidity
-        require(_publicInputs[0] == currentStateHash,
+        require(_publicFields[0] == currentStateHash,
             "Wrong old state hash");
 ```
 
-Sıfır bilgi ispatı, işlemin mevcut hash'imizden yeni bir hash'e değiştiğini göstermelidir.
+Sıfır bilgi ispatının, işlemin mevcut hash'imizden yeni bir hash'e değiştiğini göstermesi gerekir.
 
 ```solidity
         myVerifier.verify(_proof, _publicFields);
 ```
 
-Sıfır bilgi ispatını doğrulamak için doğrulayıcı sözleşmeyi çağırın. Bu adım, sıfır bilgi ispatı yanlışsa işlemi geri alır.
+Sıfır bilgi ispatını doğrulamak için doğrulayıcı sözleşmesini çağırın. Bu adım, sıfır bilgi ispatı yanlışsa işlemi geri alır.
 
 ```solidity
         currentStateHash = _publicFields[1];
@@ -1197,7 +1206,7 @@ Sıfır bilgi ispatını doğrulamak için doğrulayıcı sözleşmeyi çağır�
 }
 ```
 
-Her şey kontrol edilirse, durum hash'ini yeni değere güncelleyin ve bir `TransactionProcessed` olayı yayın.
+Eğer her şey yolundaysa, durum hash'ini yeni değere güncelleyin ve bir `TransactionProcessed` olayı yayın.
 
 ## Merkezi bileşen tarafından yapılan kötüye kullanımlar {#abuses}
 

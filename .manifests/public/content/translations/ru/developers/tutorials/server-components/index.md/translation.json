@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "ru",
-  "translatedAt": "2026-06-18T00:19:26.861Z",
-  "englishManifestHash": "970a6b071fa7",
+  "translatedAt": "2026-11-28T07:23:19.945Z",
+  "englishManifestHash": "1d220c4d9df8",
   "placeholderOrder": [
     "IMAGE-22341d",
     "IMAGE-e9d4f9",
@@ -10,15 +10,16 @@
     "LINK-330783",
     "LINK-fdcb1c",
     "LINK-5ed86a",
-    "LINK-cfd598",
+    "LINK-5bb3be",
     "CODEBLOCK-a972f6",
+    "CODEBLOCK-3d4f80",
     "LINK-dd003e",
     "CODEBLOCK-7c5e37",
     "CODE-e9cbb0",
-    "LINK-4b2ff8",
-    "CODEBLOCK-9ca8e9",
+    "LINK-f61741",
+    "CODEBLOCK-0d41ed",
     "CODEBLOCK-270309",
-    "LINK-3f5784",
+    "LINK-d53f36",
     "CODE-841254",
     "LINK-45e67d",
     "CODE-841254",
@@ -30,15 +31,15 @@
     "LINK-a31a27",
     "CODEBLOCK-56eef0",
     "LINK-7b2ffb",
-    "CODEBLOCK-94290e",
-    "LINK-aa1cea",
+    "CODEBLOCK-17d243",
+    "LINK-5db234",
     "CODEBLOCK-126bc8",
     "CODE-e9cbb0",
-    "CODEBLOCK-f20180",
+    "CODEBLOCK-85b824",
     "LINK-52b07d",
     "CODE-adf33a",
-    "CODEBLOCK-0704e9",
-    "LINK-b6bd6c",
+    "CODEBLOCK-f38d81",
+    "LINK-d3a469",
     "LINK-1d6dbc",
     "CODE-2bcb43",
     "CODEBLOCK-2739e0",
@@ -50,7 +51,7 @@
     "CODE-c52233",
     "LINK-84500b",
     "CODE-306679",
-    "CODEBLOCK-6f8d92",
+    "CODEBLOCK-4d35b1",
     "LINK-b38f83",
     "CODEBLOCK-774211",
     "LINK-5c534b",
@@ -60,7 +61,7 @@
     "LINK-d317b7",
     "CODE-b8ba2e",
     "CODE-331634",
-    "LINK-43426a",
+    "LINK-69b73c",
     "CODE-231bf8",
     "LINK-9ea2a7",
     "CODE-1aefe4",
@@ -75,9 +76,9 @@
     "CODE-1eec97",
     "CODEBLOCK-278922",
     "CODE-10fd87",
-    "LINK-079437",
+    "LINK-fa77c4",
     "CODE-ca1919",
-    "CODEBLOCK-b8c1f8",
+    "CODEBLOCK-6610c3",
     "CODEBLOCK-bbd0ae",
     "LINK-2e3e9b",
     "CODE-042303",
@@ -93,8 +94,7 @@
     "CODE-7ae45a",
     "LINK-24f7cc",
     "LINK-0ce682",
-    "CODEBLOCK-606559",
-    "CODEBLOCK-c9b459",
+    "CODEBLOCK-ee1f7a",
     "CODE-cced28",
     "CODE-5efcd7",
     "CODE-969545",
@@ -118,11 +118,15 @@
       "type": "code-fence",
       "values": {}
     },
+    "CODEBLOCK-3d4f80": {
+      "type": "code-fence",
+      "values": {}
+    },
     "CODEBLOCK-7c5e37": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-9ca8e9": {
+    "CODEBLOCK-0d41ed": {
       "type": "code-fence",
       "values": {}
     },
@@ -138,7 +142,7 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-94290e": {
+    "CODEBLOCK-17d243": {
       "type": "code-fence",
       "values": {}
     },
@@ -146,11 +150,11 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-f20180": {
+    "CODEBLOCK-85b824": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-0704e9": {
+    "CODEBLOCK-f38d81": {
       "type": "code-fence",
       "values": {}
     },
@@ -158,7 +162,7 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-6f8d92": {
+    "CODEBLOCK-4d35b1": {
       "type": "code-fence",
       "values": {}
     },
@@ -178,7 +182,7 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-b8c1f8": {
+    "CODEBLOCK-6610c3": {
       "type": "code-fence",
       "values": {}
     },
@@ -198,11 +202,7 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-606559": {
-      "type": "code-fence",
-      "values": {}
-    },
-    "CODEBLOCK-c9b459": {
+    "CODEBLOCK-ee1f7a": {
       "type": "code-fence",
       "values": {}
     },
@@ -464,10 +464,10 @@
         "url": "https://github.com/qbzzt/20240715-server-component"
       }
     },
-    "LINK-cfd598": {
+    "LINK-5bb3be": {
       "type": "link",
       "values": {
-        "url": "https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code"
+        "url": "https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract_code"
       }
     },
     "LINK-dd003e": {
@@ -476,16 +476,16 @@
         "url": "https://nodejs.org/en/download/package-manager"
       }
     },
-    "LINK-4b2ff8": {
+    "LINK-f61741": {
       "type": "link",
       "values": {
-        "url": "https://holesky-faucet.pk910.de/"
+        "url": "https://sepolia-faucet.pk910.de/"
       }
     },
-    "LINK-3f5784": {
+    "LINK-d53f36": {
       "type": "link",
       "values": {
-        "url": "https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract"
+        "url": "https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract"
       }
     },
     "LINK-45e67d": {
@@ -524,10 +524,10 @@
         "url": "https://viem.sh/docs/accounts/privateKey"
       }
     },
-    "LINK-aa1cea": {
+    "LINK-5db234": {
       "type": "link",
       "values": {
-        "url": "https://github.com/eth-clients/holesky"
+        "url": "/developers/docs/networks/#sepolia"
       }
     },
     "LINK-52b07d": {
@@ -536,10 +536,10 @@
         "url": "/glossary/#abi"
       }
     },
-    "LINK-b6bd6c": {
+    "LINK-d3a469": {
       "type": "link",
       "values": {
-        "url": "https://viem.sh/docs/clients/public.html"
+        "url": "https://viem.sh/docs/clients/public"
       }
     },
     "LINK-1d6dbc": {
@@ -584,10 +584,10 @@
         "url": "https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm"
       }
     },
-    "LINK-43426a": {
+    "LINK-69b73c": {
       "type": "link",
       "values": {
-        "url": "https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=read_contract#cfae3217"
+        "url": "https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=read_contract"
       }
     },
     "LINK-9ea2a7": {
@@ -602,10 +602,10 @@
         "url": "https://www.w3schools.com/js/js_promise.asp"
       }
     },
-    "LINK-079437": {
+    "LINK-fa77c4": {
       "type": "link",
       "values": {
-        "url": "https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862"
+        "url": "https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract"
       }
     },
     "LINK-2e3e9b": {
@@ -647,7 +647,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-18T00:19:26.861Z",
+      "translatedAt": "2026-11-28T07:23:19.945Z",
       "status": "success"
     }
   }

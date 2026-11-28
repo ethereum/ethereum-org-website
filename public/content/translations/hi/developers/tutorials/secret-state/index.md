@@ -16,20 +16,21 @@ lang: hi
 published: 2025-03-15
 ---
 
-_ब्लॉकचेन पर कोई रहस्य नहीं होते हैं_। ब्लॉकचेन पर जो कुछ भी पोस्ट किया जाता है वह हर किसी के पढ़ने के लिए खुला होता है। यह आवश्यक है, क्योंकि ब्लॉकचेन इस बात पर आधारित है कि कोई भी इसे सत्यापित कर सके। हालाँकि, गेम अक्सर गुप्त स्थिति पर निर्भर करते हैं। उदाहरण के लिए, [माइनस्वीपर](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) का गेम बिल्कुल भी समझ में नहीं आता है यदि आप केवल एक ब्लॉक एक्सप्लोरर पर जा सकते हैं और नक्शा देख सकते हैं।
+_ब्लॉकचेन पर कोई रहस्य नहीं होते हैं_। ब्लॉकचेन पर जो कुछ भी पोस्ट किया जाता है, वह सभी के पढ़ने के लिए खुला होता है। यह आवश्यक है, क्योंकि ब्लॉकचेन इस बात पर आधारित है कि कोई भी इसे सत्यापित कर सके। हालाँकि, गेम अक्सर गुप्त स्थिति (secret state) पर निर्भर करते हैं। उदाहरण के लिए, [माइनस्वीपर](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) गेम का कोई मतलब नहीं रह जाता यदि आप बस एक ब्लॉकचेन एक्सप्लोरर पर जाकर नक्शा देख सकें।
 
-सबसे सरल समाधान गुप्त स्थिति को रखने के लिए एक [सर्वर घटक](/developers/tutorials/server-components/) का उपयोग करना है। हालाँकि, हम ब्लॉकचेन का उपयोग इसलिए करते हैं ताकि गेम डेवलपर द्वारा धोखाधड़ी को रोका जा सके। हमें सर्वर घटक की ईमानदारी सुनिश्चित करने की आवश्यकता है। सर्वर स्थिति का एक हैश प्रदान कर सकता है, और यह साबित करने के लिए [शून्य-ज्ञान प्रमाण](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) का उपयोग कर सकता है कि किसी चाल के परिणाम की गणना करने के लिए उपयोग की गई स्थिति सही है।
+सबसे सरल समाधान गुप्त स्थिति को रखने के लिए एक [सर्वर घटक](/developers/tutorials/server-components/) का उपयोग करना है। हालाँकि, हम ब्लॉकचेन का उपयोग इसलिए करते हैं ताकि गेम डेवलपर द्वारा की जाने वाली धोखाधड़ी को रोका जा सके। हमें सर्वर घटक की ईमानदारी सुनिश्चित करने की आवश्यकता है। सर्वर स्थिति का एक हैश प्रदान कर सकता है, और यह साबित करने के लिए [शून्य-ज्ञान प्रमाण](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) का उपयोग कर सकता है कि किसी चाल के परिणाम की गणना करने के लिए उपयोग की गई स्थिति सही है।
 
-इस लेख को पढ़ने के बाद आप जानेंगे कि इस प्रकार का गुप्त स्थिति रखने वाला सर्वर, स्थिति दिखाने के लिए एक क्लाइंट, और दोनों के बीच संचार के लिए एक ऑनचेन घटक कैसे बनाया जाए। हमारे द्वारा उपयोग किए जाने वाले मुख्य उपकरण होंगे:
+इस लेख को पढ़ने के बाद आप जानेंगे कि इस प्रकार का गुप्त स्थिति रखने वाला सर्वर, स्थिति दिखाने के लिए एक क्लाइंट, और दोनों के बीच संचार के लिए एक ऑनचेन घटक कैसे बनाया जाता है। हमारे द्वारा उपयोग किए जाने वाले मुख्य टूल होंगे:
 
-| उपकरण                                          | उद्देश्य                                                 | इस संस्करण पर सत्यापित |
+| टूल                                          | उद्देश्य                                                 | इस संस्करण पर सत्यापित |
 | --------------------------------------------- | ------------------------------------------------------- | ------------------: |
 | [Zokrates](https://zokrates.github.io/)       | शून्य-ज्ञान प्रमाण और उनका सत्यापन            |               1.1.9 |
 | [TypeScript](https://www.typescriptlang.org/) | सर्वर और क्लाइंट दोनों के लिए प्रोग्रामिंग भाषा |               5.4.2 |
 | [Node](https://nodejs.org/en)                 | सर्वर चलाना                                      |             20.18.2 |
+| [Foundry](https://getfoundry.sh/)             | स्थानीय ब्लॉकचेन और अनुबंध तैनाती                |               1.0.0 |
 | [Viem](https://viem.sh/)                      | ब्लॉकचेन के साथ संचार                       |              2.9.20 |
 | [MUD](https://mud.dev/)                       | ऑनचेन डेटा प्रबंधन                                 |              2.0.12 |
-| [React](https://react.dev/)                   | क्लाइंट यूजर इंटरफेस                                   |              18.2.0 |
+| [React](https://react.dev/)                   | क्लाइंट यूज़र इंटरफ़ेस                                   |              18.2.0 |
 | [Vite](https://vitejs.dev/)                   | क्लाइंट कोड सर्व करना                                 |               4.2.1 |
 
 ## माइनस्वीपर उदाहरण {#minesweeper}
@@ -42,7 +43,24 @@ _ब्लॉकचेन पर कोई रहस्य नहीं हो�
 
 माइनस्वीपर उदाहरण चलाने के लिए:
 
-1. सुनिश्चित करें कि आपने [पूर्वापेक्षाएँ स्थापित कर ली हैं](https://mud.dev/quickstart#prerequisites): [Node](https://mud.dev/quickstart#prerequisites), [Foundry](https://book.getfoundry.sh/getting-started/installation), [`git`](https://git-scm.com/downloads), [`pnpm`](https://git-scm.com/downloads), और [`mprocs`](https://github.com/pvolok/mprocs)।
+1. सुनिश्चित करें कि आपने [पूर्वापेक्षाएँ स्थापित कर ली हैं](https://mud.dev/quickstart#prerequisites): [Node](https://nodejs.org/en), [Foundry](https://getfoundry.sh/introduction/installation), [`git`](https://git-scm.com/downloads), और [`pnpm`](https://pnpm.io/installation)।
+
+   यह उदाहरण MUD 2.0.12 का उपयोग करता है, जिसके लिए Node और Foundry के विशिष्ट संस्करणों की आवश्यकता होती है:
+
+   - **Node 20**। MUD 2.0.12 कमांड लाइन टूल [JSON import assertions](https://v8.dev/features/import-attributes) का उपयोग करता है, जिसका Node के नए संस्करण अब समर्थन नहीं करते हैं, इसलिए Node 22 या उसके बाद के संस्करणों पर यह `SyntaxError: Unexpected identifier 'assert'` के साथ विफल हो जाता है। Node 20 अप्रैल 2026 में [अपने जीवन के अंत तक पहुँच गया](https://nodejs.org/en/about/previous-releases) और अब इसे सुरक्षा अपडेट नहीं मिलते हैं, इसलिए इसका उपयोग केवल इस स्थानीय उदाहरण के लिए करें। [`fnm`](https://github.com/Schniz/fnm) या [`nvm`](https://github.com/nvm-sh/nvm) जैसा Node संस्करण प्रबंधक आपको केवल इस निर्देशिका के लिए Node 20 पर स्विच करने की सुविधा देता है, उदाहरण के लिए:
+
+     ```sh copy
+     fnm install 20
+     fnm use 20
+     ```
+
+   - **Foundry 1.0.0**। वर्तमान Foundry संस्करणों के साथ पोस्ट-डिप्लॉयमेंट स्क्रिप्ट _Usage of `address(this)` detected in script contract_ के साथ विफल हो जाती है। इसके साथ परीक्षण किया गया संस्करण स्थापित करें:
+
+     ```sh copy
+     foundryup -i 1.0.0
+     ```
+
+     जब आप इस ट्यूटोरियल को पूरा कर लें, तो आप `foundryup` के साथ नवीनतम संस्करण पर वापस लौट सकते हैं।
 
 2. रिपॉजिटरी को क्लोन करें।
 
@@ -55,10 +73,9 @@ _ब्लॉकचेन पर कोई रहस्य नहीं हो�
    ```sh copy
    cd 20240901-secret-state/
    pnpm install
-   npm install -g mprocs
    ```
 
-   यदि Foundry को `pnpm install` के हिस्से के रूप में स्थापित किया गया था, तो आपको कमांड-लाइन शेल को पुनरारंभ करना होगा।
+   [`mprocs`](https://github.com/pvolok/mprocs), जो एक ही टर्मिनल में सभी प्रक्रियाओं को चलाता है, पैकेजों में से एक के रूप में स्थापित किया गया है।
 
 4. अनुबंधों को संकलित करें
 
@@ -69,19 +86,19 @@ _ब्लॉकचेन पर कोई रहस्य नहीं हो�
     ```
 
 
-5. प्रोग्राम शुरू करें (जिसमें एक [anvil](https://book.getfoundry.sh/anvil/) ब्लॉकचेन शामिल है) और प्रतीक्षा करें।
+5. प्रोग्राम (जिसमें एक [anvil](https://getfoundry.sh/anvil/overview) ब्लॉकचेन शामिल है) शुरू करें और प्रतीक्षा करें।
 
    ```sh copy
-   mprocs
+   pnpm dev
    ```
 
-   ध्यान दें कि स्टार्टअप में लंबा समय लगता है। प्रगति देखने के लिए, पहले तैनात किए जा रहे MUD अनुबंधों को देखने के लिए _contracts_ टैब पर स्क्रॉल करने हेतु डाउन एरो (नीचे वाले तीर) का उपयोग करें। जब आपको _Waiting for file changes…_ संदेश मिलता है, तो अनुबंध तैनात हो जाते हैं और आगे की प्रगति _server_ टैब में होगी। वहां, आप तब तक प्रतीक्षा करें जब तक आपको _Verifier address: 0x...._ संदेश न मिल जाए।
+   ध्यान दें कि स्टार्टअप में लंबा समय लगता है। प्रगति देखने के लिए, पहले MUD अनुबंधों को तैनात होते देखने के लिए _contracts_ टैब पर स्क्रॉल करने के लिए डाउन एरो (नीचे तीर) का उपयोग करें। जब आपको _Waiting for file changes…_ संदेश मिलता है, तो अनुबंध तैनात हो जाते हैं और आगे की प्रगति _server_ टैब में होगी। वहां, आप तब तक प्रतीक्षा करें जब तक आपको _Verifier address: 0x...._ संदेश न मिल जाए।
 
-   यदि यह चरण सफल होता है, तो आपको `mprocs` स्क्रीन दिखाई देगी, जिसमें बाईं ओर विभिन्न प्रक्रियाएं और दाईं ओर वर्तमान में चयनित प्रक्रिया के लिए कंसोल आउटपुट होगा।
+   यदि यह चरण सफल होता है, तो आपको `mprocs` स्क्रीन दिखाई देगी, जिसमें बाईं ओर विभिन्न प्रक्रियाएँ और दाईं ओर वर्तमान में चयनित प्रक्रिया के लिए कंसोल आउटपुट होगा।
 
-   ![The mprocs screen](./mprocs.png)
+   ![mprocs स्क्रीन](./mprocs.png)
 
-   यदि `mprocs` के साथ कोई समस्या है, तो आप चारों प्रक्रियाओं को मैन्युअल रूप से चला सकते हैं, प्रत्येक को उसकी अपनी कमांड लाइन विंडो में:
+   यदि `mprocs` के साथ कोई समस्या है, तो आप चारों प्रक्रियाओं को मैन्युअल रूप से चला सकते हैं, प्रत्येक को अपनी कमांड लाइन विंडो में:
 
    - **Anvil**
 
@@ -102,14 +119,14 @@ _ब्लॉकचेन पर कोई रहस्य नहीं हो�
      ```sh
      cd packages/server
      pnpm start
-     ```  
+     ```
 
    - **Client**
 
      ```sh
      cd packages/client
      pnpm run dev
-     ```  
+     ```
 
 6. अब आप [क्लाइंट](http://localhost:3000) पर ब्राउज़ कर सकते हैं, **New Game** पर क्लिक कर सकते हैं, और खेलना शुरू कर सकते हैं।
 
@@ -149,24 +166,24 @@ _ब्लॉकचेन पर कोई रहस्य नहीं हो�
 
 ये प्रवाह क्लाइंट, ऑनचेन घटक और सर्वर के बीच निष्पादन का समन्वय करते हैं।
 
-#### आरंभीकरण (Initialization) {#initialization-flow}
+#### आरंभीकरण {#initialization-flow}
 
-जब आप `mprocs` चलाते हैं, तो ये चरण होते हैं:
+जब आप `pnpm dev` चलाते हैं (जो `mprocs` चलाता है), तो ये चरण होते हैं:
 
 1. [`mprocs`](https://github.com/pvolok/mprocs) चार घटक चलाता है:
 
-   - [Anvil](https://book.getfoundry.sh/anvil/), जो एक स्थानीय ब्लॉकचेन चलाता है
+   - [Anvil](https://getfoundry.sh/anvil/overview), जो एक स्थानीय ब्लॉकचेन चलाता है
    - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts), जो MUD के लिए अनुबंधों को संकलित (यदि आवश्यक हो) और तैनात करता है
    - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), जो वेब ब्राउज़र को UI और क्लाइंट कोड सर्व करने के लिए [Vite](https://vitejs.dev/) चलाता है।
-   - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server), जो सर्वर क्रियाएं करता है
+   - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server), जो सर्वर क्रियाएँ करता है
 
 2. `contracts` पैकेज MUD अनुबंधों को तैनात करता है और फिर [`PostDeploy.s.sol` स्क्रिप्ट](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol) चलाता है। यह स्क्रिप्ट कॉन्फ़िगरेशन सेट करती है। GitHub का कोड [आठ माइन्स के साथ 10x5 माइनफ़ील्ड](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23) निर्दिष्ट करता है।
 
-3. [सर्वर](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts) [MUD सेट अप](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6) करके शुरू होता है। अन्य बातों के अलावा, यह डेटा सिंक्रनाइज़ेशन को सक्रिय करता है, ताकि प्रासंगिक टेबल्स की एक प्रति सर्वर की मेमोरी में मौजूद रहे।
+3. [सर्वर](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts) [MUD को सेट अप करके](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6) शुरू होता है। अन्य बातों के अलावा, यह डेटा सिंक्रनाइज़ेशन को सक्रिय करता है, ताकि सर्वर की मेमोरी में प्रासंगिक टेबल्स की एक प्रति मौजूद रहे।
 
-4. सर्वर एक फ़ंक्शन को सब्सक्राइब करता है जिसे [`Configuration` टेबल बदलने पर](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23) निष्पादित किया जाना है। [यह फ़ंक्शन](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) `PostDeploy.s.sol` के निष्पादित होने और टेबल को संशोधित करने के बाद कॉल किया जाता है।
+4. सर्वर एक फ़ंक्शन को सब्सक्राइब करता है जिसे [जब `Configuration` टेबल बदलती है](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23) तब निष्पादित किया जाना है। [यह फ़ंक्शन](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) `PostDeploy.s.sol` के निष्पादित होने और टेबल को संशोधित करने के बाद कॉल किया जाता है।
 
-5. जब सर्वर आरंभीकरण फ़ंक्शन के पास कॉन्फ़िगरेशन होता है, तो [यह [सर्वर के शून्य-ज्ञान भाग](#using-zokrates-from-typescript) को आरंभ करने के लिए `zkFunctions` को कॉल करता है](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35)। यह तब तक नहीं हो सकता जब तक हमें कॉन्फ़िगरेशन नहीं मिल जाता क्योंकि शून्य-ज्ञान फ़ंक्शंस में माइनफ़ील्ड की चौड़ाई और ऊंचाई स्थिरांक के रूप में होनी चाहिए।
+5. जब सर्वर आरंभीकरण फ़ंक्शन के पास कॉन्फ़िगरेशन होता है, तो [यह सर्वर के शून्य-ज्ञान भाग को आरंभ करने के लिए](#using-zokrates-from-typescript) [`zkFunctions` को कॉल करता है](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35)। यह तब तक नहीं हो सकता जब तक हमें कॉन्फ़िगरेशन नहीं मिल जाता क्योंकि शून्य-ज्ञान फ़ंक्शंस में माइनफ़ील्ड की चौड़ाई और ऊंचाई स्थिरांक (constants) के रूप में होनी चाहिए।
 
 6. सर्वर के शून्य-ज्ञान भाग के आरंभ होने के बाद, अगला कदम [शून्य-ज्ञान सत्यापन अनुबंध को ब्लॉकचेन पर तैनात करना](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) और MUD में सत्यापनकर्ता का पता सेट करना है।
 
@@ -242,7 +259,7 @@ import "utils/pack/bool/pack128.zok" as pack128;
 Zokrates में फ़ील्ड तत्व आमतौर पर 256 बिट्स से कम लंबा होता है, लेकिन बहुत कम नहीं। कोड को सरल बनाने के लिए, हम मैप को 512 बिट्स तक सीमित करते हैं, और चार फ़ील्ड्स की एक सरणी को हैश करते हैं, और प्रत्येक फ़ील्ड में हम केवल 128 बिट्स का उपयोग करते हैं। [`pack128` फ़ंक्शन](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) इस उद्देश्य के लिए 128 बिट्स की एक सरणी को `field` में बदल देता है।
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 यह लाइन एक फ़ंक्शन परिभाषा शुरू करती है। `hashMap` को `map` नामक एक एकल पैरामीटर मिलता है, जो एक द्वि-आयामी (two-dimensional) `bool`(ean) सरणी है। मैप का आकार `width+2` गुणा `height+2` है, उन कारणों से जिन्हें [नीचे समझाया गया है](#why-map-border)।
@@ -252,7 +269,7 @@ def hashMap(bool[${width+2}][${height+2}] map) -> field {
 रिटर्न मान एक `field` है जिसमें हैश होता है।
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 मैप द्वि-आयामी है। हालाँकि, `pack128` फ़ंक्शन द्वि-आयामी सरणियों के साथ काम नहीं करता है। इसलिए हम पहले `map1d` का उपयोग करके मैप को 512-बाइट सरणी में समतल (flatten) करते हैं। डिफ़ॉल्ट रूप से Zokrates चर (variables) स्थिरांक (constants) होते हैं, लेकिन हमें एक लूप में इस सरणी को मान निर्दिष्ट करने की आवश्यकता है, इसलिए हम इसे [`mut`](https://zokrates.github.io/language/variables.html#mutability) के रूप में परिभाषित करते हैं।
@@ -260,19 +277,19 @@ bool[512] mut map1d = [false; 512];
 हमें सरणी को इनिशियलाइज़ करने की आवश्यकता है क्योंकि Zokrates में `undefined` नहीं है। `[false; 512]` अभिव्यक्ति का अर्थ है [512 `false` मानों की एक सरणी](https://zokrates.github.io/language/types.html#declaration-and-initialization)।
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 हमें उन बिट्स के बीच अंतर करने के लिए एक काउंटर की भी आवश्यकता है जिन्हें हमने पहले ही `map1d` में भर दिया है और जिन्हें हमने नहीं भरा है।
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 इस तरह आप Zokrates में एक [`for` लूप](https://zokrates.github.io/language/control_flow.html#for-loops) घोषित करते हैं। एक Zokrates `for` लूप की सीमाएँ निश्चित होनी चाहिए, क्योंकि भले ही यह एक लूप प्रतीत होता है, कंपाइलर वास्तव में इसे "अनरोल" (unroll) करता है। अभिव्यक्ति `${width+2}` एक कंपाइल टाइम स्थिरांक है क्योंकि कंपाइलर को कॉल करने से पहले TypeScript कोड द्वारा `width` सेट किया जाता है।
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -282,7 +299,7 @@ for u32 y in 0..${height+2} {
 मैप में प्रत्येक स्थान के लिए, उस मान को `map1d` सरणी में रखें और काउंटर को बढ़ाएँ।
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -293,7 +310,7 @@ field[4] hashMe = [
 `map1d` से चार `field` मानों की एक सरणी बनाने के लिए `pack128` का उपयोग किया जाता है। Zokrates में `array[a..b]` का अर्थ सरणी का वह स्लाइस (slice) है जो `a` से शुरू होता है और `b-1` पर समाप्त होता है।
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -349,19 +366,19 @@ def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8)
 यह दुरुपयोग के लिए एक और रास्ता खोलता है। प्रमाणक सही निर्देशांक (coordinates) का उपयोग कर सकता है, लेकिन स्थान के चारों ओर, और संभवतः स्थान पर ही किसी भी संख्या में खदानों के साथ एक मैप बना सकता है। इस दुरुपयोग को रोकने के लिए, हम शून्य-ज्ञान प्रमाण में मैप का हैश शामिल करते हैं, जो कि गेम पहचानकर्ता है।
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 यहाँ रिटर्न मान एक टपल (tuple) है जिसमें मैप हैश सरणी के साथ-साथ खुदाई का परिणाम भी शामिल है।
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 यदि स्थान पर ही बम है, तो हम एक विशेष मान के रूप में 255 का उपयोग करते हैं।
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -518,11 +535,11 @@ const solidityVerifier = `
 
 ### अनुमतियाँ {#permissions}
 
-इस गेम में एक विशेषाधिकार प्राप्त इकाई है, सर्वर। यह एकमात्र उपयोगकर्ता है जिसे [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) में फ़ंक्शंस को कॉल करने की अनुमति है। हम यह सत्यापित करने के लिए [`cast`](https://book.getfoundry.sh/cast/) का उपयोग कर सकते हैं कि अनुमति-प्राप्त (permissioned) फ़ंक्शंस पर कॉल केवल सर्वर खाते के रूप में ही अनुमत हैं।
+इस गेम में एक विशेषाधिकार प्राप्त इकाई (privileged entity) है, सर्वर। यह एकमात्र उपयोगकर्ता है जिसे [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) में फ़ंक्शंस को कॉल करने की अनुमति है। हम यह सत्यापित करने के लिए [`cast`](https://getfoundry.sh/cast/overview) का उपयोग कर सकते हैं कि अनुमति-प्राप्त (permissioned) फ़ंक्शंस को कॉल करने की अनुमति केवल सर्वर खाते के रूप में है।
 
 [सर्वर की निजी कुंजी `setupNetwork.ts` में है](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52)।
 
-1. उस कंप्यूटर पर जो `anvil` (ब्लॉकचेन) चलाता है, इन एनवायरनमेंट वेरिएबल्स को सेट करें।
+1. उस कंप्यूटर पर जो `anvil` (ब्लॉकचेन) चलाता है, इन पर्यावरण चर (environment variables) को सेट करें।
 
    ```sh copy
    WORLD_ADDRESS=0x8d8b6b8414e1e3dcfd4168561b9be6bd3bf6ec4b
@@ -530,7 +547,9 @@ const solidityVerifier = `
    AUTHORIZED_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
    ```
 
-2. सत्यापनकर्ता के पते को एक अनधिकृत पते के रूप में सेट करने का प्रयास करने के लिए `cast` का उपयोग करें।
+   यह `WORLD_ADDRESS` वह पता है जिस पर MUD एक नए `anvil` पर तैनात करता है। यदि आपका `World` किसी भिन्न पते पर है, तो `packages/contracts/worlds.json` में दिए गए मान का उपयोग करें।
+
+2. एक अनधिकृत पते के रूप में सत्यापनकर्ता का पता सेट करने का प्रयास करने के लिए `cast` का उपयोग करें।
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $UNAUTHORIZED_KEY
@@ -538,13 +557,13 @@ const solidityVerifier = `
 
    न केवल `cast` विफलता की रिपोर्ट करता है, बल्कि आप ब्राउज़र पर गेम में **MUD Dev Tools** खोल सकते हैं, **Tables** पर क्लिक कर सकते हैं, और **app\_\_VerifierAddress** का चयन कर सकते हैं। देखें कि पता शून्य नहीं है।
 
-3. सत्यापनकर्ता के पते को सर्वर के पते के रूप में सेट करें।
+3. सत्यापनकर्ता का पता सर्वर के पते के रूप में सेट करें।
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $AUTHORIZED_KEY
    ```
 
-   **app\_\_VerifiedAddress** में पता अब शून्य होना चाहिए।
+   **app\_\_VerifierAddress** में पता अब शून्य होना चाहिए।
 
 एक ही `System` में सभी MUD फ़ंक्शंस समान एक्सेस कंट्रोल से होकर गुजरते हैं, इसलिए मैं इस परीक्षण को पर्याप्त मानता हूँ। यदि आप ऐसा नहीं मानते हैं, तो आप [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) में अन्य फ़ंक्शंस की जांच कर सकते हैं।
 
@@ -560,10 +579,10 @@ Zokrates को सत्यापित करने का गणित इस
 proof.inputs[3] = "0x" + "1".padStart(64, "0")
 ```
 
-इसका मतलब है कि हम हमेशा दावा करेंगे कि एक बम है, चाहे सही उत्तर कुछ भी हो। इस संस्करण के साथ खेलने का प्रयास करें, और आप `pnpm dev` स्क्रीन के **server** टैब में यह त्रुटि देखेंगे:
+इसका मतलब है कि हम हमेशा दावा करेंगे कि एक बम है, चाहे सही उत्तर कुछ भी हो। इस संस्करण के साथ खेलने का प्रयास करें, और आप `mprocs` स्क्रीन के **server** टैब में यह त्रुटि देखेंगे:
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000
@@ -680,9 +699,11 @@ proof.proof = {
 
 ### Zokrates क्यों? {#why-zokrates}
 
-[Zokrates](https://zokrates.github.io/) उपलब्ध एकमात्र शून्य-ज्ञान लाइब्रेरी नहीं है, लेकिन यह एक सामान्य, [इम्परेटिव (imperative)](https://en.wikipedia.org/wiki/Imperative_programming) प्रोग्रामिंग भाषा के समान है और बूलियन (boolean) चर का समर्थन करती है।
+[Zokrates](https://zokrates.github.io/) उपलब्ध एकमात्र शून्य-ज्ञान लाइब्रेरी नहीं है, लेकिन यह एक सामान्य, [इम्परेटिव (imperative)](https://en.wikipedia.org/wiki/Imperative_programming) प्रोग्रामिंग भाषा के समान है और बूलियन चर (boolean variables) का समर्थन करता है।
 
-अपने एप्लिकेशन के लिए, विभिन्न आवश्यकताओं के साथ, आप [Circum](https://docs.circom.io/getting-started/installation/) या [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/) का उपयोग करना पसंद कर सकते हैं।
+हालाँकि, ZoKrates अब सक्रिय रूप से मेंटेन नहीं किया जाता है। इसकी नवीनतम रिलीज़, 0.8.8 (और मेल खाने वाला `zokrates-js` 1.1.9), नवंबर 2023 की है, और मुख्य ब्रांच में अप्रैल 2024 के बाद से कोई कमिट नहीं हुआ है। इस ट्यूटोरियल का कोड अभी भी काम करता है, लेकिन बग फिक्स या सुरक्षा अपडेट की अपेक्षा न करें। एक नए प्रोजेक्ट के लिए, [Noir](https://noir-lang.org/) जैसी मेंटेन की जाने वाली भाषा पर विचार करें, जिसका उपयोग [इस ट्यूटोरियल](/developers/tutorials/app-plasma/) में किया गया है।
+
+अपने एप्लिकेशन के लिए, विभिन्न आवश्यकताओं के साथ, आप [Circom](https://docs.circom.io/getting-started/installation/) या [Cairo](https://www.cairo-lang.org/) का उपयोग करना पसंद कर सकते हैं।
 
 ### Zokrates को कब संकलित (compile) करें {#when-compile-zokrates}
 

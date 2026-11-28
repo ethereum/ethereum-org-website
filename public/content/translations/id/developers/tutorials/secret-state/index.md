@@ -9,18 +9,19 @@ lang: id
 published: 2025-03-15
 ---
 
-_Tidak ada rahasia di rantai blok_. Segala sesuatu yang diposting di rantai blok terbuka untuk dibaca oleh siapa saja. Hal ini diperlukan, karena rantai blok didasarkan pada kemampuan siapa saja untuk memverifikasinya. Namun, permainan sering kali bergantung pada state rahasia. Misalnya, permainan [minesweeper](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) sama sekali tidak masuk akal jika Anda bisa begitu saja membuka penjelajah blok dan melihat petanya.
+_Tidak ada rahasia di rantai blok_. Segala sesuatu yang diposting di rantai blok terbuka untuk dibaca oleh siapa saja. Hal ini diperlukan, karena rantai blok didasarkan pada kemampuan siapa saja untuk memverifikasinya. Namun, permainan sering kali bergantung pada state rahasia. Misalnya, permainan [minesweeper](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) sama sekali tidak masuk akal jika Anda bisa begitu saja membuka penjelajah rantai blok dan melihat petanya.
 
-Solusi paling sederhana adalah menggunakan [komponen server](/developers/tutorials/server-components/) untuk menyimpan state rahasia. Namun, alasan kita menggunakan rantai blok adalah untuk mencegah kecurangan oleh pengembang permainan. Kita perlu memastikan kejujuran komponen server. Server dapat memberikan hash dari state tersebut, dan menggunakan [bukti tanpa pengetahuan](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) untuk membuktikan bahwa state yang digunakan untuk menghitung hasil dari suatu langkah adalah benar.
+Solusi paling sederhana adalah menggunakan [komponen server](/developers/tutorials/server-components/) untuk menyimpan state rahasia. Namun, alasan kita menggunakan rantai blok adalah untuk mencegah kecurangan oleh pengembang permainan. Kita perlu memastikan kejujuran komponen server. Server dapat memberikan hash dari state, dan menggunakan [bukti tanpa pengetahuan](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) untuk membuktikan bahwa state yang digunakan untuk menghitung hasil dari suatu langkah adalah state yang benar.
 
-Setelah membaca artikel ini, Anda akan tahu cara membuat server penyimpan state rahasia semacam ini, klien untuk menampilkan state, dan komponen onchain untuk komunikasi di antara keduanya. Alat utama yang akan kita gunakan adalah:
+Setelah membaca artikel ini, Anda akan mengetahui cara membuat server penyimpan state rahasia semacam ini, klien untuk menampilkan state, dan komponen onchain untuk komunikasi di antara keduanya. Alat utama yang akan kita gunakan adalah:
 
 | Alat                                          | Tujuan                                                  | Diverifikasi pada versi |
 | --------------------------------------------- | ------------------------------------------------------- | ------------------: |
 | [Zokrates](https://zokrates.github.io/)       | Bukti tanpa pengetahuan dan verifikasinya               |               1.1.9 |
-| [Typescript](https://www.typescriptlang.org/) | Bahasa pemrograman untuk server dan klien               |               5.4.2 |
+| [TypeScript](https://www.typescriptlang.org/) | Bahasa pemrograman untuk server dan klien               |               5.4.2 |
 | [Node](https://nodejs.org/en)                 | Menjalankan server                                      |             20.18.2 |
-| [Viem](https://viem.sh/)                      | Komunikasi dengan Rantai Blok                           |              2.9.20 |
+| [Foundry](https://getfoundry.sh/)             | Rantai blok lokal dan penyebaran kontrak                |               1.0.0 |
+| [Viem](https://viem.sh/)                      | Komunikasi dengan rantai blok                           |              2.9.20 |
 | [MUD](https://mud.dev/)                       | Manajemen data onchain                                  |              2.0.12 |
 | [React](https://react.dev/)                   | Antarmuka pengguna klien                                |              18.2.0 |
 | [Vite](https://vitejs.dev/)                   | Menyajikan kode klien                                   |               4.2.1 |
@@ -35,9 +36,26 @@ Aplikasi ini ditulis menggunakan [MUD](https://mud.dev/), sebuah kerangka kerja 
 
 Untuk menjalankan contoh minesweeper:
 
-1. Pastikan Anda [telah menginstal prasyaratnya](https://mud.dev/quickstart#prerequisites): [Node](https://mud.dev/quickstart#prerequisites), [Foundry](https://book.getfoundry.sh/getting-started/installation), [`git`](https://git-scm.com/downloads), [`pnpm`](https://git-scm.com/downloads), dan [`mprocs`](https://github.com/pvolok/mprocs).
+1. Pastikan Anda [telah menginstal prasyaratnya](https://mud.dev/quickstart#prerequisites): [Node](https://nodejs.org/en), [Foundry](https://getfoundry.sh/introduction/installation), [`git`](https://git-scm.com/downloads), dan [`pnpm`](https://pnpm.io/installation).
 
-2. Klon repositori.
+   Contoh ini menggunakan MUD 2.0.12, yang memerlukan versi Node dan Foundry tertentu:
+
+   - **Node 20**. Alat baris perintah MUD 2.0.12 menggunakan [JSON import assertions](https://v8.dev/features/import-attributes), yang tidak lagi didukung oleh versi Node yang lebih baru, sehingga pada Node 22 atau yang lebih baru akan gagal dengan `SyntaxError: Unexpected identifier 'assert'`. Node 20 [mencapai akhir masa pakainya](https://nodejs.org/en/about/previous-releases) pada bulan April 2026 dan tidak lagi mendapatkan pembaruan keamanan, jadi gunakan hanya untuk contoh lokal ini. Manajer versi Node seperti [`fnm`](https://github.com/Schniz/fnm) atau [`nvm`](https://github.com/nvm-sh/nvm) memungkinkan Anda beralih ke Node 20 hanya untuk direktori ini, misalnya:
+
+     ```sh copy
+     fnm install 20
+     fnm use 20
+     ```
+
+   - **Foundry 1.0.0**. Dengan versi Foundry saat ini, skrip pasca-penyebaran gagal dengan _Usage of `address(this)` detected in script contract_. Instal versi yang telah diuji dengan:
+
+     ```sh copy
+     foundryup -i 1.0.0
+     ```
+
+     Setelah Anda selesai dengan tutorial ini, Anda dapat kembali ke versi terbaru dengan `foundryup`.
+
+2. Kloning repositori.
 
    ```sh copy
    git clone https://github.com/qbzzt/20240901-secret-state.git
@@ -48,10 +66,9 @@ Untuk menjalankan contoh minesweeper:
    ```sh copy
    cd 20240901-secret-state/
    pnpm install
-   npm install -g mprocs
    ```
 
-   Jika Foundry diinstal sebagai bagian dari `pnpm install`, Anda perlu memulai ulang shell baris perintah.
+   [`mprocs`](https://github.com/pvolok/mprocs), yang menjalankan semua proses dalam satu terminal, diinstal sebagai salah satu paket.
 
 4. Kompilasi kontrak
 
@@ -62,17 +79,17 @@ Untuk menjalankan contoh minesweeper:
     ```
 
 
-5. Mulai program (termasuk rantai blok [Anvil](https://book.getfoundry.sh/anvil/)) dan tunggu.
+5. Mulai program (termasuk rantai blok [anvil](https://getfoundry.sh/anvil/overview)) dan tunggu.
 
    ```sh copy
-   mprocs
+   pnpm dev
    ```
 
-   Perhatikan bahwa proses startup membutuhkan waktu yang lama. Untuk melihat kemajuannya, pertama-tama gunakan panah bawah untuk menggulir ke tab _contracts_ guna melihat kontrak MUD yang sedang disebarkan. Saat Anda mendapatkan pesan _Waiting for file changes…_, kontrak telah disebarkan dan kemajuan selanjutnya akan terjadi di tab _server_. Di sana, Anda menunggu hingga mendapatkan pesan _Verifier address: 0x...._.
+   Perhatikan bahwa proses memulai membutuhkan waktu yang lama. Untuk melihat kemajuannya, pertama-tama gunakan panah bawah untuk menggulir ke tab _contracts_ guna melihat kontrak MUD yang sedang disebarkan. Saat Anda mendapatkan pesan _Waiting for file changes…_, kontrak telah disebarkan dan kemajuan selanjutnya akan terjadi di tab _server_. Di sana, Anda menunggu hingga mendapatkan pesan _Verifier address: 0x...._.
 
-   Jika langkah ini berhasil, Anda akan melihat layar `mprocs`, dengan berbagai proses di sebelah kiri dan keluaran konsol untuk proses yang saat ini dipilih di sebelah kanan.
+   Jika langkah ini berhasil, Anda akan melihat layar `mprocs`, dengan berbagai proses di sebelah kiri dan keluaran konsol untuk proses yang dipilih saat ini di sebelah kanan.
 
-   ![The mprocs screen](./mprocs.png)
+   ![Layar mprocs](./mprocs.png)
 
    Jika ada masalah dengan `mprocs`, Anda dapat menjalankan keempat proses tersebut secara manual, masing-masing di jendela baris perintahnya sendiri:
 
@@ -83,7 +100,7 @@ Untuk menjalankan contoh minesweeper:
      anvil --base-fee 0 --block-time 2
      ```
 
-   - **Kontrak** 
+   - **Contracts** 
 
      ```sh
      cd packages/contracts
@@ -95,14 +112,14 @@ Untuk menjalankan contoh minesweeper:
      ```sh
      cd packages/server
      pnpm start
-     ```  
+     ```
 
-   - **Klien**
+   - **Client**
 
      ```sh
      cd packages/client
      pnpm run dev
-     ```  
+     ```
 
 6. Sekarang Anda dapat menelusuri [klien](http://localhost:3000), klik **New Game**, dan mulai bermain.
 
@@ -144,26 +161,26 @@ Alur ini mengoordinasikan eksekusi antara klien, komponen onchain, dan server.
 
 #### Inisialisasi {#initialization-flow}
 
-Saat Anda menjalankan `mprocs`, langkah-langkah ini terjadi:
+Saat Anda menjalankan `pnpm dev` (yang menjalankan `mprocs`), langkah-langkah ini terjadi:
 
 1. [`mprocs`](https://github.com/pvolok/mprocs) menjalankan empat komponen:
 
-   - [Anvil](https://book.getfoundry.sh/anvil/), yang menjalankan rantai blok lokal
-   - [Kontrak](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts), yang mengompilasi (jika perlu) dan menyebarkan kontrak untuk MUD
-   - [Klien](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), yang menjalankan [Vite](https://vitejs.dev/) untuk menyajikan antarmuka pengguna (UI) dan kode klien ke peramban web.
+   - [Anvil](https://getfoundry.sh/anvil/overview), yang menjalankan rantai blok lokal
+   - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts), yang mengompilasi (jika diperlukan) dan menyebarkan kontrak untuk MUD
+   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), yang menjalankan [Vite](https://vitejs.dev/) untuk menyajikan UI dan kode klien ke peramban web.
    - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server), yang melakukan tindakan server
 
 2. Paket `contracts` menyebarkan kontrak MUD dan kemudian menjalankan [skrip `PostDeploy.s.sol`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol). Skrip ini mengatur konfigurasi. Kode dari GitHub menentukan [ladang ranjau 10x5 dengan delapan ranjau di dalamnya](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23).
 
 3. [Server](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts) dimulai dengan [menyiapkan MUD](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6). Antara lain, ini mengaktifkan sinkronisasi data, sehingga salinan tabel yang relevan ada di memori server.
 
-4. Server berlangganan fungsi yang akan dieksekusi [saat tabel `Configuration` berubah](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23). [Fungsi ini](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) dipanggil setelah `PostDeploy.s.sol` dieksekusi dan memodifikasi tabel.
+4. Server melanggan fungsi untuk dieksekusi [saat tabel `Configuration` berubah](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23). [Fungsi ini](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) dipanggil setelah `PostDeploy.s.sol` dieksekusi dan memodifikasi tabel.
 
 5. Saat fungsi inisialisasi server memiliki konfigurasi, [fungsi tersebut memanggil `zkFunctions`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35) untuk menginisialisasi [bagian zero-knowledge dari server](#using-zokrates-from-typescript). Hal ini tidak dapat terjadi hingga kita mendapatkan konfigurasi karena fungsi zero-knowledge harus memiliki lebar dan tinggi ladang ranjau sebagai konstanta.
 
 6. Setelah bagian zero-knowledge dari server diinisialisasi, langkah selanjutnya adalah [menyebarkan kontrak verifikasi zero-knowledge ke rantai blok](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) dan mengatur alamat pemverifikasi di MUD.
 
-7. Terakhir, kita berlangganan pembaruan sehingga kita akan melihat saat pemain meminta [untuk memulai permainan baru](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) atau [menggali dalam permainan yang ada](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108).
+7. Terakhir, kita melanggan pembaruan sehingga kita akan melihat saat pemain meminta [untuk memulai permainan baru](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) atau untuk [menggali dalam permainan yang ada](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108).
 
 #### Permainan baru {#new-game-flow}
 
@@ -235,7 +252,7 @@ Kedua baris ini mengimpor dua fungsi dari [pustaka standar Zokrates](https://zok
 Elemen field di Zokrates biasanya memiliki panjang kurang dari 256 bit, tetapi tidak jauh berbeda. Untuk menyederhanakan kode, kita membatasi peta hingga 512 bit, dan menge-hash sebuah array yang terdiri dari empat field, dan di setiap field kita hanya menggunakan 128 bit. [Fungsi `pack128`](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) mengubah sebuah array 128 bit menjadi sebuah `field` untuk tujuan ini.
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 Baris ini memulai definisi fungsi. `hashMap` mendapatkan parameter tunggal yang disebut `map`, sebuah array `bool`(ean) dua dimensi. Ukuran peta adalah `width+2` kali `height+2` karena alasan yang [dijelaskan di bawah ini](#why-map-border).
@@ -245,7 +262,7 @@ Kita dapat menggunakan `${width+2}` dan `${height+2}` karena program Zokrates di
 Nilai yang dikembalikan adalah sebuah `field` yang berisi hash tersebut.
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 Peta tersebut adalah dua dimensi. Namun, fungsi `pack128` tidak berfungsi dengan array dua dimensi. Jadi pertama-tama kita meratakan peta menjadi array 512-byte, menggunakan `map1d`. Secara default variabel Zokrates adalah konstanta, tetapi kita perlu menetapkan nilai ke array ini dalam sebuah loop, jadi kita mendefinisikannya sebagai [`mut`](https://zokrates.github.io/language/variables.html#mutability).
@@ -253,19 +270,19 @@ Peta tersebut adalah dua dimensi. Namun, fungsi `pack128` tidak berfungsi dengan
 Kita perlu menginisialisasi array karena Zokrates tidak memiliki `undefined`. Ekspresi `[false; 512]` berarti [sebuah array yang terdiri dari 512 nilai `false`](https://zokrates.github.io/language/types.html#declaration-and-initialization).
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 Kita juga memerlukan penghitung untuk membedakan antara bit yang sudah kita isi di `map1d` dan yang belum.
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 Beginilah cara Anda mendeklarasikan sebuah [loop `for`](https://zokrates.github.io/language/control_flow.html#for-loops) di Zokrates. Loop `for` Zokrates harus memiliki batas yang tetap, karena meskipun tampak seperti loop, kompiler sebenarnya "membukanya" (unroll). Ekspresi `${width+2}` adalah konstanta waktu kompilasi karena `width` ditetapkan oleh kode TypeScript sebelum memanggil kompiler.
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -275,7 +292,7 @@ for u32 y in 0..${height+2} {
 Untuk setiap lokasi di peta, masukkan nilai tersebut ke dalam array `map1d` dan tingkatkan penghitungnya.
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -286,7 +303,7 @@ field[4] hashMe = [
 `pack128` untuk membuat sebuah array yang terdiri dari empat nilai `field` dari `map1d`. Di Zokrates `array[a..b]` berarti irisan array yang dimulai pada `a` dan berakhir pada `b-1`.
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -342,19 +359,19 @@ Secara default, bukti Zokrates menyertakan inputnya. Tidak ada gunanya mengetahu
 Ini membuka celah lain untuk penyalahgunaan. Pembukti dapat menggunakan koordinat yang benar, tetapi membuat peta dengan jumlah ranjau berapa pun di sekitar lokasi, dan mungkin di lokasi itu sendiri. Untuk mencegah penyalahgunaan ini, kita membuat bukti tanpa pengetahuan menyertakan hash dari peta, yang merupakan pengidentifikasi permainan.
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 Nilai yang dikembalikan di sini adalah sebuah tuple yang mencakup array hash peta serta hasil penggalian.
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 Kita menggunakan 255 sebagai nilai khusus jika lokasi itu sendiri memiliki bom.
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -511,7 +528,7 @@ Pengujian keamanan penting karena bug fungsionalitas pada akhirnya akan terungka
 
 ### Izin {#permissions}
 
-Ada satu entitas istimewa dalam permainan ini, yaitu server. Ini adalah satu-satunya pengguna yang diizinkan untuk memanggil fungsi di [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). Kita dapat menggunakan [`cast`](https://book.getfoundry.sh/cast/) untuk memverifikasi panggilan ke fungsi berizin hanya diizinkan sebagai akun server.
+Ada satu entitas istimewa dalam permainan ini, yaitu server. Server adalah satu-satunya pengguna yang diizinkan untuk memanggil fungsi di [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). Kita dapat menggunakan [`cast`](https://getfoundry.sh/cast/overview) untuk memverifikasi bahwa panggilan ke fungsi berizin hanya diizinkan sebagai akun server.
 
 [Kunci privat server ada di `setupNetwork.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52).
 
@@ -523,13 +540,15 @@ Ada satu entitas istimewa dalam permainan ini, yaitu server. Ini adalah satu-sat
    AUTHORIZED_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
    ```
 
+   `WORLD_ADDRESS` ini adalah alamat tempat MUD menyebarkan pada `anvil` yang baru. Jika `World` Anda berada di alamat yang berbeda, gunakan nilai di `packages/contracts/worlds.json`.
+
 2. Gunakan `cast` untuk mencoba mengatur alamat pemverifikasi sebagai alamat yang tidak sah.
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $UNAUTHORIZED_KEY
    ```
 
-   Tidak hanya `cast` melaporkan kegagalan, tetapi Anda juga dapat membuka **MUD Dev Tools** di dalam permainan pada peramban, klik **Tables**, dan pilih **app\_\_VerifierAddress**. Lihat bahwa alamat tersebut bukan nol.
+   Tidak hanya `cast` melaporkan kegagalan, tetapi Anda juga dapat membuka **MUD Dev Tools** di permainan pada peramban, klik **Tables**, dan pilih **app\_\_VerifierAddress**. Lihat bahwa alamatnya bukan nol.
 
 3. Atur alamat pemverifikasi sebagai alamat server.
 
@@ -537,9 +556,9 @@ Ada satu entitas istimewa dalam permainan ini, yaitu server. Ini adalah satu-sat
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $AUTHORIZED_KEY
    ```
 
-   Alamat di **app\_\_VerifiedAddress** sekarang seharusnya menjadi nol.
+   Alamat di **app\_\_VerifierAddress** sekarang seharusnya nol.
 
-Semua fungsi MUD dalam `System` yang sama melewati kontrol akses yang sama, jadi saya menganggap pengujian ini sudah cukup. Jika Anda merasa belum cukup, Anda dapat memeriksa fungsi lainnya di [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol).
+Semua fungsi MUD di `System` yang sama melalui kontrol akses yang sama, jadi saya menganggap pengujian ini cukup. Jika Anda tidak setuju, Anda dapat memeriksa fungsi lainnya di [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol).
 
 ### Penyalahgunaan zero-knowledge {#zero-knowledge-abuses}
 
@@ -553,10 +572,10 @@ Kemungkinan paling sederhana adalah memberikan jawaban yang salah dalam Bukti ta
 proof.inputs[3] = "0x" + "1".padStart(64, "0")
 ```
 
-Ini berarti kita akan selalu mengklaim ada satu bom, terlepas dari jawaban yang benar. Cobalah bermain dengan versi ini, dan Anda akan melihat di tab **server** pada layar `pnpm dev` kesalahan ini:
+Ini berarti kita akan selalu mengklaim ada satu bom, terlepas dari jawaban yang benar. Cobalah bermain dengan versi ini, dan Anda akan melihat di tab **server** pada layar `mprocs` kesalahan ini:
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000
@@ -673,9 +692,11 @@ Sebagai tutorial, artikel ini membutuhkan permainan singkat yang mudah dipahami,
 
 ### Mengapa Zokrates? {#why-zokrates}
 
-[Zokrates](https://zokrates.github.io/) bukanlah satu-satunya pustaka zero-knowledge yang tersedia, tetapi ini mirip dengan bahasa pemrograman [imperatif](https://en.wikipedia.org/wiki/Imperative_programming) normal dan mendukung variabel boolean.
+[Zokrates](https://zokrates.github.io/) bukanlah satu-satunya pustaka zero-knowledge yang tersedia, tetapi pustaka ini mirip dengan bahasa pemrograman [imperatif](https://en.wikipedia.org/wiki/Imperative_programming) normal dan mendukung variabel boolean.
 
-Untuk aplikasi Anda, dengan persyaratan yang berbeda, Anda mungkin lebih suka menggunakan [Circum](https://docs.circom.io/getting-started/installation/) atau [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/).
+Namun, Zokrates tidak lagi dipelihara secara aktif. Rilis terbarunya, 0.8.8 (dan `zokrates-js` 1.1.9 yang cocok), berasal dari November 2023, dan cabang utama belum memiliki komit sejak April 2024. Kode dalam tutorial ini masih berfungsi, tetapi jangan mengharapkan perbaikan bug atau pembaruan keamanan. Untuk proyek baru, pertimbangkan bahasa yang dipelihara seperti [Noir](https://noir-lang.org/), yang digunakan dalam [tutorial ini](/developers/tutorials/app-plasma/).
+
+Untuk aplikasi Anda, dengan persyaratan yang berbeda, Anda mungkin lebih suka menggunakan [Circom](https://docs.circom.io/getting-started/installation/) atau [Cairo](https://www.cairo-lang.org/).
 
 ### Kapan harus mengompilasi Zokrates {#when-compile-zokrates}
 

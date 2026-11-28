@@ -1,5 +1,12 @@
 # Brazilian Portuguese (pt-br) Translation Review Findings
 
+## PR #19993 (intl/pending-dev, runs 46112784113 / 46112790344 / 46118259298) -- 2026-11-28 -- Score 8.6/10
+Scope: `page-courses.json` (4,668 keys, first translation) + 17 tutorials (changed lines); scripted placeholder/tag/ICU/digit/negation checks over all keys (clean), about 90 keys and 6 tutorial diffs read.
+
+**Fixed in this branch (about 90 values):** LLM glossary-note annotations leaked into code comments in `app-plasma` (lines 624, 721, 765-768, 894; restored from English/dev). `(L2)` added in `uniswap-v2-annotated-code:757`. Courses: 299 values wrote `gas` (and `Gas`) where ETHGlossary and the whole pt-br tree use `gás`; replaced in 66 values (placeholders such as `{gas}` untouched). 11 values kept English decimals (`0.00042`, `12.5`) while the rest uses comma. `(PoW)`, `(PoS)`, `(L2)` removed where English spells the term out (3 keys).
+
+**Open:** `a Ethereum` (24, mostly the blockchains course, "blockchain" feminine) vs `o Ethereum` (about 390, and the dev tree's form); `Wei`/`wei` mixed (glossary says `Wei`); `Prova de Trabalho` capitalized where dev uses lowercase. Register is consistent `voce`.
+
 ## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 9.1/10
 Scope: 15 markdown files, changed lines; 6 diffs read in full (ethash, data-structures x3, frameworks, transactions), sweeps over all 15.
 

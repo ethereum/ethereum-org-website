@@ -16,17 +16,18 @@ lang: zh
 published: 2025-03-15
 ---
 
-_区块链上没有秘密_。发布在区块链上的所有内容都向所有人公开，任何人都可以读取。这是必要的，因为区块链的基础是任何人都可以对其进行验证。然而，游戏通常依赖于秘密状态。例如，如果你可以直接在区块浏览器上查看地图，那么[扫雷](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>)游戏就完全失去了意义。
+_区块链上没有秘密_。发布在区块链上的所有内容都对所有人公开可见。这是必要的，因为区块链的基础是任何人都可以验证它。然而，游戏通常依赖于秘密状态。例如，如果你可以直接去区块链浏览器上查看地图，那么[扫雷](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>)游戏就完全没有意义了。
 
 最简单的解决方案是使用[服务器组件](/developers/tutorials/server-components/)来保存秘密状态。然而，我们使用区块链的原因是为了防止游戏开发者作弊。我们需要确保服务器组件的诚实性。服务器可以提供状态的哈希，并使用[零知识证明](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important)来证明用于计算移动结果的状态是正确的。
 
 阅读本文后，你将了解如何创建这种保存秘密状态的服务器、用于显示状态的客户端，以及用于两者之间通信的链上组件。我们将使用的主要工具包括：
 
-| 工具                                          | 用途                                                 | 验证版本 |
+| 工具                                          | 用途                                                 | 已验证版本 |
 | --------------------------------------------- | ------------------------------------------------------- | ------------------: |
 | [Zokrates](https://zokrates.github.io/)       | 零知识证明及其验证            |               1.1.9 |
 | [TypeScript](https://www.typescriptlang.org/) | 用于服务器和客户端的编程语言 |               5.4.2 |
 | [Node](https://nodejs.org/en)                 | 运行服务器                                      |             20.18.2 |
+| [Foundry](https://getfoundry.sh/)             | 本地区块链和合约部署                |               1.0.0 |
 | [Viem](https://viem.sh/)                      | 与区块链通信                       |              2.9.20 |
 | [MUD](https://mud.dev/)                       | 链上数据管理                                 |              2.0.12 |
 | [React](https://react.dev/)                   | 客户端用户界面                                   |              18.2.0 |
@@ -42,9 +43,26 @@ _区块链上没有秘密_。发布在区块链上的所有内容都向所有人
 
 要运行扫雷游戏示例：
 
-1. 确保你[已安装必备组件](https://mud.dev/quickstart#prerequisites)：[Node](https://mud.dev/quickstart#prerequisites)、[Foundry](https://book.getfoundry.sh/getting-started/installation)、[`git`](https://git-scm.com/downloads)、[`pnpm`](https://git-scm.com/downloads) 和 [`mprocs`](https://github.com/pvolok/mprocs)。
+1. 确保你[已安装先决条件](https://mud.dev/quickstart#prerequisites)：[Node](https://nodejs.org/en)、[Foundry](https://getfoundry.sh/introduction/installation)、[`git`](https://git-scm.com/downloads) 和 [`pnpm`](https://pnpm.io/installation)。
 
-2. 克隆代码库。
+   此示例使用 MUD 2.0.12，它需要特定版本的 Node 和 Foundry：
+
+   - **Node 20**。MUD 2.0.12 命令行工具使用 [JSON 导入断言 (JSON import assertions)](https://v8.dev/features/import-attributes)，较新版本的 Node 不再支持该功能，因此在 Node 22 或更高版本上，它会因 `SyntaxError: Unexpected identifier 'assert'` 而失败。Node 20 在 2026 年 4 月[达到生命周期终点](https://nodejs.org/en/about/previous-releases)，不再获得安全更新，因此仅将它用于此本地示例。使用 Node 版本管理器（如 [`fnm`](https://github.com/Schniz/fnm) 或 [`nvm`](https://github.com/nvm-sh/nvm)）可以让你仅针对此目录切换到 Node 20，例如：
+
+     ```sh copy
+     fnm install 20
+     fnm use 20
+     ```
+
+   - **Foundry 1.0.0**。在当前的 Foundry 版本中，部署后脚本会因 _Usage of `address(this)` detected in script contract_ 而失败。使用以下命令安装经过测试的版本：
+
+     ```sh copy
+     foundryup -i 1.0.0
+     ```
+
+     完成本教程后，你可以使用 `foundryup` 返回到最新版本。
+
+2. 克隆仓库。
 
    ```sh copy
    git clone https://github.com/qbzzt/20240901-secret-state.git
@@ -55,10 +73,9 @@ _区块链上没有秘密_。发布在区块链上的所有内容都向所有人
    ```sh copy
    cd 20240901-secret-state/
    pnpm install
-   npm install -g mprocs
    ```
 
-   如果 Foundry 是作为 `pnpm install` 的一部分安装的，你需要重新启动命令行 shell。
+   [`mprocs`](https://github.com/pvolok/mprocs) 作为其中一个包被安装，它可以在单个终端中运行所有进程。
 
 4. 编译合约
 
@@ -69,19 +86,19 @@ _区块链上没有秘密_。发布在区块链上的所有内容都向所有人
     ```
 
 
-5. 启动程序（包括一条 [anvil](https://book.getfoundry.sh/anvil/) 区块链）并等待。
+5. 启动程序（包括一个 [Anvil](https://getfoundry.sh/anvil/overview) 区块链）并等待。
 
    ```sh copy
-   mprocs
+   pnpm dev
    ```
 
    请注意，启动需要很长时间。要查看进度，首先使用向下箭头滚动到 _contracts_ 选项卡，以查看正在部署的 MUD 合约。当你收到消息 _Waiting for file changes…_ 时，说明合约已部署，进一步的进度将在 _server_ 选项卡中显示。在那里，你需要等待直到收到消息 _Verifier address: 0x...._。
 
-   如果此步骤成功，你将看到 `mprocs` 屏幕，左侧是不同的进程，右侧是当前所选进程的控制台输出。
+   如果此步骤成功，你将看到 `mprocs` 屏幕，左侧是不同的进程，右侧是当前选定进程的控制台输出。
 
-   ![The mprocs screen](./mprocs.png)
+   ![mprocs 屏幕](./mprocs.png)
 
-   如果 `mprocs` 出现问题，你可以手动运行这四个进程，每个进程在各自的命令行窗口中运行：
+   如果 `mprocs` 出现问题，你可以手动运行这四个进程，每个进程在自己的命令行窗口中运行：
 
    - **Anvil**
 
@@ -102,16 +119,16 @@ _区块链上没有秘密_。发布在区块链上的所有内容都向所有人
      ```sh
      cd packages/server
      pnpm start
-     ```  
+     ```
 
    - **Client**
 
      ```sh
      cd packages/client
      pnpm run dev
-     ```  
+     ```
 
-6. 现在你可以浏览到[客户端](http://localhost:3000)，点击 **New Game**（新游戏），然后开始游玩。
+6. 现在你可以浏览到[客户端](http://localhost:3000)，点击 **New Game**，然后开始游玩。
 
 ### 表 {#tables}
 
@@ -151,22 +168,22 @@ _区块链上没有秘密_。发布在区块链上的所有内容都向所有人
 
 #### 初始化 {#initialization-flow}
 
-当你运行 `mprocs` 时，会发生以下步骤：
+当你运行 `pnpm dev`（它会运行 `mprocs`）时，会发生以下步骤：
 
 1. [`mprocs`](https://github.com/pvolok/mprocs) 运行四个组件：
 
-   - [Anvil](https://book.getfoundry.sh/anvil/)，运行本地区块链
+   - [Anvil](https://getfoundry.sh/anvil/overview)，运行本地区块链
    - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts)，编译（如果需要）并部署 MUD 的合约
-   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client)，运行 [Vite](https://vitejs.dev/) 以向 Web 浏览器提供 UI 和客户端代码。
+   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client)，运行 [Vite](https://vitejs.dev/) 以向 Web 浏览器提供 UI 和客户端代码服务。
    - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server)，执行服务器操作
 
-2. `contracts` 包部署 MUD 合约，然后运行 [`PostDeploy.s.sol` 脚本](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol)。此脚本设置配置。来自 GitHub 的代码指定了[一个包含八个地雷的 10x5 雷区](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23)。
+2. `contracts` 包部署 MUD 合约，然后运行 [`PostDeploy.s.sol` 脚本](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol)。此脚本设置配置。来自 GitHub 的代码指定了[一个包含 8 个地雷的 10x5 雷区](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23)。
 
 3. [服务器](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts)首先[设置 MUD](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6)。除其他事项外，这会激活数据同步，以便在服务器内存中存在相关表的副本。
 
-4. 服务器订阅一个函数，以便[在 `Configuration` 表更改时](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23)执行。[此函数](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168)在 `PostDeploy.s.sol` 执行并修改表后被调用。
+4. 服务器订阅一个函数，以便[在 `Configuration` 表发生更改时](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23)执行。[此函数](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168)在 `PostDeploy.s.sol` 执行并修改表后被调用。
 
-5. 当服务器初始化函数获得配置后，[它会调用 `zkFunctions`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35) 来初始化[服务器的零知识部分](#using-zokrates-from-typescript)。这必须在我们获得配置之后才能发生，因为零知识函数必须将雷区的宽度和高度作为常量。
+5. 当服务器初始化函数获取到配置后，[它会调用 `zkFunctions`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35) 来初始化[服务器的零知识部分](#using-zokrates-from-typescript)。这必须在我们获取到配置之后才能发生，因为零知识函数必须将雷区的宽度和高度作为常量。
 
 6. 在服务器的零知识部分初始化之后，下一步是[将零知识验证合约部署到区块链](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53)并在 MUD 中设置验证者地址。
 
@@ -242,7 +259,7 @@ import "utils/pack/bool/pack128.zok" as pack128;
 Zokrates 中的 field 元素通常小于 256 位，但相差不大。为了简化代码，我们将地图限制为最多 512 位，并对包含四个 field 的数组进行哈希处理，在每个 field 中我们仅使用 128 位。[`pack128` 函数](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok)为此目的将 128 位数组转换为 `field`。
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 这一行开始定义一个函数。`hashMap` 接收一个名为 `map` 的参数，这是一个二维 `bool`(ean) 数组。地图的大小为 `width+2` 乘 `height+2`，原因将在[下文解释](#why-map-border)。
@@ -252,7 +269,7 @@ def hashMap(bool[${width+2}][${height+2}] map) -> field {
 返回值是一个包含哈希的 `field`。
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 地图是二维的。然而，`pack128` 函数不适用于二维数组。因此，我们首先使用 `map1d` 将地图展平为 512 字节的数组。默认情况下，Zokrates 变量是常量，但我们需要在循环中为该数组赋值，因此我们将其定义为 [`mut`](https://zokrates.github.io/language/variables.html#mutability)。
@@ -260,19 +277,19 @@ bool[512] mut map1d = [false; 512];
 我们需要初始化该数组，因为 Zokrates 没有 `undefined`。`[false; 512]` 表达式表示[一个包含 512 个 `false` 值的数组](https://zokrates.github.io/language/types.html#declaration-and-initialization)。
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 我们还需要一个计数器来区分我们在 `map1d` 中已经填充的位和尚未填充的位。
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 这就是在 Zokrates 中声明 [`for` 循环](https://zokrates.github.io/language/control_flow.html#for-loops)的方法。Zokrates 的 `for` 循环必须具有固定的边界，因为虽然它看起来像一个循环，但编译器实际上会将其“展开”。表达式 `${width+2}` 是一个编译时常量，因为 `width` 是由 TypeScript 代码在调用编译器之前设置的。
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -282,7 +299,7 @@ for u32 y in 0..${height+2} {
 对于地图中的每个位置，将该值放入 `map1d` 数组中并递增计数器。
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -293,7 +310,7 @@ field[4] hashMe = [
 使用 `pack128` 从 `map1d` 创建一个包含四个 `field` 值的数组。在 Zokrates 中，`array[a..b]` 表示从 `a` 开始到 `b-1` 结束的数组切片。
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -349,19 +366,19 @@ def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8)
 这开启了另一种滥用的可能。证明者可以使用正确的坐标，但创建一个在该位置周围（甚至可能在该位置本身）有任意数量地雷的地图。为了防止这种滥用，我们让零知识证明包含地图的哈希，即游戏标识符。
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 这里的返回值是一个元组，包含地图哈希数组以及挖掘结果。
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 我们使用 255 作为特殊值，以防该位置本身有炸弹。
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -518,7 +535,7 @@ const solidityVerifier = `
 
 ### 权限 {#permissions}
 
-在这个游戏中有一个特权实体，即服务器。它是唯一被允许调用 [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) 中功能的用户。我们可以使用 [`cast`](https://book.getfoundry.sh/cast/) 来验证对许可型函数的调用是否仅限于服务器账户。
+在这个游戏中有一个特权实体，即服务器。它是唯一被允许调用 [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) 中函数的用户。我们可以使用 [`cast`](https://getfoundry.sh/cast/overview) 来验证对许可型函数的调用是否仅允许作为服务器账户进行。
 
 [服务器的私钥位于 `setupNetwork.ts` 中](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52)。
 
@@ -530,21 +547,23 @@ const solidityVerifier = `
    AUTHORIZED_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
    ```
 
-2. 使用 `cast` 尝试将验证者地址设置为未经授权的地址。
+   这个 `WORLD_ADDRESS` 是 MUD 在全新的 `anvil` 上部署的地址。如果你的 `World` 位于不同的地址，请使用 `packages/contracts/worlds.json` 中的值。
+
+2. 使用 `cast` 尝试以未授权地址的身份设置验证者地址。
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $UNAUTHORIZED_KEY
    ```
 
-   不仅 `cast` 会报告失败，而且你可以在浏览器的游戏中打开 **MUD Dev Tools**，点击 **Tables**，然后选择 **app\_\_VerifierAddress**。可以看到该地址不为零。
+   不仅 `cast` 会报告失败，而且你可以在浏览器中的游戏里打开 **MUD Dev Tools**，点击 **Tables**，然后选择 **app\_\_VerifierAddress**。可以看到该地址不为零。
 
-3. 将验证者地址设置为服务器的地址。
+3. 以服务器地址的身份设置验证者地址。
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $AUTHORIZED_KEY
    ```
 
-   **app\_\_VerifiedAddress** 中的地址现在应该为零。
+   现在 **app\_\_VerifierAddress** 中的地址应该为零。
 
 同一个 `System` 中的所有 MUD 函数都经过相同的访问控制，因此我认为这个测试已经足够了。如果你觉得不够，可以检查 [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) 中的其他函数。
 
@@ -560,10 +579,10 @@ const solidityVerifier = `
 proof.inputs[3] = "0x" + "1".padStart(64, "0")
 ```
 
-这意味着无论正确答案是什么，我们都将始终声称有一颗炸弹。尝试玩一下这个版本，你会在 `pnpm dev` 屏幕的 **server** 选项卡中看到这个错误：
+这意味着无论正确答案是什么，我们都将始终声称有一颗炸弹。尝试玩一下这个版本，你会在 `mprocs` 屏幕的 **server** 选项卡中看到这个错误：
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000
@@ -682,7 +701,9 @@ proof.proof = {
 
 [Zokrates](https://zokrates.github.io/) 并不是唯一可用的零知识库，但它类似于普通的[命令式](https://en.wikipedia.org/wiki/Imperative_programming)编程语言，并且支持布尔变量。
 
-对于具有不同要求的应用程序，你可能更倾向于使用 [Circum](https://docs.circom.io/getting-started/installation/) 或 [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/)。
+然而，Zokrates 已不再积极维护。它的最新版本 0.8.8（以及匹配的 `zokrates-js` 1.1.9）发布于 2023 年 11 月，并且主分支自 2024 年 4 月以来没有任何提交。本教程中的代码仍然有效，但不要指望会有错误修复或安全更新。对于新项目，请考虑使用维护中的语言，例如 [Noir](https://noir-lang.org/)，[本教程](/developers/tutorials/app-plasma/)中就使用了该语言。
+
+对于具有不同要求的应用程序，你可能更喜欢使用 [Circom](https://docs.circom.io/getting-started/installation/) 或 [Cairo](https://www.cairo-lang.org/)。
 
 ### 何时编译 Zokrates {#when-compile-zokrates}
 

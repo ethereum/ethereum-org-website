@@ -204,3 +204,15 @@ Scope: gas page, translation-program page, page-developers-index.json (3 files),
 
 - The agent filed #101 as a warning; it is critical (see PR #19901). `Тейлор будет зачислено` grammar.
 - `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)
+
+## PR #19993 (intl/pending-dev) -- 2026-11-28 -- Score 8.6/10
+Scope: 16 developer tutorials (incremental updates), changed lines only; no page-courses.json for this locale.
+
+**Fixed in this branch:**
+
+- run-node-raspberry-pi:19 `Плата расширения (HAT) NVMe` -> `NVMe HAT` (English leaves HAT bare; added expansion, known-patterns #112)
+
+**Open / notes:**
+
+- `tags: ["уровень 2 (L2)"]` keeps the glossary `(L2)` that English lacks (case-only change in this PR); warning.
+- Pre-existing, untouched lines still carry transliterated names (`Юнисвоп`, `ОпенЗеппелин` in unchanged paragraphs); out of scope.

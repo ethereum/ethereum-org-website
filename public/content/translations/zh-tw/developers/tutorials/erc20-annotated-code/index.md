@@ -11,19 +11,27 @@ published: 2021-03-09
 
 ## 簡介 {#introduction}
 
-以太坊最常見的用途之一是讓一個群體建立可交易的代幣，從某種意義上來說，就是他們自己的貨幣。這些代幣通常遵循一個標準：[ERC-20](/developers/docs/standards/tokens/erc-20/)。這個標準使得編寫能與所有 ERC-20 代幣配合使用的工具（例如流動性池和錢包）成為可能。在本文中，我們將分析 [歐本齊柏林 (OpenZeppelin) 的 Solidity ERC-20 實作](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)，以及其[介面定義](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)。
+以太坊最常見的用途之一是讓一個群體建立可交易的代幣，在某種意義上就是他們自己的貨幣。這些代幣通常遵循一個標準：[ERC-20](/developers/docs/standards/tokens/erc-20/)。這個標準使得編寫能夠與所有 ERC-20 代幣配合使用的工具（例如流動性池和錢包）成為可能。在本文中，我們將分析 [OpenZeppelin Solidity ERC20 實作](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol)，以及[介面定義](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol)。
 
-這是帶有註解的原始碼。如果你想實作 ERC-20，請[閱讀本教學](https://docs.openzeppelin.com/contracts/3.x/erc20-supply)。
+這是帶有註解的原始碼。如果你想實作 ERC-20，請[閱讀本教學](https://docs.openzeppelin.com/contracts/5.x/erc20-supply)。
+
+<Alert variant="info">
+<AlertContent>
+<AlertDescription>
+本導覽涵蓋 OpenZeppelin Contracts v3.3（Solidity 0.6/0.7）。如果你今天安裝 `@openzeppelin/contracts`，你將獲得 v5.x，它與下面的程式碼有所不同：它使用 Solidity 內建的檢查算術而不是 `SafeMath`，將 `_beforeTokenTransfer` 和 `_afterTokenTransfer` 替換為單一的 `_update` 函式，捨棄了 `increaseAllowance`、`decreaseAllowance` 和 `_setupDecimals`，並使用自訂錯誤而不是回滾字串來報告失敗。這裡解釋的概念仍然適用。有關目前的 API，請參閱 [OpenZeppelin v5 ERC-20 文件](https://docs.openzeppelin.com/contracts/5.x/erc20)。
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## 介面 {#the-interface}
 
-像 ERC-20 這樣標準的目的是允許許多代幣實作在各種應用程式（如錢包和去中心化交易所）之間是可互操作的。為了實現這一點，我們建立了一個[介面](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/)。任何需要使用代幣合約的程式碼都可以使用介面中相同的定義，並與所有使用該介面的代幣合約相容，無論它是像梅塔馬斯克 (MetaMask) 這樣的錢包、像 etherscan.io 這樣的去中心化應用程式 (dapp)，還是像流動性池這樣的其他合約。
+像 ERC-20 這樣標準的目的是允許許多代幣實作在應用程式（如錢包和去中心化交易所）之間是可互操作的。為了實現這一點，我們建立了一個[介面](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/)。任何需要使用代幣合約的程式碼都可以使用介面中相同的定義，並與所有使用它的代幣合約相容，無論它是像 MetaMask 這樣的錢包、像 etherscan.io 這樣的 dapp，還是像流動性池這樣不同的合約。
 
-![Illustration of the ERC-20 interface](erc20_interface.png)
+![ERC-20 介面圖解](erc20_interface.png)
 
 如果你是一位經驗豐富的程式設計師，你可能記得在 [Java](https://www.w3schools.com/java/java_interface.asp) 甚至 [C 標頭檔](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html)中看過類似的結構。
 
-這是歐本齊柏林提供的 [ERC-20 介面](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)定義。它是將[人類可讀的標準](https://eips.ethereum.org/EIPS/eip-20)翻譯成 Solidity 程式碼。當然，介面本身並不定義「如何」執行任何操作。這將在下面的合約原始碼中解釋。
+這是來自 OpenZeppelin 的 [ERC-20 介面](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol)定義。它是將[人類可讀的標準](https://eips.ethereum.org/EIPS/eip-20)轉換為 Solidity 程式碼。當然，介面本身並不定義_如何_做任何事情。這將在下面的合約原始碼中解釋。
 
 &nbsp;
 
@@ -31,7 +39,7 @@ published: 2021-03-09
 // SPDX-License-Identifier: MIT
 ```
 
-Solidity 檔案應該包含一個授權標識符。[你可以在這裡查看授權列表](https://spdx.org/licenses/)。如果你需要不同的授權，只需在註解中說明即可。
+Solidity 檔案應該包含授權條款識別碼。[你可以在這裡查看授權條款列表](https://spdx.org/licenses/)。如果你需要不同的授權條款，只需在註解中解釋即可。
 
 &nbsp;
 
@@ -39,13 +47,13 @@ Solidity 檔案應該包含一個授權標識符。[你可以在這裡查看授�
 pragma solidity >=0.6.0 <0.8.0;
 ```
 
-Solidity 語言仍在快速發展，新版本可能與舊程式碼不相容（[請見此處](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)）。因此，最好不僅指定語言的最低版本，還要指定最高版本，即你測試程式碼時使用的最新版本。
+Solidity 語言仍在快速發展，新版本可能與舊程式碼不相容（[請見此處](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)）。因此，最好不僅指定語言的最低版本，還要指定最高版本，即你測試程式碼的最新版本。
 
 &nbsp;
 
 ```solidity
 /**
- * @dev EIP 中定義的 ERC-20 標準介面。
+ * @dev EIP 中定義的 ERC20 標準介面。
  */
 ```
 
@@ -63,14 +71,15 @@ interface IERC20 {
 
 ```solidity
     /**
-     * @dev 回傳存在的代幣數量。
+     * @dev 回傳現存的代幣數量。
      */
     function totalSupply() external view returns (uint256);
 ```
 
-這個函式是 `external`，這意味著[它只能從合約外部呼叫](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2)。它回傳合約中代幣的總供應量。這個值使用以太坊中最常見的型別回傳，即無號 256 位元整數（256 位元是 EVM 的原生字組大小）。這個函式也是一個 `view`，這意味著它不會改變狀態，因此它可以在單一節點上執行，而不需要區塊鏈中的每個節點都執行它。這種類型的函式不會產生交易，也不會消耗[燃料](/developers/docs/gas/)。
+這個函式是 `external`，這意味著[它只能從合約外部呼叫](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2)。它回傳合約中代幣的總供應量。這個值使用以太坊中最常見的型別回傳，即無號 256 位元（256 位元是 EVM 的原生字組大小）。這個函式也是一個 `view`，這意味著它不會改變狀態，因此它可以在單一節點上執行，而不需要區塊鏈中的每個節點都執行它。這種函式不會產生交易，也不會消耗[燃料](/developers/docs/gas/)。
 
-**注意：** 理論上，合約的建立者似乎可以透過回傳比實際值更小的總供應量來作弊，使每個代幣看起來比實際更有價值。然而，這種擔憂忽略了區塊鏈的真實本質。區塊鏈上發生的一切都可以被每個節點驗證。為了實現這一點，每個合約的機器語言程式碼和儲存空間在每個節點上都是可用的。雖然你不被強制要求發布合約的 Solidity 程式碼，但除非你發布原始碼以及編譯它所使用的 Solidity 版本，否則沒有人會認真對待你，因為這樣才能與你提供的機器語言程式碼進行驗證。例如，請參閱[這個合約](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract)。
+**注意：** 理論上，合約的建立者似乎可以透過回傳比實際值更小的總供應量來作弊，使每個代幣看起來比實際更有價值。然而，這種擔憂忽略了區塊鏈的真實本質。區塊鏈上發生的一切都可以被每個節點驗證。為了實現這一點，每個合約的機器語言程式碼和儲存空間都可以在每個節點上取得。雖然你不被要求發布你合約的 Solidity 程式碼，但除非你發布原始碼以及編譯它所使用的 Solidity 版本，否則沒有人會認真對待你，這樣它就可以與你提供的機器語言程式碼進行驗證。
+例如，請參閱[這個合約](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract)。
 
 &nbsp;
 
@@ -81,7 +90,7 @@ interface IERC20 {
     function balanceOf(address account) external view returns (uint256);
 ```
 
-顧名思義，`balanceOf` 回傳帳戶的餘額。在 Solidity 中，以太坊帳戶使用 `address` 型別來識別，該型別佔用 160 位元。它也是 `external` 和 `view`。
+顧名思義，`balanceOf` 回傳一個帳戶的餘額。以太坊帳戶在 Solidity 中使用 `address` 型別來識別，它包含 160 位元。它也是 `external` 和 `view`。
 
 &nbsp;
 
@@ -96,29 +105,29 @@ interface IERC20 {
     function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
-`transfer` 函式將代幣從呼叫者轉帳到不同的地址。這涉及狀態的改變，因此它不是 `view`。當使用者呼叫這個函式時，它會建立一筆交易並消耗燃料。它還會觸發一個事件 `Transfer`，以通知區塊鏈上的所有人該事件的發生。
+`transfer` 函式將代幣從呼叫者轉帳到不同的地址。這涉及狀態的改變，所以它不是 `view`。當使用者呼叫這個函式時，它會建立一筆交易並消耗燃料。它還會發出一個事件 `Transfer`，以通知區塊鏈上的每個人該事件。
 
 該函式為兩種不同類型的呼叫者提供兩種類型的輸出：
 
-- 直接從使用者介面呼叫該函式的使用者。通常，使用者提交交易後不會等待回應，因為這可能需要無限長的時間。使用者可以透過尋找交易收據（由交易雜湊值識別）或尋找 `Transfer` 事件來查看發生了什麼事。
-- 其他合約，它們作為整體交易的一部分呼叫該函式。這些合約會立即獲得結果，因為它們在同一筆交易中執行，因此它們可以使用函式的回傳值。
+- 直接從使用者介面呼叫該函式的使用者。通常使用者提交一筆交易，並且不等待回應，這可能需要無限長的時間。使用者可以透過尋找交易收據（由交易雜湊值識別）或尋找 `Transfer` 事件來查看發生了什麼事。
+- 其他合約，它們作為整體交易的一部分呼叫該函式。這些合約會立即得到結果，因為它們在同一筆交易中執行，所以它們可以使用函式回傳值。
 
 其他改變合約狀態的函式也會產生相同類型的輸出。
 
 &nbsp;
 
-授權額度允許一個帳戶花費屬於不同擁有者的一些代幣。這非常有用，例如對於作為賣方的合約。合約無法監控事件，因此如果買方直接將代幣轉帳給賣方合約，該合約將不知道它已經收到付款。相反地，買方允許賣方合約花費特定金額，然後賣方轉帳該金額。這是透過賣方合約呼叫的函式來完成的，因此賣方合約可以知道它是否成功。
+授權額度允許一個帳戶花費屬於不同擁有者的一些代幣。這對於例如作為賣方的合約很有用。合約無法監控事件，因此如果買方直接將代幣轉帳給賣方合約，該合約將不知道它已收到付款。相反，買方允許賣方合約花費一定金額，然後賣方轉帳該金額。這是透過賣方合約呼叫的函式來完成的，因此賣方合約可以知道它是否成功。
 
 ```solidity
     /**
-     * @dev 回傳 `spender` 透過 {transferFrom} 被允許代表 `owner` 花費的剩餘代幣數量。預設為零。
+     * @dev 回傳 `spender` 透過 {transferFrom} 被允許代表 `owner` 花費的剩餘代幣數量。此值預設為零。
      *
-     * 當呼叫 {approve} 或 {transferFrom} 時，此數值會改變。
+     * 當呼叫 {approve} 或 {transferFrom} 時，此數值將會改變。
      */
     function allowance(address owner, address spender) external view returns (uint256);
 ```
 
-`allowance` 函式讓任何人都可以查詢一個地址 (`owner`) 允許另一個地址 (`spender`) 花費的授權額度是多少。
+`allowance` 函式讓任何人都可以查詢一個地址（`owner`）允許另一個地址（`spender`）花費的授權額度是多少。
 
 &nbsp;
 
@@ -128,7 +137,7 @@ interface IERC20 {
      *
      * 回傳一個布林值來指示操作是否成功。
      *
-     * 重要提示：請注意，使用此方法更改授權額度會帶來風險，因為不幸的交易順序可能導致某人同時使用舊的與新的授權額度。減輕此競爭條件的一種可能解決方案是先將花費者的授權額度降至 0，然後再設定所需的值：
+     * 重要提示：請注意，使用此方法更改授權額度會帶來風險，因為不幸的交易順序可能導致某人同時使用舊的與新的授權額度。減輕這種競爭條件的一個可能解決方案是先將花費者的授權額度降至 0，然後再設定為所需的值：
      * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
      *
      * 觸發 {Approval} 事件。
@@ -136,7 +145,7 @@ interface IERC20 {
     function approve(address spender, uint256 amount) external returns (bool);
 ```
 
-`approve` 函式建立一個授權額度。請務必閱讀有關它可能如何被濫用的訊息。在以太坊中，你可以控制自己交易的順序，但你無法控制其他人交易的執行順序，除非你等到看見對方的交易已經發生後才提交自己的交易。
+`approve` 函式建立一個授權額度。請務必閱讀有關它如何被濫用的訊息。在以太坊中，你可以控制自己交易的順序，但你無法控制其他人交易執行的順序，除非你直到看到對方的交易已經發生才提交自己的交易。
 
 &nbsp;
 
@@ -158,24 +167,25 @@ interface IERC20 {
 ```solidity
 
     /**
-     * @dev 當 `value` 數量的代幣從一個帳戶（`from`）轉帳至另一個帳戶（`to`）時觸發。
+     * @dev 當 `value` 數量的代幣從一個帳戶 (`from`) 轉帳至另一個帳戶 (`to`) 時觸發。
      *
      * 請注意，`value` 可以為零。
      */
     event Transfer(address indexed from, address indexed to, uint256 value);
 
     /**
-     * @dev 當透過呼叫 {approve} 設定 `spender` 對 `owner` 的授權額度時觸發。`value` 為新的授權額度。
+     * @dev Emitted when the allowance of a `spender` for an `owner` is set by
+     * a call to {approve}. `value` is the new allowance.
      */
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 ```
 
-當 ERC-20 合約的狀態改變時，會觸發這些事件。
+當 ERC-20 合約的狀態改變時，會發出這些事件。
 
 ## 實際的合約 {#the-actual-contract}
 
-這是實作 ERC-20 標準的實際合約，[取自此處](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)。它不應該被原封不動地使用，但你可以[繼承](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm)它，將其擴展為可用的東西。
+這是實作 ERC-20 標準的實際合約，[取自此處](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol)。它不應該被原封不動地使用，但你可以[繼承](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm)它，將其擴展為可用的東西。
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -196,7 +206,7 @@ import "../../math/SafeMath.sol";
 ```
 
 - `GSN/Context.sol` 是使用 [OpenGSN](https://opengsn.org/) 所需的定義，這是一個允許沒有以太幣的使用者使用區塊鏈的系統。請注意，這是一個舊版本，如果你想與 OpenGSN 整合，請[使用本教學](https://docs.opengsn.org/javascript-client/tutorial.html)。
-- [SafeMath 函式庫](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)，它可以防止 Solidity 版本 **&lt;0.8.0** 的算術溢位/下溢。在 Solidity ≥0.8.0 中，算術運算在溢位/下溢時會自動回滾，使得 SafeMath 變得不必要。此合約使用 SafeMath 是為了與舊版編譯器向下相容。
+- [SafeMath 函式庫](https://docs.openzeppelin.com/contracts/3.x/api/math#SafeMath)，它可以防止 Solidity 版本 **&lt;0.8.0** 的算術溢位/下溢。在 Solidity ≥0.8.0 中，算術運算在溢位/下溢時會自動回滾，使得 SafeMath 變得不必要。此合約使用 SafeMath 是為了與舊版編譯器向下相容。
 
 &nbsp;
 
@@ -239,19 +249,19 @@ contract ERC20 is Context, IERC20 {
 
 ```
 
-這一行將 `SafeMath` 函式庫附加到 `uint256` 型別。你可以在[這裡](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol)找到這個函式庫。
+這一行將 `SafeMath` 函式庫附加到 `uint256` 型別。你可以在[這裡](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/math/SafeMath.sol)找到這個函式庫。
 
 ### 變數定義 {#variable-definitions}
 
-這些定義指定了合約的狀態變數。這些變數被宣告為 `private`，但這僅意味著區塊鏈上的其他合約無法讀取它們。_區塊鏈上沒有秘密_，每個節點上的軟體都擁有每個區塊中每個合約的狀態。按照慣例，狀態變數的命名以 `_<something>` 開頭。
+這些定義指定了合約的狀態變數。這些變數被宣告為 `private`，但這僅意味著區塊鏈上的其他合約無法讀取它們。_區塊鏈上沒有秘密_，每個節點上的軟體都擁有每個區塊中每個合約的狀態。按照慣例，狀態變數的命名為 `_<something>`。
 
-前兩個變數是[映射 (mappings)](https://www.tutorialspoint.com/solidity/solidity_mappings.htm)，這意味著它們的行為與[關聯陣列](https://wikipedia.org/wiki/Associative_array)大致相同，只是鍵值是數值。儲存空間僅分配給值不同於預設值（零）的項目。
+前兩個變數是[映射 (mapping)](https://www.tutorialspoint.com/solidity/solidity_mappings.htm)，這意味著它們的行為與[關聯陣列](https://wikipedia.org/wiki/Associative_array)大致相同，只是鍵值是數值。只有當條目的值與預設值（零）不同時，才會為其分配儲存空間。
 
 ```solidity
     mapping (address => uint256) private _balances;
 ```
 
-第一個映射 `_balances` 是地址及其各自擁有的此代幣餘額。要存取餘額，請使用此語法：`_balances[<address>]`。
+第一個映射 `_balances` 是地址及其各自的此代幣餘額。要存取餘額，請使用此語法：`_balances[<address>]`。
 
 &nbsp;
 
@@ -259,7 +269,7 @@ contract ERC20 is Context, IERC20 {
     mapping (address => mapping (address => uint256)) private _allowances;
 ```
 
-這個變數 `_allowances` 儲存了前面解釋過的授權額度。第一個索引是代幣的擁有者，第二個是獲得授權額度的合約。要存取地址 A 可以從地址 B 的帳戶中花費的金額，請使用 `_allowances[B][A]`。
+這個變數 `_allowances` 儲存了前面解釋的授權額度。第一個索引是代幣的擁有者，第二個是擁有授權額度的合約。要存取地址 A 可以從地址 B 的帳戶中花費的金額，請使用 `_allowances[B][A]`。
 
 &nbsp;
 
@@ -279,32 +289,30 @@ contract ERC20 is Context, IERC20 {
 
 這三個變數用於提高可讀性。前兩個不言自明，但 `_decimals` 則不然。
 
-一方面，以太坊沒有浮點數或小數變數。另一方面，人類喜歡能夠分割代幣。人們選擇黃金作為貨幣的原因之一是，當有人想用一頭牛的價值來買一隻鴨子時，很難找零。
+一方面，以太坊沒有浮點數或小數變數。另一方面，人類喜歡能夠分割代幣。人們選擇黃金作為貨幣的原因之一是，當有人想買一隻鴨子價值的牛時，很難找零。
 
-解決方案是追蹤整數，但計算的不是真實的代幣，而是一種幾乎毫無價值的小數代幣。以以太幣為例，小數代幣稱為 Wei，10^18 Wei 等於 1 ETH。在撰寫本文時，10,000,000,000,000 Wei 大約等於一美分或一歐分。
+解決方案是追蹤整數，但計算的不是真實的代幣，而是一種幾乎毫無價值的小數代幣。以以太幣為例，小數代幣被稱為 Wei，10^18 Wei 等於 1 ETH。
 
-應用程式需要知道如何顯示代幣餘額。如果使用者有 3,141,000,000,000,000,000 Wei，那是 3.14 ETH 嗎？31.41 ETH？還是 3,141 ETH？在以太幣的情況下，定義為 10^18 Wei 等於 1 ETH，但對於你的代幣，你可以選擇不同的值。如果分割代幣沒有意義，你可以使用 `_decimals` 值為零。如果你想使用與 ETH 相同的標準，請使用值 **18**。
+應用程式需要知道如何顯示代幣餘額。如果使用者有 3,141,000,000,000,000,000 Wei，那是 3.14 ETH 嗎？31.41 ETH？還是 3,141 ETH？在以太幣的情況下，它被定義為 10^18 Wei 等於 1 ETH，但對於你的代幣，你可以選擇不同的值。如果分割代幣沒有意義，你可以使用 `_decimals` 值為零。如果你想使用與 ETH 相同的標準，請使用值 **18**。
 
 ### 建構函式 {#the-constructor}
 
 ```solidity
     /**
-     * @dev 設定 {name} 與 {symbol} 的值，並將 {decimals} 初始化為預設值 18。
+     * @dev 設定 {name} 和 {symbol} 的值，並將 {decimals} 初始化為預設值 18。
      *
      * 若要為 {decimals} 選擇不同的值，請使用 {_setupDecimals}。
      *
      * 這三個值都是不可變的：它們只能在建構期間設定一次。
      */
     constructor (string memory name_, string memory symbol_) public {
-        // 在 Solidity ≥0.7.0 中，'public' 是隱含的，可以省略。
-
         _name = name_;
         _symbol = symbol_;
         _decimals = 18;
     }
 ```
 
-建構函式在合約首次建立時被呼叫。按照慣例，函式參數的命名以 `<something>_` 開頭。
+建構函式在合約首次建立時被呼叫。按照慣例，函式參數的命名為 `<something>_`。從 Solidity 0.7.0 開始，建構函式上的可見性（`public` 或 `internal`）被忽略並棄用，因此較新的程式碼會省略它。
 
 ### 使用者介面函式 {#user-interface-functions}
 
@@ -317,34 +325,39 @@ contract ERC20 is Context, IERC20 {
     }
 
     /**
-     * @dev 回傳代幣的符號，通常是名稱的較短版本。
+     * @dev 回傳代幣的代號，通常是名稱的縮寫版本。
      */
     function symbol() public view returns (string memory) {
         return _symbol;
     }
 
     /**
-     * @dev 回傳用於獲取其使用者表示形式的小數位數。
-     * 例如，如果 `decimals` 等於 `2`，則 `505` 個代幣的餘額應向使用者顯示為 `5,05`（`505 / 10 ** 2`）。
+     * @dev Returns the number of decimals used to get its user representation.
+     * For example, if `decimals` equals `2`, a balance of `505` tokens should
+     * be displayed to a user as `5,05` (`505 / 10 ** 2`).
      *
-     * 代幣通常選擇 18 作為值，以模仿以太幣與 Wei 之間的關係。這是 {ERC-20} 使用的值，除非呼叫了 {_setupDecimals}。
+     * Tokens usually opt for a value of 18, imitating the relationship between
+     * ether and wei. This is the value {ERC20} uses, unless {_setupDecimals} is
+     * called.
      *
-     * 注意：此資訊僅用於_顯示_目的：它絕不會影響合約的任何算術運算，包括 {IERC20-balanceOf} 與 {IERC20-transfer}。
+     * NOTE: This information is only used for _display_ purposes: it in
+     * no way affects any of the arithmetic of the contract, including
+     * {IERC20-balanceOf} and {IERC20-transfer}.
      */
     function decimals() public view returns (uint8) {
         return _decimals;
     }
 ```
 
-這些函式 `name`、`symbol` 和 `decimals` 幫助使用者介面了解你的合約，以便它們能夠正確顯示。
+這些函式 `name`、`symbol` 和 `decimals` 幫助使用者介面了解你的合約，以便它們能夠正確顯示它。
 
 回傳型別是 `string memory`，這意味著回傳一個儲存在記憶體中的字串。變數（例如字串）可以儲存在三個位置：
 
-|          | 生命週期 | 合約存取權限 | 燃料成本 |
+| | 生命週期 | 合約存取 | 燃料成本 |
 | -------- | ------------- | --------------- | -------------------------------------------------------------- |
-| 記憶體 (Memory)   | 函式呼叫期間 | 讀/寫      | 數十或數百（位置越高成本越高）                 |
-| 呼叫資料 (Calldata) | 函式呼叫期間 | 唯讀       | 不能用作回傳型別，只能用作函式參數型別 |
-| 儲存空間 (Storage)  | 直到被改變 | 讀/寫      | 高（讀取 800，寫入 20k）                             |
+| Memory | 函式呼叫 | 讀取/寫入 | 數十或數百（位置越高成本越高） |
+| Calldata | 函式呼叫 | 唯讀 | 不能用作回傳型別，只能用作函式參數型別 |
+| Storage | 直到被改變 | 讀取/寫入 | 高（冷讀取為 2,100，新寫入為 20,000） |
 
 在這種情況下，`memory` 是最佳選擇。
 
@@ -598,7 +611,7 @@ B：
 有兩種方法可以使用這個合約：
 
 1. 將其用作你自己程式碼的範本
-1. [繼承它](https://www.bitdegree.org/learn/solidity-inheritance)，並僅覆寫你需要修改的那些函式
+1. [繼承它](https://docs.soliditylang.org/en/latest/contracts.html#inheritance)，並僅覆寫你需要修改的那些函式
 
 第二種方法要好得多，因為歐本齊柏林 (OpenZeppelin) 的 ERC-20 程式碼已經過稽核並被證明是安全的。當你使用繼承時，你修改了哪些函式一目了然，為了信任你的合約，人們只需要稽核那些特定的函式。
 

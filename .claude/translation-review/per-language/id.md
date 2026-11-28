@@ -214,3 +214,13 @@ Scope: gas page, translation-program page, page-developers-index.json (3 files),
 
 - API expanded on L21 after L9.
 - `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)
+
+## PR #19993 (intl/pending-dev) -- 2026-11-28 -- Score 8.8/10
+Scope: 17 developer tutorials (incremental updates), changed lines only; no page-courses.json for this locale.
+
+**Fixed in this branch:** none beyond the coordinator's (fence indentation, ai-trading-agent fence 33). Sweeps (U+3002/U+2060/foreign script, `(ABBR)` additions, brand and code-fence checks) found nothing critical.
+
+**Open / notes:**
+
+- `tags: ["lapisan 2 (L2)"]` keeps the glossary `(L2)` that English `layer 2` lacks (only the case was fixed from `(l2)`); warning.
+- `Mesin Virtual Ethereum (EVM)` in yellow-paper-evm adds `(EVM)` to an English long form; acceptable.

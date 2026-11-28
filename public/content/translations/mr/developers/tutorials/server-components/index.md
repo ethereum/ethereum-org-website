@@ -30,7 +30,9 @@ published: 2024-07-15
 
 ## नमुना प्रोग्राम {#sample-program}
 
-तुम्ही [GitHub वर](https://github.com/qbzzt/20240715-server-component) एक नमुना सर्व्हर पाहू शकता. हा सर्व्हर [या कॉन्ट्रॅक्टमधून](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code) येणाऱ्या घटना ऐकतो, जे Hardhat च्या Greeter ची सुधारित आवृत्ती आहे. जेव्हा ग्रीटिंग (अभिवादन) बदलले जाते, तेव्हा तो ते परत बदलतो.
+तुम्ही [GitHub वर](https://github.com/qbzzt/20240715-server-component) एक नमुना सर्व्हर पाहू शकता. हा सर्व्हर Sepolia टेस्टनेटवरील [या कॉन्ट्रॅक्टमधून](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract_code) येणाऱ्या घटना ऐकतो, जे Hardhat च्या Greeter ची सुधारित आवृत्ती आहे. जेव्हा ग्रीटिंग (greeting) बदलले जाते, तेव्हा तो ते परत बदलतो.
+
+हे कॉन्ट्रॅक्ट इतर ट्युटोरियल्ससोबत सामायिक केले आहे, त्यामुळे तुमचा सर्व्हर चालू असताना इतर लोक (आणि त्यांचे सर्व्हर्स) ग्रीटिंग बदलू शकतात. तुमचे टेस्ट ETH खर्च होणे टाळण्यासाठी तुमचे काम पूर्ण झाल्यावर तुमचा सर्व्हर थांबवा.
 
 ते चालवण्यासाठी:
 
@@ -41,25 +43,31 @@ published: 2024-07-15
    cd 20240715-server-component
    ```
 
-2. आवश्यक पॅकेजेस इन्स्टॉल करा. जर तुमच्याकडे ते आधीपासून नसेल, तर [प्रथम Node इन्स्टॉल करा](https://nodejs.org/en/download/package-manager).
+2. नमुना रिपॉझिटरी होल्स्की टेस्टनेटसाठी लिहिली गेली होती, जी तेव्हापासून बंद करण्यात आली आहे. Sepolia आणि Sepolia कॉन्ट्रॅक्ट पत्ता वापरण्यासाठी ती अपडेट करा.
+
+   ```sh copy
+   sed -i.bak -e 's/holesky/sepolia/g' -e 's/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA/' src/app.ts
+   ```
+
+3. आवश्यक पॅकेजेस इन्स्टॉल करा. जर तुमच्याकडे ते आधीपासून नसेल, तर [प्रथम Node इन्स्टॉल करा](https://nodejs.org/en/download/package-manager).
 
    ```sh copy
    npm install
    ```
 
-3. होल्स्की टेस्टनेटवर ETH असलेल्या खात्याची खाजगी की निर्दिष्ट करण्यासाठी `.env` संपादित करा. जर तुमच्याकडे होल्स्कीवर ETH नसेल, तर तुम्ही [हा फॉसेट वापरू शकता](https://holesky-faucet.pk910.de/).
+4. Sepolia टेस्टनेटवर ETH असलेल्या खात्याची खाजगी की निर्दिष्ट करण्यासाठी `.env` संपादित करा. जर तुमच्याकडे Sepolia वर ETH नसेल, तर तुम्ही [हा फॉसेट वापरू शकता](https://sepolia-faucet.pk910.de/). असे नवीन खाते वापरा जे तुम्ही फक्त टेस्टिंगसाठी वापरता, ज्यामध्ये वास्तविक मालमत्ता आहे असे खाते कधीही वापरू नका.
 
    ```sh filename=".env" copy
-   PRIVATE_KEY=0x <private key goes here>
+   PRIVATE_KEY=0x<private key goes here>
    ```
 
-4. सर्व्हर सुरू करा.
+5. सर्व्हर सुरू करा.
 
    ```sh copy
    npm start
    ```
 
-5. [ब्लॉक एक्सप्लोररवर](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract) जा, आणि खाजगी की असलेल्या पत्त्यापेक्षा वेगळा पत्ता वापरून ग्रीटिंग सुधारा. ग्रीटिंग आपोआप परत सुधारले जाते हे पहा.
+6. [ब्लॉक एक्सप्लोररवर](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract) जा, आणि ज्या पत्त्याची खाजगी की आहे त्यापेक्षा वेगळा पत्ता वापरून ग्रीटिंग सुधारा. ग्रीटिंग आपोआप परत सुधारले जाते हे पहा.
 
 ### हे कसे काम करते? {#how-it-works}
 
@@ -81,7 +89,7 @@ import {
 } from "viem"
 ```
 
-हे आपल्याला आवश्यक असलेले [Viem](https://viem.sh/) घटक, फंक्शन्स आणि [`Address` प्रकार](https://viem.sh/docs/glossary/types#address) आहेत. हा सर्व्हर [TypeScript](https://www.typescriptlang.org/) मध्ये लिहिला आहे, जो JavaScript चा एक विस्तार आहे ज्यामुळे तो [स्ट्रॉंगली टाईप्ड (strongly typed)](https://en.wikipedia.org/wiki/Strong_and_weak_typing) बनतो.
+या आपल्याला आवश्यक असलेल्या [Viem](https://viem.sh/) एंटिटीज, फंक्शन्स आणि [`Address` प्रकार](https://viem.sh/docs/glossary/types#address) आहेत. हा सर्व्हर [TypeScript](https://www.typescriptlang.org/) मध्ये लिहिला आहे, जो JavaScript चा विस्तार आहे आणि तो त्याला [स्ट्रॉंगली टाईप (strongly typed)](https://en.wikipedia.org/wiki/Strong_and_weak_typing) बनवतो.
 
 ```typescript
 import { privateKeyToAccount } from "viem/accounts"
@@ -90,10 +98,10 @@ import { privateKeyToAccount } from "viem/accounts"
 [हे फंक्शन](https://viem.sh/docs/accounts/privateKey) आपल्याला खाजगी कीशी संबंधित पत्त्यासह वॉलेट माहिती तयार करू देते.
 
 ```typescript
-import { holesky } from "viem/chains"
+import { sepolia } from "viem/chains"
 ```
 
-Viem मध्ये ब्लॉकचेन वापरण्यासाठी तुम्हाला त्याची व्याख्या (definition) इम्पोर्ट करणे आवश्यक आहे. या प्रकरणात, आपल्याला [होल्स्की](https://github.com/eth-clients/holesky) टेस्ट ब्लॉकचेनशी कनेक्ट करायचे आहे.
+Viem मध्ये ब्लॉकचेन वापरण्यासाठी तुम्हाला त्याची व्याख्या (definition) इम्पोर्ट करणे आवश्यक आहे. या प्रकरणात, आपल्याला [Sepolia](/developers/docs/networks/#sepolia) टेस्ट ब्लॉकचेनशी कनेक्ट करायचे आहे.
 
 ```typescript
 // अशा प्रकारे आपण .env मधील व्याख्या process.env मध्ये जोडतो.
@@ -101,10 +109,10 @@ import * as dotenv from "dotenv"
 dotenv.config()
 ```
 
-अशा प्रकारे आपण `.env` ला एन्व्हायरन्मेंटमध्ये वाचतो. आपल्याला खाजगी कीसाठी याची आवश्यकता आहे (पुढे पहा).
+अशा प्रकारे आपण एन्व्हायरन्मेंटमध्ये `.env` वाचतो. आपल्याला खाजगी कीसाठी त्याची आवश्यकता आहे (पुढे पहा).
 
 ```typescript
-const greeterAddress : Address = "0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6"
+const greeterAddress : Address = "0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA"
 const greeterABI = [
     {
         "inputs": [
@@ -138,34 +146,34 @@ const greeterABI = [
 
 कॉन्ट्रॅक्ट वापरण्यासाठी आपल्याला त्याचा पत्ता आणि त्यासाठी [ABI](/glossary/#abi) आवश्यक आहे. आपण येथे दोन्ही प्रदान करतो.
 
-JavaScript मध्ये (आणि त्यामुळे TypeScript मध्ये) तुम्ही कॉन्स्टंटला (constant) नवीन मूल्य नियुक्त करू शकत नाही, परंतु तुम्ही त्यात संग्रहित केलेला ऑब्जेक्ट सुधारू _शकता_. `as const` प्रत्यय वापरून आपण TypeScript ला सांगत आहोत की यादी स्वतःच कॉन्स्टंट आहे आणि ती बदलली जाऊ शकत नाही.
+JavaScript मध्ये (आणि त्यामुळे TypeScript मध्ये) तुम्ही कॉन्स्टंटला (constant) नवीन मूल्य नियुक्त करू शकत नाही, परंतु तुम्ही त्यात संग्रहित केलेला ऑब्जेक्ट सुधारू _शकता_. `as const` प्रत्यय वापरून आपण TypeScript ला सांगत आहोत की सूची स्वतःच कॉन्स्टंट आहे आणि ती बदलली जाऊ शकत नाही.
 
 ```typescript
 const publicClient = createPublicClient({
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
 
-Viem [पब्लिक क्लायंट](https://viem.sh/docs/clients/public.html) तयार करा. पब्लिक क्लायंट्सना खाजगी की जोडलेली नसते, आणि त्यामुळे ते व्यवहार पाठवू शकत नाहीत. ते [`view` फंक्शन्स](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) कॉल करू शकतात, खात्यातील शिल्लक वाचू शकतात, इ.
+Viem [पब्लिक क्लायंट](https://viem.sh/docs/clients/public) तयार करा. पब्लिक क्लायंट्सना खाजगी की जोडलेली नसते, आणि त्यामुळे ते व्यवहार पाठवू शकत नाहीत. ते [`view` फंक्शन्सना](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) कॉल करू शकतात, खात्यातील शिल्लक वाचू शकतात, इ.
 
 ```typescript
 const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`)
 ```
 
-एन्व्हायरन्मेंट व्हेरिएबल्स [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env) मध्ये उपलब्ध आहेत. तथापि, TypeScript स्ट्रॉंगली टाईप्ड आहे. एन्व्हायरन्मेंट व्हेरिएबल कोणतीही स्ट्रिंग असू शकते, किंवा रिक्त असू शकते, त्यामुळे एन्व्हायरन्मेंट व्हेरिएबलचा प्रकार `string | undefined` आहे. तथापि, Viem मध्ये की `0x${string}` (`0x` आणि त्यानंतर स्ट्रिंग) म्हणून परिभाषित केली आहे. येथे आपण TypeScript ला सांगतो की `PRIVATE_KEY` एन्व्हायरन्मेंट व्हेरिएबल त्या प्रकारचा असेल. जर तसे नसेल, तर आपल्याला रनटाइम एरर मिळेल.
+एन्व्हायरन्मेंट व्हेरिएबल्स [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env) मध्ये उपलब्ध आहेत. तथापि, TypeScript स्ट्रॉंगली टाईप आहे. एन्व्हायरन्मेंट व्हेरिएबल कोणतीही स्ट्रिंग असू शकते, किंवा रिक्त असू शकते, त्यामुळे एन्व्हायरन्मेंट व्हेरिएबलचा प्रकार `string | undefined` आहे. तथापि, Viem मध्ये की `0x${string}` (`0x` आणि त्यानंतर स्ट्रिंग) म्हणून परिभाषित केली आहे. येथे आपण TypeScript ला सांगतो की `PRIVATE_KEY` एन्व्हायरन्मेंट व्हेरिएबल त्या प्रकारचा असेल. जर तो नसेल, तर आपल्याला रनटाइम एरर मिळेल.
 
-त्यानंतर [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) फंक्शन संपूर्ण खाते ऑब्जेक्ट तयार करण्यासाठी या खाजगी कीचा वापर करते.
+त्यानंतर [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) फंक्शन पूर्ण खाते ऑब्जेक्ट तयार करण्यासाठी या खाजगी कीचा वापर करते.
 
 ```typescript
 const walletClient = createWalletClient({
   account,
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
 
-पुढे, आपण [वॉलेट क्लायंट](https://viem.sh/docs/clients/wallet) तयार करण्यासाठी खाते ऑब्जेक्ट वापरतो. या क्लायंटकडे खाजगी की आणि पत्ता असतो, त्यामुळे त्याचा वापर व्यवहार पाठवण्यासाठी केला जाऊ शकतो.
+पुढे, आपण [वॉलेट क्लायंट](https://viem.sh/docs/clients/wallet) तयार करण्यासाठी खाते ऑब्जेक्ट वापरतो. या क्लायंटकडे खाजगी की आणि पत्ता आहे, त्यामुळे त्याचा वापर व्यवहार पाठवण्यासाठी केला जाऊ शकतो.
 
 ```typescript
 const greeter = getContract({
@@ -175,7 +183,7 @@ const greeter = getContract({
 })
 ```
 
-आता आपल्याकडे सर्व पूर्वअटी असल्याने, आपण शेवटी [कॉन्ट्रॅक्ट इन्स्टन्स](https://viem.sh/docs/contract/getContract) तयार करू शकतो. आपण या कॉन्ट्रॅक्ट इन्स्टन्सचा वापर ऑनचेन कॉन्ट्रॅक्टशी संवाद साधण्यासाठी करू.
+आता आपल्याकडे सर्व आवश्यक गोष्टी असल्याने, आपण शेवटी [कॉन्ट्रॅक्ट इन्स्टन्स](https://viem.sh/docs/contract/getContract) तयार करू शकतो. आपण ऑनचेन कॉन्ट्रॅक्टशी संवाद साधण्यासाठी या कॉन्ट्रॅक्ट इन्स्टन्सचा वापर करू.
 
 ##### ब्लॉकचेनवरून वाचणे
 
@@ -183,11 +191,11 @@ const greeter = getContract({
 console.log(`Current greeting:`, await greeter.read.greet())
 ```
 
-केवळ वाचण्यायोग्य (read only) असलेली कॉन्ट्रॅक्ट फंक्शन्स ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) आणि [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) `read` अंतर्गत उपलब्ध आहेत. या प्रकरणात, आपण त्याचा वापर [`greet`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=read_contract#cfae3217) फंक्शन ॲक्सेस करण्यासाठी करतो, जे ग्रीटिंग परत करते.
+कॉन्ट्रॅक्ट फंक्शन्स जे फक्त वाचनीय (read only) आहेत ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) आणि [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) ते `read` अंतर्गत उपलब्ध आहेत. या प्रकरणात, आपण त्याचा वापर [`greet`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=read_contract) फंक्शन ॲक्सेस करण्यासाठी करतो, जे ग्रीटिंग परत करते.
 
-JavaScript सिंगल-थ्रेडेड आहे, त्यामुळे जेव्हा आपण दीर्घकाळ चालणारी प्रक्रिया सुरू करतो तेव्हा आपल्याला [ती असिंक्रोनसपणे (asynchronously) करत असल्याचे निर्दिष्ट करणे](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE) आवश्यक असते. ब्लॉकचेनला कॉल करण्यासाठी, अगदी केवळ वाचण्यायोग्य ऑपरेशनसाठीही, संगणक आणि ब्लॉकचेन नोड दरम्यान राऊंड-ट्रिप आवश्यक असते. याच कारणामुळे आपण येथे निर्दिष्ट करतो की कोडला परिणामासाठी `await` करणे आवश्यक आहे.
+JavaScript सिंगल-थ्रेडेड आहे, त्यामुळे जेव्हा आपण एखादी दीर्घकाळ चालणारी प्रक्रिया सुरू करतो तेव्हा आपल्याला [ती असिंक्रोनसपणे (asynchronously) करत असल्याचे निर्दिष्ट करणे](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE) आवश्यक असते. ब्लॉकचेनला कॉल करण्यासाठी, अगदी फक्त वाचनीय ऑपरेशनसाठीही, संगणक आणि ब्लॉकचेन नोड दरम्यान राऊंड-ट्रिप आवश्यक असते. याच कारणामुळे आपण येथे निर्दिष्ट करतो की कोडला परिणामासाठी `await` करणे आवश्यक आहे.
 
-जर तुम्हाला हे कसे काम करते यात स्वारस्य असेल तर तुम्ही [त्याबद्दल येथे वाचू शकता](https://www.w3schools.com/js/js_promise.asp), परंतु व्यावहारिकदृष्ट्या तुम्हाला फक्त एवढेच माहीत असणे आवश्यक आहे की जर तुम्ही जास्त वेळ घेणारे ऑपरेशन सुरू केले तर तुम्ही परिणामांची `await` करता, आणि असे करणाऱ्या कोणत्याही फंक्शनला `async` म्हणून घोषित करणे आवश्यक आहे.
+जर तुम्हाला हे कसे काम करते यात स्वारस्य असेल तर तुम्ही [त्याबद्दल येथे वाचू शकता](https://www.w3schools.com/js/js_promise.asp), परंतु व्यावहारिकदृष्ट्या तुम्हाला फक्त एवढेच माहित असणे आवश्यक आहे की जर तुम्ही जास्त वेळ घेणारे ऑपरेशन सुरू केले तर तुम्ही परिणामांची `await` करता, आणि असे करणाऱ्या कोणत्याही फंक्शनला `async` म्हणून घोषित करणे आवश्यक आहे.
 
 ##### व्यवहार जारी करणे
 
@@ -195,16 +203,16 @@ JavaScript सिंगल-थ्रेडेड आहे, त्यामु�
 const setGreeting = async (greeting: string): Promise<any> => {
 ```
 
-ग्रीटिंग बदलणारा व्यवहार जारी करण्यासाठी तुम्ही हे फंक्शन कॉल करता. हे एक दीर्घ ऑपरेशन असल्याने, फंक्शन `async` म्हणून घोषित केले आहे. अंतर्गत अंमलबजावणीमुळे, कोणत्याही `async` फंक्शनला `Promise` ऑब्जेक्ट परत करणे आवश्यक असते. या प्रकरणात, `Promise<any>` चा अर्थ असा आहे की आपण `Promise` मध्ये नेमके काय परत केले जाईल हे निर्दिष्ट करत नाही.
+ग्रीटिंग बदलणारा व्यवहार जारी करण्यासाठी तुम्ही या फंक्शनला कॉल करता. हे एक दीर्घ ऑपरेशन असल्याने, फंक्शन `async` म्हणून घोषित केले आहे. अंतर्गत अंमलबजावणीमुळे, कोणत्याही `async` फंक्शनला `Promise` ऑब्जेक्ट परत करणे आवश्यक आहे. या प्रकरणात, `Promise<any>` चा अर्थ असा आहे की आपण `Promise` मध्ये नेमके काय परत केले जाईल हे निर्दिष्ट करत नाही.
 
 ```typescript
 const txHash = await greeter.write.setGreeting([greeting])
 ```
 
-कॉन्ट्रॅक्ट इन्स्टन्सच्या `write` फील्डमध्ये ब्लॉकचेन स्थितीवर लिहिणारी सर्व फंक्शन्स (ज्यांसाठी व्यवहार पाठवणे आवश्यक आहे) असतात, जसे की [`setGreeting`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862). पॅरामीटर्स, जर काही असतील तर, यादी म्हणून प्रदान केले जातात, आणि फंक्शन व्यवहाराचा हॅश परत करते.
+कॉन्ट्रॅक्ट इन्स्टन्सच्या `write` फील्डमध्ये ब्लॉकचेन स्थितीवर लिहिणारी सर्व फंक्शन्स (ज्यासाठी व्यवहार पाठवणे आवश्यक आहे) असतात, जसे की [`setGreeting`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract). पॅरामीटर्स, जर असतील तर, सूची म्हणून प्रदान केले जातात, आणि फंक्शन व्यवहाराचा हॅश परत करते.
 
 ```typescript
-    console.log(`Working on a fix, see https://eth-holesky.blockscout.com/tx/${txHash}`)
+    console.log(`Working on a fix, see https://eth-sepolia.blockscout.com/tx/${txHash}`)
 
     return txHash
 }
@@ -218,13 +226,13 @@ const txHash = await greeter.write.setGreeting([greeting])
 greeter.watchEvent.SetGreeting({
 ```
 
-[`watchEvent` फंक्शन](https://viem.sh/docs/actions/public/watchEvent) तुम्हाला एखादी घटना उत्सर्जित झाल्यावर कोणते फंक्शन चालवायचे हे निर्दिष्ट करू देते. जर तुम्हाला फक्त एका प्रकारच्या घटनेची काळजी असेल (या प्रकरणात, `SetGreeting`), तर तुम्ही स्वतःला त्या घटना प्रकारापुरते मर्यादित ठेवण्यासाठी या सिंटॅक्सचा वापर करू शकता.
+[`watchEvent` फंक्शन](https://viem.sh/docs/actions/public/watchEvent) तुम्हाला हे निर्दिष्ट करू देते की जेव्हा एखादी घटना उत्सर्जित (emit) होते तेव्हा कोणते फंक्शन चालवायचे आहे. जर तुम्हाला फक्त एका प्रकारच्या घटनेची काळजी असेल (या प्रकरणात, `SetGreeting`), तर तुम्ही स्वतःला त्या घटना प्रकारापुरते मर्यादित ठेवण्यासाठी या सिंटॅक्सचा वापर करू शकता.
 
 ```typescript
     onLogs: logs => {
 ```
 
-जेव्हा नोंद (log) एंट्रीज असतात तेव्हा `onLogs` फंक्शन कॉल केले जाते. इथेरियममध्ये "नोंद" आणि "घटना" सामान्यतः अदलाबदल करण्यायोग्य असतात.
+जेव्हा नोंद (log) एंट्रीज असतात तेव्हा `onLogs` फंक्शनला कॉल केले जाते. इथेरियममध्ये "नोंद" आणि "घटना" सहसा अदलाबदल करण्यायोग्य असतात.
 
 ```typescript
 console.log(
@@ -232,7 +240,7 @@ console.log(
 )
 ```
 
-अनेक घटना असू शकतात, परंतु सोपेपणासाठी आपण फक्त पहिल्या घटनेची काळजी घेतो. `logs[0].args` हे घटनेचे आर्ग्युमेंट्स आहेत, या प्रकरणात `sender` आणि `greeting`.
+अनेक घटना असू शकतात, परंतु साधेपणासाठी आपण फक्त पहिल्या घटनेचा विचार करतो. `logs[0].args` हे घटनेचे आर्ग्युमेंट्स आहेत, या प्रकरणात `sender` आणि `greeting`.
 
 ```typescript
         if (logs[0].args.sender != account.address)
@@ -249,12 +257,6 @@ console.log(
 
 ```json
 {
-  "main": "dist/index.js",
-```
-
-ही व्याख्या कोणती JavaScript फाईल चालवायची हे निर्दिष्ट करते.
-
-```json
   "scripts": {
     "start": "tsc && node dist/app.js",
   },
@@ -275,7 +277,7 @@ JavaScript नोड ॲप्लिकेशन्सचे अनेक प्
   },
 ```
 
-ही अशी पॅकेजेस आहेत जी फक्त डेव्हलपमेंटसाठी आवश्यक आहेत. येथे आपल्याला `typescript` ची आवश्यकता आहे आणि आपण ते Node.js सोबत वापरत असल्यामुळे, आपल्याला नोड व्हेरिएबल्स आणि ऑब्जेक्ट्सचे प्रकार देखील मिळत आहेत, जसे की `process`. [`^<version>` नोटेशनचा](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) अर्थ ती आवृत्ती किंवा त्याहून उच्च आवृत्ती ज्यामध्ये ब्रेकिंग बदल नाहीत असा होतो. आवृत्ती क्रमांकांच्या अर्थाबद्दल अधिक माहितीसाठी [येथे](https://semver.org) पहा.
+ही अशी पॅकेजेस आहेत जी फक्त डेव्हलपमेंटसाठी आवश्यक आहेत. येथे आपल्याला `typescript` ची आवश्यकता आहे आणि आपण ते Node.js सोबत वापरत असल्यामुळे, आपल्याला नोड व्हेरिएबल्स आणि ऑब्जेक्ट्सचे प्रकार देखील मिळत आहेत, जसे की `process`. [`^<version>` नोटेशनचा](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) अर्थ ती आवृत्ती किंवा त्याहून उच्च आवृत्ती असा होतो ज्यामध्ये ब्रेकिंग बदल नाहीत. आवृत्ती क्रमांकांच्या अर्थाबद्दल अधिक माहितीसाठी [येथे](https://semver.org) पहा.
 
 ```json
   "dependencies": {
@@ -285,7 +287,7 @@ JavaScript नोड ॲप्लिकेशन्सचे अनेक प्
 }
 ```
 
-ही अशी पॅकेजेस आहेत जी रनटाइमच्या वेळी, `dist/app.js` चालवताना आवश्यक असतात.
+ही अशी पॅकेजेस आहेत जी रनटाइमच्या वेळी आवश्यक असतात, जेव्हा `dist/app.js` चालवले जाते.
 
 ## निष्कर्ष {#conclusion}
 

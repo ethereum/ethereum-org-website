@@ -30,7 +30,9 @@ published: 2024-07-15
 
 ## 샘플 프로그램 {#sample-program}
 
-샘플 서버는 [GitHub에서](https://github.com/qbzzt/20240715-server-component) 확인할 수 있습니다. 이 서버는 Hardhat의 Greeter를 수정한 버전인 [이 컨트랙트](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code)에서 발생하는 이벤트를 수신합니다. 인사말이 변경되면 원래대로 되돌립니다.
+[GitHub에서](https://github.com/qbzzt/20240715-server-component) 샘플 서버를 확인할 수 있습니다. 이 서버는 Hardhat의 Greeter를 수정한 버전인 Sepolia 테스트넷의 [이 컨트랙트](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract_code)에서 발생하는 이벤트를 수신합니다. 인사말(greeting)이 변경되면 원래대로 되돌립니다.
+
+이 컨트랙트는 다른 튜토리얼과 공유되므로, 여러분의 서버가 실행되는 동안 다른 사람(및 그들의 서버)이 인사말을 변경할 수 있습니다. 테스트 ETH를 낭비하지 않으려면 작업이 끝난 후 서버를 중지하세요.
 
 실행 방법:
 
@@ -41,25 +43,31 @@ published: 2024-07-15
    cd 20240715-server-component
    ```
 
-2. 필요한 패키지를 설치합니다. 아직 설치하지 않았다면 [Node.js를 먼저 설치하세요](https://nodejs.org/en/download/package-manager).
+2. 샘플 리포지토리는 Holesky 테스트넷용으로 작성되었으나, 해당 네트워크는 이후 종료되었습니다. Sepolia 및 Sepolia 컨트랙트 주소를 사용하도록 업데이트하세요.
+
+   ```sh copy
+   sed -i.bak -e 's/holesky/sepolia/g' -e 's/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA/' src/app.ts
+   ```
+
+3. 필요한 패키지를 설치합니다. 아직 설치하지 않았다면 [먼저 Node를 설치하세요](https://nodejs.org/en/download/package-manager).
 
    ```sh copy
    npm install
    ```
 
-3. `.env` 파일을 편집하여 홀스카이 테스트넷에 ETH가 있는 계정의 개인 키를 지정합니다. 홀스카이에 ETH가 없다면 [이 퍼싯을 사용](https://holesky-faucet.pk910.de/)할 수 있습니다.
+4. `.env` 파일을 편집하여 Sepolia 테스트넷에 ETH가 있는 계정의 개인 키를 지정합니다. Sepolia에 ETH가 없다면 [이 퍼싯을 사용](https://sepolia-faucet.pk910.de/)할 수 있습니다. 테스트용으로만 사용하는 새 계정을 사용하고, 실제 자산이 있는 계정은 절대 사용하지 마세요.
 
    ```sh filename=".env" copy
-   PRIVATE_KEY=0x <private key goes here>
+   PRIVATE_KEY=0x<private key goes here>
    ```
 
-4. 서버를 시작합니다.
+5. 서버를 시작합니다.
 
    ```sh copy
    npm start
    ```
 
-5. [블록 탐색기](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract)로 이동하여, 개인 키를 가진 주소와 다른 주소를 사용하여 인사말을 수정합니다. 인사말이 자동으로 원래대로 수정되는지 확인합니다.
+6. [블록 탐색기](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract)로 이동하여, 개인 키를 가진 주소와 다른 주소를 사용하여 인사말을 수정합니다. 인사말이 자동으로 원래대로 수정되는지 확인합니다.
 
 ### 어떻게 작동하나요? {#how-it-works}
 
@@ -81,7 +89,7 @@ import {
 } from "viem"
 ```
 
-이것들은 우리에게 필요한 [Viem](https://viem.sh/) 엔티티, 함수 및 [`Address` 타입](https://viem.sh/docs/glossary/types#address)입니다. 이 서버는 JavaScript의 확장으로 [강력한 타입 지정(strongly typed)](https://en.wikipedia.org/wiki/Strong_and_weak_typing)을 지원하는 [TypeScript](https://www.typescriptlang.org/)로 작성되었습니다.
+이것들은 우리에게 필요한 [Viem](https://viem.sh/) 엔티티, 함수 및 [`Address` 타입](https://viem.sh/docs/glossary/types#address)입니다. 이 서버는 JavaScript의 확장으로 [강타입(strongly typed)](https://en.wikipedia.org/wiki/Strong_and_weak_typing)을 지원하는 [TypeScript](https://www.typescriptlang.org/)로 작성되었습니다.
 
 ```typescript
 import { privateKeyToAccount } from "viem/accounts"
@@ -90,21 +98,21 @@ import { privateKeyToAccount } from "viem/accounts"
 [이 함수](https://viem.sh/docs/accounts/privateKey)를 사용하면 개인 키에 해당하는 주소를 포함한 지갑 정보를 생성할 수 있습니다.
 
 ```typescript
-import { holesky } from "viem/chains"
+import { sepolia } from "viem/chains"
 ```
 
-Viem에서 블록체인을 사용하려면 해당 정의를 가져와야 합니다. 이 경우 [홀스카이](https://github.com/eth-clients/holesky) 테스트 블록체인에 연결하고자 합니다.
+Viem에서 블록체인을 사용하려면 해당 정의를 가져와야 합니다. 이 경우 [Sepolia](/developers/docs/networks/#sepolia) 테스트 블록체인에 연결하고자 합니다.
 
 ```typescript
-// .env의 정의를 process.env에 추가하는 방법입니다.
+// .env에 정의된 내용을 process.env에 추가하는 방법입니다.
 import * as dotenv from "dotenv"
 dotenv.config()
 ```
 
-이것은 `.env` 파일을 환경으로 읽어오는 방법입니다. 개인 키를 위해 필요합니다(나중에 설명).
+이것은 환경으로 `.env` 파일을 읽어오는 방법입니다. 개인 키를 위해 필요합니다(나중에 설명).
 
 ```typescript
-const greeterAddress : Address = "0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6"
+const greeterAddress : Address = "0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA"
 const greeterABI = [
     {
         "inputs": [
@@ -138,34 +146,34 @@ const greeterABI = [
 
 컨트랙트를 사용하려면 해당 주소와 [ABI](/glossary/#abi)가 필요합니다. 여기에서 두 가지를 모두 제공합니다.
 
-JavaScript(그리고 TypeScript)에서는 상수에 새 값을 할당할 수 없지만, 그 안에 저장된 객체는 수정할 수 _있습니다_. `as const` 접미사를 사용하여 TypeScript에 목록 자체가 상수이며 변경할 수 없음을 알려줍니다.
+JavaScript(그리고 TypeScript)에서는 상수에 새 값을 할당할 수 없지만, 그 안에 저장된 객체는 수정할 _수_ 있습니다. `as const` 접미사를 사용하여 TypeScript에 목록 자체가 상수이며 변경할 수 없음을 알려줍니다.
 
 ```typescript
 const publicClient = createPublicClient({
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
 
-Viem [퍼블릭 클라이언트](https://viem.sh/docs/clients/public.html)를 생성합니다. 퍼블릭 클라이언트는 연결된 개인 키가 없으므로 트랜잭션을 보낼 수 없습니다. 대신 [`view` 함수](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm)를 호출하거나 계정 잔액을 읽는 등의 작업을 수행할 수 있습니다.
+Viem [퍼블릭 클라이언트(public client)](https://viem.sh/docs/clients/public)를 생성합니다. 퍼블릭 클라이언트에는 개인 키가 연결되어 있지 않으므로 트랜잭션을 보낼 수 없습니다. [`view` 함수](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm)를 호출하거나 계정 잔액을 읽는 등의 작업을 수행할 수 있습니다.
 
 ```typescript
 const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`)
 ```
 
-환경 변수는 [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env)에서 사용할 수 있습니다. 하지만 TypeScript는 강력한 타입 지정을 사용합니다. 환경 변수는 임의의 문자열이거나 비어 있을 수 있으므로 환경 변수의 타입은 `string | undefined`입니다. 그러나 Viem에서 키는 `0x${string}`(`0x` 뒤에 문자열이 옴)로 정의됩니다. 여기서는 TypeScript에 `PRIVATE_KEY` 환경 변수가 해당 타입이 될 것이라고 알려줍니다. 그렇지 않으면 런타임 오류가 발생합니다.
+환경 변수는 [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env)에서 사용할 수 있습니다. 하지만 TypeScript는 강타입 언어입니다. 환경 변수는 어떤 문자열이든 될 수 있고 비어 있을 수도 있으므로, 환경 변수의 타입은 `string | undefined`입니다. 그러나 Viem에서 키는 `0x${string}`(`0x` 뒤에 문자열이 옴)로 정의됩니다. 여기서 우리는 TypeScript에 `PRIVATE_KEY` 환경 변수가 해당 타입이 될 것이라고 알려줍니다. 그렇지 않으면 런타임 오류가 발생합니다.
 
 그런 다음 [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) 함수는 이 개인 키를 사용하여 전체 계정 객체를 생성합니다.
 
 ```typescript
 const walletClient = createWalletClient({
   account,
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
 
-다음으로 계정 객체를 사용하여 [지갑 클라이언트](https://viem.sh/docs/clients/wallet)를 생성합니다. 이 클라이언트는 개인 키와 주소를 가지고 있으므로 트랜잭션을 보내는 데 사용할 수 있습니다.
+다음으로, 계정 객체를 사용하여 [지갑 클라이언트(wallet client)](https://viem.sh/docs/clients/wallet)를 생성합니다. 이 클라이언트는 개인 키와 주소를 가지고 있으므로 트랜잭션을 보내는 데 사용할 수 있습니다.
 
 ```typescript
 const greeter = getContract({
@@ -175,7 +183,7 @@ const greeter = getContract({
 })
 ```
 
-이제 모든 전제 조건을 갖추었으므로 마침내 [컨트랙트 인스턴스](https://viem.sh/docs/contract/getContract)를 생성할 수 있습니다. 이 컨트랙트 인스턴스를 사용하여 온체인 컨트랙트와 통신할 것입니다.
+이제 모든 필수 요소가 준비되었으므로 마침내 [컨트랙트 인스턴스](https://viem.sh/docs/contract/getContract)를 생성할 수 있습니다. 이 컨트랙트 인스턴스를 사용하여 온체인 컨트랙트와 통신할 것입니다.
 
 ##### 블록체인에서 읽기
 
@@ -183,11 +191,11 @@ const greeter = getContract({
 console.log(`Current greeting:`, await greeter.read.greet())
 ```
 
-읽기 전용인 컨트랙트 함수([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) 및 [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm))는 `read` 아래에서 사용할 수 있습니다. 이 경우 인사말을 반환하는 [`greet`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=read_contract#cfae3217) 함수에 액세스하는 데 사용합니다.
+읽기 전용인 컨트랙트 함수([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) 및 [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm))는 `read` 아래에서 사용할 수 있습니다. 이 경우, 인사말을 반환하는 [`greet`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=read_contract) 함수에 액세스하는 데 사용합니다.
 
-JavaScript는 단일 스레드이므로 장기 실행 프로세스를 시작할 때 [비동기적으로 수행하도록 지정](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE)해야 합니다. 읽기 전용 작업이라 하더라도 블록체인을 호출하려면 컴퓨터와 블록체인 노드 간의 왕복 통신이 필요합니다. 이것이 바로 코드에서 결과를 `await`(대기)해야 한다고 지정하는 이유입니다.
+JavaScript는 단일 스레드이므로, 오래 실행되는 프로세스를 시작할 때는 [비동기적으로 수행하도록 지정](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE)해야 합니다. 읽기 전용 작업이라 하더라도 블록체인을 호출하려면 컴퓨터와 블록체인 노드 간의 왕복 통신이 필요합니다. 이것이 바로 여기서 코드가 결과를 `await`(기다려야) 한다고 지정하는 이유입니다.
 
-이것이 어떻게 작동하는지 관심이 있다면 [여기에서 읽어볼 수 있지만](https://www.w3schools.com/js/js_promise.asp), 실질적으로 알아야 할 것은 시간이 오래 걸리는 작업을 시작할 때 결과를 `await`해야 하며, 이를 수행하는 모든 함수는 `async`로 선언되어야 한다는 점입니다.
+이것이 어떻게 작동하는지 관심이 있다면 [여기에서 읽어볼 수 있지만](https://www.w3schools.com/js/js_promise.asp), 실질적으로 알아야 할 것은 시간이 오래 걸리는 작업을 시작할 경우 결과를 `await`해야 하며, 이를 수행하는 모든 함수는 `async`로 선언되어야 한다는 점입니다.
 
 ##### 트랜잭션 발행하기
 
@@ -195,22 +203,22 @@ JavaScript는 단일 스레드이므로 장기 실행 프로세스를 시작할 
 const setGreeting = async (greeting: string): Promise<any> => {
 ```
 
-이것은 인사말을 변경하는 트랜잭션을 발행하기 위해 호출하는 함수입니다. 이것은 긴 작업이므로 함수는 `async`로 선언됩니다. 내부 구현으로 인해 모든 `async` 함수는 `Promise` 객체를 반환해야 합니다. 이 경우 `Promise<any>`는 `Promise`에 정확히 무엇이 반환될지 지정하지 않음을 의미합니다.
+이것은 인사말을 변경하는 트랜잭션을 발행하기 위해 호출하는 함수입니다. 이 작업은 오래 걸리므로 함수는 `async`로 선언됩니다. 내부 구현으로 인해 모든 `async` 함수는 `Promise` 객체를 반환해야 합니다. 이 경우 `Promise<any>`는 `Promise`에서 정확히 무엇이 반환될지 지정하지 않음을 의미합니다.
 
 ```typescript
 const txHash = await greeter.write.setGreeting([greeting])
 ```
 
-컨트랙트 인스턴스의 `write` 필드에는 [`setGreeting`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862)와 같이 블록체인 상태에 쓰는(트랜잭션 전송이 필요한) 모든 함수가 있습니다. 매개변수가 있는 경우 목록으로 제공되며, 함수는 트랜잭션의 해시를 반환합니다.
+컨트랙트 인스턴스의 `write` 필드에는 [`setGreeting`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract)와 같이 블록체인 상태에 쓰는(트랜잭션 전송이 필요한) 모든 함수가 있습니다. 매개변수가 있는 경우 목록으로 제공되며, 함수는 트랜잭션의 해시를 반환합니다.
 
 ```typescript
-    console.log(`Working on a fix, see https://eth-holesky.blockscout.com/tx/${txHash}`)
+    console.log(`Working on a fix, see https://eth-sepolia.blockscout.com/tx/${txHash}`)
 
     return txHash
 }
 ```
 
-트랜잭션의 해시를 (블록 탐색기에서 볼 수 있는 URL의 일부로) 보고하고 반환합니다.
+트랜잭션의 해시를 보고하고(블록 탐색기에서 볼 수 있는 URL의 일부로) 이를 반환합니다.
 
 ##### 이벤트에 응답하기
 
@@ -218,13 +226,13 @@ const txHash = await greeter.write.setGreeting([greeting])
 greeter.watchEvent.SetGreeting({
 ```
 
-[`watchEvent` 함수](https://viem.sh/docs/actions/public/watchEvent)를 사용하면 이벤트가 발생할 때 실행할 함수를 지정할 수 있습니다. 한 가지 유형의 이벤트(이 경우 `SetGreeting`)에만 관심이 있다면 이 구문을 사용하여 해당 이벤트 유형으로 제한할 수 있습니다.
+[`watchEvent` 함수](https://viem.sh/docs/actions/public/watchEvent)를 사용하면 이벤트가 발생할 때 실행할 함수를 지정할 수 있습니다. 한 가지 유형의 이벤트(이 경우 `SetGreeting`)에만 관심이 있다면, 이 구문을 사용하여 해당 이벤트 유형으로 제한할 수 있습니다.
 
 ```typescript
     onLogs: logs => {
 ```
 
-로그 항목이 있을 때 `onLogs` 함수가 호출됩니다. 이더리움에서 '로그'와 '이벤트'는 일반적으로 상호 교환적으로 사용됩니다.
+`onLogs` 함수는 로그 항목이 있을 때 호출됩니다. 이더리움에서 "로그"와 "이벤트"는 일반적으로 상호 교환적으로 사용됩니다.
 
 ```typescript
 console.log(
@@ -232,7 +240,7 @@ console.log(
 )
 ```
 
-여러 이벤트가 있을 수 있지만, 단순성을 위해 첫 번째 이벤트에만 신경 씁니다. `logs[0].args`는 이벤트의 인수이며, 이 경우 `sender` 및 `greeting`입니다.
+여러 이벤트가 있을 수 있지만, 단순화를 위해 첫 번째 이벤트에만 관심을 둡니다. `logs[0].args`는 이벤트의 인수이며, 이 경우 `sender` 및 `greeting`입니다.
 
 ```typescript
         if (logs[0].args.sender != account.address)
@@ -245,22 +253,16 @@ console.log(
 
 #### `package.json` {#package-json}
 
-[이 파일](https://github.com/qbzzt/20240715-server-component/blob/main/package.json)은 [Node.js](https://nodejs.org/en) 구성을 제어합니다. 이 문서에서는 중요한 정의만 설명합니다.
+[이 파일](https://github.com/qbzzt/20240715-server-component/blob/main/package.json)은 [Node.js](https://nodejs.org/en) 구성을 제어합니다. 이 글에서는 중요한 정의만 설명합니다.
 
 ```json
 {
-  "main": "dist/index.js",
-```
-
-이 정의는 실행할 JavaScript 파일을 지정합니다.
-
-```json
   "scripts": {
     "start": "tsc && node dist/app.js",
   },
 ```
 
-스크립트는 다양한 애플리케이션 작업입니다. 이 경우 서버를 컴파일한 다음 실행하는 `start` 하나만 있습니다. `tsc` 명령은 `typescript` 패키지의 일부이며 TypeScript를 JavaScript로 컴파일합니다. 수동으로 실행하려면 `node_modules/.bin`에 있습니다. 두 번째 명령은 서버를 실행합니다.
+스크립트는 다양한 애플리케이션 작업입니다. 이 경우 우리가 가진 유일한 스크립트는 `start`이며, 이는 서버를 컴파일한 다음 실행합니다. `tsc` 명령은 `typescript` 패키지의 일부이며 TypeScript를 JavaScript로 컴파일합니다. 수동으로 실행하려면 `node_modules/.bin`에 있습니다. 두 번째 명령은 서버를 실행합니다.
 
 ```json
   "type": "module",
@@ -275,7 +277,7 @@ JavaScript 노드 애플리케이션에는 여러 유형이 있습니다. `modul
   },
 ```
 
-이것들은 개발에만 필요한 패키지입니다. 여기서는 `typescript`가 필요하며, Node.js와 함께 사용하고 있으므로 `process`와 같은 노드 변수 및 객체의 타입도 가져옵니다. [`^<version>` 표기법](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004)은 해당 버전 또는 호환성을 깨는 변경 사항이 없는 더 높은 버전을 의미합니다. 버전 번호의 의미에 대한 자세한 내용은 [여기](https://semver.org)를 참조하세요.
+이것들은 개발에만 필요한 패키지입니다. 여기서는 `typescript`이 필요하며, Node.js와 함께 사용하고 있으므로 `process`과 같은 노드 변수 및 객체의 타입도 가져옵니다. [`^<version>` 표기법](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004)은 해당 버전 또는 호환성을 깨는 변경(breaking changes)이 없는 더 높은 버전을 의미합니다. 버전 번호의 의미에 대한 자세한 내용은 [여기](https://semver.org)를 참조하세요.
 
 ```json
   "dependencies": {

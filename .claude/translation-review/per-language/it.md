@@ -1,5 +1,8 @@
 # it Translation Review Findings
 
+## PR #19993 (intl/pending-dev, runs 46112784113 / 46112790344 / 46118259298) -- 2026-11-28 -- Score 8.9/10
+Scope: 16 tutorials, changed lines; sweeps over all 16 plus a prose read of uniswap-v2 and reverse-engineering. 1 critical fixed: an LLM glossary note leaked into a code comment (`stealth-addr:390`, restored to `// https://vite.dev/config/`). Open: none notable.
+
 ## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 9.2/10
 Scope: 15 markdown files, changed lines; 7 diffs read in full (ethash, data-structures x3, frameworks, run-a-node, transactions).
 

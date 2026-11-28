@@ -11,23 +11,29 @@ source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 
-کسی بھی ٹوکن کے ساتھ تعامل کرتے وقت اس چیک لسٹ پر عمل کریں۔ اس بات کو یقینی بنائیں کہ آپ ہر آئٹم سے وابستہ خطرات کو سمجھتے ہیں، اور ان اصولوں میں کسی بھی استثنیٰ کا جواز پیش کریں۔
+کسی بھی ٹوکن کے ساتھ تعامل کرتے وقت اس چیک لسٹ پر عمل کریں۔ اس بات کو یقینی بنائیں کہ آپ ہر آئٹم سے وابستہ خطرات کو سمجھتے ہیں، اور ان اصولوں سے کسی بھی استثنیٰ کا جواز پیش کریں۔
 
-سہولت کے لیے، تمام سلدر [یوٹیلیٹیز](https://github.com/crytic/slither#tools) کو براہ راست کسی ٹوکن کے پتہ پر چلایا جا سکتا ہے، جیسے:
+سہولت کے لیے، تمام <span dir="ltr">Slither</span> [یوٹیلیٹیز](https://github.com/crytic/slither#tools) کو براہ راست کسی ٹوکن کے پتے پر چلایا جا سکتا ہے، جیسے:
 
-[سلدر استعمال کرنے کا ٹیوٹوریل](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+[<span dir="ltr">Slither</span> استعمال کرنے کا ٹیوٹوریل](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
-```bash
-slither-check-erc 0xdac17f958d2ee523a2206206994597c13d831ec7 TetherToken
+<span dir="ltr">Etherscan</span> سے تصدیق شدہ سورس کوڈ حاصل کرنے کے لیے ایک [<span dir="ltr">Etherscan API</span> کلید](https://docs.etherscan.io/set-up-your-api-key) درکار ہوتی ہے (ایک مفت کلید کام کرتی ہے)۔ اسے `--etherscan-apikey` کے ساتھ پاس کریں، یا `ETHERSCAN_API_KEY` انوائرنمنٹ ویری ایبل سیٹ کریں، جسے <span dir="ltr">Slither</span> بھی پڑھتا ہے:
+
+```sh
+export ETHERSCAN_API_KEY=<your-etherscan-api-key>
+slither-check-erc 0xdac17f958d2ee523a2206206994597c13d831ec7 TetherToken --erc erc20 --etherscan-apikey $ETHERSCAN_API_KEY
+slither-check-erc 0x06012c8cf97BEaD5deAe237070F9587f8E7A266d KittyCore --erc erc721 --etherscan-apikey $ETHERSCAN_API_KEY
 ```
 
-اس چیک لسٹ پر عمل کرنے کے لیے، آپ کو ٹوکن کے لیے سلدر سے یہ آؤٹ پٹ درکار ہوگی:
+کلید کے بغیر، کمانڈ `Invalid etherscan API Key` ایرر کے ساتھ ناکام ہو جاتی ہے۔
 
-```bash
-- slither-check-erc [target] [contractName] [optional: --erc ERC_NUMBER]
-- slither [target] --print human-summary
-- slither [target] --print contract-summary
-- slither-prop . --contract ContractName # کنفیگریشن، اور ایکڈنا اور مینٹیکور کے استعمال کا تقاضا کرتا ہے
+اس چیک لسٹ پر عمل کرنے کے لیے، آپ ٹوکن کے لیے <span dir="ltr">Slither</span> سے یہ آؤٹ پٹ حاصل کرنا چاہیں گے:
+
+```sh
+slither-check-erc [target] [contractName] [optional: --erc ERC_NUMBER]
+slither [target] --print human-summary
+slither [target] --print contract-summary
+slither-prop . --contract ContractName # کنفیگریشن، اور Echidna کے استعمال کا تقاضا کرتا ہے
 ```
 
 ## عمومی تحفظات {#general-considerations}
@@ -38,44 +44,70 @@ slither-check-erc 0xdac17f958d2ee523a2206206994597c13d831ec7 TetherToken
 
 ## <span dir="ltr">ERC</span> کی مطابقت {#erc-conformity}
 
-سلدر میں ایک یوٹیلیٹی، [<span dir="ltr">slither-check-erc</span>](https://github.com/crytic/slither/wiki/ERC-Conformance) شامل ہے، جو بہت سے متعلقہ <span dir="ltr">ERC</span> معیارات کے ساتھ ٹوکن کی مطابقت کا جائزہ لیتی ہے۔ یہ جائزہ لینے کے لیے <span dir="ltr">slither-check-erc</span> کا استعمال کریں کہ:
+<span dir="ltr">Slither</span> میں ایک یوٹیلیٹی، [<span dir="ltr">slither-check-erc</span>](https://github.com/crytic/slither/wiki/ERC-Conformance) شامل ہے، جو بہت سے متعلقہ <span dir="ltr">ERC</span> معیارات کے ساتھ ٹوکن کی مطابقت کا جائزہ لیتی ہے۔ یہ جائزہ لینے کے لیے <span dir="ltr">slither-check-erc</span> کا استعمال کریں کہ:
 
-- **<span dir="ltr">transfer</span> اور <span dir="ltr">transferFrom</span> ایک بولین (boolean) واپس کرتے ہیں۔** کئی ٹوکنز ان فنکشنز پر بولین واپس نہیں کرتے۔ نتیجے کے طور پر، کنٹریکٹ میں ان کی کالز ناکام ہو سکتی ہیں۔
+- **<span dir="ltr">Transfer</span> اور <span dir="ltr">transferFrom</span> ایک بولین (boolean) واپس کرتے ہیں۔** کئی ٹوکنز ان فنکشنز پر بولین واپس نہیں کرتے ہیں۔ نتیجے کے طور پر، کنٹریکٹ میں ان کی کالز ناکام ہو سکتی ہیں۔
 - **اگر استعمال کیے گئے ہوں تو <span dir="ltr">name</span>، <span dir="ltr">decimals</span>، اور <span dir="ltr">symbol</span> فنکشنز موجود ہوں۔** یہ فنکشنز <span dir="ltr">ERC-20</span> معیار میں اختیاری ہیں اور ہو سکتا ہے کہ موجود نہ ہوں۔
-- **<span dir="ltr">decimals</span> ایک <span dir="ltr">uint8</span> واپس کرتا ہے۔** کئی ٹوکنز غلط طور پر <span dir="ltr">uint256</span> واپس کرتے ہیں۔ اگر ایسا ہے، تو یقینی بنائیں کہ واپس کی گئی ویلیو <span dir="ltr">255</span> سے کم ہے۔
-- **یہ ٹوکن معروف [<span dir="ltr">ERC-20</span> ریس کنڈیشن (race condition)](https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729) کو کم کرتا ہے۔** <span dir="ltr">ERC-20</span> معیار میں ایک معروف <span dir="ltr">ERC-20</span> ریس کنڈیشن موجود ہے جسے حملہ آوروں کو ٹوکنز چرانے سے روکنے کے لیے کم کیا جانا چاہیے۔
-- **یہ ٹوکن <span dir="ltr">ERC-777</span> ٹوکن نہیں ہے اور اس کے <span dir="ltr">transfer</span> اور <span dir="ltr">transferFrom</span> میں کوئی بیرونی فنکشن کال نہیں ہے۔** منتقلی کے فنکشنز میں بیرونی کالز ری اینٹرنسی (reentrancies) کا سبب بن سکتی ہیں۔
+- **<span dir="ltr">Decimals</span> ایک <span dir="ltr">uint8</span> واپس کرتا ہے۔** کئی ٹوکنز غلط طور پر ایک <span dir="ltr">uint256</span> واپس کرتے ہیں۔ اگر ایسا ہے، تو یقینی بنائیں کہ واپس کی گئی ویلیو <span dir="ltr">255</span> سے کم ہے۔
+- **ٹوکن معلوم [<span dir="ltr">ERC-20</span> ریس کنڈیشن (race condition)](https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729) کو کم کرتا ہے۔** <span dir="ltr">ERC-20</span> معیار میں ایک معلوم <span dir="ltr">ERC-20</span> ریس کنڈیشن ہے جسے حملہ آوروں کو ٹوکنز چرانے سے روکنے کے لیے کم کیا جانا چاہیے۔
+- **ٹوکن <span dir="ltr">ERC-777</span> ٹوکن نہیں ہے اور اس میں <span dir="ltr">transfer</span> اور <span dir="ltr">transferFrom</span> میں کوئی بیرونی فنکشن کال نہیں ہے۔** منتقلی کے فنکشنز میں بیرونی کالز ری اینٹرنسیز (reentrancies) کا سبب بن سکتی ہیں۔
 
-سلدر میں ایک یوٹیلیٹی، [<span dir="ltr">slither-prop</span>](https://github.com/crytic/slither/wiki/Property-generation) شامل ہے، جو یونٹ ٹیسٹس اور سیکیورٹی خصوصیات تیار کرتی ہے جو <span dir="ltr">ERC</span> کی بہت سی عام خامیوں کو دریافت کر سکتی ہیں۔ یہ جائزہ لینے کے لیے <span dir="ltr">slither-prop</span> کا استعمال کریں کہ:
+<span dir="ltr">Slither</span> میں ایک یوٹیلیٹی، [<span dir="ltr">slither-prop</span>](https://github.com/crytic/slither/wiki/Property-generation) شامل ہے، جو یونٹ ٹیسٹس اور سیکیورٹی خصوصیات تیار کرتی ہے جو بہت سی عام <span dir="ltr">ERC</span> خامیوں کو دریافت کر سکتی ہیں۔ یہ جائزہ لینے کے لیے <span dir="ltr">slither-prop</span> کا استعمال کریں کہ:
 
-- **کنٹریکٹ <span dir="ltr">slither-prop</span> کے تمام یونٹ ٹیسٹس اور سیکیورٹی خصوصیات کو پاس کرتا ہے۔** تیار کردہ یونٹ ٹیسٹس چلائیں، پھر [ایکڈنا](https://github.com/crytic/echidna) اور [مینٹیکور](https://manticore.readthedocs.io/en/latest/verifier.html) کے ساتھ خصوصیات کو چیک کریں۔
+- **کنٹریکٹ <span dir="ltr">slither-prop</span> سے تمام یونٹ ٹیسٹس اور سیکیورٹی خصوصیات کو پاس کرتا ہے۔** تیار کردہ یونٹ ٹیسٹس چلائیں، پھر [<span dir="ltr">Echidna</span>](https://github.com/crytic/echidna) کے ساتھ خصوصیات چیک کریں۔
 
-آخر میں، کچھ ایسی خصوصیات ہیں جن کی خودکار طور پر شناخت کرنا مشکل ہے۔ ان شرائط کا دستی طور پر جائزہ لیں:
+آخر میں، کچھ ایسی خصوصیات ہیں جن کی خود بخود شناخت کرنا مشکل ہے۔ ان شرائط کا دستی طور پر جائزہ لیں:
 
-- **<span dir="ltr">transfer</span> اور <span dir="ltr">transferFrom</span> کو فیس نہیں لینی چاہیے۔** ڈیفلیشنری (Deflationary) ٹوکنز غیر متوقع رویے کا سبب بن سکتے ہیں۔
-- **ٹوکن سے حاصل ہونے والے ممکنہ سود کو مدنظر رکھا گیا ہے۔** کچھ ٹوکنز ٹوکن ہولڈرز میں سود تقسیم کرتے ہیں۔ اگر اسے مدنظر نہ رکھا جائے تو یہ سود کنٹریکٹ میں پھنس سکتا ہے۔
+- **<span dir="ltr">Transfer</span> اور <span dir="ltr">transferFrom</span> کو فیس نہیں لینی چاہیے۔** ڈیفلیشنری (Deflationary) ٹوکنز غیر متوقع رویے کا سبب بن سکتے ہیں۔
+- **ٹوکن سے کمائے گئے ممکنہ سود کو مدنظر رکھا گیا ہے۔** کچھ ٹوکنز ٹوکن ہولڈرز میں سود تقسیم کرتے ہیں۔ اگر اسے مدنظر نہ رکھا جائے تو یہ سود کنٹریکٹ میں پھنس سکتا ہے۔
 
-## کنٹریکٹ کی ساخت {#contract-composition}
+## کنٹریکٹ کی ترکیب {#contract-composition}
 
-- **کنٹریکٹ غیر ضروری پیچیدگی سے گریز کرتا ہے۔** ٹوکن کو ایک سادہ کنٹریکٹ ہونا چاہیے؛ پیچیدہ کوڈ والے ٹوکن کو اعلیٰ معیار کے جائزے کی ضرورت ہوتی ہے۔ پیچیدہ کوڈ کی شناخت کے لیے سلدر کے [<span dir="ltr">human-summary printer</span>](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) کا استعمال کریں۔
-- **کنٹریکٹ <span dir="ltr">SafeMath</span> کا استعمال کرتا ہے۔** وہ کنٹریکٹس جو <span dir="ltr">SafeMath</span> کا استعمال نہیں کرتے انہیں اعلیٰ معیار کے جائزے کی ضرورت ہوتی ہے۔ <span dir="ltr">SafeMath</span> کے استعمال کے لیے کنٹریکٹ کا دستی طور پر معائنہ کریں۔
-- **کنٹریکٹ میں ٹوکن سے غیر متعلقہ صرف چند فنکشنز ہیں۔** ٹوکن سے غیر متعلقہ فنکشنز کنٹریکٹ میں کسی مسئلے کے امکان کو بڑھاتے ہیں۔ کنٹریکٹ میں استعمال ہونے والے کوڈ کا وسیع پیمانے پر جائزہ لینے کے لیے سلدر کے [<span dir="ltr">contract-summary printer</span>](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) کا استعمال کریں۔
-- **ٹوکن کا صرف ایک پتہ ہے۔** بیلنس اپ ڈیٹس کے لیے متعدد انٹری پوائنٹس والے ٹوکنز پتہ کی بنیاد پر اندرونی بک کیپنگ کو توڑ سکتے ہیں (مثال کے طور پر، `balances[token_address][msg.sender]` ہو سکتا ہے کہ اصل بیلنس کی عکاسی نہ کرے)۔
+- **کنٹریکٹ غیر ضروری پیچیدگی سے گریز کرتا ہے۔** ٹوکن کو ایک سادہ کنٹریکٹ ہونا چاہیے؛ پیچیدہ کوڈ والے ٹوکن کو اعلیٰ معیار کے جائزے کی ضرورت ہوتی ہے۔ پیچیدہ کوڈ کی شناخت کے لیے <span dir="ltr">Slither</span> کے [<span dir="ltr">human-summary printer</span>](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) کا استعمال کریں۔
+- **کنٹریکٹ چیک شدہ ریاضی (checked arithmetic) کا استعمال کرتا ہے۔** <span dir="ltr">Solidity 0.8</span> اور اس کے بعد کے ورژنز پہلے سے طے شدہ طور پر اوور فلو اور انڈر فلو پر ریورٹ کرتے ہیں؛ پرانے کنٹریکٹس کو اسی تحفظ کے لیے <span dir="ltr">SafeMath</span> کی ضرورت ہوتی ہے۔ <span dir="ltr">SafeMath</span> کے بغیر پرانے ورژنز کے ساتھ مرتب کیے گئے کنٹریکٹس، یا جو `unchecked` بلاکس استعمال کرتے ہیں، انہیں اعلیٰ معیار کے جائزے کی ضرورت ہوتی ہے۔ ریاضی کا دستی طور پر معائنہ کریں، خاص طور پر `unchecked` بلاکس اور ان لائن اسمبلی (inline assembly) کے اندر۔
+- **کنٹریکٹ میں ٹوکن سے غیر متعلقہ صرف چند فنکشنز ہیں۔** ٹوکن سے غیر متعلقہ فنکشنز کنٹریکٹ میں کسی مسئلے کے امکان کو بڑھاتے ہیں۔ کنٹریکٹ میں استعمال ہونے والے کوڈ کا وسیع پیمانے پر جائزہ لینے کے لیے <span dir="ltr">Slither</span> کے [<span dir="ltr">contract-summary printer</span>](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) کا استعمال کریں۔
+- **ٹوکن کا صرف ایک پتہ ہے۔** بیلنس اپ ڈیٹس کے لیے متعدد انٹری پوائنٹس والے ٹوکنز پتے کی بنیاد پر اندرونی بک کیپنگ کو توڑ سکتے ہیں (مثال کے طور پر، `balances[token_address][msg.sender]` اصل بیلنس کی عکاسی نہیں کر سکتا ہے)۔
 
 ## مالک کے مراعات {#owner-privileges}
 
-- **ٹوکن اپ گریڈ کے قابل نہیں ہے۔** اپ گریڈ کے قابل کنٹریکٹس وقت کے ساتھ اپنے اصول بدل سکتے ہیں۔ یہ تعین کرنے کے لیے کہ آیا کنٹریکٹ اپ گریڈ کے قابل ہے، سلدر کے [<span dir="ltr">human-summary printer</span>](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) کا استعمال کریں۔
-- **مالک کے پاس ڈھلائی کی محدود صلاحیتیں ہیں۔** بدنیتی پر مبنی یا سمجھوتہ شدہ مالکان ڈھلائی کی صلاحیتوں کا غلط استعمال کر سکتے ہیں۔ ڈھلائی کی صلاحیتوں کا جائزہ لینے کے لیے سلدر کے [<span dir="ltr">human-summary printer</span>](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) کا استعمال کریں، اور کوڈ کا دستی طور پر جائزہ لینے پر غور کریں۔
+- **ٹوکن اپ گریڈ کے قابل نہیں ہے۔** اپ گریڈ کے قابل کنٹریکٹس وقت کے ساتھ اپنے اصول بدل سکتے ہیں۔ یہ تعین کرنے کے لیے کہ آیا کنٹریکٹ اپ گریڈ کے قابل ہے، <span dir="ltr">Slither</span> کے [<span dir="ltr">human-summary printer</span>](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) کا استعمال کریں۔
+- **مالک کے پاس ڈھلائی کی محدود صلاحیتیں ہیں۔** بدنیتی پر مبنی یا سمجھوتہ شدہ مالکان ڈھلائی کی صلاحیتوں کا غلط استعمال کر سکتے ہیں۔ ڈھلائی کی صلاحیتوں کا جائزہ لینے کے لیے <span dir="ltr">Slither</span> کے [<span dir="ltr">human-summary printer</span>](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) کا استعمال کریں، اور کوڈ کا دستی طور پر جائزہ لینے پر غور کریں۔
 - **ٹوکن کو روکا (pause) نہیں جا سکتا۔** بدنیتی پر مبنی یا سمجھوتہ شدہ مالکان روکے جانے کے قابل (pausable) ٹوکنز پر انحصار کرنے والے کنٹریکٹس کو پھنسا سکتے ہیں۔ روکے جانے کے قابل کوڈ کی دستی طور پر شناخت کریں۔
 - **مالک کنٹریکٹ کو بلیک لسٹ نہیں کر سکتا۔** بدنیتی پر مبنی یا سمجھوتہ شدہ مالکان بلیک لسٹ والے ٹوکنز پر انحصار کرنے والے کنٹریکٹس کو پھنسا سکتے ہیں۔ بلیک لسٹ کرنے کی خصوصیات کی دستی طور پر شناخت کریں۔
 - **ٹوکن کے پیچھے موجود ٹیم جانی پہچانی ہے اور اسے غلط استعمال کے لیے ذمہ دار ٹھہرایا جا سکتا ہے۔** گمنام ڈیولپمنٹ ٹیموں والے کنٹریکٹس، یا جو قانونی پناہ گاہوں میں موجود ہیں، انہیں اعلیٰ معیار کے جائزے کی ضرورت ہونی چاہیے۔
 
-## ٹوکن کی کمیابی {#token-scarcity}
+## ٹوکن کی کمی {#token-scarcity}
 
-ٹوکن کی کمیابی کے مسائل کے جائزے کے لیے دستی جائزے کی ضرورت ہوتی ہے۔ ان شرائط کو چیک کریں:
+ٹوکن کی کمی کے مسائل کے جائزے کے لیے دستی جائزے کی ضرورت ہوتی ہے۔ ان شرائط کو چیک کریں:
 
-- **کوئی بھی صارف زیادہ تر سپلائی کا مالک نہیں ہے۔** اگر چند صارفین زیادہ تر ٹوکنز کے مالک ہیں، تو وہ ٹوکن کی تقسیم کی بنیاد پر آپریشنز کو متاثر کر سکتے ہیں۔
+- **کسی بھی صارف کے پاس سپلائی کا زیادہ تر حصہ نہیں ہے۔** اگر چند صارفین کے پاس زیادہ تر ٹوکنز ہیں، تو وہ ٹوکن کی تقسیم کی بنیاد پر آپریشنز کو متاثر کر سکتے ہیں۔
 - **کل سپلائی کافی ہے۔** کم کل سپلائی والے ٹوکنز کو آسانی سے ہیرا پھیری کا نشانہ بنایا جا سکتا ہے۔
-- **ٹوکنز چند سے زیادہ ایکسچینجز میں موجود ہیں۔** اگر تمام ٹوکنز ایک ہی ایکسچینج میں ہیں، تو ایکسچینج کے سمجھوتے سے ٹوکن پر انحصار کرنے والے کنٹریکٹ کو خطرہ لاحق ہو سکتا ہے۔
-- **صارفین بڑے فنڈز یا فلیش لونز (flash loans) سے وابستہ خطرات کو سمجھتے ہیں۔** ٹوکن بیلنس پر انحصار کرنے والے کنٹریکٹس کو بڑے فنڈز والے حملہ آوروں یا فلیش لونز کے ذریعے ہونے والے حملوں کو احتیاط سے مدنظر رکھنا چاہیے۔
-- **ٹوکن فلیش ڈھلائی (flash minting) کی اجازت نہیں دیتا**۔ فلیش ڈھلائی بیلنس اور کل سپلائی میں نمایاں اتار چڑھاؤ کا سبب بن سکتی ہے، جس کے لیے ٹوکن کے آپریشن میں سخت اور جامع اوور فلو چیکس کی ضرورت ہوتی ہے۔
+- **ٹوکنز چند سے زیادہ ایکسچینجز میں موجود ہیں۔** اگر تمام ٹوکنز ایک ہی ایکسچینج میں ہیں، تو ایکسچینج کے سمجھوتے (compromise) سے ٹوکن پر انحصار کرنے والے کنٹریکٹ کو خطرہ لاحق ہو سکتا ہے۔
+- **صارفین بڑے فنڈز یا فلیش لونز (flash loans) سے وابستہ خطرات کو سمجھتے ہیں۔** ٹوکن بیلنس پر انحصار کرنے والے کنٹریکٹس کو بڑے فنڈز والے حملہ آوروں یا فلیش لونز کے ذریعے ہونے والے حملوں پر احتیاط سے غور کرنا چاہیے۔
+- **ٹوکن فلیش ڈھلائی (flash minting) کی اجازت نہیں دیتا ہے۔** فلیش ڈھلائی بیلنس اور کل سپلائی میں نمایاں اتار چڑھاؤ کا سبب بن سکتی ہے، جس کے لیے ٹوکن کے آپریشن میں سخت اور جامع اوور فلو چیکس کی ضرورت ہوتی ہے۔
+## معلوم غیر معیاری <span dir="ltr">ERC-20</span> ٹوکنز {#known-non-standard-erc20-tokens}
+
+وہ پروٹوکولز جو کسی بھی ٹوکن کے ساتھ انضمام کی اجازت دیتے ہیں، انہیں کچھ معروف غیر معیاری <span dir="ltr">ERC-20</span> ٹوکنز کو مناسب طریقے سے ہینڈل کرنے کا خیال رکھنا چاہیے۔ اضافی خطرات کے حامل معروف ٹوکنز کے لیے [غیر معیاری ٹوکنز کی فہرست](https://secure-contracts.com/development-guidelines/non-standard-tokens.html) دیکھیں۔
+
+## <span dir="ltr">ERC-721</span> ٹوکنز {#erc721-tokens}
+
+### <span dir="ltr">ERC-721</span> کی مطابقت کی جانچ {#erc721-conformity-checks}
+
+کچھ کنٹریکٹس کا رویہ اصل <span dir="ltr">ERC</span> تصریح (specification) سے مختلف ہو سکتا ہے۔ درج ذیل شرائط کا دستی طور پر جائزہ لیں:
+
+- **<span dir="ltr">0x0</span> پتے پر ٹوکنز کی منتقلی ریورٹ ہوتی ہے۔** کچھ ٹوکنز <span dir="ltr">0x0</span> پر منتقلی کی اجازت دیتے ہیں اور اس پتے پر بھیجے گئے ٹوکنز کو جلایا ہوا (burned) سمجھتے ہیں؛ تاہم، <span dir="ltr">ERC-721</span> معیار کا تقاضا ہے کہ ایسی منتقلیاں ریورٹ ہوں۔
+- **`safeTransferFrom` فنکشنز درست دستخط کے ساتھ نافذ کیے گئے ہیں۔** کچھ ٹوکن کنٹریکٹس ان فنکشنز کو نافذ نہیں کرتے ہیں۔ <span dir="ltr">NFTs</span> کو ان میں سے کسی ایک کنٹریکٹ میں منتقل کرنے کے نتیجے میں اثاثوں کا نقصان ہو سکتا ہے۔
+- **اگر استعمال کیے گئے ہوں تو `name`، `decimals`، اور `symbol` فنکشنز موجود ہوں۔** یہ فنکشنز <span dir="ltr">ERC-721</span> معیار میں اختیاری ہیں اور ہو سکتا ہے کہ موجود نہ ہوں۔
+- **اگر استعمال کیا گیا ہو، تو `decimals` ایک `uint8(0)` واپس کرتا ہے۔** دیگر ویلیوز غلط ہیں۔
+- **`name` اور `symbol` فنکشنز ایک خالی سٹرنگ (empty string) واپس کر سکتے ہیں۔** اس رویے کی معیار کے ذریعہ اجازت ہے۔
+- **اگر `tokenId` غلط ہو یا کسی ایسے ٹوکن کا حوالہ دے جسے پہلے ہی جلایا جا چکا ہو تو `ownerOf` فنکشن ریورٹ ہو جاتا ہے۔** فنکشن <span dir="ltr">0x0</span> واپس نہیں کر سکتا۔ یہ رویہ معیار کے ذریعہ درکار ہے لیکن ہو سکتا ہے کہ ہمیشہ درست طریقے سے نافذ نہ کیا گیا ہو۔
+- **کسی <span dir="ltr">NFT</span> کی منتقلی اس کی منظوریوں (approvals) کو صاف کر دیتی ہے۔** یہ معیار کے ذریعہ درکار ہے۔
+- **کسی <span dir="ltr">NFT</span> کا ٹوکن <span dir="ltr">ID</span> اس کی زندگی کے دوران تبدیل نہیں کیا جا سکتا۔** یہ معیار کے ذریعہ درکار ہے۔
+
+### <span dir="ltr">ERC-721</span> معیار کے عام خطرات {#common-risks-of-the-erc721-standard}
+
+درج ذیل شرائط کا دستی جائزہ لے کر <span dir="ltr">ERC-721</span> کنٹریکٹس سے وابستہ خطرات کو کم کریں:
+
+- **`onERC721Received` کال بیک (callback) کو مدنظر رکھا گیا ہے۔** منتقلی کے فنکشنز میں بیرونی کالز ری اینٹرنسیز (reentrancies) کا سبب بن سکتی ہیں، خاص طور پر جب کال بیک واضح نہ ہو (مثال کے طور پر، [`safeMint`](https://www.paradigm.xyz/writing/the-dangers-of-surprising-code) کالز میں)۔
+- **جب کوئی <span dir="ltr">NFT</span> ڈھالا جاتا ہے، تو اسے محفوظ طریقے سے سمارٹ کنٹریکٹ میں منتقل کیا جاتا ہے۔** اگر ڈھلائی کا کوئی فنکشن موجود ہے، تو اسے `safeTransferFrom` کی طرح برتاؤ کرنا چاہیے اور نئے ٹوکنز کی سمارٹ کنٹریکٹ میں ڈھلائی کو مناسب طریقے سے ہینڈل کرنا چاہیے، تاکہ اثاثوں کے نقصان کو روکا جا سکے۔
+- **کسی ٹوکن کو جلانا اس کی منظوریوں کو صاف کر دیتا ہے۔** اگر جلانے کا کوئی فنکشن موجود ہے، تو اسے ٹوکن کی پچھلی منظوریوں کو صاف کرنا چاہیے۔

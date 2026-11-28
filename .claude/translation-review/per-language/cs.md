@@ -1,5 +1,8 @@
 # Czech (cs) Translation Review Findings
 
+## PR #19993 (intl/pending-dev, runs 46112784113 / 46112790344 / 46118259298) -- 2026-11-28 -- Score 9.0/10
+Scope: 17 tutorials, changed lines; sweeps over all 17 plus a prose read of uniswap-v2 and short-abi. 0 critical; no glossary-note leaks, abbreviation expansions or translated code found. Open: none notable.
+
 ## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.9/10
 Scope: 15 markdown files (nodes-and-clients + subpages, frameworks, data structures, transactions, glossary, roadmap, supply), changed lines; 7 diffs read in full, sweeps over all 15.
 

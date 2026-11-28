@@ -46,7 +46,9 @@ AIで最も広く使用されている言語は[Python](https://www.python.org/)
 
 ### OpenAI {#openai}
 
-大規模言語モデル（LLM）については、[OpenAI](https://openai.com/)から始めることにしました。このチュートリアルのアプリケーションを実行するには、APIアクセスの料金を支払う必要があります。最低支払額の5ドルで十分です。
+大規模言語モデルについては、[OpenAI](https://openai.com/)から始めることにしました。このチュートリアルのアプリケーションを実行するには、APIアクセスの料金を支払う必要があります。最低支払額の5ドルで十分です。
+
+OpenAIのPythonライブラリは、自分のコンピュータで実行するモデルを含め、他のOpenAI互換エンドポイントとも通信できます。別の場所に向ける方法については、[LLMとのインターフェース](#interface-llm)を参照してください。
 
 ## 開発のステップバイステップ {#step-by-step}
 
@@ -517,46 +519,63 @@ print(make_prompt(wethusdc_quotes + wethwbtc_quotes, future_time, wethusdc_pool.
 
 ### LLMとのインターフェース {#interface-llm}
 
-次に、実際のLLMにプロンプトを送信し、予想される将来の価値を受け取ります。私はOpenAIを使用してこのプログラムを書いたので、別のプロバイダーを使用したい場合は調整する必要があります。
+次に、実際のLLMにプロンプトを送信し、予想される将来の価値を受け取ります。このプログラムはOpenAIを使用して作成したため、別のプロバイダーを使用したい場合は調整する必要があります。
 
-1. [OpenAIアカウント](https://auth.openai.com/create-account)を取得する
-2. [アカウントに資金を入金する](https://platform.openai.com/settings/organization/billing/overview) — 執筆時点での最低金額は5ドルです
-3. [APIキーを作成する](https://platform.openai.com/settings/organization/api-keys)
-4. コマンドラインで、プログラムが使用できるようにAPIキーをエクスポートする
+1. [OpenAIアカウント](https://auth.openai.com/create-account)を取得します。
+2. [アカウントに入金します](https://platform.openai.com/settings/organization/billing/overview)（執筆時点での最低金額は5ドルです）。
+3. [APIキーを作成します](https://platform.openai.com/settings/organization/api-keys)。
+4. コマンドラインで、プログラムが使用できるようにAPIキーをエクスポートします。
 
    ```sh
    export OPENAI_API_KEY=sk-<the rest of the key goes here>
    ```
 
-5. エージェントをチェックアウトして実行する
+5. エージェントをチェックアウトします。
 
    ```sh
    git checkout 04-interface-llm
+   ```
+
+6. リポジトリのコードは`gpt-4-turbo`モデルを使用していますが、これは[OpenAIが2026年10月23日にシャットダウンします](https://developers.openai.com/api/docs/deprecations)。これを現在の低コストモデルである`gpt-6-luna`に切り替えます。`gpt-6-luna`は推論モデルであるため、このコマンドは推論をオフにし（`reasoning_effort="none"`、これにより`temperature`が使用可能に保たれます）、非推奨の`max_tokens`パラメータを`max_completion_tokens`に置き換えます。
+
+   ```sh
+   sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
+   ```
+
+7. エージェントを実行します。
+
+   ```sh
    uv run agent.py
    ```
+
+ローカルでホストするモデルなど、別のOpenAI互換エンドポイントを使用したい場合、OpenAIライブラリは`OPENAI_BASE_URL`環境変数からエンドポイントを読み取ります。これを設定し、サーバーがキーを確認しない場合は`OPENAI_API_KEY`に空でない値を入れ、`agent.py`および`test-predictor.py`の`gpt-6-luna`をそのサーバーが提供するモデルの名前に変更します。サーバーが`reasoning_effort`を拒否する場合は、そのパラメータを削除してください。
+
+```sh
+export OPENAI_BASE_URL=http://localhost:<port>/v1
+```
 
 新しいコードは以下の通りです。
 
 ```python
 from openai import OpenAI
 
-open_ai = OpenAI()  # クライアントはOPENAI_API_KEY環境変数を読み取る
+open_ai = OpenAI()  # クライアントは OPENAI_API_KEY 環境変数を読み込みます。
 ```
 
-OpenAI APIをインポートしてインスタンス化します。
+OpenAI APIをインポートしてインスタンス化します。クライアントは設定されていれば`OPENAI_BASE_URL`も読み取るため、同じコードが他のOpenAI互換エンドポイントでも機能します。
 
 ```python
 response = open_ai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-6-luna", reasoning_effort="none",
     messages=[
         {"role": "user", "content": prompt}
     ],
     temperature=0.0,
-    max_tokens=16,
+    max_completion_tokens=16,
 )
 ```
 
-OpenAI API（`open_ai.chat.completions.create`）を呼び出してレスポンスを作成します。
+OpenAI API（`open_ai.chat.completions.create`）を呼び出してレスポンスを作成します。`temperature`をゼロにすると最も予測可能な回答を求め、`max_completion_tokens`は回答の長さを制限します（数字を保持するだけで十分です）。推論モデルでは、`max_completion_tokens`はモデルが思考に使用するトークンもカウントするため、これも`reasoning_effort`を`none`に設定する理由の1つです。
 
 ```python
 expected_price = Decimal(response.choices[0].message.content.strip())
@@ -695,13 +714,13 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
 
 ### トランザクションの送信 {#submit-txn}
 
-これで、実際にトランザクションを送信する必要があります。しかし、システムが証明される前の現時点では、実際のお金を使いたくありません。代わりに、メインネットのローカルフォークを作成し、そのネットワーク上で「取引」します。
+次に、実際にトランザクションを送信する必要があります。しかし、システムが証明される前のこの時点では、実際のお金を使いたくありません。代わりに、メインネットのローカルフォークを作成し、そのネットワーク上で「取引」を行います。
 
 ローカルフォークを作成し、取引を有効にする手順は以下の通りです。
 
-1. [Foundry](https://getfoundry.sh/introduction/installation)をインストールする
+1. [Foundry](https://getfoundry.sh/introduction/installation)をインストールします。
 
-2. [`anvil`](https://getfoundry.sh/anvil/overview)を起動する
+2. [`anvil`](https://getfoundry.sh/anvil/overview)を起動します。
 
    ```sh
    anvil --fork-url https://eth.drpc.org --block-time 12
@@ -716,9 +735,9 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
    ADDRESS=`cast wallet address $PRIVATE_KEY`
    ```
 
-4. これらは使用する必要があるコントラクトです。[`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol)は、実際に取引するために使用するユニスワップ v3のコントラクトです。プールを通じて直接取引することもできますが、こちらの方がはるかに簡単です。
+4. これらは使用する必要があるコントラクトです。[`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol)は、実際に取引するために使用するUniswap v3コントラクトです。プールを通じて直接取引することもできますが、こちらの方がはるかに簡単です。
 
-   下の2つの変数は、WETHとUSDCの間でスワップするために必要なユニスワップ v3のパスです。
+   下の2つの変数は、WETHとUSDCの間でスワップするために必要なUniswap v3のパスです。
 
    ```sh
    WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
@@ -746,7 +765,7 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
        --private-key $PRIVATE_KEY
    ```
 
-   `approve`の呼び出しは、`SwapRouter`が私たちのトークンの一部を消費できるようにするアローワンスを作成します。コントラクトはイベントを監視できないため、トークンを直接`SwapRouter`コントラクトに送金しても、支払われたことを認識できません。代わりに、`SwapRouter`コントラクトが一定額を消費することを許可し、その後`SwapRouter`がそれを実行します。これは`SwapRouter`によって呼び出される関数を通じて行われるため、成功したかどうかを認識できます。
+   `approve`の呼び出しは、`SwapRouter`が私たちのトークンの一部を使用できるようにするアローワンスを作成します。コントラクトはイベントを監視できないため、トークンを直接`SwapRouter`コントラクトに送金しても、支払われたことを認識できません。代わりに、`SwapRouter`コントラクトが一定額を使用することを許可し、その後`SwapRouter`がそれを実行します。これは`SwapRouter`によって呼び出される関数を通じて行われるため、成功したかどうかを認識できます。
 
 7. 両方のトークンが十分にあることを確認します。
 
@@ -758,9 +777,12 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
 WETHとUSDCが手に入ったので、実際にエージェントを実行できます。
 
 ```sh
-git checkout 05-trade
+git checkout -f 05-trade
+sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
 uv run agent.py
 ```
+
+`-f`は前のブランチで行ったモデルの変更を破棄するため、`sed`コマンドを使用して新しいバージョンの`agent.py`に再度適用します。
 
 出力は次のようになります。
 
@@ -783,9 +805,9 @@ WETH Balance: 499
 
 実際に使用するには、いくつかの小さな変更が必要です。
 
-- 14行目で、`MAINNET_URL`を`https://eth.drpc.org`などの実際のアクセスポイントに変更します
-- 28行目で、`PRIVATE_KEY`を自身の秘密鍵に変更します
-- 非常に裕福で、証明されていないエージェントのために毎日1 ETHを売買できる場合を除き、29行目を変更して`WETH_TRADE_AMOUNT`を減らすとよいでしょう
+- 14行目で、`MAINNET_URL`を`https://eth.drpc.org`などの実際のアクセスポイントに変更します。
+- 28行目で、`PRIVATE_KEY`を自分の秘密鍵に変更します。
+- 非常に裕福で、証明されていないエージェントのために毎日1 ETHを売買できる場合を除き、29行目を変更して`WETH_TRADE_AMOUNT`を減らすとよいでしょう。
 
 #### コードの説明 {#trading-code}
 
@@ -823,7 +845,7 @@ SWAP_ROUTER_ABI = [
 ]
 ```
 
-`SwapRouter`のABIでは、`exactInput`だけが必要です。関連する関数として、正確に1 WETHを購入するために使用できる`exactOutput`がありますが、簡単にするために両方のケースで`exactInput`を使用します。
+`SwapRouter`のABIでは、`exactInput`だけが必要です。正確に1 WETHを購入するために使用できる関連関数`exactOutput`がありますが、簡単にするために両方のケースで`exactInput`を使用します。
 
 ```python
 account = w3.eth.account.from_key(PRIVATE_KEY)
@@ -851,7 +873,7 @@ def txn_params() -> dict:
 def approve_token(contract: Contract, amount: int):
 ```
 
-`SwapRouter`のトークンのアローワンスを承認します。
+`SwapRouter`のトークンアローワンスを承認します。
 
 ```python
     txn = contract.functions.approve(SWAP_ROUTER_ADDRESS, amount).build_transaction(txn_params())
@@ -859,7 +881,7 @@ def approve_token(contract: Contract, amount: int):
     tx_hash = w3.eth.send_raw_transaction(signed_txn.raw_transaction)
 ```
 
-これがWeb3でトランザクションを送信する方法です。まず、[`Contract`オブジェクト](https://web3py.readthedocs.io/en/stable/web3.contract.html)を使用してトランザクションを構築します。次に、`PRIVATE_KEY`を使用して、[`web3.eth.account.sign_transaction`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction)でトランザクションに署名します。最後に、[`w3.eth.send_raw_transaction`](https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction)を使用してトランザクションを送信します。
+これがWeb3でトランザクションを送信する方法です。まず、[`Contract`オブジェクト](https://web3py.readthedocs.io/en/stable/web3.contract.html)を使用してトランザクションを構築します。次に、`PRIVATE_KEY`を使用して[`web3.eth.account.sign_transaction`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction)でトランザクションに署名します。最後に、[`w3.eth.send_raw_transaction`](https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction)を使用してトランザクションを送信します。
 
 ```python
     print(f"Approve transaction sent: {tx_hash.hex()}")
@@ -917,7 +939,7 @@ def sell():
     print("Sell transaction mined.")
 ```
 
-`buy()`関数と`sell()`関数はほぼ同じです。まず、`SwapRouter`に十分なアローワンスを承認し、次に正しいパスと金額でそれを呼び出します。
+`buy()`関数と`sell()`関数はほぼ同じです。まず`SwapRouter`に十分なアローワンスを承認し、次に正しいパスと金額でそれを呼び出します。
 
 ```python
 def balances():
@@ -928,7 +950,7 @@ def balances():
     print(f"{wethusdc_pool.token1.symbol} Balance: {Decimal(token1_balance) / Decimal(10 ** wethusdc_pool.token1.decimals)}")
 ```
 
-両方の通貨でのユーザー残高を報告します。
+両方の通貨でのユーザーの残高を報告します。
 
 ```python
 print("Account balances before trade:")
@@ -945,7 +967,7 @@ print("Account balances after trade:")
 balances()
 ```
 
-このエージェントは現在1回しか機能しません。ただし、[`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html)から実行するか、368〜400行目をループで囲み、[`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep)を使用して次のサイクルの時間になるまで待機することで、継続的に機能するように変更できます。
+このエージェントは現在1回しか機能しません。ただし、[`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html)から実行するか、368〜397行目をループで囲み、[`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep)を使用して次のサイクルの時間になるまで待機することで、継続的に機能するように変更できます。
 
 ## 可能な改善点 {#improvements}
 
@@ -961,9 +983,9 @@ balances()
 
 ### トレーディング・ストラテジーを秘密にしておきたい場合はどうすればよいか？ {#secret}
 
-AIベンダーは、あなたが彼らのLLMに送信するクエリを見ることができ、これにより、あなたがエージェントで開発した天才的なトレーディングシステムが暴露される可能性があります。あまりにも多くの人が使用するトレーディングシステムは無価値です。なぜなら、あなたが買いたいときにあまりにも多くの人が買おうとし（そして価格が上がる）、あなたが売りたいときに売ろうとする（そして価格が下がる）からです。
+AIベンダーは、あなたがLLMに送信したクエリを見ることができるため、エージェントで開発した天才的な取引システムが公開される可能性があります。あまりにも多くの人が使用する取引システムは無価値です。なぜなら、あなたが買いたいときにあまりにも多くの人が買おうとし（価格が上がる）、あなたが売りたいときに売ろうとする（価格が下がる）からです。
 
-この問題を回避するために、たとえば[LM-Studio](https://lmstudio.ai/)を使用して、LLMをローカルで実行できます。
+この問題を回避するために、たとえば[llama.cpp](https://github.com/ggml-org/llama.cpp)の`llama-server`を使用して、LLMをローカルで実行できます。これはOpenAI互換のエンドポイントを提供するため、[LLMとのインターフェース](#interface-llm)で説明されているように、`OPENAI_BASE_URL`とモデル名を設定するだけで済みます。
 
 ### AIボットからAI・エージェントへ {#bot-to-agent}
 
