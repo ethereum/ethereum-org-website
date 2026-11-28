@@ -4,9 +4,12 @@
 
 import { expect, test } from "@playwright/test"
 
+import type { FileContributor, GitHubContributorsData } from "@/lib/types"
+
 import { LOCALES_CODES } from "@/lib/constants"
 
 import {
+  getPageLastModified,
   getTranslatedLocales,
   hasContentForLocale,
 } from "@/lib/i18n/translationRegistry"
@@ -98,5 +101,39 @@ test.describe("getTranslatedLocales — input handling", () => {
       const result = await getTranslatedLocales(slug)
       expect(result, `default locale missing for ${slug}`).toContain("en")
     }
+  })
+})
+
+test.describe("getPageLastModified", () => {
+  const commit = (date: string): FileContributor => ({
+    login: "someone",
+    avatar_url: "https://example.com/a.png",
+    html_url: "https://example.com/someone",
+    date,
+  })
+
+  const contributors: GitHubContributorsData = {
+    content: {
+      about: [commit("2025-01-02T03:04:05Z"), commit("2026-07-08T09:10:11Z")],
+      "videos/example": [commit("2025-01-02T03:04:05Z")],
+    },
+    appPages: {},
+    generatedAt: "2026-10-16T00:00:00Z",
+  }
+
+  test("returns the latest commit as ISO 8601 regardless of slashes", () => {
+    for (const slug of ["about", "/about", "/about/"]) {
+      expect(getPageLastModified(contributors, slug)).toBe(
+        "2026-07-08T09:10:11.000Z"
+      )
+    }
+    expect(getPageLastModified(contributors, "videos/example")).toBe(
+      "2025-01-02T03:04:05.000Z"
+    )
+  })
+
+  test("is undefined without history or data", () => {
+    expect(getPageLastModified(contributors, "/unknown/")).toBeUndefined()
+    expect(getPageLastModified(null, "/about/")).toBeUndefined()
   })
 })

@@ -1,8 +1,11 @@
 import { existsSync } from "fs"
 import { join } from "path"
 
+import type { GitHubContributorsData } from "@/lib/types"
+
 import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
+import { getAppPageLastCommitDate } from "../utils/gh"
 import { getPostSlugs } from "../utils/md"
 import { getStaticPagePaths } from "../utils/staticPages"
 import { getPrimaryNamespaceForPath } from "../utils/translations"
@@ -92,6 +95,16 @@ export async function getTranslatedLocales(slug: string): Promise<string[]> {
 type PageWithTranslations = {
   slug: string
   translatedLocales: string[]
+  lastModified?: string
+}
+
+// App pages are skipped: page.tsx history misses intl JSON and component edits.
+export function getPageLastModified(
+  contributors: GitHubContributorsData | null,
+  slug: string
+): string | undefined {
+  const history = contributors?.content[normalizeContentSlug(slug)] ?? []
+  return getAppPageLastCommitDate(history) || undefined
 }
 
 async function getDynamicIntlPagePaths(): Promise<string[]> {
@@ -178,6 +191,8 @@ export async function getAllPagesWithTranslations(): Promise<
   PageWithTranslations[]
 > {
   const pages: PageWithTranslations[] = []
+  const { getStaticGitHubContributors } = await import("@/lib/data")
+  const contributors = await getStaticGitHubContributors()
 
   const mdSlugs = await getPostSlugs("/")
 
@@ -194,7 +209,8 @@ export async function getAllPagesWithTranslations(): Promise<
 
   for (const slug of [...mdSlugs, ...videoSlugs]) {
     const translatedLocales = await getTranslatedLocales(slug)
-    pages.push({ slug, translatedLocales })
+    const lastModified = getPageLastModified(contributors, slug)
+    pages.push({ slug, translatedLocales, lastModified })
   }
 
   for (const path of uniqueIntlPaths) {
