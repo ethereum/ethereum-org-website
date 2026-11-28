@@ -46,84 +46,94 @@ _بلاک چین پر کوئی راز نہیں ہوتے_، جو کچھ بھی ہ
 
 | آفسیٹ | آپ کوڈ | اسٹیک (آپ کوڈ کے بعد) |
 | -----: | ------------ | ------------------------ |
-| <span dir="ltr">0</span> | <span dir="ltr">PUSH1 0x80</span> | <span dir="ltr">0x80</span> |
-| <span dir="ltr">2</span> | <span dir="ltr">PUSH1 0x40</span> | <span dir="ltr">0x40, 0x80</span> |
+| <span dir="ltr">0</span> | PUSH1 0x80 | <span dir="ltr">0x80</span> |
+| <span dir="ltr">2</span> | PUSH1 0x40 | <span dir="ltr">0x40, 0x80</span> |
 | <span dir="ltr">4</span> | MSTORE | خالی |
-| <span dir="ltr">5</span> | <span dir="ltr">PUSH1 0x04</span> | <span dir="ltr">0x04</span> |
+| <span dir="ltr">5</span> | PUSH1 0x04 | <span dir="ltr">0x04</span> |
 | <span dir="ltr">7</span> | CALLDATASIZE | <span dir="ltr">CALLDATASIZE 0x04</span> |
 | <span dir="ltr">8</span> | LT | <span dir="ltr">CALLDATASIZE\<4</span> |
-| <span dir="ltr">9</span> | <span dir="ltr">PUSH2 0x005e</span> | <span dir="ltr">0x5E CALLDATASIZE\<4</span> |
+| <span dir="ltr">9</span> | PUSH2 0x005e | <span dir="ltr">0x5E CALLDATASIZE\<4</span> |
 | <span dir="ltr">C</span> | JUMPI | خالی |
 
 یہ کوڈ دو کام کرتا ہے:
 
 1. میموری لوکیشنز <span dir="ltr">0x40-0x5F</span> پر <span dir="ltr">0x80</span> کو <span dir="ltr">32</span> بائٹ ویلیو کے طور پر لکھیں (<span dir="ltr">0x80</span> کو <span dir="ltr">0x5F</span> میں اسٹور کیا جاتا ہے، اور <span dir="ltr">0x40-0x5E</span> سب صفر ہیں)۔
-2. کال ڈیٹا کا سائز پڑھیں۔ عام طور پر ایتھریم کنٹریکٹ کا کال ڈیٹا [اے بی آئی (ایپلیکیشن بائنری انٹرفیس)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html) کی پیروی کرتا ہے، جس کے لیے فنکشن سلیکٹر کے لیے کم از کم چار بائٹس درکار ہوتے ہیں۔ اگر کال ڈیٹا کا سائز چار سے کم ہے، تو <span dir="ltr">0x5E</span> پر جمپ کریں۔
+2. کال ڈیٹا کا سائز پڑھیں۔ عام طور پر ایک ایتھیریم کنٹریکٹ کے لیے کال ڈیٹا [ABI (ایپلیکیشن بائنری انٹرفیس)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html) کی پیروی کرتا ہے، جس کے لیے فنکشن سلیکٹر کے لیے کم از کم چار بائٹس درکار ہوتے ہیں۔ اگر کال ڈیٹا کا سائز چار سے کم ہے، تو <span dir="ltr">0x5E</span> پر جائیں۔
 
-![Flowchart for this portion](flowchart-entry.png)
+<Flowchart>
 
-### <span dir="ltr">0x5E</span> پر ہینڈلر (نان-اے بی آئی کال ڈیٹا کے لیے) {#the-handler-at-0x5e-for-non-abi-call-data}
+- انٹری پوائنٹ (<span dir="ltr">0x00</span>)
+  - کیا کال ڈیٹا چار بائٹس سے چھوٹا ہے؟
+    - **ہاں** نان-ABI کالز (<span dir="ltr">0x5E</span>)
+      - کیا کوئی کال ڈیٹا موجود ہے؟
+        - **ہاں** <span dir="ltr">0x7C</span> (مقصد اب تک نامعلوم ہے)
+        - **نہیں** ETH منتقلی (<span dir="ltr">0x64</span>): اوور فلو پر ریورٹ کریں، بصورت دیگر کال ویلیو کو `Storage[6]` (`Value*`) میں شامل کریں اور رک جائیں
+    - **نہیں** ABI کالز (<span dir="ltr">0x0D</span>)
+
+</Flowchart>
+
+### <span dir="ltr">0x5E</span> پر ہینڈلر (نان-ABI کال ڈیٹا کے لیے) {#the-handler-at-0x5e-for-non-abi-call-data}
 
 | آفسیٹ | آپ کوڈ |
 | -----: | ------------ |
 | <span dir="ltr">5E</span> | JUMPDEST |
 | <span dir="ltr">5F</span> | CALLDATASIZE |
-| <span dir="ltr">60</span> | <span dir="ltr">PUSH2 0x007c</span> |
+| <span dir="ltr">60</span> | PUSH2 0x007c |
 | <span dir="ltr">63</span> | JUMPI |
 
-یہ اسنپٹ `JUMPDEST` کے ساتھ شروع ہوتا ہے۔ ای وی ایم (ایتھریم ورچوئل مشین) پروگرامز ایک ایکسیپشن تھرو کرتے ہیں اگر آپ کسی ایسے آپ کوڈ پر جمپ کرتے ہیں جو `JUMPDEST` نہیں ہے۔ پھر یہ CALLDATASIZE کو دیکھتا ہے، اور اگر یہ "درست" (یعنی صفر نہیں) ہے تو <span dir="ltr">0x7C</span> پر جمپ کرتا ہے۔ ہم اس پر نیچے بات کریں گے۔
+یہ اسنیپٹ `JUMPDEST` سے شروع ہوتا ہے۔ ایتھیریم ورچوئل مشین (EVM) پروگرامز ایک ایکسیپشن تھرو کرتے ہیں اگر آپ کسی ایسے آپ کوڈ پر جائیں جو `JUMPDEST` نہ ہو۔ پھر یہ `CALLDATASIZE` کو دیکھتا ہے، اور اگر یہ "درست" (یعنی صفر نہیں) ہے تو <span dir="ltr">0x7C</span> پر جاتا ہے۔ ہم اس پر نیچے بات کریں گے۔
 
 | آفسیٹ | آپ کوڈ | اسٹیک (آپ کوڈ کے بعد) |
 | -----: | ---------- | -------------------------------------------------------------------------- |
 | <span dir="ltr">64</span> | CALLVALUE | کال کے ذریعے فراہم کردہ [Wei](/glossary/#wei)۔ Solidity میں اسے `msg.value` کہا جاتا ہے |
-| <span dir="ltr">65</span> | <span dir="ltr">PUSH1 0x06</span> | <span dir="ltr">6 CALLVALUE</span> |
-| <span dir="ltr">67</span> | <span dir="ltr">PUSH1 0x00</span> | <span dir="ltr">0 6 CALLVALUE</span> |
+| <span dir="ltr">65</span> | PUSH1 0x06 | <span dir="ltr">6 CALLVALUE</span> |
+| <span dir="ltr">67</span> | PUSH1 0x00 | <span dir="ltr">0 6 CALLVALUE</span> |
 | <span dir="ltr">69</span> | DUP3 | <span dir="ltr">CALLVALUE 0 6 CALLVALUE</span> |
 | <span dir="ltr">6A</span> | DUP3 | <span dir="ltr">6 CALLVALUE 0 6 CALLVALUE</span> |
 | <span dir="ltr">6B</span> | SLOAD | <span dir="ltr">Storage[6] CALLVALUE 0 6 CALLVALUE</span> |
 
-لہذا جب کوئی کال ڈیٹا نہیں ہوتا ہے تو ہم Storage[6] کی ویلیو پڑھتے ہیں۔ ہم ابھی تک نہیں جانتے کہ یہ ویلیو کیا ہے، لیکن ہم ان ٹرانزیکشنز کو تلاش کر سکتے ہیں جو کنٹریکٹ کو بغیر کسی کال ڈیٹا کے موصول ہوئی ہیں۔ وہ ٹرانزیکشنز جو بغیر کسی کال ڈیٹا (اور اس وجہ سے کوئی میتھڈ نہیں) کے صرف ETH کی منتقلی کرتی ہیں، ان کا Etherscan میں میتھڈ `Transfer` ہوتا ہے۔ درحقیقت، [کنٹریکٹ کو موصول ہونے والی سب سے پہلی ٹرانزیکشن](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) ایک منتقلی ہے۔
+لہذا جب کوئی کال ڈیٹا نہیں ہوتا ہے تو ہم `Storage[6]` کی ویلیو پڑھتے ہیں۔ ہم ابھی تک نہیں جانتے کہ یہ ویلیو کیا ہے، لیکن ہم ان ٹرانزیکشنز کو تلاش کر سکتے ہیں جو کنٹریکٹ کو بغیر کسی کال ڈیٹا کے موصول ہوئی ہیں۔ وہ ٹرانزیکشنز جو بغیر کسی کال ڈیٹا (اور اس وجہ سے کوئی طریقہ کار نہیں) کے صرف ETH کی منتقلی کرتی ہیں، ان کا Etherscan میں طریقہ کار `Transfer` ہوتا ہے۔ درحقیقت، [کنٹریکٹ کو موصول ہونے والی سب سے پہلی ٹرانزیکشن](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) ایک منتقلی ہے۔
 
-اگر ہم اس ٹرانزیکشن میں دیکھیں اور **Click to see More** پر کلک کریں، تو ہم دیکھتے ہیں کہ کال ڈیٹا، جسے ان پٹ ڈیٹا کہا جاتا ہے، واقعی خالی ہے (`0x`)۔ یہ بھی نوٹ کریں کہ ویلیو <span dir="ltr">1.559 ETH</span> ہے، جو بعد میں متعلقہ ہوگی۔
+اگر ہم اس ٹرانزیکشن کو دیکھیں اور **<span dir="ltr">Click to see More</span>** پر کلک کریں، تو ہم دیکھتے ہیں کہ کال ڈیٹا، جسے ان پٹ ڈیٹا کہا جاتا ہے، واقعی خالی ہے (`0x`)۔ یہ بھی نوٹ کریں کہ ویلیو <span dir="ltr">1.559 ETH</span> ہے، جو بعد میں متعلقہ ہوگی۔
 
-![The call data is empty](calldata-empty.png)
+![کال ڈیٹا خالی ہے](calldata-empty.png)
 
-اس کے بعد، **State** ٹیب پر کلک کریں اور اس کنٹریکٹ کو پھیلائیں جسے ہم ریورس انجینئر کر رہے ہیں (<span dir="ltr">0x2510...</span>)۔ آپ دیکھ سکتے ہیں کہ ٹرانزیکشن کے دوران `Storage[6]` تبدیل ہوا تھا، اور اگر آپ Hex کو **Number** میں تبدیل کرتے ہیں، تو آپ دیکھیں گے کہ یہ <span dir="ltr">1,559,000,000,000,000,000</span> ہو گیا، جو wei میں منتقل کی گئی ویلیو ہے (میں نے وضاحت کے لیے کوما شامل کیے ہیں)، جو اگلی کنٹریکٹ ویلیو کے مساوی ہے۔
+اس کے بعد، **<span dir="ltr">State</span>** ٹیب پر کلک کریں اور اس کنٹریکٹ کو پھیلائیں جس کی ہم ریورس انجینئرنگ کر رہے ہیں (<span dir="ltr">0x2510...</span>)۔ آپ دیکھ سکتے ہیں کہ ٹرانزیکشن کے دوران `Storage[6]` تبدیل ہوا تھا، اور اگر آپ <span dir="ltr">Hex</span> کو **<span dir="ltr">Number</span>** میں تبدیل کرتے ہیں، تو آپ دیکھیں گے کہ یہ <span dir="ltr">1,559,000,000,000,000,000</span> ہو گیا، جو Wei میں منتقل کی گئی ویلیو ہے (میں نے وضاحت کے لیے کوما شامل کیے ہیں)، جو اگلی کنٹریکٹ ویلیو کے مساوی ہے۔
 
 ![Storage[6] میں تبدیلی](storage6.png)
 
-اگر ہم [اسی عرصے کی دیگر `Transfer` ٹرانزیکشنز](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange) کی وجہ سے ہونے والی حالت کی تبدیلیوں کو دیکھیں تو ہمیں معلوم ہوتا ہے کہ `Storage[6]` نے کچھ عرصے تک کنٹریکٹ کی ویلیو کو ٹریک کیا۔ فی الحال ہم اسے `Value*` کہیں گے۔ ایسٹرسک (`*`) ہمیں یاد دلاتا ہے کہ ہم ابھی تک نہیں _جانتے_ کہ یہ ویری ایبل کیا کرتا ہے، لیکن یہ صرف کنٹریکٹ کی ویلیو کو ٹریک کرنے کے لیے نہیں ہو سکتا کیونکہ اسٹوریج استعمال کرنے کی کوئی ضرورت نہیں ہے، جو کہ بہت مہنگا ہے، جب آپ `ADDRESS BALANCE` کا استعمال کرتے ہوئے اپنے اکاؤنٹ کا بیلنس حاصل کر سکتے ہیں۔ پہلا آپ کوڈ کنٹریکٹ کا اپنا پتہ پش کرتا ہے۔ دوسرا اسٹیک کے اوپری حصے پر موجود پتہ پڑھتا ہے اور اسے اس پتے کے بیلنس سے بدل دیتا ہے۔
+اگر ہم [اسی عرصے کی دیگر `Transfer` ٹرانزیکشنز](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange) کی وجہ سے ہونے والی حالت کی تبدیلیوں کو دیکھیں تو ہم دیکھتے ہیں کہ `Storage[6]` نے کچھ عرصے تک کنٹریکٹ کی ویلیو کو ٹریک کیا۔ فی الحال ہم اسے `Value*` کہیں گے۔ ستارہ (`*`) ہمیں یاد دلاتا ہے کہ ہم ابھی تک نہیں _جانتے_ کہ یہ ویری ایبل کیا کرتا ہے، لیکن یہ صرف کنٹریکٹ کی ویلیو کو ٹریک کرنے کے لیے نہیں ہو سکتا کیونکہ اسٹوریج استعمال کرنے کی کوئی ضرورت نہیں ہے، جو کہ بہت مہنگا ہے، جب آپ `ADDRESS BALANCE` کا استعمال کرتے ہوئے اپنے اکاؤنٹس کا بیلنس حاصل کر سکتے ہیں۔ پہلا آپ کوڈ کنٹریکٹ کا اپنا پتہ پش کرتا ہے۔ دوسرا اسٹیک کے اوپری حصے پر موجود پتہ پڑھتا ہے اور اسے اس پتے کے بیلنس سے بدل دیتا ہے۔
 
 | آفسیٹ | آپ کوڈ | اسٹیک |
 | -----: | ------------ | ------------------------------------------- |
-| <span dir="ltr">6C</span> | <span dir="ltr">PUSH2 0x0075</span> | <span dir="ltr">0x75 Value\* CALLVALUE 0 6 CALLVALUE</span> |
+| <span dir="ltr">6C</span> | PUSH2 0x0075 | <span dir="ltr">0x75 Value\* CALLVALUE 0 6 CALLVALUE</span> |
 | <span dir="ltr">6F</span> | SWAP2 | <span dir="ltr">CALLVALUE Value\* 0x75 0 6 CALLVALUE</span> |
 | <span dir="ltr">70</span> | SWAP1 | <span dir="ltr">Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
-| <span dir="ltr">71</span> | <span dir="ltr">PUSH2 0x01a7</span> | <span dir="ltr">0x01A7 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
-| <span dir="ltr">74</span> | JUMP |
+| <span dir="ltr">71</span> | PUSH2 0x01a7 | <span dir="ltr">0x01A7 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
+| <span dir="ltr">74</span> | JUMP | |
 
-ہم جمپ ڈیسٹینیشن پر اس کوڈ کو ٹریس کرنا جاری رکھیں گے۔
+ہم اس کوڈ کو جمپ کی منزل پر ٹریس کرنا جاری رکھیں گے۔
 
 | آفسیٹ | آپ کوڈ | اسٹیک |
 | -----: | ---------- | ----------------------------------------------------------- |
 | <span dir="ltr">1A7</span> | JUMPDEST | <span dir="ltr">Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
-| <span dir="ltr">1A8</span> | <span dir="ltr">PUSH1 0x00</span> | <span dir="ltr">0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
+| <span dir="ltr">1A8</span> | PUSH1 0x00 | <span dir="ltr">0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
 | <span dir="ltr">1AA</span> | DUP3 | <span dir="ltr">CALLVALUE 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
 | <span dir="ltr">1AB</span> | NOT | <span dir="ltr">2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
 
-`NOT` بٹ وائز ہے، لہذا یہ کال ویلیو میں ہر بٹ کی ویلیو کو ریورس کر دیتا ہے۔
+`NOT` بٹ وائز ہے، لہذا یہ کال ویلیو میں ہر بٹ کی ویلیو کو الٹ دیتا ہے۔
 
 | آفسیٹ | آپ کوڈ | اسٹیک |
 | -----: | ------------ | --------------------------------------------------------------------------- |
 | <span dir="ltr">1AC</span> | DUP3 | <span dir="ltr">Value\* 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
 | <span dir="ltr">1AD</span> | GT | <span dir="ltr">Value\*>2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
 | <span dir="ltr">1AE</span> | ISZERO | <span dir="ltr">Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
-| <span dir="ltr">1AF</span> | <span dir="ltr">PUSH2 0x01df</span> | <span dir="ltr">0x01DF Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
-| <span dir="ltr">1B2</span> | JUMPI |
+| <span dir="ltr">1AF</span> | PUSH2 0x01df | <span dir="ltr">0x01DF Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
+| <span dir="ltr">1B2</span> | JUMPI | |
 
-ہم جمپ کرتے ہیں اگر `Value*` <span dir="ltr">2^256-CALLVALUE-1</span> سے چھوٹا یا اس کے برابر ہے۔ یہ اوور فلو کو روکنے کے لیے لاجک کی طرح لگتا ہے۔ اور واقعی، ہم دیکھتے ہیں کہ چند بے معنی آپریشنز کے بعد (مثال کے طور پر، میموری میں لکھنا ڈیلیٹ ہونے والا ہے) آفسیٹ <span dir="ltr">0x01DE</span> پر کنٹریکٹ ریورٹ ہو جاتا ہے اگر اوور فلو کا پتہ چلتا ہے، جو کہ ایک عام رویہ ہے۔
+ہم جمپ کرتے ہیں اگر `Value*` <span dir="ltr">2^256-CALLVALUE-1</span> سے چھوٹا یا اس کے برابر ہو۔ یہ اوور فلو کو روکنے کی منطق کی طرح لگتا ہے۔ اور واقعی، ہم دیکھتے ہیں کہ چند بے معنی آپریشنز کے بعد (مثال کے طور پر میموری میں لکھنا حذف ہونے والا ہے) آفسیٹ <span dir="ltr">0x01DE</span> پر کنٹریکٹ ریورٹ ہو جاتا ہے اگر اوور فلو کا پتہ چلتا ہے، جو کہ عام رویہ ہے۔
 
-نوٹ کریں کہ اس طرح کا اوور فلو انتہائی ناممکن ہے، کیونکہ اس کے لیے کال ویلیو پلس `Value*` کو <span dir="ltr">2^256 wei</span> کے برابر ہونا درکار ہوگا، جو تقریباً <span dir="ltr">10^59 ETH</span> بنتا ہے۔ [لکھتے وقت، کل ETH سپلائی دو سو ملین سے کم ہے](https://etherscan.io/stat/supply)۔
+نوٹ کریں کہ اس طرح کا اوور فلو انتہائی غیر متوقع ہے، کیونکہ اس کے لیے کال ویلیو اور `Value*` کا <span dir="ltr">2^256 Wei</span>، یعنی تقریباً <span dir="ltr">10^59 ETH</span> کے برابر ہونا ضروری ہوگا۔ [لکھتے وقت، کل ETH سپلائی دو سو ملین سے کم ہے](https://etherscan.io/stat/supply)۔
 
 | آفسیٹ | آپ کوڈ | اسٹیک |
 | -----: | -------- | ----------------------------------------- |
@@ -131,7 +141,7 @@ _بلاک چین پر کوئی راز نہیں ہوتے_، جو کچھ بھی ہ
 | <span dir="ltr">1E0</span> | POP | <span dir="ltr">Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
 | <span dir="ltr">1E1</span> | ADD | <span dir="ltr">Value\*+CALLVALUE 0x75 0 6 CALLVALUE</span> |
 | <span dir="ltr">1E2</span> | SWAP1 | <span dir="ltr">0x75 Value\*+CALLVALUE 0 6 CALLVALUE</span> |
-| <span dir="ltr">1E3</span> | JUMP |
+| <span dir="ltr">1E3</span> | JUMP | |
 
 اگر ہم یہاں پہنچ گئے ہیں، تو `Value* + CALLVALUE` حاصل کریں اور آفسیٹ <span dir="ltr">0x75</span> پر جمپ کریں۔
 
@@ -150,11 +160,21 @@ _بلاک چین پر کوئی راز نہیں ہوتے_، جو کچھ بھی ہ
 | <span dir="ltr">7A</span> | POP |
 | <span dir="ltr">7B</span> | STOP |
 
-آخر میں، اسٹیک کو صاف کریں (جو ضروری نہیں ہے) اور ٹرانزیکشن کے کامیاب اختتام کا سگنل دیں۔
+آخر میں، اسٹیک کو صاف کریں (جو ضروری نہیں ہے) اور ٹرانزیکشن کے کامیاب اختتام کا اشارہ دیں۔
 
 مختصراً، یہاں ابتدائی کوڈ کے لیے ایک فلو چارٹ ہے۔
 
-![Entry point flowchart](flowchart-entry.png)
+<Flowchart>
+
+- انٹری پوائنٹ (<span dir="ltr">0x00</span>)
+  - کیا کال ڈیٹا چار بائٹس سے چھوٹا ہے؟
+    - **ہاں** نان-ABI کالز (<span dir="ltr">0x5E</span>)
+      - کیا کوئی کال ڈیٹا موجود ہے؟
+        - **ہاں** <span dir="ltr">0x7C</span> (مقصد اب تک نامعلوم ہے)
+        - **نہیں** ETH منتقلی (<span dir="ltr">0x64</span>): اوور فلو پر ریورٹ کریں، بصورت دیگر کال ویلیو کو `Storage[6]` (`Value*`) میں شامل کریں اور رک جائیں
+    - **نہیں** ABI کالز (<span dir="ltr">0x0D</span>)
+
+</Flowchart>
 
 ## <span dir="ltr">0x7C</span> پر ہینڈلر {#the-handler-at-0x7c}
 
@@ -248,45 +268,57 @@ _بلاک چین پر کوئی راز نہیں ہوتے_، جو کچھ بھی ہ
 
 لہذا کال کے بعد ہم ریٹرن ڈیٹا کو بفر <span dir="ltr">0x80 - 0x80+RETURNDATASIZE</span> میں کاپی کرتے ہیں، اور اگر کال کامیاب ہو جاتی ہے تو ہم بالکل اسی بفر کے ساتھ `RETURN` کرتے ہیں۔
 
-### <span dir="ltr">DELEGATECALL</span> ناکام ہو گیا {#delegatecall-failed}
+### DELEGATECALL ناکام ہو گیا {#delegatecall-failed}
 
-اگر ہم یہاں، <span dir="ltr">0xC0</span> پر پہنچتے ہیں، تو اس کا مطلب ہے کہ جس کنٹریکٹ کو ہم نے کال کیا تھا وہ ریورٹ ہو گیا۔ چونکہ ہم اس کنٹریکٹ کے لیے صرف ایک پراکسی ہیں، ہم وہی ڈیٹا واپس کرنا چاہتے ہیں اور ساتھ ہی ریورٹ بھی کرنا چاہتے ہیں۔
+اگر ہم یہاں <span dir="ltr">0xC0</span> پر پہنچتے ہیں، تو اس کا مطلب ہے کہ جس کنٹریکٹ کو ہم نے کال کیا تھا وہ ریورٹ ہو گیا۔ چونکہ ہم اس کنٹریکٹ کے لیے صرف ایک پراکسی ہیں، ہم وہی ڈیٹا واپس کرنا چاہتے ہیں اور ریورٹ بھی کرنا چاہتے ہیں۔
 
 | آفسیٹ | آپ کوڈ | اسٹیک |
 | -----: | -------- | ------------------------------------------------------------------------------------------------------------------- |
-| <span dir="ltr">C0</span> | JUMPDEST | <span dir="ltr">(((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address</span> |
-| <span dir="ltr">C1</span> | DUP2 | <span dir="ltr">RETURNDATASIZE (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address</span> |
-| <span dir="ltr">C2</span> | DUP5 | <span dir="ltr">0x80 RETURNDATASIZE (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address</span> |
-| <span dir="ltr">C3</span> | REVERT |
+| <span dir="ltr">C0</span> | JUMPDEST | (((کال کی کامیابی/ناکامی))) <span dir="ltr">RETURNDATASIZE</span> (((کال کی کامیابی/ناکامی))) <span dir="ltr">0x80 Storage[3]-as-address</span> |
+| <span dir="ltr">C1</span> | DUP2 | <span dir="ltr">RETURNDATASIZE</span> (((کال کی کامیابی/ناکامی))) <span dir="ltr">RETURNDATASIZE</span> (((کال کی کامیابی/ناکامی))) <span dir="ltr">0x80 Storage[3]-as-address</span> |
+| <span dir="ltr">C2</span> | DUP5 | <span dir="ltr">0x80 RETURNDATASIZE</span> (((کال کی کامیابی/ناکامی))) <span dir="ltr">RETURNDATASIZE</span> (((کال کی کامیابی/ناکامی))) <span dir="ltr">0x80 Storage[3]-as-address</span> |
+| <span dir="ltr">C3</span> | REVERT | |
 
 لہذا ہم اسی بفر کے ساتھ `REVERT` کرتے ہیں جسے ہم نے پہلے `RETURN` کے لیے استعمال کیا تھا: <span dir="ltr">0x80 - 0x80+RETURNDATASIZE</span>
 
-![Call to proxy flowchart](flowchart-proxy.png)
+<Flowchart>
 
-## <span dir="ltr">ABI</span> کالز {#abi-calls}
+- کال ڈیٹا ایک سے تین بائٹس طویل، یا ایک نامعلوم طریقہ کار
+  - پراکسی ہینڈلر (<span dir="ltr">0x7C</span>)
+    - `Storage[3]` پڑھیں، پراکسی کا پتہ
+      - کال ڈیٹا کو میموری میں کاپی کریں
+        - پراکسی کے پتے کو `DELEGATECALL` کریں
+          - ریٹرن ڈیٹا کو میموری میں کاپی کریں
+            - کیا کال ناکام ہو گئی؟
+              - **ہاں** ریٹرن ڈیٹا کے ساتھ `REVERT` کریں (<span dir="ltr">0xC0</span>)
+              - **نہیں** ریٹرن ڈیٹا کو `RETURN` کریں (<span dir="ltr">0xBD</span>)
 
-اگر کال ڈیٹا کا سائز چار بائٹس یا اس سے زیادہ ہے تو یہ ایک درست <span dir="ltr">ABI</span> کال ہو سکتی ہے۔
+</Flowchart>
+
+## ABI کالز {#abi-calls}
+
+اگر کال ڈیٹا کا سائز چار بائٹس یا اس سے زیادہ ہے تو یہ ایک درست ABI کال ہو سکتی ہے۔
 
 | آفسیٹ | آپ کوڈ | اسٹیک |
 | -----: | ------------ | ------------------------------------------------- |
-| <span dir="ltr">D</span> | <span dir="ltr">PUSH1 0x00</span> | <span dir="ltr">0x00</span> |
-| <span dir="ltr">F</span> | <span dir="ltr">CALLDATALOAD</span> | (((کال ڈیٹا کا پہلا لفظ (<span dir="ltr">256 bits</span>)))) |
-| <span dir="ltr">10</span> | <span dir="ltr">PUSH1 0xe0</span> | <span dir="ltr">0xE0</span> (((کال ڈیٹا کا پہلا لفظ (<span dir="ltr">256 bits</span>)))) |
-| <span dir="ltr">12</span> | <span dir="ltr">SHR</span> | (((کال ڈیٹا کے پہلے <span dir="ltr">32 bits</span> (<span dir="ltr">4 bytes</span>)))) |
+| <span dir="ltr">D</span> | PUSH1 0x00 | <span dir="ltr">0x00</span> |
+| <span dir="ltr">F</span> | CALLDATALOAD | (((کال ڈیٹا کا پہلا لفظ (<span dir="ltr">256</span> بٹس)))) |
+| <span dir="ltr">10</span> | PUSH1 0xe0 | <span dir="ltr">0xE0</span> (((کال ڈیٹا کا پہلا لفظ (<span dir="ltr">256</span> بٹس)))) |
+| <span dir="ltr">12</span> | SHR | (((کال ڈیٹا کے پہلے <span dir="ltr">32</span> بٹس (<span dir="ltr">4</span> بائٹس)))) |
 
-Etherscan ہمیں بتاتا ہے کہ `1C` ایک نامعلوم آپ کوڈ ہے، کیونکہ [اسے Etherscan کے اس فیچر کو بنانے کے بعد شامل کیا گیا تھا](https://eips.ethereum.org/EIPS/eip-145) اور انہوں نے اسے اپ ڈیٹ نہیں کیا ہے۔ ایک [اپ ٹو ڈیٹ آپ کوڈ ٹیبل](https://github.com/wolflo/evm-opcodes) ہمیں دکھاتا ہے کہ یہ شفٹ رائٹ (<span dir="ltr">shift right</span>) ہے۔
+Etherscan ہمیں بتاتا ہے کہ `1C` ایک نامعلوم آپ کوڈ ہے، کیونکہ [اسے Etherscan کے اس فیچر کو لکھنے کے بعد شامل کیا گیا تھا](https://eips.ethereum.org/EIPS/eip-145) اور انہوں نے اسے اپ ڈیٹ نہیں کیا ہے۔ ایک [اپ ٹو ڈیٹ آپ کوڈ ٹیبل](https://github.com/wolflo/evm-opcodes) ہمیں دکھاتا ہے کہ یہ شفٹ رائٹ ہے
 
 | آفسیٹ | آپ کوڈ | اسٹیک |
 | -----: | ---------------- | -------------------------------------------------------------------------------------------------------- |
-| <span dir="ltr">13</span> | <span dir="ltr">DUP1</span> | (((کال ڈیٹا کے پہلے <span dir="ltr">32 bits</span> (<span dir="ltr">4 bytes</span>)))) (((کال ڈیٹا کے پہلے <span dir="ltr">32 bits</span> (<span dir="ltr">4 bytes</span>)))) |
-| <span dir="ltr">14</span> | <span dir="ltr">PUSH4 0x3cd8045e</span> | <span dir="ltr">0x3CD8045E</span> (((کال ڈیٹا کے پہلے <span dir="ltr">32 bits</span> (<span dir="ltr">4 bytes</span>)))) (((کال ڈیٹا کے پہلے <span dir="ltr">32 bits</span> (<span dir="ltr">4 bytes</span>)))) |
-| <span dir="ltr">19</span> | <span dir="ltr">GT</span> | <span dir="ltr">0x3CD8045E>first-32-bits-of-the-call-data</span> (((کال ڈیٹا کے پہلے <span dir="ltr">32 bits</span> (<span dir="ltr">4 bytes</span>)))) |
-| <span dir="ltr">1A</span> | <span dir="ltr">PUSH2 0x0043</span> | <span dir="ltr">0x43 0x3CD8045E>first-32-bits-of-the-call-data</span> (((کال ڈیٹا کے پہلے <span dir="ltr">32 bits</span> (<span dir="ltr">4 bytes</span>)))) |
-| <span dir="ltr">1D</span> | <span dir="ltr">JUMPI</span> | (((کال ڈیٹا کے پہلے <span dir="ltr">32 bits</span> (<span dir="ltr">4 bytes</span>)))) |
+| <span dir="ltr">13</span> | DUP1 | (((کال ڈیٹا کے پہلے <span dir="ltr">32</span> بٹس (<span dir="ltr">4</span> بائٹس)))) (((کال ڈیٹا کے پہلے <span dir="ltr">32</span> بٹس (<span dir="ltr">4</span> بائٹس)))) |
+| <span dir="ltr">14</span> | PUSH4 0x3cd8045e | <span dir="ltr">0x3CD8045E</span> (((کال ڈیٹا کے پہلے <span dir="ltr">32</span> بٹس (<span dir="ltr">4</span> بائٹس)))) (((کال ڈیٹا کے پہلے <span dir="ltr">32</span> بٹس (<span dir="ltr">4</span> بائٹس)))) |
+| <span dir="ltr">19</span> | GT | <span dir="ltr">0x3CD8045E>first-32-bits-of-the-call-data</span> (((کال ڈیٹا کے پہلے <span dir="ltr">32</span> بٹس (<span dir="ltr">4</span> بائٹس)))) |
+| <span dir="ltr">1A</span> | PUSH2 0x0043 | <span dir="ltr">0x43 0x3CD8045E>first-32-bits-of-the-call-data</span> (((کال ڈیٹا کے پہلے <span dir="ltr">32</span> بٹس (<span dir="ltr">4</span> بائٹس)))) |
+| <span dir="ltr">1D</span> | JUMPI | (((کال ڈیٹا کے پہلے <span dir="ltr">32</span> بٹس (<span dir="ltr">4</span> بائٹس)))) |
 
-میتھڈ کے دستخط کے میچنگ ٹیسٹس کو اس طرح دو حصوں میں تقسیم کرنے سے اوسطاً آدھے ٹیسٹس کی بچت ہوتی ہے۔ وہ کوڈ جو اس کے فوراً بعد آتا ہے اور <span dir="ltr">0x43</span> میں موجود کوڈ اسی پیٹرن کی پیروی کرتے ہیں: کال ڈیٹا کے پہلے <span dir="ltr">32 bits</span> کو `DUP1` کریں، `PUSH4 (((method signature>` کریں، برابری چیک کرنے کے لیے `EQ` چلائیں، اور پھر اگر میتھڈ کے دستخط میچ کر جائیں تو `JUMPI` کریں۔ یہاں میتھڈ کے دستخط، ان کے پتے، اور اگر معلوم ہو تو [متعلقہ میتھڈ کی تعریف](https://www.4byte.directory/) دی گئی ہے:
+طریقہ کار کے دستخط کی مماثلت کے ٹیسٹس کو اس طرح دو حصوں میں تقسیم کرنے سے اوسطاً آدھے ٹیسٹس کی بچت ہوتی ہے۔ وہ کوڈ جو اس کے فوراً بعد آتا ہے اور <span dir="ltr">0x43</span> میں موجود کوڈ ایک ہی پیٹرن کی پیروی کرتے ہیں: کال ڈیٹا کے پہلے <span dir="ltr">32</span> بٹس کو `DUP1` کریں، `PUSH4 (((method signature>` کریں، برابری چیک کرنے کے لیے `EQ` چلائیں، اور پھر اگر طریقہ کار کے دستخط مماثل ہوں تو `JUMPI` کریں۔ یہاں طریقہ کار کے دستخط، ان کے پتے، اور اگر معلوم ہو تو [متعلقہ طریقہ کار کی تعریف](https://www.4byte.directory/) دی گئی ہے:
 
-| میتھڈ | میتھڈ کے دستخط | جمپ کرنے کے لیے آفسیٹ |
+| طریقہ کار | طریقہ کار کے دستخط | جمپ کرنے کے لیے آفسیٹ |
 | -------------------------------------------------------------------------------------- | ---------------- | ------------------- |
 | [splitter()](https://www.4byte.directory/signatures/?bytes4_signature=0x3cd8045e) | <span dir="ltr">0x3cd8045e</span> | <span dir="ltr">0x0103</span> |
 | ??? | <span dir="ltr">0x81e580d3</span> | <span dir="ltr">0x0138</span> |
@@ -294,9 +326,28 @@ Etherscan ہمیں بتاتا ہے کہ `1C` ایک نامعلوم آپ کوڈ �
 | ??? | <span dir="ltr">0x1f135823</span> | <span dir="ltr">0x00C4</span> |
 | [merkleRoot()](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab) | <span dir="ltr">0x2eb4a7ab</span> | <span dir="ltr">0x00ED</span> |
 
-اگر کوئی میچ نہیں ملتا، تو کوڈ [<span dir="ltr">0x7C</span> پر موجود پراکسی ہینڈلر](#the-handler-at-0x7c) پر جمپ کر جاتا ہے، اس امید کے ساتھ کہ جس کنٹریکٹ کے لیے ہم پراکسی ہیں اس میں کوئی میچ موجود ہو۔
+اگر کوئی مماثلت نہیں ملتی ہے، تو کوڈ [<span dir="ltr">0x7C</span> پر پراکسی ہینڈلر](#the-handler-at-0x7c) پر جمپ کرتا ہے، اس امید میں کہ جس کنٹریکٹ کے لیے ہم پراکسی ہیں اس میں کوئی مماثلت موجود ہو۔
 
-![ABI calls flowchart](flowchart-abi.png)
+<Flowchart>
+
+- طریقہ کار کا سلیکٹر پڑھیں، کال ڈیٹا کے پہلے چار بائٹس (<span dir="ltr">0x0D</span>)
+  - کیا سلیکٹر `0x3cd8045e` سے نیچے ہے؟
+    - **ہاں** کم سلیکٹرز (<span dir="ltr">0x43</span>)
+      - کیا یہ `0x1f135823` ہے؟
+        - **ہاں** <span dir="ltr">0xC4</span> پر فنکشن
+        - **نہیں** کیا یہ `0x2eb4a7ab` ہے؟
+          - **ہاں** <span dir="ltr">0xED</span> پر `merkleRoot()`
+          - **نہیں** [پراکسی ہینڈلر (<span dir="ltr">0x7C</span>)](#the-handler-at-0x7c)
+    - **نہیں** ہائی سلیکٹرز (<span dir="ltr">0x1E</span>)
+      - کیا یہ `0x3cd8045e` ہے؟
+        - **ہاں** <span dir="ltr">0x0103</span> پر `splitter()`
+        - **نہیں** کیا یہ `0x81e580d3` ہے؟
+          - **ہاں** <span dir="ltr">0x0138</span> پر فنکشن
+          - **نہیں** کیا یہ `0xba0bafb4` ہے؟
+            - **ہاں** <span dir="ltr">0x0158</span> پر `currentWindow()`
+            - **نہیں** [پراکسی ہینڈلر (<span dir="ltr">0x7C</span>)](#the-handler-at-0x7c)
+
+</Flowchart>
 
 ## splitter() {#splitter}
 

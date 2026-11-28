@@ -16,18 +16,19 @@ lang: ur
 published: 2025-03-15
 ---
 
-_بلاک چین پر کوئی راز نہیں ہوتے_۔ بلاک چین پر پوسٹ کی جانے والی ہر چیز ہر کسی کے پڑھنے کے لیے کھلی ہوتی ہے۔ یہ ضروری ہے، کیونکہ بلاک چین کی بنیاد اس بات پر ہے کہ کوئی بھی اس کی تصدیق کر سکے۔ تاہم، گیمز اکثر خفیہ حالت پر انحصار کرتی ہیں۔ مثال کے طور پر، [مائن سویپر](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) گیم کا کوئی مطلب نہیں بنتا اگر آپ صرف ایک بلاک ایکسپلورر پر جا کر نقشہ دیکھ سکیں۔
+_بلاک چین پر کوئی راز نہیں ہوتے_۔ جو کچھ بھی بلاک چین پر پوسٹ کیا جاتا ہے وہ ہر کسی کے پڑھنے کے لیے کھلا ہوتا ہے۔ یہ ضروری ہے، کیونکہ بلاک چین کی بنیاد اس بات پر ہے کہ کوئی بھی اس کی تصدیق کر سکے۔ تاہم، گیمز اکثر خفیہ حالت (secret state) پر انحصار کرتے ہیں۔ مثال کے طور پر، [مائن سویپر](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) گیم کا کوئی مطلب نہیں رہتا اگر آپ صرف بلاک چین ایکسپلورر پر جا کر نقشہ دیکھ سکیں۔
 
-سب سے آسان حل یہ ہے کہ خفیہ حالت کو برقرار رکھنے کے لیے ایک [سرور جزو](/developers/tutorials/server-components/) کا استعمال کیا جائے۔ تاہم، ہم بلاک چین کا استعمال اس لیے کرتے ہیں تاکہ گیم ڈیولپر کی جانب سے دھوکہ دہی کو روکا جا سکے۔ ہمیں سرور کے جزو کی ایمانداری کو یقینی بنانے کی ضرورت ہے۔ سرور حالت کا ایک ہیش فراہم کر سکتا ہے، اور یہ ثابت کرنے کے لیے [صفر علم ثبوت](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) کا استعمال کر سکتا ہے کہ کسی اقدام کے نتیجے کا حساب لگانے کے لیے استعمال ہونے والی حالت درست ہے۔
+سب سے آسان حل یہ ہے کہ خفیہ حالت کو رکھنے کے لیے ایک [سرور جزو](/developers/tutorials/server-components/) کا استعمال کیا جائے۔ تاہم، ہم بلاک چین کا استعمال اس لیے کرتے ہیں تاکہ گیم ڈیولپر کی جانب سے دھوکہ دہی کو روکا جا سکے۔ ہمیں سرور جزو کی ایمانداری کو یقینی بنانے کی ضرورت ہے۔ سرور حالت کا ایک ہیش فراہم کر سکتا ہے، اور [صفر علم ثبوت](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) کا استعمال کرتے ہوئے یہ ثابت کر سکتا ہے کہ کسی چال (move) کے نتیجے کا حساب لگانے کے لیے استعمال ہونے والی حالت درست ہے۔
 
-اس مضمون کو پڑھنے کے بعد آپ جان جائیں گے کہ اس قسم کا خفیہ حالت رکھنے والا سرور، حالت دکھانے کے لیے ایک کلائنٹ، اور ان دونوں کے درمیان رابطے کے لیے ایک آن چین جزو کیسے بنایا جائے۔ ہم جو اہم ٹولز استعمال کریں گے وہ یہ ہوں گے:
+اس مضمون کو پڑھنے کے بعد آپ جان جائیں گے کہ اس قسم کا خفیہ حالت رکھنے والا سرور، حالت دکھانے کے لیے ایک کلائنٹ، اور ان دونوں کے درمیان مواصلت کے لیے ایک آن چین جزو کیسے بنایا جاتا ہے۔ ہم جو اہم ٹولز استعمال کریں گے وہ یہ ہیں:
 
 | ٹول | مقصد | تصدیق شدہ ورژن |
-| --------------------------------------------- | ------------------------------------------------------- | ------------------: |
+| --- | --- | ---: |
 | [Zokrates](https://zokrates.github.io/) | صفر علم ثبوت اور ان کی تصدیق | <span dir="ltr">1.1.9</span> |
 | [TypeScript](https://www.typescriptlang.org/) | سرور اور کلائنٹ دونوں کے لیے پروگرامنگ زبان | <span dir="ltr">5.4.2</span> |
 | [Node](https://nodejs.org/en) | سرور چلانا | <span dir="ltr">20.18.2</span> |
-| [Viem](https://viem.sh/) | بلاک چین کے ساتھ رابطہ | <span dir="ltr">2.9.20</span> |
+| [Foundry](https://getfoundry.sh/) | مقامی بلاک چین اور کنٹریکٹ کی تعیناتی | <span dir="ltr">1.0.0</span> |
+| [Viem](https://viem.sh/) | بلاک چین کے ساتھ مواصلت | <span dir="ltr">2.9.20</span> |
 | [MUD](https://mud.dev/) | آن چین ڈیٹا مینجمنٹ | <span dir="ltr">2.0.12</span> |
 | [React](https://react.dev/) | کلائنٹ یوزر انٹرفیس | <span dir="ltr">18.2.0</span> |
 | [Vite](https://vitejs.dev/) | کلائنٹ کوڈ پیش کرنا | <span dir="ltr">4.2.1</span> |
@@ -38,11 +39,28 @@ _بلاک چین پر کوئی راز نہیں ہوتے_۔ بلاک چین پر 
 
 یہ ایپلیکیشن [MUD](https://mud.dev/) کا استعمال کرتے ہوئے لکھی گئی ہے، جو ایک ایسا فریم ورک ہے جو ہمیں [کلید-ویلیو ڈیٹا بیس](https://aws.amazon.com/nosql/key-value/) کا استعمال کرتے ہوئے ڈیٹا کو آن چین اسٹور کرنے اور اس ڈیٹا کو آف چین اجزاء کے ساتھ خود بخود ہم آہنگ (synchronize) کرنے کی سہولت دیتا ہے۔ ہم آہنگی کے علاوہ، MUD رسائی کنٹرول (access control) فراہم کرنا آسان بناتا ہے، اور دوسرے صارفین کے لیے ہماری ایپلیکیشن کو بغیر اجازت (permissionlessly) [توسیع](https://mud.dev/guides/extending-a-world) دینا بھی آسان بناتا ہے۔
 
-### مائن سویپر کی مثال کو چلانا {#running-minesweeper-example}
+### مائن سویپر کی مثال چلانا {#running-minesweeper-example}
 
-مائن سویپر کی مثال کو چلانے کے لیے:
+مائن سویپر کی مثال چلانے کے لیے:
 
-1. یقینی بنائیں کہ آپ نے [ضروریات انسٹال کر لی ہیں](https://mud.dev/quickstart#prerequisites): [Node](https://mud.dev/quickstart#prerequisites)، [Foundry](https://book.getfoundry.sh/getting-started/installation)، [`git`](https://git-scm.com/downloads)، [`pnpm`](https://git-scm.com/downloads)، اور [`mprocs`](https://github.com/pvolok/mprocs)۔
+1. یقینی بنائیں کہ آپ نے [ضروریات انسٹال کر لی ہیں](https://mud.dev/quickstart#prerequisites): [Node](https://nodejs.org/en)، [Foundry](https://getfoundry.sh/introduction/installation)، [`git`](https://git-scm.com/downloads)، اور [`pnpm`](https://pnpm.io/installation)۔
+
+   یہ مثال MUD <span dir="ltr">2.0.12</span> کا استعمال کرتی ہے، جس کے لیے Node اور Foundry کے مخصوص ورژنز درکار ہیں:
+
+   - **Node 20**۔ MUD <span dir="ltr">2.0.12</span> کمانڈ لائن ٹول [JSON امپورٹ اسیرشنز (import assertions)](https://v8.dev/features/import-attributes) کا استعمال کرتا ہے، جسے Node کے نئے ورژنز اب سپورٹ نہیں کرتے، اس لیے Node 22 یا اس کے بعد کے ورژنز پر یہ `SyntaxError: Unexpected identifier 'assert'` کے ساتھ ناکام ہو جاتا ہے۔ Node 20 اپریل 2026 میں [اپنی زندگی کے اختتام کو پہنچ گیا](https://nodejs.org/en/about/previous-releases) اور اب اسے سیکیورٹی اپ ڈیٹس نہیں ملتیں، اس لیے اسے صرف اس مقامی مثال کے لیے استعمال کریں۔ ایک Node ورژن مینیجر جیسے [`fnm`](https://github.com/Schniz/fnm) یا [`nvm`](https://github.com/nvm-sh/nvm) آپ کو صرف اس ڈائریکٹری کے لیے Node 20 پر سوئچ کرنے کی سہولت دیتا ہے، مثال کے طور پر:
+
+     ```sh copy
+     fnm install 20
+     fnm use 20
+     ```
+
+   - **Foundry 1.0.0**۔ موجودہ Foundry ورژنز کے ساتھ پوسٹ-ڈیپلائمنٹ اسکرپٹ _Usage of `address(this)` detected in script contract_ کے ساتھ ناکام ہو جاتا ہے۔ ٹیسٹ شدہ ورژن کو اس کے ساتھ انسٹال کریں:
+
+     ```sh copy
+     foundryup -i 1.0.0
+     ```
+
+     جب آپ اس ٹیوٹوریل کو مکمل کر لیں، تو آپ `foundryup` کے ساتھ تازہ ترین ورژن پر واپس جا سکتے ہیں۔
 
 2. ریپوزٹری کو کلون کریں۔
 
@@ -55,10 +73,9 @@ _بلاک چین پر کوئی راز نہیں ہوتے_۔ بلاک چین پر 
    ```sh copy
    cd 20240901-secret-state/
    pnpm install
-   npm install -g mprocs
    ```
 
-   اگر Foundry کو `pnpm install` کے حصے کے طور پر انسٹال کیا گیا تھا، تو آپ کو کمانڈ لائن شیل کو دوبارہ شروع کرنے کی ضرورت ہے۔
+   [`mprocs`](https://github.com/pvolok/mprocs)، جو تمام پروسیسز کو ایک ہی ٹرمینل میں چلاتا ہے، پیکجز میں سے ایک کے طور پر انسٹال کیا جاتا ہے۔
 
 4. کنٹریکٹس کو مرتب (compile) کریں
 
@@ -69,17 +86,17 @@ _بلاک چین پر کوئی راز نہیں ہوتے_۔ بلاک چین پر 
     ```
 
 
-5. پروگرام شروع کریں (بشمول ایک [anvil](https://book.getfoundry.sh/anvil/) بلاک چین) اور انتظار کریں۔
+5. پروگرام (بشمول ایک [anvil](https://getfoundry.sh/anvil/overview) بلاک چین) شروع کریں اور انتظار کریں۔
 
    ```sh copy
-   mprocs
+   pnpm dev
    ```
 
-   نوٹ کریں کہ اسٹارٹ اپ میں کافی وقت لگتا ہے۔ پیش رفت دیکھنے کے لیے، پہلے نیچے والے تیر (down arrow) کا استعمال کرتے ہوئے _contracts_ ٹیب پر اسکرول کریں تاکہ تعینات ہونے والے MUD کنٹریکٹس کو دیکھا جا سکے۔ جب آپ کو _Waiting for file changes…_ کا پیغام ملے، تو کنٹریکٹس تعینات ہو چکے ہیں اور مزید پیش رفت _server_ ٹیب میں ہوگی۔ وہاں، آپ اس وقت تک انتظار کریں جب تک کہ آپ کو _Verifier address: <span dir="ltr">0x</span>...._ کا پیغام نہ مل جائے۔
+   نوٹ کریں کہ اسٹارٹ اپ میں کافی وقت لگتا ہے۔ پیش رفت دیکھنے کے لیے، پہلے نیچے والے تیر (down arrow) کا استعمال کرتے ہوئے _contracts_ ٹیب پر اسکرول کریں تاکہ MUD کنٹریکٹس کو تعینات ہوتے ہوئے دیکھ سکیں۔ جب آپ کو _Waiting for file changes…_ کا پیغام ملے، تو کنٹریکٹس تعینات ہو چکے ہیں اور مزید پیش رفت _server_ ٹیب میں ہوگی۔ وہاں، آپ اس وقت تک انتظار کریں جب تک کہ آپ کو _Verifier address: <span dir="ltr">0x</span>...._ کا پیغام نہ مل جائے۔
 
    اگر یہ مرحلہ کامیاب ہو جاتا ہے، تو آپ کو `mprocs` اسکرین نظر آئے گی، جس کے بائیں جانب مختلف پروسیسز اور دائیں جانب فی الحال منتخب کردہ پروسیس کا کنسول آؤٹ پٹ ہوگا۔
 
-   ![The mprocs screen](./mprocs.png)
+   ![mprocs اسکرین](./mprocs.png)
 
    اگر `mprocs` کے ساتھ کوئی مسئلہ ہے، تو آپ چاروں پروسیسز کو دستی طور پر چلا سکتے ہیں، ہر ایک کو اس کی اپنی کمانڈ لائن ونڈو میں:
 
@@ -102,14 +119,14 @@ _بلاک چین پر کوئی راز نہیں ہوتے_۔ بلاک چین پر 
      ```sh
      cd packages/server
      pnpm start
-     ```  
+     ```
 
    - **Client**
 
      ```sh
      cd packages/client
      pnpm run dev
-     ```  
+     ```
 
 6. اب آپ [کلائنٹ](http://localhost:3000) پر براؤز کر سکتے ہیں، **New Game** پر کلک کریں، اور کھیلنا شروع کریں۔
 
@@ -151,24 +168,24 @@ _بلاک چین پر کوئی راز نہیں ہوتے_۔ بلاک چین پر 
 
 #### ابتدا (Initialization) {#initialization-flow}
 
-جب آپ `mprocs` چلاتے ہیں، تو یہ اقدامات ہوتے ہیں:
+جب آپ `pnpm dev` چلاتے ہیں (جو `mprocs` کو چلاتا ہے)، تو یہ مراحل پیش آتے ہیں:
 
 1. [`mprocs`](https://github.com/pvolok/mprocs) چار اجزاء چلاتا ہے:
 
-   - [Anvil](https://book.getfoundry.sh/anvil/)، جو ایک مقامی بلاک چین چلاتا ہے
+   - [Anvil](https://getfoundry.sh/anvil/overview)، جو ایک مقامی بلاک چین چلاتا ہے
    - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts)، جو MUD کے لیے کنٹریکٹس کو مرتب (اگر ضرورت ہو) اور تعینات کرتا ہے
    - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client)، جو ویب براؤزرز کو UI اور کلائنٹ کوڈ پیش کرنے کے لیے [Vite](https://vitejs.dev/) چلاتا ہے۔
    - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server)، جو سرور کے افعال انجام دیتا ہے
 
-2. `contracts` پیکج MUD کنٹریکٹس کو تعینات کرتا ہے اور پھر [`PostDeploy.s.sol` اسکرپٹ](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol) چلاتا ہے۔ یہ اسکرپٹ کنفیگریشن سیٹ کرتا ہے۔ GitHub کا کوڈ [ایک <span dir="ltr">10x5</span> بارودی سرنگوں کا میدان بتاتا ہے جس میں آٹھ بارودی سرنگیں ہیں](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23)۔
+2. `contracts` پیکج MUD کنٹریکٹس کو تعینات کرتا ہے اور پھر [`PostDeploy.s.sol` اسکرپٹ](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol) چلاتا ہے۔ یہ اسکرپٹ کنفیگریشن سیٹ کرتا ہے۔ GitHub کا کوڈ [ایک <span dir="ltr">10x5</span> بارودی سرنگوں کا میدان جس میں آٹھ بارودی سرنگیں ہیں](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23) کی وضاحت کرتا ہے۔
 
-3. [سرور](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts) [MUD کو سیٹ اپ](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6) کر کے شروع ہوتا ہے۔ دیگر چیزوں کے علاوہ، یہ ڈیٹا کی ہم آہنگی (synchronization) کو فعال کرتا ہے، تاکہ متعلقہ ٹیبلز کی ایک کاپی سرور کی میموری میں موجود ہو۔
+3. [سرور](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts) [MUD کو سیٹ اپ کرنے](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6) سے شروع ہوتا ہے۔ دیگر چیزوں کے علاوہ، یہ ڈیٹا کی ہم آہنگی (synchronization) کو فعال کرتا ہے، تاکہ متعلقہ ٹیبلز کی ایک کاپی سرور کی میموری میں موجود ہو۔
 
-4. سرور ایک فنکشن کو سبسکرائب کرتا ہے جسے [جب `Configuration` ٹیبل تبدیل ہوتا ہے](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23) تو عمل میں لایا جاتا ہے۔ [یہ فنکشن](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) `PostDeploy.s.sol` کے چلنے اور ٹیبل میں ترمیم کرنے کے بعد کال کیا جاتا ہے۔
+4. سرور ایک فنکشن کو سبسکرائب کرتا ہے جسے [جب `Configuration` ٹیبل تبدیل ہوتا ہے](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23) تو عمل میں لایا جاتا ہے۔ [یہ فنکشن](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) `PostDeploy.s.sol` کے عمل میں آنے اور ٹیبل میں ترمیم کرنے کے بعد کال کیا جاتا ہے۔
 
-5. جب سرور کے ابتدائی فنکشن کے پاس کنفیگریشن آ جاتی ہے، تو [یہ `zkFunctions` کو کال کرتا ہے](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35) تاکہ [سرور کے صفر علم (zero-knowledge) حصے](#using-zokrates-from-typescript) کو شروع کیا جا سکے۔ یہ اس وقت تک نہیں ہو سکتا جب تک کہ ہمیں کنفیگریشن نہ مل جائے کیونکہ صفر علم فنکشنز کے لیے بارودی سرنگوں کے میدان کی چوڑائی اور اونچائی کو مستقل (constants) کے طور پر رکھنا ضروری ہے۔
+5. جب سرور کے ابتدائی فنکشن کے پاس کنفیگریشن آ جاتی ہے، تو یہ [سرور کے صفر علم حصے کو شروع کرنے کے لیے](#using-zokrates-from-typescript) [`zkFunctions` کو کال کرتا ہے](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35)۔ یہ اس وقت تک نہیں ہو سکتا جب تک کہ ہمیں کنفیگریشن نہ مل جائے کیونکہ صفر علم فنکشنز کے لیے بارودی سرنگوں کے میدان کی چوڑائی اور اونچائی کا مستقل (constants) ہونا ضروری ہے۔
 
-6. سرور کا صفر علم حصہ شروع ہونے کے بعد، اگلا قدم [صفر علم تصدیق کنندہ کنٹریکٹ کو بلاک چین پر تعینات کرنا](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) اور MUD میں تصدیق کنندہ کا پتہ سیٹ کرنا ہے۔
+6. سرور کے صفر علم حصے کے شروع ہونے کے بعد، اگلا مرحلہ [صفر علم تصدیق کنندہ کنٹریکٹ کو بلاک چین پر تعینات کرنا](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) اور MUD میں تصدیق کنندہ کا پتہ سیٹ کرنا ہے۔
 
 7. آخر میں، ہم اپ ڈیٹس کو سبسکرائب کرتے ہیں تاکہ ہم دیکھ سکیں کہ کب کوئی کھلاڑی [نئی گیم شروع کرنے](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) یا [موجودہ گیم میں کھدائی کرنے](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108) کی درخواست کرتا ہے۔
 
@@ -516,11 +533,11 @@ const solidityVerifier = `
 
 سیکیورٹی ٹیسٹس اہم ہیں کیونکہ فعالیت کا بگ بالآخر خود کو ظاہر کر دیتا ہے۔ لیکن اگر ایپلیکیشن غیر محفوظ ہے، تو اس بات کا امکان ہے کہ یہ طویل عرصے تک پوشیدہ رہے، اس سے پہلے کہ کوئی دھوکہ دہی کر کے دوسروں کے وسائل لے اڑے۔
 
-### اجازتیں {#permissions}
+### اجازتیں (Permissions) {#permissions}
 
-اس گیم میں ایک مراعات یافتہ ہستی ہے، سرور۔ یہ واحد صارف ہے جسے [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) میں فنکشنز کو کال کرنے کی اجازت ہے۔ ہم [`cast`](https://book.getfoundry.sh/cast/) کا استعمال کر کے اس بات کی تصدیق کر سکتے ہیں کہ اجازت یافتہ (permissioned) فنکشنز کو کال کرنے کی اجازت صرف سرور اکاؤنٹ کو ہے۔
+اس گیم میں ایک مراعات یافتہ (privileged) ہستی ہے، جو کہ سرور ہے۔ یہ واحد صارف ہے جسے [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) میں فنکشنز کو کال کرنے کی اجازت ہے۔ ہم [`cast`](https://getfoundry.sh/cast/overview) کا استعمال کر کے اس بات کی تصدیق کر سکتے ہیں کہ اجازت یافتہ فنکشنز کو کال کرنے کی اجازت صرف سرور اکاؤنٹ کے طور پر ہے۔
 
-[سرور کی نجی کلید `setupNetwork.ts` میں ہے۔](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52)
+[سرور کی نجی کلید `setupNetwork.ts` میں ہے](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52)۔
 
 1. اس کمپیوٹر پر جو `anvil` (بلاک چین) چلاتا ہے، یہ انوائرنمنٹ ویری ایبلز سیٹ کریں۔
 
@@ -530,23 +547,25 @@ const solidityVerifier = `
    AUTHORIZED_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
    ```
 
-2. تصدیق کنندہ کا پتہ ایک غیر مجاز پتہ کے طور پر سیٹ کرنے کی کوشش کے لیے `cast` کا استعمال کریں۔
+   یہ `WORLD_ADDRESS` وہ پتہ ہے جس پر MUD ایک تازہ `anvil` پر تعینات کرتا ہے۔ اگر آپ کا `World` کسی مختلف پتے پر ہے، تو `packages/contracts/worlds.json` میں موجود ویلیو استعمال کریں۔
+
+2. تصدیق کنندہ کا پتہ ایک غیر مجاز پتے کے طور پر سیٹ کرنے کی کوشش کرنے کے لیے `cast` کا استعمال کریں۔
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $UNAUTHORIZED_KEY
    ```
 
-   نہ صرف `cast` ناکامی کی اطلاع دیتا ہے، بلکہ آپ براؤزر پر گیم میں **<span dir="ltr">MUD Dev Tools</span>** کھول سکتے ہیں، **<span dir="ltr">Tables</span>** پر کلک کریں، اور **<span dir="ltr">app__VerifierAddress</span>** کو منتخب کریں۔ دیکھیں کہ پتہ صفر نہیں ہے۔
+   نہ صرف `cast` ناکامی کی اطلاع دیتا ہے، بلکہ آپ براؤزر پر گیم میں **MUD Dev Tools** کھول سکتے ہیں، **Tables** پر کلک کریں، اور **app\_\_VerifierAddress** کو منتخب کریں۔ دیکھیں کہ پتہ صفر نہیں ہے۔
 
-3. تصدیق کنندہ کا پتہ سرور کے پتہ کے طور پر سیٹ کریں۔
+3. تصدیق کنندہ کا پتہ سرور کے پتے کے طور پر سیٹ کریں۔
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $AUTHORIZED_KEY
    ```
 
-   **<span dir="ltr">app__VerifiedAddress</span>** میں پتہ اب صفر ہونا چاہیے۔
+   اب **app\_\_VerifierAddress** میں پتہ صفر ہونا چاہیے۔
 
-ایک ہی `System` میں تمام MUD فنکشنز ایک ہی ایکسیس کنٹرول سے گزرتے ہیں، اس لیے میں اس ٹیسٹ کو کافی سمجھتا ہوں۔ اگر آپ ایسا نہیں سمجھتے، تو آپ [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) میں دیگر فنکشنز چیک کر سکتے ہیں۔
+ایک ہی `System` میں تمام MUD فنکشنز ایک ہی ایکسیس کنٹرول سے گزرتے ہیں، اس لیے میں اس ٹیسٹ کو کافی سمجھتا ہوں۔ اگر آپ ایسا نہیں سمجھتے، تو آپ [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) میں دیگر فنکشنز کو چیک کر سکتے ہیں۔
 
 ### صفر علم کے غلط استعمال {#zero-knowledge-abuses}
 
@@ -560,7 +579,7 @@ Zokrates کی تصدیق کرنے کے لیے ریاضی اس ٹیوٹوریل �
 proof.inputs[3] = "0x" + "1".padStart(64, "0")
 ```
 
-اس کا مطلب ہے کہ ہم ہمیشہ یہ دعویٰ کریں گے کہ ایک بم ہے، قطع نظر اس کے کہ صحیح جواب کیا ہے۔ اس ورژن کے ساتھ کھیلنے کی کوشش کریں، اور آپ `pnpm dev` اسکرین کے **<span dir="ltr">server</span>** ٹیب میں یہ خرابی دیکھیں گے:
+اس کا مطلب ہے کہ ہم ہمیشہ یہ دعویٰ کریں گے کہ ایک بم ہے، قطع نظر اس کے کہ صحیح جواب کیا ہے۔ اس ورژن کے ساتھ کھیلنے کی کوشش کریں، اور آپ `mprocs` اسکرین کے **<span dir="ltr">server</span>** ٹیب میں یہ خرابی دیکھیں گے:
 
 ```
 cause: {
@@ -680,9 +699,11 @@ proof.proof = {
 
 ### Zokrates کیوں؟ {#why-zokrates}
 
-[Zokrates](https://zokrates.github.io/) دستیاب واحد صفر علم لائبریری نہیں ہے، لیکن یہ ایک عام، [امپیریٹو (imperative)](https://en.wikipedia.org/wiki/Imperative_programming) پروگرامنگ زبان سے ملتی جلتی ہے اور بولین (boolean) متغیرات کو سپورٹ کرتی ہے۔
+[Zokrates](https://zokrates.github.io/) دستیاب واحد صفر علم لائبریری نہیں ہے، لیکن یہ ایک عام، [امپیریٹو (imperative)](https://en.wikipedia.org/wiki/Imperative_programming) پروگرامنگ زبان سے ملتی جلتی ہے اور بولین (boolean) ویری ایبلز کو سپورٹ کرتی ہے۔
 
-مختلف تقاضوں کے ساتھ اپنی ایپلی کیشن کے لیے، آپ [Circum](https://docs.circom.io/getting-started/installation/) یا [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/) استعمال کرنے کو ترجیح دے سکتے ہیں۔
+تاہم، Zokrates کو اب فعال طور پر برقرار (maintain) نہیں رکھا جا رہا ہے۔ اس کی تازہ ترین ریلیز، <span dir="ltr">0.8.8</span> (اور اس سے مماثل `zokrates-js` <span dir="ltr">1.1.9</span>)، نومبر 2023 کی ہے، اور مین برانچ میں اپریل 2024 کے بعد سے کوئی کمٹ (commit) نہیں ہوا ہے۔ اس ٹیوٹوریل کا کوڈ اب بھی کام کرتا ہے، لیکن بگ فکسز یا سیکیورٹی اپ ڈیٹس کی توقع نہ کریں۔ کسی نئے پروجیکٹ کے لیے، ایک برقرار رکھی جانے والی زبان جیسے [Noir](https://noir-lang.org/) پر غور کریں، جو [اس ٹیوٹوریل](/developers/tutorials/app-plasma/) میں استعمال کی گئی ہے۔
+
+اپنی ایپلیکیشن کے لیے، مختلف تقاضوں کے ساتھ، آپ [Circom](https://docs.circom.io/getting-started/installation/) یا [Cairo](https://www.cairo-lang.org/) کا استعمال ترجیح دے سکتے ہیں۔
 
 ### Zokrates کو کب مرتب (compile) کیا جائے {#when-compile-zokrates}
 

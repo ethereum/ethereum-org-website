@@ -24,7 +24,7 @@ _ٹریڈرز_ پول میں ایک قسم کا ٹوکن بھیجتے ہیں ا�
 
 جب لیکویڈیٹی فراہم کنندگان اپنے اثاثے واپس لینا چاہتے ہیں تو وہ پول ٹوکنز کو جلا سکتے ہیں اور انعامات میں اپنے حصے سمیت اپنے ٹوکنز واپس حاصل کر سکتے ہیں۔
 
-[مزید تفصیلی وضاحت کے لیے یہاں کلک کریں](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/)۔
+[مزید تفصیلی وضاحت کے لیے یہاں کلک کریں](https://developers.uniswap.org/docs/protocols/v2/concepts/swapping)۔
 
 ### <span dir="ltr">v2</span> کیوں؟ <span dir="ltr">v3</span> کیوں نہیں؟ {#why-v2}
 
@@ -111,7 +111,7 @@ _ٹریڈرز_ پول میں ایک قسم کا ٹوکن بھیجتے ہیں ا�
 
 ### UniswapV2Pair.sol {#uniswapv2pair}
 
-[یہ کنٹریکٹ](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) اس اصل پول کو نافذ کرتا ہے جو ٹوکنز کا تبادلہ کرتا ہے۔ یہ یونی سویپ کی بنیادی فعالیت ہے۔
+[یہ کنٹریکٹ](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol) اصل پول کو نافذ کرتا ہے جو ٹوکنز کا تبادلہ کرتا ہے۔ یہ Uniswap کی بنیادی فعالیت ہے۔
 
 ```solidity
 pragma solidity =0.5.16;
@@ -137,14 +137,14 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
     using SafeMath  for uint;
 ```
 
-[SafeMath لائبریری](https://docs.openzeppelin.com/contracts/3.x/api/math) کا استعمال اوور فلوز اور انڈر فلوز سے بچنے کے لیے کیا جاتا ہے۔ یہ اہم ہے کیونکہ بصورت دیگر ہم ایسی صورتحال کا شکار ہو سکتے ہیں جہاں ایک قدر کو `-1` ہونا چاہیے، لیکن اس کے بجائے وہ `2^256-1` ہوتی ہے۔
+[SafeMath لائبریری](https://docs.openzeppelin.com/contracts/3.x/api/math) کا استعمال اوور فلو (overflows) اور انڈر فلو (underflows) سے بچنے کے لیے کیا جاتا ہے۔ یہ اہم ہے کیونکہ بصورت دیگر ہم ایسی صورتحال کا شکار ہو سکتے ہیں جہاں ایک قدر کو `-1` ہونا چاہیے، لیکن اس کے بجائے وہ `2^256-1` ہوتی ہے۔
 
 ```solidity
     using UQ112x112 for uint224;
 ```
 
 پول کنٹریکٹ میں بہت سی کیلکولیشنز کے لیے کسر (fractions) کی ضرورت ہوتی ہے۔ تاہم، EVM کسر کو سپورٹ نہیں کرتا۔
-یونی سویپ نے جو حل نکالا وہ <span dir="ltr">224 bit</span> ویلیوز کا استعمال ہے، جس میں <span dir="ltr">112 bits</span> انٹیجر (integer) حصے کے لیے اور <span dir="ltr">112 bits</span> کسر کے لیے ہیں۔ لہذا `1.0` کو `2^112` کے طور پر ظاہر کیا جاتا ہے، `1.5` کو `2^112 + 2^111` کے طور پر ظاہر کیا جاتا ہے، وغیرہ۔
+Uniswap نے جو حل نکالا وہ <span dir="ltr">224 bit</span> ویلیوز کا استعمال ہے، جس میں <span dir="ltr">112 bits</span> انٹیجر (integer) حصے کے لیے اور <span dir="ltr">112 bits</span> کسر کے لیے ہوتے ہیں۔ لہذا `1.0` کو `2^112` کے طور پر، `1.5` کو `2^112 + 2^111` کے طور پر ظاہر کیا جاتا ہے، وغیرہ۔
 
 اس لائبریری کے بارے میں مزید تفصیلات [دستاویز میں آگے](#fixedpoint) دستیاب ہیں۔
 
@@ -341,17 +341,17 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 ##### \_update
 
 ```solidity
-    // ریزرو کو اپ ڈیٹ کریں اور، فی بلاک پہلی کال پر، پرائس ایکومولیٹرز کو
+    // ذخائر کو اپ ڈیٹ کریں اور، فی بلاک پہلی کال پر، قیمت کے جمع کنندگان کو
     function _update(uint balance0, uint balance1, uint112 _reserve0, uint112 _reserve1) private {
 ```
 
-یہ فنکشن ہر بار اس وقت کال کیا جاتا ہے جب ٹوکنز جمع کیے جاتے ہیں یا نکالے جاتے ہیں۔
+یہ فنکشن ہر بار اس وقت کال کیا جاتا ہے جب ٹوکنز جمع کرائے جاتے ہیں یا نکالے جاتے ہیں۔
 
 ```solidity
         require(balance0 <= uint112(-1) && balance1 <= uint112(-1), 'UniswapV2: OVERFLOW');
 ```
 
-اگر balance0 یا balance1 (uint256) میں سے کوئی بھی uint112(-1) (=2^112-1) سے زیادہ ہے (لہذا جب اسے uint112 میں تبدیل کیا جاتا ہے تو یہ اوور فلو ہو کر واپس 0 پر آ جاتا ہے) تو اوور فلوز کو روکنے کے لیے \_update کو جاری رکھنے سے انکار کر دیں۔ ایک عام ٹوکن کے ساتھ جسے 10^18 اکائیوں میں تقسیم کیا جا سکتا ہے، اس کا مطلب ہے کہ ہر تبادلہ ہر ٹوکن کے تقریباً <span dir="ltr">5.1\*10^15</span> تک محدود ہے۔ اب تک یہ کوئی مسئلہ نہیں رہا ہے۔
+اگر balance0 یا balance1 (uint256) میں سے کوئی بھی uint112(-1) (=2^112-1) سے زیادہ ہے (لہذا جب اسے uint112 میں تبدیل کیا جاتا ہے تو یہ اوور فلو ہو کر واپس 0 پر آ جاتا ہے) تو اوور فلو کو روکنے کے لیے \_update کو جاری رکھنے سے انکار کر دیں۔ ایک عام ٹوکن کے ساتھ جسے <span dir="ltr">10^18</span> اکائیوں میں تقسیم کیا جا سکتا ہے، اس کا مطلب ہے کہ ہر تبادلہ ہر ٹوکن کے تقریباً <span dir="ltr">5.1\*10^15</span> تک محدود ہے۔ اب تک یہ کوئی مسئلہ نہیں رہا ہے۔
 
 ```solidity
         uint32 blockTimestamp = uint32(block.timestamp % 2**32);
@@ -359,7 +359,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
         if (timeElapsed > 0 && _reserve0 != 0 && _reserve1 != 0) {
 ```
 
-اگر گزرا ہوا وقت صفر نہیں ہے، تو اس کا مطلب ہے کہ ہم اس بلاک پر پہلی ایکسچینج ٹرانزیکشن ہیں۔ اس صورت میں، ہمیں لاگت جمع کرنے والوں (cost accumulators) کو اپ ڈیٹ کرنے کی ضرورت ہے۔
+اگر گزرا ہوا وقت صفر نہیں ہے، تو اس کا مطلب ہے کہ ہم اس بلاک پر پہلی تبادلے کی ٹرانزیکشن ہیں۔ اس صورت میں، ہمیں لاگت جمع کرنے والوں (cost accumulators) کو اپ ڈیٹ کرنے کی ضرورت ہے۔
 
 ```solidity
             // * کبھی اوور فلو نہیں ہوتا، اور + اوور فلو مطلوب ہے
@@ -368,20 +368,20 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
         }
 ```
 
-ہر لاگت جمع کرنے والے کو تازہ ترین لاگت (دوسرے ٹوکن کا ریزرو/اس ٹوکن کا ریزرو) کو سیکنڈز میں گزرے ہوئے وقت سے ضرب دے کر اپ ڈیٹ کیا جاتا ہے۔ اوسط قیمت حاصل کرنے کے لیے، آپ وقت کے دو مقامات پر مجموعی قیمت پڑھتے ہیں اور ان کے درمیان وقت کے فرق سے تقسیم کرتے ہیں۔ مثال کے طور پر، ایونٹس کی اس ترتیب کو فرض کریں:
+ہر لاگت جمع کرنے والے کو تازہ ترین لاگت (دوسرے ٹوکن کا ذخیرہ/اس ٹوکن کا ذخیرہ) کو سیکنڈز میں گزرے ہوئے وقت سے ضرب دے کر اپ ڈیٹ کیا جاتا ہے۔ اوسط قیمت حاصل کرنے کے لیے، آپ دو مختلف اوقات میں مجموعی قیمت پڑھتے ہیں اور انہیں ان کے درمیان وقت کے فرق سے تقسیم کرتے ہیں۔ مثال کے طور پر، ایونٹس کی اس ترتیب کو فرض کریں:
 
-| ایونٹ | reserve0 | reserve1 | ٹائم اسٹیمپ | معمولی شرح تبادلہ (reserve1 / reserve0) | price0CumulativeLast |
+| ایونٹ | reserve0 | reserve1 | ٹائم اسٹیمپ | مارجنل شرح تبادلہ (reserve1 / reserve0) | price0CumulativeLast |
 | -------------------------------------------------------- | --------: | --------: | --------- | -------------------------------------------: | -------------------------: |
 | ابتدائی سیٹ اپ | <span dir="ltr">1,000.000</span> | <span dir="ltr">1,000.000</span> | <span dir="ltr">5,000</span> | <span dir="ltr">1.000</span> | <span dir="ltr">0</span> |
-| ٹریڈر A <span dir="ltr">50</span> token0 جمع کرواتا ہے اور <span dir="ltr">47.619</span> token1 واپس حاصل کرتا ہے | <span dir="ltr">1,050.000</span> | <span dir="ltr">952.381</span> | <span dir="ltr">5,020</span> | <span dir="ltr">0.907</span> | <span dir="ltr">20</span> |
-| ٹریڈر B <span dir="ltr">10</span> token0 جمع کرواتا ہے اور <span dir="ltr">8.984</span> token1 واپس حاصل کرتا ہے | <span dir="ltr">1,060.000</span> | <span dir="ltr">943.396</span> | <span dir="ltr">5,030</span> | <span dir="ltr">0.890</span> | <span dir="ltr">20+10\*0.907 = 29.07</span> |
-| ٹریڈر C <span dir="ltr">40</span> token0 جمع کرواتا ہے اور <span dir="ltr">34.305</span> token1 واپس حاصل کرتا ہے | <span dir="ltr">1,100.000</span> | <span dir="ltr">909.090</span> | <span dir="ltr">5,100</span> | <span dir="ltr">0.826</span> | <span dir="ltr">29.07+70\*0.890 = 91.37</span> |
-| ٹریڈر D <span dir="ltr">100</span> token1 جمع کرواتا ہے اور <span dir="ltr">109.01</span> token0 واپس حاصل کرتا ہے | <span dir="ltr">990.990</span> | <span dir="ltr">1,009.090</span> | <span dir="ltr">5,110</span> | <span dir="ltr">1.018</span> | <span dir="ltr">91.37+10\*0.826 = 99.63</span> |
-| ٹریڈر E <span dir="ltr">10</span> token0 جمع کرواتا ہے اور <span dir="ltr">10.079</span> token1 واپس حاصل کرتا ہے | <span dir="ltr">1,000.990</span> | <span dir="ltr">999.010</span> | <span dir="ltr">5,150</span> | <span dir="ltr">0.998</span> | <span dir="ltr">99.63+40\*1.1018 = 143.702</span> |
+| ٹریڈر A <span dir="ltr">50</span> token0 جمع کراتا ہے اور بدلے میں <span dir="ltr">47.619</span> token1 حاصل کرتا ہے | <span dir="ltr">1,050.000</span> | <span dir="ltr">952.381</span> | <span dir="ltr">5,020</span> | <span dir="ltr">0.907</span> | <span dir="ltr">20</span> |
+| ٹریڈر B <span dir="ltr">10</span> token0 جمع کراتا ہے اور بدلے میں <span dir="ltr">8.984</span> token1 حاصل کرتا ہے | <span dir="ltr">1,060.000</span> | <span dir="ltr">943.396</span> | <span dir="ltr">5,030</span> | <span dir="ltr">0.890</span> | <span dir="ltr">20+10\*0.907 = 29.07</span> |
+| ٹریڈر C <span dir="ltr">40</span> token0 جمع کراتا ہے اور بدلے میں <span dir="ltr">34.305</span> token1 حاصل کرتا ہے | <span dir="ltr">1,100.000</span> | <span dir="ltr">909.090</span> | <span dir="ltr">5,100</span> | <span dir="ltr">0.826</span> | <span dir="ltr">29.07+70\*0.890 = 91.37</span> |
+| ٹریڈر D <span dir="ltr">100</span> token1 جمع کراتا ہے اور بدلے میں <span dir="ltr">109.01</span> token0 حاصل کرتا ہے | <span dir="ltr">990.990</span> | <span dir="ltr">1,009.090</span> | <span dir="ltr">5,110</span> | <span dir="ltr">1.018</span> | <span dir="ltr">91.37+10\*0.826 = 99.63</span> |
+| ٹریڈر E <span dir="ltr">10</span> token0 جمع کراتا ہے اور بدلے میں <span dir="ltr">10.079</span> token1 حاصل کرتا ہے | <span dir="ltr">1,000.990</span> | <span dir="ltr">999.010</span> | <span dir="ltr">5,150</span> | <span dir="ltr">0.998</span> | <span dir="ltr">99.63+40\*1.018 = 140.35</span> |
 
-فرض کریں کہ ہم ٹائم اسٹیمپس <span dir="ltr">5,030</span> اور <span dir="ltr">5,150</span> کے درمیان **Token0** کی اوسط قیمت کا حساب لگانا چاہتے ہیں۔ `price0Cumulative` کی قدر میں فرق <span dir="ltr">143.702-29.07=114.632</span> ہے۔ یہ دو منٹ (<span dir="ltr">120</span> سیکنڈ) کی اوسط ہے۔ لہذا اوسط قیمت <span dir="ltr">114.632/120 = 0.955</span> ہے۔
+فرض کریں کہ ہم ٹائم اسٹیمپس <span dir="ltr">5,030</span> اور <span dir="ltr">5,150</span> کے درمیان **Token0** کی اوسط قیمت کا حساب لگانا چاہتے ہیں۔ `price0Cumulative` کی قدر میں فرق <span dir="ltr">140.35-29.07=111.28</span> ہے۔ یہ دو منٹ (<span dir="ltr">120</span> سیکنڈز) کی اوسط ہے۔ لہذا اوسط قیمت <span dir="ltr">111.28/120 = 0.927</span> ہے۔
 
-قیمت کا یہ حساب وہ وجہ ہے جس کے لیے ہمیں پرانے ریزرو سائز جاننے کی ضرورت ہوتی ہے۔
+قیمت کا یہ حساب وہ وجہ ہے جس کے لیے ہمیں پرانے ذخائر کے سائز جاننے کی ضرورت ہوتی ہے۔
 
 ```solidity
         reserve0 = uint112(balance0);
@@ -391,7 +391,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
     }
 ```
 
-آخر میں، عالمی متغیرات (global variables) کو اپ ڈیٹ کریں اور ایک `Sync` ایونٹ خارج کریں۔
+آخر میں، گلوبل متغیرات کو اپ ڈیٹ کریں اور ایک `Sync` ایونٹ جاری کریں۔
 
 ##### \_mintFee
 
@@ -400,30 +400,30 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
     function _mintFee(uint112 _reserve0, uint112 _reserve1) private returns (bool feeOn) {
 ```
 
-یونی سویپ 2.0 میں ٹریڈرز مارکیٹ استعمال کرنے کے لیے <span dir="ltr">0.30%</span> فیس ادا کرتے ہیں۔ اس فیس کا زیادہ تر حصہ (ٹریڈ کا <span dir="ltr">0.25%</span>) ہمیشہ لیکویڈیٹی فراہم کنندگان کو جاتا ہے۔ بقیہ <span dir="ltr">0.05%</span> یا تو لیکویڈیٹی فراہم کنندگان کو جا سکتا ہے یا فیکٹری کی طرف سے پروٹوکول فیس کے طور پر بتائے گئے پتے پر، جو یونی سویپ کو ان کی ترقیاتی کوششوں کے لیے ادائیگی کرتا ہے۔
+Uniswap 2.0 میں ٹریڈرز مارکیٹ استعمال کرنے کے لیے <span dir="ltr">0.30%</span> فیس ادا کرتے ہیں۔ اس فیس کا زیادہ تر حصہ (ٹریڈ کا <span dir="ltr">0.25%</span>) ہمیشہ لیکویڈیٹی فراہم کنندگان کو جاتا ہے۔ باقی <span dir="ltr">0.05%</span> یا تو لیکویڈیٹی فراہم کنندگان کو جا سکتا ہے یا فیکٹری کی طرف سے پروٹوکول فیس کے طور پر بتائے گئے پتے پر، جو Uniswap کو ان کی ترقیاتی کوششوں کے لیے ادائیگی کرتا ہے۔ ایتھیریم مین نیٹ پر یہ پروٹوکول فیس آن ہے: فیکٹری کا `feeTo` پتہ سیٹ کیا گیا ہے، لہذا <span dir="ltr">0.05%</span> لیکویڈیٹی فراہم کنندگان کے بجائے اس پتے پر جاتا ہے۔
 
-حساب کتاب (اور اس وجہ سے گیس کی لاگت) کو کم کرنے کے لیے، یہ فیس ہر ٹرانزیکشن کے بجائے صرف اس وقت شمار کی جاتی ہے جب پول میں سیالیت شامل کی جاتی ہے یا نکالی جاتی ہے۔
+حساب کتاب (اور اس طرح گیس کی لاگت) کو کم کرنے کے لیے، یہ فیس ہر ٹرانزیکشن کے بجائے صرف اس وقت شمار کی جاتی ہے جب پول میں سیالیت شامل کی جاتی ہے یا ہٹائی جاتی ہے۔
 
 ```solidity
         address feeTo = IUniswapV2Factory(factory).feeTo();
         feeOn = feeTo != address(0);
 ```
 
-فیکٹری کی فیس کی منزل پڑھیں۔ اگر یہ صفر ہے تو کوئی پروٹوکول فیس نہیں ہے اور اس فیس کا حساب لگانے کی ضرورت نہیں ہے۔
+فیکٹری کی فیس کی منزل (destination) پڑھیں۔ اگر یہ صفر ہے تو کوئی پروٹوکول فیس نہیں ہے اور اس فیس کا حساب لگانے کی ضرورت نہیں ہے۔
 
 ```solidity
         uint _kLast = kLast; // گیس کی بچت
 ```
 
 `kLast` حالت کا متغیر اسٹوریج میں واقع ہے، لہذا کنٹریکٹ کی مختلف کالز کے درمیان اس کی ایک قدر ہوگی۔
-اسٹوریج تک رسائی اس غیر مستحکم میموری تک رسائی سے کہیں زیادہ مہنگی ہے جو کنٹریکٹ کی فنکشن کال ختم ہونے پر جاری کی جاتی ہے، لہذا ہم گیس بچانے کے لیے ایک اندرونی متغیر کا استعمال کرتے ہیں۔
+اسٹوریج تک رسائی اس وولیٹائل میموری (volatile memory) تک رسائی سے کہیں زیادہ مہنگی ہے جو کنٹریکٹ کی فنکشن کال ختم ہونے پر ریلیز ہو جاتی ہے، لہذا ہم گیس بچانے کے لیے ایک اندرونی متغیر کا استعمال کرتے ہیں۔
 
 ```solidity
         if (feeOn) {
             if (_kLast != 0) {
 ```
 
-لیکویڈیٹی فراہم کنندگان کو ان کا حصہ محض ان کے سیالیت کے ٹوکنز کی قدر میں اضافے سے ملتا ہے۔ لیکن پروٹوکول فیس کے لیے نئے سیالیت کے ٹوکنز کو ڈھالنے اور `feeTo` پتے پر فراہم کرنے کی ضرورت ہوتی ہے۔
+لیکویڈیٹی فراہم کنندگان کو ان کا حصہ صرف ان کے سیالیت کے ٹوکنز کی قدر میں اضافے سے ملتا ہے۔ لیکن پروٹوکول فیس کے لیے نئے سیالیت کے ٹوکنز کو ڈھالنا اور `feeTo` پتے پر فراہم کرنا ضروری ہے۔
 
 ```solidity
                 uint rootK = Math.sqrt(uint(_reserve0).mul(_reserve1));
@@ -431,7 +431,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
                 if (rootK > rootKLast) {
 ```
 
-اگر کوئی نئی سیالیت ہے جس پر پروٹوکول فیس وصول کی جانی ہے۔ آپ اسکوائر روٹ فنکشن کو [اس مضمون میں آگے](#math) دیکھ سکتے ہیں۔
+اگر کوئی نئی سیالیت ہے جس پر پروٹوکول فیس وصول کی جانی ہے۔ آپ اسکوائر روٹ (square root) فنکشن کو [اس مضمون میں آگے](#math) دیکھ سکتے ہیں۔
 
 ```solidity
                     uint numerator = totalSupply.mul(rootK.sub(rootKLast));
@@ -439,7 +439,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
                     uint liquidity = numerator / denominator;
 ```
 
-فیسوں کے اس پیچیدہ حساب کتاب کی وضاحت [وائٹ پیپر](https://app.uniswap.org/whitepaper.pdf) کے صفحہ 5 پر کی گئی ہے۔ ہم جانتے ہیں کہ جس وقت `kLast` کا حساب لگایا گیا تھا اور موجودہ وقت کے درمیان کوئی سیالیت شامل یا نکالی نہیں گئی تھی (کیونکہ ہم یہ حساب ہر بار سیالیت شامل کرنے یا نکالنے پر چلاتے ہیں، اس سے پہلے کہ یہ حقیقت میں تبدیل ہو)، لہذا `reserve0 * reserve1` میں کوئی بھی تبدیلی ٹرانزیکشن فیس سے آنی چاہیے (ان کے بغیر ہم `reserve0 * reserve1` کو مستقل رکھیں گے)۔
+فیس کے اس پیچیدہ حساب کتاب کی وضاحت [وائٹ پیپر](https://app.uniswap.org/whitepaper.pdf) کے صفحہ 5 پر کی گئی ہے۔ ہم جانتے ہیں کہ جس وقت `kLast` کا حساب لگایا گیا تھا اور موجودہ وقت کے درمیان کوئی سیالیت شامل یا ہٹائی نہیں گئی تھی (کیونکہ ہم یہ حساب ہر بار سیالیت شامل کرنے یا ہٹانے پر چلاتے ہیں، اس سے پہلے کہ یہ حقیقت میں تبدیل ہو)، لہذا `reserve0 * reserve1` میں کوئی بھی تبدیلی ٹرانزیکشن فیس سے آنی چاہیے (ان کے بغیر ہم `reserve0 * reserve1` کو مستقل رکھیں گے)۔
 
 ```solidity
                     if (liquidity > 0) _mint(feeTo, liquidity);
@@ -456,8 +456,8 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
     }
 ```
 
-اگر کوئی فیس مقرر نہیں ہے تو `kLast` کو صفر پر سیٹ کریں (اگر یہ پہلے سے ایسا نہیں ہے)۔ جب یہ کنٹریکٹ لکھا گیا تھا تو ایک [گیس ریفنڈ فیچر](https://eips.ethereum.org/EIPS/eip-3298) تھا جو کنٹریکٹس کی حوصلہ افزائی کرتا تھا کہ وہ اس اسٹوریج کو صفر کر کے ایتھیریم حالت کے مجموعی سائز کو کم کریں جس کی انہیں ضرورت نہیں تھی۔
-یہ کوڈ جب ممکن ہو وہ ریفنڈ حاصل کرتا ہے۔
+اگر کوئی فیس سیٹ نہیں ہے تو `kLast` کو صفر پر سیٹ کریں (اگر یہ پہلے سے ایسا نہیں ہے)۔ ایتھیریم میں گیس ریفنڈ کی خصوصیت ہے جو کنٹریکٹس کی حوصلہ افزائی کرتی ہے کہ وہ اس اسٹوریج کو صفر کر کے ایتھیریم کی حالت کے مجموعی سائز کو کم کریں جس کی انہیں ضرورت نہیں ہے۔
+یہ کوڈ ممکن ہونے پر وہ ریفنڈ حاصل کرتا ہے۔ لندن اپ گریڈ ([<span dir="ltr">EIP-3529</span>](https://eips.ethereum.org/EIPS/eip-3529)) کے بعد سے ریفنڈ چھوٹا ہے اور ٹرانزیکشن کی گیس کے پانچویں حصے تک محدود ہے، لیکن یہ اب بھی موجود ہے۔
 
 #### بیرونی طور پر قابل رسائی فنکشنز {#pair-external}
 
@@ -694,7 +694,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 
 ### UniswapV2Factory.sol {#uniswapv2factory}
 
-[یہ کنٹریکٹ](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) پیئر ایکسچینجز بناتا ہے۔
+[یہ کنٹریکٹ](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Factory.sol) پیئر ایکسچینجز (pair exchanges) بناتا ہے۔
 
 ```solidity
 pragma solidity =0.5.16;
@@ -707,7 +707,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
     address public feeToSetter;
 ```
 
-یہ حالت کے متغیرات پروٹوکول فیس کو نافذ کرنے کے لیے ضروری ہیں ([وائٹ پیپر](https://app.uniswap.org/whitepaper.pdf)، صفحہ 5 دیکھیں)۔
+یہ حالت کے متغیرات پروٹوکول فیس کو نافذ کرنے کے لیے ضروری ہیں (دیکھیں [وائٹ پیپر](https://app.uniswap.org/whitepaper.pdf)، صفحہ 5)۔
 `feeTo` پتہ پروٹوکول فیس کے لیے سیالیت کے ٹوکنز جمع کرتا ہے، اور `feeToSetter` وہ پتہ ہے جسے `feeTo` کو کسی مختلف پتے پر تبدیل کرنے کی اجازت ہے۔
 
 ```solidity
@@ -715,19 +715,19 @@ contract UniswapV2Factory is IUniswapV2Factory {
     address[] public allPairs;
 ```
 
-یہ متغیرات جوڑوں، یعنی دو ٹوکن اقسام کے درمیان تبادلوں کا ٹریک رکھتے ہیں۔
+یہ متغیرات جوڑوں (pairs)، یعنی دو ٹوکن اقسام کے درمیان تبادلوں کا ٹریک رکھتے ہیں۔
 
-پہلا، `getPair`، ایک میپنگ (mapping) ہے جو ایک پیئر ایکسچینج کنٹریکٹ کی شناخت ان دو <span dir="ltr">ERC-20</span> ٹوکنز کی بنیاد پر کرتا ہے جن کا یہ تبادلہ کرتا ہے۔ <span dir="ltr">ERC-20</span> ٹوکنز کی شناخت ان کنٹریکٹس کے پتوں سے ہوتی ہے جو انہیں نافذ کرتے ہیں، لہذا کیز (keys) اور ویلیو (value) سبھی پتے ہیں۔ اس پیئر ایکسچینج کا پتہ حاصل کرنے کے لیے جو آپ کو `tokenA` سے `tokenB` میں تبدیل کرنے دیتا ہے، آپ `getPair[<tokenA address>][<tokenB address>]` استعمال کرتے ہیں (یا اس کے برعکس)۔
+پہلا، `getPair`، ایک میپنگ (mapping) ہے جو ایک پیئر ایکسچینج کنٹریکٹ کی شناخت ان دو <span dir="ltr">ERC-20</span> ٹوکنز کی بنیاد پر کرتا ہے جن کا یہ تبادلہ کرتا ہے۔ <span dir="ltr">ERC-20</span> ٹوکنز کی شناخت ان کنٹریکٹس کے پتوں سے ہوتی ہے جو انہیں نافذ کرتے ہیں، لہذا کیز (keys) اور ویلیو (value) سبھی پتے ہیں۔ اس پیئر ایکسچینج کا پتہ حاصل کرنے کے لیے جو آپ کو `tokenA` سے `tokenB` میں تبدیل کرنے کی اجازت دیتا ہے، آپ `getPair[<tokenA address>][<tokenB address>]` کا استعمال کرتے ہیں (یا اس کے برعکس)۔
 
-دوسرا متغیر، `allPairs`، ایک سرنی (array) ہے جس میں اس فیکٹری کے ذریعے بنائے گئے پیئر ایکسچینجز کے تمام پتے شامل ہیں۔ ایتھیریم میں آپ میپنگ کے مواد پر اعادہ (iterate) نہیں کر سکتے، یا تمام کیز کی فہرست حاصل نہیں کر سکتے، لہذا یہ متغیر یہ جاننے کا واحد طریقہ ہے کہ یہ فیکٹری کن ایکسچینجز کا انتظام کرتی ہے۔
+دوسرا متغیر، `allPairs`، ایک ارے (array) ہے جس میں اس فیکٹری کے ذریعے بنائے گئے پیئر ایکسچینجز کے تمام پتے شامل ہیں۔ ایتھیریم میں آپ میپنگ کے مواد پر ایٹریٹ (iterate) نہیں کر سکتے، یا تمام کیز کی فہرست حاصل نہیں کر سکتے، لہذا یہ متغیر یہ جاننے کا واحد طریقہ ہے کہ یہ فیکٹری کن ایکسچینجز کا انتظام کرتی ہے۔
 
-نوٹ: آپ میپنگ کی تمام کیز پر اعادہ کیوں نہیں کر سکتے اس کی وجہ یہ ہے کہ کنٹریکٹ ڈیٹا اسٹوریج _مہنگا_ ہے، لہذا ہم اس کا جتنا کم استعمال کریں اتنا ہی بہتر ہے، اور ہم اسے جتنی کم بار تبدیل کریں اتنا ہی بہتر ہے۔ آپ [ایسی میپنگز بنا سکتے ہیں جو اعادہ کو سپورٹ کرتی ہیں](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol)، لیکن انہیں کیز کی فہرست کے لیے اضافی اسٹوریج کی ضرورت ہوتی ہے۔ زیادہ تر ایپلی کیشنز میں آپ کو اس کی ضرورت نہیں ہوتی ہے۔
+نوٹ: آپ میپنگ کی تمام کیز پر ایٹریٹ کیوں نہیں کر سکتے اس کی وجہ یہ ہے کہ کنٹریکٹ ڈیٹا اسٹوریج _مہنگا_ ہے، لہذا ہم اس کا جتنا کم استعمال کریں اتنا ہی بہتر ہے، اور ہم اسے جتنا کم تبدیل کریں اتنا ہی بہتر ہے۔ آپ [ایسی میپنگز بنا سکتے ہیں جو ایٹریشن کو سپورٹ کرتی ہوں](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol)، لیکن انہیں کیز کی فہرست کے لیے اضافی اسٹوریج کی ضرورت ہوتی ہے۔ زیادہ تر ایپلیکیشنز میں آپ کو اس کی ضرورت نہیں ہوتی۔
 
 ```solidity
     event PairCreated(address indexed token0, address indexed token1, address pair, uint);
 ```
 
-یہ ایونٹ اس وقت خارج ہوتا ہے جب ایک نیا پیئر ایکسچینج بنایا جاتا ہے۔ اس میں ٹوکنز کے پتے، پیئر ایکسچینج کا پتہ، اور فیکٹری کے زیر انتظام ایکسچینجز کی کل تعداد شامل ہوتی ہے۔
+یہ ایونٹ اس وقت جاری ہوتا ہے جب ایک نیا پیئر ایکسچینج بنایا جاتا ہے۔ اس میں ٹوکنز کے پتے، پیئر ایکسچینج کا پتہ، اور فیکٹری کے زیر انتظام ایکسچینجز کی کل تعداد شامل ہوتی ہے۔
 
 ```solidity
     constructor(address _feeToSetter) public {
@@ -735,7 +735,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
     }
 ```
 
-کنسٹرکٹر صرف ایک کام کرتا ہے اور وہ ہے `feeToSetter` کی وضاحت کرنا۔ فیکٹریاں بغیر کسی فیس کے شروع ہوتی ہیں، اور صرف `feeSetter` ہی اسے تبدیل کر سکتا ہے۔
+کنسٹرکٹر صرف `feeToSetter` کی وضاحت کرتا ہے۔ فیکٹریاں بغیر کسی فیس کے شروع ہوتی ہیں، اور صرف `feeSetter` ہی اسے تبدیل کر سکتا ہے۔
 
 ```solidity
     function allPairsLength() external view returns (uint) {
@@ -749,29 +749,29 @@ contract UniswapV2Factory is IUniswapV2Factory {
     function createPair(address tokenA, address tokenB) external returns (address pair) {
 ```
 
-یہ فیکٹری کا بنیادی فنکشن ہے، دو <span dir="ltr">ERC-20</span> ٹوکنز کے درمیان ایک پیئر ایکسچینج بنانا۔ نوٹ کریں کہ کوئی بھی اس فنکشن کو کال کر سکتا ہے۔ نیا پیئر ایکسچینج بنانے کے لیے آپ کو یونی سویپ سے اجازت کی ضرورت نہیں ہے۔
+یہ فیکٹری کا بنیادی فنکشن ہے، جو دو <span dir="ltr">ERC-20</span> ٹوکنز کے درمیان ایک پیئر ایکسچینج بناتا ہے۔ نوٹ کریں کہ کوئی بھی اس فنکشن کو کال کر سکتا ہے۔ نیا پیئر ایکسچینج بنانے کے لیے آپ کو Uniswap سے اجازت کی ضرورت نہیں ہے۔
 
 ```solidity
         require(tokenA != tokenB, 'UniswapV2: IDENTICAL_ADDRESSES');
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-ہم چاہتے ہیں کہ نئے ایکسچینج کا پتہ متعین (deterministic) ہو، تاکہ اس کا حساب پہلے سے آف چین لگایا جا سکے (یہ [لیئر ۲ (l2) ٹرانزیکشنز](/developers/docs/scaling/) کے لیے مفید ہو سکتا ہے)۔
-ایسا کرنے کے لیے ہمیں ٹوکن کے پتوں کی ایک مستقل ترتیب کی ضرورت ہے، قطع نظر اس ترتیب کے جس میں ہم نے انہیں وصول کیا ہے، لہذا ہم انہیں یہاں ترتیب دیتے ہیں۔
+ہم چاہتے ہیں کہ نئے ایکسچینج کا پتہ ڈیٹرمنسٹک (deterministic) ہو، تاکہ اس کا حساب پہلے سے آف چین لگایا جا سکے (یہ [لیئر ۲ (L2) ٹرانزیکشنز](/developers/docs/scaling/) کے لیے مفید ہو سکتا ہے)۔
+ایسا کرنے کے لیے ہمیں ٹوکن کے پتوں کی ایک مستقل ترتیب کی ضرورت ہے، قطع نظر اس کے کہ ہم نے انہیں کس ترتیب میں وصول کیا ہے، لہذا ہم انہیں یہاں ترتیب دیتے ہیں۔
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
-        require(getPair[token0][token1] == address(0), 'UniswapV2: PAIR_EXISTS'); // سنگل چیک کافی ہے
+        require(getPair[token0][token1] == address(0), 'UniswapV2: PAIR_EXISTS'); // ایک ہی چیک کافی ہے
 ```
 
-بڑے سیالیت کے پول چھوٹے پولز سے بہتر ہوتے ہیں، کیونکہ ان کی قیمتیں زیادہ مستحکم ہوتی ہیں۔ ہم ٹوکنز کے فی جوڑے کے لیے ایک سے زیادہ سیالیت کا پول نہیں رکھنا چاہتے۔ اگر پہلے سے ہی کوئی ایکسچینج موجود ہے، تو اسی جوڑے کے لیے دوسرا بنانے کی ضرورت نہیں ہے۔
+بڑے سیالیت کے پول چھوٹے پولز سے بہتر ہوتے ہیں، کیونکہ ان کی قیمتیں زیادہ مستحکم ہوتی ہیں۔ ہم نہیں چاہتے کہ فی ٹوکن جوڑے کے لیے ایک سے زیادہ سیالیت کا پول ہو۔ اگر پہلے سے ہی کوئی ایکسچینج موجود ہے، تو اسی جوڑے کے لیے دوسرا بنانے کی ضرورت نہیں ہے۔
 
 ```solidity
         bytes memory bytecode = type(UniswapV2Pair).creationCode;
 ```
 
-ایک نیا کنٹریکٹ بنانے کے لیے ہمیں اس کوڈ کی ضرورت ہوتی ہے جو اسے بناتا ہے (کنسٹرکٹر فنکشن اور وہ کوڈ جو اصل کنٹریکٹ کے EVM بائٹ کوڈ کو میموری میں لکھتا ہے)۔ عام طور پر Solidity میں ہم صرف `addr = new <name of contract>(<constructor parameters>)` استعمال کرتے ہیں اور کمپائلر ہمارے لیے ہر چیز کا خیال رکھتا ہے، لیکن ایک متعین کنٹریکٹ کا پتہ حاصل کرنے کے لیے ہمیں [CREATE2 آپ کوڈ](https://eips.ethereum.org/EIPS/eip-1014) استعمال کرنے کی ضرورت ہے۔
-جب یہ کوڈ لکھا گیا تھا تو اس آپ کوڈ کو ابھی تک Solidity کی طرف سے سپورٹ نہیں کیا گیا تھا، اس لیے دستی طور پر کوڈ حاصل کرنا ضروری تھا۔ اب یہ کوئی مسئلہ نہیں ہے، کیونکہ [Solidity اب CREATE2 کو سپورٹ کرتا ہے](https://docs.soliditylang.org/en/v0.8.3/control-structures.html#salted-contract-creations-create2)۔
+ایک نیا کنٹریکٹ بنانے کے لیے ہمیں اس کوڈ کی ضرورت ہوتی ہے جو اسے بناتا ہے (کنسٹرکٹر فنکشن اور وہ کوڈ جو اصل کنٹریکٹ کے EVM بائٹ کوڈ کو میموری میں لکھتا ہے)۔ عام طور پر Solidity میں ہم صرف `addr = new <name of contract>(<constructor parameters>)` استعمال کرتے ہیں اور کمپائلر ہمارے لیے ہر چیز کا خیال رکھتا ہے، لیکن ایک ڈیٹرمنسٹک کنٹریکٹ کا پتہ حاصل کرنے کے لیے ہمیں [CREATE2 آپ کوڈ](https://eips.ethereum.org/EIPS/eip-1014) استعمال کرنے کی ضرورت ہے۔
+جب یہ کوڈ لکھا گیا تھا تو اس آپ کوڈ کو ابھی تک Solidity کی طرف سے سپورٹ نہیں کیا گیا تھا، لہذا دستی طور پر کوڈ حاصل کرنا ضروری تھا۔ اب یہ کوئی مسئلہ نہیں ہے، کیونکہ [Solidity اب CREATE2 کو سپورٹ کرتی ہے](https://docs.soliditylang.org/en/v0.8.3/control-structures.html#salted-contract-creations-create2)۔
 
 ```solidity
         bytes32 salt = keccak256(abi.encodePacked(token0, token1));
@@ -780,7 +780,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
         }
 ```
 
-جب کسی آپ کوڈ کو ابھی تک Solidity کی طرف سے سپورٹ نہیں کیا جاتا ہے تو ہم اسے [ان لائن اسمبلی (inline assembly)](https://docs.soliditylang.org/en/v0.8.3/assembly.html) کا استعمال کرتے ہوئے کال کر سکتے ہیں۔
+جب کسی آپ کوڈ کو ابھی تک Solidity کی طرف سے سپورٹ نہیں کیا جاتا تو ہم اسے [ان لائن اسمبلی (inline assembly)](https://docs.soliditylang.org/en/v0.8.3/assembly.html) کا استعمال کرتے ہوئے کال کر سکتے ہیں۔
 
 ```solidity
         IUniswapV2Pair(pair).initialize(token0, token1);
@@ -790,13 +790,13 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 ```solidity
         getPair[token0][token1] = pair;
-        getPair[token1][token0] = pair; // میپنگ کو الٹی سمت میں پاپولیٹ کریں
+        getPair[token1][token0] = pair; // میپنگ کو الٹی سمت میں پُر کریں
         allPairs.push(pair);
         emit PairCreated(token0, token1, pair, allPairs.length);
     }
 ```
 
-نئے جوڑے کی معلومات کو حالت کے متغیرات میں محفوظ کریں اور دنیا کو نئے پیئر ایکسچینج کے بارے میں مطلع کرنے کے لیے ایک ایونٹ خارج کریں۔
+نئے جوڑے کی معلومات کو حالت کے متغیرات میں محفوظ کریں اور دنیا کو نئے پیئر ایکسچینج کے بارے میں مطلع کرنے کے لیے ایک ایونٹ جاری کریں۔
 
 ```solidity
     function setFeeTo(address _feeTo) external {
@@ -815,10 +815,10 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 ### UniswapV2ERC20.sol {#uniswapv2erc20}
 
-[یہ کنٹریکٹ](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) <span dir="ltr">ERC-20</span> سیالیت کے ٹوکن کو نافذ کرتا ہے۔ یہ [اوپن زیپلن <span dir="ltr">ERC-20</span> کنٹریکٹ](/developers/tutorials/erc20-annotated-code) سے ملتا جلتا ہے، اس لیے میں صرف اس حصے کی وضاحت کروں گا جو مختلف ہے، یعنی `permit` فعالیت۔
+[یہ کنٹریکٹ](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2ERC20.sol) <span dir="ltr">ERC-20</span> سیالیت کے ٹوکن کو نافذ کرتا ہے۔ یہ [OpenZeppelin <span dir="ltr">ERC-20</span> کنٹریکٹ](/developers/tutorials/erc20-annotated-code) سے ملتا جلتا ہے، لہذا میں صرف اس حصے کی وضاحت کروں گا جو مختلف ہے، یعنی `permit` کی فعالیت۔
 
-ایتھیریم پر ٹرانزیکشنز پر ایتھر (ETH) لاگت آتی ہے، جو حقیقی رقم کے برابر ہے۔ اگر آپ کے پاس <span dir="ltr">ERC-20</span> ٹوکنز ہیں لیکن ETH نہیں ہے، تو آپ ٹرانزیکشنز نہیں بھیج سکتے، اس لیے آپ ان کے ساتھ کچھ نہیں کر سکتے۔ اس مسئلے سے بچنے کا ایک حل [میٹا ٹرانزیکشنز (meta-transactions)](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions) ہے۔
-ٹوکنز کا مالک ایک ٹرانزیکشن پر دستخط کرتا ہے جو کسی اور کو آف چین ٹوکنز نکالنے کی اجازت دیتا ہے اور اسے انٹرنیٹ کا استعمال کرتے ہوئے وصول کنندہ کو بھیجتا ہے۔ وصول کنندہ، جس کے پاس ETH ہوتا ہے، پھر مالک کی جانب سے اجازت نامہ (permit) جمع کرواتا ہے۔
+ایتھیریم پر ٹرانزیکشنز پر ایتھر (ETH) خرچ ہوتا ہے، جو حقیقی رقم کے برابر ہے۔ اگر آپ کے پاس <span dir="ltr">ERC-20</span> ٹوکنز ہیں لیکن ETH نہیں ہے، تو آپ ٹرانزیکشنز نہیں بھیج سکتے، لہذا آپ ان کے ساتھ کچھ نہیں کر سکتے۔ اس مسئلے سے بچنے کا ایک حل [میٹا ٹرانزیکشنز (meta-transactions)](https://developers.uniswap.org/docs/protocols/v2/concepts/meta-transactions) ہے۔
+ٹوکنز کا مالک ایک ٹرانزیکشن پر دستخط کرتا ہے جو کسی اور کو آف چین ٹوکنز نکالنے کی اجازت دیتا ہے اور اسے انٹرنیٹ کا استعمال کرتے ہوئے وصول کنندہ کو بھیجتا ہے۔ وصول کنندہ، جس کے پاس ETH ہوتا ہے، پھر مالک کی جانب سے پرمٹ (permit) جمع کراتا ہے۔
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;
@@ -832,7 +832,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
     mapping(address => uint) public nonces;
 ```
 
-وصول کنندہ کے لیے ڈیجیٹل دستخط کو جعلی بنانا ممکن نہیں ہے۔ تاہم، ایک ہی ٹرانزیکشن کو دو بار بھیجنا بہت آسان ہے (یہ [ری پلے اٹیک (replay attack)](https://wikipedia.org/wiki/Replay_attack) کی ایک شکل ہے)۔ اس سے بچنے کے لیے، ہم ایک [نانس](https://wikipedia.org/wiki/Cryptographic_nonce) استعمال کرتے ہیں۔ اگر کسی نئے `Permit` کا نانس آخری استعمال شدہ سے ایک زیادہ نہیں ہے، تو ہم فرض کرتے ہیں کہ یہ غلط ہے۔
+وصول کنندہ کے لیے جعلی ڈیجیٹل دستخط بنانا ممکن نہیں ہے۔ تاہم، ایک ہی ٹرانزیکشن کو دو بار بھیجنا بہت آسان ہے (یہ [ری پلے اٹیک (replay attack)](https://wikipedia.org/wiki/Replay_attack) کی ایک شکل ہے)۔ اس سے بچنے کے لیے، ہم ایک [نانس](https://wikipedia.org/wiki/Cryptographic_nonce) استعمال کرتے ہیں۔ اگر کسی نئے `Permit` کا نانس آخری استعمال شدہ نانس سے ایک زیادہ نہیں ہے، تو ہم فرض کرتے ہیں کہ یہ غلط ہے۔
 
 ```solidity
     constructor() public {
@@ -842,7 +842,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
         }
 ```
 
-یہ [چین شناخت کنندہ](https://chainid.network/) کو بازیافت کرنے کا کوڈ ہے۔ یہ ایک EVM اسمبلی بولی (dialect) استعمال کرتا ہے جسے [Yul](https://docs.soliditylang.org/en/v0.8.4/yul.html) کہا جاتا ہے۔ نوٹ کریں کہ Yul کے موجودہ ورژن میں آپ کو `chainid()` استعمال کرنا ہوگا، نہ کہ `chainid`۔
+یہ [چین شناخت کنندہ (chain identifier)](https://chainid.network/) کو بازیافت کرنے کا کوڈ ہے۔ یہ ایک EVM اسمبلی ڈائلیکٹ (dialect) استعمال کرتا ہے جسے [Yul](https://docs.soliditylang.org/en/v0.8.4/yul.html) کہا جاتا ہے۔ نوٹ کریں کہ Yul کے موجودہ ورژن میں آپ کو `chainid()` استعمال کرنا ہوگا، نہ کہ `chainid`۔
 
 ```solidity
         DOMAIN_SEPARATOR = keccak256(
@@ -857,13 +857,13 @@ contract UniswapV2Factory is IUniswapV2Factory {
     }
 ```
 
-<span dir="ltr">EIP-712</span> کے لیے [ڈومین الگ کرنے والے (domain separator)](https://eips.ethereum.org/EIPS/eip-712#rationale-for-domainseparator) کا حساب لگائیں۔
+<span dir="ltr">EIP-712</span> کے لیے [ڈومین سیپریٹر (domain separator)](https://eips.ethereum.org/EIPS/eip-712#rationale-for-domainseparator) کا حساب لگائیں۔
 
 ```solidity
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
 ```
 
-یہ وہ فنکشن ہے جو اجازتوں کو نافذ کرتا ہے۔ یہ متعلقہ فیلڈز، اور [دستخط](https://yos.io/2018/11/16/ethereum-signatures/) کے لیے تین اسکیلر (scalar) قدروں (v، r، اور s) کو پیرامیٹرز کے طور پر وصول کرتا ہے۔
+یہ وہ فنکشن ہے جو اجازتوں کو نافذ کرتا ہے۔ یہ متعلقہ فیلڈز، اور [دستخط](https://yos.io/2018/11/16/ethereum-signatures/) کے لیے تین اسکیلر (scalar) ویلیوز (v، r، اور s) کو پیرامیٹرز کے طور پر وصول کرتا ہے۔
 
 ```solidity
         require(deadline >= block.timestamp, 'UniswapV2: EXPIRED');
@@ -881,9 +881,8 @@ contract UniswapV2Factory is IUniswapV2Factory {
         );
 ```
 
-`abi.encodePacked(...)` وہ پیغام ہے جس کے ملنے کی ہم توقع کرتے ہیں۔ ہم جانتے ہیں کہ نانس کیا ہونا چاہیے، اس لیے ہمیں اسے پیرامیٹر کے طور پر حاصل کرنے کی ضرورت نہیں ہے۔
-
-ایتھیریم دستخطی الگورتھم دستخط کرنے کے لیے <span dir="ltr">256 bits</span> حاصل کرنے کی توقع کرتا ہے، اس لیے ہم `keccak256` ہیش فنکشن استعمال کرتے ہیں۔
+`abi.encodePacked(...)` وہ پیغام ہے جس کے ملنے کی ہمیں توقع ہے۔ ہم جانتے ہیں کہ نانس کیا ہونا چاہیے، لہذا ہمیں اسے پیرامیٹر کے طور پر حاصل کرنے کی ضرورت نہیں ہے۔
+ایتھیریم دستخطی الگورتھم کو دستخط کرنے کے لیے <span dir="ltr">256 bits</span> ملنے کی توقع ہوتی ہے، لہذا ہم `keccak256` ہیش فنکشن استعمال کرتے ہیں۔
 
 ```solidity
         address recoveredAddress = ecrecover(digest, v, r, s);
@@ -898,7 +897,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 ```
 
-اگر سب کچھ ٹھیک ہے، تو اسے [ایک <span dir="ltr">ERC-20</span> منظور کرنا](https://eips.ethereum.org/EIPS/eip-20#approve) سمجھیں۔
+اگر سب کچھ ٹھیک ہے، تو اسے [ایک <span dir="ltr">ERC-20</span> منظور کرنا (approve)](https://eips.ethereum.org/EIPS/eip-20#approve) سمجھیں۔
 
 ## پیریفیری کنٹریکٹس {#periphery-contracts}
 
@@ -906,12 +905,12 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 ### UniswapV2Router01.sol {#uniswapv2router01}
 
-[اس کنٹریکٹ](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) میں مسائل ہیں، اور اسے [مزید استعمال نہیں کیا جانا چاہیے](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01)۔ خوش قسمتی سے، پیریفیری کنٹریکٹس سٹیٹ لیس (stateless) ہیں اور ان میں کوئی اثاثے نہیں ہوتے، اس لیے اسے متروک قرار دینا اور لوگوں کو اس کے متبادل، `UniswapV2Router02`، کے استعمال کا مشورہ دینا آسان ہے۔
+[اس کنٹریکٹ](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router01.sol) میں مسائل ہیں، اور اسے مزید استعمال نہیں کیا جانا چاہیے۔ خوش قسمتی سے، پیریفیری کنٹریکٹس اسٹیٹ لیس (stateless) ہوتے ہیں اور ان کے پاس کوئی اثاثہ نہیں ہوتا، لہذا اسے متروک (deprecate) کرنا اور لوگوں کو اس کے متبادل، `UniswapV2Router02`، کو استعمال کرنے کا مشورہ دینا آسان ہے۔
 
 ### UniswapV2Router02.sol {#uniswapv2router02}
 
-زیادہ تر صورتوں میں آپ یونی سویپ کو [اس کنٹریکٹ](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol) کے ذریعے استعمال کریں گے۔
-آپ دیکھ سکتے ہیں کہ اسے [یہاں](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02) کیسے استعمال کیا جائے۔
+زیادہ تر معاملات میں آپ Uniswap کو [اس کنٹریکٹ](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router02.sol) کے ذریعے استعمال کریں گے۔
+آپ دیکھ سکتے ہیں کہ اسے کیسے استعمال کرنا ہے [یہاں](https://developers.uniswap.org/docs/protocols/v2/guides/swapping)۔
 
 ```solidity
 pragma solidity =0.6.6;
@@ -926,7 +925,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-ان میں سے زیادہ تر کا ہم نے پہلے سامنا کیا ہے، یا وہ کافی واضح ہیں۔ واحد استثنا `IWETH.sol` ہے۔ یونی سویپ <span dir="ltr">v2</span> کسی بھی <span dir="ltr">ERC-20</span> ٹوکنز کے جوڑے کے تبادلے کی اجازت دیتا ہے، لیکن ایتھر (<span dir="ltr">ETH</span>) بذات خود ایک <span dir="ltr">ERC-20</span> ٹوکن نہیں ہے۔ یہ اس معیار سے پہلے کا ہے اور اسے منفرد طریقہ کار کے ذریعے منتقل کیا جاتا ہے۔ <span dir="ltr">ERC-20</span> ٹوکنز پر لاگو ہونے والے کنٹریکٹس میں <span dir="ltr">ETH</span> کے استعمال کو فعال کرنے کے لیے لوگوں نے [ریپڈ ایتھر (ڈبلیو ایتھ)](https://weth.tkn.eth.limo/) کنٹریکٹ متعارف کرایا۔ آپ اس کنٹریکٹ کو <span dir="ltr">ETH</span> بھیجتے ہیں، اور یہ آپ کو مساوی مقدار میں ریپڈ ایتھر (ڈبلیو ایتھ) ڈھال کر دیتا ہے۔ یا آپ ریپڈ ایتھر (ڈبلیو ایتھ) کو جلا سکتے ہیں، اور واپس <span dir="ltr">ETH</span> حاصل کر سکتے ہیں۔
+ان میں سے زیادہ تر کا ہم نے یا تو پہلے سامنا کیا ہے، یا وہ کافی واضح ہیں۔ ایک استثنا `IWETH.sol` ہے۔ Uniswap v2 کسی بھی <span dir="ltr">ERC-20</span> ٹوکنز کے جوڑے کے تبادلے کی اجازت دیتا ہے، لیکن ایتھر (ETH) خود ایک <span dir="ltr">ERC-20</span> ٹوکن نہیں ہے۔ یہ معیار سے پہلے کا ہے اور اسے منفرد میکانزم کے ذریعے منتقل کیا جاتا ہے۔ <span dir="ltr">ERC-20</span> ٹوکنز پر لاگو ہونے والے کنٹریکٹس میں ETH کے استعمال کو فعال کرنے کے لیے لوگ [ریپڈ ایتھر (WETH)](https://weth.tkn.eth.limo/) کنٹریکٹ لے کر آئے۔ آپ اس کنٹریکٹ کو ETH بھیجتے ہیں، اور یہ آپ کو مساوی مقدار میں WETH ڈھال کر دیتا ہے۔ یا آپ WETH کو جلا سکتے ہیں، اور ETH واپس حاصل کر سکتے ہیں۔
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {
@@ -936,7 +935,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     address public immutable override WETH;
 ```
 
-راؤٹر کو یہ جاننے کی ضرورت ہوتی ہے کہ کون سی فیکٹری استعمال کرنی ہے، اور ان ٹرانزیکشنز کے لیے جن میں ریپڈ ایتھر (ڈبلیو ایتھ) کی ضرورت ہوتی ہے، کون سا ریپڈ ایتھر (ڈبلیو ایتھ) کنٹریکٹ استعمال کرنا ہے۔ یہ اقدار [ناقابلِ تبدیلی](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables) ہیں، جس کا مطلب ہے کہ انہیں صرف کنسٹرکٹر میں سیٹ کیا جا سکتا ہے۔ اس سے صارفین کو یہ اعتماد ملتا ہے کہ کوئی بھی انہیں کم ایماندار کنٹریکٹس کی طرف اشارہ کرنے کے لیے تبدیل نہیں کر سکے گا۔
+راؤٹر کو یہ جاننے کی ضرورت ہوتی ہے کہ کون سی فیکٹری استعمال کرنی ہے، اور ان ٹرانزیکشنز کے لیے جن میں WETH کی ضرورت ہوتی ہے، کون سا WETH کنٹریکٹ استعمال کرنا ہے۔ یہ قدریں [ناقابلِ تبدیلی](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables) ہیں، جس کا مطلب ہے کہ انہیں صرف کنٹریکٹر میں سیٹ کیا جا سکتا ہے۔ اس سے صارفین کو یہ اعتماد ملتا ہے کہ کوئی بھی انہیں کم ایماندار کنٹریکٹس کی طرف اشارہ کرنے کے لیے تبدیل نہیں کر سکے گا۔
 
 ```solidity
     modifier ensure(uint deadline) {
@@ -945,7 +944,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     }
 ```
 
-یہ موڈیفائر اس بات کو یقینی بناتا ہے کہ وقت کی پابندی والی ٹرانزیکشنز ("اگر ہو سکے تو وقت Y سے پہلے X کریں") ان کی مقررہ مدت کے بعد نہ ہوں۔
+یہ موڈیفائر (modifier) اس بات کو یقینی بناتا ہے کہ وقت کی پابندی والی ٹرانزیکشنز ("اگر آپ کر سکتے ہیں تو وقت Y سے پہلے X کریں") ان کی وقت کی حد کے بعد نہ ہوں۔
 
 ```solidity
     constructor(address _factory, address _WETH) public {
@@ -954,7 +953,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     }
 ```
 
-کنسٹرکٹر صرف ناقابلِ تبدیلی حالت کے متغیرات (state variables) کو سیٹ کرتا ہے۔
+کنسٹرکٹر صرف ناقابلِ تبدیلی حالت کے متغیرات کو سیٹ کرتا ہے۔
 
 ```solidity
     receive() external payable {
@@ -962,7 +961,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     }
 ```
 
-یہ فنکشن اس وقت کال کیا جاتا ہے جب ہم ریپڈ ایتھر (ڈبلیو ایتھ) کنٹریکٹ سے ٹوکنز کو واپس <span dir="ltr">ETH</span> میں ریڈیم کرتے ہیں۔ صرف وہی ریپڈ ایتھر (ڈبلیو ایتھ) کنٹریکٹ جو ہم استعمال کرتے ہیں، ایسا کرنے کا مجاز ہے۔
+یہ فنکشن اس وقت کال کیا جاتا ہے جب ہم WETH کنٹریکٹ سے ٹوکنز کو واپس ETH میں ریڈیم (redeem) کرتے ہیں۔ صرف وہی WETH کنٹریکٹ جو ہم استعمال کرتے ہیں ایسا کرنے کا مجاز ہے۔
 
 #### سیالیت شامل کریں {#add-liquidity}
 
@@ -974,7 +973,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     function _addLiquidity(
 ```
 
-یہ فنکشن A اور B ٹوکنز کی اس مقدار کا حساب لگانے کے لیے استعمال ہوتا ہے جو پیئر ایکسچینج میں جمع کی جانی چاہیے۔
+یہ فنکشن A اور B ٹوکنز کی اس مقدار کا حساب لگانے کے لیے استعمال کیا جاتا ہے جو پیئر ایکسچینج میں جمع کی جانی چاہیے۔
 
 ```solidity
         address tokenA,
@@ -988,35 +987,35 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         uint amountBDesired,
 ```
 
-یہ وہ رقوم ہیں جو لیکویڈیٹی فراہم کنندہ جمع کرنا چاہتا ہے۔ یہ جمع کیے جانے والے A اور B کی زیادہ سے زیادہ مقداریں بھی ہیں۔
+یہ وہ مقداریں ہیں جو لیکویڈیٹی فراہم کنندہ جمع کرانا چاہتا ہے۔ یہ جمع کی جانے والی A اور B کی زیادہ سے زیادہ مقداریں بھی ہیں۔
 
 ```solidity
         uint amountAMin,
         uint amountBMin
 ```
 
-یہ جمع کرنے کے لیے کم از کم قابل قبول مقداریں ہیں۔ اگر ٹرانزیکشن ان مقداروں یا اس سے زیادہ کے ساتھ نہیں ہو سکتی، تو اسے ریورٹ کر دیں۔ اگر آپ یہ فیچر نہیں چاہتے ہیں، تو بس صفر درج کریں۔
+یہ جمع کرانے کے لیے کم از کم قابل قبول مقداریں ہیں۔ اگر ٹرانزیکشن ان مقداروں یا اس سے زیادہ کے ساتھ نہیں ہو سکتی، تو اسے ریورٹ کر دیں۔ اگر آپ یہ خصوصیت نہیں چاہتے ہیں، تو بس صفر کی وضاحت کریں۔
 
-لیکویڈیٹی فراہم کنندہ عام طور پر کم از کم مقدار بتاتے ہیں، کیونکہ وہ ٹرانزیکشن کو موجودہ شرح تبادلہ کے قریب محدود کرنا چاہتے ہیں۔ اگر شرح تبادلہ میں بہت زیادہ اتار چڑھاؤ آتا ہے تو اس کا مطلب ایسی خبریں ہو سکتی ہیں جو بنیادی اقدار کو تبدیل کر دیں، اور وہ دستی طور پر فیصلہ کرنا چاہتے ہیں کہ کیا کرنا ہے۔
+لیکویڈیٹی فراہم کنندگان عام طور پر کم از کم کی وضاحت کرتے ہیں، کیونکہ وہ ٹرانزیکشن کو اس شرح تبادلہ تک محدود کرنا چاہتے ہیں جو موجودہ شرح کے قریب ہو۔ اگر شرح تبادلہ میں بہت زیادہ اتار چڑھاؤ آتا ہے تو اس کا مطلب ایسی خبریں ہو سکتی ہیں جو بنیادی اقدار کو تبدیل کرتی ہیں، اور وہ دستی طور پر فیصلہ کرنا چاہتے ہیں کہ کیا کرنا ہے۔
 
-مثال کے طور پر، ایک ایسی صورتحال کا تصور کریں جہاں شرح تبادلہ ایک کے بدلے ایک ہو اور لیکویڈیٹی فراہم کنندہ یہ اقدار بتاتا ہے:
+مثال کے طور پر، ایک ایسے معاملے کا تصور کریں جہاں شرح تبادلہ ایک کے بدلے ایک ہے اور لیکویڈیٹی فراہم کنندہ ان اقدار کی وضاحت کرتا ہے:
 
 | پیرامیٹر | قدر |
 | -------------- | ----: |
-| amountADesired |  1000 |
-| amountBDesired |  1000 |
-| amountAMin     |   900 |
-| amountBMin     |   800 |
+| amountADesired | <span dir="ltr">1000</span> |
+| amountBDesired | <span dir="ltr">1000</span> |
+| amountAMin | <span dir="ltr">900</span> |
+| amountBMin | <span dir="ltr">800</span> |
 
-جب تک شرح تبادلہ <span dir="ltr">0.9</span> اور <span dir="ltr">1.25</span> کے درمیان رہتی ہے، ٹرانزیکشن مکمل ہو جاتی ہے۔ اگر شرح تبادلہ اس حد سے باہر ہو جاتی ہے، تو ٹرانزیکشن منسوخ ہو جاتی ہے۔
+جب تک شرح تبادلہ <span dir="ltr">0.9</span> اور <span dir="ltr">1.25</span> کے درمیان رہتی ہے، ٹرانزیکشن ہوتی ہے۔ اگر شرح تبادلہ اس حد سے باہر ہو جاتی ہے، تو ٹرانزیکشن منسوخ ہو جاتی ہے۔
 
-اس احتیاط کی وجہ یہ ہے کہ ٹرانزیکشنز فوری نہیں ہوتیں، آپ انہیں جمع کراتے ہیں اور بالآخر ایک توثیق کار انہیں ایک بلاک میں شامل کرے گا (جب تک کہ آپ کی گیس کی قیمت بہت کم نہ ہو، اس صورت میں آپ کو اسے اوور رائٹ کرنے کے لیے اسی نانس اور زیادہ گیس کی قیمت کے ساتھ ایک اور ٹرانزیکشن جمع کرانی ہوگی)۔ آپ جمع کرانے اور شامل ہونے کے درمیانی وقفے کے دوران ہونے والے واقعات کو کنٹرول نہیں کر سکتے۔
+اس احتیاط کی وجہ یہ ہے کہ ٹرانزیکشنز فوری نہیں ہوتیں، آپ انہیں جمع کراتے ہیں اور بالآخر ایک توثیق کار انہیں ایک بلاک میں شامل کرنے والا ہے (جب تک کہ آپ کی گیس کی قیمت بہت کم نہ ہو، اس صورت میں آپ کو اسے اوور رائٹ کرنے کے لیے اسی نانس اور زیادہ گیس کی قیمت کے ساتھ ایک اور ٹرانزیکشن جمع کرانی ہوگی)۔ آپ اس بات کو کنٹرول نہیں کر سکتے کہ جمع کرانے اور شامل ہونے کے درمیانی وقفے کے دوران کیا ہوتا ہے۔
 
 ```solidity
     ) internal virtual returns (uint amountA, uint amountB) {
 ```
 
-یہ فنکشن وہ مقداریں واپس کرتا ہے جو لیکویڈیٹی فراہم کنندہ کو جمع کرانی چاہئیں تاکہ ذخائر کے درمیان موجودہ تناسب کے برابر تناسب برقرار رہے۔
+یہ فنکشن وہ مقداریں واپس کرتا ہے جو لیکویڈیٹی فراہم کنندہ کو جمع کرانی چاہئیں تاکہ ذخائر کے درمیان موجودہ تناسب کے برابر تناسب حاصل ہو۔
 
 ```solidity
         // اگر جوڑا ابھی تک موجود نہیں ہے تو اسے بنائیں
@@ -1045,7 +1044,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
             uint amountBOptimal = UniswapV2Library.quote(amountADesired, reserveA, reserveB);
 ```
 
-اگر ہمیں یہ دیکھنے کی ضرورت ہے کہ مقداریں کیا ہوں گی، تو ہم [اس فنکشن](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L35) کا استعمال کرتے ہوئے بہترین مقدار حاصل کرتے ہیں۔ ہم موجودہ ذخائر کے برابر تناسب چاہتے ہیں۔
+اگر ہمیں یہ دیکھنے کی ضرورت ہے کہ مقداریں کیا ہوں گی، تو ہم [اس فنکشن](https://github.com/Uniswap/v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L36) کا استعمال کرتے ہوئے بہترین مقدار حاصل کرتے ہیں۔ ہم موجودہ ذخائر جیسا ہی تناسب چاہتے ہیں۔
 
 ```solidity
             if (amountBOptimal <= amountBDesired) {
@@ -1053,7 +1052,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
                 (amountA, amountB) = (amountADesired, amountBOptimal);
 ```
 
-اگر `amountBOptimal` اس مقدار سے کم ہے جو لیکویڈیٹی فراہم کنندہ جمع کرنا چاہتا ہے تو اس کا مطلب ہے کہ ٹوکن B فی الحال اس سے زیادہ قیمتی ہے جتنا لیکویڈیٹی جمع کرنے والا سوچتا ہے، اس لیے کم مقدار درکار ہے۔
+اگر `amountBOptimal` اس مقدار سے کم ہے جو لیکویڈیٹی فراہم کنندہ جمع کرانا چاہتا ہے تو اس کا مطلب ہے کہ ٹوکن B اس وقت اس سے زیادہ قیمتی ہے جتنا لیکویڈیٹی جمع کرانے والا سوچتا ہے، لہذا کم مقدار کی ضرورت ہے۔
 
 ```solidity
             } else {
@@ -1063,13 +1062,13 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
                 (amountA, amountB) = (amountAOptimal, amountBDesired);
 ```
 
-اگر بہترین B مقدار مطلوبہ B مقدار سے زیادہ ہے تو اس کا مطلب ہے کہ B ٹوکنز فی الحال اس سے کم قیمتی ہیں جتنا لیکویڈیٹی جمع کرنے والا سوچتا ہے، اس لیے زیادہ مقدار درکار ہے۔ تاہم، مطلوبہ مقدار زیادہ سے زیادہ حد ہے، اس لیے ہم ایسا نہیں کر سکتے۔ اس کے بجائے ہم B ٹوکنز کی مطلوبہ مقدار کے لیے A ٹوکنز کی بہترین تعداد کا حساب لگاتے ہیں۔
+اگر بہترین B مقدار مطلوبہ B مقدار سے زیادہ ہے تو اس کا مطلب ہے کہ B ٹوکنز اس وقت اس سے کم قیمتی ہیں جتنا لیکویڈیٹی جمع کرانے والا سوچتا ہے، لہذا زیادہ مقدار کی ضرورت ہے۔ تاہم، مطلوبہ مقدار زیادہ سے زیادہ ہے، لہذا ہم ایسا نہیں کر سکتے۔ اس کے بجائے ہم B ٹوکنز کی مطلوبہ مقدار کے لیے A ٹوکنز کی بہترین تعداد کا حساب لگاتے ہیں۔
 
-ان سب کو ملا کر ہمیں یہ گراف ملتا ہے۔ فرض کریں کہ آپ ایک ہزار A ٹوکنز (نیلی لکیر) اور ایک ہزار B ٹوکنز (سرخ لکیر) جمع کرنے کی کوشش کر رہے ہیں۔ x محور شرح تبادلہ، <span dir="ltr">A/B</span> ہے۔ اگر <span dir="ltr">x=1</span> ہے، تو وہ قدر میں برابر ہیں اور آپ ہر ایک کے ایک ہزار جمع کرتے ہیں۔ اگر <span dir="ltr">x=2</span> ہے، تو A کی قدر B سے دوگنی ہے (آپ کو ہر A ٹوکن کے بدلے دو B ٹوکن ملتے ہیں) اس لیے آپ ایک ہزار B ٹوکن جمع کرتے ہیں، لیکن صرف <span dir="ltr">500</span> A ٹوکن۔ اگر <span dir="ltr">x=0.5</span> ہے، تو صورتحال الٹ جاتی ہے، ایک ہزار A ٹوکنز اور پانچ سو B ٹوکنز۔
+ان سب کو ملا کر ہمیں یہ گراف ملتا ہے۔ فرض کریں کہ آپ ایک ہزار A ٹوکنز (نیلی لکیر) اور ایک ہزار B ٹوکنز (سرخ لکیر) جمع کرانے کی کوشش کر رہے ہیں۔ x محور شرح تبادلہ، A/B ہے۔ اگر <span dir="ltr">x=1</span> ہے، تو وہ قدر میں برابر ہیں اور آپ ہر ایک کے ایک ہزار جمع کراتے ہیں۔ اگر <span dir="ltr">x=2</span> ہے، تو A کی قدر B سے دوگنی ہے (آپ کو ہر A ٹوکن کے لیے دو B ٹوکن ملتے ہیں) لہذا آپ ایک ہزار B ٹوکنز جمع کراتے ہیں، لیکن صرف <span dir="ltr">500</span> A ٹوکنز۔ اگر <span dir="ltr">x=0.5</span> ہے، تو صورتحال الٹ جاتی ہے، ایک ہزار A ٹوکنز اور پانچ سو B ٹوکنز۔
 
-![Graph](liquidityProviderDeposit.png)
+![گراف](liquidityProviderDeposit.png)
 
-آپ براہ راست کور کنٹریکٹ میں سیالیت جمع کر سکتے ہیں ([UniswapV2Pair::mint](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol#L110) کا استعمال کرتے ہوئے)، لیکن کور کنٹریکٹ صرف یہ جانچتا ہے کہ اس کے ساتھ دھوکہ تو نہیں ہو رہا، اس لیے اگر آپ کی ٹرانزیکشن جمع کرانے اور اس کے عمل میں آنے کے درمیانی وقت میں شرح تبادلہ تبدیل ہو جاتی ہے تو آپ کو قدر کھونے کا خطرہ ہوتا ہے۔ اگر آپ پیریفیری کنٹریکٹ استعمال کرتے ہیں، تو یہ اس مقدار کا حساب لگاتا ہے جو آپ کو جمع کرانی چاہیے اور اسے فوری طور پر جمع کر دیتا ہے، اس لیے شرح تبادلہ تبدیل نہیں ہوتی اور آپ کا کچھ ضائع نہیں ہوتا۔
+آپ سیالیت کو براہ راست کور کنٹریکٹ میں جمع کرا سکتے ہیں ([UniswapV2Pair::mint](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol#L110) کا استعمال کرتے ہوئے)، لیکن کور کنٹریکٹ صرف یہ چیک کرتا ہے کہ اس کے ساتھ خود دھوکہ تو نہیں ہو رہا، لہذا اگر آپ کی ٹرانزیکشن جمع کرانے اور اس کے عمل میں آنے کے درمیانی وقت میں شرح تبادلہ تبدیل ہو جاتی ہے تو آپ کو قدر کھونے کا خطرہ ہوتا ہے۔ اگر آپ پیریفیری کنٹریکٹ استعمال کرتے ہیں، تو یہ اس مقدار کا حساب لگاتا ہے جو آپ کو جمع کرانی چاہیے اور اسے فوری طور پر جمع کر دیتا ہے، لہذا شرح تبادلہ تبدیل نہیں ہوتی اور آپ کا کچھ نقصان نہیں ہوتا۔
 
 ```solidity
     function addLiquidity(
@@ -1083,10 +1082,10 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         uint deadline
 ```
 
-سیالیت جمع کرنے کے لیے اس فنکشن کو ٹرانزیکشن کے ذریعے کال کیا جا سکتا ہے۔ زیادہ تر پیرامیٹرز اوپر دیے گئے `_addLiquidity` کی طرح ہی ہیں، سوائے دو استثنیات کے:
+اس فنکشن کو سیالیت جمع کرانے کے لیے ایک ٹرانزیکشن کے ذریعے کال کیا جا سکتا ہے۔ زیادہ تر پیرامیٹرز اوپر `_addLiquidity` کی طرح ہی ہیں، دو استثنیات کے ساتھ:
 
-. `to` وہ پتہ ہے جسے پول میں لیکویڈیٹی فراہم کنندہ کا حصہ ظاہر کرنے کے لیے نئے سیالیت کے ٹوکنز ڈھال کر ملتے ہیں
-. `deadline` ٹرانزیکشن پر وقت کی حد ہے
+- `to` وہ پتہ ہے جسے پول میں لیکویڈیٹی فراہم کنندہ کا حصہ دکھانے کے لیے نئے سیالیت کے ٹوکنز ڈھال کر ملتے ہیں
+- `deadline` ٹرانزیکشن پر وقت کی حد ہے
 
 ```solidity
     ) external virtual override ensure(deadline) returns (uint amountA, uint amountB, uint liquidity) {
@@ -1094,21 +1093,21 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         address pair = UniswapV2Library.pairFor(factory, tokenA, tokenB);
 ```
 
-ہم اصل میں جمع کی جانے والی مقداروں کا حساب لگاتے ہیں اور پھر سیالیت کا پول کا پتہ تلاش کرتے ہیں۔ گیس بچانے کے لیے ہم فیکٹری سے پوچھ کر ایسا نہیں کرتے، بلکہ لائبریری فنکشن `pairFor` کا استعمال کرتے ہیں (نیچے لائبریریوں میں دیکھیں)
+ہم حقیقت میں جمع کی جانے والی مقداروں کا حساب لگاتے ہیں اور پھر سیالیت کے پول کا پتہ تلاش کرتے ہیں۔ گیس بچانے کے لیے ہم یہ فیکٹری سے پوچھ کر نہیں کرتے، بلکہ لائبریری فنکشن `pairFor` کا استعمال کرتے ہوئے کرتے ہیں (نیچے لائبریریوں میں دیکھیں)
 
 ```solidity
         TransferHelper.safeTransferFrom(tokenA, msg.sender, pair, amountA);
         TransferHelper.safeTransferFrom(tokenB, msg.sender, pair, amountB);
 ```
 
-صارف سے ٹوکنز کی درست مقدار پیئر ایکسچینج میں منتقل کریں۔
+صارف سے ٹوکنز کی درست مقداریں پیئر ایکسچینج میں منتقل کریں۔
 
 ```solidity
         liquidity = IUniswapV2Pair(pair).mint(to);
     }
 ```
 
-اس کے بدلے میں `to` پتے کو پول کی جزوی ملکیت کے لیے سیالیت کے ٹوکنز دیں۔ کور کنٹریکٹ کا `mint` فنکشن دیکھتا ہے کہ اس کے پاس کتنے اضافی ٹوکنز ہیں (اس کے مقابلے میں جو پچھلی بار سیالیت تبدیل ہونے پر اس کے پاس تھے) اور اسی کے مطابق سیالیت ڈھالتا ہے۔
+بدلے میں `to` پتے کو پول کی جزوی ملکیت کے لیے سیالیت کے ٹوکنز دیں۔ کور کنٹریکٹ کا `mint` فنکشن دیکھتا ہے کہ اس کے پاس کتنے اضافی ٹوکنز ہیں (اس کے مقابلے میں جو اس کے پاس پچھلی بار سیالیت تبدیل ہونے پر تھے) اور اسی کے مطابق سیالیت ڈھالتا ہے۔
 
 ```solidity
     function addLiquidityETH(
@@ -1116,7 +1115,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         uint amountTokenDesired,
 ```
 
-جب کوئی لیکویڈیٹی فراہم کنندہ ٹوکن/<span dir="ltr">ETH</span> پیئر ایکسچینج کو سیالیت فراہم کرنا چاہتا ہے، تو کچھ اختلافات ہوتے ہیں۔ کنٹریکٹ لیکویڈیٹی فراہم کنندہ کے لیے <span dir="ltr">ETH</span> کو ریپ کرنے کا کام سنبھالتا ہے۔ یہ بتانے کی ضرورت نہیں ہے کہ صارف کتنے <span dir="ltr">ETH</span> جمع کرنا چاہتا ہے، کیونکہ صارف انہیں صرف ٹرانزیکشن کے ساتھ بھیجتا ہے (یہ مقدار `msg.value` میں دستیاب ہوتی ہے)۔
+جب کوئی لیکویڈیٹی فراہم کنندہ Token/ETH پیئر ایکسچینج کو سیالیت فراہم کرنا چاہتا ہے، تو کچھ اختلافات ہوتے ہیں۔ کنٹریکٹ لیکویڈیٹی فراہم کنندہ کے لیے ETH کو ریپ (wrap) کرنے کا کام سنبھالتا ہے۔ یہ بتانے کی ضرورت نہیں ہے کہ صارف کتنے ETH جمع کرانا چاہتا ہے، کیونکہ صارف انہیں صرف ٹرانزیکشن کے ساتھ بھیجتا ہے (مقدار `msg.value` میں دستیاب ہے)۔
 
 ```solidity
         uint amountTokenMin,
@@ -1138,16 +1137,16 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         assert(IWETH(WETH).transfer(pair, amountETH));
 ```
 
-<span dir="ltr">ETH</span> جمع کرنے کے لیے کنٹریکٹ پہلے اسے ریپڈ ایتھر (ڈبلیو ایتھ) میں ریپ کرتا ہے اور پھر ریپڈ ایتھر (ڈبلیو ایتھ) کو جوڑے میں منتقل کرتا ہے۔ غور کریں کہ منتقلی کو `assert` میں ریپ کیا گیا ہے۔ اس کا مطلب یہ ہے کہ اگر منتقلی ناکام ہو جاتی ہے تو یہ کنٹریکٹ کال بھی ناکام ہو جاتی ہے، اور اس لیے ریپنگ حقیقت میں نہیں ہوتی۔
+ETH جمع کرانے کے لیے کنٹریکٹ پہلے اسے WETH میں ریپ کرتا ہے اور پھر WETH کو جوڑے میں منتقل کرتا ہے۔ غور کریں کہ منتقلی کو ایک `assert` میں ریپ کیا گیا ہے۔ اس کا مطلب ہے کہ اگر منتقلی ناکام ہو جاتی ہے تو یہ کنٹریکٹ کال بھی ناکام ہو جاتی ہے، اور اس لیے ریپنگ حقیقت میں نہیں ہوتی۔
 
 ```solidity
         liquidity = IUniswapV2Pair(pair).mint(to);
-        // ڈسٹ eth ریفنڈ کریں، اگر کوئی ہو
+        // ڈسٹ ETH واپس کریں، اگر کوئی ہو
         if (msg.value > amountETH) TransferHelper.safeTransferETH(msg.sender, msg.value - amountETH);
     }
 ```
 
-صارف ہمیں پہلے ہی <span dir="ltr">ETH</span> بھیج چکا ہے، اس لیے اگر کوئی اضافی رقم بچ جاتی ہے (کیونکہ دوسرا ٹوکن صارف کی سوچ سے کم قیمتی ہے)، تو ہمیں ریفنڈ جاری کرنے کی ضرورت ہے۔
+صارف ہمیں پہلے ہی ETH بھیج چکا ہے، لہذا اگر کوئی اضافی بچ جاتا ہے (کیونکہ دوسرا ٹوکن صارف کی سوچ سے کم قیمتی ہے)، تو ہمیں ریفنڈ جاری کرنے کی ضرورت ہے۔
 
 #### سیالیت ہٹائیں {#remove-liquidity}
 
@@ -1314,31 +1313,31 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 
 ```solidity
     // **** تبادلہ ****
-    // اس کے لیے ضروری ہے کہ ابتدائی رقم پہلے ہی پہلے جوڑے کو بھیجی جا چکی ہو
+    // تقاضا کرتا ہے کہ ابتدائی رقم پہلے ہی پہلے جوڑے کو بھیجی جا چکی ہو
     function _swap(uint[] memory amounts, address[] memory path, address _to) internal virtual {
 ```
 
-یہ فنکشن وہ اندرونی پروسیسنگ انجام دیتا ہے جو ان فنکشنز کے لیے درکار ہوتی ہے جو ٹریڈرز کے لیے ظاہر کیے جاتے ہیں۔
+یہ فنکشن اندرونی پروسیسنگ انجام دیتا ہے جو ان فنکشنز کے لیے درکار ہوتی ہے جو ٹریڈرز کے لیے دستیاب ہوتے ہیں۔
 
 ```solidity
         for (uint i; i < path.length - 1; i++) {
 ```
 
-جب میں یہ لکھ رہا ہوں تو [<span dir="ltr">388,160</span> <span dir="ltr">ERC-20</span> ٹوکنز](https://eth.blockscout.com/tokens) موجود ہیں۔ اگر ہر ٹوکن جوڑے کے لیے ایک پیئر ایکسچینج ہوتا، تو یہ <span dir="ltr">150</span> بلین سے زیادہ پیئر ایکسچینجز ہوتے۔ اس وقت پوری چین میں [اکاؤنٹس کی تعداد اس کا صرف <span dir="ltr">0.1%</span> ہے](https://eth.blockscout.com/stats/accountsGrowth)۔ اس کے بجائے، تبادلہ فنکشنز ایک راستے (path) کے تصور کی حمایت کرتے ہیں۔ ایک ٹریڈر A کا B سے، B کا C سے، اور C کا D سے تبادلہ کر سکتا ہے، اس لیے براہ راست A-D پیئر ایکسچینج کی کوئی ضرورت نہیں ہے۔
+جب میں یہ لکھ رہا ہوں تو [<span dir="ltr">388,160</span> <span dir="ltr">ERC-20</span> ٹوکنز](https://eth.blockscout.com/tokens) موجود ہیں۔ اگر ہر ٹوکن جوڑے کے لیے ایک پیئر ایکسچینج ہوتا، تو یہ <span dir="ltr">150</span> بلین سے زیادہ پیئر ایکسچینجز ہوتے۔ اس وقت پوری چین میں [اکاؤنٹس کی تعداد اس کا صرف <span dir="ltr">0.1%</span> ہے](https://eth.blockscout.com/stats/accountsGrowth)۔ اس کے بجائے، تبادلے کے فنکشنز ایک راستے (path) کے تصور کو سپورٹ کرتے ہیں۔ ایک ٹریڈر A کا B سے، B کا C سے، اور C کا D سے تبادلہ کر سکتا ہے، لہذا براہ راست A-D پیئر ایکسچینج کی کوئی ضرورت نہیں ہے۔
 
-ان مارکیٹوں میں قیمتیں ہم آہنگ (synchronized) ہوتی ہیں، کیونکہ جب وہ ہم آہنگ نہیں ہوتیں تو یہ آربٹریج (arbitrage) کا موقع پیدا کرتی ہیں۔ مثال کے طور پر، تین ٹوکنز A، B، اور C کا تصور کریں۔ تین پیئر ایکسچینجز ہیں، ہر جوڑے کے لیے ایک۔
+ان مارکیٹوں میں قیمتیں ہم آہنگ (synchronized) ہوتی ہیں، کیونکہ جب وہ ہم آہنگ نہیں ہوتیں تو یہ آربٹراج (arbitrage) کا موقع پیدا کرتی ہیں۔ مثال کے طور پر، تین ٹوکنز، A، B، اور C کا تصور کریں۔ تین پیئر ایکسچینجز ہیں، ہر جوڑے کے لیے ایک۔
 
 1. ابتدائی صورتحال
 2. ایک ٹریڈر <span dir="ltr">24.695</span> A ٹوکنز فروخت کرتا ہے اور <span dir="ltr">25.305</span> B ٹوکنز حاصل کرتا ہے۔
 3. ٹریڈر <span dir="ltr">25.305</span> C ٹوکنز کے لیے <span dir="ltr">24.695</span> B ٹوکنز فروخت کرتا ہے، اور تقریباً <span dir="ltr">0.61</span> B ٹوکنز منافع کے طور پر رکھتا ہے۔
-4. پھر ٹریڈر <span dir="ltr">25.305</span> A ٹوکنز کے لیے <span dir="ltr">24.695</span> C ٹوکنز فروخت کرتا ہے، اور تقریباً <span dir="ltr">0.61</span> C ٹوکنز منافع کے طور پر رکھتا ہے۔ ٹریڈر کے پاس <span dir="ltr">0.61</span> اضافی A ٹوکنز بھی ہوتے ہیں (وہ <span dir="ltr">25.305</span> جو ٹریڈر کے پاس آخر میں بچتے ہیں، مائنس <span dir="ltr">24.695</span> کی اصل سرمایہ کاری)۔
+4. پھر ٹریڈر <span dir="ltr">25.305</span> A ٹوکنز کے لیے <span dir="ltr">24.695</span> C ٹوکنز فروخت کرتا ہے، اور تقریباً <span dir="ltr">0.61</span> C ٹوکنز منافع کے طور پر رکھتا ہے۔ ٹریڈر کے پاس <span dir="ltr">0.61</span> اضافی A ٹوکنز بھی ہیں (وہ <span dir="ltr">25.305</span> جن کے ساتھ ٹریڈر اختتام کرتا ہے، مائنس <span dir="ltr">24.695</span> کی اصل سرمایہ کاری)۔
 
 | مرحلہ | A-B ایکسچینج | B-C ایکسچینج | A-C ایکسچینج |
 | ---- | --------------------------- | --------------------------- | --------------------------- |
-| 1 | <span dir="ltr">A:1000 B:1050 A/B=1.05</span> | <span dir="ltr">B:1000 C:1050 B/C=1.05</span> | <span dir="ltr">A:1050 C:1000 C/A=1.05</span> |
-| 2 | <span dir="ltr">A:1024.695 B:1024.695 A/B=1</span> | <span dir="ltr">B:1000 C:1050 B/C=1.05</span> | <span dir="ltr">A:1050 C:1000 C/A=1.05</span> |
-| 3 | <span dir="ltr">A:1024.695 B:1024.695 A/B=1</span> | <span dir="ltr">B:1024.695 C:1024.695 B/C=1</span> | <span dir="ltr">A:1050 C:1000 C/A=1.05</span> |
-| 4 | <span dir="ltr">A:1024.695 B:1024.695 A/B=1</span> | <span dir="ltr">B:1024.695 C:1024.695 B/C=1</span> | <span dir="ltr">A:1024.695 C:1024.695 C/A=1</span> |
+| 1 | A:1000 B:1050 A/B=1.05 | B:1000 C:1050 B/C=1.05 | A:1050 C:1000 C/A=1.05 |
+| 2 | A:1024.695 B:1024.695 A/B=1 | B:1000 C:1050 B/C=1.05 | A:1050 C:1000 C/A=1.05 |
+| 3 | A:1024.695 B:1024.695 A/B=1 | B:1024.695 C:1024.695 B/C=1 | A:1050 C:1000 C/A=1.05 |
+| 4 | A:1024.695 B:1024.695 A/B=1 | B:1024.695 C:1024.695 B/C=1 | A:1024.695 C:1024.695 C/A=1 |
 
 ```solidity
             (address input, address output) = (path[i], path[i + 1]);
@@ -1358,7 +1357,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
             address to = i < path.length - 2 ? UniswapV2Library.pairFor(factory, output, path[i + 2]) : _to;
 ```
 
-کیا یہ آخری ایکسچینج ہے؟ اگر ایسا ہے تو، ٹریڈ کے لیے موصول ہونے والے ٹوکنز کو منزل پر بھیجیں۔ اگر نہیں، تو اسے اگلے پیئر ایکسچینج میں بھیجیں۔
+کیا یہ آخری ایکسچینج ہے؟ اگر ایسا ہے، تو ٹریڈ کے لیے موصول ہونے والے ٹوکنز کو منزل پر بھیجیں۔ اگر نہیں، تو اسے اگلے پیئر ایکسچینج میں بھیجیں۔
 
 ```solidity
 
@@ -1369,13 +1368,13 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     }
 ```
 
-ٹوکنز کا تبادلہ کرنے کے لیے اصل میں پیئر ایکسچینج کو کال کریں۔ ہمیں ایکسچینج کے بارے میں بتانے کے لیے کال بیک کی ضرورت نہیں ہے، اس لیے ہم اس فیلڈ میں کوئی بائٹس نہیں بھیجتے۔
+ٹوکنز کا تبادلہ کرنے کے لیے حقیقت میں پیئر ایکسچینج کو کال کریں۔ ہمیں ایکسچینج کے بارے میں بتانے کے لیے کال بیک (callback) کی ضرورت نہیں ہے، لہذا ہم اس فیلڈ میں کوئی بائٹس نہیں بھیجتے ہیں۔
 
 ```solidity
     function swapExactTokensForTokens(
 ```
 
-یہ فنکشن ٹریڈرز کے ذریعے براہ راست ایک ٹوکن کا دوسرے سے تبادلہ کرنے کے لیے استعمال ہوتا ہے۔
+یہ فنکشن ٹریڈرز کے ذریعے براہ راست ایک ٹوکن کا دوسرے سے تبادلہ کرنے کے لیے استعمال کیا جاتا ہے۔
 
 ```solidity
         uint amountIn,
@@ -1383,11 +1382,11 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         address[] calldata path,
 ```
 
-اس پیرامیٹر میں <span dir="ltr">ERC-20</span> کنٹریکٹس کے پتے شامل ہیں۔ جیسا کہ اوپر وضاحت کی گئی ہے، یہ ایک سرنی (array) ہے کیونکہ آپ کو اپنے موجودہ اثاثے سے مطلوبہ اثاثے تک پہنچنے کے لیے کئی پیئر ایکسچینجز سے گزرنا پڑ سکتا ہے۔
+اس پیرامیٹر میں <span dir="ltr">ERC-20</span> کنٹریکٹس کے پتے شامل ہیں۔ جیسا کہ اوپر وضاحت کی گئی ہے، یہ ایک ارے ہے کیونکہ آپ کو اپنے پاس موجود اثاثے سے مطلوبہ اثاثے تک پہنچنے کے لیے کئی پیئر ایکسچینجز سے گزرنا پڑ سکتا ہے۔
 
-<span dir="ltr">Solidity</span> میں ایک فنکشن پیرامیٹر کو یا تو `memory` میں یا `calldata` میں محفوظ کیا جا سکتا ہے۔ اگر فنکشن کنٹریکٹ کا انٹری پوائنٹ ہے، جسے براہ راست صارف (ٹرانزیکشن کا استعمال کرتے ہوئے) یا کسی مختلف کنٹریکٹ سے کال کیا جاتا ہے، تو پیرامیٹر کی قدر براہ راست کال ڈیٹا سے لی جا سکتی ہے۔ اگر فنکشن کو اندرونی طور پر کال کیا جاتا ہے، جیسا کہ اوپر `_swap`، تو پیرامیٹرز کو `memory` میں محفوظ کرنا ہوگا۔ کال کیے گئے کنٹریکٹ کے نقطہ نظر سے `calldata` صرف پڑھنے کے لیے (read only) ہے۔
+Solidity میں ایک فنکشن پیرامیٹر کو یا تو `memory` میں یا `calldata` میں محفوظ کیا جا سکتا ہے۔ اگر فنکشن کنٹریکٹ کا انٹری پوائنٹ (entry point) ہے، جسے براہ راست کسی صارف (ٹرانزیکشن کا استعمال کرتے ہوئے) یا کسی مختلف کنٹریکٹ سے کال کیا گیا ہے، تو پیرامیٹر کی قدر براہ راست کال ڈیٹا سے لی جا سکتی ہے۔ اگر فنکشن کو اندرونی طور پر کال کیا جاتا ہے، جیسا کہ اوپر `_swap`، تو پیرامیٹرز کو `memory` میں محفوظ کرنا ہوگا۔ کال کیے گئے کنٹریکٹ کے نقطہ نظر سے `calldata` صرف پڑھنے کے لیے (read only) ہے۔
 
-سکیلر اقسام جیسے `uint` یا `address` کے ساتھ کمپائلر ہمارے لیے سٹوریج کے انتخاب کو سنبھالتا ہے، لیکن سرنیوں (arrays) کے ساتھ، جو لمبی اور زیادہ مہنگی ہوتی ہیں، ہم استعمال ہونے والی سٹوریج کی قسم بتاتے ہیں۔
+اسکیلر اقسام جیسے `uint` یا `address` کے ساتھ کمپائلر ہمارے لیے اسٹوریج کے انتخاب کو سنبھالتا ہے، لیکن ارے کے ساتھ، جو طویل اور زیادہ مہنگی ہوتی ہیں، ہم استعمال ہونے والے اسٹوریج کی قسم کی وضاحت کرتے ہیں۔
 
 ```solidity
         address to,
@@ -1395,14 +1394,14 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     ) external virtual override ensure(deadline) returns (uint[] memory amounts) {
 ```
 
-واپسی کی اقدار (Return values) ہمیشہ میموری میں واپس کی جاتی ہیں۔
+واپسی کی قدریں (Return values) ہمیشہ میموری میں واپس کی جاتی ہیں۔
 
 ```solidity
         amounts = UniswapV2Library.getAmountsOut(factory, amountIn, path);
         require(amounts[amounts.length - 1] >= amountOutMin, 'UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT');
 ```
 
-ہر تبادلے میں خریدی جانے والی مقدار کا حساب لگائیں۔ اگر نتیجہ اس کم از کم مقدار سے کم ہے جسے ٹریڈر قبول کرنے کے لیے تیار ہے، تو ٹرانزیکشن کو ریورٹ کر دیں۔
+ہر تبادلے میں خریدی جانے والی مقدار کا حساب لگائیں۔ اگر نتیجہ اس کم از کم سے کم ہے جسے ٹریڈر قبول کرنے کے لیے تیار ہے، تو ٹرانزیکشن کو ریورٹ کر دیں۔
 
 ```solidity
         TransferHelper.safeTransferFrom(
@@ -1412,7 +1411,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     }
 ```
 
-آخر میں، ابتدائی <span dir="ltr">ERC-20</span> ٹوکن کو پہلے پیئر ایکسچینج کے اکاؤنٹ میں منتقل کریں اور `_swap` کو کال کریں۔ یہ سب ایک ہی ٹرانزیکشن میں ہو رہا ہے، اس لیے پیئر ایکسچینج جانتا ہے کہ کوئی بھی غیر متوقع ٹوکنز اس منتقلی کا حصہ ہیں۔
+آخر میں، ابتدائی <span dir="ltr">ERC-20</span> ٹوکن کو پہلے پیئر ایکسچینج کے اکاؤنٹ میں منتقل کریں اور `_swap` کو کال کریں۔ یہ سب ایک ہی ٹرانزیکشن میں ہو رہا ہے، لہذا پیئر ایکسچینج جانتا ہے کہ کوئی بھی غیر متوقع ٹوکنز اس منتقلی کا حصہ ہیں۔
 
 ```solidity
     function swapTokensForExactTokens(
@@ -1431,9 +1430,9 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     }
 ```
 
-پچھلا فنکشن، `swapTokensForTokens`، ٹریڈر کو ان پٹ ٹوکنز کی صحیح تعداد بتانے کی اجازت دیتا ہے جو وہ دینے کے لیے تیار ہے اور آؤٹ پٹ ٹوکنز کی کم از کم تعداد جو وہ بدلے میں وصول کرنے کے لیے تیار ہے۔ یہ فنکشن الٹا تبادلہ کرتا ہے، یہ ٹریڈر کو آؤٹ پٹ ٹوکنز کی وہ تعداد بتانے دیتا ہے جو وہ چاہتا ہے، اور ان پٹ ٹوکنز کی زیادہ سے زیادہ تعداد جو وہ ان کے لیے ادا کرنے کو تیار ہے۔
+پچھلا فنکشن، `swapExactTokensForTokens`، ایک ٹریڈر کو ان پٹ ٹوکنز کی صحیح تعداد بتانے کی اجازت دیتا ہے جو وہ دینے کے لیے تیار ہے اور آؤٹ پٹ ٹوکنز کی کم از کم تعداد جو وہ بدلے میں وصول کرنے کے لیے تیار ہے۔ یہ فنکشن الٹا تبادلہ کرتا ہے، یہ ٹریڈر کو آؤٹ پٹ ٹوکنز کی وہ تعداد بتانے دیتا ہے جو وہ چاہتا ہے، اور ان پٹ ٹوکنز کی زیادہ سے زیادہ تعداد جو وہ ان کے لیے ادا کرنے کو تیار ہے۔
 
-دونوں صورتوں میں، ٹریڈر کو پہلے اس پیریفیری کنٹریکٹ کو ایک الاؤنس دینا ہوگا تاکہ اسے منتقل کرنے کی اجازت مل سکے۔
+دونوں صورتوں میں، ٹریڈر کو پہلے اس پیریفیری کنٹریکٹ کو ایک الاؤنس دینا ہوگا تاکہ اسے انہیں منتقل کرنے کی اجازت مل سکے۔
 
 ```solidity
     function swapExactETHForTokens(uint amountOutMin, address[] calldata path, address to, uint deadline)
@@ -1506,20 +1505,20 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         IWETH(WETH).deposit{value: amounts[0]}();
         assert(IWETH(WETH).transfer(UniswapV2Library.pairFor(factory, path[0], path[1]), amounts[0]));
         _swap(amounts, path, to);
-        // ڈسٹ eth ریفنڈ کریں، اگر کوئی ہو
+        // ڈسٹ ETH واپس کریں، اگر کوئی ہو
         if (msg.value > amounts[0]) TransferHelper.safeTransferETH(msg.sender, msg.value - amounts[0]);
     }
 ```
 
-ان چاروں اقسام میں <span dir="ltr">ETH</span> اور ٹوکنز کے درمیان ٹریڈنگ شامل ہے۔ واحد فرق یہ ہے کہ ہم یا تو ٹریڈر سے <span dir="ltr">ETH</span> وصول کرتے ہیں اور اسے ریپڈ ایتھر (ڈبلیو ایتھ) ڈھالنے کے لیے استعمال کرتے ہیں، یا ہم راستے کے آخری ایکسچینج سے ریپڈ ایتھر (ڈبلیو ایتھ) وصول کرتے ہیں اور اسے جلا دیتے ہیں، اور ٹریڈر کو نتیجے میں ملنے والا <span dir="ltr">ETH</span> واپس بھیج دیتے ہیں۔
+ان چاروں ویریئنٹس (variants) میں ETH اور ٹوکنز کے درمیان ٹریڈنگ شامل ہے۔ فرق صرف اتنا ہے کہ ہم یا تو ٹریڈر سے ETH وصول کرتے ہیں اور اسے WETH ڈھالنے کے لیے استعمال کرتے ہیں، یا ہم راستے میں آخری ایکسچینج سے WETH وصول کرتے ہیں اور اسے جلا دیتے ہیں، اور نتیجے میں ملنے والا ETH ٹریڈر کو واپس بھیج دیتے ہیں۔
 
 ```solidity
-    // **** تبادلہ (fee-on-transfer ٹوکنز کو سپورٹ کرتے ہوئے) ****
-    // اس کے لیے ضروری ہے کہ ابتدائی رقم پہلے ہی پہلے جوڑے کو بھیجی جا چکی ہو
+    // **** تبادلہ (منتقلی پر فیس والے ٹوکنز کی معاونت) ****
+    // تقاضا کرتا ہے کہ ابتدائی رقم پہلے ہی پہلے جوڑے کو بھیجی جا چکی ہو
     function _swapSupportingFeeOnTransferTokens(address[] memory path, address _to) internal virtual {
 ```
 
-یہ ان ٹوکنز کا تبادلہ کرنے کا اندرونی فنکشن ہے جن کی منتقلی یا سٹوریج کی فیس ہوتی ہے تاکہ ([اس مسئلے](https://github.com/Uniswap/uniswap-interface/issues/835)) کو حل کیا جا سکے۔
+یہ ان ٹوکنز کا تبادلہ کرنے کا اندرونی فنکشن ہے جن میں منتقلی یا اسٹوریج کی فیس ہوتی ہے تاکہ ([اس مسئلے](https://github.com/Uniswap/interface/issues/835)) کو حل کیا جا سکے۔
 
 ```solidity
         for (uint i; i < path.length - 1; i++) {
@@ -1528,7 +1527,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
             IUniswapV2Pair pair = IUniswapV2Pair(UniswapV2Library.pairFor(factory, input, output));
             uint amountInput;
             uint amountOutput;
-            { // stack too deep ایررز سے بچنے کے لیے اسکوپ
+            { // اسٹیک ٹو ڈیپ (stack too deep) کی غلطیوں سے بچنے کے لیے اسکوپ
             (uint reserve0, uint reserve1,) = pair.getReserves();
             (uint reserveInput, uint reserveOutput) = input == token0 ? (reserve0, reserve1) : (reserve1, reserve0);
             amountInput = IERC20(input).balanceOf(address(pair)).sub(reserveInput);
@@ -1537,7 +1536,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 
 منتقلی کی فیس کی وجہ سے ہم یہ بتانے کے لیے `getAmountsOut` فنکشن پر انحصار نہیں کر سکتے کہ ہمیں ہر منتقلی سے کتنا ملتا ہے (جس طرح ہم اصل `_swap` کو کال کرنے سے پہلے کرتے ہیں)۔ اس کے بجائے ہمیں پہلے منتقل کرنا ہوگا اور پھر دیکھنا ہوگا کہ ہمیں کتنے ٹوکنز واپس ملے۔
 
-نوٹ: نظریاتی طور پر ہم `_swap` کے بجائے صرف اس فنکشن کو استعمال کر سکتے ہیں، لیکن بعض صورتوں میں (مثال کے طور پر، اگر منتقلی بالآخر ریورٹ ہو جاتی ہے کیونکہ مطلوبہ کم از کم حد کو پورا کرنے کے لیے آخر میں کافی نہیں ہے) تو اس پر زیادہ گیس خرچ ہوگی۔ ٹرانسفر فیس والے ٹوکنز کافی نایاب ہیں، اس لیے اگرچہ ہمیں انہیں ایڈجسٹ کرنے کی ضرورت ہے لیکن تمام تبادلوں کے لیے یہ فرض کرنے کی ضرورت نہیں ہے کہ وہ ان میں سے کم از کم ایک سے گزرتے ہیں۔
+نوٹ: نظریاتی طور پر ہم `_swap` کے بجائے صرف اس فنکشن کو استعمال کر سکتے ہیں، لیکن بعض صورتوں میں (مثال کے طور پر، اگر منتقلی ریورٹ ہو جاتی ہے کیونکہ آخر میں مطلوبہ کم از کم کو پورا کرنے کے لیے کافی نہیں ہے) تو اس پر زیادہ گیس خرچ ہوگی۔ ٹرانسفر فیس والے ٹوکنز کافی نایاب ہیں، لہذا اگرچہ ہمیں انہیں ایڈجسٹ کرنے کی ضرورت ہے لیکن تمام تبادلوں کے لیے یہ فرض کرنے کی ضرورت نہیں ہے کہ وہ ان میں سے کم از کم ایک سے گزرتے ہیں۔
 
 ```solidity
             }
@@ -1616,7 +1615,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     }
 ```
 
-یہ وہی اقسام ہیں جو عام ٹوکنز کے لیے استعمال ہوتی ہیں، لیکن وہ اس کے بجائے `_swapSupportingFeeOnTransferTokens` کو کال کرتی ہیں۔
+یہ وہی ویریئنٹس ہیں جو عام ٹوکنز کے لیے استعمال ہوتے ہیں، لیکن وہ اس کے بجائے `_swapSupportingFeeOnTransferTokens` کو کال کرتے ہیں۔
 
 ```solidity
     // **** لائبریری فنکشنز ****
@@ -1666,7 +1665,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 }
 ```
 
-یہ فنکشنز صرف پراکسیز ہیں جو [UniswapV2Library فنکشنز](#uniswapv2library) کو کال کرتے ہیں۔
+یہ فنکشنز صرف پراکسیز (proxies) ہیں جو [UniswapV2Library فنکشنز](#uniswapv2library) کو کال کرتے ہیں۔
 
 ### UniswapV2Migrator.sol {#uniswapv2migrator}
 
@@ -1760,7 +1759,7 @@ library UQ112x112 {
 
 ### UniswapV2Library {#uniswapv2library}
 
-یہ لائبریری صرف پیریفری (periphery) کنٹریکٹس کے ذریعے استعمال ہوتی ہے
+یہ لائبریری صرف پیریفیری کنٹریکٹس کے ذریعے استعمال کی جاتی ہے
 
 ```solidity
 pragma solidity >=0.5.0;
@@ -1772,7 +1771,7 @@ import "./SafeMath.sol";
 library UniswapV2Library {
     using SafeMath for uint;
 
-    // ترتیب شدہ ٹوکن کے پتے واپس کرتا ہے، اس ترتیب میں ترتیب دیے گئے جوڑوں سے واپسی کی قدروں کو ہینڈل کرنے کے لیے استعمال ہوتا ہے
+    // ترتیب شدہ ٹوکن کے پتے لوٹاتا ہے، جو اس ترتیب میں ترتیب دیے گئے جوڑوں سے واپسی کی قدروں کو سنبھالنے کے لیے استعمال ہوتا ہے
     function sortTokens(address tokenA, address tokenB) internal pure returns (address token0, address token1) {
         require(tokenA != tokenB, 'UniswapV2Library: IDENTICAL_ADDRESSES');
         (token0, token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
@@ -1780,7 +1779,7 @@ library UniswapV2Library {
     }
 ```
 
-دونوں ٹوکنز کو پتے کے لحاظ سے ترتیب دیں، تاکہ ہم ان کے لیے پیئر ایکسچینج (pair exchange) کا پتہ حاصل کر سکیں۔ یہ ضروری ہے کیونکہ بصورت دیگر ہمارے پاس دو امکانات ہوں گے، ایک پیرامیٹرز <span dir="ltr">A,B</span> کے لیے اور دوسرا پیرامیٹرز <span dir="ltr">B,A</span> کے لیے، جس کی وجہ سے ایک کے بجائے دو ایکسچینجز بن جائیں گے۔
+دونوں ٹوکنز کو پتے کے لحاظ سے ترتیب دیں، تاکہ ہم ان کے لیے پیئر ایکسچینج کا پتہ حاصل کر سکیں۔ یہ ضروری ہے کیونکہ بصورت دیگر ہمارے پاس دو امکانات ہوں گے، ایک پیرامیٹرز A,B کے لیے اور دوسرا پیرامیٹرز B,A کے لیے، جس سے ایک کے بجائے دو ایکسچینجز بنیں گے۔
 
 ```solidity
     // کسی بھی بیرونی کال کے بغیر جوڑے کے لیے CREATE2 پتہ کا حساب لگاتا ہے
@@ -1795,10 +1794,10 @@ library UniswapV2Library {
     }
 ```
 
-یہ فنکشن دونوں ٹوکنز کے لیے پیئر ایکسچینج کے پتے کا حساب لگاتا ہے۔ یہ کنٹریکٹ [<span dir="ltr">CREATE2</span> آپ کوڈ](https://eips.ethereum.org/EIPS/eip-1014) کا استعمال کرتے ہوئے بنایا گیا ہے، اس لیے اگر ہم اس کے استعمال کردہ پیرامیٹرز کو جانتے ہوں تو ہم اسی الگورتھم کا استعمال کرتے ہوئے پتے کا حساب لگا سکتے ہیں۔ یہ فیکٹری سے پوچھنے کی نسبت بہت سستا ہے، اور
+یہ فنکشن دو ٹوکنز کے لیے پیئر ایکسچینج کے پتے کا حساب لگاتا ہے۔ یہ کنٹریکٹ [CREATE2 آپ کوڈ](https://eips.ethereum.org/EIPS/eip-1014) کا استعمال کرتے ہوئے بنایا گیا ہے، لہذا اگر ہم اس کے استعمال کردہ پیرامیٹرز کو جانتے ہیں تو ہم اسی الگورتھم کا استعمال کرتے ہوئے پتے کا حساب لگا سکتے ہیں۔ یہ فیکٹری سے پوچھنے سے کہیں زیادہ سستا ہے، اور اس کے لیے کسی بیرونی کال کی ضرورت نہیں ہے۔
 
 ```solidity
-    // جوڑے کے لیے ریزرو لاتا ہے اور ترتیب دیتا ہے
+    // جوڑے کے لیے ذخائر لاتا ہے اور انہیں ترتیب دیتا ہے
     function getReserves(address factory, address tokenA, address tokenB) internal view returns (uint reserveA, uint reserveB) {
         (address token0,) = sortTokens(tokenA, tokenB);
         (uint reserve0, uint reserve1,) = IUniswapV2Pair(pairFor(factory, tokenA, tokenB)).getReserves();
@@ -1806,10 +1805,10 @@ library UniswapV2Library {
     }
 ```
 
-یہ فنکشن ان دو ٹوکنز کے ریزرو (reserves) واپس کرتا ہے جو پیئر ایکسچینج کے پاس ہوتے ہیں۔ یاد رکھیں کہ یہ ٹوکنز کو کسی بھی ترتیب میں وصول کر سکتا ہے، اور انہیں اندرونی استعمال کے لیے ترتیب دیتا ہے۔
+یہ فنکشن ان دو ٹوکنز کے ذخائر واپس کرتا جو پیئر ایکسچینج کے پاس ہیں۔ نوٹ کریں کہ یہ ٹوکنز کو کسی بھی ترتیب میں وصول کر سکتا ہے، اور انہیں اندرونی استعمال کے لیے ترتیب دیتا ہے۔
 
 ```solidity
-    // کسی اثاثے کی کچھ مقدار اور جوڑے کے ریزرو دیے جانے پر، دوسرے اثاثے کی مساوی مقدار واپس کرتا ہے
+    // کسی اثاثے کی کچھ مقدار اور جوڑے کے ذخائر دیے جانے پر، دوسرے اثاثے کی مساوی مقدار لوٹاتا ہے
     function quote(uint amountA, uint reserveA, uint reserveB) internal pure returns (uint amountB) {
         require(amountA > 0, 'UniswapV2Library: INSUFFICIENT_AMOUNT');
         require(reserveA > 0 && reserveB > 0, 'UniswapV2Library: INSUFFICIENT_LIQUIDITY');
@@ -1817,14 +1816,14 @@ library UniswapV2Library {
     }
 ```
 
-یہ فنکشن آپ کو ٹوکن B کی وہ مقدار بتاتا ہے جو آپ کو ٹوکن A کے بدلے میں ملے گی اگر اس میں کوئی فیس شامل نہ ہو۔ یہ حساب اس بات کو مدنظر رکھتا ہے کہ منتقلی سے شرح تبادلہ (exchange rate) تبدیل ہو جاتی ہے۔
+یہ فنکشن آپ کو ٹوکن B کی وہ مقدار دیتا ہے جو آپ کو ٹوکن A کے بدلے میں ملے گی اگر اس میں کوئی فیس شامل نہ ہو۔ یہ حساب اس بات کو مدنظر رکھتا ہے کہ منتقلی شرح تبادلہ کو تبدیل کرتی ہے۔
 
 ```solidity
-    // کسی اثاثے کی ان پٹ مقدار اور جوڑے کے ریزرو دیے جانے پر، دوسرے اثاثے کی زیادہ سے زیادہ آؤٹ پٹ مقدار واپس کرتا ہے
+    // کسی اثاثے کی ان پٹ مقدار اور جوڑے کے ذخائر دیے جانے پر، دوسرے اثاثے کی زیادہ سے زیادہ آؤٹ پٹ مقدار لوٹاتا ہے
     function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {
 ```
 
-اوپر دیا گیا `quote` فنکشن بہت اچھا کام کرتا ہے اگر پیئر ایکسچینج استعمال کرنے کی کوئی فیس نہ ہو۔ تاہم، اگر <span dir="ltr">0.3%</span> ایکسچینج فیس ہو تو آپ کو ملنے والی اصل مقدار کم ہوتی ہے۔ یہ فنکشن ایکسچینج فیس کے بعد کی مقدار کا حساب لگاتا ہے۔
+اوپر دیا گیا `quote` فنکشن بہت اچھا کام کرتا ہے اگر پیئر ایکسچینج استعمال کرنے کی کوئی فیس نہ ہو۔ تاہم، اگر <span dir="ltr">0.3%</span> ایکسچینج فیس ہے تو آپ کو حقیقت میں ملنے والی مقدار کم ہوتی ہے۔ یہ فنکشن ایکسچینج فیس کے بعد کی مقدار کا حساب لگاتا ہے۔
 
 ```solidity
 
@@ -1837,10 +1836,10 @@ library UniswapV2Library {
     }
 ```
 
-Solidity کسروں کو مقامی طور پر ہینڈل نہیں کرتی، اس لیے ہم مقدار کو صرف <span dir="ltr">0.997</span> سے ضرب نہیں دے سکتے۔ اس کے بجائے، ہم نیومریٹر (numerator) کو <span dir="ltr">997</span> سے اور ڈینومینیٹر (denominator) کو <span dir="ltr">1000</span> سے ضرب دیتے ہیں، جس سے وہی نتیجہ حاصل ہوتا ہے۔
+Solidity مقامی طور پر کسر کو ہینڈل نہیں کرتی، لہذا ہم صرف مقدار کو <span dir="ltr">0.997</span> سے ضرب نہیں دے سکتے۔ اس کے بجائے، ہم شمار کنندہ (numerator) کو <span dir="ltr">997</span> سے اور مخرج (denominator) کو <span dir="ltr">1000</span> سے ضرب دیتے ہیں، جس سے وہی اثر حاصل ہوتا ہے۔
 
 ```solidity
-    // کسی اثاثے کی آؤٹ پٹ مقدار اور جوڑے کے ریزرو دیے جانے پر، دوسرے اثاثے کی مطلوبہ ان پٹ مقدار واپس کرتا ہے
+    // کسی اثاثے کی آؤٹ پٹ مقدار اور جوڑے کے ذخائر دیے جانے پر، دوسرے اثاثے کی مطلوبہ ان پٹ مقدار لوٹاتا ہے
     function getAmountIn(uint amountOut, uint reserveIn, uint reserveOut) internal pure returns (uint amountIn) {
         require(amountOut > 0, 'UniswapV2Library: INSUFFICIENT_OUTPUT_AMOUNT');
         require(reserveIn > 0 && reserveOut > 0, 'UniswapV2Library: INSUFFICIENT_LIQUIDITY');
@@ -1850,11 +1849,11 @@ Solidity کسروں کو مقامی طور پر ہینڈل نہیں کرتی، �
     }
 ```
 
-یہ فنکشن تقریباً وہی کام کرتا ہے، لیکن یہ آؤٹ پٹ کی مقدار حاصل کرتا ہے اور ان پٹ فراہم کرتا ہے۔
+یہ فنکشن تقریباً وہی کام کرتا ہے، لیکن یہ آؤٹ پٹ مقدار حاصل کرتا ہے اور ان پٹ فراہم کرتا ہے۔
 
 ```solidity
 
-    // کسی بھی تعداد میں جوڑوں پر زنجیر بند getAmountOut کیلکولیشنز انجام دیتا ہے
+    // کسی بھی تعداد میں جوڑوں پر چین شدہ getAmountOut کیلکولیشنز انجام دیتا ہے
     function getAmountsOut(address factory, uint amountIn, address[] memory path) internal view returns (uint[] memory amounts) {
         require(path.length >= 2, 'UniswapV2Library: INVALID_PATH');
         amounts = new uint[](path.length);
@@ -1865,7 +1864,7 @@ Solidity کسروں کو مقامی طور پر ہینڈل نہیں کرتی، �
         }
     }
 
-    // کسی بھی تعداد میں جوڑوں پر زنجیر بند getAmountIn کیلکولیشنز انجام دیتا ہے
+    // کسی بھی تعداد میں جوڑوں پر چین شدہ getAmountIn کیلکولیشنز انجام دیتا ہے
     function getAmountsIn(address factory, uint amountOut, address[] memory path) internal view returns (uint[] memory amounts) {
         require(path.length >= 2, 'UniswapV2Library: INVALID_PATH');
         amounts = new uint[](path.length);
@@ -1878,18 +1877,18 @@ Solidity کسروں کو مقامی طور پر ہینڈل نہیں کرتی، �
 }
 ```
 
-یہ دونوں فنکشنز ان ویلیوز کی شناخت کو ہینڈل کرتے ہیں جب کئی پیئر ایکسچینجز سے گزرنا ضروری ہو۔
+یہ دو فنکشنز ان اقدار کی شناخت کو سنبھالتے ہیں جب کئی پیئر ایکسچینجز سے گزرنا ضروری ہو۔
 
-### ٹرانسفر ہیلپر (Transfer Helper) {#transfer-helper}
+### ٹرانسفر ہیلپر {#transfer-helper}
 
-[یہ لائبریری](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) <span dir="ltr">ERC-20</span> اور ایتھیریم کی منتقلیوں کے گرد کامیابی کی جانچ کا اضافہ کرتی ہے تاکہ ایک ریورٹ اور `false` ویلیو کی واپسی کو ایک ہی طرح سے ٹریٹ کیا جا سکے۔
+[یہ لائبریری](https://github.com/Uniswap/solidity-lib/blob/master/contracts/libraries/TransferHelper.sol) (ایک ایسی ریپوزٹری میں جو اب آرکائیو ہو چکی ہے) <span dir="ltr">ERC-20</span> اور ایتھیریم کی منتقلیوں کے گرد کامیابی کی جانچ کا اضافہ کرتی ہے تاکہ ایک ریورٹ اور `false` ویلیو کی واپسی کو ایک ہی طرح سے ٹریٹ کیا جا سکے۔
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 pragma solidity >=0.6.0;
 
-// ERC-20 ٹوکنز کے ساتھ تعامل کرنے اور ETH بھیجنے کے لیے ہیلپر میتھڈز جو مستقل طور پر true/false واپس نہیں کرتے ہیں
+// ERC-20 ٹوکنز کے ساتھ تعامل کرنے اور ETH بھیجنے کے لیے ہیلپر میتھڈز جو مستقل طور پر true/false نہیں لوٹاتے
 library TransferHelper {
     function safeApprove(
         address token,
@@ -1901,7 +1900,7 @@ library TransferHelper {
 
 ```
 
-ہم کسی دوسرے کنٹریکٹ کو دو میں سے ایک طریقے سے کال کر سکتے ہیں:
+ہم کسی دوسرے کنٹریکٹ کو دو میں سے کسی ایک طریقے سے کال کر سکتے ہیں:
 
 - فنکشن کال بنانے کے لیے انٹرفیس کی تعریف کا استعمال کریں
 - کال بنانے کے لیے [ایپلیکیشن بائنری انٹرفیس (ABI)](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html) کا "دستی" طور پر استعمال کریں۔ کوڈ کے مصنف نے یہی کرنے کا فیصلہ کیا ہے۔
@@ -1914,7 +1913,7 @@ library TransferHelper {
     }
 ```
 
-<span dir="ltr">ERC-20</span> معیار سے پہلے بنائے گئے ٹوکنز کے ساتھ بیک ورڈ کمپیٹیبلٹی (backwards compatibility) کی خاطر، ایک <span dir="ltr">ERC-20</span> کال یا تو ریورٹ ہو کر ناکام ہو سکتی ہے (جس صورت میں `success` `false` ہوتا ہے) یا کامیاب ہو کر `false` ویلیو واپس کر سکتی ہے (جس صورت میں آؤٹ پٹ ڈیٹا ہوتا ہے، اور اگر آپ اسے بولین (boolean) کے طور پر ڈی کوڈ کرتے ہیں تو آپ کو `false` ملتا ہے)۔
+<span dir="ltr">ERC-20</span> معیار سے پہلے بنائے گئے ٹوکنز کے ساتھ بیک ورڈ کمپیٹیبلٹی کی خاطر، ایک <span dir="ltr">ERC-20</span> کال یا تو ریورٹ ہونے سے ناکام ہو سکتی ہے (جس صورت میں `success` کی ویلیو `false` ہوتی ہے) یا کامیاب ہو کر `false` ویلیو واپس کرنے سے (جس صورت میں آؤٹ پٹ ڈیٹا ہوتا ہے، اور اگر آپ اسے بولین کے طور پر ڈی کوڈ کرتے ہیں تو آپ کو `false` ملتا ہے)۔
 
 ```solidity
 
@@ -1933,7 +1932,7 @@ library TransferHelper {
     }
 ```
 
-یہ فنکشن [<span dir="ltr">ERC-20</span> کی منتقلی کی فعالیت](https://eips.ethereum.org/EIPS/eip-20#transfer) کو نافذ کرتا ہے، جو ایک اکاؤنٹ کو کسی دوسرے اکاؤنٹ کی طرف سے فراہم کردہ الاؤنس خرچ کرنے کی اجازت دیتا ہے۔
+یہ فنکشن [<span dir="ltr">ERC-20</span> کی منتقلی کی فعالیت](https://eips.ethereum.org/EIPS/eip-20#transfer) کو نافذ کرتا ہے، جو ٹوکنز کو کال کرنے والے (اس کنٹریکٹ) سے `to` میں منتقل کرتا ہے۔
 
 ```solidity
 
@@ -1952,7 +1951,7 @@ library TransferHelper {
     }
 ```
 
-یہ فنکشن [<span dir="ltr">ERC-20</span> کی transferFrom فعالیت](https://eips.ethereum.org/EIPS/eip-20#transferfrom) کو نافذ کرتا ہے، جو ایک اکاؤنٹ کو کسی دوسرے اکاؤنٹ کی طرف سے فراہم کردہ الاؤنس خرچ کرنے کی اجازت دیتا ہے۔
+یہ فنکشن [<span dir="ltr">ERC-20</span> کی <span dir="ltr">transferFrom</span> فعالیت](https://eips.ethereum.org/EIPS/eip-20#transferfrom) کو نافذ کرتا ہے، جو کسی اکاؤنٹ کو دوسرے اکاؤنٹ کی طرف سے فراہم کردہ الاؤنس خرچ کرنے کی اجازت دیتا ہے۔
 
 ```solidity
 
@@ -1963,7 +1962,7 @@ library TransferHelper {
 }
 ```
 
-یہ فنکشن کسی اکاؤنٹ میں ایتھر منتقل کرتا ہے۔ کسی دوسرے کنٹریکٹ کو کی جانے والی کوئی بھی کال ایتھر بھیجنے کی کوشش کر سکتی ہے۔ چونکہ ہمیں دراصل کسی فنکشن کو کال کرنے کی ضرورت نہیں ہے، اس لیے ہم کال کے ساتھ کوئی ڈیٹا نہیں بھیجتے۔
+یہ فنکشن کسی اکاؤنٹ میں ایتھر منتقل کرتا ہے۔ کسی دوسرے کنٹریکٹ پر کوئی بھی کال ایتھر بھیجنے کی کوشش کر سکتی ہے۔ چونکہ ہمیں دراصل کسی فنکشن کو کال کرنے کی ضرورت نہیں ہے، اس لیے ہم کال کے ساتھ کوئی ڈیٹا نہیں بھیجتے۔
 
 ## نتیجہ {#conclusion}
 
