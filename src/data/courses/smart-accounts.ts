@@ -211,5 +211,17 @@ export const smartAccountsCourse: Course = {
       type: "choice",
       options: ["app", "familiar", "wallet"],
     },
+    {
+      id: "tokens",
+      source: "/developers/docs/accounts/#key-differences",
+      type: "choice",
+      options: ["itself", "helper", "validators"],
+    },
+    {
+      id: "setup",
+      source: "/roadmap/pectra/7702/#abstract",
+      type: "choice",
+      options: ["delegate", "smart", "wallet"],
+    },
   ],
 }

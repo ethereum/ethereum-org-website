@@ -207,5 +207,19 @@ export const proofOfStakeCourse: Course = {
       type: "choice",
       options: ["same", "less", "more"],
     },
+    {
+      id: "votes",
+      source:
+        "/developers/docs/consensus-mechanisms/pos/attestations/#what-is-an-attestation",
+      type: "choice",
+      options: ["slot", "epoch", "propose"],
+    },
+    {
+      id: "outage",
+      source:
+        "/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/#inactivity-leak",
+      type: "choice",
+      options: ["slashed", "stalls", "half"],
+    },
   ],
 }

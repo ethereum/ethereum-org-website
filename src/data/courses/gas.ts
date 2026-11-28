@@ -199,5 +199,17 @@ export const gasCourse: Course = {
       type: "choice",
       options: ["delete", "self", "next"],
     },
+    {
+      id: "failed",
+      source: "/developers/docs/gas/#what-is-gas-limit",
+      type: "choice",
+      options: ["used", "whole", "limit"],
+    },
+    {
+      id: "jump",
+      source: "/developers/docs/gas/#base-fee",
+      type: "choice",
+      options: ["next", "waits", "failed"],
+    },
   ],
 }
