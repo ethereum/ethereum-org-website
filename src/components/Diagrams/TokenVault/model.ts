@@ -26,6 +26,8 @@
  * investor already holds 200 shares. Fulfillment happens at 1.06.
  */
 
+import type { DiagramText } from "@/lib/types"
+
 /* ---------- Figures and parts ---------- */
 
 export const VAULT_FIGURES = [
@@ -591,5 +593,58 @@ export const getAsyncView = (
         : request === "claimable"
           ? numbers.request
           : zero(numbers.request.unit),
+  }
+}
+
+/* ---------- Values each figure's strings quote ---------- */
+
+/** "95 shares", "1 asset": a plural-aware amount in the locale's digits. */
+export const vaultAmountText = (
+  { number, t }: DiagramText,
+  { value, unit }: VaultAmount
+) => t(`token-vault-amount-${unit}`, { count: value, value: number(value) })
+
+const exampleValues = ({ number }: DiagramText) => ({
+  totalAssets: number(VAULT_EXAMPLE.totalAssets),
+  totalSupply: number(VAULT_EXAMPLE.totalSupply),
+  rate: number(VAULT_EXAMPLE.rate),
+})
+
+export const getVaultInterfaceValues = (text: DiagramText) => ({
+  ...exampleValues(text),
+  ...text.steps(INTERFACE_LAST_STEP),
+})
+
+export const getVaultDepositValues = (text: DiagramText) => {
+  const { deposit, shares } = getSyncView(0)
+  return {
+    ...exampleValues(text),
+    deposit: vaultAmountText(text, { value: deposit, unit: "assets" }),
+    shares: vaultAmountText(text, { value: shares, unit: "shares" }),
+    ...text.steps(SYNC_LAST_STEP),
+  }
+}
+
+/** For a request (the first preset by default). */
+export const getAsyncVaultValues = (
+  text: DiagramText,
+  figure: "async" | "lifecycle",
+  presetId: AsyncPresetId = ASYNC_PRESET_IDS[0]
+) => {
+  const numbers = getAsyncNumbers(presetId)
+  const fns = ASYNC_FUNCTIONS[presetId]
+  return {
+    requestFn: fns.request,
+    claimFn: fns.claim,
+    pendingFn: fns.pending,
+    claimableFn: fns.claimable,
+    requestEvent: fns.requestEvent,
+    claimEvent: fns.claimEvent,
+    amount: vaultAmountText(text, numbers.request),
+    atRequest: vaultAmountText(text, numbers.atRequest),
+    received: vaultAmountText(text, numbers.received),
+    rate: text.number(numbers.rate),
+    rateAtRequest: text.number(numbers.rateAtRequest),
+    ...text.steps(figure === "async" ? ASYNC_LAST_STEP : LIFECYCLE_LAST_STEP),
   }
 }

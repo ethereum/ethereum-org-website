@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "dev:webpack": "next dev --webpack",
+    "prebuild": "pnpm agent-md",
     "build": "next build",
     "build:webpack": "next build --webpack",
     "start": "next start",
@@ -30,6 +31,7 @@
     "lint:md:fix": "markdownlint-cli2 --fix \"public/content/**/*.md\" \"!public/content/translations/**\"",
     "intl:estimate": "MODE=estimate tsx ./src/scripts/intl-pipeline/estimate.ts",
     "intl:identity-sweep": "tsx ./src/scripts/intl-pipeline/identity-sweep.ts",
+    "agent-md": "tsx src/scripts/agent-markdown.ts",
     "update-tutorials": "tsx src/scripts/update-tutorials-list.ts",
     "sync-upgrades": "tsx src/scripts/sync-upgrades/main.ts",
     "prepare": "husky",

@@ -51,6 +51,7 @@
     "/.well-known/*",
     "/images/*",
     "/content/*",
+    "/agent-md/*",
     "/videos/*",
     "/audio/*",
     "/code-examples/*",

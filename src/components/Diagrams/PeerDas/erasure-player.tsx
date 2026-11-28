@@ -13,18 +13,19 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 import { Button } from "@/components/ui/buttons/Button"
 
 import ErasureRig from "./erasure-rig"
 import {
-  BLOB_VALUES,
   DEFAULT_VALUES,
   ERASURE_LAST_STEP,
   ERASURE_PARTS,
   type ErasurePart,
-  EXTENDED_BLOB_VALUES,
+  getErasureCaptionValues,
+  getErasureValues,
   getErasureView,
   LOSS_PRESET_IDS,
   type LossPresetId,
@@ -59,6 +60,7 @@ export function ErasureCodingPlayer({
 }: ErasureCodingPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
   const valuesLabelId = useId()
 
@@ -125,21 +127,11 @@ export function ErasureCodingPlayer({
   return (
     <InteractiveDiagram
       className={className}
-      caption={t("peer-das-erasure-caption", {
-        needed: format(NEEDED_POINTS),
-        total: format(SLOT_COUNT),
-        original: format(BLOB_VALUES),
-        extended: format(EXTENDED_BLOB_VALUES),
-      })}
-      description={t("peer-das-erasure-description", {
-        ...numbers,
-        original: format(NEEDED_POINTS),
-        blob: format(BLOB_VALUES),
-        extended: format(EXTENDED_BLOB_VALUES),
-        step1: format(1),
-        step2: format(2),
-        step3: format(3),
-      })}
+      caption={t("peer-das-erasure-caption", getErasureCaptionValues(text))}
+      description={t(
+        "peer-das-erasure-description",
+        getErasureValues(text, presetId)
+      )}
       fig={fig}
       title={t("peer-das-erasure-title")}
       status={t(`peer-das-erasure-status-${view.motion}`)}

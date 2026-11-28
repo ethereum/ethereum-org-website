@@ -13,12 +13,14 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
 import {
   BISECTION_ROUNDS,
   CHALLENGE_DAY,
+  getOptimisticRollupValues,
   getOptimisticRollupView,
   OPTIMISTIC_ROLLUP_LAST_STEP,
   OPTIMISTIC_ROLLUP_PARTS,
@@ -55,6 +57,7 @@ export function OptimisticRollupPlayer({
 }: OptimisticRollupPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
 
   const [presetId, setPresetId] =
@@ -124,12 +127,10 @@ export function OptimisticRollupPlayer({
     <InteractiveDiagram
       className={className}
       caption={t("optimistic-rollup-caption")}
-      description={t("optimistic-rollup-description", {
-        ...shared,
-        ...Object.fromEntries(
-          [1, 2, 3, 4, 5].map((n) => [`step${n}`, format(n)])
-        ),
-      })}
+      description={t(
+        "optimistic-rollup-description",
+        getOptimisticRollupValues(text)
+      )}
       fig={fig}
       title={t("optimistic-rollup-title")}
       status={t(`optimistic-rollup-status-${view.key}`)}

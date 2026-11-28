@@ -30,6 +30,8 @@
  *   counts them from slot n+3 (step 5), when D's proposer picks the head.
  */
 
+import type { DiagramText } from "@/lib/types"
+
 /** viewBox of the drawing. */
 export const EX_ANTE_REORG_SIZE = { width: 480, height: 300 }
 
@@ -165,3 +167,13 @@ export const getExAnteReorgView = (
     key: step >= 2 ? `${motion}-${preset}` : motion,
   }
 }
+
+/** Values the figure's strings quote. */
+export const getExAnteReorgValues = ({ number, steps }: DiagramText) => ({
+  ...SLOT_NAMES,
+  committee: number(COMMITTEE_VOTES),
+  attacker: number(ATTACKER_VOTES),
+  honest: number(HONEST_VOTES),
+  boost: number(PROPOSER_BOOST_VOTES),
+  ...steps(EX_ANTE_REORG_LAST_STEP),
+})

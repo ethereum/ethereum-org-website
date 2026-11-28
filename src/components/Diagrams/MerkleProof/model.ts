@@ -12,6 +12,8 @@
  * precomputed (no inputs are user-editable), so no keccak ships to the page.
  */
 
+import type { DiagramText } from "@/lib/types"
+
 /** viewBox of the drawing. */
 export const MERKLE_PROOF_SIZE = { width: 460, height: 300 }
 
@@ -199,3 +201,10 @@ export const getMerkleProofView = (
     result: motion === "compare" ? (data.matches ? "match" : "mismatch") : null,
   }
 }
+
+/** Values the figure's description quotes. */
+export const getMerkleProofValues = ({ number, steps }: DiagramText) => ({
+  leaves: number(LEAVES),
+  proofSize: number(PROOF_SIZE),
+  ...steps(MERKLE_PROOF_LAST_STEP),
+})

@@ -53,6 +53,9 @@ next-env.d.ts
 # route handler stays tracked -- mirrors /sitemap*.xml above)
 /robots.txt
 
+# Agent-facing markdown, written before each build (pnpm agent-md)
+/public/agent-md/
+
 # Local Netlify folder
 .netlify
 

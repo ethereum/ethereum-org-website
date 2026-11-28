@@ -2,7 +2,7 @@
 
 import { useMemo } from "react"
 import { Send } from "lucide-react"
-import { useLocale, useTranslations } from "next-intl"
+import { useTranslations } from "next-intl"
 
 import { useDiagramInView } from "@/components/Diagrams/diagram-hover"
 import {
@@ -12,21 +12,17 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
-import { numberFormat } from "@/lib/utils/numbers"
-
 import {
+  getTxApplyValues,
   getTxApplyView,
-  GWEI_PER_ETH,
   TX_APPLY_LAST_STEP,
   TX_APPLY_PARTS,
   TX_APPLY_STEPS,
-  TX_BURN_GWEI,
-  TX_EXAMPLE,
-  TX_FEE_GWEI,
-  TX_TIP_GWEI,
+  txApplyEth,
   type TxApplyPart,
 } from "./model"
 import TxApplyRig from "./rig"
@@ -53,8 +49,8 @@ export function TxApplyPlayer({
   className,
 }: TxApplyPlayerProps) {
   const t = useTranslations("component-diagrams")
-  const locale = useLocale()
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
   const { step, isRunning, atEnd, run, goTo, reset } = useStepPlayer({
     idle: IDLE_STEP,
@@ -64,37 +60,17 @@ export function TxApplyPlayer({
   })
   const view = useMemo(() => getTxApplyView(step), [step])
 
-  // ETH amounts, from whole gwei; signed for balance changes.
-  const { eth, signedEth, signed } = useMemo(() => {
-    const ethFormat = numberFormat(locale, { maximumFractionDigits: 5 })
-    const signedFormat = numberFormat(locale, {
-      maximumFractionDigits: 5,
-      signDisplay: "exceptZero",
-    })
-    const signedInt = numberFormat(locale, { signDisplay: "exceptZero" })
-    return {
-      eth: (gwei: number) =>
-        t("tx-apply-eth", { amount: ethFormat.format(gwei / GWEI_PER_ETH) }),
-      signedEth: (gwei: number) =>
-        t("tx-apply-eth", {
-          amount: signedFormat.format(gwei / GWEI_PER_ETH),
-        }),
-      signed: (value: number) => signedInt.format(value),
-    }
-  }, [locale, t])
+  const { eth, signedEth, signed } = useMemo(
+    () => ({
+      eth: (gwei: number) => txApplyEth(text, gwei),
+      signedEth: (gwei: number) => txApplyEth(text, gwei, true),
+      signed: (value: number) =>
+        text.number(value, { signDisplay: "exceptZero" }),
+    }),
+    [text]
+  )
 
-  const amounts = {
-    value: eth(TX_EXAMPLE.valueGwei),
-    fee: eth(TX_FEE_GWEI),
-    burned: eth(TX_BURN_GWEI),
-    tip: eth(TX_TIP_GWEI),
-    sent: eth(TX_EXAMPLE.valueGwei + TX_FEE_GWEI),
-    nonce: signed(1),
-    step: format(view.step),
-    ...Object.fromEntries(
-      [1, 2, 3, 4].map((n) => [`step${n}`, format(n)] as const)
-    ),
-  }
+  const amounts = { ...getTxApplyValues(text), step: format(view.step) }
 
   const { labels, definitions, parts } = useMemo(() => {
     const labels = {} as Record<TxApplyPart, string>

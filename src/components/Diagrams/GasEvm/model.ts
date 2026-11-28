@@ -10,6 +10,8 @@
  * 21,000.
  */
 
+import type { DiagramText } from "@/lib/types"
+
 export const INTRINSIC_GAS = 21_000
 
 /** viewBox of the drawing. */
@@ -43,6 +45,19 @@ export const PROGRAM: Instruction[] = [
   { op: "SSTORE", cost: 22_100 },
   { op: "STOP", cost: 0 },
 ]
+
+// Numbers quoted in the description and definitions, from the program.
+export const PUSH = PROGRAM.find((ins) => ins.op === "PUSH1")!
+export const SSTORE = PROGRAM.find((ins) => ins.op === "SSTORE")!
+const SLOT = PROGRAM.filter((ins) => ins.op === "PUSH1")[1]!
+
+/** Values the figure's description quotes. */
+export const getGasEvmValues = ({ number }: DiagramText) => ({
+  intrinsic: number(INTRINSIC_GAS),
+  value: number(PUSH.arg ?? 0),
+  slot: number(SLOT.arg ?? 0),
+  sstore: number(SSTORE.cost),
+})
 
 /** Byte offset of each opcode in the code: PUSH1 takes a one-byte operand. */
 const BYTE_OFFSETS = PROGRAM.map((_, i) =>

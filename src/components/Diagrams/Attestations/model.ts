@@ -18,6 +18,8 @@
  * aggregates do.
  */
 
+import type { DiagramText } from "@/lib/types"
+
 /** viewBox of the drawing. */
 export const ATTESTATIONS_SIZE = { width: 480, height: 320 }
 
@@ -151,3 +153,11 @@ export const getAttestationsView = (
     key: included && preset === "missed" ? "include-missed" : motion,
   }
 }
+
+/** Values the figure's description quotes. */
+export const getAttestationsValues = ({ number, steps }: DiagramText) => ({
+  members: number(COMMITTEE_MEMBERS),
+  signedA: number(SIGNED_A),
+  signedB: number(SIGNED_B),
+  ...steps(ATTESTATIONS_LAST_STEP),
+})

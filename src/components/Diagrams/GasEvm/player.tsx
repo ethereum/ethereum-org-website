@@ -13,6 +13,7 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
@@ -21,9 +22,10 @@ import {
   GAS_EVM_PRESET_IDS,
   type GasEvmPart,
   type GasEvmPresetId,
+  getGasEvmValues,
   getGasEvmView,
-  INTRINSIC_GAS,
-  PROGRAM,
+  PUSH,
+  SSTORE,
 } from "./model"
 import GasEvmRig from "./rig"
 
@@ -38,11 +40,6 @@ const PARTS: GasEvmPart[] = [
   "memory",
   "storage",
 ]
-
-// Numbers quoted in the description and definitions, from the program.
-const PUSH = PROGRAM.find((ins) => ins.op === "PUSH1")!
-const SSTORE = PROGRAM.find((ins) => ins.op === "SSTORE")!
-const SLOT = PROGRAM.filter((ins) => ins.op === "PUSH1")[1]!
 
 interface GasEvmPlayerProps {
   initialPreset?: GasEvmPresetId
@@ -64,6 +61,7 @@ export function GasEvmPlayer({
 }: GasEvmPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
 
   const [presetId, setPresetId] = useState<GasEvmPresetId>(initialPreset)
@@ -117,12 +115,7 @@ export function GasEvmPlayer({
     <InteractiveDiagram
       className={className}
       caption={t("gas-evm-caption")}
-      description={t("gas-evm-description", {
-        intrinsic: format(INTRINSIC_GAS),
-        value: format(PUSH.arg ?? 0),
-        slot: format(SLOT.arg ?? 0),
-        sstore: format(SSTORE.cost),
-      })}
+      description={t("gas-evm-description", getGasEvmValues(text))}
       fig={fig}
       title={t("gas-evm-title")}
       status={

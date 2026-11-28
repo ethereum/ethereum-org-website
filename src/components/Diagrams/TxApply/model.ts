@@ -10,6 +10,8 @@
  * sender = −(1 + 0.0042) = −1.0042 ETH.
  */
 
+import type { DiagramText } from "@/lib/types"
+
 /** viewBox of the drawing. */
 export const TX_APPLY_SIZE = { width: 480, height: 330 }
 
@@ -101,3 +103,27 @@ export const getTxApplyView = (requestedStep: number): TxApplyView => {
     captionKey: `tx-apply-step-${motion}`,
   }
 }
+
+/** An ETH amount from whole gwei; `signed` for a balance change. */
+export const txApplyEth = (
+  { number, t }: DiagramText,
+  gwei: number,
+  signed = false
+) =>
+  t("tx-apply-eth", {
+    amount: number(gwei / GWEI_PER_ETH, {
+      maximumFractionDigits: 5,
+      ...(signed && { signDisplay: "exceptZero" }),
+    }),
+  })
+
+/** Values the figure's strings quote. */
+export const getTxApplyValues = (text: DiagramText) => ({
+  value: txApplyEth(text, TX_EXAMPLE.valueGwei),
+  fee: txApplyEth(text, TX_FEE_GWEI),
+  burned: txApplyEth(text, TX_BURN_GWEI),
+  tip: txApplyEth(text, TX_TIP_GWEI),
+  sent: txApplyEth(text, TX_EXAMPLE.valueGwei + TX_FEE_GWEI),
+  nonce: text.number(1, { signDisplay: "exceptZero" }),
+  ...text.steps(TX_APPLY_LAST_STEP),
+})

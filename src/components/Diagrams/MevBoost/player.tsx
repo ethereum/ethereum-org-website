@@ -11,16 +11,17 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
 import {
+  getMevBoostValues,
   getMevBoostView,
   MEV_BOOST_LAST_STEP,
   MEV_BOOST_PARTS,
   MEV_BOOST_STEPS,
   type MevBoostPart,
-  WINNING_BID,
 } from "./model"
 import MevBoostRig from "./rig"
 
@@ -46,6 +47,7 @@ export function MevBoostPlayer({
 }: MevBoostPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
   const { step, isRunning, atEnd, run, goTo, reset } = useStepPlayer({
     idle: IDLE_STEP,
@@ -71,7 +73,7 @@ export function MevBoostPlayer({
     return { labels, definitions, parts }
   }, [t])
 
-  const bid = format(WINNING_BID)
+  const values = getMevBoostValues(text)
   const captionFor = (index: number) =>
     t(`mev-boost-step-${MEV_BOOST_STEPS[index]}`, { step: format(index) })
   const none = t("mev-boost-readout-none")
@@ -80,15 +82,10 @@ export function MevBoostPlayer({
     <InteractiveDiagram
       className={className}
       caption={t("mev-boost-caption")}
-      description={t("mev-boost-description", {
-        ...Object.fromEntries(
-          [1, 2, 3, 4, 5].map((n) => [`step${n}`, format(n)])
-        ),
-        bid,
-      })}
+      description={t("mev-boost-description", values)}
       fig={fig}
       title={t("mev-boost-title")}
-      status={t(`mev-boost-status-${view.motion}`, { bid })}
+      status={t(`mev-boost-status-${view.motion}`, values)}
       parts={parts}
       legend={[
         { hue: "entity", label: t("mev-boost-legend-parties") },

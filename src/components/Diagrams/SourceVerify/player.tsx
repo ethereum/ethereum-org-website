@@ -12,11 +12,13 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
 import {
   GET_CODE,
+  getSourceVerifyValues,
   getSourceVerifyView,
   SOURCE_VERIFY_LAST_STEP,
   SOURCE_VERIFY_PARTS,
@@ -50,6 +52,7 @@ export function SourceVerifyPlayer({
 }: SourceVerifyPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
 
   const [presetId, setPresetId] = useState<SourceVerifyPresetId>(initialPreset)
@@ -92,10 +95,7 @@ export function SourceVerifyPlayer({
     <InteractiveDiagram
       className={className}
       caption={t("source-verify-caption")}
-      description={t(
-        "source-verify-description",
-        Object.fromEntries([1, 2, 3, 4].map((n) => [`step${n}`, format(n)]))
-      )}
+      description={t("source-verify-description", getSourceVerifyValues(text))}
       fig={fig}
       title={t("source-verify-title")}
       status={t(`source-verify-status-${view.key}`)}

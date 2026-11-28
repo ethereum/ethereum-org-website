@@ -12,20 +12,21 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
 import {
-  ASYNC_FUNCTIONS,
   ASYNC_LAST_STEP,
   ASYNC_PRESET_IDS,
   type AsyncPresetId,
-  getAsyncNumbers,
+  getAsyncVaultValues,
   getAsyncView,
   LIFECYCLE_LAST_STEP,
+  vaultAmountText,
 } from "./model"
 import TokenVaultRig from "./rig"
-import { useVaultAmount, useVaultParts } from "./use-vault-parts"
+import { useVaultParts } from "./use-vault-parts"
 
 const IDLE_STEP = 0
 
@@ -47,14 +48,14 @@ interface AsyncVaultPlayerProps {
  */
 export function AsyncVaultPlayer({
   figure,
-  initialPreset = "deposit",
+  initialPreset = ASYNC_PRESET_IDS[0],
   initialStep = IDLE_STEP,
   fig,
   className,
 }: AsyncVaultPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
-  const amount = useVaultAmount()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
   const { labels, definitions, parts } = useVaultParts(figure)
   const last = figure === "async" ? ASYNC_LAST_STEP : LIFECYCLE_LAST_STEP
@@ -72,23 +73,10 @@ export function AsyncVaultPlayer({
     [figure, presetId, step]
   )
 
-  const params = useMemo(() => {
-    const numbers = getAsyncNumbers(presetId)
-    const fns = ASYNC_FUNCTIONS[presetId]
-    return {
-      requestFn: fns.request,
-      claimFn: fns.claim,
-      pendingFn: fns.pending,
-      claimableFn: fns.claimable,
-      requestEvent: fns.requestEvent,
-      claimEvent: fns.claimEvent,
-      amount: amount(numbers.request, format),
-      atRequest: amount(numbers.atRequest, format),
-      received: amount(numbers.received, format),
-      rate: format(numbers.rate),
-      rateAtRequest: format(numbers.rateAtRequest),
-    }
-  }, [presetId, amount, format])
+  const params = useMemo(
+    () => getAsyncVaultValues(text, figure, presetId),
+    [text, figure, presetId]
+  )
 
   const captionFor = (i: number) => {
     const v = getAsyncView(figure, presetId, i)
@@ -116,23 +104,25 @@ export function AsyncVaultPlayer({
           },
           {
             label: t("token-vault-readout-received"),
-            value: view.received ? amount(view.received, format) : none,
+            value: view.received ? vaultAmountText(text, view.received) : none,
           },
         ]
       : [
           {
             label: t("token-vault-request-pending"),
-            value: view.pending ? amount(view.pending, format) : none,
+            value: view.pending ? vaultAmountText(text, view.pending) : none,
           },
           {
             label: t("token-vault-request-claimable"),
-            value: view.claimable ? amount(view.claimable, format) : none,
+            value: view.claimable
+              ? vaultAmountText(text, view.claimable)
+              : none,
           },
           {
             label: t("token-vault-readout-received"),
             value:
               view.request === "claimed" && view.received
-                ? amount(view.received, format)
+                ? vaultAmountText(text, view.received)
                 : none,
           },
         ]
@@ -141,15 +131,7 @@ export function AsyncVaultPlayer({
     <InteractiveDiagram
       className={className}
       caption={t(`${prefix}-caption`)}
-      description={t(`${prefix}-description`, {
-        ...params,
-        ...Object.fromEntries(
-          Array.from({ length: last }, (_, i) => [
-            `step${i + 1}`,
-            format(i + 1),
-          ])
-        ),
-      })}
+      description={t(`${prefix}-description`, params)}
       fig={fig}
       title={t(`${prefix}-title`)}
       status={t(`${prefix}-status-${view.stepId}`)}

@@ -12,10 +12,12 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
 import {
+  getNodeNetworksValues,
   getNodeNetworksView,
   NODE_NETWORKS_PRESETS,
   NODE_NETWORKS_STEPS,
@@ -51,6 +53,7 @@ export function NodeNetworksPlayer({
 }: NodeNetworksPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
   const [preset, setPreset] = useState<NodeNetworksPreset>(initialPreset)
   const last = nodeNetworksLastStep(preset)
@@ -74,7 +77,7 @@ export function NodeNetworksPlayer({
       caption={t("node-clients-networks-caption")}
       description={t(
         "node-clients-networks-description",
-        Object.fromEntries([1, 2, 3, 4].map((n) => [`step${n}`, format(n)]))
+        getNodeNetworksValues(text)
       )}
       fig={fig}
       title={t("node-clients-networks-title")}

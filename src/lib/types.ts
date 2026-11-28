@@ -1527,3 +1527,34 @@ export interface CatalogItem {
   breadcrumbSlug: string
   next?: { name: string; href: string }
 }
+
+/** ICU values for a diagram string: formatted text, or raw numbers for plurals. */
+export type DiagramValues = Record<string, string | number>
+
+/** Locale formatting a diagram model fills its strings with. */
+export interface DiagramText {
+  /** A locale number, through `numberFormat()`. */
+  number: (value: number, options?: Intl.NumberFormatOptions) => string
+  /** A `component-diagrams` message. */
+  t: (key: string, values?: DiagramValues) => string
+  /** `step1` to `step{last}`, the step numbers a description quotes. */
+  steps: (last: number) => DiagramValues
+}
+
+/** How a diagram's markdown tag reads as text: its key prefix and values. */
+export interface DiagramFigureText {
+  /** Prefix of its `-title`, `-caption` and `-description` keys. */
+  prefix: string
+  /** Every value its title, caption and description quote. */
+  values: (text: DiagramText) => DiagramValues
+  /** The caption's values, when an argument means something else there. */
+  captionValues?: (text: DiagramText) => DiagramValues
+  /** Scenarios whose description values differ: each preset's label key and values. */
+  presets?: { label: string; values: (text: DiagramText) => DiagramValues }[]
+}
+
+/**
+ * How an MDX tag reads in the agent-facing markdown, given its figure number
+ * on the page (diagrams only). Throws when it can't be written.
+ */
+export type AgentTagText = (fig: number) => string

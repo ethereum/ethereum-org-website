@@ -27,6 +27,8 @@
  *   4 for the Verkle tree.
  */
 
+import type { DiagramText } from "@/lib/types"
+
 /** viewBox of the drawing. */
 export const VERKLE_TREE_SIZE = { width: 440, height: 350 }
 
@@ -152,3 +154,29 @@ export const getVerkleTreeView = (
     proofItems: proof ? MERKLE_SIBLINGS : null,
   }
 }
+
+/** Values the figure's description quotes; its steps are the Verkle lookup's. */
+export const getVerkleTreeValues = ({ number, steps }: DiagramText) => ({
+  width: number(VERKLE_WIDTH),
+  merkleWidth: number(MERKLE_WIDTH),
+  nibbleBits: number(NIBBLE_BITS),
+  marker: number(EXTENSION_MARKER),
+  stemBytes: number(STEM_BYTES),
+  suffix: number(EXAMPLE_SUFFIX),
+  c1From: number(C1_RANGE[0]),
+  c1To: number(C1_RANGE[1]),
+  c2From: number(C2_RANGE[0]),
+  c2To: number(C2_RANGE[1]),
+  valueBytes: number(VALUE_BYTES),
+  halfBytes: number(HALF_BYTES),
+  valueBits: number(VALUE_BITS),
+  safeBits: number(SAFE_BITS),
+  levels: number(VERKLE_LEVELS),
+  merkleLevels: number(MERKLE_LEVELS),
+  commitments: number(VERKLE_COMMITMENTS),
+  siblings: number(MERKLE_SIBLINGS_PER_LEVEL),
+  total: number(MERKLE_SIBLINGS),
+  verkleBytes: number(WITNESS_BYTES.verkle),
+  merkleKb: number(WITNESS_BYTES.merkle),
+  ...steps(verkleTreeLastStep("verkle")),
+})

@@ -13,6 +13,8 @@
  * mainnet levels (about 0.1 gwei); cooling off starts high to show the fall.
  */
 
+import type { DiagramText } from "@/lib/types"
+
 /** viewBox of the drawing. */
 export const BASE_FEE_SIZE = { width: 480, height: 306 }
 
@@ -179,3 +181,16 @@ export const getBaseFeeView = (
 /** Base fee of block n (1-based); n = BLOCK_COUNT + 1 is the next block. */
 export const feeOf = (view: BaseFeeView, n: number) =>
   n <= BLOCK_COUNT ? view.blocks[n - 1].baseFeeGwei : view.nextGwei
+
+/** Values the figure's caption and description quote. */
+export const getBaseFeeValues = ({ number }: DiagramText) => {
+  const gwei = { maximumSignificantDigits: 4 }
+  return {
+    blocks: number(BLOCK_COUNT),
+    limit: number(GAS_LIMIT),
+    target: number(GAS_TARGET),
+    start: number(BASE_FEE_START_WEI.spike / 1e9, gwei),
+    coolingStart: number(BASE_FEE_START_WEI.cooling / 1e9, gwei),
+    max: number(MAX_CHANGE, { style: "percent", maximumFractionDigits: 3 }),
+  }
+}

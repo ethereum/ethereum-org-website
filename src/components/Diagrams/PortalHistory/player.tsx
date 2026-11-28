@@ -11,11 +11,12 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
 import {
-  EXAMPLE_BLOCK,
+  getPortalHistoryValues,
   getPortalHistoryView,
   PORTAL_HISTORY_LAST_STEP,
   PORTAL_HISTORY_PARTS,
@@ -47,6 +48,7 @@ export function PortalHistoryPlayer({
 }: PortalHistoryPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
   const { step, isRunning, atEnd, run, goTo, reset } = useStepPlayer({
     idle: IDLE_STEP,
@@ -72,11 +74,11 @@ export function PortalHistoryPlayer({
     return { labels, definitions, parts }
   }, [t])
 
-  const block = format(EXAMPLE_BLOCK)
+  const values = getPortalHistoryValues(text)
   const captionFor = (index: number) =>
     t(`portal-history-step-${PORTAL_HISTORY_STEPS[index]}`, {
+      ...values,
       step: format(index),
-      block,
     })
   const none = t("portal-history-readout-none")
 
@@ -84,13 +86,10 @@ export function PortalHistoryPlayer({
     <InteractiveDiagram
       className={className}
       caption={t("portal-history-caption")}
-      description={t("portal-history-description", {
-        ...Object.fromEntries([1, 2, 3, 4].map((n) => [`step${n}`, format(n)])),
-        block,
-      })}
+      description={t("portal-history-description", values)}
       fig={fig}
       title={t("portal-history-title")}
-      status={t(`portal-history-status-${view.motion}`, { block })}
+      status={t(`portal-history-status-${view.motion}`, values)}
       parts={parts}
       legend={[
         { hue: "entity", label: t("portal-history-legend-entity") },
@@ -137,7 +136,7 @@ export function PortalHistoryPlayer({
           rows={[
             {
               label: t("portal-history-readout-block"),
-              value: view.located ? block : none,
+              value: view.located ? values.block : none,
             },
             {
               label: t("portal-history-readout-message"),

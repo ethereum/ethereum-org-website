@@ -13,10 +13,12 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
 import {
+  getNodeArchitectureValues,
   getNodeArchitectureView,
   NODE_ARCHITECTURE_PRESETS,
   NODE_ARCHITECTURE_STEPS,
@@ -53,6 +55,7 @@ export function NodeArchitecturePlayer({
 }: NodeArchitecturePlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
   const [preset, setPreset] = useState<NodeArchitecturePreset>(initialPreset)
   const last = nodeArchitectureLastStep(preset)
@@ -86,7 +89,7 @@ export function NodeArchitecturePlayer({
       caption={t("node-clients-architecture-caption")}
       description={t(
         "node-clients-architecture-description",
-        Object.fromEntries([1, 2, 3, 4].map((n) => [`step${n}`, format(n)]))
+        getNodeArchitectureValues(text)
       )}
       fig={fig}
       title={t("node-clients-architecture-title")}

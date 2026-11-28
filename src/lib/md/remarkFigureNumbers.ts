@@ -1,6 +1,6 @@
 import { visit } from "unist-util-visit"
 
-const DIAGRAM = /^[A-Z]\w*Diagram$/
+export const DIAGRAM = /^[A-Z]\w*Diagram$/
 
 // Numbers the interactive diagrams (`<GasTxDiagram />`, ...) in page order by
 // injecting `fig={n}`, which renders "Fig. N" and the `#fig-N` anchor. Images
