@@ -3,7 +3,7 @@ title: "ABI ngắn để tối ưu hóa dữ liệu lệnh gọi"
 description: "Tối ưu hóa hợp đồng thông minh cho bản cuộn Optimistic"
 author: Ori Pomerantz
 lang: vi
-tags: ["lớp 2 (l2)"]
+tags: ["lớp 2 (L2)"]
 skill: intermediate
 breadcrumb: "ABI ngắn"
 published: 2022-04-01
@@ -21,46 +21,75 @@ Tuy nhiên, kỹ thuật được giải thích ở đây cũng sẽ hoạt đ�
 
 ### Thuật ngữ {#terminology}
 
-Khi thảo luận về các bản cuộn, thuật ngữ 'lớp 1 (l1)' được sử dụng cho Mạng chính, mạng lưới Ethereum sản xuất.
-Thuật ngữ 'lớp 2 (l2)' được sử dụng cho Rollup hoặc bất kỳ hệ thống nào khác dựa vào l1 để bảo mật nhưng thực hiện phần lớn quá trình xử lý ngoài chuỗi.
+Khi thảo luận về các bản cuộn, thuật ngữ 'lớp 1 (L1)' được sử dụng cho Mạng chính, mạng lưới Ethereum sản xuất.
+Thuật ngữ 'lớp 2 (L2)' được sử dụng cho Rollup hoặc bất kỳ hệ thống nào khác dựa vào L1 để bảo mật nhưng thực hiện phần lớn quá trình xử lý ngoài chuỗi.
 
-## Làm thế nào chúng ta có thể giảm thêm chi phí của các giao dịch l2? {#how-can-we-further-reduce-the-cost-of-l2-transactions}
+## Làm thế nào chúng ta có thể giảm thêm chi phí của các giao dịch L2? {#how-can-we-further-reduce-the-cost-of-l2-transactions}
 
-[Bản cuộn Optimistic](/developers/docs/scaling/optimistic-rollups) phải lưu giữ hồ sơ của mọi giao dịch lịch sử để bất kỳ ai cũng có thể xem qua chúng và xác minh rằng trạng thái hiện tại là chính xác.
-Cách rẻ nhất để đưa dữ liệu vào Mạng chính Ethereum là ghi nó dưới dạng dữ liệu lệnh gọi.
+Các [bản cuộn Optimistic](/developers/docs/scaling/optimistic-rollups) phải lưu giữ hồ sơ của mọi giao dịch lịch sử để bất kỳ ai cũng có thể xem qua chúng và xác minh rằng trạng thái hiện tại là chính xác.
+Khi bài viết này được viết, cách rẻ nhất để đưa dữ liệu vào Mạng chính Ethereum là ghi nó dưới dạng dữ liệu lệnh gọi.
 Giải pháp này đã được chọn bởi cả [Optimism](https://docs.optimism.io/op-stack/protocol/overview) và [Arbitrum](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction).
+Kể từ bản nâng cấp Dencun (tháng 3 năm 2024), các bản cuộn có thể đăng dữ liệu này trong các [khối dữ liệu](/roadmap/danksharding/) thay thế, rẻ hơn rất nhiều.
 
-### Chi phí của các giao dịch l2 {#cost-of-l2-transactions}
+### Chi phí của các giao dịch L2 {#cost-of-l2-transactions}
 
-Chi phí của các giao dịch l2 bao gồm hai thành phần:
+Chi phí của các giao dịch L2 bao gồm hai thành phần:
 
-1. Xử lý l2, thường cực kỳ rẻ
-2. Lưu trữ l1, gắn liền với chi phí Gas trên Mạng chính
+1. Xử lý L2, thường cực kỳ rẻ
+2. Lưu trữ L1, gắn liền với chi phí Gas trên Mạng chính
 
-Tại thời điểm tôi viết bài này, trên Optimism, chi phí Gas l2 là 0,001 [Gwei](/developers/docs/gas/#pre-london).
-Mặt khác, chi phí Gas l1 xấp xỉ 40 Gwei.
-[Bạn có thể xem giá hiện tại ở đây](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
+Khi tôi viết bài này vào năm 2022, trên Optimism, chi phí Gas L2 là 0,001 [Gwei](/developers/docs/gas/#what-is-gas).
+Mặt khác, chi phí Gas L1 xấp xỉ 40 Gwei.
 
 Một byte dữ liệu lệnh gọi có giá 4 Gas (nếu nó bằng 0) hoặc 16 Gas (nếu nó là bất kỳ giá trị nào khác).
 Một trong những hoạt động đắt đỏ nhất trên EVM là ghi vào bộ nhớ.
-Chi phí tối đa để ghi một từ 32 byte vào bộ nhớ trên l2 là 22100 Gas. Hiện tại, mức này là 22,1 Gwei.
+Chi phí tối đa để ghi một từ 32 byte vào bộ nhớ trên L2 là 22100 Gas. Vào thời điểm đó, con số này là 22,1 Gwei.
 Vì vậy, nếu chúng ta có thể tiết kiệm một byte 0 duy nhất của dữ liệu lệnh gọi, chúng ta sẽ có thể ghi khoảng 200 byte vào bộ nhớ mà vẫn có lợi.
+
+#### Chi phí L2 đã thay đổi như thế nào trong năm 2024 {#how-l2-costs-changed-in-2024}
+
+Công thức [phí dữ liệu L1](https://docs.optimism.io/op-stack/transactions/fees#l1-data-fee) của OP Stack đã thay đổi hai lần kể từ khi bài viết này được viết:
+
+- Với [bản nâng cấp Ecotone](https://docs.optimism.io/op-stack/transactions/fees#ecotone) (tháng 3 năm 2024), các chuỗi OP Stack bắt đầu đăng dữ liệu giao dịch lên các khối dữ liệu, được định giá bằng một phí cơ sở khối dữ liệu riêng biệt (và thường thấp hơn nhiều).
+- Với [bản nâng cấp Fjord](https://docs.optimism.io/op-stack/transactions/fees#fjord) (tháng 7 năm 2024), phí dữ liệu L1 dựa trên ước tính kích thước của giao dịch sau khi nén bằng [FastLZ](https://github.com/ariya/FastLZ), với tối thiểu 100 byte cho mỗi giao dịch ([xem thông số kỹ thuật](https://specs.optimism.io/protocol/fjord/exec-engine.html)).
+
+Điều này thay đổi phân tích trong phần còn lại của bài viết này theo ba cách:
+
+1. Các byte 0 nén tốt, vì vậy chúng gần như miễn phí.
+   Các con số 4 và 16 Gas cho mỗi byte bên dưới là chi phí của dữ liệu lệnh gọi L1, không phải là những gì bạn trả cho dữ liệu giao dịch trên chuỗi OP Stack ngày nay.
+2. Dưới mức tối thiểu 100 byte, dữ liệu lệnh gọi ngắn hơn không tiết kiệm được gì.
+   Ví dụ: vào tháng 10 năm 2026 trên OP Mainnet, một `transfer` ERC-20 tiêu chuẩn (68 byte dữ liệu lệnh gọi) và phiên bản ngắn 23 byte trong bài viết này sẽ trả chính xác cùng một khoản phí dữ liệu L1, mức tối thiểu, khoảng 1 Gwei (10<sup>-9</sup> ETH).
+3. Vì không gian khối dữ liệu rẻ, phí thực thi L2 hiện nay thường lớn hơn phí dữ liệu L1.
+   Ở mức giá gas L2 là 0,001 Gwei, 1000 Gas có giá 1 Gwei, bằng với toàn bộ phí dữ liệu L1 đó, vì vậy lượng Gas thực thi bổ sung khi đi qua một hợp đồng proxy có thể tốn nhiều chi phí hơn số byte mà nó tiết kiệm được.
+
+Nguyên tắc vẫn giữ nguyên: ít byte nén hơn có nghĩa là phí dữ liệu L1 thấp hơn.
+Các ABI ngắn có ý nghĩa nhất đối với các giao dịch có nhiều dữ liệu không nén tốt, và trên các chuỗi hoặc vào những thời điểm mà dữ liệu L1 đắt đỏ.
+Để xem một giao dịch cụ thể sẽ phải trả bao nhiêu, hãy gọi `getL1Fee` trên [hợp đồng triển khai trước `GasPriceOracle`](https://specs.optimism.io/protocol/predeploys.html#gaspriceoracle) với giao dịch chưa ký.
+Ví dụ: sử dụng `cast` của [Foundry](https://getfoundry.sh/introduction/installation/):
+
+```sh
+TX=$(cast mktx --raw-unsigned --from <your address> --chain 10 --nonce 0 --gas-limit 100000 \
+  --priority-gas-price 1000000 --gas-price 1000000 <destination address> <calldata>)
+cast call 0x420000000000000000000000000000000000000F "getL1Fee(bytes)(uint256)" $TX --rpc-url https://mainnet.optimism.io
+```
+
+Kết quả được tính bằng Wei.
 
 ### ABI {#the-abi}
 
-Phần lớn các giao dịch truy cập vào một hợp đồng từ một tài khoản thuộc sở hữu bên ngoài.
-Hầu hết các hợp đồng được viết bằng Solidity và diễn giải trường dữ liệu của chúng theo [giao diện nhị phân ứng dụng (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
+Phần lớn các giao dịch truy cập vào một hợp đồng từ một tài khoản thuộc sở hữu bên ngoài (EOA).
+Hầu hết các hợp đồng được viết bằng Solidity và diễn giải trường dữ liệu của chúng theo [Giao diện nhị phân ứng dụng (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
-Tuy nhiên, ABI được thiết kế cho l1, nơi một byte dữ liệu lệnh gọi có chi phí xấp xỉ bằng bốn phép toán số học, chứ không phải l2 nơi một byte dữ liệu lệnh gọi có chi phí hơn một nghìn phép toán số học.
+Tuy nhiên, ABI được thiết kế cho L1, nơi một byte dữ liệu lệnh gọi có chi phí xấp xỉ bằng bốn phép toán số học, không phải L2 nơi (với mức giá năm 2022) một byte dữ liệu lệnh gọi có chi phí hơn một nghìn phép toán số học.
 Dữ liệu lệnh gọi được chia như sau:
 
 | Phần | Độ dài | Byte | Byte lãng phí | Gas lãng phí | Byte cần thiết | Gas cần thiết |
 | ------------------- | -----: | ----: | -----------: | ---------: | --------------: | ------------: |
-| Bộ chọn hàm |      4 |   0-3 |            3 |         48 |               1 |            16 |
-| Các số 0 |     12 |  4-15 |           12 |         48 |               0 |             0 |
-| Địa chỉ đích |     20 | 16-35 |            0 |          0 |              20 |           320 |
-| Số lượng |     32 | 36-67 |           17 |         64 |              15 |           240 |
-| Tổng cộng |     68 |       |              |        160 |                 |           576 |
+| Bộ chọn hàm | 4 | 0-3 | 3 | 48 | 1 | 16 |
+| Các số 0 | 12 | 4-15 | 12 | 48 | 0 | 0 |
+| Địa chỉ đích | 20 | 16-35 | 0 | 0 | 20 | 320 |
+| Số lượng | 32 | 36-67 | 17 | 68 | 15 | 240 |
+| Tổng cộng | 68 | | | 164 | | 576 |
 
 Giải thích:
 
@@ -69,17 +98,30 @@ Giải thích:
 - **Các số 0**: Các byte này luôn bằng 0 vì một địa chỉ 20 byte không yêu cầu một từ 32 byte để chứa nó.
   Các byte chứa số 0 có giá 4 Gas ([xem sách vàng](https://ethereum.github.io/yellowpaper/paper.pdf), Phụ lục G,
   trang 27, giá trị cho `G`<sub>`txdatazero`</sub>).
-- **Số lượng**: Nếu chúng ta giả định rằng trong hợp đồng này `decimals` là mười tám (giá trị bình thường) và số lượng token tối đa mà chúng ta chuyển sẽ là 10<sup>18</sup>, chúng ta nhận được số lượng tối đa là 10<sup>36</sup>.
-  256<sup>15</sup> &gt; 10<sup>36</sup>, vì vậy mười lăm byte là đủ.
+- **Số lượng**: Nếu chúng ta giả định rằng trong hợp đồng này `decimals` là 18 (giá trị bình thường) và số lượng token tối đa mà chúng ta chuyển sẽ là 10<sup>18</sup>, chúng ta nhận được số lượng tối đa là 10<sup>36</sup>.
+  256<sup>15</sup> &gt; 10<sup>36</sup>, vì vậy 15 byte là đủ.
 
-Sự lãng phí 160 Gas trên l1 thường không đáng kể. Một giao dịch có giá ít nhất [21.000 Gas](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), vì vậy thêm 0,8% không thành vấn đề.
-Tuy nhiên, trên l2, mọi thứ lại khác. Gần như toàn bộ chi phí của giao dịch là ghi nó vào l1.
-Ngoài dữ liệu lệnh gọi của giao dịch, còn có 109 byte tiêu đề giao dịch (địa chỉ đích, chữ ký, v.v.).
-Do đó, tổng chi phí là `109*16+576+160=2480` và chúng ta đang lãng phí khoảng 6,5% trong số đó.
+Việc lãng phí 164 Gas trên L1 thường không đáng kể. Một giao dịch có chi phí ít nhất [21.000 Gas](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), vì vậy thêm 0,8% không thành vấn đề.
+Tuy nhiên, trên L2 vào năm 2022, mọi thứ đã khác. Gần như toàn bộ chi phí của giao dịch là ghi nó vào L1.
+Ngoài dữ liệu lệnh gọi giao dịch, còn có 109 byte tiêu đề giao dịch (địa chỉ đích, chữ ký, v.v.).
+Do đó, tổng chi phí là `109*16+576+164=2484` và chúng ta đang lãng phí khoảng 6,6% trong số đó.
 
 ## Giảm chi phí khi bạn không kiểm soát đích đến {#reducing-costs-when-you-dont-control-the-destination}
 
 Giả sử rằng bạn không có quyền kiểm soát hợp đồng đích, bạn vẫn có thể sử dụng một giải pháp tương tự như [giải pháp này](https://github.com/qbzzt/ethereum.org-20220330-shortABI).
+
+Để chạy nó, bạn cần [Node.js](https://nodejs.org/) và git:
+
+```sh
+git clone https://github.com/qbzzt/ethereum.org-20220330-shortABI.git
+cd ethereum.org-20220330-shortABI
+npm install
+npx hardhat test
+```
+
+Bài kiểm tra triển khai các hợp đồng lên mạng lưới cục bộ tích hợp sẵn của Hardhat, vì vậy bạn không cần bất kỳ ETH nào.
+Kho lưu trữ sử dụng Hardhat 2.9, vì vậy trên các phiên bản Node.js hiện tại, nó cảnh báo rằng phiên bản Node.js của bạn không được hỗ trợ, nhưng bài kiểm tra vẫn vượt qua.
+
 Hãy cùng xem qua các tệp có liên quan.
 
 ### Token.sol {#token-sol}
@@ -115,22 +157,23 @@ Chúng ta cần hàm token để biết cách gọi nó.
 
 ```solidity
 contract CalldataInterpreter {
+
     OrisUselessToken public immutable token;
 ```
 
-Địa chỉ của token mà chúng ta đóng vai trò là một hợp đồng proxy.
+Địa chỉ của token mà chúng ta làm proxy.
 
 ```solidity
 
     /**
-     * @dev Chỉ định địa chỉ token
+     * @dev Chỉ định Địa chỉ token
      * @param tokenAddr_ Địa chỉ hợp đồng ERC-20
      */
     constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);
-    }   // constructor
+    }   // hàm khởi tạo
 ```
 
 Địa chỉ token là tham số duy nhất chúng ta cần chỉ định.
@@ -154,7 +197,7 @@ contract CalldataInterpreter {
 
 Chúng ta sẽ tải một từ 32 byte (256 bit) duy nhất vào bộ nhớ và loại bỏ các byte không thuộc trường mà chúng ta muốn.
 Thuật toán này không hoạt động đối với các giá trị dài hơn 32 byte và tất nhiên chúng ta không thể đọc vượt quá phần cuối của dữ liệu lệnh gọi.
-Trên l1, có thể cần phải bỏ qua các bài kiểm tra này để tiết kiệm Gas, nhưng trên l2, Gas cực kỳ rẻ, điều này cho phép thực hiện bất kỳ kiểm tra tính hợp lý nào mà chúng ta có thể nghĩ ra.
+Trên L1, có thể cần phải bỏ qua các bài kiểm tra này để tiết kiệm Gas, nhưng trên L2, Gas cực kỳ rẻ, điều này cho phép thực hiện bất kỳ kiểm tra tính hợp lý nào mà chúng ta có thể nghĩ ra.
 
 ```solidity
         assembly {
@@ -162,18 +205,18 @@ Trên l1, có thể cần phải bỏ qua các bài kiểm tra này để tiết
         }
 ```
 
-Chúng ta có thể đã sao chép dữ liệu từ lệnh gọi đến `fallback()` (xem bên dưới), nhưng sẽ dễ dàng hơn nếu sử dụng [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), ngôn ngữ hợp ngữ của EVM.
+Chúng ta có thể đã sao chép dữ liệu từ lệnh gọi sang `fallback()` (xem bên dưới), nhưng sẽ dễ dàng hơn nếu sử dụng [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), ngôn ngữ hợp ngữ của EVM.
 
 Ở đây chúng ta sử dụng [mã lệnh CALLDATALOAD](https://www.evm.codes/#35) để đọc các byte từ `startByte` đến `startByte+31` vào ngăn xếp.
-Nói chung, cú pháp của một mã lệnh trong Yul là `<opcode name>(<first stack value, if any>,<second stack value, if any>...)`.
+Nhìn chung, cú pháp của một mã lệnh trong Yul là `<opcode name>(<first stack value, if any>,<second stack value, if any>...)`.
 
 ```solidity
 
         _retVal = _retVal >> (256-length*8);
 ```
 
-Chỉ những byte `length` có ý nghĩa nhất mới là một phần của trường, vì vậy chúng ta [dịch phải](https://en.wikipedia.org/wiki/Logical_shift) để loại bỏ các giá trị khác.
-Điều này có thêm lợi thế là di chuyển giá trị sang bên phải của trường, vì vậy nó chính là giá trị đó thay vì giá trị nhân với 256<sup>một số nào đó</sup>.
+Chỉ có `length` byte có ý nghĩa nhất là một phần của trường, vì vậy chúng ta [dịch phải](https://en.wikipedia.org/wiki/Logical_shift) để loại bỏ các giá trị khác.
+Điều này có thêm lợi thế là di chuyển giá trị sang bên phải của trường, vì vậy nó là chính giá trị đó thay vì giá trị nhân với 256<sup>một số nào đó</sup>.
 
 ```solidity
 
@@ -197,19 +240,19 @@ Trong trường hợp của `CalldataInterpreter`, _bất kỳ_ lệnh gọi nà
 Có hai lý do tại sao một hàm sẽ không khả dụng ở đây:
 
 1. Các hàm là `pure` hoặc `view` không thay đổi trạng thái và không tốn Gas (khi được gọi ngoài chuỗi).
-   Sẽ không có ý nghĩa gì khi cố gắng giảm chi phí Gas của chúng.
+   Việc cố gắng giảm chi phí Gas của chúng là vô nghĩa.
 2. Các hàm dựa vào [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties).
    Giá trị của `msg.sender` sẽ là địa chỉ của `CalldataInterpreter`, không phải của người gọi.
 
-Thật không may, [khi xem xét các thông số kỹ thuật của ERC-20](https://eips.ethereum.org/EIPS/eip-20), điều này chỉ để lại một hàm, `transfer`.
-Điều này khiến chúng ta chỉ còn lại hai hàm: `transfer` (vì chúng ta có thể gọi `transferFrom`) và `faucet` (vì chúng ta có thể chuyển token trở lại cho bất kỳ ai đã gọi chúng ta).
+Thật không may, [khi xem xét các thông số kỹ thuật của ERC-20](https://eips.ethereum.org/EIPS/eip-20), điều này chỉ để lại một hàm tiêu chuẩn, `transfer` (bởi vì chúng ta có thể gọi `transferFrom`).
+Token thử nghiệm của chúng ta cũng có `faucet`, mà chúng ta có thể hỗ trợ vì chúng ta có thể chuyển token trở lại cho bất kỳ ai đã gọi chúng ta.
 
 ```solidity
 
-        // Gọi các phương thức thay đổi trạng thái của token bằng cách sử dụng
+        // Gọi các phương thức thay đổi trạng thái của token sử dụng
         // thông tin từ dữ liệu lệnh gọi
 
-        // faucet
+        // vòi
         if (_func == 1) {
 ```
 
@@ -222,8 +265,8 @@ Một lệnh gọi đến `faucet()`, không có tham số.
         }
 ```
 
-Sau khi gọi `token.faucet()`, chúng ta nhận được token. Tuy nhiên, với tư cách là hợp đồng proxy, chúng ta không **cần** token.
-EOA (tài khoản thuộc sở hữu bên ngoài) hoặc hợp đồng đã gọi chúng ta mới cần.
+Sau khi chúng ta gọi `token.faucet()`, chúng ta nhận được token. Tuy nhiên, với tư cách là hợp đồng proxy, chúng ta không **cần** token.
+Tài khoản thuộc sở hữu bên ngoài (EOA) hoặc hợp đồng đã gọi chúng ta mới cần.
 Vì vậy, chúng ta chuyển tất cả token của mình cho bất kỳ ai đã gọi chúng ta.
 
 ```solidity
@@ -251,31 +294,31 @@ Là một địa chỉ, nó dài 20 byte.
                 calldataVal(21, 2)
 ```
 
-Đối với hợp đồng cụ thể này, chúng ta giả định rằng số lượng token tối đa mà bất kỳ ai muốn chuyển sẽ vừa trong hai byte (nhỏ hơn 65536).
+Đối với hợp đồng cụ thể này, chúng ta giả định rằng số lượng token tối đa mà bất kỳ ai muốn chuyển vừa vặn trong hai byte (nhỏ hơn 65536).
 
 ```solidity
             );
         }
 ```
 
-Nhìn chung, một lần chuyển mất 35 byte dữ liệu lệnh gọi:
+Nhìn chung, một giao dịch chuyển mất 23 byte dữ liệu lệnh gọi:
 
 | Phần | Độ dài | Byte |
 | ------------------- | -----: | ----: |
-| Bộ chọn hàm |      1 |     0 |
-| Địa chỉ đích |     32 |  1-32 |
-| Số lượng |      2 | 33-34 |
+| Bộ chọn hàm | 1 | 0 |
+| Địa chỉ đích | 20 | 1-20 |
+| Số lượng | 2 | 21-22 |
 
 ```solidity
     }   // fallback
 
-}       // contract CalldataInterpreter
+}       // hợp đồng CalldataInterpreter
 ```
 
 ### test.js {#test-js}
 
 [Bài kiểm tra đơn vị JavaScript này](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) cho chúng ta thấy cách sử dụng cơ chế này (và cách xác minh nó hoạt động chính xác).
-Tôi sẽ giả định rằng bạn hiểu [chai](https://www.chaijs.com/) và [ethers](https://docs.ethers.io/v5/) và chỉ giải thích các phần áp dụng cụ thể cho hợp đồng.
+Tôi sẽ giả định rằng bạn hiểu [chai](https://www.chaijs.com/) và [ethers](https://docs.ethers.org/v5/) và chỉ giải thích các phần áp dụng cụ thể cho hợp đồng.
 
 ```js
 const { expect } = require("chai");
@@ -323,7 +366,7 @@ Có hai tham số chúng ta cần cung cấp cho giao dịch:
     await (await signer.sendTransaction(faucetTx)).wait()
 ```
 
-Chúng ta gọi [phương thức `sendTransaction` của người ký](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction) vì chúng ta đã chỉ định đích đến (`faucetTx.to`) và chúng ta cần giao dịch được ký.
+Chúng ta gọi [phương thức `sendTransaction` của người ký](https://docs.ethers.org/v5/api/signer/#Signer-sendTransaction) vì chúng ta đã chỉ định đích đến (`faucetTx.to`) và chúng ta cần giao dịch được ký.
 
 ```javascript
 // Kiểm tra xem faucet có cung cấp token chính xác không
@@ -368,9 +411,15 @@ Tạo một giao dịch chuyển. Byte đầu tiên là "0x02", tiếp theo là 
 ## Giảm chi phí khi bạn kiểm soát hợp đồng đích {#reducing-the-cost-when-you-do-control-the-destination-contract}
 
 Nếu bạn có quyền kiểm soát hợp đồng đích, bạn có thể tạo các hàm bỏ qua các kiểm tra `msg.sender` vì chúng tin tưởng trình thông dịch dữ liệu lệnh gọi.
-[Bạn có thể xem ví dụ về cách thức hoạt động của nó ở đây, trong nhánh `control-contract`](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
+[Bạn có thể xem ví dụ về cách điều này hoạt động tại đây, trong nhánh `control-contract`](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
+Để chạy nó, hãy chuyển sang nhánh đó trong kho lưu trữ mà bạn đã sao chép trước đó và chạy lại bài kiểm tra:
 
-Nếu hợp đồng chỉ phản hồi các giao dịch bên ngoài, chúng ta có thể xoay sở chỉ với một hợp đồng.
+```sh
+git checkout control-contract
+npx hardhat test
+```
+
+Nếu hợp đồng chỉ phản hồi các giao dịch bên ngoài, chúng ta có thể chỉ cần một hợp đồng.
 Tuy nhiên, điều đó sẽ phá vỡ [khả năng kết hợp](/developers/docs/smart-contracts/composability/).
 Sẽ tốt hơn nhiều nếu có một hợp đồng phản hồi các lệnh gọi ERC-20 bình thường và một hợp đồng khác phản hồi các giao dịch có dữ liệu lệnh gọi ngắn.
 
@@ -576,9 +625,10 @@ Lưu ý rằng `transferFromTx` yêu cầu hai tham số địa chỉ: người 
 
 ## Kết luận {#conclusion}
 
-Cả [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92) và [Arbitrum](https://developer.offchainlabs.com/docs/special_features) đều đang tìm cách giảm kích thước của dữ liệu lệnh gọi được ghi vào l1 và do đó giảm chi phí giao dịch.
+Cả [Optimism](https://docs.optimism.io/op-stack/transactions/fees#fjord) và [Arbitrum](https://docs.arbitrum.io/how-arbitrum-works/deep-dives/gas-and-fees) hiện đều nén dữ liệu mà chúng ghi vào L1 và tính phí mỗi giao dịch dựa trên kích thước đã nén của nó, nhằm giảm chi phí giao dịch.
 Tuy nhiên, với tư cách là các nhà cung cấp cơ sở hạ tầng đang tìm kiếm các giải pháp chung, khả năng của chúng tôi bị hạn chế.
-Là nhà phát triển ứng dụng phi tập trung (dapp), bạn có kiến thức cụ thể về ứng dụng, điều này cho phép bạn tối ưu hóa dữ liệu lệnh gọi của mình tốt hơn nhiều so với những gì chúng tôi có thể làm trong một giải pháp chung.
+Là nhà phát triển dapp, bạn có kiến thức cụ thể về ứng dụng, điều này cho phép bạn tối ưu hóa dữ liệu lệnh gọi của mình tốt hơn nhiều so với những gì chúng tôi có thể làm trong một giải pháp chung.
 Hy vọng rằng bài viết này sẽ giúp bạn tìm ra giải pháp lý tưởng cho nhu cầu của mình.
 
-[Xem thêm các tác phẩm của tôi tại đây](https://cryptodocguy.pro/).
+[Xem thêm các bài viết khác của tôi tại đây](https://cryptodocguy.pro/).
+
