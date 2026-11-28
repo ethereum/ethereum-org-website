@@ -904,7 +904,7 @@
   "tokens-exam-pick-opt-company": "Backed by currency and bonds a company keeps",
   "tokens-exam-pick-opt-crypto": "Backed by extra crypto locked in a smart contract",
   "tokens-exam-pick-opt-rules": "No backing, only rules that add or remove coins",
-  "tokens-exam-pick-explain": "When a company keeps the backing, it stays in charge of the coins and can often freeze them at an address. Crypto backing sits in a smart contract with no company behind it, and the extra crypto absorbs price drops. A coin with nothing behind it holds steady only while people trust it.",
+  "tokens-exam-pick-explain": "When a company keeps the backing, it stays in charge of the coins and can freeze them at an address. Crypto backing sits in a smart contract with no company behind it, and the extra crypto absorbs price drops. A coin with nothing behind it holds steady only while people trust it.",
   "tokens-exam-lookalike-prompt": "A token you never asked for shows up. It has the same name and picture as a stablecoin you already hold, and a much bigger balance. What's MOST likely?",
   "tokens-exam-lookalike-opt-copy": "A copy from a different contract, sent as bait",
   "tokens-exam-lookalike-opt-gift": "A thank-you from the stablecoin's company for holding its coins",
