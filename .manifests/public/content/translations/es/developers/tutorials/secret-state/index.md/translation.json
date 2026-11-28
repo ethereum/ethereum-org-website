@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "es",
-  "translatedAt": "2026-06-19T23:19:08.616Z",
-  "englishManifestHash": "b0c71f35881f",
+  "translatedAt": "2026-11-28T07:17:10.522Z",
+  "englishManifestHash": "31d7e617e385",
   "placeholderOrder": [
     "LINK-637479",
     "LINK-33599d",
@@ -10,6 +10,7 @@
     "LINK-33a26d",
     "LINK-b476f7",
     "LINK-d17b92",
+    "LINK-7494ea",
     "LINK-55276b",
     "LINK-53d644",
     "LINK-eb5ea9",
@@ -19,20 +20,30 @@
     "LINK-2ae89a",
     "LINK-278609",
     "LINK-d81945",
-    "LINK-5cbb66",
-    "LINK-64fe23",
+    "LINK-d17b92",
+    "LINK-9883d5",
     "LINK-48fa71",
     "CODE-9a881b",
-    "LINK-e192d1",
+    "LINK-a30383",
     "CODE-2e5aa0",
+    "LINK-1e5270",
+    "CODE-0d2d07",
+    "LINK-1c3cf0",
+    "LINK-938dbc",
+    "CODE-8e9d06",
+    "LINK-2352b6",
+    "CODE-880a87",
+    "CODEBLOCK-d6520c",
+    "CODE-73ebe2",
+    "CODEBLOCK-8d2722",
+    "CODE-206ce6",
+    "CODEBLOCK-1dafe7",
+    "CODEBLOCK-37bf52",
     "LINK-6a101b",
     "CODE-e5c0f0",
-    "CODEBLOCK-1dafe7",
-    "CODEBLOCK-7ddbf5",
-    "CODE-005d0b",
     "CODEBLOCK-98386b",
-    "LINK-5d6f48",
-    "CODEBLOCK-43623e",
+    "LINK-f8f82f",
+    "CODEBLOCK-81dcbe",
     "CODE-e5c0f0",
     "IMAGE-88594e",
     "CODE-e5c0f0",
@@ -63,10 +74,11 @@
     "CODE-0abaf5",
     "CODE-26492a",
     "LINK-904181",
+    "CODE-658bcd",
     "CODE-e5c0f0",
     "LINK-6a101b",
     "CODE-e5c0f0",
-    "LINK-905b9d",
+    "LINK-ec4927",
     "LINK-efa233",
     "LINK-e5aad8",
     "LINK-28c067",
@@ -281,12 +293,16 @@
     "CODEBLOCK-4c27a1",
     "LINK-072a76",
     "CODE-9d8945",
-    "LINK-2c5ec9",
+    "LINK-7d6785",
     "CODE-603705",
     "LINK-7fcee3",
     "CODE-726bcb",
     "CODE-50bc66",
     "CODEBLOCK-53462d",
+    "CODE-9671f2",
+    "CODE-50bc66",
+    "CODE-78ae64",
+    "CODE-943bab",
     "CODE-603705",
     "CODEBLOCK-703347",
     "CODE-603705",
@@ -299,7 +315,7 @@
     "CODE-a447f7",
     "LINK-cd7e6b",
     "CODEBLOCK-84f260",
-    "CODE-658bcd",
+    "CODE-e5c0f0",
     "CODEBLOCK-7f4d2a",
     "CODEBLOCK-acb8ff",
     "LINK-423ac0",
@@ -315,8 +331,11 @@
     "LINK-24828c",
     "LINK-33a26d",
     "LINK-9fab09",
-    "LINK-44982d",
-    "LINK-565a36",
+    "CODE-8bb25e",
+    "LINK-232350",
+    "LINK-06a2b0",
+    "LINK-ddeec9",
+    "LINK-d89b07",
     "LINK-3a02b1",
     "LINK-d08050",
     "LINK-ee867f",
@@ -326,6 +345,7 @@
     "CODE-a12dd3",
     "LINK-d0ee33",
     "LINK-12265a",
+    "CODE-bf1877",
     "LINK-012c11",
     "LINK-7ce9de",
     "CODE-ea7285",
@@ -334,11 +354,19 @@
     "LINK-f915fb"
   ],
   "placeholderMap": {
+    "CODEBLOCK-d6520c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8d2722": {
+      "type": "code-fence",
+      "values": {}
+    },
     "CODEBLOCK-1dafe7": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-7ddbf5": {
+    "CODEBLOCK-37bf52": {
       "type": "code-fence",
       "values": {}
     },
@@ -346,7 +374,7 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-43623e": {
+    "CODEBLOCK-81dcbe": {
       "type": "code-fence",
       "values": {}
     },
@@ -530,16 +558,40 @@
         "content": "pnpm"
       }
     },
+    "CODE-0d2d07": {
+      "type": "inline-code",
+      "values": {
+        "content": "SyntaxError: Unexpected identifier 'assert'"
+      }
+    },
+    "CODE-8e9d06": {
+      "type": "inline-code",
+      "values": {
+        "content": "fnm"
+      }
+    },
+    "CODE-880a87": {
+      "type": "inline-code",
+      "values": {
+        "content": "nvm"
+      }
+    },
+    "CODE-73ebe2": {
+      "type": "inline-code",
+      "values": {
+        "content": "address(this)"
+      }
+    },
+    "CODE-206ce6": {
+      "type": "inline-code",
+      "values": {
+        "content": "foundryup"
+      }
+    },
     "CODE-e5c0f0": {
       "type": "inline-code",
       "values": {
         "content": "mprocs"
-      }
-    },
-    "CODE-005d0b": {
-      "type": "inline-code",
-      "values": {
-        "content": "pnpm install"
       }
     },
     "CODE-b332c3": {
@@ -642,6 +694,12 @@
       "type": "inline-code",
       "values": {
         "content": "PendingDig"
+      }
+    },
+    "CODE-658bcd": {
+      "type": "inline-code",
+      "values": {
+        "content": "pnpm dev"
       }
     },
     "CODE-b094db": {
@@ -1046,16 +1104,22 @@
         "content": "anvil"
       }
     },
+    "CODE-9671f2": {
+      "type": "inline-code",
+      "values": {
+        "content": "WORLD_ADDRESS"
+      }
+    },
+    "CODE-943bab": {
+      "type": "inline-code",
+      "values": {
+        "content": "packages/contracts/worlds.json"
+      }
+    },
     "CODE-a447f7": {
       "type": "inline-code",
       "values": {
         "content": "zkDig"
-      }
-    },
-    "CODE-658bcd": {
-      "type": "inline-code",
-      "values": {
-        "content": "pnpm dev"
       }
     },
     "CODE-ca9d4a": {
@@ -1064,10 +1128,22 @@
         "content": "dig.zok"
       }
     },
+    "CODE-8bb25e": {
+      "type": "inline-code",
+      "values": {
+        "content": "zokrates-js"
+      }
+    },
     "CODE-a12dd3": {
       "type": "inline-code",
       "values": {
         "content": "verify"
+      }
+    },
+    "CODE-bf1877": {
+      "type": "inline-code",
+      "values": {
+        "content": "x*(height+2)+y"
       }
     },
     "IMAGE-88594e": {
@@ -1110,6 +1186,12 @@
       "type": "link",
       "values": {
         "url": "https://nodejs.org/en"
+      }
+    },
+    "LINK-7494ea": {
+      "type": "link",
+      "values": {
+        "url": "https://getfoundry.sh/"
       }
     },
     "LINK-55276b": {
@@ -1160,16 +1242,10 @@
         "url": "https://mud.dev/quickstart#prerequisites"
       }
     },
-    "LINK-5cbb66": {
+    "LINK-9883d5": {
       "type": "link",
       "values": {
-        "url": "https://mud.dev/quickstart#prerequisites"
-      }
-    },
-    "LINK-64fe23": {
-      "type": "link",
-      "values": {
-        "url": "https://book.getfoundry.sh/getting-started/installation"
+        "url": "https://getfoundry.sh/introduction/installation"
       }
     },
     "LINK-48fa71": {
@@ -1178,10 +1254,34 @@
         "url": "https://git-scm.com/downloads"
       }
     },
-    "LINK-e192d1": {
+    "LINK-a30383": {
       "type": "link",
       "values": {
-        "url": "https://git-scm.com/downloads"
+        "url": "https://pnpm.io/installation"
+      }
+    },
+    "LINK-1e5270": {
+      "type": "link",
+      "values": {
+        "url": "https://v8.dev/features/import-attributes"
+      }
+    },
+    "LINK-1c3cf0": {
+      "type": "link",
+      "values": {
+        "url": "https://nodejs.org/en/about/previous-releases"
+      }
+    },
+    "LINK-938dbc": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Schniz/fnm"
+      }
+    },
+    "LINK-2352b6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/nvm-sh/nvm"
       }
     },
     "LINK-6a101b": {
@@ -1190,10 +1290,10 @@
         "url": "https://github.com/pvolok/mprocs"
       }
     },
-    "LINK-5d6f48": {
+    "LINK-f8f82f": {
       "type": "link",
       "values": {
-        "url": "https://book.getfoundry.sh/anvil/"
+        "url": "https://getfoundry.sh/anvil/overview"
       }
     },
     "LINK-ba1ffc": {
@@ -1214,10 +1314,10 @@
         "url": "https://mud.dev/store/tables#types-of-tables"
       }
     },
-    "LINK-905b9d": {
+    "LINK-ec4927": {
       "type": "link",
       "values": {
-        "url": "https://book.getfoundry.sh/anvil/"
+        "url": "https://getfoundry.sh/anvil/overview"
       }
     },
     "LINK-efa233": {
@@ -1646,10 +1746,10 @@
         "url": "https://zokrates.github.io/toolbox/zokrates_js.html#generateproofprogram-witness-provingkey-entropy"
       }
     },
-    "LINK-2c5ec9": {
+    "LINK-7d6785": {
       "type": "link",
       "values": {
-        "url": "https://book.getfoundry.sh/cast/"
+        "url": "https://getfoundry.sh/cast/overview"
       }
     },
     "LINK-7fcee3": {
@@ -1700,16 +1800,28 @@
         "url": "https://en.wikipedia.org/wiki/Imperative_programming"
       }
     },
-    "LINK-44982d": {
+    "LINK-232350": {
+      "type": "link",
+      "values": {
+        "url": "https://noir-lang.org/"
+      }
+    },
+    "LINK-06a2b0": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/app-plasma/"
+      }
+    },
+    "LINK-ddeec9": {
       "type": "link",
       "values": {
         "url": "https://docs.circom.io/getting-started/installation/"
       }
     },
-    "LINK-565a36": {
+    "LINK-d89b07": {
       "type": "link",
       "values": {
-        "url": "https://www.cairo-lang.org/tutorials/getting-started-with-cairo/"
+        "url": "https://www.cairo-lang.org/"
       }
     },
     "LINK-3a02b1": {
@@ -1793,7 +1905,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-19T23:19:08.616Z",
+      "translatedAt": "2026-11-28T07:17:10.521Z",
       "status": "success"
     }
   }
