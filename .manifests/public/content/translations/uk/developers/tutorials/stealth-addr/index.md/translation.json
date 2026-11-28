@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "uk",
-  "translatedAt": "2026-06-18T00:28:13.842Z",
-  "englishManifestHash": "05d0d826feff",
+  "translatedAt": "2026-11-28T07:13:49.828Z",
+  "englishManifestHash": "a63af4566131",
   "placeholderOrder": [
     "LINK-59a455",
     "LINK-658192",
@@ -19,14 +19,24 @@
     "LINK-7cd47c",
     "LINK-5bfb36",
     "LINK-b668e5",
+    "LINK-d07a76",
+    "LINK-253803",
+    "CODE-ee98a2",
+    "CODE-e22ac4",
+    "CODE-4902a3",
+    "CODEBLOCK-79034b",
+    "CODEBLOCK-a67335",
+    "LINK-ad3e1c",
+    "CODE-d46aee",
+    "CODEBLOCK-c5e426",
     "CODEBLOCK-cf37f0",
     "CODEBLOCK-a5da13",
     "CODEBLOCK-21bcc4",
     "LINK-da6d10",
     "LINK-469d14",
     "LINK-3fc911",
-    "LINK-a7a682",
-    "CODE-b0968a",
+    "LINK-d4503a",
+    "CODE-01a509",
     "LINK-620bea",
     "CODE-722c45",
     "CODE-2e9d96",
@@ -70,10 +80,10 @@
     "CODE-1b16b1",
     "CODE-827810",
     "LINK-050687",
-    "CODE-578dcb",
+    "CODE-a41860",
     "CODE-dc937b",
-    "CODE-d3570b",
-    "CODE-ec0edd",
+    "CODE-d7b048",
+    "CODE-bc64bc",
     "CODEBLOCK-62c484",
     "LINK-c64688",
     "CODE-47465f",
@@ -118,7 +128,6 @@
     "CODE-bf59a4",
     "CODEBLOCK-3d75a8",
     "CODEBLOCK-304523",
-    "CODE-62e207",
     "CODEBLOCK-30e2e3",
     "LINK-eb5ea9",
     "LINK-28cc7f",
@@ -133,10 +142,10 @@
     "CODE-3bc510",
     "CODE-e51783",
     "CODEBLOCK-743d3e",
-    "LINK-89c1fb",
+    "LINK-932ef4",
     "CODE-c740d4",
     "CODE-b24ff0",
-    "CODE-61cb48",
+    "CODE-a5f551",
     "CODEBLOCK-9a1bb1",
     "LINK-637ddc",
     "CODE-b6e70b",
@@ -157,6 +166,18 @@
     "LINK-f915fb"
   ],
   "placeholderMap": {
+    "CODEBLOCK-79034b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a67335": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c5e426": {
+      "type": "code-fence",
+      "values": {}
+    },
     "CODEBLOCK-cf37f0": {
       "type": "code-fence",
       "values": {}
@@ -257,12 +278,6 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODE-62e207": {
-      "type": "inline-code",
-      "values": {
-        "content": "left == right"
-      }
-    },
     "CODEBLOCK-30e2e3": {
       "type": "code-fence",
       "values": {}
@@ -287,10 +302,34 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODE-b0968a": {
+    "CODE-ee98a2": {
       "type": "inline-code",
       "values": {
-        "content": "src/rust_wasm/src/lib.rs"
+        "content": "secp256k1-sys"
+      }
+    },
+    "CODE-e22ac4": {
+      "type": "inline-code",
+      "values": {
+        "content": "wasm-pack build"
+      }
+    },
+    "CODE-4902a3": {
+      "type": "inline-code",
+      "values": {
+        "content": "failed to find tool \"clang\""
+      }
+    },
+    "CODE-d46aee": {
+      "type": "inline-code",
+      "values": {
+        "content": "export"
+      }
+    },
+    "CODE-01a509": {
+      "type": "inline-code",
+      "values": {
+        "content": "src/rust-wasm/src/lib.rs"
       }
     },
     "CODE-722c45": {
@@ -383,10 +422,10 @@
         "content": "Option<[u8; N]>"
       }
     },
-    "CODE-578dcb": {
+    "CODE-a41860": {
       "type": "inline-code",
       "values": {
-        "content": "str_to_array::10(\"bad060a7\")"
+        "content": "str_to_array::<10>(\"bad060a7\")"
       }
     },
     "CODE-dc937b": {
@@ -395,16 +434,16 @@
         "content": "None"
       }
     },
-    "CODE-d3570b": {
+    "CODE-d7b048": {
       "type": "inline-code",
       "values": {
-        "content": "str_to_array::4(\"bad060a7\")"
+        "content": "str_to_array::<4>(\"bad060a7\")"
       }
     },
-    "CODE-ec0edd": {
+    "CODE-bc64bc": {
       "type": "inline-code",
       "values": {
-        "content": "Some<[0xba, 0xd0, 0x60, 0xa7]>"
+        "content": "Some([0xba, 0xd0, 0x60, 0xa7])"
       }
     },
     "CODE-47465f": {
@@ -533,10 +572,10 @@
         "content": "src/rust-wasm/pkg/rust_wasm_bg.wasm"
       }
     },
-    "CODE-61cb48": {
+    "CODE-a5f551": {
       "type": "inline-code",
       "values": {
-        "content": "src/rust_wasm/pkg/rust_wasm.js"
+        "content": "src/rust-wasm/pkg/rust_wasm.js"
       }
     },
     "CODE-b6e70b": {
@@ -677,6 +716,24 @@
         "url": "https://nodejs.org/en/download"
       }
     },
+    "LINK-d07a76": {
+      "type": "link",
+      "values": {
+        "url": "https://clang.llvm.org/"
+      }
+    },
+    "LINK-253803": {
+      "type": "link",
+      "values": {
+        "url": "https://crates.io/crates/secp256k1-sys"
+      }
+    },
+    "LINK-ad3e1c": {
+      "type": "link",
+      "values": {
+        "url": "https://brew.sh/"
+      }
+    },
     "LINK-da6d10": {
       "type": "link",
       "values": {
@@ -689,7 +746,7 @@
         "url": "https://iancoleman.net/ethereum-private-key-to-address/"
       }
     },
-    "LINK-a7a682": {
+    "LINK-d4503a": {
       "type": "link",
       "values": {
         "url": "https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs"
@@ -863,10 +920,10 @@
         "url": "https://github.com/Menci/vite-plugin-wasm#readme"
       }
     },
-    "LINK-89c1fb": {
+    "LINK-932ef4": {
       "type": "link",
       "values": {
-        "url": "https://rustwasm.github.io/docs/wasm-pack/"
+        "url": "https://wasm-bindgen.github.io/wasm-pack/book/"
       }
     },
     "LINK-637ddc": {
@@ -896,7 +953,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-18T00:28:13.842Z",
+      "translatedAt": "2026-11-28T07:13:49.828Z",
       "status": "success"
     }
   }

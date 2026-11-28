@@ -29,7 +29,9 @@ published: 2024-07-15
 
 ## Приклад програми {#sample-program}
 
-Ви можете переглянути приклад сервера [на GitHub](https://github.com/qbzzt/20240715-server-component). Цей сервер прослуховує події, що надходять від [цього контракту](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code), модифікованої версії Greeter від Hardhat. Коли привітання змінюється, він змінює його назад.
+Ви можете переглянути приклад сервера [на GitHub](https://github.com/qbzzt/20240715-server-component). Цей сервер прослуховує події, що надходять від [цього контракту](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract_code) у тестовій мережі Sepolia, який є модифікованою версією Greeter від Hardhat. Коли привітання змінюється, він змінює його назад.
+
+Цей контракт використовується спільно з іншими посібниками, тому інші люди (та їхні сервери) можуть змінювати привітання під час роботи вашого сервера. Зупиніть свій сервер, коли закінчите, щоб уникнути витрат тестових ETH.
 
 Щоб запустити його:
 
@@ -40,25 +42,31 @@ published: 2024-07-15
    cd 20240715-server-component
    ```
 
-2. Встановіть необхідні пакети. Якщо у вас його ще немає, [спочатку встановіть Node.js](https://nodejs.org/en/download/package-manager).
+2. Приклад репозиторію був написаний для тестової мережі Голескі, яку відтоді було закрито. Оновіть його, щоб використовувати Sepolia та адресу контракту в Sepolia.
+
+   ```sh copy
+   sed -i.bak -e 's/holesky/sepolia/g' -e 's/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA/' src/app.ts
+   ```
+
+3. Встановіть необхідні пакунки. Якщо у вас його ще немає, [спочатку встановіть Node](https://nodejs.org/en/download/package-manager).
 
    ```sh copy
    npm install
    ```
 
-3. Відредагуйте `.env`, щоб вказати приватний ключ акаунта, який має ETH у тестовій мережі Голескі. Якщо у вас немає ETH у Голескі, ви можете [скористатися цим краном](https://holesky-faucet.pk910.de/).
+4. Відредагуйте `.env`, щоб вказати приватний ключ акаунта, який має ETH у тестовій мережі Sepolia. Якщо у вас немає ETH у Sepolia, ви можете [скористатися цим краном](https://sepolia-faucet.pk910.de/). Використовуйте новий акаунт, який ви застосовуєте лише для тестування, і ніколи той, що містить реальні активи.
 
    ```sh filename=".env" copy
-   PRIVATE_KEY=0x <private key goes here>
+   PRIVATE_KEY=0x<private key goes here>
    ```
 
-4. Запустіть сервер.
+5. Запустіть сервер.
 
    ```sh copy
    npm start
    ```
 
-5. Перейдіть до [оглядача блоків](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract) і, використовуючи іншу адресу (не ту, від якої у вас є приватний ключ), змініть привітання. Переконайтеся, що привітання автоматично змінюється назад.
+6. Перейдіть до [оглядача блоків](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract) і, використовуючи іншу адресу, ніж та, що має приватний ключ, змініть привітання. Переконайтеся, що привітання автоматично змінюється назад.
 
 ### Як це працює? {#how-it-works}
 
@@ -89,10 +97,10 @@ import { privateKeyToAccount } from "viem/accounts"
 [Ця функція](https://viem.sh/docs/accounts/privateKey) дозволяє нам генерувати інформацію про гаманець, включно з адресою, що відповідає приватному ключу.
 
 ```typescript
-import { holesky } from "viem/chains"
+import { sepolia } from "viem/chains"
 ```
 
-Щоб використовувати блокчейн у Viem, потрібно імпортувати його визначення. У цьому випадку ми хочемо підключитися до тестового блокчейну [Голескі](https://github.com/eth-clients/holesky).
+Щоб використовувати блокчейн у Viem, вам потрібно імпортувати його визначення. У цьому випадку ми хочемо підключитися до тестового блокчейну [Sepolia](/developers/docs/networks/#sepolia).
 
 ```typescript
 // Ось як ми додаємо визначення з .env до process.env.
@@ -103,7 +111,7 @@ dotenv.config()
 Ось як ми зчитуємо `.env` у середовище. Це потрібно нам для приватного ключа (див. далі).
 
 ```typescript
-const greeterAddress : Address = "0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6"
+const greeterAddress : Address = "0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA"
 const greeterABI = [
     {
         "inputs": [
@@ -137,29 +145,29 @@ const greeterABI = [
 
 Щоб використовувати контракт, нам потрібна його адреса та [ABI](/glossary/#abi) для нього. Ми надаємо і те, і інше тут.
 
-У JavaScript (а отже, і в TypeScript) ви не можете призначити нове значення константі, але ви _можете_ змінити об'єкт, який у ній зберігається. Використовуючи суфікс `as const`, ми повідомляємо TypeScript, що сам список є константою і не може бути змінений.
+У JavaScript (і, відповідно, у TypeScript) ви не можете призначити нове значення константі, але ви _можете_ змінити об'єкт, який у ній зберігається. Використовуючи суфікс `as const`, ми повідомляємо TypeScript, що сам список є константою і не може бути змінений.
 
 ```typescript
 const publicClient = createPublicClient({
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
 
-Створіть [публічний клієнт](https://viem.sh/docs/clients/public.html) Viem. Публічні клієнти не мають прив'язаного приватного ключа, а тому не можуть надсилати транзакції. Вони можуть викликати [функції `view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm), зчитувати баланси акаунтів тощо.
+Створіть [публічний клієнт](https://viem.sh/docs/clients/public) Viem. Публічні клієнти не мають прив'язаного приватного ключа, а тому не можуть надсилати транзакції. Вони можуть викликати [функції `view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm), зчитувати баланси акаунтів тощо.
 
 ```typescript
 const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`)
 ```
 
-Змінні середовища доступні в [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). Однак TypeScript є строго типізованим. Змінна середовища може бути будь-яким рядком або порожньою, тому тип для змінної середовища — `string | undefined`. Проте ключ у Viem визначається як `0x${string}` (`0x` з наступним рядком). Тут ми повідомляємо TypeScript, що змінна середовища `PRIVATE_KEY` матиме саме цей тип. Якщо це не так, ми отримаємо помилку під час виконання.
+Змінні середовища доступні в [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). Однак TypeScript є строго типізованим. Змінна середовища може бути будь-яким рядком або порожньою, тому тип для змінної середовища — `string | undefined`. Проте ключ у Viem визначається як `0x${string}` (`0x` з наступним рядком). Тут ми вказуємо TypeScript, що змінна середовища `PRIVATE_KEY` буде саме такого типу. Якщо це не так, ми отримаємо помилку під час виконання.
 
 Потім функція [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) використовує цей приватний ключ для створення повноцінного об'єкта акаунта.
 
 ```typescript
 const walletClient = createWalletClient({
   account,
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
@@ -182,11 +190,11 @@ const greeter = getContract({
 console.log(`Current greeting:`, await greeter.read.greet())
 ```
 
-Функції контракту, які призначені лише для зчитування ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) та [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)), доступні в `read`. У цьому випадку ми використовуємо його для доступу до функції [`greet`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=read_contract#cfae3217), яка повертає привітання.
+Функції контракту, які призначені лише для зчитування ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) та [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)), доступні в `read`. У цьому випадку ми використовуємо його для доступу до функції [`greet`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=read_contract), яка повертає привітання.
 
-JavaScript є однопотоковим, тому, коли ми запускаємо тривалий процес, нам потрібно [вказати, що ми робимо це асинхронно](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). Звернення до блокчейну, навіть для операції зчитування, вимагає двостороннього зв'язку між комп'ютером і вузлом блокчейну. Саме тому ми вказуємо тут, що код повинен очікувати (`await`) на результат.
+JavaScript є однопотоковим, тому, коли ми запускаємо тривалий процес, нам потрібно [вказати, що ми робимо це асинхронно](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). Виклик блокчейну, навіть для операції лише зчитування, вимагає обміну даними між комп'ютером і вузлом блокчейну. Саме тому ми вказуємо тут, що код повинен очікувати (`await`) на результат.
 
-Якщо вам цікаво, як це працює, ви можете [прочитати про це тут](https://www.w3schools.com/js/js_promise.asp), але на практиці все, що вам потрібно знати, це те, що ви використовуєте `await` для результатів, якщо починаєте операцію, яка займає багато часу, і що будь-яка функція, яка це робить, має бути оголошена як `async`.
+Якщо вам цікаво, як це працює, ви можете [прочитати про це тут](https://www.w3schools.com/js/js_promise.asp), але на практиці все, що вам потрібно знати, це те, що ви очікуєте (`await`) на результати, якщо починаєте операцію, яка займає багато часу, і що будь-яка функція, яка це робить, повинна бути оголошена як `async`.
 
 ##### Надсилання транзакцій
 
@@ -200,10 +208,10 @@ const setGreeting = async (greeting: string): Promise<any> => {
 const txHash = await greeter.write.setGreeting([greeting])
 ```
 
-Поле `write` екземпляра контракту містить усі функції, які записують у стан блокчейну (ті, що вимагають надсилання транзакції), наприклад [`setGreeting`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862). Параметри, якщо такі є, надаються у вигляді списку, а функція повертає хеш транзакції.
+Поле `write` екземпляра контракту містить усі функції, які записують у стан блокчейну (ті, що вимагають надсилання транзакції), такі як [`setGreeting`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract). Параметри, якщо такі є, надаються у вигляді списку, і функція повертає хеш транзакції.
 
 ```typescript
-    console.log(`Working on a fix, see https://eth-holesky.blockscout.com/tx/${txHash}`)
+    console.log(`Working on a fix, see https://eth-sepolia.blockscout.com/tx/${txHash}`)
 
     return txHash
 }
@@ -217,13 +225,13 @@ const txHash = await greeter.write.setGreeting([greeting])
 greeter.watchEvent.SetGreeting({
 ```
 
-[Функція `watchEvent`](https://viem.sh/docs/actions/public/watchEvent) дозволяє вказати, що функція має виконуватися під час випромінювання події. Якщо вас цікавить лише один тип події (у цьому випадку `SetGreeting`), ви можете використати цей синтаксис, щоб обмежитися цим типом події.
+[Функція `watchEvent`](https://viem.sh/docs/actions/public/watchEvent) дозволяє вказати, що функція має виконуватися під час випромінювання події. Якщо вас цікавить лише один тип події (у цьому випадку `SetGreeting`), ви можете використовувати цей синтаксис, щоб обмежитися цим типом події.
 
 ```typescript
     onLogs: logs => {
 ```
 
-Функція `onLogs` викликається, коли є записи логів. В Етеріумі «лог» та «подія» зазвичай є взаємозамінними поняттями.
+Функція `onLogs` викликається, коли є записи логів. В Етеріумі «лог» і «подія» зазвичай є взаємозамінними.
 
 ```typescript
 console.log(
@@ -240,7 +248,7 @@ console.log(
 })
 ```
 
-Якщо відправником є _не_ цей сервер, використовуйте `setGreeting` для зміни привітання.
+Якщо відправником _не_ є цей сервер, використовуйте `setGreeting` для зміни привітання.
 
 #### `package.json` {#package-json}
 
@@ -248,24 +256,18 @@ console.log(
 
 ```json
 {
-  "main": "dist/index.js",
-```
-
-Це визначення вказує, який файл JavaScript потрібно запустити.
-
-```json
   "scripts": {
     "start": "tsc && node dist/app.js",
   },
 ```
 
-Скрипти — це різні дії застосунку. У цьому випадку єдиний скрипт, який у нас є, це `start`, який компілює, а потім запускає сервер. Команда `tsc` є частиною пакета `typescript` і компілює TypeScript у JavaScript. Якщо ви хочете запустити її вручну, вона знаходиться в `node_modules/.bin`. Друга команда запускає сервер.
+Скрипти — це різні дії застосунку. У цьому випадку єдиний, який у нас є, це `start`, який компілює, а потім запускає сервер. Команда `tsc` є частиною пакунка `typescript` і компілює TypeScript у JavaScript. Якщо ви хочете запустити її вручну, вона знаходиться в `node_modules/.bin`. Друга команда запускає сервер.
 
 ```json
   "type": "module",
 ```
 
-Існує кілька типів застосунків Node.js на JavaScript. Тип `module` дозволяє нам використовувати `await` у коді верхнього рівня, що важливо, коли ви виконуєте повільні (і тому асинхронні) операції.
+Існує кілька типів застосунків Node на JavaScript. Тип `module` дозволяє нам мати `await` у коді верхнього рівня, що важливо, коли ви виконуєте повільні (і тому асинхронні) операції.
 
 ```json
   "devDependencies": {
@@ -274,7 +276,7 @@ console.log(
   },
 ```
 
-Це пакети, які потрібні лише для розробки. Тут нам потрібен `typescript`, і оскільки ми використовуємо його з Node.js, ми також отримуємо типи для змінних та об'єктів Node, таких як `process`. [Нотація `^<version>`](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) означає цю версію або вищу версію, яка не має критичних змін. Дивіться [тут](https://semver.org) для отримання додаткової інформації про значення номерів версій.
+Це пакунки, які потрібні лише для розробки. Тут нам потрібен `typescript`, і оскільки ми використовуємо його з Node.js, ми також отримуємо типи для змінних та об'єктів Node, таких як `process`. [Нотація `^<version>`](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) означає цю версію або вищу версію, яка не має критичних змін. Дивіться [тут](https://semver.org) для отримання додаткової інформації про значення номерів версій.
 
 ```json
   "dependencies": {
@@ -284,7 +286,7 @@ console.log(
 }
 ```
 
-Це пакети, які потрібні під час виконання, коли запускається `dist/app.js`.
+Це пакунки, які потрібні під час виконання, при запуску `dist/app.js`.
 
 ## Висновок {#conclusion}
 
