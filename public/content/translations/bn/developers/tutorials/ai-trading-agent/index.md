@@ -360,15 +360,15 @@ uv run agent.py
 আউটপুটটি এখন একটি LLM-এর জন্য প্রম্পট হতে চলেছে, যা অনেকটা এরকম:
 
 ```
-এই কোটগুলো দেওয়া হলো:
-অ্যাসেট: WETH/USDC
+Given these quotes:
+Asset: WETH/USDC
         2026-01-20T16:34 3016.21
         .
         .
         .
         2026-02-01T17:49 2299.10
 
-অ্যাসেট: WBTC/WETH
+Asset: WBTC/WETH
         2026-01-20T16:34 29.84
         .
         .
@@ -376,9 +376,10 @@ uv run agent.py
         2026-02-01T17:50 33.46
 
 
-2026-02-02T17:56 সময়ে WETH/USDC-এর মান কত হবে বলে আপনি আশা করেন?
+What would you expect the value for WETH/USDC to be at time 2026-02-02T17:56?
 
-অন্য কোনো টেক্সট ছাড়া, আপনার উত্তরটি দুই দশমিক স্থান পর্যন্ত রাউন্ড করা একটি একক সংখ্যা হিসেবে প্রদান করুন।
+Provide your answer as a single number rounded to two decimal places,
+without any other text.
 ```
 
 লক্ষ্য করুন যে এখানে দুটি অ্যাসেটের কোট রয়েছে, `WETH/USDC` এবং `WBTC/WETH`। অন্য একটি অ্যাসেট থেকে কোট যোগ করলে প্রেডিকশনের নির্ভুলতা উন্নত হতে পারে।

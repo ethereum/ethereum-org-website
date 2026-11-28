@@ -756,7 +756,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-我们希望新兑换的地址是确定性的，以便可以提前在链下计算它（这对于[二层网络 (L2) 交易](/developers/docs/scaling/)很有用）。
+我们希望新兑换的地址是确定性的，以便可以提前在链下计算它（这对于[二层网络交易](/developers/docs/scaling/)很有用）。
 为此，我们需要代币地址具有一致的顺序，无论我们接收它们的顺序如何，因此我们在这里对它们进行排序。
 
 ```solidity

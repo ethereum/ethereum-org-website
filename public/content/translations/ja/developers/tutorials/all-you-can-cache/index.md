@@ -770,7 +770,7 @@ ABI仕様に従っていないため、`writeEntryCached`を呼び出す外部�
 
 ### クライアント {#the-client}
 
-Solidityのテストでは得られないものの1つは、独自のアプリケーションにカットアンドペーストできるJavaScriptコードです。このチュートリアルの元のバージョンでは、WORMをOptimism ゴエリにデプロイしていましたが、その後シャットダウンされました。サンプルリポジトリは依然としてOptimism ゴエリを指しているため、現在クライアントを実行するには、WORMを自分で[OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack)にデプロイし、クライアントをそのデプロイメントに向ける必要があります。
+Solidityのテストでは得られないものの1つは、独自のアプリケーションにカットアンドペーストできるJavaScriptコードです。このチュートリアルの元のバージョンでは、WORMをOptimism Goerliにデプロイしていましたが、その後シャットダウンされました。サンプルリポジトリは依然としてOptimism Goerliを指しているため、現在クライアントを実行するには、WORMを自分で[OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack)にデプロイし、クライアントをそのデプロイメントに向ける必要があります。
 
 [クライアントのJavaScriptコードはこちらで確認できます](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js)。これを使用するには、[Foundry](https://getfoundry.sh/introduction/installation/)、[Node.js](https://nodejs.org/)、およびいくらかのOP Sepolia ETHを持つアカウントが必要です。[Optimismのフォーセットドキュメント](https://docs.optimism.io/app-developers/tools-sdks/faucets)には、現在のテストネットのフォーセットがリストされています。
 
@@ -793,7 +793,7 @@ Solidityのテストでは得られないものの1つは、独自のアプリ�
 
    `--broadcast`がない場合、`forge create`はデプロイメントをシミュレートするだけです。出力の`Deployed to:`行からアドレスをコピーします。
 
-3. `javascript/index.js`を編集します。この行の古いOptimism ゴエリアドレスを、デプロイメントのアドレスに置き換えます。
+3. `javascript/index.js`を編集します。この行の古いOptimism Goerliアドレスを、デプロイメントのアドレスに置き換えます。
 
    ```javascript
    const worm = WormFactory.attach("0xD34335b1d818ceE54e3323D3246bD31d94E6a78a")
@@ -814,7 +814,7 @@ Solidityのテストでは得られないものの1つは、独自のアプリ�
    cp .env.example .env
    ```
 
-6. 設定に合わせて`.env`を編集します。変数名は依然としてOptimism ゴエリを参照していますが、値はOP Sepolia用です。
+6. 設定に合わせて`.env`を編集します。変数名は依然としてOptimism Goerliを参照していますが、値はOP Sepolia用です。
 
    | パラメータ           | 値                                                                                                   |
    | ------------------- | ------------------------------------------------------------------------------------------------------- |

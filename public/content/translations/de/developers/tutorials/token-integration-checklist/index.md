@@ -33,7 +33,7 @@ Um dieser Checkliste zu folgen, sollten Sie diese Ausgabe von Slither für den T
 slither-check-erc [target] [contractName] [optional: --erc ERC_NUMBER]
 slither [target] --print human-summary
 slither [target] --print contract-summary
-slither-prop . --contract ContractName # Require-Anweisung (In code contexts, the English keyword 'require' must be used exactly.) Konfiguration, und Verwendung von Echidna (Eigennamen für Software-Tools werden im Deutschen typischerweise nicht übersetzt.)
+slither-prop . --contract ContractName # erfordert Konfiguration und die Verwendung von Echidna
 ```
 
 ## Allgemeine Überlegungen {#general-considerations}

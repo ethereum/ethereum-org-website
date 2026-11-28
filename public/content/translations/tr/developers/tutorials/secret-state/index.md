@@ -259,7 +259,7 @@ Bu iki satır, [Zokrates standart kütüphanesinden](https://zokrates.github.io/
 Zokrates'teki alan (field) elemanı tipik olarak 256 bitten daha kısadır, ancak çok da kısa değildir. Kodu basitleştirmek için haritayı 512 bite kadar sınırlandırıyoruz ve dört alandan oluşan bir diziyi hashliyoruz ve her alanda yalnızca 128 bit kullanıyoruz. [`pack128` fonksiyonu](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) bu amaçla 128 bitlik bir diziyi bir `field` değerine dönüştürür.
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 Bu satır bir fonksiyon tanımını başlatır. `hashMap`, iki boyutlu bir `bool`(ean) dizisi olan `map` adında tek bir parametre alır. Haritanın boyutu, [aşağıda açıklanan](#why-map-border) nedenlerden dolayı `width+2`'e `height+2`'dir.
@@ -269,7 +269,7 @@ Zokrates programları bu uygulamada [şablon dizeleri (template strings)](https:
 Dönüş değeri, hash'i içeren bir `field` değeridir.
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 Harita iki boyutludur. Ancak, `pack128` fonksiyonu iki boyutlu dizilerle çalışmaz. Bu yüzden önce `map1d` kullanarak haritayı 512 baytlık bir diziye düzleştiriyoruz. Varsayılan olarak Zokrates değişkenleri sabittir, ancak bir döngü içinde bu diziye değerler atamamız gerekir, bu yüzden onu [`mut`](https://zokrates.github.io/language/variables.html#mutability) olarak tanımlarız.
@@ -277,19 +277,19 @@ Harita iki boyutludur. Ancak, `pack128` fonksiyonu iki boyutlu dizilerle çalı�
 Zokrates'te `undefined` olmadığı için diziyi başlatmamız gerekir. `[false; 512]` ifadesi, [512 adet `false` değerinden oluşan bir dizi](https://zokrates.github.io/language/types.html#declaration-and-initialization) anlamına gelir.
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 Ayrıca `map1d` içinde zaten doldurduğumuz bitler ile doldurmadıklarımızı ayırt etmek için bir sayaca ihtiyacımız var.
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 Zokrates'te bir [`for` döngüsü](https://zokrates.github.io/language/control_flow.html#for-loops) bu şekilde bildirilir. Bir Zokrates `for` döngüsünün sabit sınırları olmalıdır, çünkü bir döngü gibi görünse de derleyici aslında onu "açar" (unroll). `${width+2}` ifadesi bir derleme zamanı sabitidir çünkü `width`, derleyiciyi çağırmadan önce TypeScript kodu tarafından ayarlanır.
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -299,7 +299,7 @@ for u32 y in 0..${height+2} {
 Haritadaki her konum için, o değeri `map1d` dizisine koyun ve sayacı artırın.
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -310,7 +310,7 @@ field[4] hashMe = [
 `map1d`'den dört `field` değerinden oluşan bir dizi oluşturmak için `pack128` kullanılır. Zokrates'te `array[a..b]`, dizinin `a`'da başlayan ve `b-1`'de biten dilimi anlamına gelir.
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -366,19 +366,19 @@ Varsayılan olarak Zokrates ispatları girdilerini içerir. Hangi nokta olduğun
 Bu, suistimal için başka bir yol açar. Kanıtlayıcı doğru koordinatları kullanabilir, ancak konumun etrafında ve muhtemelen konumun kendisinde herhangi bir sayıda mayın içeren bir harita oluşturabilir. Bu suistimali önlemek için, sıfır bilgi ispatının oyun tanımlayıcısı olan haritanın hash'ini içermesini sağlıyoruz.
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 Buradaki dönüş değeri, harita hash dizisinin yanı sıra kazı sonucunu da içeren bir demettir (tuple).
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 Konumun kendisinde bir bomba olması durumunda özel bir değer olarak 255 kullanıyoruz.
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -582,7 +582,7 @@ proof.inputs[3] = "0x" + "1".padStart(64, "0")
 Bu, doğru cevap ne olursa olsun her zaman bir bomba olduğunu talep edeceğimiz anlamına gelir. Bu sürümle oynamayı deneyin ve `mprocs` ekranının **server** sekmesinde şu hatayı göreceksiniz:
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000

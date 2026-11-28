@@ -105,7 +105,7 @@ published: 2022-08-15
         internal virtual
         override(ERC20)
     {
-        // сжигать (Verb form.) отправляет токен (A digital asset on Ethereum following a standard (ERC-20, ERC-721). NOT a physical coin or voucher.)ы на Адрес (A unique hexadecimal identifier (0x...) for an Ethereum account. NOT a physical location.)(0), не ставьте блок (A unit of bundled transactions added to the blockchain. NOT a physical block or obstruction.) на это
+        // Сжигание отправляет токены на address(0), не блокируйте его
         if (to != address(0)) {
             require(to != address(this), "Can't send tokens to the contract address");
 
@@ -177,7 +177,7 @@ published: 2022-08-15
   События индексируются, поэтому можно будет найти все случаи, когда аккаунт был заморожен или разморожен.
 
   ```solidity
-    // Когда Аккаунт (A digital identity on Ethereum with an address, balance, and optional code.)ы заморожены или разморожены
+    // Когда аккаунты замораживаются или размораживаются
     event AccountFrozen(address indexed _addr);
     event AccountThawed(address indexed _addr);
   ```
@@ -197,7 +197,7 @@ published: 2022-08-15
         require(!frozenAccounts[addr], "Account already frozen");
         frozenAccounts[addr] = true;
         emit AccountFrozen(addr);
-    }  // заморозить Аккаунт (A digital identity on Ethereum with an address, balance, and optional code.)
+    }  // freezeAccount
   ```
 
   Если аккаунт уже заморожен, происходит откат. В противном случае заморозьте его и сгенерируйте (`emit`) событие.

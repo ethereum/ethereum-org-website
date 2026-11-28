@@ -356,15 +356,15 @@ uv run agent.py
 Теперь выводом будет промпт для LLM, похожий на:
 
 ```
-Учитывая эти котировки:
-Актив: WETH/USDC
+Given these quotes:
+Asset: WETH/USDC
         2026-01-20T16:34 3016.21
         .
         .
         .
         2026-02-01T17:49 2299.10
 
-Актив: WBTC/WETH
+Asset: WBTC/WETH
         2026-01-20T16:34 29.84
         .
         .
@@ -372,10 +372,10 @@ uv run agent.py
         2026-02-01T17:50 33.46
 
 
-Каким, по вашему мнению, будет значение WETH/USDC в момент времени 2026-02-02T17:56?
+What would you expect the value for WETH/USDC to be at time 2026-02-02T17:56?
 
-Предоставьте свой ответ в виде одного числа, округленного до двух знаков после запятой,
-без какого-либо другого текста.
+Provide your answer as a single number rounded to two decimal places,
+without any other text.
 ```
 
 Обратите внимание, что здесь представлены котировки для двух активов: `WETH/USDC` и `WBTC/WETH`. Добавление котировок другого актива может повысить точность прогноза.

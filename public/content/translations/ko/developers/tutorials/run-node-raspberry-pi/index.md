@@ -123,7 +123,7 @@ Geth 및 Lighthouse 서비스가 실행되고 동기화되면 이제 Raspberry P
 
 ## 검증자 {#validators}
 
-합의 클라이언트에 선택적으로 검증자를 추가할 수도 있습니다. 검증자 소프트웨어를 사용하면 노드가 합의에 적극적으로 참여하고 네트워크에 암호경제적 보안을 제공할 수 있습니다. 이 작업에 대한 보상으로 ETH를 받습니다. 검증자를 실행하려면 먼저 32 ETH가 있어야 하며, 이를 예치 컨트랙트에 예치해야 합니다. 예치는 [런치패드](https://launchpad.ethereum.org/)의 단계별 가이드에 따라 수행할 수 있습니다. 이 작업은 데스크톱/노트북에서 수행하되 키는 생성하지 마세요. 키 생성은 Raspberry Pi에서 직접 수행할 수 있습니다.
+합의 클라이언트에 선택적으로 검증자를 추가할 수도 있습니다. 검증자 소프트웨어를 사용하면 노드가 합의에 적극적으로 참여하고 네트워크에 암호경제적 보안을 제공할 수 있습니다. 이 작업에 대한 보상으로 ETH를 받습니다. 검증자를 실행하려면 먼저 32 ETH가 있어야 하며, 이를 예치 컨트랙트에 예치해야 합니다. 예치는 [Launchpad](https://launchpad.ethereum.org/)의 단계별 가이드에 따라 수행할 수 있습니다. 이 작업은 데스크톱/노트북에서 수행하되 키는 생성하지 마세요. 키 생성은 Raspberry Pi에서 직접 수행할 수 있습니다.
 
 [ethstaker-deposit-cli](https://github.com/ethstaker/ethstaker-deposit-cli) 도구는 검증자 키를 생성합니다. 현재 이미지에는 이 도구가 포함되어 있습니다. 이전 이미지를 실행 중인 경우 먼저 설치하세요. 그런 다음 `<YOUR_ETH_ADDRESS>`를 출금액을 받을 주소로 바꾸어 예치 키를 생성합니다.
 
@@ -135,9 +135,9 @@ cd && deposit new-mnemonic --num_validators 1 --execution_address <YOUR_ETH_ADDR
 
 (또는 에어갭 머신에서 실행할 [ethstaker-deposit-cli](https://github.com/ethstaker/ethstaker-deposit-cli)를 다운로드하고 그곳에서 `deposit new-mnemonic` 명령을 실행하세요.)
 
-니모닉 문구를 안전하게 보관하세요! 위의 명령은 `validator_keys` 디렉터리에 검증자 키와 예치 데이터 파일이라는 두 개의 파일을 생성했습니다. 예치 데이터는 런치패드에 업로드해야 하므로 Raspberry Pi에서 데스크톱/노트북으로 복사해야 합니다. 이 작업은 ssh 연결이나 다른 복사/붙여넣기 방법을 사용하여 수행할 수 있습니다.
+니모닉 문구를 안전하게 보관하세요! 위의 명령은 `validator_keys` 디렉터리에 검증자 키와 예치 데이터 파일이라는 두 개의 파일을 생성했습니다. 예치 데이터는 Launchpad에 업로드해야 하므로 Raspberry Pi에서 데스크톱/노트북으로 복사해야 합니다. 이 작업은 ssh 연결이나 다른 복사/붙여넣기 방법을 사용하여 수행할 수 있습니다.
 
-런치패드를 실행하는 컴퓨터에서 예치 데이터 파일을 사용할 수 있게 되면 런치패드 화면의 `+`에 끌어다 놓을 수 있습니다. 화면의 지침에 따라 예치 컨트랙트로 트랜잭션을 보냅니다.
+Launchpad를 실행하는 컴퓨터에서 예치 데이터 파일을 사용할 수 있게 되면 Launchpad 화면의 `+`에 끌어다 놓을 수 있습니다. 화면의 지침에 따라 예치 컨트랙트로 트랜잭션을 보냅니다.
 
 다시 Raspberry Pi로 돌아와서 검증자를 시작할 수 있습니다. 이를 위해서는 검증자 키를 가져오고, 보상을 수집할 주소를 설정한 다음, 사전 구성된 검증자 프로세스를 시작해야 합니다. 아래 예시는 Lighthouse에 대한 것입니다. 다른 합의 클라이언트에 대한 지침은 [Ethereum on Arm 문서](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/staking/solo-staking.html)에서 확인할 수 있습니다.
 

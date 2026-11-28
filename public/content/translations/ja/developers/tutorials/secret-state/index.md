@@ -603,7 +603,7 @@ proof.proof = {
 
 やはり失敗しますが、今回は検証者の呼び出し中に発生するため、理由なしに失敗します。
 
-### How can a user verify the zero trust code? {#user-verify-zero-trust}
+### ユーザーはゼロトラストのコードをどのように検証できますか？ {#user-verify-zero-trust}
 
 スマート・コントラクトの検証は比較的簡単です。通常、開発者はソースコードをブロック・エクスプローラーに公開し、ブロック・エクスプローラーはソースコードが[コントラクトのデプロイ・トランザクション](/developers/docs/smart-contracts/deploying/)内のコードにコンパイルされることを検証します。MUDの`System`の場合、これは[少し複雑になります](https://mud.dev/cli/verify)が、それほどではありません。
 

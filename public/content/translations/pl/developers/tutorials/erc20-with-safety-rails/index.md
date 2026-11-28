@@ -105,7 +105,7 @@ Oto kompletna funkcja:
         internal virtual
         override(ERC20)
     {
-        // Spalanie wysyła token (A digital asset on Ethereum following a standard (ERC-20, ERC-721). NOT a physical coin or voucher.)y na adres (A unique hexadecimal identifier (0x...) for an Ethereum account. NOT a physical location.)(0), nie blok (A unit of bundled transactions added to the blockchain. NOT a physical block or obstruction.)uj tego
+        // Spalanie wysyła tokeny na address(0), nie blokuj tego
         if (to != address(0)) {
             require(to != address(this), "Can't send tokens to the contract address");
 
@@ -177,7 +177,7 @@ Zamrażanie i odmrażanie kontraktów wymaga kilku zmian:
   Zdarzenia są indeksowane, więc możliwe będzie wyszukanie wszystkich przypadków, gdy konto zostało zamrożone lub odmrożone.
 
   ```solidity
-    // Kiedy konto (A digital identity on Ethereum with an address, balance, and optional code.) jest zamrożone lub odmrożone
+    // Gdy konta są zamrażane lub odmrażane
     event AccountFrozen(address indexed _addr);
     event AccountThawed(address indexed _addr);
   ```
@@ -197,7 +197,7 @@ Zamrażanie i odmrażanie kontraktów wymaga kilku zmian:
         require(!frozenAccounts[addr], "Account already frozen");
         frozenAccounts[addr] = true;
         emit AccountFrozen(addr);
-    }  // zamroź konto (A digital identity on Ethereum with an address, balance, and optional code.)
+    }  // freezeAccount
   ```
 
   Jeśli konto jest już zamrożone, następuje wycofanie. W przeciwnym razie zamroź je i wyemituj (`emit`) zdarzenie.

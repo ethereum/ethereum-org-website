@@ -252,7 +252,7 @@ import "utils/pack/bool/pack128.zok" as pack128;
 Zokrates मधील फील्ड घटक सामान्यतः 256 बिट्सपेक्षा कमी लांबीचा असतो, परंतु फार कमी नसतो. कोड सोपा करण्यासाठी, आपण नकाशा 512 बिट्सपर्यंत मर्यादित ठेवतो, आणि चार फील्ड्सच्या अ‍ॅरेचे हॅश करतो, आणि प्रत्येक फील्डमध्ये आपण फक्त 128 बिट्स वापरतो. या उद्देशासाठी [`pack128` फंक्शन](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) 128 बिट्सच्या अ‍ॅरेला `field` मध्ये बदलते.
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 ही ओळ फंक्शनची व्याख्या सुरू करते. `hashMap` ला `map` नावाचा एकच पॅरामीटर मिळतो, जो एक द्विमितीय (two-dimensional) `bool`(ean) अ‍ॅरे आहे. नकाशाचा आकार `width+2` बाय `height+2` आहे ज्याची कारणे [खाली स्पष्ट केली आहेत](#why-map-border).
@@ -262,7 +262,7 @@ def hashMap(bool[${width+2}][${height+2}] map) -> field {
 रिटर्न व्हॅल्यू एक `field` आहे ज्यामध्ये हॅश असतो.
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 नकाशा द्विमितीय आहे. तथापि, `pack128` फंक्शन द्विमितीय अ‍ॅरेसह कार्य करत नाही. म्हणून आपण प्रथम `map1d` वापरून नकाशाला 512-बाइट अ‍ॅरेमध्ये सपाट (flatten) करतो. डीफॉल्टनुसार Zokrates व्हेरिएबल्स स्थिरांक (constants) असतात, परंतु आपल्याला लूपमध्ये या अ‍ॅरेला मूल्ये नियुक्त करण्याची आवश्यकता असते, म्हणून आपण ते [`mut`](https://zokrates.github.io/language/variables.html#mutability) म्हणून परिभाषित करतो.
@@ -270,19 +270,19 @@ bool[512] mut map1d = [false; 512];
 आपल्याला अ‍ॅरे इनिशियलाइझ करण्याची आवश्यकता आहे कारण Zokrates मध्ये `undefined` नाही. `[false; 512]` एक्स्प्रेशनचा अर्थ [512 `false` मूल्यांचा अ‍ॅरे](https://zokrates.github.io/language/types.html#declaration-and-initialization) असा होतो.
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 आपण `map1d` मध्ये आधीच भरलेले बिट्स आणि जे भरलेले नाहीत त्यांच्यात फरक करण्यासाठी आपल्याला काउंटरची देखील आवश्यकता आहे.
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 अशा प्रकारे तुम्ही Zokrates मध्ये [`for` लूप](https://zokrates.github.io/language/control_flow.html#for-loops) घोषित करता. Zokrates `for` लूपला निश्चित मर्यादा असणे आवश्यक आहे, कारण ते लूपसारखे दिसत असले तरी, कंपायलर प्रत्यक्षात ते "अनरोल" करतो. `${width+2}` हे एक्स्प्रेशन एक कंपाइल टाइम कॉन्स्टंट आहे कारण कंपायलरला कॉल करण्यापूर्वी TypeScript कोडद्वारे `width` सेट केले जाते.
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -292,7 +292,7 @@ for u32 y in 0..${height+2} {
 नकाशातील प्रत्येक स्थानासाठी, ते मूल्य `map1d` अ‍ॅरेमध्ये ठेवा आणि काउंटर वाढवा.
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -303,7 +303,7 @@ field[4] hashMe = [
 `map1d` मधून चार `field` मूल्यांचा अ‍ॅरे तयार करण्यासाठी `pack128` वापरले जाते. Zokrates मध्ये `array[a..b]` म्हणजे अ‍ॅरेचा तो भाग जो `a` पासून सुरू होतो आणि `b-1` वर संपतो.
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -359,19 +359,19 @@ def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8)
 यामुळे गैरवापराचा आणखी एक मार्ग खुला होतो. सिद्धकर्ता योग्य निर्देशांक वापरू शकतो, परंतु स्थानाभोवती आणि शक्यतो त्या स्थानावरच कितीही खाणी असलेला नकाशा तयार करू शकतो. हा गैरवापर टाळण्यासाठी, आपण शून्य-ज्ञान पुराव्यामध्ये नकाशाचा हॅश समाविष्ट करतो, जो गेम आयडेंटिफायर आहे.
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 येथील रिटर्न व्हॅल्यू एक ट्यूपल (tuple) आहे ज्यामध्ये नकाशा हॅश अ‍ॅरे तसेच डिग (dig) परिणाम समाविष्ट आहे.
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 जर त्या स्थानावरच बॉम्ब असेल तर आपण 255 हे विशेष मूल्य म्हणून वापरतो.
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -575,7 +575,7 @@ proof.inputs[3] = "0x" + "1".padStart(64, "0")
 याचा अर्थ असा की योग्य उत्तर काहीही असले तरी आपण नेहमी एक बॉम्ब असल्याचा दावा करू. या आवृत्तीसह खेळण्याचा प्रयत्न करा, आणि तुम्हाला `mprocs` स्क्रीनच्या **server** टॅबमध्ये ही त्रुटी दिसेल:
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000

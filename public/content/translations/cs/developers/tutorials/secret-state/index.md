@@ -252,7 +252,7 @@ Tyto dva řádky importují dvě funkce ze [standardní knihovny Zokrates](https
 Prvek tělesa (field) v Zokrates je obvykle kratší než 256 bitů, ale ne o moc. Pro zjednodušení kódu omezíme mapu na maximálně 512 bitů a hashujeme pole čtyř prvků tělesa, přičemž v každém z nich použijeme pouze 128 bitů. [Funkce `pack128`](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) pro tento účel mění pole 128 bitů na `field`.
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 Tento řádek začíná definici funkce. `hashMap` získává jeden parametr s názvem `map`, což je dvourozměrné pole typu `bool`(ean). Velikost mapy je `width+2` krát `height+2` z důvodů, které jsou [vysvětleny níže](#why-map-border).
@@ -262,7 +262,7 @@ Můžeme použít `${width+2}` a `${height+2}`, protože programy Zokrates jsou 
 Návratovou hodnotou je `field`, který obsahuje hash.
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 Mapa je dvourozměrná. Funkce `pack128` však nefunguje s dvourozměrnými poli. Proto nejprve mapu zploštíme do 512bajtového pole pomocí `map1d`. Ve výchozím nastavení jsou proměnné v Zokrates konstanty, ale my potřebujeme tomuto poli přiřazovat hodnoty ve smyčce, takže ho definujeme jako [`mut`](https://zokrates.github.io/language/variables.html#mutability).
@@ -270,19 +270,19 @@ Mapa je dvourozměrná. Funkce `pack128` však nefunguje s dvourozměrnými poli
 Pole musíme inicializovat, protože Zokrates nemá `undefined`. Výraz `[false; 512]` znamená [pole 512 hodnot `false`](https://zokrates.github.io/language/types.html#declaration-and-initialization).
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 Potřebujeme také počítadlo, abychom rozlišili mezi bity, které jsme již v `map1d` vyplnili, a těmi, které ještě ne.
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 Takhle se v Zokrates deklaruje [smyčka `for`](https://zokrates.github.io/language/control_flow.html#for-loops). Smyčka `for` v Zokrates musí mít pevné hranice, protože ačkoli se jeví jako smyčka, kompilátor ji ve skutečnosti „rozbalí“ (unrolls). Výraz `${width+2}` je konstanta v době kompilace, protože `width` je nastaveno kódem v TypeScriptu předtím, než zavolá kompilátor.
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -292,7 +292,7 @@ for u32 y in 0..${height+2} {
 Pro každé místo na mapě vložte tuto hodnotu do pole `map1d` a zvyšte počítadlo.
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -303,7 +303,7 @@ field[4] hashMe = [
 Pomocí `pack128` vytvoříme pole čtyř hodnot `field` z `map1d`. V Zokrates `array[a..b]` znamená výřez pole, který začíná na `a` a končí na `b-1`.
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -359,19 +359,19 @@ Ve výchozím nastavení důkazy Zokrates zahrnují své vstupy. Není k ničemu
 To otevírá další prostor pro zneužití. Dokazovatel by mohl použít správné souřadnice, ale vytvořit mapu s libovolným počtem min kolem daného místa, a případně i na samotném místě. Abychom tomuto zneužití zabránili, zajistíme, aby důkaz s nulovou znalostí obsahoval hash mapy, což je identifikátor hry.
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 Návratovou hodnotou je zde n-tice (tuple), která obsahuje pole hashe mapy a také výsledek kopání.
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 Používáme 255 jako speciální hodnotu pro případ, že se na samotném místě nachází bomba.
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -575,7 +575,7 @@ proof.inputs[3] = "0x" + "1".padStart(64, "0")
 To znamená, že budeme vždy tvrdit, že je tam jedna bomba, bez ohledu na správnou odpověď. Zkuste si zahrát s touto verzí a na kartě **server** na obrazovce `mprocs` uvidíte tuto chybu:
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000

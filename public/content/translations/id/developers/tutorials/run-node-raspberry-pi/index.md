@@ -145,7 +145,7 @@ Kembali ke Raspberry Pi, validator dapat dimulai. Ini memerlukan pengimporan kun
 # impor kunci validator (Software entity (node) that validates blocks in proof-of-stake. Sometimes refers to the human operator. NOT the same as 'miner' (PoW).)
 lighthouse account validator import --directory=/home/ethereum/validator_keys
 
-# atur alamat (A unique hexadecimal identifier (0x...) for an Ethereum account. NOT a physical location.) hadiah (ganti <YOUR_ETH_ADDRESS> dengan alamat (A unique hexadecimal identifier (0x...) for an Ethereum account. NOT a physical location.) Anda)
+# atur alamat hadiah (ganti <YOUR_ETH_ADDRESS> dengan alamat Anda)
 sudo sed -i 's/changeme/<YOUR_ETH_ADDRESS>/' /etc/ethereum/lighthouse-validator.conf
 
 # mulai validator (Software entity (node) that validates blocks in proof-of-stake. Sometimes refers to the human operator. NOT the same as 'miner' (PoW).)

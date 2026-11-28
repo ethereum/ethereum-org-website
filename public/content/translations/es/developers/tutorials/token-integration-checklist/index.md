@@ -33,7 +33,7 @@ Para seguir esta lista de verificación, querrá tener esta salida de Slither pa
 slither-check-erc [target] [contractName] [optional: --erc ERC_NUMBER]
 slither [target] --print human-summary
 slither [target] --print contract-summary
-slither-prop . --contract ContractName # require (Se mantiene en inglés por ser una palabra reservada del lenguaje Solidity.) configuración, y el uso de Echidna (Proper noun referring to a specific development tool. Never translated.)
+slither-prop . --contract ContractName # requiere configuración, y el uso de Echidna
 ```
 
 ## Consideraciones generales {#general-considerations}

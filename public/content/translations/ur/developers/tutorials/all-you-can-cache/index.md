@@ -46,7 +46,7 @@ lang: ur
 
 ## کیش کی ہیرا پھیری {#cache-manipulation}
 
-کیش کو [`کیشے.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol) میں لاگو کیا گیا ہے۔ آئیے اس کا لائن بہ لائن جائزہ لیں۔
+کیش کو [`Cache.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol) میں لاگو کیا گیا ہے۔ آئیے اس کا لائن بہ لائن جائزہ لیں۔
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -770,7 +770,7 @@ contract WORM is Cache {
 
 ### کلائنٹ {#the-client}
 
-ایک چیز جو آپ کو Solidity ٹیسٹس کے ساتھ نہیں ملتی وہ JavaScript کوڈ ہے جسے آپ کاٹ کر اپنی ایپلی کیشن میں پیسٹ کر سکتے ہیں۔ اس ٹیوٹوریل کے اصل ورژن نے WORM کو Optimism گورلی پر تعینات کیا تھا، جسے اب بند کر دیا گیا ہے۔ نمونہ ریپوزٹری اب بھی Optimism گورلی کی طرف اشارہ کرتی ہے، اس لیے آج کلائنٹ کو چلانے کے لیے آپ کو خود WORM کو [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack) پر تعینات کرنا ہوگا اور کلائنٹ کو اپنی تعیناتی کی طرف اشارہ کرنا ہوگا۔
+ایک چیز جو آپ کو Solidity ٹیسٹس کے ساتھ نہیں ملتی وہ JavaScript کوڈ ہے جسے آپ کاٹ کر اپنی ایپلی کیشن میں پیسٹ کر سکتے ہیں۔ اس ٹیوٹوریل کے اصل ورژن نے WORM کو <span dir="ltr">Optimism Goerli</span> پر تعینات کیا تھا، جسے اب بند کر دیا گیا ہے۔ نمونہ ریپوزٹری اب بھی <span dir="ltr">Optimism Goerli</span> کی طرف اشارہ کرتی ہے، اس لیے آج کلائنٹ کو چلانے کے لیے آپ کو خود WORM کو [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack) پر تعینات کرنا ہوگا اور کلائنٹ کو اپنی تعیناتی کی طرف اشارہ کرنا ہوگا۔
 
 [آپ کلائنٹ کے لیے JavaScript کوڈ یہاں دیکھ سکتے ہیں](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js)۔ اسے استعمال کرنے کے لیے، آپ کو [Foundry](https://getfoundry.sh/introduction/installation/)، [Node.js](https://nodejs.org/)، اور کچھ OP Sepolia ETH والے اکاؤنٹ کی ضرورت ہے۔ [Optimism کے فوسٹ ڈاکیومنٹس](https://docs.optimism.io/app-developers/tools-sdks/faucets) موجودہ آزمائشی نیٹ ورک فوسٹس کی فہرست دیتے ہیں۔
 
@@ -793,7 +793,7 @@ contract WORM is Cache {
 
    `--broadcast` کے بغیر، `forge create` صرف تعیناتی کی نقل (simulate) کرتا ہے۔ آؤٹ پٹ کی `Deployed to:` لائن سے پتہ کاپی کریں۔
 
-3. `javascript/index.js` میں ترمیم کریں۔ اس لائن میں پرانے Optimism گورلی پتے کو اپنی تعیناتی کے پتے سے تبدیل کریں:
+3. `javascript/index.js` میں ترمیم کریں۔ اس لائن میں پرانے <span dir="ltr">Optimism Goerli</span> پتے کو اپنی تعیناتی کے پتے سے تبدیل کریں:
 
    ```javascript
    const worm = WormFactory.attach("0xD34335b1d818ceE54e3323D3246bD31d94E6a78a")
@@ -814,7 +814,7 @@ contract WORM is Cache {
    cp .env.example .env
    ```
 
-6. اپنی کنفیگریشن کے لیے `.env` میں ترمیم کریں۔ متغیر (variable) کے نام اب بھی Optimism گورلی کا حوالہ دیتے ہیں، لیکن قدریں OP Sepolia کے لیے ہیں:
+6. اپنی کنفیگریشن کے لیے `.env` میں ترمیم کریں۔ متغیر (variable) کے نام اب بھی <span dir="ltr">Optimism Goerli</span> کا حوالہ دیتے ہیں، لیکن قدریں OP Sepolia کے لیے ہیں:
 
    | پیرامیٹر | قدر |
    | ------------------- | ------------------------------------------------------------------------------------------------------- |

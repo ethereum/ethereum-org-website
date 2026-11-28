@@ -259,7 +259,7 @@ import "utils/pack/bool/pack128.zok" as pack128;
 Zokrates 中的 field 元素通常小於 256 位元，但相差不大。為了簡化程式碼，我們將地圖限制為最多 512 位元，並對包含四個 field 的陣列進行雜湊運算，且在每個 field 中我們僅使用 128 位元。[`pack128` 函數](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok)為此目的將 128 位元的陣列轉換為 `field`。
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 這一行開始定義函數。`hashMap` 接收一個名為 `map` 的單一參數，這是一個二維的 `bool`(ean) 陣列。地圖的大小為 `width+2` 乘 `height+2`，原因將在[下方解釋](#why-map-border)。
@@ -269,7 +269,7 @@ def hashMap(bool[${width+2}][${height+2}] map) -> field {
 回傳值是一個包含雜湊的 `field`。
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 地圖是二維的。然而，`pack128` 函數不適用於二維陣列。因此，我們首先使用 `map1d` 將地圖展平為 512 位元組的陣列。預設情況下，Zokrates 變數是常數，但我們需要在迴圈中為這個陣列賦值，因此我們將其定義為 [`mut`](https://zokrates.github.io/language/variables.html#mutability)。
@@ -277,19 +277,19 @@ bool[512] mut map1d = [false; 512];
 我們需要初始化陣列，因為 Zokrates 沒有 `undefined`。`[false; 512]` 表達式代表[一個包含 512 個 `false` 值的陣列](https://zokrates.github.io/language/types.html#declaration-and-initialization)。
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 我們還需要一個計數器來區分我們已經在 `map1d` 中填入的位元和尚未填入的位元。
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 這就是在 Zokrates 中宣告 [`for` 迴圈](https://zokrates.github.io/language/control_flow.html#for-loops)的方式。Zokrates 的 `for` 迴圈必須具有固定的邊界，因為雖然它看起來像是一個迴圈，但編譯器實際上會將其「展開」。表達式 `${width+2}` 是一個編譯期常數，因為 `width` 是由 TypeScript 程式碼在呼叫編譯器之前設定的。
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -299,7 +299,7 @@ for u32 y in 0..${height+2} {
 對於地圖中的每個位置，將該值放入 `map1d` 陣列中並遞增計數器。
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -310,7 +310,7 @@ field[4] hashMe = [
 使用 `pack128` 從 `map1d` 建立一個包含四個 `field` 值的陣列。在 Zokrates 中，`array[a..b]` 代表從 `a` 開始並在 `b-1` 結束的陣列切片。
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -366,19 +366,19 @@ def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8)
 這開啟了另一個濫用的途徑。證明者可以使用正確的座標，但建立一個在該位置周圍（甚至可能在該位置本身）有任意數量地雷的地圖。為了防止這種濫用，我們讓零知識證明包含地圖的雜湊，也就是遊戲識別碼。
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 這裡的回傳值是一個元組，包含地圖雜湊陣列以及挖掘結果。
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 我們使用 255 作為特殊值，以防該位置本身有炸彈。
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -582,7 +582,7 @@ proof.inputs[3] = "0x" + "1".padStart(64, "0")
 這意味著無論正確答案為何，我們都會始終聲稱有一顆炸彈。嘗試遊玩這個版本，您會在 `mprocs` 畫面的 **server** 分頁中看到此錯誤：
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000

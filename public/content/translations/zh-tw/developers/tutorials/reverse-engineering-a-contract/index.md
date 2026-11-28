@@ -42,7 +42,7 @@ _區塊鏈上沒有秘密_，發生的每一件事都是一致、可驗證且公
 
 ## 進入點 (0x00) {#the-entry-point-0x00}
 
-Contracts are always executed from the first byte. This is the initial part of the code:
+合約總是從第一個位元組開始執行。這是程式碼的初始部分：
 
 | 偏移量 | 操作碼       | 堆疊（操作碼之後） |
 | -----: | ------------ | ------------------------ |

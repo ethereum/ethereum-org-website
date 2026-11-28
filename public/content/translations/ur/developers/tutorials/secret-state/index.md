@@ -259,7 +259,7 @@ import "utils/pack/bool/pack128.zok" as pack128;
 Zokrates میں فیلڈ عنصر عام طور پر <span dir="ltr">256 bits</span> سے کم طویل ہوتا ہے، لیکن زیادہ نہیں۔ کوڈ کو آسان بنانے کے لیے، ہم نقشے کو <span dir="ltr">512 bits</span> تک محدود کرتے ہیں، اور چار فیلڈز کی ایک سرنی کو ہیش کرتے ہیں، اور ہر فیلڈ میں ہم صرف <span dir="ltr">128 bits</span> استعمال کرتے ہیں۔ [`pack128` فنکشن](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) اس مقصد کے لیے <span dir="ltr">128 bits</span> کی ایک سرنی کو `field` میں تبدیل کرتا ہے۔
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 یہ لائن ایک فنکشن کی تعریف شروع کرتی ہے۔ `hashMap` کو `map` نامی ایک واحد پیرامیٹر ملتا ہے، جو کہ دو جہتی (two-dimensional) `bool`(ean) سرنی ہے۔ نقشے کا سائز `width+2` بائی `height+2` ہے ان وجوہات کی بنا پر جو [نیچے بیان کی گئی ہیں](#why-map-border)۔
@@ -269,7 +269,7 @@ def hashMap(bool[${width+2}][${height+2}] map) -> field {
 واپسی کی قدر ایک `field` ہے جس میں ہیش شامل ہے۔
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 نقشہ دو جہتی ہے۔ تاہم، `pack128` فنکشن دو جہتی سرنیوں کے ساتھ کام نہیں کرتا ہے۔ اس لیے ہم پہلے `map1d` کا استعمال کرتے ہوئے نقشے کو <span dir="ltr">512-byte</span> کی سرنی میں ہموار (flatten) کرتے ہیں۔ پہلے سے طے شدہ طور پر Zokrates متغیرات (variables) مستقل (constants) ہوتے ہیں، لیکن ہمیں ایک لوپ میں اس سرنی کو قدریں تفویض کرنے کی ضرورت ہے، اس لیے ہم اسے [`mut`](https://zokrates.github.io/language/variables.html#mutability) کے طور پر بیان کرتے ہیں۔
@@ -277,19 +277,19 @@ bool[512] mut map1d = [false; 512];
 ہمیں سرنی کو شروع (initialize) کرنے کی ضرورت ہے کیونکہ Zokrates میں `undefined` نہیں ہے۔ `[false; 512]` اظہار کا مطلب ہے [512 `false` قدروں کی ایک سرنی](https://zokrates.github.io/language/types.html#declaration-and-initialization)۔
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 ہمیں ان بٹس کے درمیان فرق کرنے کے لیے ایک کاؤنٹر کی بھی ضرورت ہے جو ہم نے پہلے ہی `map1d` میں بھر دیے ہیں اور وہ جو ہم نے نہیں بھرے ہیں۔
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 اس طرح آپ Zokrates میں ایک [`for` لوپ](https://zokrates.github.io/language/control_flow.html#for-loops) کا اعلان کرتے ہیں۔ Zokrates کے `for` لوپ کی حدود مقرر ہونی چاہئیں، کیونکہ اگرچہ یہ ایک لوپ معلوم ہوتا ہے، لیکن کمپائلر دراصل اسے "انرول" (unroll) کرتا ہے۔ اظہار `${width+2}` ایک کمپائل ٹائم مستقل ہے کیونکہ `width` کو کمپائلر کو کال کرنے سے پہلے TypeScript کوڈ کے ذریعے سیٹ کیا جاتا ہے۔
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -299,7 +299,7 @@ for u32 y in 0..${height+2} {
 نقشے میں ہر مقام کے لیے، اس قدر کو `map1d` سرنی میں رکھیں اور کاؤنٹر میں اضافہ کریں۔
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -310,7 +310,7 @@ field[4] hashMe = [
 `map1d` سے چار `field` قدروں کی ایک سرنی بنانے کے لیے `pack128` کا استعمال کیا جاتا ہے۔ Zokrates میں `array[a..b]` کا مطلب سرنی کا وہ حصہ ہے جو `a` سے شروع ہوتا ہے اور `b-1` پر ختم ہوتا ہے۔
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -366,19 +366,19 @@ def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8)
 اس سے غلط استعمال کا ایک اور راستہ کھلتا ہے۔ ثابت کنندہ درست نقاط (coordinates) استعمال کر سکتا ہے، لیکن مقام کے ارد گرد، اور ممکنہ طور پر خود اس مقام پر کسی بھی تعداد میں بارودی سرنگوں کے ساتھ ایک نقشہ بنا سکتا ہے۔ اس غلط استعمال کو روکنے کے لیے، ہم صفر علم ثبوت میں نقشے کا ہیش شامل کرتے ہیں، جو کہ گیم کا شناخت کنندہ ہے۔
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 یہاں واپسی کی قدر ایک ٹپل (tuple) ہے جس میں نقشے کی ہیش سرنی کے ساتھ ساتھ کھدائی کا نتیجہ بھی شامل ہے۔
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 اگر مقام پر خود کوئی بم ہو تو ہم <span dir="ltr">255</span> کو ایک خاص قدر کے طور پر استعمال کرتے ہیں۔
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -582,7 +582,7 @@ proof.inputs[3] = "0x" + "1".padStart(64, "0")
 اس کا مطلب ہے کہ ہم ہمیشہ یہ دعویٰ کریں گے کہ ایک بم ہے، قطع نظر اس کے کہ صحیح جواب کیا ہے۔ اس ورژن کے ساتھ کھیلنے کی کوشش کریں، اور آپ `mprocs` اسکرین کے **<span dir="ltr">server</span>** ٹیب میں یہ خرابی دیکھیں گے:
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000

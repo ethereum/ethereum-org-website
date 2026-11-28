@@ -105,7 +105,7 @@ Aquí está la función completa:
         internal virtual
         override(ERC20)
     {
-        // Quemar envía token (Universally adopted anglicism in the crypto ecosystem.)s a la dirección (A unique hexadecimal identifier (0x...) for an Ethereum account. NOT a physical location.)(0), no lo bloque (A unit of bundled transactions added to the blockchain. NOT a physical block or obstruction.)
+        // Quemar envía tokens a address(0), no lo bloquees
         if (to != address(0)) {
             require(to != address(this), "Can't send tokens to the contract address");
 
@@ -177,7 +177,7 @@ Congelar y descongelar contratos requiere varios cambios:
   Los eventos están indexados, por lo que será posible buscar todas las veces que una cuenta ha sido congelada o descongelada.
 
   ```solidity
-    // Cuando las cuenta (A digital identity on Ethereum with an address, balance, and optional code.)s están congeladas o descongeladas
+    // Cuando las cuentas se congelan o descongelan
     event AccountFrozen(address indexed _addr);
     event AccountThawed(address indexed _addr);
   ```
@@ -197,7 +197,7 @@ Congelar y descongelar contratos requiere varios cambios:
         require(!frozenAccounts[addr], "Account already frozen");
         frozenAccounts[addr] = true;
         emit AccountFrozen(addr);
-    }  // congelarCuenta (A digital identity on Ethereum with an address, balance, and optional code.)
+    }  // freezeAccount
   ```
 
   Si la cuenta ya está congelada, revertir. De lo contrario, congélela y `emit` un evento.

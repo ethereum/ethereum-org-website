@@ -259,7 +259,7 @@ import "utils/pack/bool/pack128.zok" as pack128;
 Zokrates 中的 field 元素通常小于 256 位，但相差不大。为了简化代码，我们将地图限制为最多 512 位，并对包含四个 field 的数组进行哈希处理，在每个 field 中我们仅使用 128 位。[`pack128` 函数](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok)为此目的将 128 位数组转换为 `field`。
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 这一行开始定义一个函数。`hashMap` 接收一个名为 `map` 的参数，这是一个二维 `bool`(ean) 数组。地图的大小为 `width+2` 乘 `height+2`，原因将在[下文解释](#why-map-border)。
@@ -269,7 +269,7 @@ def hashMap(bool[${width+2}][${height+2}] map) -> field {
 返回值是一个包含哈希的 `field`。
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 地图是二维的。然而，`pack128` 函数不适用于二维数组。因此，我们首先使用 `map1d` 将地图展平为 512 字节的数组。默认情况下，Zokrates 变量是常量，但我们需要在循环中为该数组赋值，因此我们将其定义为 [`mut`](https://zokrates.github.io/language/variables.html#mutability)。
@@ -277,19 +277,19 @@ bool[512] mut map1d = [false; 512];
 我们需要初始化该数组，因为 Zokrates 没有 `undefined`。`[false; 512]` 表达式表示[一个包含 512 个 `false` 值的数组](https://zokrates.github.io/language/types.html#declaration-and-initialization)。
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 我们还需要一个计数器来区分我们在 `map1d` 中已经填充的位和尚未填充的位。
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 这就是在 Zokrates 中声明 [`for` 循环](https://zokrates.github.io/language/control_flow.html#for-loops)的方法。Zokrates 的 `for` 循环必须具有固定的边界，因为虽然它看起来像一个循环，但编译器实际上会将其“展开”。表达式 `${width+2}` 是一个编译时常量，因为 `width` 是由 TypeScript 代码在调用编译器之前设置的。
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -299,7 +299,7 @@ for u32 y in 0..${height+2} {
 对于地图中的每个位置，将该值放入 `map1d` 数组中并递增计数器。
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -310,7 +310,7 @@ field[4] hashMe = [
 使用 `pack128` 从 `map1d` 创建一个包含四个 `field` 值的数组。在 Zokrates 中，`array[a..b]` 表示从 `a` 开始到 `b-1` 结束的数组切片。
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -366,19 +366,19 @@ def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8)
 这开启了另一种滥用的可能。证明者可以使用正确的坐标，但创建一个在该位置周围（甚至可能在该位置本身）有任意数量地雷的地图。为了防止这种滥用，我们让零知识证明包含地图的哈希，即游戏标识符。
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 这里的返回值是一个元组，包含地图哈希数组以及挖掘结果。
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 我们使用 255 作为特殊值，以防该位置本身有炸弹。
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -582,7 +582,7 @@ proof.inputs[3] = "0x" + "1".padStart(64, "0")
 这意味着无论正确答案是什么，我们都将始终声称有一颗炸弹。尝试玩一下这个版本，你会在 `mprocs` 屏幕的 **server** 选项卡中看到这个错误：
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000

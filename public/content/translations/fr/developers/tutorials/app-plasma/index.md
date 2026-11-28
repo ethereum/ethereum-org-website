@@ -164,7 +164,7 @@ Pour le voir en action :
    La sortie devrait être similaire à
 
       ```
-ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
+   ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
 
    [zkBank] Circuit witness successfully solved
    [zkBank] Witness saved to target/zkBank.gz

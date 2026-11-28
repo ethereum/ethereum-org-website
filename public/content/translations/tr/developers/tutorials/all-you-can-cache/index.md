@@ -42,7 +42,7 @@ Basitlik adına tüm işlem parametrelerinin `uint256` yani 32 bayt uzunluğunda
 
 ## Önbellek manipülasyonu {#cache-manipulation}
 
-Önbellek [`Önbellek.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol) içinde uygulanmıştır. Satır satır üzerinden geçelim.
+Önbellek [`Cache.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol) içinde uygulanmıştır. Satır satır üzerinden geçelim.
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED

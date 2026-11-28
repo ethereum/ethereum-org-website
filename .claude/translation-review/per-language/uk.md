@@ -252,3 +252,16 @@ Scope: gas page, translation-program page, page-developers-index.json (3 files),
 
 - `tip` -> `надбавка`/`заохочення`; `повинна бути принаймні не меншою` says "at least" twice (gas:89); `акаунт` vs `рахунок` in one paragraph.
 - `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)
+
+## PR #19993 (intl/pending-dev) -- 2026-11-28 -- Score 8.6/10
+Scope: 15 developer tutorials (incremental updates), changed lines only; no page-courses.json for this locale.
+
+**Fixed in this branch:**
+
+- all-you-can-cache:45 inline file name `Кеш.sol` -> `Cache.sol` (identifier translated)
+- yellow-paper-evm:37 `Кеччак-256` -> `Keccak-256` (name of a hash function; matches the table at :228 and ru)
+
+**Open / notes:**
+
+- `tags: ["рівень 2 (L2)"]` keeps the glossary `(L2)` that English lacks (case-only change in this PR); warning.
+- Pre-existing, untouched lines still carry transliterated names (`Юнісвоп`, `ОупенЗеппелін`, `МетаМаск`, `Лайтгаус`); out of scope.

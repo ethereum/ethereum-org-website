@@ -259,7 +259,7 @@ Hai dòng này nhập hai hàm từ [thư viện chuẩn Zokrates](https://zokra
 Phần tử trường (field element) trong Zokrates thường dài dưới 256 bit, nhưng không ít hơn nhiều. Để đơn giản hóa mã, chúng ta giới hạn bản đồ ở mức tối đa 512 bit và băm một mảng gồm bốn trường, và trong mỗi trường chúng ta chỉ sử dụng 128 bit. [Hàm `pack128`](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) thay đổi một mảng 128 bit thành một `field` cho mục đích này.
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 Dòng này bắt đầu một định nghĩa hàm. `hashMap` nhận một tham số duy nhất gọi là `map`, một mảng `bool`(ean) hai chiều. Kích thước của bản đồ là `width+2` nhân `height+2` vì những lý do được [giải thích bên dưới](#why-map-border).
@@ -269,7 +269,7 @@ Chúng ta có thể sử dụng `${width+2}` và `${height+2}` vì các chương
 Giá trị trả về là một `field` chứa mã băm.
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 Bản đồ là hai chiều. Tuy nhiên, hàm `pack128` không hoạt động với các mảng hai chiều. Vì vậy, trước tiên chúng ta làm phẳng bản đồ thành một mảng 512 byte, sử dụng `map1d`. Theo mặc định, các biến Zokrates là hằng số, nhưng chúng ta cần gán giá trị cho mảng này trong một vòng lặp, vì vậy chúng ta định nghĩa nó là [`mut`](https://zokrates.github.io/language/variables.html#mutability).
@@ -277,19 +277,19 @@ Bản đồ là hai chiều. Tuy nhiên, hàm `pack128` không hoạt động v�
 Chúng ta cần khởi tạo mảng vì Zokrates không có `undefined`. Biểu thức `[false; 512]` có nghĩa là [một mảng gồm 512 giá trị `false`](https://zokrates.github.io/language/types.html#declaration-and-initialization).
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 Chúng ta cũng cần một bộ đếm để phân biệt giữa các bit chúng ta đã điền vào `map1d` và những bit chưa điền.
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 Đây là cách bạn khai báo một [vòng lặp `for`](https://zokrates.github.io/language/control_flow.html#for-loops) trong Zokrates. Một vòng lặp `for` của Zokrates phải có các giới hạn cố định, bởi vì mặc dù nó có vẻ là một vòng lặp, trình biên dịch thực sự "mở cuộn" (unroll) nó. Biểu thức `${width+2}` là một hằng số tại thời điểm biên dịch vì `width` được thiết lập bởi mã TypeScript trước khi nó gọi trình biên dịch.
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -299,7 +299,7 @@ for u32 y in 0..${height+2} {
 Đối với mỗi vị trí trong bản đồ, hãy đặt giá trị đó vào mảng `map1d` và tăng bộ đếm.
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -310,7 +310,7 @@ field[4] hashMe = [
 Sử dụng `pack128` để tạo một mảng gồm bốn giá trị `field` từ `map1d`. Trong Zokrates, `array[a..b]` có nghĩa là lát cắt của mảng bắt đầu tại `a` và kết thúc tại `b-1`.
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -366,19 +366,19 @@ Theo mặc định, các bằng chứng Zokrates bao gồm các đầu vào củ
 Điều này mở ra một cơ hội khác cho việc lạm dụng. Trình chứng minh có thể sử dụng tọa độ chính xác, nhưng tạo ra một bản đồ với bất kỳ số lượng mìn nào xung quanh vị trí đó, và có thể tại chính vị trí đó. Để ngăn chặn sự lạm dụng này, chúng ta làm cho bằng chứng không kiến thức bao gồm mã băm của bản đồ, đây chính là định danh của trò chơi.
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 Giá trị trả về ở đây là một tuple bao gồm mảng mã băm bản đồ cũng như kết quả đào.
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 Chúng ta sử dụng 255 như một giá trị đặc biệt trong trường hợp bản thân vị trí đó có một quả bom.
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -582,7 +582,7 @@ proof.inputs[3] = "0x" + "1".padStart(64, "0")
 Điều này có nghĩa là chúng ta sẽ luôn khẳng định có một quả bom, bất kể câu trả lời đúng là gì. Hãy thử chơi với phiên bản này, và bạn sẽ thấy trong tab **server** của màn hình `mprocs` có lỗi này:
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000

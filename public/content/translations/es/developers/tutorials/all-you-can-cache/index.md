@@ -368,7 +368,7 @@ Así es como se realiza la prueba real, utilizando [funciones `assert...`](https
     }    // testCaching
 
 
-    // Almacenar en caché el mismo valor varias veces, asegurarse de que la clave (Aunque 'llave' también se utiliza, 'clave' es el estándar establecido en el ámbito criptográfico y de seguridad informática en español.) se mantenga
+    // Almacenar en caché el mismo valor varias veces, asegurarse de que la clave se mantenga
     // igual
     function testRepeatCaching() public {
         for(uint i=1; i<100; i++) {
@@ -547,12 +547,12 @@ Esta función es similar a `testReadParam`, excepto que en lugar de escribir los
 La única prueba adicional en `testEncodeVal()` es verificar que la longitud de `_callInput` sea correcta. Para la primera llamada es 4+33\*4. Para la segunda, donde cada valor ya está en la caché, es 4+1\*4.
 
 ```solidity
-    // Probar encodeVal cuando la clave (Aunque 'llave' también se utiliza, 'clave' es el estándar establecido en el ámbito criptográfico y de seguridad informática en español.) es de más de un solo byte
+    // Probar encodeVal cuando la clave es de más de un solo byte
     // Máximo tres bytes porque llenar la caché a cuatro bytes toma
     // demasiado tiempo.
     function testEncodeValBig() public {
         // Poner una cantidad de valores en la caché.
-        // Para mantener las cosas simples, usar la clave (Aunque 'llave' también se utiliza, 'clave' es el estándar establecido en el ámbito criptográfico y de seguridad informática en español.) n para el valor n.
+        // Para mantener las cosas simples, usar la clave n para el valor n.
         for(uint i=1; i<0x1FFF; i++) {
             cache.cacheWrite(i);
         }
@@ -604,7 +604,7 @@ Pruebe qué sucede en el caso anormal en el que no hay suficientes parámetros.
 Dado que se revierte, el resultado que deberíamos obtener es `false`.
 
 ```
-    // Llamar con claves (Aunque 'llave' también se utiliza, 'clave' es el estándar establecido en el ámbito criptográfico y de seguridad informática en español.) de caché que no están ahí
+    // Llamar con claves de caché que no están ahí
     function testNoCacheKey() public {
         .
         .
@@ -834,7 +834,7 @@ La mayor parte del cliente es JavaScript normal de dapp. Así que, de nuevo, sol
 const main = async () => {
     const func = await worm.WRITE_ENTRY_CACHED()
 
-    // Se necesita una nueva clave (Aunque 'llave' también se utiliza, 'clave' es el estándar establecido en el ámbito criptográfico y de seguridad informática en español.) cada vez
+    // Se necesita una nueva clave cada vez
     const key = await worm.encodeVal(Number(new Date()))
 ```
 

@@ -770,7 +770,7 @@ contract WORM is Cache {
 
 ### العميل {#the-client}
 
-الشيء الوحيد الذي لا تحصل عليه مع اختبارات Solidity هو كود JavaScript الذي يمكنك قصه ولصقه في تطبيقك الخاص. قامت النسخة الأصلية من هذا البرنامج التعليمي بنشر WORM على شبكة Optimism غويرلي، والتي تم إغلاقها منذ ذلك الحين. لا يزال مستودع العينة يشير إلى Optimism غويرلي، لذا لتشغيل العميل اليوم، تحتاج إلى نشر WORM بنفسك على [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack) وتوجيه العميل إلى عملية النشر الخاصة بك.
+الشيء الوحيد الذي لا تحصل عليه مع اختبارات Solidity هو كود JavaScript الذي يمكنك قصه ولصقه في تطبيقك الخاص. قامت النسخة الأصلية من هذا البرنامج التعليمي بنشر WORM على شبكة <span dir="ltr">Optimism Goerli</span>، والتي تم إغلاقها منذ ذلك الحين. لا يزال مستودع العينة يشير إلى <span dir="ltr">Optimism Goerli</span>، لذا لتشغيل العميل اليوم، تحتاج إلى نشر WORM بنفسك على [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack) وتوجيه العميل إلى عملية النشر الخاصة بك.
 
 [يمكنك رؤية كود JavaScript للعميل هنا](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). لاستخدامه، تحتاج إلى [Foundry](https://getfoundry.sh/introduction/installation/)، و [Node.js](https://nodejs.org/)، وحساب به بعض من OP Sepolia ETH. تسرد [مستندات صنبور Optimism](https://docs.optimism.io/app-developers/tools-sdks/faucets) صنابير شبكة الاختبار الحالية.
 
@@ -793,7 +793,7 @@ contract WORM is Cache {
 
    بدون `--broadcast`، يقوم `forge create` بمحاكاة النشر فقط. انسخ العنوان من سطر `Deployed to:` في المخرجات.
 
-3. حرر `javascript/index.js`. استبدل عنوان Optimism غويرلي القديم في هذا السطر بعنوان النشر الخاص بك:
+3. حرر `javascript/index.js`. استبدل عنوان <span dir="ltr">Optimism Goerli</span> القديم في هذا السطر بعنوان النشر الخاص بك:
 
    ```javascript
    const worm = WormFactory.attach("0xD34335b1d818ceE54e3323D3246bD31d94E6a78a")
@@ -814,7 +814,7 @@ contract WORM is Cache {
    cp .env.example .env
    ```
 
-6. حرر `.env` لتكوينك. لا تزال أسماء المتغيرات تشير إلى Optimism غويرلي، لكن القيم مخصصة لـ OP Sepolia:
+6. حرر `.env` لتكوينك. لا تزال أسماء المتغيرات تشير إلى <span dir="ltr">Optimism Goerli</span>، لكن القيم مخصصة لـ OP Sepolia:
 
    | المعلمة | القيمة |
    | ------------------- | ------------------------------------------------------------------------------------------------------- |

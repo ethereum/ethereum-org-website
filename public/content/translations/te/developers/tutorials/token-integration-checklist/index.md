@@ -37,7 +37,7 @@ slither-check-erc 0x06012c8cf97BEaD5deAe237070F9587f8E7A266d KittyCore --erc erc
 slither-check-erc [target] [contractName] [optional: --erc ERC_NUMBER]
 slither [target] --print human-summary
 slither [target] --print contract-summary
-slither-prop . --contract ContractName # కాన్ఫిగరేషన్, మరియు Echidna ఉపయోగం అవసరం (In Solidity code, use 'require'.)
+slither-prop . --contract ContractName # కాన్ఫిగరేషన్, మరియు Echidna ఉపయోగం అవసరం
 ```
 
 ## సాధారణ పరిగణనలు {#general-considerations}
@@ -74,8 +74,8 @@ Slither లో [slither-prop](https://github.com/crytic/slither/wiki/Property-ge
 
 ## యజమాని అధికారాలు {#owner-privileges}
 
-- **టోకెన్ అప్‌గ్రేడ్ చేయదగినది కాదు.** అప్‌గ్రేడ్ చేయగల కాంట్రాక్ట్‌లు కాలక్రమేణా వాటి నియమాలను మార్చవచ్చు. కాంట్రాక్ట్ అప్‌గ్రేడ్ చేయదగినదో కాదో తెలుసుకోవడానికి స్లిదర్ యొక్క [human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) ని ఉపయోగించండి.
-- **యజమానికి పరిమిత ముద్రించడం (minting) సామర్థ్యాలు ఉన్నాయి.** హానికరమైన లేదా రాజీపడిన యజమానులు ముద్రించడం సామర్థ్యాలను దుర్వినియోగం చేయవచ్చు. ముద్రించడం సామర్థ్యాలను సమీక్షించడానికి స్లిదర్ యొక్క [human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) ని ఉపయోగించండి మరియు కోడ్‌ను మాన్యువల్‌గా సమీక్షించడాన్ని పరిగణించండి.
+- **టోకెన్ అప్‌గ్రేడ్ చేయదగినది కాదు.** అప్‌గ్రేడ్ చేయగల కాంట్రాక్ట్‌లు కాలక్రమేణా వాటి నియమాలను మార్చవచ్చు. కాంట్రాక్ట్ అప్‌గ్రేడ్ చేయదగినదో కాదో తెలుసుకోవడానికి Slither యొక్క [human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) ని ఉపయోగించండి.
+- **యజమానికి పరిమిత ముద్రించడం (minting) సామర్థ్యాలు ఉన్నాయి.** హానికరమైన లేదా రాజీపడిన యజమానులు ముద్రించడం సామర్థ్యాలను దుర్వినియోగం చేయవచ్చు. ముద్రించడం సామర్థ్యాలను సమీక్షించడానికి Slither యొక్క [human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) ని ఉపయోగించండి మరియు కోడ్‌ను మాన్యువల్‌గా సమీక్షించడాన్ని పరిగణించండి.
 - **టోకెన్ పాజ్ చేయదగినది కాదు.** హానికరమైన లేదా రాజీపడిన యజమానులు పాజ్ చేయగల టోకెన్‌లపై ఆధారపడే కాంట్రాక్ట్‌లను ట్రాప్ చేయవచ్చు. పాజ్ చేయగల కోడ్‌ను మాన్యువల్‌గా గుర్తించండి.
 - **యజమాని కాంట్రాక్ట్‌ను బ్లాక్‌లిస్ట్ చేయలేరు.** హానికరమైన లేదా రాజీపడిన యజమానులు బ్లాక్‌లిస్ట్ ఉన్న టోకెన్‌లపై ఆధారపడే కాంట్రాక్ట్‌లను ట్రాప్ చేయవచ్చు. బ్లాక్‌లిస్టింగ్ ఫీచర్‌లను మాన్యువల్‌గా గుర్తించండి.
 - **టోకెన్ వెనుక ఉన్న బృందం అందరికీ తెలిసినది మరియు దుర్వినియోగానికి వారిని బాధ్యులను చేయవచ్చు.** అనామక డెవలప్‌మెంట్ బృందాలు ఉన్న లేదా చట్టపరమైన ఆశ్రయాలలో ఉన్న కాంట్రాక్ట్‌లకు ఉన్నత ప్రమాణాల సమీక్ష అవసరం.

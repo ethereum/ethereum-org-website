@@ -356,15 +356,15 @@ uv run agent.py
 आउटपुट आता LLM साठी एक प्रॉम्प्ट असणार आहे, यासारखे:
 
 ```
-हे कोट्स दिल्यास:
-ॲसेट: WETH/USDC
+Given these quotes:
+Asset: WETH/USDC
         2026-01-20T16:34 3016.21
         .
         .
         .
         2026-02-01T17:49 2299.10
 
-ॲसेट: WBTC/WETH
+Asset: WBTC/WETH
         2026-01-20T16:34 29.84
         .
         .
@@ -372,9 +372,10 @@ uv run agent.py
         2026-02-01T17:50 33.46
 
 
-2026-02-02T17:56 या वेळेत WETH/USDC चे मूल्य काय असेल अशी तुमची अपेक्षा आहे?
+What would you expect the value for WETH/USDC to be at time 2026-02-02T17:56?
 
-तुमचे उत्तर इतर कोणत्याही मजकुराशिवाय, दोन दशांश स्थानांपर्यंत पूर्ण केलेला एकच क्रमांक म्हणून द्या.
+Provide your answer as a single number rounded to two decimal places,
+without any other text.
 ```
 
 लक्षात घ्या की येथे दोन ॲसेट्ससाठी कोट्स आहेत, `WETH/USDC` आणि `WBTC/WETH`. दुसऱ्या ॲसेटमधील कोट्स जोडल्याने अंदाजाची अचूकता सुधारू शकते.

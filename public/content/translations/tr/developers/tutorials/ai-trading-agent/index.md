@@ -356,15 +356,15 @@ uv run agent.py
 Çıktı artık bir YDM'ye yönelik, şuna benzer bir istem olacaktır:
 
 ```
-Bu fiyat teklifleri göz önüne alındığında:
-Varlık: WETH/USDC
+Given these quotes:
+Asset: WETH/USDC
         2026-01-20T16:34 3016.21
         .
         .
         .
         2026-02-01T17:49 2299.10
 
-Varlık: WBTC/WETH
+Asset: WBTC/WETH
         2026-01-20T16:34 29.84
         .
         .
@@ -372,10 +372,10 @@ Varlık: WBTC/WETH
         2026-02-01T17:50 33.46
 
 
-2026-02-02T17:56 zamanında WETH/USDC değerinin ne olmasını beklersiniz?
+What would you expect the value for WETH/USDC to be at time 2026-02-02T17:56?
 
-Cevabınızı başka hiçbir metin olmadan, iki ondalık basamağa yuvarlanmış
-tek bir sayı olarak verin.
+Provide your answer as a single number rounded to two decimal places,
+without any other text.
 ```
 
 Burada iki varlık için fiyat teklifleri olduğuna dikkat edin: `WETH/USDC` ve `WBTC/WETH`. Başka bir varlıktan fiyat teklifleri eklemek tahmin doğruluğunu artırabilir.

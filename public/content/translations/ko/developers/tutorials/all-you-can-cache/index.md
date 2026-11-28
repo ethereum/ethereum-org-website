@@ -766,7 +766,7 @@ contract WORM is Cache {
 
 ### 클라이언트 {#the-client}
 
-Solidity 테스트에서 얻을 수 없는 한 가지는 자체 애플리케이션에 잘라내어 붙여넣을 수 있는 JavaScript 코드입니다. 이 튜토리얼의 원본 버전은 WORM을 Optimism 괴를리에 배포했지만, 이후 종료되었습니다. 샘플 리포지토리는 여전히 Optimism 괴를리를 가리키고 있으므로 오늘날 클라이언트를 실행하려면 WORM을 [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack)에 직접 배포하고 클라이언트가 배포를 가리키도록 해야 합니다.
+Solidity 테스트에서 얻을 수 없는 한 가지는 자체 애플리케이션에 잘라내어 붙여넣을 수 있는 JavaScript 코드입니다. 이 튜토리얼의 원본 버전은 WORM을 Optimism Goerli에 배포했지만, 이후 종료되었습니다. 샘플 리포지토리는 여전히 Optimism Goerli를 가리키고 있으므로 오늘날 클라이언트를 실행하려면 WORM을 [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack)에 직접 배포하고 클라이언트가 배포를 가리키도록 해야 합니다.
 
 [여기에서 클라이언트용 JavaScript 코드를 볼 수 있습니다](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). 이를 사용하려면 [Foundry](https://getfoundry.sh/introduction/installation/), [Node.js](https://nodejs.org/), 그리고 약간의 OP Sepolia ETH가 있는 계정이 필요합니다. [Optimism의 퍼싯 문서](https://docs.optimism.io/app-developers/tools-sdks/faucets)에 현재 테스트넷 퍼싯이 나열되어 있습니다.
 
@@ -789,7 +789,7 @@ Solidity 테스트에서 얻을 수 없는 한 가지는 자체 애플리케이�
 
    `--broadcast`가 없으면 `forge create`는 배포를 시뮬레이션하기만 합니다. 출력의 `Deployed to:` 줄에서 주소를 복사합니다.
 
-3. `javascript/index.js`를 편집합니다. 이 줄의 이전 Optimism 괴를리 주소를 배포 주소로 바꿉니다:
+3. `javascript/index.js`를 편집합니다. 이 줄의 이전 Optimism Goerli 주소를 배포 주소로 바꿉니다:
 
    ```javascript
    const worm = WormFactory.attach("0xD34335b1d818ceE54e3323D3246bD31d94E6a78a")
@@ -810,7 +810,7 @@ Solidity 테스트에서 얻을 수 없는 한 가지는 자체 애플리케이�
    cp .env.example .env
    ```
 
-6. 구성에 맞게 `.env`를 편집합니다. 변수 이름은 여전히 Optimism 괴를리를 참조하지만 값은 OP Sepolia용입니다:
+6. 구성에 맞게 `.env`를 편집합니다. 변수 이름은 여전히 Optimism Goerli를 참조하지만 값은 OP Sepolia용입니다:
 
    | 매개변수            | 값                                                                                                      |
    | ------------------- | ------------------------------------------------------------------------------------------------------- |

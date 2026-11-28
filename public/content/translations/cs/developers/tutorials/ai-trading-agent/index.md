@@ -360,15 +360,15 @@ uv run agent.py
 Výstupem nyní bude prompt pro LLM, podobný tomuto:
 
 ```
-Vzhledem k těmto cenovým nabídkám:
-Aktivum: WETH/USDC
+Given these quotes:
+Asset: WETH/USDC
         2026-01-20T16:34 3016.21
         .
         .
         .
         2026-02-01T17:49 2299.10
 
-Aktivum: WBTC/WETH
+Asset: WBTC/WETH
         2026-01-20T16:34 29.84
         .
         .
@@ -376,10 +376,10 @@ Aktivum: WBTC/WETH
         2026-02-01T17:50 33.46
 
 
-Jakou hodnotu byste očekávali pro WETH/USDC v čase 2026-02-02T17:56?
+What would you expect the value for WETH/USDC to be at time 2026-02-02T17:56?
 
-Uveďte svou odpověď jako jediné číslo zaokrouhlené na dvě desetinná místa,
-bez jakéhokoli dalšího textu.
+Provide your answer as a single number rounded to two decimal places,
+without any other text.
 ```
 
 Všimněte si, že zde jsou cenové nabídky pro dvě aktiva, `WETH/USDC` a `WBTC/WETH`. Přidání cenových nabídek z dalšího aktiva by mohlo zlepšit přesnost predikce.

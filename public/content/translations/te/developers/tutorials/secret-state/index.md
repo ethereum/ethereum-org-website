@@ -258,7 +258,7 @@ import "utils/pack/bool/pack128.zok" as pack128;
 Zokratesలోని ఫీల్డ్ మూలకం సాధారణంగా 256 బిట్‌ల కంటే తక్కువ పొడవు ఉంటుంది, కానీ మరీ అంత తక్కువ కాదు. కోడ్‌ను సులభతరం చేయడానికి, మేము మ్యాప్‌ను 512 బిట్‌ల వరకు పరిమితం చేస్తాము మరియు నాలుగు ఫీల్డ్‌ల శ్రేణిని హాష్ చేస్తాము, మరియు ప్రతి ఫీల్డ్‌లో మేము కేవలం 128 బిట్‌లను మాత్రమే ఉపయోగిస్తాము. [`pack128` ఫంక్షన్](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) ఈ ప్రయోజనం కోసం 128 బిట్‌ల శ్రేణిని `field`గా మారుస్తుంది.
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 ఈ లైన్ ఫంక్షన్ నిర్వచనాన్ని ప్రారంభిస్తుంది. `hashMap` అనేది `map` అనే ఒకే పరామితిని పొందుతుంది, ఇది ద్విమితీయ `bool`(ean) శ్రేణి. [క్రింద వివరించిన](#why-map-border) కారణాల వల్ల మ్యాప్ పరిమాణం `width+2` బై `height+2`గా ఉంటుంది.
@@ -268,7 +268,7 @@ Zokrates ప్రోగ్రామ్‌లు ఈ అప్లికేషన
 తిరిగి ఇచ్చే విలువ హాష్‌ను కలిగి ఉన్న `field`.
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 మ్యాప్ ద్విమితీయమైనది. అయితే, `pack128` ఫంక్షన్ ద్విమితీయ శ్రేణులతో పనిచేయదు. కాబట్టి మేము ముందుగా `map1d`ని ఉపయోగించి మ్యాప్‌ను 512-బైట్ శ్రేణిగా చదును చేస్తాము. అప్రమేయంగా Zokrates వేరియబుల్స్ స్థిరాంకాలు, కానీ మేము లూప్‌లో ఈ శ్రేణికి విలువలను కేటాయించాలి, కాబట్టి మేము దానిని [`mut`](https://zokrates.github.io/language/variables.html#mutability)గా నిర్వచిస్తాము.
@@ -276,19 +276,19 @@ bool[512] mut map1d = [false; 512];
 Zokratesలో `undefined` లేనందున మేము శ్రేణిని ప్రారంభించాలి. `[false; 512]` ఎక్స్‌ప్రెషన్ అంటే [512 `false` విలువల శ్రేణి](https://zokrates.github.io/language/types.html#declaration-and-initialization).
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 మేము ఇప్పటికే `map1d`లో నింపిన బిట్‌లు మరియు నింపని వాటి మధ్య తేడాను గుర్తించడానికి మాకు కౌంటర్ కూడా అవసరం.
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 Zokratesలో [`for` లూప్](https://zokrates.github.io/language/control_flow.html#for-loops)ను మీరు ఈ విధంగా ప్రకటిస్తారు. Zokrates `for` లూప్ స్థిరమైన సరిహద్దులను కలిగి ఉండాలి, ఎందుకంటే ఇది లూప్‌లా కనిపించినప్పటికీ, కంపైలర్ వాస్తవానికి దానిని "అన్‌రోల్" చేస్తుంది. `${width+2}` ఎక్స్‌ప్రెషన్ అనేది కంపైల్ టైమ్ స్థిరాంకం ఎందుకంటే కంపైలర్‌ను కాల్ చేయడానికి ముందు TypeScript కోడ్ ద్వారా `width` సెట్ చేయబడుతుంది.
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -298,7 +298,7 @@ for u32 y in 0..${height+2} {
 మ్యాప్‌లోని ప్రతి లొకేషన్ కోసం, ఆ విలువను `map1d` శ్రేణిలో ఉంచండి మరియు కౌంటర్‌ను పెంచండి.
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -309,7 +309,7 @@ field[4] hashMe = [
 `map1d` నుండి నాలుగు `field` విలువల శ్రేణిని సృష్టించడానికి `pack128` ఉపయోగించబడుతుంది. Zokratesలో `array[a..b]` అంటే `a` వద్ద ప్రారంభమై `b-1` వద్ద ముగిసే శ్రేణి యొక్క స్లైస్.
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -365,19 +365,19 @@ def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8)
 ఇది దుర్వినియోగానికి మరో మార్గాన్ని తెరుస్తుంది. ప్రూవర్ సరైన కోఆర్డినేట్‌లను ఉపయోగించవచ్చు, కానీ లొకేషన్ చుట్టూ మరియు బహుశా లొకేషన్ వద్దనే ఎన్ని గనులతోనైనా మ్యాప్‌ను సృష్టించవచ్చు. ఈ దుర్వినియోగాన్ని నిరోధించడానికి, మేము శూన్య-జ్ఞాన నిరూపణలో గేమ్ ఐడెంటిఫైయర్ అయిన మ్యాప్ యొక్క హాష్‌ను చేర్చుతాము.
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 ఇక్కడ తిరిగి ఇచ్చే విలువ మ్యాప్ హాష్ శ్రేణితో పాటు తవ్వకం ఫలితాన్ని కలిగి ఉన్న టపుల్.
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 లొకేషన్‌లోనే బాంబు ఉన్నట్లయితే మేము 255ని ప్రత్యేక విలువగా ఉపయోగిస్తాము.
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -581,7 +581,7 @@ proof.inputs[3] = "0x" + "1".padStart(64, "0")
 దీని అర్థం సరైన సమాధానంతో సంబంధం లేకుండా, ఒక బాంబు ఉందని మనం ఎల్లప్పుడూ క్లెయిమ్ చేస్తాము. ఈ వెర్షన్‌తో ఆడేందుకు ప్రయత్నించండి, మరియు మీరు `mprocs` స్క్రీన్ యొక్క **server** ట్యాబ్‌లో ఈ లోపాన్ని చూస్తారు:
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000

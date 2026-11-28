@@ -263,14 +263,14 @@ Le [registre ERC-7730](https://github.com/ethereum/clear-signing-erc7730-registr
 1. Faites un fork du dépôt sur GitHub
 2. Créez un dossier dans `registry/<your-project-name>/`
 3. Placez votre fichier à l'intérieur : `registry/myproject/calldata-SwapRouter.json`
-4. Mettez à jour le champ `$schema` avec le chemin relatif utilisé dans le dépôt : `"../../specs/erc7730-v2.schema.json"`. L'intégration continue (CI) rejette une URL ici.
+4. Mettez à jour le champ `$schema` avec le chemin relatif utilisé dans le dépôt : `"../../specs/erc7730-v2.schema.json"`. La CI rejette une URL ici.
 5. Ajoutez un fichier de test (voir ci-dessous)
 6. Validez vos fichiers localement (voir ci-dessous)
 7. Ouvrez une pull request. Chaque pull request ne peut modifier qu'un seul dossier sous `registry/`
 
 ### Ajouter un fichier de test {#add-a-test-file}
 
-Chaque descripteur que vous ajoutez ou modifiez nécessite un fichier de test, afin que les implémentations de signature en clair puissent être vérifiées par rapport à celui-ci. Créez `registry/<your-project-name>/testsv2/calldata-<ContractName>.tests.json` avec au moins un cas de test pour chaque fonction dans `display.formats`. L'intégration continue (CI) dérive le sélecteur de fonction de chaque format et échoue si aucune transaction de test ne l'appelle.
+Chaque descripteur que vous ajoutez ou modifiez nécessite un fichier de test, afin que les implémentations de signature en clair puissent être vérifiées par rapport à celui-ci. Créez `registry/<your-project-name>/testsv2/calldata-<ContractName>.tests.json` avec au moins un cas de test pour chaque fonction dans `display.formats`. La CI dérive le sélecteur de fonction de chaque format et échoue si aucune transaction de test ne l'appelle.
 
 ```json
 {
@@ -304,7 +304,7 @@ Chaque descripteur que vous ajoutez ou modifiez nécessite un fichier de test, a
 
 - `rawTx` est la transaction **non signée** sérialisée complète (raccourcie ici), et pas seulement les données d'appel. Les transactions réelles vers votre contrat constituent les meilleurs cas de test.
 - `dataProvider` fournit les métadonnées du jeton (et éventuellement l'adresse et les noms ENS) afin que les tests n'aient pas besoin d'un accès au réseau.
-- `expected` est ce qu'un portefeuille devrait afficher. L'intégration continue (CI) rend chaque cas de test avec les implémentations de signature en clair et signale toute différence sur la pull request.
+- `expected` est ce qu'un portefeuille devrait afficher. La CI rend chaque cas de test avec les implémentations de signature en clair et signale toute différence sur la pull request.
 
 Consultez les [Cas de test de référence](https://github.com/ethereum/clear-signing-erc7730-registry#reference-test-cases) dans le README du registre pour le format complet, y compris les fichiers de test pour les descripteurs EIP-712.
 
@@ -325,9 +325,9 @@ Si vous utilisez [uv](https://docs.astral.sh/uv/), vous pouvez ignorer l'environ
 uvx --python 3.12 --from "$(cat .github/requirements.txt)" erc7730 lint registry/myproject/calldata-SwapRouter.json
 ```
 
-Le linter vérifie le descripteur par rapport au schéma et par rapport à l'ABI vérifiée de votre contrat. Corrigez chaque erreur. Les avertissements tels que `Missing display format` signifient que le contrat possède des fonctions que votre descripteur ne décrit pas encore. Pour vérifier également les chemins `$schema` et le fichier de test de la même manière que l'intégration continue (CI), consultez [Comment valider](https://github.com/ethereum/clear-signing-erc7730-registry#how-to-validate) dans le README du registre.
+Le linter vérifie le descripteur par rapport au schéma et par rapport à l'ABI vérifiée de votre contrat. Corrigez chaque erreur. Les avertissements tels que `Missing display format` signifient que le contrat possède des fonctions que votre descripteur ne décrit pas encore. Pour vérifier également les chemins `$schema` et le fichier de test de la même manière que la CI, consultez [Comment valider](https://github.com/ethereum/clear-signing-erc7730-registry#how-to-validate) dans le README du registre.
 
-Lorsque vous ouvrez la PR, l'intégration continue (CI) exécute automatiquement la validation du schéma, vérifie que les signatures de fonction produisent des sélecteurs valides, confirme que l'adresse du contrat est vérifiée sur Sourcify et signale les incohérences de l'ABI. Les résultats de la vérification apparaissent directement sur la PR. Les mainteneurs du registre examinent les soumissions pour détecter les descripteurs mal formés ou potentiellement malveillants. L'inclusion dans le registre n'implique ni audit ni approbation.
+Lorsque vous ouvrez la PR, la CI exécute automatiquement la validation du schéma, vérifie que les signatures de fonction produisent des sélecteurs valides, confirme que l'adresse du contrat est vérifiée sur Sourcify et signale les incohérences de l'ABI. Les résultats de la vérification apparaissent directement sur la PR. Les mainteneurs du registre examinent les soumissions pour détecter les descripteurs mal formés ou potentiellement malveillants. L'inclusion dans le registre n'implique ni audit ni approbation.
 
 <Alert variant="info">
 <AlertContent>

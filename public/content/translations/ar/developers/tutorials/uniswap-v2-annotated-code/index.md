@@ -377,7 +377,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 | المتداول د يودع 100 token1 ويسترد 109.01 token0 | <span dir="ltr">990.990</span> | <span dir="ltr">1,009.090</span> | <span dir="ltr">5,110</span> | <span dir="ltr">1.018</span> | <span dir="ltr">91.37+10\*0.826 = 99.63</span> |
 | المتداول هـ يودع 10 token0 ويسترد 10.079 token1 | <span dir="ltr">1,000.990</span> | <span dir="ltr">999.010</span> | <span dir="ltr">5,150</span> | <span dir="ltr">0.998</span> | <span dir="ltr">99.63+40\*1.018 = 140.35</span> |
 
-لنفترض أننا نريد حساب متوسط سعر **Token0** بين الطوابع الزمنية <span dir="ltr">5,030</span> و <span dir="ltr">5,150</span>. الفرق في قيمة `price0Cumulative` هو <span dir="ltr">140.35-29.07=111.28</span>. هذا هو المتوسط عبر دقيقتين (<span dir="ltr">120 seconds</span>). لذا فإن متوسط السعر هو <span dir="ltr">111.28/120 = 0.927</span>.
+لنفترض أننا نريد حساب متوسط سعر **Token0** بين الطوابع الزمنية <span dir="ltr">5,030</span> و <span dir="ltr">5,150</span>. الفرق في قيمة `price0Cumulative` هو <span dir="ltr">140.35-29.07=111.28</span>. هذا هو المتوسط عبر دقيقتين (<span dir="ltr">120</span> ثانية). لذا فإن متوسط السعر هو <span dir="ltr">111.28/120 = 0.927</span>.
 
 حساب السعر هذا هو السبب في أننا بحاجة إلى معرفة أحجام الاحتياطي القديمة.
 

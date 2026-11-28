@@ -15,7 +15,7 @@ sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 
 لاستخدام إيثيريوم على Arm لتحويل Raspberry Pi إلى عقدة إيثيريوم، يوصى باستخدام الأجهزة التالية:
 
-- Raspberry Pi 5 بذاكرة وصول عشوائي (RAM) سعة <span dir="ltr">16 GB</span>
+- Raspberry Pi 5 بسعة <span dir="ltr">16 GB</span> من RAM
 - لوحة NVMe HAT لـ Raspberry Pi 5، لتوصيل قرص NVMe
 - محرك أقراص NVMe SSD (M.2 2280)، بحد أدنى <span dir="ltr">4 TB</span>. تجنب الأقراص التي تحتوي على وحدة تحكم Phison، والتي تعاني من مشكلات توافق معروفة.
 - بطاقة MicroSD (بحد أدنى <span dir="ltr">16 GB</span> من الفئة 10)

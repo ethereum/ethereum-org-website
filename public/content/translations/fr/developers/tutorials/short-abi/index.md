@@ -166,8 +166,8 @@ L'adresse du jeton pour lequel nous sommes un proxy.
 ```solidity
 
     /**
-     * @dev Spécifier l'adresse (Always translate. Refers to an Ethereum account identifier.) du jeton (Both 'jeton' and the loanword 'token' are widely used in French.)
-     * @param tokenAddr_ adresse (Always translate. Refers to an Ethereum account identifier.) du contrat (Smart contract -- code deployed on the blockchain. NOT a legal agreement.) ERC-20 (ERC-n identifiers always Latin. Expanded form translatable. Pattern applies to ALL numbered ERCs. Filter matches the family at request time; no per-instance entries needed.)
+     * @dev Spécifie l'adresse du jeton
+     * @param tokenAddr_ adresse du contrat ERC-20
      */
     constructor(
         address tokenAddr_
@@ -249,10 +249,10 @@ Notre jeton de test possède également `faucet`, que nous pouvons prendre en ch
 
 ```solidity
 
-        // Appeler les méthodes modifiant l'état du jeton (Both 'jeton' and the loanword 'token' are widely used in French.) en utilisant
-        // les informations des données d'appel (Always pluralized in context of EVM memory space. 'Calldata' is frequently kept as a loanword among developers.)
+        // Appelle les méthodes de changement d'état du jeton en utilisant
+        // les informations des données d'appel
 
-        // faucet (English loanword generally preferred over the literal translation 'robinet' in the French crypto community.)
+        // faucet
         if (_func == 1) {
 ```
 
@@ -270,7 +270,7 @@ L'EOA (compte détenu en externe) ou le contrat qui nous a appelés en a besoin.
 Nous transférons donc tous nos jetons à la personne qui nous a appelés.
 
 ```solidity
-        // transfert (Moving tokens between addresses. In ERC-20 context, a specific function name.) (en supposant que nous avons une allocation pour cela)
+        // transfert (en supposant que nous avons une allocation pour cela)
         if (_func == 2) {
 ```
 
@@ -312,7 +312,7 @@ Dans l'ensemble, un transfert prend 23 octets de données d'appel :
 ```solidity
     }   // fallback
 
-}       // contrat (Smart contract -- code deployed on the blockchain. NOT a legal agreement.) CalldataInterpreter
+}       // contract CalldataInterpreter
 ```
 
 ### test.js {#test-js}

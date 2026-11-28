@@ -252,7 +252,7 @@ import "utils/pack/bool/pack128.zok" as pack128;
 Zokrates의 필드 요소는 일반적으로 256비트보다 작지만, 그 차이가 크지는 않습니다. 코드를 단순화하기 위해 맵을 최대 512비트로 제한하고, 4개의 필드로 구성된 배열을 해시하며, 각 필드에서는 128비트만 사용합니다. [`pack128` 함수](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok)는 이 목적을 위해 128비트 배열을 `field`로 변환합니다.
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 이 줄은 함수 정의를 시작합니다. `hashMap`는 `map`이라는 단일 매개변수를 받는데, 이는 2차원 `bool`(ean) 배열입니다. 맵의 크기가 `width+2` 곱하기 `height+2`인 이유는 [아래에 설명되어 있습니다](#why-map-border).
@@ -262,7 +262,7 @@ Zokrates 프로그램이 이 애플리케이션에서 [템플릿 문자열](http
 반환 값은 해시를 포함하는 `field`입니다.
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 맵은 2차원입니다. 하지만 `pack128` 함수는 2차원 배열에서 작동하지 않습니다. 따라서 먼저 `map1d`을 사용하여 맵을 512바이트 배열로 평탄화합니다. 기본적으로 Zokrates 변수는 상수이지만, 루프 내에서 이 배열에 값을 할당해야 하므로 이를 [`mut`](https://zokrates.github.io/language/variables.html#mutability)로 정의합니다.
@@ -270,19 +270,19 @@ bool[512] mut map1d = [false; 512];
 Zokrates에는 `undefined`가 없기 때문에 배열을 초기화해야 합니다. `[false; 512]` 표현식은 [512개의 `false` 값으로 구성된 배열](https://zokrates.github.io/language/types.html#declaration-and-initialization)을 의미합니다.
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 또한 `map1d`에 이미 채운 비트와 아직 채우지 않은 비트를 구분하기 위한 카운터도 필요합니다.
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 이것이 Zokrates에서 [`for` 루프](https://zokrates.github.io/language/control_flow.html#for-loops)를 선언하는 방법입니다. Zokrates의 `for` 루프는 고정된 경계를 가져야 합니다. 루프처럼 보이지만 컴파일러가 실제로는 이를 "풀어서(unroll)" 처리하기 때문입니다. `width`는 컴파일러를 호출하기 전에 TypeScript 코드에 의해 설정되므로 `${width+2}` 표현식은 컴파일 타임 상수입니다.
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -292,7 +292,7 @@ for u32 y in 0..${height+2} {
 맵의 모든 위치에 대해 해당 값을 `map1d` 배열에 넣고 카운터를 증가시킵니다.
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -303,7 +303,7 @@ field[4] hashMe = [
 `map1d`에서 4개의 `field` 값으로 구성된 배열을 생성하기 위해 `pack128`를 사용합니다. Zokrates에서 `array[a..b]`는 `a`에서 시작하여 `b-1`에서 끝나는 배열의 슬라이스를 의미합니다.
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -359,19 +359,19 @@ def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8)
 이는 또 다른 악용의 여지를 엽니다. 증명자가 올바른 좌표를 사용하되, 해당 위치 주변이나 심지어 그 위치 자체에 임의의 개수의 지뢰가 있는 맵을 생성할 수 있습니다. 이러한 악용을 방지하기 위해 영지식 증명에 게임 식별자인 맵의 해시를 포함시킵니다.
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 여기서 반환 값은 파내기 결과뿐만 아니라 맵 해시 배열을 포함하는 튜플입니다.
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 해당 위치 자체에 폭탄이 있는 경우를 위한 특수 값으로 255를 사용합니다.
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -575,7 +575,7 @@ proof.inputs[3] = "0x" + "1".padStart(64, "0")
 이는 정답에 관계없이 항상 폭탄이 하나 있다고 청구한다는 의미입니다. 이 버전으로 플레이해 보면 `mprocs` 화면의 **server** 탭에서 다음과 같은 오류를 볼 수 있습니다.
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000

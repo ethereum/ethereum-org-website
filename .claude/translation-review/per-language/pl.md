@@ -1,5 +1,8 @@
 # Polish (pl) Translation Review Findings
 
+## PR #19993 (intl/pending-dev, runs 46112784113 / 46112790344 / 46118259298) -- 2026-11-28 -- Score 8.9/10
+Scope: 17 tutorials, changed lines; sweeps over all 17 plus a prose read of uniswap-v2, reverse-engineering and all-you-can-cache. 3 critical fixed: LLM glossary notes leaked into code comments in `erc20-with-safety-rails` lines 108, 180, 200 (restored from English/dev). Open: none notable.
+
 ## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.9/10
 Scope: 15 markdown files, changed lines; 7 diffs read in full (nodes-and-clients, ethash, data-structures x3, frameworks, transactions).
 

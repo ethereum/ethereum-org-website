@@ -77,7 +77,7 @@ cast call 0x420000000000000000000000000000000000000F "getL1Fee(bytes)(uint256)" 
 
 ### ABI {#the-abi}
 
-绝大多数交易都是从外部拥有账户 (EOA) 访问合约。
+绝大多数交易都是从外部拥有账户访问合约。
 大多数合约都是用 Solidity 编写的，并根据[应用程序二进制接口 (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding) 解释其数据字段。
 
 然而，ABI 是为 L1 设计的，在 L1 中，一个字节的调用数据成本大约等于四次算术运算，而不是 L2，在 L2 中（按 2022 年的价格），一个字节的调用数据成本超过一千次算术运算。

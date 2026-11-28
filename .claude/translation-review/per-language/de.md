@@ -1,5 +1,18 @@
 # German (de) Translation Review Findings
 
+## PR #19993 (intl/pending-dev, runs 46112784113 / 46112790344 / 46118259298) -- 2026-11-28 -- Score 7.6/10
+Scope: `page-courses.json` (4,668 keys, first translation) + 17 tutorials (changed lines); scripted placeholder/tag/ICU/digit/negation checks over all keys (clean), about 90 keys and 6 tutorial diffs read.
+
+**Fixed in this branch (8 critical):** LLM glossary-note annotations leaked into code comments: `secret-state` lines 450, 452, 480; `short-abi` 169, 170, 252, 253, 255, 273, 315; `token-integration-checklist` 36 (restored from English/dev). `short-abi:80` `(EOA)` added to a spelled-out English phrase. Courses: 14 values kept English decimals (`0.2`, `0.00042`, `0.0005`) while the rest of the file uses `0,2`; set to comma.
+
+**Open (native call needed):**
+
+- **du/Sie split inside `page-courses.json` (about 1,000 informal-only values vs about 610 formal-only).** By course: blockchains, scams, upgrades are all `Sie`; everyday, nfts, wallets, tokens, sending, rollups are `du`; smart-accounts, smart-contracts, gas, layer-2, trading-and-lending, eth mix both inside one course. The UI JSON elsewhere in de is `du`. Needs a pipeline re-run with a fixed register for the courses namespace (or a scripted `Sie` -> `du` pass), not hand edits.
+- `Seed-Phrase` (18) vs `Wiederherstellungsphrase` (54) for English "recovery phrase"; the intro defines `Seed-Phrase` in bold and the rest uses the other term. `Layer 2-Netzwerke` (63) vs glossary compound `Layer-2-Netzwerke`. `geslasht`. `ETH` gender (`dein ETH` / `deine ETH`).
+- Tutorials switch between `Sie` (prose) and `du` imperatives (code comments) inside one file (uniswap-v2, erc20-annotated); table cell `Aufrufdaten` next to `Memory`/`Storage`.
+
+**Notes:** sweeps clean for U+3002, U+2060, foreign scripts, SPDX/solhint directives, anchors and link counts.
+
 ## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 9.1/10
 Scope: 15 markdown files, changed lines; 7 diffs read in full (nodes-and-clients, ethash, patricia-merkle-trie, ssz, frameworks, transactions, verkle-trees), sweeps over all 15.
 

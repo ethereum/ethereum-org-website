@@ -77,7 +77,7 @@ Das Ergebnis ist in Wei.
 
 ### Die ABI {#the-abi}
 
-Die überwiegende Mehrheit der Transaktionen greift von einem externen Konto (EOA) auf einen Vertrag zu.
+Die überwiegende Mehrheit der Transaktionen greift von einem externen Konto auf einen Vertrag zu.
 Die meisten Verträge sind in Solidity geschrieben und interpretieren ihr Datenfeld gemäß [der Application Binary Interface (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
 Die ABI wurde jedoch für L1 entwickelt, wo ein Byte Calldata ungefähr so viel kostet wie vier arithmetische Operationen, und nicht für L2, wo (zu Preisen von 2022) ein Byte Calldata mehr als tausend arithmetische Operationen kostet.
@@ -166,8 +166,8 @@ Die Adresse des Tokens, für das wir ein Proxy sind.
 ```solidity
 
     /**
-     * @dev Geben Sie die Token (A digital asset on Ethereum following a standard (ERC-20, ERC-721). NOT a physical coin or voucher.) Adresse (A unique hexadecimal identifier (0x...) for an Ethereum account. NOT a physical location.) an
-     * @param tokenAddr_ ERC-20 (ERC-n identifiers always Latin. Expanded form translatable. Pattern applies to ALL numbered ERCs. Filter matches the family at request time; no per-instance entries needed.) Vertrag (Smart contract -- code deployed on the blockchain. NOT a legal agreement.) Adresse (A unique hexadecimal identifier (0x...) for an Ethereum account. NOT a physical location.)
+     * @dev Geben Sie die Token-Adresse an
+     * @param tokenAddr_ ERC-20 Vertragsadresse
      */
     constructor(
         address tokenAddr_
@@ -249,10 +249,10 @@ Unser Test-Token hat auch `faucet`, was wir unterstützen können, da wir die To
 
 ```solidity
 
-        // Rufe die Zustand ändernden Methoden des Token (A digital asset on Ethereum following a standard (ERC-20, ERC-721). NOT a physical coin or voucher.) auf unter Verwendung von
-        // Informationen aus den Aufrufdaten (Often used in plural. 'Calldata' is frequently kept as a loanword in developer contexts.)
+        // Rufe die zustandsändernden Methoden des Tokens auf unter Verwendung von
+        // Informationen aus den Aufrufdaten
 
-        // Faucet (Generally untranslated in German.)
+        // faucet
         if (_func == 1) {
 ```
 
@@ -270,7 +270,7 @@ Das externe Konto (EOA) oder der Vertrag, der uns aufgerufen hat, hingegen schon
 Also transferieren wir alle unsere Token an denjenigen, der uns aufgerufen hat.
 
 ```solidity
-        // Transfer (In the context of ERC-20, 'Transfer' is standard. 'Übertragung' is also frequently used in general blockchain contexts.) (angenommen, wir haben einen Freigabebetrag (Translates the concept of approving a specific amount of ERC-20 tokens.) dafür)
+        // Transfer (angenommen, wir haben einen Freigabebetrag dafür)
         if (_func == 2) {
 ```
 
@@ -312,7 +312,7 @@ Insgesamt benötigt ein Transfer 23 Bytes an Calldata:
 ```solidity
     }   // Fallback
 
-}       // Vertrag (Smart contract -- code deployed on the blockchain. NOT a legal agreement.) CalldataInterpreter
+}       // contract CalldataInterpreter
 ```
 
 ### test.js {#test-js}

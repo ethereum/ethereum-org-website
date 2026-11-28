@@ -43,7 +43,7 @@ published: 2024-07-15
    cd 20240715-server-component
    ```
 
-2. 샘플 리포지토리는 홀스카이 테스트넷용으로 작성되었으나, 해당 네트워크는 이후 종료되었습니다. Sepolia 및 Sepolia 컨트랙트 주소를 사용하도록 업데이트하세요.
+2. 샘플 리포지토리는 Holesky 테스트넷용으로 작성되었으나, 해당 네트워크는 이후 종료되었습니다. Sepolia 및 Sepolia 컨트랙트 주소를 사용하도록 업데이트하세요.
 
    ```sh copy
    sed -i.bak -e 's/holesky/sepolia/g' -e 's/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA/' src/app.ts

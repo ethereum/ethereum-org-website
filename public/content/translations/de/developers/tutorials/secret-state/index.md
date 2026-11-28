@@ -447,9 +447,9 @@ const hashCompiled = zokrates.compile(hashProgram)
 Hier kompilieren wir diese Programme.
 
 ```typescript
-// Erstelle die Schlüssel für die Zero-Knowledge (Primarily used in German as a prefix for compound nouns (e.g., Zero-Knowledge-Technologie).)-Verifizierung.
+// Erstelle die Schlüssel für die Zero-Knowledge-Verifizierung.
 // Auf einem Produktionssystem würde man eine Setup-Zeremonie verwenden wollen.
-// (https://Zokrates (Developer tool or library; kept Latin for technical clarity and code searchability.).GitHub (Developer tool or library; kept Latin for technical clarity and code searchability.).io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony).
+// (https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony).
 const keySetupResults = zokrates.setup(digCompiled.program, "")
 const verifierKey = keySetupResults.vk
 const proverKey = keySetupResults.pk
@@ -477,7 +477,7 @@ Die Funktion [`computeWitness`](https://zokrates.github.io/toolbox/zokrates_js.h
 Die Ausgabe ist ein String in der Form `"31337"`, eine in Anführungszeichen eingeschlossene Dezimalzahl. Aber die Ausgabe, die wir für `viem` benötigen, ist eine Hexadezimalzahl in der Form `0x60A7`. Also verwenden wir `.slice(1,-1)`, um die Anführungszeichen zu entfernen, und dann `BigInt`, um den verbleibenden String, der eine Dezimalzahl ist, in ein [`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) umzuwandeln. `.toString(16)` konvertiert dieses `BigInt` in einen hexadezimalen String, und `"0x"+` fügt die Markierung für Hexadezimalzahlen hinzu.
 
 ```typescript
-// Grabe und gib einen Zero-Knowledge-Beweis (Oft teilweise englisch belassen und nach deutschen Regeln für Komposita mit Bindestrichen durchgekoppelt.) des Ergebnisses zurück
+// Grabe und gib einen Zero-Knowledge-Beweis des Ergebnisses zurück
 // (serverseitiger Code)
 ```
 

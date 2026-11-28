@@ -47,7 +47,7 @@ _لا توجد أسرار على سلسلة الكتل_. كل ما يتم نشر
 
    يستخدم هذا المثال <span dir="ltr">MUD 2.0.12</span>، والذي يحتاج إلى إصدارات محددة من Node وFoundry:
 
-   - **Node 20**. تستخدم أداة سطر الأوامر الخاصة بـ <span dir="ltr">MUD 2.0.12</span> [تأكيدات استيراد JSON](https://v8.dev/features/import-attributes)، والتي لم تعد الإصدارات الأحدث من Node تدعمها، لذلك تفشل على Node 22 أو أحدث مع `SyntaxError: Unexpected identifier 'assert'`. [وصل Node 20 إلى نهاية عمره الافتراضي](https://nodejs.org/en/about/previous-releases) في <span dir="ltr">April 2026</span> ولم يعد يتلقى تحديثات أمنية، لذا استخدمه فقط لهذا المثال المحلي. يتيح لك مدير إصدارات Node مثل [`fnm`](https://github.com/Schniz/fnm) أو [`nvm`](https://github.com/nvm-sh/nvm) التبديل إلى Node 20 لهذا الدليل فقط، على سبيل المثال:
+   - **Node 20**. تستخدم أداة سطر الأوامر الخاصة بـ <span dir="ltr">MUD 2.0.12</span> [تأكيدات استيراد JSON](https://v8.dev/features/import-attributes)، والتي لم تعد الإصدارات الأحدث من Node تدعمها، لذلك تفشل على Node 22 أو أحدث مع `SyntaxError: Unexpected identifier 'assert'`. [وصل Node 20 إلى نهاية عمره الافتراضي](https://nodejs.org/en/about/previous-releases) في أبريل <span dir="ltr">2026</span> ولم يعد يتلقى تحديثات أمنية، لذا استخدمه فقط لهذا المثال المحلي. يتيح لك مدير إصدارات Node مثل [`fnm`](https://github.com/Schniz/fnm) أو [`nvm`](https://github.com/nvm-sh/nvm) التبديل إلى Node 20 لهذا الدليل فقط، على سبيل المثال:
 
      ```sh copy
      fnm install 20
@@ -259,7 +259,7 @@ import "utils/pack/bool/pack128.zok" as pack128;
 عادةً ما يكون عنصر الحقل في Zokrates أقل من <span dir="ltr">256 bits</span>، ولكن ليس بكثير. لتبسيط الكود، نقصر الخريطة على أن تصل إلى <span dir="ltr">512 bits</span>، ونقوم بتجزئة مصفوفة من أربعة حقول، وفي كل حقل نستخدم <span dir="ltr">128 bits</span> فقط. تقوم [دالة `pack128`](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) بتغيير مصفوفة مكونة من <span dir="ltr">128 bits</span> إلى `field` لهذا الغرض.
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 يبدأ هذا السطر تعريف دالة. تحصل `hashMap` على معلمة واحدة تسمى `map`، وهي مصفوفة `bool`(ean) ثنائية الأبعاد. حجم الخريطة هو `width+2` في `height+2` لأسباب [مشروحة أدناه](#why-map-border).
@@ -269,7 +269,7 @@ def hashMap(bool[${width+2}][${height+2}] map) -> field {
 القيمة المرجعة هي `field` تحتوي على التجزئة.
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 الخريطة ثنائية الأبعاد. ومع ذلك، لا تعمل دالة `pack128` مع المصفوفات ثنائية الأبعاد. لذلك نقوم أولاً بتسوية الخريطة إلى مصفوفة بحجم <span dir="ltr">512-byte</span>، باستخدام `map1d`. افتراضيًا، متغيرات Zokrates هي ثوابت، لكننا بحاجة إلى تعيين قيم لهذه المصفوفة في حلقة تكرار، لذلك نعرّفها كـ [`mut`](https://zokrates.github.io/language/variables.html#mutability).
@@ -277,19 +277,19 @@ bool[512] mut map1d = [false; 512];
 نحتاج إلى تهيئة المصفوفة لأن Zokrates لا يحتوي على `undefined`. التعبير `[false; 512]` يعني [مصفوفة من 512 قيمة `false`](https://zokrates.github.io/language/types.html#declaration-and-initialization).
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 نحتاج أيضًا إلى عداد للتمييز بين البتات التي ملأناها بالفعل في `map1d` وتلك التي لم نملأها.
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 هذه هي الطريقة التي تعلن بها عن [حلقة `for`](https://zokrates.github.io/language/control_flow.html#for-loops) في Zokrates. يجب أن يكون لحلقة `for` في Zokrates حدود ثابتة، لأنه على الرغم من أنها تبدو كحلقة، إلا أن المترجم يقوم فعليًا بـ "فكها" (unrolls). التعبير `${width+2}` هو ثابت في وقت الترجمة لأن `width` يتم تعيينه بواسطة كود TypeScript قبل أن يستدعي المترجم.
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -299,7 +299,7 @@ for u32 y in 0..${height+2} {
 لكل موقع في الخريطة، ضع تلك القيمة في مصفوفة `map1d` وقم بزيادة العداد.
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -310,7 +310,7 @@ field[4] hashMe = [
 تُستخدم `pack128` لإنشاء مصفوفة من أربع قيم `field` من `map1d`. في Zokrates، تعني `array[a..b]` شريحة المصفوفة التي تبدأ عند `a` وتنتهي عند `b-1`.
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -366,19 +366,19 @@ def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8)
 يفتح هذا مجالًا آخر لإساءة الاستخدام. يمكن للمُثبِت استخدام الإحداثيات الصحيحة، ولكن إنشاء خريطة بأي عدد من الألغام حول الموقع، وربما في الموقع نفسه. لمنع هذه الإساءة، نجعل إثبات المعرفة الصفرية يتضمن تجزئة الخريطة، وهو معرف اللعبة.
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 القيمة المرجعة هنا هي صف (tuple) يتضمن مصفوفة تجزئة الخريطة بالإضافة إلى نتيجة الحفر.
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 نستخدم 255 كقيمة خاصة في حالة احتواء الموقع نفسه على قنبلة.
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -582,7 +582,7 @@ proof.inputs[3] = "0x" + "1".padStart(64, "0")
 هذا يعني أننا سنطالب دائمًا بوجود قنبلة واحدة، بغض النظر عن الإجابة الصحيحة. حاول اللعب بهذه النسخة، وسترى في علامة التبويب **server** على شاشة `mprocs` هذا الخطأ:
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000
@@ -701,7 +701,7 @@ proof.proof = {
 
 ليست [Zokrates](https://zokrates.github.io/) مكتبة المعرفة الصفرية الوحيدة المتاحة، ولكنها تشبه لغة برمجة [حتمية (imperative)](https://en.wikipedia.org/wiki/Imperative_programming) عادية وتدعم المتغيرات المنطقية.
 
-ومع ذلك، لم تعد Zokrates تخضع للصيانة النشطة. أحدث إصدار لها، <span dir="ltr">0.8.8</span> (و `zokrates-js` المطابق <span dir="ltr">1.1.9</span>)، يعود إلى <span dir="ltr">November 2023</span>، ولم يشهد الفرع الرئيسي أي التزامات (commits) منذ <span dir="ltr">April 2024</span>. لا يزال الكود الموجود في هذا البرنامج التعليمي يعمل، ولكن لا تتوقع إصلاحات للأخطاء أو تحديثات أمنية. بالنسبة لمشروع جديد، فكر في لغة تخضع للصيانة مثل [Noir](https://noir-lang.org/)، والتي تُستخدم في [هذا البرنامج التعليمي](/developers/tutorials/app-plasma/).
+ومع ذلك، لم تعد Zokrates تخضع للصيانة النشطة. أحدث إصدار لها، <span dir="ltr">0.8.8</span> (و `zokrates-js` المطابق <span dir="ltr">1.1.9</span>)، يعود إلى نوفمبر <span dir="ltr">2023</span>، ولم يشهد الفرع الرئيسي أي التزامات (commits) منذ أبريل <span dir="ltr">2024</span>. لا يزال الكود الموجود في هذا البرنامج التعليمي يعمل، ولكن لا تتوقع إصلاحات للأخطاء أو تحديثات أمنية. بالنسبة لمشروع جديد، فكر في لغة تخضع للصيانة مثل [Noir](https://noir-lang.org/)، والتي تُستخدم في [هذا البرنامج التعليمي](/developers/tutorials/app-plasma/).
 
 بالنسبة لتطبيقك، بمتطلبات مختلفة، قد تفضل استخدام [Circom](https://docs.circom.io/getting-started/installation/) أو [Cairo](https://www.cairo-lang.org/).
 

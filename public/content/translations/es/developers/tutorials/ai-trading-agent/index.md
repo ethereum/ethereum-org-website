@@ -42,7 +42,7 @@ Hay [muchos intercambios descentralizados (DEX)](/apps/categories/defi/) que te 
 
 ### OpenAI {#openai}
 
-Para un modelo de lenguaje grande (LLM), elegí empezar con [OpenAI](https://openai.com/). Para ejecutar la aplicación en este tutorial, tendrás que pagar por el acceso a la API. El pago mínimo de 5 $ es más que suficiente.
+Para un modelo de lenguaje grande, elegí empezar con [OpenAI](https://openai.com/). Para ejecutar la aplicación en este tutorial, tendrás que pagar por el acceso a la API. El pago mínimo de 5 $ es más que suficiente.
 
 La biblioteca de Python de OpenAI también puede comunicarse con cualquier otro punto de conexión compatible con OpenAI, incluyendo un modelo que ejecutes en tu propio ordenador. Consulta [Interactuar con un LLM](#interface-llm) para ver cómo apuntarlo a otro lugar.
 
@@ -356,15 +356,15 @@ uv run agent.py
 La salida ahora va a ser un prompt para un LLM, similar a:
 
 ```
-Dadas estas cotizaciones:
-Activo: WETH/USDC
+Given these quotes:
+Asset: WETH/USDC
         2026-01-20T16:34 3016.21
         .
         .
         .
         2026-02-01T17:49 2299.10
 
-Activo: WBTC/WETH
+Asset: WBTC/WETH
         2026-01-20T16:34 29.84
         .
         .
@@ -372,10 +372,10 @@ Activo: WBTC/WETH
         2026-02-01T17:50 33.46
 
 
-¿Cuál esperarías que fuera el valor de WETH/USDC en el momento 2026-02-02T17:56?
+What would you expect the value for WETH/USDC to be at time 2026-02-02T17:56?
 
-Proporciona tu respuesta como un solo número redondeado a dos decimales,
-sin ningún otro texto.
+Provide your answer as a single number rounded to two decimal places,
+without any other text.
 ```
 
 Ten en cuenta que aquí hay cotizaciones para dos activos, `WETH/USDC` y `WBTC/WETH`. Añadir cotizaciones de otro activo podría mejorar la precisión de la predicción.

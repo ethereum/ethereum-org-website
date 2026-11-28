@@ -105,7 +105,7 @@ OpenZeppelin ERC-20 కాంట్రాక్ట్‌లో బ్యాల�
         internal virtual
         override(ERC20)
     {
-        // దహనం చేయు (Literal translation of 'burn' works well in Telugu crypto contexts to signify permanent destruction.) అనేది టోకెన్ (A digital asset on Ethereum following a standard (ERC-20, ERC-721). NOT a physical coin or voucher.)లను చిరునామా (A unique hexadecimal identifier (0x...) for an Ethereum account. NOT a physical location.)(0) కు పంపుతుంది, దీన్ని బ్లాక్ (Always transliterated in tech contexts.) చేయవద్దు
+        // దహనం చేయు అనేది టోకెన్‌లను address(0) కు పంపుతుంది, దీన్ని బ్లాక్ చేయవద్దు
         if (to != address(0)) {
             require(to != address(this), "Can't send tokens to the contract address");
 
@@ -177,7 +177,7 @@ OpenZeppelin ERC-20 కాంట్రాక్ట్‌లో బ్యాల�
   ఘటనలు ఇండెక్స్ చేయబడతాయి కాబట్టి ఖాతా స్తంభింపజేయబడిన లేదా అన్‌ఫ్రీజ్ చేయబడిన అన్ని సమయాల కోసం శోధించడం సాధ్యమవుతుంది.
 
   ```solidity
-    // ఖాతా (A digital identity on Ethereum with an address, balance, and optional code.)లు స్తంభింపజేయబడినప్పుడు లేదా స్తంభన తొలగించబడినప్పుడు
+    // ఖాతాలు స్తంభింపజేయబడినప్పుడు లేదా స్తంభన తొలగించబడినప్పుడు
     event AccountFrozen(address indexed _addr);
     event AccountThawed(address indexed _addr);
   ```
@@ -197,7 +197,7 @@ OpenZeppelin ERC-20 కాంట్రాక్ట్‌లో బ్యాల�
         require(!frozenAccounts[addr], "Account already frozen");
         frozenAccounts[addr] = true;
         emit AccountFrozen(addr);
-    }  // ఖాతా (A digital identity on Ethereum with an address, balance, and optional code.)ను స్తంభింపజేయు
+    }  // ఖాతాను స్తంభింపజేయు
   ```
 
   ఖాతా ఇప్పటికే స్తంభింపజేయబడి ఉంటే, రివర్ట్ చేయండి. లేకపోతే, దానిని స్తంభింపజేసి, ఒక ఘటనను `emit` చేయండి.

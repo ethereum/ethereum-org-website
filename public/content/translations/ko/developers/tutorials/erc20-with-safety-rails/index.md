@@ -105,7 +105,7 @@ Solidity에 익숙하지 않다면 이 함수의 일부가 생소할 수 있습�
         internal virtual
         override(ERC20)
     {
-        // 소각하는 것은 토큰 (A digital asset on Ethereum following a standard (ERC-20, ERC-721). NOT a physical coin or voucher.)을 주소 (Refers to the hexadecimal identifier, not a physical address.)(0)으로 보냅니다, 그것을 블록 (A unit of bundled transactions added to the blockchain. NOT a physical block or obstruction.)하지 마세요
+        // 소각은 토큰을 address(0)으로 보내므로 차단하지 않습니다
         if (to != address(0)) {
             require(to != address(this), "Can't send tokens to the contract address");
 
@@ -177,7 +177,7 @@ Solidity에 익숙하지 않다면 이 함수의 일부가 생소할 수 있습�
   이벤트는 인덱싱되므로 계정이 동결되거나 동결 해제된 모든 시간을 검색할 수 있습니다.
 
   ```solidity
-    // 계정 (A digital identity on Ethereum with an address, balance, and optional code.)이 동결되거나 동결 해제될 때
+    // 계정이 동결되거나 동결 해제될 때
     event AccountFrozen(address indexed _addr);
     event AccountThawed(address indexed _addr);
   ```
@@ -197,7 +197,7 @@ Solidity에 익숙하지 않다면 이 함수의 일부가 생소할 수 있습�
         require(!frozenAccounts[addr], "Account already frozen");
         frozenAccounts[addr] = true;
         emit AccountFrozen(addr);
-    }  // 계정 (A digital identity on Ethereum with an address, balance, and optional code.) 동결
+    }  // freezeAccount
   ```
 
   계정이 이미 동결된 경우 되돌리기를 수행합니다. 그렇지 않으면 동결하고 이벤트를 `emit`합니다.

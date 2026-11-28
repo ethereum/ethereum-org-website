@@ -263,14 +263,14 @@ El [registro ERC-7730](https://github.com/ethereum/clear-signing-erc7730-registr
 1. Haz una bifurcación (fork) del repositorio en GitHub
 2. Crea una carpeta en `registry/<your-project-name>/`
 3. Coloca tu archivo dentro de ella: `registry/myproject/calldata-SwapRouter.json`
-4. Actualiza el campo `$schema` a la ruta relativa utilizada dentro del repositorio: `"../../specs/erc7730-v2.schema.json"`. La integración continua (CI) rechaza una URL aquí.
+4. Actualiza el campo `$schema` a la ruta relativa utilizada dentro del repositorio: `"../../specs/erc7730-v2.schema.json"`. La CI rechaza una URL aquí.
 5. Añade un archivo de prueba (ver a continuación)
 6. Valida tus archivos localmente (ver a continuación)
 7. Abre un pull request. Cada pull request puede cambiar solo una carpeta bajo `registry/`
 
 ### Añadir un archivo de prueba {#add-a-test-file}
 
-Cada descriptor que añadas o cambies necesita un archivo de prueba, para que las implementaciones de firma clara puedan verificarse contra él. Crea `registry/<your-project-name>/testsv2/calldata-<ContractName>.tests.json` con al menos un caso de prueba para cada función en `display.formats`. La integración continua (CI) deriva el selector de función de cada formato y falla si ninguna transacción de prueba lo llama.
+Cada descriptor que añadas o cambies necesita un archivo de prueba, para que las implementaciones de firma clara puedan verificarse contra él. Crea `registry/<your-project-name>/testsv2/calldata-<ContractName>.tests.json` con al menos un caso de prueba para cada función en `display.formats`. La CI deriva el selector de función de cada formato y falla si ninguna transacción de prueba lo llama.
 
 ```json
 {

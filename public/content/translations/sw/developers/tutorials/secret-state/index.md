@@ -174,7 +174,7 @@ Unapoendesha `pnpm dev` (ambayo inaendesha `mprocs`), hatua hizi hutokea:
 
    - [Anvil](https://getfoundry.sh/anvil/overview), ambayo inaendesha mnyororo wa vitalu wa ndani
    - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts), ambayo inakusanya (ikiwa inahitajika) na kusambaza mikataba kwa ajili ya MUD
-   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), ambayo inaendesha [Vite](https://vitejs.dev/) ili kuhudumia kiolesura cha mtumiaji (UI) na msimbo wa mteja kwa vivinjari vya wavuti.
+   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), ambayo inaendesha [Vite](https://vitejs.dev/) ili kuhudumia UI na msimbo wa mteja kwa vivinjari vya wavuti.
    - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server), ambayo inatekeleza vitendo vya seva
 
 2. Kifurushi cha `contracts` kinasambaza mikataba ya MUD na kisha kuendesha [hati ya `PostDeploy.s.sol`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol). Hati hii inaweka usanidi. Msimbo kutoka GitHub unabainisha [uwanja wa mabomu wa 10x5 wenye mabomu nane ndani yake](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23).
@@ -259,7 +259,7 @@ Mistari hii miwili inaingiza kazi mbili kutoka kwenye [maktaba ya kawaida ya Zok
 Kipengele cha uwanja katika Zokrates kwa kawaida huwa na urefu wa chini ya biti 256, lakini si kwa kiasi kikubwa. Ili kurahisisha msimbo, tunazuia ramani kuwa hadi biti 512, na kuheshi safu ya nyanja nne, na katika kila uwanja tunatumia biti 128 pekee. [Kazi ya `pack128`](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) inabadilisha safu ya biti 128 kuwa `field` kwa madhumuni haya.
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 Mstari huu unaanza ufafanuzi wa kazi. `hashMap` inapata kigezo kimoja kinachoitwa `map`, safu ya `bool`(ean) yenye vipimo viwili. Ukubwa wa ramani ni `width+2` kwa `height+2` kwa sababu ambazo [zimeelezwa hapa chini](#why-map-border).
@@ -269,7 +269,7 @@ Tunaweza kutumia `${width+2}` na `${height+2}` kwa sababu programu za Zokrates z
 Thamani inayorudishwa ni `field` ambayo ina heshi.
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 Ramani ina vipimo viwili. Hata hivyo, kazi ya `pack128` haifanyi kazi na safu za vipimo viwili. Kwa hivyo kwanza tunatandaza ramani kuwa safu ya baiti 512, tukitumia `map1d`. Kwa chaguo-msingi vigezo vya Zokrates ni vya kudumu (constants), lakini tunahitaji kugawa thamani kwenye safu hii katika kitanzi (loop), kwa hivyo tunaifafanua kama [`mut`](https://zokrates.github.io/language/variables.html#mutability).
@@ -277,19 +277,19 @@ Ramani ina vipimo viwili. Hata hivyo, kazi ya `pack128` haifanyi kazi na safu za
 Tunahitaji kuanzisha safu kwa sababu Zokrates haina `undefined`. Usemi wa `[false; 512]` unamaanisha [safu ya thamani 512 za `false`](https://zokrates.github.io/language/types.html#declaration-and-initialization).
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 Pia tunahitaji kihesabio ili kutofautisha kati ya biti ambazo tayari tumezijaza kwenye `map1d` na zile ambazo hatujajaza.
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 Hivi ndivyo unavyotangaza [kitanzi cha `for`](https://zokrates.github.io/language/control_flow.html#for-loops) katika Zokrates. Kitanzi cha `for` cha Zokrates lazima kiwe na mipaka isiyobadilika, kwa sababu ingawa kinaonekana kuwa kitanzi, kikusanyaji (compiler) kwa kweli "hukifungua" (unrolls). Usemi wa `${width+2}` ni wa kudumu wakati wa kukusanya kwa sababu `width` imewekwa na msimbo wa TypeScript kabla ya kuita kikusanyaji.
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -299,7 +299,7 @@ for u32 y in 0..${height+2} {
 Kwa kila eneo kwenye ramani, weka thamani hiyo kwenye safu ya `map1d` na uongeze kihesabio.
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -310,7 +310,7 @@ field[4] hashMe = [
 `pack128` inatumika kuunda safu ya thamani nne za `field` kutoka kwenye `map1d`. Katika Zokrates `array[a..b]` inamaanisha kipande cha safu kinachoanza kwenye `a` na kuishia kwenye `b-1`.
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -366,19 +366,19 @@ Kwa chaguo-msingi uthibitisho wa Zokrates unajumuisha pembejeo zake. Haifai kuju
 Hii inafungua njia nyingine ya matumizi mabaya. Mthibitishaji angeweza kutumia viwianishi (coordinates) sahihi, lakini akaunda ramani yenye idadi yoyote ya mabomu kuzunguka eneo hilo, na ikiwezekana kwenye eneo lenyewe. Ili kuzuia matumizi haya mabaya, tunafanya uthibitisho wa maarifa-sifuri ujumuishe heshi ya ramani, ambayo ni kitambulisho cha mchezo.
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 Thamani inayorudishwa hapa ni tapo (tuple) inayojumuisha safu ya heshi ya ramani pamoja na matokeo ya kuchimba.
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 Tunatumia 255 kama thamani maalum endapo eneo lenyewe lina bomu.
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -582,7 +582,7 @@ proof.inputs[3] = "0x" + "1".padStart(64, "0")
 Hii inamaanisha tutadai kila wakati kuna bomu moja, bila kujali jibu sahihi. Jaribu kucheza na toleo hili, na utaona katika kichupo cha **server** cha skrini ya `mprocs` kosa hili:
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000

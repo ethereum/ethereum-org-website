@@ -754,7 +754,7 @@ Esta é a função principal da fábrica, para criar uma troca de pares entre do
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Queremos que o endereço da nova troca seja determinístico, para que possa ser calculado antecipadamente offchain (isso pode ser útil para [transações de camada 2 (L2)](/developers/docs/scaling/)).
+Queremos que o endereço da nova troca seja determinístico, para que possa ser calculado antecipadamente offchain (isso pode ser útil para [transações de camada 2](/developers/docs/scaling/)).
 Para fazer isso, precisamos ter uma ordem consistente dos endereços dos tokens, independentemente da ordem em que os recebemos, então os ordenamos aqui.
 
 ```solidity

@@ -755,7 +755,7 @@ C'est la fonction principale de l'usine, pour créer un échange de paires entre
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Nous voulons que l'adresse du nouvel échange soit déterministe, afin qu'elle puisse être calculée à l'avance hors chaîne (cela peut être utile pour les [transactions de couche 2 (L2)](/developers/docs/scaling/)).
+Nous voulons que l'adresse du nouvel échange soit déterministe, afin qu'elle puisse être calculée à l'avance hors chaîne (cela peut être utile pour les [transactions de couche 2](/developers/docs/scaling/)).
 Pour ce faire, nous devons avoir un ordre cohérent des adresses de jetons, quel que soit l'ordre dans lequel nous les avons reçues, nous les trions donc ici.
 
 ```solidity

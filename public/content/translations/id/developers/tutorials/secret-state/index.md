@@ -252,7 +252,7 @@ Kedua baris ini mengimpor dua fungsi dari [pustaka standar Zokrates](https://zok
 Elemen field di Zokrates biasanya memiliki panjang kurang dari 256 bit, tetapi tidak jauh berbeda. Untuk menyederhanakan kode, kita membatasi peta hingga 512 bit, dan menge-hash sebuah array yang terdiri dari empat field, dan di setiap field kita hanya menggunakan 128 bit. [Fungsi `pack128`](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) mengubah sebuah array 128 bit menjadi sebuah `field` untuk tujuan ini.
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 Baris ini memulai definisi fungsi. `hashMap` mendapatkan parameter tunggal yang disebut `map`, sebuah array `bool`(ean) dua dimensi. Ukuran peta adalah `width+2` kali `height+2` karena alasan yang [dijelaskan di bawah ini](#why-map-border).
@@ -262,7 +262,7 @@ Kita dapat menggunakan `${width+2}` dan `${height+2}` karena program Zokrates di
 Nilai yang dikembalikan adalah sebuah `field` yang berisi hash tersebut.
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 Peta tersebut adalah dua dimensi. Namun, fungsi `pack128` tidak berfungsi dengan array dua dimensi. Jadi pertama-tama kita meratakan peta menjadi array 512-byte, menggunakan `map1d`. Secara default variabel Zokrates adalah konstanta, tetapi kita perlu menetapkan nilai ke array ini dalam sebuah loop, jadi kita mendefinisikannya sebagai [`mut`](https://zokrates.github.io/language/variables.html#mutability).
@@ -270,19 +270,19 @@ Peta tersebut adalah dua dimensi. Namun, fungsi `pack128` tidak berfungsi dengan
 Kita perlu menginisialisasi array karena Zokrates tidak memiliki `undefined`. Ekspresi `[false; 512]` berarti [sebuah array yang terdiri dari 512 nilai `false`](https://zokrates.github.io/language/types.html#declaration-and-initialization).
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 Kita juga memerlukan penghitung untuk membedakan antara bit yang sudah kita isi di `map1d` dan yang belum.
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 Beginilah cara Anda mendeklarasikan sebuah [loop `for`](https://zokrates.github.io/language/control_flow.html#for-loops) di Zokrates. Loop `for` Zokrates harus memiliki batas yang tetap, karena meskipun tampak seperti loop, kompiler sebenarnya "membukanya" (unroll). Ekspresi `${width+2}` adalah konstanta waktu kompilasi karena `width` ditetapkan oleh kode TypeScript sebelum memanggil kompiler.
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -292,7 +292,7 @@ for u32 y in 0..${height+2} {
 Untuk setiap lokasi di peta, masukkan nilai tersebut ke dalam array `map1d` dan tingkatkan penghitungnya.
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -303,7 +303,7 @@ field[4] hashMe = [
 `pack128` untuk membuat sebuah array yang terdiri dari empat nilai `field` dari `map1d`. Di Zokrates `array[a..b]` berarti irisan array yang dimulai pada `a` dan berakhir pada `b-1`.
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -359,19 +359,19 @@ Secara default, bukti Zokrates menyertakan inputnya. Tidak ada gunanya mengetahu
 Ini membuka celah lain untuk penyalahgunaan. Pembukti dapat menggunakan koordinat yang benar, tetapi membuat peta dengan jumlah ranjau berapa pun di sekitar lokasi, dan mungkin di lokasi itu sendiri. Untuk mencegah penyalahgunaan ini, kita membuat bukti tanpa pengetahuan menyertakan hash dari peta, yang merupakan pengidentifikasi permainan.
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 Nilai yang dikembalikan di sini adalah sebuah tuple yang mencakup array hash peta serta hasil penggalian.
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 Kita menggunakan 255 sebagai nilai khusus jika lokasi itu sendiri memiliki bom.
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -575,7 +575,7 @@ proof.inputs[3] = "0x" + "1".padStart(64, "0")
 Ini berarti kita akan selalu mengklaim ada satu bom, terlepas dari jawaban yang benar. Cobalah bermain dengan versi ini, dan Anda akan melihat di tab **server** pada layar `mprocs` kesalahan ini:
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000

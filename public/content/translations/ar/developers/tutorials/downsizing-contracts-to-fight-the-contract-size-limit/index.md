@@ -13,7 +13,7 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 
 ## لماذا يوجد حد؟ {#why-is-there-a-limit}
 
-في <span dir="ltr">[November 22, 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon)</span>، قدم التفرع الصلب <span dir="ltr">Spurious Dragon</span> <span dir="ltr">[EIP-170](https://eips.ethereum.org/EIPS/eip-170)</span> الذي أضاف حدًا لحجم العقد الذكي يبلغ <span dir="ltr">24,576 bytes</span> (<span dir="ltr">24 KiB</span>). بالنسبة لك كمطور <span dir="ltr">Solidity</span>، يعني هذا أنه عندما تضيف المزيد والمزيد من الوظائف إلى عقدك، ستصل في مرحلة ما إلى الحد وسيحذرك المترجم (compiler):
+في [<span dir="ltr">22</span> نوفمبر <span dir="ltr">2016</span>](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon)، قدم التفرع الصلب <span dir="ltr">Spurious Dragon</span> <span dir="ltr">[EIP-170](https://eips.ethereum.org/EIPS/eip-170)</span> الذي أضاف حدًا لحجم العقد الذكي يبلغ <span dir="ltr">24,576 bytes</span> (<span dir="ltr">24 KiB</span>). بالنسبة لك كمطور <span dir="ltr">Solidity</span>، يعني هذا أنه عندما تضيف المزيد والمزيد من الوظائف إلى عقدك، ستصل في مرحلة ما إلى الحد وسيحذرك المترجم (compiler):
 
 `Warning: Contract code size is 25000 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low "runs" value!), turning off revert strings, or using libraries.`
 

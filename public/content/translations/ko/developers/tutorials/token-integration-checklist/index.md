@@ -70,8 +70,8 @@ Slither에는 여러 일반적인 ERC 결함을 발견할 수 있는 단위 테�
 
 ## 소유자 권한 {#owner-privileges}
 
-- **토큰은 업그레이드할 수 없습니다.** 업그레이드 가능한 컨트랙트는 시간이 지남에 따라 규칙이 변경될 수 있습니다. 슬리더의 [human-summary 프린터](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary)를 사용하여 컨트랙트가 업그레이드 가능한지 확인하세요.
-- **소유자의 발행 권한이 제한되어 있습니다.** 악의적이거나 손상된 소유자는 발행 권한을 남용할 수 있습니다. 슬리더의 [human-summary 프린터](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary)를 사용하여 발행 권한을 검토하고, 코드를 수동으로 검토하는 것을 고려하세요.
+- **토큰은 업그레이드할 수 없습니다.** 업그레이드 가능한 컨트랙트는 시간이 지남에 따라 규칙이 변경될 수 있습니다. Slither의 [human-summary 프린터](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary)를 사용하여 컨트랙트가 업그레이드 가능한지 확인하세요.
+- **소유자의 발행 권한이 제한되어 있습니다.** 악의적이거나 손상된 소유자는 발행 권한을 남용할 수 있습니다. Slither의 [human-summary 프린터](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary)를 사용하여 발행 권한을 검토하고, 코드를 수동으로 검토하는 것을 고려하세요.
 - **토큰은 일시 중지할 수 없습니다.** 악의적이거나 손상된 소유자는 일시 중지 가능한 토큰에 의존하는 컨트랙트를 가둘 수 있습니다. 일시 중지 가능한 코드를 수동으로 식별하세요.
 - **소유자는 컨트랙트를 블랙리스트에 추가할 수 없습니다.** 악의적이거나 손상된 소유자는 블랙리스트 기능이 있는 토큰에 의존하는 컨트랙트를 가둘 수 있습니다. 블랙리스트 기능을 수동으로 식별하세요.
 - **토큰의 개발팀이 알려져 있으며 남용에 대해 책임을 질 수 있습니다.** 익명의 개발팀이 만들었거나 법적 보호 구역에 있는 컨트랙트는 더 높은 수준의 검토가 필요합니다.

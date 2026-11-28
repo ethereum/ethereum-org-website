@@ -360,15 +360,15 @@ uv run agent.py
 అవుట్‌పుట్ ఇప్పుడు LLMకి ప్రాంప్ట్‌గా ఉంటుంది, దీనికి సమానంగా:
 
 ```
-ఈ కోట్‌లను బట్టి:
-ఆస్తి: WETH/USDC
+Given these quotes:
+Asset: WETH/USDC
         2026-01-20T16:34 3016.21
         .
         .
         .
         2026-02-01T17:49 2299.10
 
-ఆస్తి: WBTC/WETH
+Asset: WBTC/WETH
         2026-01-20T16:34 29.84
         .
         .
@@ -376,10 +376,10 @@ uv run agent.py
         2026-02-01T17:50 33.46
 
 
-2026-02-02T17:56 సమయానికి WETH/USDC విలువ ఎంత ఉంటుందని మీరు ఆశిస్తున్నారు?
+What would you expect the value for WETH/USDC to be at time 2026-02-02T17:56?
 
-మీ సమాధానాన్ని రెండు దశాంశ స్థానాలకు రౌండ్ చేసిన ఒకే సంఖ్యగా అందించండి,
-మరే ఇతర వచనం లేకుండా.
+Provide your answer as a single number rounded to two decimal places,
+without any other text.
 ```
 
 ఇక్కడ `WETH/USDC` మరియు `WBTC/WETH` అనే రెండు ఆస్తుల కోసం కోట్‌లు ఉన్నాయని గమనించండి. మరొక ఆస్తి నుండి కోట్‌లను జోడించడం అంచనా ఖచ్చితత్వాన్ని మెరుగుపరుస్తుంది.

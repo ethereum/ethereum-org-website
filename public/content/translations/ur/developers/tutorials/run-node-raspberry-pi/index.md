@@ -91,7 +91,7 @@ Password: ethereum
 
 آپ کے پہلے لاگ ان پر آپ سے ڈیفالٹ پاس ورڈ تبدیل کرنے کو کہا جائے گا۔ اسے تبدیل کریں، کیونکہ بصورت دیگر کوئی بھی شخص جو آپ کے نوڈ تک پہنچ سکتا ہے وہ ڈیفالٹ پاس ورڈ کے ساتھ لاگ ان کر سکتا ہے۔ سسٹم فائر وال ڈیفالٹ طور پر غیر فعال ہے، لہذا اگر آپ کے نوڈ کا پبلک <span dir="ltr">IP</span> پتہ ہے، تو اسے فعال کرنے کے لیے [<span dir="ltr">Ethereum on Arm</span> کی سیکیورٹی گائیڈ](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/system/security.html) دیکھیں۔
 
-پہلے اتفاقِ رائے کا کلائنٹ شروع کریں۔ اپنے راؤٹر پر پورٹ <span dir="ltr">9000 (TCP</span> اور <span dir="ltr">UDP)</span> کھولیں تاکہ <span dir="ltr">Lighthouse</span> ہم منصبوں کو تلاش کر سکے اور ان سے جڑ سکے۔ پھر <span dir="ltr">lighthouse</span> سروس کو فعال اور شروع کریں، تاکہ یہ ریبوٹ کے بعد بھی دوبارہ شروع ہو جائے:
+پہلے اتفاقِ رائے کا کلائنٹ شروع کریں۔ اپنے راؤٹر پر پورٹ <span dir="ltr">9000</span> (<span dir="ltr">TCP</span> اور <span dir="ltr">UDP</span>) کھولیں تاکہ <span dir="ltr">Lighthouse</span> ہم منصبوں کو تلاش کر سکے اور ان سے جڑ سکے۔ پھر <span dir="ltr">lighthouse</span> سروس کو فعال اور شروع کریں، تاکہ یہ ریبوٹ کے بعد بھی دوبارہ شروع ہو جائے:
 
 ```sh
 sudo systemctl enable --now lighthouse-beacon
@@ -103,7 +103,7 @@ sudo systemctl enable --now lighthouse-beacon
 sudo journalctl -u lighthouse-beacon -f
 ```
 
-اس کے بعد، ایگزیکیوشن کلائنٹ شروع کریں۔ اپنے راؤٹر پر پورٹ <span dir="ltr">30303 (TCP</span> اور <span dir="ltr">UDP)</span> کھولیں تاکہ <span dir="ltr">Geth</span> ہم منصبوں کو تلاش کر سکے اور ان سے جڑ سکے۔ پھر <span dir="ltr">geth</span> سروس کو فعال اور شروع کریں:
+اس کے بعد، ایگزیکیوشن کلائنٹ شروع کریں۔ اپنے راؤٹر پر پورٹ <span dir="ltr">30303</span> (<span dir="ltr">TCP</span> اور <span dir="ltr">UDP</span>) کھولیں تاکہ <span dir="ltr">Geth</span> ہم منصبوں کو تلاش کر سکے اور ان سے جڑ سکے۔ پھر <span dir="ltr">geth</span> سروس کو فعال اور شروع کریں:
 
 ```sh
 sudo systemctl enable --now geth
@@ -145,7 +145,7 @@ cd && deposit new-mnemonic --num_validators 1 --execution_address <YOUR_ETH_ADDR
 # توثیق کار کی کیز امپورٹ کریں
 lighthouse account validator import --directory=/home/ethereum/validator_keys
 
-# انعام کا پتہ سیٹ کریں (<YOUR_ETH_ADDRESS> کو اپنے پتہ سے تبدیل کریں)
+# انعام کا پتہ سیٹ کریں (<YOUR_ETH_ADDRESS> کو اپنے پتے سے تبدیل کریں)
 sudo sed -i 's/changeme/<YOUR_ETH_ADDRESS>/' /etc/ethereum/lighthouse-validator.conf
 
 # توثیق کار کو شروع کریں

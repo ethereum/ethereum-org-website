@@ -1,5 +1,12 @@
 # Bengali (bn) -- Translation Review Findings
 
+## PR #19993 (intl/pending-dev, runs 46112784113/46112790344/46118259298) -- 2026-11-28 -- Score 8.6/10
+Scope: 17 developer tutorials (incremental updates), changed lines only; read 5 diffs (ai-trading-agent, clear-signing, secret-state, token-integration-checklist, short-abi) plus scripted sweeps over all 17. No JSON.
+
+Fixed (critical): Bengali digits -> Western (`লেয়ার ২ (L2)`/`লেয়ার ১ (L1)` short-abi:6,24,25; `১/৬` uniswap-v2:399; `লেয়ার ২` uniswap-v2:759; `কেক্যাক-২৫৬` yellow-paper-evm:37); glossary note leaked into a code comment and `requires` rendered `রিকোয়ার` (token-integration-checklist:36, now `প্রয়োজন`); `স্লিদারের` -> `Slither-এর` (token-integration-checklist:73-74); `(EOA)` added after the spelled-out long form (short-abi:80) removed.
+
+Open (warnings): `কনসেনসাস` (tree-dominant, 481 vs 251 `ঐক্যমত`) vs glossary; `(EVM)` after the long form in yellow-paper-evm:20, `(L2)` after `layer 2` in uniswap-v2:759 and short-abi tags; injected English glosses (`ইথেরিয়াম (Ethereum)`, `এক্সপ্লয়েটের (exploits)`, `র (raw)`); `মেটামাস্ক` app-plasma:142 and `অপটিমিজম` erc20-with-safety-rails:53 unchanged from dev; Bengali digits remain on unchanged lines (app-plasma 718/764/765, all-you-can-cache:98, yellow-paper-evm:228).
+
 ## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.6/10
 Scope: 14 markdown pages (ethash, data-structures, patricia-merkle-trie, ssz, frameworks, nodes-as-a-service, run-a-node, transactions, glossary, roadmap merge/privacy/statelessness/verkle-trees, supply), changed lines only; read 8 diffs in full (run-a-node, transactions, privacy, supply, merge, statelessness, nodes-as-a-service, glossary) plus scripted sweeps over all 14. No JSON in this PR. U+3002/U+2060/foreign-script/SPDX/untranslated sweeps clean.
 

@@ -382,7 +382,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import wasm from "vite-plugin-wasm";
 
-// https://Vite (Developer tool or library; kept Latin for technical clarity and code searchability.).dev/config/
+// https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), wasm()],
 })

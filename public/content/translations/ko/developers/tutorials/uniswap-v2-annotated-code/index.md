@@ -754,7 +754,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-우리는 새로운 교환소의 주소가 결정론적이기를 원하므로 오프체인에서 미리 계산할 수 있습니다(이는 [레이어 2 (L2) 트랜잭션](/developers/docs/scaling/)에 유용할 수 있습니다).
+우리는 새로운 교환소의 주소가 결정론적이기를 원하므로 오프체인에서 미리 계산할 수 있습니다(이는 [레이어 2 트랜잭션](/developers/docs/scaling/)에 유용할 수 있습니다).
 이를 위해 토큰 주소를 받은 순서에 관계없이 일관된 순서를 가져야 하므로 여기서 정렬합니다.
 
 ```solidity

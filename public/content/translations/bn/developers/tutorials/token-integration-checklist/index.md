@@ -33,7 +33,7 @@ slither-check-erc 0x06012c8cf97BEaD5deAe237070F9587f8E7A266d KittyCore --erc erc
 slither-check-erc [target] [contractName] [optional: --erc ERC_NUMBER]
 slither [target] --print human-summary
 slither [target] --print contract-summary
-slither-prop . --contract ContractName # কনফিগারেশন, এবং Echidna এর ব্যবহার রিকোয়ার (Transliterated Solidity keyword. Maintained in Latin script for code contexts.) করে
+slither-prop . --contract ContractName # কনফিগারেশন, এবং Echidna এর ব্যবহার প্রয়োজন
 ```
 
 ## সাধারণ বিবেচ্য বিষয় {#general-considerations}
@@ -70,8 +70,8 @@ Slither-এ [slither-prop](https://github.com/crytic/slither/wiki/Property-gener
 
 ## মালিকের বিশেষাধিকার {#owner-privileges}
 
-- **টোকেনটি আপগ্রেডযোগ্য নয়।** আপগ্রেডযোগ্য কন্ট্রাক্টগুলো সময়ের সাথে সাথে তাদের নিয়ম পরিবর্তন করতে পারে। কন্ট্রাক্টটি আপগ্রেডযোগ্য কিনা তা নির্ধারণ করতে স্লিদারের [human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) ব্যবহার করুন।
-- **মালিকের সীমিত মিন্টিং ক্ষমতা রয়েছে।** ক্ষতিকারক বা আপসকৃত মালিকরা মিন্টিং ক্ষমতার অপব্যবহার করতে পারে। মিন্টিং ক্ষমতা পর্যালোচনা করতে স্লিদারের [human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) ব্যবহার করুন এবং কোডটি ম্যানুয়ালি পর্যালোচনা করার কথা বিবেচনা করুন।
+- **টোকেনটি আপগ্রেডযোগ্য নয়।** আপগ্রেডযোগ্য কন্ট্রাক্টগুলো সময়ের সাথে সাথে তাদের নিয়ম পরিবর্তন করতে পারে। কন্ট্রাক্টটি আপগ্রেডযোগ্য কিনা তা নির্ধারণ করতে Slither-এর [human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) ব্যবহার করুন।
+- **মালিকের সীমিত মিন্টিং ক্ষমতা রয়েছে।** ক্ষতিকারক বা আপসকৃত মালিকরা মিন্টিং ক্ষমতার অপব্যবহার করতে পারে। মিন্টিং ক্ষমতা পর্যালোচনা করতে Slither-এর [human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) ব্যবহার করুন এবং কোডটি ম্যানুয়ালি পর্যালোচনা করার কথা বিবেচনা করুন।
 - **টোকেনটি পজ (pause) করার যোগ্য নয়।** ক্ষতিকারক বা আপসকৃত মালিকরা পজযোগ্য টোকেনের ওপর নির্ভরশীল কন্ট্রাক্টগুলোকে ফাঁদে ফেলতে পারে। পজযোগ্য কোড ম্যানুয়ালি শনাক্ত করুন।
 - **মালিক কন্ট্রাক্টটিকে ব্ল্যাকলিস্ট করতে পারে না।** ক্ষতিকারক বা আপসকৃত মালিকরা ব্ল্যাকলিস্ট থাকা টোকেনের ওপর নির্ভরশীল কন্ট্রাক্টগুলোকে ফাঁদে ফেলতে পারে। ব্ল্যাকলিস্টিং বৈশিষ্ট্যগুলো ম্যানুয়ালি শনাক্ত করুন।
 - **টোকেনের পেছনের দলটি পরিচিত এবং অপব্যবহারের জন্য তাদের দায়ী করা যেতে পারে।** বেনামী ডেভেলপমেন্ট দল বা আইনি আশ্রয়ে থাকা কন্ট্রাক্টগুলোর জন্য উচ্চ মানের পর্যালোচনা প্রয়োজন।

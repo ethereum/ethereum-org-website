@@ -16,7 +16,7 @@ sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 Для использования Ethereum on Arm с целью превращения Raspberry Pi в узел Эфириума рекомендуется следующее оборудование:
 
 - Raspberry Pi 5 с 16 ГБ оперативной памяти
-- Плата расширения (HAT) NVMe для Raspberry Pi 5, чтобы подключить NVMe-диск
+- NVMe HAT для Raspberry Pi 5, чтобы подключить NVMe-диск
 - NVMe SSD (M.2 2280), минимум 4 ТБ. Избегайте дисков с контроллером Phison, у которых есть известные проблемы с совместимостью.
 - Карта MicroSD (минимум 16 ГБ, класс 10)
 - Блок питания

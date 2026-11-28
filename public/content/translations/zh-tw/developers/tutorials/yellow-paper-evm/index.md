@@ -17,7 +17,7 @@ published: 2022-05-15
 
 ### 為什麼是 EVM？ {#why-the-evm}
 
-最初的黃皮書是在以太坊開發之初撰寫的。它描述了最初用於保護網路安全、基於工作量證明 (PoW) 的共識機制。然而，以太坊在 2022 年 9 月關閉了工作量證明，並開始使用基於權益證明 (PoS) 的共識。本教學將重點介紹黃皮書中定義以太坊虛擬機 (EVM) 的部分。向權益證明的過渡幾乎沒有改變 EVM：`DIFFICULTY` 操作碼 (0x44) 被重新命名為 [`PREVRANDAO`](https://eips.ethereum.org/EIPS/eip-4399)，現在會從信標鏈傳回一個隨機值。
+最初的黃皮書是在以太坊開發之初撰寫的。它描述了最初用於保護網路安全、基於工作量證明的共識機制。然而，以太坊在 2022 年 9 月關閉了工作量證明，並開始使用基於權益證明的共識。本教學將重點介紹黃皮書中定義以太坊虛擬機 (EVM) 的部分。向權益證明的過渡幾乎沒有改變 EVM：`DIFFICULTY` 操作碼 (0x44) 被重新命名為 [`PREVRANDAO`](https://eips.ethereum.org/EIPS/eip-4399)，現在會從信標鏈傳回一個隨機值。
 
 後續的網路升級確實改變了 EVM。它們新增了操作碼，例如 [`PUSH0`](https://eips.ethereum.org/EIPS/eip-3855)、[`TLOAD` 和 `TSTORE`](https://eips.ethereum.org/EIPS/eip-1153)（暫時性儲存）、[`MCOPY`](https://eips.ethereum.org/EIPS/eip-5656)、[`BLOBHASH`](https://eips.ethereum.org/EIPS/eip-4844) 以及 [`BLOBBASEFEE`](https://eips.ethereum.org/EIPS/eip-7516)，並改變了 [`SELFDESTRUCT`](https://eips.ethereum.org/EIPS/eip-6780) 的行為。黃皮書並未涵蓋所有這些變更。最新的規範是 [Python 執行層規範](https://github.com/ethereum/execution-specs)。
 

@@ -1,5 +1,11 @@
 # Traditional Chinese (zh-tw) Translation Review Findings
 
+## PR #19993 (intl/pending-dev) -- 2026-11-28 -- Score 9.0/10
+Scope: `page-courses.json` (4,668 keys, first translation) + 15 developer tutorials (incremental), changed lines only; every courses value checked by script (ICU names, tags, hrefs), 80 courses keys and 5 tutorial diffs read.
+
+Fixed (critical): second `<strong>EIP</strong>` restored in `upgrades-eips-intro-p1`; `(L2)` added to `第二層` in 32 courses values, `(L2)` in uniswap-v2, `(PoW)`/`(PoS)` in yellow-paper-evm; one English sentence left in reverse-engineering-a-contract (line 45).
+Open (warnings): register mixes 你 (about 1,630) and 您 (about 570 across 160 runs of keys, plus the secret-state tutorial); common.json on dev uses 您 only while this file and `page-values` use 你, so pick one site-wide (`sed 's/您/你/g'` over the courses file is lossless; 你們 occurs once, 您們 never). `Gas`/`燃料` mixed (glossary 燃料; the tree mixes both); `Rollup`/`匯總`/`卷疊` mixed (glossary conflict, see known-patterns 113); Latin glosses on terms English leaves bare (`兌換 (Swap)`, `分叉 (Fork)`, `待處理 (Pending)`, `愛麗絲 (Alice)`).
+
 ## PR #19983 (intl/pending-dev) -- 2026-11-27 -- Score 8.9/10
 Scope: 15 md pages, markdown only; changed lines only; sampled 8 md diffs plus scripted sweeps (no foreign script, U+2060, SPDX).
 

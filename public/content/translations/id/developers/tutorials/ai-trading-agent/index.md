@@ -356,15 +356,15 @@ uv run agent.py
 Outputnya sekarang akan menjadi prompt ke LLM, mirip dengan:
 
 ```
-Diberikan penawaran harga ini:
-Aset: WETH/USDC
+Given these quotes:
+Asset: WETH/USDC
         2026-01-20T16:34 3016.21
         .
         .
         .
         2026-02-01T17:49 2299.10
 
-Aset: WBTC/WETH
+Asset: WBTC/WETH
         2026-01-20T16:34 29.84
         .
         .
@@ -372,10 +372,10 @@ Aset: WBTC/WETH
         2026-02-01T17:50 33.46
 
 
-Berapa perkiraan nilai untuk WETH/USDC pada waktu 2026-02-02T17:56?
+What would you expect the value for WETH/USDC to be at time 2026-02-02T17:56?
 
-Berikan jawaban Anda sebagai angka tunggal yang dibulatkan menjadi dua tempat desimal,
-tanpa teks lainnya.
+Provide your answer as a single number rounded to two decimal places,
+without any other text.
 ```
 
 Perhatikan bahwa ada penawaran harga untuk dua aset di sini, `WETH/USDC` dan `WBTC/WETH`. Menambahkan penawaran harga dari aset lain mungkin meningkatkan akurasi prediksi.

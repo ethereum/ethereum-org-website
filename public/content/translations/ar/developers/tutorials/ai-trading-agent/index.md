@@ -360,15 +360,15 @@ uv run agent.py
 سيكون الإخراج الآن عبارة عن مطالبة لنموذج لغوي كبير، مشابهة لـ:
 
 ```
-بناءً على هذه الأسعار:
-الأصل: WETH/USDC
+Given these quotes:
+Asset: WETH/USDC
         2026-01-20T16:34 3016.21
         .
         .
         .
         2026-02-01T17:49 2299.10
 
-الأصل: WBTC/WETH
+Asset: WBTC/WETH
         2026-01-20T16:34 29.84
         .
         .
@@ -376,10 +376,10 @@ uv run agent.py
         2026-02-01T17:50 33.46
 
 
-ما هي القيمة التي تتوقعها لـ WETH/USDC في الوقت 2026-02-02T17:56؟
+What would you expect the value for WETH/USDC to be at time 2026-02-02T17:56?
 
-قدم إجابتك كرقم واحد مقرب إلى منزلتين عشريتين،
-بدون أي نص آخر.
+Provide your answer as a single number rounded to two decimal places,
+without any other text.
 ```
 
 لاحظ أن هناك أسعارًا لأصلين هنا، `WETH/USDC` و `WBTC/WETH`. قد تؤدي إضافة أسعار من أصل آخر إلى تحسين دقة التنبؤ.
@@ -519,7 +519,7 @@ print(make_prompt(wethusdc_quotes + wethwbtc_quotes, future_time, wethusdc_pool.
 
 ### التفاعل مع نموذج لغوي كبير (LLM) {#interface-llm}
 
-بعد ذلك، نقوم بمطالبة نموذج لغوي كبير (LLM) فعلي ونتلقى قيمة مستقبلية متوقعة. لقد كتبت هذا البرنامج باستخدام OpenAI، لذا إذا كنت ترغب في استخدام مزود مختلف، فستحتاج إلى تعديله.
+بعد ذلك، نقوم بمطالبة نموذج لغوي كبير فعلي ونتلقى قيمة مستقبلية متوقعة. لقد كتبت هذا البرنامج باستخدام OpenAI، لذا إذا كنت ترغب في استخدام مزود مختلف، فستحتاج إلى تعديله.
 
 1. احصل على [حساب OpenAI](https://auth.openai.com/create-account)
 2. [قم بتمويل الحساب](https://platform.openai.com/settings/organization/billing/overview) — الحد الأدنى للمبلغ وقت كتابة هذا التقرير هو <span dir="ltr">$5</span>
@@ -536,7 +536,7 @@ print(make_prompt(wethusdc_quotes + wethwbtc_quotes, future_time, wethusdc_pool.
    git checkout 04-interface-llm
    ```
 
-6. يستخدم الكود الموجود في المستودع نموذج `gpt-4-turbo`، والذي [ستقوم OpenAI بإيقافه في <span dir="ltr">October 23, 2026</span>](https://developers.openai.com/api/docs/deprecations). قم بتبديله إلى `gpt-6-luna`، وهو نموذج حالي منخفض التكلفة. نظرًا لأن `gpt-6-luna` هو نموذج استنتاجي، فإن الأمر يقوم أيضًا بإيقاف تشغيل الاستنتاج (`reasoning_effort="none"`، مما يحافظ على قابلية استخدام `temperature`) ويستبدل المعلمة المهملة `max_tokens` بـ `max_completion_tokens`.
+6. يستخدم الكود الموجود في المستودع نموذج `gpt-4-turbo`، والذي [ستقوم OpenAI بإيقافه في <span dir="ltr">23</span> أكتوبر <span dir="ltr">2026</span>](https://developers.openai.com/api/docs/deprecations). قم بتبديله إلى `gpt-6-luna`، وهو نموذج حالي منخفض التكلفة. نظرًا لأن `gpt-6-luna` هو نموذج استنتاجي، فإن الأمر يقوم أيضًا بإيقاف تشغيل الاستنتاج (`reasoning_effort="none"`، مما يحافظ على قابلية استخدام `temperature`) ويستبدل المعلمة المهملة `max_tokens` بـ `max_completion_tokens`.
 
    ```sh
    sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
@@ -807,7 +807,7 @@ WETH Balance: 499
 
 - في السطر 14، قم بتغيير `MAINNET_URL` إلى نقطة وصول حقيقية، مثل `https://eth.drpc.org`
 - في السطر 28، قم بتغيير `PRIVATE_KEY` إلى مفتاحك الخاص
-- ما لم تكن ثريًا جدًا ويمكنك شراء أو بيع <span dir="ltr">1 ETH</span> كل يوم لوكيل غير مثبت، فقد ترغب في تغيير 29 لتقليل `WETH_TRADE_AMOUNT`
+- ما لم تكن ثريًا جدًا ويمكنك شراء أو بيع <span dir="ltr">1 ETH</span> كل يوم لوكيل غير مثبت، فقد ترغب في تغيير السطر 29 لتقليل `WETH_TRADE_AMOUNT`
 
 #### شرح الكود {#trading-code}
 
@@ -983,9 +983,9 @@ balances()
 
 ### ماذا لو كنت تريد الحفاظ على سرية استراتيجية التداول الخاصة بك؟ {#secret}
 
-يمكن لموردي الذكاء الاصطناعي رؤية الاستعلامات التي ترسلها إلى النماذج اللغوية الكبيرة (LLMs) الخاصة بهم، مما قد يكشف عن نظام التداول العبقري الذي طورته مع وكيلك. نظام التداول الذي يستخدمه عدد كبير جدًا من الأشخاص لا قيمة له لأن الكثير من الأشخاص يحاولون الشراء عندما تريد الشراء (ويرتفع السعر) ويحاولون البيع عندما تريد البيع (وينخفض السعر).
+يمكن لموردي الذكاء الاصطناعي رؤية الاستعلامات التي ترسلها إلى النماذج اللغوية الكبيرة الخاصة بهم، مما قد يكشف عن نظام التداول العبقري الذي طورته مع وكيلك. نظام التداول الذي يستخدمه عدد كبير جدًا من الأشخاص لا قيمة له لأن الكثير من الأشخاص يحاولون الشراء عندما تريد الشراء (ويرتفع السعر) ويحاولون البيع عندما تريد البيع (وينخفض السعر).
 
-يمكنك تشغيل نموذج لغوي كبير (LLM) محليًا، على سبيل المثال، باستخدام `llama-server` الخاص بـ [llama.cpp](https://github.com/ggml-org/llama.cpp)، لتجنب هذه المشكلة. فهو يوفر نقطة نهاية متوافقة مع OpenAI، لذا تحتاج فقط إلى تعيين `OPENAI_BASE_URL` واسم النموذج كما هو موضح في [التفاعل مع نموذج لغوي كبير (LLM)](#interface-llm).
+يمكنك تشغيل نموذج لغوي كبير محليًا، على سبيل المثال، باستخدام `llama-server` الخاص بـ [llama.cpp](https://github.com/ggml-org/llama.cpp)، لتجنب هذه المشكلة. فهو يوفر نقطة نهاية متوافقة مع OpenAI، لذا تحتاج فقط إلى تعيين `OPENAI_BASE_URL` واسم النموذج كما هو موضح في [التفاعل مع نموذج لغوي كبير (LLM)](#interface-llm).
 
 ### من روبوت ذكاء اصطناعي إلى وكيل ذكاء اصطناعي {#bot-to-agent}
 

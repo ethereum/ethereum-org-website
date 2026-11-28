@@ -164,7 +164,7 @@ bbup -v 0.87.0
    வெளியீடு இதைப் போலவே இருக்க வேண்டும்
 
       ```
-ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
+   ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
 
    [zkBank] Circuit witness successfully solved
    [zkBank] Witness saved to target/zkBank.gz

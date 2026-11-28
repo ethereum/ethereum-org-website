@@ -1,5 +1,12 @@
 # Tamil (ta) Translation Review Findings
 
+## PR #19993 (intl/pending-dev, runs 46112784113/46112790344/46118259298) -- 2026-11-28 -- Score 8.5/10
+Scope: 17 developer tutorials (incremental updates), changed lines only; read 5 diffs (clear-signing, reverse-engineering-a-contract, secret-state, token-integration-checklist, short-abi) plus scripted sweeps. No JSON.
+
+Fixed (critical): `ஸ்லித்தரின்` -> `Slither-இன்` (token-integration-checklist:73-74).
+
+Open (warnings): `(EOA)`/`(PoW)`/`(PoS)`/`(L2)` added after spelled-out long forms kept under the ta first-mention allowance (short-abi:80, yellow-paper-evm:20, uniswap-v2:757); `எத்திரியம்` (32) vs `எத்தேரியம்` (4) vs `எத்தீரியம்` (foundation, clear-signing:261) in changed lines; `ஒப்பந்தம்` (tree-dominant) vs glossary `திறன் ஒப்பந்தம்`; `ஆப்டிமிசத்தின்` erc20-with-safety-rails:53 unchanged from dev; injected English glosses.
+
 ## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.4/10
 Scope: 15 markdown pages, changed lines only; read 6 diffs (nodes-and-clients, run-a-node, supply, privacy, transactions, nodes-as-a-service name lines) plus scripted sweeps over all 15. No JSON in this PR. U+3002/U+2060/foreign-script/SPDX/untranslated sweeps clean.
 

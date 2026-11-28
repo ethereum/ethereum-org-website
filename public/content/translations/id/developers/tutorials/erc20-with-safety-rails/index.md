@@ -105,7 +105,7 @@ Berikut adalah fungsi lengkapnya:
         internal virtual
         override(ERC20)
     {
-        // Membakar mengirim token (A digital asset on Ethereum following a standard (ERC-20, ERC-721). NOT a physical coin or voucher.) ke alamat (A unique hexadecimal identifier (0x...) for an Ethereum account. NOT a physical location.)(0), jangan blok (A unit of bundled transactions added to the blockchain. NOT a physical block or obstruction.) itu
+        // Pembakaran mengirim token ke address(0), jangan diblokir
         if (to != address(0)) {
             require(to != address(this), "Can't send tokens to the contract address");
 
@@ -177,7 +177,7 @@ Membekukan dan mencairkan kontrak memerlukan beberapa perubahan:
   Kejadian tersebut diindeks sehingga akan memungkinkan untuk mencari semua waktu sebuah akun telah dibekukan atau dicairkan.
 
   ```solidity
-    // Ketika akun (A digital identity on Ethereum with an address, balance, and optional code.) dibekukan atau dicairkan
+    // Ketika akun dibekukan atau dicairkan
     event AccountFrozen(address indexed _addr);
     event AccountThawed(address indexed _addr);
   ```
@@ -197,7 +197,7 @@ Membekukan dan mencairkan kontrak memerlukan beberapa perubahan:
         require(!frozenAccounts[addr], "Account already frozen");
         frozenAccounts[addr] = true;
         emit AccountFrozen(addr);
-    }  // freezeAkun (A digital identity on Ethereum with an address, balance, and optional code.)
+    }  // freezeAccount
   ```
 
   Jika akun sudah dibekukan, mengembalikan. Jika tidak, bekukan dan `emit` sebuah kejadian.

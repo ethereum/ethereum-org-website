@@ -360,15 +360,15 @@ uv run agent.py
 Wynikiem będzie teraz prompt do LLM, podobny do:
 
 ```
-Biorąc pod uwagę te wyceny:
-Aktywo: WETH/USDC
+Given these quotes:
+Asset: WETH/USDC
         2026-01-20T16:34 3016.21
         .
         .
         .
         2026-02-01T17:49 2299.10
 
-Aktywo: WBTC/WETH
+Asset: WBTC/WETH
         2026-01-20T16:34 29.84
         .
         .
@@ -376,10 +376,10 @@ Aktywo: WBTC/WETH
         2026-02-01T17:50 33.46
 
 
-Jakiej wartości WETH/USDC spodziewasz się w czasie 2026-02-02T17:56?
+What would you expect the value for WETH/USDC to be at time 2026-02-02T17:56?
 
-Podaj odpowiedź jako pojedynczą liczbę zaokrągloną do dwóch miejsc po przecinku,
-bez żadnego innego tekstu.
+Provide your answer as a single number rounded to two decimal places,
+without any other text.
 ```
 
 Zauważ, że są tu wyceny dla dwóch aktywów, `WETH/USDC` i `WBTC/WETH`. Dodanie wycen z innego aktywa może poprawić dokładność przewidywań.

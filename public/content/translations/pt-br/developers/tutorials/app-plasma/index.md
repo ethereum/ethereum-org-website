@@ -621,7 +621,7 @@ fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn
 Esta função converte a mensagem em bytes e, em seguida, converte os valores em um `TransferTxn`.
 
 ```rust
-// O equivalente ao hashMessage do Viem (Developer tool or library; kept Latin for technical clarity and code searchability.)
+// O equivalente ao hashMessage do Viem
 // https://viem.sh/docs/utilities/hashMessage#hashmessage
 fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
 ```
@@ -718,7 +718,7 @@ fn signatureToAddressAndHash(
         pubKeyX: [u8; 32],
         pubKeyY: [u8; 32],
         signature: [u8; 64]
-    ) -> (Field, Field, Field)   // endereço (A unique hexadecimal identifier (0x...) for an Ethereum account. NOT a physical location.), primeiros 16 bytes do hash (Termo não é traduzido na maioria dos contextos de tecnologia no Brasil.), últimos 16 bytes do hash (Termo não é traduzido na maioria dos contextos de tecnologia no Brasil.)        
+    ) -> (Field, Field, Field)   // endereço, primeiros 16 bytes do hash, últimos 16 bytes do hash        
 {
 ```
 
@@ -762,10 +762,10 @@ fn main(
         pubKeyY: [u8; 32],
         signature: [u8; 64],
     ) -> pub (
-        Field,  // Hash (Termo não é traduzido na maioria dos contextos de tecnologia no Brasil.) do array de contas (A digital identity on Ethereum with an address, balance, and optional code.) antigas
-        Field,  // Hash (Termo não é traduzido na maioria dos contextos de tecnologia no Brasil.) do array de contas (A digital identity on Ethereum with an address, balance, and optional code.) novas
-        Field,  // Primeiros 16 bytes do hash (Termo não é traduzido na maioria dos contextos de tecnologia no Brasil.) da mensagem
-        Field,  // Últimos 16 bytes do hash (Termo não é traduzido na maioria dos contextos de tecnologia no Brasil.) da mensagem
+        Field,  // Hash do array de contas antigas
+        Field,  // Hash do array de contas novas
+        Field,  // Primeiros 16 bytes do hash da mensagem
+        Field,  // Últimos 16 bytes do hash da mensagem
     )
 ```
 
@@ -891,7 +891,7 @@ const noir = new Noir(circuit)
 Carregue o circuito aritmético---o programa Noir compilado que criamos na etapa anterior---e prepare-se para executá-lo.
 
 ```js
-// Fornecemos informações de conta (A digital identity on Ethereum with an address, balance, and optional code.) apenas em resposta a uma requisição assinada
+// Fornecemos informações de conta apenas em resposta a uma requisição assinada
 const accountInformation = async signature => {
     const fromAddress = await recoverAddress({
         hash: hashMessage("Get account data " + Math.floor((new Date().getTime())/60000)),

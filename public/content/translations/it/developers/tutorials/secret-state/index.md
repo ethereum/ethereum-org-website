@@ -259,7 +259,7 @@ Queste due righe importano due funzioni dalla [libreria standard di Zokrates](ht
 L'elemento field in Zokrates è in genere lungo meno di 256 bit, ma non di molto. Per semplificare il codice, limitiamo la mappa a un massimo di 512 bit e facciamo l'hashing di un array di quattro field, e in ogni field usiamo solo 128 bit. [La funzione `pack128`](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) trasforma un array di 128 bit in un `field` a questo scopo.
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 Questa riga inizia la definizione di una funzione. `hashMap` ottiene un singolo parametro chiamato `map`, un array `bool`(eano) bidimensionale. La dimensione della mappa è `width+2` per `height+2` per motivi che sono [spiegati di seguito](#why-map-border).
@@ -269,7 +269,7 @@ Possiamo usare `${width+2}` e `${height+2}` perché i programmi Zokrates sono me
 Il valore di ritorno è un `field` che contiene l'hash.
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 La mappa è bidimensionale. Tuttavia, la funzione `pack128` non funziona con array bidimensionali. Quindi prima appiattiamo la mappa in un array di 512 byte, usando `map1d`. Per impostazione predefinita le variabili Zokrates sono costanti, ma dobbiamo assegnare valori a questo array in un ciclo, quindi lo definiamo come [`mut`](https://zokrates.github.io/language/variables.html#mutability).
@@ -277,19 +277,19 @@ La mappa è bidimensionale. Tuttavia, la funzione `pack128` non funziona con arr
 Dobbiamo inizializzare l'array perché Zokrates non ha `undefined`. L'espressione `[false; 512]` significa [un array di 512 valori `false`](https://zokrates.github.io/language/types.html#declaration-and-initialization).
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 Abbiamo anche bisogno di un contatore per distinguere tra i bit che abbiamo già riempito in `map1d` e quelli che non abbiamo riempito.
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 Ecco come si dichiara un [ciclo `for`](https://zokrates.github.io/language/control_flow.html#for-loops) in Zokrates. Un ciclo `for` in Zokrates deve avere limiti fissi, perché sebbene sembri essere un ciclo, il compilatore in realtà lo "srotola" (unroll). L'espressione `${width+2}` è una costante a tempo di compilazione perché `width` è impostato dal codice TypeScript prima che chiami il compilatore.
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -299,7 +299,7 @@ for u32 y in 0..${height+2} {
 Per ogni posizione nella mappa, inserisci quel valore nell'array `map1d` e incrementa il contatore.
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -310,7 +310,7 @@ field[4] hashMe = [
 Il `pack128` serve a creare un array di quattro valori `field` da `map1d`. In Zokrates `array[a..b]` indica la porzione dell'array che inizia a `a` e finisce a `b-1`.
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -366,19 +366,19 @@ Per impostazione predefinita, le prove di Zokrates includono i loro input. Non s
 Questo apre un'altra possibilità di abuso. Il prover potrebbe usare le coordinate corrette, ma creare una mappa con un numero qualsiasi di mine attorno alla posizione, e possibilmente nella posizione stessa. Per prevenire questo abuso, facciamo in modo che la prova a conoscenza zero includa l'hash della mappa, che è l'identificatore del gioco.
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 Il valore di ritorno qui è una tupla che include l'array dell'hash della mappa e il risultato dello scavo.
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 Usiamo 255 come valore speciale nel caso in cui la posizione stessa abbia una bomba.
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -582,7 +582,7 @@ proof.inputs[3] = "0x" + "1".padStart(64, "0")
 Questo significa che dichiareremo sempre che c'è una bomba, indipendentemente dalla risposta corretta. Prova a giocare con questa versione e vedrai nella scheda **server** della schermata `mprocs` questo errore:
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000

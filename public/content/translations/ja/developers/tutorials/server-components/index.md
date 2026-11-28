@@ -42,7 +42,7 @@ published: 2024-07-15
    cd 20240715-server-component
    ```
 
-2. サンプルリポジトリはホルスキーテストネット用に書かれていましたが、その後シャットダウンされました。SepoliaとSepoliaのコントラクトアドレスを使用するように更新してください。
+2. サンプルリポジトリはHoleskyテストネット用に書かれていましたが、その後シャットダウンされました。SepoliaとSepoliaのコントラクトアドレスを使用するように更新してください。
 
    ```sh copy
    sed -i.bak -e 's/holesky/sepolia/g' -e 's/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA/' src/app.ts

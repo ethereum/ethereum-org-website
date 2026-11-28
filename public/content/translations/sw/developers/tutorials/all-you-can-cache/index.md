@@ -46,7 +46,7 @@ Kwa kurahisisha tutachukulia kuwa vigezo vyote vya muamala ni `uint256`, vyenye 
 
 ## Udhibiti wa kache {#cache-manipulation}
 
-Kache inatekelezwa katika [`Kache.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol). Hebu tuipitie mstari kwa mstari.
+Kache inatekelezwa katika [`Cache.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol). Hebu tuipitie mstari kwa mstari.
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED

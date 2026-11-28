@@ -42,7 +42,7 @@ lang: uk
 
 ## Маніпуляції з кешем {#cache-manipulation}
 
-Кеш реалізовано в [`Кеш.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol). Давайте розглянемо його рядок за рядком.
+Кеш реалізовано в [`Cache.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol). Давайте розглянемо його рядок за рядком.
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED

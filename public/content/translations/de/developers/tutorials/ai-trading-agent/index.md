@@ -360,7 +360,7 @@ uv run agent.py
 Die Ausgabe wird nun ein Prompt für ein LLM sein, ähnlich wie:
 
 ```
-Angesichts dieser Preisangebote:
+Given these quotes:
 Asset: WETH/USDC
         2026-01-20T16:34 3016.21
         .
@@ -376,10 +376,10 @@ Asset: WBTC/WETH
         2026-02-01T17:50 33.46
 
 
-Welchen Wert würden Sie für WETH/USDC zum Zeitpunkt 2026-02-02T17:56 erwarten?
+What would you expect the value for WETH/USDC to be at time 2026-02-02T17:56?
 
-Geben Sie Ihre Antwort als einzelne Zahl an, gerundet auf zwei Dezimalstellen,
-ohne weiteren Text.
+Provide your answer as a single number rounded to two decimal places,
+without any other text.
 ```
 
 Beachten Sie, dass es hier Preisangebote für zwei Assets gibt, `WETH/USDC` und `WBTC/WETH`. Das Hinzufügen von Preisangeboten eines weiteren Assets könnte die Vorhersagegenauigkeit verbessern.

@@ -258,7 +258,7 @@ import "utils/pack/bool/pack128.zok" as pack128;
 Zokrates-এ ফিল্ড উপাদান সাধারণত 256 বিটের চেয়ে কম দীর্ঘ হয়, তবে খুব বেশি কম নয়। কোডটি সহজ করার জন্য, আমরা ম্যাপটিকে 512 বিট পর্যন্ত সীমাবদ্ধ করি এবং চারটি ফিল্ডের একটি অ্যারেকে হ্যাশ করি, যেখানে প্রতিটি ফিল্ডে আমরা শুধুমাত্র 128 বিট ব্যবহার করি। এই উদ্দেশ্যে [`pack128` ফাংশনটি](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) 128 বিটের একটি অ্যারেকে একটি `field`-এ পরিবর্তন করে।
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 এই লাইনটি একটি ফাংশন ডেফিনিশন শুরু করে। `hashMap` একটি মাত্র প্যারামিটার পায় যার নাম `map`, যা একটি দ্বিমাত্রিক `bool`(ean) অ্যারে। ম্যাপের আকার হলো `width+2` বাই `height+2`, যার কারণ [নিচে ব্যাখ্যা করা হয়েছে](#why-map-border)।
@@ -268,7 +268,7 @@ def hashMap(bool[${width+2}][${height+2}] map) -> field {
 রিটার্ন ভ্যালু হলো একটি `field` যা হ্যাশ ধারণ করে।
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 ম্যাপটি দ্বিমাত্রিক। তবে, `pack128` ফাংশনটি দ্বিমাত্রিক অ্যারের সাথে কাজ করে না। তাই আমরা প্রথমে `map1d` ব্যবহার করে ম্যাপটিকে একটি 512-বাইট অ্যারেতে ফ্ল্যাটেন বা সমতল করি। ডিফল্টভাবে Zokrates ভেরিয়েবলগুলো ধ্রুবক (constant) হয়, কিন্তু আমাদের একটি লুপের মধ্যে এই অ্যারেতে মান নির্ধারণ করতে হবে, তাই আমরা এটিকে [`mut`](https://zokrates.github.io/language/variables.html#mutability) হিসেবে সংজ্ঞায়িত করি।
@@ -276,19 +276,19 @@ bool[512] mut map1d = [false; 512];
 আমাদের অ্যারেটি ইনিশিয়ালাইজ করতে হবে কারণ Zokrates-এ `undefined` নেই। `[false; 512]` এক্সপ্রেশনটির অর্থ হলো [512টি `false` মানের একটি অ্যারে](https://zokrates.github.io/language/types.html#declaration-and-initialization)।
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 আমরা `map1d`-এ ইতিমধ্যে যে বিটগুলো পূরণ করেছি এবং যেগুলো করিনি, সেগুলোর মধ্যে পার্থক্য করার জন্য আমাদের একটি কাউন্টারও প্রয়োজন।
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 এভাবেই আপনি Zokrates-এ একটি [`for` লুপ](https://zokrates.github.io/language/control_flow.html#for-loops) ডিক্লেয়ার বা ঘোষণা করতে পারেন। একটি Zokrates `for` লুপের নির্দিষ্ট সীমা থাকতে হয়, কারণ এটি দেখতে লুপের মতো হলেও, কম্পাইলার আসলে এটিকে "আনরোল" করে। `${width+2}` এক্সপ্রেশনটি একটি কম্পাইল টাইম ধ্রুবক কারণ কম্পাইলারকে কল করার আগে TypeScript কোড দ্বারা `width` সেট করা হয়।
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -298,7 +298,7 @@ for u32 y in 0..${height+2} {
 ম্যাপের প্রতিটি লোকেশনের জন্য, সেই মানটি `map1d` অ্যারেতে রাখুন এবং কাউন্টারটি বৃদ্ধি করুন।
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -309,7 +309,7 @@ field[4] hashMe = [
 `map1d` থেকে চারটি `field` মানের একটি অ্যারে তৈরি করতে `pack128` ব্যবহার করা হয়। Zokrates-এ `array[a..b]` মানে হলো অ্যারের সেই স্লাইস বা অংশ যা `a` থেকে শুরু হয় এবং `b-1`-এ শেষ হয়।
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -365,19 +365,19 @@ def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8)
 এটি অপব্যবহারের আরেকটি পথ খুলে দেয়। প্রমাণকারী সঠিক স্থানাঙ্কগুলো ব্যবহার করতে পারে, কিন্তু লোকেশনের চারপাশে এবং সম্ভবত লোকেশনটিতেই যেকোনো সংখ্যক মাইন দিয়ে একটি ম্যাপ তৈরি করতে পারে। এই অপব্যবহার রোধ করতে, আমরা শূন্য-জ্ঞান প্রমাণে ম্যাপের হ্যাশ অন্তর্ভুক্ত করি, যা হলো গেম আইডেন্টিফায়ার।
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 এখানে রিটার্ন ভ্যালু হলো একটি টাপল (tuple) যা ম্যাপ হ্যাশ অ্যারের পাশাপাশি খননের ফলাফল অন্তর্ভুক্ত করে।
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 লোকেশনটিতে যদি বোমা থাকে তবে আমরা একটি বিশেষ মান হিসেবে 255 ব্যবহার করি।
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -581,7 +581,7 @@ proof.inputs[3] = "0x" + "1".padStart(64, "0")
 এর মানে হলো সঠিক উত্তর যাই হোক না কেন, আমরা সবসময় দাবি করব যে একটি বোমা আছে। এই সংস্করণটি দিয়ে খেলার চেষ্টা করুন, এবং আপনি `mprocs` স্ক্রিনের **server** ট্যাবে এই ত্রুটিটি দেখতে পাবেন:
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000

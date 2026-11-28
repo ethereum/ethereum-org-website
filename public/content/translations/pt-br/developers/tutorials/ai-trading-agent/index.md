@@ -356,15 +356,15 @@ uv run agent.py
 A saída agora será um prompt para um LLM, semelhante a:
 
 ```
-Dadas estas cotações:
-Ativo: WETH/USDC
+Given these quotes:
+Asset: WETH/USDC
         2026-01-20T16:34 3016.21
         .
         .
         .
         2026-02-01T17:49 2299.10
 
-Ativo: WBTC/WETH
+Asset: WBTC/WETH
         2026-01-20T16:34 29.84
         .
         .
@@ -372,10 +372,10 @@ Ativo: WBTC/WETH
         2026-02-01T17:50 33.46
 
 
-Qual você esperaria que fosse o valor para WETH/USDC no momento 2026-02-02T17:56?
+What would you expect the value for WETH/USDC to be at time 2026-02-02T17:56?
 
-Forneça sua resposta como um único número arredondado para duas casas decimais,
-sem nenhum outro texto.
+Provide your answer as a single number rounded to two decimal places,
+without any other text.
 ```
 
 Observe que há cotações para dois ativos aqui, `WETH/USDC` e `WBTC/WETH`. Adicionar cotações de outro ativo pode melhorar a precisão da previsão.

@@ -322,7 +322,7 @@ Solidity 컨트랙트에 대한 호출이 어떤 함수 서명과도 일치하�
 ```js
 const { expect } = require("chai");
 
-contract CalldataInterpreter {
+describe("CalldataInterpreter", function () {
   it("Should let us use tokens", async function () {
     const Token = await ethers.getContractFactory("OrisUselessToken")
     const token = await Token.deploy()

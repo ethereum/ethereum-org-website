@@ -1,5 +1,25 @@
 # Urdu (ur) -- Translation Review Findings
 
+## PR #19993 (intl/pending-dev) -- 2026-11-28 -- Score 8.4/10
+Scope: 14 developer tutorials (all-you-can-cache, app-plasma, clear-signing, erc20-annotated-code, erc20-with-safety-rails, monitoring-geth, reverse-engineering, run-node-raspberry-pi, secret-state, server-components, stealth-addr, token-integration-checklist, uniswap-v2-annotated-code, yellow-paper-evm), changed lines only. Read 7 diffs (all-you-can-cache, run-node, clear-signing, yellow-paper, uniswap word diff, reverse-engineering, token-integration). Scripted sweeps (U+3002/U+2060/CJK/Cyrillic/Indic, SPDX, span/isolate balance, anchors, components, link targets, English months/units, `(ABBR)` against English, transliterated tool names, `پتہ`+postposition, `لین دین`, `اداکار`) clean apart from the items below.
+
+**Fixed in this branch:**
+
+- all-you-can-cache:49 file name `` `کیشے.sol` `` -> `` `Cache.sol` `` (the link target is `Cache.sol`; verify-structure `inline-code` warning).
+- Hybrid `Optimism گورلی` x3 (:773, :796, :817) -> `<span dir="ltr">Optimism Goerli</span>` (#44).
+- token-integration-checklist:73,74 Slither `سلدر` -> `<span dir="ltr">Slither</span>` (#113).
+- yellow-paper-evm:20 `<span dir="ltr">September 2022</span>` -> `ستمبر 2022`.
+- yellow-paper-evm:47 semantic inversion: `non-volatile` storage rendered `غیر مستحکم (non-volatile)` (the word used for volatile memory two paragraphs earlier) -> `پائیدار (non-volatile)`.
+- run-node:94,106 LTR spans split across a parenthesis (`<span>9000 (TCP</span> اور <span>UDP)</span>`) -> `<span>9000</span> (<span>TCP</span> اور <span>UDP</span>)`.
+- Oblique case before a postposition: token-integration-checklist:16,69,98 x2 `پتہ پر`/`پتہ کی` -> `پتے`; run-node:148 `اپنے پتہ سے` -> `اپنے پتے سے`.
+
+**Open (warnings):**
+
+- uniswap: English glosses added where English has none (`(destination)`, `(square root)`, `(pair exchanges)`, `(pairs)`, `(volatile memory)`, `(chain identifier)`, `(approve)`); `لیئر ۲ (L2)` expansion kept from dev; `تبادلہ` used for both swap and exchange.
+- yellow-paper: `(PoW)`/`(PoS)` parentheticals and `(Boolean)` glosses; `غیر مستحکم` also used for volatile memory (L39, L53; `عارضی` is closer); `لفظ میں خالی جگہ` at L41 is clipped.
+- all-you-can-cache: units left English in spans (`100 bytes`, `22100 gas`, `256 bit`); Arabic-kaf `لامركزی` at erc20-annotated-code:30 (glossary data, #71).
+- run-node: `میمونک فریز (mnemonic phrase)` gloss; `ہم منصبوں` for peers; untranslated image alt text in 3 files (pre-existing).
+
 ## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.2/10
 Scope: 16 md pages (ethash, data-structures trio, frameworks, nodes-and-clients index/nodes-as-a-service/run-a-node, transactions, glossary, merge, privacy, statelessness, verkle-trees, supply), changed lines only; all diffs read. Sweeps clean (U+3002/U+2060/CJK, SPDX, isolates, span balance, Eastern-Arabic digits in identifiers) apart from below.
 

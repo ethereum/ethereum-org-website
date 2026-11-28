@@ -259,7 +259,7 @@ import "utils/pack/bool/pack128.zok" as pack128;
 Zokrates में फ़ील्ड तत्व आमतौर पर 256 बिट्स से कम लंबा होता है, लेकिन बहुत कम नहीं। कोड को सरल बनाने के लिए, हम मैप को 512 बिट्स तक सीमित करते हैं, और चार फ़ील्ड्स की एक सरणी को हैश करते हैं, और प्रत्येक फ़ील्ड में हम केवल 128 बिट्स का उपयोग करते हैं। [`pack128` फ़ंक्शन](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) इस उद्देश्य के लिए 128 बिट्स की एक सरणी को `field` में बदल देता है।
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 यह लाइन एक फ़ंक्शन परिभाषा शुरू करती है। `hashMap` को `map` नामक एक एकल पैरामीटर मिलता है, जो एक द्वि-आयामी (two-dimensional) `bool`(ean) सरणी है। मैप का आकार `width+2` गुणा `height+2` है, उन कारणों से जिन्हें [नीचे समझाया गया है](#why-map-border)।
@@ -269,7 +269,7 @@ def hashMap(bool[${width+2}][${height+2}] map) -> field {
 रिटर्न मान एक `field` है जिसमें हैश होता है।
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 मैप द्वि-आयामी है। हालाँकि, `pack128` फ़ंक्शन द्वि-आयामी सरणियों के साथ काम नहीं करता है। इसलिए हम पहले `map1d` का उपयोग करके मैप को 512-बाइट सरणी में समतल (flatten) करते हैं। डिफ़ॉल्ट रूप से Zokrates चर (variables) स्थिरांक (constants) होते हैं, लेकिन हमें एक लूप में इस सरणी को मान निर्दिष्ट करने की आवश्यकता है, इसलिए हम इसे [`mut`](https://zokrates.github.io/language/variables.html#mutability) के रूप में परिभाषित करते हैं।
@@ -277,19 +277,19 @@ bool[512] mut map1d = [false; 512];
 हमें सरणी को इनिशियलाइज़ करने की आवश्यकता है क्योंकि Zokrates में `undefined` नहीं है। `[false; 512]` अभिव्यक्ति का अर्थ है [512 `false` मानों की एक सरणी](https://zokrates.github.io/language/types.html#declaration-and-initialization)।
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 हमें उन बिट्स के बीच अंतर करने के लिए एक काउंटर की भी आवश्यकता है जिन्हें हमने पहले ही `map1d` में भर दिया है और जिन्हें हमने नहीं भरा है।
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 इस तरह आप Zokrates में एक [`for` लूप](https://zokrates.github.io/language/control_flow.html#for-loops) घोषित करते हैं। एक Zokrates `for` लूप की सीमाएँ निश्चित होनी चाहिए, क्योंकि भले ही यह एक लूप प्रतीत होता है, कंपाइलर वास्तव में इसे "अनरोल" (unroll) करता है। अभिव्यक्ति `${width+2}` एक कंपाइल टाइम स्थिरांक है क्योंकि कंपाइलर को कॉल करने से पहले TypeScript कोड द्वारा `width` सेट किया जाता है।
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -299,7 +299,7 @@ for u32 y in 0..${height+2} {
 मैप में प्रत्येक स्थान के लिए, उस मान को `map1d` सरणी में रखें और काउंटर को बढ़ाएँ।
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -310,7 +310,7 @@ field[4] hashMe = [
 `map1d` से चार `field` मानों की एक सरणी बनाने के लिए `pack128` का उपयोग किया जाता है। Zokrates में `array[a..b]` का अर्थ सरणी का वह स्लाइस (slice) है जो `a` से शुरू होता है और `b-1` पर समाप्त होता है।
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -366,19 +366,19 @@ def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8)
 यह दुरुपयोग के लिए एक और रास्ता खोलता है। प्रमाणक सही निर्देशांक (coordinates) का उपयोग कर सकता है, लेकिन स्थान के चारों ओर, और संभवतः स्थान पर ही किसी भी संख्या में खदानों के साथ एक मैप बना सकता है। इस दुरुपयोग को रोकने के लिए, हम शून्य-ज्ञान प्रमाण में मैप का हैश शामिल करते हैं, जो कि गेम पहचानकर्ता है।
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 यहाँ रिटर्न मान एक टपल (tuple) है जिसमें मैप हैश सरणी के साथ-साथ खुदाई का परिणाम भी शामिल है।
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 यदि स्थान पर ही बम है, तो हम एक विशेष मान के रूप में 255 का उपयोग करते हैं।
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -582,7 +582,7 @@ proof.inputs[3] = "0x" + "1".padStart(64, "0")
 इसका मतलब है कि हम हमेशा दावा करेंगे कि एक बम है, चाहे सही उत्तर कुछ भी हो। इस संस्करण के साथ खेलने का प्रयास करें, और आप `mprocs` स्क्रीन के **server** टैब में यह त्रुटि देखेंगे:
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000
