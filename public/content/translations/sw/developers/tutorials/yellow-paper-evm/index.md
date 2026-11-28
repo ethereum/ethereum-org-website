@@ -13,11 +13,13 @@ published: 2022-05-15
 
 ## Waraka wa Manjano Upi? {#which-yellow-paper}
 
-Kama karibu kila kitu kingine katika Ethereum, Waraka wa Manjano hubadilika kadiri muda unavyopita. Ili kuweza kurejelea toleo mahususi, nilipakia [toleo la sasa wakati wa kuandika](https://ethereum.github.io/yellowpaper/paper.pdf). Nambari za sehemu, ukurasa, na mlinganyo ninazotumia zitarejelea toleo hilo. Ni wazo zuri kuwa nayo wazi katika dirisha tofauti wakati unasoma waraka huu.
+Kama karibu kila kitu kingine katika Ethereum, Waraka wa Manjano hubadilika kadiri muda unavyopita. Ili kuweza kurejelea toleo mahususi, nilipakia [toleo ambalo lilikuwa la sasa wakati wa kuandika](yellow-paper-berlin.pdf) (toleo la Berlin, 2022). Nambari za sehemu, ukurasa, na mlinganyo katika mafunzo haya zinarejelea toleo hilo. [Toleo la hivi punde](https://ethereum.github.io/yellowpaper/paper.pdf) limesasishwa tangu wakati huo, kwa hivyo nambari zake zinaweza kutofautiana. Ni wazo zuri kuwa nalo wazi katika dirisha tofauti unaposoma waraka huu.
 
 ### Kwa nini EVM? {#why-the-evm}
 
-Waraka wa manjano wa asili uliandikwa mwanzoni kabisa mwa maendeleo ya Ethereum. Inaelezea utaratibu wa makubaliano wa asili unaotegemea Uthibitisho wa Kazi (PoW) ambao ulitumiwa hapo awali kulinda mtandao. Hata hivyo, Ethereum ilizima Uthibitisho wa Kazi (PoW) na kuanza kutumia mwafaka unaotegemea Uthibitisho wa Dau (PoS) mnamo Septemba 2022. Mafunzo haya yataangazia sehemu za waraka wa manjano zinazofafanua Mashine Pepe ya Ethereum (EVM). EVM haikubadilishwa na mpito kwenda kwenye Uthibitisho wa Dau (PoS) (isipokuwa kwa thamani ya kurejesha ya msimbo wa operesheni wa DIFFICULTY).
+Waraka wa manjano wa asili uliandikwa mwanzoni mwa maendeleo ya Ethereum. Inaelezea utaratibu wa makubaliano wa asili unaotegemea Uthibitisho wa Kazi ambao ulitumika hapo awali kulinda mtandao. Hata hivyo, Ethereum ilizima Uthibitisho wa Kazi na kuanza kutumia mwafaka unaotegemea Uthibitisho wa Dau mnamo Septemba 2022. Mafunzo haya yataangazia sehemu za waraka wa manjano zinazofafanua Mashine Pepe ya Ethereum (EVM). Mpito kwenda kwenye Uthibitisho wa Dau haukubadilisha sana EVM: msimbo wa operesheni wa `DIFFICULTY` (0x44) ulibadilishwa jina kuwa [`PREVRANDAO`](https://eips.ethereum.org/EIPS/eip-4399) na sasa unarejesha thamani nasibu kutoka kwenye Mnyororo wa Beacon.
+
+Maboresho ya mtandao ya baadaye yalibadilisha EVM. Yaliongeza misimbo ya operesheni kama vile [`PUSH0`](https://eips.ethereum.org/EIPS/eip-3855), [`TLOAD` na `TSTORE`](https://eips.ethereum.org/EIPS/eip-1153) (hifadhi ya muda), [`MCOPY`](https://eips.ethereum.org/EIPS/eip-5656), [`BLOBHASH`](https://eips.ethereum.org/EIPS/eip-4844), na [`BLOBBASEFEE`](https://eips.ethereum.org/EIPS/eip-7516), na kubadilisha tabia ya [`SELFDESTRUCT`](https://eips.ethereum.org/EIPS/eip-6780). Waraka wa Manjano haujumuishi mabadiliko haya yote. Maelezo ya hivi punde zaidi ni [maelezo ya tabaka la utekelezaji la Python](https://github.com/ethereum/execution-specs).
 
 ## 9 Muundo wa utekelezaji {#9-execution-model}
 
@@ -32,21 +34,23 @@ Neno [Turing-kamili](https://en.wikipedia.org/wiki/Turing_completeness) linamaan
 
 Sehemu hii inatoa mambo ya msingi ya EVM na jinsi inavyolinganishwa na miundo mingine ya kimahesabu.
 
-[Mashine ya staki](https://en.wikipedia.org/wiki/Stack_machine) ni kompyuta inayohifadhi data za kati si kwenye rejista, bali kwenye [**staki**](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>). Huu ndio usanifu unaopendelewa kwa mashine pepe kwa sababu ni rahisi kutekeleza ikimaanisha kuwa hitilafu, na udhaifu wa kiusalama, haziwezekani sana kutokea. Kumbukumbu katika staki imegawanywa katika maneno ya biti 256. Hii ilichaguliwa kwa sababu inafaa kwa shughuli kuu za kificho za Ethereum kama vile uheshiji wa Keccak-256 na hesabu za tao la duaradufu. Ukubwa wa juu zaidi wa staki ni vipengee 1024 (1024 x biti 256). Wakati misimbo ya operesheni inatekelezwa kwa kawaida hupata vigezo vyake kutoka kwenye staki. Kuna misimbo ya operesheni mahususi kwa ajili ya kupanga upya vipengele katika staki kama vile `POP` (huondoa kipengee kutoka juu ya staki), `DUP_N` (hunakili kipengee cha N katika staki), n.k.
+[Mashine ya staki](https://en.wikipedia.org/wiki/Stack_machine) ni kompyuta inayohifadhi data za kati si kwenye rejista, bali kwenye [**staki**](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>). Huu ndio usanifu unaopendelewa kwa mashine pepe kwa sababu ni rahisi kuutekeleza ikimaanisha kuwa hitilafu, na udhaifu wa kiusalama, haziwezekani sana kutokea. Kumbukumbu katika staki imegawanywa katika maneno ya biti 256. Hili lilichaguliwa kwa sababu linafaa kwa shughuli kuu za kificho za Ethereum kama vile uheshiji wa Keccak-256 na hesabu za tao la duaradufu. Ukubwa wa juu zaidi wa staki ni vipengee 1024 (biti 1024 x 256). Wakati misimbo ya operesheni inatekelezwa kwa kawaida hupata vigezo vyake kutoka kwenye staki. Kuna misimbo ya operesheni mahususi kwa ajili ya kupanga upya vipengele kwenye staki kama vile `POP` (huondoa kipengee kutoka juu ya staki), `DUP_N` (hunakili kipengee cha N kwenye staki), n.k.
 
-EVM pia ina nafasi tete inayoitwa **kumbukumbu** ambayo hutumika kuhifadhi data wakati wa utekelezaji. Kumbukumbu hii imepangwa katika maneno ya baiti 32. Maeneo yote ya kumbukumbu huanzishwa kwa sifuri. Ikiwa utatekeleza msimbo huu wa [Yul](https://docs.soliditylang.org/en/latest/yul.html) ili kuongeza neno kwenye kumbukumbu, itajaza baiti 32 za kumbukumbu kwa kujaza nafasi tupu katika neno na sifuri, yaani, inaunda neno moja - na sifuri katika maeneo 0-29, 0x60 hadi 30, na 0xA7 hadi 31.
+EVM pia ina nafasi tete inayoitwa **kumbukumbu** ambayo hutumika kuhifadhi data wakati wa utekelezaji. Kumbukumbu hii imepangwa katika maneno ya baiti 32. Maeneo yote ya kumbukumbu huanzishwa kwa sifuri. Ikiwa utatekeleza msimbo huu wa [Yul](https://docs.soliditylang.org/en/latest/yul.html) ili kuongeza neno kwenye kumbukumbu, utajaza baiti 32 za kumbukumbu kwa kujaza nafasi tupu katika neno na sifuri, yaani, inaunda neno moja - lenye sifuri katika maeneo 0-29, 0x60 hadi 30, na 0xA7 hadi 31.
 
 ```yul
 mstore(0, 0x60A7)
 ```
 
-`mstore` ni mojawapo ya misimbo ya operesheni mitatu ambayo EVM hutoa kwa ajili ya kuingiliana na kumbukumbu - hupakia neno kwenye kumbukumbu. Mengine mawili ni `mstore8` ambayo hupakia baiti moja kwenye kumbukumbu, na `mload` ambayo huhamisha neno kutoka kwenye kumbukumbu hadi kwenye staki.
+`mstore` ni mojawapo ya misimbo ya operesheni mitatu ambayo EVM hutoa kwa ajili ya kuingiliana na kumbukumbu - hupakia neno kwenye kumbukumbu. Mingine miwili ni `mstore8` ambayo hupakia baiti moja kwenye kumbukumbu, na `mload` ambayo huhamisha neno kutoka kwenye kumbukumbu hadi kwenye staki.
 
-EVM pia ina muundo tofauti wa **hifadhi** isiyo tete ambayo hudumishwa kama sehemu ya hali ya mfumo - kumbukumbu hii imepangwa katika safu za maneno (kinyume na safu za baiti zinazoweza kushughulikiwa na neno katika staki). Hifadhi hii ndipo mikataba huweka data ya kudumu - mkataba unaweza tu kuingiliana na hifadhi yake yenyewe. Hifadhi imepangwa katika ramani za ufunguo-thamani.
+EVM pia ina muundo tofauti wa **hifadhi** isiyo tete ambayo hudumishwa kama sehemu ya hali ya mfumo - kumbukumbu hii hupanga funguo za biti 256 kwa thamani za biti 256 (kinyume na kumbukumbu, ambayo ni safu inayoweza kushughulikiwa na baiti). Hifadhi hii ndipo mikataba huweka data za kudumu - mkataba unaweza tu kuingiliana na hifadhi yake yenyewe. Hifadhi imepangwa katika ramani za ufunguo-thamani.
 
-Ingawa haijatajwa katika sehemu hii ya Waraka wa Manjano, ni muhimu pia kujua kuna aina ya nne ya kumbukumbu. **Data za mwito** ni kumbukumbu ya kusoma tu inayoweza kushughulikiwa na baiti inayotumika kuhifadhi thamani iliyopitishwa na kigezo cha `data` cha muamala. EVM ina misimbo ya operesheni mahususi ya kudhibiti `calldata`. `calldatasize` hurejesha ukubwa wa data. `calldataload` hupakia data kwenye staki. `calldatacopy` hunakili data kwenye kumbukumbu.
+Tangu uboreshaji wa Cancun, pia kuna **hifadhi ya muda** ([EIP-1153](https://eips.ethereum.org/EIPS/eip-1153)). Inafikiwa kama hifadhi, kwa kutumia misimbo ya operesheni ya `TLOAD` na `TSTORE`, lakini inafutwa mwishoni mwa kila muamala.
 
-Usanifu wa kawaida wa [Von Neumann](https://en.wikipedia.org/wiki/Von_Neumann_architecture) huhifadhi msimbo na data katika kumbukumbu sawa. EVM haifuati kiwango hiki kwa sababu za kiusalama - kushiriki kumbukumbu tete hufanya iwezekane kubadilisha msimbo wa programu. Badala yake, msimbo huhifadhiwa kwenye hifadhi.
+Ingawa haijatajwa katika sehemu hii ya Waraka wa Manjano, ni muhimu pia kujua kuna aina moja zaidi ya kumbukumbu. **Data za mwito** ni kumbukumbu ya kusoma tu inayoweza kushughulikiwa na baiti inayotumika kuhifadhi thamani iliyopitishwa na kigezo cha `data` cha muamala. EVM ina misimbo ya operesheni mahususi ya kudhibiti `calldata`. `calldatasize` inarejesha ukubwa wa data. `calldataload` hupakia data kwenye staki. `calldatacopy` hunakili data kwenye kumbukumbu.
+
+[Usanifu wa kawaida wa Von Neumann](https://en.wikipedia.org/wiki/Von_Neumann_architecture) huhifadhi msimbo na data katika kumbukumbu sawa. EVM haifuati kiwango hiki kwa sababu za kiusalama - kushiriki kumbukumbu tete hufanya iwezekane kubadilisha msimbo wa programu. Badala yake, msimbo huhifadhiwa bila kubadilika kama sehemu ya akaunti ya mkataba katika hali ya ulimwengu, tofauti na kumbukumbu na hifadhi ya mkataba.
 
 Kuna matukio mawili tu ambapo msimbo unatekelezwa kutoka kwenye kumbukumbu:
 
@@ -86,7 +90,7 @@ Chaguo la kukokotoa _C<sub>mem</sub>_ linafafanuliwa katika mlinganyo 328: _C<su
 [Soma zaidi kuhusu gesi](/developers/docs/gas/).
 ## 9.3 Mazingira ya utekelezaji {#93-execution-env}
 
-Mazingira ya utekelezaji ni tuple, _I_, ambayo inajumuisha taarifa ambazo si sehemu ya hali ya mnyororo wa vitalu au EVM.
+Mazingira ya utekelezaji ni tuple, _I_, inayojumuisha taarifa ambayo si sehemu ya hali ya mnyororo wa vitalu au EVM.
 
 | Kigezo       | Msimbo wa operesheni wa kufikia data                                                                                        | Msimbo wa Solidity wa kufikia data         |
 | --------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
@@ -97,18 +101,19 @@ Mazingira ya utekelezaji ni tuple, _I_, ambayo inajumuisha taarifa ambazo si seh
 | _I<sub>s</sub>_ | [`CALLER`](https://www.evm.codes/#33)                                                                            | `msg.sender`                             |
 | _I<sub>v</sub>_ | [`CALLVALUE`](https://www.evm.codes/#34)                                                                         | `msg.value`                              |
 | _I<sub>b</sub>_ | [`CODECOPY`](https://www.evm.codes/#39)                                                                          | `address(this).code`                     |
-| _I<sub>H</sub>_ | Nyanja za kichwa cha kizuizi, kama vile [`NUMBER`](https://www.evm.codes/#43) na [`DIFFICULTY`](https://www.evm.codes/#44) | `block.number`, `block.difficulty`, n.k. |
-| _I<sub>e</sub>_ | Kina cha staki ya mwito kwa ajili ya miito kati ya mikataba (ikiwa ni pamoja na uundaji wa mkataba)                                |
-| _I<sub>w</sub>_ | Je, EVM inaruhusiwa kubadilisha hali, au inaendeshwa kwa uthabiti                                                  |
+| _I<sub>H</sub>_ | Sehemu za kichwa cha kizuizi, kama vile [`NUMBER`](https://www.evm.codes/#43) na [`PREVRANDAO`](https://www.evm.codes/#44) | `block.number`, `block.prevrandao`, n.k. |
+| _I<sub>e</sub>_ | Kina cha staki ya mwito kwa miito kati ya mikataba (ikiwa ni pamoja na uundaji wa mkataba)                                |
+| _I<sub>w</sub>_ | Je, EVM inaruhusiwa kubadilisha hali, au inaendeshwa kitakwimu                                                  |
 
-Vigezo vingine vichache ni muhimu ili kuelewa sehemu iliyosalia ya sehemu ya 9:
+Vigezo vingine vichache ni muhimu ili kuelewa sehemu iliyosalia ya 9:
 
 | Kigezo | Imefafanuliwa katika sehemu   | Maana                                                                                                                                                                                                                  |
 | --------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | _σ_       | 2 (uk. 2, mlinganyo 1) | Hali ya mnyororo wa vitalu                                                                                                                                                                                              |
 | _g_       | 9.3 (uk. 14)          | Gesi iliyosalia                                                                                                                                                                                                            |
-| _A_       | 6.1 (uk. 9)           | Hali ndogo iliyokusanywa (mabadiliko yaliyopangwa kwa wakati muamala unapokamilika)                                                                                                                                                       |
-| _o_       | 9.3 (uk. 14)          | Pato - matokeo yaliyorejeshwa katika kesi ya muamala wa ndani (wakati mkataba mmoja unaita mwingine) na miito ya kutazama vipengele (unapouliza tu taarifa, kwa hivyo hakuna haja ya kusubiri muamala) |
+| _A_       | 6.1 (uk. 9)           | Hali ndogo iliyokusanywa (mabadiliko yaliyopangwa kwa wakati muamala utakapokamilika)                                                                                                                                                       |
+| _o_       | 9.3 (uk. 14)          | Pato - matokeo yaliyorejeshwa katika kesi ya muamala wa ndani (wakati mkataba mmoja unaita mwingine) na miito ya kutazama chaguo za kukokotoa (unapouliza tu taarifa, kwa hivyo hakuna haja ya kusubiri muamala) |
+
 ## 9.4 Muhtasari wa utekelezaji {#94-execution-overview}
 
 Sasa kwa kuwa tuna mambo yote ya awali, hatimaye tunaweza kuanza kufanyia kazi jinsi EVM inavyofanya kazi.
@@ -138,18 +143,18 @@ Kwa kuwa hii ni [mashine ya staki](https://en.wikipedia.org/wiki/Stack_machine),
 
 ## 9.4.2 Kusimama kwa Kipekee {#942-exceptional-halt}
 
-Sehemu hii inafafanua chaguo la kukokotoa la _Z_, ambalo hubainisha wakati tuna usitishaji usio wa kawaida. Hili ni chaguo la kukokotoa la [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type), kwa hivyo linatumia [_∨_ kwa ajili ya 'au' ya kimantiki](https://en.wikipedia.org/wiki/Logical_disjunction) na [_∧_ kwa ajili ya 'na' ya kimantiki](https://en.wikipedia.org/wiki/Logical_conjunction).
+Sehemu hii inafafanua chaguo la kukokotoa la _Z_, ambalo hubainisha wakati tuna usitishaji usio wa kawaida. Hili ni chaguo la kukokotoa la [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type), kwa hivyo linatumia [_∨_ kwa mantiki ya au](https://en.wikipedia.org/wiki/Logical_disjunction) na [_∧_ kwa mantiki ya na](https://en.wikipedia.org/wiki/Logical_conjunction).
 
-Tuna kusimama kwa kipekee ikiwa mojawapo ya masharti haya ni kweli:
+Tuna usimamishaji wa kipekee ikiwa mojawapo ya masharti haya ni kweli:
 
 - **_μ<sub>g</sub> < C(σ,μ,A,I)_**
-  Kama tulivyoona katika sehemu ya 9.2, _C_ ni chaguo la kukokotoa ambalo hubainisha gharama ya gesi. Hakuna gesi ya kutosha iliyosalia ili kufidia msimbo wa operesheni unaofuata.
+  Kama tulivyoona katika sehemu ya 9.2, _C_ ni chaguo la kukokotoa ambalo hubainisha gharama ya gesi. Hakuna gesi ya kutosha iliyosalia kugharamia msimbo wa operesheni unaofuata.
 
 - **_δ<sub>w</sub>=∅_**
-  Ikiwa idadi ya vipengee vilivyotolewa kwa ajili ya msimbo wa operesheni haijafafanuliwa, basi msimbo wa operesheni wenyewe haujafafanuliwa.
+  Ikiwa idadi ya vipengee vilivyotolewa kwa msimbo wa operesheni haijabainishwa, basi msimbo wa operesheni wenyewe haujabainishwa.
 
 - **_|| μ<sub>s</sub> || < δ<sub>w</sub>_**
-  Upungufu wa staki, hakuna vipengee vya kutosha kwenye staki kwa ajili ya msimbo wa operesheni wa sasa.
+  Upungufu wa staki, hakuna vipengee vya kutosha kwenye staki kwa msimbo wa operesheni wa sasa.
 
 - **_w = JUMP ∧ μ<sub>s</sub>[0]∉D(I<sub>b</sub>)_**
   Msimbo wa operesheni ni [`JUMP`](https://www.evm.codes/#56) na anwani si [`JUMPDEST`](https://www.evm.codes/#5b). Miruko ni halali _tu_ wakati lengwa ni [`JUMPDEST`](https://www.evm.codes/#5b).
@@ -158,29 +163,30 @@ Tuna kusimama kwa kipekee ikiwa mojawapo ya masharti haya ni kweli:
   Msimbo wa operesheni ni [`JUMPI`](https://www.evm.codes/#57), sharti ni kweli (sio sifuri) kwa hivyo mruko unapaswa kutokea, na anwani si [`JUMPDEST`](https://www.evm.codes/#5b). Miruko ni halali _tu_ wakati lengwa ni [`JUMPDEST`](https://www.evm.codes/#5b).
 
 - **_w = RETURNDATACOPY ∧ μ<sub>s</sub>[1]+μ<sub>s</sub>[2]>|| μ<sub>o</sub> ||_**
-  Msimbo wa operesheni ni [`RETURNDATACOPY`](https://www.evm.codes/#3e). Katika msimbo huu wa operesheni kipengele cha staki _μ<sub>s</sub>[1]_ ni kigezo cha kusoma kutoka kwenye bafa ya data ya kurejesha, na kipengele cha staki _μ<sub>s</sub>[2]_ ni urefu wa data. Sharti hili hutokea unapojaribu kusoma zaidi ya mwisho wa bafa ya data ya kurejesha. Kumbuka kwamba hakuna sharti sawa kwa ajili ya data za mwito au kwa msimbo wenyewe. Unapojaribu kusoma zaidi ya mwisho wa bafa hizo unapata sifuri tu.
+  Msimbo wa operesheni ni [`RETURNDATACOPY`](https://www.evm.codes/#3e). Katika msimbo huu wa operesheni kipengele cha staki _μ<sub>s</sub>[1]_ ni kigezo cha kusoma kutoka kwenye bafa ya data ya kurejesha, na kipengele cha staki _μ<sub>s</sub>[2]_ ni urefu wa data. Sharti hili hutokea unapojaribu kusoma zaidi ya mwisho wa bafa ya data ya kurejesha. Kumbuka kuwa hakuna sharti sawa kwa data za mwito au kwa msimbo wenyewe. Unapojaribu kusoma zaidi ya mwisho wa bafa hizo unapata tu sifuri.
 
 - **_|| μ<sub>s</sub> || - δ<sub>w</sub> + α<sub>w</sub> > 1024_**
 
   Mzidio wa staki. Ikiwa kuendesha msimbo wa operesheni kutasababisha staki ya zaidi ya vipengee 1024, sitisha.
 
 - **_¬I<sub>w</sub> ∧ W(w,μ)_**
-  Je, tunaendesha kwa uthabiti ([¬ ni ukanushaji](https://en.wikipedia.org/wiki/Negation) na _I<sub>w</sub>_ ni kweli tunaporuhusiwa kubadilisha hali ya mnyororo wa vitalu)? Ikiwa ndivyo, na tunajaribu operesheni ya kubadilisha hali, haiwezi kutokea.
+  Je, tunaendesha kitakwimu ([¬ ni ukanushaji](https://en.wikipedia.org/wiki/Negation) na _I<sub>w</sub>_ ni kweli tunaporuhusiwa kubadilisha hali ya mnyororo wa vitalu)? Ikiwa ndivyo, na tunajaribu operesheni ya kubadilisha hali, haiwezi kutokea.
 
-  Chaguo la kukokotoa _W(w,μ)_ linafafanuliwa baadaye katika mlinganyo 159. _W(w,μ)_ ni kweli ikiwa mojawapo ya masharti haya ni kweli:
+  Chaguo la kukokotoa la _W(w,μ)_ linafafanuliwa baadaye katika mlinganyo 159. _W(w,μ)_ ni kweli ikiwa mojawapo ya masharti haya ni kweli:
 
   - **_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT}_**
-    Misimbo hii ya operesheni hubadilisha hali, ama kwa kuunda mkataba mpya, kuhifadhi thamani, au kuharibu mkataba wa sasa.
+    Misimbo hii ya operesheni hubadilisha hali, ama kwa kuunda mkataba mpya, kuhifadhi thamani, au kuharibu mkataba wa sasa. `TSTORE`, ambayo iliongezwa baada ya toleo hili la Waraka wa Manjano, pia imepigwa marufuku katika muktadha wa kitakwimu.
 
   - **_LOG0≤w ∧ w≤LOG4_**
-    Ikiwa tunaitwa kwa uthabiti hatuwezi kutoa maingizo ya logi.
-    Misimbo ya operesheni ya logi yote iko katika masafa kati ya [`LOG0` (A0)](https://www.evm.codes/#a0) na [`LOG4` (A4)](https://www.evm.codes/#a4).
+    Ikiwa tunaitwa kitakwimu hatuwezi kutoa maingizo ya logi.
+    Misimbo yote ya operesheni ya logi iko katika masafa kati ya [`LOG0` (A0)](https://www.evm.codes/#a0) na [`LOG4` (A4)](https://www.evm.codes/#a4).
     Nambari baada ya msimbo wa operesheni wa logi inabainisha ni mada ngapi ingizo la logi lina.
   - **_w=CALL ∧ μ<sub>s</sub>[2]≠0_**
-    Unaweza kuita mkataba mwingine unapokuwa thabiti, lakini ukifanya hivyo huwezi kuhamisha ETH kwake.
+    Unaweza kuita mkataba mwingine unapokuwa kitakwimu, lakini ukifanya hivyo huwezi kuhamisha ETH kwake.
 
 - **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_**
   Huwezi kuendesha [`SSTORE`](https://www.evm.codes/#55) isipokuwa uwe na gesi zaidi ya G<sub>callstipend</sub> (iliyofafanuliwa kama 2300 katika Kiambatisho G).
+
 ## 9.4.3 Uhalali wa Lengwa la Mruko {#943-jump-dest-valid}
 
 Hapa tunafafanua rasmi misimbo ya operesheni ya [`JUMPDEST`](https://www.evm.codes/#5b) ni nini. Hatuwezi tu kutafuta thamani ya baiti 0x5B, kwa sababu inaweza kuwa ndani ya PUSH (na kwa hivyo ni data na sio msimbo wa operesheni).
@@ -194,9 +200,9 @@ Katika hali zingine zote tunaangalia msimbo uliosalia kwa kwenda kwenye msimbo w
 
 Chaguo la kukokotoa la kusimama _H_, linaweza kurejesha aina tatu za thamani.
 
-- Ikiwa hatuko katika msimbo wa operesheni wa kusimama, rejesha _∅_, seti tupu. Kwa kawaida, thamani hii inatafsiriwa kama uongo wa Boolean.
-- Ikiwa tuna msimbo wa operesheni wa kusimama ambao hautoi pato (ama [`STOP`](https://www.evm.codes/#00) au [`SELFDESTRUCT`](https://www.evm.codes/#ff)), rejesha mlolongo wa baiti za ukubwa wa sifuri kama thamani ya kurejesha. Kumbuka kwamba hii ni tofauti sana na seti tupu. Thamani hii inamaanisha kuwa EVM ilisimama kweli, tu hakuna data ya kurejesha ya kusoma.
-- Ikiwa tuna msimbo wa operesheni wa kusimama ambao hutoa pato (ama [`RETURN`](https://www.evm.codes/#f3) au [`REVERT`](https://www.evm.codes/#fd)), rejesha mlolongo wa baiti uliobainishwa na msimbo huo wa operesheni. Mlolongo huu unachukuliwa kutoka kwenye kumbukumbu, thamani iliyo juu ya staki (_μ<sub>s</sub>[0]_) ni baiti ya kwanza, na thamani baada yake (_μ<sub>s</sub>[1]_) ni urefu.
+- Ikiwa hatuko katika msimbo wa operesheni wa kusimama, rejesha _∅_, seti tupu. Kwa kawaida, thamani hii inatafsiriwa kama Boolean uongo.
+- Ikiwa tuna msimbo wa operesheni wa kusimama ambao hautoi pato (ama [`STOP`](https://www.evm.codes/#00) au [`SELFDESTRUCT`](https://www.evm.codes/#ff)), rejesha mfuatano wa baiti za ukubwa wa sifuri kama thamani ya kurejesha. Kumbuka kuwa hii ni tofauti sana na seti tupu. Thamani hii inamaanisha kuwa EVM ilisimama kweli, isipokuwa tu hakuna data ya kurejesha ya kusoma. (Pia kumbuka kuwa tangu [EIP-6780](https://eips.ethereum.org/EIPS/eip-6780), `SELFDESTRUCT` inafuta mkataba tu ikiwa inaitwa katika muamala sawa uliounda mkataba. Vinginevyo, inahamisha tu ETH ya mkataba.)
+- Ikiwa tuna msimbo wa operesheni wa kusimama ambao unatoa pato (ama [`RETURN`](https://www.evm.codes/#f3) au [`REVERT`](https://www.evm.codes/#fd)), rejesha mfuatano wa baiti zilizobainishwa na msimbo huo wa operesheni. Mfuatano huu unachukuliwa kutoka kwenye kumbukumbu, thamani iliyo juu ya staki (_μ<sub>s</sub>[0]_) ni baiti ya kwanza, na thamani inayoifuata (_μ<sub>s</sub>[1]_) ni urefu.
 
 ## H.2 Seti ya maagizo {#h2-instruction-set}
 
@@ -262,8 +268,8 @@ Kwa hili EVM inafafanuliwa kikamilifu.
 
 Nukuu za kihisabati ni sahihi na zimeruhusu Waraka wa Manjano kubainisha kila undani wa Ethereum. Hata hivyo, ina baadhi ya mapungufu:
 
-- Inaweza kueleweka tu na binadamu, ambayo inamaanisha kwamba [majaribio ya kufuata](https://github.com/ethereum/tests) lazima yaandikwe kwa mikono.
+- Inaweza kueleweka tu na binadamu, ambayo inamaanisha kuwa [majaribio ya utiifu](https://github.com/ethereum/tests) lazima yaandikwe kwa mikono.
 - Watengenezaji programu wanaelewa msimbo wa kompyuta.
-  Wanaweza au wasielewe nukuu za kihisabati.
+  Wanaweza au wasiweze kuelewa nukuu za kihisabati.
 
-Labda kwa sababu hizi, [maelezo mapya ya tabaka la mwafaka](https://github.com/ethereum/consensus-specs/blob/master/tests/core/pyspec/README.md) yameandikwa katika Python. Kuna [maelezo ya tabaka la utekelezaji katika Python](https://ethereum.github.io/execution-specs), lakini hayajakamilika. Hadi na isipokuwa Waraka wa Manjano wote pia utafsiriwe kwa Python au lugha sawa, Waraka wa Manjano utaendelea kutumika, na inasaidia kuweza kuusoma.
+Kwa sababu hizi, [maelezo ya tabaka la mwafaka](https://github.com/ethereum/consensus-specs) yameandikwa katika Python, na ndivyo pia [maelezo ya tabaka la utekelezaji](https://github.com/ethereum/execution-specs). Maelezo ya tabaka la utekelezaji la Python sasa ndiyo marejeleo yanayodumishwa ya jinsi EVM inavyofanya kazi, na inajumuisha mabadiliko kutoka kwenye maboresho ambayo Waraka wa Manjano haujumuishi. Waraka wa Manjano bado ni maelezo rasmi muhimu, na kuweza kuusoma hukusaidia kusoma nyaraka zingine za kihisabati zinazohusiana.

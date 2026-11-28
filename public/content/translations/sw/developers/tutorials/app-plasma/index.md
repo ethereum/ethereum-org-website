@@ -98,13 +98,22 @@ Hizi ni njia ambazo vijenzi mbalimbali huwasiliana ili kufanya hamisho kutoka ak
 
 ### Zana {#tools}
 
-Kwa msimbo wa upande wa mteja, tutatumia [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/), na [Wagmi](https://wagmi.sh/). Hizi ni zana za kiwango cha tasnia; ikiwa huzifahamu, unaweza kutumia [somo hili](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
+Kwa msimbo wa upande wa mteja, tutatumia [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/), na [Wagmi](https://wagmi.sh/). Hizi ni zana za kiwango cha sekta; ikiwa hauzifahamu, unaweza kutumia [mafunzo haya](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
 
-Sehemu kubwa ya seva imeandikwa kwa JavaScript kwa kutumia [Node](https://nodejs.org/en). Sehemu ya sifuri-maarifa imeandikwa kwa [Noir](https://noir-lang.org/). Tunahitaji toleo `1.0.0-beta.10`, kwa hivyo baada ya [kusakinisha Noir kama ilivyoelekezwa](https://noir-lang.org/docs/getting_started/quick_start), endesha:
+Sehemu kubwa ya seva imeandikwa katika JavaScript kwa kutumia [Node](https://nodejs.org/en). Sehemu ya sifuri-maarifa imeandikwa katika [Noir](https://noir-lang.org/). Tunahitaji toleo la `1.0.0-beta.10`, kwa hivyo baada ya [kusakinisha Noir kama ilivyoelekezwa](https://noir-lang.org/docs/getting_started/quick_start), endesha:
 
-```
+```sh
 noirup -v 1.0.0-beta.10
 ```
+
+Ili kuunda uthibitisho unaoweza kuhakikiwa mnyororoni (katika hatua ya 3) tunahitaji pia [Barretenberg](https://barretenberg.aztec.network/docs/getting_started) (`bb`), mazingira ya nyuma ya kuthibitisha, katika toleo linalolingana na toleo hili la Noir. Sakinisha `bbup`, kisakinishi cha Barretenberg, na kisha ukitumie kusakinisha `bb` toleo la `0.87.0` (ikiwa `bbup` haipatikani, fungua terminali mpya ili `PATH` iliyosasishwa ianze kufanya kazi):
+
+```sh
+curl -L https://raw.githubusercontent.com/AztecProtocol/aztec-packages/refs/heads/next/barretenberg/bbup/install | bash
+bbup -v 0.87.0
+```
+
+Mafunzo haya yalijaribiwa na `nargo` 1.0.0-beta.10, `bb` 0.87.0, na (kwenye seva) `@noir-lang/noir_js` 1.0.0-beta.11. Usitumie matoleo mapya zaidi: msimbo wa Noir haukusanyiki na matoleo ya sasa ya 1.0 yanayotarajiwa kutolewa, na matoleo ya sasa ya `bb` hayawezi kusoma saketi zilizokusanywa na `nargo` 1.0.0-beta.10 na hayakubali tena alama ya `--oracle_hash`.
 
 Mnyororo wa vitalu tunaotumia ni `anvil`, mnyororo wa vitalu wa majaribio wa ndani ambao ni sehemu ya [Foundry](https://getfoundry.sh/introduction/installation).
 
@@ -327,22 +336,22 @@ Huu ni muundo wa HTML (kwa usahihi zaidi, [JSX](https://react.dev/learn/writing-
 use std::hash::pedersen_hash;
 ```
 
-[Heshi ya Pedersen](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) inatolewa pamoja na [maktaba ya kawaida ya Noir](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). Uthibitisho wa maarifa-sifuri kwa kawaida hutumia kazi hii ya heshi. Ni rahisi sana kukokotoa ndani ya [saketi za hesabu](https://rareskills.io/post/arithmetic-circuit) ikilinganishwa na kazi za kawaida za heshi.
+[Heshi ya Pedersen](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) inatolewa na [maktaba ya kawaida ya Noir](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). Uthibitisho wa maarifa-sifuri kwa kawaida hutumia kazi hii ya heshi. Ni rahisi sana kukokotoa ndani ya [saketi za hesabu](https://rareskills.io/post/arithmetic-circuit) ikilinganishwa na kazi za kawaida za heshi.
 
 ```
 use keccak256::keccak256;
 use dep::ecrecover;
 ```
 
-Kazi hizi mbili ni maktaba za nje, zilizofafanuliwa katika [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). Ni kwa usahihi kile zilichopewa jina, kazi inayokokotoa [heshi ya keccak256](https://emn178.github.io/online-tools/keccak_256.html) na kazi inayohakiki sahihi za Ethereum na kurejesha anwani ya mtia saini wa Ethereum.
+Kazi hizi mbili ni maktaba za nje, zilizofafanuliwa katika [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). Zinafanya hasa kile zilichopewa jina, kazi inayokokotoa [heshi ya keccak256](https://emn178.github.io/online-tools/keccak_256.html) na kazi inayohakiki sahihi za Ethereum na kurejesha anwani ya Ethereum ya mtia saini.
 
 ```
 global ACCOUNT_NUMBER : u32 = 5;
 ```
 
-Noir imetiwa hamasa na [Rust](https://www.rust-lang.org/). Vigeu, kwa chaguo-msingi, ni thabiti. Hivi ndivyo tunavyofafanua thabiti za usanidi wa kimataifa. Hasa, `ACCOUNT_NUMBER` ni idadi ya akaunti tunazohifadhi.
+Noir imehamasishwa na [Rust](https://www.rust-lang.org/). Vigeu, kwa chaguo-msingi, ni vya kudumu. Hivi ndivyo tunavyofafanua vigeu vya kudumu vya usanidi wa kimataifa. Hasa, `ACCOUNT_NUMBER` ni idadi ya akaunti tunazohifadhi.
 
-Aina za data zilizoitwa `u<number>` ni idadi hiyo ya biti, ambazo hazijasainiwa. Aina pekee zinazotumika ni `u8`, `u16`, `u32`, `u64`, na `u128`.
+Aina za data zinazoitwa `u<number>` ni idadi hiyo ya biti, zisizo na alama. Aina pekee zinazotumika ni `u8`, `u16`, `u32`, `u64`, na `u128`.
 
 ```
 global FLAT_ACCOUNT_FIELDS : u32 = 2;
@@ -354,7 +363,7 @@ Kigeu hiki kinatumika kwa heshi ya Pedersen ya akaunti, kama ilivyoelezwa hapa c
 global MESSAGE_LENGTH : u32 = 100;
 ```
 
-Kama ilivyoelezwa hapo juu, urefu wa ujumbe haubadiliki. Umebainishwa hapa.
+Kama ilivyoelezwa hapo juu, urefu wa ujumbe ni thabiti. Umebainishwa hapa.
 
 ```
 global ASCII_MESSAGE_LENGTH : [u8; 3] = [0x31, 0x30, 0x30];
@@ -397,32 +406,32 @@ Ufafanuzi wa kazi. Kigezo ni taarifa ya `Account`. Matokeo ni safu ya vigeu vya 
     ];
 ```
 
-Thamani ya kwanza katika safu ni anwani ya akaunti. Ya pili inajumuisha salio na nonsi. Wito wa `.into()` hubadilisha nambari kuwa aina ya data inavyohitaji kuwa. `account.nonce` ni thamani ya `u32`, lakini ili kuiongeza kwenye `account.balance << 32`, thamani ya `u128`, inahitaji kuwa `u128`. Hiyo ndiyo `.into()` ya kwanza. Ya pili inabadilisha matokeo ya `u128` kuwa `Field` ili iingie kwenye safu.
+Thamani ya kwanza katika safu ni anwani ya akaunti. Ya pili inajumuisha salio na nonsi. Miito ya `.into()` inabadilisha nambari kuwa aina ya data inayohitajika kuwa. `account.nonce` ni thamani ya `u32`, lakini ili kuiongeza kwenye `account.balance << 32`, thamani ya `u128`, inahitaji kuwa `u128`. Hiyo ndiyo `.into()` ya kwanza. Ya pili inabadilisha matokeo ya `u128` kuwa `Field` ili itoshee kwenye safu.
 
 ```
     flat
 }
 ```
 
-Katika Noir, kazi zinaweza kurejesha thamani mwishoni pekee (hakuna urejeshaji wa mapema). Ili kubainisha thamani inayorejeshwa, unaitathmini kabla tu ya mabano ya kufunga ya kazi.
+Katika Noir, kazi zinaweza tu kurejesha thamani mwishoni (hakuna urejeshaji wa mapema). Ili kubainisha thamani ya kurejesha, unaitathmini kabla tu ya mabano ya kufunga ya kazi.
 
 ```
 fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] {
 ```
 
-Kazi hii hubadilisha safu ya akaunti kuwa safu ya `Field`, ambayo inaweza kutumika kama ingizo kwa Heshi ya Petersen.
+Kazi hii inabadilisha safu ya akaunti kuwa safu ya `Field`, ambayo inaweza kutumika kama ingizo kwa heshi ya Pedersen.
 
 ```
     let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
 ```
 
-Hivi ndivyo unavyobainisha kigeu kinachoweza kubadilika, yaani, _sio_ thabiti. Vigeu katika Noir lazima viwe na thamani kila wakati, kwa hivyo tunaanzisha kigeu hiki kwa sifuri zote.
+Hivi ndivyo unavyobainisha kigeu kinachoweza kubadilika, yaani, _sio_ cha kudumu. Vigeu katika Noir lazima viwe na thamani kila wakati, kwa hivyo tunaanzisha kigeu hiki kuwa sifuri zote.
 
 ```
     for i in 0..ACCOUNT_NUMBER {
 ```
 
-Hii ni kitanzi cha `for`. Kumbuka kwamba mipaka ni thabiti. Vitanzi vya Noir lazima viwe na mipaka inayojulikana wakati wa kukusanya. Sababu ni kwamba saketi za hesabu hazitumii udhibiti wa mtiririko. Wakati wa kuchakata kitanzi cha `for`, kikusanyaji huweka tu msimbo ndani yake mara nyingi, moja kwa kila mzunguko.
+Huu ni mzunguko wa `for`. Kumbuka kwamba mipaka ni ya kudumu. Mizunguko ya Noir inapaswa kuwa na mipaka yake inayojulikana wakati wa kukusanya. Sababu ni kwamba saketi za hesabu hazitumii udhibiti wa mtiririko. Wakati wa kuchakata mzunguko wa `for`, kikusanyaji huweka tu msimbo ndani yake mara nyingi, moja kwa kila mzunguko.
 
 ```
         let fields = flatten_account(accounts[i]);
@@ -439,7 +448,7 @@ fn hash_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> Field {
 }
 ```
 
-Hatimaye, tumefika kwenye kazi inayoheshisha safu ya akaunti.
+Hatimaye, tumefika kwenye kazi inayofanya heshi ya safu ya akaunti.
 
 ```
 fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
@@ -452,13 +461,13 @@ fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
     }
 ```
 
-Kazi hii inatafuta akaunti yenye anwani maalum. Kazi hii ingekuwa isiyofaa sana katika msimbo wa kawaida kwa sababu inazunguka akaunti zote, hata baada ya kupata anwani.
+Kazi hii inatafuta akaunti yenye anwani maalum. Kazi hii ingekuwa isiyofaa sana katika msimbo wa kawaida kwa sababu inapitia akaunti zote, hata baada ya kupata anwani.
 
-Hata hivyo, katika uthibitisho wa maarifa-sifuri, hakuna udhibiti wa mtiririko. Ikiwa tutawahi kuhitaji kuangalia sharti, lazima tuliangalie kila wakati.
+Hata hivyo, katika uthibitisho wa maarifa-sifuri, hakuna udhibiti wa mtiririko. Ikiwa tutawahi kuhitaji kuangalia sharti, inabidi tuliangalie kila wakati.
 
-Jambo kama hilo hutokea kwa kauli za `if`. Kauli ya `if` katika kitanzi hapo juu inatafsiriwa katika kauli hizi za hisabati.
+Jambo sawa hufanyika na kauli za `if`. Kauli ya `if` katika mzunguko hapo juu inatafsiriwa kuwa kauli hizi za kihisabati.
 
-_condition<sub>result</sub> = accounts[i].address == address_ // moja ikiwa zinalingana, sifuri vinginevyo
+_condition<sub>result</sub> = accounts[i].address == address_ // moja ikiwa ni sawa, sifuri vinginevyo
 
 _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result</sub>)\*account<sub>old</sub>_
 
@@ -469,7 +478,7 @@ _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result
 }
 ```
 
-Kazi ya [`assert`](https://noir-lang.org/docs/language/assert) husababisha uthibitisho wa maarifa-sifuri kuacha kufanya kazi ikiwa dai ni la uongo. Katika kesi hii, ikiwa hatuwezi kupata akaunti yenye anwani husika. Ili kuripoti anwani, tunatumia [mfuatano wa muundo](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
+Kazi ya [`assert`](https://noir-lang.org/docs/language/assert) inasababisha uthibitisho wa maarifa-sifuri kushindwa ikiwa dai ni la uongo. Katika kesi hii, ikiwa hatuwezi kupata akaunti yenye anwani husika. Ili kuripoti anwani, tunatumia [mfuatano wa umbizo](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
 
 ```rust
 fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> [Account; ACCOUNT_NUMBER] {
@@ -485,7 +494,7 @@ Kazi hii inatumia muamala wa hamisho na kurejesha safu mpya ya akaunti.
         (txn.from, txn.amount, txn.nonce, accounts[from].nonce);
 ```
 
-Hatuwezi kufikia vipengele vya muundo ndani ya mfuatano wa muundo katika Noir, kwa hivyo tunaunda nakala inayoweza kutumika.
+Hatuwezi kufikia vipengele vya muundo ndani ya mfuatano wa umbizo katika Noir, kwa hivyo tunaunda nakala inayoweza kutumika.
 
 ```rust
     assert (accounts[from].balance >= txn.amount,
@@ -495,7 +504,7 @@ Hatuwezi kufikia vipengele vya muundo ndani ya mfuatano wa muundo katika Noir, k
         f"Transaction has nonce {txnNonce}, but the account is expected to use {accountNonce}");
 ```
 
-Haya ni masharti mawili yanayoweza kufanya muamala uwe batili.
+Haya ni masharti mawili ambayo yanaweza kufanya muamala kuwa batili.
 
 ```rust
     let mut newAccounts = accounts;
@@ -508,7 +517,7 @@ Haya ni masharti mawili yanayoweza kufanya muamala uwe batili.
 }
 ```
 
-Unda safu mpya ya akaunti kisha uirejeshe.
+Unda safu mpya ya akaunti na kisha uirejeshe.
 
 ```rust
 fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field
@@ -523,7 +532,7 @@ Kazi hii inasoma anwani kutoka kwenye ujumbe.
     for i in 7..47 {
 ```
 
-Anwani daima ina urefu wa baiti 20 (a.k.a. tarakimu 40 za heksadesimali), na huanza kwenye herufi #7.
+Anwani daima ina urefu wa baiti 20 (yaani tarakimu 40 za heksadesimali), na huanza kwenye herufi #7.
 
 ```rust
         result *= 0x10;
@@ -555,7 +564,7 @@ Soma kiasi na nonsi kutoka kwenye ujumbe.
     let mut stillReadingNonce: bool = false;
 ```
 
-Katika ujumbe, nambari ya kwanza baada ya anwani ni kiasi cha finney (a.k.a. elfu moja ya ETH) cha kuhamisha. Nambari ya pili ni nonsi. Maandishi yoyote kati yao hupuuzwa.
+Katika ujumbe, nambari ya kwanza baada ya anwani ni kiasi cha finney (yaani elfu moja ya ETH) cha kuhamisha. Nambari ya pili ni nonsi. Maandishi yoyote kati yao hupuuzwa.
 
 ```rust
     for i in 48..MESSAGE_LENGTH {
@@ -589,7 +598,7 @@ Katika ujumbe, nambari ya kwanza baada ya anwani ni kiasi cha finney (a.k.a. elf
 }
 ```
 
-Kurejesha [tapo](https://noir-lang.org/docs/noir/concepts/data_types/tuples) ni njia ya Noir kurejesha thamani nyingi kutoka kwenye kazi.
+Kurejesha [tapo](https://noir-lang.org/docs/noir/concepts/data_types/tuples) ni njia ya Noir ya kurejesha thamani nyingi kutoka kwa kazi.
 
 ```rust
 fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn 
@@ -614,7 +623,7 @@ Kazi hii inabadilisha ujumbe kuwa baiti, kisha inabadilisha kiasi kuwa `Transfer
 fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
 ```
 
-Tuliweza kutumia Heshi ya Pedersen kwa akaunti kwa sababu zinaheshishwa tu ndani ya uthibitisho wa maarifa-sifuri. Hata hivyo, katika msimbo huu tunahitaji kuangalia sahihi ya ujumbe, ambayo inazalishwa na kivinjari. Kwa hilo, tunahitaji kufuata muundo wa kusaini wa Ethereum katika [EIP-191](https://eips.ethereum.org/EIPS/eip-191). Hii ina maana tunahitaji kuunda bafa iliyounganishwa na kiambishi awali cha kawaida, urefu wa ujumbe katika ASCII, na ujumbe wenyewe, na kutumia kiwango cha Ethereum cha keccak256 kukiheshisha.
+Tuliweza kutumia Heshi ya Pedersen kwa akaunti kwa sababu zinafanyiwa heshi tu ndani ya uthibitisho wa maarifa-sifuri. Hata hivyo, katika msimbo huu tunahitaji kuangalia sahihi ya ujumbe, ambayo inazalishwa na kivinjari. Kwa hilo, tunahitaji kufuata umbizo la kusaini la Ethereum katika [EIP-191](https://eips.ethereum.org/EIPS/eip-191). Hii inamaanisha tunahitaji kuunda bafa iliyounganishwa yenye kiambishi awali cha kawaida, urefu wa ujumbe katika ASCII, na ujumbe wenyewe, na kutumia keccak256 ya kawaida ya Ethereum kuifanyia heshi.
 
 ```rust
     // Kiambishi awali cha ASCII
@@ -648,7 +657,7 @@ Tuliweza kutumia Heshi ya Pedersen kwa akaunti kwa sababu zinaheshishwa tu ndani
     ];
 ```
 
-Ili kuepuka matukio ambapo programu inamuomba mtumiaji kusaini ujumbe unaoweza kutumika kama muamala au kwa madhumuni mengine, EIP-191 inabainisha kwamba jumbe zote zilizosainiwa huanza na herufi 0x19 (sio herufi halali ya ASCII) ikifuatiwa na `Ethereum Signed Message:` na mstari mpya.
+Ili kuepuka matukio ambapo programu inamwomba mtumiaji kusaini ujumbe unaoweza kutumika kama muamala au kwa madhumuni mengine, EIP-191 inabainisha kwamba jumbe zote zilizosainiwa huanza na herufi 0x19 (sio herufi halali ya ASCII) ikifuatiwa na `Ethereum Signed Message:` na mstari mpya.
 
 ```rust
     let mut buffer: [u8; HASH_BUFFER_SIZE] = [0u8; HASH_BUFFER_SIZE];
@@ -691,7 +700,7 @@ Ili kuepuka matukio ambapo programu inamuomba mtumiaji kusaini ujumbe unaoweza k
     assert(MESSAGE_LENGTH < 1000, "Messages whose length is over three digits are not supported");
 ```
 
-Shughulikia urefu wa ujumbe hadi 999 na ushindwe ikiwa ni mkubwa zaidi. Niliongeza msimbo huu, ingawa urefu wa ujumbe ni thabiti, kwa sababu inafanya iwe rahisi kuubadilisha. Kwenye mfumo wa uzalishaji, labda ungedhani tu `MESSAGE_LENGTH` haibadiliki kwa ajili ya utendaji bora.
+Shughulikia urefu wa ujumbe hadi 999 na ushindwe ikiwa ni mkubwa zaidi. Niliongeza msimbo huu, ingawa urefu wa ujumbe ni wa kudumu, kwa sababu inafanya iwe rahisi kuubadilisha. Kwenye mfumo wa uzalishaji, labda ungechukulia tu `MESSAGE_LENGTH` haibadiliki kwa ajili ya utendaji bora.
 
 ```rust
     keccak256::keccak256(buffer, HASH_BUFFER_SIZE)
@@ -710,9 +719,9 @@ fn signatureToAddressAndHash(
 {
 ```
 
-Kazi hii inahakiki sahihi, ambayo inahitaji heshi ya ujumbe. Kisha inatupatia anwani iliyoisaini na heshi ya ujumbe. Heshi ya ujumbe hutolewa katika thamani mbili za `Field` kwa sababu hizo ni rahisi kutumia katika sehemu iliyosalia ya programu kuliko safu ya baiti.
+Kazi hii inahakiki sahihi, ambayo inahitaji heshi ya ujumbe. Kisha inatupatia anwani iliyoisaini na heshi ya ujumbe. Heshi ya ujumbe inatolewa katika thamani mbili za `Field` kwa sababu hizo ni rahisi kutumia katika programu iliyosalia kuliko safu ya baiti.
 
-Tunahitaji kutumia thamani mbili za `Field` kwa sababu hesabu za uga hufanywa [modulo](https://en.wikipedia.org/wiki/Modulo) idadi kubwa, lakini nambari hiyo kwa kawaida ni chini ya biti 256 (vinginevyo ingekuwa vigumu kufanya hesabu hizo katika EVM).
+Tunahitaji kutumia thamani mbili za `Field` kwa sababu hesabu za uga zinafanywa [modulo](https://en.wikipedia.org/wiki/Modulo) nambari kubwa, lakini nambari hiyo kwa kawaida ni chini ya biti 256 (vinginevyo ingekuwa vigumu kufanya hesabu hizo katika EVM).
 
 ```rust
     let hash = hashMessage(message);
@@ -732,9 +741,9 @@ Bainisha `hash1` na `hash2` kama vigeu vinavyoweza kubadilika, na uandike heshi 
         ecrecover::ecrecover(pubKeyX, pubKeyY, signature, hash), 
 ```
     
-Hii inafanana na [`ecrecover` ya Solidity](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions), kukiwa na tofauti mbili muhimu:
+Hii inafanana na [`ecrecover` ya Solidity](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions), na tofauti mbili muhimu:
 
-- Ikiwa sahihi sio halali, wito unashindwa `assert` na programu inakatishwa.
+- Ikiwa sahihi si halali, wito unashindwa `assert` na programu inasitishwa.
 - Ingawa ufunguo wa umma unaweza kurejeshwa kutoka kwenye sahihi na heshi, huu ni uchakataji unaoweza kufanywa nje na, kwa hivyo, haufai kufanywa ndani ya uthibitisho wa maarifa-sifuri. Ikiwa mtu atajaribu kutudanganya hapa, uhakiki wa sahihi utashindwa.
 
 ```rust
@@ -757,7 +766,7 @@ fn main(
     )
 ```
 
-Hatimaye, tunafika kwenye kazi ya `main`. Tunahitaji kuthibitisha kwamba tuna muamala unaobadilisha heshi ya akaunti kwa uhalali kutoka thamani ya zamani hadi mpya. Tunahitaji pia kuthibitisha kwamba ina heshi hii maalum ya muamala ili mtu aliyeituma ajue muamala wake umechakatwa.
+Hatimaye, tunafika kwenye kazi ya `main`. Tunahitaji kuthibitisha kwamba tuna muamala unaobadilisha kihalali heshi ya akaunti kutoka thamani ya zamani kwenda mpya. Tunahitaji pia kuthibitisha kwamba ina heshi hii maalum ya muamala ili mtu aliyeituma ajue muamala wake umechakatwa.
 
 ```rust
 {
@@ -812,24 +821,24 @@ Ili kuiona ikifanya kazi:
    npm run start
    ```
 
-4. Katika dirisha tofauti la mstari wa amri, endesha Vite ili kuhudumia msimbo wa kivinjari.
+4. Katika dirisha tofauti la mstari wa amri, kuanzia kwenye mzizi wa hazina, endesha Vite ili kuhudumia msimbo wa kivinjari.
 
    ```sh
    cd client
    npm run dev
    ```
 
-5. Vinjari hadi kwenye msimbo wa mteja kwenye [http://localhost:5173](http://localhost:5173)
+5. Vinjari msimbo wa mteja kwenye [http://localhost:5173](http://localhost:5173)
 
 6. Kabla ya kutoa muamala, unahitaji kujua nonsi, pamoja na kiasi unachoweza kutuma. Ili kupata taarifa hii, bofya **Sasisha data ya akaunti** na usaini ujumbe.
 
-   Tuna utata hapa. Kwa upande mmoja, hatutaki kusaini ujumbe unaoweza kutumika tena ([shambulio la kurudiwa](https://en.wikipedia.org/wiki/Replay_attack)), ndiyo maana tunataka nonsi hapo awali. Hata hivyo, hatuna nonsi bado. Suluhisho ni kuchagua nonsi inayoweza kutumika mara moja tu na ambayo tayari tunayo pande zote mbili, kama vile wakati wa sasa.
+   Tuna mtanziko hapa. Kwa upande mmoja, hatutaki kusaini ujumbe unaoweza kutumika tena ([shambulio la kurudia](https://en.wikipedia.org/wiki/Replay_attack)), ndiyo maana tunataka nonsi hapo awali. Hata hivyo, bado hatuna nonsi. Suluhisho ni kuchagua nonsi inayoweza kutumika mara moja tu na ambayo tayari tunayo pande zote mbili, kama vile wakati wa sasa.
 
-   Tatizo la suluhisho hili ni kwamba wakati unaweza usiwe uliosawazishwa kikamilifu. Kwa hivyo badala yake, tunasaini thamani inayobadilika kila dakika. Hii ina maana kwamba dirisha letu la kuathiriwa na mashambulizi ya kurudiwa si zaidi ya dakika moja. Kwa kuzingatia kwamba katika uzalishaji ombi lililosainiwa litalindwa na TLS, na kwamba upande mwingine wa handaki---seva---inaweza tayari kufichua salio na nonsi (inabidi izijue ili kufanya kazi), hii ni hatari inayokubalika.
+   Tatizo la suluhisho hili ni kwamba wakati unaweza usiwe umesawazishwa kikamilifu. Kwa hivyo badala yake, tunasaini thamani inayobadilika kila dakika. Hii inamaanisha kwamba dirisha letu la hatari kwa mashambulizi ya kurudia ni dakika moja zaidi. Kwa kuzingatia kwamba katika uzalishaji ombi lililosainiwa litalindwa na TLS, na kwamba upande mwingine wa handaki---seva---tayari inaweza kufichua salio na nonsi (inabidi izijue ili ifanye kazi), hii ni hatari inayokubalika.
 
-7. Pindi kivinjari kinaporejesha salio na nonsi, kinaonyesha fomu ya hamisho. Chagua anwani ya mwisho na kiasi kisha ubofye **Hamisha**. Saini ombi hili.
+7. Mara tu kivinjari kinapopata salio na nonsi, kinaonyesha fomu ya hamisho. Chagua anwani ya marudio na kiasi na ubofye **Hamisha**. Saini ombi hili.
 
-8. Ili kuona hamisho, ama **Sasisha data ya akaunti** au angalia kwenye dirisha ambapo unaendesha seva. Seva inarekodi hali kila wakati inapobadilika.
+8. Ili kuona hamisho, ama **Sasisha data ya akaunti** au angalia kwenye dirisha ambapo unaendesha seva. Seva huweka logi ya hali kila wakati inapobadilika.
 
     ```
     ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
@@ -963,7 +972,7 @@ Muundo wa awali wa `Accounts`.
 
 3. Endesha `anvil` katika dirisha tofauti la mstari wa amri.
 
-4. Zalisha ufunguo wa uhakiki na mhakiki wa Solidity, kisha unakili msimbo wa mhakiki kwenye mradi wa Solidity.
+4. Zalisha ufunguo wa uhakiki na mhakiki wa Solidity, kisha nakili msimbo wa mhakiki kwenye mradi wa Solidity.
 
    ```sh
    cd noir
@@ -980,7 +989,7 @@ Muundo wa awali wa `Accounts`.
    ETH_PRIVATE_KEY=ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
    ```
 
-6. Sambaza `Verifier.sol` na uhifadhi anwani kwenye kigeu cha mazingira.
+6. Sambaza `Verifier.sol` na uhifadhi anwani katika kigeu cha mazingira.
 
    ```sh
    VERIFIER_ADDRESS=`forge create src/Verifier.sol:HonkVerifier --private-key $ETH_PRIVATE_KEY --optimize --broadcast | awk '/Deployed to:/ {print $3}'`
@@ -994,7 +1003,7 @@ Muundo wa awali wa `Accounts`.
    echo $ZKBANK_ADDRESS
    ```
 
-   Thamani ya `0x199..67b` ni heshi ya Pedersen ya hali ya awali ya `Accounts`. Ikiwa utarekebisha hali hii ya awali katika `server/index.mjs`, unaweza kuendesha muamala ili kuona heshi ya awali iliyoripotiwa na uthibitisho wa maarifa-sifuri.
+   Thamani ya `0x199..67b` ni heshi ya Pedersen ya hali ya awali ya `Accounts`. Ikiwa utabadilisha hali hii ya awali katika `server/index.mjs`, unaweza kuendesha muamala ili kuona heshi ya awali iliyoripotiwa na uthibitisho wa maarifa-sifuri.
 
 8. Endesha seva.
 
@@ -1003,7 +1012,7 @@ Muundo wa awali wa `Accounts`.
    npm run start
    ```
 
-9. Endesha mteja katika dirisha tofauti la mstari wa amri.
+9. Endesha mteja katika dirisha tofauti la mstari wa amri, kuanzia kwenye mzizi wa hazina.
 
    ```sh
    cd client
@@ -1012,9 +1021,9 @@ Muundo wa awali wa `Accounts`.
 
 10. Endesha baadhi ya miamala.
 
-11. Ili kuhakiki kwamba hali imebadilika mnyororoni, washa upya mchakato wa seva. Angalia kwamba `ZkBank` haikubali tena miamala, kwa sababu thamani ya asili ya heshi katika miamala inatofautiana na thamani ya heshi iliyohifadhiwa mnyororoni.
+11. Ili kuhakiki kwamba hali imebadilika mnyororoni, anzisha upya mchakato wa seva. Angalia kwamba `ZkBank` haikubali tena miamala, kwa sababu thamani ya asili ya heshi katika miamala inatofautiana na thamani ya heshi iliyohifadhiwa mnyororoni.
 
-    Hili ndilo aina ya kosa linalotarajiwa.
+    Hili ndilo kosa linalotarajiwa.
 
     ```
     ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
@@ -1043,9 +1052,9 @@ import util from 'util'
 const execPromise = util.promisify(exec)
 ```
 
-Tunahitaji kutumia [kifurushi cha Barretenberg](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) ili kuunda uthibitisho halisi wa kutuma mnyororoni. Tunaweza kutumia kifurushi hiki ama kwa kuendesha kiolesura cha mstari wa amri (`bb`) au kwa kutumia [maktaba ya JavaScript, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). Maktaba ya JavaScript ni polepole sana kuliko kuendesha msimbo kiasili, kwa hivyo tunatumia [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) hapa ili kutumia mstari wa amri.
+Tunahitaji kutumia [kifurushi cha Barretenberg](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) kuunda uthibitisho halisi wa kutuma mnyororoni. Tunaweza kutumia kifurushi hiki ama kwa kuendesha kiolesura cha mstari wa amri (`bb`) au kwa kutumia [maktaba ya JavaScript, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). Maktaba ya JavaScript ni polepole sana kuliko kuendesha msimbo asilia, kwa hivyo tunatumia [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) hapa kutumia mstari wa amri.
 
-Kumbuka kwamba ukiamua kutumia `bb.js`, unahitaji kutumia toleo linaloendana na toleo la Noir unalotumia. Wakati wa kuandika, toleo la sasa la Noir (1.0.0-beta.11) linatumia `bb.js` toleo la 0.87.
+Kumbuka kwamba ikiwa utaamua kutumia `bb.js`, unahitaji kutumia toleo linaloendana na toleo la Noir unalotumia. Kwa mfano, Noir 1.0.0-beta.10 na 1.0.0-beta.11 zote zinaenda na `bb` na `bb.js` toleo la 0.87.
 
 ```js
 const zkBankAddress = process.env.ZKBANK_ADDRESS || "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
@@ -1067,26 +1076,26 @@ Ufunguo huu wa siri ni mojawapo ya akaunti chaguomsingi zilizofadhiliwa mapema k
 const generateProof = async (witness, fileID) => {
 ```
 
-Zalisha uthibitisho ukitumia faili inayoweza kutekelezwa ya `bb`.
+Zalisha uthibitisho kwa kutumia faili tekelezi la `bb`.
 
-```js 
+```js
     const fname = `witness-${fileID}.gz`    
     await fs.writeFile(fname, witness)
 ```
 
-Andika Shahidi kwenye faili.
+Andika shahidi kwenye faili.
 
 ```js
     await execPromise(`bb prove -b ./noir/target/zkBank.json -w ${fname} -o ${fileID} --oracle_hash keccak --output_format fields`)
 ```
 
-Unda uthibitisho halisi. Hatua hii pia inaunda faili lenye vigeu vya umma, lakini hatuhitaji hilo. Tayari tulipata vigeu hivyo kutoka kwenye `noir.execute`.
+Unda uthibitisho halisi. Hatua hii pia inaunda faili lenye vigeu vya umma, lakini hatuhitaji hilo. Tayari tulipata vigeu hivyo kutoka kwa `noir.execute`.
 
 ```js
     const proof = "0x" + JSON.parse(await fs.readFile(`./${fileID}/proof_fields.json`)).reduce((a,b) => a+b, "").replace(/0x/g, "")
 ```
 
-Uthibitisho ni safu ya JSON ya thamani za `Field`, kila moja ikiwakilishwa kama thamani ya heksadesimali. Hata hivyo, tunahitaji kuituma katika muamala kama thamani moja ya `bytes`, ambayo Viem inaiwakilisha kwa mfuatano mkubwa wa heksadesimali. Hapa tunabadilisha muundo kwa kuunganisha thamani zote, kuondoa `0x` zote, na kisha kuongeza moja mwishoni.
+Uthibitisho ni safu ya JSON ya thamani za `Field`, kila moja ikiwakilishwa kama thamani ya heksadesimali. Hata hivyo, tunahitaji kuituma katika muamala kama thamani moja ya `bytes`, ambayo Viem inaiwakilisha kwa mfuatano mkubwa wa heksadesimali. Hapa tunabadilisha umbizo kwa kuunganisha thamani zote, kuondoa `0x` zote, na kisha kuongeza moja mwishoni.
 
 ```js
     await execPromise(`rm -r ${fname} ${fileID}`)
@@ -1106,13 +1115,13 @@ const processMessage = async (message, signature) => {
     const publicFields = noirResult.returnValue.map(x=>'0x' + x.slice(2).padStart(64, "0"))
 ```
 
-Nyanja za umma zinahitaji kuwa safu ya thamani za baiti 32. Hata hivyo, kwa kuwa tulihitaji kugawanya heshi ya muamala kati ya thamani mbili za `Field`, inaonekana kama thamani ya baiti 16. Hapa tunaongeza sifuri ili Viem ielewe kuwa ni baiti 32.
+Nyanja za umma zinahitaji kuwa safu ya thamani za baiti 32. Hata hivyo, kwa kuwa tulihitaji kugawanya heshi ya muamala kati ya thamani mbili za `Field`, inaonekana kama thamani ya baiti 16. Hapa tunaongeza sifuri ili Viem ielewe kuwa ni baiti 32 haswa.
 
 ```js
     const proof = await generateProof(noirResult.witness, `${fromAddress}-${nonce}`)
 ```
 
-Kila anwani hutumia kila nonsi mara moja tu ili tuweze kutumia mchanganyiko wa `fromAddress` na `nonce` kama kitambulisho cha kipekee kwa faili la Shahidi na saraka ya towe.
+Kila anwani inatumia kila nonsi mara moja tu ili tuweze kutumia mchanganyiko wa `fromAddress` na `nonce` kama kitambulisho cha kipekee kwa faili la shahidi na saraka ya towe.
 
 ```js
     try {
@@ -1151,7 +1160,7 @@ contract ZkBank {
     }
 ```
 
-Msimbo wa mnyororoni unahitaji kufuatilia vigeu viwili: mhakiki (mkataba tofauti unaoundwa na `nargo`) na heshi ya hali ya sasa.
+Msimbo wa mnyororoni unahitaji kufuatilia vigeu viwili: mhakiki (mkataba tofauti unaozalishwa na `bb write_solidity_verifier` ya Barretenberg) na heshi ya hali ya sasa.
 
 ```solidity
     event TransactionProcessed(
@@ -1170,20 +1179,20 @@ Kila wakati hali inapobadilika, tunatoa tukio la `TransactionProcessed`.
     ) public {
 ```
 
-Kazi hii inachakata miamala. Inapata uthibitisho (kama `bytes`) na maingizo ya umma (kama safu ya `bytes32`), katika muundo ambao mhakiki anahitaji (ili kupunguza uchakataji wa mnyororoni na kwa hivyo gharama za gesi).
+Kazi hii inachakata miamala. Inapata uthibitisho (kama `bytes`) na maingizo ya umma (kama safu ya `bytes32`), katika umbizo ambalo mhakiki anahitaji (ili kupunguza uchakataji wa mnyororoni na hivyo gharama za gesi).
 
 ```solidity
-        require(_publicInputs[0] == currentStateHash,
+        require(_publicFields[0] == currentStateHash,
             "Wrong old state hash");
 ```
 
-Uthibitisho wa maarifa-sifuri unahitaji kuwa kwamba muamala unabadilika kutoka heshi yetu ya sasa hadi mpya.
+Uthibitisho wa maarifa-sifuri unahitaji kuwa kwamba muamala unabadilika kutoka kwenye heshi yetu ya sasa kwenda mpya.
 
 ```solidity
         myVerifier.verify(_proof, _publicFields);
 ```
 
-Ita mkataba wa mhakiki ili kuhakiki uthibitisho wa maarifa-sifuri. Hatua hii hurejesha muamala ikiwa uthibitisho wa maarifa-sifuri ni mbaya.
+Ita mkataba wa mhakiki ili kuhakiki uthibitisho wa maarifa-sifuri. Hatua hii inarejesha nyuma muamala ikiwa uthibitisho wa maarifa-sifuri ni mbaya.
 
 ```solidity
         currentStateHash = _publicFields[1];
@@ -1197,7 +1206,7 @@ Ita mkataba wa mhakiki ili kuhakiki uthibitisho wa maarifa-sifuri. Hatua hii hur
 }
 ```
 
-Ikiwa kila kitu ni sawa, sasisha heshi ya hali kuwa thamani mpya na utoe tukio la `TransactionProcessed`.
+Ikiwa kila kitu kiko sawa, sasisha heshi ya hali kuwa thamani mpya na utoe tukio la `TransactionProcessed`.
 
 ## Unyanyasaji na kijenzi kilichowekwa kati {#abuses}
 

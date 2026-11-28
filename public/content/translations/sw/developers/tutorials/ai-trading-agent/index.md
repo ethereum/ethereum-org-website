@@ -44,6 +44,8 @@ Kuna [mabadilishano mengi yaliyosambazwa (DEX)](/apps/categories/defi/) yanayoku
 
 Kwa mfumo mkubwa wa lugha, nilichagua kuanza na [OpenAI](https://openai.com/). Ili kuendesha programu katika mafunzo haya utahitaji kulipia ufikiaji wa API. Malipo ya chini ya $5 yanatosha kabisa.
 
+Maktaba ya Python ya OpenAI inaweza pia kuwasiliana na kituo kingine chochote kinachoendana na OpenAI, ikiwa ni pamoja na mfumo unaoendesha kwenye kompyuta yako mwenyewe. Tazama [Kuunganisha na LLM](#interface-llm) kwa jinsi ya kuielekeza kwingine.
+
 ## Uendelezaji, hatua kwa hatua {#step-by-step}
 
 Ili kurahisisha uendelezaji, tunaendelea kwa hatua. Kila hatua ni tawi katika GitHub.
@@ -513,46 +515,63 @@ Amua hatua ya muda ujao ambayo tunataka makadirio, na uunde kidokezo.
 
 ### Kuunganisha na LLM {#interface-llm}
 
-Kisha, tunadokeza LLM halisi na kupokea thamani inayotarajiwa ya baadaye. Niliandika programu hii kwa kutumia OpenAI, kwa hivyo ikiwa unataka kutumia mtoa huduma tofauti, utahitaji kuirekebisha.
+Kisha, tunatoa kidokezo kwa LLM halisi na kupokea thamani inayotarajiwa ya baadaye. Niliandika programu hii kwa kutumia OpenAI, kwa hivyo ikiwa unataka kutumia mtoa huduma tofauti, utahitaji kuirekebisha.
 
 1. Pata [akaunti ya OpenAI](https://auth.openai.com/create-account)
 2. [Weka pesa kwenye akaunti](https://platform.openai.com/settings/organization/billing/overview)—kiasi cha chini wakati wa kuandika ni $5
 3. [Unda ufunguo wa API](https://platform.openai.com/settings/organization/api-keys)
-4. Katika mstari wa amri, hamisha ufunguo wa API ili programu yako iweze kuutumia
+4. Kwenye mstari wa amri, hamisha ufunguo wa API ili programu yako iweze kuutumia
 
    ```sh
    export OPENAI_API_KEY=sk-<the rest of the key goes here>
    ```
 
-5. Angalia na uendeshe ajenti
+5. Angalia ajenti
 
    ```sh
    git checkout 04-interface-llm
+   ```
+
+6. Msimbo katika hazina unatumia mfumo wa `gpt-4-turbo`, ambao [OpenAI itaufunga mnamo Oktoba 23, 2026](https://developers.openai.com/api/docs/deprecations). Ubadilishe kuwa `gpt-6-luna`, mfumo wa sasa wa gharama nafuu. Kwa sababu `gpt-6-luna` ni mfumo wa kufikiri, amri pia inazima kufikiri (`reasoning_effort="none"`, ambayo inaweka `temperature` kutumika) na inabadilisha kigezo kilichopitwa na wakati cha `max_tokens` na `max_completion_tokens`.
+
+   ```sh
+   sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
+   ```
+
+7. Endesha ajenti
+
+   ```sh
    uv run agent.py
    ```
+
+Ikiwa ungependa kutumia kituo kingine kinachoendana na OpenAI, kama vile mfumo unaouendesha kwenye kompyuta yako, maktaba ya OpenAI inasoma kituo kutoka kwa kigezo cha mazingira cha `OPENAI_BASE_URL`. Kiweke, weka thamani yoyote isiyo tupu katika `OPENAI_API_KEY` ikiwa seva haikagui funguo, na ubadilishe `gpt-6-luna` katika `agent.py` na `test-predictor.py` kuwa jina la mfumo ambao seva hiyo inatoa. Ikiwa seva inakataa `reasoning_effort`, ondoa kigezo hicho.
+
+```sh
+export OPENAI_BASE_URL=http://localhost:<port>/v1
+```
 
 Hapa kuna msimbo mpya.
 
 ```python
 from openai import OpenAI
 
-open_ai = OpenAI()  # Mteja anasoma kibadilika cha mazingira cha OPENAI_API_KEY
+open_ai = OpenAI()  # The client reads the OPENAI_API_KEY environment variable
 ```
 
-Ingiza na uanzishe API ya OpenAI.
+Ingiza na uanzishe API ya OpenAI. Mteja pia anasoma `OPENAI_BASE_URL` ikiwa imewekwa, kwa hivyo msimbo huo huo unafanya kazi na vituo vingine vinavyoendana na OpenAI.
 
 ```python
 response = open_ai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-6-luna", reasoning_effort="none",
     messages=[
         {"role": "user", "content": prompt}
     ],
     temperature=0.0,
-    max_tokens=16,
+    max_completion_tokens=16,
 )
 ```
 
-Ita API ya OpenAI (`open_ai.chat.completions.create`) ili kuunda jibu.
+Iite API ya OpenAI (`open_ai.chat.completions.create`) ili kuunda jibu. `temperature` ya sifuri inaomba jibu linalotabirika zaidi, na `max_completion_tokens` inazuia urefu wa jibu, ambalo linahitaji tu kushikilia nambari. Kwa mfumo wa kufikiri, `max_completion_tokens` pia inahesabu tokeni ambazo mfumo unatumia kufikiri, ambayo ni sababu nyingine ya kuweka `reasoning_effort` kuwa `none`.
 
 ```python
 expected_price = Decimal(response.choices[0].message.content.strip())
@@ -697,24 +716,24 @@ Hapa kuna hatua za kuunda mchepuo wa ndani na kuwezesha biashara.
 
 1. Sakinisha [Foundry](https://getfoundry.sh/introduction/installation)
 
-2. Anza [`anvil`](https://getfoundry.sh/anvil/overview)
+2. Anzisha [`anvil`](https://getfoundry.sh/anvil/overview)
 
    ```sh
    anvil --fork-url https://eth.drpc.org --block-time 12
    ```
 
-   `anvil` inasikiliza kwenye URL chaguo-msingi ya Foundry, http://localhost:8545, kwa hivyo hatuhitaji kubainisha URL kwa [amri ya `cast`](https://getfoundry.sh/cast/overview) tunayotumia kudhibiti mnyororo wa vitalu.
+   `anvil` inasikiliza kwenye URL chaguomsingi ya Foundry, http://localhost:8545, kwa hivyo hatuhitaji kubainisha URL kwa [amri ya `cast`](https://getfoundry.sh/cast/overview) tunayotumia kudhibiti mnyororo wa vitalu.
 
-3. Wakati wa kuendesha katika `anvil`, kuna akaunti kumi za majaribio ambazo zina ETH—weka vigezo vya mazingira kwa ya kwanza
+3. Unapoendesha katika `anvil`, kuna akaunti kumi za majaribio ambazo zina ETH—weka vigezo vya mazingira kwa ya kwanza
 
    ```sh
    PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
    ADDRESS=`cast wallet address $PRIVATE_KEY`
    ```
 
-4. Hii ndiyo mikataba tunayohitaji kutumia. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) ni mkataba wa Uniswap v3 tunaotumia kufanya biashara hasa. Tungeweza kufanya biashara moja kwa moja kupitia bwawa, lakini hii ni rahisi zaidi.
+4. Hii ndiyo mikataba tunayohitaji kutumia. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) ni mkataba wa Uniswap v3 tunaotumia kufanya biashara. Tungeweza kufanya biashara moja kwa moja kupitia bwawa, lakini hii ni rahisi zaidi.
 
-   Vigezo viwili vya chini ni njia za Uniswap v3 zinazohitajika kwa badilishano kati ya WETH na USDC.
+   Vigezo viwili vya chini ni njia za Uniswap v3 zinazohitajika kufanya badilishano kati ya WETH na USDC.
 
    ```sh
    WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
@@ -725,13 +744,13 @@ Hapa kuna hatua za kuunda mchepuo wa ndani na kuwezesha biashara.
    USDC_TO_WETH=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB480001F4C02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
    ```
 
-5. Kila moja ya akaunti za majaribio ina 10,000 ETH. Tumia mkataba wa WETH kufunga 1000 ETH ili kupata 1000 WETH kwa biashara.
+5. Kila moja ya akaunti za majaribio ina ETH 10,000. Tumia mkataba wa WETH kufunga ETH 1000 ili kupata WETH 1000 kwa ajili ya biashara.
 
    ```sh
    cast send $WETH_ADDRESS "deposit()" --value 1000ether --private-key $PRIVATE_KEY
    ```
 
-6. Tumia `SwapRouter` kufanya biashara ya 500 WETH kwa USDC.
+6. Tumia `SwapRouter` kufanya biashara ya WETH 500 kwa USDC.
 
    ```sh
    cast send $WETH_ADDRESS "approve(address,uint256)" $SWAP_ROUTER 500ether --private-key $PRIVATE_KEY
@@ -742,9 +761,9 @@ Hapa kuna hatua za kuunda mchepuo wa ndani na kuwezesha biashara.
        --private-key $PRIVATE_KEY
    ```
 
-   Wito wa `approve` unaunda kibali kinachoruhusu `SwapRouter` kutumia baadhi ya tokeni zetu. Mikataba haiwezi kufuatilia matukio, kwa hivyo ikiwa tutafanya hamisho la tokeni moja kwa moja kwenye mkataba wa `SwapRouter`, isingejua ililipwa. Badala yake, tunaruhusu mkataba wa `SwapRouter` kutumia kiasi fulani, na kisha `SwapRouter` inafanya hivyo. Hii inafanywa kupitia kazi inayoitwa na `SwapRouter`, kwa hivyo inajua ikiwa ilifanikiwa.
+   Wito wa `approve` unaunda kibali kinachoruhusu `SwapRouter` kutumia baadhi ya tokeni zetu. Mikataba haiwezi kufuatilia matukio, kwa hivyo ikiwa tutafanya hamisho la tokeni moja kwa moja kwenye mkataba wa `SwapRouter`, isingejua kuwa imelipwa. Badala yake, tunaruhusu mkataba wa `SwapRouter` kutumia kiasi fulani, na kisha `SwapRouter` inafanya hivyo. Hili linafanywa kupitia kazi inayoitwa na `SwapRouter`, kwa hivyo inajua ikiwa ilifanikiwa.
 
-7. Thibitisha una kiasi cha kutosha cha tokeni zote mbili.
+7. Thibitisha kuwa una kiasi cha kutosha cha tokeni zote mbili.
 
    ```sh
    cast call $WETH_ADDRESS "balanceOf(address)" $ADDRESS | cast from-wei
@@ -754,11 +773,14 @@ Hapa kuna hatua za kuunda mchepuo wa ndani na kuwezesha biashara.
 Sasa kwa kuwa tuna WETH na USDC, tunaweza kuendesha ajenti.
 
 ```sh
-git checkout 05-trade
+git checkout -f 05-trade
+sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
 uv run agent.py
 ```
 
-Matokeo yataonekana sawa na:
+`-f` inatupa mabadiliko ya mfumo uliyofanya kwenye tawi lililopita, kwa hivyo amri ya `sed` inaitumia tena kwenye toleo jipya la `agent.py`.
+
+Matokeo yatafanana na:
 
 ```
 (ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
@@ -777,11 +799,11 @@ USDC Balance: 929143.797116
 WETH Balance: 499
 ```
 
-Ili kuitumia hasa, unahitaji mabadiliko machache madogo.
+Ili kuitumia, unahitaji mabadiliko machache madogo.
 
 - Katika mstari wa 14, badilisha `MAINNET_URL` kuwa kituo halisi cha ufikiaji, kama vile `https://eth.drpc.org`
 - Katika mstari wa 28, badilisha `PRIVATE_KEY` kuwa ufunguo wa siri wako mwenyewe
-- Isipokuwa wewe ni tajiri sana na unaweza kununua au kuuza 1 ETH kila siku kwa ajenti ambaye hajathibitishwa, unaweza kutaka kubadilisha 29 ili kupunguza `WETH_TRADE_AMOUNT`
+- Isipokuwa wewe ni tajiri sana na unaweza kununua au kuuza ETH 1 kila siku kwa ajenti ambaye hajathibitishwa, unaweza kutaka kubadilisha 29 ili kupunguza `WETH_TRADE_AMOUNT`
 
 #### Maelezo ya msimbo {#trading-code}
 
@@ -811,7 +833,7 @@ ERC20_ABI = [
 ]
 ```
 
-Ili kufanya biashara hasa, tunahitaji kazi ya `approve`. Pia tunataka kuonyesha salio kabla na baada, kwa hivyo tunahitaji pia `balanceOf`.
+Ili kufanya biashara, tunahitaji kazi ya `approve`. Pia tunataka kuonyesha salio kabla na baada, kwa hivyo tunahitaji pia `balanceOf`.
 
 ```python
 SWAP_ROUTER_ABI = [
@@ -819,7 +841,7 @@ SWAP_ROUTER_ABI = [
 ]
 ```
 
-Katika ABI ya `SwapRouter` tunahitaji tu `exactInput`. Kuna kazi inayohusiana, `exactOutput`, ambayo tungeweza kutumia kununua WETH moja haswa, lakini kwa urahisi tunatumia tu `exactInput` katika visa vyote viwili.
+Katika ABI ya `SwapRouter` tunahitaji tu `exactInput`. Kuna kazi inayohusiana, `exactOutput`, ambayo tungeweza kutumia kununua WETH moja kamili, lakini kwa urahisi tunatumia tu `exactInput` katika visa vyote viwili.
 
 ```python
 account = w3.eth.account.from_key(PRIVATE_KEY)
@@ -863,7 +885,7 @@ Hivi ndivyo tunavyotuma muamala katika Web3. Kwanza tunatumia [kitu cha `Contrac
     print("Approve transaction mined.")
 ```
 
-[`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) inasubiri hadi muamala uchimbwe. Inarudisha stakabadhi ikihitajika.
+[`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) inasubiri hadi muamala uchimbwe. Inarudisha stakabadhi ikiwa inahitajika.
 
 ```python
 SELL_PARAMS = {
@@ -888,7 +910,7 @@ def make_buy_params(quote: Quote) -> dict:
     }
 ```
 
-Tofauti na `SELL_PARAMS`, vigezo vya kununua vinaweza kubadilika. Kiasi cha kuingiza ni gharama ya 1 WETH, kama inavyopatikana katika `quote`.
+Tofauti na `SELL_PARAMS`, vigezo vya kununua vinaweza kubadilika. Kiasi cha kuingiza ni gharama ya WETH 1, kama inavyopatikana katika `quote`.
 
 ```python
 def buy(quote: Quote):
@@ -913,7 +935,7 @@ def sell():
     print("Sell transaction mined.")
 ```
 
-Kazi za `buy()` na `sell()` zinakaribia kufanana. Kwanza tunaidhinisha kibali cha kutosha kwa `SwapRouter`, na kisha tunaiita kwa njia na kiasi sahihi.
+Kazi za `buy()` na `sell()` zinafanana karibu kabisa. Kwanza tunaidhinisha kibali cha kutosha kwa `SwapRouter`, na kisha tunaiita kwa njia na kiasi sahihi.
 
 ```python
 def balances():
@@ -941,7 +963,7 @@ print("Account balances after trade:")
 balances()
 ```
 
-Ajenti huyu kwa sasa anafanya kazi mara moja tu. Hata hivyo, unaweza kumbadilisha ili afanye kazi mfululizo ama kwa kumuendesha kutoka [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) au kwa kufunga mistari 368-400 katika kitanzi na kutumia [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) kusubiri hadi wakati wa mzunguko unaofuata.
+Ajenti huyu kwa sasa anafanya kazi mara moja tu. Hata hivyo, unaweza kumbadilisha ili afanye kazi mfululizo ama kwa kumuendesha kutoka [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) au kwa kufunga mistari 368-397 katika kitanzi na kutumia [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) kusubiri hadi wakati wa mzunguko unaofuata.
 
 ## Maboresho yanayowezekana {#improvements}
 
@@ -955,11 +977,11 @@ Kuna ukweli mbili muhimu ambazo ajenti anapuuza anapoamua nini cha kufanya.
   Inawezekana, ingekuwa bora kupuuza mabadiliko madogo na kuuza kulingana na kiasi gani tunatarajia bei kushuka.
 - _Kwingineko ya sasa_. Ikiwa 10% ya kwingineko yako iko katika WETH na unafikiri bei itapanda, labda ina maana kununua zaidi. Lakini ikiwa 90% ya kwingineko yako iko katika WETH, unaweza kuwa umejiweka wazi vya kutosha, na hakuna haja ya kununua zaidi. Kinyume chake ni kweli ikiwa unatarajia bei kushuka.
 
-### Vipi ikiwa unataka kuweka mkakati wako wa biashara siri? {#secret}
+### Vipi ikiwa unataka kuweka mkakati wako wa biashara kuwa siri? {#secret}
 
-Wachuuzi wa AI wanaweza kuona maswali unayotuma kwa LLM zao, ambayo yanaweza kufichua mfumo wa biashara wa kipekee uliouendeleza na ajenti wako. Mfumo wa biashara ambao watu wengi sana wanautumia hauna thamani kwa sababu watu wengi sana wanajaribu kununua wakati unataka kununua (na bei inapanda) na kujaribu kuuza wakati unataka kuuza (na bei inashuka).
+Wachuuzi wa AI wanaweza kuona maswali unayotuma kwa LLM zao, ambayo yanaweza kufichua mfumo mzuri wa biashara uliouunda na ajenti wako. Mfumo wa biashara ambao watu wengi sana wanautumia hauna thamani kwa sababu watu wengi sana wanajaribu kununua wakati unataka kununua (na bei inapanda) na kujaribu kuuza wakati unataka kuuza (na bei inashuka).
 
-Unaweza kuendesha LLM ndani ya nchi, kwa mfano, kwa kutumia [LM-Studio](https://lmstudio.ai/), ili kuepuka tatizo hili.
+Unaweza kuendesha LLM kwenye kompyuta yako, kwa mfano, kwa kutumia `llama-server` ya [llama.cpp](https://github.com/ggml-org/llama.cpp), ili kuepuka tatizo hili. Inatoa kituo kinachoendana na OpenAI, kwa hivyo unahitaji tu kuweka `OPENAI_BASE_URL` na jina la mfumo kama ilivyoelezwa katika [Kuunganisha na LLM](#interface-llm).
 
 ### Kutoka kwa boti ya AI hadi ajenti wa akili bandia {#bot-to-agent}
 
