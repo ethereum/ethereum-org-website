@@ -184,6 +184,15 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - [Pricing calculator](https://drpc.org/pricing#calculator)
   - NodeCore: open-source stack for organizations wanting full control
 
+- [**FlexYield**](https://flexyield.io)
+  - [Docs](https://flexyield.io/docs)
+  - Features
+    - One API key across Ethereum, Base, Arbitrum One, OP Mainnet, Polygon PoS and Solana with automatic multi-provider failover
+    - Published request weights (standard 1 · heavy 2 · data 10 · cache hit 0) instead of compute units
+    - Public status page with continuous per-chain measurements (uptime, p50/p95) and a weekly open dataset (CC BY 4.0)
+    - MCP server for AI agents, capability keys without signup, pay-per-call via x402 (USDC on Base)
+    - Free tier of 1M weighted units per month; paid plans from $12 per month
+
 - [**GetBlock**](https://getblock.io/)
   - [Docs](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Features
