@@ -101,9 +101,18 @@ Pour le code côté client, nous allons utiliser [Vite](https://vite.dev/), [Rea
 
 La majorité du serveur est écrite en JavaScript en utilisant [Node](https://nodejs.org/en). La partie à divulgation nulle de connaissance est écrite en [Noir](https://noir-lang.org/). Nous avons besoin de la version `1.0.0-beta.10`, donc après avoir [installé Noir comme indiqué](https://noir-lang.org/docs/getting_started/quick_start), exécutez :
 
-```
+```sh
 noirup -v 1.0.0-beta.10
 ```
+
+Pour créer des preuves qui peuvent être vérifiées onchain (à l'étape 3), nous avons également besoin de [Barretenberg](https://barretenberg.aztec.network/docs/getting_started) (`bb`), le backend de preuve, dans la version qui correspond à cette version de Noir. Installez `bbup`, l'installateur de Barretenberg, puis utilisez-le pour installer `bb` version `0.87.0` (si `bbup` n'est pas trouvé, ouvrez un nouveau terminal pour que le `PATH` mis à jour prenne effet) :
+
+```sh
+curl -L https://raw.githubusercontent.com/AztecProtocol/aztec-packages/refs/heads/next/barretenberg/bbup/install | bash
+bbup -v 0.87.0
+```
+
+Ce tutoriel a été testé avec `nargo` 1.0.0-beta.10, `bb` 0.87.0 et (sur le serveur) `@noir-lang/noir_js` 1.0.0-beta.11. N'utilisez pas de versions plus récentes : le code Noir ne compile pas avec les versions candidates 1.0 actuelles, et les versions actuelles de `bb` ne peuvent pas lire les circuits compilés par `nargo` 1.0.0-beta.10 et n'acceptent plus l'indicateur `--oracle_hash`.
 
 La chaîne de blocs que nous utilisons est `anvil`, une chaîne de blocs de test locale qui fait partie de [Foundry](https://getfoundry.sh/introduction/installation).
 
@@ -117,7 +126,7 @@ Pour la première étape, nous allons signer une transaction dans le navigateur,
 
 Pour le voir en action :
 
-1. Assurez-vous d'avoir installé [Node](https://nodejs.org/en/download) et [Noir](https://noir-lang.org/install). De préférence, installez-les sur un système UNIX tel que macOS, Linux ou [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
+1. Assurez-vous d'avoir installé [Node](https://nodejs.org/en/download) et [Noir](https://noir-lang.org/docs/installation). De préférence, installez-les sur un système UNIX tel que macOS, Linux ou [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 2. Téléchargez le code de l'étape 1 et démarrez le serveur web pour servir le code client.
 
@@ -326,7 +335,7 @@ C'est le format HTML (plus précisément, [JSX](https://react.dev/learn/writing-
 use std::hash::pedersen_hash;
 ```
 
-Le [hash de Pedersen](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) est fourni avec la [bibliothèque standard de Noir](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). Les preuves à divulgation nulle de connaissance utilisent couramment cette fonction de hachage. Il est beaucoup plus facile à calculer à l'intérieur des [circuits arithmétiques](https://rareskills.io/post/arithmetic-circuit) par rapport aux fonctions de hachage standard.
+Le [hash de Pedersen](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) est fourni avec la [bibliothèque standard de Noir](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). Les preuves à divulgation nulle de connaissance utilisent couramment cette fonction de hachage. Elle est beaucoup plus facile à calculer dans des [circuits arithmétiques](https://rareskills.io/post/arithmetic-circuit) par rapport aux fonctions de hachage standards.
 
 ```
 use keccak256::keccak256;
@@ -360,7 +369,7 @@ global ASCII_MESSAGE_LENGTH : [u8; 3] = [0x31, 0x30, 0x30];
 global HASH_BUFFER_SIZE : u32 = 26+3+MESSAGE_LENGTH;
 ```
 
-Les [signatures EIP-191](https://eips.ethereum.org/EIPS/eip-191) nécessitent un tampon avec un préfixe de 26 octets, suivi de la longueur du message en ASCII, et enfin du message lui-même.
+Les [signatures EIP-191](https://eips.ethereum.org/EIPS/eip-191) nécessitent un tampon avec un préfixe de 26 octets, suivi de la longueur du message en ASCII, et enfin le message lui-même.
 
 ```
 struct Account {
@@ -390,41 +399,41 @@ fn flatten_account(account: Account) -> [Field; FLAT_ACCOUNT_FIELDS] {
 Une définition de fonction. Le paramètre est l'information `Account`. Le résultat est un tableau de variables `Field`, dont la longueur est `FLAT_ACCOUNT_FIELDS`
 
 ```
-let flat = [
+    let flat = [
         account.address,
         ((account.balance << 32) + account.nonce.into()).into(),
     ];
 ```
 
-La première valeur du tableau est l'adresse du compte. La seconde inclut à la fois le solde et le nonce. Les appels `.into()` changent un nombre vers le type de données qu'il doit être. `account.nonce` est une valeur `u32`, mais pour l'ajouter à `account.balance << 32`, une valeur `u128`, elle doit être un `u128`. C'est le premier `.into()`. Le second convertit le résultat `u128` en un `Field` pour qu'il s'intègre dans le tableau.
+La première valeur du tableau est l'adresse du compte. La seconde inclut à la fois le solde et le nonce. Les appels `.into()` modifient un nombre vers le type de données dont il a besoin. `account.nonce` est une valeur `u32`, mais pour l'ajouter à `account.balance << 32`, une valeur `u128`, elle doit être un `u128`. C'est le premier `.into()`. Le second convertit le résultat `u128` en un `Field` pour qu'il s'intègre dans le tableau.
 
 ```
-flat
+    flat
 }
 ```
 
-Dans Noir, les fonctions ne peuvent renvoyer une valeur qu'à la fin (il n'y a pas de retour anticipé). Pour spécifier la valeur de retour, vous l'évaluez juste avant l'accolade de fermeture de la fonction.
+Dans Noir, les fonctions ne peuvent renvoyer une valeur qu'à la fin (il n'y a pas de retour anticipé). Pour spécifier la valeur de retour, vous l'évaluez juste avant l'accolade fermante de la fonction.
 
 ```
 fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] {
 ```
 
-Cette fonction transforme le tableau de comptes en un tableau `Field`, qui peut être utilisé comme entrée pour un hash de Petersen.
+Cette fonction transforme le tableau de comptes en un tableau `Field`, qui peut être utilisé comme entrée pour un hash de Pedersen.
 
 ```
-let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
+    let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
 ```
 
 C'est ainsi que vous spécifiez une variable mutable, c'est-à-dire _non_ constante. Les variables dans Noir doivent toujours avoir une valeur, nous initialisons donc cette variable avec des zéros.
 
 ```
-for i in 0..ACCOUNT_NUMBER {
+    for i in 0..ACCOUNT_NUMBER {
 ```
 
 C'est une boucle `for`. Notez que les limites sont des constantes. Les boucles Noir doivent avoir leurs limites connues au moment de la compilation. La raison est que les circuits arithmétiques ne prennent pas en charge le contrôle de flux. Lors du traitement d'une boucle `for`, le compilateur place simplement le code à l'intérieur plusieurs fois, une fois pour chaque itération.
 
 ```
-let fields = flatten_account(accounts[i]);
+        let fields = flatten_account(accounts[i]);
         for j in 0..FLAT_ACCOUNT_FIELDS {
             flat[i*FLAT_ACCOUNT_FIELDS + j] = fields[j];
         }
@@ -438,7 +447,7 @@ fn hash_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> Field {
 }
 ```
 
-Enfin, nous sommes arrivés à la fonction qui hache le tableau des comptes.
+Enfin, nous arrivons à la fonction qui hache le tableau de comptes.
 
 ```
 fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
@@ -451,13 +460,13 @@ fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
     }
 ```
 
-Cette fonction trouve le compte avec une adresse spécifique. Cette fonction serait terriblement inefficace dans un code standard car elle itère sur tous les comptes, même après avoir trouvé l'adresse.
+Cette fonction trouve le compte avec une adresse spécifique. Cette fonction serait terriblement inefficace dans du code standard car elle itère sur tous les comptes, même après avoir trouvé l'adresse.
 
 Cependant, dans les preuves à divulgation nulle de connaissance, il n'y a pas de contrôle de flux. Si nous devons vérifier une condition, nous devons la vérifier à chaque fois.
 
 Une chose similaire se produit avec les instructions `if`. L'instruction `if` dans la boucle ci-dessus est traduite en ces instructions mathématiques.
 
-_condition<sub>result</sub> = accounts[i].address == address_ // un s'ils sont égaux, zéro sinon
+_condition<sub>result</sub> = accounts[i].address == address_ // un si elles sont égales, zéro sinon
 
 _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result</sub>)\*account<sub>old</sub>_
 
@@ -468,7 +477,7 @@ _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result
 }
 ```
 
-La fonction [`assert`](https://noir-lang.org/docs/dev/noir/concepts/assert) provoque le plantage de la preuve à divulgation nulle de connaissance si l'assertion est fausse. Dans ce cas, si nous ne pouvons pas trouver de compte avec l'adresse correspondante. Pour signaler l'adresse, nous utilisons une [chaîne de formatage](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
+La fonction [`assert`](https://noir-lang.org/docs/language/assert) provoque le plantage de la preuve à divulgation nulle de connaissance si l'assertion est fausse. Dans ce cas, si nous ne pouvons pas trouver de compte avec l'adresse correspondante. Pour signaler l'adresse, nous utilisons une [chaîne de format](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
 
 ```rust
 fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> [Account; ACCOUNT_NUMBER] {
@@ -484,7 +493,7 @@ Cette fonction applique une transaction de transfert et renvoie le nouveau table
         (txn.from, txn.amount, txn.nonce, accounts[from].nonce);
 ```
 
-Nous ne pouvons pas accéder aux éléments de structure à l'intérieur d'une chaîne de formatage dans Noir, nous créons donc une copie utilisable.
+Nous ne pouvons pas accéder aux éléments de structure à l'intérieur d'une chaîne de format dans Noir, nous créons donc une copie utilisable.
 
 ```rust
     assert (accounts[from].balance >= txn.amount,
@@ -507,13 +516,13 @@ Ce sont deux conditions qui pourraient rendre une transaction invalide.
 }
 ```
 
-Créez le nouveau tableau de comptes, puis renvoyez-le.
+Créez le nouveau tableau de comptes puis renvoyez-le.
 
 ```rust
 fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field
 ```
 
-Cette fonction lit l'adresse à partir du message. 
+Cette fonction lit l'adresse à partir du message.
 
 ```rust
 {
@@ -543,7 +552,7 @@ L'adresse fait toujours 20 octets (soit 40 chiffres hexadécimaux) de long, et c
 fn readAmountAndNonce(messageBytes: [u8; MESSAGE_LENGTH]) -> (u128, u32)
 ```
 
-Lisez le montant et le nonce à partir du message. 
+Lisez le montant et le nonce à partir du message.
 
 ```rust
 {
@@ -588,7 +597,7 @@ Dans le message, le premier nombre après l'adresse est le montant de finney (so
 }
 ```
 
-Renvoyer un [tuple](https://noir-lang.org/docs/noir/concepts/data_types/tuples) est la façon de Noir de renvoyer plusieurs valeurs à partir d'une fonction.
+Renvoyer un [tuple](https://noir-lang.org/docs/noir/concepts/data_types/tuples) est la façon Noir de renvoyer plusieurs valeurs à partir d'une fonction.
 
 ```rust
 fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn 
@@ -690,7 +699,7 @@ Pour éviter les cas où une application demande à l'utilisateur de signer un m
     assert(MESSAGE_LENGTH < 1000, "Messages whose length is over three digits are not supported");
 ```
 
-Gérez les longueurs de message jusqu'à 999 et échouez si elle est supérieure. J'ai ajouté ce code, même si la longueur du message est une constante, car cela facilite sa modification. Sur un système de production, vous supposeriez probablement simplement que `MESSAGE_LENGTH` ne change pas pour des raisons de meilleures performances.
+Gérez les longueurs de message jusqu'à 999 et échouez si elle est supérieure. J'ai ajouté ce code, même si la longueur du message est une constante, car cela facilite sa modification. Sur un système de production, vous supposeriez probablement que `MESSAGE_LENGTH` ne change pas pour des raisons de meilleures performances.
 
 ```rust
     keccak256::keccak256(buffer, HASH_BUFFER_SIZE)
@@ -709,7 +718,7 @@ fn signatureToAddressAndHash(
 {
 ```
 
-Cette fonction vérifie la signature, ce qui nécessite le hash du message. Elle nous fournit ensuite l'adresse qui l'a signé et le hash du message. Le hash du message est fourni en deux valeurs `Field` car celles-ci sont plus faciles à utiliser dans le reste du programme qu'un tableau d'octets.
+Cette fonction vérifie la signature, ce qui nécessite le hash du message. Elle nous fournit ensuite l'adresse qui l'a signé et le hash du message. Le hash du message est fourni dans deux valeurs `Field` car elles sont plus faciles à utiliser dans le reste du programme qu'un tableau d'octets.
 
 Nous devons utiliser deux valeurs `Field` car les calculs de champ sont effectués [modulo](https://en.wikipedia.org/wiki/Modulo) un grand nombre, mais ce nombre est généralement inférieur à 256 bits (sinon il serait difficile d'effectuer ces calculs dans l'EVM).
 
@@ -731,10 +740,10 @@ Spécifiez `hash1` et `hash2` comme variables mutables, et écrivez le hash à l
         ecrecover::ecrecover(pubKeyX, pubKeyY, signature, hash), 
 ```
     
-Ceci est similaire au [`ecrecover` de Solidity](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions), avec deux différences importantes :
+Ceci est similaire à [`ecrecover` de Solidity](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions), avec deux différences importantes :
 
 - Si la signature n'est pas valide, l'appel échoue à un `assert` et le programme est interrompu.
-- Bien que la clé publique puisse être récupérée à partir de la signature et du hash, il s'agit d'un traitement qui peut être effectué en externe et, par conséquent, qui ne vaut pas la peine d'être effectué à l'intérieur de la preuve à divulgation nulle de connaissance. Si quelqu'un essaie de nous tromper ici, la vérification de la signature échouera.
+- Bien que la clé publique puisse être récupérée à partir de la signature et du hash, c'est un traitement qui peut être effectué en externe et, par conséquent, il ne vaut pas la peine de le faire à l'intérieur de la preuve à divulgation nulle de connaissance. Si quelqu'un essaie de nous tromper ici, la vérification de la signature échouera.
 
 ```rust
         hash1,
@@ -756,14 +765,14 @@ fn main(
     )
 ```
 
-Enfin, nous atteignons la fonction `main`. Nous devons prouver que nous avons une transaction qui modifie valablement le hash des comptes de l'ancienne valeur à la nouvelle. Nous devons également prouver qu'elle a ce hachage de transaction spécifique afin que la personne qui l'a envoyée sache que sa transaction a été traitée.
+Enfin, nous atteignons la fonction `main`. Nous devons prouver que nous avons une transaction qui modifie de manière valide le hash des comptes de l'ancienne valeur à la nouvelle. Nous devons également prouver qu'elle a ce hachage de transaction spécifique afin que la personne qui l'a envoyée sache que sa transaction a été traitée.
 
 ```rust
 {
     let mut txn = readTransferTxn(message);
 ```
 
-Nous avons besoin que `txn` soit mutable car nous ne lisons pas l'adresse d'origine à partir du message, nous la lisons à partir de la signature. 
+Nous avons besoin que `txn` soit mutable car nous ne lisons pas l'adresse de l'expéditeur à partir du message, nous la lisons à partir de la signature.
 
 ```rust
     let (fromAddress, txnHash1, txnHash2) = signatureToAddressAndHash(
@@ -803,7 +812,7 @@ Pour le voir en action :
    npm install
    ```
 
-   Il n'est pas nécessaire de compiler le code Noir, c'est le même que le code que vous avez utilisé pour l'étape 1.
+   Il n'est pas nécessaire de compiler le code Noir, c'est le même code que celui que vous avez utilisé pour l'étape 1.
 
 3. Démarrez le serveur.
 
@@ -811,14 +820,14 @@ Pour le voir en action :
    npm run start
    ```
 
-4. Dans une fenêtre de ligne de commande séparée, exécutez Vite pour servir le code du navigateur.
+4. Dans une fenêtre de ligne de commande séparée, en partant de la racine du dépôt, exécutez Vite pour servir le code du navigateur.
 
    ```sh
    cd client
    npm run dev
    ```
 
-5. Naviguez vers le code client à l'adresse [http://localhost:5173](http://localhost:5173)
+5. Accédez au code client sur [http://localhost:5173](http://localhost:5173)
 
 6. Avant de pouvoir émettre une transaction, vous devez connaître le nonce, ainsi que le montant que vous pouvez envoyer. Pour obtenir ces informations, cliquez sur **Update account data** et signez le message.
 
@@ -828,10 +837,10 @@ Pour le voir en action :
 
 7. Une fois que le navigateur récupère le solde et le nonce, il affiche le formulaire de transfert. Sélectionnez l'adresse de destination et le montant, puis cliquez sur **Transfer**. Signez cette requête.
 
-8. Pour voir le transfert, cliquez sur **Update account data** ou regardez dans la fenêtre où vous exécutez le serveur. Le serveur journalise l'état chaque fois qu'il change.
+8. Pour voir le transfert, soit **Update account data**, soit regardez dans la fenêtre où vous exécutez le serveur. Le serveur journalise l'état à chaque fois qu'il change.
 
-        ```
-ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
+    ```
+    ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
 
     > server@1.0.0 start
     > node --experimental-json-modules index.mjs
@@ -858,7 +867,7 @@ ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
     0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC has 100000 (0)
     0x90F79bf6EB2c4f870365E785982E1f101E93b906 has 139000 (0)
     0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 has 100000 (0)
-        ```
+    ```
 
 #### `server/index.mjs` {#server-index-mjs-1}
 
@@ -993,16 +1002,16 @@ La structure `Accounts` initiale.
    echo $ZKBANK_ADDRESS
    ```
 
-   La valeur `0x199..67b` est le hash de Pederson de l'état initial de `Accounts`. Si vous modifiez cet état initial dans `server/index.mjs`, vous pouvez exécuter une transaction pour voir le hash initial rapporté par la preuve à divulgation nulle de connaissance.
+   La valeur `0x199..67b` est le hash de Pedersen de l'état initial de `Accounts`. Si vous modifiez cet état initial dans `server/index.mjs`, vous pouvez exécuter une transaction pour voir le hash initial rapporté par la preuve à divulgation nulle de connaissance.
 
-8. Démarrez le serveur.
+8. Exécutez le serveur.
 
    ```sh
    cd ../server
    npm run start
    ```
 
-9. Exécutez le client dans une fenêtre de ligne de commande différente.
+9. Exécutez le client dans une fenêtre de ligne de commande différente, en partant de la racine du dépôt.
 
    ```sh
    cd client
@@ -1011,12 +1020,12 @@ La structure `Accounts` initiale.
 
 10. Exécutez quelques transactions.
 
-11. Pour vérifier que l'état a changé onchain, redémarrez le processus du serveur. Constatez que `ZkBank` n'accepte plus de transactions, car la valeur de hachage d'origine dans les transactions diffère de la valeur de hachage stockée onchain.
+11. Pour vérifier que l'état a changé onchain, redémarrez le processus du serveur. Voyez que `ZkBank` n'accepte plus de transactions, car la valeur de hash d'origine dans les transactions diffère de la valeur de hash stockée onchain.
 
     C'est le type d'erreur attendu.
 
-        ```
-ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
+    ```
+    ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
 
     > server@1.0.0 start
     > node --experimental-json-modules index.mjs
@@ -1029,11 +1038,11 @@ ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
         address:   0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
         function:  processTransaction(bytes _proof, bytes32[] _publicInputs)
         args:                        (0x0000000000000000000000000000000000000000000000042ab5d6d1986846cf00000000000000000000000000000000000000000000000b75c020998797da7800000000000000000000000000000000000000000000000
-        ```
+    ```
 
 #### `server/index.mjs` {#server-index-mjs-2}
 
-Les modifications apportées à ce fichier concernent principalement la création de la preuve proprement dite et sa soumission onchain.
+Les modifications dans ce fichier concernent principalement la création de la preuve proprement dite et sa soumission onchain.
 
 ```js
 import { exec } from 'child_process'
@@ -1042,9 +1051,9 @@ import util from 'util'
 const execPromise = util.promisify(exec)
 ```
 
-Nous devons utiliser [le paquet Barretenberg](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) pour créer la preuve proprement dite à envoyer onchain. Nous pouvons utiliser ce paquet soit en exécutant l'interface en ligne de commande (`bb`), soit en utilisant la [bibliothèque JavaScript, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). La bibliothèque JavaScript est beaucoup plus lente que l'exécution native du code, nous utilisons donc [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) ici pour utiliser la ligne de commande.
+Nous devons utiliser [le paquet Barretenberg](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) pour créer la preuve proprement dite à envoyer onchain. Nous pouvons utiliser ce paquet soit en exécutant l'interface en ligne de commande (`bb`), soit en utilisant la [bibliothèque JavaScript, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). La bibliothèque JavaScript est beaucoup plus lente que l'exécution de code natif, nous utilisons donc [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) ici pour utiliser la ligne de commande.
 
-Notez que si vous décidez d'utiliser `bb.js`, vous devez utiliser une version compatible avec la version de Noir que vous utilisez. Au moment de la rédaction, la version actuelle de Noir (1.0.0-beta.11) utilise la version 0.87 de `bb.js`.
+Notez que si vous décidez d'utiliser `bb.js`, vous devez utiliser une version compatible avec la version de Noir que vous utilisez. Par exemple, Noir 1.0.0-beta.10 et 1.0.0-beta.11 vont tous deux avec `bb` et `bb.js` version 0.87.
 
 ```js
 const zkBankAddress = process.env.ZKBANK_ADDRESS || "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
@@ -1060,15 +1069,15 @@ const walletClient = createWalletClient({
 })
 ```
 
-Cette clé privée est l'un des comptes préfinancés par défaut dans `anvil`. 
+Cette clé privée est l'un des comptes préfinancés par défaut dans `anvil`.
 
 ```js
 const generateProof = async (witness, fileID) => {
 ```
 
-Générez une preuve à l'aide de l'exécutable `bb`.
+Générez une preuve en utilisant l'exécutable `bb`.
 
-```js 
+```js
     const fname = `witness-${fileID}.gz`    
     await fs.writeFile(fname, witness)
 ```
@@ -1105,7 +1114,7 @@ const processMessage = async (message, signature) => {
     const publicFields = noirResult.returnValue.map(x=>'0x' + x.slice(2).padStart(64, "0"))
 ```
 
-Les champs publics doivent être un tableau de valeurs de 32 octets. Cependant, comme nous devions diviser le hachage de transaction entre deux valeurs `Field`, il apparaît comme une valeur de 16 octets. Ici, nous ajoutons des zéros pour que Viem comprenne qu'il s'agit en fait de 32 octets.
+Les champs publics doivent être un tableau de valeurs de 32 octets. Cependant, comme nous avons dû diviser le hachage de transaction entre deux valeurs `Field`, il apparaît comme une valeur de 16 octets. Ici, nous ajoutons des zéros pour que Viem comprenne qu'il s'agit en fait de 32 octets.
 
 ```js
     const proof = await generateProof(noirResult.witness, `${fromAddress}-${nonce}`)
@@ -1150,7 +1159,7 @@ contract ZkBank {
     }
 ```
 
-Le code onchain doit garder une trace de deux variables : le vérificateur (un contrat séparé qui est créé par `nargo`) et le hash de l'état actuel.
+Le code onchain doit garder une trace de deux variables : le vérificateur (un contrat séparé qui est généré par le `bb write_solidity_verifier` de Barretenberg) et le hash de l'état actuel.
 
 ```solidity
     event TransactionProcessed(
@@ -1160,7 +1169,7 @@ Le code onchain doit garder une trace de deux variables : le vérificateur (un c
     );
 ```
 
-Chaque fois que l'état change, nous émettons un événement `TransactionProcessed`.
+À chaque fois que l'état change, nous émettons un événement `TransactionProcessed`.
 
 ```solidity
     function processTransaction(
@@ -1169,10 +1178,10 @@ Chaque fois que l'état change, nous émettons un événement `TransactionProces
     ) public {
 ```
 
-Cette fonction traite les transactions. Elle obtient la preuve (sous forme de `bytes`) et les entrées publiques (sous forme de tableau `bytes32`), dans le format requis par le vérificateur (pour minimiser le traitement onchain et donc les coûts en gaz).
+Cette fonction traite les transactions. Elle obtient la preuve (en tant que `bytes`) et les entrées publiques (en tant que tableau `bytes32`), dans le format requis par le vérificateur (pour minimiser le traitement onchain et donc les coûts en gaz).
 
 ```solidity
-        require(_publicInputs[0] == currentStateHash,
+        require(_publicFields[0] == currentStateHash,
             "Wrong old state hash");
 ```
 
@@ -1196,7 +1205,7 @@ Appelez le contrat vérificateur pour vérifier la preuve à divulgation nulle d
 }
 ```
 
-Si tout est correct, mettez à jour le hash de l'état avec la nouvelle valeur et émettez un événement `TransactionProcessed`.
+Si tout est correct, mettez à jour le hash de l'état vers la nouvelle valeur et émettez un événement `TransactionProcessed`.
 
 ## Abus par le composant centralisé {#abuses}
 
