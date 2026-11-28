@@ -19,58 +19,61 @@ published: 2021-01-13
 
 ## கண்காணிப்பு அடுக்கு {#monitoring-stack}
 
-ஒரு எத்திரியம் கிளையண்ட் காலவரிசைப்படியான தரவுத்தளத்தின் வடிவத்தில் படிக்கக்கூடிய பல தரவுகளைச் சேகரிக்கிறது. கண்காணிப்பை எளிதாக்க, இதை நீங்கள் தரவு காட்சிப்படுத்தல் மென்பொருளில் உள்ளிடலாம். இதற்கு பல விருப்பங்கள் உள்ளன:
+ஒரு எத்திரியம் கிளையண்ட் நிறைய தரவுகளைச் சேகரிக்கிறது, இவற்றை ஒரு காலவரிசை தரவுத்தளத்தின் வடிவத்தில் படிக்க முடியும். கண்காணிப்பை எளிதாக்க, இதை நீங்கள் தரவு காட்சிப்படுத்தல் மென்பொருளில் உள்ளிடலாம். இதற்குப் பல விருப்பங்கள் உள்ளன:
 
 - [Prometheus](https://prometheus.io/) (இழுக்கும் மாதிரி)
 - [InfluxDB](https://www.influxdata.com/get-influxdb/) (தள்ளும் மாதிரி)
-- [Telegraf](https://www.influxdata.com/get-influxdb/)
+- [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/)
 - [Grafana](https://www.grafana.com/)
 - [Datadog](https://www.datadoghq.com/)
 - [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)
 
-InfluxDB மற்றும் Grafana உடன் முன்பே உள்ளமைக்கப்பட்ட ஒரு விருப்பமான [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter) என்பதும் உள்ளது.
+நீங்கள் Prometheus-ஐ விரும்பினால், Geth அதன் அளவீடுகளை Prometheus வடிவத்திலும் வெளிப்படுத்த முடியும். `--metrics --metrics.addr 127.0.0.1` உடன் Geth-ஐத் தொடங்கி, Prometheus-ஐ `http://127.0.0.1:6060/debug/metrics/prometheus` இல் சுட்டிக்காட்டவும்.
 
-இந்த வழிகாட்டியில், தரவுத்தளத்தை உருவாக்க InfluxDB-க்கும், தரவின் வரைபடக் காட்சிப்படுத்தலை உருவாக்க Grafana-க்கும் தரவைத் தள்ள உங்கள் Geth கிளையண்டை அமைப்போம். இதை கைமுறையாகச் செய்வது, செயல்முறையைச் சிறப்பாகப் புரிந்துகொள்ளவும், அதை மாற்றவும், வெவ்வேறு சூழல்களில் நிலைநிறுத்தவும் உதவும்.
+இந்த வழிகாட்டியில், ஒரு தரவுத்தளத்தை உருவாக்க InfluxDB-க்கும், தரவின் வரைபடக் காட்சிப்படுத்தலை உருவாக்க Grafana-வுக்கும் தரவைத் தள்ளுவதற்கு உங்கள் Geth கிளையண்டை அமைப்போம். இதை கைமுறையாகச் செய்வது, செயல்முறையைச் சிறப்பாகப் புரிந்துகொள்ளவும், அதை மாற்றியமைக்கவும், வெவ்வேறு சூழல்களில் நிலைநிறுத்தவும் உதவும்.
 
 ## InfluxDB-ஐ அமைத்தல் {#setting-up-influxdb}
 
-முதலில், InfluxDB-ஐப் பதிவிறக்கி நிறுவுவோம். பல்வேறு பதிவிறக்க விருப்பங்களை [Influxdata வெளியீட்டுப் பக்கத்தில்](https://portal.influxdata.com/downloads/) காணலாம். உங்கள் சூழலுக்கு ஏற்ற ஒன்றைத் தேர்ந்தெடுக்கவும்.
-இதை நீங்கள் ஒரு [களஞ்சியத்திலிருந்தும் (repository)](https://repos.influxdata.com/) நிறுவலாம். எடுத்துக்காட்டாக Debian அடிப்படையிலான விநியோகத்தில்:
+முதலில், InfluxDB-ஐப் பதிவிறக்கி நிறுவுவோம். இந்த வழிகாட்டி InfluxDB 1.x (OSS)-ஐப் பயன்படுத்துகிறது, இதை Geth கீழே உள்ள `--metrics.influxdb` கொடிகளுடன் ஆதரிக்கிறது. புதிய InfluxDB பதிப்புகள் தரவுத்தளங்கள் மற்றும் பயனர்களுக்குப் பதிலாக நிறுவனங்கள், பக்கெட்டுகள் மற்றும் டோக்கன்களுடன் வேறுபட்ட அமைப்பைப் பயன்படுத்துகின்றன. Geth `--metrics.influxdbv2` கொடிகளுடன் InfluxDB 2.x-ஐ ஆதரிக்கிறது, ஆனால் இந்த வழிகாட்டியில் உள்ள அமைப்புப் படிகள் 1.x-க்கு மட்டுமே பொருந்தும்.
 
-```
-curl -tlsv1.3 --proto =https -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add
-source /etc/lsb-release
-echo "deb https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
+உங்கள் சூழலுக்கான [InfluxDB 1.x நிறுவல் வழிமுறைகளைப்](https://docs.influxdata.com/influxdb/v1/introduction/install/) பின்பற்றவும். எடுத்துக்காட்டாக, Debian அல்லது Ubuntu-வில் நீங்கள் அதை InfluxData களஞ்சியத்திலிருந்து நிறுவலாம். திறவுகோலை நம்புவதற்கு முன், தற்போதைய கையொப்பமிடுதல் திறவுகோல் கைரேகைக்கான நிறுவல் வழிமுறைகளைச் சரிபார்க்கவும்:
+
+```sh
+curl --silent --location -O https://repos.influxdata.com/influxdata-archive.key
+sudo mkdir -p /etc/apt/keyrings
+gpg --dearmor < influxdata-archive.key | sudo tee /etc/apt/keyrings/influxdata-archive.gpg > /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/influxdata-archive.gpg] https://repos.influxdata.com/debian stable main" | sudo tee /etc/apt/sources.list.d/influxdata.list
 sudo apt update
 sudo apt install influxdb -y
 sudo systemctl enable influxdb
 sudo systemctl start influxdb
-sudo apt install influxdb-client
 ```
 
-InfluxDB-ஐ வெற்றிகரமாக நிறுவிய பின், அது பின்னணியில் இயங்குகிறதா என்பதை உறுதிப்படுத்திக் கொள்ளவும். இயல்பாக, இதை `localhost:8086` இல் அணுகலாம்.
-`influx` கிளையண்டைப் பயன்படுத்துவதற்கு முன், நிர்வாகி (admin) சலுகைகளுடன் புதிய பயனரை நீங்கள் உருவாக்க வேண்டும். இந்தப் பயனர் உயர்மட்ட மேலாண்மை, தரவுத்தளங்கள் மற்றும் பயனர்களை உருவாக்குவதற்குச் சேவை செய்வார்.
+`influxdb` தொகுப்பில் `influx` கட்டளை வரி கிளையண்ட் அடங்கும்.
 
-```
+InfluxDB-ஐ வெற்றிகரமாக நிறுவிய பின், அது பின்னணியில் இயங்குகிறதா என்பதை உறுதிப்படுத்திக் கொள்ளவும். இயல்புநிலையாக, இதை `localhost:8086` இல் அணுகலாம்.
+`influx` கிளையண்டைப் பயன்படுத்துவதற்கு முன், நீங்கள் நிர்வாகி சலுகைகளுடன் புதிய பயனரை உருவாக்க வேண்டும். இந்தப் பயனர் உயர்மட்ட மேலாண்மைக்கும், தரவுத்தளங்கள் மற்றும் பயனர்களை உருவாக்குவதற்கும் சேவை செய்வார்.
+
+```sh
 curl -XPOST "http://localhost:8086/query" --data-urlencode "q=CREATE USER username WITH PASSWORD 'password' WITH ALL PRIVILEGES"
 ```
 
-இப்போது இந்தப் பயனருடன் [InfluxDB ஷெல்லில்](https://docs.influxdata.com/influxdb/v1.8/tools/shell/) நுழைய influx கிளையண்டைப் பயன்படுத்தலாம்.
+இப்போது இந்தப் பயனருடன் [InfluxDB ஷெல்லில்](https://docs.influxdata.com/influxdb/v1/tools/shell/) நுழைய influx கிளையண்டைப் பயன்படுத்தலாம்.
 
-```
+```sh
 influx -username 'username' -password 'password'
 ```
 
 InfluxDB-இன் ஷெல்லில் நேரடியாகத் தொடர்புகொள்வதன் மூலம், geth அளவீடுகளுக்கான தரவுத்தளத்தையும் பயனரையும் நீங்கள் உருவாக்கலாம்.
 
-```
+```sql
 create database geth
-create user geth with password choosepassword
+create user geth with password '<geth-password>'
 ```
 
 உருவாக்கப்பட்ட உள்ளீடுகளை இதைக் கொண்டு சரிபார்க்கவும்:
 
-```
+```sql
 show databases
 show users
 ```
@@ -85,30 +88,31 @@ InfluxDB இயங்குகிறது மற்றும் Geth-இலி�
 
 ## Geth-ஐத் தயார் செய்தல் {#preparing-geth}
 
-தரவுத்தளத்தை அமைத்த பிறகு, Geth-இல் அளவீடுகள் சேகரிப்பை நாம் இயக்க வேண்டும். `geth --help` இல் உள்ள `METRICS AND STATS OPTIONS` என்பதைக் கவனிக்கவும். அங்கு பல விருப்பங்களைக் காணலாம், இந்த நிலையில் Geth தரவை InfluxDB-க்குள் தள்ள வேண்டும் என்று நாங்கள் விரும்புகிறோம்.
-அடிப்படை அமைப்பானது InfluxDB-ஐ அணுகக்கூடிய இறுதிப்புள்ளியையும் (endpoint) தரவுத்தளத்திற்கான அங்கீகாரத்தையும் குறிப்பிடுகிறது.
+தரவுத்தளத்தை அமைத்த பிறகு, Geth-இல் அளவீடுகள் சேகரிப்பை நாம் இயக்க வேண்டும். `geth --help` இல் உள்ள `METRICS AND STATS OPTIONS`-க்குக் கவனம் செலுத்துங்கள். அங்குப் பல விருப்பங்களைக் காணலாம், இந்த நிலையில் Geth தரவை InfluxDB-க்குள் தள்ள வேண்டும் என்று நாங்கள் விரும்புகிறோம்.
+அடிப்படை அமைப்பு InfluxDB-ஐ அணுகக்கூடிய இறுதிப்புள்ளியையும் தரவுத்தளத்திற்கான அங்கீகாரத்தையும் குறிப்பிடுகிறது.
 
+```sh
+geth --metrics --metrics.influxdb --metrics.influxdb.endpoint "http://127.0.0.1:8086" --metrics.influxdb.database "geth" --metrics.influxdb.username "geth" --metrics.influxdb.password "<geth-password>"
 ```
-geth --metrics --metrics.influxdb --metrics.influxdb.endpoint "http://0.0.0.0:8086" --metrics.influxdb.username "geth" --metrics.influxdb.password "chosenpassword"
-```
 
-இந்தக் கொடிகளை (flags) கிளையண்டைத் தொடங்கும் கட்டளையுடன் சேர்க்கலாம் அல்லது உள்ளமைவு கோப்பில் சேமிக்கலாம்.
+நீங்கள் `geth` பயனரை உருவாக்கியபோது அமைத்த அதே கடவுச்சொல்லைப் பயன்படுத்தவும். இந்தக் கொடிகளை கிளையண்டைத் தொடங்கும் கட்டளையுடன் சேர்க்கலாம் அல்லது உள்ளமைவு கோப்பில் சேமிக்கலாம்.
 
-எடுத்துக்காட்டாக, தரவுத்தளத்தில் அளவீடுகளைப் பட்டியலிடுவதன் மூலம் Geth வெற்றிகரமாகத் தரவைத் தள்ளுகிறது என்பதை நீங்கள் சரிபார்க்கலாம். InfluxDB ஷெல்லில்:
+எடுத்துக்காட்டாக, தரவுத்தளத்தில் அளவீடுகளைப் பட்டியலிடுவதன் மூலம் Geth வெற்றிகரமாகத் தரவைத் தள்ளுகிறதா என்பதை நீங்கள் சரிபார்க்கலாம். InfluxDB ஷெல்லில்:
 
-```
+```sql
 use geth
 show measurements
 ```
 
 ## Grafana-ஐ அமைத்தல் {#setting-up-grafana}
 
-அடுத்த படி Grafana-ஐ நிறுவுவதாகும், இது தரவை வரைபட ரீதியாக விளக்கும். Grafana ஆவணத்தில் உங்கள் சூழலுக்கான நிறுவல் செயல்முறையைப் பின்பற்றவும். நீங்கள் வேறுவிதமாக விரும்பவில்லை என்றால் OSS பதிப்பை நிறுவுவதை உறுதிசெய்யவும்.
-களஞ்சியத்தைப் பயன்படுத்தி Debian விநியோகங்களுக்கான எடுத்துக்காட்டு நிறுவல் படிகள்:
+அடுத்த படி Grafana-ஐ நிறுவுவதாகும், இது தரவை வரைபடமாக விளக்கும். Grafana ஆவணத்தில் உள்ள [உங்கள் சூழலுக்கான நிறுவல் செயல்முறையைப்](https://grafana.com/docs/grafana/latest/setup-grafana/installation/) பின்பற்றவும். உங்களுக்கு வேறு ஏதேனும் தேவைப்படாவிட்டால், OSS பதிப்பை நிறுவுவதை உறுதிசெய்யவும்.
+Grafana களஞ்சியத்தைப் பயன்படுத்தி Debian அல்லது Ubuntu-க்கான எடுத்துக்காட்டு நிறுவல் படிகள்:
 
-```
-curl -tlsv1.3 --proto =https -sL https://packages.grafana.com/gpg.key | sudo apt-key add -
-echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+```sh
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee /etc/apt/sources.list.d/grafana.list
 sudo apt update
 sudo apt install grafana
 sudo systemctl enable grafana-server
@@ -116,37 +120,37 @@ sudo systemctl start grafana-server
 ```
 
 நீங்கள் Grafana-ஐ இயக்கியதும், அதை `localhost:3000` இல் அணுக முடியும்.
-இந்தப் பாதையை அணுக உங்களுக்கு விருப்பமான உலாவியைப் பயன்படுத்தவும், பின்னர் இயல்புநிலை சான்றளிப்புகளைக் கொண்டு (பயனர்: `admin` மற்றும் கடவுச்சொல்: `admin`) உள்நுழையவும். கேட்கப்படும்போது, இயல்புநிலை கடவுச்சொல்லை மாற்றிச் சேமிக்கவும்.
+இந்தப்பாதையை அணுக உங்களுக்கு விருப்பமான உலாவியைப் பயன்படுத்தவும், பின்னர் இயல்புநிலை சான்றளிப்புகளுடன் (பயனர்: `admin` மற்றும் கடவுச்சொல்: `admin`) உள்நுழையவும். கேட்கப்படும்போது, இயல்புநிலை கடவுச்சொல்லை மாற்றிச் சேமிக்கவும்.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 1)](./grafana1.png)
+![Geth கண்காணிப்பிற்கான Grafana டாஷ்போர்டு ஸ்கிரீன்ஷாட் (பேனல் 1)](./grafana1.png)
 
-நீங்கள் Grafana முகப்புப் பக்கத்திற்குத் திருப்பி விடப்படுவீர்கள். முதலில், உங்கள் மூலத் தரவை (source data) அமைக்கவும். இடது பட்டியில் உள்ள உள்ளமைவு ஐகானைக் கிளிக் செய்து "Data sources" என்பதைத் தேர்ந்தெடுக்கவும்.
+நீங்கள் Grafana முகப்புப் பக்கத்திற்குத் திருப்பி விடப்படுவீர்கள். முதலில், உங்கள் மூலத் தரவை அமைக்கவும். மெனுவைத் திறந்து **Connections > Data sources** என்பதைத் தேர்ந்தெடுக்கவும். இந்த வழிகாட்டியில் உள்ள ஸ்கிரீன்ஷாட்கள் Grafana-இன் பழைய பதிப்பிலிருந்து வந்தவை, எனவே உங்கள் திரைகள் சற்று வித்தியாசமாகத் தோன்றலாம்.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 2)](./grafana2.png)
+![Geth கண்காணிப்பிற்கான Grafana டாஷ்போர்டு ஸ்கிரீன்ஷாட் (பேனல் 2)](./grafana2.png)
 
 இதுவரை எந்தத் தரவு மூலங்களும் உருவாக்கப்படவில்லை, ஒன்றை வரையறுக்க "Add data source" என்பதைக் கிளிக் செய்யவும்.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 3)](./grafana3.png)
+![Geth கண்காணிப்பிற்கான Grafana டாஷ்போர்டு ஸ்கிரீன்ஷாட் (பேனல் 3)](./grafana3.png)
 
 இந்த அமைப்பிற்கு, "InfluxDB" என்பதைத் தேர்ந்தெடுத்துத் தொடரவும்.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 4)](./grafana4.png)
+![Geth கண்காணிப்பிற்கான Grafana டாஷ்போர்டு ஸ்கிரீன்ஷாட் (பேனல் 4)](./grafana4.png)
 
-நீங்கள் ஒரே கணினியில் கருவிகளை இயக்குகிறீர்கள் என்றால் தரவு மூல உள்ளமைவு மிகவும் நேரடியானது. தரவுத்தளத்தை அணுகுவதற்கான InfluxDB முகவரி மற்றும் விவரங்களை நீங்கள் அமைக்க வேண்டும். கீழே உள்ள படத்தைப் பார்க்கவும்.
+நீங்கள் ஒரே கணினியில் கருவிகளை இயக்கினால், தரவு மூல உள்ளமைவு மிகவும் நேரடியானது. தரவுத்தளத்தை அணுகுவதற்கான InfluxDB முகவரி மற்றும் விவரங்களை நீங்கள் அமைக்க வேண்டும். கீழே உள்ள படத்தைப் பார்க்கவும்.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 5)](./grafana5.png)
+![Geth கண்காணிப்பிற்கான Grafana டாஷ்போர்டு ஸ்கிரீன்ஷாட் (பேனல் 5)](./grafana5.png)
 
 எல்லாம் முடிந்து InfluxDB-ஐ அணுக முடிந்தால், "Save and test" என்பதைக் கிளிக் செய்து, உறுதிப்படுத்தல் தோன்றும் வரை காத்திருக்கவும்.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 6)](./grafana6.png)
+![Geth கண்காணிப்பிற்கான Grafana டாஷ்போர்டு ஸ்கிரீன்ஷாட் (பேனல் 6)](./grafana6.png)
 
-InfluxDB-இலிருந்து தரவைப் படிக்க Grafana இப்போது அமைக்கப்பட்டுள்ளது. இப்போது நீங்கள் அதை விளக்கி காண்பிக்கும் ஒரு டாஷ்போர்டை (dashboard) உருவாக்க வேண்டும். டாஷ்போர்டுகளின் பண்புகள் JSON கோப்புகளில் குறியாக்கம் செய்யப்பட்டுள்ளன, அவற்றை யார் வேண்டுமானாலும் உருவாக்கலாம் மற்றும் எளிதாக இறக்குமதி செய்யலாம். இடது பட்டியில், "Create and Import" என்பதைக் கிளிக் செய்யவும்.
+Grafana இப்போது InfluxDB-இலிருந்து தரவைப் படிக்க அமைக்கப்பட்டுள்ளது. இப்போது நீங்கள் அதை விளக்கி காண்பிக்கும் ஒரு டாஷ்போர்டை உருவாக்க வேண்டும். டாஷ்போர்டுகளின் பண்புகள் JSON கோப்புகளில் குறியாக்கம் செய்யப்பட்டுள்ளன, இவற்றை யார் வேண்டுமானாலும் உருவாக்கலாம் மற்றும் எளிதாக இறக்குமதி செய்யலாம். மெனுவைத் திறந்து **Dashboards** என்பதைத் தேர்ந்தெடுக்கவும், பின்னர் **New > Import** என்பதைக் கிளிக் செய்யவும்.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 7)](./grafana7.png)
+![Geth கண்காணிப்பிற்கான Grafana டாஷ்போர்டு ஸ்கிரீன்ஷாட் (பேனல் 7)](./grafana7.png)
 
-Geth கண்காணிப்பு டாஷ்போர்டிற்கு, [இந்த டாஷ்போர்டின்](https://grafana.com/grafana/dashboards/13877/) ஐடியை (ID) நகலெடுத்து Grafana-இல் உள்ள "Import page" இல் ஒட்டவும். டாஷ்போர்டைச் சேமித்த பிறகு, அது இப்படி இருக்க வேண்டும்:
+Geth கண்காணிப்பு டாஷ்போர்டுக்கு, [இந்த டாஷ்போர்டின்](https://grafana.com/grafana/dashboards/13877/) ஐடியை நகலெடுத்து Grafana-இல் உள்ள "Import page"-இல் ஒட்டவும். டாஷ்போர்டைச் சேமித்த பிறகு, அது இப்படித் தோன்றும்:
 
-![Grafana dashboard screenshot for Geth monitoring (panel 8)](./grafana8.png)
+![Geth கண்காணிப்பிற்கான Grafana டாஷ்போர்டு ஸ்கிரீன்ஷாட் (பேனல் 8)](./grafana8.png)
 
 உங்கள் டாஷ்போர்டுகளை நீங்கள் மாற்றியமைக்கலாம். ஒவ்வொரு பேனலையும் திருத்தலாம், நகர்த்தலாம், அகற்றலாம் அல்லது சேர்க்கலாம். உங்கள் உள்ளமைவுகளை நீங்கள் மாற்றலாம். இது உங்கள் விருப்பம்! டாஷ்போர்டுகள் எவ்வாறு செயல்படுகின்றன என்பதைப் பற்றி மேலும் அறிய, [Grafana-இன் ஆவணத்தைப்](https://grafana.com/docs/grafana/latest/dashboards/) பார்க்கவும்.
-[எச்சரிக்கை செய்வதிலும் (Alerting)](https://grafana.com/docs/grafana/latest/alerting/) நீங்கள் ஆர்வமாக இருக்கலாம். அளவீடுகள் குறிப்பிட்ட மதிப்புகளை அடையும் போது எச்சரிக்கை அறிவிப்புகளை அமைக்க இது உங்களை அனுமதிக்கிறது. பல்வேறு தகவல் தொடர்பு சேனல்கள் ஆதரிக்கப்படுகின்றன.
+[எச்சரிக்கையளிப்பதிலும் (Alerting)](https://grafana.com/docs/grafana/latest/alerting/) நீங்கள் ஆர்வமாக இருக்கலாம். அளவீடுகள் குறிப்பிட்ட மதிப்புகளை அடையும் போது எச்சரிக்கை அறிவிப்புகளை அமைக்க இது உங்களை அனுமதிக்கிறது. பல்வேறு தகவல் தொடர்பு சேனல்கள் ஆதரிக்கப்படுகின்றன.
