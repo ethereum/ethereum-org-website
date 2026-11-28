@@ -341,6 +341,9 @@ test("check keeps an existing listing only when its text is in the file", async 
   const r = await check(
     {
       issue: "7",
+      criteria: JSON.stringify([
+        { criterion: "Scope", weight: "must", status: "unknown" },
+      ]),
       existing: JSON.stringify([
         { path: "public/content/a.md", text: "Foo   is a node provider" },
         { path: "public/content/a.md", text: "Bar is something else" },
@@ -517,4 +520,25 @@ test("an issue waits on its author until they answer the check's questions", () 
   expect(issueLabel(at(rec({ Audited: "fail" }), asked), asked, true)).toBe(
     REVIEW
   )
+})
+
+test("check refuses criteria that are missing or broken in transit", async () => {
+  const fetchPage = async () => ({ status: 200, url: "", text: "", links: [] })
+  // URL redaction once ate a quote's closing `"`, leaving invalid JSON.
+  const broken =
+    '[{"criterion":"Scope","weight":"must","status":"pass","quote":"Ethereum 1 (rpc.example.io/redacted),"url":"example.io","source":"author"}]'
+  await expect(check({ criteria: broken }, fetchPage)).rejects.toThrow()
+  await expect(check({ criteria: "[]" }, fetchPage)).rejects.toThrow()
+  await expect(check({}, fetchPage)).rejects.toThrow()
+  await expect(
+    check(
+      {
+        criteria: JSON.stringify([
+          { criterion: "Scope", weight: "must", status: "unknown" },
+        ]),
+        facts: "not json",
+      },
+      fetchPage
+    )
+  ).rejects.toThrow()
 })

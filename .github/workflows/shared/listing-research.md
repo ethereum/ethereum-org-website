@@ -51,6 +51,7 @@ A request to list a third-party product, service or resource on ethereum.org. A 
 - `ask_author`: at most 3, about `must` criteria that remain open. Plain questions: no greeting or thanks, since the comment already opens with one.
 - `existing`: where the site already lists the product, with `text` copied exactly from that file on `dev` (it is re-checked and dropped otherwise).
 - `product`, `policy_page`, `policy_why`.
+- Never put a URL inside `quote`, `fact`, `criterion` or a question; links are redacted in transit and break the submission. URLs go only in `url`.
 - The submit job enforces:
   - `pass`/`fail` quotes are re-fetched from `url` (20+ characters, `…` joins pieces of 12+) or become ❔;
   - a pass only the product's own site supports (`source: author`) shows as ☑️, not ✅;

@@ -67,6 +67,9 @@ permissions:
   contents: read
   issues: read
   pull-requests: read
+# Replies come from read-only outside authors, and gh-aw refuses to check out a PR for them; the research never needs PR code.
+checkout:
+  pull-request: false
 engine:
   id: claude
   model: claude-opus-5-5
