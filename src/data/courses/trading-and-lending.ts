@@ -215,5 +215,18 @@ export const tradingAndLendingCourse: Course = {
       type: "choice",
       options: ["careful", "safe", "staking"],
     },
+    {
+      id: "admin-approval",
+      source:
+        "/developers/docs/smart-contracts/upgrading/#pros-and-cons-of-upgrading-smart-contracts",
+      type: "choice",
+      options: ["move", "wallet", "pause"],
+    },
+    {
+      id: "undo",
+      source: "/security/#double-check-transactions",
+      type: "choice",
+      options: ["admin", "nothing", "back"],
+    },
   ],
 }

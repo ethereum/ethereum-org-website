@@ -235,5 +235,17 @@ export const scamsCourse: Course = {
       type: "choice",
       options: ["ignore", "pay", "half"],
     },
+    {
+      id: "label",
+      source: "/security/#double-check-transactions",
+      type: "choice",
+      options: ["sign", "revoke", "close"],
+    },
+    {
+      id: "support",
+      source: "/security/#protect-private-keys",
+      type: "choice",
+      options: ["logo", "reply", "ignore"],
+    },
   ],
 }

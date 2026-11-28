@@ -179,5 +179,18 @@ export const layer2Course: Course = {
       type: "choice",
       options: ["send", "address", "switch"],
     },
+    {
+      id: "across",
+      source:
+        "/guides/how-to-use-a-bridge/#can-i-go-back-to-ethereum-mainnet-after-i-bridge-my-tokens-to-l2",
+      type: "choice",
+      options: ["send", "switch", "bridge"],
+    },
+    {
+      id: "public",
+      source: "/developers/docs/scaling/#rollups",
+      type: "choice",
+      options: ["hidden", "bundle", "bridged"],
+    },
   ],
 }

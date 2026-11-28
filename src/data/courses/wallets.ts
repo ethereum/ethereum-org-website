@@ -275,5 +275,18 @@ export const walletsCourse: Course = {
       type: "choice",
       options: ["connect", "sign", "send"],
     },
+    {
+      id: "typo",
+      source:
+        "/guides/how-to-create-an-ethereum-account/#if-i-lose-my-phonehardware-wallet-do-i-need-to-use-the-same-wallet-app-again-to-recover-the-lost-funds",
+      type: "choice",
+      options: ["word", "new", "sync"],
+    },
+    {
+      id: "privacy",
+      source: "/roadmap/privacy/#private-payments",
+      type: "choice",
+      options: ["separate", "usual", "connect"],
+    },
   ],
 }

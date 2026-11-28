@@ -223,5 +223,18 @@ export const nftsCourse: Course = {
       type: "choice",
       options: ["revoke", "wait", "disconnect"],
     },
+    {
+      id: "pass",
+      source: "/nft/#nft-use-cases",
+      type: "choice",
+      options: ["looks", "sign", "collection"],
+    },
+    {
+      id: "sale",
+      source:
+        "/guides/how-to-revoke-token-access/#when-will-the-contract-permission-expire",
+      type: "choice",
+      options: ["one", "renew", "both"],
+    },
   ],
 }

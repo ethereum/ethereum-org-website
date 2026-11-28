@@ -238,5 +238,18 @@ export const everydayCourse: Course = {
       type: "choice",
       options: ["two", "bank", "anyone"],
     },
+    {
+      id: "concert",
+      source: "/developers/docs/gas/#what-is-gas",
+      type: "choice",
+      options: ["fee", "cut", "free"],
+    },
+    {
+      id: "refund",
+      source:
+        "/guides/how-to-use-a-wallet/#can-i-cancel-or-return-transactions",
+      type: "choice",
+      options: ["edit", "scam", "bank"],
+    },
   ],
 }

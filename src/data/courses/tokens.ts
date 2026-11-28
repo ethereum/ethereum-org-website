@@ -182,5 +182,17 @@ export const tokensCourse: Course = {
       type: "choice",
       options: ["company", "anyone", "wallet"],
     },
+    {
+      id: "pick",
+      source: "/stablecoins/",
+      type: "choice",
+      options: ["company", "crypto", "rules"],
+    },
+    {
+      id: "lookalike",
+      source: "/guides/how-to-id-scam-tokens/#appearing-legitimate",
+      type: "choice",
+      options: ["copy", "gift", "real"],
+    },
   ],
 }

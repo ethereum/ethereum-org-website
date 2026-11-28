@@ -192,5 +192,17 @@ export const sendingCourse: Course = {
       type: "choice",
       options: ["fee", "value", "status"],
     },
+    {
+      id: "helper",
+      source: "/roadmap/account-abstraction/#better-user-experience",
+      type: "choice",
+      options: ["eth", "other", "none"],
+    },
+    {
+      id: "tipped",
+      source: "/developers/docs/gas/#priority-fee",
+      type: "choice",
+      options: ["sooner", "receive", "safer"],
+    },
   ],
 }

@@ -178,5 +178,17 @@ export const ethereumCourse: Course = {
       type: "choice",
       options: ["owner", "file", "nothing"],
     },
+    {
+      id: "raffle",
+      source: "/what-is-the-ethereum-network/",
+      type: "choice",
+      options: ["nodes", "creator", "company"],
+    },
+    {
+      id: "vote",
+      source: "/smart-contracts/#public-record",
+      type: "choice",
+      options: ["check", "creator", "members"],
+    },
   ],
 }

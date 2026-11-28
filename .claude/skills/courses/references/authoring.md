@@ -52,8 +52,8 @@ Every lesson sets `learnMore`: one ethereum.org page offered on the completion s
 
 Every course ends in a course check: the trophy node on the path, route `/courses/<id>/exam/`, data in the course's `exam` array (`ExamStep`, keys under `{course}-exam-`). Passing at `EXAM_PASS_MARK` (80%) earns the trophy; it can be retaken any time and is open before every lesson is done, like the lessons themselves.
 
-- Two choice questions per lesson, in lesson order (ten for a five-lesson course).
-- It tests what the course taught and introduces nothing: each question repeats a lesson question, widget puzzle or stated fact with a new scenario or wording. Never copy a lesson string verbatim, and never use a fact the course (or an earlier course on the path) didn't teach.
+- Two choice questions per lesson, in lesson order (ten for a five-lesson course), then two or three scenario questions at the end.
+- It tests what the course taught and introduces nothing: every question must be answerable from the course (or an earlier course on the path), and never uses a fact they didn't teach. The per-lesson questions repeat a lesson question, widget puzzle or stated fact with a new scenario or wording. The closing scenario questions put a learner in a fresh, realistic situation, ideally one that combines ideas from two lessons, and don't paraphrase any lesson or exam question. Never copy a lesson string verbatim.
 - One attempt per question, graded by the server: after a pass the review screen shows whether each was right, its `-explain` and its source, never the right option (see `accounts.md`). So there are no per-option `fb-` notes, just one `-explain` that teaches the point on its own and works whether the learner was right or wrong (don't open with "Right" or "Wrong").
 - Which option is right goes in the encrypted answer key, not the course file: update `.learner-exam-key.json`, run `pnpm courses:exam-key check` and `encrypt`, and commit `src/data/courses/exam-key.ts` with the question (`accounts.md`).
 - `multi` at most twice per check.
