@@ -44,12 +44,15 @@ There are several light clients in development, including execution, consensus a
 
 - [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): consensus light client in TypeScript
 - [Helios](https://github.com/a16z/helios): combined execution and consensus light client in Rust
+- [colibri.stateless](https://corpuscore.tech/colibri): stateless light client (execution and consensus), in C with bindings to other languages
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): light mode for execution client (in development) in Go
 - [Nimbus](https://nimbus.guide/el-light-client.html): consensus light client in Nim
+- [Myotis](https://github.com/biafra23/myotis): experimental light client using p2p and SNAP, originally built for Android
+- [Nethermind](https://github.com/NethermindEth/nethermind/pull/14457): experimental light client using p2p and SNAP
 
-To our knowledge none of these are considered production-ready yet.
+To our knowledge, only colibri and helios are considered production-ready yet.
 
-There is also a lot of work being done to improve the ways that light clients can access Ethereum data. Currently, light clients rely on RPC requests to full nodes using a client/server model. The [Portal Network](/developers/docs/networking-layer/portal-network/) was first designed to serve this data to light clients over a peer-to-peer network, but its development now focuses on serving the history of past blocks.
+There is also a lot of work being done to improve the ways that light clients can access Ethereum data. Currently, some light clients rely on RPC requests to full nodes using a client/server model, others are utilizing the SNAP protocol for purposes other than its intended use but in the future the data could be requested in a more decentralized way using a dedicated network such as the [Portal Network](https://www.ethportal.net/) that could serve the data to light clients using a peer-to-peer gossip protocol.
 
 Other [roadmap](/roadmap/) items such as a new state tree (currently proposed as a binary tree in [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) and [statelessness](/roadmap/statelessness/) will eventually bring the security guarantees of light clients equal to those of full clients.
 
@@ -59,3 +62,4 @@ Other [roadmap](/roadmap/) items such as a new state tree (currently proposed as
 - [Etan Kissling on light client networking](https://www.youtube.com/watch?v=85MeiMA4dD8)
 - [Etan Kissling on light clients after The Merge](https://www.youtube.com/watch?v=ZHNrAXf3RDE)
 - [Piper Merriam: The winding road to functional light clients](https://snakecharmers.ethereum.org/the-winding-road-to-functional-light-clients/)
+- [Steffen Kux on light clients and stateless clients](https://www.corpuscore.tech/blog/blockchain-client-types)
