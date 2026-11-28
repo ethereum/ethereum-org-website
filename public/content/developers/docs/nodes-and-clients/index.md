@@ -141,6 +141,7 @@ This table summarizes the different clients. All of them pass [client tests](htt
 | [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                         | Archive, Pruned |
 | [ethrex](https://ethrex.xyz/)                                            | Rust       | Linux, macOS          | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Full](#full-sync)                     | Pruned          |
 | [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                         | Archive, Pruned |
+| [xOneRS](https://github.com/xOneSH/xone-rs)                              | Rust       | Linux (amd64)         | pq-devnet-1, Bogota devnet (Mainnet not yet) | —                                                          | —               |
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
@@ -185,6 +186,12 @@ Reth (short for Rust Ethereum) is an Ethereum full node implementation that is f
 Reth is production ready, and suitable for usage in mission-critical environments such as staking or high-uptime services. Performs well in use cases where high performance with great margins is required such as RPC, MEV, indexing, simulations, and P2P activities.
 
 Learn more by checking out the [Reth Book](https://reth.rs/), or the [Reth GitHub repo](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
+
+### xOneRS {#xoners}
+
+xOneRS is an experimental Rust execution client developed by XDCIndia. It is open source under AGPL-3.0-or-later; commercial licences available from xOneSH (hello@xone.sh). Source: https://github.com/xOneSH/xone-rs. It has been run on pq-devnet-1 and follows the Bogota devnet. Ethereum Mainnet is not supported yet. The published image is linux/amd64 only; there is no macOS or arm64 build.
+
+Learn more on the [xOne website](https://xone.sh/) and in the [xOne documentation](https://xone.sh/docs/).
 
 ## Consensus clients {#consensus-clients}
 
