@@ -32,7 +32,8 @@ import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
  *
  * Illustration column, top to bottom: the figure header ("Fig. N", title, in
  * small caps), the drawing, a status line (the step, or the hovered
- * part's definition) and a legend of the role colours.
+ * part's definition) and a legend of the role colours. The step text and
+ * the legend are optional, for simple figures the caption already explains.
  * Panel, top to bottom: presets ("Choose scenario"), transport (primary
  * action, then previous / "Step x of n" / next / reset), caption, readout.
  *
@@ -67,10 +68,10 @@ export interface InteractiveDiagramProps {
   title: ReactNode
   illustration: ReactNode
   /** The status line at rest: what the current step does, in a few words. */
-  status: ReactNode
+  status?: ReactNode
   /** Label and definition per part id, for the status line on hover. */
   parts: Record<string, DiagramPartText>
-  legend: DiagramLegendItem[]
+  legend?: DiagramLegendItem[]
   /** A `DiagramPresets`, for diagrams with example values. */
   presets?: ReactNode
   transport: ReactNode
@@ -81,6 +82,14 @@ export interface InteractiveDiagramProps {
   inViewRef?: Ref<HTMLDivElement>
   /** Off screen: hold animations still. */
   paused?: boolean
+  /**
+   * `stacked`: the panel stays under a smaller drawing at every width, with
+   * presets and transport on one row (pass them `inline`) above the caption
+   * and readout. The hover definition line and "Fig. N" are left out.
+   */
+  layout?: "side" | "stacked"
+  /** On the drawing's wrapper, e.g. a different `max-w-*`. */
+  illustrationClassName?: string
   className?: string
 }
 
@@ -100,6 +109,8 @@ export function InteractiveDiagram({
   readout,
   inViewRef,
   paused,
+  layout = "side",
+  illustrationClassName,
   className,
 }: InteractiveDiagramProps) {
   const t = useTranslations("component-diagrams")
@@ -114,27 +125,45 @@ export function InteractiveDiagram({
       >
         <div ref={inViewRef} data-paused={paused ? "" : undefined}>
           <DiagramStage
+            layout={layout}
             illustration={
               <DiagramIllustration
                 figLabel={
-                  figLabel ??
-                  (fig ? t("diagram-fig", { number: format(fig) }) : undefined)
+                  layout === "stacked"
+                    ? undefined
+                    : (figLabel ??
+                      (fig
+                        ? t("diagram-fig", { number: format(fig) })
+                        : undefined))
                 }
                 title={title}
                 status={status}
                 parts={parts}
                 legend={legend}
+                compact={layout === "stacked"}
+                className={illustrationClassName}
               >
                 {illustration}
               </DiagramIllustration>
             }
             panel={
-              <>
-                {presets}
-                {transport}
-                {stepCaption}
-                {readout}
-              </>
+              layout === "stacked" ? (
+                <>
+                  <div className="flex min-w-0 flex-col gap-4 @[640px]:flex-row @[640px]:flex-wrap @[640px]:items-end @[640px]:gap-x-6 @[640px]:gap-y-3">
+                    {presets}
+                    {transport}
+                  </div>
+                  {stepCaption}
+                  {readout}
+                </>
+              ) : (
+                <>
+                  {presets}
+                  {transport}
+                  {stepCaption}
+                  {readout}
+                </>
+              )
             }
           />
         </div>
@@ -155,11 +184,13 @@ function DiagramIllustration({
   status,
   parts,
   legend,
+  compact,
+  className,
   children,
 }: Pick<
   InteractiveDiagramProps,
   "figLabel" | "title" | "status" | "parts" | "legend"
-> & { children: ReactNode }) {
+> & { compact: boolean; className?: string; children: ReactNode }) {
   const { hovered } = useDiagramHover()
   const hoverTargets = useHoverTargets()
   const part = hovered ? parts[hovered] : undefined
@@ -175,41 +206,52 @@ function DiagramIllustration({
         )}
         {title}
       </p>
-      <div className="mx-auto w-full max-w-2xl py-1" {...hoverTargets}>
+      <div
+        className={cn(
+          "mx-auto w-full py-1",
+          compact ? "max-w-lg" : "max-w-2xl",
+          className
+        )}
+        {...hoverTargets}
+      >
         {children}
       </div>
       {/* Visual only: the step is announced by the caption, and a focused
           label carries its definition itself. Two lines are reserved, so
           nothing below moves when the text changes. */}
-      <p
-        aria-hidden
-        className="m-0 line-clamp-2 min-h-[2lh] text-sm leading-snug text-body-medium"
-      >
-        {part ? (
-          <>
-            <span className="text-body">{part.label}</span>
-            {": "}
-            {part.definition}
-          </>
-        ) : (
-          status
-        )}
-      </p>
-      <ul className="m-0 flex list-none flex-wrap gap-x-4 gap-y-1 p-0 text-sm text-body-medium">
-        {legend.map((item) => (
-          <li key={item.hue} className="m-0 flex items-center gap-1.5">
-            <span
-              aria-hidden
-              className={cn(
-                "size-2.5 rounded-[2px] border",
-                LEGEND_BORDER[item.hue]
-              )}
-              style={{ background: anatomyFill(item.hue, "end", "lit") }}
-            />
-            {item.label}
-          </li>
-        ))}
-      </ul>
+      {!compact && (
+        <p
+          aria-hidden
+          className="m-0 line-clamp-2 min-h-[2lh] text-sm leading-snug text-body-medium"
+        >
+          {part ? (
+            <>
+              <span className="text-body">{part.label}</span>
+              {": "}
+              {part.definition}
+            </>
+          ) : (
+            status
+          )}
+        </p>
+      )}
+      {legend && (
+        <ul className="m-0 flex list-none flex-wrap gap-x-4 gap-y-1 p-0 text-sm text-body-medium">
+          {legend.map((item) => (
+            <li key={item.hue} className="m-0 flex items-center gap-1.5">
+              <span
+                aria-hidden
+                className={cn(
+                  "size-2.5 rounded-[2px] border",
+                  LEGEND_BORDER[item.hue]
+                )}
+                style={{ background: anatomyFill(item.hue, "end", "lit") }}
+              />
+              {item.label}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   )
 }
@@ -230,9 +272,12 @@ export function DiagramPresets<T extends string>({
   options,
   value,
   onChange,
+  inline,
   eventCategory = "Diagram",
   eventAction,
 }: {
+  /** Keep the segments in a row at every width, for the `stacked` layout. */
+  inline?: boolean
   /** Defaults to "Choose scenario". */
   label?: ReactNode
   options: DiagramPresetOption<T>[]
@@ -245,7 +290,12 @@ export function DiagramPresets<T extends string>({
   const label = labelProp ?? t("diagram-presets-label")
   const labelId = useId()
   return (
-    <div className="flex flex-col gap-2">
+    <div
+      className={cn(
+        "flex flex-col gap-2",
+        inline && "@[640px]:shrink-0 @[640px]:grow"
+      )}
+    >
       <span id={labelId} className="text-sm text-body-medium">
         {label}
       </span>
@@ -257,10 +307,19 @@ export function DiagramPresets<T extends string>({
           onChange(id as T)
           trackCustomEvent({ eventCategory, eventAction, eventName: id })
         }}
-        className="@[640px]:flex-col @[640px]:divide-x-0 @[640px]:divide-y"
+        className={cn(
+          !inline && "@[640px]:flex-col @[640px]:divide-x-0 @[640px]:divide-y"
+        )}
       >
         {options.map((option) => (
-          <RadioGroupSegment key={option.id} value={option.id}>
+          <RadioGroupSegment
+            key={option.id}
+            value={option.id}
+            className={cn(
+              inline &&
+                "leading-[1.2] @[640px]:flex-auto @[640px]:whitespace-nowrap"
+            )}
+          >
             {option.label}
           </RadioGroupSegment>
         ))}
@@ -287,9 +346,15 @@ export function DiagramTransport({
   canGoPrevious,
   canGoNext,
   canReset,
+  inline,
   eventCategory = "Diagram",
   eventAction,
 }: {
+  /**
+   * From 640px, the primary action and the step row share one row; the
+   * action stretches, so the row stays edge to edge when it wraps.
+   */
+  inline?: boolean
   primary: {
     label: ReactNode
     icon: ReactNode
@@ -312,11 +377,18 @@ export function DiagramTransport({
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
   return (
-    <div className="flex flex-col gap-2">
+    <div
+      className={cn(
+        "flex flex-col gap-2",
+        inline &&
+          "@[640px]:shrink-0 @[640px]:grow @[640px]:flex-row @[640px]:items-center @[640px]:gap-2"
+      )}
+    >
       <Button
         size="sm"
         onClick={primary.onClick}
         disabled={primary.disabled}
+        className={cn(inline && "@[640px]:flex-1")}
         customEventOptions={{
           eventCategory,
           eventAction,
@@ -337,7 +409,12 @@ export function DiagramTransport({
         >
           <ChevronPrev />
         </Button>
-        <span className="min-w-0 flex-1 text-center text-sm text-body-medium tabular-nums">
+        <span
+          className={cn(
+            "min-w-0 flex-1 text-center text-sm text-body-medium tabular-nums",
+            inline && "@[640px]:flex-none @[640px]:px-2"
+          )}
+        >
           {current > 0
             ? t("diagram-step-counter", {
                 current: format(current),
@@ -419,7 +496,7 @@ export function DiagramReadout({
   return (
     <dl
       aria-label={label ?? t("diagram-readout-label")}
-      className="m-0 grid grid-cols-[auto_minmax(0,1fr)] gap-x-3 gap-y-1 border-t border-border pt-3 text-sm"
+      className="m-0 grid grid-cols-[fit-content(60%)_minmax(0,1fr)] gap-x-3 gap-y-1 border-t border-border pt-3 text-sm"
     >
       {rows.map((row, i) => (
         <div key={i} className="contents">

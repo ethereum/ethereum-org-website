@@ -3,6 +3,7 @@ import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
+import RollupCostDiagram from "@/components/Diagrams/RollupCost"
 import FileContributors from "@/components/FileContributors"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
@@ -34,7 +35,6 @@ import PageJsonLD from "./page-jsonld"
 
 import layer2NetworksCalloutImage from "@/public/images/counter-screen-network-towers-rings-collage-cut-out.png"
 import optimisticRollupImage from "@/public/images/layer-2/optimistic_rollup.png"
-import rollupImage from "@/public/images/layer-2/rollup-2.png"
 import zkRollupImage from "@/public/images/layer-2/zk_rollup.png"
 import layer2CalloutImage from "@/public/images/man-and-dog-playing.png"
 import heroImg from "@/public/images/network-column-rooftop-piping-construction.png"
@@ -259,15 +259,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <p>{t("page-layer-2-learn-how-does-layer-2-work-rollups-1")}</p>
               <p>{t("page-layer-2-learn-how-does-layer-2-work-rollups-2")}</p>
             </div>
-            <div className="grid place-items-center">
-              {/* Diagram contains text -- size by width, keep legible on mobile */}
-              <Image
-                src={rollupImage}
-                alt=""
-                className="h-auto w-full max-w-2xl object-contain"
-                sizes="(max-width: 992px) 100vw, 45vw"
-              />
-            </div>
+            <RollupCostDiagram className="w-full" />
           </Section>
 
           <Section id="rollup-cards">

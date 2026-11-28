@@ -11,14 +11,17 @@ import { cn } from "@/lib/utils/cn"
  * the rest (the grid mirrors in RTL); narrower, it stacks directly under the
  * illustration. A container query on the card, not a viewport breakpoint: the
  * docs column is only ~450-800px wide. Use it through `InteractiveDiagram`.
+ * `layout="stacked"` keeps the panel under the illustration at every width.
  */
 export function DiagramStage({
   illustration,
   panel,
+  layout = "side",
   className,
 }: {
   illustration: ReactNode
   panel: ReactNode
+  layout?: "side" | "stacked"
   className?: string
 }) {
   return (
@@ -30,7 +33,11 @@ export function DiagramStage({
     >
       <div
         data-diagram-grid=""
-        className="grid gap-3 p-(--card-pad) @[640px]:grid-cols-[minmax(0,1fr)_15rem] @[640px]:items-center @[640px]:gap-6"
+        className={cn(
+          "grid gap-3 p-(--card-pad)",
+          layout === "side" &&
+            "@[640px]:grid-cols-[minmax(0,1fr)_15rem] @[640px]:items-center @[640px]:gap-6"
+        )}
       >
         <div className="flex min-w-0 justify-center">{illustration}</div>
         <div data-diagram-panel="" className="flex min-w-0 flex-col gap-4">

@@ -8,7 +8,8 @@ import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
  * Step state shared by every interactive diagram. `idle` is the state before
  * the primary action; steps run from `idle + 1` to `last`. `run` starts the
  * first step (or carries on from the current one) and advances on its own,
- * one dwell per step; `goTo` stops a run and jumps. With reduced motion
+ * one dwell per step; `advance` moves one step per call instead, for
+ * diagrams read at the reader's pace; `goTo` stops a run and jumps. With reduced motion
  * nothing moves, so steps get longer reading time. `last` may change with
  * the preset (e.g. a run that fails early).
  */
@@ -67,11 +68,14 @@ export function useStepPlayer({
     setIsRunning(next < last)
   }
 
+  const advance = () => goTo(atEnd ? idle + 1 : step + 1)
+
   return {
     step,
     isRunning,
     atEnd,
     run,
+    advance,
     goTo,
     reset: () => goTo(idle),
     prefersReducedMotion,
