@@ -46,7 +46,9 @@ sidebarDepth: 3
 
 ### OpenAI {#openai}
 
-একটি লার্জ ল্যাঙ্গুয়েজ মডেলের জন্য, আমি [OpenAI](https://openai.com/) দিয়ে শুরু করার সিদ্ধান্ত নিয়েছি। এই টিউটোরিয়ালের অ্যাপ্লিকেশনটি চালানোর জন্য আপনাকে API অ্যাক্সেসের জন্য অর্থ প্রদান করতে হবে। ন্যূনতম $5 পেমেন্ট যথেষ্টর চেয়েও বেশি।
+একটি লার্জ ল্যাঙ্গুয়েজ মডেলের জন্য, আমি [OpenAI](https://openai.com/) দিয়ে শুরু করার সিদ্ধান্ত নিয়েছি। এই টিউটোরিয়ালের অ্যাপ্লিকেশনটি চালানোর জন্য আপনাকে API অ্যাক্সেসের জন্য অর্থ প্রদান করতে হবে। 5 ডলারের ন্যূনতম পেমেন্ট যথেষ্টর চেয়েও বেশি।
+
+OpenAI Python লাইব্রেরি অন্য যেকোনো OpenAI-সামঞ্জস্যপূর্ণ এন্ডপয়েন্টের সাথেও যোগাযোগ করতে পারে, যার মধ্যে আপনার নিজের কম্পিউটারে চালানো একটি মডেলও অন্তর্ভুক্ত। এটিকে অন্য কোথাও কীভাবে পয়েন্ট করতে হয় তার জন্য [একটি LLM-এর সাথে ইন্টারফেসিং](#interface-llm) দেখুন।
 
 ## ধাপে ধাপে ডেভেলপমেন্ট {#step-by-step}
 
@@ -516,10 +518,10 @@ print(make_prompt(wethusdc_quotes + wethwbtc_quotes, future_time, wethusdc_pool.
 
 ### একটি LLM-এর সাথে ইন্টারফেসিং {#interface-llm}
 
-এরপর, আমরা একটি আসল LLM-কে প্রম্পট করি এবং একটি প্রত্যাশিত ভবিষ্যৎ মান পাই। আমি OpenAI ব্যবহার করে এই প্রোগ্রামটি লিখেছি, তাই আপনি যদি অন্য কোনো প্রোভাইডার ব্যবহার করতে চান, তবে আপনাকে এটি সামঞ্জস্য করতে হবে।
+এরপর, আমরা একটি প্রকৃত LLM-কে প্রম্পট করি এবং একটি প্রত্যাশিত ভবিষ্যৎ মান গ্রহণ করি। আমি OpenAI ব্যবহার করে এই প্রোগ্রামটি লিখেছি, তাই আপনি যদি অন্য কোনো প্রোভাইডার ব্যবহার করতে চান, তবে আপনাকে এটি অ্যাডজাস্ট করতে হবে।
 
 1. একটি [OpenAI অ্যাকাউন্ট](https://auth.openai.com/create-account) পান
-2. [অ্যাকাউন্টে ফান্ড যোগ করুন](https://platform.openai.com/settings/organization/billing/overview)—লেখার সময় ন্যূনতম পরিমাণ হলো $5
+2. [অ্যাকাউন্টে ফান্ড যোগ করুন](https://platform.openai.com/settings/organization/billing/overview)—লেখার সময় ন্যূনতম পরিমাণ হলো 5 ডলার
 3. [একটি API কী তৈরি করুন](https://platform.openai.com/settings/organization/api-keys)
 4. কমান্ড লাইনে, API কী এক্সপোর্ট করুন যাতে আপনার প্রোগ্রাম এটি ব্যবহার করতে পারে
 
@@ -527,35 +529,52 @@ print(make_prompt(wethusdc_quotes + wethwbtc_quotes, future_time, wethusdc_pool.
    export OPENAI_API_KEY=sk-<the rest of the key goes here>
    ```
 
-5. চেকআউট করুন এবং এজেন্ট রান করুন
+5. এজেন্ট চেকআউট করুন
 
    ```sh
    git checkout 04-interface-llm
+   ```
+
+6. রিপোজিটরির কোডটি `gpt-4-turbo` মডেল ব্যবহার করে, যা [OpenAI 23 অক্টোবর, 2026-এ বন্ধ করে দেবে](https://developers.openai.com/api/docs/deprecations)। এটিকে `gpt-6-luna`-এ পরিবর্তন করুন, যা বর্তমানের একটি কম খরচের মডেল। যেহেতু `gpt-6-luna` একটি রিজনিং মডেল, তাই কমান্ডটি রিজনিং বন্ধ করে দেয় (`reasoning_effort="none"`, যা `temperature`-কে ব্যবহারযোগ্য রাখে) এবং বাতিল হওয়া `max_tokens` প্যারামিটারটিকে `max_completion_tokens` দিয়ে প্রতিস্থাপন করে।
+
+   ```sh
+   sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
+   ```
+
+7. এজেন্ট রান করুন
+
+   ```sh
    uv run agent.py
    ```
+
+আপনি যদি অন্য কোনো OpenAI-সামঞ্জস্যপূর্ণ এন্ডপয়েন্ট ব্যবহার করতে চান, যেমন আপনার লোকালি হোস্ট করা কোনো মডেল, তবে OpenAI লাইব্রেরি `OPENAI_BASE_URL` এনভায়রনমেন্ট ভেরিয়েবল থেকে এন্ডপয়েন্টটি পড়ে। এটি সেট করুন, সার্ভার যদি কী চেক না করে তবে `OPENAI_API_KEY`-এ যেকোনো নন-এম্পটি মান রাখুন, এবং `agent.py` ও `test-predictor.py`-এ থাকা `gpt-6-luna`-কে সার্ভার দ্বারা প্রদান করা মডেলের নামে পরিবর্তন করুন। সার্ভার যদি `reasoning_effort` প্রত্যাখ্যান করে, তবে সেই প্যারামিটারটি সরিয়ে দিন।
+
+```sh
+export OPENAI_BASE_URL=http://localhost:<port>/v1
+```
 
 নিচে নতুন কোড দেওয়া হলো।
 
 ```python
 from openai import OpenAI
 
-open_ai = OpenAI()  # ক্লায়েন্ট OPENAI_API_KEY এনভায়রনমেন্ট ভেরিয়েবলটি পড়ে
+open_ai = OpenAI()  # ক্লায়েন্ট OPENAI_API_KEY এনভায়রনমেন্ট ভেরিয়েবলটি পড়ে।
 ```
 
-OpenAI API ইমপোর্ট এবং ইনস্ট্যানশিয়েট করুন।
+OpenAI API ইমপোর্ট এবং ইনস্ট্যানশিয়েট করুন। ক্লায়েন্ট `OPENAI_BASE_URL`-ও পড়ে যদি এটি সেট করা থাকে, তাই একই কোড অন্যান্য OpenAI-সামঞ্জস্যপূর্ণ এন্ডপয়েন্টের সাথে কাজ করে।
 
 ```python
 response = open_ai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-6-luna", reasoning_effort="none",
     messages=[
         {"role": "user", "content": prompt}
     ],
     temperature=0.0,
-    max_tokens=16,
+    max_completion_tokens=16,
 )
 ```
 
-রেসপন্স তৈরি করতে OpenAI API (`open_ai.chat.completions.create`) কল করুন।
+রেসপন্স তৈরি করতে OpenAI API (`open_ai.chat.completions.create`) কল করুন। শূন্যের একটি `temperature` সবচেয়ে অনুমানযোগ্য উত্তরের জন্য জিজ্ঞাসা করে, এবং `max_completion_tokens` উত্তরের দৈর্ঘ্য সীমিত করে, যার মধ্যে কেবল একটি সংখ্যা থাকা প্রয়োজন। একটি রিজনিং মডেলের ক্ষেত্রে, `max_completion_tokens` মডেলটি চিন্তা করার জন্য যে টোকেনগুলো ব্যবহার করে সেগুলোও গণনা করে, যা `reasoning_effort`-কে `none`-এ সেট করার আরেকটি কারণ।
 
 ```python
 expected_price = Decimal(response.choices[0].message.content.strip())
@@ -570,7 +589,7 @@ else:
     print(f"Sell, I expect the price to go down by {current_price - expected_price} USD")
 ```
 
-দাম আউটপুট করুন এবং একটি কেনা বা বেচার সুপারিশ প্রদান করুন।
+মূল্য আউটপুট করুন এবং একটি কেনা বা বিক্রির সুপারিশ প্রদান করুন।
 
 #### প্রেডিকশনগুলো পরীক্ষা করা {#testing-the-predictions}
 
@@ -692,15 +711,15 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
 
 লাভজনক দিনের সংখ্যা এবং লোকসানের দিনের সংখ্যা গণনা করতে [`filter`](https://www.w3schools.com/python/ref_func_filter.asp) ব্যবহার করুন। ফলাফলটি হলো একটি ফিল্টার অবজেক্ট, যার দৈর্ঘ্য পেতে আমাদের সেটিকে একটি তালিকায় রূপান্তর করতে হবে।
 
-### ট্রানজ্যাকশন জমা দেওয়া {#submit-txn}
+### ট্রানজ্যাকশন সাবমিট করা {#submit-txn}
 
-এখন আমাদের আসলে ট্রানজ্যাকশন জমা দিতে হবে। তবে, সিস্টেমটি প্রমাণিত হওয়ার আগে, আমি এই মুহূর্তে আসল অর্থ ব্যয় করতে চাই না। এর পরিবর্তে, আমরা মেইননেট-এর একটি লোকাল ফর্ক তৈরি করব এবং সেই নেটওয়ার্কে "ট্রেড" করব।
+এখন আমাদের আসলে ট্রানজ্যাকশন সাবমিট করতে হবে। তবে, সিস্টেমটি প্রমাণিত হওয়ার আগে, আমি এই মুহূর্তে আসল অর্থ ব্যয় করতে চাই না। এর পরিবর্তে, আমরা মেইননেট-এর একটি লোকাল ফর্ক তৈরি করব এবং সেই নেটওয়ার্ক-এ "ট্রেড" করব।
 
 একটি লোকাল ফর্ক তৈরি এবং ট্রেডিং সক্ষম করার ধাপগুলো নিচে দেওয়া হলো।
 
 1. [Foundry](https://getfoundry.sh/introduction/installation) ইনস্টল করুন
 
-2. [`anvil`](https://getfoundry.sh/anvil/overview) শুরু করুন
+2. [`anvil`](https://getfoundry.sh/anvil/overview) চালু করুন
 
    ```sh
    anvil --fork-url https://eth.drpc.org --block-time 12
@@ -708,16 +727,16 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
 
    `anvil` Foundry-এর ডিফল্ট URL, http://localhost:8545-এ শুনছে, তাই ব্লকচেইন ম্যানিপুলেট করার জন্য আমরা যে [`cast` কমান্ড](https://getfoundry.sh/cast/overview) ব্যবহার করি তার জন্য আমাদের URL নির্দিষ্ট করার প্রয়োজন নেই।
 
-3. `anvil`-এ রান করার সময়, দশটি টেস্ট অ্যাকাউন্ট থাকে যেগুলোতে ETH থাকে—প্রথমটির জন্য এনভায়রনমেন্ট ভেরিয়েবলগুলো সেট করুন
+3. `anvil`-এ চালানোর সময়, দশটি টেস্ট অ্যাকাউন্ট থাকে যেগুলোতে ETH রয়েছে—প্রথমটির জন্য এনভায়রনমেন্ট ভেরিয়েবলগুলো সেট করুন
 
    ```sh
    PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
    ADDRESS=`cast wallet address $PRIVATE_KEY`
    ```
 
-4. এগুলো হলো সেই কন্ট্রাক্ট যা আমাদের ব্যবহার করতে হবে। [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) হলো ইউনিসোয়াপ v3 কন্ট্রাক্ট যা আমরা আসলে ট্রেড করার জন্য ব্যবহার করি। আমরা সরাসরি পুলের মাধ্যমে ট্রেড করতে পারতাম, তবে এটি অনেক সহজ।
+4. এগুলো হলো সেই কন্ট্রাক্ট যা আমাদের ব্যবহার করতে হবে। [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) হলো Uniswap v3 কন্ট্রাক্ট যা আমরা আসলে ট্রেড করার জন্য ব্যবহার করি। আমরা সরাসরি পুলের মাধ্যমে ট্রেড করতে পারতাম, কিন্তু এটি অনেক সহজ।
 
-   নিচের দুটি ভেরিয়েবল হলো WETH এবং USDC-এর মধ্যে সোয়াপ করার জন্য প্রয়োজনীয় ইউনিসোয়াপ v3 পাথ।
+   নিচের দুটি ভেরিয়েবল হলো WETH এবং USDC-এর মধ্যে সোয়াপ করার জন্য প্রয়োজনীয় Uniswap v3 পাথ।
 
    ```sh
    WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
@@ -745,23 +764,26 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
        --private-key $PRIVATE_KEY
    ```
 
-   `approve` কলটি একটি অ্যালাউন্স তৈরি করে যা `SwapRouter`-কে আমাদের কিছু টোকেন খরচ করার অনুমতি দেয়। কন্ট্রাক্টগুলো ইভেন্ট মনিটর করতে পারেবিধা না, তাই আমরা যদি সরাসরি `SwapRouter` কন্ট্রাক্টে টোকেন হস্তান্তর করি, তবে এটি জানতে পারবে না যে এটিকে পেমেন্ট করা হয়েছে। এর পরিবর্তে, আমরা `SwapRouter` কন্ট্রাক্টকে একটি নির্দিষ্ট পরিমাণ খরচ করার অনুমতি দিই, এবং তারপর `SwapRouter` তা করে। এটি `SwapRouter` দ্বারা কল করা একটি ফাংশনের মাধ্যমে করা হয়, তাই এটি জানতে পারে যে এটি সফল হয়েছে কিনা।
+   `approve` কলটি একটি অ্যালাউন্স তৈরি করে যা `SwapRouter`-কে আমাদের কিছু টোকেন খরচ করার অনুমতি দেয়। কন্ট্রাক্টগুলো ইভেন্ট মনিটর করতে পারে না, তাই আমরা যদি সরাসরি `SwapRouter` কন্ট্রাক্ট-এ টোকেন হস্তান্তর করি, তবে এটি জানতে পারবে না যে এটিকে পেমেন্ট করা হয়েছে। এর পরিবর্তে, আমরা `SwapRouter` কন্ট্রাক্ট-কে একটি নির্দিষ্ট পরিমাণ খরচ করার অনুমতি দিই, এবং তারপর `SwapRouter` এটি করে। এটি `SwapRouter` দ্বারা কল করা একটি ফাংশনের মাধ্যমে করা হয়, তাই এটি জানতে পারে যে এটি সফল হয়েছে কিনা।
 
-7. আপনার কাছে উভয় টোকেন পর্যাপ্ত পরিমাণে আছে কিনা তা যাচাই করুন।
+7. যাচাই করুন যে আপনার কাছে উভয় টোকেন পর্যাপ্ত পরিমাণে রয়েছে।
 
    ```sh
    cast call $WETH_ADDRESS "balanceOf(address)" $ADDRESS | cast from-wei
    echo `cast call $USDC_ADDRESS "balanceOf(address)" $ADDRESS | cast to-dec`/10^6 | bc
    ```
 
-এখন যেহেতু আমাদের কাছে WETH এবং USDC আছে, আমরা আসলে এজেন্টটি রান করতে পারি।
+এখন যেহেতু আমাদের কাছে WETH এবং USDC রয়েছে, আমরা আসলে এজেন্টটি রান করতে পারি।
 
 ```sh
-git checkout 05-trade
+git checkout -f 05-trade
+sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
 uv run agent.py
 ```
 
-আউটপুটটি অনেকটা এরকম দেখাবে:
+`-f` পূর্ববর্তী ব্রাঞ্চে আপনার করা মডেল পরিবর্তনটি বাতিল করে দেয়, তাই `sed` কমান্ডটি `agent.py`-এর নতুন সংস্করণে এটি আবার প্রয়োগ করে।
+
+আউটপুটটি এর মতো দেখাবে:
 
 ```
 (ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
@@ -780,11 +802,11 @@ USDC Balance: 929143.797116
 WETH Balance: 499
 ```
 
-এটি আসলে ব্যবহার করার জন্য, আপনার কয়েকটি ছোট পরিবর্তনের প্রয়োজন।
+এটি আসলে ব্যবহার করার জন্য, আপনার কয়েকটি ছোটখাটো পরিবর্তন প্রয়োজন।
 
-- 14 নম্বর লাইনে, `MAINNET_URL`-কে একটি আসল অ্যাক্সেস পয়েন্টে পরিবর্তন করুন, যেমন `https://eth.drpc.org`
-- 28 নম্বর লাইনে, `PRIVATE_KEY`-কে আপনার নিজস্ব প্রাইভেট কী-তে পরিবর্তন করুন
-- যদি না আপনি খুব ধনী হন এবং একটি অপ্রমাণিত এজেন্টের জন্য প্রতিদিন 1 ETH কিনতে বা বেচতে পারেন, তবে আপনি `WETH_TRADE_AMOUNT` কমানোর জন্য 29 নম্বর লাইন পরিবর্তন করতে চাইতে পারেন
+- 14 নম্বর লাইনে, `MAINNET_URL`-কে একটি বাস্তব অ্যাক্সেস পয়েন্টে পরিবর্তন করুন, যেমন `https://eth.drpc.org`
+- 28 নম্বর লাইনে, `PRIVATE_KEY`-কে আপনার নিজের প্রাইভেট কী-তে পরিবর্তন করুন
+- আপনি যদি খুব ধনী না হন এবং একটি অপ্রমাণিত এজেন্টের জন্য প্রতিদিন 1 ETH কিনতে বা বিক্রি করতে না পারেন, তবে আপনি `WETH_TRADE_AMOUNT` কমানোর জন্য 29 পরিবর্তন করতে চাইতে পারেন
 
 #### কোড ব্যাখ্যা {#trading-code}
 
@@ -797,7 +819,7 @@ USDC_TO_WETH=bytes.fromhex("A0b86991c6218b36c1d19D4a2e9Eb0cE3606eB480001F4C02aaA
 PRIVATE_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
 ```
 
-4 নম্বর ধাপে আমরা যে ভেরিয়েবলগুলো ব্যবহার করেছি সেগুলোই।
+ধাপ 4-এ আমরা যে ভেরিয়েবলগুলো ব্যবহার করেছি সেগুলোই।
 
 ```python
 WETH_TRADE_AMOUNT=1
@@ -814,7 +836,7 @@ ERC20_ABI = [
 ]
 ```
 
-আসলে ট্রেড করার জন্য, আমাদের `approve` ফাংশন প্রয়োজন। আমরা আগের এবং পরের ব্যালেন্সও দেখাতে চাই, তাই আমাদের `balanceOf`-ও প্রয়োজন।
+আসলে ট্রেড করার জন্য, আমাদের `approve` ফাংশনটি প্রয়োজন। আমরা আগের এবং পরের ব্যালেন্সও দেখাতে চাই, তাই আমাদের `balanceOf`-ও প্রয়োজন।
 
 ```python
 SWAP_ROUTER_ABI = [
@@ -822,7 +844,7 @@ SWAP_ROUTER_ABI = [
 ]
 ```
 
-`SwapRouter` ABI-তে আমাদের কেবল `exactInput` প্রয়োজন। একটি সম্পর্কিত ফাংশন রয়েছে, `exactOutput`, যা আমরা ঠিক একটি WETH কেনার জন্য ব্যবহার করতে পারতাম, তবে সরলতার জন্য আমরা উভয় ক্ষেত্রেই কেবল `exactInput` ব্যবহার করি।
+`SwapRouter` ABI-তে আমাদের কেবল `exactInput` প্রয়োজন। একটি সম্পর্কিত ফাংশন, `exactOutput` রয়েছে, যা আমরা ঠিক একটি WETH কিনতে ব্যবহার করতে পারতাম, কিন্তু সরলতার জন্য আমরা উভয় ক্ষেত্রেই কেবল `exactInput` ব্যবহার করি।
 
 ```python
 account = w3.eth.account.from_key(PRIVATE_KEY)
@@ -832,7 +854,7 @@ swap_router = w3.eth.contract(
 )
 ```
 
-[`account`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html) এবং `SwapRouter` কন্ট্রাক্টের জন্য Web3 সংজ্ঞা।
+[`account`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html) এবং `SwapRouter` কন্ট্রাক্ট-এর জন্য Web3 সংজ্ঞা।
 
 ```python
 def txn_params() -> dict:
@@ -844,7 +866,7 @@ def txn_params() -> dict:
     }
 ```
 
-ট্রানজ্যাকশন প্যারামিটার। আমাদের এখানে একটি ফাংশন প্রয়োজন কারণ [নন্স](https://en.wikipedia.org/wiki/Cryptographic_nonce) প্রতিবার পরিবর্তন হতে হবে।
+ট্রানজ্যাকশন প্যারামিটার। আমাদের এখানে একটি ফাংশন প্রয়োজন কারণ [নন্স](https://en.wikipedia.org/wiki/Cryptographic_nonce) প্রতিবার পরিবর্তন করতে হবে।
 
 ```python
 def approve_token(contract: Contract, amount: int):
@@ -858,7 +880,7 @@ def approve_token(contract: Contract, amount: int):
     tx_hash = w3.eth.send_raw_transaction(signed_txn.raw_transaction)
 ```
 
-Web3-তে আমরা এভাবেই একটি ট্রানজ্যাকশন পাঠাই। প্রথমে আমরা ট্রানজ্যাকশন তৈরি করতে [`Contract` অবজেক্ট](https://web3py.readthedocs.io/en/stable/web3.contract.html) ব্যবহার করি। তারপর আমরা `PRIVATE_KEY` ব্যবহার করে ট্রানজ্যাকশন সাইন করতে [`web3.eth.account.sign_transaction`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction) ব্যবহার করি। সবশেষে, আমরা ট্রানজ্যাকশন পাঠাতে [`w3.eth.send_raw_transaction`](https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction) ব্যবহার করি।
+এভাবেই আমরা Web3-তে একটি ট্রানজ্যাকশন পাঠাই। প্রথমে আমরা ট্রানজ্যাকশন তৈরি করতে [`Contract` অবজেক্ট](https://web3py.readthedocs.io/en/stable/web3.contract.html) ব্যবহার করি। তারপর আমরা `PRIVATE_KEY` ব্যবহার করে ট্রানজ্যাকশন সাইন করতে [`web3.eth.account.sign_transaction`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction) ব্যবহার করি। সবশেষে, আমরা ট্রানজ্যাকশন পাঠাতে [`w3.eth.send_raw_transaction`](https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction) ব্যবহার করি।
 
 ```python
     print(f"Approve transaction sent: {tx_hash.hex()}")
@@ -866,7 +888,7 @@ Web3-তে আমরা এভাবেই একটি ট্রানজ্�
     print("Approve transaction mined.")
 ```
 
-[`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) ট্রানজ্যাকশন মাইন হওয়া পর্যন্ত অপেক্ষা করে। প্রয়োজন হলে এটি রসিদ ফেরত দেয়।
+[`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) ট্রানজ্যাকশন মাইন হওয়া পর্যন্ত অপেক্ষা করে। প্রয়োজন হলে এটি রসিদ রিটার্ন করে।
 
 ```python
 SELL_PARAMS = {
@@ -916,7 +938,7 @@ def sell():
     print("Sell transaction mined.")
 ```
 
-`buy()` এবং `sell()` ফাংশনগুলো প্রায় অভিন্ন। প্রথমে আমরা `SwapRouter`-এর জন্য পর্যাপ্ত অ্যালাউন্স অনুমোদন করি এবং তারপর আমরা সঠিক পাথ এবং পরিমাণ দিয়ে এটিকে কল করি।
+`buy()` এবং `sell()` ফাংশনগুলো প্রায় অভিন্ন। প্রথমে আমরা `SwapRouter`-এর জন্য পর্যাপ্ত অ্যালাউন্স অনুমোদন করি, এবং তারপর আমরা সঠিক পাথ এবং পরিমাণ দিয়ে এটিকে কল করি।
 
 ```python
 def balances():
@@ -944,7 +966,7 @@ print("Account balances after trade:")
 balances()
 ```
 
-এই এজেন্টটি বর্তমানে কেবল একবার কাজ করে। তবে, আপনি এটিকে [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) থেকে রান করে অথবা 368-400 লাইনগুলোকে একটি লুপে র‍্যাপ করে এবং পরবর্তী সাইকেলের সময় হওয়া পর্যন্ত অপেক্ষা করতে [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) ব্যবহার করে ক্রমাগত কাজ করার জন্য পরিবর্তন করতে পারেন।
+এই এজেন্টটি বর্তমানে কেবল একবার কাজ করে। তবে, আপনি এটিকে অবিচ্ছিন্নভাবে কাজ করার জন্য পরিবর্তন করতে পারেন, হয় এটিকে [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) থেকে রান করে অথবা 368-397 লাইনগুলোকে একটি লুপে র‍্যাপ করে এবং পরবর্তী সাইকেলের সময় না হওয়া পর্যন্ত অপেক্ষা করতে [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) ব্যবহার করে।
 
 ## সম্ভাব্য উন্নতি {#improvements}
 
@@ -960,9 +982,9 @@ balances()
 
 ### আপনি যদি আপনার ট্রেডিং কৌশল গোপন রাখতে চান তবে কী করবেন? {#secret}
 
-এআই ভেন্ডররা তাদের LLM-এ আপনার পাঠানো কোয়েরিগুলো দেখতে পারে, যা আপনার এজেন্টের সাথে তৈরি করা আপনার জিনিয়াস ট্রেডিং সিস্টেমকে প্রকাশ করে দিতে পারে। এমন একটি ট্রেডিং সিস্টেম যা খুব বেশি মানুষ ব্যবহার করে তা মূল্যহীন কারণ আপনি যখন কিনতে চান তখন খুব বেশি মানুষ কেনার চেষ্টা করে (এবং দাম বেড়ে যায়) এবং আপনি যখন বিক্রি করতে চান তখন বিক্রি করার চেষ্টা করে (এবং দাম কমে যায়)।
+এআই ভেন্ডররা তাদের LLM-এ আপনার পাঠানো কোয়েরিগুলো দেখতে পারে, যা আপনার এজেন্টের সাথে তৈরি করা আপনার জিনিয়াস ট্রেডিং সিস্টেমকে প্রকাশ করে দিতে পারে। এমন একটি ট্রেডিং সিস্টেম যা খুব বেশি মানুষ ব্যবহার করে তা মূল্যহীন, কারণ আপনি যখন কিনতে চান তখন খুব বেশি মানুষ কেনার চেষ্টা করে (এবং দাম বেড়ে যায়) এবং আপনি যখন বিক্রি করতে চান তখন বিক্রি করার চেষ্টা করে (এবং দাম কমে যায়)।
 
-এই সমস্যা এড়াতে আপনি স্থানীয়ভাবে একটি LLM রান করতে পারেন, উদাহরণস্বরূপ, [LM-Studio](https://lmstudio.ai/) ব্যবহার করে।
+এই সমস্যা এড়াতে আপনি লোকালি একটি LLM রান করতে পারেন, উদাহরণস্বরূপ, [llama.cpp](https://github.com/ggml-org/llama.cpp)-এর `llama-server` ব্যবহার করে। এটি একটি OpenAI-সামঞ্জস্যপূর্ণ এন্ডপয়েন্ট প্রদান করে, তাই আপনাকে কেবল `OPENAI_BASE_URL` এবং মডেলের নাম সেট করতে হবে, যেমনটি [একটি LLM-এর সাথে ইন্টারফেসিং](#interface-llm)-এ ব্যাখ্যা করা হয়েছে।
 
 ### এআই বট থেকে এআই এজেন্ট {#bot-to-agent}
 
