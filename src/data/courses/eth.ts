@@ -214,5 +214,17 @@ export const ethCourse: Course = {
       type: "choice",
       options: ["exchange", "solo", "pool"],
     },
+    {
+      id: "unwrap",
+      source: "/wrapped-eth/#weth-vs-eth-differences",
+      type: "choice",
+      options: ["wei", "short", "weth"],
+    },
+    {
+      id: "day",
+      source: "/what-is-ether/supply/#eth-issuance",
+      type: "choice",
+      options: ["tips", "grows", "net"],
+    },
   ],
 }

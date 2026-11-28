@@ -196,5 +196,17 @@ export const upgradesCourse: Course = {
       type: "choice",
       options: ["bug", "kept", "rename"],
     },
+    {
+      id: "late",
+      source: "/developers/docs/nodes-and-clients/client-diversity/#finality",
+      type: "choice",
+      options: ["carries", "stalls", "reverts"],
+    },
+    {
+      id: "early",
+      source: "/roadmap/fusaka/#blob-parameter-only-forks",
+      type: "choice",
+      options: ["now", "moment", "remote"],
+    },
   ],
 }

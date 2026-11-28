@@ -188,5 +188,18 @@ export const rollupsCourse: Course = {
       type: "choice",
       options: ["signers", "message", "native"],
     },
+    {
+      id: "late",
+      source:
+        "/developers/docs/scaling/optimistic-rollups/#what-is-an-optimistic-rollup",
+      type: "choice",
+      options: ["data", "closed", "validators"],
+    },
+    {
+      id: "zk-exit",
+      source: "/developers/docs/scaling/zk-rollups/#what-are-zk-rollups",
+      type: "choice",
+      options: ["week", "proof", "same"],
+    },
   ],
 }
