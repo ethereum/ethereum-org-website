@@ -34,6 +34,8 @@ With The Graph, developers can benefit from:
 
 Follow this [quick-start](https://thegraph.com/docs/en/quick-start/) guide to create, deploy, and query a subgraph within 5 minutes.
 
+[Pinax](https://pinax.network/) operates hosted [Firehose](https://firehose.streamingfast.io/) and [Substreams](https://docs.substreams.dev/) endpoints alongside [StreamingFast](https://streamingfast.io/).
+
 ## Client diversity {#client-diversity}
 
 [Client diversity](/developers/docs/nodes-and-clients/client-diversity/) is important for the overall health of the Ethereum network because it provides resilience to bugs and exploits. There are now several client diversity dashboards including [clientdiversity.org](https://clientdiversity.org/), [rated.network](https://www.rated.network), [supermajority.info](https://supermajority.info//) and [Ethernodes](https://ethernodes.org/).
