@@ -91,7 +91,7 @@ Most Ethereum blocks are currently assembled by a small number of specialised bu
 
 ### State growth and statelessness {#state-growth-and-statelessness}
 
-Every full node stores Ethereum's state, so the rate at which that state grows sets a floor on the cost of running one. In the short term, research focuses on repricing the operations that create state and on expiring history that nodes no longer need to keep. In the longer term, the plan is to replace Ethereum's hexary Merkle-Patricia trie with a binary tree that produces much smaller proofs, and to move towards statelessness, so that a node can verify blocks without holding the entire state. Earlier work in this area assumed Verkle trees; the current proposal is a unified binary tree, which carries over the witness gas schedule specified for that earlier line of work.
+Every full node stores Ethereum's state, so the rate at which that state grows sets a floor on the cost of running one. In the short term, research focuses on repricing the operations that create state and on expiring history that nodes no longer need to keep. In the longer term, the plan is to replace Ethereum's hexary Merkle-Patricia trie with a binary tree that produces much smaller proofs, and to move towards statelessness, so that a node can verify blocks without holding the entire state. Earlier work in this area assumed Verkle trees; the current proposal is a partitioned binary tree ([EIP-8297](https://eips.ethereum.org/EIPS/eip-8297)), which leaves the gas schedule unchanged.
 
 #### Background reading {#background-reading-22}
 
@@ -100,8 +100,8 @@ Every full node stores Ethereum's state, so the rate at which that state grows s
 
 #### Recent research {#recent-research-22}
 
-- [EIP-7864: Ethereum state using a unified binary tree](https://eips.ethereum.org/EIPS/eip-7864)
-- [EIP-4762: Statelessness gas cost changes](https://eips.ethereum.org/EIPS/eip-4762)
+- [EIP-8297: Partitioned Binary Tree](https://eips.ethereum.org/EIPS/eip-8297)
+- [EIP-8347: Offline State Migration to the PBT](https://eips.ethereum.org/EIPS/eip-8347)
 - [Why decentralized state is important for Ethereum](https://ethresear.ch/t/why-decentralized-state-is-important-for-ethereum/25622)
 
 ### Post-quantum cryptography {#post-quantum-cryptography}

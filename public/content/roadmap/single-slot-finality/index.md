@@ -57,7 +57,7 @@ The problem with scaling aggregation by growing the number of validators per sub
 
 ## Current progress {#current-progress}
 
-SSF is in the research phase. It is not expected to ship for several years, likely after other substantial upgrades such as a new state tree (currently proposed as a binary tree in [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) and [Danksharding](/roadmap/danksharding/).
+SSF is in the research phase. It is not expected to ship for several years, likely after other substantial upgrades such as a new state tree (currently proposed as a partitioned binary tree in [EIP-8297](https://eips.ethereum.org/EIPS/eip-8297)) and [Danksharding](/roadmap/danksharding/).
 
 ## Further reading {#further-reading}
 
