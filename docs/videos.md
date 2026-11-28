@@ -168,15 +168,10 @@ Video pages are included in the sitemap through the same content-driven path as 
 Videos are linked in the **Learn** section of the site navigation via `src/lib/nav/buildNavigation.ts`:
 
 ```typescript
-{
-  id: "learn/videos",
-  label: t("nav-videos-label"),
-  description: t("nav-videos-description"),
-  href: "/videos/",
-}
+{ label: t("videos"), href: "/videos/" }
 ```
 
-Translation keys `nav-videos-label` and `nav-videos-description` live in `src/intl/en/common.json`.
+The `videos` translation key lives in `src/intl/en/common.json`.
 
 ## Translation Namespace
 
