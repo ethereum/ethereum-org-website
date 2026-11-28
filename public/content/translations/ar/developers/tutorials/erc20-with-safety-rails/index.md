@@ -11,36 +11,38 @@ published: 2022-08-15
 
 ## المقدمة {#introduction}
 
-من أعظم الأشياء في إيثيريوم هو عدم وجود سلطة مركزية يمكنها تعديل أو التراجع عن معاملاتك. ومن أكبر المشكلات في إيثيريوم هو عدم وجود سلطة مركزية تتمتع بصلاحية التراجع عن أخطاء المستخدمين أو المعاملات غير المشروعة. في هذه المقالة، ستتعرف على بعض الأخطاء الشائعة التي يرتكبها المستخدمون مع الرموز المميزة من نوع [<span dir="ltr">ERC-20</span>](/developers/docs/standards/tokens/erc-20/)، بالإضافة إلى كيفية إنشاء عقود <span dir="ltr">ERC-20</span> تساعد المستخدمين على تجنب تلك الأخطاء، أو تمنح سلطة مركزية بعض الصلاحيات (على سبيل المثال، تجميد الحسابات).
+من أعظم الأشياء في إيثيريوم هو عدم وجود سلطة مركزية يمكنها تعديل معاملاتك أو التراجع عنها. ومن أكبر المشكلات في إيثيريوم هو عدم وجود سلطة مركزية تمتلك القدرة على التراجع عن أخطاء المستخدمين أو المعاملات غير المشروعة. في هذه المقالة، ستتعرف على بعض الأخطاء الشائعة التي يرتكبها المستخدمون مع الرموز المميزة [<span dir="ltr">ERC-20</span>](/developers/docs/standards/tokens/erc-20/)، بالإضافة إلى كيفية إنشاء عقود <span dir="ltr">ERC-20</span> تساعد المستخدمين على تجنب تلك الأخطاء، أو تمنح سلطة مركزية بعض الصلاحيات (على سبيل المثال، تجميد الحسابات).
 
-لاحظ أنه على الرغم من أننا سنستخدم [عقد الرمز المميز <span dir="ltr">ERC-20</span> من أوبن زبلن](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20)، إلا أن هذه المقالة لا تشرحه بتفصيل كبير. يمكنك العثور على هذه المعلومات [هنا](/developers/tutorials/erc20-annotated-code).
+لاحظ أنه على الرغم من أننا سنستخدم [عقد الرمز المميز <span dir="ltr">ERC-20</span> من OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20)، إلا أن هذه المقالة لا تشرحه بتفصيل كبير. يمكنك العثور على هذه المعلومات [هنا](/developers/tutorials/erc20-annotated-code).
 
 إذا كنت ترغب في رؤية الكود المصدري الكامل:
 
-1. افتح [بيئة التطوير المتكاملة Remix](https://remix.ethereum.org/).
+1. افتح [Remix IDE](https://remix.ethereum.org/).
 2. انقر على أيقونة استنساخ GitHub (![clone github icon](icon-clone.png)).
 3. استنسخ مستودع GitHub `https://github.com/qbzzt/20220815-erc20-safety-rails`.
 4. افتح **contracts > erc20-safety-rails.sol**.
 
+لاحظ أن المستودع كُتب لإصدار OpenZeppelin Contracts <span dir="ltr">4.7.2</span>، حيث تُسمى الدالة التي تتجاوزها هذه المقالة `_beforeTokenTransfer`. تستخدم هذه المقالة الإصدار الحالي OpenZeppelin Contracts <span dir="ltr">5.x</span>، حيث تتجاوز `_update` بدلاً من ذلك، لذا يختلف الكود في هذه المقالة قليلاً عن الكود الموجود في المستودع.
+
 ## إنشاء عقد <span dir="ltr">ERC-20</span> {#creating-an-erc-20-contract}
 
-قبل أن نتمكن من إضافة وظيفة حواجز الأمان، نحتاج إلى عقد <span dir="ltr">ERC-20</span>. في هذه المقالة، سنستخدم [معالج عقود أوبن زبلن](https://docs.openzeppelin.com/contracts/5.x/wizard). افتحه في متصفح آخر واتبع هذه التعليمات:
+قبل أن نتمكن من إضافة وظيفة حواجز الأمان، نحتاج إلى عقد <span dir="ltr">ERC-20</span>. في هذه المقالة، سنستخدم [OpenZeppelin Contracts Wizard](https://docs.openzeppelin.com/contracts/5.x/wizard). افتحه في متصفح آخر واتبع هذه التعليمات:
 
 1. حدد **ERC20**.
 2. أدخل هذه الإعدادات:
 
    | المعلمة | القيمة |
-   | -------------- | ---------------- |
-   | الاسم | SafetyRailsToken |
-   | الرمز | SAFE |
-   | السك المسبق | 1000 |
-   | الميزات | لا شيء |
-   | التحكم في الوصول | Ownable |
-   | قابلية الترقية | لا شيء |
+   | -------------- | ------------------------- |
+   | Name | SafetyRailsToken |
+   | Symbol | SAFE |
+   | Premint | 1000 |
+   | Features | None (قم بإلغاء تحديد **Permit**) |
+   | Access Control | Ownable |
+   | Upgradability | None |
 
 3. قم بالتمرير لأعلى وانقر على **Open in Remix** (لـ Remix) أو **Download** لاستخدام بيئة مختلفة. سأفترض أنك تستخدم Remix، وإذا كنت تستخدم شيئًا آخر، فما عليك سوى إجراء التغييرات المناسبة.
 4. لدينا الآن عقد <span dir="ltr">ERC-20</span> يعمل بكامل طاقته. يمكنك توسيع `.deps` > `npm` لرؤية الكود المستورد.
-5. قم بتجميع ونشر وتجربة العقد للتأكد من أنه يعمل كعقد <span dir="ltr">ERC-20</span>. إذا كنت بحاجة إلى تعلم كيفية استخدام Remix، [استخدم هذا البرنامج التعليمي](https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth).
+5. قم بتجميع العقد ونشره وتجربته للتأكد من أنه يعمل كعقد <span dir="ltr">ERC-20</span>. إذا كنت بحاجة إلى تعلم كيفية استخدام Remix، [استخدم هذا البرنامج التعليمي](https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth).
 
 ## الأخطاء الشائعة {#common-mistakes}
 
@@ -54,16 +56,16 @@ published: 2022-08-15
 
 ### منع التحويلات {#preventing-transfers}
 
-يتضمن عقد <span dir="ltr">ERC-20</span> من أوبن زبلن [خطافًا (hook)، `_beforeTokenTransfer`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L364-L368)، يتم استدعاؤه قبل تحويل الرمز المميز. افتراضيًا، لا يفعل هذا الخطاف أي شيء، ولكن يمكننا تعليق وظائفنا الخاصة عليه، مثل عمليات التحقق التي تتراجع إذا كانت هناك مشكلة.
+في عقد <span dir="ltr">ERC-20</span> من OpenZeppelin، يمر كل تغيير في الأرصدة، سواء كان تحويلاً أو سكاً أو حرقاً، عبر [دالة داخلية، `_update`](https://docs.openzeppelin.com/contracts/5.x/api/token/erc20#ERC20-_update-address-address-uint256-). يمكننا تجاوزها لربط وظيفتنا الخاصة بها، مثل عمليات التحقق التي تتراجع إذا كانت هناك مشكلة.
 
-لاستخدام الخطاف، أضف هذه الدالة بعد المُنشئ:
+للقيام بذلك، أضف هذه الدالة بعد المُنشئ:
 
 ```solidity
-    function _beforeTokenTransfer(address from, address to, uint256 amount)
+    function _update(address from, address to, uint256 value)
         internal virtual
         override(ERC20)
     {
-        super._beforeTokenTransfer(from, to, amount);
+        super._update(from, to, value);
     }
 ```
 
@@ -73,28 +75,51 @@ published: 2022-08-15
         internal virtual
 ```
 
-تعني الكلمة الرئيسية `virtual` أنه تمامًا كما ورثنا الوظائف من `ERC20` وتجاوزنا هذه الدالة، يمكن للعقود الأخرى أن ترث منا وتتجاوز هذه الدالة.
+تعني الكلمة المفتاحية `virtual` أنه تمامًا كما ورثنا الوظائف من `ERC20` وتجاوزنا هذه الدالة، يمكن للعقود الأخرى أن ترث منا وتتجاوز هذه الدالة.
 
 ```solidity
         override(ERC20)
 ```
 
-يجب أن نحدد صراحةً أننا [نتجاوز](https://docs.soliditylang.org/en/v0.8.15/contracts.html#function-overriding) تعريف الرمز المميز ERC20 لـ `_beforeTokenTransfer`. بشكل عام، التعريفات الصريحة أفضل بكثير، من الناحية الأمنية، من التعريفات الضمنية - لا يمكنك أن تنسى أنك فعلت شيئًا إذا كان أمامك مباشرة. وهذا هو السبب أيضًا في أننا بحاجة إلى تحديد `_beforeTokenTransfer` الخاص بالفئة الفائقة (superclass) الذي نتجاوزه.
+يجب أن نحدد صراحةً أننا [نتجاوز](https://docs.soliditylang.org/en/latest/contracts.html#function-overriding) تعريف الرمز المميز ERC20 لـ `_update`. بشكل عام، التعريفات الصريحة أفضل بكثير من الناحية الأمنية من التعريفات الضمنية - لا يمكنك أن تنسى أنك فعلت شيئًا إذا كان أمامك مباشرة. وهذا هو السبب أيضًا في أننا بحاجة إلى تحديد `_update` الخاص بالفئة العليا (superclass) التي نتجاوزها.
 
 ```solidity
-        super._beforeTokenTransfer(from, to, amount);
+        super._update(from, to, value);
 ```
 
-يستدعي هذا السطر الدالة `_beforeTokenTransfer` للعقد أو العقود التي ورثنا منها والتي تحتوي عليها. في هذه الحالة، هذا هو `ERC20` فقط، ولا يحتوي `Ownable` على هذا الخطاف. على الرغم من أن `ERC20._beforeTokenTransfer` لا يفعل أي شيء حاليًا، إلا أننا نستدعيه في حالة إضافة وظائف في المستقبل (ونقرر بعد ذلك إعادة نشر العقد، لأن العقود لا تتغير بعد النشر).
+يستدعي هذا السطر الدالة `_update` للعقد أو العقود التي ورثنا منها والتي تحتوي عليها. في هذه الحالة، هذا هو `ERC20` فقط، ولا يحتوي `Ownable` على هذه الدالة. على عكس الخطاف (hook) الفارغ، فإن `ERC20._update` هو ما ينقل الرموز المميزة فعليًا، لذا من الضروري استدعاؤه. تسبق عمليات التحقق الخاصة بنا هذا الاستدعاء، بحيث يمكنها التراجع قبل أي تغييرات في الرصيد.
 
 ### برمجة المتطلبات {#coding-the-requirements}
 
-نريد إضافة هذه المتطلبات إلى الدالة:
+نريد إضافة هذه المتطلبات إلى الدالة. نظرًا لأن `_update` يُستدعى أيضًا عند حرق الرموز المميزة، مع تعيين `to` إلى `address(0)`، فإننا نتحقق من `to` فقط عندما لا يكون `address(0)`:
 
-- لا يمكن أن يساوي العنوان `to` العنوان `address(this)`، وهو عنوان عقد <span dir="ltr">ERC-20</span> نفسه.
+- لا يمكن أن يساوي العنوان `to` قيمة `address(this)`، وهو عنوان عقد <span dir="ltr">ERC-20</span> نفسه.
 - لا يمكن أن يكون العنوان `to` فارغًا، يجب أن يكون إما:
-  - حساب مملوك خارجيًا (EOA). لا يمكننا التحقق مما إذا كان العنوان هو EOA بشكل مباشر، ولكن يمكننا التحقق من رصيد ETH للعنوان. تمتلك حسابات EOA دائمًا رصيدًا تقريبًا، حتى لو لم تعد مستخدمة - فمن الصعب تصفيتها حتى آخر Wei.
-  - عقد ذكي. يعد اختبار ما إذا كان العنوان عقدًا ذكيًا أصعب قليلاً. يوجد رمز التشغيل الذي يتحقق من طول الكود الخارجي، ويسمى [`EXTCODESIZE`](https://www.evm.codes/#3b)، ولكنه غير متوفر مباشرة في Solidity. علينا استخدام [Yul](https://docs.soliditylang.org/en/v0.8.15/yul.html)، وهي لغة التجميع الخاصة بآلة إيثيريوم الافتراضية (EVM)، للقيام بذلك. هناك قيم أخرى يمكننا استخدامها من Solidity ([`<address>.code` و `<address>.codehash`](https://docs.soliditylang.org/en/v0.8.15/units-and-global-variables.html#members-of-address-types))، لكنها تكلف أكثر.
+  - حساب مملوك خارجياً (EOA). لا يمكننا التحقق مما إذا كان العنوان هو حساب مملوك خارجياً (EOA) بشكل مباشر، ولكن يمكننا التحقق من رصيد ETH الخاص بالعنوان. تمتلك الحسابات المملوكة خارجياً (EOA) رصيدًا دائمًا تقريبًا، حتى لو لم تعد مستخدمة - فمن الصعب تصفيرها حتى آخر Wei.
+  - عقد ذكي. يعد اختبار ما إذا كان العنوان عقدًا ذكيًا أصعب قليلاً. يوجد رمز التشغيل الذي يتحقق من طول الكود الخارجي، ويسمى [`EXTCODESIZE`](https://www.evm.codes/#3b). في Solidity، يمكنك الحصول عليه باستخدام [`<address>.code.length`](https://docs.soliditylang.org/en/latest/units-and-global-variables.html#members-of-address-types)، والذي يحوله المترجم إلى `EXTCODESIZE`. هنا نستخدم [Yul](https://docs.soliditylang.org/en/latest/yul.html)، وهي لغة تجميع EVM، لإظهار كيفية استدعاء رمز التشغيل مباشرة. لاحظ أنه منذ [<span dir="ltr">EIP-7702</span>](https://eips.ethereum.org/EIPS/eip-7702)، يمكن أن يحتوي الحساب المملوك خارجياً (EOA) أيضًا على كود (تفويض إلى عقد)، لذا فإن هذا التحقق يحدد الحسابات التي تحتوي على كود، وليس العقود بشكل صارم. بالنسبة لغرضنا، وهو رفض العناوين الفارغة، فهذا جيد.
+
+إليك الدالة الكاملة:
+
+```solidity
+    function _update(address from, address to, uint256 value)
+        internal virtual
+        override(ERC20)
+    {
+        // الحرق يرسل الرموز المميزة إلى العنوان(0)، لا تقم بعمل كتلة له
+        if (to != address(0)) {
+            require(to != address(this), "Can't send tokens to the contract address");
+
+            bool isToContract;
+            assembly {
+               isToContract := gt(extcodesize(to), 0)
+            }
+
+            require(to.balance != 0 || isToContract, "Can't send tokens to an empty address");
+        }
+
+        super._update(from, to, value);
+    }
+```
 
 دعنا نراجع الكود الجديد سطرًا بسطر:
 
@@ -102,7 +127,7 @@ published: 2022-08-15
         require(to != address(this), "Can't send tokens to the contract address");
 ```
 
-هذا هو المطلب الأول، تحقق من أن `to` و `this(address)` ليسا نفس الشيء.
+هذا هو المطلب الأول، التحقق من أن `to` و `this(address)` ليسا نفس الشيء.
 
 ```solidity
         bool isToContract;
@@ -111,13 +136,13 @@ published: 2022-08-15
         }
 ```
 
-هذه هي الطريقة التي نتحقق بها مما إذا كان العنوان عقدًا. لا يمكننا تلقي المخرجات مباشرة من Yul، لذلك نحدد بدلاً من ذلك متغيرًا للاحتفاظ بالنتيجة (`isToContract` في هذه الحالة). الطريقة التي تعمل بها Yul هي أن كل رمز التشغيل يعتبر دالة. لذلك نستدعي أولاً [`EXTCODESIZE`](https://www.evm.codes/#3b) للحصول على حجم العقد، ثم نستخدم [`GT`](https://www.evm.codes/#11) للتحقق من أنه ليس صفرًا (نحن نتعامل مع أعداد صحيحة غير سالبة، لذلك بالطبع لا يمكن أن تكون سالبة). ثم نكتب النتيجة في `isToContract`.
+هذه هي الطريقة التي نتحقق بها مما إذا كان العنوان عقدًا. لا يمكننا تلقي المخرجات مباشرة من Yul، لذا بدلاً من ذلك نحدد متغيرًا للاحتفاظ بالنتيجة (`isToContract` في هذه الحالة). الطريقة التي يعمل بها Yul هي أن كل رمز التشغيل يُعتبر دالة. لذا نستدعي أولاً [`EXTCODESIZE`](https://www.evm.codes/#3b) للحصول على حجم العقد، ثم نستخدم [`GT`](https://www.evm.codes/#11) للتحقق من أنه ليس صفرًا (نحن نتعامل مع أعداد صحيحة غير سالبة، لذا بالطبع لا يمكن أن تكون سالبة). ثم نكتب النتيجة في `isToContract`.
 
 ```solidity
         require(to.balance != 0 || isToContract, "Can't send tokens to an empty address");
 ```
 
-وأخيرًا، لدينا الفحص الفعلي للعناوين الفارغة.
+وأخيرًا، لدينا التحقق الفعلي من العناوين الفارغة.
 
 ## الوصول الإداري {#admin-access}
 
@@ -132,22 +157,22 @@ published: 2022-08-15
 
 توفر أوبن زبلن آليتين لتمكين الوصول الإداري:
 
-- عقود [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable) لها مالك واحد. الدوال التي تحتوي على [المُعدِّل (modifier)](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) `onlyOwner` لا يمكن استدعاؤها إلا من قبل هذا المالك. يمكن للمالكين نقل الملكية إلى شخص آخر أو التخلي عنها تمامًا. حقوق جميع الحسابات الأخرى متطابقة عادةً.
+- عقود [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable) لها مالك واحد. الدوال التي تحتوي على [المُعدِّل (modifier)](https://docs.soliditylang.org/en/latest/contracts.html#function-modifiers) `onlyOwner` لا يمكن استدعاؤها إلا من قبل هذا المالك. يمكن للمالكين نقل الملكية إلى شخص آخر أو التخلي عنها تمامًا. حقوق جميع الحسابات الأخرى متطابقة عادةً.
 - عقود [`AccessControl`](https://docs.openzeppelin.com/contracts/5.x/access-control#role-based-access-control) لديها [تحكم في الوصول قائم على الأدوار (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control).
 
 من أجل البساطة، نستخدم في هذه المقالة `Ownable`.
 
 ### تجميد وإلغاء تجميد العقود {#freezing-and-thawing-contracts}
 
-يتطلب تجميد وإلغاء تجميد العقود عدة تغييرات:
+يتطلب تجميد العقود وإلغاء تجميدها عدة تغييرات:
 
-- [تخطيط (mapping)](https://www.tutorialspoint.com/solidity/solidity_mappings.htm) من العناوين إلى [القيم المنطقية (booleans)](https://en.wikipedia.org/wiki/Boolean_data_type) لتتبع العناوين المجمدة. جميع القيم تكون صفرًا في البداية، والتي تُفسر للقيم المنطقية على أنها خطأ (false). هذا ما نريده لأنه افتراضيًا لا يتم تجميد الحسابات.
+- [تخطيط (mapping)](https://docs.soliditylang.org/en/latest/types.html#mapping-types) من العناوين إلى [القيم المنطقية (booleans)](https://en.wikipedia.org/wiki/Boolean_data_type) لتتبع العناوين المجمدة. تكون جميع القيم في البداية صفرًا، والتي تُفسر بالنسبة للقيم المنطقية على أنها خطأ (false). هذا ما نريده لأن الحسابات لا تكون مجمدة افتراضيًا.
 
   ```solidity
       mapping(address => bool) public frozenAccounts;
   ```
 
-- [أحداث](https://www.tutorialspoint.com/solidity/solidity_events.htm) لإبلاغ أي شخص مهتم عند تجميد حساب أو إلغاء تجميده. من الناحية الفنية، الأحداث ليست مطلوبة لهذه الإجراءات، ولكنها تساعد الكود خارج السلسلة على التمكن من الاستماع إلى هذه الأحداث ومعرفة ما يحدث. يعتبر من الممارسات الجيدة للعقد الذكي أن يصدرها عندما يحدث شيء قد يكون ذا صلة بشخص آخر.
+- [أحداث](https://docs.soliditylang.org/en/latest/contracts.html#events) لإبلاغ أي شخص مهتم عند تجميد حساب أو إلغاء تجميده. من الناحية الفنية، الأحداث ليست مطلوبة لهذه الإجراءات، ولكنها تساعد الكود خارج السلسلة على التمكن من الاستماع إلى هذه الأحداث ومعرفة ما يحدث. يُعتبر من الممارسات الجيدة للعقد الذكي أن يصدرها عندما يحدث شيء قد يكون ذا صلة بشخص آخر.
 
   تتم فهرسة الأحداث بحيث يكون من الممكن البحث عن جميع الأوقات التي تم فيها تجميد حساب أو إلغاء تجميده.
 
@@ -157,7 +182,7 @@ published: 2022-08-15
     event AccountThawed(address indexed _addr);
   ```
 
-- دوال لتجميد وإلغاء تجميد الحسابات. هاتان الدالتان متطابقتان تقريبًا، لذلك سنراجع دالة التجميد فقط.
+- دوال لتجميد الحسابات وإلغاء تجميدها. هاتان الدالتان متطابقتان تقريبًا، لذا سنراجع دالة التجميد فقط.
 
   ```solidity
       function freezeAccount(address addr)
@@ -165,19 +190,19 @@ published: 2022-08-15
         onlyOwner
   ```
 
-  يمكن استدعاء الدوال المميزة بـ [`public`](https://www.tutorialspoint.com/solidity/solidity_contracts.htm) من عقود ذكية أخرى أو مباشرة عن طريق معاملة.
+  يمكن استدعاء الدوال المميزة بـ [`public`](https://docs.soliditylang.org/en/latest/contracts.html#function-visibility) من عقود ذكية أخرى أو مباشرة بواسطة معاملة.
 
   ```solidity
     {
         require(!frozenAccounts[addr], "Account already frozen");
         frozenAccounts[addr] = true;
         emit AccountFrozen(addr);
-    }  // freezeAccount
+    }  // تجميد الحساب
   ```
 
-  إذا كان الحساب مجمدًا بالفعل، تراجع. بخلاف ذلك، قم بتجميده و `emit` حدثًا.
+  إذا كان الحساب مجمدًا بالفعل، تراجع. بخلاف ذلك، قم بتجميده و `emit` حدث.
 
-- قم بتغيير `_beforeTokenTransfer` لمنع نقل الأموال من حساب مجمد. لاحظ أنه لا يزال من الممكن تحويل الأموال إلى الحساب المجمد.
+- قم بتغيير `_update` لمنع نقل الأموال من حساب مجمد. لاحظ أنه لا يزال من الممكن تحويل الأموال إلى الحساب المجمد. ضع هذا السطر في بداية الدالة، خارج كتلة `if`، بحيث يمنع أيضًا حرق الرموز المميزة من حساب مجمد.
 
   ```solidity
        require(!frozenAccounts[from], "The account is frozen");
@@ -185,7 +210,7 @@ published: 2022-08-15
 
 ### تنظيف الأصول {#asset-cleanup}
 
-لتحرير الرموز المميزة من نوع <span dir="ltr">ERC-20</span> التي يحتفظ بها هذا العقد، نحتاج إلى استدعاء دالة في عقد الرمز المميز الذي تنتمي إليه، إما [`transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer) أو [`approve`](https://eips.ethereum.org/EIPS/eip-20#approve). لا جدوى من إهدار غاز في هذه الحالة على المخصصات (allowances)، قد نقوم بالتحويل مباشرة.
+لتحرير الرموز المميزة <span dir="ltr">ERC-20</span> التي يحتفظ بها هذا العقد، نحتاج إلى استدعاء دالة في عقد الرمز المميز الذي تنتمي إليه، إما [`transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer) أو [`approve`](https://eips.ethereum.org/EIPS/eip-20#approve). لا جدوى من إهدار الغاز في هذه الحالة على المخصصات (allowances)، بل من الأفضل أن نقوم بالتحويل مباشرة.
 
 ```solidity
     function cleanupERC20(
@@ -198,7 +223,11 @@ published: 2022-08-15
         IERC20 token = IERC20(erc20);
 ```
 
-هذه هي الصيغة لإنشاء كائن لعقد عندما نتلقى العنوان. يمكننا القيام بذلك لأن لدينا تعريف الرموز المميزة ERC20 كجزء من الكود المصدري (انظر السطر 4)، ويتضمن هذا الملف [تعريف IERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)، وهي الواجهة لعقد <span dir="ltr">ERC-20</span> من أوبن زبلن.
+هذه هي الصيغة لإنشاء كائن لعقد عندما نتلقى العنوان. لاستخدامه، نحتاج إلى [تعريف IERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)، وهي الواجهة لعقد <span dir="ltr">ERC-20</span> من OpenZeppelin. يجلب سطر `import {ERC20} from ...` الخاص بـ Wizard فقط `ERC20`، لذا أضف هذا السطر بجوار الواردات (imports) الأخرى في أعلى الملف:
+
+```solidity
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+```
 
 ```solidity
         uint balance = token.balanceOf(address(this));
@@ -206,7 +235,7 @@ published: 2022-08-15
     }
 ```
 
-هذه دالة تنظيف، لذلك من المفترض أننا لا نريد ترك أي رموز مميزة. بدلاً من الحصول على الرصيد من المستخدم يدويًا، قد نقوم أيضًا بأتمتة العملية.
+هذه دالة تنظيف، لذا من المفترض أننا لا نريد ترك أي رموز مميزة. بدلاً من الحصول على الرصيد من المستخدم يدويًا، من الأفضل أن نقوم بأتمتة العملية.
 
 ## الخاتمة {#conclusion}
 
