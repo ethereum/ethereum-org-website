@@ -9,7 +9,7 @@ breadcrumb: "明文签名"
 published: 2026-05-11
 ---
 
-大多数重大的以太坊漏洞利用都有相同的最后一步：用户授权了一笔他们无法真正理解的交易。硬件钱包显示原始的十六进制调用数据，更糟糕的是，它们迫使你开启盲签。软件钱包会显示解码后的字段，但前提是它们能识别该合约。当它们无法识别时（无论是因为协议是新的、应用程序被攻破，还是设备离线），用户只能盲签。
+大多数重大的以太坊漏洞利用都有相同的最后一步：用户授权了一笔他们无法真正理解的交易。硬件钱包显示原始的十六进制调用数据，更糟糕的是，它们迫使你开启盲签（blind signing）。软件钱包会显示解码后的字段，但前提是它们能识别该合约。当它们无法识别时，无论是因为协议是新的、应用被攻破，还是设备离线，用户都在进行盲签。
 
 [ERC-7730](https://eips.ethereum.org/EIPS/eip-7730) 定义了一种标准的 JSON 格式，用于描述你的合约函数调用的*含义*。
 
@@ -18,7 +18,7 @@ published: 2026-05-11
 > **兑换**  
 > 发送：1,000 USDC  
 > 最低接收：0.42 WETH  
-> 协议：尤尼斯瓦普 V3 (Uniswap V3)
+> 协议：Uniswap V2
 
 或者是一句人类和代理都能读懂的完整句子：
 
@@ -26,13 +26,13 @@ published: 2026-05-11
 
 而不是一个函数选择器和一堆原始整数值。
 
-这就是[明文签名](https://clearsigning.org/)——“所见即所签”。本教程将引导你为自己的合约编写描述符，使用官方 CLI 工具进行验证，并将其提交到开放注册表。
+这就是[明文签名 (clear signing)](https://clearsigning.org/)——“所见即所签”。本教程将引导你为自己的合约编写描述符，使用官方 CLI 工具进行验证，并将其提交到开放注册表。
 
 ## 前提条件 {#prerequisites}
 
 - 熟悉 Solidity 和智能合约 ABI
-- 一个已部署且具有已验证 ABI 的智能合约（在描述符被注册表接受之前，需要进行 [Sourcify](https://sourcify.dev) 验证） 
-- 用于验证 CLI 的 Python 3.12+ 
+- 一个已部署且具有已验证 ABI 的智能合约（在描述符被注册表接受之前，需要通过 [Sourcify](https://sourcify.dev) 验证）
+- 用于验证 CLI 的 Python 3.12（固定的 `erc7730` 包无法在 Python 3.13 或更高版本上安装）。如果你的系统 Python 是其他版本，[uv](https://docs.astral.sh/uv/) 可以为你下载并运行 Python 3.12
 - 基本的 JSON 知识
 
 ## 什么是 ERC-7730 描述符？ {#what-is-an-erc-7730-descriptor}
@@ -49,8 +49,7 @@ published: 2026-05-11
 
 ## 第 1 步：创建文件骨架 {#step-1-create-the-file-skeleton}
 
-创建一个名为 `calldata-<contractname>-<descriptorversion>.json` 的文件。`calldata-` 前缀告诉注册表此描述符涵盖合约函数调用，而不是用于类型化数据消息的 `eip712-`。`descriptorversion` 告诉注册表描述符文件的版本，如果未提供版本，则默认为 0。
-
+创建一个名为 `calldata-<ContractName>.json` 的文件，例如 `calldata-SwapRouter.json`。`calldata-` 前缀告诉注册表此描述符涵盖合约函数调用，而不是用于类型化数据消息的 `eip712-`。如果你需要描述合约的多个版本，请在名称中包含合约版本，如注册表中的 `calldata-UniswapV3Router02.json`。
 
 ```json
 {
@@ -69,7 +68,7 @@ published: 2026-05-11
 
 ```json
 "context": {
-  "$id": "uniswap-v3-router-mainnet",
+  "$id": "example-swap-router",
   "contract": {
     "deployments": [
       { "chainId": 1, "address": "0xYourContractAddressOnMainnet" },
@@ -84,7 +83,7 @@ published: 2026-05-11
 - `context.$id` — 此描述符文档或部署配置的唯一标识符。
 - `contract.deployments` — 此描述符适用的部署集合。
 - `deployments[].chainId` — 部署的 EVM 链 ID。包括你的合约部署的每条链。
-- `deployments[].address` — 钱包应与此描述符关联的合约地址。使用包含执行逻辑的实现地址。
+- `deployments[].address` — 钱包应与此描述符关联的合约地址。这是用户实际发送交易的地址。如果你的合约是可升级的，那就是代理地址，而不是实现地址，而 `display.formats` 中的函数签名来自实现的 ABI。
 
 ## 第 3 步：编写元数据部分 {#step-3-write-the-metadata-section}
 
@@ -115,6 +114,8 @@ published: 2026-05-11
 
 ### 示例：描述代币兑换 {#eg-describing-token-swap}
 
+此示例描述了 Uniswap V2 `Router02` 合约中的 `swapExactTokensForTokens`。输入代币是 `path` 的第一个元素，输出代币是最后一个元素（对于多跳兑换，`path` 可以有超过两个元素）。
+
 ```json
 "display": {
   "formats": {
@@ -127,7 +128,7 @@ published: 2026-05-11
           "label": "Send",
           "format": "tokenAmount",
           "params": {
-            "tokenPath": "#.path[0]"
+            "tokenPath": "#.path.[0]"
           }
         },
         {
@@ -135,7 +136,7 @@ published: 2026-05-11
           "label": "Receive minimum",
           "format": "tokenAmount",
           "params": {
-            "tokenPath": "#.path[1]"
+            "tokenPath": "#.path.[-1]"
           }
         },
         {
@@ -159,15 +160,14 @@ published: 2026-05-11
     }
   }
 }
-
 ```
 
 ### 显示字段 {#display-fields}
 
-- **`intent`** — **（必填）** 操作的简短、用户友好的描述，例如“兑换”。
-- **`interpolatedIntent`** — **（推荐）** 嵌入格式化字段值的更丰富的句子模板，例如 `"Swap {amountIn} for at least {amountOutMin}"`。将其与 `intent` 一起包含，以提供更用户友好的描述符，钱包可以根据任何显示限制选择显示。
+- **`intent`** — **（必填）** 操作的简短、用户友好的描述，例如“兑换 (Swap)”。
+- **`interpolatedIntent`** — **（推荐）** 嵌入格式化字段值的更丰富的句子模板，例如 `"Swap {amountIn} for at least {amountOutMin}"`。将其与 `intent` 一起包含，以提供更加用户友好的描述符，钱包可以根据任何显示限制选择显示。
 - **`fields`** — **（必填）** 钱包应向用户显示的交易字段的有序列表。
-  - **`path`** — **（必填）** 对交易数据的引用。`#.fieldName` 指向按 ABI 中名称解码的调用数据参数。`@.value` 指随交易发送的 ETH 值。
+  - **`path`** — **（必填）** 对交易数据的引用。`#.fieldName` 指向 ABI 中按名称解码的调用数据参数。`@.value` 指随交易发送的 ETH 值。数组元素在括号前写有 `.`：`#.path.[0]` 是第一个元素，`#.path.[-1]` 是最后一个元素。没有点的 `#.path[0]` 会被 linter 拒绝。
   - **`label`** — **（必填）** 显示在值旁边的人类可读标签。
   - **`format`** — **（推荐）** 控制应如何渲染该值。常见格式包括：
     - `tokenAmount`
@@ -176,18 +176,20 @@ published: 2026-05-11
 
     当不需要额外的格式化时，使用 `raw`。某些格式接受额外的 **`params`** 配置。例如：
 
-    - `tokenAmount` 可以使用 `tokenPath` 来识别哪个代币地址提供小数位数和代码元数据。
+    - `tokenAmount` 可以使用 `tokenPath` 来识别哪个代币地址提供小数和代币符号元数据。
     - `date` 可以使用 `encoding` 来描述时间戳的编码方式。
 
     如果所选格式不需要额外信息，请省略 `params`。
 
 ## 完整的描述符 {#the-complete-descriptor}
 
+将占位符地址替换为你已部署合约的地址。linter 会根据这些地址处已验证的 ABI 检查描述符，因此在你替换之前它会报告错误。
+
 ```json
 {
   "$schema": "https://eips.ethereum.org/assets/eip-7730/erc7730-v2.schema.json",
   "context": {
-    "$id": "uniswap-v3-router-mainnet",
+    "$id": "example-swap-router",
     "contract": {
       "deployments": [
         {
@@ -219,7 +221,7 @@ published: 2026-05-11
             "label": "Send",
             "format": "tokenAmount",
             "params": {
-              "tokenPath": "#.path[0]"
+              "tokenPath": "#.path.[0]"
             }
           },
           {
@@ -227,7 +229,7 @@ published: 2026-05-11
             "label": "Receive minimum",
             "format": "tokenAmount",
             "params": {
-              "tokenPath": "#.path[1]"
+              "tokenPath": "#.path.[-1]"
             }
           },
           {
@@ -256,15 +258,76 @@ published: 2026-05-11
 
 ## 第 5 步：提交到注册表 {#step-5-submit-to-the-registry}
 
-[ERC-7730 注册表](https://github.com/ethereum/clear-signing-erc7730-registry)是一个由[以太坊基金会](/foundation/)作为中立管理者托管的开放存储库。任何人都可以自由克隆并自行托管它——钱包独立决定它们信任哪些注册表实例。
+[ERC-7730 注册表](https://github.com/ethereum/clear-signing-erc7730-registry) 是一个由[以太坊基金会](/foundation/)作为中立管理者托管的开放存储库。任何人都可以自由克隆和自托管它——钱包独立决定它们信任哪些注册表实例。
 
-1. 在 GitHub 上复刻 (Fork) 该存储库  
-2. 在 `registry/<your-project-name>/` 处创建一个文件夹  
-3. 将你的文件放入其中：`registry/myproject/calldata-mycontract-0_0.json`  
-4. 将 `$schema` 字段更新为存储库中使用的相对路径：`"../../specs/erc7730-v2.schema.json"`  
-5. 开启一个拉取请求 (Pull request)
+1. 在 GitHub 上复刻 (Fork) 该存储库
+2. 在 `registry/<your-project-name>/` 处创建一个文件夹
+3. 将你的文件放入其中：`registry/myproject/calldata-SwapRouter.json`
+4. 将 `$schema` 字段更新为存储库中使用的相对路径：`"../../specs/erc7730-v2.schema.json"`。CI 会拒绝此处的 URL。
+5. 添加一个测试文件（见下文）
+6. 在本地验证你的文件（见下文）
+7. 开启一个拉取请求 (Pull request)。每个拉取请求只能更改 `registry/` 下的一个文件夹
 
-当你开启 PR 时，CI 会自动运行模式验证，检查函数签名是否生成有效的选择器，确认合约地址已在 Sourcify 上验证，并标记 ABI 不一致之处。检查结果会内联显示在 PR 上。注册表维护者会筛选提交的内容，以查找格式错误或潜在恶意的描述符。包含在注册表中并不意味着经过审计或认可。
+### 添加测试文件 {#add-a-test-file}
+
+你添加或更改的每个描述符都需要一个测试文件，以便可以根据它检查明文签名实现。创建 `registry/<your-project-name>/testsv2/calldata-<ContractName>.tests.json`，为 `display.formats` 中的每个函数至少提供一个测试用例。CI 会派生每种格式的函数选择器，如果没有测试交易调用它，则会失败。
+
+```json
+{
+  "$schema": "../../../specs/erc7730-tests-v2.schema.json",
+  "descriptor": "../calldata-SwapRouter.json",
+  "dataProvider": {
+    "tokens": {
+      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": { "symbol": "USDC", "decimals": 6, "name": "USD Coin" },
+      "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": { "symbol": "WETH", "decimals": 18, "name": "Wrapped Ether" }
+    }
+  },
+  "tests": [
+    {
+      "description": "Swap 1,000 USDC for at least 0.42 WETH",
+      "rawTx": "0x02f9012f0180843b9aca00...",
+      "expected": {
+        "intent": "Swap",
+        "interpolatedIntent": "Swap 1000 USDC for at least 0.42 WETH",
+        "owner": "Example Swap Protocol",
+        "fields": [
+          { "label": "Send", "value": "1000 USDC" },
+          { "label": "Receive minimum", "value": "0.42 WETH" },
+          { "label": "Recipient", "value": "0x1234567890123456789012345678901234567890" },
+          { "label": "Expires", "value": "2026-01-01 00:00:00Z" }
+        ]
+      }
+    }
+  ]
+}
+```
+
+- `rawTx` 是完整的序列化**未签名**交易（此处已缩短），而不仅仅是调用数据。对你合约的真实交易是最好的测试用例。
+- `dataProvider` 提供代币元数据（以及可选的地址和 ENS 名称），因此测试不需要网络访问。
+- `expected` 是钱包应该显示的内容。CI 使用明文签名实现渲染每个测试用例，并在拉取请求上报告任何差异。
+
+有关完整格式，包括 EIP-712 描述符的测试文件，请参阅注册表 README 中的[参考测试用例 (Reference test cases)](https://github.com/ethereum/clear-signing-erc7730-registry#reference-test-cases)。
+
+### 在本地验证 {#validate-locally}
+
+注册表使用固定在 `.github/requirements.txt` 中的 [`erc7730`](https://github.com/sourcifyeth/python-erc7730) 命令行工具检查描述符。在 Python 3.12 环境中，从你复刻的根目录运行它：
+
+```sh
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install -r .github/requirements.txt
+erc7730 lint registry/myproject/calldata-SwapRouter.json
+```
+
+如果你使用 [uv](https://docs.astral.sh/uv/)，你可以跳过虚拟环境，如果需要，uv 会下载 Python 3.12：
+
+```sh
+uvx --python 3.12 --from "$(cat .github/requirements.txt)" erc7730 lint registry/myproject/calldata-SwapRouter.json
+```
+
+linter 会根据模式 (schema) 和你合约已验证的 ABI 检查描述符。修复每个错误。诸如 `Missing display format` 之类的警告意味着合约具有你的描述符尚未描述的函数。要像 CI 那样检查 `$schema` 路径和测试文件，请参阅注册表 README 中的[如何验证 (How to validate)](https://github.com/ethereum/clear-signing-erc7730-registry#how-to-validate)。
+
+当你开启 PR 时，CI 会自动运行模式验证，检查函数签名是否产生有效的选择器，确认合约地址已在 Sourcify 上验证，并标记 ABI 不一致之处。检查结果会内联显示在 PR 上。注册表维护者会筛选提交的格式错误或潜在恶意的描述符。包含在注册表中并不意味着审计或认可。
 
 <Alert variant="info">
 <AlertContent>
@@ -276,7 +339,7 @@ published: 2026-05-11
 
 ## 合并后会发生什么？ {#what-happens-after-merging}
 
-注册表中的所有描述符都对审计员开放。在你的 PR 合并后，任何审计员都可以审查你的描述符并发布加密证明（根据 [ERC-8176](https://github.com/ethereum/ERCs/pull/1576)）以确认其准确性。 
+注册表中的所有描述符都对审计员开放。在你的 PR 合并后，任何审计员都可以审查你的描述符并发布加密证明（根据 [ERC-8176](https://eips.ethereum.org/EIPS/eip-8176)）以确认其准确性。 
 
 这些证明信号让钱包能够应用自己的信任策略——具有多个独立证明的描述符比没有证明的描述符更有分量。你可以通过 [clearsigning.org](https://clearsigning.org) 联系审计员社区。
 
@@ -289,3 +352,4 @@ published: 2026-05-11
 - [clearsigning.org](https://clearsigning.org) — 工具、生态系统状态和治理  
 - [Sourcify 合约验证](https://sourcify.dev)  
 - [万亿美元安全倡议 (Trillion Dollar Security initiative)](https://trilliondollarsecurity.org)
+
