@@ -16,21 +16,22 @@ lang: vi
 published: 2025-03-15
 ---
 
-_Không có bí mật nào trên chuỗi khối_. Mọi thứ được đăng trên chuỗi khối đều mở cho mọi người đọc. Điều này là cần thiết, bởi vì chuỗi khối dựa trên việc bất kỳ ai cũng có thể xác minh nó. Tuy nhiên, các trò chơi thường dựa vào trạng thái bí mật. Ví dụ, trò chơi [dò mìn](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) hoàn toàn vô nghĩa nếu bạn chỉ cần vào một trình khám phá khối và xem bản đồ.
+_Không có bí mật nào trên chuỗi khối_. Mọi thứ được đăng trên chuỗi khối đều mở để mọi người có thể đọc. Điều này là cần thiết, vì chuỗi khối dựa trên việc bất kỳ ai cũng có thể xác minh nó. Tuy nhiên, các trò chơi thường dựa vào trạng thái bí mật. Ví dụ, trò chơi [dò mìn (minesweeper)](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) sẽ hoàn toàn vô nghĩa nếu bạn có thể truy cập vào một trình khám phá chuỗi khối và xem bản đồ.
 
-Giải pháp đơn giản nhất là sử dụng một [thành phần máy chủ](/developers/tutorials/server-components/) để giữ trạng thái bí mật. Tuy nhiên, lý do chúng ta sử dụng chuỗi khối là để ngăn chặn việc gian lận từ nhà phát triển trò chơi. Chúng ta cần đảm bảo tính trung thực của thành phần máy chủ. Máy chủ có thể cung cấp một mã băm của trạng thái, và sử dụng [bằng chứng không kiến thức](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) để chứng minh rằng trạng thái được sử dụng để tính toán kết quả của một nước đi là chính xác.
+Giải pháp đơn giản nhất là sử dụng một [thành phần máy chủ](/developers/tutorials/server-components/) để giữ trạng thái bí mật. Tuy nhiên, lý do chúng ta sử dụng chuỗi khối là để ngăn chặn việc gian lận từ phía nhà phát triển trò chơi. Chúng ta cần đảm bảo tính trung thực của thành phần máy chủ. Máy chủ có thể cung cấp một mã băm của trạng thái, và sử dụng [bằng chứng không kiến thức](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) để chứng minh rằng trạng thái được sử dụng để tính toán kết quả của một nước đi là chính xác.
 
-Sau khi đọc bài viết này, bạn sẽ biết cách tạo ra loại máy chủ giữ trạng thái bí mật này, một máy khách để hiển thị trạng thái, và một thành phần trên chuỗi để giao tiếp giữa hai bên. Các công cụ chính mà chúng ta sử dụng sẽ là:
+Sau khi đọc bài viết này, bạn sẽ biết cách tạo ra loại máy chủ giữ trạng thái bí mật này, một client để hiển thị trạng thái, và một thành phần trên chuỗi để giao tiếp giữa hai bên. Các công cụ chính mà chúng ta sử dụng sẽ là:
 
-| Công cụ                                          | Mục đích                                                 | Đã xác minh trên phiên bản |
+| Công cụ                                       | Mục đích                                                | Đã xác minh trên phiên bản |
 | --------------------------------------------- | ------------------------------------------------------- | ------------------: |
-| [Zokrates](https://zokrates.github.io/)       | Bằng chứng không kiến thức và việc xác minh chúng            |               1.1.9 |
-| [TypeScript](https://www.typescriptlang.org/) | Ngôn ngữ lập trình cho cả máy chủ và máy khách |               5.4.2 |
-| [Node](https://nodejs.org/en)                 | Chạy máy chủ                                      |             20.18.2 |
-| [Viem](https://viem.sh/)                      | Giao tiếp với Chuỗi khối                       |              2.9.20 |
-| [MUD](https://mud.dev/)                       | Quản lý dữ liệu trên chuỗi                                 |              2.0.12 |
-| [React](https://react.dev/)                   | Giao diện người dùng máy khách                                   |              18.2.0 |
-| [Vite](https://vitejs.dev/)                   | Phục vụ mã máy khách                                 |               4.2.1 |
+| [Zokrates](https://zokrates.github.io/)       | Bằng chứng không kiến thức và việc xác minh chúng       |               1.1.9 |
+| [TypeScript](https://www.typescriptlang.org/) | Ngôn ngữ lập trình cho cả máy chủ và client             |               5.4.2 |
+| [Node](https://nodejs.org/en)                 | Chạy máy chủ                                            |             20.18.2 |
+| [Foundry](https://getfoundry.sh/)             | Chuỗi khối cục bộ và việc triển khai hợp đồng           |               1.0.0 |
+| [Viem](https://viem.sh/)                      | Giao tiếp với chuỗi khối                                |              2.9.20 |
+| [MUD](https://mud.dev/)                       | Quản lý dữ liệu trên chuỗi                              |              2.0.12 |
+| [React](https://react.dev/)                   | Giao diện người dùng client                             |              18.2.0 |
+| [Vite](https://vitejs.dev/)                   | Phục vụ mã client                                       |               4.2.1 |
 
 ## Ví dụ về Minesweeper {#minesweeper}
 
@@ -38,11 +39,28 @@ Sau khi đọc bài viết này, bạn sẽ biết cách tạo ra loại máy ch
 
 Ứng dụng này được viết bằng [MUD](https://mud.dev/), một framework cho phép chúng ta lưu trữ dữ liệu trên chuỗi bằng cách sử dụng [cơ sở dữ liệu khóa-giá trị](https://aws.amazon.com/nosql/key-value/) và tự động đồng bộ hóa dữ liệu đó với các thành phần ngoài chuỗi. Ngoài việc đồng bộ hóa, MUD giúp dễ dàng cung cấp quyền kiểm soát truy cập và cho phép những người dùng khác [mở rộng](https://mud.dev/guides/extending-a-world) ứng dụng của chúng ta một cách không phép.
 
-### Chạy ví dụ Minesweeper {#running-minesweeper-example}
+### Chạy ví dụ minesweeper {#running-minesweeper-example}
 
-Để chạy ví dụ Minesweeper:
+Để chạy ví dụ minesweeper:
 
-1. Đảm bảo bạn [đã cài đặt các điều kiện tiên quyết](https://mud.dev/quickstart#prerequisites): [Node](https://mud.dev/quickstart#prerequisites), [Foundry](https://book.getfoundry.sh/getting-started/installation), [`git`](https://git-scm.com/downloads), [`pnpm`](https://git-scm.com/downloads), và [`mprocs`](https://github.com/pvolok/mprocs).
+1. Đảm bảo bạn [đã cài đặt các điều kiện tiên quyết](https://mud.dev/quickstart#prerequisites): [Node](https://nodejs.org/en), [Foundry](https://getfoundry.sh/introduction/installation), [`git`](https://git-scm.com/downloads), và [`pnpm`](https://pnpm.io/installation).
+
+   Ví dụ này sử dụng MUD 2.0.12, yêu cầu các phiên bản cụ thể của Node và Foundry:
+
+   - **Node 20**. Công cụ dòng lệnh MUD 2.0.12 sử dụng [JSON import assertions](https://v8.dev/features/import-attributes), mà các phiên bản Node mới hơn không còn hỗ trợ, vì vậy trên Node 22 hoặc mới hơn, nó sẽ thất bại với lỗi `SyntaxError: Unexpected identifier 'assert'`. Node 20 [đã kết thúc vòng đời](https://nodejs.org/en/about/previous-releases) vào tháng 4 năm 2026 và không còn nhận được các bản cập nhật bảo mật, vì vậy chỉ sử dụng nó cho ví dụ cục bộ này. Một trình quản lý phiên bản Node như [`fnm`](https://github.com/Schniz/fnm) hoặc [`nvm`](https://github.com/nvm-sh/nvm) cho phép bạn chuyển sang Node 20 chỉ cho thư mục này, ví dụ:
+
+     ```sh copy
+     fnm install 20
+     fnm use 20
+     ```
+
+   - **Foundry 1.0.0**. Với các phiên bản Foundry hiện tại, tập lệnh sau triển khai sẽ thất bại với lỗi _Usage of `address(this)` detected in script contract_. Cài đặt phiên bản đã được kiểm tra bằng:
+
+     ```sh copy
+     foundryup -i 1.0.0
+     ```
+
+     Khi bạn hoàn thành bài hướng dẫn này, bạn có thể quay lại phiên bản mới nhất bằng `foundryup`.
 
 2. Sao chép (clone) kho lưu trữ.
 
@@ -55,10 +73,9 @@ Sau khi đọc bài viết này, bạn sẽ biết cách tạo ra loại máy ch
    ```sh copy
    cd 20240901-secret-state/
    pnpm install
-   npm install -g mprocs
    ```
 
-   Nếu Foundry được cài đặt như một phần của `pnpm install`, bạn cần khởi động lại shell dòng lệnh.
+   [`mprocs`](https://github.com/pvolok/mprocs), công cụ chạy tất cả các tiến trình trong một terminal duy nhất, được cài đặt như một trong các gói.
 
 4. Biên dịch các hợp đồng
 
@@ -69,19 +86,19 @@ Sau khi đọc bài viết này, bạn sẽ biết cách tạo ra loại máy ch
     ```
 
 
-5. Khởi động chương trình (bao gồm một chuỗi khối [anvil](https://book.getfoundry.sh/anvil/)) và chờ đợi.
+5. Bắt đầu chương trình (bao gồm một chuỗi khối [anvil](https://getfoundry.sh/anvil/overview)) và chờ đợi.
 
    ```sh copy
-   mprocs
+   pnpm dev
    ```
 
-   Lưu ý rằng quá trình khởi động mất nhiều thời gian. Để xem tiến trình, trước tiên hãy sử dụng mũi tên xuống để cuộn đến tab _contracts_ nhằm xem các hợp đồng MUD đang được triển khai. Khi bạn nhận được thông báo _Waiting for file changes…_, các hợp đồng đã được triển khai và tiến trình tiếp theo sẽ diễn ra trong tab _server_. Tại đó, bạn chờ cho đến khi nhận được thông báo _Verifier address: 0x...._.
+   Lưu ý rằng quá trình khởi động mất nhiều thời gian. Để xem tiến trình, trước tiên hãy sử dụng mũi tên xuống để cuộn đến tab _contracts_ để xem các hợp đồng MUD đang được triển khai. Khi bạn nhận được thông báo _Waiting for file changes…_, các hợp đồng đã được triển khai và tiến trình tiếp theo sẽ diễn ra trong tab _server_. Tại đó, bạn chờ cho đến khi nhận được thông báo _Verifier address: 0x...._.
 
-   Nếu bước này thành công, bạn sẽ thấy màn hình `mprocs`, với các tiến trình khác nhau ở bên trái và đầu ra bảng điều khiển cho tiến trình hiện được chọn ở bên phải.
+   Nếu bước này thành công, bạn sẽ thấy màn hình `mprocs`, với các tiến trình khác nhau ở bên trái và đầu ra console cho tiến trình hiện được chọn ở bên phải.
 
-   ![The mprocs screen](./mprocs.png)
+   ![Màn hình mprocs](./mprocs.png)
 
-   Nếu có sự cố với `mprocs`, bạn có thể chạy thủ công bốn tiến trình, mỗi tiến trình trong cửa sổ dòng lệnh riêng của nó:
+   Nếu có vấn đề với `mprocs`, bạn có thể chạy bốn tiến trình theo cách thủ công, mỗi tiến trình trong cửa sổ dòng lệnh riêng của nó:
 
    - **Anvil**
 
@@ -90,7 +107,7 @@ Sau khi đọc bài viết này, bạn sẽ biết cách tạo ra loại máy ch
      anvil --base-fee 0 --block-time 2
      ```
 
-   - **Hợp đồng** 
+   - **Contracts** 
 
      ```sh
      cd packages/contracts
@@ -102,16 +119,16 @@ Sau khi đọc bài viết này, bạn sẽ biết cách tạo ra loại máy ch
      ```sh
      cd packages/server
      pnpm start
-     ```  
+     ```
 
    - **Client**
 
      ```sh
      cd packages/client
      pnpm run dev
-     ```  
+     ```
 
-6. Bây giờ bạn có thể duyệt đến [client](http://localhost:3000), nhấp vào **New Game** và bắt đầu chơi.
+6. Bây giờ bạn có thể duyệt đến [client](http://localhost:3000), nhấp vào **New Game**, và bắt đầu chơi.
 
 ### Các bảng {#tables}
 
@@ -151,24 +168,24 @@ Các luồng này điều phối việc thực thi giữa client, thành phần 
 
 #### Khởi tạo {#initialization-flow}
 
-Khi bạn chạy `mprocs`, các bước sau sẽ diễn ra:
+Khi bạn chạy `pnpm dev` (lệnh này sẽ chạy `mprocs`), các bước sau sẽ diễn ra:
 
 1. [`mprocs`](https://github.com/pvolok/mprocs) chạy bốn thành phần:
 
-   - [Anvil](https://book.getfoundry.sh/anvil/), chạy một chuỗi khối cục bộ
+   - [Anvil](https://getfoundry.sh/anvil/overview), chạy một chuỗi khối cục bộ
    - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts), biên dịch (nếu cần) và triển khai các hợp đồng cho MUD
-   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), chạy [Vite](https://vitejs.dev/) để phục vụ giao diện người dùng (UI) và mã client cho các trình duyệt web.
+   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), chạy [Vite](https://vitejs.dev/) để phục vụ giao diện người dùng và mã client cho các trình duyệt web.
    - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server), thực hiện các hành động của máy chủ
 
 2. Gói `contracts` triển khai các hợp đồng MUD và sau đó chạy [tập lệnh `PostDeploy.s.sol`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol). Tập lệnh này thiết lập cấu hình. Mã từ GitHub chỉ định [một bãi mìn 10x5 với tám quả mìn trong đó](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23).
 
-3. [Máy chủ](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts) bắt đầu bằng cách [thiết lập MUD](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6). Cùng với những thứ khác, điều này kích hoạt đồng bộ hóa dữ liệu, để một bản sao của các bảng liên quan tồn tại trong bộ nhớ của máy chủ.
+3. [Máy chủ](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts) bắt đầu bằng cách [thiết lập MUD](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6). Cùng với các việc khác, điều này kích hoạt đồng bộ hóa dữ liệu, để một bản sao của các bảng liên quan tồn tại trong bộ nhớ của máy chủ.
 
 4. Máy chủ đăng ký một hàm để thực thi [khi bảng `Configuration` thay đổi](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23). [Hàm này](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) được gọi sau khi `PostDeploy.s.sol` thực thi và sửa đổi bảng.
 
 5. Khi hàm khởi tạo máy chủ có cấu hình, [nó gọi `zkFunctions`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35) để khởi tạo [phần không tri thức của máy chủ](#using-zokrates-from-typescript). Điều này không thể xảy ra cho đến khi chúng ta nhận được cấu hình vì các hàm không tri thức phải có chiều rộng và chiều cao của bãi mìn dưới dạng hằng số.
 
-6. Sau khi phần không tri thức của máy chủ được khởi tạo, bước tiếp theo là [triển khai hợp đồng xác minh không tri thức lên chuỗi khối](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) và thiết lập địa chỉ của bên được xác minh trong MUD.
+6. Sau khi phần không tri thức của máy chủ được khởi tạo, bước tiếp theo là [triển khai hợp đồng xác minh không tri thức lên chuỗi khối](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) và thiết lập địa chỉ trình xác minh trong MUD.
 
 7. Cuối cùng, chúng ta đăng ký nhận các bản cập nhật để có thể thấy khi nào người chơi yêu cầu [bắt đầu một trò chơi mới](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) hoặc [đào trong một trò chơi hiện có](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108).
 
@@ -516,9 +533,9 @@ Cuối cùng, trả về mọi thứ mà mã khác có thể cần.
 
 Các bài kiểm tra bảo mật rất quan trọng vì một lỗi chức năng cuối cùng sẽ tự bộc lộ. Nhưng nếu ứng dụng không an toàn, điều đó có khả năng bị ẩn giấu trong một thời gian dài trước khi bị phát hiện bởi một kẻ gian lận nào đó và chiếm đoạt các tài nguyên thuộc về người khác.
 
-### Quyền hạn {#permissions}
+### Quyền {#permissions}
 
-Có một thực thể có đặc quyền trong trò chơi này, đó là máy chủ. Đây là người dùng duy nhất được phép gọi các hàm trong [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). Chúng ta có thể sử dụng [`cast`](https://book.getfoundry.sh/cast/) để xác minh các lệnh gọi đến các hàm có cấp phép chỉ được cho phép dưới dạng tài khoản máy chủ.
+Có một thực thể có đặc quyền trong trò chơi này, đó là máy chủ. Đây là người dùng duy nhất được phép gọi các hàm trong [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). Chúng ta có thể sử dụng [`cast`](https://getfoundry.sh/cast/overview) để xác minh rằng các lệnh gọi đến các hàm có cấp phép chỉ được cho phép dưới tư cách là tài khoản máy chủ.
 
 [Khóa riêng tư của máy chủ nằm trong `setupNetwork.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52).
 
@@ -530,21 +547,23 @@ Có một thực thể có đặc quyền trong trò chơi này, đó là máy c
    AUTHORIZED_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
    ```
 
-2. Sử dụng `cast` để thử đặt địa chỉ trình xác minh thành một địa chỉ không được ủy quyền.
+   `WORLD_ADDRESS` này là địa chỉ mà MUD triển khai trên một `anvil` mới. Nếu `World` của bạn ở một địa chỉ khác, hãy sử dụng giá trị trong `packages/contracts/worlds.json`.
+
+2. Sử dụng `cast` để cố gắng thiết lập địa chỉ trình xác minh bằng một địa chỉ không được ủy quyền.
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $UNAUTHORIZED_KEY
    ```
 
-   Không chỉ `cast` báo cáo lỗi, mà bạn còn có thể mở **MUD Dev Tools** trong trò chơi trên trình duyệt, nhấp vào **Tables**, và chọn **app\_\_VerifierAddress**. Hãy xem rằng địa chỉ không phải là số không.
+   Không chỉ `cast` báo cáo thất bại, mà bạn còn có thể mở **MUD Dev Tools** trong trò chơi trên trình duyệt, nhấp vào **Tables**, và chọn **app\_\_VerifierAddress**. Bạn sẽ thấy rằng địa chỉ không phải là số không.
 
-3. Đặt địa chỉ trình xác minh thành địa chỉ của máy chủ.
+3. Thiết lập địa chỉ trình xác minh thành địa chỉ của máy chủ.
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $AUTHORIZED_KEY
    ```
 
-   Địa chỉ trong **app\_\_VerifiedAddress** bây giờ sẽ là số không.
+   Địa chỉ trong **app\_\_VerifierAddress** bây giờ sẽ là số không.
 
 Tất cả các hàm MUD trong cùng một `System` đều đi qua cùng một cơ chế kiểm soát truy cập, vì vậy tôi coi bài kiểm tra này là đủ. Nếu bạn không nghĩ vậy, bạn có thể kiểm tra các hàm khác trong [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol).
 
@@ -560,7 +579,7 @@ Khả năng đơn giản nhất là cung cấp câu trả lời sai trong bằng
 proof.inputs[3] = "0x" + "1".padStart(64, "0")
 ```
 
-Điều này có nghĩa là chúng ta sẽ luôn khẳng định có một quả bom, bất kể câu trả lời đúng là gì. Hãy thử chơi với phiên bản này, và bạn sẽ thấy trong tab **server** của màn hình `pnpm dev` có lỗi này:
+Điều này có nghĩa là chúng ta sẽ luôn khẳng định có một quả bom, bất kể câu trả lời đúng là gì. Hãy thử chơi với phiên bản này, và bạn sẽ thấy trong tab **server** của màn hình `mprocs` có lỗi này:
 
 ```
 cause: {
@@ -680,9 +699,11 @@ Vì là một bài hướng dẫn, bài viết này cần một trò chơi ngắ
 
 ### Tại sao lại là Zokrates? {#why-zokrates}
 
-[Zokrates](https://zokrates.github.io/) không phải là thư viện không tri thức duy nhất hiện có, nhưng nó tương tự như một ngôn ngữ lập trình [mệnh lệnh](https://en.wikipedia.org/wiki/Imperative_programming) thông thường và hỗ trợ các biến boolean.
+[Zokrates](https://zokrates.github.io/) không phải là thư viện không tri thức duy nhất có sẵn, nhưng nó tương tự như một ngôn ngữ lập trình [mệnh lệnh](https://en.wikipedia.org/wiki/Imperative_programming) thông thường và hỗ trợ các biến boolean.
 
-Đối với ứng dụng của bạn, với các yêu cầu khác nhau, bạn có thể muốn sử dụng [Circum](https://docs.circom.io/getting-started/installation/) hoặc [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/).
+Tuy nhiên, Zokrates không còn được bảo trì tích cực nữa. Bản phát hành mới nhất của nó, 0.8.8 (và `zokrates-js` 1.1.9 tương ứng), là từ tháng 11 năm 2023, và nhánh chính đã không có commit nào kể từ tháng 4 năm 2024. Mã trong bài hướng dẫn này vẫn hoạt động, nhưng đừng mong đợi các bản sửa lỗi hoặc cập nhật bảo mật. Đối với một dự án mới, hãy xem xét một ngôn ngữ đang được bảo trì như [Noir](https://noir-lang.org/), ngôn ngữ được sử dụng trong [bài hướng dẫn này](/developers/tutorials/app-plasma/).
+
+Đối với ứng dụng của bạn, với các yêu cầu khác nhau, bạn có thể muốn sử dụng [Circom](https://docs.circom.io/getting-started/installation/) hoặc [Cairo](https://www.cairo-lang.org/).
 
 ### Khi nào nên biên dịch Zokrates {#when-compile-zokrates}
 

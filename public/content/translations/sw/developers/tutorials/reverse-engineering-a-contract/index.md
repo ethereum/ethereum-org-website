@@ -42,9 +42,9 @@ Tunahitaji kazi hii itupatie thamani ya heksadesimali kwa sababu thamani zinazos
 
 ## Sehemu ya Kuingilia (0x00) {#the-entry-point-0x00}
 
-Mikataba kila wakati hutekelezwa kuanzia baiti ya kwanza. Hii ni sehemu ya awali ya msimbo:
+Mikataba kila wakati inatekelezwa kuanzia baiti ya kwanza. Hii ni sehemu ya awali ya msimbo:
 
-| Offset | Msimbo wa operesheni | Stack (baada ya msimbo wa operesheni) |
+| Ofseti | Msimbo wa operesheni | Staki (baada ya msimbo wa operesheni) |
 | -----: | ------------ | ------------------------ |
 |      0 | PUSH1 0x80   | 0x80                     |
 |      2 | PUSH1 0x40   | 0x40, 0x80               |
@@ -57,23 +57,33 @@ Mikataba kila wakati hutekelezwa kuanzia baiti ya kwanza. Hii ni sehemu ya awali
 
 Msimbo huu unafanya mambo mawili:
 
-1. Kuandika 0x80 kama thamani ya baiti 32 kwenye maeneo ya kumbukumbu 0x40-0x5F (0x80 inahifadhiwa katika 0x5F, na 0x40-0x5E zote ni sifuri).
-2. Kusoma ukubwa wa data za mwito. Kwa kawaida data za mwito kwa mkataba wa Ethereum hufuata [ABI (kiolesura cha mfumo wa programu)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html), ambayo kwa uchache inahitaji baiti nne kwa kiteuzi cha utendaji. Ikiwa ukubwa wa data za mwito ni chini ya nne, ruka hadi 0x5E.
+1. Andika 0x80 kama thamani ya baiti 32 kwenye maeneo ya kumbukumbu 0x40-0x5F (0x80 inahifadhiwa katika 0x5F, na 0x40-0x5E zote ni sifuri).
+2. Soma ukubwa wa data za mwito. Kwa kawaida data za mwito kwa mkataba wa Ethereum hufuata [ABI (kiolesura cha mfumo wa jozi cha programu)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html), ambayo kwa kiwango cha chini inahitaji baiti nne kwa ajili ya kiteuzi cha kazi. Ikiwa ukubwa wa data za mwito ni chini ya nne, ruka hadi 0x5E.
 
-![Flowchart for this portion](flowchart-entry.png)
+<Flowchart>
+
+- Sehemu ya kuingilia (0x00)
+  - Je, data za mwito ni fupi kuliko baiti nne?
+    - **Ndiyo** Miito isiyo ya ABI (0x5E)
+      - Je, kuna data za mwito zozote?
+        - **Ndiyo** 0x7C (dhumuni halijulikani hadi sasa)
+        - **Hapana** Hamisho la ETH (0x64): tengua kwenye mzidio, vinginevyo ongeza thamani ya mwito kwenye `Storage[6]` (`Value*`) na usimame
+    - **Hapana** Miito ya ABI (0x0D)
+
+</Flowchart>
 
 ### Kishughulikiaji katika 0x5E (kwa data za mwito zisizo za ABI) {#the-handler-at-0x5e-for-non-abi-call-data}
 
-| Offset | Msimbo wa operesheni       |
+| Ofseti | Msimbo wa operesheni |
 | -----: | ------------ |
 |     5E | JUMPDEST     |
 |     5F | CALLDATASIZE |
 |     60 | PUSH2 0x007c |
 |     63 | JUMPI        |
 
-Kipande hiki kinaanza na `JUMPDEST`. Programu za EVM (mashine pepe ya Ethereum) hurusha hitilafu ikiwa utaruka kwenye msimbo wa operesheni ambao sio `JUMPDEST`. Kisha inaangalia CALLDATASIZE, na ikiwa ni "kweli" (yaani, sio sifuri) inaruka hadi 0x7C. Tutafikia hilo hapa chini.
+Kipande hiki kinaanza na `JUMPDEST`. Programu za Mashine Pepe ya Ethereum (EVM) hurusha upekee ikiwa utaruka kwenye msimbo wa operesheni ambao si `JUMPDEST`. Kisha inaangalia CALLDATASIZE, na ikiwa ni "kweli" (yaani, si sifuri) inaruka hadi 0x7C. Tutafikia hilo hapa chini.
 
-| Offset | Msimbo wa operesheni     | Stack (baada ya msimbo wa operesheni)                                                       |
+| Ofseti | Msimbo wa operesheni | Staki (baada ya msimbo wa operesheni)                                                       |
 | -----: | ---------- | -------------------------------------------------------------------------- |
 |     64 | CALLVALUE  | [Wei](/glossary/#wei) iliyotolewa na mwito. Inaitwa `msg.value` katika Solidity |
 |     65 | PUSH1 0x06 | 6 CALLVALUE                                                                |
@@ -84,17 +94,17 @@ Kipande hiki kinaanza na `JUMPDEST`. Programu za EVM (mashine pepe ya Ethereum) 
 
 Kwa hivyo wakati hakuna data za mwito tunasoma thamani ya Storage[6]. Hatujui thamani hii ni nini bado, lakini tunaweza kutafuta miamala ambayo mkataba ulipokea bila data za mwito. Miamala ambayo inahamisha tu ETH bila data za mwito zozote (na kwa hivyo hakuna mbinu) ina mbinu ya `Transfer` katika Etherscan. Kwa kweli, [muamala wa kwanza kabisa ambao mkataba ulipokea](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) ni hamisho.
 
-Tukitazama katika muamala huo na kubofya **Click to see More**, tunaona kwamba data za mwito, zinazoitwa data za uingizaji, kwa kweli ni tupu (`0x`). Kumbuka pia kwamba thamani ni 1.559 ETH, hiyo itakuwa muhimu baadaye.
+Tukitazama katika muamala huo na kubofya **Bofya ili kuona Zaidi**, tunaona kwamba data za mwito, zinazoitwa data za kuingiza, kwa kweli ni tupu (`0x`). Kumbuka pia kwamba thamani ni 1.559 ETH, hiyo itakuwa muhimu baadaye.
 
-![The call data is empty](calldata-empty.png)
+![Data za mwito ni tupu](calldata-empty.png)
 
-Kisha, bofya kichupo cha **State** na upanue mkataba tunaoufanyia uhandisi wa kinyume (0x2510...). Unaweza kuona kwamba `Storage[6]` ilibadilika wakati wa muamala, na ukibadilisha Hex kuwa **Number**, unaona ikawa 1,559,000,000,000,000,000, thamani iliyohamishwa katika wei (nimeongeza koma kwa uwazi), inayolingana na thamani inayofuata ya mkataba.
+Kisha, bofya kichupo cha **Hali** na upanue mkataba tunaoufanyia uhandisi wa kinyume (0x2510...). Unaweza kuona kwamba `Storage[6]` ilibadilika wakati wa muamala, na ukibadilisha Heksadesimali kuwa **Nambari**, unaona ikawa 1,559,000,000,000,000,000, thamani iliyohamishwa katika Wei (niliongeza koma kwa uwazi), inayolingana na thamani inayofuata ya mkataba.
 
 ![Mabadiliko katika Storage[6]](storage6.png)
 
-Tukitazama katika mabadiliko ya hali yaliyosababishwa na [miamala mingine ya `Transfer` kutoka kipindi hicho hicho](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange) tunaona kwamba `Storage[6]` ilifuatilia thamani ya mkataba kwa muda. Kwa sasa tutaiita `Value*`. Alama ya nyota (`*`) inatukumbusha kwamba _hatujui_ kigezo hiki kinafanya nini bado, lakini haiwezi kuwa tu kufuatilia thamani ya mkataba kwa sababu hakuna haja ya kutumia hifadhi, ambayo ni ghali sana, wakati unaweza kupata salio la akaunti zako ukitumia `ADDRESS BALANCE`. Msimbo wa operesheni wa kwanza unasukuma anwani ya mkataba wenyewe. Wa pili unasoma anwani iliyo juu ya stack na kuibadilisha na salio la anwani hiyo.
+Tukitazama katika mabadiliko ya hali yaliyosababishwa na [miamala mingine ya `Transfer` kutoka kipindi hicho hicho](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange) tunaona kwamba `Storage[6]` ilifuatilia thamani ya mkataba kwa muda. Kwa sasa tutaiita `Value*`. Alama ya nyota (`*`) inatukumbusha kwamba _hatujui_ kigezo hiki kinafanya nini bado, lakini haiwezi kuwa tu kufuatilia thamani ya mkataba kwa sababu hakuna haja ya kutumia hifadhi, ambayo ni ghali sana, wakati unaweza kupata salio la akaunti zako kwa kutumia `ADDRESS BALANCE`. Msimbo wa operesheni wa kwanza unasukuma anwani ya mkataba wenyewe. Wa pili unasoma anwani iliyo juu ya staki na kuibadilisha na salio la anwani hiyo.
 
-| Offset | Msimbo wa operesheni       | Stack                                       |
+| Ofseti | Msimbo wa operesheni | Staki                                       |
 | -----: | ------------ | ------------------------------------------- |
 |     6C | PUSH2 0x0075 | 0x75 Value\* CALLVALUE 0 6 CALLVALUE        |
 |     6F | SWAP2        | CALLVALUE Value\* 0x75 0 6 CALLVALUE        |
@@ -104,16 +114,16 @@ Tukitazama katika mabadiliko ya hali yaliyosababishwa na [miamala mingine ya `Tr
 
 Tutaendelea kufuatilia msimbo huu kwenye kituo cha kuruka.
 
-| Offset | Msimbo wa operesheni     | Stack                                                       |
+| Ofseti | Msimbo wa operesheni | Staki                                                       |
 | -----: | ---------- | ----------------------------------------------------------- |
 |    1A7 | JUMPDEST   | Value\* CALLVALUE 0x75 0 6 CALLVALUE                        |
 |    1A8 | PUSH1 0x00 | 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE                   |
 |    1AA | DUP3       | CALLVALUE 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
 |    1AB | NOT        | 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 
-`NOT` ni ya kibiti, kwa hivyo inageuza thamani ya kila biti katika thamani ya mwito.
+`NOT` ni ya kibiti, kwa hivyo inabadilisha thamani ya kila biti katika thamani ya mwito.
 
-| Offset | Msimbo wa operesheni       | Stack                                                                       |
+| Ofseti | Msimbo wa operesheni | Staki                                                                       |
 | -----: | ------------ | --------------------------------------------------------------------------- |
 |    1AC | DUP3         | Value\* 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
 |    1AD | GT           | Value\*>2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
@@ -121,11 +131,11 @@ Tutaendelea kufuatilia msimbo huu kwenye kituo cha kuruka.
 |    1AF | PUSH2 0x01df | 0x01DF Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 |    1B2 | JUMPI        |
 
-Tunaruka ikiwa `Value*` ni ndogo kuliko 2^256-CALLVALUE-1 au sawa nayo. Hii inaonekana kama mantiki ya kuzuia kufurika (overflow). Na kwa kweli, tunaona kwamba baada ya operesheni chache zisizo na maana (kuandika kwenye kumbukumbu kunakaribia kufutwa, kwa mfano) kwenye offset 0x01DE mkataba unatengua ikiwa kufurika kutagunduliwa, ambayo ni tabia ya kawaida.
+Tunaruka ikiwa `Value*` ni ndogo kuliko 2^256-CALLVALUE-1 au sawa nayo. Hii inaonekana kama mantiki ya kuzuia mzidio. Na kwa kweli, tunaona kwamba baada ya operesheni chache zisizo na maana (kuandika kwenye kumbukumbu kunakaribia kufutwa, kwa mfano) kwenye ofseti 0x01DE mkataba unatengua ikiwa mzidio utagunduliwa, ambayo ni tabia ya kawaida.
 
-Kumbuka kwamba kufurika kama huko kuna uwezekano mdogo sana kutokea, kwa sababu itahitaji thamani ya mwito kujumlisha na `Value*` kulinganishwa na wei 2^256, takriban 10^59 ETH. [Jumla ya usambazaji wa ETH, wakati wa kuandika, ni chini ya milioni mia mbili](https://etherscan.io/stat/supply).
+Kumbuka kwamba mzidio kama huo hauwezekani sana, kwa sababu itahitaji thamani ya mwito kujumlisha `Value*` ili kulinganishwa na Wei 2^256, takriban ETH 10^59. [Ugavi wa jumla wa ETH, wakati wa kuandika, ni chini ya milioni mia mbili](https://etherscan.io/stat/supply).
 
-| Offset | Msimbo wa operesheni   | Stack                                     |
+| Ofseti | Msimbo wa operesheni | Staki                                     |
 | -----: | -------- | ----------------------------------------- |
 |    1DF | JUMPDEST | 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 |    1E0 | POP      | Value\* CALLVALUE 0x75 0 6 CALLVALUE      |
@@ -133,28 +143,38 @@ Kumbuka kwamba kufurika kama huko kuna uwezekano mdogo sana kutokea, kwa sababu 
 |    1E2 | SWAP1    | 0x75 Value\*+CALLVALUE 0 6 CALLVALUE      |
 |    1E3 | JUMP     |
 
-Ikiwa tumefika hapa, pata `Value* + CALLVALUE` na uruke hadi offset 0x75.
+Ikiwa tumefika hapa, pata `Value* + CALLVALUE` na uruke hadi ofseti 0x75.
 
-| Offset | Msimbo wa operesheni   | Stack                           |
+| Ofseti | Msimbo wa operesheni | Staki                           |
 | -----: | -------- | ------------------------------- |
 |     75 | JUMPDEST | Value\*+CALLVALUE 0 6 CALLVALUE |
 |     76 | SWAP1    | 0 Value\*+CALLVALUE 6 CALLVALUE |
 |     77 | SWAP2    | 6 Value\*+CALLVALUE 0 CALLVALUE |
 |     78 | SSTORE   | 0 CALLVALUE                     |
 
-Ikiwa tutafika hapa (ambayo inahitaji data za mwito kuwa tupu) tunaongeza kwenye `Value*` thamani ya mwito. Hii inaendana na kile tunachosema miamala ya `Transfer` inafanya.
+Ikiwa tunafika hapa (ambayo inahitaji data za mwito kuwa tupu) tunaongeza kwenye `Value*` thamani ya mwito. Hii inaendana na kile tunachosema miamala ya `Transfer` inafanya.
 
-| Offset | Msimbo wa operesheni |
+| Ofseti | Msimbo wa operesheni |
 | -----: | ------ |
 |     79 | POP    |
 |     7A | POP    |
 |     7B | STOP   |
 
-Hatimaye, futa stack (ambayo sio lazima) na uashirie mwisho wa mafanikio wa muamala.
+Hatimaye, futa staki (ambayo si lazima) na uashirie mwisho wa mafanikio wa muamala.
 
-Kwa muhtasari, hapa kuna chati mtiririko ya msimbo wa awali.
+Kwa muhtasari wa yote, hapa kuna chati ya mtiririko kwa msimbo wa awali.
 
-![Entry point flowchart](flowchart-entry.png)
+<Flowchart>
+
+- Sehemu ya kuingilia (0x00)
+  - Je, data za mwito ni fupi kuliko baiti nne?
+    - **Ndiyo** Miito isiyo ya ABI (0x5E)
+      - Je, kuna data za mwito zozote?
+        - **Ndiyo** 0x7C (dhumuni halijulikani hadi sasa)
+        - **Hapana** Hamisho la ETH (0x64): tengua kwenye mzidio, vinginevyo ongeza thamani ya mwito kwenye `Storage[6]` (`Value*`) na usimame
+    - **Hapana** Miito ya ABI (0x0D)
+
+</Flowchart>
 
 ## Kishughulikiaji kwenye 0x7C {#the-handler-at-0x7c}
 
@@ -248,35 +268,47 @@ Hapa tunanakili data zote za kurejesha kwenye bafa ya kumbukumbu kuanzia 0x80.
 
 Kwa hivyo baada ya mwito tunanakili data za kurejesha kwenye bafa 0x80 - 0x80+RETURNDATASIZE, na ikiwa mwito utafaulu basi tuna `RETURN` na bafa hiyo haswa.
 
-### DELEGATECALL Ilifeli {#delegatecall-failed}
+### DELEGATECALL Imeshindwa {#delegatecall-failed}
 
-Ikiwa tutafika hapa, kwenye 0xC0, inamaanisha kuwa mkataba tuliouita ulitengua. Kwa kuwa sisi ni uwakilishi tu wa mkataba huo, tunataka kurejesha data sawa na pia kutengua.
+Ikiwa tunafika hapa, hadi 0xC0, inamaanisha kwamba mkataba tuliouita umetengua. Kwa kuwa sisi ni uwakilishi tu wa mkataba huo, tunataka kurejesha data zilezile na pia kutengua.
 
-| Ofseti | Msimbo wa operesheni   | Staki                                                                                                               |
+| Ofseti | Msimbo wa operesheni | Staki                                                                                                               |
 | -----: | -------- | ------------------------------------------------------------------------------------------------------------------- |
-|     C0 | JUMPDEST | (((kufaulu/kufeli kwa mwito))) RETURNDATASIZE (((kufaulu/kufeli kwa mwito))) 0x80 Storage[3]-kama-anwani                     |
-|     C1 | DUP2     | RETURNDATASIZE (((kufaulu/kufeli kwa mwito))) RETURNDATASIZE (((kufaulu/kufeli kwa mwito))) 0x80 Storage[3]-kama-anwani      |
-|     C2 | DUP5     | 0x80 RETURNDATASIZE (((kufaulu/kufeli kwa mwito))) RETURNDATASIZE (((kufaulu/kufeli kwa mwito))) 0x80 Storage[3]-kama-anwani |
+|     C0 | JUMPDEST | (((mafanikio/kushindwa kwa mwito))) RETURNDATASIZE (((mafanikio/kushindwa kwa mwito))) 0x80 Storage[3]-kama-anwani                     |
+|     C1 | DUP2     | RETURNDATASIZE (((mafanikio/kushindwa kwa mwito))) RETURNDATASIZE (((mafanikio/kushindwa kwa mwito))) 0x80 Storage[3]-kama-anwani      |
+|     C2 | DUP5     | 0x80 RETURNDATASIZE (((mafanikio/kushindwa kwa mwito))) RETURNDATASIZE (((mafanikio/kushindwa kwa mwito))) 0x80 Storage[3]-kama-anwani |
 |     C3 | REVERT   |
 
-Kwa hivyo tuna `REVERT` na bafa sawa tuliyotumia kwa `RETURN` hapo awali: 0x80 - 0x80+RETURNDATASIZE
+Kwa hivyo tuna `REVERT` na bafa ileile tuliyotumia kwa `RETURN` mapema: 0x80 - 0x80+RETURNDATASIZE
 
-![Call to proxy flowchart](flowchart-proxy.png)
+<Flowchart>
+
+- Data za mwito zenye urefu wa baiti moja hadi tatu, au mbinu isiyojulikana
+  - Kishughulikiaji cha uwakilishi (0x7C)
+    - Soma `Storage[3]`, anwani ya uwakilishi
+      - Nakili data za mwito kwenye kumbukumbu
+        - `DELEGATECALL` anwani ya uwakilishi
+          - Nakili data za kurejesha kwenye kumbukumbu
+            - Je, mwito ulishindwa?
+              - **Ndiyo** `REVERT` na data za kurejesha (0xC0)
+              - **Hapana** `RETURN` data za kurejesha (0xBD)
+
+</Flowchart>
 
 ## Miito ya ABI {#abi-calls}
 
 Ikiwa ukubwa wa data za mwito ni baiti nne au zaidi huu unaweza kuwa mwito halali wa ABI.
 
-| Sogezo | Msimbo wa operesheni | Staki                                             |
+| Ofseti | Msimbo wa operesheni | Staki                                             |
 | -----: | ------------ | ------------------------------------------------- |
 |      D | PUSH1 0x00   | 0x00                                              |
 |      F | CALLDATALOAD | (((Neno la kwanza (biti 256) la data za mwito)))      |
 |     10 | PUSH1 0xe0   | 0xE0 (((Neno la kwanza (biti 256) la data za mwito))) |
 |     12 | SHR          | (((biti 32 za kwanza (baiti 4) za data za mwito)))    |
 
-Etherscan inatuambia kwamba `1C` ni msimbo wa operesheni usiojulikana, kwa sababu [uliongezwa baada ya Etherscan kuandika kipengele hiki](https://eips.ethereum.org/EIPS/eip-145) na hawajasasisha. [Jedwali la kisasa la msimbo wa operesheni](https://github.com/wolflo/evm-opcodes) linatuonyesha kwamba hii ni shift right
+Etherscan inatuambia kwamba `1C` ni msimbo wa operesheni usiojulikana, kwa sababu [uliongezwa baada ya Etherscan kuandika kipengele hiki](https://eips.ethereum.org/EIPS/eip-145) na hawajaisasisha. [Jedwali la msimbo wa operesheni lililosasishwa](https://github.com/wolflo/evm-opcodes) linatuonyesha kwamba hii ni shift right
 
-| Sogezo | Msimbo wa operesheni | Staki                                                                                                    |
+| Ofseti | Msimbo wa operesheni | Staki                                                                                                    |
 | -----: | ---------------- | -------------------------------------------------------------------------------------------------------- |
 |     13 | DUP1             | (((biti 32 za kwanza (baiti 4) za data za mwito))) (((biti 32 za kwanza (baiti 4) za data za mwito)))            |
 |     14 | PUSH4 0x3cd8045e | 0x3CD8045E (((biti 32 za kwanza (baiti 4) za data za mwito))) (((biti 32 za kwanza (baiti 4) za data za mwito))) |
@@ -284,9 +316,9 @@ Etherscan inatuambia kwamba `1C` ni msimbo wa operesheni usiojulikana, kwa sabab
 |     1A | PUSH2 0x0043     | 0x43 0x3CD8045E>biti-32-za-kwanza-za-data-za-mwito (((biti 32 za kwanza (baiti 4) za data za mwito)))            |
 |     1D | JUMPI            | (((biti 32 za kwanza (baiti 4) za data za mwito)))                                                           |
 
-Kwa kugawanya majaribio ya kulinganisha sahihi ya mbinu mara mbili kama hivi huokoa nusu ya majaribio kwa wastani. Msimbo unaofuata mara moja baada ya huu na msimbo katika 0x43 unafuata mtindo ule ule: `DUP1` biti 32 za kwanza za data za mwito, `PUSH4 (((method signature>`, endesha `EQ` ili kuangalia usawa, na kisha `JUMPI` ikiwa sahihi ya mbinu inalingana. Hapa kuna sahihi za mbinu, anwani zake, na ikiwa inajulikana [ufafanuzi wa mbinu unaolingana](https://www.4byte.directory/):
+Kwa kugawanya majaribio ya kulinganisha sahihi ya mbinu katika mbili kama hii huokoa nusu ya majaribio kwa wastani. Msimbo unaofuata mara moja hii na msimbo katika 0x43 hufuata muundo uleule: `DUP1` biti 32 za kwanza za data za mwito, `PUSH4 (((method signature>`, endesha `EQ` ili kuangalia usawa, na kisha `JUMPI` ikiwa sahihi ya mbinu inalingana. Hapa kuna sahihi za mbinu, anwani zake, na ikiwa inajulikana [ufafanuzi wa mbinu unaolingana](https://www.4byte.directory/):
 
-| Mbinu                                                                                 | Sahihi ya mbinu | Sogezo la kurukia |
+| Mbinu                                                                                 | Sahihi ya mbinu | Ofseti ya kurukia |
 | -------------------------------------------------------------------------------------- | ---------------- | ------------------- |
 | [splitter()](https://www.4byte.directory/signatures/?bytes4_signature=0x3cd8045e)      | 0x3cd8045e       | 0x0103              |
 | ???                                                                                    | 0x81e580d3       | 0x0138              |
@@ -294,9 +326,28 @@ Kwa kugawanya majaribio ya kulinganisha sahihi ya mbinu mara mbili kama hivi huo
 | ???                                                                                    | 0x1f135823       | 0x00C4              |
 | [merkleRoot()](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab)    | 0x2eb4a7ab       | 0x00ED              |
 
-Ikiwa hakuna ulinganifu uliopatikana, msimbo unaruka hadi kwenye [kidhibiti cha uwakilishi katika 0x7C](#the-handler-at-0x7c), kwa matumaini kwamba mkataba ambao sisi ni wawakilishi wake una ulinganifu.
+Ikiwa hakuna ulinganifu unaopatikana, msimbo unaruka hadi kwenye [kishughulikiaji cha uwakilishi katika 0x7C](#the-handler-at-0x7c), kwa matumaini kwamba mkataba ambao sisi ni uwakilishi wake una ulinganifu.
 
-![ABI calls flowchart](flowchart-abi.png)
+<Flowchart>
+
+- Soma kiteuzi cha mbinu, baiti nne za kwanza za data za mwito (0x0D)
+  - Je, kiteuzi kiko chini ya `0x3cd8045e`?
+    - **Ndiyo** Viteuzi vya chini (0x43)
+      - Je, ni `0x1f135823`?
+        - **Ndiyo** Kazi katika 0xC4
+        - **Hapana** Je, ni `0x2eb4a7ab`?
+          - **Ndiyo** `merkleRoot()` katika 0xED
+          - **Hapana** [Kishughulikiaji cha uwakilishi (0x7C)](#the-handler-at-0x7c)
+    - **Hapana** Viteuzi vya juu (0x1E)
+      - Je, ni `0x3cd8045e`?
+        - **Ndiyo** `splitter()` katika 0x0103
+        - **Hapana** Je, ni `0x81e580d3`?
+          - **Ndiyo** Kazi katika 0x0138
+          - **Hapana** Je, ni `0xba0bafb4`?
+            - **Ndiyo** `currentWindow()` katika 0x0158
+            - **Hapana** [Kishughulikiaji cha uwakilishi (0x7C)](#the-handler-at-0x7c)
+
+</Flowchart>
 
 ## splitter() {#splitter}
 

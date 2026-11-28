@@ -13,9 +13,17 @@ published: 2022-09-15
 lang: vi
 ---
 
-Khi sử dụng các bản cuộn, chi phí của một byte trong giao dịch đắt hơn rất nhiều so với chi phí của một khe lưu trữ. Do đó, việc lưu vào bộ nhớ đệm càng nhiều thông tin càng tốt trên chuỗi là điều hợp lý.
+Khi sử dụng các bản cuộn, mỗi byte của giao dịch phải được đăng lên L1. Khi bài viết này được viết, điều đó làm cho chi phí của một byte trong giao dịch đắt hơn rất nhiều so với chi phí của một khe lưu trữ. Do đó, việc lưu vào bộ nhớ đệm càng nhiều thông tin càng tốt trên chuỗi là điều hợp lý.
 
-Trong bài viết này, bạn sẽ tìm hiểu cách tạo và sử dụng một hợp đồng bộ nhớ đệm theo cách mà bất kỳ giá trị tham số nào có khả năng được sử dụng nhiều lần sẽ được lưu vào bộ nhớ đệm và có sẵn để sử dụng (sau lần đầu tiên) với số lượng byte nhỏ hơn nhiều, cũng như cách viết mã ngoài chuỗi sử dụng bộ nhớ đệm này.
+> **Lưu ý:** Phí Rollup đã thay đổi rất nhiều kể từ khi bài viết này được viết vào năm 2022. Kể từ [bản nâng cấp Ecotone và Fjord](https://docs.optimism.io/op-stack/transactions/fees#l1-data-fee) (2024), các chuỗi OP Stack đăng dữ liệu giao dịch lên các [khối dữ liệu](/roadmap/danksharding/) và phí dữ liệu L1 dựa trên ước tính kích thước _đã nén_ của giao dịch, với mức tối thiểu là 100 byte cho mỗi giao dịch ([xem thông số kỹ thuật](https://specs.optimism.io/protocol/fjord/exec-engine.html)). Kết quả là:
+>
+> - Các byte 0 gần như miễn phí, vì chúng nén tốt.
+> - Các giao dịch ngắn đã ở mức tối thiểu 100 byte, vì vậy việc làm cho dữ liệu lệnh gọi của chúng ngắn hơn nữa không làm giảm phí của chúng.
+> - Không gian khối dữ liệu rất rẻ, vì vậy trên OP Mainnet, Gas thực thi L2 thường chiếm phần lớn hơn trong phí so với phí dữ liệu L1. Việc ghi một giá trị mới vào bộ nhớ đệm (hai `SSTORE` với 22100 Gas mỗi cái) có thể tốn nhiều chi phí hơn số byte mà nó tiết kiệm được.
+>
+> Nguyên tắc này vẫn đúng (ít byte nén hơn có nghĩa là phí dữ liệu L1 thấp hơn), nhưng liệu việc lưu vào bộ nhớ đệm có mang lại lợi ích hay không phụ thuộc vào kích thước giao dịch của bạn và giá Gas L1 và L2 hiện tại. Bạn có thể kiểm tra phí dữ liệu L1 của một giao dịch cụ thể bằng cách gọi `getL1Fee` trên [hợp đồng triển khai trước `GasPriceOracle`](https://specs.optimism.io/protocol/predeploys.html#gaspriceoracle).
+
+Trong bài viết này, bạn sẽ tìm hiểu cách tạo và sử dụng hợp đồng bộ nhớ đệm theo cách mà bất kỳ giá trị tham số nào có khả năng được sử dụng nhiều lần sẽ được lưu vào bộ nhớ đệm và có sẵn để sử dụng (sau lần đầu tiên) với số lượng byte nhỏ hơn nhiều, và cách viết mã ngoài chuỗi sử dụng bộ nhớ đệm này.
 
 Nếu bạn muốn bỏ qua bài viết và chỉ xem mã nguồn, [nó ở đây](https://github.com/qbzzt/20220915-all-you-can-cache). Ngăn xếp phát triển là [Foundry](https://getfoundry.sh/introduction/installation/).
 
@@ -310,7 +318,7 @@ Nếu chúng ta đến được đây, điều đó có nghĩa là chúng ta đ�
 
 ### Kiểm tra bộ nhớ đệm {#testing-the-cache}
 
-Một trong những lợi thế của Foundry là [nó cho phép bạn viết các bài kiểm tra bằng Solidity](https://getfoundry.sh/forge/tests/overview/), điều này giúp việc viết các bài kiểm tra đơn vị dễ dàng hơn. Các bài kiểm tra cho lớp `Cache` ở [đây](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol). Vì mã kiểm tra có tính lặp đi lặp lại, như các bài kiểm tra thường vậy, bài viết này chỉ giải thích những phần thú vị.
+Một trong những lợi thế của Foundry là [nó cho phép bạn viết các bài kiểm tra bằng Solidity](https://getfoundry.sh/forge/tests/overview/), điều này giúp việc viết các bài kiểm tra đơn vị dễ dàng hơn. Các bài kiểm tra cho lớp `Cache` nằm ở [đây](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol). Vì mã kiểm tra có tính lặp lại, như các bài kiểm tra thường thấy, bài viết này chỉ giải thích những phần thú vị.
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -323,7 +331,7 @@ import "forge-std/Test.sol";
 import "forge-std/console.sol";
 ```
 
-Đây chỉ là mã soạn sẵn (boilerplate) cần thiết để sử dụng gói kiểm tra và `console.log`.
+Đây chỉ là mã soạn sẵn cần thiết để sử dụng gói kiểm tra và `console.log`.
 
 ```solidity
 import "src/Cache.sol";
@@ -340,7 +348,7 @@ contract CacheTest is Test {
     }
 ```
 
-Hàm `setUp` được gọi trước mỗi bài kiểm tra. Trong trường hợp này, chúng ta chỉ tạo một bộ nhớ đệm mới, để các bài kiểm tra của chúng ta sẽ không ảnh hưởng lẫn nhau.
+Hàm `setUp` được gọi trước mỗi bài kiểm tra. Trong trường hợp này, chúng ta chỉ tạo một bộ nhớ đệm mới, để các bài kiểm tra của chúng ta không ảnh hưởng lẫn nhau.
 
 ```solidity
     function testCaching() public {
@@ -364,7 +372,7 @@ Các bài kiểm tra là các hàm có tên bắt đầu bằng `test`. Hàm nà
     }    // testCaching
 
 
-    // Lưu vào bộ nhớ đệm cùng một giá trị nhiều lần, đảm bảo rằng khóa vẫn
+    // Lưu cùng một giá trị vào bộ nhớ cache nhiều lần, đảm bảo rằng khóa vẫn
     // giữ nguyên
     function testRepeatCaching() public {
         for(uint i=1; i<100; i++) {
@@ -384,7 +392,7 @@ Các bài kiểm tra là các hàm có tên bắt đầu bằng `test`. Hàm nà
     }    // testRepeatCaching
 ```
 
-Về lý thuyết, có thể có một lỗi không ảnh hưởng đến các lần ghi bộ nhớ đệm liên tiếp. Vì vậy, ở đây chúng ta thực hiện một số lần ghi không liên tiếp và thấy các giá trị vẫn không bị ghi lại.
+Về lý thuyết, có thể có một lỗi không ảnh hưởng đến các lần ghi bộ nhớ đệm liên tiếp. Vì vậy, ở đây chúng ta thực hiện một số lần ghi không liên tiếp và thấy các giá trị vẫn không bị ghi đè.
 
 ```solidity
     // Đọc một uint từ bộ đệm bộ nhớ (để đảm bảo chúng ta nhận lại các tham số
@@ -405,7 +413,7 @@ Về lý thuyết, có thể có một lỗi không ảnh hưởng đến các l
         }
 ```
 
-Yul không hỗ trợ các cấu trúc dữ liệu ngoài `uint256`, vì vậy khi bạn tham chiếu đến một cấu trúc dữ liệu phức tạp hơn, chẳng hạn như bộ đệm bộ nhớ `_bytes`, bạn sẽ nhận được địa chỉ của cấu trúc đó. Solidity lưu trữ các giá trị `bytes memory` dưới dạng một từ 32 byte chứa độ dài, theo sau là các byte thực tế, vì vậy để lấy số byte `_start`, chúng ta cần tính toán `_bytes+32+_start`.
+Yul không hỗ trợ các cấu trúc dữ liệu ngoài `uint256`, vì vậy khi bạn tham chiếu đến một cấu trúc dữ liệu phức tạp hơn, chẳng hạn như bộ đệm bộ nhớ `_bytes`, bạn sẽ nhận được địa chỉ của cấu trúc đó. Solidity lưu trữ các giá trị `bytes memory` dưới dạng một từ 32 byte chứa độ dài, theo sau là các byte thực tế, vì vậy để lấy byte số `_start`, chúng ta cần tính toán `_bytes+32+_start`.
 
 ```solidity
 
@@ -416,7 +424,7 @@ Yul không hỗ trợ các cấu trúc dữ liệu ngoài `uint256`, vì vậy k
     // https://www.4byte.directory/signatures/?bytes4_signature=0x3edc1e6d
     bytes4 constant FOUR_PARAMS = 0x3edc1e6d;
 
-    // Chỉ là một số giá trị không đổi để xem chúng ta có nhận lại đúng các giá trị hay không
+    // Chỉ là một số giá trị hằng số để xem chúng ta có nhận lại đúng các giá trị hay không
     uint256 constant VAL_A = 0xDEAD60A7;
     uint256 constant VAL_B =     0xBEEF;
     uint256 constant VAL_C =     0x600D;
@@ -438,23 +446,23 @@ Gọi `fourParams()`, một hàm sử dụng `readParams`, để kiểm tra xem 
         bytes memory _callOutput;
 ```
 
-Chúng ta không thể sử dụng cơ chế ABI thông thường để gọi một hàm sử dụng bộ nhớ đệm, vì vậy chúng ta cần sử dụng cơ chế [`<address>.call()`](https://docs.soliditylang.org/en/v0.8.16/types.html#members-of-addresses) cấp thấp. Cơ chế đó lấy một `bytes memory` làm đầu vào và trả về nó (cũng như một giá trị Boolean) làm đầu ra.
+Chúng ta không thể sử dụng cơ chế ABI thông thường để gọi một hàm sử dụng bộ nhớ đệm, vì vậy chúng ta cần sử dụng cơ chế [`<address>.call()`](https://docs.soliditylang.org/en/v0.8.16/types.html#members-of-addresses) cấp thấp. Cơ chế đó lấy `bytes memory` làm đầu vào và trả về giá trị đó (cũng như một giá trị Boolean) làm đầu ra.
 
 ```solidity
-        // Lần gọi đầu tiên, bộ nhớ đệm trống
+        // Lần gọi đầu tiên, bộ nhớ cache trống
         _callInput = bytes.concat(
             FOUR_PARAMS,
 ```
 
-Sẽ rất hữu ích nếu cùng một hợp đồng hỗ trợ cả các hàm được lưu vào bộ nhớ đệm (đối với các lệnh gọi trực tiếp từ các giao dịch) và các hàm không được lưu vào bộ nhớ đệm (đối với các lệnh gọi từ các hợp đồng thông minh khác). Để làm điều đó, chúng ta cần tiếp tục dựa vào cơ chế Solidity để gọi đúng hàm, thay vì đặt mọi thứ vào [một hàm `fallback`](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function). Làm điều này giúp khả năng kết hợp dễ dàng hơn rất nhiều. Một byte duy nhất sẽ đủ để xác định hàm trong hầu hết các trường hợp, vì vậy chúng ta đang lãng phí ba byte (16\*3=48 Gas). Tuy nhiên, khi tôi viết bài này, 48 Gas đó có giá 0,07 xu, đây là một chi phí hợp lý cho mã đơn giản hơn, ít bị lỗi hơn.
+Sẽ rất hữu ích nếu cùng một hợp đồng hỗ trợ cả các hàm được lưu vào bộ nhớ đệm (đối với các lệnh gọi trực tiếp từ các giao dịch) và các hàm không được lưu vào bộ nhớ đệm (đối với các lệnh gọi từ các hợp đồng thông minh khác). Để làm điều đó, chúng ta cần tiếp tục dựa vào cơ chế Solidity để gọi đúng hàm, thay vì đặt mọi thứ vào [một hàm `fallback`](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function). Làm điều này giúp khả năng kết hợp dễ dàng hơn rất nhiều. Một byte duy nhất sẽ đủ để xác định hàm trong hầu hết các trường hợp, vì vậy chúng ta đang lãng phí ba byte. Với công thức phí OP Stack hiện tại, ba byte đó thêm một phần nhỏ của một xu (nếu có, hãy xem lưu ý ở đầu bài viết), đây là một chi phí hợp lý cho mã đơn giản hơn, ít bị lỗi hơn.
 
 ```solidity
-            // Giá trị đầu tiên, thêm nó vào bộ nhớ đệm
+            // Giá trị đầu tiên, thêm nó vào bộ nhớ cache
             cache.INTO_CACHE(),
             bytes32(VAL_A),
 ```
 
-Giá trị đầu tiên: Một cờ cho biết đó là một giá trị đầy đủ cần được ghi vào bộ nhớ đệm, theo sau là 32 byte của giá trị. Ba giá trị còn lại tương tự nhau, ngoại trừ việc `VAL_B` không được ghi vào bộ nhớ đệm và `VAL_C` vừa là tham số thứ ba vừa là tham số thứ tư.
+Giá trị đầu tiên: Một cờ cho biết đó là một giá trị đầy đủ cần được ghi vào bộ nhớ đệm, theo sau là 32 byte của giá trị. Ba giá trị còn lại tương tự, ngoại trừ việc `VAL_B` không được ghi vào bộ nhớ đệm và `VAL_C` vừa là tham số thứ ba vừa là tham số thứ tư.
 
 ```solidity
              .
@@ -480,7 +488,7 @@ Chúng ta mong đợi lệnh gọi sẽ thành công.
 Chúng ta bắt đầu với một bộ nhớ đệm trống và sau đó thêm `VAL_A` theo sau là `VAL_C`. Chúng ta mong đợi cái đầu tiên có khóa 1 và cái thứ hai có khóa 2.
 
 ```
-assertEq(toUint256(_callOutput,0), VAL_A);
+        assertEq(toUint256(_callOutput,0), VAL_A);
         assertEq(toUint256(_callOutput,32), VAL_B);
         assertEq(toUint256(_callOutput,64), VAL_C);
         assertEq(toUint256(_callOutput,96), VAL_C);
@@ -489,18 +497,18 @@ assertEq(toUint256(_callOutput,0), VAL_A);
 Đầu ra là bốn tham số. Ở đây chúng ta xác minh nó là chính xác.
 
 ```solidity
-        // Lần gọi thứ hai, chúng ta có thể sử dụng bộ nhớ đệm
+        // Lần gọi thứ hai, chúng ta có thể sử dụng bộ nhớ cache
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
-            // Giá trị đầu tiên trong Bộ nhớ đệm
+            // Giá trị đầu tiên trong Cache
             bytes1(0x01),
 ```
 
 Các khóa bộ nhớ đệm dưới 16 chỉ là một byte.
 
 ```solidity
-            // Giá trị thứ hai, không thêm nó vào bộ nhớ đệm
+            // Giá trị thứ hai, đừng thêm nó vào bộ nhớ cache
             cache.DONT_CACHE(),
             bytes32(VAL_B),
 
@@ -520,7 +528,7 @@ Các bài kiểm tra sau lệnh gọi giống hệt với các bài kiểm tra s
     function testEncodeVal() public {
 ```
 
-Hàm này tương tự như `testReadParam`, ngoại trừ việc thay vì viết các tham số một cách rõ ràng, chúng ta sử dụng `encodeVal()`.
+Hàm này tương tự như `testReadParam`, ngoại trừ việc thay vì ghi các tham số một cách rõ ràng, chúng ta sử dụng `encodeVal()`.
 
 ```solidity
         .
@@ -543,18 +551,18 @@ Hàm này tương tự như `testReadParam`, ngoại trừ việc thay vì viế
 Bài kiểm tra bổ sung duy nhất trong `testEncodeVal()` là xác minh rằng độ dài của `_callInput` là chính xác. Đối với lệnh gọi đầu tiên, nó là 4+33\*4. Đối với lệnh gọi thứ hai, nơi mọi giá trị đã có trong bộ nhớ đệm, nó là 4+1\*4.
 
 ```solidity
-    // Thử nghiệm encodeVal khi khóa lớn hơn một byte duy nhất
-    // Tối đa ba byte vì việc lấp đầy bộ nhớ đệm đến bốn byte mất
+    // Kiểm tra encodeVal khi khóa lớn hơn một byte
+    // Tối đa ba byte vì việc lấp đầy bộ nhớ cache đến bốn byte mất
     // quá nhiều thời gian.
     function testEncodeValBig() public {
-        // Đặt một số giá trị vào bộ nhớ đệm.
+        // Đặt một số giá trị vào bộ nhớ cache.
         // Để giữ cho mọi thứ đơn giản, hãy sử dụng khóa n cho giá trị n.
         for(uint i=1; i<0x1FFF; i++) {
             cache.cacheWrite(i);
         }
 ```
 
-Hàm `testEncodeVal` ở trên chỉ ghi bốn giá trị vào bộ nhớ đệm, vì vậy [phần của hàm xử lý các giá trị nhiều byte](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol#L144-L171) không được kiểm tra. Nhưng mã đó rất phức tạp và dễ xảy ra lỗi.
+Hàm `testEncodeVal` ở trên chỉ ghi bốn giá trị vào bộ nhớ đệm, vì vậy [phần của hàm xử lý các giá trị nhiều byte](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol#L144-L171) không được kiểm tra. Nhưng mã đó phức tạp và dễ xảy ra lỗi.
 
 Phần đầu tiên của hàm này là một vòng lặp ghi tất cả các giá trị từ 1 đến 0x1FFF vào bộ nhớ đệm theo thứ tự, vì vậy chúng ta sẽ có thể mã hóa các giá trị đó và biết chúng sẽ đi đâu.
 
@@ -572,7 +580,7 @@ Phần đầu tiên của hàm này là một vòng lặp ghi tất cả các gi
         );
 ```
 
-Kiểm tra các giá trị một byte, hai byte và ba byte. Chúng ta không kiểm tra vượt quá mức đó vì sẽ mất quá nhiều thời gian để ghi đủ các mục ngăn xếp (ít nhất là 0x10000000, khoảng một phần tư tỷ).
+Kiểm tra các giá trị một byte, hai byte và ba byte. Chúng ta không kiểm tra vượt quá mức đó vì sẽ mất quá nhiều thời gian để ghi đủ các mục nhập ngăn xếp (ít nhất là 0x10000000, khoảng một phần tư tỷ).
 
 ```solidity
         .
@@ -582,7 +590,7 @@ Kiểm tra các giá trị một byte, hai byte và ba byte. Chúng ta không ki
     }    // testEncodeValBig
 
 
-    // Thử nghiệm xem với một bộ đệm quá nhỏ, chúng ta có nhận được một hoàn nguyên hay không
+    // Kiểm tra rằng với một bộ đệm quá nhỏ, chúng ta nhận được một hoàn nguyên
     function testShortCalldata() public {
 ```
 
@@ -597,10 +605,10 @@ Kiểm tra điều gì xảy ra trong trường hợp bất thường khi không
     }   // testShortCalldata
 ```
 
-Vì nó hoàn nguyên, kết quả chúng ta sẽ nhận được là `false`.
+Vì nó hoàn nguyên, kết quả chúng ta nhận được phải là `false`.
 
 ```
-// Gọi với các khóa bộ nhớ đệm không có ở đó
+    // Gọi với các khóa bộ nhớ cache không tồn tại
     function testNoCacheKey() public {
         .
         .
@@ -608,7 +616,7 @@ Vì nó hoàn nguyên, kết quả chúng ta sẽ nhận được là `false`.
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
-            // Giá trị đầu tiên, thêm nó vào bộ nhớ đệm
+            // Giá trị đầu tiên, thêm nó vào bộ nhớ cache
             cache.INTO_CACHE(),
             bytes32(VAL_A),
 
@@ -625,27 +633,27 @@ Hàm này nhận được bốn tham số hoàn toàn hợp lệ, ngoại trừ 
         .
         .
         .
-    // Thử nghiệm xem với một bộ đệm quá dài, mọi thứ có hoạt động ổn không
+    // Kiểm tra rằng với một bộ đệm quá dài, mọi thứ vẫn hoạt động tốt
     function testLongCalldata() public {
         address _cacheAddr = address(cache);
         bool _success;
         bytes memory _callInput;
         bytes memory _callOutput;
 
-        // Lần gọi đầu tiên, bộ nhớ đệm trống
+        // Lần gọi đầu tiên, bộ nhớ cache trống
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
-            // Giá trị đầu tiên, thêm nó vào bộ nhớ đệm
+            // Giá trị đầu tiên, thêm nó vào bộ nhớ cache
             cache.INTO_CACHE(), bytes32(VAL_A),
 
-            // Giá trị thứ hai, thêm nó vào bộ nhớ đệm
+            // Giá trị thứ hai, thêm nó vào bộ nhớ cache
             cache.INTO_CACHE(), bytes32(VAL_B),
 
-            // Giá trị thứ ba, thêm nó vào bộ nhớ đệm
+            // Giá trị thứ ba, thêm nó vào bộ nhớ cache
             cache.INTO_CACHE(), bytes32(VAL_C),
 
-            // Giá trị thứ tư, thêm nó vào bộ nhớ đệm
+            // Giá trị thứ tư, thêm nó vào bộ nhớ cache
             cache.INTO_CACHE(), bytes32(VAL_D),
 
             // Và một giá trị khác để "lấy may"
@@ -653,7 +661,7 @@ Hàm này nhận được bốn tham số hoàn toàn hợp lệ, ngoại trừ 
         );
 ```
 
-Hàm này gửi năm giá trị. Chúng ta biết rằng giá trị thứ năm bị bỏ qua vì nó không phải là một mục bộ nhớ đệm hợp lệ, điều này sẽ gây ra việc hoàn nguyên nếu nó không được bao gồm.
+Hàm này gửi năm giá trị. Chúng ta biết rằng giá trị thứ năm bị bỏ qua vì nó không phải là một mục nhập bộ nhớ đệm hợp lệ, điều này sẽ gây ra việc hoàn nguyên nếu nó không được bao gồm.
 
 ```solidity
         (_success, _callOutput) = _cacheAddr.call(_callInput);
@@ -722,7 +730,7 @@ Hàm đọc là một `view`, vì vậy nó không yêu cầu giao dịch và kh
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[Đây (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) là cách chúng ta chỉ định trong một bài kiểm tra Foundry rằng lệnh gọi tiếp theo sẽ thất bại và lý do được báo cáo cho sự thất bại. Điều này áp dụng khi chúng ta sử dụng cú pháp `<contract>.<function name>()` thay vì xây dựng dữ liệu lệnh gọi và gọi hợp đồng bằng giao diện cấp thấp (`<contract>.call()`, v.v.).
+[Đây (`vm.expectRevert`)](https://getfoundry.sh/reference/cheatcodes/expect-revert/) là cách chúng ta chỉ định trong một bài kiểm tra Foundry rằng lệnh gọi tiếp theo sẽ thất bại và lý do được báo cáo cho sự thất bại. Điều này áp dụng khi chúng ta sử dụng cú pháp `<contract>.<function name>()` thay vì xây dựng dữ liệu lệnh gọi và gọi hợp đồng bằng giao diện cấp thấp (`<contract>.call()`, v.v.).
 
 ```solidity
     function testReadWriteCached() public {
@@ -762,37 +770,58 @@ Vì chúng ta sử dụng hàm `<address>.call()` cấp thấp, chúng ta không
 
 ### Máy khách {#the-client}
 
-Một điều bạn không có được với các bài kiểm tra Solidity là mã JavaScript mà bạn có thể cắt và dán vào ứng dụng của riêng mình. Phiên bản gốc của hướng dẫn này đã triển khai WORM lên Optimism Goerli, mạng lưới này hiện đã ngừng hoạt động. Để chạy máy khách ngày nay, hãy triển khai lại WORM lên một mạng lưới OP Stack được hỗ trợ như [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack), sau đó sử dụng địa chỉ hợp đồng thu được trong máy khách JavaScript.
+Một điều bạn không nhận được với các bài kiểm tra Solidity là mã JavaScript mà bạn có thể cắt và dán vào ứng dụng của riêng mình. Phiên bản gốc của hướng dẫn này đã triển khai WORM lên Optimism Goerli, mạng này hiện đã ngừng hoạt động. Kho lưu trữ mẫu vẫn trỏ đến Optimism Goerli, vì vậy để chạy máy khách ngày hôm nay, bạn cần tự triển khai WORM lên [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack) và trỏ máy khách đến việc triển khai của bạn.
 
-[Bạn có thể xem mã JavaScript cho máy khách tại đây](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Kho lưu trữ mẫu được viết cho Optimism Goerli, vì vậy trước khi chạy nó, hãy cập nhật điểm cuối RPC và URL của trình khám phá trong `javascript/.env.example` và `javascript/index.js` cho mạng lưới mục tiêu của bạn. Để sử dụng nó:
+[Bạn có thể xem mã JavaScript cho máy khách tại đây](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Để sử dụng nó, bạn cần [Foundry](https://getfoundry.sh/introduction/installation/), [Node.js](https://nodejs.org/) và một tài khoản có một ít ETH OP Sepolia. [Tài liệu về vòi của Optimism](https://docs.optimism.io/app-developers/tools-sdks/faucets) liệt kê các vòi mạng thử nghiệm hiện tại.
 
-1. Sao chép kho lưu trữ git:
+1. Sao chép kho lưu trữ git, bao gồm cả mô-đun con `forge-std` và xây dựng các hợp đồng. Máy khách đọc ABI và mã byte của WORM từ `out/WORM.sol/WORM.json`, tệp này chỉ tồn tại sau `forge build`.
 
    ```sh
-   git clone https://github.com/qbzzt/20220915-all-you-can-cache.git
+   git clone --recurse-submodules https://github.com/qbzzt/20220915-all-you-can-cache.git
+   cd 20220915-all-you-can-cache
+   forge build
    ```
 
-2. Cài đặt các gói cần thiết:
+   Forge cảnh báo rằng `foundry.toml` sử dụng tên phần `[default]` cũ. Bạn có thể bỏ qua cảnh báo này hoặc chạy `forge config --fix`.
+
+2. Nhập khóa riêng tư của tài khoản đã được nạp tiền của bạn vào một kho khóa Foundry được mã hóa và sử dụng nó để [triển khai WORM](https://getfoundry.sh/reference/forge/create) lên OP Sepolia.
+
+   ```sh
+   cast wallet import op-sepolia-deployer --interactive
+   forge create src/WORM.sol:WORM --rpc-url https://sepolia.optimism.io --account op-sepolia-deployer --broadcast
+   ```
+
+   Nếu không có `--broadcast`, `forge create` chỉ mô phỏng việc triển khai. Sao chép địa chỉ từ dòng `Deployed to:` của đầu ra.
+
+3. Chỉnh sửa `javascript/index.js`. Thay thế địa chỉ Optimism Goerli cũ trong dòng này bằng địa chỉ triển khai của bạn:
+
+   ```javascript
+   const worm = WormFactory.attach("0xD34335b1d818ceE54e3323D3246bD31d94E6a78a")
+   ```
+
+   Bạn cũng có thể thay thế `https://goerli-optimism.etherscan.io` bằng `https://sepolia-optimism.etherscan.io` trong hai dòng `console.log`, để các liên kết mà máy khách in ra hoạt động.
+
+4. Cài đặt các gói cần thiết:
 
    ```sh
    cd javascript
-   yarn
+   npm install
    ```
 
-3. Sao chép tệp cấu hình:
+5. Sao chép tệp cấu hình:
 
    ```sh
    cp .env.example .env
    ```
 
-4. Chỉnh sửa `.env` cho cấu hình của bạn:
+6. Chỉnh sửa `.env` cho cấu hình của bạn. Tên biến vẫn tham chiếu đến Optimism Goerli, nhưng các giá trị là dành cho OP Sepolia:
 
-   | Tham số | Giá trị |
-   | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC | Cụm từ ghi nhớ cho một tài khoản có đủ ETH để thanh toán cho một giao dịch. [Tài liệu về vòi của Optimism](https://docs.optimism.io/app-developers/tools/faucets) liệt kê các vòi mạng thử nghiệm hiện tại. |
-   | OPTIMISM_GOERLI_URL | URL RPC cho mạng lưới nơi bạn triển khai lại WORM. Đối với OP Sepolia, hãy sử dụng điểm cuối RPC của OP Sepolia như `https://sepolia.optimism.io` hoặc một điểm cuối khác từ nhà cung cấp của bạn. |
+   | Tham số             | Giá trị                                                                                                 |
+   | ------------------- | ------------------------------------------------------------------------------------------------------- |
+   | MNEMONIC            | Cụm từ ghi nhớ cho một tài khoản có đủ ETH OP Sepolia để thanh toán cho một giao dịch.                  |
+   | OPTIMISM_GOERLI_URL | URL RPC của OP Sepolia, `https://sepolia.optimism.io` hoặc một điểm cuối OP Sepolia từ một nhà cung cấp khác. |
 
-5. Chạy `index.js`.
+7. Chạy `index.js`.
 
    ```sh
    node index.js
@@ -800,7 +829,7 @@ Một điều bạn không có được với các bài kiểm tra Solidity là 
 
    Ứng dụng mẫu này trước tiên ghi một mục nhập vào WORM, hiển thị dữ liệu lệnh gọi và một liên kết đến giao dịch trên một trình khám phá khối. Sau đó, nó đọc lại mục nhập đó và hiển thị khóa mà nó sử dụng cùng với các giá trị trong mục nhập (giá trị, số khối và tác giả).
 
-Phần lớn máy khách là JavaScript dapp thông thường. Vì vậy, một lần nữa chúng ta sẽ chỉ xem xét những phần thú vị.
+Phần lớn máy khách là JavaScript dapp thông thường. Vì vậy, một lần nữa chúng ta sẽ chỉ đi qua những phần thú vị.
 
 ```javascript
 .
@@ -818,11 +847,11 @@ Một khe nhất định chỉ có thể được ghi vào một lần, vì vậ
 ```javascript
 const val = await worm.encodeVal("0x600D")
 
-// Ghi một mục nhập
+// Ghi một mục
 const calldata = func + key.slice(2) + val.slice(2)
 ```
 
-Ethers mong đợi dữ liệu lệnh gọi là một chuỗi hex, `0x` theo sau là một số chẵn các chữ số thập lục phân. Vì cả `key` và `val` đều bắt đầu bằng `0x`, chúng ta cần loại bỏ các phần đầu đó.
+Ethers mong đợi dữ liệu lệnh gọi là một chuỗi hex, `0x` theo sau là một số chẵn các chữ số thập lục phân. Vì `key` và `val` đều bắt đầu bằng `0x`, chúng ta cần xóa các tiêu đề đó.
 
 ```javascript
 const tx = await worm.populateTransaction.writeEntryCached()
@@ -837,34 +866,36 @@ Giống như với mã kiểm tra Solidity, chúng ta không thể gọi một h
     .
     .
     .
-    // Đọc mục nhập vừa được ghi
-    const realKey = '0x' + key.slice(4)  // loại bỏ cờ FF
+    // Đọc mục vừa ghi
+    const realKey = '0x' + key.slice(4)  // xóa cờ FF
     const entryRead = await worm.readEntry(realKey)
     .
     .
     .
 ```
 
-Để đọc các mục nhập, chúng ta có thể sử dụng cơ chế bình thường. Không cần sử dụng bộ nhớ đệm tham số với các hàm `view`.
+Để đọc các mục nhập, chúng ta có thể sử dụng cơ chế thông thường. Không cần sử dụng bộ nhớ đệm tham số với các hàm `view`.
+
 ## Kết luận {#conclusion}
 
-Mã trong bài viết này là một bằng chứng khái niệm (proof of concept), mục đích là làm cho ý tưởng dễ hiểu. Đối với một hệ thống sẵn sàng cho sản xuất, bạn có thể muốn triển khai một số chức năng bổ sung:
+Mã trong bài viết này là một bằng chứng khái niệm, mục đích là làm cho ý tưởng dễ hiểu. Đối với một hệ thống sẵn sàng cho sản xuất, bạn có thể muốn triển khai một số chức năng bổ sung:
 
 - Xử lý các giá trị không phải là `uint256`. Ví dụ: chuỗi.
 - Thay vì một bộ nhớ đệm toàn cục, có thể có một ánh xạ giữa người dùng và bộ nhớ đệm. Những người dùng khác nhau sử dụng các giá trị khác nhau.
-- Các giá trị được sử dụng cho địa chỉ khác biệt với các giá trị được sử dụng cho các mục đích khác. Có thể hợp lý khi có một bộ nhớ đệm riêng chỉ dành cho các địa chỉ.
-- Hiện tại, các khóa bộ nhớ đệm dựa trên thuật toán "đến trước, khóa nhỏ nhất". Mười sáu giá trị đầu tiên có thể được gửi dưới dạng một byte duy nhất. 4080 giá trị tiếp theo có thể được gửi dưới dạng hai byte. Khoảng một triệu giá trị tiếp theo là ba byte, v.v. Một hệ thống sản xuất nên giữ các bộ đếm mức sử dụng trên các mục bộ nhớ đệm và tổ chức lại chúng sao cho mười sáu giá trị _phổ biến nhất_ là một byte, 4080 giá trị phổ biến nhất tiếp theo là hai byte, v.v.
+- Các giá trị được sử dụng cho địa chỉ khác biệt với các giá trị được sử dụng cho các mục đích khác. Có thể hợp lý khi có một bộ nhớ đệm riêng chỉ dành cho địa chỉ.
+- Hiện tại, các khóa bộ nhớ đệm dựa trên thuật toán "đến trước, khóa nhỏ nhất". Mười sáu giá trị đầu tiên có thể được gửi dưới dạng một byte duy nhất. 4080 giá trị tiếp theo có thể được gửi dưới dạng hai byte. Khoảng một triệu giá trị tiếp theo là ba byte, v.v. Một hệ thống sản xuất nên giữ các bộ đếm mức sử dụng trên các mục nhập bộ nhớ đệm và tổ chức lại chúng sao cho mười sáu giá trị _phổ biến nhất_ là một byte, 4080 giá trị phổ biến tiếp theo là hai byte, v.v.
 
   Tuy nhiên, đó là một hoạt động có khả năng gây nguy hiểm. Hãy tưởng tượng chuỗi sự kiện sau:
 
-  1. Noam Naive gọi `encodeVal` để mã hóa địa chỉ mà anh ta muốn gửi token đến. Địa chỉ đó là một trong những địa chỉ đầu tiên được sử dụng trên ứng dụng, vì vậy giá trị được mã hóa là 0x06. Đây là một hàm `view`, không phải là một giao dịch, vì vậy nó nằm giữa Noam và nút mà anh ta sử dụng, và không ai khác biết về nó.
+  1. Noam Naive gọi `encodeVal` để mã hóa địa chỉ mà anh ta muốn gửi token đến. Địa chỉ đó là một trong những địa chỉ đầu tiên được sử dụng trên ứng dụng, vì vậy giá trị được mã hóa là 0x06. Đây là một hàm `view`, không phải là một giao dịch, vì vậy nó nằm giữa Noam và nút mà anh ta sử dụng, và không ai khác biết về nó
 
-  2. Owen Owner chạy thao tác sắp xếp lại bộ nhớ đệm. Rất ít người thực sự sử dụng địa chỉ đó, vì vậy bây giờ nó được mã hóa thành 0x201122. Một giá trị khác, 10<sup>18</sup>, được gán là 0x06.
+  2. Owen Owner chạy hoạt động sắp xếp lại bộ nhớ đệm. Rất ít người thực sự sử dụng địa chỉ đó, vì vậy bây giờ nó được mã hóa thành 0x201122. Một giá trị khác, 10<sup>18</sup>, được gán là 0x06.
 
-  3. Noam Naive gửi token của mình đến 0x06. Chúng đi đến địa chỉ `0x0000000000000000000000000de0b6b3a7640000` và vì không ai biết khóa riêng tư cho địa chỉ đó, chúng chỉ bị kẹt ở đó. Noam _không vui chút nào_.
+  3. Noam Naive gửi token của mình đến 0x06. Chúng đi đến địa chỉ `0x0000000000000000000000000de0b6b3a7640000` và vì không ai biết khóa riêng tư cho địa chỉ đó, chúng chỉ bị kẹt ở đó. Noam _không vui_.
 
   Có nhiều cách để giải quyết vấn đề này và vấn đề liên quan đến các giao dịch nằm trong mempool trong quá trình sắp xếp lại bộ nhớ đệm, nhưng bạn phải nhận thức được điều đó.
 
-Tôi đã trình bày bộ nhớ đệm ở đây với Optimism, vì tôi là một nhân viên của Optimism và đây là bản cuộn mà tôi biết rõ nhất. Nhưng nó sẽ hoạt động với bất kỳ bản cuộn nào tính chi phí tối thiểu cho quá trình xử lý nội bộ, do đó, khi so sánh, việc ghi dữ liệu giao dịch vào lớp 1 (l1) là chi phí chính.
+Tôi đã trình bày việc lưu vào bộ nhớ đệm ở đây với Optimism, vì tôi là một nhân viên của Optimism và đây là Rollup mà tôi biết rõ nhất. Nhưng nó sẽ hoạt động với bất kỳ Rollup nào tính chi phí tối thiểu cho quá trình xử lý nội bộ, do đó, khi so sánh, việc ghi dữ liệu giao dịch vào L1 là chi phí chính. Như đã giải thích trong lưu ý ở đầu bài viết này, hãy kiểm tra các khoản phí hiện tại trước khi bạn quyết định việc lưu vào bộ nhớ đệm có đáng giá hay không.
 
 [Xem tại đây để biết thêm về công việc của tôi](https://cryptodocguy.pro/).
+

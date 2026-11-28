@@ -25,54 +25,57 @@ published: 2021-01-13
 
 - [Prometheus](https://prometheus.io/) (модель pull)
 - [InfluxDB](https://www.influxdata.com/get-influxdb/) (модель push)
-- [Telegraf](https://www.influxdata.com/get-influxdb/)
+- [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/)
 - [Grafana](https://www.grafana.com/)
 - [Datadog](https://www.datadoghq.com/)
 - [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)
 
-Також існує [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter) — варіант, попередньо налаштований з InfluxDB та Grafana.
+Якщо ви віддаєте перевагу Prometheus, Geth також може надавати свої метрики у форматі Prometheus. Запустіть Geth з `--metrics --metrics.addr 127.0.0.1` та спрямуйте Prometheus на `http://127.0.0.1:6060/debug/metrics/prometheus`.
 
 У цьому посібнику ми налаштуємо ваш клієнт Geth для надсилання даних до InfluxDB, щоб створити базу даних, та до Grafana для створення графічної візуалізації даних. Виконання цього вручну допоможе вам краще зрозуміти процес, змінювати його та розгортати в різних середовищах.
 
 ## Налаштування InfluxDB {#setting-up-influxdb}
 
-Спочатку завантажимо та встановимо InfluxDB. Різні варіанти завантаження можна знайти на [сторінці релізів Influxdata](https://portal.influxdata.com/downloads/). Виберіть той, який підходить для вашого середовища.
-Ви також можете встановити його з [репозиторію](https://repos.influxdata.com/). Наприклад, у дистрибутивах на базі Debian:
+Спочатку завантажимо та встановимо InfluxDB. У цьому посібнику використовується InfluxDB 1.x (OSS), який Geth підтримує за допомогою прапорців `--metrics.influxdb`, наведених нижче. Новіші версії InfluxDB використовують інше налаштування з організаціями, бакетами та токенами замість баз даних і користувачів. Geth підтримує InfluxDB 2.x за допомогою прапорців `--metrics.influxdbv2`, але кроки налаштування в цьому посібнику стосуються лише версії 1.x.
 
-```
-curl -tlsv1.3 --proto =https -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add
-source /etc/lsb-release
-echo "deb https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
+Дотримуйтесь [інструкцій зі встановлення InfluxDB 1.x](https://docs.influxdata.com/influxdb/v1/introduction/install/) для вашого середовища. Наприклад, на Debian або Ubuntu ви можете встановити його з репозиторію InfluxData. Перевірте інструкції зі встановлення щодо поточного відбитка ключа підписання, перш ніж довіряти ключу:
+
+```sh
+curl --silent --location -O https://repos.influxdata.com/influxdata-archive.key
+sudo mkdir -p /etc/apt/keyrings
+gpg --dearmor < influxdata-archive.key | sudo tee /etc/apt/keyrings/influxdata-archive.gpg > /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/influxdata-archive.gpg] https://repos.influxdata.com/debian stable main" | sudo tee /etc/apt/sources.list.d/influxdata.list
 sudo apt update
 sudo apt install influxdb -y
 sudo systemctl enable influxdb
 sudo systemctl start influxdb
-sudo apt install influxdb-client
 ```
+
+Пакет `influxdb` містить клієнт командного рядка `influx`.
 
 Після успішного встановлення InfluxDB переконайтеся, що він працює у фоновому режимі. За замовчуванням він доступний за адресою `localhost:8086`.
-Перед використанням клієнта `influx` вам потрібно створити нового користувача з правами адміністратора. Цей користувач слугуватиме для високорівневого управління, створення баз даних та користувачів.
+Перед використанням клієнта `influx` вам потрібно створити нового користувача з правами адміністратора. Цей користувач слугуватиме для високорівневого керування, створення баз даних та користувачів.
 
-```
+```sh
 curl -XPOST "http://localhost:8086/query" --data-urlencode "q=CREATE USER username WITH PASSWORD 'password' WITH ALL PRIVILEGES"
 ```
 
-Тепер ви можете використовувати клієнт influx для входу в [оболонку InfluxDB](https://docs.influxdata.com/influxdb/v1.8/tools/shell/) під цим користувачем.
+Тепер ви можете використовувати клієнт influx для входу в [оболонку InfluxDB](https://docs.influxdata.com/influxdb/v1/tools/shell/) з цим користувачем.
 
-```
+```sh
 influx -username 'username' -password 'password'
 ```
 
-Спілкуючись безпосередньо з InfluxDB у його оболонці, ви можете створити базу даних та користувача для метрик Geth.
+Безпосередньо взаємодіючи з InfluxDB у його оболонці, ви можете створити базу даних та користувача для метрик Geth.
 
-```
+```sql
 create database geth
-create user geth with password choosepassword
+create user geth with password '<geth-password>'
 ```
 
 Перевірте створені записи за допомогою:
 
-```
+```sql
 show databases
 show users
 ```
@@ -87,68 +90,69 @@ InfluxDB запущено та налаштовано для зберіганн�
 
 ## Підготовка Geth {#preparing-geth}
 
-Після налаштування бази даних нам потрібно увімкнути збір метрик у Geth. Зверніть увагу на `METRICS AND STATS OPTIONS` у `geth --help`. Там можна знайти кілька варіантів, у цьому випадку ми хочемо, щоб Geth надсилав дані до InfluxDB.
+Після налаштування бази даних нам потрібно ввімкнути збір метрик у Geth. Зверніть увагу на `METRICS AND STATS OPTIONS` у `geth --help`. Там можна знайти кілька варіантів, у цьому випадку ми хочемо, щоб Geth надсилав дані до InfluxDB.
 Базове налаштування визначає кінцеву точку, де доступний InfluxDB, та автентифікацію для бази даних.
 
-```
-geth --metrics --metrics.influxdb --metrics.influxdb.endpoint "http://0.0.0.0:8086" --metrics.influxdb.username "geth" --metrics.influxdb.password "chosenpassword"
+```sh
+geth --metrics --metrics.influxdb --metrics.influxdb.endpoint "http://127.0.0.1:8086" --metrics.influxdb.database "geth" --metrics.influxdb.username "geth" --metrics.influxdb.password "<geth-password>"
 ```
 
-Ці прапорці можна додати до команди запуску клієнта або зберегти у файлі конфігурації.
+Використовуйте той самий пароль, який ви встановили під час створення користувача `geth`. Ці прапорці можна додати до команди запуску клієнта або зберегти у файлі конфігурації.
 
 Ви можете перевірити, чи Geth успішно надсилає дані, наприклад, переглянувши список метрик у базі даних. В оболонці InfluxDB:
 
-```
+```sql
 use geth
 show measurements
 ```
 
 ## Налаштування Grafana {#setting-up-grafana}
 
-Наступним кроком є встановлення Grafana, яка буде графічно інтерпретувати дані. Дотримуйтесь процесу встановлення для вашого середовища в документації Grafana. Переконайтеся, що встановлюєте версію OSS, якщо не бажаєте іншого.
-Приклад кроків встановлення для дистрибутивів Debian з використанням репозиторію:
+Наступним кроком є встановлення Grafana, яка буде графічно інтерпретувати дані. Дотримуйтесь [процесу встановлення для вашого середовища](https://grafana.com/docs/grafana/latest/setup-grafana/installation/) у документації Grafana. Переконайтеся, що встановлюєте версію OSS, якщо вам не потрібно щось інше.
+Приклад кроків встановлення для Debian або Ubuntu з використанням репозиторію Grafana:
 
-```
-curl -tlsv1.3 --proto =https -sL https://packages.grafana.com/gpg.key | sudo apt-key add -
-echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+```sh
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee /etc/apt/sources.list.d/grafana.list
 sudo apt update
 sudo apt install grafana
 sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 ```
 
-Коли Grafana буде запущена, вона має бути доступна за адресою `localhost:3000`.
-Використовуйте ваш улюблений браузер для доступу до цього шляху, потім увійдіть за допомогою облікових даних за замовчуванням (користувач: `admin` та пароль: `admin`). Коли з'явиться запит, змініть пароль за замовчуванням та збережіть.
+Коли Grafana буде запущено, вона має бути доступна за адресою `localhost:3000`.
+Використовуйте ваш улюблений браузер для доступу до цього шляху, потім увійдіть за допомогою облікових даних за замовчуванням (користувач: `admin` та пароль: `admin`). Коли з'явиться запит, змініть пароль за замовчуванням і збережіть.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 1)](./grafana1.png)
+![Знімок екрана панелі інструментів Grafana для моніторингу Geth (панель 1)](./grafana1.png)
 
-Вас буде перенаправлено на домашню сторінку Grafana. Спочатку налаштуйте джерело даних. Натисніть на значок конфігурації на лівій панелі та виберіть «Data sources» (Джерела даних).
+Вас буде переспрямовано на домашню сторінку Grafana. Спочатку налаштуйте вихідні дані. Відкрийте меню та виберіть **Connections > Data sources**. Знімки екрана в цьому посібнику зроблені зі старішої версії Grafana, тому ваші екрани можуть виглядати трохи інакше.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 2)](./grafana2.png)
+![Знімок екрана панелі інструментів Grafana для моніторингу Geth (панель 2)](./grafana2.png)
 
-Ще не створено жодного джерела даних, натисніть «Add data source» (Додати джерело даних), щоб визначити його.
+Ще не створено жодного джерела даних, натисніть «Add data source», щоб визначити його.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 3)](./grafana3.png)
+![Знімок екрана панелі інструментів Grafana для моніторингу Geth (панель 3)](./grafana3.png)
 
-Для цього налаштування виберіть «InfluxDB» та продовжуйте.
+Для цього налаштування виберіть «InfluxDB» і продовжуйте.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 4)](./grafana4.png)
+![Знімок екрана панелі інструментів Grafana для моніторингу Geth (панель 4)](./grafana4.png)
 
-Конфігурація джерела даних досить проста, якщо ви запускаєте інструменти на одній машині. Вам потрібно вказати адресу InfluxDB та дані для доступу до бази даних. Зверніться до зображення нижче.
+Конфігурація джерела даних є досить простою, якщо ви запускаєте інструменти на одній машині. Вам потрібно вказати адресу InfluxDB та дані для доступу до бази даних. Зверніться до зображення нижче.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 5)](./grafana5.png)
+![Знімок екрана панелі інструментів Grafana для моніторингу Geth (панель 5)](./grafana5.png)
 
-Якщо все заповнено і InfluxDB доступний, натисніть «Save and test» (Зберегти та перевірити) і дочекайтеся появи підтвердження.
+Якщо все виконано і InfluxDB доступний, натисніть «Save and test» і зачекайте на появу підтвердження.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 6)](./grafana6.png)
+![Знімок екрана панелі інструментів Grafana для моніторингу Geth (панель 6)](./grafana6.png)
 
-Тепер Grafana налаштована на читання даних з InfluxDB. Далі вам потрібно створити інформаційну панель (дашборд), яка буде їх інтерпретувати та відображати. Властивості інформаційних панелей кодуються у файлах JSON, які може створити будь-хто і легко імпортувати. На лівій панелі натисніть «Create and Import» (Створити та імпортувати).
+Тепер Grafana налаштована на читання даних з InfluxDB. Тепер вам потрібно створити панель інструментів, яка буде інтерпретувати та відображати їх. Властивості панелей інструментів кодуються у файлах JSON, які може створити будь-хто і легко імпортувати. Відкрийте меню та виберіть **Dashboards**, потім натисніть **New > Import**.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 7)](./grafana7.png)
+![Знімок екрана панелі інструментів Grafana для моніторингу Geth (панель 7)](./grafana7.png)
 
-Для інформаційної панелі моніторингу Geth скопіюйте ID [цієї панелі](https://grafana.com/grafana/dashboards/13877/) та вставте його на сторінці «Import» (Імпорт) у Grafana. Після збереження інформаційна панель має виглядати так:
+Для панелі інструментів моніторингу Geth скопіюйте ID [цієї панелі інструментів](https://grafana.com/grafana/dashboards/13877/) і вставте його на сторінці «Import» у Grafana. Після збереження панель інструментів має виглядати так:
 
-![Grafana dashboard screenshot for Geth monitoring (panel 8)](./grafana8.png)
+![Знімок екрана панелі інструментів Grafana для моніторингу Geth (панель 8)](./grafana8.png)
 
-Ви можете змінювати свої інформаційні панелі. Кожну панель можна редагувати, переміщувати, видаляти або додавати. Ви можете змінювати свої конфігурації. Все залежить від вас! Щоб дізнатися більше про те, як працюють інформаційні панелі, зверніться до [документації Grafana](https://grafana.com/docs/grafana/latest/dashboards/).
-Вас також може зацікавити [Сповіщення (Alerting)](https://grafana.com/docs/grafana/latest/alerting/). Це дозволяє налаштувати сповіщення, коли метрики досягають певних значень. Підтримуються різні канали зв'язку.
+Ви можете змінювати свої панелі інструментів. Кожну панель можна редагувати, переміщувати, видаляти або додавати. Ви можете змінювати свої конфігурації. Все залежить від вас! Щоб дізнатися більше про те, як працюють панелі інструментів, зверніться до [документації Grafana](https://grafana.com/docs/grafana/latest/dashboards/).
+Вас також може зацікавити [Alerting](https://grafana.com/docs/grafana/latest/alerting/). Це дозволяє налаштувати сповіщення, коли метрики досягають певних значень. Підтримуються різні канали зв'язку.

@@ -1,30 +1,20 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "mr",
-  "translatedAt": "2026-05-01T19:39:02.104Z",
-  "englishManifestHash": "e177d1d95e41",
+  "translatedAt": "2026-11-28T07:28:04.446Z",
+  "englishManifestHash": "3cceec2aef3f",
   "placeholderOrder": [
     "LINK-a21a82",
-    "LINK-b259c4",
+    "LINK-944234",
     "LINK-ec56f0",
     "LINK-8f7bf4",
     "LINK-fe2251",
-    "LINK-c1328a",
-    "LINK-22c07b",
-    "LINK-38f1c3",
-    "LINK-c75065",
-    "LINK-9b31ff",
-    "LINK-65b925",
-    "LINK-ab3d13",
+    "LINK-9598e7",
     "LINK-d6ca27",
-    "LINK-5d37d0",
-    "LINK-9e5212",
     "LINK-039e0d",
-    "LINK-16d615",
     "LINK-e4076c",
     "LINK-f1c8dc",
-    "LINK-5cc31a",
-    "LINK-48c296",
+    "LINK-bc4720",
     "LINK-c47bf2"
   ],
   "placeholderMap": {
@@ -34,10 +24,10 @@
         "url": "/"
       }
     },
-    "LINK-b259c4": {
+    "LINK-944234": {
       "type": "link",
       "values": {
-        "url": "/founders/"
+        "url": "/organizations/founders/"
       }
     },
     "LINK-ec56f0": {
@@ -58,46 +48,10 @@
         "url": "https://esp.ethereum.foundation/academic-grants"
       }
     },
-    "LINK-c1328a": {
-      "type": "link",
-      "values": {
-        "url": "https://gap.karmahq.xyz/funding-map"
-      }
-    },
-    "LINK-22c07b": {
-      "type": "link",
-      "values": {
-        "url": "https://etherscan.io/directory/Others/Grant"
-      }
-    },
-    "LINK-38f1c3": {
-      "type": "link",
-      "values": {
-        "url": "https://airtable.com/shr86elKgWTSCP4AY"
-      }
-    },
-    "LINK-c75065": {
-      "type": "link",
-      "values": {
-        "url": "https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0"
-      }
-    },
-    "LINK-9b31ff": {
+    "LINK-9598e7": {
       "type": "link",
       "values": {
         "url": "https://arbitrum.foundation/grants"
-      }
-    },
-    "LINK-65b925": {
-      "type": "link",
-      "values": {
-        "url": "https://arbitrum.foundation/"
-      }
-    },
-    "LINK-ab3d13": {
-      "type": "link",
-      "values": {
-        "url": "https://alphagrowth.io/crypto-web3-grants-list"
       }
     },
     "LINK-d6ca27": {
@@ -106,28 +60,10 @@
         "url": "https://www.uniswapfoundation.org/build"
       }
     },
-    "LINK-5d37d0": {
-      "type": "link",
-      "values": {
-        "url": "https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0"
-      }
-    },
-    "LINK-9e5212": {
-      "type": "link",
-      "values": {
-        "url": "https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708"
-      }
-    },
     "LINK-039e0d": {
       "type": "link",
       "values": {
         "url": "/defi/#quadratic-funding"
-      }
-    },
-    "LINK-16d615": {
-      "type": "link",
-      "values": {
-        "url": "https://www.gitcoin.co/program"
       }
     },
     "LINK-e4076c": {
@@ -142,16 +78,10 @@
         "url": "https://giveth.io/"
       }
     },
-    "LINK-5cc31a": {
+    "LINK-bc4720": {
       "type": "link",
       "values": {
-        "url": "https://artizen.fund/"
-      }
-    },
-    "LINK-48c296": {
-      "type": "link",
-      "values": {
-        "url": "https://qacc.giveth.io/"
+        "url": "https://www.karmahq.org/funding-map"
       }
     },
     "LINK-c47bf2": {
@@ -163,7 +93,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-05-01T19:39:02.103Z",
+      "translatedAt": "2026-11-28T07:28:04.446Z",
       "status": "success"
     }
   }

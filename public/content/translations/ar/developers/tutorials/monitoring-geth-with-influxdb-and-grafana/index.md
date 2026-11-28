@@ -19,134 +19,138 @@ published: 2021-01-13
 
 ## حزمة المراقبة {#monitoring-stack}
 
-يجمع عميل إيثيريوم الكثير من البيانات التي يمكن قراءتها في شكل قاعدة بيانات زمنية. لجعل المراقبة أسهل، يمكنك إدخال هذه البيانات في برنامج تصور البيانات. هناك خيارات متعددة متاحة:
+يجمع عميل إيثيريوم الكثير من البيانات التي يمكن قراءتها في شكل قاعدة بيانات زمنية. لتسهيل المراقبة، يمكنك تغذية هذه البيانات في برنامج لتصور البيانات. هناك خيارات متعددة متاحة:
 
-- [<span dir="ltr">Prometheus</span>](https://prometheus.io/) (نموذج السحب)
-- [<span dir="ltr">InfluxDB</span>](https://www.influxdata.com/get-influxdb/) (نموذج الدفع)
-- [<span dir="ltr">Telegraf</span>](https://www.influxdata.com/get-influxdb/)
-- [<span dir="ltr">Grafana</span>](https://www.grafana.com/)
-- [<span dir="ltr">Datadog</span>](https://www.datadoghq.com/)
-- [<span dir="ltr">Chronograf</span>](https://www.influxdata.com/time-series-platform/chronograf/)
+- [Prometheus](https://prometheus.io/) (نموذج السحب)
+- [InfluxDB](https://www.influxdata.com/get-influxdb/) (نموذج الدفع)
+- [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/)
+- [Grafana](https://www.grafana.com/)
+- [Datadog](https://www.datadoghq.com/)
+- [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)
 
-هناك أيضًا [<span dir="ltr">Geth Prometheus Exporter</span>](https://github.com/hunterlong/gethexporter)، وهو خيار مُعد مسبقًا مع <span dir="ltr">InfluxDB</span> و<span dir="ltr">Grafana</span>.
+إذا كنت تفضل Prometheus، يمكن لـ Geth أيضًا عرض مقاييسه بتنسيق Prometheus. ابدأ تشغيل Geth باستخدام `--metrics --metrics.addr 127.0.0.1` ووجه Prometheus إلى `http://127.0.0.1:6060/debug/metrics/prometheus`.
 
-في هذا البرنامج التعليمي، سنقوم بإعداد عميل <span dir="ltr">Geth</span> الخاص بك لدفع البيانات إلى <span dir="ltr">InfluxDB</span> لإنشاء قاعدة بيانات و<span dir="ltr">Grafana</span> لإنشاء تصور رسومي للبيانات. سيساعدك القيام بذلك يدويًا على فهم العملية بشكل أفضل، وتعديلها، ونشرها في بيئات مختلفة.
+في هذا البرنامج التعليمي، سنقوم بإعداد عميل Geth الخاص بك لدفع البيانات إلى InfluxDB لإنشاء قاعدة بيانات وGrafana لإنشاء تصور رسومي للبيانات. سيساعدك القيام بذلك يدويًا على فهم العملية بشكل أفضل، وتعديلها، ونشرها في بيئات مختلفة.
 
 ## إعداد InfluxDB {#setting-up-influxdb}
 
-أولاً، دعنا نقوم بتنزيل وتثبيت <span dir="ltr">InfluxDB</span>. يمكن العثور على خيارات تنزيل مختلفة في [صفحة إصدارات <span dir="ltr">Influxdata</span>](https://portal.influxdata.com/downloads/). اختر الخيار الذي يناسب بيئتك.
-يمكنك أيضًا تثبيته من [مستودع](https://repos.influxdata.com/). على سبيل المثال في التوزيعات المبنية على <span dir="ltr">Debian</span>:
+أولاً، دعنا نقوم بتنزيل وتثبيت InfluxDB. يستخدم هذا البرنامج التعليمي <span dir="ltr">InfluxDB 1.x (OSS)</span>، والذي يدعمه Geth باستخدام علامات `--metrics.influxdb` أدناه. تستخدم إصدارات InfluxDB الأحدث إعدادًا مختلفًا مع المؤسسات (organizations) والحاويات (buckets) والرموز (tokens) بدلاً من قواعد البيانات والمستخدمين. يدعم Geth إصدار <span dir="ltr">InfluxDB 2.x</span> باستخدام علامات `--metrics.influxdbv2`، ولكن خطوات الإعداد في هذا البرنامج التعليمي تنطبق فقط على <span dir="ltr">1.x</span>.
 
-```
-curl -tlsv1.3 --proto =https -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add
-source /etc/lsb-release
-echo "deb https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
+اتبع [إرشادات تثبيت <span dir="ltr">InfluxDB 1.x</span>](https://docs.influxdata.com/influxdb/v1/introduction/install/) لبيئتك. على سبيل المثال، في Debian أو Ubuntu يمكنك تثبيته من مستودع InfluxData. تحقق من إرشادات التثبيت لمعرفة بصمة مفتاح التوقيع الحالية قبل الوثوق بالمفتاح:
+
+```sh
+curl --silent --location -O https://repos.influxdata.com/influxdata-archive.key
+sudo mkdir -p /etc/apt/keyrings
+gpg --dearmor < influxdata-archive.key | sudo tee /etc/apt/keyrings/influxdata-archive.gpg > /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/influxdata-archive.gpg] https://repos.influxdata.com/debian stable main" | sudo tee /etc/apt/sources.list.d/influxdata.list
 sudo apt update
 sudo apt install influxdb -y
 sudo systemctl enable influxdb
 sudo systemctl start influxdb
-sudo apt install influxdb-client
 ```
 
-بعد تثبيت <span dir="ltr">InfluxDB</span> بنجاح، تأكد من تشغيله في الخلفية. افتراضيًا، يمكن الوصول إليه على `localhost:8086`.
+تتضمن حزمة `influxdb` عميل سطر الأوامر `influx`.
+
+بعد تثبيت InfluxDB بنجاح، تأكد من تشغيله في الخلفية. افتراضيًا، يمكن الوصول إليه على `localhost:8086`.
 قبل استخدام عميل `influx`، يجب عليك إنشاء مستخدم جديد بامتيازات المسؤول. سيعمل هذا المستخدم للإدارة عالية المستوى، وإنشاء قواعد البيانات والمستخدمين.
 
-```
+```sh
 curl -XPOST "http://localhost:8086/query" --data-urlencode "q=CREATE USER username WITH PASSWORD 'password' WITH ALL PRIVILEGES"
 ```
 
-الآن يمكنك استخدام عميل <span dir="ltr">influx</span> للدخول إلى [صدفة <span dir="ltr">InfluxDB</span>](https://docs.influxdata.com/influxdb/v1.8/tools/shell/) باستخدام هذا المستخدم.
+الآن يمكنك استخدام عميل influx للدخول إلى [صدفة InfluxDB](https://docs.influxdata.com/influxdb/v1/tools/shell/) باستخدام هذا المستخدم.
 
-```
+```sh
 influx -username 'username' -password 'password'
 ```
 
-من خلال التواصل المباشر مع <span dir="ltr">InfluxDB</span> في الصدفة الخاصة به، يمكنك إنشاء قاعدة بيانات ومستخدم لمقاييس <span dir="ltr">geth</span>.
+من خلال التواصل المباشر مع InfluxDB في الصدفة الخاصة به، يمكنك إنشاء قاعدة بيانات ومستخدم لمقاييس geth.
 
-```
+```sql
 create database geth
-create user geth with password choosepassword
+create user geth with password '<geth-password>'
 ```
 
-تحقق من الإدخالات المنشأة باستخدام:
+تحقق من الإدخالات التي تم إنشاؤها باستخدام:
 
-```
+```sql
 show databases
 show users
 ```
 
-اخرج من صدفة <span dir="ltr">InfluxDB</span>.
+اخرج من صدفة InfluxDB.
 
 ```
 exit
 ```
 
-يعمل <span dir="ltr">InfluxDB</span> الآن وهو مُكوّن لتخزين المقاييس من <span dir="ltr">Geth</span>.
+يعمل InfluxDB الآن وهو مكوّن لتخزين المقاييس من Geth.
 
 ## تجهيز Geth {#preparing-geth}
 
-بعد إعداد قاعدة البيانات، نحتاج إلى تمكين جمع المقاييس في <span dir="ltr">Geth</span>. انتبه إلى `METRICS AND STATS OPTIONS` في `geth --help`. يمكن العثور على خيارات متعددة هناك، في هذه الحالة نريد من <span dir="ltr">Geth</span> دفع البيانات إلى <span dir="ltr">InfluxDB</span>.
-يحدد الإعداد الأساسي نقطة النهاية (endpoint) التي يمكن الوصول إلى <span dir="ltr">InfluxDB</span> من خلالها والمصادقة لقاعدة البيانات.
+بعد إعداد قاعدة البيانات، نحتاج إلى تمكين جمع المقاييس في Geth. انتبه إلى `METRICS AND STATS OPTIONS` في `geth --help`. يمكن العثور على خيارات متعددة هناك، وفي هذه الحالة نريد من Geth دفع البيانات إلى InfluxDB.
+يحدد الإعداد الأساسي نقطة النهاية التي يمكن الوصول إلى InfluxDB من خلالها والمصادقة لقاعدة البيانات.
 
+```sh
+geth --metrics --metrics.influxdb --metrics.influxdb.endpoint "http://127.0.0.1:8086" --metrics.influxdb.database "geth" --metrics.influxdb.username "geth" --metrics.influxdb.password "<geth-password>"
 ```
-geth --metrics --metrics.influxdb --metrics.influxdb.endpoint "http://0.0.0.0:8086" --metrics.influxdb.username "geth" --metrics.influxdb.password "chosenpassword"
-```
 
-يمكن إلحاق هذه العلامات (flags) بأمر بدء تشغيل العميل أو حفظها في ملف التكوين.
+استخدم نفس كلمة المرور التي قمت بتعيينها عند إنشاء المستخدم `geth`. يمكن إلحاق هذه العلامات بأمر بدء تشغيل العميل أو حفظها في ملف التكوين.
 
-يمكنك التحقق من أن <span dir="ltr">Geth</span> يدفع البيانات بنجاح، على سبيل المثال عن طريق سرد المقاييس في قاعدة البيانات. في صدفة <span dir="ltr">InfluxDB</span>:
+يمكنك التحقق من أن Geth يقوم بدفع البيانات بنجاح، على سبيل المثال عن طريق سرد المقاييس في قاعدة البيانات. في صدفة InfluxDB:
 
-```
+```sql
 use geth
 show measurements
 ```
 
 ## إعداد Grafana {#setting-up-grafana}
 
-الخطوة التالية هي تثبيت <span dir="ltr">Grafana</span> الذي سيقوم بتفسير البيانات رسوميًا. اتبع عملية التثبيت لبيئتك في وثائق <span dir="ltr">Grafana</span>. تأكد من تثبيت إصدار <span dir="ltr">OSS</span> إذا لم تكن ترغب في غير ذلك.
-خطوات التثبيت كمثال لتوزيعات <span dir="ltr">Debian</span> باستخدام المستودع:
+الخطوة التالية هي تثبيت Grafana الذي سيقوم بتفسير البيانات رسوميًا. اتبع [عملية التثبيت لبيئتك](https://grafana.com/docs/grafana/latest/setup-grafana/installation/) في وثائق Grafana. تأكد من تثبيت إصدار OSS ما لم تكن بحاجة إلى شيء آخر.
+مثال على خطوات التثبيت لـ Debian أو Ubuntu باستخدام مستودع Grafana:
 
-```
-curl -tlsv1.3 --proto =https -sL https://packages.grafana.com/gpg.key | sudo apt-key add -
-echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+```sh
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee /etc/apt/sources.list.d/grafana.list
 sudo apt update
 sudo apt install grafana
 sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 ```
 
-عندما يكون <span dir="ltr">Grafana</span> قيد التشغيل، يجب أن يكون قابلاً للوصول على `localhost:3000`.
+عندما يعمل Grafana، يجب أن يكون قابلاً للوصول على `localhost:3000`.
 استخدم متصفحك المفضل للوصول إلى هذا المسار، ثم قم بتسجيل الدخول باستخدام بيانات الاعتماد الافتراضية (المستخدم: `admin` وكلمة المرور: `admin`). عند المطالبة، قم بتغيير كلمة المرور الافتراضية واحفظها.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 1)](./grafana1.png)
+![لقطة شاشة للوحة تحكم Grafana لمراقبة Geth (اللوحة 1)](./grafana1.png)
 
-ستتم إعادة توجيهك إلى الصفحة الرئيسية لـ <span dir="ltr">Grafana</span>. أولاً، قم بإعداد بيانات المصدر الخاصة بك. انقر على أيقونة التكوين في الشريط الأيسر وحدد <span dir="ltr">"Data sources"</span> (مصادر البيانات).
+ستتم إعادة توجيهك إلى الصفحة الرئيسية لـ Grafana. أولاً، قم بإعداد بيانات المصدر الخاصة بك. افتح القائمة وحدد <span dir="ltr">**Connections > Data sources**</span>. لقطات الشاشة في هذا البرنامج التعليمي مأخوذة من إصدار أقدم من Grafana، لذلك قد تبدو شاشاتك مختلفة قليلاً.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 2)](./grafana2.png)
+![لقطة شاشة للوحة تحكم Grafana لمراقبة Geth (اللوحة 2)](./grafana2.png)
 
-لا توجد أي مصادر بيانات تم إنشاؤها بعد، انقر على <span dir="ltr">"Add data source"</span> (إضافة مصدر بيانات) لتحديد واحد.
+لا توجد أي مصادر بيانات تم إنشاؤها بعد، انقر على "Add data source" لتحديد واحد.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 3)](./grafana3.png)
+![لقطة شاشة للوحة تحكم Grafana لمراقبة Geth (اللوحة 3)](./grafana3.png)
 
-لهذا الإعداد، حدد <span dir="ltr">"InfluxDB"</span> وتابع.
+لهذا الإعداد، حدد "InfluxDB" وتابع.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 4)](./grafana4.png)
+![لقطة شاشة للوحة تحكم Grafana لمراقبة Geth (اللوحة 4)](./grafana4.png)
 
-تكوين مصدر البيانات واضح ومباشر إذا كنت تقوم بتشغيل الأدوات على نفس الجهاز. تحتاج إلى تعيين عنوان <span dir="ltr">InfluxDB</span> والتفاصيل للوصول إلى قاعدة البيانات. راجع الصورة أدناه.
+تكوين مصدر البيانات بسيط للغاية إذا كنت تقوم بتشغيل الأدوات على نفس الجهاز. تحتاج إلى تعيين عنوان InfluxDB والتفاصيل للوصول إلى قاعدة البيانات. راجع الصورة أدناه.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 5)](./grafana5.png)
+![لقطة شاشة للوحة تحكم Grafana لمراقبة Geth (اللوحة 5)](./grafana5.png)
 
-إذا اكتمل كل شيء وكان <span dir="ltr">InfluxDB</span> قابلاً للوصول، انقر على <span dir="ltr">"Save and test"</span> (حفظ واختبار) وانتظر ظهور التأكيد.
+إذا اكتمل كل شيء وكان InfluxDB قابلاً للوصول، انقر على "Save and test" وانتظر ظهور التأكيد.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 6)](./grafana6.png)
+![لقطة شاشة للوحة تحكم Grafana لمراقبة Geth (اللوحة 6)](./grafana6.png)
 
-تم إعداد <span dir="ltr">Grafana</span> الآن لقراءة البيانات من <span dir="ltr">InfluxDB</span>. الآن تحتاج إلى إنشاء لوحة معلومات (dashboard) ستقوم بتفسيرها وعرضها. يتم تشفير خصائص لوحات المعلومات في ملفات <span dir="ltr">JSON</span> التي يمكن لأي شخص إنشاؤها واستيرادها بسهولة. في الشريط الأيسر، انقر على <span dir="ltr">"Create and Import"</span> (إنشاء واستيراد).
+تم إعداد Grafana الآن لقراءة البيانات من InfluxDB. الآن تحتاج إلى إنشاء لوحة تحكم ستقوم بتفسيرها وعرضها. يتم تشفير خصائص لوحات التحكم في ملفات JSON التي يمكن لأي شخص إنشاؤها واستيرادها بسهولة. افتح القائمة وحدد **Dashboards**، ثم انقر على <span dir="ltr">**New > Import**</span>.
 
-![Grafana dashboard screenshot for Geth monitoring (panel 7)](./grafana7.png)
+![لقطة شاشة للوحة تحكم Grafana لمراقبة Geth (اللوحة 7)](./grafana7.png)
 
-للحصول على لوحة معلومات مراقبة <span dir="ltr">Geth</span>، انسخ مُعرّف (ID) [لوحة المعلومات هذه](https://grafana.com/grafana/dashboards/13877/) والصقه في <span dir="ltr">"Import page"</span> (صفحة الاستيراد) في <span dir="ltr">Grafana</span>. بعد حفظ لوحة المعلومات، يجب أن تبدو هكذا:
+للحصول على لوحة تحكم مراقبة Geth، انسخ معرف [لوحة التحكم هذه](https://grafana.com/grafana/dashboards/13877/) والصقه في "Import page" في Grafana. بعد حفظ لوحة التحكم، يجب أن تبدو هكذا:
 
-![Grafana dashboard screenshot for Geth monitoring (panel 8)](./grafana8.png)
+![لقطة شاشة للوحة تحكم Grafana لمراقبة Geth (اللوحة 8)](./grafana8.png)
 
-يمكنك تعديل لوحات المعلومات الخاصة بك. يمكن تحرير كل لوحة أو نقلها أو إزالتها أو إضافتها. يمكنك تغيير تكويناتك. الأمر متروك لك! لمعرفة المزيد حول كيفية عمل لوحات المعلومات، راجع [وثائق <span dir="ltr">Grafana</span>](https://grafana.com/docs/grafana/latest/dashboards/).
+يمكنك تعديل لوحات التحكم الخاصة بك. يمكن تحرير كل لوحة أو نقلها أو إزالتها أو إضافتها. يمكنك تغيير تكويناتك. الأمر متروك لك! لمعرفة المزيد حول كيفية عمل لوحات التحكم، راجع [وثائق Grafana](https://grafana.com/docs/grafana/latest/dashboards/).
 قد تكون مهتمًا أيضًا بـ [التنبيهات (Alerting)](https://grafana.com/docs/grafana/latest/alerting/). يتيح لك هذا إعداد إشعارات التنبيه عندما تصل المقاييس إلى قيم معينة. يتم دعم قنوات اتصال مختلفة.

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/tutorials/uniswap-v2-annotated-code/index.md",
-  "generatedAt": "2026-10-21T22:16:23.270Z",
-  "rootHash": "8bd0d5db19b7",
+  "generatedAt": "2026-11-28T06:52:45.910Z",
+  "rootHash": "8a6328d1776d",
   "tree": {
-    "contentHash": "a4832e0828a1",
-    "anchorHash": "c544f7765d90",
+    "contentHash": "f784e3648881",
+    "anchorHash": "7bc2b07091fa",
     "children": {
       "frontmatter:title": {
         "contentHash": "87713332e69a",
@@ -55,7 +55,7 @@
       },
       "introduction": {
         "contentHash": "add69065f095",
-        "anchorHash": "23d610075818",
+        "anchorHash": "aeabc217d0b4",
         "labelHash": "b605350bc002",
         "children": {
           "_label": {
@@ -72,7 +72,7 @@
           },
           "what-does-uniswap-do": {
             "contentHash": "a87005394ce7",
-            "anchorHash": "eb2f4408ff30",
+            "anchorHash": "576086254597",
             "labelHash": "1300af24e28c",
             "children": {
               "_label": {
@@ -85,7 +85,7 @@
               },
               "link:0": {
                 "contentHash": "84508fc8aef1",
-                "anchorHash": "e0abbe7a1bb0"
+                "anchorHash": "9c7f4fa6899e"
               },
               "prose:2": {
                 "contentHash": "cdb4ee2aea69",
@@ -492,8 +492,8 @@
         ]
       },
       "core-contracts": {
-        "contentHash": "aa862e8b931b",
-        "anchorHash": "b26b55868ec1",
+        "contentHash": "bc5bf7158bdb",
+        "anchorHash": "414c6de33be7",
         "labelHash": "f5ff94b7df31",
         "children": {
           "_label": {
@@ -505,8 +505,8 @@
             "anchorHash": "e3b0c44298fc"
           },
           "uniswapv2pair": {
-            "contentHash": "80bc64a0c5bb",
-            "anchorHash": "705c7fb44773",
+            "contentHash": "1b315567ae4c",
+            "anchorHash": "7c8b7c571b47",
             "labelHash": "7c804fe8ac0b",
             "children": {
               "_label": {
@@ -1030,8 +1030,8 @@
                 ]
               },
               "pair-update-internal": {
-                "contentHash": "60bd7113a443",
-                "anchorHash": "5816004cc449",
+                "contentHash": "2b3e4918d843",
+                "anchorHash": "6c7a65232307",
                 "labelHash": "12d7f7a5aff2",
                 "children": {
                   "_label": {
@@ -1039,7 +1039,7 @@
                     "anchorHash": "e3b0c44298fc"
                   },
                   "_auto:_update": {
-                    "contentHash": "25285b78fe77",
+                    "contentHash": "848991ae8612",
                     "anchorHash": "9731588abaa3",
                     "labelHash": "e5b802928cd0",
                     "children": {
@@ -1113,8 +1113,8 @@
                     ]
                   },
                   "_auto:_mintfee": {
-                    "contentHash": "8e61d27684cb",
-                    "anchorHash": "d27c9e9c5d40",
+                    "contentHash": "7e89444550b0",
+                    "anchorHash": "d524b32023ef",
                     "labelHash": "2b151a334963",
                     "children": {
                       "_label": {
@@ -1129,18 +1129,6 @@
                         "contentHash": "e3b0c44298fc",
                         "anchorHash": "f606e5eff947"
                       },
-                      "prose:0": {
-                        "contentHash": "4c482a5dbe8a",
-                        "anchorHash": "e3b0c44298fc"
-                      },
-                      "code-fence:4": {
-                        "contentHash": "e3b0c44298fc",
-                        "anchorHash": "2495b15f17b4"
-                      },
-                      "code-fence:6": {
-                        "contentHash": "e3b0c44298fc",
-                        "anchorHash": "0fb52ae6f722"
-                      },
                       "prose:1": {
                         "contentHash": "1dad4a8e7ca3",
                         "anchorHash": "e3b0c44298fc"
@@ -1153,11 +1141,23 @@
                         "contentHash": "cb01c173972d",
                         "anchorHash": "e3b0c44298fc"
                       },
-                      "code-fence:10": {
+                      "code-fence:6": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "2495b15f17b4"
+                      },
+                      "prose:0": {
+                        "contentHash": "4c482a5dbe8a",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "code-fence:8": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "0fb52ae6f722"
+                      },
+                      "code-fence:12": {
                         "contentHash": "e3b0c44298fc",
                         "anchorHash": "da2eee182a51"
                       },
-                      "code-fence:14": {
+                      "code-fence:16": {
                         "contentHash": "e3b0c44298fc",
                         "anchorHash": "8b8da412e52f"
                       },
@@ -1165,12 +1165,12 @@
                         "contentHash": "04d96b9dbf36",
                         "anchorHash": "9d6f5c70415d"
                       },
-                      "code-fence:17": {
+                      "code-fence:19": {
                         "contentHash": "e3b0c44298fc",
                         "anchorHash": "1f16e36a38cc"
                       },
                       "prose:4": {
-                        "contentHash": "3aa50943df14",
+                        "contentHash": "7a8d9ce02d4a",
                         "anchorHash": "e3b0c44298fc"
                       },
                       "prose:5": {
@@ -1201,42 +1201,44 @@
                         "contentHash": "04fc026c755e",
                         "anchorHash": "e3b0c44298fc"
                       },
-                      "code-fence:27": {
+                      "code-fence:29": {
                         "contentHash": "e3b0c44298fc",
                         "anchorHash": "fa4c8c742dc0"
                       },
                       "prose:3": {
-                        "contentHash": "c864d3e731dc",
+                        "contentHash": "4a615d3529d3",
                         "anchorHash": "e3b0c44298fc"
                       },
-                      "code-fence:33": {
+                      "code-fence:35": {
                         "contentHash": "e3b0c44298fc",
                         "anchorHash": "f625aecaa420"
                       },
                       "link:1": {
-                        "contentHash": "9c82b0147d31",
-                        "anchorHash": "94ca733304af"
+                        "contentHash": "b5d0b689b64a",
+                        "anchorHash": "f32e43dfe3fe"
                       }
                     },
                     "childrenOrder": [
                       "_label",
                       "code-comment:1",
                       "code-fence:2",
-                      "prose:0",
-                      "code-fence:4",
-                      "prose:0",
+                      "prose:1",
+                      "inline-code:0",
+                      "prose:2",
                       "code-fence:6",
+                      "prose:0",
+                      "code-fence:8",
                       "prose:1",
                       "inline-code:0",
                       "prose:2",
-                      "code-fence:10",
+                      "code-fence:12",
                       "prose:1",
                       "inline-code:0",
                       "prose:2",
-                      "code-fence:14",
+                      "code-fence:16",
                       "prose:1",
                       "link:0",
-                      "code-fence:17",
+                      "code-fence:19",
                       "prose:4",
                       "link:0",
                       "prose:5",
@@ -1246,13 +1248,13 @@
                       "prose:7",
                       "inline-code:3",
                       "prose:8",
-                      "code-fence:27",
+                      "code-fence:29",
                       "prose:2",
                       "inline-code:0",
                       "prose:3",
                       "inline-code:1",
                       "prose:4",
-                      "code-fence:33",
+                      "code-fence:35",
                       "prose:2",
                       "inline-code:0",
                       "prose:3",
@@ -1733,7 +1735,7 @@
           },
           "uniswapv2factory": {
             "contentHash": "a5deee344396",
-            "anchorHash": "54f7fd90bfdf",
+            "anchorHash": "c92ae6453ed2",
             "labelHash": "2beeb2de9134",
             "children": {
               "_label": {
@@ -1955,7 +1957,7 @@
           },
           "uniswapv2erc20": {
             "contentHash": "3aaa96c5e885",
-            "anchorHash": "d104be32e515",
+            "anchorHash": "0d91ec606dd1",
             "labelHash": "0ea38f3f242d",
             "children": {
               "_label": {
@@ -1988,7 +1990,7 @@
               },
               "link:3": {
                 "contentHash": "f733ba8444e6",
-                "anchorHash": "22f573796d03"
+                "anchorHash": "156d2817c791"
               },
               "prose:7": {
                 "contentHash": "fe6ed4add0dd",
@@ -2137,8 +2139,8 @@
         ]
       },
       "periphery-contracts": {
-        "contentHash": "85552b8843eb",
-        "anchorHash": "b4fd55d0b6e8",
+        "contentHash": "c6ecf16d5c4d",
+        "anchorHash": "337ca83842ca",
         "labelHash": "b6ebe58286f0",
         "children": {
           "_label": {
@@ -2150,8 +2152,8 @@
             "anchorHash": "e3b0c44298fc"
           },
           "uniswapv2router01": {
-            "contentHash": "8690b4713e3c",
-            "anchorHash": "4bd30c366d59",
+            "contentHash": "39344b9a1a36",
+            "anchorHash": "fbb1752c10d1",
             "labelHash": "169d60c26132",
             "children": {
               "_label": {
@@ -2160,25 +2162,17 @@
               },
               "link:0": {
                 "contentHash": "ea726398de4b",
-                "anchorHash": "b48105e1acca"
+                "anchorHash": "53573eb19934"
               },
-              "prose:3": {
-                "contentHash": "1eb84709c448",
+              "prose:2": {
+                "contentHash": "b0d67d078ffa",
                 "anchorHash": "e3b0c44298fc"
               },
-              "link:1": {
-                "contentHash": "0300dace68d4",
-                "anchorHash": "2aa2608aa659"
-              },
-              "prose:4": {
-                "contentHash": "e0df8d950c93",
-                "anchorHash": "e3b0c44298fc"
-              },
-              "inline-code:2": {
+              "inline-code:1": {
                 "contentHash": "e3b0c44298fc",
                 "anchorHash": "3ec9a279a83a"
               },
-              "prose:5": {
+              "prose:3": {
                 "contentHash": "51e1044068d8",
                 "anchorHash": "e3b0c44298fc"
               }
@@ -2186,16 +2180,14 @@
             "childrenOrder": [
               "_label",
               "link:0",
-              "prose:3",
-              "link:1",
-              "prose:4",
-              "inline-code:2",
-              "prose:5"
+              "prose:2",
+              "inline-code:1",
+              "prose:3"
             ]
           },
           "uniswapv2router02": {
-            "contentHash": "1c009c08d68b",
-            "anchorHash": "7b94c40ca3d7",
+            "contentHash": "c6658bf1d06e",
+            "anchorHash": "06ea6721786a",
             "labelHash": "50da31220749",
             "children": {
               "_label": {
@@ -2255,8 +2247,8 @@
                 "anchorHash": "364eae0b8caa"
               },
               "add-liquidity": {
-                "contentHash": "6136aef311f7",
-                "anchorHash": "bc49d5266155",
+                "contentHash": "2a18b713eb2a",
+                "anchorHash": "2223dc7a4c03",
                 "labelHash": "d704eebdbd69",
                 "children": {
                   "_label": {
@@ -2317,7 +2309,7 @@
                   },
                   "link:0": {
                     "contentHash": "b923fda02ff5",
-                    "anchorHash": "a053f1fe30f0"
+                    "anchorHash": "77093a65f1b7"
                   },
                   "prose:2": {
                     "contentHash": "eb62938a43e5",
@@ -2345,7 +2337,7 @@
                   },
                   "link:1": {
                     "contentHash": "dd1608596cec",
-                    "anchorHash": "fa31c65e70bf"
+                    "anchorHash": "823c64b81569"
                   },
                   "prose:4": {
                     "contentHash": "051dcc0ede98",
@@ -2360,7 +2352,7 @@
                     "anchorHash": "dc6f17bbec82"
                   },
                   "prose:5": {
-                    "contentHash": "f232c5b82104",
+                    "contentHash": "cf18f71276cc",
                     "anchorHash": "e3b0c44298fc"
                   },
                   "inline-code:2": {
@@ -2591,7 +2583,7 @@
               },
               "trade": {
                 "contentHash": "c3489e423004",
-                "anchorHash": "d311a1cd847e",
+                "anchorHash": "1f60913deb00",
                 "labelHash": "9709653fc80c",
                 "children": {
                   "_label": {
@@ -2923,8 +2915,8 @@
         ]
       },
       "libraries": {
-        "contentHash": "11c8f25fdae0",
-        "anchorHash": "8e63810a38a8",
+        "contentHash": "6a95fccbd439",
+        "anchorHash": "bce95f717b50",
         "labelHash": "254216e4550d",
         "children": {
           "_label": {
@@ -3105,7 +3097,7 @@
             ]
           },
           "uniswapv2library": {
-            "contentHash": "5a14d4f63ea5",
+            "contentHash": "775e6d9eecf8",
             "anchorHash": "cfd0159bbd4a",
             "labelHash": "c6503f6ca30f",
             "children": {
@@ -3232,8 +3224,8 @@
             ]
           },
           "transfer-helper": {
-            "contentHash": "9244044ea6ae",
-            "anchorHash": "b66800a518ad",
+            "contentHash": "d653e39a6df0",
+            "anchorHash": "bdab178d60de",
             "labelHash": "967eff413af3",
             "children": {
               "_label": {
@@ -3250,10 +3242,10 @@
               },
               "inline-code:1": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "fcbcf165908d"
+                "anchorHash": "663ea1bfffe5"
               },
               "prose:3": {
-                "contentHash": "d87309563a42",
+                "contentHash": "cf9f186600f5",
                 "anchorHash": "e3b0c44298fc"
               },
               "code-comment:5": {
@@ -3281,7 +3273,7 @@
                 "anchorHash": "d4ff88865950"
               },
               "prose:4": {
-                "contentHash": "c6ae171acf78",
+                "contentHash": "cdb4ee2aea69",
                 "anchorHash": "e3b0c44298fc"
               },
               "inline-code:0": {
@@ -3320,15 +3312,15 @@
                 "contentHash": "e3b0c44298fc",
                 "anchorHash": "6a186fa3b801"
               },
-              "code-comment:27": {
+              "code-comment:29": {
                 "contentHash": "9f752372e19d",
                 "anchorHash": "e3b0c44298fc"
               },
-              "code-fence:28": {
+              "code-fence:30": {
                 "contentHash": "e3b0c44298fc",
                 "anchorHash": "731b59e59196"
               },
-              "code-fence:32": {
+              "code-fence:34": {
                 "contentHash": "e3b0c44298fc",
                 "anchorHash": "ca6dcf6fd033"
               },
@@ -3362,15 +3354,17 @@
               "prose:8",
               "code-comment:22",
               "code-fence:23",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "inline-code:1",
+              "prose:4",
+              "code-comment:29",
+              "code-fence:30",
               "prose:1",
               "link:0",
               "prose:2",
-              "code-comment:27",
-              "code-fence:28",
-              "prose:1",
-              "link:0",
-              "prose:2",
-              "code-fence:32",
+              "code-fence:34",
               "prose:0"
             ]
           }
@@ -3433,5 +3427,5 @@
       "conclusion"
     ]
   },
-  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
+  "sourceCommitSha": "5b47cdd0767fb2af81d1867c4e131dfd280d81bc"
 }

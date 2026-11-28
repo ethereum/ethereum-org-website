@@ -13,15 +13,19 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 
 ## لماذا يوجد حد؟ {#why-is-there-a-limit}
 
-في [22 نوفمبر 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon)، قدم التفرع الكلي Spurious Dragon [<span dir="ltr">EIP-170</span>](https://eips.ethereum.org/EIPS/eip-170) والذي أضاف حدًا لحجم العقد الذكي يبلغ <span dir="ltr">24.576 kb</span>. بالنسبة لك كمطور Solidity، يعني هذا أنه عندما تضيف المزيد والمزيد من الوظائف إلى عقدك، ستصل في مرحلة ما إلى الحد الأقصى وعند النشر سترى الخطأ:
+في <span dir="ltr">[November 22, 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon)</span>، قدم التفرع الصلب <span dir="ltr">Spurious Dragon</span> <span dir="ltr">[EIP-170](https://eips.ethereum.org/EIPS/eip-170)</span> الذي أضاف حدًا لحجم العقد الذكي يبلغ <span dir="ltr">24,576 bytes</span> (<span dir="ltr">24 KiB</span>). بالنسبة لك كمطور <span dir="ltr">Solidity</span>، يعني هذا أنه عندما تضيف المزيد والمزيد من الوظائف إلى عقدك، ستصل في مرحلة ما إلى الحد وسيحذرك المترجم (compiler):
 
-`Warning: Contract code size exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low "runs" value!), turning off revert strings, or using libraries.`
+`Warning: Contract code size is 25000 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low "runs" value!), turning off revert strings, or using libraries.`
 
-تم تقديم هذا الحد لمنع هجمات حجب الخدمة (DOS). أي استدعاء لعقد يكون رخيصًا نسبيًا من حيث الغاز. ومع ذلك، فإن تأثير استدعاء العقد على عقد إيثيريوم يزداد بشكل غير متناسب اعتمادًا على حجم رمز العقد المستدعى (قراءة الرمز من القرص، والمعالجة المسبقة للرمز، وإضافة البيانات إلى إثبات ميركل). كلما واجهت موقفًا يتطلب فيه المهاجم موارد قليلة للتسبب في الكثير من العمل للآخرين، فإنك تحصل على احتمالية لهجمات DOS.
+يوجد تحذير مشابه لرمز النشر (initcode)، والذي حده <span dir="ltr">[EIP-3860](https://eips.ethereum.org/EIPS/eip-3860)</span> إلى <span dir="ltr">49,152 bytes</span> في ترقية شانغهاي.
 
-في الأصل، كان هذا يمثل مشكلة أقل لأن أحد الحدود الطبيعية لحجم العقد هو حد الغاز للكتلة. من الواضح أنه يجب نشر العقد ضمن معاملة تحتوي على كل رمز البايت الخاص بالعقد. إذا قمت بتضمين تلك المعاملة الواحدة فقط في كتلة، فيمكنك استهلاك كل هذا الغاز، لكنه ليس لانهائيًا. منذ [ترقية لندن](/ethereum-forks/#london)، أصبح حد الغاز للكتلة قادرًا على التغير بين <span dir="ltr">15M</span> و <span dir="ltr">30M</span> وحدة اعتمادًا على طلب الشبكة.
+هذا الحد ليس دائمًا. يرفعه <span dir="ltr">[EIP-7954](https://eips.ethereum.org/EIPS/eip-7954)</span> إلى <span dir="ltr">65,536 bytes</span> (<span dir="ltr">64 KiB</span>)، وحد رمز النشر إلى <span dir="ltr">131,072 bytes</span>، ومن المقرر إدراجه في [ترقية غلامستردام](/roadmap/glamsterdam/). حتى يتم تفعيل تلك الترقية على الشبكة التي تنشر عليها، فإن <span dir="ltr">24,576 bytes</span> هو الحد هناك، وحتى بعد ذلك تظل العقود الأصغر أرخص في النشر وأسهل في التدقيق.
 
-في ما يلي سنلقي نظرة على بعض الطرق مرتبة حسب تأثيرها المحتمل. فكر في الأمر من منظور فقدان الوزن. أفضل استراتيجية لشخص ما للوصول إلى وزنه المستهدف (في حالتنا <span dir="ltr">24kb</span>) هي التركيز على الطرق ذات التأثير الكبير أولاً. في معظم الحالات، مجرد إصلاح نظامك الغذائي سيوصلك إلى هناك، ولكن في بعض الأحيان تحتاج إلى أكثر من ذلك بقليل. ثم قد تضيف بعض التمارين (تأثير متوسط) أو حتى المكملات الغذائية (تأثير صغير).
+تم تقديم هذا الحد لمنع هجمات الحرمان من الخدمة (<span dir="ltr">DOS</span>). أي استدعاء لعقد يعتبر رخيصًا نسبيًا من حيث الغاز. ومع ذلك، فإن تأثير استدعاء العقد على عُقد إيثيريوم يزداد بشكل غير متناسب اعتمادًا على حجم رمز العقد المستدعى (قراءة الرمز من القرص، المعالجة المسبقة للرمز، إضافة البيانات إلى إثبات ميركل). كلما واجهت موقفًا يتطلب فيه المهاجم موارد قليلة للتسبب في الكثير من العمل للآخرين، فإنك تحصل على إمكانية حدوث هجمات <span dir="ltr">DOS</span>.
+
+في الأصل، كان هذا يمثل مشكلة أقل لأن أحد الحدود الطبيعية لحجم العقد هو حد غاز الكتلة. من الواضح أنه يجب نشر العقد ضمن معاملة تحتوي على كل رمز البايت الخاص بالعقد. إذا قمت بتضمين تلك المعاملة الواحدة فقط في كتلة، فيمكنك استهلاك كل هذا الغاز، لكنه ليس لا نهائيًا. اليوم، يبلغ حد غاز الكتلة عشرات الملايين من الغاز وقد تم رفعه عدة مرات بواسطة المدققين، لذا بمفرده سيسمح بعقود كبيرة جدًا. منذ [ترقية فوساكا](/roadmap/fusaka/)، تم أيضًا وضع حد أقصى لمعاملة واحدة عند <span dir="ltr">16,777,216 gas</span> (<span dir="ltr">[EIP-7825](https://eips.ethereum.org/EIPS/eip-7825)</span>)، ولكن هذا لا يزال أعلى بكثير مما يكلفه نشر عقد بحجم <span dir="ltr">24 KiB</span>، ولهذا السبب هناك حاجة إلى حد صريح للحجم.
+
+فيما يلي سنلقي نظرة على بعض الطرق مرتبة حسب تأثيرها المحتمل. فكر في الأمر من منظور فقدان الوزن. أفضل استراتيجية لشخص ما للوصول إلى وزنه المستهدف (في حالتنا <span dir="ltr">24kb</span>) هي التركيز على الطرق ذات التأثير الكبير أولاً. في معظم الحالات، مجرد إصلاح نظامك الغذائي سيوصلك إلى هناك، ولكن في بعض الأحيان تحتاج إلى أكثر من ذلك بقليل. ثم قد تضيف بعض التمارين (تأثير متوسط) أو حتى المكملات الغذائية (تأثير صغير).
 
 ## تأثير كبير {#big-impact}
 
@@ -35,11 +39,11 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 
 ### المكتبات {#libraries}
 
-إحدى الطرق البسيطة لنقل رمز الوظائف بعيدًا عن التخزين هي استخدام [مكتبة](https://solidity.readthedocs.io/en/v0.6.10/contracts.html#libraries). لا تقم بتعريف دوال المكتبة على أنها `internal` لأنها ستتم [إضافتها إلى العقد](https://ethereum.stackexchange.com/questions/12975/are-internal-functions-in-libraries-not-covered-by-linking) مباشرة أثناء الترجمة (compilation). ولكن إذا استخدمت دوال `public`، فستكون هذه الدوال في الواقع في عقد مكتبة منفصل. ضع في اعتبارك استخدام [`using for`](https://solidity.readthedocs.io/en/v0.6.10/contracts.html#using-for) لجعل استخدام المكتبات أكثر ملاءمة.
+إحدى الطرق البسيطة لنقل رمز الوظائف بعيدًا عن التخزين هي استخدام [مكتبة](https://docs.soliditylang.org/en/latest/contracts.html#libraries). لا تقم بتعريف دوال المكتبة على أنها `internal` لأنها ستتم [إضافتها إلى العقد](https://ethereum.stackexchange.com/questions/12975/are-internal-functions-in-libraries-not-covered-by-linking) مباشرة أثناء الترجمة (compilation). ولكن إذا استخدمت دوال `public`، فستكون هذه الدوال في الواقع في عقد مكتبة منفصل. ضع في اعتبارك استخدام [`using for`](https://docs.soliditylang.org/en/latest/contracts.html#using-for) لجعل استخدام المكتبات أكثر ملاءمة.
 
 ### الوكلاء (Proxies) {#proxies}
 
-استراتيجية أكثر تقدمًا ستكون نظام الوكيل (proxy). تستخدم المكتبات `DELEGATECALL` في الخلفية والذي ينفذ ببساطة دالة عقد آخر مع حالة العقد المستدعي. تحقق من [منشور المدونة هذا](https://hackernoon.com/how-to-make-smart-contracts-upgradable-2612e771d5a2) لمعرفة المزيد عن أنظمة الوكلاء. إنها تمنحك المزيد من الوظائف، على سبيل المثال، تتيح إمكانية الترقية، ولكنها تضيف أيضًا الكثير من التعقيد. لن أضيفها فقط لتقليل أحجام العقود ما لم تكن خيارك الوحيد لأي سبب من الأسباب.
+ستكون الاستراتيجية الأكثر تقدمًا هي نظام الوكيل (proxy). تستخدم المكتبات `DELEGATECALL` في الخلفية والذي ينفذ ببساطة دالة عقد آخر مع حالة العقد المستدعي. تحقق من [ترقية العقود الذكية](/developers/docs/smart-contracts/upgrading/) لمعرفة المزيد عن أنظمة الوكلاء. إنها تمنحك المزيد من الوظائف، على سبيل المثال، تتيح إمكانية الترقية، ولكنها تضيف أيضًا الكثير من التعقيد. لن أضيفها فقط لتقليل أحجام العقود ما لم تكن خيارك الوحيد لأي سبب من الأسباب.
 
 ## تأثير متوسط {#medium-impact}
 
@@ -53,19 +57,26 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 ### تجنب المتغيرات الإضافية {#avoid-additional-variables}
 
 ```solidity
-function get(uint id) returns (address,address) {
+struct MyStruct {
+    address addr1;
+    address addr2;
+}
+
+mapping(uint => MyStruct) myStructs;
+
+function get(uint id) public view returns (address, address) {
     MyStruct memory myStruct = myStructs[id];
     return (myStruct.addr1, myStruct.addr2);
 }
 ```
 
 ```solidity
-function get(uint id) returns (address,address) {
+function get(uint id) public view returns (address, address) {
     return (myStructs[id].addr1, myStructs[id].addr2);
 }
 ```
 
-تغيير بسيط كهذا يحدث فرقًا بمقدار **<span dir="ltr">0.28kb</span>**. من المحتمل أن تجد العديد من المواقف المشابهة في عقودك ويمكن أن تتراكم هذه المواقف لتصل إلى كميات كبيرة.
+أحدث تغيير بسيط كهذا فرقًا بمقدار **<span dir="ltr">0.28kb</span>** عند كتابة هذا المقال. تعتمد المدخرات الدقيقة على إصدار المترجم (compiler) وإعداداته (مع <span dir="ltr">Solidity 0.8.37</span> يبلغ حوالي <span dir="ltr">0.1kb</span> بدون المُحسِّن (optimizer) وأقل بكثير معه)، لذا قم بالقياس دائمًا. من المحتمل أن تجد العديد من المواقف المشابهة في عقودك ويمكن أن تتراكم هذه المواقف لتصل إلى مقادير كبيرة.
 
 ### تقصير رسالة الخطأ {#shorten-error-message}
 
@@ -81,42 +92,44 @@ require(msg.sender == owner, "OW1");
 
 ### استخدام الأخطاء المخصصة بدلاً من رسائل الخطأ {#use-custom-errors-instead-of-error-messages}
 
-تم تقديم الأخطاء المخصصة في [<span dir="ltr">Solidity 0.8.4</span>](https://blog.soliditylang.org/2021/04/21/custom-errors/). إنها طريقة رائعة لتقليل حجم عقودك، لأنها مشفرة بـ ABI كمحددات (selectors) (تمامًا مثل الدوال).
+تم تقديم الأخطاء المخصصة في <span dir="ltr">[Solidity 0.8.4](https://blog.soliditylang.org/2021/04/21/custom-errors/)</span>. إنها طريقة رائعة لتقليل حجم عقودك، لأنها مشفرة بـ <span dir="ltr">ABI</span> كمحددات (selectors) (تمامًا مثل الدوال).
 
 ```solidity
 error Unauthorized();
 
-if (msg.sender != owner) {
-    revert Unauthorized();
+function doSomething() public view {
+    if (msg.sender != owner) {
+        revert Unauthorized();
+    }
 }
 ```
 
-### ضع في اعتبارك قيمة تشغيل منخفضة في المُحسّن (optimizer) {#consider-a-low-run-value-in-the-optimizer}
+### ضع في اعتبارك قيمة تشغيل منخفضة في المُحسِّن (optimizer) {#consider-a-low-run-value-in-the-optimizer}
 
-يمكنك أيضًا تغيير إعدادات المُحسّن (optimizer). القيمة الافتراضية 200 تعني أنه يحاول تحسين رمز البايت كما لو تم استدعاء الدالة 200 مرة. إذا قمت بتغييرها إلى 1، فأنت تخبر المُحسّن أساسًا بالتحسين لحالة تشغيل كل دالة مرة واحدة فقط. الدالة المحسنة للتشغيل مرة واحدة فقط تعني أنها محسنة لعملية النشر نفسها. كن على علم بأن **هذا يزيد من [تكاليف الغاز](/developers/docs/gas/) لتشغيل الدوال**، لذلك قد لا ترغب في القيام بذلك.
+يمكنك أيضًا تغيير إعدادات المُحسِّن. القيمة الافتراضية <span dir="ltr">200</span> تعني أنه يحاول تحسين رمز البايت كما لو تم استدعاء دالة <span dir="ltr">200</span> مرة. إذا قمت بتغييرها إلى <span dir="ltr">1</span>، فأنت تخبر المُحسِّن أساسًا بالتحسين لحالة تشغيل كل دالة مرة واحدة فقط. الدالة المحسنة للتشغيل مرة واحدة فقط تعني أنها محسنة للنشر نفسه. كن على علم بأن **هذا يزيد من [تكاليف الغاز](/developers/docs/gas/) لتشغيل الدوال**، لذلك قد لا ترغب في القيام بذلك. إذا قمت بالترجمة مع تمكين `viaIR`، فتحقق من الحجم معه وبدونه، حيث يمكن لمولد الرمز القائم على <span dir="ltr">IR</span> إنتاج أحجام رمز البايت مختلفة بشكل ملحوظ. راجع [خيارات المُحسِّن](https://docs.soliditylang.org/en/latest/using-the-compiler.html#optimizer-options) للحصول على التفاصيل.
 
 ## تأثير صغير {#small-impact}
 
 ### تجنب تمرير الهياكل (structs) إلى الدوال {#avoid-passing-structs-to-functions}
 
-إذا كنت تستخدم [<span dir="ltr">ABIEncoderV2</span>](https://solidity.readthedocs.io/en/v0.6.10/layout-of-source-files.html#abiencoderv2)، فقد يساعدك عدم تمرير الهياكل (structs) إلى دالة. بدلاً من تمرير المعلمة كهيكل، قم بتمرير المعلمات المطلوبة مباشرة. في هذا المثال وفرنا **<span dir="ltr">0.1kb</span>** أخرى.
+إذا كنت تستخدم <span dir="ltr">[ABI coder v2](https://docs.soliditylang.org/en/latest/layout-of-source-files.html#abi-coder-pragma)</span> (الافتراضي منذ <span dir="ltr">Solidity 0.8.0</span>)، فقد يساعدك عدم تمرير الهياكل إلى دالة. بدلاً من تمرير المعلمة كهيكل، قم بتمرير المعلمات المطلوبة مباشرة. في هذا المثال وفرنا **<span dir="ltr">0.1kb</span>** أخرى.
 
 ```solidity
-function get(uint id) returns (address,address) {
-    return _get(myStruct);
+function get(uint id) public view returns (address, address) {
+    return _get(myStructs[id]);
 }
 
-function _get(MyStruct memory myStruct) private view returns(address,address) {
+function _get(MyStruct memory myStruct) private pure returns (address, address) {
     return (myStruct.addr1, myStruct.addr2);
 }
 ```
 
 ```solidity
-function get(uint id) returns(address,address) {
+function get(uint id) public view returns (address, address) {
     return _get(myStructs[id].addr1, myStructs[id].addr2);
 }
 
-function _get(address addr1, address addr2) private view returns(address,address) {
+function _get(address addr1, address addr2) private pure returns (address, address) {
     return (addr1, addr2);
 }
 ```
@@ -128,18 +141,25 @@ function _get(address addr1, address addr2) private view returns(address,address
 
 ### إزالة المُعدِّلات (modifiers) {#remove-modifiers}
 
-المُعدِّلات (modifiers)، خاصة عند استخدامها بكثافة، يمكن أن يكون لها تأثير كبير على حجم العقد. ضع في اعتبارك إزالتها واستخدام الدوال بدلاً منها.
+يمكن أن يكون للمُعدِّلات، خاصة عند استخدامها بكثافة، تأثير كبير على حجم العقد. ضع في اعتبارك إزالتها واستخدام الدوال بدلاً من ذلك.
 
 ```solidity
-modifier checkStuff() {}
+modifier checkStuff() {
+    require(msg.sender == owner, "OW1");
+    _;
+}
 
-function doSomething() checkStuff {}
+function doSomething() public checkStuff {}
 ```
 
 ```solidity
-function checkStuff() private {}
+function checkStuff() private view {
+    require(msg.sender == owner, "OW1");
+}
 
-function doSomething() { checkStuff(); }
+function doSomething() public view {
+    checkStuff();
+}
 ```
 
-يجب أن تساعدك هذه النصائح على تقليل حجم العقد بشكل كبير. مرة أخرى، لا يسعني التأكيد بما فيه الكفاية، ركز دائمًا على تقسيم العقود إن أمكن للحصول على أكبر تأثير.
+يجب أن تساعدك هذه النصائح على تقليل حجم العقد بشكل كبير. مرة أخرى، لا يمكنني التأكيد بما فيه الكفاية، ركز دائمًا على تقسيم العقود إن أمكن للحصول على أكبر تأثير.

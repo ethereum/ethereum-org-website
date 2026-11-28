@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "de",
-  "translatedAt": "2026-06-17T01:05:14.836Z",
-  "englishManifestHash": "673518e36b74",
+  "translatedAt": "2026-11-28T07:03:31.798Z",
+  "englishManifestHash": "8a6328d1776d",
   "placeholderOrder": [
     "LINK-39a820",
-    "LINK-a17757",
+    "LINK-a04534",
     "LINK-37da96",
     "CODE-a0af9f",
     "CODE-da47c2",
@@ -14,14 +14,14 @@
     "CODE-5615ff",
     "CODE-7cc5bb",
     "CODE-5615ff",
-    "LINK-abcb8b",
+    "LINK-3710ee",
     "CODEBLOCK-880d4e",
     "CODE-9b5749",
     "CODE-6bbd01",
     "CODEBLOCK-043dea",
     "CODE-6bbd01",
     "CODEBLOCK-9187a7",
-    "LINK-2fee12",
+    "LINK-30ae18",
     "CODE-1bad6b",
     "CODE-688648",
     "CODEBLOCK-be4337",
@@ -82,6 +82,7 @@
     "CODEBLOCK-f490bd",
     "CODE-8d261a",
     "CODEBLOCK-9a04eb",
+    "CODE-c67614",
     "CODEBLOCK-7b0f91",
     "CODEBLOCK-c24eba",
     "CODE-4eea46",
@@ -99,7 +100,7 @@
     "CODE-c67614",
     "CODEBLOCK-eb1226",
     "CODE-4eea46",
-    "LINK-b85573",
+    "LINK-4a3cfb",
     "CODEBLOCK-da0806",
     "LINK-36f4f1",
     "CODEBLOCK-c8a0b0",
@@ -142,7 +143,7 @@
     "CODE-769a27",
     "CODE-769a27",
     "CODEBLOCK-e27ffb",
-    "LINK-228b2a",
+    "LINK-cbae02",
     "CODEBLOCK-1694b9",
     "LINK-943260",
     "CODE-c67614",
@@ -176,10 +177,10 @@
     "CODEBLOCK-567849",
     "CODE-f8a956",
     "CODE-f8a956",
-    "LINK-d5dc7e",
+    "LINK-0585c1",
     "LINK-67a5e2",
     "CODE-85441a",
-    "LINK-a46b02",
+    "LINK-191b26",
     "CODEBLOCK-5ff633",
     "LINK-0ca33b",
     "CODE-db1da3",
@@ -204,11 +205,10 @@
     "LINK-b4cb0d",
     "CODEBLOCK-ad07b9",
     "LINK-bf7c87",
-    "LINK-07b9eb",
-    "LINK-8e2733",
+    "LINK-4086d9",
     "CODE-3ec9a2",
-    "LINK-bf2026",
-    "LINK-dc49c4",
+    "LINK-507699",
+    "LINK-e7f3c7",
     "CODEBLOCK-6e8257",
     "CODE-ce0700",
     "LINK-57283b",
@@ -226,12 +226,12 @@
     "CODEBLOCK-22345c",
     "CODEBLOCK-19df0e",
     "CODEBLOCK-2887c2",
-    "LINK-f23681",
+    "LINK-e30b27",
     "CODEBLOCK-2c71e6",
     "CODE-67405d",
     "CODEBLOCK-ade62b",
     "IMAGE-d75ab6",
-    "LINK-b47201",
+    "LINK-64d9ed",
     "CODEBLOCK-2c69b5",
     "CODE-d3e3bc",
     "CODE-663ea1",
@@ -283,10 +283,10 @@
     "CODEBLOCK-ae947a",
     "CODE-a47a5a",
     "CODEBLOCK-56bfb6",
-    "CODE-d8301a",
+    "CODE-a56f4d",
     "CODEBLOCK-b159b3",
     "CODEBLOCK-20a620",
-    "LINK-8166c5",
+    "LINK-0e336a",
     "CODEBLOCK-4a77a0",
     "CODE-03b08c",
     "CODE-a47a5a",
@@ -295,7 +295,7 @@
     "CODE-7a3508",
     "CODEBLOCK-91562a",
     "LINK-394775",
-    "LINK-2fee12",
+    "LINK-30ae18",
     "CODEBLOCK-9dbbe3",
     "CODEBLOCK-59514f",
     "LINK-53565a",
@@ -319,7 +319,7 @@
     "CODEBLOCK-bd2c22",
     "CODEBLOCK-66278b",
     "CODEBLOCK-910524",
-    "LINK-d09c1c",
+    "LINK-bb5a09",
     "CODE-fcbcf1",
     "CODEBLOCK-1fcac7",
     "LINK-e3da4c",
@@ -330,6 +330,7 @@
     "CODE-fcbcf1",
     "CODEBLOCK-b72b55",
     "LINK-1626ef",
+    "CODE-663ea1",
     "CODEBLOCK-4f52ee",
     "LINK-5f9b92",
     "CODEBLOCK-eb2baf",
@@ -1328,10 +1329,10 @@
         "content": "address"
       }
     },
-    "CODE-d8301a": {
+    "CODE-a56f4d": {
       "type": "inline-code",
       "values": {
-        "content": "swapTokensForTokens"
+        "content": "swapExactTokensForTokens"
       }
     },
     "CODE-03b08c": {
@@ -1388,10 +1389,10 @@
         "url": "https://app.uniswap.org/whitepaper.pdf"
       }
     },
-    "LINK-a17757": {
+    "LINK-a04534": {
       "type": "link",
       "values": {
-        "url": "https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/"
+        "url": "https://developers.uniswap.org/docs/protocols/v2/concepts/swapping"
       }
     },
     "LINK-37da96": {
@@ -1400,16 +1401,16 @@
         "url": "https://app.uniswap.org/whitepaper-v3.pdf"
       }
     },
-    "LINK-abcb8b": {
+    "LINK-3710ee": {
       "type": "link",
       "values": {
-        "url": "https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol"
+        "url": "https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol"
       }
     },
-    "LINK-2fee12": {
+    "LINK-30ae18": {
       "type": "link",
       "values": {
-        "url": "https://docs.openzeppelin.com/contracts/2.x/api/math"
+        "url": "https://docs.openzeppelin.com/contracts/3.x/api/math"
       }
     },
     "LINK-e5c10e": {
@@ -1454,10 +1455,10 @@
         "url": "https://app.uniswap.org/whitepaper.pdf"
       }
     },
-    "LINK-b85573": {
+    "LINK-4a3cfb": {
       "type": "link",
       "values": {
-        "url": "https://eips.ethereum.org/EIPS/eip-3298"
+        "url": "https://eips.ethereum.org/EIPS/eip-3529"
       }
     },
     "LINK-36f4f1": {
@@ -1478,10 +1479,10 @@
         "url": "https://ethereum.github.io/yellowpaper/paper.pdf"
       }
     },
-    "LINK-228b2a": {
+    "LINK-cbae02": {
       "type": "link",
       "values": {
-        "url": "https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol"
+        "url": "https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Factory.sol"
       }
     },
     "LINK-a101d9": {
@@ -1514,10 +1515,10 @@
         "url": "https://docs.soliditylang.org/en/v0.8.3/assembly.html"
       }
     },
-    "LINK-d5dc7e": {
+    "LINK-0585c1": {
       "type": "link",
       "values": {
-        "url": "https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol"
+        "url": "https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2ERC20.sol"
       }
     },
     "LINK-67a5e2": {
@@ -1526,10 +1527,10 @@
         "url": "/developers/tutorials/erc20-annotated-code"
       }
     },
-    "LINK-a46b02": {
+    "LINK-191b26": {
       "type": "link",
       "values": {
-        "url": "https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions"
+        "url": "https://developers.uniswap.org/docs/protocols/v2/concepts/meta-transactions"
       }
     },
     "LINK-0ca33b": {
@@ -1586,28 +1587,22 @@
         "url": "https://eips.ethereum.org/EIPS/eip-20#approve"
       }
     },
-    "LINK-07b9eb": {
+    "LINK-4086d9": {
       "type": "link",
       "values": {
-        "url": "https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol"
+        "url": "https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router01.sol"
       }
     },
-    "LINK-8e2733": {
+    "LINK-507699": {
       "type": "link",
       "values": {
-        "url": "https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01"
+        "url": "https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router02.sol"
       }
     },
-    "LINK-bf2026": {
+    "LINK-e7f3c7": {
       "type": "link",
       "values": {
-        "url": "https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol"
-      }
-    },
-    "LINK-dc49c4": {
-      "type": "link",
-      "values": {
-        "url": "https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02"
+        "url": "https://developers.uniswap.org/docs/protocols/v2/guides/swapping"
       }
     },
     "LINK-57283b": {
@@ -1622,16 +1617,16 @@
         "url": "https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables"
       }
     },
-    "LINK-f23681": {
+    "LINK-e30b27": {
       "type": "link",
       "values": {
-        "url": "https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L35"
+        "url": "https://github.com/Uniswap/v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L36"
       }
     },
-    "LINK-b47201": {
+    "LINK-64d9ed": {
       "type": "link",
       "values": {
-        "url": "https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol#L110"
+        "url": "https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol#L110"
       }
     },
     "LINK-038e0c": {
@@ -1652,10 +1647,10 @@
         "url": "https://eth.blockscout.com/stats/accountsGrowth"
       }
     },
-    "LINK-8166c5": {
+    "LINK-0e336a": {
       "type": "link",
       "values": {
-        "url": "https://github.com/Uniswap/uniswap-interface/issues/835"
+        "url": "https://github.com/Uniswap/interface/issues/835"
       }
     },
     "LINK-394775": {
@@ -1670,10 +1665,10 @@
         "url": "https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method"
       }
     },
-    "LINK-d09c1c": {
+    "LINK-bb5a09": {
       "type": "link",
       "values": {
-        "url": "https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol"
+        "url": "https://github.com/Uniswap/solidity-lib/blob/master/contracts/libraries/TransferHelper.sol"
       }
     },
     "LINK-e3da4c": {
@@ -1703,7 +1698,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-17T01:05:14.836Z",
+      "translatedAt": "2026-11-28T07:03:31.798Z",
       "status": "success"
     }
   }

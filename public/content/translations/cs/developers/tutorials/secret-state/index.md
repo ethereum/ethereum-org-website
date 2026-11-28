@@ -9,7 +9,7 @@ lang: cs
 published: 2025-03-15
 ---
 
-_Na blockchainu neexistují žádná tajemství_. Vše, co je zveřejněno na blockchainu, si může kdokoli přečíst. To je nezbytné, protože blockchain je založen na tom, že jej může kdokoli ověřit. Hry však často spoléhají na tajný stav. Například hra [Hledání min](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) nedává absolutně žádný smysl, pokud můžete jednoduše jít do prohlížeče bloků a podívat se na mapu.
+_Na blockchainu neexistují žádná tajemství_. Vše, co je na blockchain zveřejněno, si může kdokoli přečíst. Je to nezbytné, protože blockchain je založen na tom, že jej může kdokoli ověřit. Hry však často spoléhají na tajný stav. Například hra [Hledání min](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) nedává absolutně žádný smysl, pokud můžete jednoduše jít do prohlížeče blockchainu a podívat se na mapu.
 
 Nejjednodušším řešením je použít [serverovou komponentu](/developers/tutorials/server-components/) k uchování tajného stavu. Důvodem, proč používáme blockchain, je však zabránit podvádění ze strany vývojáře hry. Musíme zajistit poctivost serverové komponenty. Server může poskytnout hash stavu a použít [důkazy s nulovou znalostí](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) k prokázání, že stav použitý k výpočtu výsledku tahu je ten správný.
 
@@ -20,6 +20,7 @@ Po přečtení tohoto článku budete vědět, jak vytvořit tento druh serveru 
 | [Zokrates](https://zokrates.github.io/)       | Důkazy s nulovou znalostí a jejich ověřování            |               1.1.9 |
 | [TypeScript](https://www.typescriptlang.org/) | Programovací jazyk pro server i klienta                 |               5.4.2 |
 | [Node](https://nodejs.org/en)                 | Spuštění serveru                                        |             20.18.2 |
+| [Foundry](https://getfoundry.sh/)             | Lokální blockchain a nasazení kontraktů                 |               1.0.0 |
 | [Viem](https://viem.sh/)                      | Komunikace s blockchainem                               |              2.9.20 |
 | [MUD](https://mud.dev/)                       | Správa onchain dat                                      |              2.0.12 |
 | [React](https://react.dev/)                   | Uživatelské rozhraní klienta                            |              18.2.0 |
@@ -31,11 +32,28 @@ Po přečtení tohoto článku budete vědět, jak vytvořit tento druh serveru 
 
 Tato aplikace je napsána pomocí [MUD](https://mud.dev/), frameworku, který nám umožňuje ukládat data onchain pomocí [databáze klíč-hodnota](https://aws.amazon.com/nosql/key-value/) a automaticky tato data synchronizovat s offchain komponentami. Kromě synchronizace MUD usnadňuje poskytování řízení přístupu a umožňuje ostatním uživatelům [rozšířit](https://mud.dev/guides/extending-a-world) naši aplikaci bez oprávnění.
 
-### Spuštění příkladu hry Hledání min {#running-minesweeper-example}
+### Spuštění příkladu Hledání min {#running-minesweeper-example}
 
-Pro spuštění příkladu hry Hledání min:
+Chcete-li spustit příklad Hledání min:
 
-1. Ujistěte se, že [máte nainstalované předpoklady](https://mud.dev/quickstart#prerequisites): [Node](https://mud.dev/quickstart#prerequisites), [Foundry](https://book.getfoundry.sh/getting-started/installation), [`git`](https://git-scm.com/downloads), [`pnpm`](https://git-scm.com/downloads) a [`mprocs`](https://github.com/pvolok/mprocs).
+1. Ujistěte se, že [máte nainstalované předpoklady](https://mud.dev/quickstart#prerequisites): [Node](https://nodejs.org/en), [Foundry](https://getfoundry.sh/introduction/installation), [`git`](https://git-scm.com/downloads) a [`pnpm`](https://pnpm.io/installation).
+
+   Tento příklad používá MUD 2.0.12, který vyžaduje specifické verze Node a Foundry:
+
+   - **Node 20**. Nástroj příkazového řádku MUD 2.0.12 používá [JSON import assertions](https://v8.dev/features/import-attributes), které novější verze Node již nepodporují, takže na Node 22 nebo novějším selže s chybou `SyntaxError: Unexpected identifier 'assert'`. Node 20 [dosáhl konce životnosti](https://nodejs.org/en/about/previous-releases) v dubnu 2026 a již nedostává bezpečnostní aktualizace, proto jej používejte pouze pro tento lokální příklad. Správce verzí Node, jako je [`fnm`](https://github.com/Schniz/fnm) nebo [`nvm`](https://github.com/nvm-sh/nvm), vám umožní přepnout na Node 20 pouze pro tento adresář, například:
+
+     ```sh copy
+     fnm install 20
+     fnm use 20
+     ```
+
+   - **Foundry 1.0.0**. U aktuálních verzí Foundry selže skript po nasazení s chybou _Usage of `address(this)` detected in script contract_. Nainstalujte testovanou verzi pomocí:
+
+     ```sh copy
+     foundryup -i 1.0.0
+     ```
+
+     Až s tímto tutoriálem skončíte, můžete se vrátit k nejnovější verzi pomocí `foundryup`.
 
 2. Naklonujte repozitář.
 
@@ -48,10 +66,9 @@ Pro spuštění příkladu hry Hledání min:
    ```sh copy
    cd 20240901-secret-state/
    pnpm install
-   npm install -g mprocs
    ```
 
-   Pokud bylo Foundry nainstalováno jako součást `pnpm install`, musíte restartovat příkazový řádek.
+   [`mprocs`](https://github.com/pvolok/mprocs), který spouští všechny procesy v jediném terminálu, se nainstaluje jako jeden z balíčků.
 
 4. Zkompilujte kontrakty
 
@@ -62,17 +79,17 @@ Pro spuštění příkladu hry Hledání min:
     ```
 
 
-5. Spusťte program (včetně blockchainu [anvil](https://book.getfoundry.sh/anvil/)) a počkejte.
+5. Spusťte program (včetně blockchainu [anvil](https://getfoundry.sh/anvil/overview)) a počkejte.
 
    ```sh copy
-   mprocs
+   pnpm dev
    ```
 
-   Vezměte na vědomí, že spuštění trvá dlouho. Chcete-li vidět průběh, nejprve pomocí šipky dolů přejděte na kartu _contracts_, kde uvidíte, jak se nasazují MUD kontrakty. Když se zobrazí zpráva _Waiting for file changes…_, kontrakty jsou nasazeny a další průběh se bude odehrávat na kartě _server_. Tam počkejte, dokud se nezobrazí zpráva _Verifier address: 0x...._.
+   Vezměte na vědomí, že spuštění trvá dlouho. Chcete-li vidět průběh, nejprve pomocí šipky dolů přejděte na kartu _contracts_, kde uvidíte nasazování kontraktů MUD. Když se zobrazí zpráva _Waiting for file changes…_, kontrakty jsou nasazeny a další průběh se bude odehrávat na kartě _server_. Tam počkejte, dokud se nezobrazí zpráva _Verifier address: 0x...._.
 
    Pokud je tento krok úspěšný, uvidíte obrazovku `mprocs` s různými procesy vlevo a výstupem konzole pro aktuálně vybraný proces vpravo.
 
-   ![The mprocs screen](./mprocs.png)
+   ![Obrazovka mprocs](./mprocs.png)
 
    Pokud se vyskytne problém s `mprocs`, můžete spustit čtyři procesy ručně, každý ve vlastním okně příkazového řádku:
 
@@ -95,14 +112,14 @@ Pro spuštění příkladu hry Hledání min:
      ```sh
      cd packages/server
      pnpm start
-     ```  
+     ```
 
    - **Client**
 
      ```sh
      cd packages/client
      pnpm run dev
-     ```  
+     ```
 
 6. Nyní můžete přejít na [klienta](http://localhost:3000), kliknout na **New Game** a začít hrát.
 
@@ -144,26 +161,26 @@ Tyto toky koordinují provádění mezi klientem, onchain komponentou a serverem
 
 #### Inicializace {#initialization-flow}
 
-Když spustíte `mprocs`, stanou se tyto kroky:
+Když spustíte `pnpm dev` (což spustí `mprocs`), stanou se tyto kroky:
 
 1. [`mprocs`](https://github.com/pvolok/mprocs) spustí čtyři komponenty:
 
-   - [Anvil](https://book.getfoundry.sh/anvil/), který spouští lokální blockchain
-   - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts), který zkompiluje (v případě potřeby) a nasadí kontrakty pro MUD
-   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), který spouští [Vite](https://vitejs.dev/) pro poskytování uživatelského rozhraní a klientského kódu webovým prohlížečům.
+   - [Anvil](https://getfoundry.sh/anvil/overview), který spouští lokální blockchain
+   - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts), který zkompiluje (pokud je to nutné) a nasadí kontrakty pro MUD
+   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), který spouští [Vite](https://vitejs.dev/) pro poskytování uživatelského rozhraní a kódu klienta webovým prohlížečům.
    - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server), který provádí akce serveru
 
-2. Balíček `contracts` nasadí MUD kontrakty a poté spustí [skript `PostDeploy.s.sol`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol). Tento skript nastaví konfiguraci. Kód z GitHubu specifikuje [minové pole 10x5 s osmi minami](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23).
+2. Balíček `contracts` nasadí kontrakty MUD a poté spustí [skript `PostDeploy.s.sol`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol). Tento skript nastaví konfiguraci. Kód z GitHubu specifikuje [minové pole 10x5 s osmi minami](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23).
 
-3. [Server](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts) začíná [nastavením MUD](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6). Mimo jiné to aktivuje synchronizaci dat, takže v paměti serveru existuje kopie příslušných tabulek.
+3. [Server](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts) začne [nastavením MUD](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6). Mimo jiné to aktivuje synchronizaci dat, takže v paměti serveru existuje kopie příslušných tabulek.
 
-4. Server přihlásí k odběru funkci, která se má provést, [když se změní tabulka `Configuration`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23). [Tato funkce](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) je volána po provedení `PostDeploy.s.sol` a úpravě tabulky.
+4. Server přihlásí funkci k provedení, [když se změní tabulka `Configuration`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23). [Tato funkce](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) je zavolána poté, co se provede `PostDeploy.s.sol` a upraví tabulku.
 
 5. Když má inicializační funkce serveru konfiguraci, [zavolá `zkFunctions`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35) k inicializaci [části serveru s nulovým vědomím](#using-zokrates-from-typescript). To se nemůže stát, dokud nezískáme konfiguraci, protože funkce s nulovým vědomím musí mít šířku a výšku minového pole jako konstanty.
 
-6. Po inicializaci části serveru s nulovým vědomím je dalším krokem [nasazení ověřovacího kontraktu s nulovým vědomím na blockchain](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) a nastavení adresy ověřovatele v MUD.
+6. Po inicializaci části serveru s nulovým vědomím je dalším krokem [nasazení kontraktu pro ověřování s nulovým vědomím na blockchain](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) a nastavení adresy ověřovatele v MUD.
 
-7. Nakonec se přihlásíme k odběru aktualizací, abychom viděli, když hráč požádá buď [o spuštění nové hry](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71), nebo o [kopání ve stávající hře](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108).
+7. Nakonec se přihlásíme k odběru aktualizací, abychom viděli, když hráč požádá buď [o spuštění nové hry](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71), nebo o [kopání v existující hře](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108).
 
 #### Nová hra {#new-game-flow}
 
@@ -511,11 +528,11 @@ Bezpečnostní testy jsou důležité, protože chyba ve funkčnosti se nakonec 
 
 ### Oprávnění {#permissions}
 
-V této hře existuje jedna privilegovaná entita, a to server. Je to jediný uživatel, který má povoleno volat funkce v [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). Můžeme použít [`cast`](https://book.getfoundry.sh/cast/) k ověření, že volání funkcí s řízeným přístupem jsou povolena pouze pro účet serveru.
+V této hře existuje jedna privilegovaná entita, server. Je to jediný uživatel, který má povoleno volat funkce v [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). Můžeme použít [`cast`](https://getfoundry.sh/cast/overview) k ověření, že volání funkcí s řízeným přístupem jsou povolena pouze jako účet serveru.
 
 [Soukromý klíč serveru je v `setupNetwork.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52).
 
-1. Na počítači, na kterém běží `anvil` (blockchain), nastavte tyto proměnné prostředí.
+1. Na počítači, který spouští `anvil` (blockchain), nastavte tyto proměnné prostředí.
 
    ```sh copy
    WORLD_ADDRESS=0x8d8b6b8414e1e3dcfd4168561b9be6bd3bf6ec4b
@@ -523,13 +540,15 @@ V této hře existuje jedna privilegovaná entita, a to server. Je to jediný u�
    AUTHORIZED_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
    ```
 
-2. Použijte `cast` k pokusu o nastavení adresy ověřovatele jako neoprávněné adresy.
+   Tato `WORLD_ADDRESS` je adresa, na kterou MUD nasazuje na čistém `anvil`. Pokud je váš `World` na jiné adrese, použijte hodnotu v `packages/contracts/worlds.json`.
+
+2. Použijte `cast` k pokusu o nastavení adresy ověřovatele jako neautorizovaná adresa.
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $UNAUTHORIZED_KEY
    ```
 
-   Nejenže `cast` nahlásí selhání, ale můžete také otevřít **MUD Dev Tools** ve hře v prohlížeči, kliknout na **Tables** a vybrat **app\_\_VerifierAddress**. Uvidíte, že adresa není nula.
+   Nejenže `cast` nahlásí selhání, ale můžete otevřít **MUD Dev Tools** ve hře v prohlížeči, kliknout na **Tables** a vybrat **app\_\_VerifierAddress**. Uvidíte, že adresa není nula.
 
 3. Nastavte adresu ověřovatele jako adresu serveru.
 
@@ -537,7 +556,7 @@ V této hře existuje jedna privilegovaná entita, a to server. Je to jediný u�
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $AUTHORIZED_KEY
    ```
 
-   Adresa v **app\_\_VerifiedAddress** by nyní měla být nula.
+   Adresa v **app\_\_VerifierAddress** by nyní měla být nula.
 
 Všechny funkce MUD ve stejném `System` procházejí stejným řízením přístupu, takže tento test považuji za dostatečný. Pokud ne, můžete zkontrolovat ostatní funkce v [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol).
 
@@ -553,7 +572,7 @@ Nejjednodušší možností je poskytnout špatnou odpověď v důkazu s nulovou
 proof.inputs[3] = "0x" + "1".padStart(64, "0")
 ```
 
-To znamená, že budeme vždy tvrdit, že je tam jedna bomba, bez ohledu na správnou odpověď. Zkuste si zahrát s touto verzí a na kartě **server** na obrazovce `pnpm dev` uvidíte tuto chybu:
+To znamená, že budeme vždy tvrdit, že je tam jedna bomba, bez ohledu na správnou odpověď. Zkuste si zahrát s touto verzí a na kartě **server** na obrazovce `mprocs` uvidíte tuto chybu:
 
 ```
 cause: {
@@ -675,7 +694,9 @@ Jako tutoriál tento článek potřeboval krátkou hru, která je snadno pochopi
 
 [Zokrates](https://zokrates.github.io/) není jedinou dostupnou knihovnou s nulovým vědomím, ale je podobný běžnému [imperativnímu](https://en.wikipedia.org/wiki/Imperative_programming) programovacímu jazyku a podporuje booleovské proměnné.
 
-Pro vaši aplikaci s jinými požadavky možná upřednostníte použití [Circum](https://docs.circom.io/getting-started/installation/) nebo [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/).
+ZoKrates však již není aktivně udržován. Jeho nejnovější vydání, 0.8.8 (a odpovídající `zokrates-js` 1.1.9), je z listopadu 2023 a hlavní větev neměla žádné commity od dubna 2024. Kód v tomto tutoriálu stále funguje, ale neočekávejte opravy chyb ani bezpečnostní aktualizace. Pro nový projekt zvažte udržovaný jazyk, jako je [Noir](https://noir-lang.org/), který se používá v [tomto tutoriálu](/developers/tutorials/app-plasma/).
+
+Pro vaši aplikaci s jinými požadavky možná upřednostníte použití [Circom](https://docs.circom.io/getting-started/installation/) nebo [Cairo](https://www.cairo-lang.org/).
 
 ### Kdy kompilovat Zokrates {#when-compile-zokrates}
 

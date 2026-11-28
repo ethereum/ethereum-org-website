@@ -2,14 +2,7 @@
 title: Uso de conocimiento cero para un estado secreto
 description: "Los juegos en cadena están limitados porque no pueden mantener ninguna información oculta. Después de leer este tutorial, el lector podrá combinar pruebas de conocimiento cero y componentes de servidor para crear juegos verificables con un componente de estado secreto fuera de la cadena. La técnica para hacer esto se demostrará creando un juego de buscaminas."
 author: Ori Pomerantz
-tags:
-  - servidor
-  - fuera de la cadena
-  - centralizado
-  - conocimiento cero
-  - zokrates
-  - mud
-  - privacidad
+tags: ["servidor", "fuera de la cadena", "centralizado", "conocimiento cero", "zokrates", "mud", "privacidad"]
 skill: advanced
 breadcrumb: Estado secreto ZK
 lang: es
@@ -22,45 +15,62 @@ La solución más sencilla es usar un [componente de servidor](/developers/tutor
 
 Después de leer este artículo, sabrás cómo crear este tipo de servidor que mantiene un estado secreto, un cliente para mostrar el estado y un componente en cadena para la comunicación entre ambos. Las principales herramientas que usaremos serán:
 
-| Herramienta                                   | Propósito                                                               | Verificado en la versión |
-| --------------------------------------------- | ----------------------------------------------------------------------- | -----------------------: |
-| [Zokrates](https://zokrates.github.io/)       | Pruebas de conocimiento cero y su verificación                          |                    1.1.9 |
-| [TypeScript](https://www.typescriptlang.org/) | Lenguaje de programación tanto para el servidor como para el cliente    |                    5.4.2 |
-| [Node](https://nodejs.org/en)                 | Ejecutar el servidor                                                    |                  20.18.2 |
-| [Viem](https://viem.sh/)                      | Comunicación con la cadena de bloques                                   |                   2.9.20 |
-| [MUD](https://mud.dev/)                       | Gestión de datos en cadena                                              |                   2.0.12 |
-| [React](https://react.dev/)                   | Interfaz de usuario del cliente                                         |                   18.2.0 |
-| [Vite](https://vitejs.dev/)                   | Servir el código del cliente                                            |                    4.2.1 |
+| Herramienta                                          | Propósito                                                 | Verificado en la versión |
+| --------------------------------------------- | ------------------------------------------------------- | ------------------: |
+| [Zokrates](https://zokrates.github.io/)       | Pruebas de conocimiento cero y su verificación            |               1.1.9 |
+| [TypeScript](https://www.typescriptlang.org/) | Lenguaje de programación tanto para el servidor como para el cliente |               5.4.2 |
+| [Node](https://nodejs.org/en)                 | Ejecución del servidor                                      |             20.18.2 |
+| [Foundry](https://getfoundry.sh/)             | Cadena de bloques local y despliegue de contratos                |               1.0.0 |
+| [Viem](https://viem.sh/)                      | Comunicación con la cadena de bloques                       |              2.9.20 |
+| [MUD](https://mud.dev/)                       | Gestión de datos en cadena                                 |              2.0.12 |
+| [React](https://react.dev/)                   | Interfaz de usuario del cliente                                   |              18.2.0 |
+| [Vite](https://vitejs.dev/)                   | Servir el código del cliente                                 |               4.2.1 |
 
-## Ejemplo del Buscaminas {#minesweeper}
+## Ejemplo del buscaminas {#minesweeper}
 
-[Buscaminas](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) es un juego que incluye un mapa secreto con un campo de minas. El jugador elige cavar en una ubicación específica. Si esa ubicación tiene una mina, el juego termina. De lo contrario, el jugador obtiene el número de minas en las ocho casillas que rodean esa ubicación.
+[Buscaminas](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) es un juego que incluye un mapa secreto con un campo minado. El jugador elige cavar en una ubicación específica. Si esa ubicación tiene una mina, el juego termina. De lo contrario, el jugador obtiene el número de minas en las ocho casillas que rodean esa ubicación.
 
-Esta aplicación está escrita usando [MUD](https://mud.dev/), un marco de trabajo que nos permite almacenar datos en cadena usando una [base de datos clave-valor](https://aws.amazon.com/nosql/key-value/) y sincronizar esos datos automáticamente con componentes fuera de la cadena. Además de la sincronización, MUD facilita proporcionar control de acceso y que otros usuarios puedan [extender](https://mud.dev/guides/extending-a-world) nuestra aplicación sin permisos.
+Esta aplicación está escrita usando [MUD](https://mud.dev/), un framework que nos permite almacenar datos en cadena usando una [base de datos clave-valor](https://aws.amazon.com/nosql/key-value/) y sincronizar esos datos automáticamente con componentes fuera de la cadena. Además de la sincronización, MUD facilita proporcionar control de acceso y que otros usuarios puedan [extender](https://mud.dev/guides/extending-a-world) nuestra aplicación sin permisos.
 
-### Ejecutar el ejemplo del Buscaminas {#running-minesweeper-example}
+### Ejecutar el ejemplo del buscaminas {#running-minesweeper-example}
 
-Para ejecutar el ejemplo del Buscaminas:
+Para ejecutar el ejemplo del buscaminas:
 
-1. Asegúrese de [tener instalados los requisitos previos](https://mud.dev/quickstart#prerequisites): [Node](https://mud.dev/quickstart#prerequisites), [Foundry](https://book.getfoundry.sh/getting-started/installation), [`git`](https://git-scm.com/downloads), [`pnpm`](https://git-scm.com/downloads) y [`mprocs`](https://github.com/pvolok/mprocs).
+1. Asegúrate de [tener los requisitos previos instalados](https://mud.dev/quickstart#prerequisites): [Node](https://nodejs.org/en), [Foundry](https://getfoundry.sh/introduction/installation), [`git`](https://git-scm.com/downloads) y [`pnpm`](https://pnpm.io/installation).
 
-2. Clone el repositorio.
+   Este ejemplo usa MUD 2.0.12, que necesita versiones específicas de Node y Foundry:
+
+   - **Node 20**. La herramienta de línea de comandos de MUD 2.0.12 usa [aserciones de importación JSON](https://v8.dev/features/import-attributes), que las versiones más recientes de Node ya no admiten, por lo que en Node 22 o posterior falla con `SyntaxError: Unexpected identifier 'assert'`. Node 20 [llegó al final de su vida útil](https://nodejs.org/en/about/previous-releases) en abril de 2026 y ya no recibe actualizaciones de seguridad, así que úsalo solo para este ejemplo local. Un administrador de versiones de Node como [`fnm`](https://github.com/Schniz/fnm) o [`nvm`](https://github.com/nvm-sh/nvm) te permite cambiar a Node 20 solo para este directorio, por ejemplo:
+
+     ```sh copy
+     fnm install 20
+     fnm use 20
+     ```
+
+   - **Foundry 1.0.0**. Con las versiones actuales de Foundry, el script posterior al despliegue falla con _Usage of `address(this)` detected in script contract_. Instala la versión probada con:
+
+     ```sh copy
+     foundryup -i 1.0.0
+     ```
+
+     Cuando hayas terminado con este tutorial, puedes volver a la última versión con `foundryup`.
+
+2. Clona el repositorio.
 
    ```sh copy
    git clone https://github.com/qbzzt/20240901-secret-state.git
    ```
 
-3. Instale los paquetes.
+3. Instala los paquetes.
 
    ```sh copy
    cd 20240901-secret-state/
    pnpm install
-   npm install -g mprocs
    ```
 
-   Si Foundry se instaló como parte de `pnpm install`, debe reiniciar el intérprete de línea de comandos.
+   [`mprocs`](https://github.com/pvolok/mprocs), que ejecuta todos los procesos en una sola terminal, se instala como uno de los paquetes.
 
-4. Compile los contratos
+4. Compila los contratos
 
     ```sh copy
     cd packages/contracts
@@ -69,19 +79,19 @@ Para ejecutar el ejemplo del Buscaminas:
     ```
 
 
-5. Inicie el programa (incluyendo una cadena de bloques [anvil](https://book.getfoundry.sh/anvil/)) y espere.
+5. Inicia el programa (incluyendo una cadena de bloques [anvil](https://getfoundry.sh/anvil/overview)) y espera.
 
    ```sh copy
-   mprocs
+   pnpm dev
    ```
 
-   Tenga en cuenta que el inicio tarda mucho tiempo. Para ver el progreso, primero use la flecha hacia abajo para desplazarse a la pestaña _contracts_ y ver los contratos de MUD que se están desplegando. Cuando reciba el mensaje _Waiting for file changes…_, los contratos estarán desplegados y el progreso continuará en la pestaña _server_. Allí, espere hasta recibir el mensaje _Verifier address: 0x...._.
+   Ten en cuenta que el inicio tarda mucho tiempo. Para ver el progreso, primero usa la flecha hacia abajo para desplazarte a la pestaña _contracts_ y ver los contratos de MUD que se están desplegando. Cuando recibas el mensaje _Waiting for file changes…_, los contratos estarán desplegados y el progreso adicional ocurrirá en la pestaña _server_. Allí, espera hasta que recibas el mensaje _Verifier address: 0x...._.
 
-   Si este paso es exitoso, verá la pantalla de `mprocs`, con los diferentes procesos a la izquierda y la salida de la consola para el proceso seleccionado actualmente a la derecha.
+   Si este paso es exitoso, verás la pantalla de `mprocs`, con los diferentes procesos a la izquierda y la salida de la consola para el proceso seleccionado actualmente a la derecha.
 
    ![The mprocs screen](./mprocs.png)
 
-   Si hay algún problema con `mprocs`, puede ejecutar los cuatro procesos manualmente, cada uno en su propia ventana de línea de comandos:
+   Si hay un problema con `mprocs`, puedes ejecutar los cuatro procesos manualmente, cada uno en su propia ventana de línea de comandos:
 
    - **Anvil**
 
@@ -90,42 +100,42 @@ Para ejecutar el ejemplo del Buscaminas:
      anvil --base-fee 0 --block-time 2
      ```
 
-   - **Contratos** 
+   - **Contracts** 
 
      ```sh
      cd packages/contracts
      pnpm mud dev-contracts --rpc http://127.0.0.1:8545
      ```
 
-   - **Servidor**
+   - **Server**
 
      ```sh
      cd packages/server
      pnpm start
      ```  
 
-   - **Cliente**
+   - **Client**
 
      ```sh
      cd packages/client
      pnpm run dev
      ```  
 
-6. Ahora puede navegar a [el cliente](http://localhost:3000), hacer clic en **New Game** (Nuevo juego) y comenzar a jugar.
+6. Ahora puedes navegar a [el cliente](http://localhost:3000), hacer clic en **New Game** y empezar a jugar.
 
 ### Tablas {#tables}
 
 Necesitamos [varias tablas](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/mud.config.ts) en cadena.
 
-- `Configuration`: Esta tabla es un singleton, no tiene clave y contiene un solo registro. Se utiliza para guardar la información de configuración del juego:
-  - `height`: La altura de un campo de minas
-  - `width`: El ancho de un campo de minas
-  - `numberOfBombs`: El número de bombas en cada campo de minas
-- `VerifierAddress`: Esta tabla también es un singleton. Se utiliza para guardar una parte de la configuración, la dirección del contrato verificador (`verifier`). Podríamos haber puesto esta información en la tabla `Configuration`, pero la establece un componente diferente, el servidor, por lo que es más fácil ponerla en una tabla separada.
+- `Configuration`: Esta tabla es un singleton, no tiene clave y tiene un solo registro. Se usa para guardar la información de configuración del juego:
+  - `height`: La altura de un campo minado
+  - `width`: El ancho de un campo minado
+  - `numberOfBombs`: El número de bombas en cada campo minado
+- `VerifierAddress`: Esta tabla también es un singleton. Se usa para guardar una parte de la configuración, la dirección del contrato verificador (`verifier`). Podríamos haber puesto esta información en la tabla `Configuration`, pero la establece un componente diferente, el servidor, por lo que es más fácil ponerla en una tabla separada.
 
 - `PlayerGame`: La clave es la dirección del jugador. Los datos son:
 
-  - `gameId`: Valor de 32 bytes que es el hash del mapa en el que está jugando el jugador (el identificador del juego).
+  - `gameId`: valor de 32 bytes que es el hash del mapa en el que está jugando el jugador (el identificador del juego).
   - `win`: un booleano que indica si el jugador ganó el juego.
   - `lose`: un booleano que indica si el jugador perdió el juego.
   - `digNumber`: el número de excavaciones exitosas en el juego.
@@ -134,7 +144,7 @@ Necesitamos [varias tablas](https://github.com/qbzzt/20240901-secret-state/blob/
 
 - `Map`: La clave es una tupla de tres valores:
 
-  - `gameId`: Valor de 32 bytes que es el hash del mapa en el que está jugando el jugador (el identificador del juego).
+  - `gameId`: valor de 32 bytes que es el hash del mapa en el que está jugando el jugador (el identificador del juego).
   - coordenada `x`
   - coordenada `y`
 
@@ -151,22 +161,22 @@ Estos flujos coordinan la ejecución entre el cliente, el componente en cadena y
 
 #### Inicialización {#initialization-flow}
 
-Cuando ejecuta `mprocs`, ocurren estos pasos:
+Cuando ejecutas `pnpm dev` (que ejecuta `mprocs`), ocurren estos pasos:
 
 1. [`mprocs`](https://github.com/pvolok/mprocs) ejecuta cuatro componentes:
 
-   - [Anvil](https://book.getfoundry.sh/anvil/), que ejecuta una cadena de bloques local
-   - [Contratos](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts), que compila (si es necesario) y despliega los contratos para MUD
-   - [Cliente](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), que ejecuta [Vite](https://vitejs.dev/) para servir la interfaz de usuario y el código del cliente a los navegadores web.
-   - [Servidor](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server), que realiza las acciones del servidor
+   - [Anvil](https://getfoundry.sh/anvil/overview), que ejecuta una cadena de bloques local
+   - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts), que compila (si es necesario) y despliega los contratos para MUD
+   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), que ejecuta [Vite](https://vitejs.dev/) para servir la interfaz de usuario y el código del cliente a los navegadores web.
+   - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server), que realiza las acciones del servidor
 
-2. El paquete `contracts` despliega los contratos de MUD y luego ejecuta [el script `PostDeploy.s.sol`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol). Este script establece la configuración. El código de GitHub especifica [un campo de minas de 10x5 con ocho minas en él](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23).
+2. El paquete `contracts` despliega los contratos de MUD y luego ejecuta [el script `PostDeploy.s.sol`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol). Este script establece la configuración. El código de GitHub especifica [un campo minado de 10x5 con ocho minas en él](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23).
 
 3. [El servidor](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts) comienza [configurando MUD](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6). Entre otras cosas, esto activa la sincronización de datos, de modo que exista una copia de las tablas relevantes en la memoria del servidor.
 
-4. El servidor suscribe una función para que se ejecute [cuando la tabla `Configuration` cambie](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23). [Esta función](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) se llama después de que `PostDeploy.s.sol` se ejecuta y modifica la tabla.
+4. El servidor suscribe una función para que se ejecute [cuando la tabla `Configuration` cambie](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23). [Esta función](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) se llama después de que `PostDeploy.s.sol` se ejecute y modifique la tabla.
 
-5. Cuando la función de inicialización del servidor tiene la configuración, [llama a `zkFunctions`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35) para inicializar [la parte de conocimiento cero del servidor](#using-zokrates-from-typescript). Esto no puede suceder hasta que obtengamos la configuración porque las funciones de conocimiento cero deben tener el ancho y la altura del campo de minas como constantes.
+5. Cuando la función de inicialización del servidor tiene la configuración, [llama a `zkFunctions`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35) para inicializar [la parte de conocimiento cero del servidor](#using-zokrates-from-typescript). Esto no puede suceder hasta que obtengamos la configuración porque las funciones de conocimiento cero deben tener el ancho y la altura del campo minado como constantes.
 
 6. Después de que se inicializa la parte de conocimiento cero del servidor, el siguiente paso es [desplegar el contrato de verificación de conocimiento cero en la cadena de bloques](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) y establecer la dirección del verificador en MUD.
 
@@ -178,17 +188,17 @@ Esto es lo que sucede cuando el jugador solicita un nuevo juego.
 
 1. Si no hay ningún juego en progreso para este jugador, o hay uno pero con un gameId de cero, el cliente muestra un [botón de nuevo juego](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175). Cuando el usuario presiona este botón, [React ejecuta la función `newGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L96).
 
-2. [`newGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/mud/createSystemCalls.ts#L43-L46) es una llamada al `System`. En MUD, todas las llamadas se enrutan a través del contrato `World`, y en la mayoría de los casos se llama a `<namespace>__<function name>`. En este caso, la llamada es a `app__newGame`, que MUD luego enruta a [`newGame` en `GameSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L16-L22).
+2. [`newGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/mud/createSystemCalls.ts#L43-L46) es una llamada a `System`. En MUD, todas las llamadas se enrutan a través del contrato `World`, y en la mayoría de los casos llamas a `<namespace>__<function name>`. En este caso, la llamada es a `app__newGame`, que MUD luego enruta a [`newGame` en `GameSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L16-L22).
 
 3. La función en cadena verifica que el jugador no tenga un juego en progreso, y si no lo hay, [agrega la solicitud a la tabla `PendingGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L21).
 
 4. El servidor detecta el cambio en `PendingGame` y [ejecuta la función suscrita](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71). Esta función llama a [`newGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L110-L114), que a su vez llama a [`createGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L116-L144).
 
-5. Lo primero que hace `createGame` es [crear un mapa aleatorio con el número apropiado de minas](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L120-L135). Luego, llama a [`makeMapBorders`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L147-L166) para crear un mapa con bordes en blanco, lo cual es necesario para Zokrates. Finalmente, `createGame` llama a [`calculateMapHash`](#calculatemaphash) para obtener el hash del mapa, que se utiliza como el ID del juego.
+5. Lo primero que hace `createGame` es [crear un mapa aleatorio con el número apropiado de minas](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L120-L135). Luego, llama a [`makeMapBorders`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L147-L166) para crear un mapa con bordes en blanco, lo cual es necesario para Zokrates. Finalmente, `createGame` llama a [`calculateMapHash`](#calculatemaphash), para obtener el hash del mapa, que se usa como el ID del juego.
 
 6. La función `newGame` agrega el nuevo juego a `gamesInProgress`.
 
-7. Lo último que hace el servidor es llamar a [`app__newGameResponse`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L38-L43), que está en cadena. Esta función se encuentra en un `System` diferente, [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol), para habilitar el control de acceso. El control de acceso se define en el [archivo de configuración de MUD](https://mud.dev/config), [`mud.config.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/mud.config.ts#L67-L72).
+7. Lo último que hace el servidor es llamar a [`app__newGameResponse`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L38-L43), que está en cadena. Esta función está en un `System` diferente, [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol), para habilitar el control de acceso. El control de acceso se define en el [archivo de configuración de MUD](https://mud.dev/config), [`mud.config.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/mud.config.ts#L67-L72).
 
    La lista de acceso solo permite que una única dirección llame al `System`. Esto restringe el acceso a las funciones del servidor a una sola dirección, por lo que nadie puede hacerse pasar por el servidor.
 
@@ -202,13 +212,13 @@ Esto es lo que sucede cuando el jugador solicita un nuevo juego.
 
 10. En el cliente, [`gameRecord`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L143-L148) se establece en la entrada de `PlayerGame` para la dirección del jugador. Cuando `PlayerGame` cambia, `gameRecord` también cambia.
 
-11. Si hay un valor en `gameRecord` y el juego no se ha ganado ni perdido, el cliente [muestra el mapa](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175-L190).
+11. Si hay un valor en `gameRecord`, y el juego no se ha ganado ni perdido, el cliente [muestra el mapa](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175-L190).
 
 #### Cavar {#dig-flow}
 
 1. El jugador [hace clic en el botón de la celda del mapa](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L188), lo que llama a [la función `dig`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/mud/createSystemCalls.ts#L33-L36). Esta función llama a [`dig` en cadena](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L24-L32).
 
-2. El componente en cadena [realiza una serie de verificaciones de validez](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L25-L30) y, si son exitosas, agrega la solicitud de excavación a [`PendingDig`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L31).
+2. El componente en cadena [realiza una serie de comprobaciones de validación](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L25-L30), y si tiene éxito, agrega la solicitud de excavación a [`PendingDig`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L31).
 
 3. El servidor [detecta el cambio en `PendingDig`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73). [Si es válido](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L75-L84), [llama al código de conocimiento cero](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L86-L95) (explicado a continuación) para generar tanto el resultado como una prueba de que es válido.
 
@@ -226,7 +236,7 @@ En los flujos explicados anteriormente, omitimos las partes de conocimiento cero
 
 ### Hashing del mapa {#hashing-map}
 
-Podemos usar [este código de JavaScript](https://github.com/ZK-Plus/ICBC24_Tutorial_Compute-Offchain-Verify-onchain/tree/solutions/exercise) para implementar [Poseidon](https://www.poseidon-hash.info), la función hash de Zokrates que utilizamos. Sin embargo, aunque esto sería más rápido, también sería más complicado que simplemente usar la función hash de Zokrates para hacerlo. Este es un tutorial, por lo que el código está optimizado para la simplicidad, no para el rendimiento. Por lo tanto, necesitamos dos programas de Zokrates diferentes, uno para simplemente calcular el hash de un mapa (`hash`) y otro para crear realmente una prueba de conocimiento cero del resultado de la excavación en una ubicación del mapa (`dig`).
+Podemos usar [este código de JavaScript](https://github.com/ZK-Plus/ICBC24_Tutorial_Compute-Offchain-Verify-onchain/tree/solutions/exercise) para implementar [Poseidon](https://www.poseidon-hash.info), la función hash de Zokrates que utilizamos. Sin embargo, aunque esto sería más rápido, también sería más complicado que simplemente usar la función hash de Zokrates para hacerlo. Este es un tutorial, por lo que el código está optimizado para la simplicidad, no para el rendimiento. Por lo tanto, necesitamos dos programas de Zokrates diferentes, uno para calcular simplemente el hash de un mapa (`hash`) y otro para crear realmente una prueba de conocimiento cero del resultado de la excavación en una ubicación del mapa (`dig`).
 
 ### La función hash {#hash-function}
 
@@ -239,20 +249,20 @@ import "utils/pack/bool/pack128.zok" as pack128;
 
 Estas dos líneas importan dos funciones de la [biblioteca estándar de Zokrates](https://zokrates.github.io/toolbox/stdlib.html). [La primera función](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/hashes/poseidon/poseidon.zok) es un [hash Poseidon](https://www.poseidon-hash.info/). Toma una matriz de [elementos `field`](https://zokrates.github.io/language/types.html#field) y devuelve un `field`.
 
-El elemento de campo en Zokrates suele tener menos de 256 bits de longitud, pero no por mucho. Para simplificar el código, restringimos el mapa a un máximo de 512 bits y aplicamos un hash a una matriz de cuatro campos, y en cada campo usamos solo 128 bits. [La función `pack128`](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) cambia una matriz de 128 bits a un `field` para este propósito.
+El elemento de campo en Zokrates suele tener menos de 256 bits de longitud, pero no por mucho. Para simplificar el código, restringimos el mapa a un máximo de 512 bits y aplicamos un hash a una matriz de cuatro campos, y en cada campo usamos solo 128 bits. [La función `pack128`](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) convierte una matriz de 128 bits en un `field` para este propósito.
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
-Esta línea inicia la definición de una función. `hashMap` obtiene un único parámetro llamado `map`, una matriz bidimensional `bool`(eana). El tamaño del mapa es `width+2` por `height+2` por razones que se [explican a continuación](#why-map-border).
+Esta línea inicia la definición de una función. `hashMap` recibe un único parámetro llamado `map`, una matriz bidimensional de tipo `bool`(ean). El tamaño del mapa es de `width+2` por `height+2` por razones que se [explican a continuación](#why-map-border).
 
 Podemos usar `${width+2}` y `${height+2}` porque los programas de Zokrates se almacenan en esta aplicación como [cadenas de plantillas](https://www.w3schools.com/js/js_string_templates.asp). El código entre `${` y `}` es evaluado por JavaScript, y de esta manera el programa se puede usar para diferentes tamaños de mapa. El parámetro del mapa tiene un borde de una ubicación de ancho a su alrededor sin ninguna bomba, que es la razón por la que necesitamos sumar dos al ancho y al alto.
 
 El valor de retorno es un `field` que contiene el hash.
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 El mapa es bidimensional. Sin embargo, la función `pack128` no funciona con matrices bidimensionales. Así que primero aplanamos el mapa en una matriz de 512 bytes, usando `map1d`. Por defecto, las variables de Zokrates son constantes, pero necesitamos asignar valores a esta matriz en un bucle, por lo que la definimos como [`mut`](https://zokrates.github.io/language/variables.html#mutability).
@@ -260,19 +270,19 @@ El mapa es bidimensional. Sin embargo, la función `pack128` no funciona con mat
 Necesitamos inicializar la matriz porque Zokrates no tiene `undefined`. La expresión `[false; 512]` significa [una matriz de 512 valores `false`](https://zokrates.github.io/language/types.html#declaration-and-initialization).
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 También necesitamos un contador para distinguir entre los bits que ya hemos llenado en `map1d` y los que no.
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 Así es como se declara un [bucle `for`](https://zokrates.github.io/language/control_flow.html#for-loops) en Zokrates. Un bucle `for` de Zokrates tiene que tener límites fijos, porque aunque parece ser un bucle, el compilador en realidad lo "desenrolla". La expresión `${width+2}` es una constante en tiempo de compilación porque `width` es establecido por el código de TypeScript antes de llamar al compilador.
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -282,7 +292,7 @@ for u32 y in 0..${height+2} {
 Para cada ubicación en el mapa, coloque ese valor en la matriz `map1d` e incremente el contador.
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -293,7 +303,7 @@ field[4] hashMe = [
 El `pack128` para crear una matriz de cuatro valores `field` a partir de `map1d`. En Zokrates, `array[a..b]` significa la porción de la matriz que comienza en `a` y termina en `b-1`.
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -338,7 +348,7 @@ return if index>4 { 0 } else { arr[index] }
 
 Dará un error, porque necesita calcular `arr[10]`, a pesar de que ese valor se multiplicará más tarde por cero.
 
-Esta es la razón por la que necesitamos un borde de una ubicación de ancho alrededor de todo el mapa. Necesitamos calcular el número total de minas alrededor de una ubicación, y eso significa que necesitamos ver la ubicación una fila arriba y abajo, a la izquierda y a la derecha, de la ubicación donde estamos excavando. Lo que significa que esas ubicaciones tienen que existir en la matriz del mapa que se proporciona a Zokrates.
+Esta es la razón por la que necesitamos un borde de una ubicación de ancho alrededor de todo el mapa. Necesitamos calcular el número total de minas alrededor de una ubicación, y eso significa que necesitamos ver la ubicación una fila por encima y por debajo, a la izquierda y a la derecha, de la ubicación donde estamos excavando. Lo que significa que esas ubicaciones tienen que existir en la matriz del mapa que se proporciona a Zokrates.
 
 ```
 def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8) {
@@ -349,19 +359,19 @@ Por defecto, las pruebas de Zokrates incluyen sus entradas. De nada sirve saber 
 Esto abre otra vía para el abuso. El probador podría usar las coordenadas correctas, pero crear un mapa con cualquier número de minas alrededor de la ubicación, y posiblemente en la ubicación misma. Para evitar este abuso, hacemos que la prueba de conocimiento cero incluya el hash del mapa, que es el identificador del juego.
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 El valor de retorno aquí es una tupla que incluye la matriz hash del mapa, así como el resultado de la excavación.
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 Usamos 255 como un valor especial en caso de que la ubicación en sí tenga una bomba.
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -387,7 +397,7 @@ Importe los [enlaces de JavaScript de Zokrates](https://zokrates.github.io/toolb
 export const zkFunctions = async (width: number, height: number) : Promise<any> => {
 ```
 
-Al igual que el propio Zokrates, también exportamos solo una función, que también es [asíncrona](https://www.w3schools.com/js/js_async.asp). Cuando finalmente regresa, proporciona varias funciones como veremos a continuación.
+De manera similar al propio Zokrates, también exportamos solo una función, que también es [asíncrona](https://www.w3schools.com/js/js_async.asp). Cuando finalmente regresa, proporciona varias funciones como veremos a continuación.
 
 ```typescript
 const zokrates = await zokratesInitialize()
@@ -514,15 +524,15 @@ Finalmente, devuelva todo lo que otro código pueda necesitar.
 
 ## Pruebas de seguridad {#security-tests}
 
-Las pruebas de seguridad son importantes porque un error de funcionalidad eventualmente se revelará por sí solo. Pero si la aplicación es insegura, es probable que permanezca oculta durante mucho tiempo antes de que alguien haga trampa y se salga con la suya con recursos que pertenecen a otros.
+Las pruebas de seguridad son importantes porque un error de funcionalidad acabará revelándose. Pero si la aplicación es insegura, es probable que permanezca oculta durante mucho tiempo antes de que alguien haga trampa y se salga con la suya con recursos que pertenecen a otros.
 
 ### Permisos {#permissions}
 
-Hay una entidad privilegiada en este juego, el servidor. Es el único usuario al que se le permite llamar a las funciones en [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). Podemos usar [`cast`](https://book.getfoundry.sh/cast/) para verificar que las llamadas a funciones con permisos solo se permitan como la cuenta del servidor.
+Hay una entidad privilegiada en este juego, el servidor. Es el único usuario al que se le permite llamar a las funciones en [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). Podemos usar [`cast`](https://getfoundry.sh/cast/overview) para verificar que las llamadas a funciones con permisos solo se permiten como la cuenta del servidor.
 
 [La clave privada del servidor está en `setupNetwork.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52).
 
-1. En la computadora que ejecuta `anvil` (la cadena de bloques), configura estas variables de entorno.
+1. En la computadora que ejecuta `anvil` (la cadena de bloques), configure estas variables de entorno.
 
    ```sh copy
    WORLD_ADDRESS=0x8d8b6b8414e1e3dcfd4168561b9be6bd3bf6ec4b
@@ -530,23 +540,25 @@ Hay una entidad privilegiada en este juego, el servidor. Es el único usuario al
    AUTHORIZED_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
    ```
 
-2. Usa `cast` para intentar establecer la dirección del verificador como una dirección no autorizada.
+   Esta `WORLD_ADDRESS` es la dirección en la que MUD se despliega en una `anvil` nueva. Si su `World` está en una dirección diferente, use el valor en `packages/contracts/worlds.json`.
+
+2. Use `cast` para intentar establecer la dirección del verificador como una dirección no autorizada.
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $UNAUTHORIZED_KEY
    ```
 
-   No solo `cast` informa de un fallo, sino que puedes abrir **MUD Dev Tools** en el juego en el navegador, hacer clic en **Tables** y seleccionar **app\_\_VerifierAddress**. Verás que la dirección no es cero.
+   No solo `cast` informa de un fallo, sino que puede abrir **MUD Dev Tools** en el juego en el navegador, hacer clic en **Tables** y seleccionar **app\_\_VerifierAddress**. Verá que la dirección no es cero.
 
-3. Establece la dirección del verificador como la dirección del servidor.
+3. Establezca la dirección del verificador como la dirección del servidor.
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $AUTHORIZED_KEY
    ```
 
-   La dirección en **app\_\_VerifiedAddress** ahora debería ser cero.
+   La dirección en **app\_\_VerifierAddress** ahora debería ser cero.
 
-Todas las funciones de MUD en el mismo `System` pasan por el mismo control de acceso, por lo que considero que esta prueba es suficiente. Si no lo crees, puedes comprobar las otras funciones en [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol).
+Todas las funciones de MUD en el mismo `System` pasan por el mismo control de acceso, por lo que considero que esta prueba es suficiente. Si no lo cree así, puede comprobar las otras funciones en [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol).
 
 ### Abusos de conocimiento cero {#zero-knowledge-abuses}
 
@@ -560,10 +572,10 @@ La posibilidad más simple es proporcionar la respuesta incorrecta en la prueba 
 proof.inputs[3] = "0x" + "1".padStart(64, "0")
 ```
 
-Esto significa que siempre haremos el reclamo de que hay una bomba, independientemente de la respuesta correcta. Intenta jugar con esta versión y verás en la pestaña **server** de la pantalla `pnpm dev` este error:
+Esto significa que siempre afirmaremos que hay una bomba, independientemente de la respuesta correcta. Intente jugar con esta versión y verá en la pestaña **server** de la pantalla `mprocs` este error:
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000
@@ -576,7 +588,7 @@ Así que este tipo de trampa falla.
 
 #### Prueba incorrecta {#wrong-proof}
 
-¿Qué sucede si proporcionamos la información correcta, pero simplemente tenemos los datos de prueba incorrectos? Ahora, reemplaza la línea 91 con:
+¿Qué sucede si proporcionamos la información correcta, pero simplemente tenemos los datos de prueba incorrectos? Ahora, reemplace la línea 91 con:
 
 ```ts
 proof.proof = {
@@ -593,9 +605,9 @@ Sigue fallando, pero ahora falla sin un motivo porque ocurre durante la llamada 
 
 ### ¿Cómo puede un usuario verificar el código de confianza cero? {#user-verify-zero-trust}
 
-Los contratos inteligentes son relativamente fáciles de verificar. Por lo general, el desarrollador publica el código fuente en un explorador de bloques, y el explorador de bloques verifica que el código fuente se compile en el código de la [transacción de despliegue del contrato](/developers/docs/smart-contracts/deploying/). En el caso de los `System`s de MUD, esto es [un poco más complicado](https://mud.dev/cli/verify), pero no mucho.
+Los contratos inteligentes son relativamente fáciles de verificar. Por lo general, el desarrollador publica el código fuente en un explorador de bloques, y el explorador de bloques verifica que el código fuente se compila en el código de la [transacción de despliegue del contrato](/developers/docs/smart-contracts/deploying/). En el caso de los `System`s de MUD, esto es [un poco más complicado](https://mud.dev/cli/verify), pero no mucho.
 
-Esto es más difícil con el conocimiento cero. El verificador incluye algunas constantes y ejecuta algunos cálculos sobre ellas. Esto no te dice qué se está probando.
+Esto es más difícil con el conocimiento cero. El verificador incluye algunas constantes y ejecuta algunos cálculos sobre ellas. Esto no le dice qué se está probando.
 
 ```solidity
     function verifyingKey() pure internal returns (VerifyingKey memory vk) {
@@ -603,12 +615,12 @@ Esto es más difícil con el conocimiento cero. El verificador incluye algunas c
         vk.beta = Pairing.G2Point([uint256(0x2cebd0fbd21aca01910581537b21ae4fed46bc0e524c055059aa164ba0a6b62b), uint256(0x18fd4a7bc386cf03a95af7163d5359165acc4e7961cb46519e6d9ee4a1e2b7e9)], [uint256(0x11449dee0199ef6d8eebfe43b548e875c69e7ce37705ee9a00c81fe52f11a009), uint256(0x066d0c83b32800d3f335bb9e8ed5e2924cf00e77e6ec28178592eac9898e1a00)]);
 ```
 
-La solución, al menos hasta que los exploradores de bloques se decidan a añadir la verificación de Zokrates a sus interfaces de usuario, es que los desarrolladores de aplicaciones pongan a disposición los programas de Zokrates, y que al menos algunos usuarios los compilen ellos mismos con la clave de verificación adecuada.
+La solución, al menos hasta que los exploradores de bloques implementen la verificación de Zokrates en sus interfaces de usuario, es que los desarrolladores de aplicaciones pongan a disposición los programas de Zokrates, y que al menos algunos usuarios los compilen ellos mismos con la clave de verificación adecuada.
 
 Para hacerlo:
 
-1. [Instala Zokrates](https://zokrates.github.io/gettingstarted.html).
-2. Crea un archivo, `dig.zok`, con el programa de Zokrates. El código a continuación asume que mantuviste el tamaño del mapa original, 10x5.
+1. [Instale Zokrates](https://zokrates.github.io/gettingstarted.html).
+2. Cree un archivo, `dig.zok`, con el programa de Zokrates. El código a continuación asume que mantuvo el tamaño del mapa original, 10x5.
 
    ```zokrates
     import "utils/pack/bool/pack128.zok" as pack128;
@@ -652,14 +664,14 @@ Para hacerlo:
     }
    ```
 
-3. Compila el código de Zokrates y crea la clave de verificación. La clave de verificación tiene que crearse con la misma entropía utilizada en el servidor original, [en este caso una cadena vacía](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L67).
+3. Compile el código de Zokrates y cree la clave de verificación. La clave de verificación debe crearse con la misma entropía utilizada en el servidor original, [en este caso una cadena vacía](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L67).
 
    ```sh copy
    zokrates compile --input dig.zok
    zokrates setup -e ""
    ```
 
-4. Crea el verificador de Solidity por tu cuenta y verifica que sea funcionalmente idéntico al de la cadena de bloques (el servidor añade un comentario, pero eso no es importante).
+4. Cree el verificador de Solidity por su cuenta y verifique que sea funcionalmente idéntico al de la cadena de bloques (el servidor agrega un comentario, pero eso no es importante).
 
    ```sh copy
    zokrates export-verifier
@@ -672,7 +684,7 @@ En cualquier aplicación lo suficientemente compleja, existen objetivos de dise�
 
 ### Por qué conocimiento cero {#why-zero-knowledge}
 
-Para el buscaminas, en realidad no necesitas conocimiento cero. El servidor siempre puede guardar el mapa y luego revelarlo por completo cuando termine el juego. Luego, al final del juego, el contrato inteligente puede calcular el hash del mapa, verificar que coincida y, si no lo hace, penalizar al servidor o ignorar el juego por completo.
+Para el buscaminas no necesitas realmente conocimiento cero. El servidor siempre puede guardar el mapa y luego simplemente revelarlo todo cuando el juego termine. Luego, al final del juego, el contrato inteligente puede calcular el hash del mapa, verificar que coincida y, si no lo hace, penalizar al servidor o ignorar el juego por completo.
 
 No utilicé esta solución más sencilla porque solo funciona para juegos cortos con un estado final bien definido. Cuando un juego es potencialmente infinito (como es el caso de los [mundos autónomos](https://0xparc.org/blog/autonomous-worlds)), necesitas una solución que pruebe el estado _sin_ revelarlo.
 
@@ -682,7 +694,9 @@ Como tutorial, este artículo necesitaba un juego corto que fuera fácil de ente
 
 [Zokrates](https://zokrates.github.io/) no es la única biblioteca de conocimiento cero disponible, pero es similar a un lenguaje de programación [imperativo](https://en.wikipedia.org/wiki/Imperative_programming) normal y admite variables booleanas.
 
-Para tu aplicación, con requisitos diferentes, podrías preferir usar [Circum](https://docs.circom.io/getting-started/installation/) o [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/).
+Sin embargo, ZoKrates ya no se mantiene activamente. Su última versión, 0.8.8 (y la correspondiente `zokrates-js` 1.1.9), es de noviembre de 2023, y la rama principal no ha tenido confirmaciones (commits) desde abril de 2024. El código de este tutorial sigue funcionando, pero no esperes correcciones de errores ni actualizaciones de seguridad. Para un proyecto nuevo, considera un lenguaje con mantenimiento como [Noir](https://noir-lang.org/), que se utiliza en [este tutorial](/developers/tutorials/app-plasma/).
+
+Para tu aplicación, con requisitos diferentes, podrías preferir usar [Circom](https://docs.circom.io/getting-started/installation/) o [Cairo](https://www.cairo-lang.org/).
 
 ### Cuándo compilar Zokrates {#when-compile-zokrates}
 
@@ -700,13 +714,13 @@ Aquí confiamos en los [poderes perpetuos de tau](https://github.com/privacy-sca
 
 ### Dónde verificar {#where-verification}
 
-Podemos verificar las pruebas de conocimiento cero ya sea en cadena (lo que cuesta gas) o en el cliente (usando [`verify`](https://zokrates.github.io/toolbox/zokrates_js.html#verifyverificationkey-proof)). Elegí la primera opción, porque esto te permite [verificar el verificador](#user-verify-zero-trust) una vez y luego confiar en que no cambiará mientras la dirección del contrato para él siga siendo la misma. Si la verificación se hiciera en el cliente, tendrías que verificar el código que recibes cada vez que descargas el cliente.
+Podemos verificar las pruebas de conocimiento cero ya sea en cadena (lo que cuesta gas) o en el cliente (usando [`verify`](https://zokrates.github.io/toolbox/zokrates_js.html#verifyverificationkey-proof)). Elegí la primera opción, porque esto te permite [verificar el verificador](#user-verify-zero-trust) una vez y luego confiar en que no cambiará mientras la dirección del contrato siga siendo la misma. Si la verificación se hiciera en el cliente, tendrías que verificar el código que recibes cada vez que descargas el cliente.
 
 Además, aunque este juego es para un solo jugador, muchos juegos de cadena de bloques son multijugador. La verificación en cadena significa que solo verificas la prueba de conocimiento cero una vez. Hacerlo en el cliente requeriría que cada cliente verificara de forma independiente.
 
 ### ¿Aplanar el mapa en TypeScript o Zokrates? {#where-flatten}
 
-En general, cuando el procesamiento se puede hacer en TypeScript o Zokrates, es mejor hacerlo en TypeScript, que es mucho más rápido y no requiere pruebas de conocimiento cero. Esta es la razón, por ejemplo, por la que no le proporcionamos a Zokrates el hash y hacemos que verifique que es correcto. El hashing tiene que hacerse dentro de Zokrates, pero la coincidencia entre el hash devuelto y el hash en cadena puede ocurrir fuera de él.
+En general, cuando el procesamiento se puede hacer en TypeScript o Zokrates, es mejor hacerlo en TypeScript, que es mucho más rápido y no requiere pruebas de conocimiento cero. Esta es la razón, por ejemplo, por la que no proporcionamos a Zokrates el hash y hacemos que verifique que es correcto. El hashing tiene que hacerse dentro de Zokrates, pero la coincidencia entre el hash devuelto y el hash en cadena puede ocurrir fuera de él.
 
 Sin embargo, todavía [aplanamos el mapa en Zokrates](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20), mientras que podríamos haberlo hecho en TypeScript. La razón es que las otras opciones son, en mi opinión, peores.
 
@@ -718,19 +732,19 @@ Sin embargo, todavía [aplanamos el mapa en Zokrates](https://github.com/qbzzt/2
 
 ### Dónde almacenar los mapas {#where-store-maps}
 
-En esta aplicación, [`gamesInProgress`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L20) es simplemente una variable en la memoria. Esto significa que si tu servidor muere y necesita ser reiniciado, toda la información que almacenó se pierde. Los jugadores no solo no pueden continuar su juego, sino que ni siquiera pueden comenzar un juego nuevo porque el componente en cadena piensa que todavía tienen un juego en progreso.
+En esta aplicación, [`gamesInProgress`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L20) es simplemente una variable en memoria. Esto significa que si tu servidor muere y necesita ser reiniciado, toda la información que almacenó se pierde. Los jugadores no solo no pueden continuar su juego, sino que ni siquiera pueden comenzar un juego nuevo porque el componente en cadena piensa que todavía tienen un juego en curso.
 
 Esto es claramente un mal diseño para un sistema de producción, en el que almacenarías esta información en una base de datos. La única razón por la que usé una variable aquí es porque esto es un tutorial y la simplicidad es la consideración principal.
 
-## Conclusión: ¿En qué condiciones es esta la técnica adecuada? {#conclusion}
+## Conclusión: ¿Bajo qué condiciones es esta la técnica adecuada? {#conclusion}
 
-Así que ahora ya sabe cómo programar un juego con un servidor que almacena un estado secreto que no debe estar en cadena. Pero, ¿en qué casos debería hacerlo? Hay dos consideraciones principales.
+Así que, ahora ya sabes cómo escribir un juego con un servidor que almacena un estado secreto que no debe estar en cadena. Pero, ¿en qué casos deberías hacerlo? Hay dos consideraciones principales.
 
-- _Juego de larga duración_: [Como se mencionó anteriormente](#why-zero-knowledge), en un juego corto simplemente puede publicar el estado una vez que el juego termina y hacer que todo se verifique en ese momento. Pero esa no es una opción cuando el juego toma un tiempo largo o indefinido, y el estado necesita mantenerse en secreto.
+- _Juego de larga duración_: [Como se mencionó anteriormente](#why-zero-knowledge), en un juego corto simplemente puedes publicar el estado una vez que el juego termina y hacer que todo se verifique en ese momento. Pero esa no es una opción cuando el juego toma un tiempo largo o indefinido, y el estado necesita mantenerse secreto.
 
-- _Cierta centralización aceptable_: Las pruebas de conocimiento cero pueden verificar la integridad, que una entidad no está falsificando los resultados. Lo que no pueden hacer es asegurar que la entidad seguirá estando disponible y responderá a los mensajes. En situaciones donde la disponibilidad también necesita ser descentralizada, las pruebas de conocimiento cero no son una solución suficiente, y se necesita [computación multipartita](https://en.wikipedia.org/wiki/Secure_multi-party_computation).
+- _Cierta centralización aceptable_: Las pruebas de conocimiento cero pueden verificar la integridad, que una entidad no está falsificando los resultados. Lo que no pueden hacer es asegurar que la entidad seguirá estando disponible y responderá a los mensajes. En situaciones donde la disponibilidad también necesita ser descentralizada, las pruebas de conocimiento cero no son una solución suficiente, y necesitas [computación multipartita](https://en.wikipedia.org/wiki/Secure_multi-party_computation).
 
-[Vea aquí más de mi trabajo](https://cryptodocguy.pro/).
+[Consulta aquí para ver más de mi trabajo](https://cryptodocguy.pro/).
 
 ### Agradecimientos {#acknowledgements}
 

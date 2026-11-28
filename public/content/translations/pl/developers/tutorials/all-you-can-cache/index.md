@@ -9,11 +9,19 @@ published: 2022-09-15
 lang: pl
 ---
 
-Podczas korzystania z rollupów koszt bajtu w transakcji jest znacznie wyższy niż koszt slotu przechowywania. Dlatego ma sens buforowanie (caching) jak największej ilości informacji onchain.
+Podczas korzystania z rollupów każdy bajt transakcji musi zostać opublikowany w L1. Kiedy ten artykuł był pisany, sprawiało to, że koszt bajtu w transakcji był znacznie wyższy niż koszt slotu przechowywania. Dlatego sensowne było buforowanie jak największej ilości informacji onchain.
 
-W tym artykule dowiesz się, jak stworzyć i używać kontraktu buforującego w taki sposób, aby każda wartość parametru, która prawdopodobnie zostanie użyta wielokrotnie, została zbuforowana i była gotowa do użycia (po pierwszym razie) przy użyciu znacznie mniejszej liczby bajtów, a także jak napisać kod pozałańcuchowy, który korzysta z tej pamięci podręcznej.
+> **Uwaga:** Opłaty za rollupy znacznie się zmieniły od czasu napisania tego artykułu w 2022 roku. Od czasu [aktualizacji Ecotone i Fjord](https://docs.optimism.io/op-stack/transactions/fees#l1-data-fee) (2024), łańcuchy OP Stack publikują dane transakcji w [blobach](/roadmap/danksharding/), a opłata za dane L1 opiera się na szacunkowym _skompresowanym_ rozmiarze transakcji, z minimum 100 bajtów na transakcję ([zobacz specyfikację](https://specs.optimism.io/protocol/fjord/exec-engine.html)). W rezultacie:
+>
+> - Zerowe bajty są prawie darmowe, ponieważ dobrze się kompresują.
+> - Krótkie transakcje są już na poziomie minimum 100 bajtów, więc jeszcze większe skrócenie ich danych wywołania nie zmniejsza ich opłaty.
+> - Przestrzeń blobów jest tania, więc w OP Mainnet gaz za wykonanie w L2 jest często większą częścią opłaty niż opłata za dane L1. Zapisanie nowej wartości w pamięci podręcznej (dwa `SSTORE` po 22100 gazu każdy) może kosztować więcej niż zaoszczędzone bajty.
+>
+> Zasada nadal obowiązuje (mniej skompresowanych bajtów oznacza niższą opłatę za dane L1), ale to, czy buforowanie się opłaca, zależy od rozmiaru transakcji oraz od obecnych cen gazu w L1 i L2. Możesz sprawdzić opłatę za dane L1 dla konkretnej transakcji, wywołując `getL1Fee` na [wstępnym wdrożeniu (predeploy) `GasPriceOracle`](https://specs.optimism.io/protocol/predeploys.html#gaspriceoracle).
 
-Jeśli chcesz pominąć artykuł i po prostu zobaczyć kod źródłowy, [znajdziesz go tutaj](https://github.com/qbzzt/20220915-all-you-can-cache). Stos technologiczny to [Foundry](https://getfoundry.sh/introduction/installation/).
+W tym artykule dowiesz się, jak stworzyć i używać kontraktu buforującego w taki sposób, aby każda wartość parametru, która prawdopodobnie zostanie użyta wielokrotnie, była buforowana i dostępna do użycia (po pierwszym razie) przy użyciu znacznie mniejszej liczby bajtów, a także jak napisać kod pozałańcuchowy, który korzysta z tej pamięci podręcznej.
+
+Jeśli chcesz pominąć artykuł i po prostu zobaczyć kod źródłowy, [znajdziesz go tutaj](https://github.com/qbzzt/20220915-all-you-can-cache). Stos programistyczny to [Foundry](https://getfoundry.sh/introduction/installation/).
 
 ## Ogólny projekt {#overall-design}
 
@@ -306,7 +314,7 @@ Jeśli tu dotrzemy, oznacza to, że otrzymaliśmy klucz, który nie jest mniejsz
 
 ### Testowanie pamięci podręcznej {#testing-the-cache}
 
-Jedną z zalet Foundry jest to, że [pozwala pisać testy w Solidity](https://getfoundry.sh/forge/tests/overview/), co ułatwia pisanie testów jednostkowych. Testy dla klasy `Cache` znajdują się [tutaj](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol). Ponieważ kod testujący jest powtarzalny, jak to zwykle bywa z testami, ten artykuł wyjaśnia tylko interesujące części.
+Jedną z zalet Foundry jest to, że [pozwala na pisanie testów w Solidity](https://getfoundry.sh/forge/tests/overview/), co ułatwia pisanie testów jednostkowych. Testy dla klasy `Cache` znajdują się [tutaj](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol). Ponieważ kod testowy jest powtarzalny, jak to zwykle bywa z testami, ten artykuł wyjaśnia tylko interesujące części.
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -319,7 +327,7 @@ import "forge-std/Test.sol";
 import "forge-std/console.sol";
 ```
 
-To tylko kod szablonowy (boilerplate), który jest niezbędny do korzystania z pakietu testowego i `console.log`.
+To tylko standardowy kod (boilerplate), który jest niezbędny do korzystania z pakietu testowego i `console.log`.
 
 ```solidity
 import "src/Cache.sol";
@@ -353,14 +361,14 @@ Testy to funkcje, których nazwy zaczynają się od `test`. Ta funkcja sprawdza 
             assertEq(cache.cacheRead(i), i*i);
 ```
 
-Tak przeprowadza się właściwe testowanie, używając [funkcji `assert...`](https://getfoundry.sh/reference/forge-std/std-assertions/). W tym przypadku sprawdzamy, czy zapisana wartość jest tą, którą odczytaliśmy. Możemy odrzucić wynik `cache.cacheWrite`, ponieważ wiemy, że klucze pamięci podręcznej są przypisywane liniowo.
+W ten sposób przeprowadza się właściwe testowanie, używając [funkcji `assert...`](https://getfoundry.sh/reference/forge-std/std-assertions/). W tym przypadku sprawdzamy, czy zapisana wartość jest tą, którą odczytaliśmy. Możemy odrzucić wynik `cache.cacheWrite`, ponieważ wiemy, że klucze pamięci podręcznej są przypisywane liniowo.
 
 ```solidity
         }
     }    // testCaching
 
 
-    // Zapisz tę samą wartość w pamięci podręcznej wiele razy, upewnij się, że klucz pozostaje
+    // Zapisz tę samą wartość w pamięci podręcznej wielokrotnie, upewnij się, że klucz pozostaje
     // taki sam
     function testRepeatCaching() public {
         for(uint i=1; i<100; i++) {
@@ -370,7 +378,7 @@ Tak przeprowadza się właściwe testowanie, używając [funkcji `assert...`](ht
         }
 ```
 
-Najpierw zapisujemy każdą wartość dwukrotnie w pamięci podręcznej i upewniamy się, że klucze są takie same (co oznacza, że drugi zapis tak naprawdę się nie odbył).
+Najpierw zapisujemy każdą wartość dwukrotnie do pamięci podręcznej i upewniamy się, że klucze są takie same (co oznacza, że drugi zapis tak naprawdę się nie odbył).
 
 ```solidity
         for(uint i=1; i<100; i+=3) {
@@ -380,16 +388,16 @@ Najpierw zapisujemy każdą wartość dwukrotnie w pamięci podręcznej i upewni
     }    // testRepeatCaching
 ```
 
-W teorii mógłby istnieć błąd, który nie wpływa na kolejne zapisy w pamięci podręcznej. Więc tutaj wykonujemy kilka zapisów, które nie są po kolei, i sprawdzamy, czy wartości nadal nie są nadpisywane.
+Teoretycznie mógłby istnieć błąd, który nie wpływa na kolejne zapisy w pamięci podręcznej. Więc tutaj wykonujemy kilka zapisów, które nie następują po sobie, i widzimy, że wartości nadal nie są nadpisywane.
 
 ```solidity
-    // Odczytaj uint z bufora pamięci (aby upewnić się, że otrzymujemy z powrotem parametry,
+    // Odczytaj uint z bufora pamięci (aby upewnić się, że odzyskujemy parametry
     // które wysłaliśmy)
     function toUint256(bytes memory _bytes, uint256 _start) internal pure
         returns (uint256)
 ```
 
-Odczytaj 256-bitowe słowo z bufora `bytes memory`. Ta funkcja pomocnicza pozwala nam zweryfikować, czy otrzymujemy poprawne wyniki, gdy uruchamiamy wywołanie funkcji korzystającej z pamięci podręcznej.
+Odczytaj 256-bitowe słowo z bufora `bytes memory`. Ta funkcja narzędziowa pozwala nam zweryfikować, czy otrzymujemy poprawne wyniki, gdy uruchamiamy wywołanie funkcji korzystającej z pamięci podręcznej.
 
 ```solidity
     {
@@ -401,7 +409,7 @@ Odczytaj 256-bitowe słowo z bufora `bytes memory`. Ta funkcja pomocnicza pozwal
         }
 ```
 
-Yul nie obsługuje struktur danych poza `uint256`, więc kiedy odwołujesz się do bardziej zaawansowanej struktury danych, takiej jak bufor pamięci `_bytes`, otrzymujesz adres tej struktury. Solidity przechowuje wartości `bytes memory` jako 32-bajtowe słowo zawierające długość, po którym następują rzeczywiste bajty, więc aby uzyskać bajt numer `_start`, musimy obliczyć `_bytes+32+_start`.
+Yul nie obsługuje struktur danych poza `uint256`, więc kiedy odnosisz się do bardziej skomplikowanej struktury danych, takiej jak bufor pamięci `_bytes`, otrzymujesz adres tej struktury. Solidity przechowuje wartości `bytes memory` jako 32-bajtowe słowo zawierające długość, po którym następują właściwe bajty, więc aby uzyskać bajt o numerze `_start`, musimy obliczyć `_bytes+32+_start`.
 
 ```solidity
 
@@ -434,7 +442,7 @@ Wywołaj `fourParams()`, funkcję, która używa `readParams`, aby przetestować
         bytes memory _callOutput;
 ```
 
-Nie możemy użyć normalnego mechanizmu ABI do wywołania funkcji korzystającej z pamięci podręcznej, więc musimy użyć niskopoziomowego mechanizmu [`<address>.call()`](https://docs.soliditylang.org/en/v0.8.16/types.html#members-of-addresses). Ten mechanizm przyjmuje `bytes memory` jako wejście i zwraca to samo (a także wartość logiczną) jako wyjście.
+Nie możemy użyć normalnego mechanizmu ABI do wywołania funkcji korzystającej z pamięci podręcznej, więc musimy użyć niskopoziomowego mechanizmu [`<address>.call()`](https://docs.soliditylang.org/en/v0.8.16/types.html#members-of-addresses). Ten mechanizm przyjmuje `bytes memory` jako wejście i zwraca to samo (oraz wartość logiczną) jako wyjście.
 
 ```solidity
         // Pierwsze wywołanie, pamięć podręczna jest pusta
@@ -442,7 +450,7 @@ Nie możemy użyć normalnego mechanizmu ABI do wywołania funkcji korzystające
             FOUR_PARAMS,
 ```
 
-Przydatne jest, aby ten sam kontrakt obsługiwał zarówno funkcje buforowane (dla wywołań bezpośrednio z transakcji), jak i niebuforowane (dla wywołań z innych inteligentnych kontraktów). Aby to zrobić, musimy nadal polegać na mechanizmie Solidity do wywoływania odpowiedniej funkcji, zamiast umieszczać wszystko w [funkcji `fallback`](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function). Takie podejście znacznie ułatwia kompozycyjność. W większości przypadków pojedynczy bajt wystarczyłby do zidentyfikowania funkcji, więc marnujemy trzy bajty (16\*3=48 gazu). Jednak w momencie pisania tego tekstu te 48 gazu kosztuje 0,07 centa, co jest rozsądnym kosztem za prostszy, mniej podatny na błędy kod.
+Przydatne jest, aby ten sam kontrakt obsługiwał zarówno funkcje buforowane (dla wywołań bezpośrednio z transakcji), jak i niebuforowane (dla wywołań z innych smart kontraktów). Aby to zrobić, musimy nadal polegać na mechanizmie Solidity do wywoływania odpowiedniej funkcji, zamiast umieszczać wszystko w [funkcji `fallback`](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function). Takie podejście znacznie ułatwia kompozycyjność. W większości przypadków pojedynczy bajt wystarczyłby do zidentyfikowania funkcji, więc marnujemy trzy bajty. Przy obecnej formule opłat OP Stack te trzy bajty dodają ułamek centa (jeśli w ogóle, zobacz uwagę na początku artykułu), co jest rozsądnym kosztem za prostszy, mniej podatny na błędy kod.
 
 ```solidity
             // Pierwsza wartość, dodaj ją do pamięci podręcznej
@@ -450,7 +458,7 @@ Przydatne jest, aby ten sam kontrakt obsługiwał zarówno funkcje buforowane (d
             bytes32(VAL_A),
 ```
 
-Pierwsza wartość: Flaga mówiąca, że jest to pełna wartość, która musi zostać zapisana w pamięci podręcznej, po której następuje 32 bajty wartości. Pozostałe trzy wartości są podobne, z tą różnicą, że `VAL_B` nie jest zapisywana w pamięci podręcznej, a `VAL_C` jest zarówno trzecim, jak i czwartym parametrem.
+Pierwsza wartość: flaga mówiąca, że jest to pełna wartość, która musi zostać zapisana w pamięci podręcznej, po której następuje 32 bajty wartości. Pozostałe trzy wartości są podobne, z tą różnicą, że `VAL_B` nie jest zapisywana w pamięci podręcznej, a `VAL_C` jest zarówno trzecim, jak i czwartym parametrem.
 
 ```solidity
              .
@@ -473,16 +481,16 @@ Oczekujemy, że wywołanie zakończy się sukcesem.
         assertEq(cache.cacheRead(2), VAL_C);
 ```
 
-Zaczynamy od pustej pamięci podręcznej, a następnie dodajemy `VAL_A`, a po nim `VAL_C`. Oczekujemy, że pierwsza z nich będzie miała klucz 1, a druga 2.
+Zaczynamy od pustej pamięci podręcznej, a następnie dodajemy `VAL_A`, a po nim `VAL_C`. Oczekujemy, że pierwszy z nich będzie miał klucz 1, a drugi 2.
 
 ```
-assertEq(toUint256(_callOutput,0), VAL_A);
+        assertEq(toUint256(_callOutput,0), VAL_A);
         assertEq(toUint256(_callOutput,32), VAL_B);
         assertEq(toUint256(_callOutput,64), VAL_C);
         assertEq(toUint256(_callOutput,96), VAL_C);
 ```
 
-Wyjściem są cztery parametry. Tutaj weryfikujemy, czy jest poprawne.
+Wyjściem są cztery parametry. Tutaj weryfikujemy, czy są poprawne.
 
 ```solidity
         // Drugie wywołanie, możemy użyć pamięci podręcznej
@@ -536,7 +544,7 @@ Ta funkcja jest podobna do `testReadParam`, z tą różnicą, że zamiast jawnie
     }   // testEncodeVal
 ```
 
-Jedynym dodatkowym testem w `testEncodeVal()` jest weryfikacja, czy długość `_callInput` jest poprawna. Dla pierwszego wywołania wynosi ona 4+33\*4. Dla drugiego, gdzie każda wartość jest już w pamięci podręcznej, wynosi 4+1\*4.
+Jedynym dodatkowym testem w `testEncodeVal()` jest sprawdzenie, czy długość `_callInput` jest poprawna. Dla pierwszego wywołania wynosi ona 4+33\*4. Dla drugiego, gdzie każda wartość jest już w pamięci podręcznej, wynosi 4+1\*4.
 
 ```solidity
     // Przetestuj encodeVal, gdy klucz ma więcej niż jeden bajt
@@ -544,15 +552,15 @@ Jedynym dodatkowym testem w `testEncodeVal()` jest weryfikacja, czy długość `
     // zbyt dużo czasu.
     function testEncodeValBig() public {
         // Umieść kilka wartości w pamięci podręcznej.
-        // Aby uprościć sprawę, użyj klucza n dla wartości n.
+        // Dla uproszczenia, użyj klucza n dla wartości n.
         for(uint i=1; i<0x1FFF; i++) {
             cache.cacheWrite(i);
         }
 ```
 
-Powyższa funkcja `testEncodeVal` zapisuje tylko cztery wartości w pamięci podręcznej, więc [część funkcji zajmująca się wartościami wielobajtowymi](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol#L144-L171) nie jest sprawdzana. Ale ten kod jest skomplikowany i podatny na błędy.
+Powyższa funkcja `testEncodeVal` zapisuje tylko cztery wartości do pamięci podręcznej, więc [część funkcji, która zajmuje się wartościami wielobajtowymi](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol#L144-L171), nie jest sprawdzana. Ale ten kod jest skomplikowany i podatny na błędy.
 
-Pierwsza część tej funkcji to pętla, która zapisuje wszystkie wartości od 1 do 0x1FFF w pamięci podręcznej w kolejności, dzięki czemu będziemy w stanie zakodować te wartości i wiedzieć, dokąd trafiają.
+Pierwsza część tej funkcji to pętla, która zapisuje wszystkie wartości od 1 do 0x1FFF do pamięci podręcznej w kolejności, dzięki czemu będziemy mogli zakodować te wartości i wiedzieć, gdzie trafiają.
 
 ```solidity
         .
@@ -578,11 +586,11 @@ Przetestuj wartości jedno-, dwu- i trzybajtowe. Nie testujemy dalej, ponieważ 
     }    // testEncodeValBig
 
 
-    // Przetestuj, czy przy zbyt małym buforze otrzymamy wycofanie
+    // Przetestuj, czy przy zbyt małym buforze otrzymujemy wycofanie
     function testShortCalldata() public {
 ```
 
-Przetestuj, co się dzieje w nietypowym przypadku, gdy nie ma wystarczającej liczby parametrów.
+Przetestuj, co się dzieje w nienormalnym przypadku, gdy nie ma wystarczającej liczby parametrów.
 
 ```solidity
         .
@@ -596,7 +604,7 @@ Przetestuj, co się dzieje w nietypowym przypadku, gdy nie ma wystarczającej li
 Ponieważ następuje wycofanie, wynikiem, który powinniśmy otrzymać, jest `false`.
 
 ```
-// Call with cache keys that aren't there
+    // Wywołaj z kluczami pamięci podręcznej, których tam nie ma
     function testNoCacheKey() public {
         .
         .
@@ -608,7 +616,7 @@ Ponieważ następuje wycofanie, wynikiem, który powinniśmy otrzymać, jest `fa
             cache.INTO_CACHE(),
             bytes32(VAL_A),
 
-            // Second value
+            // Druga wartość
             bytes1(0x0F),
             bytes2(0x1234),
             bytes11(0xA10102030405060708090A)
@@ -632,7 +640,7 @@ Ta funkcja otrzymuje cztery całkowicie poprawne parametry, z tą różnicą, ż
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
-            // First value, add it to the cache
+            // Pierwsza wartość, dodaj ją do pamięci podręcznej
             cache.INTO_CACHE(), bytes32(VAL_A),
 
             // Druga wartość, dodaj ją do pamięci podręcznej
@@ -644,7 +652,7 @@ Ta funkcja otrzymuje cztery całkowicie poprawne parametry, z tą różnicą, ż
             // Czwarta wartość, dodaj ją do pamięci podręcznej
             cache.INTO_CACHE(), bytes32(VAL_D),
 
-            // I jeszcze jedna wartość na "szczęście"
+            // I kolejna wartość na "szczęście"
             bytes4(0x31112233)
         );
 ```
@@ -706,9 +714,9 @@ Zauważ, że chociaż definiujemy `WRITE_ENTRY_CACHED` jako zmienną stanu, aby 
 
 Funkcja odczytu to `view`, więc nie wymaga transakcji i nie kosztuje gazu. W rezultacie nie ma korzyści z używania pamięci podręcznej dla parametru. W przypadku funkcji widoku (view functions) najlepiej jest użyć standardowego mechanizmu, który jest prostszy.
 
-### Kod testujący {#the-testing-code}
+### Kod testowy {#the-testing-code}
 
-[Oto kod testujący dla kontraktu](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/WORM.t.sol). Ponownie, spójrzmy tylko na to, co interesujące.
+[To jest kod testowy dla kontraktu](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/WORM.t.sol). Ponownie, spójrzmy tylko na to, co interesujące.
 
 ```solidity
     function testWReadWrite() public {
@@ -718,27 +726,27 @@ Funkcja odczytu to `view`, więc nie wymaga transakcji i nie kosztuje gazu. W re
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[W ten sposób (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) określamy w teście Foundry, że następne wywołanie powinno się nie powieść, oraz zgłaszaną przyczynę niepowodzenia. Ma to zastosowanie, gdy używamy składni `<contract>.<function name>()` zamiast budowania danych wywołania i wywoływania kontraktu za pomocą interfejsu niskopoziomowego (`<contract>.call()` itp.).
+[W ten sposób (`vm.expectRevert`)](https://getfoundry.sh/reference/cheatcodes/expect-revert/) określamy w teście Foundry, że następne wywołanie powinno się nie powieść, oraz podajemy zgłoszony powód niepowodzenia. Ma to zastosowanie, gdy używamy składni `<contract>.<function name>()` zamiast budować dane wywołania i wywoływać kontrakt za pomocą niskopoziomowego interfejsu (`<contract>.call()` itp.).
 
 ```solidity
     function testReadWriteCached() public {
         uint cacheGoat = worm.cacheWrite(0x60A7);
 ```
 
-Tutaj wykorzystujemy fakt, że `cacheWrite` zwraca klucz pamięci podręcznej. Nie jest to coś, czego spodziewalibyśmy się użyć w produkcji, ponieważ `cacheWrite` zmienia stan, a zatem może być wywołane tylko podczas transakcji. Transakcje nie mają wartości zwracanych; jeśli mają wyniki, te wyniki powinny być emitowane jako zdarzenia. Zatem wartość zwracana przez `cacheWrite` jest dostępna tylko z kodu onchain, a kod onchain nie potrzebuje buforowania parametrów.
+Tutaj wykorzystujemy fakt, że `cacheWrite` zwraca klucz pamięci podręcznej. Nie jest to coś, czego spodziewalibyśmy się użyć w środowisku produkcyjnym, ponieważ `cacheWrite` zmienia stan, a zatem może być wywołane tylko podczas transakcji. Transakcje nie mają wartości zwracanych; jeśli mają wyniki, powinny one być emitowane jako zdarzenia. Zatem wartość zwracana przez `cacheWrite` jest dostępna tylko z kodu onchain, a kod onchain nie potrzebuje buforowania parametrów.
 
 ```solidity
         (_success,) = address(worm).call(_callInput);
 ```
 
-W ten sposób mówimy Solidity, że chociaż `<contract address>.call()` ma dwie wartości zwracane, zależy nam tylko na pierwszej.
+W ten sposób mówimy Solidity, że chociaż `<contract address>.call()` ma dwie wartości zwracane, interesuje nas tylko pierwsza.
 
 ```solidity
         (_success,) = address(worm).call(_callInput);
         assertEq(_success, false);
 ```
 
-Ponieważ używamy niskopoziomowej funkcji `<address>.call()`, nie możemy użyć `vm.expectRevert()` i musimy spojrzeć na logiczną wartość sukcesu, którą otrzymujemy z wywołania.
+Ponieważ używamy niskopoziomowej funkcji `<address>.call()`, nie możemy użyć `vm.expectRevert()` i musimy spojrzeć na wartość logiczną sukcesu, którą otrzymujemy z wywołania.
 
 ```solidity
     event EntryWritten(uint indexed key, uint indexed value);
@@ -758,45 +766,66 @@ W ten sposób weryfikujemy, czy kod [poprawnie emituje zdarzenie](https://getfou
 
 ### Klient {#the-client}
 
-Jedną rzeczą, której nie uzyskasz dzięki testom w Solidity, jest kod w JavaScript, który możesz skopiować i wkleić do własnej aplikacji. Oryginalna wersja tego samouczka wdrażała WORM w sieci Optimism Goerli, która od tego czasu została wycofana. Aby dzisiaj uruchomić klienta, ponownie wdróż WORM w obsługiwanej sieci OP Stack, takiej jak [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack), a następnie użyj wynikowego adresu kontraktu w kliencie JavaScript.
+Jedną z rzeczy, których nie otrzymujesz z testami w Solidity, jest kod JavaScript, który możesz skopiować i wkleić do własnej aplikacji. Oryginalna wersja tego samouczka wdrażała WORM w Optimism Goerli, które od tego czasu zostało zamknięte. Przykładowe repozytorium nadal wskazuje na Optimism Goerli, więc aby dzisiaj uruchomić klienta, musisz samodzielnie wdrożyć WORM w [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack) i skierować klienta na swoje wdrożenie.
 
-[Kod JavaScript dla klienta można zobaczyć tutaj](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Przykładowe repozytorium zostało napisane dla Optimism Goerli, więc przed jego uruchomieniem zaktualizuj punkt końcowy RPC i adresy URL eksploratora w plikach `javascript/.env.example` oraz `javascript/index.js` dla swojej docelowej sieci. Aby z niego skorzystać:
+[Kod JavaScript dla klienta możesz zobaczyć tutaj](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Aby z niego skorzystać, potrzebujesz [Foundry](https://getfoundry.sh/introduction/installation/), [Node.js](https://nodejs.org/) oraz konta z pewną ilością ETH w OP Sepolia. [Dokumentacja kraników Optimism](https://docs.optimism.io/app-developers/tools-sdks/faucets) zawiera listę aktualnych kraników w sieci testowej.
 
-1. Sklonuj repozytorium git:
+1. Sklonuj repozytorium git, w tym moduł podrzędny `forge-std`, i zbuduj kontrakty. Klient odczytuje ABI i kod bajtowy WORM z `out/WORM.sol/WORM.json`, które istnieją dopiero po `forge build`.
 
    ```sh
-   git clone https://github.com/qbzzt/20220915-all-you-can-cache.git
+   git clone --recurse-submodules https://github.com/qbzzt/20220915-all-you-can-cache.git
+   cd 20220915-all-you-can-cache
+   forge build
    ```
 
-2. Zainstaluj niezbędne pakiety:
+   Forge ostrzega, że `foundry.toml` używa starej nazwy sekcji `[default]`. Możesz zignorować to ostrzeżenie lub uruchomić `forge config --fix`.
+
+2. Zaimportuj klucz prywatny swojego zasilonego konta do zaszyfrowanego magazynu kluczy Foundry i użyj go, aby [wdrożyć WORM](https://getfoundry.sh/reference/forge/create) w OP Sepolia.
+
+   ```sh
+   cast wallet import op-sepolia-deployer --interactive
+   forge create src/WORM.sol:WORM --rpc-url https://sepolia.optimism.io --account op-sepolia-deployer --broadcast
+   ```
+
+   Bez `--broadcast`, `forge create` tylko symuluje wdrożenie. Skopiuj adres z wiersza `Deployed to:` w danych wyjściowych.
+
+3. Edytuj `javascript/index.js`. Zastąp stary adres Optimism Goerli w tym wierszu adresem swojego wdrożenia:
+
+   ```javascript
+   const worm = WormFactory.attach("0xD34335b1d818ceE54e3323D3246bD31d94E6a78a")
+   ```
+
+   Możesz również zastąpić `https://goerli-optimism.etherscan.io` przez `https://sepolia-optimism.etherscan.io` w dwóch wierszach `console.log`, aby linki drukowane przez klienta działały.
+
+4. Zainstaluj niezbędne pakiety:
 
    ```sh
    cd javascript
-   yarn
+   npm install
    ```
 
-3. Skopiuj plik konfiguracyjny:
+5. Skopiuj plik konfiguracyjny:
 
    ```sh
    cp .env.example .env
    ```
 
-4. Edytuj plik `.env` zgodnie ze swoją konfiguracją:
+6. Edytuj `.env` dla swojej konfiguracji. Nazwy zmiennych nadal odnoszą się do Optimism Goerli, ale wartości są dla OP Sepolia:
 
-   | Parametr            | Wartość                                                                                                                                                               |
-   | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC            | Fraza mnemoniczna dla konta, które ma wystarczająco dużo ETH, aby zapłacić za transakcję. [Dokumentacja kraników Optimism](https://docs.optimism.io/app-developers/tools/faucets) zawiera listę aktualnych kraników dla sieci testowej. |
-   | OPTIMISM_GOERLI_URL | Adres URL RPC dla sieci, w której ponownie wdrażasz WORM. W przypadku OP Sepolia użyj punktu końcowego RPC dla OP Sepolia, takiego jak `https://sepolia.optimism.io`, lub innego punktu końcowego od Twojego dostawcy.        |
+   | Parametr            | Wartość                                                                                                 |
+   | ------------------- | ------------------------------------------------------------------------------------------------------- |
+   | MNEMONIC            | Fraza mnemoniczna dla konta, które ma wystarczająco dużo ETH w OP Sepolia, aby zapłacić za transakcję.  |
+   | OPTIMISM_GOERLI_URL | Adres URL RPC OP Sepolia, `https://sepolia.optimism.io` lub punkt końcowy OP Sepolia od innego dostawcy. |
 
-5. Uruchom `index.js`.
+7. Uruchom `index.js`.
 
    ```sh
    node index.js
    ```
 
-   Ta przykładowa aplikacja najpierw zapisuje wpis w WORM, wyświetlając dane wywołania i link do transakcji w eksploratorze bloków. Następnie odczytuje ten wpis i wyświetla używany klucz oraz wartości w nim zawarte (wartość, numer bloku i autora).
+   Ta przykładowa aplikacja najpierw zapisuje wpis do WORM, wyświetlając dane wywołania i link do transakcji w eksploratorze bloków. Następnie odczytuje ten wpis i wyświetla używany klucz oraz wartości we wpisie (wartość, numer bloku i autor).
 
-Większość klienta to standardowy kod JavaScript dla zdecentralizowanej aplikacji (dapp). Dlatego ponownie omówimy tylko interesujące części.
+Większość klienta to normalny JavaScript dla dapp. Więc ponownie omówimy tylko interesujące części.
 
 ```javascript
 .
@@ -809,7 +838,7 @@ const main = async () => {
     const key = await worm.encodeVal(Number(new Date()))
 ```
 
-Do danego slotu można zapisać tylko raz, więc używamy znacznika czasu, aby upewnić się, że nie używamy ponownie tych samych slotów.
+W danym slocie można zapisać tylko raz, więc używamy znacznika czasu, aby upewnić się, że nie używamy ponownie slotów.
 
 ```javascript
 const val = await worm.encodeVal("0x600D")
@@ -818,7 +847,7 @@ const val = await worm.encodeVal("0x600D")
 const calldata = func + key.slice(2) + val.slice(2)
 ```
 
-Biblioteka Ethers oczekuje, że dane wywołania będą ciągiem szesnastkowym, czyli `0x`, po którym następuje parzysta liczba cyfr szesnastkowych. Ponieważ zarówno `key`, jak i `val` zaczynają się od `0x`, musimy usunąć te nagłówki.
+Ethers oczekuje, że dane wywołania będą ciągiem szesnastkowym, `0x`, po którym następuje parzysta liczba cyfr szesnastkowych. Ponieważ zarówno `key`, jak i `val` zaczynają się od `0x`, musimy usunąć te nagłówki.
 
 ```javascript
 const tx = await worm.populateTransaction.writeEntryCached()
@@ -827,13 +856,13 @@ tx.data = calldata
 sentTx = await wallet.sendTransaction(tx)
 ```
 
-Podobnie jak w kodzie testującym w Solidity, nie możemy normalnie wywołać funkcji korzystającej z pamięci podręcznej. Zamiast tego musimy użyć mechanizmu niższego poziomu.
+Podobnie jak w przypadku kodu testowego w Solidity, nie możemy normalnie wywołać buforowanej funkcji. Zamiast tego musimy użyć mechanizmu niższego poziomu.
 
 ```javascript
     .
     .
     .
-    // Odczytaj nowo zapisany wpis
+    // Odczytaj właśnie zapisany wpis
     const realKey = '0x' + key.slice(4)  // usuń flagę FF
     const entryRead = await worm.readEntry(realKey)
     .
@@ -841,19 +870,20 @@ Podobnie jak w kodzie testującym w Solidity, nie możemy normalnie wywołać fu
     .
 ```
 
-Do odczytywania wpisów możemy użyć standardowego mechanizmu. Nie ma potrzeby używania buforowania parametrów w przypadku funkcji `view`.
-## Podsumowanie {#conclusion}
+Do odczytywania wpisów możemy użyć normalnego mechanizmu. Nie ma potrzeby używania buforowania parametrów z funkcjami `view`.
 
-Kod w tym artykule to dowód słuszności koncepcji (proof of concept), a jego celem jest ułatwienie zrozumienia pomysłu. W przypadku systemu gotowego do produkcji możesz chcieć zaimplementować dodatkową funkcjonalność:
+## Wniosek {#conclusion}
+
+Kod w tym artykule jest dowodem słuszności koncepcji (proof of concept), a jego celem jest ułatwienie zrozumienia pomysłu. W przypadku systemu gotowego do produkcji możesz chcieć zaimplementować dodatkową funkcjonalność:
 
 - Obsługa wartości, które nie są `uint256`. Na przykład ciągi znaków (strings).
-- Zamiast globalnej pamięci podręcznej, być może mapowanie między użytkownikami a pamięciami podręcznymi. Różni użytkownicy używają różnych wartości.
-- Wartości używane dla adresów różnią się od tych używanych do innych celów. Może mieć sens posiadanie oddzielnej pamięci podręcznej tylko dla adresów.
-- Obecnie klucze pamięci podręcznej opierają się na algorytmie „kto pierwszy, ten ma najmniejszy klucz”. Pierwsze szesnaście wartości można wysłać jako pojedynczy bajt. Następne 4080 wartości można wysłać jako dwa bajty. Kolejny około milion wartości to trzy bajty itd. System produkcyjny powinien prowadzić liczniki użycia wpisów w pamięci podręcznej i reorganizować je tak, aby szesnaście _najczęstszych_ wartości zajmowało jeden bajt, kolejne 4080 najczęstszych wartości dwa bajty itd.
+- Zamiast globalnej pamięci podręcznej, być może mapowanie między użytkownikami a pamięci podręcznymi. Różni użytkownicy używają różnych wartości.
+- Wartości używane dla adresów różnią się od tych używanych do innych celów. Sensowne może być posiadanie oddzielnej pamięci podręcznej tylko dla adresów.
+- Obecnie klucze pamięci podręcznej opierają się na algorytmie „kto pierwszy, ten ma najmniejszy klucz”. Pierwsze szesnaście wartości można wysłać jako pojedynczy bajt. Kolejne 4080 wartości można wysłać jako dwa bajty. Kolejne około milion wartości to trzy bajty itd. System produkcyjny powinien prowadzić liczniki użycia wpisów w pamięci podręcznej i reorganizować je tak, aby szesnaście _najczęstszych_ wartości miało jeden bajt, kolejne 4080 najczęstszych wartości dwa bajty itd.
 
-  Jednak jest to potencjalnie niebezpieczna operacja. Wyobraź sobie następującą sekwencję zdarzeń:
+  Jest to jednak potencjalnie niebezpieczna operacja. Wyobraź sobie następującą sekwencję zdarzeń:
 
-  1. Naiwny Noam wywołuje `encodeVal`, aby zakodować adres, na który chce wysłać tokeny. Ten adres jest jednym z pierwszych użytych w aplikacji, więc zakodowana wartość to 0x06. Jest to funkcja `view`, a nie transakcja, więc odbywa się to między Noamem a węzłem, z którego korzysta, i nikt inny o tym nie wie.
+  1. Naiwny Noam wywołuje `encodeVal`, aby zakodować adres, na który chce wysłać tokeny. Ten adres jest jednym z pierwszych użytych w aplikacji, więc zakodowana wartość to 0x06. Jest to funkcja `view`, a nie transakcja, więc odbywa się to między Noamem a węzłem, którego używa, i nikt inny o tym nie wie.
 
   2. Właściciel Owen uruchamia operację zmiany kolejności w pamięci podręcznej. Bardzo niewiele osób faktycznie używa tego adresu, więc jest on teraz zakodowany jako 0x201122. Innej wartości, 10<sup>18</sup>, przypisano 0x06.
 
@@ -861,6 +891,7 @@ Kod w tym artykule to dowód słuszności koncepcji (proof of concept), a jego c
 
   Istnieją sposoby na rozwiązanie tego problemu, a także powiązanego problemu transakcji, które znajdują się w mempoolu podczas zmiany kolejności w pamięci podręcznej, ale musisz być tego świadomy.
 
-Zademonstrowałem tutaj buforowanie z Optimism, ponieważ jestem pracownikiem Optimism i jest to rollup, który znam najlepiej. Ale powinno to działać z każdym rollupem, który pobiera minimalne opłaty za wewnętrzne przetwarzanie, tak że w porównaniu z tym zapisywanie danych transakcji na L1 jest głównym wydatkiem.
+Zademonstrowałem tutaj buforowanie z Optimism, ponieważ jestem pracownikiem Optimism i jest to rollup, który znam najlepiej. Ale powinno to działać z każdym rollupem, który pobiera minimalne koszty za przetwarzanie wewnętrzne, tak że w porównaniu z tym zapisywanie danych transakcji w L1 jest głównym wydatkiem. Jak wyjaśniono w uwadze na początku tego artykułu, sprawdź aktualne opłaty, zanim zdecydujesz, czy buforowanie jest tego warte.
 
 [Zobacz tutaj więcej moich prac](https://cryptodocguy.pro/).
+

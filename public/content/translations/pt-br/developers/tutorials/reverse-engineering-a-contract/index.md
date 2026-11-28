@@ -40,121 +40,141 @@ Em `A1`, coloque o primeiro offset, zero. Em seguida, em `A2`, coloque esta fun�
 
 Precisamos que esta função nos dê o valor hexadecimal porque os valores que são empilhados antes dos saltos (`JUMP` e `JUMPI`) nos são fornecidos em hexadecimal.
 
-## O Ponto de Entrada (0x00) {#the-entry-point-0x00}
+## O ponto de entrada (0x00) {#the-entry-point-0x00}
 
 Os contratos são sempre executados a partir do primeiro byte. Esta é a parte inicial do código:
 
-| Offset | Código de operação | Pilha (após o código de operação) |
-| -----: | ------------------ | --------------------------------- |
-|      0 | PUSH1 0x80         | 0x80                              |
-|      2 | PUSH1 0x40         | 0x40, 0x80                        |
-|      4 | MSTORE             | Vazia                             |
-|      5 | PUSH1 0x04         | 0x04                              |
-|      7 | CALLDATASIZE       | CALLDATASIZE 0x04                 |
-|      8 | LT                 | CALLDATASIZE\<4                    |
-|      9 | PUSH2 0x005e       | 0x5E CALLDATASIZE\<4               |
-|      C | JUMPI              | Vazia                             |
+| Offset | Opcode       | Pilha (após o código de operação) |
+| -----: | ------------ | --------------------------------- |
+|      0 | PUSH1 0x80   | 0x80                              |
+|      2 | PUSH1 0x40   | 0x40, 0x80                        |
+|      4 | MSTORE       | Vazia                             |
+|      5 | PUSH1 0x04   | 0x04                              |
+|      7 | CALLDATASIZE | CALLDATASIZE 0x04                 |
+|      8 | LT           | CALLDATASIZE\<4                   |
+|      9 | PUSH2 0x005e | 0x5E CALLDATASIZE\<4              |
+|      C | JUMPI        | Vazia                             |
 
 Este código faz duas coisas:
 
 1. Escreve 0x80 como um valor de 32 bytes nos locais de memória 0x40-0x5F (0x80 é armazenado em 0x5F, e 0x40-0x5E são todos zeros).
 2. Lê o tamanho dos dados de chamada. Normalmente, os dados de chamada para um contrato Ethereum seguem [a ABI (interface binária de aplicativo)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html), que no mínimo requer quatro bytes para o seletor de função. Se o tamanho dos dados de chamada for menor que quatro, salta para 0x5E.
 
-![Flowchart for this portion](flowchart-entry.png)
+<Flowchart>
 
-### O Manipulador em 0x5E (para dados de chamada não-ABI) {#the-handler-at-0x5e-for-non-abi-call-data}
+- Ponto de entrada (0x00)
+  - Os dados de chamada têm menos de quatro bytes?
+    - **Sim** Chamadas não ABI (0x5E)
+      - Existem dados de chamada?
+        - **Sim** 0x7C (propósito desconhecido até agora)
+        - **Não** Transferência de ETH (0x64): reverter em caso de overflow, caso contrário, adicionar o valor da chamada a `Storage[6]` (`Value*`) e parar
+    - **Não** Chamadas ABI (0x0D)
 
-| Offset | Código de operação |
-| -----: | ------------------ |
-|     5E | JUMPDEST           |
-|     5F | CALLDATASIZE       |
-|     60 | PUSH2 0x007c       |
-|     63 | JUMPI              |
+</Flowchart>
 
-Este trecho começa com um `JUMPDEST`. Os programas da EVM (máquina virtual Ethereum) lançam uma exceção se você saltar para um código de operação que não seja `JUMPDEST`. Em seguida, ele analisa o CALLDATASIZE e, se for "verdadeiro" (ou seja, não zero), salta para 0x7C. Chegaremos a isso mais adiante.
+### O manipulador em 0x5E (para dados de chamada não ABI) {#the-handler-at-0x5e-for-non-abi-call-data}
 
-| Offset | Código de operação | Pilha (após o código de operação)                                                                          |
-| -----: | ------------------ | ---------------------------------------------------------------------------------------------------------- |
-|     64 | CALLVALUE          | [Wei](/glossary/#wei) fornecido pela chamada. Chamado de `msg.value` em Solidity |
-|     65 | PUSH1 0x06         | 6 CALLVALUE                                                                                                |
-|     67 | PUSH1 0x00         | 0 6 CALLVALUE                                                                                              |
-|     69 | DUP3               | CALLVALUE 0 6 CALLVALUE                                                                                    |
-|     6A | DUP3               | 6 CALLVALUE 0 6 CALLVALUE                                                                                  |
-|     6B | SLOAD              | Storage[6] CALLVALUE 0 6 CALLVALUE                                                                         |
+| Offset | Opcode       |
+| -----: | ------------ |
+|     5E | JUMPDEST     |
+|     5F | CALLDATASIZE |
+|     60 | PUSH2 0x007c |
+|     63 | JUMPI        |
+
+Este trecho começa com um `JUMPDEST`. Os programas da EVM (Máquina Virtual Ethereum) lançam uma exceção se você saltar para um código de operação que não seja `JUMPDEST`. Em seguida, ele analisa o CALLDATASIZE e, se for "verdadeiro" (ou seja, não zero), salta para 0x7C. Chegaremos a isso mais abaixo.
+
+| Offset | Opcode     | Pilha (após o código de operação)                                          |
+| -----: | ---------- | -------------------------------------------------------------------------- |
+|     64 | CALLVALUE  | [Wei](/glossary/#wei) fornecido pela chamada. Chamado de `msg.value` em Solidity |
+|     65 | PUSH1 0x06 | 6 CALLVALUE                                                                |
+|     67 | PUSH1 0x00 | 0 6 CALLVALUE                                                              |
+|     69 | DUP3       | CALLVALUE 0 6 CALLVALUE                                                    |
+|     6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                  |
+|     6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                         |
 
 Portanto, quando não há dados de chamada, lemos o valor de Storage[6]. Ainda não sabemos qual é esse valor, mas podemos procurar transações que o contrato recebeu sem dados de chamada. Transações que apenas transferem ETH sem nenhum dado de chamada (e, portanto, sem método) têm no Etherscan o método `Transfer`. De fato, [a primeira transação que o contrato recebeu](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) é uma transferência.
 
-Se olharmos para essa transação e clicarmos em **Click to see More** (Clique para ver mais), veremos que os dados de chamada, chamados de dados de entrada (input data), estão de fato vazios (`0x`). Observe também que o valor é 1,559 ETH, o que será relevante mais tarde.
+Se olharmos para essa transação e clicarmos em **Click to see More**, veremos que os dados de chamada, chamados de dados de entrada, estão de fato vazios (`0x`). Observe também que o valor é 1,559 ETH, o que será relevante mais tarde.
 
-![The call data is empty](calldata-empty.png)
+![Os dados de chamada estão vazios](calldata-empty.png)
 
-Em seguida, clique na aba **State** (Estado) e expanda o contrato que estamos fazendo engenharia reversa (0x2510...). Você pode ver que `Storage[6]` mudou durante a transação e, se você alterar Hex para **Number** (Número), verá que se tornou 1.559.000.000.000.000.000, o valor transferido em wei (adicionei os pontos para maior clareza), correspondendo ao próximo valor do contrato.
+Em seguida, clique na aba **State** e expanda o contrato que estamos fazendo engenharia reversa (0x2510...). Você pode ver que `Storage[6]` mudou durante a transação e, se você alterar Hex para **Number**, verá que se tornou 1.559.000.000.000.000.000, o valor transferido em Wei (adicionei os pontos para maior clareza), correspondendo ao próximo valor do contrato.
 
 ![A mudança em Storage[6]](storage6.png)
 
-Se olharmos para as mudanças de estado causadas por [outras transações `Transfer` do mesmo período](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange), veremos que `Storage[6]` rastreou o valor do contrato por um tempo. Por enquanto, vamos chamá-lo de `Value*`. O asterisco (`*`) nos lembra que ainda não _sabemos_ o que essa variável faz, mas não pode ser apenas para rastrear o valor do contrato porque não há necessidade de usar o armazenamento, que é muito caro, quando você pode obter o saldo de suas contas usando `ADDRESS BALANCE`. O primeiro código de operação empurra o próprio endereço do contrato. O segundo lê o endereço no topo da pilha e o substitui pelo saldo desse endereço.
+Se olharmos para as mudanças de estado causadas por [outras transações `Transfer` do mesmo período](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange), vemos que `Storage[6]` rastreou o valor do contrato por um tempo. Por enquanto, vamos chamá-lo de `Value*`. O asterisco (`*`) nos lembra que ainda não _sabemos_ o que essa variável faz, mas não pode ser apenas para rastrear o valor do contrato porque não há necessidade de usar o armazenamento, que é muito caro, quando você pode obter o saldo de suas contas usando `ADDRESS BALANCE`. O primeiro código de operação empilha o próprio endereço do contrato. O segundo lê o endereço no topo da pilha e o substitui pelo saldo desse endereço.
 
-| Offset | Código de operação | Pilha                                       |
-| -----: | ------------------ | ------------------------------------------- |
-|     6C | PUSH2 0x0075       | 0x75 Value\* CALLVALUE 0 6 CALLVALUE        |
-|     6F | SWAP2              | CALLVALUE Value\* 0x75 0 6 CALLVALUE        |
-|     70 | SWAP1              | Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
-|     71 | PUSH2 0x01a7       | 0x01A7 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
-|     74 | JUMP               |
+| Offset | Opcode       | Pilha                                       |
+| -----: | ------------ | ------------------------------------------- |
+|     6C | PUSH2 0x0075 | 0x75 Value\* CALLVALUE 0 6 CALLVALUE        |
+|     6F | SWAP2        | CALLVALUE Value\* 0x75 0 6 CALLVALUE        |
+|     70 | SWAP1        | Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
+|     71 | PUSH2 0x01a7 | 0x01A7 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
+|     74 | JUMP         |
 
 Continuaremos a rastrear este código no destino do salto.
 
-| Offset | Código de operação | Pilha                                                       |
-| -----: | ------------------ | ----------------------------------------------------------- |
-|    1A7 | JUMPDEST           | Value\* CALLVALUE 0x75 0 6 CALLVALUE                        |
-|    1A8 | PUSH1 0x00         | 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE                   |
-|    1AA | DUP3               | CALLVALUE 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
-|    1AB | NOT                | 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
+| Offset | Opcode     | Pilha                                                       |
+| -----: | ---------- | ----------------------------------------------------------- |
+|    1A7 | JUMPDEST   | Value\* CALLVALUE 0x75 0 6 CALLVALUE                        |
+|    1A8 | PUSH1 0x00 | 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE                   |
+|    1AA | DUP3       | CALLVALUE 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
+|    1AB | NOT        | 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 
-O `NOT` é bit a bit (bitwise), portanto, inverte o valor de cada bit no valor da chamada.
+O `NOT` é bit a bit, então ele inverte o valor de cada bit no valor da chamada.
 
-| Offset | Código de operação | Pilha                                                                        |
-| -----: | ------------------ | ---------------------------------------------------------------------------- |
-|    1AC | DUP3               | Value\* 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE          |
-|    1AD | GT                 | Value\*>2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE          |
-|    1AE | ISZERO             | Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
-|    1AF | PUSH2 0x01df       | 0x01DF Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
-|    1B2 | JUMPI              |
+| Offset | Opcode       | Pilha                                                                       |
+| -----: | ------------ | --------------------------------------------------------------------------- |
+|    1AC | DUP3         | Value\* 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
+|    1AD | GT           | Value\*>2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
+|    1AE | ISZERO       | Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
+|    1AF | PUSH2 0x01df | 0x01DF Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
+|    1B2 | JUMPI        |
 
-Saltamos se `Value*` for menor que 2^256-CALLVALUE-1 ou igual a ele. Isso parece uma lógica para evitar o transbordamento (overflow). E, de fato, vemos que após algumas operações sem sentido (escrever na memória está prestes a ser excluído, por exemplo) no offset 0x01DE, o contrato é revertido se o transbordamento for detectado, o que é um comportamento normal.
+Saltamos se `Value*` for menor que 2^256-CALLVALUE-1 ou igual a ele. Isso parece uma lógica para evitar overflow. E, de fato, vemos que após algumas operações sem sentido (escrever na memória está prestes a ser excluído, por exemplo) no offset 0x01DE, o contrato reverte se o overflow for detectado, o que é um comportamento normal.
 
-Observe que tal transbordamento é extremamente improvável, porque exigiria que o valor da chamada mais `Value*` fosse comparável a 2^256 wei, cerca de 10^59 ETH. [O fornecimento total de ETH, no momento da redação, é inferior a duzentos milhões](https://etherscan.io/stat/supply).
+Observe que tal overflow é extremamente improvável, porque exigiria que o valor da chamada mais `Value*` fosse comparável a 2^256 Wei, cerca de 10^59 ETH. [O fornecimento total de ETH, no momento da escrita, é inferior a duzentos milhões](https://etherscan.io/stat/supply).
 
-| Offset | Código de operação | Pilha                                     |
-| -----: | ------------------ | ----------------------------------------- |
-|    1DF | JUMPDEST           | 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
-|    1E0 | POP                | Value\* CALLVALUE 0x75 0 6 CALLVALUE      |
-|    1E1 | ADD                | Value\*+CALLVALUE 0x75 0 6 CALLVALUE      |
-|    1E2 | SWAP1              | 0x75 Value\*+CALLVALUE 0 6 CALLVALUE      |
-|    1E3 | JUMP               |
+| Offset | Opcode   | Pilha                                     |
+| -----: | -------- | ----------------------------------------- |
+|    1DF | JUMPDEST | 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
+|    1E0 | POP      | Value\* CALLVALUE 0x75 0 6 CALLVALUE      |
+|    1E1 | ADD      | Value\*+CALLVALUE 0x75 0 6 CALLVALUE      |
+|    1E2 | SWAP1    | 0x75 Value\*+CALLVALUE 0 6 CALLVALUE      |
+|    1E3 | JUMP     |
 
-Se chegamos aqui, obtemos `Value* + CALLVALUE` e saltamos para o offset 0x75.
+Se chegamos aqui, pegue `Value* + CALLVALUE` e salte para o offset 0x75.
 
-| Offset | Código de operação | Pilha                           |
-| -----: | ------------------ | ------------------------------- |
-|     75 | JUMPDEST           | Value\*+CALLVALUE 0 6 CALLVALUE |
-|     76 | SWAP1              | 0 Value\*+CALLVALUE 6 CALLVALUE |
-|     77 | SWAP2              | 6 Value\*+CALLVALUE 0 CALLVALUE |
-|     78 | SSTORE             | 0 CALLVALUE                     |
+| Offset | Opcode   | Pilha                           |
+| -----: | -------- | ------------------------------- |
+|     75 | JUMPDEST | Value\*+CALLVALUE 0 6 CALLVALUE |
+|     76 | SWAP1    | 0 Value\*+CALLVALUE 6 CALLVALUE |
+|     77 | SWAP2    | 6 Value\*+CALLVALUE 0 CALLVALUE |
+|     78 | SSTORE   | 0 CALLVALUE                     |
 
 Se chegarmos aqui (o que exige que os dados de chamada estejam vazios), adicionamos a `Value*` o valor da chamada. Isso é consistente com o que dizemos que as transações `Transfer` fazem.
 
-| Offset | Código de operação |
-| -----: | ------------------ |
-|     79 | POP                |
-|     7A | POP                |
-|     7B | STOP               |
+| Offset | Opcode |
+| -----: | ------ |
+|     79 | POP    |
+|     7A | POP    |
+|     7B | STOP   |
 
-Por fim, limpa a pilha (o que não é necessário) e sinaliza o fim bem-sucedido da transação.
+Por fim, limpe a pilha (o que não é necessário) e sinalize o fim bem-sucedido da transação.
 
 Para resumir tudo, aqui está um fluxograma para o código inicial.
 
-![Entry point flowchart](flowchart-entry.png)
+<Flowchart>
+
+- Ponto de entrada (0x00)
+  - Os dados de chamada têm menos de quatro bytes?
+    - **Sim** Chamadas não ABI (0x5E)
+      - Existem dados de chamada?
+        - **Sim** 0x7C (propósito desconhecido até agora)
+        - **Não** Transferência de ETH (0x64): reverter em caso de overflow, caso contrário, adicionar o valor da chamada a `Storage[6]` (`Value*`) e parar
+    - **Não** Chamadas ABI (0x0D)
+
+</Flowchart>
 
 ## O manipulador em 0x7C {#the-handler-at-0x7c}
 
@@ -252,51 +272,82 @@ Então, após a chamada, copiamos os dados de retorno para o buffer 0x80 - 0x80+
 
 Se chegarmos aqui, em 0xC0, significa que o contrato que chamamos foi revertido. Como somos apenas um proxy para esse contrato, queremos retornar os mesmos dados e também reverter.
 
-| Deslocamento | Código de operação | Pilha                                                                                                               |
+| Offset | Opcode   | Pilha                                                                                                               |
 | -----: | -------- | ------------------------------------------------------------------------------------------------------------------- |
 |     C0 | JUMPDEST | (((sucesso/falha da chamada))) RETURNDATASIZE (((sucesso/falha da chamada))) 0x80 Storage[3]-como-endereço                     |
 |     C1 | DUP2     | RETURNDATASIZE (((sucesso/falha da chamada))) RETURNDATASIZE (((sucesso/falha da chamada))) 0x80 Storage[3]-como-endereço      |
 |     C2 | DUP5     | 0x80 RETURNDATASIZE (((sucesso/falha da chamada))) RETURNDATASIZE (((sucesso/falha da chamada))) 0x80 Storage[3]-como-endereço |
 |     C3 | REVERT   |
 
-Então executamos `REVERT` com o mesmo buffer que usamos para `RETURN` anteriormente: 0x80 - 0x80+RETURNDATASIZE
+Então nós `REVERT` com o mesmo buffer que usamos para `RETURN` anteriormente: 0x80 - 0x80+RETURNDATASIZE
 
-![Call to proxy flowchart](flowchart-proxy.png)
+<Flowchart>
 
-## Chamadas de ABI {#abi-calls}
+- Dados de chamada com um a três bytes de comprimento, ou um método desconhecido
+  - Manipulador de proxy (0x7C)
+    - Ler `Storage[3]`, o endereço do proxy
+      - Copiar os dados de chamada para a memória
+        - `DELEGATECALL` o endereço do proxy
+          - Copiar os dados de retorno para a memória
+            - A chamada falhou?
+              - **Sim** `REVERT` com os dados de retorno (0xC0)
+              - **Não** `RETURN` os dados de retorno (0xBD)
 
-Se o tamanho dos dados de chamada for de quatro bytes ou mais, isso pode ser uma chamada de ABI válida.
+</Flowchart>
 
-| Offset | Código de operação | Pilha                                             |
-| -----: | ------------------ | ------------------------------------------------- |
-|      D | PUSH1 0x00         | 0x00                                              |
-|      F | CALLDATALOAD       | (((Primeira palavra (256 bits) dos dados de chamada)))      |
-|     10 | PUSH1 0xe0         | 0xE0 (((Primeira palavra (256 bits) dos dados de chamada))) |
-|     12 | SHR                | (((primeiros 32 bits (4 bytes) dos dados de chamada)))    |
+## Chamadas ABI {#abi-calls}
 
-O Etherscan nos diz que `1C` é um código de operação desconhecido, porque [ele foi adicionado depois que o Etherscan escreveu esse recurso](https://eips.ethereum.org/EIPS/eip-145) e eles não o atualizaram. Uma [tabela de códigos de operação atualizada](https://github.com/wolflo/evm-opcodes) nos mostra que isso é um deslocamento para a direita
+Se o tamanho dos dados de chamada for de quatro bytes ou mais, esta pode ser uma chamada ABI válida.
 
-| Offset | Código de operação | Pilha                                                                                                    |
-| -----: | ------------------ | -------------------------------------------------------------------------------------------------------- |
-|     13 | DUP1               | (((primeiros 32 bits (4 bytes) dos dados de chamada))) (((primeiros 32 bits (4 bytes) dos dados de chamada)))            |
-|     14 | PUSH4 0x3cd8045e   | 0x3CD8045E (((primeiros 32 bits (4 bytes) dos dados de chamada))) (((primeiros 32 bits (4 bytes) dos dados de chamada))) |
-|     19 | GT                 | 0x3CD8045E>primeiros-32-bits-dos-dados-de-chamada (((primeiros 32 bits (4 bytes) dos dados de chamada)))                 |
-|     1A | PUSH2 0x0043       | 0x43 0x3CD8045E>primeiros-32-bits-dos-dados-de-chamada (((primeiros 32 bits (4 bytes) dos dados de chamada)))            |
-|     1D | JUMPI              | (((primeiros 32 bits (4 bytes) dos dados de chamada)))                                                           |
+| Offset | Opcode       | Pilha                                             |
+| -----: | ------------ | ------------------------------------------------- |
+|      D | PUSH1 0x00   | 0x00                                              |
+|      F | CALLDATALOAD | (((Primeira palavra (256 bits) dos dados de chamada)))      |
+|     10 | PUSH1 0xe0   | 0xE0 (((Primeira palavra (256 bits) dos dados de chamada))) |
+|     12 | SHR          | (((primeiros 32 bits (4 bytes) dos dados de chamada)))    |
 
-Dividir os testes de correspondência de assinatura de método em dois dessa forma economiza metade dos testes, em média. O código que segue imediatamente a isso e o código em 0x43 seguem o mesmo padrão: `DUP1` os primeiros 32 bits dos dados de chamada, `PUSH4 (((method signature>`, executa `EQ` para verificar a igualdade e, em seguida, `JUMPI` se a assinatura do método corresponder. Aqui estão as assinaturas de método, seus endereços e, se conhecida, [a definição de método correspondente](https://www.4byte.directory/):
+O Etherscan nos diz que `1C` é um código de operação desconhecido, porque [ele foi adicionado depois que o Etherscan escreveu esse recurso](https://eips.ethereum.org/EIPS/eip-145) e eles não o atualizaram. Uma [tabela de códigos de operação atualizada](https://github.com/wolflo/evm-opcodes) nos mostra que isso é um deslocamento para a direita (shift right)
+
+| Offset | Opcode           | Pilha                                                                                                    |
+| -----: | ---------------- | -------------------------------------------------------------------------------------------------------- |
+|     13 | DUP1             | (((primeiros 32 bits (4 bytes) dos dados de chamada))) (((primeiros 32 bits (4 bytes) dos dados de chamada)))            |
+|     14 | PUSH4 0x3cd8045e | 0x3CD8045E (((primeiros 32 bits (4 bytes) dos dados de chamada))) (((primeiros 32 bits (4 bytes) dos dados de chamada))) |
+|     19 | GT               | 0x3CD8045E>primeiros-32-bits-dos-dados-de-chamada (((primeiros 32 bits (4 bytes) dos dados de chamada)))                 |
+|     1A | PUSH2 0x0043     | 0x43 0x3CD8045E>primeiros-32-bits-dos-dados-de-chamada (((primeiros 32 bits (4 bytes) dos dados de chamada)))            |
+|     1D | JUMPI            | (((primeiros 32 bits (4 bytes) dos dados de chamada)))                                                           |
+
+Dividir os testes de correspondência de assinatura de método em dois dessa forma economiza metade dos testes, em média. O código que se segue imediatamente a este e o código em 0x43 seguem o mesmo padrão: `DUP1` os primeiros 32 bits dos dados de chamada, `PUSH4 (((method signature>`, executa `EQ` para verificar a igualdade e, em seguida, `JUMPI` se a assinatura do método corresponder. Aqui estão as assinaturas de método, seus endereços e, se conhecida, [a definição de método correspondente](https://www.4byte.directory/):
 
 | Método                                                                                 | Assinatura do método | Offset para saltar |
-| -------------------------------------------------------------------------------------- | -------------------- | ------------------ |
-| [splitter()](https://www.4byte.directory/signatures/?bytes4_signature=0x3cd8045e)      | 0x3cd8045e           | 0x0103             |
-| ???                                                                                    | 0x81e580d3           | 0x0138             |
-| [currentWindow()](https://www.4byte.directory/signatures/?bytes4_signature=0xba0bafb4) | 0xba0bafb4           | 0x0158             |
-| ???                                                                                    | 0x1f135823           | 0x00C4             |
-| [merkleRoot()](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab)    | 0x2eb4a7ab           | 0x00ED             |
+| -------------------------------------------------------------------------------------- | ---------------- | ------------------- |
+| [splitter()](https://www.4byte.directory/signatures/?bytes4_signature=0x3cd8045e)      | 0x3cd8045e       | 0x0103              |
+| ???                                                                                    | 0x81e580d3       | 0x0138              |
+| [currentWindow()](https://www.4byte.directory/signatures/?bytes4_signature=0xba0bafb4) | 0xba0bafb4       | 0x0158              |
+| ???                                                                                    | 0x1f135823       | 0x00C4              |
+| [merkleRoot()](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab)    | 0x2eb4a7ab       | 0x00ED              |
 
 Se nenhuma correspondência for encontrada, o código salta para [o manipulador de proxy em 0x7C](#the-handler-at-0x7c), na esperança de que o contrato para o qual somos um proxy tenha uma correspondência.
 
-![ABI calls flowchart](flowchart-abi.png)
+<Flowchart>
+
+- Ler o seletor de método, os primeiros quatro bytes dos dados de chamada (0x0D)
+  - O seletor está abaixo de `0x3cd8045e`?
+    - **Sim** Seletores baixos (0x43)
+      - É `0x1f135823`?
+        - **Sim** Função em 0xC4
+        - **Não** É `0x2eb4a7ab`?
+          - **Sim** `merkleRoot()` em 0xED
+          - **Não** [Manipulador de proxy (0x7C)](#the-handler-at-0x7c)
+    - **Não** Seletores altos (0x1E)
+      - É `0x3cd8045e`?
+        - **Sim** `splitter()` em 0x0103
+        - **Não** É `0x81e580d3`?
+          - **Sim** Função em 0x0138
+          - **Não** É `0xba0bafb4`?
+            - **Sim** `currentWindow()` em 0x0158
+            - **Não** [Manipulador de proxy (0x7C)](#the-handler-at-0x7c)
+
+</Flowchart>
 
 ## splitter() {#splitter}
 

@@ -16,21 +16,22 @@ lang: ar
 published: 2025-03-15
 ---
 
-_لا توجد أسرار على سلسلة الكتل_. كل ما يتم نشره على سلسلة الكتل متاح للجميع لقراءته. هذا ضروري، لأن سلسلة الكتل تعتمد على قدرة أي شخص على التحقق منها. ومع ذلك، تعتمد الألعاب غالبًا على حالة سرية. على سبيل المثال، لعبة [كاسحة الألغام](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) لا معنى لها على الإطلاق إذا كان بإمكانك ببساطة الذهاب إلى مستكشف الكتل ورؤية الخريطة.
+_لا توجد أسرار على سلسلة الكتل_. كل ما يتم نشره على سلسلة الكتل مفتوح للجميع لقراءته. هذا ضروري، لأن سلسلة الكتل تعتمد على قدرة أي شخص على التحقق منها. ومع ذلك، غالبًا ما تعتمد الألعاب على حالة سرية. على سبيل المثال، لعبة [كاسحة الألغام (minesweeper)](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) لا معنى لها على الإطلاق إذا كان بإمكانك ببساطة الذهاب إلى مستكشف سلسلة الكتل ورؤية الخريطة.
 
 الحل الأبسط هو استخدام [مكون خادم](/developers/tutorials/server-components/) للاحتفاظ بالحالة السرية. ومع ذلك، فإن السبب الذي يجعلنا نستخدم سلسلة الكتل هو منع الغش من قبل مطور اللعبة. نحتاج إلى ضمان نزاهة مكون الخادم. يمكن للخادم توفير تجزئة للحالة، واستخدام [إثباتات المعرفة الصفرية](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) لإثبات أن الحالة المستخدمة لحساب نتيجة الحركة هي الحالة الصحيحة.
 
-بعد قراءة هذه المقالة، ستعرف كيفية إنشاء هذا النوع من الخوادم التي تحتفظ بحالة سرية، وعميل لعرض الحالة، ومكون على السلسلة للتواصل بينهما. الأدوات الرئيسية التي سنستخدمها ستكون:
+بعد قراءة هذا المقال، ستعرف كيفية إنشاء هذا النوع من الخوادم التي تحتفظ بالحالة السرية، وعميل لعرض الحالة، ومكون على السلسلة للتواصل بينهما. الأدوات الرئيسية التي سنستخدمها ستكون:
 
-| الأداة                                          | الغرض                                                 | تم التحقق منه على الإصدار |
-| --------------------------------------------- | ------------------------------------------------------- | ------------------: |
-| [Zokrates](https://zokrates.github.io/)       | إثباتات المعرفة الصفرية والتحقق منها            |               <span dir="ltr">1.1.9</span> |
-| [TypeScript](https://www.typescriptlang.org/) | لغة برمجة لكل من الخادم والعميل |               <span dir="ltr">5.4.2</span> |
-| [Node](https://nodejs.org/en)                 | تشغيل الخادم                                      |             <span dir="ltr">20.18.2</span> |
-| [Viem](https://viem.sh/)                      | التواصل مع سلسلة الكتل                       |              <span dir="ltr">2.9.20</span> |
-| [MUD](https://mud.dev/)                       | إدارة البيانات على السلسلة                                 |              <span dir="ltr">2.0.12</span> |
-| [React](https://react.dev/)                   | واجهة مستخدم العميل                                   |              <span dir="ltr">18.2.0</span> |
-| [Vite](https://vitejs.dev/)                   | تقديم كود العميل                                 |               <span dir="ltr">4.2.1</span> |
+| الأداة | الغرض | تم التحقق منه على الإصدار |
+| --- | --- | ---: |
+| [Zokrates](https://zokrates.github.io/) | إثباتات المعرفة الصفرية والتحقق منها | <span dir="ltr">1.1.9</span> |
+| [TypeScript](https://www.typescriptlang.org/) | لغة برمجة لكل من الخادم والعميل | <span dir="ltr">5.4.2</span> |
+| [Node](https://nodejs.org/en) | تشغيل الخادم | <span dir="ltr">20.18.2</span> |
+| [Foundry](https://getfoundry.sh/) | سلسلة كتل محلية ونشر العقود | <span dir="ltr">1.0.0</span> |
+| [Viem](https://viem.sh/) | التواصل مع سلسلة الكتل | <span dir="ltr">2.9.20</span> |
+| [MUD](https://mud.dev/) | إدارة البيانات على السلسلة | <span dir="ltr">2.0.12</span> |
+| [React](https://react.dev/) | واجهة مستخدم العميل | <span dir="ltr">18.2.0</span> |
+| [Vite](https://vitejs.dev/) | تقديم كود العميل | <span dir="ltr">4.2.1</span> |
 
 ## مثال كاسحة الألغام {#minesweeper}
 
@@ -42,7 +43,24 @@ _لا توجد أسرار على سلسلة الكتل_. كل ما يتم نشر
 
 لتشغيل مثال كاسحة الألغام:
 
-1. تأكد من [تثبيت المتطلبات الأساسية](https://mud.dev/quickstart#prerequisites): [<span dir="ltr">Node</span>](https://mud.dev/quickstart#prerequisites)، و[<span dir="ltr">Foundry</span>](https://book.getfoundry.sh/getting-started/installation)، و[`git`](https://git-scm.com/downloads)، و[`pnpm`](https://git-scm.com/downloads)، و[`mprocs`](https://github.com/pvolok/mprocs).
+1. تأكد من [تثبيت المتطلبات الأساسية](https://mud.dev/quickstart#prerequisites): [Node](https://nodejs.org/en)، و[Foundry](https://getfoundry.sh/introduction/installation)، و[`git`](https://git-scm.com/downloads)، و[`pnpm`](https://pnpm.io/installation).
+
+   يستخدم هذا المثال <span dir="ltr">MUD 2.0.12</span>، والذي يحتاج إلى إصدارات محددة من Node وFoundry:
+
+   - **Node 20**. تستخدم أداة سطر الأوامر الخاصة بـ <span dir="ltr">MUD 2.0.12</span> [تأكيدات استيراد JSON](https://v8.dev/features/import-attributes)، والتي لم تعد الإصدارات الأحدث من Node تدعمها، لذلك تفشل على Node 22 أو أحدث مع `SyntaxError: Unexpected identifier 'assert'`. [وصل Node 20 إلى نهاية عمره الافتراضي](https://nodejs.org/en/about/previous-releases) في <span dir="ltr">April 2026</span> ولم يعد يتلقى تحديثات أمنية، لذا استخدمه فقط لهذا المثال المحلي. يتيح لك مدير إصدارات Node مثل [`fnm`](https://github.com/Schniz/fnm) أو [`nvm`](https://github.com/nvm-sh/nvm) التبديل إلى Node 20 لهذا الدليل فقط، على سبيل المثال:
+
+     ```sh copy
+     fnm install 20
+     fnm use 20
+     ```
+
+   - **<span dir="ltr">Foundry 1.0.0</span>**. مع إصدارات Foundry الحالية، يفشل البرنامج النصي لما بعد النشر مع رسالة _Usage of `address(this)` detected in script contract_. قم بتثبيت الإصدار الذي تم اختباره باستخدام:
+
+     ```sh copy
+     foundryup -i 1.0.0
+     ```
+
+     عند الانتهاء من هذا البرنامج التعليمي، يمكنك العودة إلى أحدث إصدار باستخدام `foundryup`.
 
 2. استنسخ المستودع.
 
@@ -50,17 +68,16 @@ _لا توجد أسرار على سلسلة الكتل_. كل ما يتم نشر
    git clone https://github.com/qbzzt/20240901-secret-state.git
    ```
 
-3. ثبّت الحزم.
+3. قم بتثبيت الحزم.
 
    ```sh copy
    cd 20240901-secret-state/
    pnpm install
-   npm install -g mprocs
    ```
 
-   إذا تم تثبيت <span dir="ltr">Foundry</span> كجزء من `pnpm install`، فستحتاج إلى إعادة تشغيل واجهة سطر الأوامر.
+   يتم تثبيت [`mprocs`](https://github.com/pvolok/mprocs)، والذي يقوم بتشغيل جميع العمليات في وحدة طرفية واحدة، كإحدى الحزم.
 
-4. صرّف (Compile) العقود
+4. قم بتجميع العقود
 
     ```sh copy
     cd packages/contracts
@@ -69,49 +86,49 @@ _لا توجد أسرار على سلسلة الكتل_. كل ما يتم نشر
     ```
 
 
-5. ابدأ تشغيل البرنامج (بما في ذلك سلسلة كتل [<span dir="ltr">anvil</span>](https://book.getfoundry.sh/anvil/)) وانتظر.
+5. ابدأ البرنامج (بما في ذلك سلسلة كتل [anvil](https://getfoundry.sh/anvil/overview)) وانتظر.
 
    ```sh copy
-   mprocs
+   pnpm dev
    ```
 
-   لاحظ أن بدء التشغيل يستغرق وقتًا طويلاً. لرؤية التقدم، استخدم أولاً السهم لأسفل للتمرير إلى علامة التبويب <span dir="ltr">_contracts_</span> لرؤية عقود <span dir="ltr">MUD</span> التي يتم نشرها. عندما تتلقى رسالة <span dir="ltr">_Waiting for file changes…_</span>، تكون العقود قد نُشرت وسيحدث المزيد من التقدم في علامة التبويب <span dir="ltr">_server_</span>. هناك، انتظر حتى تتلقى رسالة <span dir="ltr">_Verifier address: 0x...._</span>.
+   لاحظ أن بدء التشغيل يستغرق وقتًا طويلاً. لرؤية التقدم، استخدم أولاً السهم لأسفل للتمرير إلى علامة التبويب _contracts_ لرؤية عقود MUD التي يتم نشرها. عندما تتلقى رسالة _Waiting for file changes…_، تكون العقود قد نُشرت وسيحدث المزيد من التقدم في علامة التبويب _server_. هناك، تنتظر حتى تتلقى رسالة _Verifier address: <span dir="ltr">0x</span>...._.
 
    إذا نجحت هذه الخطوة، فسترى شاشة `mprocs`، مع العمليات المختلفة على اليسار ومخرجات وحدة التحكم للعملية المحددة حاليًا على اليمين.
 
-   ![The mprocs screen](./mprocs.png)
+   ![شاشة mprocs](./mprocs.png)
 
    إذا كانت هناك مشكلة في `mprocs`، يمكنك تشغيل العمليات الأربع يدويًا، كل منها في نافذة سطر أوامر خاصة بها:
 
-   - **<span dir="ltr">Anvil</span>**
+   - **Anvil**
 
      ```sh
      cd packages/contracts
      anvil --base-fee 0 --block-time 2
      ```
 
-   - **العقود (Contracts)** 
+   - **Contracts** 
 
      ```sh
      cd packages/contracts
      pnpm mud dev-contracts --rpc http://127.0.0.1:8545
      ```
 
-   - **الخادم (Server)**
+   - **Server**
 
      ```sh
      cd packages/server
      pnpm start
-     ```  
+     ```
 
-   - **العميل (Client)**
+   - **Client**
 
      ```sh
      cd packages/client
      pnpm run dev
-     ```  
+     ```
 
-6. الآن يمكنك تصفح [العميل](http://localhost:3000)، والنقر على **New Game**، والبدء في اللعب.
+6. الآن يمكنك التصفح إلى [العميل](http://localhost:3000)، والنقر على **New Game**، وبدء اللعب.
 
 ### الجداول {#tables}
 
@@ -149,26 +166,26 @@ _لا توجد أسرار على سلسلة الكتل_. كل ما يتم نشر
 
 تنسق هذه التدفقات التنفيذ بين العميل، والمكون الموجود على السلسلة، والخادم.
 
-#### التهيئة (Initialization) {#initialization-flow}
+#### التهيئة {#initialization-flow}
 
-عند تشغيل `mprocs`، تحدث هذه الخطوات:
+عند تشغيل `pnpm dev` (والذي يقوم بتشغيل `mprocs`)، تحدث هذه الخطوات:
 
-1. يُشغل [`mprocs`](https://github.com/pvolok/mprocs) أربعة مكونات:
+1. يقوم [`mprocs`](https://github.com/pvolok/mprocs) بتشغيل أربعة مكونات:
 
-   - [<span dir="ltr">Anvil</span>](https://book.getfoundry.sh/anvil/)، والذي يُشغل سلسلة كتل محلية
-   - [العقود (Contracts)](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts)، والتي تقوم بتصريف (إذا لزم الأمر) ونشر العقود لـ <span dir="ltr">MUD</span>
-   - [العميل (Client)](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client)، والذي يُشغل [<span dir="ltr">Vite</span>](https://vitejs.dev/) لتقديم واجهة المستخدم وكود العميل لمتصفحات الويب.
-   - [الخادم (Server)](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server)، والذي ينفذ إجراءات الخادم
+   - [Anvil](https://getfoundry.sh/anvil/overview)، والذي يقوم بتشغيل سلسلة كتل محلية
+   - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts)، والذي يقوم بتجميع (إذا لزم الأمر) ونشر العقود الخاصة بـ MUD
+   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client)، والذي يقوم بتشغيل [Vite](https://vitejs.dev/) لتقديم واجهة المستخدم وكود العميل لمتصفحات الويب.
+   - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server)، والذي ينفذ إجراءات الخادم
 
-2. تقوم حزمة `contracts` بنشر عقود <span dir="ltr">MUD</span> ثم تُشغل [البرنامج النصي `PostDeploy.s.sol`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol). يحدد هذا البرنامج النصي التكوين. يحدد الكود من <span dir="ltr">GitHub</span> [حقل ألغام بحجم <span dir="ltr">10x5</span> يحتوي على ثمانية ألغام](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23).
+2. تقوم حزمة `contracts` بنشر عقود MUD ثم تشغيل [البرنامج النصي `PostDeploy.s.sol`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol). يقوم هذا البرنامج النصي بتعيين التكوين. يحدد الكود من GitHub [حقل ألغام بحجم <span dir="ltr">10x5</span> يحتوي على ثمانية ألغام](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23).
 
-3. يبدأ [الخادم](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts) بـ [إعداد <span dir="ltr">MUD</span>](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6). من بين أمور أخرى، يؤدي هذا إلى تنشيط مزامنة البيانات، بحيث توجد نسخة من الجداول ذات الصلة في ذاكرة الخادم.
+3. يبدأ [الخادم](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts) بـ [إعداد MUD](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6). من بين أمور أخرى، يؤدي هذا إلى تنشيط مزامنة البيانات، بحيث توجد نسخة من الجداول ذات الصلة في ذاكرة الخادم.
 
 4. يشترك الخادم في دالة ليتم تنفيذها [عندما يتغير جدول `Configuration`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23). يتم استدعاء [هذه الدالة](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) بعد تنفيذ `PostDeploy.s.sol` وتعديل الجدول.
 
 5. عندما تحصل دالة تهيئة الخادم على التكوين، [فإنها تستدعي `zkFunctions`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35) لتهيئة [جزء المعرفة الصفرية من الخادم](#using-zokrates-from-typescript). لا يمكن أن يحدث هذا حتى نحصل على التكوين لأن دوال المعرفة الصفرية يجب أن تحتوي على عرض وارتفاع حقل الألغام كثوابت.
 
-6. بعد تهيئة جزء المعرفة الصفرية من الخادم، الخطوة التالية هي [نشر عقد التحقق من المعرفة الصفرية على سلسلة الكتل](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) وتعيين عنوان المتحقق في <span dir="ltr">MUD</span>.
+6. بعد تهيئة جزء المعرفة الصفرية من الخادم، تتمثل الخطوة التالية في [نشر عقد التحقق من المعرفة الصفرية على سلسلة الكتل](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) وتعيين عنوان المتحقق في MUD.
 
 7. أخيرًا، نشترك في التحديثات حتى نرى متى يطلب اللاعب إما [بدء لعبة جديدة](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) أو [الحفر في لعبة حالية](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108).
 
@@ -518,11 +535,11 @@ const solidityVerifier = `
 
 ### الأذونات {#permissions}
 
-يوجد كيان واحد يتمتع بامتيازات في هذه اللعبة، وهو الخادم. إنه المستخدم الوحيد المسموح له باستدعاء الدوال في [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). يمكننا استخدام [`cast`](https://book.getfoundry.sh/cast/) للتحقق من أن استدعاءات الدوال المصرح بها مسموحة فقط لحساب الخادم.
+يوجد كيان واحد يتمتع بامتيازات في هذه اللعبة، وهو الخادم. إنه المستخدم الوحيد المسموح له باستدعاء الدوال في [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). يمكننا استخدام [`cast`](https://getfoundry.sh/cast/overview) للتحقق من أن استدعاءات الدوال المصرح بها مسموح بها فقط لحساب الخادم.
 
-[المفتاح الخاص بالخادم موجود في `setupNetwork.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52).
+[المفتاح الخاص للخادم موجود في `setupNetwork.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52).
 
-1. على جهاز الكمبيوتر الذي يُشغل `anvil` (سلسلة الكتل)، قم بتعيين متغيرات البيئة هذه.
+1. على جهاز الكمبيوتر الذي يقوم بتشغيل `anvil` (سلسلة الكتل)، قم بتعيين متغيرات البيئة هذه.
 
    ```sh copy
    WORLD_ADDRESS=0x8d8b6b8414e1e3dcfd4168561b9be6bd3bf6ec4b
@@ -530,13 +547,15 @@ const solidityVerifier = `
    AUTHORIZED_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
    ```
 
+   هذا الـ `WORLD_ADDRESS` هو العنوان الذي ينشر إليه MUD على `anvil` جديد. إذا كان `World` الخاص بك في عنوان مختلف، فاستخدم القيمة الموجودة في `packages/contracts/worlds.json`.
+
 2. استخدم `cast` لمحاولة تعيين عنوان المتحقق كعنوان غير مصرح به.
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $UNAUTHORIZED_KEY
    ```
 
-   لا يقتصر الأمر على إبلاغ `cast` عن فشل، بل يمكنك فتح **MUD Dev Tools** في اللعبة على المتصفح، والنقر على **Tables**، وتحديد **app\_\_VerifierAddress**. لاحظ أن العنوان ليس صفرًا.
+   لا يقتصر الأمر على إبلاغ `cast` عن فشل، بل يمكنك فتح **MUD Dev Tools** في اللعبة على المتصفح، والنقر على **Tables**، وتحديد **app\_\_VerifierAddress**. سترى أن العنوان ليس صفرًا.
 
 3. قم بتعيين عنوان المتحقق كعنوان الخادم.
 
@@ -544,9 +563,9 @@ const solidityVerifier = `
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $AUTHORIZED_KEY
    ```
 
-   يجب أن يكون العنوان في **app\_\_VerifiedAddress** الآن صفرًا.
+   يجب أن يكون العنوان في **app\_\_VerifierAddress** الآن صفرًا.
 
-تمر جميع دوال MUD في نفس الـ `System` عبر نفس التحكم في الوصول، لذا أعتبر هذا الاختبار كافيًا. إذا لم تكن تعتقد ذلك، يمكنك التحقق من الدوال الأخرى في [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol).
+تمر جميع دوال MUD في نفس `System` عبر نفس التحكم في الوصول، لذلك أعتبر هذا الاختبار كافيًا. إذا لم تكن تعتقد ذلك، يمكنك التحقق من الدوال الأخرى في [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol).
 
 ### إساءة استخدام المعرفة الصفرية {#zero-knowledge-abuses}
 
@@ -560,7 +579,7 @@ const solidityVerifier = `
 proof.inputs[3] = "0x" + "1".padStart(64, "0")
 ```
 
-هذا يعني أننا سنطالب دائمًا بوجود قنبلة واحدة، بغض النظر عن الإجابة الصحيحة. حاول اللعب بهذه النسخة، وسترى في علامة التبويب **server** على شاشة `pnpm dev` هذا الخطأ:
+هذا يعني أننا سنطالب دائمًا بوجود قنبلة واحدة، بغض النظر عن الإجابة الصحيحة. حاول اللعب بهذه النسخة، وسترى في علامة التبويب **server** على شاشة `mprocs` هذا الخطأ:
 
 ```
 cause: {
@@ -680,9 +699,11 @@ proof.proof = {
 
 ### لماذا Zokrates؟ {#why-zokrates}
 
-لا تعتبر [Zokrates](https://zokrates.github.io/) مكتبة المعرفة الصفرية الوحيدة المتاحة، ولكنها تشبه لغة برمجة [حتمية](https://en.wikipedia.org/wiki/Imperative_programming) عادية وتدعم المتغيرات المنطقية.
+ليست [Zokrates](https://zokrates.github.io/) مكتبة المعرفة الصفرية الوحيدة المتاحة، ولكنها تشبه لغة برمجة [حتمية (imperative)](https://en.wikipedia.org/wiki/Imperative_programming) عادية وتدعم المتغيرات المنطقية.
 
-بالنسبة لتطبيقك، بمتطلبات مختلفة، قد تفضل استخدام [Circum](https://docs.circom.io/getting-started/installation/) أو [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/).
+ومع ذلك، لم تعد Zokrates تخضع للصيانة النشطة. أحدث إصدار لها، <span dir="ltr">0.8.8</span> (و `zokrates-js` المطابق <span dir="ltr">1.1.9</span>)، يعود إلى <span dir="ltr">November 2023</span>، ولم يشهد الفرع الرئيسي أي التزامات (commits) منذ <span dir="ltr">April 2024</span>. لا يزال الكود الموجود في هذا البرنامج التعليمي يعمل، ولكن لا تتوقع إصلاحات للأخطاء أو تحديثات أمنية. بالنسبة لمشروع جديد، فكر في لغة تخضع للصيانة مثل [Noir](https://noir-lang.org/)، والتي تُستخدم في [هذا البرنامج التعليمي](/developers/tutorials/app-plasma/).
+
+بالنسبة لتطبيقك، بمتطلبات مختلفة، قد تفضل استخدام [Circom](https://docs.circom.io/getting-started/installation/) أو [Cairo](https://www.cairo-lang.org/).
 
 ### متى يتم تجميع Zokrates {#when-compile-zokrates}
 

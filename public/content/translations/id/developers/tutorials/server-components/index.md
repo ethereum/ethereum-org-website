@@ -30,7 +30,9 @@ Ada beberapa kemungkinan tugas yang dapat dipenuhi oleh server semacam itu.
 
 ## Contoh program {#sample-program}
 
-Anda dapat melihat contoh server [di GitHub](https://github.com/qbzzt/20240715-server-component). Server ini mendengarkan peristiwa yang datang dari [kontrak ini](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code), versi modifikasi dari Greeter milik Hardhat. Ketika sapaan diubah, server akan mengubahnya kembali.
+Anda dapat melihat contoh server [di GitHub](https://github.com/qbzzt/20240715-server-component). Server ini mendengarkan kejadian yang berasal dari [kontrak ini](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract_code) di testnet Sepolia, versi modifikasi dari Greeter milik Hardhat. Ketika sapaan (greeting) diubah, server akan mengubahnya kembali.
+
+Kontrak ini dibagikan dengan tutorial lain, sehingga orang lain (dan server mereka) mungkin mengubah sapaan saat server Anda sedang berjalan. Hentikan server Anda setelah selesai untuk menghindari menghabiskan ETH pengujian Anda.
 
 Untuk menjalankannya:
 
@@ -41,25 +43,31 @@ Untuk menjalankannya:
    cd 20240715-server-component
    ```
 
-2. Instal paket-paket yang diperlukan. Jika Anda belum memilikinya, [instal Node terlebih dahulu](https://nodejs.org/en/download/package-manager).
+2. Repositori sampel ditulis untuk testnet Holesky, yang sejak saat itu telah ditutup. Perbarui untuk menggunakan Sepolia dan alamat kontrak Sepolia.
+
+   ```sh copy
+   sed -i.bak -e 's/holesky/sepolia/g' -e 's/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA/' src/app.ts
+   ```
+
+3. Instal paket yang diperlukan. Jika Anda belum memilikinya, [instal Node terlebih dahulu](https://nodejs.org/en/download/package-manager).
 
    ```sh copy
    npm install
    ```
 
-3. Edit `.env` untuk menentukan kunci privat dari akun yang memiliki ETH di testnet Holesky. Jika Anda tidak memiliki ETH di Holesky, Anda dapat [menggunakan faucet ini](https://holesky-faucet.pk910.de/).
+4. Edit `.env` untuk menentukan kunci privat dari akun yang memiliki ETH di testnet Sepolia. Jika Anda tidak memiliki ETH di Sepolia, Anda dapat [menggunakan faucet ini](https://sepolia-faucet.pk910.de/). Gunakan akun baru yang hanya Anda gunakan untuk pengujian, jangan pernah gunakan akun yang menyimpan aset nyata.
 
    ```sh filename=".env" copy
-   PRIVATE_KEY=0x <private key goes here>
+   PRIVATE_KEY=0x<private key goes here>
    ```
 
-4. Mulai server.
+5. Mulai server.
 
    ```sh copy
    npm start
    ```
 
-5. Buka [penjelajah blok](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract), dan menggunakan alamat yang berbeda dari yang memiliki kunci privat, ubah sapaannya. Lihat bahwa sapaan tersebut secara otomatis diubah kembali.
+6. Buka [penjelajah blok](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract), dan dengan menggunakan alamat yang berbeda dari yang memiliki kunci privat, ubah sapaannya. Lihat bahwa sapaan tersebut secara otomatis diubah kembali.
 
 ### Bagaimana cara kerjanya? {#how-it-works}
 
@@ -67,7 +75,7 @@ Cara termudah untuk memahami cara menulis komponen server adalah dengan memeriks
 
 #### `src/app.ts` {#src-app-ts}
 
-Sebagian besar program terdapat di dalam [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts).
+Sebagian besar program terdapat di [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts).
 
 ##### Membuat objek prasyarat
 
@@ -81,7 +89,7 @@ import {
 } from "viem"
 ```
 
-Ini adalah entitas [Viem](https://viem.sh/) yang kita butuhkan, fungsi, dan [tipe `Address`](https://viem.sh/docs/glossary/types#address). Server ini ditulis dalam [TypeScript](https://www.typescriptlang.org/), yang merupakan ekstensi dari JavaScript yang membuatnya [diketik secara kuat (strongly typed)](https://en.wikipedia.org/wiki/Strong_and_weak_typing).
+Ini adalah entitas [Viem](https://viem.sh/) yang kita butuhkan, fungsi, dan [tipe `Address`](https://viem.sh/docs/glossary/types#address). Server ini ditulis dalam [TypeScript](https://www.typescriptlang.org/), yang merupakan ekstensi untuk JavaScript yang membuatnya [diketik secara kuat (strongly typed)](https://en.wikipedia.org/wiki/Strong_and_weak_typing).
 
 ```typescript
 import { privateKeyToAccount } from "viem/accounts"
@@ -90,13 +98,13 @@ import { privateKeyToAccount } from "viem/accounts"
 [Fungsi ini](https://viem.sh/docs/accounts/privateKey) memungkinkan kita menghasilkan informasi dompet, termasuk alamat, yang sesuai dengan kunci privat.
 
 ```typescript
-import { holesky } from "viem/chains"
+import { sepolia } from "viem/chains"
 ```
 
-Untuk menggunakan rantai blok di Viem, Anda perlu mengimpor definisinya. Dalam hal ini, kita ingin terhubung ke rantai blok pengujian [Holesky](https://github.com/eth-clients/holesky).
+Untuk menggunakan rantai blok di Viem, Anda perlu mengimpor definisinya. Dalam hal ini, kita ingin terhubung ke rantai blok pengujian [Sepolia](/developers/docs/networks/#sepolia).
 
 ```typescript
-// Ini adalah cara kita menambahkan definisi di .env ke process.env.
+// Begini cara kita menambahkan definisi di .env ke process.env.
 import * as dotenv from "dotenv"
 dotenv.config()
 ```
@@ -104,7 +112,7 @@ dotenv.config()
 Ini adalah cara kita membaca `.env` ke dalam lingkungan. Kita membutuhkannya untuk kunci privat (lihat nanti).
 
 ```typescript
-const greeterAddress : Address = "0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6"
+const greeterAddress : Address = "0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA"
 const greeterABI = [
     {
         "inputs": [
@@ -142,25 +150,25 @@ Dalam JavaScript (dan karenanya TypeScript) Anda tidak dapat menetapkan nilai ba
 
 ```typescript
 const publicClient = createPublicClient({
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
 
-Buat [klien publik](https://viem.sh/docs/clients/public.html) Viem. Klien publik tidak memiliki kunci privat yang terlampir, dan karenanya tidak dapat mengirim transaksi. Mereka dapat memanggil [fungsi `view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm), membaca saldo akun, dll.
+Buat [klien publik](https://viem.sh/docs/clients/public) Viem. Klien publik tidak memiliki kunci privat yang terlampir, dan karenanya tidak dapat mengirim transaksi. Mereka dapat memanggil [fungsi `view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm), membaca saldo akun, dll.
 
 ```typescript
 const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`)
 ```
 
-Variabel lingkungan tersedia di [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). Namun, TypeScript diketik secara kuat. Variabel lingkungan dapat berupa string apa pun, atau kosong, sehingga tipe untuk variabel lingkungan adalah `string | undefined`. Namun, sebuah kunci didefinisikan di Viem sebagai `0x${string}` (`0x` diikuti oleh sebuah string). Di sini kita memberi tahu TypeScript bahwa variabel lingkungan `PRIVATE_KEY` akan menjadi tipe tersebut. Jika tidak, kita akan mendapatkan kesalahan runtime.
+Variabel lingkungan tersedia di [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). Namun, TypeScript diketik secara kuat. Variabel lingkungan dapat berupa string apa pun, atau kosong, sehingga tipe untuk variabel lingkungan adalah `string | undefined`. Namun, kunci didefinisikan di Viem sebagai `0x${string}` (`0x` diikuti oleh string). Di sini kita memberi tahu TypeScript bahwa variabel lingkungan `PRIVATE_KEY` akan bertipe tersebut. Jika tidak, kita akan mendapatkan kesalahan saat runtime.
 
 Fungsi [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) kemudian menggunakan kunci privat ini untuk membuat objek akun lengkap.
 
 ```typescript
 const walletClient = createWalletClient({
   account,
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
@@ -183,11 +191,11 @@ Sekarang setelah kita memiliki semua prasyarat, kita akhirnya dapat membuat [ins
 console.log(`Current greeting:`, await greeter.read.greet())
 ```
 
-Fungsi kontrak yang bersifat hanya-baca ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) dan [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) tersedia di bawah `read`. Dalam hal ini, kita menggunakannya untuk mengakses fungsi [`greet`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=read_contract#cfae3217), yang mengembalikan sapaan.
+Fungsi kontrak yang hanya baca ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) dan [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) tersedia di bawah `read`. Dalam hal ini, kita menggunakannya untuk mengakses fungsi [`greet`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=read_contract), yang mengembalikan sapaan.
 
-JavaScript bersifat utas tunggal (single-threaded), jadi ketika kita menjalankan proses yang berjalan lama, kita perlu [menentukan bahwa kita melakukannya secara asinkron](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). Memanggil rantai blok, bahkan untuk operasi hanya-baca, memerlukan perjalanan bolak-balik antara komputer dan node rantai blok. Itulah alasan kita menentukan di sini bahwa kode perlu `await` (menunggu) hasilnya.
+JavaScript adalah single-threaded, jadi ketika kita menjalankan proses yang berjalan lama, kita perlu [menentukan bahwa kita melakukannya secara asinkron](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). Memanggil rantai blok, bahkan untuk operasi hanya baca, memerlukan perjalanan bolak-balik antara komputer dan node rantai blok. Itulah alasan kita menentukan di sini bahwa kode perlu `await` (menunggu) hasilnya.
 
-Jika Anda tertarik dengan cara kerjanya, Anda dapat [membacanya di sini](https://www.w3schools.com/js/js_promise.asp), tetapi secara praktis yang perlu Anda ketahui adalah bahwa Anda menggunakan `await` untuk hasil jika Anda memulai operasi yang memakan waktu lama, dan bahwa fungsi apa pun yang melakukan ini harus dideklarasikan sebagai `async`.
+Jika Anda tertarik dengan cara kerjanya, Anda dapat [membacanya di sini](https://www.w3schools.com/js/js_promise.asp), tetapi secara praktis yang perlu Anda ketahui adalah bahwa Anda `await` hasilnya jika Anda memulai operasi yang memakan waktu lama, dan bahwa fungsi apa pun yang melakukan ini harus dideklarasikan sebagai `async`.
 
 ##### Mengeluarkan transaksi
 
@@ -195,16 +203,16 @@ Jika Anda tertarik dengan cara kerjanya, Anda dapat [membacanya di sini](https:/
 const setGreeting = async (greeting: string): Promise<any> => {
 ```
 
-Ini adalah fungsi yang Anda panggil untuk mengeluarkan transaksi yang mengubah sapaan. Karena ini adalah operasi yang panjang, fungsi ini dideklarasikan sebagai `async`. Karena implementasi internal, setiap fungsi `async` perlu mengembalikan objek `Promise`. Dalam hal ini, `Promise<any>` berarti kita tidak menentukan apa tepatnya yang akan dikembalikan dalam `Promise`.
+Ini adalah fungsi yang Anda panggil untuk mengeluarkan transaksi yang mengubah sapaan. Karena ini adalah operasi yang panjang, fungsi tersebut dideklarasikan sebagai `async`. Karena implementasi internal, setiap fungsi `async` perlu mengembalikan objek `Promise`. Dalam hal ini, `Promise<any>` berarti kita tidak menentukan apa tepatnya yang akan dikembalikan dalam `Promise`.
 
 ```typescript
 const txHash = await greeter.write.setGreeting([greeting])
 ```
 
-Bidang `write` dari instans kontrak memiliki semua fungsi yang menulis ke state rantai blok (yang memerlukan pengiriman transaksi), seperti [`setGreeting`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862). Parameter, jika ada, disediakan sebagai daftar, dan fungsi tersebut mengembalikan hash dari transaksi.
+Bidang `write` dari instans kontrak memiliki semua fungsi yang menulis ke state rantai blok (yang memerlukan pengiriman transaksi), seperti [`setGreeting`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract). Parameter, jika ada, disediakan sebagai daftar, dan fungsi tersebut mengembalikan hash dari transaksi.
 
 ```typescript
-    console.log(`Working on a fix, see https://eth-holesky.blockscout.com/tx/${txHash}`)
+    console.log(`Working on a fix, see https://eth-sepolia.blockscout.com/tx/${txHash}`)
 
     return txHash
 }
@@ -212,19 +220,19 @@ Bidang `write` dari instans kontrak memiliki semua fungsi yang menulis ke state 
 
 Laporkan hash dari transaksi (sebagai bagian dari URL ke penjelajah blok untuk melihatnya) dan kembalikan.
 
-##### Merespons peristiwa
+##### Merespons kejadian
 
 ```typescript
 greeter.watchEvent.SetGreeting({
 ```
 
-[Fungsi `watchEvent`](https://viem.sh/docs/actions/public/watchEvent) memungkinkan Anda menentukan bahwa suatu fungsi akan dijalankan ketika sebuah peristiwa dipancarkan. Jika Anda hanya peduli pada satu jenis peristiwa (dalam hal ini, `SetGreeting`), Anda dapat menggunakan sintaks ini untuk membatasi diri Anda pada jenis peristiwa tersebut.
+[Fungsi `watchEvent`](https://viem.sh/docs/actions/public/watchEvent) memungkinkan Anda menentukan bahwa suatu fungsi akan dijalankan ketika sebuah kejadian dipancarkan. Jika Anda hanya peduli pada satu jenis kejadian (dalam hal ini, `SetGreeting`), Anda dapat menggunakan sintaks ini untuk membatasi diri Anda pada jenis kejadian tersebut.
 
 ```typescript
     onLogs: logs => {
 ```
 
-Fungsi `onLogs` dipanggil ketika ada entri Log. Di Ethereum, "Log" dan "peristiwa" biasanya dapat dipertukarkan.
+Fungsi `onLogs` dipanggil ketika ada entri Log. Di Ethereum, "Log" dan "kejadian" biasanya dapat dipertukarkan.
 
 ```typescript
 console.log(
@@ -232,7 +240,7 @@ console.log(
 )
 ```
 
-Bisa jadi ada beberapa peristiwa, tetapi untuk kesederhanaan kita hanya peduli pada yang pertama. `logs[0].args` adalah argumen dari peristiwa tersebut, dalam hal ini `sender` dan `greeting`.
+Bisa jadi ada beberapa kejadian, tetapi untuk kesederhanaan kita hanya peduli pada yang pertama. `logs[0].args` adalah argumen dari kejadian tersebut, dalam hal ini `sender` dan `greeting`.
 
 ```typescript
         if (logs[0].args.sender != account.address)
@@ -249,18 +257,12 @@ Jika pengirimnya _bukan_ server ini, gunakan `setGreeting` untuk mengubah sapaan
 
 ```json
 {
-  "main": "dist/index.js",
-```
-
-Definisi ini menentukan file JavaScript mana yang akan dijalankan.
-
-```json
   "scripts": {
     "start": "tsc && node dist/app.js",
   },
 ```
 
-Skrip adalah berbagai tindakan aplikasi. Dalam hal ini, satu-satunya yang kita miliki adalah `start`, yang mengompilasi dan kemudian menjalankan server. Perintah `tsc` adalah bagian dari paket `typescript` dan mengompilasi TypeScript menjadi JavaScript. Jika Anda ingin menjalankannya secara manual, perintah ini terletak di `node_modules/.bin`. Perintah kedua menjalankan server.
+Skrip adalah berbagai tindakan aplikasi. Dalam hal ini, satu-satunya yang kita miliki adalah `start`, yang mengompilasi dan kemudian menjalankan server. Perintah `tsc` adalah bagian dari paket `typescript` dan mengompilasi TypeScript menjadi JavaScript. Jika Anda ingin menjalankannya secara manual, perintah tersebut terletak di `node_modules/.bin`. Perintah kedua menjalankan server.
 
 ```json
   "type": "module",

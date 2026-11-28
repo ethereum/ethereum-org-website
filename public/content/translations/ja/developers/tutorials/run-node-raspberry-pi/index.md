@@ -1,6 +1,6 @@
 ---
-title: "Raspberry Pi 4でイーサリアムノードを実行する"
-description: "Raspberry Pi 4をフラッシュし、イーサネットケーブルを接続し、SSDディスクを繋いでデバイスの電源を入れ、Raspberry Pi 4を完全なイーサリアムノード＋バリデータにする方法"
+title: "Raspberry Pi 5でイーサリアムノードを実行する"
+description: "Raspberry Pi 5をフラッシュし、イーサネットケーブルを接続し、NVMeディスクを接続してデバイスの電源を入れ、Raspberry Pi 5を完全なイーサリアムノードとバリデータにする方法"
 author: "EthereumOnArm"
 tags: ["クライアント", "実行レイヤー", "コンセンサスレイヤー", "ノード"]
 lang: ja
@@ -15,61 +15,51 @@ sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 
 Ethereum on Armを使用してRaspberry Piをイーサリアムノードにするには、以下のハードウェアが推奨されます。
 
-- Raspberry Pi 4（モデルB 8GB）、Odroid M1、またはRock 5B（8GB/16GB RAM）ボード
-- MicroSDカード（最低16GB、クラス10）
-- 最低2TBのUSB 3.0接続SSDディスク、またはUSB-SATAケース付きSSD
+- 16 GBのRAMを搭載したRaspberry Pi 5
+- NVMeディスクを接続するためのRaspberry Pi 5用NVMe HAT
+- NVMe SSD (M.2 2280)、最低4 TB。互換性の問題が知られているPhisonコントローラを搭載したディスクは避けてください。
+- MicroSDカード (最低16 GB、Class 10)
 - 電源
 - イーサネットケーブル
-- ポートフォワーディング（詳細はクライアントを参照）
-- ヒートシンクとファン付きのケース
-- USBキーボード、モニター、HDMIケーブル（micro-HDMI）（オプション）
+- ポートフォワーディング (詳細はクライアントを参照)
+- ヒートシンク付きケース
+- USBキーボード、モニター、HDMIケーブル (micro-HDMI) (オプション)
+
+Ethereum on Armは、NanoPC T6、Rock 5B、Orange Pi 5 Plusなどの他のARMボードもサポートしています。これらのボードはネイティブでNVMeをサポートしているため、新しいハードウェアを購入する場合は、Ethereum on ArmチームはRaspberry Pi 5よりもこれらを推奨しています。詳細は[推奨ハードウェアリスト](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/overview/supported-hardware.html)を参照してください。このチュートリアルの残りの部分は、ダウンロードするイメージファイルを除き、サポートされているすべてのボードで同じです。
 
 ## なぜARMでイーサリアムを実行するのか？ {#why-run-ethereum-on-arm}
 
 ARMボードは非常に手頃な価格で、柔軟性のある小型コンピュータです。安価に購入でき、すべてのリソースをノードに集中させるように設定できるため効率的であり、消費電力が少なく、物理的に小さいためどんな家庭にも目立たずに設置できることから、イーサリアムノードを実行するための良い選択肢となります。また、Raspberry PiのMicroSDにビルド済みのイメージをフラッシュするだけでよく、ソフトウェアのダウンロードやビルドが不要なため、ノードを立ち上げるのが非常に簡単です。
 
-## どのような仕組みですか？ {#how-does-it-work}
+## 仕組み {#how-does-it-work}
 
-Raspberry Piのメモリカードには、ビルド済みのイメージがフラッシュされます。このイメージには、イーサリアムノードを実行するために必要なすべてが含まれています。フラッシュされたカードがあれば、ユーザーはRaspberry Piの電源を入れるだけです。ノードの実行に必要なすべてのプロセスが自動的に開始されます。これが機能するのは、メモリカードにLinuxベースのオペレーティングシステム（OS）が含まれており、その上でユニットをイーサリアムノードに変えるシステムレベルのプロセスが自動的に実行されるためです。
+Raspberry Piのメモリカードには、ビルド済みのイメージがフラッシュされます。このイメージには、イーサリアムノードを実行するために必要なすべてが含まれています。フラッシュされたカードがあれば、ユーザーはRaspberry Piの電源を入れるだけです。ノードの実行に必要なすべてのプロセスが自動的に開始されます。これが機能するのは、メモリカードにLinuxベースのオペレーティングシステム(OS)が含まれており、その上でシステムレベルのプロセスが自動的に実行されて、ユニットがイーサリアムノードに変わるためです。
 
-人気のRaspberry Pi用Linux OSである「Raspbian」を使用してイーサリアムを実行することはできません。Raspbianは依然として32ビットアーキテクチャを使用しているため、イーサリアムユーザーはメモリの問題に直面し、コンセンサス・クライアントは32ビットバイナリをサポートしていないからです。これを克服するため、Ethereum on Armチームは「Armbian」と呼ばれるネイティブ64ビットOSに移行しました。
+Ethereum on Armのイメージは、イーサリアムノードの実行に最適化された64ビットLinuxディストリビューションに基づいており、ビルド済みのイーサリアムクライアントが含まれています。
 
-**イメージは必要なすべての手順を処理します**。環境の設定やSSDディスクのフォーマットから、イーサリアムソフトウェアのインストールと実行、さらにはブロックチェーンの同期の開始まで行います。
+**イメージは、環境のセットアップやNVMeディスクのフォーマットからイーサリアムソフトウェアのインストールまで、必要なすべての手順を処理します**。
 
 ## 実行クライアントとコンセンサス・クライアントに関する注意 {#note-on-execution-and-consensus-clients}
 
-Ethereum on Armのイメージには、ビルド済みの実行クライアントとコンセンサス・クライアントがサービスとして含まれています。イーサリアムノードは、両方のクライアントが同期され、実行されている必要があります。ユーザーはイメージをダウンロードしてフラッシュし、サービスを開始するだけです。イメージには以下の実行クライアントがプリロードされています。
+Ethereum on Armのイメージには、ビルド済みの実行クライアントとコンセンサス・クライアントがサービスとして含まれています。イーサリアムノードでは、両方のクライアントが同期して実行されている必要があります。イメージをダウンロードしてフラッシュし、サービスを開始するだけで済みます。イメージには、いくつかの実行クライアント(Geth、Nethermind、Besu、Erigon、Rethなど)とコンセンサス・クライアント(Lighthouse、Prysm、Teku、Nimbus、Lodestarなど)がプリロードされています。現在のリストについては、[Ethereum on Armのドキュメント](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/running-a-node/managing-clients.html)を参照してください。
 
-- Geth
-- ネザーマインド
-- ベス
-
-また、以下のコンセンサス・クライアントも含まれています。
-
-- ライトハウス
-- ニンバス
-- プリズム
-- テク
-
-それぞれ1つずつ選択して実行する必要があります。すべての実行クライアントは、すべてのコンセンサス・クライアントと互換性があります。クライアントを明示的に選択しない場合、ノードはデフォルトであるGethとライトハウスにフォールバックし、ボードの電源が入ったときにそれらを自動的に実行します。Gethがピアを見つけて接続できるように、ルーターのポート30303を開く必要があります。
+それぞれ1つずつ選択して実行する必要があります。すべての実行クライアントは、すべてのコンセンサス・クライアントと互換性があります。このチュートリアルでは、GethとLighthouseを使用します。
 
 ## イメージのダウンロード {#downloading-the-image}
 
-Raspberry Pi 4のイーサリアムイメージは「プラグアンドプレイ」イメージであり、実行クライアントとコンセンサス・クライアントの両方を自動的にインストールおよびセットアップし、互いに通信してイーサリアムネットワークに接続するように設定します。ユーザーは簡単なコマンドを使用してプロセスを開始するだけです。
+Ethereum on Armのイメージは、実行クライアントとコンセンサス・クライアントの両方を自動的にインストールしてセットアップし、互いに通信してイーサリアムネットワークに接続するように構成する「プラグアンドプレイ」イメージです。ユーザーは、簡単なコマンドを使用してプロセスを開始するだけです。
 
-[Ethereum on Arm](https://ethereumonarm-my.sharepoint.com/:u:/p/dlosada/Ec_VmUvr80VFjf3RYSU-NzkBmj2JOteDECj8Bibde929Gw?download=1)からRaspberry Piのイメージをダウンロードし、SHA-256ハッシュを検証します。
+[Ethereum on Armのダウンロードページ](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/getting-started/installation.html#image-downloads)から、お使いのボード用の最新イメージをダウンロードします。ダウンロードページには、各イメージのSHA256チェックサムも記載されています。ダウンロードしたファイルをそれと照合して検証します。
 
 ```sh
 # ダウンロードしたイメージを含むディレクトリから
-shasum -a 256 ethonarm_22.04.00.img.zip
-# ハッシュの出力は次のようになるはずです: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
+sha256sum ethonarm_rpi5_<version>.img.zip
+# 出力をダウンロードページのチェックサムと比較する
 ```
-
-Rock 5BおよびOdroid M1ボード用のイメージは、Ethereum-on-Armの[ダウンロードページ](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)で入手できることに注意してください。
 
 ## MicroSDのフラッシュ {#flashing-the-microsd}
 
-Raspberry Piで使用するMicroSDカードは、フラッシュできるようにまずデスクトップまたはラップトップに挿入する必要があります。次に、以下のターミナルコマンドを実行して、ダウンロードしたイメージをSDカードにフラッシュします。
+Raspberry Piに使用するMicroSDカードは、フラッシュできるように、まずデスクトップまたはノートパソコンに挿入する必要があります。次に、以下のターミナルコマンドを実行して、ダウンロードしたイメージをSDカードにフラッシュします。
 
 ```shell
 # MicroSDカードの名前を確認する
@@ -78,84 +68,91 @@ sudo fdisk -l
 >> sdxxx
 ```
 
-次のコマンドには、イメージを書き込む前にカードの既存のコンテンツを完全に消去する`dd`が含まれているため、名前を正確に指定することが非常に重要です。続行するには、zip圧縮されたイメージが含まれるディレクトリに移動します。
+次のコマンドには、イメージをカードに書き込む前にカードの既存のコンテンツを完全に消去する`dd`が含まれているため、名前を正確に指定することが非常に重要です。続行するには、zip圧縮されたイメージが含まれているディレクトリに移動します。
 
 ```shell
 # イメージを解凍してフラッシュする
-unzip ethonarm_22.04.00.img.zip
-sudo dd bs=1M if=ethonarm_22.04.00.img of=/dev/<sdxx> conv=fdatasync status=progress
+unzip ethonarm_rpi5_<version>.img.zip
+sudo dd bs=1M if=ethonarm_rpi5_<version>.img of=/dev/<sdxx> conv=fdatasync status=progress
 ```
 
 これでカードがフラッシュされたので、Raspberry Piに挿入できます。
 
 ## ノードの起動 {#start-the-node}
 
-SDカードをRaspberry Piに挿入した状態で、イーサネットケーブルとSSDを接続し、電源を入れます。OSが起動し、クライアントソフトウェアのインストールやビルドなど、Raspberry Piをイーサリアムノードにするための事前設定されたタスクの実行が自動的に開始されます。これにはおそらく10〜15分かかります。
+SDカードをRaspberry Piに挿入した状態で、イーサネットケーブルとNVMeディスクを接続し、電源を入れます。OSが起動し、NVMeディスクのフォーマットやクライアントソフトウェアのインストールなど、Raspberry Piをイーサリアムノードにするための事前設定されたタスクの実行が自動的に開始されます。これにはおそらく10〜15分かかり、完了するとボードは自動的に再起動します。この間は電源を切らないでください。
 
-すべてのインストールと設定が完了したら、SSH接続経由でデバイスにログインするか、ボードにモニターとキーボードが接続されている場合は直接ターミナルを使用します。ノードを起動するために必要な権限を持つ`ethereum`アカウントを使用してログインします。
+すべてのインストールと設定が完了したら、ssh接続経由でデバイスにログインするか、モニターとキーボードがボードに接続されている場合はターミナルを直接使用してログインします。ノードの起動に必要な権限を持つ`ethereum`アカウントを使用してログインします。
 
 ```shell
 User: ethereum
 Password: ethereum
 ```
 
-デフォルトの実行クライアントであるGethは自動的に起動します。以下のターミナルコマンドを使用してログを確認することで、これを確認できます。
+初回ログイン時にデフォルトのパスワードを変更するように求められます。ノードにアクセスできる人なら誰でもデフォルトのパスワードでログインできてしまうため、必ず変更してください。システムのファイアウォールはデフォルトで無効になっているため、ノードにパブリックIPアドレスがある場合は、[Ethereum on Armのセキュリティガイド](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/system/security.html)を参照して有効にしてください。
+
+最初にコンセンサス・クライアントを起動します。Lighthouseがピアを見つけて接続できるように、ルーターのポート9000 (TCPおよびUDP)を開きます。次に、lighthouseサービスを有効にして起動し、再起動後も自動的に起動するようにします。
 
 ```sh
-sudo journalctl -u geth -f
-```
-
-コンセンサス・クライアントは明示的に起動する必要があります。これを行うには、まずライトハウスがピアを見つけて接続できるように、ルーターのポート9000を開きます。次に、lighthouseサービスを有効にして起動します。
-
-```sh
-sudo systemctl enable lighthouse-beacon
-sudo systemctl start lighthouse-beacon
+sudo systemctl enable --now lighthouse-beacon
 ```
 
 ログを使用してクライアントを確認します。
 
 ```sh
-sudo journalctl -u lighthouse-beacon
+sudo journalctl -u lighthouse-beacon -f
 ```
 
-コンセンサス・クライアントはチェックポイント同期を使用するため、数分で同期されることに注意してください。実行クライアントにはさらに時間がかかり、数時間かかる可能性もあります。また、コンセンサス・クライアントの同期が完了するまで起動しません（これは、実行クライアントが同期するためのターゲットを必要とし、同期されたコンセンサス・クライアントがそれを提供するためです）。
+次に、実行クライアントを起動します。Gethがピアを見つけて接続できるように、ルーターのポート30303 (TCPおよびUDP)を開きます。次に、gethサービスを有効にして起動します。
 
-Gethとライトハウスのサービスが実行され、同期されると、Raspberry Piはイーサリアムノードになります！イーサリアムネットワークとやり取りする最も一般的な方法は、ポート8545でGethクライアントにアタッチできるGethのJavaScriptコンソールを使用することです。Curlなどのリクエストツールを使用して、JSONオブジェクトとしてフォーマットされたコマンドを送信することも可能です。詳細は[Gethのドキュメント](https://geth.ethereum.org/)をご覧ください。
+```sh
+sudo systemctl enable --now geth
+```
 
-Gethは、ブラウザで表示できるGrafanaダッシュボードにメトリクスを報告するように事前設定されています。より高度なユーザーは、`ipaddress:3000`に移動し、`user: admin`と`passwd: ethereum`を渡すことで、この機能を使用してノードの健全性を監視したいと思うかもしれません。
+ログを確認することで、実行されていることを確認できます。
+
+```sh
+sudo journalctl -u geth -f
+```
+
+コンセンサス・クライアントはチェックポイント同期を使用するため、数分で同期されることに注意してください。実行クライアントにはさらに時間がかかり、数時間かかる可能性があります。両方のクライアントは同時に実行されます。コンセンサス・クライアントは実行クライアントにどのブロックがチェーンの先頭であるかを伝え、実行クライアントはそこまでのブロックをダウンロードして検証します。
+
+GethとLighthouseのサービスが実行され、同期されると、Raspberry Piはイーサリアムノードになります！イーサリアムネットワークとのやり取りには、ポート8545でGethクライアントにアタッチできるGethのJavaScriptコンソールを使用するのが最も一般的です。Curlなどのリクエストツールを使用して、JSONオブジェクトとしてフォーマットされたコマンドを送信することも可能です。詳細は[Gethのドキュメント](https://geth.ethereum.org/)を参照してください。
+
+イメージにはGrafanaダッシュボードも含まれており、上級ユーザーはブラウザで`ipaddress:3000`に移動することで、ノードの健全性を監視するために使用できます。
 
 ## バリデータ {#validators}
 
-コンセンサス・クライアントには、オプションでバリデータを追加することもできます。バリデータソフトウェアを使用すると、ノードがコンセンサスに積極的に参加し、ネットワークに暗号経済的なセキュリティを提供できるようになります。この作業の報酬としてETHを受け取ります。バリデータを実行するには、まず32 ETHを用意し、デポジット・コントラクトにデポジットする必要があります。デポジットは、[Launchpad](https://launchpad.ethereum.org/)のステップバイステップガイドに従って行うことができます。これはデスクトップ/ラップトップで行いますが、キーは生成しないでください。キーの生成はRaspberry Pi上で直接行うことができます。
+オプションで、コンセンサス・クライアントにバリデータを追加することもできます。バリデータソフトウェアを使用すると、ノードがコンセンサスに積極的に参加し、ネットワークに暗号経済的セキュリティを提供できるようになります。この作業の報酬としてETHを受け取ります。バリデータを実行するには、まず32 ETHを用意し、デポジット・コントラクトにデポジットする必要があります。デポジットは、[Launchpad](https://launchpad.ethereum.org/)のステップバイステップガイドに従って行うことができます。これはデスクトップ/ノートパソコンで行いますが、キーは生成しないでください。これはRaspberry Piで直接行うことができます。
 
-Raspberry Piでターミナルを開き、以下のコマンドを実行してデポジットキーを生成します。
+[ethstaker-deposit-cli](https://github.com/ethstaker/ethstaker-deposit-cli)ツールは、バリデータキーを生成します。現在のイメージには含まれていますが、古いイメージを実行している場合は、最初にインストールしてください。次に、`<YOUR_ETH_ADDRESS>`を引き出しを受け取るアドレスに置き換えて、デポジットキーを生成します。
 
-```
+```sh
 sudo apt-get update
-sudo apt-get install staking-deposit-cli
-cd && deposit new-mnemonic --num_validators 1
+sudo apt-get install ethstaker-deposit-cli
+cd && deposit new-mnemonic --num_validators 1 --execution_address <YOUR_ETH_ADDRESS> --chain mainnet
 ```
 
-（または、エアギャップ環境のマシンで実行するために[staking-deposit-cli](https://github.com/ethereum/staking-deposit-cli)をダウンロードし、`deposit new-mnemnonic`コマンドを実行します）
+(または、エアギャップマシンで実行するために[ethstaker-deposit-cli](https://github.com/ethstaker/ethstaker-deposit-cli)をダウンロードし、そこで`deposit new-mnemonic`コマンドを実行します)
 
-ニーモニックフレーズは安全に保管してください！上記のコマンドにより、ノードのキーストアにバリデータキーとデポジットデータファイルの2つのファイルが生成されました。デポジットデータはLaunchpadにアップロードする必要があるため、Raspberry Piからデスクトップ/ラップトップにコピーする必要があります。これは、SSH接続やその他のコピー/ペースト方法を使用して行うことができます。
+ニーモニックフレーズは安全に保管してください！上記のコマンドにより、`validator_keys`ディレクトリにバリデータキーとデポジットデータファイルの2つのファイルが生成されました。デポジットデータはLaunchpadにアップロードする必要があるため、Raspberry Piからデスクトップ/ノートパソコンにコピーする必要があります。これは、ssh接続またはその他のコピー/ペースト方法を使用して行うことができます。
 
 Launchpadを実行しているコンピュータでデポジットデータファイルが利用可能になったら、Launchpad画面の`+`にドラッグアンドドロップできます。画面の指示に従って、デポジット・コントラクトにトランザクションを送信します。
 
-Raspberry Piに戻り、バリデータを起動できます。これには、バリデータキーのインポート、報酬を受け取るアドレスの設定、そして事前設定されたバリデータプロセスの開始が必要です。以下の例はライトハウスのものです。他のコンセンサス・クライアントの手順は、[Ethereum on Armのドキュメント](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)で確認できます。
+Raspberry Piに戻り、バリデータを起動できます。これには、バリデータキーのインポート、報酬を収集するアドレスの設定、そして事前設定されたバリデータプロセスの開始が必要です。以下の例はLighthouseのものです。他のコンセンサス・クライアントの手順は、[Ethereum on Armのドキュメント](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/staking/solo-staking.html)で確認できます。
 
 ```shell
-# バリデータのキーをインポートする
+# バリデータキーをインポートする
 lighthouse account validator import --directory=/home/ethereum/validator_keys
 
-# 報酬アドレスを設定する
-sudo sed -i 's/<ETH_ADDRESS>' /etc/ethereum/lighthouse-validator.conf
+# 報酬アドレスを設定する（<YOUR_ETH_ADDRESS>をあなたのアドレスに置き換える）
+sudo sed -i 's/changeme/<YOUR_ETH_ADDRESS>/' /etc/ethereum/lighthouse-validator.conf
 
 # バリデータを起動する
-sudo systemctl start lighthouse-validator
+sudo systemctl enable --now lighthouse-validator
 ```
 
-おめでとうございます。これでRaspberry Pi上で完全なイーサリアムノードとバリデータが実行されるようになりました！
+おめでとうございます。これで、Raspberry Pi上で完全なイーサリアムノードとバリデータが実行されるようになりました！
 
 ## 詳細情報 {#more-details}
 
@@ -164,22 +161,14 @@ sudo systemctl start lighthouse-validator
 ## フィードバックのお願い {#feedback-appreciated}
 
 Raspberry Piには膨大なユーザーベースがあり、イーサリアムネットワークの健全性に非常に良い影響を与える可能性があると私たちは考えています。
-ぜひこのチュートリアルの詳細を掘り下げ、テストネットでの実行を試し、Ethereum on ArmのGitHubをチェックして、フィードバックの提供、IssueやPull Requestの作成を行い、技術とドキュメントの進歩にご協力ください！
+このチュートリアルの詳細を掘り下げ、テストネットでの実行を試し、[Ethereum on ArmのGitHub](https://github.com/EOA-Blockchain-Labs/ethereumonarm)をチェックし、フィードバックを提供し、Issueやプルリクエストを提起して、テクノロジーとドキュメントの進歩にご協力ください！
 
 ## 参考文献 {#references}
 
-1. https://ubuntu.com/download/raspberry-pi
+1. https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 2. https://wikipedia.org/wiki/Port_forwarding
 3. https://prometheus.io
 4. https://grafana.com
-5. https://forum.armbian.com/topic/5565-zram-vs-swap/
-6. https://geth.ethereum.org
-7. https://nethermind.io
-8. https://www.hyperledger.org/projects/besu
-9. https://github.com/prysmaticlabs/prysm
-10. https://lighthouse.sigmaprime.io
-11. https://docs.ethswarm.org/
-12. https://raiden.network
-13. https://ipfs.io
-14. https://status.im
-15. https://vipnode.org
+5. https://geth.ethereum.org
+6. https://lighthouse.sigmaprime.io
+7. https://github.com/ethstaker/ethstaker-deposit-cli

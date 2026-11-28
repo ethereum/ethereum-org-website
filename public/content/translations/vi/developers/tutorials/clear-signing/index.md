@@ -9,30 +9,30 @@ breadcrumb: "Việc ký rõ ràng"
 published: 2026-05-11
 ---
 
-Hầu hết các vụ khai thác Ethereum lớn đều có cùng một bước cuối cùng: người dùng chấp thuận một giao dịch mà họ không thể hiểu rõ ý nghĩa. Ví phần cứng hiển thị dữ liệu lệnh gọi (calldata) dạng hex thô, và tệ hơn là buộc bạn phải bật tính năng ký mù (blind signing). Ví phần mềm hiển thị các trường đã được giải mã, nhưng chỉ khi chúng nhận diện được hợp đồng. Khi chúng không nhận diện được, cho dù vì giao thức còn mới, ứng dụng bị xâm phạm hay thiết bị đang ngoại tuyến, người dùng đều phải ký mù.
+Hầu hết các vụ khai thác Ethereum lớn đều có cùng một bước cuối cùng: người dùng chấp thuận một giao dịch mà họ không thể hiểu rõ ý nghĩa. Các ví phần cứng hiển thị dữ liệu lệnh gọi (calldata) dạng hex thô, và tệ hơn là buộc bạn phải bật tính năng ký mù (blind signing). Các ví phần mềm hiển thị các trường đã được giải mã, nhưng chỉ khi chúng nhận diện được hợp đồng. Khi chúng không nhận diện được, cho dù vì giao thức còn mới, ứng dụng bị xâm phạm, hay thiết bị đang ngoại tuyến, người dùng đều phải ký mù.
 
-[ERC-7730](https://eips.ethereum.org/EIPS/eip-7730) định nghĩa một định dạng JSON tiêu chuẩn để mô tả *ý nghĩa* của các lệnh gọi hàm trong hợp đồng của bạn. 
+[ERC-7730](https://eips.ethereum.org/EIPS/eip-7730) định nghĩa một định dạng JSON tiêu chuẩn để mô tả *ý nghĩa* của các lệnh gọi hàm trong hợp đồng của bạn.
 
 Một ví hỗ trợ ERC-7730 sẽ đọc bộ mô tả của bạn và hiển thị:
 
 > **Hoán đổi**  
 > Gửi: 1.000 USDC  
 > Nhận tối thiểu: 0,42 WETH  
-> Giao thức: Uniswap V3
+> Giao thức: Uniswap V2
 
-Hoặc một câu hoàn chỉnh dễ đọc cho cả con người và các tác nhân (agent):
+Hoặc một câu hoàn chỉnh duy nhất mà cả con người và các tác nhân (agent) đều có thể đọc được:
 
 > Hoán đổi 1.000 USDC để lấy ít nhất 0,42 WETH
 
 Thay vì một bộ chọn hàm (function selector) và một danh sách các giá trị số nguyên thô.
 
-Đây là [việc ký rõ ràng](https://clearsigning.org/) — "Những gì bạn thấy là những gì bạn ký" (What You See Is What You Sign). Hướng dẫn này sẽ dẫn dắt bạn qua quá trình viết một bộ mô tả cho hợp đồng của riêng bạn, xác thực nó bằng công cụ CLI chính thức và gửi nó lên sổ đăng ký mở (open registry).
+Đây là [việc ký rõ ràng (clear signing)](https://clearsigning.org/) — "Những gì bạn thấy là những gì bạn ký." Hướng dẫn này sẽ dẫn dắt bạn qua quá trình viết một bộ mô tả cho hợp đồng của riêng bạn, xác thực nó bằng công cụ CLI chính thức và gửi nó lên sổ đăng ký mở.
 
 ## Điều kiện tiên quyết {#prerequisites}
 
 - Làm quen với Solidity và ABI của hợp đồng thông minh
-- Một hợp đồng thông minh đã được triển khai với ABI đã được xác minh (yêu cầu xác minh trên [Sourcify](https://sourcify.dev) trước khi bộ mô tả được chấp nhận vào sổ đăng ký) 
-- Python 3.12+ cho CLI xác thực 
+- Một hợp đồng thông minh đã được triển khai với ABI đã được xác minh (yêu cầu xác minh trên [Sourcify](https://sourcify.dev) trước khi bộ mô tả được chấp nhận vào sổ đăng ký)
+- Python 3.12 cho CLI xác thực (gói `erc7730` được ghim không thể cài đặt trên Python 3.13 trở lên). Nếu Python trên hệ thống của bạn là một phiên bản khác, [uv](https://docs.astral.sh/uv/) có thể tải xuống và chạy Python 3.12 cho bạn
 - Kiến thức cơ bản về JSON
 
 ## Bộ mô tả ERC-7730 là gì? {#what-is-an-erc-7730-descriptor}
@@ -49,8 +49,7 @@ Vì bộ mô tả tách biệt với bản thân hợp đồng, bạn có thể 
 
 ## Bước 1: Tạo bộ khung tệp {#step-1-create-the-file-skeleton}
 
-Tạo một tệp có tên `calldata-<contractname>-<descriptorversion>.json`. Tiền tố `calldata-` cho sổ đăng ký biết rằng bộ mô tả này bao gồm các lệnh gọi hàm của hợp đồng, trái ngược với `eip712-` dành cho các tin nhắn dữ liệu có kiểu (typed-data). `descriptorversion` cho sổ đăng ký biết phiên bản của tệp mô tả, mặc định là 0 nếu không có phiên bản nào được cung cấp.
-
+Tạo một tệp có tên `calldata-<ContractName>.json`, ví dụ `calldata-SwapRouter.json`. Tiền tố `calldata-` cho sổ đăng ký biết rằng bộ mô tả này bao gồm các lệnh gọi hàm của hợp đồng, trái ngược với `eip712-` dành cho các tin nhắn dữ liệu có kiểu (typed-data). Nếu bạn cần mô tả nhiều phiên bản của một hợp đồng, hãy đưa phiên bản hợp đồng vào tên, như trong `calldata-UniswapV3Router02.json` của sổ đăng ký.
 
 ```json
 {
@@ -63,13 +62,13 @@ Tạo một tệp có tên `calldata-<contractname>-<descriptorversion>.json`. T
 }
 ```
 
-## Bước 2: Viết phần ngữ cảnh (context) {#step-2-write-the-context-section}
+## Bước 2: Viết phần ngữ cảnh {#step-2-write-the-context-section}
 
-Phần `context` liên kết bộ mô tả với một hoặc nhiều đợt triển khai hợp đồng. Các ví sử dụng phần này để khớp một giao dịch đến với bộ mô tả chính xác.
+Phần `context` liên kết bộ mô tả với một hoặc nhiều đợt triển khai hợp đồng. Các ví sử dụng điều này để khớp một giao dịch đến với bộ mô tả chính xác.
 
 ```json
 "context": {
-  "$id": "uniswap-v3-router-mainnet",
+  "$id": "example-swap-router",
   "contract": {
     "deployments": [
       { "chainId": 1, "address": "0xYourContractAddressOnMainnet" },
@@ -81,10 +80,10 @@ Phần `context` liên kết bộ mô tả với một hoặc nhiều đợt tri
 
 ### Các trường ngữ cảnh {#context-fields}
 
-- `context.$id` — Một định danh duy nhất cho tài liệu mô tả hoặc cấu hình triển khai này.
+- `context.$id` — Một định danh duy nhất cho tài liệu bộ mô tả hoặc cấu hình triển khai này.
 - `contract.deployments` — Tập hợp các đợt triển khai mà bộ mô tả này áp dụng.
 - `deployments[].chainId` — ID chuỗi EVM cho một đợt triển khai. Bao gồm mọi chuỗi nơi hợp đồng của bạn được triển khai.
-- `deployments[].address` — Địa chỉ hợp đồng mà các ví nên liên kết với bộ mô tả này. Sử dụng địa chỉ triển khai (implementation address) chứa logic thực thi.
+- `deployments[].address` — Địa chỉ hợp đồng mà các ví nên liên kết với bộ mô tả này. Đây là địa chỉ mà người dùng thực sự gửi giao dịch đến. Nếu hợp đồng của bạn có thể nâng cấp, đó là địa chỉ proxy, không phải địa chỉ triển khai (implementation), trong khi các chữ ký hàm trong `display.formats` đến từ ABI của bản triển khai.
 
 ## Bước 3: Viết phần siêu dữ liệu {#step-3-write-the-metadata-section}
 
@@ -115,6 +114,8 @@ Mỗi khóa (key) là một đoạn ABI dễ đọc — chữ ký hàm bao gồm
 
 ### Ví dụ: Mô tả một giao dịch hoán đổi token {#eg-describing-token-swap}
 
+Ví dụ này mô tả `swapExactTokensForTokens` từ hợp đồng `Router02` của Uniswap V2. Token đầu vào là phần tử đầu tiên của `path`, và token đầu ra là phần tử cuối cùng (`path` có thể có nhiều hơn hai phần tử cho một giao dịch hoán đổi nhiều bước (multi-hop)).
+
 ```json
 "display": {
   "formats": {
@@ -127,7 +128,7 @@ Mỗi khóa (key) là một đoạn ABI dễ đọc — chữ ký hàm bao gồm
           "label": "Send",
           "format": "tokenAmount",
           "params": {
-            "tokenPath": "#.path[0]"
+            "tokenPath": "#.path.[0]"
           }
         },
         {
@@ -135,7 +136,7 @@ Mỗi khóa (key) là một đoạn ABI dễ đọc — chữ ký hàm bao gồm
           "label": "Receive minimum",
           "format": "tokenAmount",
           "params": {
-            "tokenPath": "#.path[1]"
+            "tokenPath": "#.path.[-1]"
           }
         },
         {
@@ -159,17 +160,16 @@ Mỗi khóa (key) là một đoạn ABI dễ đọc — chữ ký hàm bao gồm
     }
   }
 }
-
 ```
 
 ### Các trường hiển thị {#display-fields}
 
 - **`intent`** — **(Bắt buộc)** Một mô tả ngắn gọn, thân thiện với người dùng về hành động, chẳng hạn như "Hoán đổi".
-- **`interpolatedIntent`** — **(Được khuyến nghị)** Một mẫu câu phong phú hơn nhúng các giá trị trường đã được định dạng, chẳng hạn như `"Swap {amountIn} for at least {amountOutMin}"`. Bao gồm trường này cùng với `intent` để cung cấp một bộ mô tả thân thiện với người dùng hơn nữa mà các ví có thể chọn hiển thị tùy thuộc vào bất kỳ ràng buộc hiển thị nào.
-- **`fields`** — **(Bắt buộc)** Danh sách có thứ tự các trường giao dịch mà ví nên hiển thị cho người dùng.
-  - **`path`** — **(Bắt buộc)** Một tham chiếu đến dữ liệu giao dịch. `#.fieldName` trỏ đến một tham số dữ liệu lệnh gọi đã được giải mã theo tên trong ABI. `@.value` đề cập đến giá trị ETH được gửi kèm theo giao dịch.
+- **`interpolatedIntent`** — **(Được khuyến nghị)** Một mẫu câu phong phú hơn nhúng các giá trị trường đã được định dạng, chẳng hạn như `"Swap {amountIn} for at least {amountOutMin}"`. Bao gồm điều này cùng với `intent` để cung cấp một bộ mô tả thân thiện với người dùng hơn nữa mà các ví có thể chọn hiển thị tùy thuộc vào bất kỳ ràng buộc hiển thị nào.
+- **`fields`** — **(Bắt buộc)** Danh sách có thứ tự các trường giao dịch mà các ví nên hiển thị cho người dùng.
+  - **`path`** — **(Bắt buộc)** Một tham chiếu đến dữ liệu giao dịch. `#.fieldName` trỏ đến một tham số dữ liệu lệnh gọi đã được giải mã theo tên trong ABI. `@.value` đề cập đến giá trị ETH được gửi kèm theo giao dịch. Các phần tử mảng được viết với một `.` trước dấu ngoặc vuông: `#.path.[0]` là phần tử đầu tiên và `#.path.[-1]` là phần tử cuối cùng. `#.path[0]` (không có dấu chấm) sẽ bị linter từ chối.
   - **`label`** — **(Bắt buộc)** Nhãn dễ đọc được hiển thị bên cạnh giá trị.
-  - **`format`** — **(Được khuyến nghị)** Kiểm soát cách giá trị sẽ được hiển thị. Các định dạng phổ biến bao gồm:
+  - **`format`** — **(Được khuyến nghị)** Kiểm soát cách giá trị nên được hiển thị. Các định dạng phổ biến bao gồm:
     - `tokenAmount`
     - `addressName`
     - `date`
@@ -183,11 +183,13 @@ Mỗi khóa (key) là một đoạn ABI dễ đọc — chữ ký hàm bao gồm
 
 ## Bộ mô tả hoàn chỉnh {#the-complete-descriptor}
 
+Thay thế các địa chỉ giữ chỗ bằng các địa chỉ của hợp đồng đã được triển khai của bạn. Linter sẽ kiểm tra bộ mô tả dựa trên ABI đã được xác minh tại các địa chỉ đó, vì vậy nó sẽ báo lỗi cho đến khi bạn thực hiện việc này.
+
 ```json
 {
   "$schema": "https://eips.ethereum.org/assets/eip-7730/erc7730-v2.schema.json",
   "context": {
-    "$id": "uniswap-v3-router-mainnet",
+    "$id": "example-swap-router",
     "contract": {
       "deployments": [
         {
@@ -219,7 +221,7 @@ Mỗi khóa (key) là một đoạn ABI dễ đọc — chữ ký hàm bao gồm
             "label": "Send",
             "format": "tokenAmount",
             "params": {
-              "tokenPath": "#.path[0]"
+              "tokenPath": "#.path.[0]"
             }
           },
           {
@@ -227,7 +229,7 @@ Mỗi khóa (key) là một đoạn ABI dễ đọc — chữ ký hàm bao gồm
             "label": "Receive minimum",
             "format": "tokenAmount",
             "params": {
-              "tokenPath": "#.path[1]"
+              "tokenPath": "#.path.[-1]"
             }
           },
           {
@@ -256,15 +258,76 @@ Mỗi khóa (key) là một đoạn ABI dễ đọc — chữ ký hàm bao gồm
 
 ## Bước 5: Gửi lên sổ đăng ký {#step-5-submit-to-the-registry}
 
-[Sổ đăng ký ERC-7730](https://github.com/ethereum/clear-signing-erc7730-registry) là một kho lưu trữ mở được lưu trữ bởi [Tổ chức Ethereum](/foundation/) với tư cách là một người quản lý trung lập. Bất kỳ ai cũng có thể tự do sao chép (clone) và tự lưu trữ nó — các ví sẽ độc lập quyết định phiên bản sổ đăng ký nào mà họ tin tưởng.
+[Sổ đăng ký ERC-7730](https://github.com/ethereum/clear-signing-erc7730-registry) là một kho lưu trữ mở được lưu trữ bởi [Tổ chức Ethereum](/foundation/) với tư cách là một người quản lý trung lập. Bất kỳ ai cũng có thể tự do sao chép (clone) và tự lưu trữ nó — các ví sẽ độc lập quyết định các phiên bản sổ đăng ký nào mà họ tin tưởng.
 
-1. Fork kho lưu trữ trên GitHub  
-2. Tạo một thư mục tại `registry/<your-project-name>/`  
-3. Đặt tệp của bạn vào bên trong đó: `registry/myproject/calldata-mycontract-0_0.json`  
-4. Cập nhật trường `$schema` thành đường dẫn tương đối được sử dụng trong kho lưu trữ: `"../../specs/erc7730-v2.schema.json"`  
-5. Mở một pull request
+1. Phân nhánh (fork) kho lưu trữ trên GitHub
+2. Tạo một thư mục tại `registry/<your-project-name>/`
+3. Đặt tệp của bạn vào bên trong nó: `registry/myproject/calldata-SwapRouter.json`
+4. Cập nhật trường `$schema` thành đường dẫn tương đối được sử dụng trong kho lưu trữ: `"../../specs/erc7730-v2.schema.json"`. CI sẽ từ chối một URL ở đây.
+5. Thêm một tệp kiểm thử (xem bên dưới)
+6. Xác thực các tệp của bạn cục bộ (xem bên dưới)
+7. Mở một yêu cầu kéo (pull request). Mỗi yêu cầu kéo chỉ có thể thay đổi một thư mục dưới `registry/`
 
-Khi bạn mở PR, CI sẽ tự động chạy xác thực lược đồ (schema validation), kiểm tra xem các chữ ký hàm có tạo ra các bộ chọn hợp lệ hay không, xác nhận địa chỉ hợp đồng đã được xác minh trên Sourcify và gắn cờ các điểm không nhất quán của ABI. Kết quả kiểm tra xuất hiện trực tiếp trên PR. Những người bảo trì sổ đăng ký sẽ sàng lọc các nội dung gửi lên để tìm các bộ mô tả bị lỗi định dạng hoặc có khả năng gây hại. Việc được đưa vào sổ đăng ký không ngụ ý rằng bộ mô tả đã được kiểm toán hoặc chứng thực.
+### Thêm một tệp kiểm thử {#add-a-test-file}
+
+Mỗi bộ mô tả bạn thêm hoặc thay đổi đều cần một tệp kiểm thử, để các bản triển khai việc ký rõ ràng có thể được kiểm tra dựa trên nó. Tạo `registry/<your-project-name>/testsv2/calldata-<ContractName>.tests.json` với ít nhất một trường hợp kiểm thử cho mỗi hàm trong `display.formats`. CI sẽ trích xuất bộ chọn hàm của mỗi định dạng và báo lỗi nếu không có giao dịch kiểm thử nào gọi nó.
+
+```json
+{
+  "$schema": "../../../specs/erc7730-tests-v2.schema.json",
+  "descriptor": "../calldata-SwapRouter.json",
+  "dataProvider": {
+    "tokens": {
+      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": { "symbol": "USDC", "decimals": 6, "name": "USD Coin" },
+      "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": { "symbol": "WETH", "decimals": 18, "name": "Wrapped Ether" }
+    }
+  },
+  "tests": [
+    {
+      "description": "Swap 1,000 USDC for at least 0.42 WETH",
+      "rawTx": "0x02f9012f0180843b9aca00...",
+      "expected": {
+        "intent": "Swap",
+        "interpolatedIntent": "Swap 1000 USDC for at least 0.42 WETH",
+        "owner": "Example Swap Protocol",
+        "fields": [
+          { "label": "Send", "value": "1000 USDC" },
+          { "label": "Receive minimum", "value": "0.42 WETH" },
+          { "label": "Recipient", "value": "0x1234567890123456789012345678901234567890" },
+          { "label": "Expires", "value": "2026-01-01 00:00:00Z" }
+        ]
+      }
+    }
+  ]
+}
+```
+
+- `rawTx` là toàn bộ giao dịch **chưa ký** đã được tuần tự hóa (được rút gọn ở đây), không chỉ là dữ liệu lệnh gọi. Các giao dịch thực tế đến hợp đồng của bạn là những trường hợp kiểm thử tốt nhất.
+- `dataProvider` cung cấp siêu dữ liệu token (và tùy chọn là địa chỉ và tên ENS) để các bài kiểm thử không cần truy cập mạng lưới.
+- `expected` là những gì một ví nên hiển thị. CI sẽ kết xuất (render) từng trường hợp kiểm thử với các bản triển khai việc ký rõ ràng và báo cáo bất kỳ sự khác biệt nào trên yêu cầu kéo.
+
+Xem [Các trường hợp kiểm thử tham chiếu](https://github.com/ethereum/clear-signing-erc7730-registry#reference-test-cases) trong README của sổ đăng ký để biết định dạng đầy đủ, bao gồm các tệp kiểm thử cho các bộ mô tả EIP-712.
+
+### Xác thực cục bộ {#validate-locally}
+
+Sổ đăng ký kiểm tra các bộ mô tả bằng công cụ dòng lệnh [`erc7730`](https://github.com/sourcifyeth/python-erc7730), được ghim trong `.github/requirements.txt`. Chạy nó từ thư mục gốc của bản phân nhánh của bạn, trong môi trường Python 3.12:
+
+```sh
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install -r .github/requirements.txt
+erc7730 lint registry/myproject/calldata-SwapRouter.json
+```
+
+Nếu bạn sử dụng [uv](https://docs.astral.sh/uv/), bạn có thể bỏ qua môi trường ảo và uv sẽ tải xuống Python 3.12 nếu cần:
+
+```sh
+uvx --python 3.12 --from "$(cat .github/requirements.txt)" erc7730 lint registry/myproject/calldata-SwapRouter.json
+```
+
+Linter sẽ kiểm tra bộ mô tả dựa trên lược đồ (schema) và dựa trên ABI đã được xác minh của hợp đồng của bạn. Hãy sửa mọi lỗi. Các cảnh báo như `Missing display format` có nghĩa là hợp đồng có các hàm mà bộ mô tả của bạn chưa mô tả. Để cũng kiểm tra các đường dẫn `$schema` và tệp kiểm thử theo cách CI thực hiện, hãy xem [Cách xác thực](https://github.com/ethereum/clear-signing-erc7730-registry#how-to-validate) trong README của sổ đăng ký.
+
+Khi bạn mở PR, CI sẽ tự động chạy xác thực lược đồ, kiểm tra xem các chữ ký hàm có tạo ra các bộ chọn hợp lệ hay không, xác nhận địa chỉ hợp đồng đã được xác minh trên Sourcify và gắn cờ các điểm không nhất quán của ABI. Kết quả kiểm tra sẽ xuất hiện trực tiếp trên PR. Những người bảo trì sổ đăng ký sẽ sàng lọc các nội dung gửi lên để tìm các bộ mô tả bị lỗi định dạng hoặc có khả năng gây hại. Việc được đưa vào sổ đăng ký không ngụ ý rằng đã được kiểm toán hoặc chứng thực.
 
 <Alert variant="info">
 <AlertContent>
@@ -276,7 +339,7 @@ Khi bạn mở PR, CI sẽ tự động chạy xác thực lược đồ (schema
 
 ## Điều gì xảy ra sau khi hợp nhất (merge)? {#what-happens-after-merging}
 
-Tất cả các bộ mô tả trong sổ đăng ký đều mở cho các kiểm toán viên. Sau khi PR của bạn được hợp nhất, bất kỳ kiểm toán viên nào cũng có thể xem xét bộ mô tả của bạn và xuất bản một chứng thực mật mã (theo [ERC-8176](https://github.com/ethereum/ERCs/pull/1576)) để xác nhận tính chính xác của nó. 
+Tất cả các bộ mô tả trong sổ đăng ký đều mở cho các kiểm toán viên. Sau khi PR của bạn được hợp nhất, bất kỳ kiểm toán viên nào cũng có thể xem xét bộ mô tả của bạn và xuất bản một chứng thực mật mã (theo [ERC-8176](https://eips.ethereum.org/EIPS/eip-8176)) để xác nhận tính chính xác của nó. 
 
 Các tín hiệu chứng thực này cho phép các ví áp dụng các chính sách tin cậy của riêng họ — một bộ mô tả có nhiều chứng thực độc lập sẽ có sức nặng hơn một bộ mô tả không có chứng thực nào. Bạn có thể tiếp cận cộng đồng kiểm toán viên thông qua [clearsigning.org](https://clearsigning.org).
 
@@ -289,3 +352,4 @@ Các ví sẽ chọn sổ đăng ký nào mà họ sẽ hỗ trợ. Khi bộ mô
 - [clearsigning.org](https://clearsigning.org) — công cụ, trạng thái hệ sinh thái và Quản trị  
 - [Xác minh hợp đồng Sourcify](https://sourcify.dev)  
 - [Sáng kiến Bảo mật Nghìn tỷ Đô la (Trillion Dollar Security initiative)](https://trilliondollarsecurity.org)
+

@@ -9,11 +9,19 @@ published: 2022-09-15
 lang: zh
 ---
 
-使用汇总时，交易中一个字节的成本比存储时隙的成本要高得多。因此，尽可能多地在链上缓存信息是有意义的。
+使用汇总时，交易的每个字节都必须发布到 L1。在撰写本文时，这使得交易中一个字节的成本比存储时隙的成本要高得多。因此，在链上尽可能多地缓存信息是有意义的。
 
-在本文中，你将学习如何创建和使用缓存合约，使得任何可能被多次使用的参数值都能被缓存，并在（首次使用后）以更少的字节数供后续使用，以及如何编写使用此缓存的链下代码。
+> **注意：** 自本文于 2022 年撰写以来，Rollup 费用发生了很大变化。自 [Ecotone 和 Fjord 升级](https://docs.optimism.io/op-stack/transactions/fees#l1-data-fee)（2024 年）以来，OP Stack 链将交易数据发布到[斑点](/roadmap/danksharding/)，并且 L1 数据费用基于对交易_压缩_大小的估计，每笔交易至少 100 字节（[参见规范](https://specs.optimism.io/protocol/fjord/exec-engine.html)）。因此：
+>
+> - 零字节几乎是免费的，因为它们很容易压缩。
+> - 短交易已经达到 100 字节的最小值，因此使其调用数据更短并不会降低其费用。
+> - 斑点空间很便宜，因此在 OP Mainnet 上，L2 执行 Gas 通常占费用的比重比 L1 数据费用更大。将新值写入缓存（两次各消耗 22100 Gas 的 `SSTORE`）的成本可能高于它节省的字节成本。
+>
+> 该原则仍然适用（压缩字节越少意味着 L1 数据费用越低），但缓存是否划算取决于你的交易大小以及当前的 L1 和 L2 Gas 价格。你可以通过在 [`GasPriceOracle` 预部署](https://specs.optimism.io/protocol/predeploys.html#gaspriceoracle)上调用 `getL1Fee` 来检查特定交易的 L1 数据费用。
 
-如果你想跳过本文直接查看源代码，[请点击这里](https://github.com/qbzzt/20220915-all-you-can-cache)。开发技术栈为 [Foundry](https://getfoundry.sh/introduction/installation/)。
+在本文中，你将学习如何创建和使用缓存合约，使得任何可能被多次使用的参数值都将被缓存，并（在第一次之后）以少得多的字节数供使用，以及如何编写使用此缓存的链下代码。
+
+如果你想跳过本文直接查看源代码，[请点击此处](https://github.com/qbzzt/20220915-all-you-can-cache)。开发栈是 [Foundry](https://getfoundry.sh/introduction/installation/)。
 
 ## 整体设计 {#overall-design}
 
@@ -306,7 +314,7 @@ Foundry 的一大优势是它允许用 Solidity 编写测试（[请参阅下面�
 
 ### 测试缓存 {#testing-the-cache}
 
-Foundry 的优势之一是[它允许你用 Solidity 编写测试](https://getfoundry.sh/forge/tests/overview/)，这使得编写单元测试变得更加容易。`Cache` 类的测试在[这里](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol)。由于测试代码通常是重复的，本文仅解释有趣的部分。
+Foundry 的一大优势是[它允许你用 Solidity 编写测试](https://getfoundry.sh/forge/tests/overview/)，这使得编写单元测试变得更加容易。`Cache` 类的测试在[这里](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol)。由于测试代码往往是重复的，因此本文仅解释有趣的部分。
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -315,7 +323,7 @@ pragma solidity ^0.8.13;
 import "forge-std/Test.sol";
 
 
-// 需要运行 `forge test -vv` 以查看控制台输出。
+// 需要运行 `forge test -vv` 以使用控制台。
 import "forge-std/console.sol";
 ```
 
@@ -336,13 +344,13 @@ contract CacheTest is Test {
     }
 ```
 
-`setUp` 函数在每次测试之前被调用。在这种情况下，我们只需创建一个新缓存，这样我们的测试就不会相互影响。
+`setUp` 函数在每次测试之前被调用。在这种情况下，我们只是创建一个新缓存，以便我们的测试不会相互影响。
 
 ```solidity
     function testCaching() public {
 ```
 
-测试是名称以 `test` 开头的函数。此函数检查基本的缓存功能，即写入值并再次读取它们。
+测试是名称以 `test` 开头的函数。此函数检查基本的缓存功能，写入值并再次读取它们。
 
 ```solidity
         for(uint i=1; i<5000; i++) {
@@ -380,16 +388,16 @@ contract CacheTest is Test {
     }    // testRepeatCaching
 ```
 
-理论上，可能存在一个不影响连续缓存写入的错误。因此，在这里我们进行一些不连续的写入，并查看这些值是否仍然没有被重写。
+理论上可能存在一个不影响连续缓存写入的错误。因此，在这里我们进行一些不连续的写入，并查看值是否仍然没有被重写。
 
 ```solidity
-    // 从内存缓冲区读取一个 uint（以确保我们取回了
+    // 从内存缓冲区读取一个 uint（以确保我们能取回
     // 发送出去的参数）
     function toUint256(bytes memory _bytes, uint256 _start) internal pure
         returns (uint256)
 ```
 
-从 `bytes memory` 缓冲区读取一个 256 位的字。这个实用函数让我们能够验证在运行使用缓存的函数调用时是否收到了正确的结果。
+从 `bytes memory` 缓冲区读取一个 256 位字。这个实用函数让我们能够验证在运行使用缓存的函数调用时是否收到了正确的结果。
 
 ```solidity
     {
@@ -401,18 +409,18 @@ contract CacheTest is Test {
         }
 ```
 
-Yul 不支持 `uint256` 之外的数据结构，因此当你引用更复杂的数据结构（例如内存缓冲区 `_bytes`）时，你将获得该结构的地址。Solidity 将 `bytes memory` 值存储为一个包含长度的 32 字节字，后跟实际字节，因此要获取第 `_start` 个字节，我们需要计算 `_bytes+32+_start`。
+Yul 不支持 `uint256` 之外的数据结构，因此当你引用更复杂的数据结构（例如内存缓冲区 `_bytes`）时，你得到的是该结构的地址。Solidity 将 `bytes memory` 值存储为一个 32 字节的字，其中包含长度，后跟实际字节，因此要获取第 `_start` 个字节，我们需要计算 `_bytes+32+_start`。
 
 ```solidity
 
         return tempUint;
     }     // toUint256
 
-    // fourParams() 的函数签名，由以下网址提供：
+    // fourParams() 的函数签名，由以下网址提供
     // https://www.4byte.directory/signatures/?bytes4_signature=0x3edc1e6d
     bytes4 constant FOUR_PARAMS = 0x3edc1e6d;
 
-    // 只是一些常量值，以查看我们是否取回了正确的值
+    // 只是一些常量值，用于查看我们是否取回了正确的值
     uint256 constant VAL_A = 0xDEAD60A7;
     uint256 constant VAL_B =     0xBEEF;
     uint256 constant VAL_C =     0x600D;
@@ -434,7 +442,7 @@ Yul 不支持 `uint256` 之外的数据结构，因此当你引用更复杂的�
         bytes memory _callOutput;
 ```
 
-我们不能使用正常的 ABI 机制来调用使用缓存的函数，因此我们需要使用低级 [`<address>.call()`](https://docs.soliditylang.org/en/v0.8.16/types.html#members-of-addresses) 机制。该机制将 `bytes memory` 作为输入，并将其（以及一个布尔值）作为输出返回。
+我们不能使用普通的 ABI 机制来调用使用缓存的函数，因此我们需要使用低级 [`<address>.call()`](https://docs.soliditylang.org/en/v0.8.16/types.html#members-of-addresses) 机制。该机制将 `bytes memory` 作为输入，并将其（以及一个布尔值）作为输出返回。
 
 ```solidity
         // 第一次调用，缓存为空
@@ -442,7 +450,7 @@ Yul 不支持 `uint256` 之外的数据结构，因此当你引用更复杂的�
             FOUR_PARAMS,
 ```
 
-同一个合约同时支持缓存函数（用于直接来自交易的调用）和非缓存函数（用于来自其他智能合约的调用）是很有用的。为此，我们需要继续依赖 Solidity 机制来调用正确的函数，而不是将所有内容都放在[一个 `fallback` 函数](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function)中。这样做使可组合性变得容易得多。在大多数情况下，一个字节就足以识别该函数，因此我们浪费了三个字节（16\*3=48 Gas）。然而，在我写这篇文章时，这 48 Gas 的成本为 0.07 美分，对于更简单、更不容易出错的代码来说，这是一个合理的成本。
+同一个合约同时支持缓存函数（用于直接来自交易的调用）和非缓存函数（用于来自其他智能合约的调用）是很有用的。为此，我们需要继续依赖 Solidity 机制来调用正确的函数，而不是将所有内容都放在[一个 `fallback` 函数](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function)中。这样做使可组合性变得容易得多。在大多数情况下，一个字节就足以识别该函数，因此我们浪费了三个字节。在当前的 OP Stack 费用公式下，这三个字节增加的成本微乎其微（如果有的话，请参阅文章顶部的说明），这是为了获得更简单、更不容易出错的代码而付出的合理成本。
 
 ```solidity
             // 第一个值，将其添加到缓存中
@@ -460,7 +468,7 @@ Yul 不支持 `uint256` 之外的数据结构，因此当你引用更复杂的�
         (_success, _callOutput) = _cacheAddr.call(_callInput);
 ```
 
-这就是我们实际调用 `Cache` 合约的地方。
+这是我们实际调用 `Cache` 合约的地方。
 
 ```solidity
         assertEq(_success, true);
@@ -476,7 +484,7 @@ Yul 不支持 `uint256` 之外的数据结构，因此当你引用更复杂的�
 我们从一个空缓存开始，然后添加 `VAL_A`，接着是 `VAL_C`。我们期望第一个的密钥为 1，第二个的密钥为 2。
 
 ```
-assertEq(toUint256(_callOutput,0), VAL_A);
+        assertEq(toUint256(_callOutput,0), VAL_A);
         assertEq(toUint256(_callOutput,32), VAL_B);
         assertEq(toUint256(_callOutput,64), VAL_C);
         assertEq(toUint256(_callOutput,96), VAL_C);
@@ -516,7 +524,7 @@ assertEq(toUint256(_callOutput,0), VAL_A);
     function testEncodeVal() public {
 ```
 
-此函数类似于 `testReadParam`，不同之处在于我们使用 `encodeVal()` 而不是显式写入参数。
+此函数类似于 `testReadParam`，不同之处在于我们不显式写入参数，而是使用 `encodeVal()`。
 
 ```solidity
         .
@@ -536,10 +544,10 @@ assertEq(toUint256(_callOutput,0), VAL_A);
     }   // testEncodeVal
 ```
 
-`testEncodeVal()` 中唯一的附加测试是验证 `_callInput` 的长度是否正确。对于第一次调用，它是 4+33\*4。对于第二次调用（每个值都已在缓存中），它是 4+1\*4。
+`testEncodeVal()` 中唯一的附加测试是验证 `_callInput` 的长度是否正确。对于第一次调用，它是 4+33\*4。对于第二次调用，其中每个值都已在缓存中，它是 4+1\*4。
 
 ```solidity
-    // 测试当密钥超过单个字节时的 encodeVal
+    // 测试当密钥超过单字节时的 encodeVal
     // 最多三个字节，因为将缓存填满到四个字节需要
     // 太长时间。
     function testEncodeValBig() public {
@@ -568,7 +576,7 @@ assertEq(toUint256(_callOutput,0), VAL_A);
         );
 ```
 
-测试单字节、双字节和三字节的值。我们不测试超出此范围的值，因为写入足够的堆栈条目（至少 0x10000000，大约 2.5 亿个）需要太长时间。
+测试单字节、双字节和三字节值。我们不测试超出此范围的值，因为写入足够的堆栈条目（至少 0x10000000，大约 2.5 亿个）需要太长时间。
 
 ```solidity
         .
@@ -578,7 +586,7 @@ assertEq(toUint256(_callOutput,0), VAL_A);
     }    // testEncodeValBig
 
 
-    // 测试使用过小的缓冲区时我们会得到回退
+    // 测试使用过小的缓冲区时我们会得到一个回退
     function testShortCalldata() public {
 ```
 
@@ -596,7 +604,7 @@ assertEq(toUint256(_callOutput,0), VAL_A);
 由于它会回退，我们应该得到的结果是 `false`。
 
 ```
-// 使用不存在的缓存密钥进行调用
+    // 使用不存在的缓存密钥进行调用
     function testNoCacheKey() public {
         .
         .
@@ -615,13 +623,13 @@ assertEq(toUint256(_callOutput,0), VAL_A);
         );
 ```
 
-此函数获得了四个完全合法的参数，只是缓存为空，因此没有可读取的值。
+此函数获得四个完全合法的参数，只是缓存为空，因此没有可读取的值。
 
 ```solidity
         .
         .
         .
-    // 测试使用过长的缓冲区时一切正常工作
+    // 测试使用过长的缓冲区时一切正常
     function testLongCalldata() public {
         address _cacheAddr = address(cache);
         bool _success;
@@ -649,7 +657,7 @@ assertEq(toUint256(_callOutput,0), VAL_A);
         );
 ```
 
-此函数发送五个值。我们知道第五个值被忽略了，因为它不是有效的缓存条目，如果未包含它，将会导致回退。
+此函数发送五个值。我们知道第五个值被忽略，因为它不是有效的缓存条目，如果不包含它，就会导致回退。
 
 ```solidity
         (_success, _callOutput) = _cacheAddr.call(_callInput);
@@ -718,14 +726,14 @@ contract WORM is Cache {
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[这（`vm.expectRevert`）](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert)是我们如何在 Foundry 测试中指定下一次调用应该失败，以及报告的失败原因。这适用于我们使用语法 `<contract>.<function name>()` 而不是构建调用数据并使用低级接口（`<contract>.call()` 等）调用合约的情况。
+[这 (`vm.expectRevert`)](https://getfoundry.sh/reference/cheatcodes/expect-revert/) 是我们在 Foundry 测试中指定下一次调用应该失败以及报告的失败原因的方式。当我们使用语法 `<contract>.<function name>()` 而不是构建调用数据并使用低级接口（`<contract>.call()` 等）调用合约时，这适用。
 
 ```solidity
     function testReadWriteCached() public {
         uint cacheGoat = worm.cacheWrite(0x60A7);
 ```
 
-在这里，我们利用了 `cacheWrite` 返回缓存密钥这一事实。这不是我们期望在生产环境中使用的东西，因为 `cacheWrite` 会改变状态，因此只能在交易期间调用。交易没有返回值，如果它们有结果，这些结果应该作为事件发出。因此，`cacheWrite` 的返回值只能从链上代码访问，而链上代码不需要参数缓存。
+在这里，我们利用了 `cacheWrite` 返回缓存密钥这一事实。这不是我们期望在生产环境中使用的东西，因为 `cacheWrite` 会改变状态，因此只能在交易期间调用。交易没有返回值，如果它们有结果，这些结果应该作为事件发出。因此，`cacheWrite` 返回值只能从链上代码访问，而链上代码不需要参数缓存。
 
 ```solidity
         (_success,) = address(worm).call(_callInput);
@@ -754,49 +762,70 @@ contract WORM is Cache {
         (_success,) = address(worm).call(_callInput);
 ```
 
-这就是我们在 Foundry 中验证代码是否[正确发出事件](https://getfoundry.sh/reference/cheatcodes/expect-emit/)的方式。
+这是我们在 Foundry 中验证代码[正确发出事件](https://getfoundry.sh/reference/cheatcodes/expect-emit/)的方式。
 
 ### 客户端 {#the-client}
 
-Solidity 测试无法提供的一点是，你可以直接复制粘贴到自己应用中的 JavaScript 代码。本教程的原始版本将 WORM 部署到了 Optimism Goerli，但该网络现已退役。要在今天运行客户端，请将 WORM 重新部署到受支持的 OP Stack 网络（例如 [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack)），然后在 JavaScript 客户端中使用生成的合约地址。
+Solidity 测试无法提供的一点是，你可以将 JavaScript 代码剪切并粘贴到你自己的应用程序中。本教程的原始版本将 WORM 部署到了 Optimism Goerli，该网络现已关闭。示例仓库仍然指向 Optimism Goerli，因此要立即运行客户端，你需要自己将 WORM 部署到 [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack)，并将客户端指向你的部署。
 
-[你可以在此处查看客户端的 JavaScript 代码](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js)。该示例仓库是为 Optimism Goerli 编写的，因此在运行它之前，请在 `javascript/.env.example` 和 `javascript/index.js` 中更新目标网络的 RPC 端点和浏览器 URL。使用方法如下：
+[你可以在此处查看客户端的 JavaScript 代码](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js)。要使用它，你需要 [Foundry](https://getfoundry.sh/introduction/installation/)、[Node.js](https://nodejs.org/) 以及一个包含一些 OP Sepolia ETH 的账户。[Optimism 的水龙头文档](https://docs.optimism.io/app-developers/tools-sdks/faucets)列出了当前的测试网水龙头。
 
-1. 克隆 git 仓库：
+1. 克隆 git 仓库，包括 `forge-std` 子模块，并构建合约。客户端从 `out/WORM.sol/WORM.json` 读取 WORM ABI 和字节码，该文件仅在 `forge build` 之后存在。
 
    ```sh
-   git clone https://github.com/qbzzt/20220915-all-you-can-cache.git
+   git clone --recurse-submodules https://github.com/qbzzt/20220915-all-you-can-cache.git
+   cd 20220915-all-you-can-cache
+   forge build
    ```
 
-2. 安装必要的包：
+   Forge 警告 `foundry.toml` 使用了旧的 `[default]` 部分名称。你可以忽略此警告，或运行 `forge config --fix`。
+
+2. 将你已注资账户的私钥导入加密的 Foundry 密钥库，并使用它将 WORM [部署](https://getfoundry.sh/reference/forge/create)到 OP Sepolia。
+
+   ```sh
+   cast wallet import op-sepolia-deployer --interactive
+   forge create src/WORM.sol:WORM --rpc-url https://sepolia.optimism.io --account op-sepolia-deployer --broadcast
+   ```
+
+   如果没有 `--broadcast`，`forge create` 仅模拟部署。从输出的 `Deployed to:` 行复制地址。
+
+3. 编辑 `javascript/index.js`。将此行中的旧 Optimism Goerli 地址替换为你的部署地址：
+
+   ```javascript
+   const worm = WormFactory.attach("0xD34335b1d818ceE54e3323D3246bD31d94E6a78a")
+   ```
+
+   你也可以在两行 `console.log` 中将 `https://goerli-optimism.etherscan.io` 替换为 `https://sepolia-optimism.etherscan.io`，以便客户端打印的链接能够正常工作。
+
+4. 安装必要的包：
 
    ```sh
    cd javascript
-   yarn
+   npm install
    ```
 
-3. 复制配置文件：
+5. 复制配置文件：
 
    ```sh
    cp .env.example .env
    ```
 
-4. 根据你的配置编辑 `.env`：
+6. 针对你的配置编辑 `.env`。变量名仍然引用 Optimism Goerli，但值是针对 OP Sepolia 的：
 
-   | 参数 | 值 | 
-   | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC | 拥有足够 ETH 支付交易费用的账户助记词。[Optimism 的水龙头文档](https://docs.optimism.io/app-developers/tools/faucets)列出了当前的测试网水龙头。 |
-   | OPTIMISM_GOERLI_URL | 你重新部署 WORM 的网络的 RPC URL。对于 OP Sepolia，请使用 OP Sepolia RPC 端点（例如 `https://sepolia.optimism.io`），或来自你的提供商的其他端点。 |
+   | 参数                | 值                                                                                                      |
+   | ------------------- | ------------------------------------------------------------------------------------------------------- |
+   | MNEMONIC            | 拥有足够 OP Sepolia ETH 来支付交易费用的账户的助记词。                                                  |
+   | OPTIMISM_GOERLI_URL | OP Sepolia RPC URL、`https://sepolia.optimism.io` 或来自其他提供商的 OP Sepolia 端点。                   |
 
-5. 运行 `index.js`。
+7. 运行 `index.js`。
 
    ```sh
    node index.js
    ```
 
-   此示例应用首先向 WORM 写入一个条目，显示调用数据以及区块浏览器上的交易链接。然后它会读回该条目，并显示其使用的密钥以及条目中的值（值、区块号和作者）。
+   此示例应用程序首先向 WORM 写入一个条目，显示调用数据以及区块浏览器上的交易链接。然后它读回该条目，并显示它使用的密钥以及条目中的值（值、区块号和作者）。
 
-客户端的大部分代码都是普通的去中心化应用 (dapp) JavaScript 代码。因此，我们再次只介绍有趣的部分。
+客户端的大部分内容都是普通的 dapp JavaScript。因此，我们再次只讨论有趣的部分。
 
 ```javascript
 .
@@ -805,11 +834,11 @@ Solidity 测试无法提供的一点是，你可以直接复制粘贴到自己�
 const main = async () => {
     const func = await worm.WRITE_ENTRY_CACHED()
 
-    // 每次都需要一个新密钥
+    // 每次都需要一个新的密钥
     const key = await worm.encodeVal(Number(new Date()))
 ```
 
-给定的时隙只能写入一次，因此我们使用时间戳来确保不会重复使用时隙。
+给定的时隙只能写入一次，因此我们使用时间戳来确保我们不会重复使用时隙。
 
 ```javascript
 const val = await worm.encodeVal("0x600D")
@@ -818,7 +847,7 @@ const val = await worm.encodeVal("0x600D")
 const calldata = func + key.slice(2) + val.slice(2)
 ```
 
-Ethers 期望调用数据是一个十六进制字符串，即 `0x` 后跟偶数个十六进制数字。由于 `key` 和 `val` 都以 `0x` 开头，我们需要移除这些前缀。
+Ethers 期望调用数据是一个十六进制字符串，即 `0x` 后跟偶数个十六进制数字。由于 `key` 和 `val` 都以 `0x` 开头，我们需要删除这些标头。
 
 ```javascript
 const tx = await worm.populateTransaction.writeEntryCached()
@@ -827,7 +856,7 @@ tx.data = calldata
 sentTx = await wallet.sendTransaction(tx)
 ```
 
-与 Solidity 测试代码一样，我们不能正常调用缓存函数。相反，我们需要使用更底层的机制。
+与 Solidity 测试代码一样，我们无法正常调用缓存函数。相反，我们需要使用更低级的机制。
 
 ```javascript
     .
@@ -841,27 +870,28 @@ sentTx = await wallet.sendTransaction(tx)
     .
 ```
 
-对于读取条目，我们可以使用常规机制。没有必要在 `view` 函数中使用参数缓存。
+对于读取条目，我们可以使用普通机制。没有必要对 `view` 函数使用参数缓存。
 
 ## 结论 {#conclusion}
 
-本文中的代码是一个概念验证，目的是让这个想法易于理解。对于生产就绪的系统，你可能需要实现一些附加功能：
+本文中的代码是一个概念验证，目的是使这个想法易于理解。对于生产就绪的系统，你可能需要实现一些附加功能：
 
 - 处理非 `uint256` 的值。例如，字符串。
 - 也许可以在用户和缓存之间建立映射，而不是使用全局缓存。不同的用户使用不同的值。
-- 用于地址的值与用于其他目的的值不同。为地址单独设置一个缓存可能是有意义的。
+- 用于地址的值不同于用于其他目的的值。为地址单独设置一个缓存可能是有意义的。
 - 目前，缓存密钥采用“先到先得，密钥最小”的算法。前 16 个值可以作为单字节发送。接下来的 4080 个值可以作为双字节发送。接下来的大约一百万个值是三字节，依此类推。生产系统应该在缓存条目上保留使用计数器并重新组织它们，以便 16 个_最常见_的值是一个字节，接下来的 4080 个最常见的值是两个字节，依此类推。
 
-  然而，这是一个潜在的危险操作。想象一下以下事件序列：
+  然而，这是一个潜在的危险操作。想象以下事件序列：
 
-  1. Noam Naive 调用 `encodeVal` 来编码他想要发送代币的地址。该地址是应用程序上最早使用的地址之一，因此编码值为 0x06。这是一个 `view` 函数，而不是一笔交易，因此它只发生在 Noam 和他使用的节点之间，没有其他人知道
+  1. Noam Naive 调用 `encodeVal` 来编码他想要发送代币的地址。该地址是应用程序上最早使用的地址之一，因此编码值为 0x06。这是一个 `view` 函数，而不是一笔交易，因此它只在 Noam 和他使用的节点之间进行，没有其他人知道它。
 
-  2. Owen Owner 运行缓存重排序操作。实际上很少有人使用该地址，因此它现在被编码为 0x201122。另一个不同的值 10<sup>18</sup> 被分配为 0x06。
+  2. Owen Owner 运行缓存重新排序操作。实际上很少有人使用该地址，因此它现在被编码为 0x201122。另一个不同的值 10<sup>18</sup> 被分配为 0x06。
 
-  3. Noam Naive 将他的代币发送到 0x06。它们进入了地址 `0x0000000000000000000000000de0b6b3a7640000`，由于没有人知道该地址的私钥，它们就被困在那里了。Noam _很不高兴_。
+  3. Noam Naive 将他的代币发送到 0x06。它们进入了地址 `0x0000000000000000000000000de0b6b3a7640000`，由于没有人知道该地址的私钥，它们就被卡在那里了。Noam _很不高兴_。
 
-  有多种方法可以解决这个问题，以及在缓存重排序期间内存池中交易的相关问题，但你必须意识到这一点。
+  有办法解决这个问题，以及在缓存重新排序期间内存池中交易的相关问题，但你必须意识到这一点。
 
-我在这里用 Optimism 演示了缓存，因为我是 Optimism 的员工，这是我最了解的 Rollup。但它应该适用于任何对内部处理收取极低成本的 Rollup，相比之下，将交易数据写入一层网络 (l1) 才是主要开销。
+我在这里用 Optimism 演示了缓存，因为我是 Optimism 的员工，这是我最了解的 Rollup。但它应该适用于任何对内部处理收取极低成本的 Rollup，因此相比之下，将交易数据写入 L1 是主要开销。正如本文顶部的说明中所解释的，在决定缓存是否值得之前，请检查当前的费用。
 
 [点击此处查看我的更多作品](https://cryptodocguy.pro/)。
+

@@ -22,7 +22,7 @@ _Pedagang_ mengirimkan satu jenis token ke kolam dan menerima jenis lainnya (mis
 
 Ketika penyedia likuiditas menginginkan aset mereka kembali, mereka dapat membakar token kolam dan menerima kembali token mereka, termasuk bagian imbalan mereka.
 
-[Klik di sini untuk deskripsi yang lebih lengkap](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
+[Klik di sini untuk deskripsi yang lebih lengkap](https://developers.uniswap.org/docs/protocols/v2/concepts/swapping).
 
 ### Mengapa v2? Mengapa bukan v3? {#why-v2}
 
@@ -109,7 +109,7 @@ Ini adalah kontrak aman yang menyimpan likuiditas.
 
 ### UniswapV2Pair.sol {#uniswapv2pair}
 
-[Kontrak ini](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) mengimplementasikan kolam sebenarnya yang menukar token. Ini adalah fungsionalitas inti Uniswap.
+[Kontrak ini](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol) mengimplementasikan kolam aktual yang menukar token. Ini adalah fungsionalitas inti Uniswap.
 
 ```solidity
 pragma solidity =0.5.16;
@@ -135,7 +135,7 @@ Kontrak ini mewarisi dari `UniswapV2ERC20`, yang menyediakan fungsi ERC-20 untuk
     using SafeMath  for uint;
 ```
 
-[Pustaka SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) digunakan untuk menghindari overflow dan underflow. Hal ini penting karena jika tidak, kita mungkin akan berakhir pada situasi di mana sebuah nilai seharusnya `-1`, tetapi malah menjadi `2^256-1`.
+[Pustaka SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) digunakan untuk menghindari overflow dan underflow. Ini penting karena jika tidak, kita mungkin berakhir dengan situasi di mana sebuah nilai seharusnya `-1`, tetapi malah menjadi `2^256-1`.
 
 ```solidity
     using UQ112x112 for uint224;
@@ -339,7 +339,7 @@ Fungsi ini memungkinkan pabrik (dan hanya pabrik) untuk menentukan dua token ERC
 ##### \_update
 
 ```solidity
-    // memperbarui cadangan dan, pada panggilan pertama per blok, akumulator harga
+    // perbarui cadangan dan, pada panggilan pertama per blok, akumulator harga
     function _update(uint balance0, uint balance1, uint112 _reserve0, uint112 _reserve1) private {
 ```
 
@@ -349,7 +349,7 @@ Fungsi ini dipanggil setiap kali token disetor atau ditarik.
         require(balance0 <= uint112(-1) && balance1 <= uint112(-1), 'UniswapV2: OVERFLOW');
 ```
 
-Jika balance0 atau balance1 (uint256) lebih tinggi dari uint112(-1) (=2^112-1) (sehingga meluap & kembali ke 0 saat dikonversi ke uint112) tolak untuk melanjutkan \_update guna mencegah overflow. Dengan token normal yang dapat dibagi lagi menjadi 10^18 unit, ini berarti setiap pertukaran dibatasi hingga sekitar 5,1\*10^15 dari setiap token. Sejauh ini hal tersebut belum menjadi masalah.
+Jika balance0 atau balance1 (uint256) lebih tinggi dari uint112(-1) (=2^112-1) (sehingga terjadi overflow & kembali ke 0 saat dikonversi ke uint112) tolak untuk melanjutkan \_update guna mencegah overflow. Dengan token normal yang dapat dibagi menjadi 10^18 unit, ini berarti setiap pertukaran dibatasi hingga sekitar 5.1\*10^15 dari setiap token. Sejauh ini hal tersebut belum menjadi masalah.
 
 ```solidity
         uint32 blockTimestamp = uint32(block.timestamp % 2**32);
@@ -357,7 +357,7 @@ Jika balance0 atau balance1 (uint256) lebih tinggi dari uint112(-1) (=2^112-1) (
         if (timeElapsed > 0 && _reserve0 != 0 && _reserve1 != 0) {
 ```
 
-Jika waktu yang berlalu bukan nol, itu berarti kita adalah transaksi pertukaran pertama di blok ini. Dalam hal ini, kita perlu memperbarui akumulator biaya.
+Jika waktu yang berlalu tidak nol, itu berarti kita adalah transaksi pertukaran pertama pada blok ini. Dalam hal ini, kita perlu memperbarui akumulator biaya.
 
 ```solidity
             // * tidak pernah overflow, dan + overflow diinginkan
@@ -366,20 +366,20 @@ Jika waktu yang berlalu bukan nol, itu berarti kita adalah transaksi pertukaran 
         }
 ```
 
-Setiap akumulator biaya diperbarui dengan biaya terbaru (cadangan token lain/cadangan token ini) dikalikan waktu yang berlalu dalam detik. Untuk mendapatkan harga rata-rata, Anda membaca harga kumulatif di dua titik waktu dan membaginya dengan perbedaan waktu di antara keduanya. Misalnya, asumsikan urutan peristiwa ini:
+Setiap akumulator biaya diperbarui dengan biaya terbaru (cadangan token lain/cadangan token ini) dikalikan waktu yang berlalu dalam detik. Untuk mendapatkan harga rata-rata, Anda membaca harga kumulatif pada dua titik waktu dan membaginya dengan perbedaan waktu di antara keduanya. Misalnya, asumsikan urutan kejadian ini:
 
-| Peristiwa                                                              |  reserve0 |  reserve1 | stempel waktu | Nilai tukar marjinal (reserve1 / reserve0) |       price0CumulativeLast |
-| ---------------------------------------------------------------------- | --------: | --------: | ------------- | -----------------------------------------: | -------------------------: |
-| Pengaturan awal                                                        | 1,000.000 | 1,000.000 | 5,000         |                                      1.000 |                          0 |
-| Pedagang A menyetor 50 token0 dan mendapatkan kembali 47.619 token1    | 1,050.000 |   952.381 | 5,020         |                                      0.907 |                         20 |
-| Pedagang B menyetor 10 token0 dan mendapatkan kembali 8.984 token1     | 1,060.000 |   943.396 | 5,030         |                                      0.890 |       20+10\*0.907 = 29.07 |
-| Pedagang C menyetor 40 token0 dan mendapatkan kembali 34.305 token1    | 1,100.000 |   909.090 | 5,100         |                                      0.826 |    29.07+70\*0.890 = 91.37 |
-| Pedagang D menyetor 100 token1 dan mendapatkan kembali 109.01 token0   |   990.990 | 1,009.090 | 5,110         |                                      1.018 |    91.37+10\*0.826 = 99.63 |
-| Pedagang E menyetor 10 token0 dan mendapatkan kembali 10.079 token1    | 1,000.990 |   999.010 | 5,150         |                                      0.998 | 99.63+40\*1.1018 = 143.702 |
+| Kejadian                                                    |  reserve0 |  reserve1 | timestamp | Nilai tukar marjinal (reserve1 / reserve0) |       price0CumulativeLast |
+| -------------------------------------------------------- | --------: | --------: | --------- | -------------------------------------------: | -------------------------: |
+| Pengaturan awal                                            | 1,000.000 | 1,000.000 | 5,000     |                                        1.000 |                          0 |
+| Pedagang A menyetor 50 token0 dan mendapatkan kembali 47.619 token1  | 1,050.000 |   952.381 | 5,020     |                                        0.907 |                         20 |
+| Pedagang B menyetor 10 token0 dan mendapatkan kembali 8.984 token1   | 1,060.000 |   943.396 | 5,030     |                                        0.890 |       20+10\*0.907 = 29.07 |
+| Pedagang C menyetor 40 token0 dan mendapatkan kembali 34.305 token1  | 1,100.000 |   909.090 | 5,100     |                                        0.826 |    29.07+70\*0.890 = 91.37 |
+| Pedagang D menyetor 100 token1 dan mendapatkan kembali 109.01 token0 |   990.990 | 1,009.090 | 5,110     |                                        1.018 |    91.37+10\*0.826 = 99.63 |
+| Pedagang E menyetor 10 token0 dan mendapatkan kembali 10.079 token1  | 1,000.990 |   999.010 | 5,150     |                                        0.998 |   99.63+40\*1.018 = 140.35 |
 
-Katakanlah kita ingin menghitung harga rata-rata **Token0** antara stempel waktu 5.030 dan 5.150. Perbedaan nilai `price0Cumulative` adalah 143.702-29.07=114.632. Ini adalah rata-rata selama dua menit (120 detik). Jadi harga rata-ratanya adalah 114.632/120 = 0.955.
+Katakanlah kita ingin menghitung harga rata-rata **Token0** antara stempel waktu 5.030 dan 5.150. Perbedaan nilai `price0Cumulative` adalah 140,35-29,07=111,28. Ini adalah rata-rata selama dua menit (120 detik). Jadi harga rata-ratanya adalah 111,28/120 = 0,927.
 
-Perhitungan harga ini adalah alasan kita perlu mengetahui ukuran cadangan lama.
+Perhitungan harga ini adalah alasan kita perlu mengetahui ukuran cadangan yang lama.
 
 ```solidity
         reserve0 = uint112(balance0);
@@ -389,18 +389,18 @@ Perhitungan harga ini adalah alasan kita perlu mengetahui ukuran cadangan lama.
     }
 ```
 
-Terakhir, perbarui variabel global dan pancarkan peristiwa `Sync`.
+Terakhir, perbarui variabel global dan pancarkan kejadian `Sync`.
 
 ##### \_mintFee
 
 ```solidity
-    // jika biaya aktif, cetak likuiditas yang setara dengan 1/6 dari pertumbuhan sqrt(k)
+    // jika biaya aktif, cetak Likuiditas yang setara dengan 1/6 dari pertumbuhan sqrt(k)
     function _mintFee(uint112 _reserve0, uint112 _reserve1) private returns (bool feeOn) {
 ```
 
-Di Uniswap 2.0, pedagang membayar biaya 0,30% untuk menggunakan pasar. Sebagian besar biaya tersebut (0,25% dari perdagangan) selalu diberikan kepada penyedia likuiditas. Sisa 0,05% dapat diberikan kepada penyedia likuiditas atau ke alamat yang ditentukan oleh pabrik sebagai biaya protokol, yang membayar Uniswap atas upaya pengembangan mereka.
+Di Uniswap 2.0, pedagang membayar biaya 0,30% untuk menggunakan pasar. Sebagian besar biaya tersebut (0,25% dari perdagangan) selalu diberikan kepada penyedia likuiditas. Sisa 0,05% dapat diberikan kepada penyedia likuiditas atau ke alamat yang ditentukan oleh pabrik sebagai biaya protokol, yang membayar Uniswap atas upaya pengembangan mereka. Di Mainnet Ethereum, biaya protokol ini diaktifkan: alamat `feeTo` pabrik telah diatur, sehingga 0,05% masuk ke alamat tersebut alih-alih ke penyedia likuiditas.
 
-Untuk mengurangi perhitungan (dan karenanya biaya gas), biaya ini hanya dihitung ketika likuiditas ditambahkan atau ditarik dari kolam, bukan pada setiap transaksi.
+Untuk mengurangi perhitungan (dan dengan demikian biaya gas), biaya ini hanya dihitung ketika likuiditas ditambahkan atau dihapus dari kolam, bukan pada setiap transaksi.
 
 ```solidity
         address feeTo = IUniswapV2Factory(factory).feeTo();
@@ -421,7 +421,7 @@ Akses ke penyimpanan jauh lebih mahal daripada akses ke memori volatil yang dile
             if (_kLast != 0) {
 ```
 
-Penyedia likuiditas mendapatkan bagian mereka hanya dari apresiasi token likuiditas mereka. Namun biaya protokol mewajibkan token likuiditas baru untuk dicetak dan diberikan ke alamat `feeTo`.
+Penyedia likuiditas mendapatkan bagian mereka hanya dengan apresiasi token likuiditas mereka. Namun, biaya protokol mengharuskan token likuiditas baru dicetak dan diberikan ke alamat `feeTo`.
 
 ```solidity
                 uint rootK = Math.sqrt(uint(_reserve0).mul(_reserve1));
@@ -437,7 +437,7 @@ Jika ada likuiditas baru yang dapat dipungut biaya protokol. Anda dapat melihat 
                     uint liquidity = numerator / denominator;
 ```
 
-Perhitungan biaya yang rumit ini dijelaskan dalam [buku putih](https://app.uniswap.org/whitepaper.pdf) di halaman 5. Kita tahu bahwa antara waktu `kLast` dihitung dan saat ini tidak ada likuiditas yang ditambahkan atau ditarik (karena kita menjalankan perhitungan ini setiap kali likuiditas ditambahkan atau ditarik, sebelum benar-benar berubah), jadi setiap perubahan pada `reserve0 * reserve1` harus berasal dari biaya transaksi (tanpanya kita akan menjaga `reserve0 * reserve1` tetap konstan).
+Perhitungan biaya yang rumit ini dijelaskan dalam [buku putih](https://app.uniswap.org/whitepaper.pdf) di halaman 5. Kita tahu bahwa antara waktu `kLast` dihitung dan saat ini tidak ada likuiditas yang ditambahkan atau dihapus (karena kita menjalankan perhitungan ini setiap kali likuiditas ditambahkan atau dihapus, sebelum benar-benar berubah), jadi setiap perubahan pada `reserve0 * reserve1` harus berasal dari biaya transaksi (tanpanya kita akan menjaga `reserve0 * reserve1` tetap konstan).
 
 ```solidity
                     if (liquidity > 0) _mint(feeTo, liquidity);
@@ -454,8 +454,8 @@ Gunakan fungsi `UniswapV2ERC20._mint` untuk benar-benar mencetak token likuidita
     }
 ```
 
-Jika tidak ada biaya, atur `kLast` menjadi nol (jika belum). Ketika kontrak ini ditulis, ada [fitur pengembalian dana gas](https://eips.ethereum.org/EIPS/eip-3298) yang mendorong kontrak untuk mengurangi ukuran keseluruhan state Ethereum dengan mengosongkan penyimpanan yang tidak mereka butuhkan.
-Kode ini mendapatkan pengembalian dana tersebut jika memungkinkan.
+Jika tidak ada biaya, atur `kLast` menjadi nol (jika belum). Ethereum memiliki fitur pengembalian dana gas yang mendorong kontrak untuk mengurangi ukuran keseluruhan state Ethereum dengan mengosongkan penyimpanan yang tidak mereka butuhkan.
+Kode ini mendapatkan pengembalian dana tersebut jika memungkinkan. Sejak pemutakhiran London ([EIP-3529](https://eips.ethereum.org/EIPS/eip-3529)), pengembalian dana lebih kecil dan dibatasi hingga seperlima dari gas transaksi, tetapi masih ada.
 
 #### Fungsi yang Dapat Diakses Secara Eksternal {#pair-external}
 
@@ -692,7 +692,7 @@ Dalam hal ini ada dua solusi:
 
 ### UniswapV2Factory.sol {#uniswapv2factory}
 
-[Kontrak ini](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) membuat pertukaran pasangan.
+[Kontrak ini](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Factory.sol) membuat pertukaran pasangan.
 
 ```solidity
 pragma solidity =0.5.16;
@@ -715,9 +715,9 @@ Alamat `feeTo` mengakumulasi token likuiditas untuk biaya protokol, dan `feeToSe
 
 Variabel-variabel ini melacak pasangan, pertukaran antara dua jenis token.
 
-Yang pertama, `getPair`, adalah pemetaan yang mengidentifikasi kontrak pertukaran pasangan berdasarkan dua token ERC-20 yang ditukarnya. Token ERC-20 diidentifikasi oleh alamat kontrak yang mengimplementasikannya, sehingga kunci dan nilainya semuanya adalah alamat. Untuk mendapatkan alamat pertukaran pasangan yang memungkinkan Anda mengonversi dari `tokenA` ke `tokenB`, Anda menggunakan `getPair[<tokenA address>][<tokenB address>]` (atau sebaliknya).
+Yang pertama, `getPair`, adalah pemetaan yang mengidentifikasi kontrak pertukaran pasangan berdasarkan dua token ERC-20 yang ditukarnya. Token ERC-20 diidentifikasi oleh alamat kontrak yang mengimplementasikannya, jadi kunci dan nilainya semuanya adalah alamat. Untuk mendapatkan alamat pertukaran pasangan yang memungkinkan Anda mengonversi dari `tokenA` ke `tokenB`, Anda menggunakan `getPair[<tokenA address>][<tokenB address>]` (atau sebaliknya).
 
-Variabel kedua, `allPairs`, adalah array yang mencakup semua alamat pertukaran pasangan yang dibuat oleh pabrik ini. Di Ethereum Anda tidak dapat melakukan iterasi pada konten pemetaan, atau mendapatkan daftar semua kunci, jadi variabel ini adalah satu-satunya cara untuk mengetahui pertukaran mana yang dikelola pabrik ini.
+Variabel kedua, `allPairs`, adalah array yang mencakup semua alamat pertukaran pasangan yang dibuat oleh pabrik ini. Di Ethereum, Anda tidak dapat melakukan iterasi pada konten pemetaan, atau mendapatkan daftar semua kunci, jadi variabel ini adalah satu-satunya cara untuk mengetahui pertukaran mana yang dikelola pabrik ini.
 
 Catatan: Alasan Anda tidak dapat melakukan iterasi pada semua kunci pemetaan adalah karena penyimpanan data kontrak itu _mahal_, jadi semakin sedikit kita menggunakannya semakin baik, dan semakin jarang kita mengubahnya
 semakin baik. Anda dapat membuat [pemetaan yang mendukung iterasi](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol), tetapi mereka memerlukan penyimpanan ekstra untuk daftar kunci. Di sebagian besar aplikasi, Anda tidak membutuhkannya.
@@ -726,7 +726,7 @@ semakin baik. Anda dapat membuat [pemetaan yang mendukung iterasi](https://githu
     event PairCreated(address indexed token0, address indexed token1, address pair, uint);
 ```
 
-Peristiwa ini dipancarkan ketika pertukaran pasangan baru dibuat. Ini mencakup alamat token, alamat pertukaran pasangan, dan jumlah total pertukaran yang dikelola oleh pabrik.
+Kejadian ini dipancarkan ketika pertukaran pasangan baru dibuat. Ini mencakup alamat token, alamat pertukaran pasangan, dan jumlah total pertukaran yang dikelola oleh pabrik.
 
 ```solidity
     constructor(address _feeToSetter) public {
@@ -755,12 +755,12 @@ Ini adalah fungsi utama pabrik, untuk membuat pertukaran pasangan antara dua tok
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Kita ingin alamat pertukaran baru bersifat deterministik, sehingga dapat dihitung sebelumnya secara offchain (ini dapat berguna untuk [transaksi lapisan 2 (l2)](/developers/docs/scaling/)).
+Kita ingin alamat pertukaran baru menjadi deterministik, sehingga dapat dihitung sebelumnya secara offchain (ini dapat berguna untuk [transaksi lapisan 2 (L2)](/developers/docs/scaling/)).
 Untuk melakukan ini, kita perlu memiliki urutan alamat token yang konsisten, terlepas dari urutan kita menerimanya, jadi kita mengurutkannya di sini.
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
-        require(getPair[token0][token1] == address(0), 'UniswapV2: PAIR_EXISTS'); // pemeriksaan tunggal sudah cukup
+        require(getPair[token0][token1] == address(0), 'UniswapV2: PAIR_EXISTS'); // satu pemeriksaan sudah cukup
 ```
 
 Kolam likuiditas yang besar lebih baik daripada yang kecil, karena harganya lebih stabil. Kita tidak ingin memiliki lebih dari satu kolam likuiditas per pasangan token. Jika sudah ada pertukaran, tidak perlu membuat yang lain untuk pasangan yang sama.
@@ -769,8 +769,8 @@ Kolam likuiditas yang besar lebih baik daripada yang kecil, karena harganya lebi
         bytes memory bytecode = type(UniswapV2Pair).creationCode;
 ```
 
-Untuk membuat kontrak baru, kita memerlukan kode yang membuatnya (baik fungsi konstruktor maupun kode yang menulis ke memori kode bita EVM dari kontrak yang sebenarnya). Biasanya di Solidity kita hanya menggunakan `addr = new <name of contract>(<constructor parameters>)` dan kompiler mengurus semuanya untuk kita, tetapi untuk memiliki alamat kontrak yang deterministik kita perlu menggunakan [opcode CREATE2](https://eips.ethereum.org/EIPS/eip-1014).
-Ketika kode ini ditulis, opcode tersebut belum didukung oleh Solidity, sehingga perlu untuk mendapatkan kodenya secara manual. Ini tidak lagi menjadi masalah, karena [Solidity sekarang mendukung CREATE2](https://docs.soliditylang.org/en/v0.8.3/control-structures.html#salted-contract-creations-create2).
+Untuk membuat kontrak baru, kita memerlukan kode yang membuatnya (baik fungsi konstruktor maupun kode yang menulis ke memori kode bita EVM dari kontrak aktual). Biasanya di Solidity kita hanya menggunakan `addr = new <name of contract>(<constructor parameters>)` dan kompiler mengurus semuanya untuk kita, tetapi untuk memiliki alamat kontrak yang deterministik kita perlu menggunakan [opcode CREATE2](https://eips.ethereum.org/EIPS/eip-1014).
+Ketika kode ini ditulis, opcode tersebut belum didukung oleh Solidity, jadi perlu untuk mendapatkan kodenya secara manual. Ini tidak lagi menjadi masalah, karena [Solidity sekarang mendukung CREATE2](https://docs.soliditylang.org/en/v0.8.3/control-structures.html#salted-contract-creations-create2).
 
 ```solidity
         bytes32 salt = keccak256(abi.encodePacked(token0, token1));
@@ -779,7 +779,7 @@ Ketika kode ini ditulis, opcode tersebut belum didukung oleh Solidity, sehingga 
         }
 ```
 
-Ketika sebuah opcode belum didukung oleh Solidity, kita dapat memanggilnya menggunakan [assembly sebaris (inline assembly)](https://docs.soliditylang.org/en/v0.8.3/assembly.html).
+Ketika sebuah opcode belum didukung oleh Solidity, kita dapat memanggilnya menggunakan [inline assembly](https://docs.soliditylang.org/en/v0.8.3/assembly.html).
 
 ```solidity
         IUniswapV2Pair(pair).initialize(token0, token1);
@@ -789,13 +789,13 @@ Panggil fungsi `initialize` untuk memberi tahu pertukaran baru dua token apa yan
 
 ```solidity
         getPair[token0][token1] = pair;
-        getPair[token1][token0] = pair; // isi pemetaan ke arah sebaliknya
+        getPair[token1][token0] = pair; // isi pemetaan dalam arah sebaliknya
         allPairs.push(pair);
         emit PairCreated(token0, token1, pair, allPairs.length);
     }
 ```
 
-Simpan informasi pasangan baru dalam variabel state dan pancarkan peristiwa untuk memberi tahu dunia tentang pertukaran pasangan baru.
+Simpan informasi pasangan baru dalam variabel state dan pancarkan kejadian untuk memberi tahu dunia tentang pertukaran pasangan baru.
 
 ```solidity
     function setFeeTo(address _feeTo) external {
@@ -814,10 +814,10 @@ Kedua fungsi ini memungkinkan `feeSetter` untuk mengontrol penerima biaya (jika 
 
 ### UniswapV2ERC20.sol {#uniswapv2erc20}
 
-[Kontrak ini](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) mengimplementasikan token likuiditas ERC-20. Ini mirip dengan [kontrak ERC-20 OpenZeppelin](/developers/tutorials/erc20-annotated-code), jadi saya hanya akan menjelaskan bagian yang berbeda, yaitu fungsionalitas `permit`.
+[Kontrak ini](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2ERC20.sol) mengimplementasikan token likuiditas ERC-20. Ini mirip dengan [kontrak ERC-20 OpenZeppelin](/developers/tutorials/erc20-annotated-code), jadi saya hanya akan menjelaskan bagian yang berbeda, yaitu fungsionalitas `permit`.
 
-Transaksi di Ethereum membutuhkan biaya Ether (ETH), yang setara dengan uang sungguhan. Jika Anda memiliki token ERC-20 tetapi tidak memiliki ETH, Anda tidak dapat mengirim transaksi, sehingga Anda tidak dapat melakukan apa pun dengannya. Salah satu solusi untuk menghindari masalah ini adalah [transaksi meta (meta-transactions)](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions).
-Pemilik token menandatangani transaksi yang memungkinkan orang lain untuk melakukan penarikan token secara offchain dan mengirimkannya menggunakan Internet ke penerima. Penerima, yang memiliki ETH, kemudian mengirimkan izin tersebut atas nama pemilik.
+Transaksi di Ethereum membutuhkan biaya Ether (ETH), yang setara dengan uang sungguhan. Jika Anda memiliki token ERC-20 tetapi tidak memiliki ETH, Anda tidak dapat mengirim transaksi, sehingga Anda tidak dapat melakukan apa pun dengannya. Salah satu solusi untuk menghindari masalah ini adalah [transaksi meta](https://developers.uniswap.org/docs/protocols/v2/concepts/meta-transactions).
+Pemilik token menandatangani transaksi yang memungkinkan orang lain untuk menarik token secara offchain dan mengirimkannya menggunakan Internet ke penerima. Penerima, yang memiliki ETH, kemudian mengirimkan izin atas nama pemilik.
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;
@@ -831,7 +831,7 @@ Hash ini adalah [pengidentifikasi untuk jenis transaksi](https://eips.ethereum.o
     mapping(address => uint) public nonces;
 ```
 
-Tidak mungkin bagi penerima untuk memalsukan tanda tangan digital. Namun, sangat mudah untuk mengirim transaksi yang sama dua kali (ini adalah bentuk [serangan pemutaran ulang](https://wikipedia.org/wiki/Replay_attack)). Untuk mencegah hal ini, kita menggunakan [nonce](https://wikipedia.org/wiki/Cryptographic_nonce). Jika nonce dari `Permit` baru tidak lebih dari satu dari yang terakhir digunakan, kita menganggapnya tidak valid.
+Tidak mungkin bagi penerima untuk memalsukan tanda tangan digital. Namun, sangat mudah untuk mengirim transaksi yang sama dua kali (ini adalah bentuk [serangan replay](https://wikipedia.org/wiki/Replay_attack)). Untuk mencegah hal ini, kita menggunakan [nonce](https://wikipedia.org/wiki/Cryptographic_nonce). Jika nonce dari `Permit` baru tidak satu lebih besar dari yang terakhir digunakan, kita menganggapnya tidak valid.
 
 ```solidity
     constructor() public {
@@ -862,7 +862,7 @@ Hitung [pemisah domain](https://eips.ethereum.org/EIPS/eip-712#rationale-for-dom
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
 ```
 
-Ini adalah fungsi yang mengimplementasikan izin. Fungsi ini menerima sebagai parameter bidang yang relevan, dan tiga nilai skalar untuk [tanda tangan](https://yos.io/2018/11/16/ethereum-signatures/) (v, r, dan s).
+Ini adalah fungsi yang mengimplementasikan izin. Ini menerima sebagai parameter bidang yang relevan, dan tiga nilai skalar untuk [tanda tangan](https://yos.io/2018/11/16/ethereum-signatures/) (v, r, dan s).
 
 ```solidity
         require(deadline >= block.timestamp, 'UniswapV2: EXPIRED');
@@ -880,7 +880,7 @@ Jangan terima transaksi setelah tenggat waktu.
         );
 ```
 
-`abi.encodePacked(...)` adalah pesan yang kita harapkan untuk didapatkan. Kita tahu apa seharusnya nonce tersebut, jadi kita tidak perlu mendapatkannya sebagai parameter.
+`abi.encodePacked(...)` adalah pesan yang kita harapkan untuk didapatkan. Kita tahu apa seharusnya nonce tersebut, jadi tidak perlu bagi kita untuk mendapatkannya sebagai parameter.
 
 Algoritma tanda tangan Ethereum mengharapkan untuk mendapatkan 256 bit untuk ditandatangani, jadi kita menggunakan fungsi hash `keccak256`.
 
@@ -888,7 +888,7 @@ Algoritma tanda tangan Ethereum mengharapkan untuk mendapatkan 256 bit untuk dit
         address recoveredAddress = ecrecover(digest, v, r, s);
 ```
 
-Dari intisari (digest) dan tanda tangan, kita bisa mendapatkan alamat yang menandatanganinya menggunakan [ecrecover](https://coders-errand.com/ecrecover-signature-verification-ethereum/).
+Dari intisari dan tanda tangan kita bisa mendapatkan alamat yang menandatanganinya menggunakan [ecrecover](https://coders-errand.com/ecrecover-signature-verification-ethereum/).
 
 ```solidity
         require(recoveredAddress != address(0) && recoveredAddress == owner, 'UniswapV2: INVALID_SIGNATURE');
@@ -905,12 +905,12 @@ Kontrak periphery adalah API (antarmuka program aplikasi) untuk Uniswap. Kontrak
 
 ### UniswapV2Router01.sol {#uniswapv2router01}
 
-[Kontrak ini](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) memiliki masalah, dan [seharusnya tidak lagi digunakan](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Untungnya, kontrak periphery bersifat stateless (tidak menyimpan state) dan tidak menahan aset apa pun, sehingga mudah untuk menghentikan penggunaannya dan menyarankan orang-orang untuk menggunakan penggantinya, yaitu `UniswapV2Router02`.
+[Kontrak ini](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router01.sol) memiliki masalah, dan tidak boleh lagi digunakan. Untungnya, kontrak periphery tidak memiliki state dan tidak menyimpan aset apa pun, sehingga mudah untuk menghentikan penggunaannya dan menyarankan orang untuk menggunakan penggantinya, yaitu `UniswapV2Router02`.
 
 ### UniswapV2Router02.sol {#uniswapv2router02}
 
-Dalam kebanyakan kasus, Anda akan menggunakan Uniswap melalui [kontrak ini](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
-Anda dapat melihat cara menggunakannya [di sini](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
+Dalam kebanyakan kasus, Anda akan menggunakan Uniswap melalui [kontrak ini](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
+Anda dapat melihat cara menggunakannya [di sini](https://developers.uniswap.org/docs/protocols/v2/guides/swapping).
 
 ```solidity
 pragma solidity =0.6.6;
@@ -925,7 +925,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-Sebagian besar dari ini pernah kita temui sebelumnya, atau cukup jelas. Satu-satunya pengecualian adalah `IWETH.sol`. Uniswap v2 memungkinkan pertukaran untuk pasangan token ERC-20 apa pun, tetapi ether (ETH) itu sendiri bukanlah token ERC-20. ETH ada sebelum standar tersebut dan ditransfer melalui mekanisme yang unik. Untuk memungkinkan penggunaan ETH dalam kontrak yang berlaku untuk token ERC-20, orang-orang menciptakan kontrak [ether terbungkus (weth)](https://weth.tkn.eth.limo/). Anda mengirimkan ETH ke kontrak ini, dan kontrak tersebut mencetak jumlah WETH yang setara untuk Anda. Atau Anda dapat membakar WETH, dan mendapatkan ETH kembali.
+Sebagian besar dari ini telah kita temui sebelumnya, atau cukup jelas. Satu-satunya pengecualian adalah `IWETH.sol`. Uniswap v2 memungkinkan pertukaran untuk setiap pasangan token ERC-20, tetapi Ether (ETH) itu sendiri bukanlah token ERC-20. ETH mendahului standar tersebut dan ditransfer dengan mekanisme unik. Untuk memungkinkan penggunaan ETH dalam kontrak yang berlaku untuk token ERC-20, orang-orang membuat kontrak [ether terbungkus (WETH)](https://weth.tkn.eth.limo/). Anda mengirimkan ETH ke kontrak ini, dan kontrak ini mencetak jumlah WETH yang setara untuk Anda. Atau Anda dapat membakar WETH, dan mendapatkan kembali ETH.
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {
@@ -935,7 +935,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     address public immutable override WETH;
 ```
 
-Router perlu mengetahui factory mana yang akan digunakan, dan untuk transaksi yang mewajibkan WETH, kontrak WETH mana yang akan digunakan. Nilai-nilai ini [tidak dapat diubah](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables), yang berarti mereka hanya dapat diatur di dalam konstruktor. Hal ini memberikan keyakinan kepada pengguna bahwa tidak ada yang dapat mengubahnya untuk menunjuk ke kontrak yang kurang jujur.
+Router perlu mengetahui pabrik mana yang akan digunakan, dan untuk transaksi yang memerlukan WETH, kontrak WETH mana yang akan digunakan. Nilai-nilai ini [tidak dapat diubah](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables), yang berarti mereka hanya dapat diatur di dalam konstruktor. Ini memberi pengguna keyakinan bahwa tidak ada yang dapat mengubahnya untuk menunjuk ke kontrak yang kurang jujur.
 
 ```solidity
     modifier ensure(uint deadline) {
@@ -944,7 +944,7 @@ Router perlu mengetahui factory mana yang akan digunakan, dan untuk transaksi ya
     }
 ```
 
-Modifier ini memastikan bahwa transaksi dengan batas waktu ("lakukan X sebelum waktu Y jika Anda bisa") tidak terjadi setelah batas waktunya habis.
+Pengubah ini memastikan bahwa transaksi dengan batas waktu ("lakukan X sebelum waktu Y jika Anda bisa") tidak terjadi setelah batas waktunya.
 
 ```solidity
     constructor(address _factory, address _WETH) public {
@@ -973,7 +973,7 @@ Fungsi-fungsi ini menambahkan token ke pertukaran pasangan, yang meningkatkan ko
     function _addLiquidity(
 ```
 
-Fungsi ini digunakan untuk menghitung jumlah token A dan B yang harus disetorkan ke dalam pertukaran pasangan.
+Fungsi ini digunakan untuk menghitung jumlah token A dan B yang harus disetor ke dalam pertukaran pasangan.
 
 ```solidity
         address tokenA,
@@ -987,18 +987,18 @@ Ini adalah alamat dari kontrak token ERC-20.
         uint amountBDesired,
 ```
 
-Ini adalah jumlah yang ingin disetorkan oleh penyedia likuiditas. Ini juga merupakan jumlah maksimum A dan B yang akan disetorkan.
+Ini adalah jumlah yang ingin disetor oleh penyedia likuiditas. Ini juga merupakan jumlah maksimum A dan B yang akan disetor.
 
 ```solidity
         uint amountAMin,
         uint amountBMin
 ```
 
-Ini adalah jumlah minimum yang dapat diterima untuk disetorkan. Jika transaksi tidak dapat berlangsung dengan jumlah ini atau lebih, kembalikan transaksi tersebut. Jika Anda tidak menginginkan fitur ini, cukup tentukan nol.
+Ini adalah jumlah minimum yang dapat diterima untuk disetor. Jika transaksi tidak dapat berlangsung dengan jumlah ini atau lebih, kembalikan transaksi tersebut. Jika Anda tidak menginginkan fitur ini, cukup tentukan nol.
 
-Penyedia likuiditas biasanya menentukan nilai minimum, karena mereka ingin membatasi transaksi pada nilai tukar yang mendekati nilai tukar saat ini. Jika nilai tukar berfluktuasi terlalu banyak, itu mungkin berarti ada berita yang mengubah nilai yang mendasarinya, dan mereka ingin memutuskan secara manual apa yang harus dilakukan.
+Penyedia likuiditas biasanya menentukan nilai minimum, karena mereka ingin membatasi transaksi pada nilai tukar yang mendekati nilai saat ini. Jika nilai tukar berfluktuasi terlalu banyak, itu mungkin berarti ada berita yang mengubah nilai yang mendasarinya, dan mereka ingin memutuskan secara manual apa yang harus dilakukan.
 
-Sebagai contoh, bayangkan sebuah kasus di mana nilai tukarnya adalah satu banding satu dan penyedia likuiditas menentukan nilai-nilai ini:
+Misalnya, bayangkan sebuah kasus di mana nilai tukarnya adalah satu banding satu dan penyedia likuiditas menentukan nilai-nilai ini:
 
 | Parameter      | Nilai |
 | -------------- | ----: |
@@ -1007,15 +1007,15 @@ Sebagai contoh, bayangkan sebuah kasus di mana nilai tukarnya adalah satu bandin
 | amountAMin     |   900 |
 | amountBMin     |   800 |
 
-Selama nilai tukar tetap berada di antara 0,9 dan 1,25, transaksi akan berlangsung. Jika nilai tukar keluar dari kisaran tersebut, transaksi akan dibatalkan.
+Selama nilai tukar tetap antara 0,9 dan 1,25, transaksi berlangsung. Jika nilai tukar keluar dari kisaran tersebut, transaksi dibatalkan.
 
-Alasan dari tindakan pencegahan ini adalah karena transaksi tidak terjadi secara instan, Anda mengirimkannya dan pada akhirnya seorang validator akan memasukkannya ke dalam sebuah blok (kecuali jika harga gas Anda sangat rendah, dalam hal ini Anda perlu mengirimkan transaksi lain dengan nonce yang sama dan harga gas yang lebih tinggi untuk menimpanya). Anda tidak dapat mengontrol apa yang terjadi selama interval antara pengiriman dan penyertaan.
+Alasan tindakan pencegahan ini adalah karena transaksi tidak langsung terjadi, Anda mengirimkannya dan pada akhirnya validator akan memasukkannya ke dalam blok (kecuali harga gas Anda sangat rendah, dalam hal ini Anda harus mengirimkan transaksi lain dengan nonce yang sama dan harga gas yang lebih tinggi untuk menimpanya). Anda tidak dapat mengontrol apa yang terjadi selama interval antara pengiriman dan penyertaan.
 
 ```solidity
     ) internal virtual returns (uint amountA, uint amountB) {
 ```
 
-Fungsi ini mengembalikan jumlah yang harus disetorkan oleh penyedia likuiditas untuk memiliki rasio yang sama dengan rasio saat ini di antara cadangan.
+Fungsi ini mengembalikan jumlah yang harus disetor oleh penyedia likuiditas untuk memiliki rasio yang sama dengan rasio saat ini antara cadangan.
 
 ```solidity
         // buat pasangan jika belum ada
@@ -1037,14 +1037,14 @@ Dapatkan cadangan saat ini dalam pasangan tersebut.
             (amountA, amountB) = (amountADesired, amountBDesired);
 ```
 
-Jika cadangan saat ini kosong, maka ini adalah pertukaran pasangan yang baru. Jumlah yang akan disetorkan harus sama persis dengan jumlah yang ingin diberikan oleh penyedia likuiditas.
+Jika cadangan saat ini kosong maka ini adalah pertukaran pasangan baru. Jumlah yang akan disetor harus sama persis dengan yang ingin diberikan oleh penyedia likuiditas.
 
 ```solidity
         } else {
             uint amountBOptimal = UniswapV2Library.quote(amountADesired, reserveA, reserveB);
 ```
 
-Jika kita perlu melihat berapa jumlahnya, kita mendapatkan jumlah optimal menggunakan [fungsi ini](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L35). Kita menginginkan rasio yang sama dengan cadangan saat ini.
+Jika kita perlu melihat berapa jumlahnya, kita mendapatkan jumlah optimal menggunakan [fungsi ini](https://github.com/Uniswap/v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L36). Kita menginginkan rasio yang sama dengan cadangan saat ini.
 
 ```solidity
             if (amountBOptimal <= amountBDesired) {
@@ -1052,7 +1052,7 @@ Jika kita perlu melihat berapa jumlahnya, kita mendapatkan jumlah optimal menggu
                 (amountA, amountB) = (amountADesired, amountBOptimal);
 ```
 
-Jika `amountBOptimal` lebih kecil dari jumlah yang ingin disetorkan oleh penyedia likuiditas, itu berarti token B saat ini lebih berharga daripada yang diperkirakan oleh penyetor likuiditas, sehingga jumlah yang lebih kecil diperlukan.
+Jika `amountBOptimal` lebih kecil dari jumlah yang ingin disetor oleh penyedia likuiditas, itu berarti token B saat ini lebih berharga daripada yang dipikirkan oleh penyetor likuiditas, sehingga jumlah yang lebih kecil diperlukan.
 
 ```solidity
             } else {
@@ -1062,13 +1062,13 @@ Jika `amountBOptimal` lebih kecil dari jumlah yang ingin disetorkan oleh penyedi
                 (amountA, amountB) = (amountAOptimal, amountBDesired);
 ```
 
-Jika jumlah B yang optimal lebih dari jumlah B yang diinginkan, itu berarti token B saat ini kurang berharga daripada yang diperkirakan oleh penyetor likuiditas, sehingga jumlah yang lebih tinggi diperlukan. Namun, jumlah yang diinginkan adalah maksimum, jadi kita tidak dapat melakukan itu. Sebagai gantinya, kita menghitung jumlah token A yang optimal untuk jumlah token B yang diinginkan.
+Jika jumlah B yang optimal lebih dari jumlah B yang diinginkan, itu berarti token B saat ini kurang berharga daripada yang dipikirkan oleh penyetor likuiditas, sehingga jumlah yang lebih tinggi diperlukan. Namun, jumlah yang diinginkan adalah maksimum, jadi kita tidak dapat melakukan itu. Sebagai gantinya, kita menghitung jumlah token A yang optimal untuk jumlah token B yang diinginkan.
 
-Dengan menggabungkan semuanya, kita mendapatkan grafik ini. Asumsikan Anda mencoba menyetorkan seribu token A (garis biru) dan seribu token B (garis merah). Sumbu x adalah nilai tukar, A/B. Jika x=1, nilainya sama dan Anda menyetorkan seribu untuk masing-masing token. Jika x=2, nilai A dua kali lipat dari B (Anda mendapatkan dua token B untuk setiap token A) sehingga Anda menyetorkan seribu token B, tetapi hanya 500 token A. Jika x=0,5, situasinya terbalik, seribu token A dan lima ratus token B.
+Menyatukan semuanya, kita mendapatkan grafik ini. Asumsikan Anda mencoba menyetor seribu token A (garis biru) dan seribu token B (garis merah). Sumbu x adalah nilai tukar, A/B. Jika x=1, nilainya sama dan Anda menyetor seribu untuk masing-masing token. Jika x=2, A bernilai dua kali lipat dari B (Anda mendapatkan dua token B untuk setiap token A) jadi Anda menyetor seribu token B, tetapi hanya 500 token A. Jika x=0,5, situasinya terbalik, seribu token A dan lima ratus token B.
 
-![Graph](liquidityProviderDeposit.png)
+![Grafik](liquidityProviderDeposit.png)
 
-Anda dapat menyetorkan likuiditas secara langsung ke dalam kontrak inti (menggunakan [UniswapV2Pair::mint](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol#L110)), tetapi kontrak inti hanya memeriksa bahwa ia tidak dicurangi, sehingga Anda berisiko kehilangan nilai jika nilai tukar berubah antara waktu Anda mengirimkan transaksi dan waktu transaksi tersebut dieksekusi. Jika Anda menggunakan kontrak periphery, kontrak tersebut akan menghitung jumlah yang harus Anda setorkan dan segera menyetorkannya, sehingga nilai tukar tidak berubah dan Anda tidak kehilangan apa pun.
+Anda dapat menyetor likuiditas langsung ke dalam kontrak inti (menggunakan [UniswapV2Pair::mint](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol#L110)), tetapi kontrak inti hanya memeriksa bahwa ia tidak dicurangi, sehingga Anda berisiko kehilangan nilai jika nilai tukar berubah antara waktu Anda mengirimkan transaksi dan waktu pelaksanaannya. Jika Anda menggunakan kontrak periphery, ia menghitung jumlah yang harus Anda setor dan segera menyetornya, sehingga nilai tukar tidak berubah dan Anda tidak kehilangan apa pun.
 
 ```solidity
     function addLiquidity(
@@ -1082,10 +1082,10 @@ Anda dapat menyetorkan likuiditas secara langsung ke dalam kontrak inti (menggun
         uint deadline
 ```
 
-Fungsi ini dapat dipanggil oleh sebuah transaksi untuk menyetorkan likuiditas. Sebagian besar parameter sama seperti pada `_addLiquidity` di atas, dengan dua pengecualian:
+Fungsi ini dapat dipanggil oleh transaksi untuk menyetor likuiditas. Sebagian besar parameter sama seperti pada `_addLiquidity` di atas, dengan dua pengecualian:
 
-. `to` adalah alamat yang mendapatkan token likuiditas baru yang dicetak untuk menunjukkan porsi penyedia likuiditas di dalam kolam
-. `deadline` adalah batas waktu pada transaksi
+- `to` adalah alamat yang mendapatkan token likuiditas baru yang dicetak untuk menunjukkan porsi penyedia likuiditas dari kolam
+- `deadline` adalah batas waktu pada transaksi
 
 ```solidity
     ) external virtual override ensure(deadline) returns (uint amountA, uint amountB, uint liquidity) {
@@ -1093,7 +1093,7 @@ Fungsi ini dapat dipanggil oleh sebuah transaksi untuk menyetorkan likuiditas. S
         address pair = UniswapV2Library.pairFor(factory, tokenA, tokenB);
 ```
 
-Kita menghitung jumlah yang benar-benar akan disetorkan dan kemudian menemukan alamat kolam likuiditas. Untuk menghemat gas, kita tidak melakukan ini dengan bertanya kepada factory, melainkan menggunakan fungsi pustaka `pairFor` (lihat di bawah pada bagian pustaka)
+Kita menghitung jumlah yang benar-benar akan disetor dan kemudian menemukan alamat kolam likuiditas. Untuk menghemat gas, kita tidak melakukan ini dengan bertanya kepada pabrik, tetapi menggunakan fungsi pustaka `pairFor` (lihat di bawah di bagian pustaka)
 
 ```solidity
         TransferHelper.safeTransferFrom(tokenA, msg.sender, pair, amountA);
@@ -1107,7 +1107,7 @@ Transfer jumlah token yang benar dari pengguna ke dalam pertukaran pasangan.
     }
 ```
 
-Sebagai imbalannya, berikan alamat `to` token likuiditas untuk kepemilikan sebagian dari kolam tersebut. Fungsi `mint` dari kontrak inti melihat berapa banyak token ekstra yang dimilikinya (dibandingkan dengan apa yang dimilikinya saat terakhir kali likuiditas berubah) dan mencetak likuiditas yang sesuai.
+Sebagai imbalannya, berikan alamat `to` token likuiditas untuk kepemilikan sebagian dari kolam. Fungsi `mint` dari kontrak inti melihat berapa banyak token ekstra yang dimilikinya (dibandingkan dengan apa yang dimilikinya terakhir kali likuiditas berubah) dan mencetak likuiditas yang sesuai.
 
 ```solidity
     function addLiquidityETH(
@@ -1115,7 +1115,7 @@ Sebagai imbalannya, berikan alamat `to` token likuiditas untuk kepemilikan sebag
         uint amountTokenDesired,
 ```
 
-Ketika penyedia likuiditas ingin menyediakan likuiditas ke pertukaran pasangan Token/ETH, ada beberapa perbedaan. Kontrak menangani pembungkusan ETH untuk penyedia likuiditas. Tidak perlu menentukan berapa banyak ETH yang ingin disetorkan pengguna, karena pengguna cukup mengirimkannya bersama transaksi (jumlahnya tersedia di `msg.value`).
+Ketika penyedia likuiditas ingin menyediakan likuiditas ke pertukaran pasangan Token/ETH, ada beberapa perbedaan. Kontrak menangani pembungkusan ETH untuk penyedia likuiditas. Tidak perlu menentukan berapa banyak ETH yang ingin disetor pengguna, karena pengguna hanya mengirimkannya bersama transaksi (jumlahnya tersedia di `msg.value`).
 
 ```solidity
         uint amountTokenMin,
@@ -1137,16 +1137,16 @@ Ketika penyedia likuiditas ingin menyediakan likuiditas ke pertukaran pasangan T
         assert(IWETH(WETH).transfer(pair, amountETH));
 ```
 
-Untuk menyetorkan ETH, kontrak pertama-tama membungkusnya menjadi WETH dan kemudian mentransfer WETH ke dalam pasangan tersebut. Perhatikan bahwa transfer tersebut dibungkus dalam sebuah `assert`. Ini berarti bahwa jika transfer gagal, panggilan kontrak ini juga gagal, dan oleh karena itu pembungkusan tidak benar-benar terjadi.
+Untuk menyetor ETH, kontrak pertama-tama membungkusnya menjadi WETH dan kemudian mentransfer WETH ke dalam pasangan. Perhatikan bahwa transfer dibungkus dalam `assert`. Ini berarti bahwa jika transfer gagal, panggilan kontrak ini juga gagal, dan oleh karena itu pembungkusan tidak benar-benar terjadi.
 
 ```solidity
         liquidity = IUniswapV2Pair(pair).mint(to);
-        // kembalikan dust eth, jika ada
+        // kembalikan sisa debu ETH, jika ada
         if (msg.value > amountETH) TransferHelper.safeTransferETH(msg.sender, msg.value - amountETH);
     }
 ```
 
-Pengguna telah mengirimi kita ETH, jadi jika ada sisa (karena token lainnya kurang berharga daripada yang diperkirakan pengguna), kita perlu mengeluarkan pengembalian dana.
+Pengguna telah mengirimi kita ETH, jadi jika ada sisa ekstra (karena token lain kurang berharga daripada yang dipikirkan pengguna), kita perlu mengeluarkan pengembalian dana.
 
 #### Hapus Likuiditas {#remove-liquidity}
 
@@ -1313,7 +1313,7 @@ Fungsi terakhir menggabungkan biaya penyimpanan dengan transaksi meta.
 
 ```solidity
     // **** TUKAR ****
-    // mengharuskan jumlah awal sudah dikirim ke pasangan pertama
+    // wajibkan jumlah awal telah dikirim ke pasangan pertama
     function _swap(uint[] memory amounts, address[] memory path, address _to) internal virtual {
 ```
 
@@ -1323,9 +1323,9 @@ Fungsi ini melakukan pemrosesan internal yang diperlukan untuk fungsi-fungsi yan
         for (uint i; i < path.length - 1; i++) {
 ```
 
-Saat saya menulis ini, terdapat [388.160 token ERC-20](https://eth.blockscout.com/tokens). Jika ada pertukaran pasangan untuk setiap pasangan token, akan ada lebih dari 150 miliar pertukaran pasangan. Seluruh rantai, pada saat ini, [hanya memiliki 0,1% dari jumlah akun tersebut](https://eth.blockscout.com/stats/accountsGrowth). Sebagai gantinya, fungsi tukar mendukung konsep jalur (path). Seorang pedagang dapat menukar A dengan B, B dengan C, dan C dengan D, sehingga tidak perlu ada pertukaran pasangan A-D secara langsung.
+Saat saya menulis ini, ada [388.160 token ERC-20](https://eth.blockscout.com/tokens). Jika ada pertukaran pasangan untuk setiap pasangan token, akan ada lebih dari 150 miliar pertukaran pasangan. Seluruh rantai, saat ini, [hanya memiliki 0,1% dari jumlah akun tersebut](https://eth.blockscout.com/stats/accountsGrowth). Sebagai gantinya, fungsi tukar mendukung konsep jalur. Seorang pedagang dapat menukar A dengan B, B dengan C, dan C dengan D, sehingga tidak perlu ada pertukaran pasangan A-D secara langsung.
 
-Harga di pasar-pasar ini cenderung tersinkronisasi, karena ketika tidak sinkron, hal itu menciptakan peluang untuk arbitrase. Bayangkan, misalnya, tiga token, A, B, dan C. Ada tiga pertukaran pasangan, satu untuk setiap pasangan.
+Harga di pasar-pasar ini cenderung disinkronkan, karena ketika tidak sinkron, hal itu menciptakan peluang untuk arbitrase. Bayangkan, misalnya, tiga token, A, B, dan C. Ada tiga pertukaran pasangan, satu untuk setiap pasangan.
 
 1. Situasi awal
 2. Seorang pedagang menjual 24,695 token A dan mendapatkan 25,305 token B.
@@ -1368,13 +1368,13 @@ Apakah ini pertukaran terakhir? Jika ya, kirim token yang diterima untuk perdaga
     }
 ```
 
-Benar-benar memanggil pertukaran pasangan untuk menukar token. Kita tidak memerlukan callback untuk diberi tahu tentang pertukaran tersebut, jadi kita tidak mengirimkan bita apa pun di bidang itu.
+Benar-benar memanggil pertukaran pasangan untuk menukar token. Kita tidak memerlukan panggilan balik untuk diberi tahu tentang pertukaran tersebut, jadi kita tidak mengirim byte apa pun di bidang itu.
 
 ```solidity
     function swapExactTokensForTokens(
 ```
 
-Fungsi ini digunakan secara langsung oleh pedagang untuk menukar satu token dengan token lainnya.
+Fungsi ini digunakan langsung oleh pedagang untuk menukar satu token dengan token lainnya.
 
 ```solidity
         uint amountIn,
@@ -1382,11 +1382,11 @@ Fungsi ini digunakan secara langsung oleh pedagang untuk menukar satu token deng
         address[] calldata path,
 ```
 
-Parameter ini berisi alamat-alamat dari kontrak ERC-20. Seperti yang dijelaskan di atas, ini adalah sebuah array karena Anda mungkin perlu melalui beberapa pertukaran pasangan untuk mendapatkan aset yang Anda inginkan dari aset yang Anda miliki.
+Parameter ini berisi alamat kontrak ERC-20. Seperti yang dijelaskan di atas, ini adalah array karena Anda mungkin perlu melalui beberapa pertukaran pasangan untuk mendapatkan dari aset yang Anda miliki ke aset yang Anda inginkan.
 
-Parameter fungsi dalam Solidity dapat disimpan baik di `memory` maupun di `calldata`. Jika fungsi tersebut adalah titik masuk ke kontrak, dipanggil langsung dari pengguna (menggunakan transaksi) atau dari kontrak yang berbeda, maka nilai parameter dapat diambil langsung dari data panggilan. Jika fungsi dipanggil secara internal, seperti `_swap` di atas, maka parameter harus disimpan di `memory`. Dari perspektif kontrak yang dipanggil, `calldata` bersifat hanya baca.
+Parameter fungsi di Solidity dapat disimpan baik di `memory` atau `calldata`. Jika fungsi tersebut adalah titik masuk ke kontrak, dipanggil langsung dari pengguna (menggunakan transaksi) atau dari kontrak yang berbeda, maka nilai parameter dapat diambil langsung dari data panggilan. Jika fungsi dipanggil secara internal, seperti `_swap` di atas, maka parameter harus disimpan di `memory`. Dari perspektif kontrak yang dipanggil, `calldata` bersifat hanya baca.
 
-Dengan tipe skalar seperti `uint` atau `address`, kompiler menangani pilihan penyimpanan untuk kita, tetapi dengan array, yang lebih panjang dan lebih mahal, kita menentukan tipe penyimpanan yang akan digunakan.
+Dengan tipe skalar seperti `uint` atau `address`, kompiler menangani pilihan penyimpanan untuk kita, tetapi dengan array, yang lebih panjang dan lebih mahal, kita menentukan jenis penyimpanan yang akan digunakan.
 
 ```solidity
         address to,
@@ -1394,14 +1394,14 @@ Dengan tipe skalar seperti `uint` atau `address`, kompiler menangani pilihan pen
     ) external virtual override ensure(deadline) returns (uint[] memory amounts) {
 ```
 
-Nilai kembalian selalu dikembalikan di dalam memori.
+Nilai kembalian selalu dikembalikan di memori.
 
 ```solidity
         amounts = UniswapV2Library.getAmountsOut(factory, amountIn, path);
         require(amounts[amounts.length - 1] >= amountOutMin, 'UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT');
 ```
 
-Hitung jumlah yang akan dibeli dalam setiap pertukaran. Jika hasilnya kurang dari minimum yang bersedia diterima oleh pedagang, kembalikan transaksi tersebut.
+Hitung jumlah yang akan dibeli di setiap pertukaran. Jika hasilnya kurang dari minimum yang bersedia diterima pedagang, kembalikan transaksi tersebut.
 
 ```solidity
         TransferHelper.safeTransferFrom(
@@ -1430,7 +1430,7 @@ Terakhir, transfer token ERC-20 awal ke akun untuk pertukaran pasangan pertama d
     }
 ```
 
-Fungsi sebelumnya, `swapTokensForTokens`, memungkinkan pedagang untuk menentukan jumlah pasti token masukan yang bersedia ia berikan dan jumlah minimum token keluaran yang bersedia ia terima sebagai imbalannya. Fungsi ini melakukan pertukaran sebaliknya, ini memungkinkan pedagang menentukan jumlah token keluaran yang ia inginkan, dan jumlah maksimum token masukan yang bersedia ia bayarkan untuk itu.
+Fungsi sebelumnya, `swapExactTokensForTokens`, memungkinkan pedagang untuk menentukan jumlah pasti token masukan yang bersedia ia berikan dan jumlah minimum token keluaran yang bersedia ia terima sebagai imbalannya. Fungsi ini melakukan pertukaran sebaliknya, ini memungkinkan pedagang menentukan jumlah token keluaran yang ia inginkan, dan jumlah maksimum token masukan yang bersedia ia bayarkan untuk itu.
 
 Dalam kedua kasus tersebut, pedagang harus terlebih dahulu memberikan jatah kepada kontrak periphery ini untuk memungkinkannya mentransfer token tersebut.
 
@@ -1505,20 +1505,20 @@ Dalam kedua kasus tersebut, pedagang harus terlebih dahulu memberikan jatah kepa
         IWETH(WETH).deposit{value: amounts[0]}();
         assert(IWETH(WETH).transfer(UniswapV2Library.pairFor(factory, path[0], path[1]), amounts[0]));
         _swap(amounts, path, to);
-        // kembalikan dust eth, jika ada
+        // kembalikan sisa debu ETH, jika ada
         if (msg.value > amounts[0]) TransferHelper.safeTransferETH(msg.sender, msg.value - amounts[0]);
     }
 ```
 
-Keempat varian ini semuanya melibatkan perdagangan antara ETH dan token. Satu-satunya perbedaan adalah bahwa kita menerima ETH dari pedagang dan menggunakannya untuk mencetak WETH, atau kita menerima WETH dari pertukaran terakhir di jalur tersebut dan membakarnya, lalu mengirimkan kembali ETH yang dihasilkan kepada pedagang.
+Keempat varian ini semuanya melibatkan perdagangan antara ETH dan token. Satu-satunya perbedaan adalah bahwa kita menerima ETH dari pedagang dan menggunakannya untuk mencetak WETH, atau kita menerima WETH dari pertukaran terakhir di jalur dan membakarnya, mengirimkan kembali ETH yang dihasilkan kepada pedagang.
 
 ```solidity
     // **** TUKAR (mendukung token dengan biaya saat transfer) ****
-    // mengharuskan jumlah awal sudah dikirim ke pasangan pertama
+    // wajibkan jumlah awal telah dikirim ke pasangan pertama
     function _swapSupportingFeeOnTransferTokens(address[] memory path, address _to) internal virtual {
 ```
 
-Ini adalah fungsi internal untuk menukar token yang memiliki biaya transfer atau penyimpanan untuk menyelesaikan ([masalah ini](https://github.com/Uniswap/uniswap-interface/issues/835)).
+Ini adalah fungsi internal untuk menukar token yang memiliki biaya transfer atau penyimpanan untuk menyelesaikan ([masalah ini](https://github.com/Uniswap/interface/issues/835)).
 
 ```solidity
         for (uint i; i < path.length - 1; i++) {
@@ -1534,9 +1534,9 @@ Ini adalah fungsi internal untuk menukar token yang memiliki biaya transfer atau
             amountOutput = UniswapV2Library.getAmountOut(amountInput, reserveInput, reserveOutput);
 ```
 
-Karena adanya biaya transfer, kita tidak dapat mengandalkan fungsi `getAmountsOut` untuk memberi tahu kita berapa banyak yang kita dapatkan dari setiap transfer (seperti yang kita lakukan sebelum memanggil `_swap` yang asli). Sebagai gantinya, kita harus mentransfer terlebih dahulu dan kemudian melihat berapa banyak token yang kita dapatkan kembali.
+Karena biaya transfer, kita tidak dapat mengandalkan fungsi `getAmountsOut` untuk memberi tahu kita berapa banyak yang kita dapatkan dari setiap transfer (seperti yang kita lakukan sebelum memanggil `_swap` asli). Sebagai gantinya, kita harus mentransfer terlebih dahulu dan kemudian melihat berapa banyak token yang kita dapatkan kembali.
 
-Catatan: Secara teori kita bisa saja menggunakan fungsi ini alih-alih `_swap`, tetapi dalam kasus tertentu (misalnya, jika transfer akhirnya dikembalikan karena tidak ada cukup dana pada akhirnya untuk memenuhi minimum yang diwajibkan) hal itu akan berakhir dengan menghabiskan lebih banyak gas. Token dengan biaya transfer cukup langka, jadi meskipun kita perlu mengakomodasinya, tidak perlu bagi semua pertukaran untuk berasumsi bahwa mereka melalui setidaknya satu dari token tersebut.
+Catatan: Secara teori kita bisa saja menggunakan fungsi ini alih-alih `_swap`, tetapi dalam kasus tertentu (misalnya, jika transfer akhirnya dikembalikan karena tidak ada cukup di akhir untuk memenuhi minimum yang disyaratkan) itu akan berakhir dengan biaya gas yang lebih besar. Token dengan biaya transfer cukup langka, jadi meskipun kita perlu mengakomodasinya, tidak perlu semua pertukaran berasumsi bahwa mereka melalui setidaknya salah satunya.
 
 ```solidity
             }
@@ -1759,7 +1759,7 @@ Jika kita membagi dua nilai `UQ112x112`, hasilnya tidak lagi dikalikan dengan 2^
 
 ### UniswapV2Library {#uniswapv2library}
 
-Pustaka ini hanya digunakan oleh kontrak-kontrak periferal
+Pustaka ini hanya digunakan oleh kontrak periphery
 
 ```solidity
 pragma solidity >=0.5.0;
@@ -1779,10 +1779,10 @@ library UniswapV2Library {
     }
 ```
 
-Urutkan kedua token berdasarkan alamat, sehingga kita akan bisa mendapatkan alamat pertukaran pasangan untuk keduanya. Hal ini diperlukan karena jika tidak, kita akan memiliki dua kemungkinan, satu untuk parameter A,B dan satu lagi untuk parameter B,A, yang mengarah pada dua pertukaran alih-alih satu.
+Urutkan kedua token berdasarkan alamat, sehingga kita akan bisa mendapatkan alamat pertukaran pasangan untuk mereka. Ini diperlukan karena jika tidak, kita akan memiliki dua kemungkinan, satu untuk parameter A,B dan satu lagi untuk parameter B,A, yang mengarah ke dua pertukaran alih-alih satu.
 
 ```solidity
-    // menghitung alamat CREATE2 untuk pasangan tanpa melakukan panggilan eksternal apa pun
+    // menghitung alamat CREATE2 untuk sebuah pasangan tanpa melakukan panggilan eksternal apa pun
     function pairFor(address factory, address tokenA, address tokenB) internal pure returns (address pair) {
         (address token0, address token1) = sortTokens(tokenA, tokenB);
         pair = address(uint(keccak256(abi.encodePacked(
@@ -1794,10 +1794,10 @@ Urutkan kedua token berdasarkan alamat, sehingga kita akan bisa mendapatkan alam
     }
 ```
 
-Fungsi ini menghitung alamat pertukaran pasangan untuk kedua token tersebut. Kontrak ini dibuat menggunakan [opcode CREATE2](https://eips.ethereum.org/EIPS/eip-1014), sehingga kita dapat menghitung alamat menggunakan algoritma yang sama jika kita mengetahui parameter yang digunakannya. Ini jauh lebih murah daripada bertanya kepada factory, dan
+Fungsi ini menghitung alamat pertukaran pasangan untuk kedua token. Kontrak ini dibuat menggunakan [opcode CREATE2](https://eips.ethereum.org/EIPS/eip-1014), sehingga kita dapat menghitung alamat menggunakan algoritma yang sama jika kita mengetahui parameter yang digunakannya. Ini jauh lebih murah daripada bertanya kepada pabrik, dan tidak memerlukan panggilan eksternal.
 
 ```solidity
-    // mengambil dan mengurutkan cadangan untuk pasangan
+    // mengambil dan mengurutkan cadangan untuk sebuah pasangan
     function getReserves(address factory, address tokenA, address tokenB) internal view returns (uint reserveA, uint reserveB) {
         (address token0,) = sortTokens(tokenA, tokenB);
         (uint reserve0, uint reserve1,) = IUniswapV2Pair(pairFor(factory, tokenA, tokenB)).getReserves();
@@ -1805,7 +1805,7 @@ Fungsi ini menghitung alamat pertukaran pasangan untuk kedua token tersebut. Kon
     }
 ```
 
-Fungsi ini mengembalikan cadangan dari kedua token yang dimiliki oleh pertukaran pasangan. Perhatikan bahwa fungsi ini dapat menerima token dalam urutan apa pun, dan mengurutkannya untuk penggunaan internal.
+Fungsi ini mengembalikan cadangan dari dua token yang dimiliki oleh pertukaran pasangan. Perhatikan bahwa ia dapat menerima token dalam urutan apa pun, dan mengurutkannya untuk penggunaan internal.
 
 ```solidity
     // diberikan sejumlah aset dan cadangan pasangan, mengembalikan jumlah yang setara dari aset lainnya
@@ -1819,11 +1819,11 @@ Fungsi ini mengembalikan cadangan dari kedua token yang dimiliki oleh pertukaran
 Fungsi ini memberi Anda jumlah token B yang akan Anda dapatkan sebagai imbalan untuk token A jika tidak ada biaya yang terlibat. Perhitungan ini memperhitungkan bahwa transfer mengubah nilai tukar.
 
 ```solidity
-    // diberikan jumlah input aset dan cadangan pasangan, mengembalikan jumlah output maksimum dari aset lainnya
+    // diberikan jumlah input dari sebuah aset dan cadangan pasangan, mengembalikan jumlah output maksimum dari aset lainnya
     function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {
 ```
 
-Fungsi `quote` di atas berfungsi dengan baik jika tidak ada biaya untuk menggunakan pertukaran pasangan. Namun, jika ada biaya pertukaran sebesar 0,3%, jumlah yang sebenarnya Anda dapatkan akan lebih rendah. Fungsi ini menghitung jumlah setelah biaya pertukaran.
+Fungsi `quote` di atas berfungsi dengan baik jika tidak ada biaya untuk menggunakan pertukaran pasangan. Namun, jika ada biaya pertukaran 0,3%, jumlah yang sebenarnya Anda dapatkan lebih rendah. Fungsi ini menghitung jumlah setelah biaya pertukaran.
 
 ```solidity
 
@@ -1836,10 +1836,10 @@ Fungsi `quote` di atas berfungsi dengan baik jika tidak ada biaya untuk mengguna
     }
 ```
 
-Solidity tidak menangani pecahan secara bawaan, jadi kita tidak bisa begitu saja mengalikan jumlahnya dengan 0,997. Sebagai gantinya, kita mengalikan pembilang dengan 997 dan penyebut dengan 1000, untuk mencapai efek yang sama.
+Solidity tidak menangani pecahan secara bawaan, jadi kita tidak bisa begitu saja mengalikan jumlah keluaran dengan 0,997. Sebagai gantinya, kita mengalikan pembilang dengan 997 dan penyebut dengan 1000, mencapai efek yang sama.
 
 ```solidity
-    // diberikan jumlah output aset dan cadangan pasangan, mengembalikan jumlah input yang diperlukan dari aset lainnya
+    // diberikan jumlah output dari sebuah aset dan cadangan pasangan, mengembalikan jumlah input yang diwajibkan dari aset lainnya
     function getAmountIn(uint amountOut, uint reserveIn, uint reserveOut) internal pure returns (uint amountIn) {
         require(amountOut > 0, 'UniswapV2Library: INSUFFICIENT_OUTPUT_AMOUNT');
         require(reserveIn > 0 && reserveOut > 0, 'UniswapV2Library: INSUFFICIENT_LIQUIDITY');
@@ -1849,7 +1849,7 @@ Solidity tidak menangani pecahan secara bawaan, jadi kita tidak bisa begitu saja
     }
 ```
 
-Fungsi ini melakukan hal yang kurang lebih sama, tetapi fungsi ini mendapatkan jumlah keluaran dan menyediakan masukannya.
+Fungsi ini melakukan hal yang kurang lebih sama, tetapi ia mendapatkan jumlah keluaran dan menyediakan masukan.
 
 ```solidity
 
@@ -1881,7 +1881,7 @@ Kedua fungsi ini menangani identifikasi nilai ketika perlu melalui beberapa pert
 
 ### Transfer Helper {#transfer-helper}
 
-[Pustaka ini](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) menambahkan pemeriksaan keberhasilan di sekitar transfer ERC-20 dan Ethereum untuk memperlakukan pengembalian dan nilai kembalian `false` dengan cara yang sama.
+[Pustaka ini](https://github.com/Uniswap/solidity-lib/blob/master/contracts/libraries/TransferHelper.sol) (dalam repositori yang sekarang diarsipkan) menambahkan pemeriksaan keberhasilan seputar transfer ERC-20 dan Ethereum untuk memperlakukan pengembalian dan nilai kembalian `false` dengan cara yang sama.
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0-or-later
@@ -1903,7 +1903,7 @@ library TransferHelper {
 Kita dapat memanggil kontrak yang berbeda dengan salah satu dari dua cara:
 
 - Menggunakan definisi antarmuka untuk membuat panggilan fungsi
-- Menggunakan [antarmuka biner aplikasi (ABI)](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html) secara "manual" untuk membuat panggilan. Inilah yang diputuskan oleh penulis kode untuk dilakukan.
+- Menggunakan [Antarmuka Biner Aplikasi (ABI)](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html) secara "manual" untuk membuat panggilan. Inilah yang diputuskan oleh penulis kode untuk dilakukan.
 
 ```solidity
         require(
@@ -1913,7 +1913,7 @@ Kita dapat memanggil kontrak yang berbeda dengan salah satu dari dua cara:
     }
 ```
 
-Demi kompatibilitas mundur dengan token yang dibuat sebelum standar ERC-20, panggilan ERC-20 dapat gagal baik karena mengembalikan (dalam hal ini `success` bernilai `false`) atau karena berhasil dan mengembalikan nilai `false` (dalam hal ini terdapat data keluaran, dan jika Anda mendekodenya sebagai boolean, Anda mendapatkan `false`).
+Demi kompatibilitas mundur dengan token yang dibuat sebelum standar ERC-20, panggilan ERC-20 dapat gagal baik dengan mengembalikan (dalam hal ini `success` adalah `false`) atau dengan berhasil dan mengembalikan nilai `false` (dalam hal ini ada data keluaran, dan jika Anda mendekodenya sebagai boolean, Anda mendapatkan `false`).
 
 ```solidity
 
@@ -1932,7 +1932,7 @@ Demi kompatibilitas mundur dengan token yang dibuat sebelum standar ERC-20, pang
     }
 ```
 
-Fungsi ini mengimplementasikan [fungsionalitas transfer ERC-20](https://eips.ethereum.org/EIPS/eip-20#transfer), yang memungkinkan sebuah akun untuk menghabiskan jatah yang diberikan oleh akun yang berbeda.
+Fungsi ini mengimplementasikan [fungsionalitas transfer ERC-20](https://eips.ethereum.org/EIPS/eip-20#transfer), yang memindahkan token dari pemanggil (kontrak ini) ke `to`.
 
 ```solidity
 
@@ -1962,7 +1962,7 @@ Fungsi ini mengimplementasikan [fungsionalitas transferFrom ERC-20](https://eips
 }
 ```
 
-Fungsi ini mentransfer Ether ke sebuah akun. Panggilan apa pun ke kontrak yang berbeda dapat mencoba mengirim Ether. Karena kita tidak perlu benar-benar memanggil fungsi apa pun, kita tidak mengirim data apa pun bersama panggilan tersebut.
+Fungsi ini mentransfer Ether ke sebuah akun. Setiap panggilan ke kontrak yang berbeda dapat mencoba mengirim Ether. Karena kita tidak perlu benar-benar memanggil fungsi apa pun, kita tidak mengirim data apa pun dengan panggilan tersebut.
 
 ## Kesimpulan {#conclusion}
 

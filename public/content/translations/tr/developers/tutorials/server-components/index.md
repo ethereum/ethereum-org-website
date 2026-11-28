@@ -29,7 +29,9 @@ Böyle bir sunucunun yerine getirebileceği birkaç olası görev vardır.
 
 ## Örnek program {#sample-program}
 
-Örnek bir sunucuyu [GitHub'da](https://github.com/qbzzt/20240715-server-component) görebilirsiniz. Bu sunucu, Hardhat'in Greeter'ının değiştirilmiş bir versiyonu olan [bu Sözleşmeden](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code) gelen olayları dinler. Selamlama değiştirildiğinde, onu eski haline getirir.
+Örnek bir sunucuyu [GitHub'da](https://github.com/qbzzt/20240715-server-component) görebilirsiniz. Bu sunucu, Sepolia test ağındaki [bu Sözleşmeden](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract_code) (Hardhat'in Greeter'ının değiştirilmiş bir versiyonu) gelen olayları dinler. Karşılama mesajı değiştirildiğinde, onu eski haline getirir.
+
+Bu Sözleşme diğer öğreticilerle paylaşılmaktadır, bu nedenle sizinki çalışırken diğer insanlar (ve onların sunucuları) karşılama mesajını değiştirebilir. Test ETH'nizi harcamaktan kaçınmak için işiniz bittiğinde sunucunuzu durdurun.
 
 Çalıştırmak için:
 
@@ -40,25 +42,31 @@ Böyle bir sunucunun yerine getirebileceği birkaç olası görev vardır.
    cd 20240715-server-component
    ```
 
-2. Gerekli paketleri yükleyin. Eğer henüz sahip değilseniz, [önce Node'u yükleyin](https://nodejs.org/en/download/package-manager).
+2. Örnek depo, o zamandan beri kapatılmış olan Holesky test ağı için yazılmıştır. Sepolia'yı ve Sepolia Sözleşme Adresini kullanacak şekilde güncelleyin.
+
+   ```sh copy
+   sed -i.bak -e 's/holesky/sepolia/g' -e 's/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA/' src/app.ts
+   ```
+
+3. Gerekli paketleri yükleyin. Henüz sahip değilseniz, [önce Node'u yükleyin](https://nodejs.org/en/download/package-manager).
 
    ```sh copy
    npm install
    ```
 
-3. Holesky test ağında ETH'si olan bir Hesabın özel anahtarını belirtmek için `.env` dosyasını düzenleyin. Holesky'de ETH'niz yoksa, [bu musluğu kullanabilirsiniz](https://holesky-faucet.pk910.de/).
+4. Sepolia test ağında ETH'si olan bir Hesabın özel anahtarını belirtmek için `.env` dosyasını düzenleyin. Sepolia'da ETH'niz yoksa, [bu musluğu kullanabilirsiniz](https://sepolia-faucet.pk910.de/). Yalnızca test için kullandığınız yeni bir Hesap kullanın, asla gerçek varlıkları tutan bir Hesap kullanmayın.
 
    ```sh filename=".env" copy
-   PRIVATE_KEY=0x <private key goes here>
+   PRIVATE_KEY=0x<private key goes here>
    ```
 
-4. Sunucuyu başlatın.
+5. Sunucuyu başlatın.
 
    ```sh copy
    npm start
    ```
 
-5. [Bir blok gezginine](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract) gidin ve özel anahtara sahip olandan farklı bir Adres kullanarak selamlamayı değiştirin. Selamlamanın otomatik olarak eski haline getirildiğini görün.
+6. [Bir blok gezginine](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract) gidin ve özel anahtara sahip olandan farklı bir Adres kullanarak karşılama mesajını değiştirin. Karşılama mesajının otomatik olarak eski haline getirildiğini görün.
 
 ### Nasıl çalışır? {#how-it-works}
 
@@ -80,7 +88,7 @@ import {
 } from "viem"
 ```
 
-Bunlar ihtiyacımız olan [Viem](https://viem.sh/) varlıkları, işlevleri ve [`Address` türüdür](https://viem.sh/docs/glossary/types#address). Bu sunucu, JavaScript'in onu [sıkı tipli (strongly typed)](https://en.wikipedia.org/wiki/Strong_and_weak_typing) yapan bir uzantısı olan [TypeScript](https://www.typescriptlang.org/) ile yazılmıştır.
+Bunlar ihtiyacımız olan [Viem](https://viem.sh/) varlıkları, işlevleri ve [`Address` türüdür](https://viem.sh/docs/glossary/types#address). Bu sunucu, JavaScript'in onu [kesin tipli](https://en.wikipedia.org/wiki/Strong_and_weak_typing) yapan bir uzantısı olan [TypeScript](https://www.typescriptlang.org/) ile yazılmıştır.
 
 ```typescript
 import { privateKeyToAccount } from "viem/accounts"
@@ -89,10 +97,10 @@ import { privateKeyToAccount } from "viem/accounts"
 [Bu işlev](https://viem.sh/docs/accounts/privateKey), bir özel anahtara karşılık gelen Adres de dahil olmak üzere Cüzdan bilgilerini oluşturmamızı sağlar.
 
 ```typescript
-import { holesky } from "viem/chains"
+import { sepolia } from "viem/chains"
 ```
 
-Viem'de bir Blokzincir kullanmak için tanımını içe aktarmanız gerekir. Bu durumda, [Holesky](https://github.com/eth-clients/holesky) test Blokzincirine bağlanmak istiyoruz.
+Viem'de bir Blokzincir kullanmak için tanımını içe aktarmanız gerekir. Bu durumda, [Sepolia](/developers/docs/networks/#sepolia) test Blokzincirine bağlanmak istiyoruz.
 
 ```typescript
 // .env içindeki tanımları process.env'ye bu şekilde ekliyoruz.
@@ -100,10 +108,10 @@ import * as dotenv from "dotenv"
 dotenv.config()
 ```
 
-`.env` dosyasını ortama bu şekilde okuruz. Buna özel anahtar için ihtiyacımız var (daha sonrasına bakın).
+`.env` dosyasını ortama bu şekilde okuruz. Özel anahtar için buna ihtiyacımız var (daha sonrasına bakın).
 
 ```typescript
-const greeterAddress : Address = "0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6"
+const greeterAddress : Address = "0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA"
 const greeterABI = [
     {
         "inputs": [
@@ -135,31 +143,31 @@ const greeterABI = [
 ] as const
 ```
 
-Bir Sözleşmeyi kullanmak için Adresine ve onun [ABI](/glossary/#abi)'sine ihtiyacımız var. Burada her ikisini de sağlıyoruz.
+Bir Sözleşmeyi kullanmak için Adresine ve onun için [ABI'ye](/glossary/#abi) ihtiyacımız var. İkisini de burada sağlıyoruz.
 
-JavaScript'te (ve dolayısıyla TypeScript'te) bir sabite yeni bir değer atayamazsınız, ancak içinde saklanan nesneyi _değiştirebilirsiniz_. `as const` son ekini kullanarak TypeScript'e listenin kendisinin sabit olduğunu ve değiştirilemeyeceğini söylüyoruz.
+JavaScript'te (ve dolayısıyla TypeScript'te) bir sabite yeni bir değer atayamazsınız, ancak içinde depolanan nesneyi _değiştirebilirsiniz_. `as const` son ekini kullanarak TypeScript'e listenin kendisinin sabit olduğunu ve değiştirilemeyeceğini söylüyoruz.
 
 ```typescript
 const publicClient = createPublicClient({
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
 
-Bir Viem [genel istemcisi (public client)](https://viem.sh/docs/clients/public.html) oluşturun. Genel istemcilerin ekli bir özel anahtarı yoktur ve bu nedenle işlem gönderemezler. [`view` işlevlerini](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) çağırabilir, Hesap bakiyelerini okuyabilir vb.
+Bir Viem [genel istemcisi](https://viem.sh/docs/clients/public) oluşturun. Genel istemcilerin ekli bir özel anahtarı yoktur ve bu nedenle işlem gönderemezler. [`view` işlevlerini](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) çağırabilir, Hesap bakiyelerini okuyabilir vb.
 
 ```typescript
 const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`)
 ```
 
-Ortam değişkenleri [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env) içinde mevcuttur. Ancak, TypeScript sıkı tiplidir. Bir ortam değişkeni herhangi bir dize veya boş olabilir, bu nedenle bir ortam değişkeninin türü `string | undefined` şeklindedir. Ancak, bir anahtar Viem'de `0x${string}` (`0x` ve ardından bir dize) olarak tanımlanır. Burada TypeScript'e `PRIVATE_KEY` ortam değişkeninin bu türde olacağını söylüyoruz. Eğer değilse, bir çalışma zamanı hatası alırız.
+Ortam değişkenleri [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env) içinde mevcuttur. Ancak, TypeScript kesin tiplidir. Bir ortam değişkeni herhangi bir dize veya boş olabilir, bu nedenle bir ortam değişkeninin türü `string | undefined` şeklindedir. Ancak, bir anahtar Viem'de `0x${string}` (`0x` ve ardından bir dize) olarak tanımlanır. Burada TypeScript'e `PRIVATE_KEY` ortam değişkeninin bu türde olacağını söylüyoruz. Eğer değilse, bir çalışma zamanı hatası alırız.
 
 [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) işlevi daha sonra tam bir Hesap nesnesi oluşturmak için bu özel anahtarı kullanır.
 
 ```typescript
 const walletClient = createWalletClient({
   account,
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
@@ -174,7 +182,7 @@ const greeter = getContract({
 })
 ```
 
-Artık tüm ön koşullara sahip olduğumuza göre, nihayet bir [Sözleşme örneği](https://viem.sh/docs/contract/getContract) oluşturabiliriz. Zincir içi Sözleşme ile iletişim kurmak için bu Sözleşme örneğini kullanacağız.
+Artık tüm ön koşullara sahip olduğumuza göre, nihayet bir [Sözleşme örneği](https://viem.sh/docs/contract/getContract) oluşturabiliriz. Bu Sözleşme örneğini zincir içi Sözleşme ile iletişim kurmak için kullanacağız.
 
 ##### Blokzincirden okuma
 
@@ -182,28 +190,28 @@ Artık tüm ön koşullara sahip olduğumuza göre, nihayet bir [Sözleşme örn
 console.log(`Current greeting:`, await greeter.read.greet())
 ```
 
-Salt okunur olan Sözleşme işlevleri ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) ve [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) `read` altında mevcuttur. Bu durumda, selamlamayı döndüren [`greet`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=read_contract#cfae3217) işlevine erişmek için kullanırız.
+Salt okunur olan Sözleşme işlevleri ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) ve [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) `read` altında mevcuttur. Bu durumda, karşılama mesajını döndüren [`greet`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=read_contract) işlevine erişmek için kullanırız.
 
-JavaScript tek iş parçacıklıdır, bu nedenle uzun süren bir işlemi başlattığımızda [bunu eşzamansız (asenkron) olarak yaptığımızı belirtmemiz](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE) gerekir. Blokzinciri çağırmak, salt okunur bir işlem için bile olsa, bilgisayar ile bir Blokzincir Düğümü arasında gidiş-dönüş gerektirir. Bu nedenle burada kodun sonuç için `await` (beklemesi) gerektiğini belirtiyoruz.
+JavaScript tek iş parçacıklıdır, bu nedenle uzun süren bir işlemi başlattığımızda [bunu eşzamansız olarak yaptığımızı belirtmemiz](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE) gerekir. Blokzinciri çağırmak, salt okunur bir işlem için bile, bilgisayar ile bir Blokzincir Düğümü arasında gidiş-dönüş gerektirir. Burada kodun sonuç için `await` gerektiğini belirtmemizin nedeni budur.
 
-Bunun nasıl çalıştığıyla ilgileniyorsanız [buradan okuyabilirsiniz](https://www.w3schools.com/js/js_promise.asp), ancak pratik anlamda bilmeniz gereken tek şey, uzun süren bir işlem başlatırsanız sonuçları `await` ile beklemeniz gerektiği ve bunu yapan herhangi bir işlevin `async` olarak bildirilmesi gerektiğidir.
+Bunun nasıl çalıştığıyla ilgileniyorsanız [buradan okuyabilirsiniz](https://www.w3schools.com/js/js_promise.asp), ancak pratik anlamda bilmeniz gereken tek şey, uzun süren bir işlem başlatırsanız sonuçları `await` ve bunu yapan herhangi bir işlevin `async` olarak bildirilmesi gerektiğidir.
 
-##### İşlem gönderme
+##### İşlemleri yayınlama
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
 ```
 
-Bu, selamlamayı değiştiren bir işlem göndermek için çağırdığınız işlevdir. Bu uzun bir işlem olduğundan, işlev `async` olarak bildirilir. Dahili uygulama nedeniyle, herhangi bir `async` işlevinin bir `Promise` nesnesi döndürmesi gerekir. Bu durumda `Promise<any>`, `Promise` içinde tam olarak neyin döndürüleceğini belirtmediğimiz anlamına gelir.
+Bu, karşılama mesajını değiştiren bir işlem yayınlamak için çağırdığınız işlevdir. Bu uzun bir işlem olduğundan, işlev `async` olarak bildirilir. Dahili uygulama nedeniyle, herhangi bir `async` işlevinin bir `Promise` nesnesi döndürmesi gerekir. Bu durumda, `Promise<any>`, `Promise` içinde tam olarak neyin döndürüleceğini belirtmediğimiz anlamına gelir.
 
 ```typescript
 const txHash = await greeter.write.setGreeting([greeting])
 ```
 
-Sözleşme örneğinin `write` alanı, [`setGreeting`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862) gibi Blokzincir durumuna yazan (bir işlem gönderilmesini gerektiren) tüm işlevlere sahiptir. Varsa parametreler bir liste olarak sağlanır ve işlev işlemin hash'ini döndürür.
+Sözleşme örneğinin `write` alanı, [`setGreeting`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract) gibi Blokzincir durumuna yazan (işlem gönderilmesini gerektiren) tüm işlevlere sahiptir. Varsa parametreler bir liste olarak sağlanır ve işlev işlemin hash'ini döndürür.
 
 ```typescript
-    console.log(`Working on a fix, see https://eth-holesky.blockscout.com/tx/${txHash}`)
+    console.log(`Working on a fix, see https://eth-sepolia.blockscout.com/tx/${txHash}`)
 
     return txHash
 }
@@ -217,7 +225,7 @@ Sözleşme örneğinin `write` alanı, [`setGreeting`](https://eth-holesky.block
 greeter.watchEvent.SetGreeting({
 ```
 
-[`watchEvent` işlevi](https://viem.sh/docs/actions/public/watchEvent), bir olay yayınlandığında çalıştırılacak bir işlevi belirtmenizi sağlar. Yalnızca bir tür olayla ilgileniyorsanız (bu durumda `SetGreeting`), kendinizi o olay türüyle sınırlamak için bu sözdizimini kullanabilirsiniz.
+[`watchEvent` işlevi](https://viem.sh/docs/actions/public/watchEvent), bir olay yayımlandığında çalıştırılacak bir işlevi belirtmenize olanak tanır. Yalnızca bir tür olayla ilgileniyorsanız (bu durumda, `SetGreeting`), kendinizi o olay türüyle sınırlamak için bu sözdizimini kullanabilirsiniz.
 
 ```typescript
     onLogs: logs => {
@@ -231,7 +239,7 @@ console.log(
 )
 ```
 
-Birden fazla olay olabilir, ancak basitlik adına yalnızca ilkiyle ilgileniyoruz. `logs[0].args`, olayın argümanlarıdır, bu durumda `sender` ve `greeting`.
+Birden fazla olay olabilir, ancak basitlik için yalnızca ilkiyle ilgileniyoruz. `logs[0].args`, olayın argümanlarıdır, bu durumda `sender` ve `greeting`.
 
 ```typescript
         if (logs[0].args.sender != account.address)
@@ -240,32 +248,26 @@ Birden fazla olay olabilir, ancak basitlik adına yalnızca ilkiyle ilgileniyoru
 })
 ```
 
-Gönderen bu sunucu _değilse_, selamlamayı değiştirmek için `setGreeting` kullanın.
+Gönderen bu sunucu _değilse_, karşılama mesajını değiştirmek için `setGreeting` kullanın.
 
 #### `package.json` {#package-json}
 
-[Bu dosya](https://github.com/qbzzt/20240715-server-component/blob/main/package.json) [Node.js](https://nodejs.org/en) yapılandırmasını kontrol eder. Bu makale yalnızca önemli tanımları açıklamaktadır.
+[Bu dosya](https://github.com/qbzzt/20240715-server-component/blob/main/package.json), [Node.js](https://nodejs.org/en) yapılandırmasını kontrol eder. Bu makale yalnızca önemli tanımları açıklamaktadır.
 
 ```json
 {
-  "main": "dist/index.js",
-```
-
-Bu tanım, hangi JavaScript dosyasının çalıştırılacağını belirtir.
-
-```json
   "scripts": {
     "start": "tsc && node dist/app.js",
   },
 ```
 
-Betikler çeşitli uygulama eylemleridir. Bu durumda, sahip olduğumuz tek betik, sunucuyu derleyen ve ardından çalıştıran `start` betiğidir. `tsc` komutu `typescript` paketinin bir parçasıdır ve TypeScript'i JavaScript'e derler. Manuel olarak çalıştırmak isterseniz, `node_modules/.bin` içinde bulunur. İkinci komut sunucuyu çalıştırır.
+Komut dosyaları çeşitli uygulama eylemleridir. Bu durumda, sahip olduğumuz tek komut dosyası, sunucuyu derleyen ve ardından çalıştıran `start` komut dosyasıdır. `tsc` komutu `typescript` paketinin bir parçasıdır ve TypeScript'i JavaScript'e derler. Manuel olarak çalıştırmak isterseniz, `node_modules/.bin` içinde bulunur. İkinci komut sunucuyu çalıştırır.
 
 ```json
   "type": "module",
 ```
 
-Birden fazla JavaScript Node uygulaması türü vardır. `module` türü, en üst düzey kodda `await` kullanmamıza izin verir, bu da yavaş (ve dolayısıyla eşzamansız) işlemler yaptığınızda önemlidir.
+Birden fazla JavaScript Düğüm uygulaması türü vardır. `module` türü, yavaş (ve dolayısıyla eşzamansız) işlemler yaptığınızda önemli olan üst düzey kodda `await` kullanmamıza olanak tanır.
 
 ```json
   "devDependencies": {
@@ -274,7 +276,7 @@ Birden fazla JavaScript Node uygulaması türü vardır. `module` türü, en üs
   },
 ```
 
-Bunlar yalnızca geliştirme için gerekli olan paketlerdir. Burada `typescript` paketine ihtiyacımız var ve bunu Node.js ile kullandığımız için `process` gibi node değişkenleri ve nesneleri için türleri de alıyoruz. [`^<version>` gösterimi](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004), o sürüm veya bozucu değişiklikleri olmayan daha yüksek bir sürüm anlamına gelir. Sürüm numaralarının anlamı hakkında daha fazla bilgi için [buraya](https://semver.org) bakın.
+Bunlar yalnızca geliştirme için gerekli olan paketlerdir. Burada `typescript` paketine ihtiyacımız var ve onu Node.js ile kullandığımız için `process` gibi Düğüm değişkenleri ve nesneleri için türleri de alıyoruz. [`^<version>` gösterimi](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004), o sürüm veya bozucu değişiklikleri olmayan daha yüksek bir sürüm anlamına gelir. Sürüm numaralarının anlamı hakkında daha fazla bilgi için [buraya](https://semver.org) bakın.
 
 ```json
   "dependencies": {

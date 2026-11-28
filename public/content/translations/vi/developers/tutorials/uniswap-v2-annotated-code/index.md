@@ -22,7 +22,7 @@ Các _nhà giao dịch_ gửi một loại token vào pool và nhận lại lo�
 
 Khi các nhà cung cấp thanh khoản muốn lấy lại tài sản của mình, họ có thể đốt các token của pool và nhận lại các token của họ, bao gồm cả phần thưởng được chia.
 
-[Nhấn vào đây để xem mô tả đầy đủ hơn](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
+[Nhấn vào đây để xem mô tả đầy đủ hơn](https://developers.uniswap.org/docs/protocols/v2/concepts/swapping).
 
 ### Tại sao lại là v2? Tại sao không phải là v3? {#why-v2}
 
@@ -109,7 +109,7 @@ Uniswap v2 được chia thành hai thành phần: cốt lõi (core) và ngoại
 
 ### UniswapV2Pair.sol {#uniswapv2pair}
 
-[Hợp đồng này](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) triển khai pool thực tế để hoán đổi các token. Đây là chức năng cốt lõi của Uniswap.
+[Hợp đồng này](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol) triển khai pool thực tế để hoán đổi các token. Đây là chức năng cốt lõi của Uniswap.
 
 ```solidity
 pragma solidity =0.5.16;
@@ -123,7 +123,7 @@ import './interfaces/IUniswapV2Factory.sol';
 import './interfaces/IUniswapV2Callee.sol';
 ```
 
-Đây là tất cả các giao diện mà hợp đồng cần biết, có thể vì hợp đồng triển khai chúng (`IUniswapV2Pair` và `UniswapV2ERC20`) hoặc vì nó gọi các hợp đồng triển khai chúng.
+Đây là tất cả các giao diện mà hợp đồng cần biết, hoặc vì hợp đồng triển khai chúng (`IUniswapV2Pair` và `UniswapV2ERC20`) hoặc vì nó gọi các hợp đồng triển khai chúng.
 
 ```solidity
 contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
@@ -339,17 +339,17 @@ Hàm này cho phép factory (và chỉ factory) chỉ định hai token ERC-20 m
 ##### \_update
 
 ```solidity
-    // cập nhật dự trữ và, trong lần gọi đầu tiên mỗi khối, các bộ tích lũy giá
+    // cập nhật dự trữ và, trong lần gọi đầu tiên mỗi khối, bộ tích lũy giá
     function _update(uint balance0, uint balance1, uint112 _reserve0, uint112 _reserve1) private {
 ```
 
-Hàm này được gọi mỗi khi các token được nạp hoặc rút.
+Hàm này được gọi mỗi khi token được nạp hoặc rút.
 
 ```solidity
         require(balance0 <= uint112(-1) && balance1 <= uint112(-1), 'UniswapV2: OVERFLOW');
 ```
 
-Nếu balance0 hoặc balance1 (uint256) cao hơn uint112(-1) (=2^112-1) (do đó nó bị tràn và quay trở lại 0 khi được chuyển đổi thành uint112), hãy từ chối tiếp tục \_update để ngăn chặn tràn số. Với một token bình thường có thể được chia nhỏ thành 10^18 đơn vị, điều này có nghĩa là mỗi sàn giao dịch bị giới hạn ở khoảng 5.1\*10^15 của mỗi token. Cho đến nay đó chưa phải là một vấn đề.
+Nếu balance0 hoặc balance1 (uint256) lớn hơn uint112(-1) (=2^112-1) (do đó nó bị tràn và quay trở lại 0 khi được chuyển đổi thành uint112), từ chối tiếp tục \_update để ngăn chặn tràn số. Với một token bình thường có thể được chia nhỏ thành 10^18 đơn vị, điều này có nghĩa là mỗi lần hoán đổi được giới hạn ở khoảng 5.1\*10^15 của mỗi token. Cho đến nay điều đó vẫn chưa phải là vấn đề.
 
 ```solidity
         uint32 blockTimestamp = uint32(block.timestamp % 2**32);
@@ -366,7 +366,7 @@ Nếu thời gian trôi qua không phải là 0, điều đó có nghĩa là ch�
         }
 ```
 
-Mỗi bộ tích lũy chi phí được cập nhật với chi phí mới nhất (dự trữ của token kia/dự trữ của token này) nhân với thời gian trôi qua tính bằng giây. Để có được mức giá trung bình, bạn đọc giá tích lũy ở hai thời điểm và chia cho chênh lệch thời gian giữa chúng. Ví dụ, giả sử chuỗi sự kiện này:
+Mỗi bộ tích lũy chi phí được cập nhật với chi phí mới nhất (dự trữ của token kia/dự trữ của token này) nhân với thời gian trôi qua tính bằng giây. Để có được mức giá trung bình, bạn đọc giá tích lũy tại hai thời điểm và chia cho chênh lệch thời gian giữa chúng. Ví dụ, giả sử chuỗi sự kiện này:
 
 | Sự kiện                                                    |  reserve0 |  reserve1 | timestamp | Tỷ giá hoán đổi biên (reserve1 / reserve0) |       price0CumulativeLast |
 | -------------------------------------------------------- | --------: | --------: | --------- | -------------------------------------------: | -------------------------: |
@@ -375,11 +375,11 @@ Mỗi bộ tích lũy chi phí được cập nhật với chi phí mới nhất
 | Nhà giao dịch B nạp 10 token0 và nhận lại 8.984 token1   | 1,060.000 |   943.396 | 5,030     |                                        0.890 |       20+10\*0.907 = 29.07 |
 | Nhà giao dịch C nạp 40 token0 và nhận lại 34.305 token1  | 1,100.000 |   909.090 | 5,100     |                                        0.826 |    29.07+70\*0.890 = 91.37 |
 | Nhà giao dịch D nạp 100 token1 và nhận lại 109.01 token0 |   990.990 | 1,009.090 | 5,110     |                                        1.018 |    91.37+10\*0.826 = 99.63 |
-| Nhà giao dịch E nạp 10 token0 và nhận lại 10.079 token1  | 1,000.990 |   999.010 | 5,150     |                                        0.998 | 99.63+40\*1.1018 = 143.702 |
+| Nhà giao dịch E nạp 10 token0 và nhận lại 10.079 token1  | 1,000.990 |   999.010 | 5,150     |                                        0.998 |   99.63+40\*1.018 = 140.35 |
 
-Giả sử chúng ta muốn tính giá trung bình của **Token0** giữa các dấu thời gian 5,030 và 5,150. Sự chênh lệch trong giá trị của `price0Cumulative` là 143.702-29.07=114.632. Đây là mức trung bình trong hai phút (120 giây). Vì vậy, giá trung bình là 114.632/120 = 0.955.
+Giả sử chúng ta muốn tính giá trung bình của **Token0** giữa các dấu thời gian 5,030 và 5,150. Sự chênh lệch trong giá trị của `price0Cumulative` là 140.35-29.07=111.28. Đây là mức trung bình trong hai phút (120 giây). Vì vậy, giá trung bình là 111.28/120 = 0.927.
 
-Việc tính toán giá này là lý do chúng ta cần biết quy mô dự trữ cũ.
+Tính toán giá này là lý do chúng ta cần biết quy mô dự trữ cũ.
 
 ```solidity
         reserve0 = uint112(balance0);
@@ -394,13 +394,13 @@ Cuối cùng, cập nhật các biến toàn cục và phát ra một sự kiệ
 ##### \_mintFee
 
 ```solidity
-    // nếu phí được bật, đúc thanh khoản tương đương với 1/6 sự tăng trưởng của sqrt(k)
+    // nếu phí được bật, đúc Thanh khoản tương đương với 1/6 sự tăng trưởng của sqrt(k)
     function _mintFee(uint112 _reserve0, uint112 _reserve1) private returns (bool feeOn) {
 ```
 
-Trong Uniswap 2.0, các nhà giao dịch trả mức phí 0,30% để sử dụng thị trường. Phần lớn khoản phí đó (0,25% của giao dịch) luôn thuộc về các nhà cung cấp thanh khoản. 0,05% còn lại có thể thuộc về các nhà cung cấp thanh khoản hoặc đến một địa chỉ được chỉ định bởi factory dưới dạng phí giao thức, dùng để trả cho Uniswap vì nỗ lực phát triển của họ.
+Trong Uniswap 2.0, các nhà giao dịch trả một khoản phí 0,30% để sử dụng thị trường. Phần lớn khoản phí đó (0,25% của giao dịch) luôn thuộc về các nhà cung cấp thanh khoản. 0,05% còn lại có thể thuộc về các nhà cung cấp thanh khoản hoặc một địa chỉ được factory chỉ định làm phí giao thức, dùng để trả cho Uniswap cho nỗ lực phát triển của họ. Trên Mạng chính Ethereum, phí giao thức này được bật: địa chỉ `feeTo` của factory được thiết lập, vì vậy 0,05% sẽ chuyển đến địa chỉ đó thay vì cho các nhà cung cấp thanh khoản.
 
-Để giảm bớt các tính toán (và do đó là chi phí gas), khoản phí này chỉ được tính khi thanh khoản được thêm vào hoặc rút khỏi pool, thay vì ở mỗi giao dịch.
+Để giảm bớt các tính toán (và do đó giảm chi phí gas), khoản phí này chỉ được tính khi thanh khoản được thêm vào hoặc rút khỏi pool, thay vì tại mỗi giao dịch.
 
 ```solidity
         address feeTo = IUniswapV2Factory(factory).feeTo();
@@ -413,15 +413,15 @@ Trong Uniswap 2.0, các nhà giao dịch trả mức phí 0,30% để sử dụn
         uint _kLast = kLast; // tiết kiệm Gas
 ```
 
-Biến trạng thái `kLast` được đặt trong bộ nhớ lưu trữ, vì vậy nó sẽ có một giá trị giữa các lệnh gọi khác nhau đến hợp đồng.
-Việc truy cập vào bộ nhớ lưu trữ đắt hơn rất nhiều so với việc truy cập vào bộ nhớ tạm thời (memory) được giải phóng khi lệnh gọi hàm đến hợp đồng kết thúc, vì vậy chúng ta sử dụng một biến nội bộ để tiết kiệm gas.
+Biến trạng thái `kLast` nằm trong bộ nhớ lưu trữ (storage), vì vậy nó sẽ giữ nguyên giá trị giữa các lần gọi khác nhau đến hợp đồng.
+Truy cập vào bộ nhớ lưu trữ đắt hơn rất nhiều so với truy cập vào bộ nhớ tạm thời (memory) vốn được giải phóng khi lệnh gọi hàm đến hợp đồng kết thúc, vì vậy chúng ta sử dụng một biến nội bộ để tiết kiệm gas.
 
 ```solidity
         if (feeOn) {
             if (_kLast != 0) {
 ```
 
-Các nhà cung cấp thanh khoản nhận được phần của họ đơn giản bằng sự tăng giá của các token thanh khoản của họ. Nhưng phí giao thức yêu cầu các token thanh khoản mới phải được đúc và cung cấp cho địa chỉ `feeTo`.
+Các nhà cung cấp thanh khoản nhận được phần của họ đơn giản bằng sự tăng giá trị của các token thanh khoản của họ. Nhưng phí giao thức yêu cầu các token thanh khoản mới phải được đúc và cung cấp cho địa chỉ `feeTo`.
 
 ```solidity
                 uint rootK = Math.sqrt(uint(_reserve0).mul(_reserve1));
@@ -437,7 +437,7 @@ Nếu có thanh khoản mới để thu phí giao thức. Bạn có thể xem h�
                     uint liquidity = numerator / denominator;
 ```
 
-Việc tính toán phí phức tạp này được giải thích trong [sách trắng](https://app.uniswap.org/whitepaper.pdf) ở trang 5. Chúng ta biết rằng giữa thời điểm `kLast` được tính toán và hiện tại không có thanh khoản nào được thêm vào hoặc rút ra (bởi vì chúng ta chạy tính toán này mỗi khi thanh khoản được thêm vào hoặc rút ra, trước khi nó thực sự thay đổi), vì vậy bất kỳ sự thay đổi nào trong `reserve0 * reserve1` đều phải đến từ phí giao dịch (nếu không có chúng, chúng ta sẽ giữ `reserve0 * reserve1` không đổi).
+Tính toán phí phức tạp này được giải thích trong [sách trắng](https://app.uniswap.org/whitepaper.pdf) ở trang 5. Chúng ta biết rằng giữa thời điểm `kLast` được tính toán và hiện tại không có thanh khoản nào được thêm vào hoặc rút ra (bởi vì chúng ta chạy tính toán này mỗi khi thanh khoản được thêm vào hoặc rút ra, trước khi nó thực sự thay đổi), vì vậy bất kỳ thay đổi nào trong `reserve0 * reserve1` đều phải đến từ phí giao dịch (nếu không có chúng, chúng ta sẽ giữ `reserve0 * reserve1` không đổi).
 
 ```solidity
                     if (liquidity > 0) _mint(feeTo, liquidity);
@@ -454,8 +454,8 @@ Sử dụng hàm `UniswapV2ERC20._mint` để thực sự tạo ra các token th
     }
 ```
 
-Nếu không có phí, hãy đặt `kLast` thành 0 (nếu nó chưa phải là 0). Khi hợp đồng này được viết, có một [tính năng hoàn trả gas](https://eips.ethereum.org/EIPS/eip-3298) khuyến khích các hợp đồng giảm kích thước tổng thể của trạng thái Ethereum bằng cách đưa các bộ nhớ lưu trữ mà chúng không cần về 0.
-Đoạn mã này nhận được khoản hoàn trả đó khi có thể.
+Nếu không có phí, hãy đặt `kLast` thành 0 (nếu nó chưa phải là 0). Ethereum có một tính năng hoàn trả gas khuyến khích các hợp đồng giảm kích thước tổng thể của trạng thái Ethereum bằng cách đưa các bộ nhớ lưu trữ mà chúng không cần về 0.
+Mã này nhận được khoản hoàn trả đó khi có thể. Kể từ bản nâng cấp London ([EIP-3529](https://eips.ethereum.org/EIPS/eip-3529)), khoản hoàn trả nhỏ hơn và được giới hạn ở mức một phần năm lượng gas của giao dịch, nhưng nó vẫn tồn tại.
 
 #### Các hàm có thể truy cập từ bên ngoài {#pair-external}
 
@@ -692,7 +692,7 @@ Trong trường hợp đó, có hai giải pháp:
 
 ### UniswapV2Factory.sol {#uniswapv2factory}
 
-[Hợp đồng này](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) tạo ra các cặp hoán đổi.
+[Hợp đồng này](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Factory.sol) tạo ra các cặp hoán đổi.
 
 ```solidity
 pragma solidity =0.5.16;
@@ -706,26 +706,26 @@ contract UniswapV2Factory is IUniswapV2Factory {
 ```
 
 Các biến trạng thái này là cần thiết để triển khai phí giao thức (xem [sách trắng](https://app.uniswap.org/whitepaper.pdf), trang 5).
-Địa chỉ `feeTo` tích lũy các token thanh khoản cho phí giao thức và `feeToSetter` là địa chỉ được phép thay đổi `feeTo` thành một địa chỉ khác.
+Địa chỉ `feeTo` tích lũy các token thanh khoản cho phí giao thức, và `feeToSetter` là địa chỉ được phép thay đổi `feeTo` thành một địa chỉ khác.
 
 ```solidity
     mapping(address => mapping(address => address)) public getPair;
     address[] public allPairs;
 ```
 
-Các biến này theo dõi các cặp, các cuộc hoán đổi giữa hai loại token.
+Các biến này theo dõi các cặp, tức là các sàn giao dịch giữa hai loại token.
 
-Biến đầu tiên, `getPair`, là một ánh xạ (mapping) xác định một hợp đồng cặp hoán đổi dựa trên hai token ERC-20 mà nó hoán đổi. Các token ERC-20 được xác định bởi các địa chỉ của các hợp đồng triển khai chúng, vì vậy các khóa và giá trị đều là các địa chỉ. Để lấy địa chỉ của cặp hoán đổi cho phép bạn chuyển đổi từ `tokenA` sang `tokenB`, bạn sử dụng `getPair[<tokenA address>][<tokenB address>]` (hoặc ngược lại).
+Biến đầu tiên, `getPair`, là một ánh xạ (mapping) xác định một hợp đồng cặp hoán đổi dựa trên hai token ERC-20 mà nó hoán đổi. Các token ERC-20 được xác định bởi địa chỉ của các hợp đồng triển khai chúng, vì vậy các khóa và giá trị đều là các địa chỉ. Để lấy địa chỉ của cặp hoán đổi cho phép bạn chuyển đổi từ `tokenA` sang `tokenB`, bạn sử dụng `getPair[<tokenA address>][<tokenB address>]` (hoặc ngược lại).
 
-Biến thứ hai, `allPairs`, là một mảng bao gồm tất cả các địa chỉ của các cặp hoán đổi được tạo bởi factory này. Trong Ethereum, bạn không thể lặp qua nội dung của một ánh xạ hoặc lấy danh sách tất cả các khóa, vì vậy biến này là cách duy nhất để biết factory này quản lý những sàn giao dịch nào.
+Biến thứ hai, `allPairs`, là một mảng bao gồm tất cả các địa chỉ của các cặp hoán đổi được tạo bởi factory này. Trong Ethereum, bạn không thể lặp qua nội dung của một ánh xạ, hoặc lấy danh sách tất cả các khóa, vì vậy biến này là cách duy nhất để biết factory này quản lý những sàn giao dịch nào.
 
-Lưu ý: Lý do bạn không thể lặp qua tất cả các khóa của một ánh xạ là vì việc lưu trữ dữ liệu hợp đồng rất _đắt đỏ_, vì vậy chúng ta càng sử dụng ít càng tốt và càng ít thay đổi nó càng tốt. Bạn có thể tạo [các ánh xạ hỗ trợ lặp](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol), nhưng chúng yêu cầu thêm bộ nhớ lưu trữ cho một danh sách các khóa. Trong hầu hết các ứng dụng, bạn không cần điều đó.
+Lưu ý: Lý do bạn không thể lặp qua tất cả các khóa của một ánh xạ là vì việc lưu trữ dữ liệu hợp đồng rất _đắt đỏ_, vì vậy chúng ta càng sử dụng ít càng tốt, và càng ít thay đổi nó càng tốt. Bạn có thể tạo [các ánh xạ hỗ trợ lặp](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol), nhưng chúng yêu cầu thêm bộ nhớ lưu trữ cho một danh sách các khóa. Trong hầu hết các ứng dụng, bạn không cần điều đó.
 
 ```solidity
     event PairCreated(address indexed token0, address indexed token1, address pair, uint);
 ```
 
-Sự kiện này được phát ra khi một cặp hoán đổi mới được tạo. Nó bao gồm các địa chỉ của các token, địa chỉ của cặp hoán đổi và tổng số các sàn giao dịch được quản lý bởi factory.
+Sự kiện này được phát ra khi một cặp hoán đổi mới được tạo. Nó bao gồm địa chỉ của các token, địa chỉ của cặp hoán đổi và tổng số các sàn giao dịch do factory quản lý.
 
 ```solidity
     constructor(address _feeToSetter) public {
@@ -733,7 +733,7 @@ Sự kiện này được phát ra khi một cặp hoán đổi mới được t
     }
 ```
 
-Điều duy nhất mà hàm khởi tạo làm là chỉ định `feeToSetter`. Các factory bắt đầu mà không có phí và chỉ `feeSetter` mới có thể thay đổi điều đó.
+Điều duy nhất mà hàm khởi tạo làm là chỉ định `feeToSetter`. Các factory bắt đầu mà không có phí, và chỉ `feeSetter` mới có thể thay đổi điều đó.
 
 ```solidity
     function allPairsLength() external view returns (uint) {
@@ -754,7 +754,7 @@ Hàm này trả về số lượng các cặp hoán đổi.
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Chúng ta muốn địa chỉ của sàn giao dịch mới mang tính xác định (deterministic), để nó có thể được tính toán trước ngoài chuỗi (điều này có thể hữu ích cho [các giao dịch lớp 2 (l2)](/developers/docs/scaling/)).
+Chúng ta muốn địa chỉ của sàn giao dịch mới mang tính tất định (deterministic), để nó có thể được tính toán trước ngoài chuỗi (điều này có thể hữu ích cho [các giao dịch lớp 2](/developers/docs/scaling/)).
 Để làm điều này, chúng ta cần có một thứ tự nhất quán của các địa chỉ token, bất kể thứ tự mà chúng ta đã nhận được chúng, vì vậy chúng ta sắp xếp chúng ở đây.
 
 ```solidity
@@ -762,14 +762,14 @@ Chúng ta muốn địa chỉ của sàn giao dịch mới mang tính xác đị
         require(getPair[token0][token1] == address(0), 'UniswapV2: PAIR_EXISTS'); // kiểm tra một lần là đủ
 ```
 
-Các pool thanh khoản lớn tốt hơn các pool nhỏ, bởi vì chúng có giá ổn định hơn. Chúng ta không muốn có nhiều hơn một pool thanh khoản cho mỗi cặp token. Nếu đã có một sàn giao dịch, không cần phải tạo một sàn khác cho cùng một cặp.
+Các pool thanh khoản lớn tốt hơn các pool nhỏ, vì chúng có giá cả ổn định hơn. Chúng ta không muốn có nhiều hơn một pool thanh khoản duy nhất cho mỗi cặp token. Nếu đã có một sàn giao dịch, không cần phải tạo một sàn khác cho cùng một cặp.
 
 ```solidity
         bytes memory bytecode = type(UniswapV2Pair).creationCode;
 ```
 
-Để tạo một hợp đồng mới, chúng ta cần mã tạo ra nó (cả hàm khởi tạo và mã ghi vào bộ nhớ mã byte EVM của hợp đồng thực tế). Thông thường trong Solidity, chúng ta chỉ sử dụng `addr = new <name of contract>(<constructor parameters>)` và trình biên dịch sẽ lo mọi thứ cho chúng ta, nhưng để có một địa chỉ hợp đồng mang tính xác định, chúng ta cần sử dụng [mã lệnh CREATE2](https://eips.ethereum.org/EIPS/eip-1014).
-Khi đoạn mã này được viết, mã lệnh đó chưa được Solidity hỗ trợ, vì vậy cần phải lấy mã theo cách thủ công. Điều này không còn là vấn đề nữa, bởi vì [Solidity hiện đã hỗ trợ CREATE2](https://docs.soliditylang.org/en/v0.8.3/control-structures.html#salted-contract-creations-create2).
+Để tạo một hợp đồng mới, chúng ta cần mã tạo ra nó (cả hàm khởi tạo và mã ghi vào bộ nhớ mã byte EVM của hợp đồng thực tế). Thông thường trong Solidity, chúng ta chỉ sử dụng `addr = new <name of contract>(<constructor parameters>)` và trình biên dịch sẽ lo mọi thứ cho chúng ta, nhưng để có một địa chỉ hợp đồng tất định, chúng ta cần sử dụng [mã lệnh CREATE2](https://eips.ethereum.org/EIPS/eip-1014).
+Khi mã này được viết, mã lệnh đó chưa được Solidity hỗ trợ, vì vậy cần phải lấy mã theo cách thủ công. Điều này không còn là vấn đề nữa, vì [Solidity hiện đã hỗ trợ CREATE2](https://docs.soliditylang.org/en/v0.8.3/control-structures.html#salted-contract-creations-create2).
 
 ```solidity
         bytes32 salt = keccak256(abi.encodePacked(token0, token1));
@@ -788,7 +788,7 @@ Gọi hàm `initialize` để cho sàn giao dịch mới biết nó hoán đổi
 
 ```solidity
         getPair[token0][token1] = pair;
-        getPair[token1][token0] = pair; // điền mapping theo hướng ngược lại
+        getPair[token1][token0] = pair; // điền ánh xạ theo hướng ngược lại
         allPairs.push(pair);
         emit PairCreated(token0, token1, pair, allPairs.length);
     }
@@ -809,14 +809,14 @@ Lưu thông tin cặp mới vào các biến trạng thái và phát ra một s�
 }
 ```
 
-Hai hàm này cho phép `feeSetter` kiểm soát người nhận phí (nếu có) và thay đổi `feeSetter` thành một địa chỉ mới.
+Hai hàm này cho phép `feeSetter` kiểm soát người nhận phí (nếu có), và thay đổi `feeSetter` thành một địa chỉ mới.
 
 ### UniswapV2ERC20.sol {#uniswapv2erc20}
 
-[Hợp đồng này](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) triển khai token thanh khoản ERC-20. Nó tương tự như [hợp đồng ERC-20 của OpenZeppelin](/developers/tutorials/erc20-annotated-code), vì vậy tôi sẽ chỉ giải thích phần khác biệt, chức năng `permit`.
+[Hợp đồng này](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2ERC20.sol) triển khai token thanh khoản ERC-20. Nó tương tự như [hợp đồng ERC-20 của OpenZeppelin](/developers/tutorials/erc20-annotated-code), vì vậy tôi sẽ chỉ giải thích phần khác biệt, đó là chức năng `permit`.
 
-Các giao dịch trên Ethereum tốn ether (ETH), tương đương với tiền thật. Nếu bạn có các token ERC-20 nhưng không có ETH, bạn không thể gửi các giao dịch, vì vậy bạn không thể làm gì với chúng. Một giải pháp để tránh vấn đề này là [các siêu giao dịch (meta-transactions)](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions).
-Chủ sở hữu của các token ký một giao dịch cho phép người khác rút các token ngoài chuỗi và gửi nó qua Internet cho người nhận. Người nhận, người có ETH, sau đó sẽ gửi giấy phép thay mặt cho chủ sở hữu.
+Các giao dịch trên Ethereum tốn ether (ETH), tương đương với tiền thật. Nếu bạn có token ERC-20 nhưng không có ETH, bạn không thể gửi giao dịch, vì vậy bạn không thể làm gì với chúng. Một giải pháp để tránh vấn đề này là [siêu giao dịch (meta-transactions)](https://developers.uniswap.org/docs/protocols/v2/concepts/meta-transactions).
+Chủ sở hữu của các token ký một giao dịch cho phép người khác rút token ngoài chuỗi và gửi nó qua Internet cho người nhận. Người nhận, người có ETH, sau đó sẽ gửi giấy phép (permit) thay mặt cho chủ sở hữu.
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;
@@ -830,7 +830,7 @@ Mã băm này là [định danh cho loại giao dịch](https://eips.ethereum.or
     mapping(address => uint) public nonces;
 ```
 
-Việc người nhận làm giả chữ ký số là không khả thi. Tuy nhiên, việc gửi cùng một giao dịch hai lần lại rất dễ dàng (đây là một dạng [tấn công phát lại (replay attack)](https://wikipedia.org/wiki/Replay_attack)). Để ngăn chặn điều này, chúng ta sử dụng một [nonce](https://wikipedia.org/wiki/Cryptographic_nonce). Nếu nonce của một `Permit` mới không lớn hơn 1 so với nonce cuối cùng được sử dụng, chúng ta cho rằng nó không hợp lệ.
+Người nhận không thể làm giả chữ ký số. Tuy nhiên, việc gửi cùng một giao dịch hai lần lại rất dễ dàng (đây là một dạng [tấn công phát lại (replay attack)](https://wikipedia.org/wiki/Replay_attack)). Để ngăn chặn điều này, chúng ta sử dụng một [nonce](https://wikipedia.org/wiki/Cryptographic_nonce). Nếu nonce của một `Permit` mới không lớn hơn 1 so với nonce được sử dụng lần cuối, chúng ta coi nó là không hợp lệ.
 
 ```solidity
     constructor() public {
@@ -840,7 +840,7 @@ Việc người nhận làm giả chữ ký số là không khả thi. Tuy nhiê
         }
 ```
 
-Đây là đoạn mã để truy xuất [định danh chuỗi](https://chainid.network/). Nó sử dụng một phương ngữ hợp ngữ EVM có tên là [Yul](https://docs.soliditylang.org/en/v0.8.4/yul.html). Lưu ý rằng trong phiên bản hiện tại của Yul, bạn phải sử dụng `chainid()`, chứ không phải `chainid`.
+Đây là mã để truy xuất [định danh chuỗi](https://chainid.network/). Nó sử dụng một phương ngữ hợp ngữ EVM gọi là [Yul](https://docs.soliditylang.org/en/v0.8.4/yul.html). Lưu ý rằng trong phiên bản hiện tại của Yul, bạn phải sử dụng `chainid()`, chứ không phải `chainid`.
 
 ```solidity
         DOMAIN_SEPARATOR = keccak256(
@@ -855,13 +855,13 @@ Việc người nhận làm giả chữ ký số là không khả thi. Tuy nhiê
     }
 ```
 
-Tính toán [bộ phân tách miền (domain separator)](https://eips.ethereum.org/EIPS/eip-712#rationale-for-domainseparator) cho EIP-712.
+Tính toán [dấu phân cách miền (domain separator)](https://eips.ethereum.org/EIPS/eip-712#rationale-for-domainseparator) cho EIP-712.
 
 ```solidity
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
 ```
 
-Đây là hàm triển khai các quyền. Nó nhận các trường có liên quan làm tham số và ba giá trị vô hướng cho [chữ ký](https://yos.io/2018/11/16/ethereum-signatures/) (v, r và s).
+Đây là hàm triển khai các quyền. Nó nhận các trường liên quan làm tham số, và ba giá trị vô hướng cho [chữ ký](https://yos.io/2018/11/16/ethereum-signatures/) (v, r, và s).
 
 ```solidity
         require(deadline >= block.timestamp, 'UniswapV2: EXPIRED');
@@ -879,7 +879,7 @@ Không chấp nhận các giao dịch sau thời hạn.
         );
 ```
 
-`abi.encodePacked(...)` là thông điệp mà chúng ta mong đợi nhận được. Chúng ta biết nonce nên là gì, vì vậy không cần thiết phải lấy nó làm tham số.
+`abi.encodePacked(...)` là thông điệp mà chúng ta mong đợi nhận được. Chúng ta biết nonce nên là bao nhiêu, vì vậy không cần phải lấy nó làm tham số.
 
 Thuật toán chữ ký Ethereum mong đợi nhận được 256 bit để ký, vì vậy chúng ta sử dụng hàm băm `keccak256`.
 
@@ -887,7 +887,7 @@ Thuật toán chữ ký Ethereum mong đợi nhận được 256 bit để ký, 
         address recoveredAddress = ecrecover(digest, v, r, s);
 ```
 
-Từ bản tóm tắt (digest) và chữ ký, chúng ta có thể lấy địa chỉ đã ký nó bằng cách sử dụng [ecrecover](https://coders-errand.com/ecrecover-signature-verification-ethereum/).
+Từ bản tóm tắt (digest) và chữ ký, chúng ta có thể lấy được địa chỉ đã ký nó bằng cách sử dụng [ecrecover](https://coders-errand.com/ecrecover-signature-verification-ethereum/).
 
 ```solidity
         require(recoveredAddress != address(0) && recoveredAddress == owner, 'UniswapV2: INVALID_SIGNATURE');
@@ -896,7 +896,7 @@ Từ bản tóm tắt (digest) và chữ ký, chúng ta có thể lấy địa c
 
 ```
 
-Nếu mọi thứ đều ổn, hãy coi đây là [một sự chấp thuận ERC-20](https://eips.ethereum.org/EIPS/eip-20#approve).
+Nếu mọi thứ đều ổn, hãy coi đây như [một sự chấp thuận ERC-20](https://eips.ethereum.org/EIPS/eip-20#approve).
 
 ## Các hợp đồng ngoại vi {#periphery-contracts}
 
@@ -904,12 +904,12 @@ Các hợp đồng ngoại vi là API (giao diện lập trình ứng dụng) ch
 
 ### UniswapV2Router01.sol {#uniswapv2router01}
 
-[Hợp đồng này](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) có vấn đề, và [không nên được sử dụng nữa](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). May mắn thay, các hợp đồng ngoại vi không có trạng thái và không giữ bất kỳ tài sản nào, vì vậy rất dễ dàng để ngừng sử dụng nó và đề xuất mọi người sử dụng hợp đồng thay thế, `UniswapV2Router02`.
+[Hợp đồng này](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router01.sol) có vấn đề và không nên được sử dụng nữa. May mắn thay, các hợp đồng ngoại vi không có trạng thái và không nắm giữ bất kỳ tài sản nào, vì vậy rất dễ dàng để loại bỏ nó và đề xuất mọi người sử dụng hợp đồng thay thế, `UniswapV2Router02`.
 
 ### UniswapV2Router02.sol {#uniswapv2router02}
 
-Trong hầu hết các trường hợp, bạn sẽ sử dụng Uniswap thông qua [hợp đồng này](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
-Bạn có thể xem cách sử dụng nó [tại đây](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
+Trong hầu hết các trường hợp, bạn sẽ sử dụng Uniswap thông qua [hợp đồng này](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
+Bạn có thể xem cách sử dụng nó [tại đây](https://developers.uniswap.org/docs/protocols/v2/guides/swapping).
 
 ```solidity
 pragma solidity =0.6.6;
@@ -924,7 +924,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-Hầu hết những điều này chúng ta đã gặp trước đây, hoặc khá rõ ràng. Một ngoại lệ là `IWETH.sol`. Uniswap v2 cho phép hoán đổi bất kỳ cặp token ERC-20 nào, nhưng bản thân ether (ETH) không phải là một token ERC-20. Nó ra đời trước tiêu chuẩn này và được chuyển bằng các cơ chế độc đáo. Để cho phép sử dụng ETH trong các hợp đồng áp dụng cho token ERC-20, mọi người đã tạo ra hợp đồng [Ether được bọc (WETH)](https://weth.tkn.eth.limo/). Bạn gửi ETH cho hợp đồng này, và nó đúc cho bạn một lượng WETH tương đương. Hoặc bạn có thể đốt WETH, và nhận lại ETH.
+Hầu hết những thứ này chúng ta đã gặp trước đây, hoặc khá rõ ràng. Ngoại lệ duy nhất là `IWETH.sol`. Uniswap v2 cho phép hoán đổi bất kỳ cặp token ERC-20 nào, nhưng bản thân ether (ETH) không phải là token ERC-20. Nó ra đời trước tiêu chuẩn này và được chuyển bằng các cơ chế độc đáo. Để cho phép sử dụng ETH trong các hợp đồng áp dụng cho token ERC-20, mọi người đã nghĩ ra hợp đồng [Ether được bọc (WETH)](https://weth.tkn.eth.limo/). Bạn gửi ETH cho hợp đồng này, và nó đúc cho bạn một lượng WETH tương đương. Hoặc bạn có thể đốt WETH và nhận lại ETH.
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {
@@ -934,7 +934,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     address public immutable override WETH;
 ```
 
-Router cần biết factory nào để sử dụng, và đối với các giao dịch yêu cầu WETH thì sử dụng hợp đồng WETH nào. Các giá trị này là [bất biến](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables), nghĩa là chúng chỉ có thể được thiết lập trong hàm khởi tạo. Điều này mang lại cho người dùng sự tự tin rằng không ai có thể thay đổi chúng để trỏ đến các hợp đồng kém trung thực hơn.
+Router cần biết sử dụng factory nào, và đối với các giao dịch yêu cầu WETH thì sử dụng hợp đồng WETH nào. Các giá trị này là [bất biến](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables), nghĩa là chúng chỉ có thể được thiết lập trong hàm khởi tạo. Điều này mang lại cho người dùng sự tự tin rằng không ai có thể thay đổi chúng để trỏ đến các hợp đồng kém trung thực hơn.
 
 ```solidity
     modifier ensure(uint deadline) {
@@ -943,7 +943,7 @@ Router cần biết factory nào để sử dụng, và đối với các giao d
     }
 ```
 
-Modifier này đảm bảo rằng các giao dịch có giới hạn thời gian ("thực hiện X trước thời gian Y nếu bạn có thể") không xảy ra sau giới hạn thời gian của chúng.
+Công cụ sửa đổi (modifier) này đảm bảo rằng các giao dịch có giới hạn thời gian ("làm X trước thời gian Y nếu bạn có thể") không xảy ra sau giới hạn thời gian của chúng.
 
 ```solidity
     constructor(address _factory, address _WETH) public {
@@ -960,7 +960,7 @@ Hàm khởi tạo chỉ thiết lập các biến trạng thái bất biến.
     }
 ```
 
-Hàm này được gọi khi chúng ta quy đổi token từ hợp đồng WETH trở lại thành ETH. Chỉ hợp đồng WETH mà chúng ta sử dụng mới được ủy quyền để làm điều đó.
+Hàm này được gọi khi chúng ta quy đổi token từ hợp đồng WETH trở lại thành ETH. Chỉ hợp đồng WETH mà chúng ta sử dụng mới được ủy quyền làm điều đó.
 
 #### Thêm thanh khoản {#add-liquidity}
 
@@ -986,27 +986,27 @@ Hàm này được sử dụng để tính toán số lượng token A và B nê
         uint amountBDesired,
 ```
 
-Đây là các số lượng mà nhà cung cấp thanh khoản muốn nạp. Chúng cũng là số lượng tối đa của A và B được nạp.
+Đây là số lượng mà nhà cung cấp thanh khoản muốn nạp. Chúng cũng là số lượng tối đa của A và B sẽ được nạp.
 
 ```solidity
         uint amountAMin,
         uint amountBMin
 ```
 
-Đây là các số lượng tối thiểu có thể chấp nhận để nạp. Nếu giao dịch không thể diễn ra với các số lượng này hoặc nhiều hơn, hãy hoàn nguyên nó. Nếu bạn không muốn tính năng này, chỉ cần chỉ định bằng không.
+Đây là số lượng tối thiểu có thể chấp nhận được để nạp. Nếu giao dịch không thể diễn ra với các số lượng này hoặc nhiều hơn, hãy hoàn nguyên nó. Nếu bạn không muốn tính năng này, chỉ cần chỉ định là 0.
 
-Các nhà cung cấp thanh khoản thường chỉ định mức tối thiểu, bởi vì họ muốn giới hạn giao dịch ở một tỷ giá hoán đổi gần với tỷ giá hiện tại. Nếu tỷ giá hoán đổi biến động quá nhiều, điều đó có thể có nghĩa là có tin tức làm thay đổi các giá trị cơ sở, và họ muốn tự quyết định phải làm gì.
+Các nhà cung cấp thanh khoản thường chỉ định mức tối thiểu, bởi vì họ muốn giới hạn giao dịch ở một tỷ giá hoán đổi gần với tỷ giá hiện tại. Nếu tỷ giá hoán đổi biến động quá nhiều, điều đó có thể có nghĩa là có tin tức làm thay đổi các giá trị cơ bản, và họ muốn tự quyết định phải làm gì.
 
-Ví dụ, hãy tưởng tượng một trường hợp trong đó tỷ giá hoán đổi là một-một và nhà cung cấp thanh khoản chỉ định các giá trị này:
+Ví dụ, hãy tưởng tượng một trường hợp tỷ giá hoán đổi là một đổi một và nhà cung cấp thanh khoản chỉ định các giá trị này:
 
-| Tham số        | Giá trị |
-| -------------- | ------: |
-| amountADesired |    1000 |
-| amountBDesired |    1000 |
-| amountAMin     |     900 |
-| amountBMin     |     800 |
+| Tham số      | Giá trị |
+| -------------- | ----: |
+| amountADesired |  1000 |
+| amountBDesired |  1000 |
+| amountAMin     |   900 |
+| amountBMin     |   800 |
 
-Miễn là tỷ giá hoán đổi nằm trong khoảng từ 0.9 đến 1.25, giao dịch sẽ diễn ra. Nếu tỷ giá hoán đổi vượt ra ngoài phạm vi đó, giao dịch sẽ bị hủy.
+Miễn là tỷ giá hoán đổi nằm trong khoảng từ 0,9 đến 1,25, giao dịch sẽ diễn ra. Nếu tỷ giá hoán đổi vượt ra ngoài phạm vi đó, giao dịch sẽ bị hủy.
 
 Lý do cho sự phòng ngừa này là các giao dịch không diễn ra ngay lập tức, bạn gửi chúng và cuối cùng một trình xác thực sẽ đưa chúng vào một khối (trừ khi giá gas của bạn rất thấp, trong trường hợp đó bạn sẽ cần gửi một giao dịch khác với cùng một nonce và giá gas cao hơn để ghi đè lên nó). Bạn không thể kiểm soát những gì xảy ra trong khoảng thời gian giữa lúc gửi và lúc được đưa vào khối.
 
@@ -1023,7 +1023,7 @@ Hàm trả về số lượng mà nhà cung cấp thanh khoản nên nạp để
         }
 ```
 
-Nếu chưa có cặp hoán đổi nào cho cặp token này, hãy tạo nó.
+Nếu chưa có sàn giao dịch nào cho cặp token này, hãy tạo nó.
 
 ```solidity
         (uint reserveA, uint reserveB) = UniswapV2Library.getReserves(factory, tokenA, tokenB);
@@ -1043,7 +1043,7 @@ Nếu các khoản dự trữ hiện tại trống thì đây là một cặp ho
             uint amountBOptimal = UniswapV2Library.quote(amountADesired, reserveA, reserveB);
 ```
 
-Nếu chúng ta cần xem số lượng sẽ là bao nhiêu, chúng ta lấy số lượng tối ưu bằng cách sử dụng [hàm này](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L35). Chúng ta muốn tỷ lệ giống như các khoản dự trữ hiện tại.
+Nếu chúng ta cần xem số lượng sẽ là bao nhiêu, chúng ta lấy số lượng tối ưu bằng cách sử dụng [hàm này](https://github.com/Uniswap/v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L36). Chúng ta muốn tỷ lệ giống như các khoản dự trữ hiện tại.
 
 ```solidity
             if (amountBOptimal <= amountBDesired) {
@@ -1061,13 +1061,13 @@ Nếu `amountBOptimal` nhỏ hơn số lượng mà nhà cung cấp thanh khoả
                 (amountA, amountB) = (amountAOptimal, amountBDesired);
 ```
 
-Nếu số lượng B tối ưu lớn hơn số lượng B mong muốn, điều đó có nghĩa là token B hiện ít có giá trị hơn so với suy nghĩ của người nạp thanh khoản, vì vậy cần một số lượng cao hơn. Tuy nhiên, số lượng mong muốn là mức tối đa, vì vậy chúng ta không thể làm điều đó. Thay vào đó, chúng ta tính toán số lượng token A tối ưu cho số lượng token B mong muốn.
+Nếu số lượng B tối ưu nhiều hơn số lượng B mong muốn, điều đó có nghĩa là token B hiện ít giá trị hơn so với suy nghĩ của người nạp thanh khoản, vì vậy cần một số lượng cao hơn. Tuy nhiên, số lượng mong muốn là mức tối đa, vì vậy chúng ta không thể làm điều đó. Thay vào đó, chúng ta tính toán số lượng token A tối ưu cho số lượng token B mong muốn.
 
-Kết hợp tất cả lại, chúng ta có biểu đồ này. Giả sử bạn đang cố gắng nạp một nghìn token A (đường màu xanh lam) và một nghìn token B (đường màu đỏ). Trục x là tỷ giá hoán đổi, A/B. Nếu x=1, chúng có giá trị bằng nhau và bạn nạp một nghìn cho mỗi loại. Nếu x=2, A có giá trị gấp đôi B (bạn nhận được hai token B cho mỗi token A) vì vậy bạn nạp một nghìn token B, nhưng chỉ 500 token A. Nếu x=0.5, tình huống bị đảo ngược, một nghìn token A và năm trăm token B.
+Kết hợp tất cả lại, chúng ta có biểu đồ này. Giả sử bạn đang cố gắng nạp một nghìn token A (đường màu xanh) và một nghìn token B (đường màu đỏ). Trục x là tỷ giá hoán đổi, A/B. Nếu x=1, chúng có giá trị bằng nhau và bạn nạp một nghìn cho mỗi loại. Nếu x=2, A có giá trị gấp đôi B (bạn nhận được hai token B cho mỗi token A) vì vậy bạn nạp một nghìn token B, nhưng chỉ 500 token A. Nếu x=0,5, tình huống bị đảo ngược, một nghìn token A và năm trăm token B.
 
-![Graph](liquidityProviderDeposit.png)
+![Biểu đồ](liquidityProviderDeposit.png)
 
-Bạn có thể nạp thanh khoản trực tiếp vào hợp đồng cốt lõi (sử dụng [UniswapV2Pair::mint](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol#L110)), nhưng hợp đồng cốt lõi chỉ kiểm tra xem bản thân nó có bị gian lận hay không, vì vậy bạn có nguy cơ mất giá trị nếu tỷ giá hoán đổi thay đổi trong khoảng thời gian giữa lúc bạn gửi giao dịch và lúc nó được thực thi. Nếu bạn sử dụng hợp đồng ngoại vi, nó sẽ tính toán số lượng bạn nên nạp và nạp ngay lập tức, vì vậy tỷ giá hoán đổi không thay đổi và bạn không mất gì cả.
+Bạn có thể nạp thanh khoản trực tiếp vào hợp đồng cốt lõi (sử dụng [UniswapV2Pair::mint](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol#L110)), nhưng hợp đồng cốt lõi chỉ kiểm tra xem bản thân nó có bị gian lận hay không, vì vậy bạn có nguy cơ mất giá trị nếu tỷ giá hoán đổi thay đổi giữa thời điểm bạn gửi giao dịch và thời điểm nó được thực thi. Nếu bạn sử dụng hợp đồng ngoại vi, nó sẽ tính toán số lượng bạn nên nạp và nạp ngay lập tức, vì vậy tỷ giá hoán đổi không thay đổi và bạn không mất gì cả.
 
 ```solidity
     function addLiquidity(
@@ -1083,8 +1083,8 @@ Bạn có thể nạp thanh khoản trực tiếp vào hợp đồng cốt lõi 
 
 Hàm này có thể được gọi bởi một giao dịch để nạp thanh khoản. Hầu hết các tham số đều giống như trong `_addLiquidity` ở trên, với hai ngoại lệ:
 
-. `to` là địa chỉ nhận được các token thanh khoản mới được đúc để thể hiện phần của nhà cung cấp thanh khoản trong pool
-. `deadline` là giới hạn thời gian cho giao dịch
+- `to` là địa chỉ nhận được các token thanh khoản mới được đúc để thể hiện phần của nhà cung cấp thanh khoản trong pool
+- `deadline` là giới hạn thời gian cho giao dịch
 
 ```solidity
     ) external virtual override ensure(deadline) returns (uint amountA, uint amountB, uint liquidity) {
@@ -1106,7 +1106,7 @@ Chuyển đúng số lượng token từ người dùng vào cặp hoán đổi.
     }
 ```
 
-Đổi lại, cấp cho địa chỉ `to` các token thanh khoản cho quyền sở hữu một phần của pool. Hàm `mint` của hợp đồng cốt lõi xem nó có bao nhiêu token thừa (so với những gì nó có ở lần thay đổi thanh khoản trước) và đúc thanh khoản tương ứng.
+Đổi lại, cung cấp cho địa chỉ `to` các token thanh khoản cho quyền sở hữu một phần của pool. Hàm `mint` của hợp đồng cốt lõi xem nó có bao nhiêu token thừa (so với những gì nó có lần cuối cùng thanh khoản thay đổi) và đúc thanh khoản tương ứng.
 
 ```solidity
     function addLiquidityETH(
@@ -1114,7 +1114,7 @@ Chuyển đúng số lượng token từ người dùng vào cặp hoán đổi.
         uint amountTokenDesired,
 ```
 
-Khi một nhà cung cấp thanh khoản muốn cung cấp thanh khoản cho một cặp hoán đổi Token/ETH, có một vài điểm khác biệt. Hợp đồng xử lý việc bọc ETH cho nhà cung cấp thanh khoản. Không cần chỉ định số lượng ETH mà người dùng muốn nạp, bởi vì người dùng chỉ cần gửi chúng cùng với giao dịch (số lượng có sẵn trong `msg.value`).
+Khi một nhà cung cấp thanh khoản muốn cung cấp thanh khoản cho một cặp hoán đổi Token/ETH, có một vài điểm khác biệt. Hợp đồng xử lý việc bọc ETH cho nhà cung cấp thanh khoản. Không cần chỉ định người dùng muốn nạp bao nhiêu ETH, vì người dùng chỉ cần gửi chúng cùng với giao dịch (số lượng có sẵn trong `msg.value`).
 
 ```solidity
         uint amountTokenMin,
@@ -1136,16 +1136,16 @@ Khi một nhà cung cấp thanh khoản muốn cung cấp thanh khoản cho mộ
         assert(IWETH(WETH).transfer(pair, amountETH));
 ```
 
-Để nạp ETH, hợp đồng trước tiên bọc nó thành WETH và sau đó chuyển WETH vào cặp. Lưu ý rằng việc chuyển được bọc trong một `assert`. Điều này có nghĩa là nếu việc chuyển thất bại, lệnh gọi hợp đồng này cũng thất bại, và do đó việc bọc không thực sự xảy ra.
+Để nạp ETH, hợp đồng trước tiên bọc nó thành WETH và sau đó chuyển WETH vào cặp. Lưu ý rằng việc chuyển được bọc trong một `assert`. Điều này có nghĩa là nếu việc chuyển thất bại, lệnh gọi hợp đồng này cũng thất bại, và do đó việc bọc thực sự không xảy ra.
 
 ```solidity
         liquidity = IUniswapV2Pair(pair).mint(to);
-        // hoàn trả eth lẻ, nếu có
+        // hoàn trả ETH lẻ, nếu có
         if (msg.value > amountETH) TransferHelper.safeTransferETH(msg.sender, msg.value - amountETH);
     }
 ```
 
-Người dùng đã gửi cho chúng ta ETH, vì vậy nếu còn thừa bất kỳ khoản nào (bởi vì token kia ít có giá trị hơn so với suy nghĩ của người dùng), chúng ta cần phải hoàn lại tiền.
+Người dùng đã gửi cho chúng ta ETH, vì vậy nếu còn thừa bất kỳ khoản nào (vì token kia ít giá trị hơn người dùng nghĩ), chúng ta cần phải hoàn trả.
 
 #### Rút thanh khoản {#remove-liquidity}
 
@@ -1322,16 +1322,16 @@ Hàm này thực hiện xử lý nội bộ cần thiết cho các hàm được
         for (uint i; i < path.length - 1; i++) {
 ```
 
-Khi tôi đang viết bài này, có [388.160 token ERC-20](https://eth.blockscout.com/tokens). Nếu có một cặp hoán đổi cho mỗi cặp token, sẽ có hơn 150 tỷ cặp hoán đổi. Toàn bộ chuỗi, tại thời điểm hiện tại, [chỉ có 0,1% số lượng tài khoản đó](https://eth.blockscout.com/stats/accountsGrowth). Thay vào đó, các hàm hoán đổi hỗ trợ khái niệm về một đường dẫn (path). Một nhà giao dịch có thể hoán đổi A lấy B, B lấy C, và C lấy D, vì vậy không cần một cặp hoán đổi trực tiếp A-D.
+Khi tôi viết bài này, có [388.160 token ERC-20](https://eth.blockscout.com/tokens). Nếu có một cặp hoán đổi cho mỗi cặp token, sẽ có hơn 150 tỷ cặp hoán đổi. Toàn bộ chuỗi, tại thời điểm hiện tại, [chỉ có 0,1% số lượng tài khoản đó](https://eth.blockscout.com/stats/accountsGrowth). Thay vào đó, các hàm hoán đổi hỗ trợ khái niệm về một đường dẫn (path). Một nhà giao dịch có thể hoán đổi A lấy B, B lấy C, và C lấy D, vì vậy không cần một cặp hoán đổi trực tiếp A-D.
 
-Giá trên các thị trường này có xu hướng được đồng bộ hóa, bởi vì khi chúng không đồng bộ, nó tạo ra cơ hội cho kinh doanh chênh lệch giá (arbitrage). Ví dụ, hãy tưởng tượng ba token, A, B, và C. Có ba cặp hoán đổi, một cho mỗi cặp.
+Giá trên các thị trường này có xu hướng được đồng bộ hóa, bởi vì khi chúng mất đồng bộ, nó tạo ra cơ hội cho kinh doanh chênh lệch giá (arbitrage). Ví dụ, hãy tưởng tượng ba token, A, B, và C. Có ba cặp hoán đổi, một cho mỗi cặp.
 
 1. Tình huống ban đầu
-2. Một nhà giao dịch bán 24.695 token A và nhận được 25.305 token B.
-3. Nhà giao dịch bán 24.695 token B lấy 25.305 token C, giữ lại khoảng 0.61 token B làm lợi nhuận.
-4. Sau đó, nhà giao dịch bán 24.695 token C lấy 25.305 token A, giữ lại khoảng 0.61 token C làm lợi nhuận. Nhà giao dịch cũng có thêm 0.61 token A (25.305 mà nhà giao dịch nhận được cuối cùng, trừ đi khoản đầu tư ban đầu là 24.695).
+2. Một nhà giao dịch bán 24,695 token A và nhận được 25,305 token B.
+3. Nhà giao dịch bán 24,695 token B lấy 25,305 token C, giữ lại khoảng 0,61 token B làm lợi nhuận.
+4. Sau đó, nhà giao dịch bán 24,695 token C lấy 25,305 token A, giữ lại khoảng 0,61 token C làm lợi nhuận. Nhà giao dịch cũng có thêm 0,61 token A (25,305 mà nhà giao dịch nhận được cuối cùng, trừ đi khoản đầu tư ban đầu là 24,695).
 
-| Bước | Hoán đổi A-B                | Hoán đổi B-C                | Hoán đổi A-C                |
+| Bước | Sàn giao dịch A-B                | Sàn giao dịch B-C                | Sàn giao dịch A-C                |
 | ---- | --------------------------- | --------------------------- | --------------------------- |
 | 1    | A:1000 B:1050 A/B=1.05      | B:1000 C:1050 B/C=1.05      | A:1050 C:1000 C/A=1.05      |
 | 2    | A:1024.695 B:1024.695 A/B=1 | B:1000 C:1050 B/C=1.05      | A:1050 C:1000 C/A=1.05      |
@@ -1350,7 +1350,7 @@ Lấy cặp mà chúng ta hiện đang xử lý, sắp xếp nó (để sử d�
             (uint amount0Out, uint amount1Out) = input == token0 ? (uint(0), amountOut) : (amountOut, uint(0));
 ```
 
-Lấy các số lượng đầu ra dự kiến, được sắp xếp theo cách mà cặp hoán đổi mong đợi.
+Lấy số lượng đầu ra dự kiến, được sắp xếp theo cách mà cặp hoán đổi mong đợi.
 
 ```solidity
             address to = i < path.length - 2 ? UniswapV2Library.pairFor(factory, output, path[i + 2]) : _to;
@@ -1381,11 +1381,11 @@ Hàm này được sử dụng trực tiếp bởi các nhà giao dịch để h
         address[] calldata path,
 ```
 
-Tham số này chứa các địa chỉ của các hợp đồng ERC-20. Như đã giải thích ở trên, đây là một mảng bởi vì bạn có thể cần phải đi qua một vài cặp hoán đổi để đi từ tài sản bạn có đến tài sản bạn muốn.
+Tham số này chứa các địa chỉ của các hợp đồng ERC-20. Như đã giải thích ở trên, đây là một mảng vì bạn có thể cần phải đi qua một vài cặp hoán đổi để đi từ tài sản bạn có đến tài sản bạn muốn.
 
-Một tham số hàm trong Solidity có thể được lưu trữ trong `memory` hoặc `calldata`. Nếu hàm là một điểm vào (entry point) của hợp đồng, được gọi trực tiếp từ một người dùng (sử dụng một giao dịch) hoặc từ một hợp đồng khác, thì giá trị của tham số có thể được lấy trực tiếp từ dữ liệu lệnh gọi. Nếu hàm được gọi nội bộ, như `_swap` ở trên, thì các tham số phải được lưu trữ trong `memory`. Từ góc độ của hợp đồng được gọi, `calldata` là chỉ đọc.
+Một tham số hàm trong solidity có thể được lưu trữ trong `memory` hoặc `calldata`. Nếu hàm là một điểm vào (entry point) của hợp đồng, được gọi trực tiếp từ người dùng (sử dụng một giao dịch) hoặc từ một hợp đồng khác, thì giá trị của tham số có thể được lấy trực tiếp từ dữ liệu lệnh gọi. Nếu hàm được gọi nội bộ, như `_swap` ở trên, thì các tham số phải được lưu trữ trong `memory`. Từ góc độ của hợp đồng được gọi, `calldata` là chỉ đọc.
 
-Với các kiểu vô hướng (scalar types) như `uint` hoặc `address`, trình biên dịch xử lý việc lựa chọn lưu trữ cho chúng ta, nhưng với các mảng, vốn dài hơn và đắt hơn, chúng ta chỉ định kiểu lưu trữ sẽ được sử dụng.
+Với các kiểu vô hướng như `uint` hoặc `address`, trình biên dịch xử lý việc lựa chọn bộ nhớ lưu trữ cho chúng ta, nhưng với các mảng, vốn dài hơn và đắt hơn, chúng ta chỉ định loại bộ nhớ lưu trữ sẽ được sử dụng.
 
 ```solidity
         address to,
@@ -1393,7 +1393,7 @@ Với các kiểu vô hướng (scalar types) như `uint` hoặc `address`, trì
     ) external virtual override ensure(deadline) returns (uint[] memory amounts) {
 ```
 
-Các giá trị trả về luôn được trả về trong bộ nhớ (memory).
+Các giá trị trả về luôn được trả về trong bộ nhớ tạm thời (memory).
 
 ```solidity
         amounts = UniswapV2Library.getAmountsOut(factory, amountIn, path);
@@ -1410,7 +1410,7 @@ Tính toán số lượng sẽ được mua trong mỗi lần hoán đổi. Nế
     }
 ```
 
-Cuối cùng, chuyển token ERC-20 ban đầu vào tài khoản cho cặp hoán đổi đầu tiên và gọi `_swap`. Tất cả điều này đang diễn ra trong cùng một giao dịch, vì vậy cặp hoán đổi biết rằng bất kỳ token bất ngờ nào cũng là một phần của lần chuyển này.
+Cuối cùng, chuyển token ERC-20 ban đầu vào tài khoản cho cặp hoán đổi đầu tiên và gọi `_swap`. Tất cả điều này đang diễn ra trong cùng một giao dịch, vì vậy cặp hoán đổi biết rằng bất kỳ token bất ngờ nào đều là một phần của việc chuyển này.
 
 ```solidity
     function swapTokensForExactTokens(
@@ -1429,7 +1429,7 @@ Cuối cùng, chuyển token ERC-20 ban đầu vào tài khoản cho cặp hoán
     }
 ```
 
-Hàm trước đó, `swapTokensForTokens`, cho phép một nhà giao dịch chỉ định chính xác số lượng token đầu vào mà họ sẵn sàng đưa ra và số lượng token đầu ra tối thiểu mà họ sẵn sàng nhận lại. Hàm này thực hiện hoán đổi ngược lại, nó cho phép một nhà giao dịch chỉ định số lượng token đầu ra mà họ muốn, và số lượng token đầu vào tối đa mà họ sẵn sàng trả cho chúng.
+Hàm trước đó, `swapExactTokensForTokens`, cho phép một nhà giao dịch chỉ định chính xác số lượng token đầu vào mà họ sẵn sàng đưa ra và số lượng token đầu ra tối thiểu mà họ sẵn sàng nhận lại. Hàm này thực hiện hoán đổi ngược lại, nó cho phép một nhà giao dịch chỉ định số lượng token đầu ra mà họ muốn, và số lượng token đầu vào tối đa mà họ sẵn sàng trả cho chúng.
 
 Trong cả hai trường hợp, nhà giao dịch trước tiên phải cấp cho hợp đồng ngoại vi này một hạn mức để cho phép nó chuyển chúng.
 
@@ -1504,12 +1504,12 @@ Trong cả hai trường hợp, nhà giao dịch trước tiên phải cấp cho
         IWETH(WETH).deposit{value: amounts[0]}();
         assert(IWETH(WETH).transfer(UniswapV2Library.pairFor(factory, path[0], path[1]), amounts[0]));
         _swap(amounts, path, to);
-        // hoàn trả eth lẻ, nếu có
+        // hoàn trả ETH lẻ, nếu có
         if (msg.value > amounts[0]) TransferHelper.safeTransferETH(msg.sender, msg.value - amounts[0]);
     }
 ```
 
-Bốn biến thể này đều liên quan đến giao dịch giữa ETH và các token. Sự khác biệt duy nhất là chúng ta hoặc nhận ETH từ nhà giao dịch và sử dụng nó để đúc WETH, hoặc chúng ta nhận WETH từ lần hoán đổi cuối cùng trong đường dẫn và đốt nó, gửi lại cho nhà giao dịch số ETH thu được.
+Bốn biến thể này đều liên quan đến giao dịch giữa ETH và token. Điểm khác biệt duy nhất là chúng ta nhận ETH từ nhà giao dịch và sử dụng nó để đúc WETH, hoặc chúng ta nhận WETH từ sàn giao dịch cuối cùng trong đường dẫn và đốt nó, gửi lại cho nhà giao dịch số ETH thu được.
 
 ```solidity
     // **** HOÁN ĐỔI (hỗ trợ các token có phí khi chuyển) ****
@@ -1517,7 +1517,7 @@ Bốn biến thể này đều liên quan đến giao dịch giữa ETH và các
     function _swapSupportingFeeOnTransferTokens(address[] memory path, address _to) internal virtual {
 ```
 
-Đây là hàm nội bộ để hoán đổi các token có phí chuyển hoặc phí lưu trữ để giải quyết ([vấn đề này](https://github.com/Uniswap/uniswap-interface/issues/835)).
+Đây là hàm nội bộ để hoán đổi các token có phí chuyển hoặc phí lưu trữ để giải quyết ([vấn đề này](https://github.com/Uniswap/interface/issues/835)).
 
 ```solidity
         for (uint i; i < path.length - 1; i++) {
@@ -1526,7 +1526,7 @@ Bốn biến thể này đều liên quan đến giao dịch giữa ETH và các
             IUniswapV2Pair pair = IUniswapV2Pair(UniswapV2Library.pairFor(factory, input, output));
             uint amountInput;
             uint amountOutput;
-            { // phạm vi để tránh lỗi stack too deep
+            { // giới hạn phạm vi để tránh lỗi stack too deep
             (uint reserve0, uint reserve1,) = pair.getReserves();
             (uint reserveInput, uint reserveOutput) = input == token0 ? (reserve0, reserve1) : (reserve1, reserve0);
             amountInput = IERC20(input).balanceOf(address(pair)).sub(reserveInput);
@@ -1535,7 +1535,7 @@ Bốn biến thể này đều liên quan đến giao dịch giữa ETH và các
 
 Do phí chuyển, chúng ta không thể dựa vào hàm `getAmountsOut` để cho chúng ta biết chúng ta nhận được bao nhiêu từ mỗi lần chuyển (cách chúng ta làm trước khi gọi `_swap` ban đầu). Thay vào đó, chúng ta phải chuyển trước và sau đó xem chúng ta nhận lại được bao nhiêu token.
 
-Lưu ý: Về lý thuyết, chúng ta có thể chỉ sử dụng hàm này thay vì `_swap`, nhưng trong một số trường hợp nhất định (ví dụ: nếu việc chuyển cuối cùng bị hoàn nguyên vì không có đủ ở cuối để đáp ứng mức tối thiểu được yêu cầu) điều đó sẽ dẫn đến tốn nhiều gas hơn. Các token có phí chuyển khá hiếm, vì vậy mặc dù chúng ta cần phải đáp ứng chúng, nhưng không cần thiết tất cả các lần hoán đổi đều phải giả định rằng chúng đi qua ít nhất một trong số đó.
+Lưu ý: Về lý thuyết, chúng ta có thể chỉ sử dụng hàm này thay vì `_swap`, nhưng trong một số trường hợp nhất định (ví dụ: nếu việc chuyển cuối cùng bị hoàn nguyên vì không có đủ ở cuối để đáp ứng mức tối thiểu được yêu cầu) điều đó sẽ tốn nhiều gas hơn. Các token có phí chuyển khá hiếm, vì vậy mặc dù chúng ta cần phải đáp ứng chúng, nhưng không cần tất cả các hoán đổi phải giả định rằng chúng đi qua ít nhất một trong số đó.
 
 ```solidity
             }
@@ -1770,7 +1770,7 @@ import "./SafeMath.sol";
 library UniswapV2Library {
     using SafeMath for uint;
 
-    // trả về các địa chỉ token đã sắp xếp, được sử dụng để xử lý các giá trị trả về từ các cặp được sắp xếp theo thứ tự này
+    // trả về các Địa chỉ token đã sắp xếp, được sử dụng để xử lý các giá trị trả về từ các cặp được sắp xếp theo thứ tự này
     function sortTokens(address tokenA, address tokenB) internal pure returns (address token0, address token1) {
         require(tokenA != tokenB, 'UniswapV2Library: IDENTICAL_ADDRESSES');
         (token0, token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
@@ -1778,25 +1778,25 @@ library UniswapV2Library {
     }
 ```
 
-Sắp xếp hai token theo Địa chỉ, để chúng ta có thể lấy Địa chỉ của cặp hoán đổi cho chúng. Điều này là cần thiết vì nếu không chúng ta sẽ có hai khả năng, một cho các tham số A,B và một cho các tham số B,A, dẫn đến hai sàn giao dịch thay vì một.
+Sắp xếp hai token theo địa chỉ, để chúng ta có thể lấy địa chỉ của cặp hoán đổi cho chúng. Điều này là cần thiết vì nếu không chúng ta sẽ có hai khả năng, một cho các tham số A,B và một cho các tham số B,A, dẫn đến hai sàn giao dịch thay vì một.
 
 ```solidity
-    // tính toán địa chỉ CREATE2 cho một cặp mà không thực hiện bất kỳ lệnh gọi bên ngoài nào
+    // tính toán Địa chỉ CREATE2 cho một cặp mà không thực hiện bất kỳ lệnh gọi bên ngoài nào
     function pairFor(address factory, address tokenA, address tokenB) internal pure returns (address pair) {
         (address token0, address token1) = sortTokens(tokenA, tokenB);
         pair = address(uint(keccak256(abi.encodePacked(
                 hex'ff',
                 factory,
                 keccak256(abi.encodePacked(token0, token1)),
-                hex'96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f' // hash của init code
+                hex'96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f' // Mã băm của mã khởi tạo
             ))));
     }
 ```
 
-Hàm này tính toán Địa chỉ của cặp hoán đổi cho hai token. Hợp đồng này được tạo bằng cách sử dụng [mã lệnh CREATE2](https://eips.ethereum.org/EIPS/eip-1014), vì vậy chúng ta có thể tính toán Địa chỉ bằng cùng một thuật toán nếu chúng ta biết các tham số mà nó sử dụng. Điều này rẻ hơn nhiều so với việc hỏi factory, và
+Hàm này tính toán địa chỉ của cặp hoán đổi cho hai token. Hợp đồng này được tạo bằng cách sử dụng [mã lệnh CREATE2](https://eips.ethereum.org/EIPS/eip-1014), vì vậy chúng ta có thể tính toán địa chỉ bằng cùng một thuật toán nếu chúng ta biết các tham số mà nó sử dụng. Điều này rẻ hơn rất nhiều so với việc hỏi factory, và nó không yêu cầu một lệnh gọi bên ngoài.
 
 ```solidity
-    // lấy và sắp xếp các dự trữ cho một cặp
+    // lấy và sắp xếp dự trữ cho một cặp
     function getReserves(address factory, address tokenA, address tokenB) internal view returns (uint reserveA, uint reserveB) {
         (address token0,) = sortTokens(tokenA, tokenB);
         (uint reserve0, uint reserve1,) = IUniswapV2Pair(pairFor(factory, tokenA, tokenB)).getReserves();
@@ -1804,7 +1804,7 @@ Hàm này tính toán Địa chỉ của cặp hoán đổi cho hai token. Hợp
     }
 ```
 
-Hàm này trả về dự trữ của hai token mà cặp hoán đổi có. Lưu ý rằng nó có thể nhận các token theo bất kỳ thứ tự nào, và sắp xếp chúng để sử dụng nội bộ.
+Hàm này trả về các khoản dự trữ của hai token mà cặp hoán đổi có. Lưu ý rằng nó có thể nhận các token theo bất kỳ thứ tự nào, và sắp xếp chúng để sử dụng nội bộ.
 
 ```solidity
     // với một số lượng tài sản nhất định và dự trữ của cặp, trả về số lượng tương đương của tài sản kia
@@ -1815,14 +1815,14 @@ Hàm này trả về dự trữ của hai token mà cặp hoán đổi có. Lưu
     }
 ```
 
-Hàm này cung cấp cho bạn số lượng token B bạn sẽ nhận lại cho token A nếu không có phí liên quan. Tính toán này tính đến việc chuyển đổi làm thay đổi tỷ giá hoán đổi.
+Hàm này cung cấp cho bạn số lượng token B mà bạn sẽ nhận lại cho token A nếu không có phí liên quan. Tính toán này tính đến việc chuyển làm thay đổi tỷ giá hoán đổi.
 
 ```solidity
-    // với một số lượng đầu vào của một tài sản và dự trữ của cặp, trả về số lượng đầu ra tối đa của tài sản kia
+    // với số lượng đầu vào của một tài sản và dự trữ của cặp, trả về số lượng đầu ra tối đa của tài sản kia
     function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {
 ```
 
-Hàm `quote` ở trên hoạt động rất tốt nếu không có phí sử dụng cặp hoán đổi. Tuy nhiên, nếu có phí hoán đổi 0,3%, số lượng bạn thực sự nhận được sẽ thấp hơn. Hàm này tính toán số lượng sau khi trừ phí hoán đổi.
+Hàm `quote` ở trên hoạt động rất tốt nếu không có phí để sử dụng cặp hoán đổi. Tuy nhiên, nếu có phí giao dịch 0,3%, số lượng bạn thực sự nhận được sẽ thấp hơn. Hàm này tính toán số lượng sau phí giao dịch.
 
 ```solidity
 
@@ -1838,7 +1838,7 @@ Hàm `quote` ở trên hoạt động rất tốt nếu không có phí sử d�
 Solidity không xử lý phân số một cách tự nhiên, vì vậy chúng ta không thể chỉ nhân số lượng đầu ra với 0,997. Thay vào đó, chúng ta nhân tử số với 997 và mẫu số với 1000, đạt được hiệu ứng tương tự.
 
 ```solidity
-    // với một số lượng đầu ra của một tài sản và dự trữ của cặp, trả về số lượng đầu vào cần thiết của tài sản kia
+    // với số lượng đầu ra của một tài sản và dự trữ của cặp, trả về số lượng đầu vào được yêu cầu của tài sản kia
     function getAmountIn(uint amountOut, uint reserveIn, uint reserveOut) internal pure returns (uint amountIn) {
         require(amountOut > 0, 'UniswapV2Library: INSUFFICIENT_OUTPUT_AMOUNT');
         require(reserveIn > 0 && reserveOut > 0, 'UniswapV2Library: INSUFFICIENT_LIQUIDITY');
@@ -1848,7 +1848,7 @@ Solidity không xử lý phân số một cách tự nhiên, vì vậy chúng ta
     }
 ```
 
-Hàm này thực hiện gần như cùng một việc, nhưng nó lấy số lượng đầu ra và cung cấp đầu vào.
+Hàm này làm gần như cùng một việc, nhưng nó lấy số lượng đầu ra và cung cấp đầu vào.
 
 ```solidity
 
@@ -1880,14 +1880,14 @@ Hai hàm này xử lý việc xác định các giá trị khi cần thiết ph�
 
 ### Transfer Helper {#transfer-helper}
 
-[Thư viện này](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) thêm các kiểm tra thành công xung quanh các giao dịch chuyển ERC-20 và Ethereum để xử lý một lệnh hoàn nguyên và một giá trị trả về `false` theo cùng một cách.
+[Thư viện này](https://github.com/Uniswap/solidity-lib/blob/master/contracts/libraries/TransferHelper.sol) (trong một kho mã nguồn hiện đã được lưu trữ) thêm các kiểm tra thành công xung quanh các giao dịch chuyển ERC-20 và Ethereum để xử lý việc hoàn nguyên và việc trả về giá trị `false` theo cùng một cách.
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 pragma solidity >=0.6.0;
 
-// các phương thức hỗ trợ để tương tác với các token ERC20 và gửi ETH mà không trả về true/false một cách nhất quán
+// các phương thức hỗ trợ để tương tác với các token ERC-20 và gửi ETH mà không trả về true/false một cách nhất quán
 library TransferHelper {
     function safeApprove(
         address token,
@@ -1902,7 +1902,7 @@ library TransferHelper {
 Chúng ta có thể gọi một hợp đồng khác theo một trong hai cách:
 
 - Sử dụng định nghĩa giao diện để tạo một lệnh gọi hàm
-- Sử dụng [giao diện nhị phân ứng dụng (ABI)](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html) "thủ công" để tạo lệnh gọi. Đây là những gì tác giả của mã đã quyết định thực hiện.
+- Sử dụng [Giao diện nhị phân ứng dụng (ABI)](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html) một cách "thủ công" để tạo lệnh gọi. Đây là cách mà tác giả của đoạn mã đã quyết định thực hiện.
 
 ```solidity
         require(
@@ -1912,7 +1912,7 @@ Chúng ta có thể gọi một hợp đồng khác theo một trong hai cách:
     }
 ```
 
-Vì mục đích tương thích ngược với token được tạo trước tiêu chuẩn ERC-20, một lệnh gọi ERC-20 có thể thất bại bằng cách hoàn nguyên (trong trường hợp đó `success` là `false`) hoặc bằng cách thành công và trả về một giá trị `false` (trong trường hợp đó có dữ liệu đầu ra, và nếu bạn giải mã nó dưới dạng boolean, bạn sẽ nhận được `false`).
+Vì mục đích tương thích ngược với các token được tạo trước tiêu chuẩn ERC-20, một lệnh gọi ERC-20 có thể thất bại bằng cách hoàn nguyên (trong trường hợp đó `success` là `false`) hoặc bằng cách thành công và trả về giá trị `false` (trong trường hợp đó có dữ liệu đầu ra, và nếu bạn giải mã nó dưới dạng boolean, bạn sẽ nhận được `false`).
 
 ```solidity
 
@@ -1931,7 +1931,7 @@ Vì mục đích tương thích ngược với token được tạo trước ti�
     }
 ```
 
-Hàm này triển khai [chức năng chuyển của ERC-20](https://eips.ethereum.org/EIPS/eip-20#transfer), cho phép một Tài khoản chi tiêu hạn mức được cung cấp bởi một Tài khoản khác.
+Hàm này triển khai [chức năng chuyển của ERC-20](https://eips.ethereum.org/EIPS/eip-20#transfer), giúp chuyển các token từ người gọi (hợp đồng này) đến `to`.
 
 ```solidity
 
@@ -1950,7 +1950,7 @@ Hàm này triển khai [chức năng chuyển của ERC-20](https://eips.ethereu
     }
 ```
 
-Hàm này triển khai [chức năng transferFrom của ERC-20](https://eips.ethereum.org/EIPS/eip-20#transferfrom), cho phép một Tài khoản chi tiêu hạn mức được cung cấp bởi một Tài khoản khác.
+Hàm này triển khai [chức năng transferFrom của ERC-20](https://eips.ethereum.org/EIPS/eip-20#transferfrom), cho phép một tài khoản chi tiêu từ hạn mức được cung cấp bởi một tài khoản khác.
 
 ```solidity
 
@@ -1961,7 +1961,7 @@ Hàm này triển khai [chức năng transferFrom của ERC-20](https://eips.eth
 }
 ```
 
-Hàm này chuyển ether đến một Tài khoản. Bất kỳ lệnh gọi nào đến một hợp đồng khác đều có thể cố gắng gửi ether. Bởi vì chúng ta không cần thực sự gọi bất kỳ hàm nào, chúng ta không gửi bất kỳ dữ liệu nào kèm theo lệnh gọi.
+Hàm này chuyển ether đến một tài khoản. Bất kỳ lệnh gọi nào đến một hợp đồng khác đều có thể cố gắng gửi ether. Bởi vì chúng ta không thực sự cần gọi bất kỳ hàm nào, chúng ta không gửi bất kỳ dữ liệu nào kèm theo lệnh gọi.
 
 ## Kết luận {#conclusion}
 
