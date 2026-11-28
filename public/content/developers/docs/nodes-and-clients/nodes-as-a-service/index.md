@@ -352,6 +352,12 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Pay-per-hour pricing
     - Direct support
 
+- [**SolidRPC**](https://solidrpc.io/)
+  - [Docs](https://solidrpc.io/docs)
+  - Features
+    - Keyless Ethereum Mainnet endpoint for standard wallet requests
+    - Authenticated Ethereum Mainnet and Sepolia JSON-RPC access
+
 - [**Tenderly**](https://tenderly.co/web3-gateway)
   - [Docs](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - Features
