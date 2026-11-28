@@ -9,20 +9,21 @@ lang: mr
 published: 2025-03-15
 ---
 
-_ब्लॉकचेनवर कोणतीही गुपिते नसतात_. ब्लॉकचेनवर पोस्ट केलेली प्रत्येक गोष्ट सर्वांना वाचण्यासाठी खुली असते. हे आवश्यक आहे, कारण ब्लॉकचेनची रचना कोणीही त्याची पडताळणी करू शकेल यावर आधारित आहे. तथापि, गेम्स अनेकदा गुप्त स्थितीवर अवलंबून असतात. उदाहरणार्थ, जर तुम्ही फक्त ब्लॉक एक्सप्लोररवर जाऊन नकाशा पाहू शकत असाल तर [माइनस्वीपर](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) गेमला काहीच अर्थ उरत नाही.
+_ब्लॉकचेनवर कोणतीही गुपिते नसतात_. ब्लॉकचेनवर पोस्ट केलेली प्रत्येक गोष्ट प्रत्येकाला वाचण्यासाठी खुली असते. हे आवश्यक आहे, कारण ब्लॉकचेनची पडताळणी कोणीही करू शकण्यावर आधारित आहे. तथापि, गेम्स अनेकदा गुप्त स्थितीवर (secret state) अवलंबून असतात. उदाहरणार्थ, जर तुम्ही फक्त ब्लॉकचेन एक्सप्लोररवर जाऊन नकाशा पाहू शकत असाल, तर [माइनस्वीपर](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) गेमला काहीच अर्थ उरत नाही.
 
-सर्वात सोपा उपाय म्हणजे गुप्त स्थिती ठेवण्यासाठी [सर्व्हर घटक](/developers/tutorials/server-components/) वापरणे. तथापि, आपण ब्लॉकचेन वापरण्याचे कारण म्हणजे गेम डेव्हलपरकडून होणारी फसवणूक टाळणे. आपल्याला सर्व्हर घटकाच्या प्रामाणिकपणाची खात्री करणे आवश्यक आहे. सर्व्हर स्थितीचा हॅश प्रदान करू शकतो आणि चालचा (move) निकाल मोजण्यासाठी वापरलेली स्थिती योग्य आहे हे सिद्ध करण्यासाठी [शून्य-ज्ञान पुरावे](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) वापरू शकतो.
+सर्वात सोपा उपाय म्हणजे गुप्त स्थिती ठेवण्यासाठी [सर्व्हर घटक](/developers/tutorials/server-components/) वापरणे. तथापि, आपण ब्लॉकचेन वापरण्याचे कारण म्हणजे गेम डेव्हलपरकडून होणारी फसवणूक टाळणे. आपल्याला सर्व्हर घटकाच्या प्रामाणिकपणाची खात्री करणे आवश्यक आहे. सर्व्हर स्थितीचा हॅश प्रदान करू शकतो आणि एखाद्या चालीच्या (move) परिणामाची गणना करण्यासाठी वापरलेली स्थिती योग्य आहे हे सिद्ध करण्यासाठी [शून्य-ज्ञान पुरावे](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) वापरू शकतो.
 
-हा लेख वाचल्यानंतर तुम्हाला अशा प्रकारचा गुप्त स्थिती ठेवणारा सर्व्हर, स्थिती दर्शवणारा क्लायंट आणि या दोन्हींमधील संवादासाठी ऑनचेन घटक कसा तयार करायचा हे समजेल. आपण वापरत असलेली मुख्य साधने खालीलप्रमाणे असतील:
+हा लेख वाचल्यानंतर तुम्हाला अशा प्रकारचा गुप्त स्थिती ठेवणारा सर्व्हर, स्थिती दर्शवणारा क्लायंट आणि या दोघांमधील संवादासाठी ऑनचेन घटक कसा तयार करायचा हे समजेल. आपण वापरत असलेली मुख्य साधने खालीलप्रमाणे असतील:
 
 | साधन | उद्देश | या आवृत्तीवर पडताळणी केली |
-| --- | --- | ---: |
+| --------------------------------------------- | ------------------------------------------------------- | ------------------: |
 | [Zokrates](https://zokrates.github.io/) | शून्य-ज्ञान पुरावे आणि त्यांची पडताळणी | 1.1.9 |
-| [TypeScript](https://www.typescriptlang.org/) | सर्व्हर आणि क्लायंट दोन्हीसाठी प्रोग्रामिंग भाषा | 5.4.2 |
+| [TypeScript](https://www.typescriptlang.org/) | सर्व्हर आणि क्लायंट दोघांसाठी प्रोग्रामिंग भाषा | 5.4.2 |
 | [Node](https://nodejs.org/en) | सर्व्हर चालवणे | 20.18.2 |
+| [Foundry](https://getfoundry.sh/) | स्थानिक ब्लॉकचेन आणि कॉन्ट्रॅक्ट प्रस्थापना | 1.0.0 |
 | [Viem](https://viem.sh/) | ब्लॉकचेनसोबत संवाद | 2.9.20 |
 | [MUD](https://mud.dev/) | ऑनचेन डेटा व्यवस्थापन | 2.0.12 |
-| [React](https://react.dev/) | क्लायंट युजर इंटरफेस | 18.2.0 |
+| [React](https://react.dev/) | क्लायंट युझर इंटरफेस | 18.2.0 |
 | [Vite](https://vitejs.dev/) | क्लायंट कोड सर्व्ह करणे | 4.2.1 |
 
 ## माइनस्वीपर उदाहरण {#minesweeper}
@@ -35,7 +36,24 @@ _ब्लॉकचेनवर कोणतीही गुपिते नस�
 
 माइनस्वीपर उदाहरण चालवण्यासाठी:
 
-1. तुमच्याकडे [आवश्यक पूर्वअटी इन्स्टॉल केलेल्या असल्याची](https://mud.dev/quickstart#prerequisites) खात्री करा: [नोड](https://mud.dev/quickstart#prerequisites), [Foundry](https://book.getfoundry.sh/getting-started/installation), [`git`](https://git-scm.com/downloads), [`pnpm`](https://git-scm.com/downloads), आणि [`mprocs`](https://github.com/pvolok/mprocs).
+1. तुमच्याकडे [आवश्यक गोष्टी इन्स्टॉल केलेल्या असल्याची](https://mud.dev/quickstart#prerequisites) खात्री करा: [Node](https://nodejs.org/en), [Foundry](https://getfoundry.sh/introduction/installation), [`git`](https://git-scm.com/downloads), आणि [`pnpm`](https://pnpm.io/installation).
+
+   हे उदाहरण MUD 2.0.12 वापरते, ज्यासाठी Node आणि Foundry च्या विशिष्ट आवृत्त्या आवश्यक आहेत:
+
+   - **Node 20**. MUD 2.0.12 कमांड लाइन टूल [JSON import assertions](https://v8.dev/features/import-attributes) वापरते, ज्याला Node च्या नवीन आवृत्त्या आता सपोर्ट करत नाहीत, त्यामुळे Node 22 किंवा त्यापुढील आवृत्त्यांवर ते `SyntaxError: Unexpected identifier 'assert'` सह अयशस्वी होते. Node 20 एप्रिल 2026 मध्ये [एंड ऑफ लाइफला पोहोचले](https://nodejs.org/en/about/previous-releases) आणि त्याला आता सुरक्षा अपडेट्स मिळत नाहीत, त्यामुळे ते फक्त या स्थानिक उदाहरणासाठी वापरा. [`fnm`](https://github.com/Schniz/fnm) किंवा [`nvm`](https://github.com/nvm-sh/nvm) सारखा Node व्हर्जन मॅनेजर तुम्हाला फक्त या डिरेक्टरीसाठी Node 20 वर स्विच करू देतो, उदाहरणार्थ:
+
+     ```sh copy
+     fnm install 20
+     fnm use 20
+     ```
+
+   - **Foundry 1.0.0**. सध्याच्या Foundry आवृत्त्यांसह पोस्ट-डिप्लॉयमेंट स्क्रिप्ट _Usage of `address(this)` detected in script contract_ सह अयशस्वी होते. यासह चाचणी केलेली आवृत्ती इन्स्टॉल करा:
+
+     ```sh copy
+     foundryup -i 1.0.0
+     ```
+
+     जेव्हा तुम्ही हे ट्युटोरिअल पूर्ण कराल, तेव्हा तुम्ही `foundryup` सह नवीनतम आवृत्तीवर परत येऊ शकता.
 
 2. रिपॉझिटरी क्लोन करा.
 
@@ -48,10 +66,9 @@ _ब्लॉकचेनवर कोणतीही गुपिते नस�
    ```sh copy
    cd 20240901-secret-state/
    pnpm install
-   npm install -g mprocs
    ```
 
-   जर Foundry `pnpm install` चा भाग म्हणून इन्स्टॉल केले असेल, तर तुम्हाला कमांड-लाइन शेल रीस्टार्ट करणे आवश्यक आहे.
+   [`mprocs`](https://github.com/pvolok/mprocs), जे एकाच टर्मिनलमध्ये सर्व प्रक्रिया चालवते, ते एका पॅकेजच्या रूपात इन्स्टॉल केले जाते.
 
 4. कॉन्ट्रॅक्ट्स कंपाईल करा
 
@@ -62,19 +79,19 @@ _ब्लॉकचेनवर कोणतीही गुपिते नस�
     ```
 
 
-5. प्रोग्राम सुरू करा (ज्यामध्ये [anvil](https://book.getfoundry.sh/anvil/) ब्लॉकचेन समाविष्ट आहे) आणि प्रतीक्षा करा.
+5. प्रोग्राम सुरू करा (ज्यामध्ये [anvil](https://getfoundry.sh/anvil/overview) ब्लॉकचेन समाविष्ट आहे) आणि प्रतीक्षा करा.
 
    ```sh copy
-   mprocs
+   pnpm dev
    ```
 
-   लक्षात घ्या की स्टार्टअपला बराच वेळ लागतो. प्रगती पाहण्यासाठी, प्रस्थापित होत असलेले MUD कॉन्ट्रॅक्ट्स पाहण्यासाठी प्रथम _contracts_ टॅबवर स्क्रोल करण्यासाठी डाउन ॲरो (खालचा बाण) वापरा. जेव्हा तुम्हाला _Waiting for file changes…_ हा संदेश मिळेल, तेव्हा कॉन्ट्रॅक्ट्स प्रस्थापित झालेले असतात आणि पुढील प्रगती _server_ टॅबमध्ये होईल. तेथे, तुम्हाला _Verifier address: 0x...._ हा संदेश मिळेपर्यंत प्रतीक्षा करा.
+   लक्षात घ्या की स्टार्टअपला बराच वेळ लागतो. प्रगती पाहण्यासाठी, MUD कॉन्ट्रॅक्ट्स प्रस्थापित होताना पाहण्यासाठी प्रथम _contracts_ टॅबवर स्क्रोल करण्यासाठी डाउन ॲरो (खाली जाणारा बाण) वापरा. जेव्हा तुम्हाला _Waiting for file changes…_ हा संदेश मिळेल, तेव्हा कॉन्ट्रॅक्ट्स प्रस्थापित झालेले असतात आणि पुढील प्रगती _server_ टॅबमध्ये होईल. तिथे, तुम्हाला _Verifier address: 0x...._ हा संदेश मिळेपर्यंत प्रतीक्षा करा.
 
-   जर ही पायरी यशस्वी झाली, तर तुम्हाला `mprocs` स्क्रीन दिसेल, ज्यामध्ये डावीकडे विविध प्रक्रिया आणि उजवीकडे सध्या निवडलेल्या प्रक्रियेसाठी कन्सोल आउटपुट असेल.
+   जर ही पायरी यशस्वी झाली, तर तुम्हाला `mprocs` स्क्रीन दिसेल, ज्यामध्ये डावीकडे वेगवेगळ्या प्रक्रिया आणि उजवीकडे सध्या निवडलेल्या प्रक्रियेसाठी कन्सोल आउटपुट असेल.
 
-   ![The mprocs screen](./mprocs.png)
+   ![mprocs स्क्रीन](./mprocs.png)
 
-   जर `mprocs` मध्ये काही समस्या असेल, तर तुम्ही चारही प्रक्रिया मॅन्युअली चालवू शकता, प्रत्येक त्याच्या स्वतःच्या कमांड लाइन विंडोमध्ये:
+   जर `mprocs` मध्ये काही समस्या असेल, तर तुम्ही चारही प्रक्रिया मॅन्युअली चालवू शकता, प्रत्येक प्रक्रिया त्याच्या स्वतःच्या कमांड लाइन विंडोमध्ये:
 
    - **Anvil**
 
@@ -95,14 +112,14 @@ _ब्लॉकचेनवर कोणतीही गुपिते नस�
      ```sh
      cd packages/server
      pnpm start
-     ```  
+     ```
 
    - **Client**
 
      ```sh
      cd packages/client
      pnpm run dev
-     ```  
+     ```
 
 6. आता तुम्ही [क्लायंटवर](http://localhost:3000) ब्राउझ करू शकता, **New Game** वर क्लिक करू शकता आणि खेळायला सुरुवात करू शकता.
 
@@ -144,26 +161,26 @@ _ब्लॉकचेनवर कोणतीही गुपिते नस�
 
 #### इनिशिएलायझेशन (प्रारंभ) {#initialization-flow}
 
-जेव्हा तुम्ही `mprocs` चालवता, तेव्हा या पायऱ्या घडतात:
+जेव्हा तुम्ही `pnpm dev` चालवता (जे `mprocs` चालवते), तेव्हा या पायऱ्या घडतात:
 
 1. [`mprocs`](https://github.com/pvolok/mprocs) चार घटक चालवते:
 
-   - [Anvil](https://book.getfoundry.sh/anvil/), जे एक स्थानिक ब्लॉकचेन चालवते
+   - [Anvil](https://getfoundry.sh/anvil/overview), जे स्थानिक ब्लॉकचेन चालवते
    - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts), जे MUD साठी कॉन्ट्रॅक्ट्स कंपाईल करते (आवश्यक असल्यास) आणि प्रस्थापित करते
    - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), जे वेब ब्राउझरला UI आणि क्लायंट कोड सर्व्ह करण्यासाठी [Vite](https://vitejs.dev/) चालवते.
    - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server), जे सर्व्हरच्या क्रिया करते
 
-2. `contracts` पॅकेज MUD कॉन्ट्रॅक्ट्स प्रस्थापित करते आणि नंतर [`PostDeploy.s.sol` स्क्रिप्ट](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol) चालवते. ही स्क्रिप्ट कॉन्फिगरेशन सेट करते. GitHub मधील कोड [आठ माइन्ससह 10x5 माइनफील्ड](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23) निर्दिष्ट करतो.
+2. `contracts` पॅकेज MUD कॉन्ट्रॅक्ट्स प्रस्थापित करते आणि नंतर [`PostDeploy.s.sol` स्क्रिप्ट](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol) चालवते. ही स्क्रिप्ट कॉन्फिगरेशन सेट करते. GitHub वरील कोड [आठ माइन्ससह 10x5 माइनफील्ड](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23) निर्दिष्ट करतो.
 
 3. [सर्व्हर](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts) [MUD सेट करून](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6) सुरू होतो. इतर गोष्टींबरोबरच, हे डेटा सिंक्रोनायझेशन सक्रिय करते, जेणेकरून संबंधित टेबल्सची एक प्रत सर्व्हरच्या मेमरीमध्ये अस्तित्वात असते.
 
-4. [जेव्हा `Configuration` टेबल बदलते](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23) तेव्हा कार्यान्वित करण्यासाठी सर्व्हर एका फंक्शनला सबस्क्राईब करतो. `PostDeploy.s.sol` कार्यान्वित झाल्यानंतर आणि टेबलमध्ये बदल केल्यानंतर [हे फंक्शन](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) कॉल केले जाते.
+4. सर्व्हर एक फंक्शन सबस्क्राईब करतो जे [`Configuration` टेबल बदलल्यावर](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23) कार्यान्वित केले जाते. `PostDeploy.s.sol` कार्यान्वित झाल्यानंतर आणि टेबलमध्ये बदल केल्यानंतर [हे फंक्शन](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) कॉल केले जाते.
 
 5. जेव्हा सर्व्हर इनिशिएलायझेशन फंक्शनकडे कॉन्फिगरेशन असते, तेव्हा ते [सर्व्हरचा झिरो-नॉलेज भाग](#using-zokrates-from-typescript) इनिशिएलाईज करण्यासाठी [`zkFunctions` ला कॉल करते](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35). जोपर्यंत आपल्याला कॉन्फिगरेशन मिळत नाही तोपर्यंत हे घडू शकत नाही कारण झिरो-नॉलेज फंक्शन्समध्ये माइनफील्डची रुंदी आणि उंची स्थिरांक (constants) म्हणून असणे आवश्यक आहे.
 
-6. सर्व्हरचा झिरो-नॉलेज भाग इनिशिएलाईज झाल्यानंतर, पुढची पायरी म्हणजे [ब्लॉकचेनवर झिरो-नॉलेज पडताळणी कॉन्ट्रॅक्ट प्रस्थापित करणे](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) आणि MUD मध्ये पडताळणीकर्ता पत्ता सेट करणे.
+6. सर्व्हरचा झिरो-नॉलेज भाग इनिशिएलाईज झाल्यानंतर, पुढची पायरी म्हणजे [झिरो-नॉलेज पडताळणी कॉन्ट्रॅक्ट ब्लॉकचेनवर प्रस्थापित करणे](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) आणि MUD मध्ये पडताळणीकर्त्याचा पत्ता सेट करणे.
 
-7. शेवटी, आपण अपडेट्ससाठी सबस्क्राईब करतो जेणेकरून जेव्हा एखादा खेळाडू [नवीन गेम सुरू करण्याची](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) किंवा [विद्यमान गेममध्ये खोदण्याची](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108) विनंती करेल तेव्हा आपल्याला दिसेल.
+7. शेवटी, आपण अपडेट्स सबस्क्राईब करतो जेणेकरून जेव्हा एखादा खेळाडू [नवीन गेम सुरू करण्याची](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) किंवा [विद्यमान गेममध्ये खोदण्याची](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108) विनंती करेल तेव्हा आपल्याला दिसेल.
 
 #### नवीन गेम {#new-game-flow}
 
@@ -511,7 +528,7 @@ const solidityVerifier = `
 
 ### परवानग्या {#permissions}
 
-या गेममध्ये एक विशेषाधिकार प्राप्त घटक आहे, तो म्हणजे सर्व्हर. [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) मधील फंक्शन्स कॉल करण्याची परवानगी असलेला हा एकमेव वापरकर्ता आहे. परवानगीयुक्त (permissioned) फंक्शन्सना केवळ सर्व्हर खाते म्हणून कॉल करण्याची परवानगी आहे हे पडताळण्यासाठी आपण [`cast`](https://book.getfoundry.sh/cast/) वापरू शकतो.
+या गेममध्ये एक विशेषाधिकार प्राप्त घटक (privileged entity) आहे, तो म्हणजे सर्व्हर. [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) मधील फंक्शन्स कॉल करण्याची परवानगी असलेला हा एकमेव वापरकर्ता आहे. परवानगीयुक्त फंक्शन्सचे कॉल्स केवळ सर्व्हर खाते म्हणून अनुमत आहेत हे पडताळून पाहण्यासाठी आपण [`cast`](https://getfoundry.sh/cast/overview) वापरू शकतो.
 
 [सर्व्हरची खाजगी की `setupNetwork.ts` मध्ये आहे](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52).
 
@@ -523,21 +540,23 @@ const solidityVerifier = `
    AUTHORIZED_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
    ```
 
-2. पडताळणीकर्ता पत्ता अनधिकृत पत्ता म्हणून सेट करण्याचा प्रयत्न करण्यासाठी `cast` वापरा.
+   हा `WORLD_ADDRESS` तो पत्ता आहे ज्यावर MUD एका नवीन `anvil` वर प्रस्थापित करते. जर तुमचा `World` वेगळ्या पत्त्यावर असेल, तर `packages/contracts/worlds.json` मधील मूल्य वापरा.
+
+2. अनधिकृत पत्ता म्हणून पडताळणीकर्त्याचा पत्ता सेट करण्याचा प्रयत्न करण्यासाठी `cast` वापरा.
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $UNAUTHORIZED_KEY
    ```
 
-   केवळ `cast` अपयश नोंदवत नाही, तर तुम्ही ब्राउझरवरील गेममध्ये **MUD Dev Tools** उघडू शकता, **Tables** वर क्लिक करू शकता आणि **app\_\_VerifierAddress** निवडू शकता. पत्ता शून्य नाही हे पहा.
+   `cast` केवळ अपयशच नोंदवत नाही, तर तुम्ही ब्राउझरवरील गेममध्ये **MUD Dev Tools** उघडू शकता, **Tables** वर क्लिक करू शकता आणि **app\_\_VerifierAddress** निवडू शकता. पत्ता शून्य नाही हे पहा.
 
-3. पडताळणीकर्ता पत्ता सर्व्हरचा पत्ता म्हणून सेट करा.
+3. पडताळणीकर्त्याचा पत्ता सर्व्हरचा पत्ता म्हणून सेट करा.
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $AUTHORIZED_KEY
    ```
 
-   **app\_\_VerifiedAddress** मधील पत्ता आता शून्य असावा.
+   **app\_\_VerifierAddress** मधील पत्ता आता शून्य असावा.
 
 एकाच `System` मधील सर्व MUD फंक्शन्स एकाच ॲक्सेस कंट्रोलमधून जातात, त्यामुळे मी ही चाचणी पुरेशी मानतो. जर तुम्हाला तसे वाटत नसेल, तर तुम्ही [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol) मधील इतर फंक्शन्स तपासू शकता.
 
@@ -553,7 +572,7 @@ Zokrates पडताळणी करण्यासाठी लागणार
 proof.inputs[3] = "0x" + "1".padStart(64, "0")
 ```
 
-याचा अर्थ असा की योग्य उत्तर काहीही असले तरी आपण नेहमी एक बॉम्ब असल्याचा दावा करू. या आवृत्तीसह खेळण्याचा प्रयत्न करा, आणि तुम्हाला `pnpm dev` स्क्रीनच्या **server** टॅबमध्ये ही त्रुटी दिसेल:
+याचा अर्थ असा की योग्य उत्तर काहीही असले तरी आपण नेहमी एक बॉम्ब असल्याचा दावा करू. या आवृत्तीसह खेळण्याचा प्रयत्न करा, आणि तुम्हाला `mprocs` स्क्रीनच्या **server** टॅबमध्ये ही त्रुटी दिसेल:
 
 ```
 cause: {
@@ -673,9 +692,11 @@ proof.proof = {
 
 ### Zokrates का? {#why-zokrates}
 
-[Zokrates](https://zokrates.github.io/) ही एकमेव झिरो-नॉलेज लायब्ररी उपलब्ध नाही, परंतु ती एका सामान्य, [इम्परेटिव्ह](https://en.wikipedia.org/wiki/Imperative_programming) प्रोग्रामिंग भाषेसारखी आहे आणि बुलियन व्हेरिएबल्सना सपोर्ट करते.
+[Zokrates](https://zokrates.github.io/) ही उपलब्ध असलेली एकमेव झिरो-नॉलेज लायब्ररी नाही, परंतु ती एका सामान्य, [इम्परेटिव्ह](https://en.wikipedia.org/wiki/Imperative_programming) प्रोग्रामिंग भाषेसारखी आहे आणि बुलियन व्हेरिएबल्सला सपोर्ट करते.
 
-तुमच्या ॲप्लिकेशनसाठी, वेगवेगळ्या आवश्यकतांसह, तुम्ही [Circum](https://docs.circom.io/getting-started/installation/) किंवा [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/) वापरण्यास प्राधान्य देऊ शकता.
+तथापि, ZoKrates आता सक्रियपणे मेंटेन केले जात नाही. त्याचे नवीनतम रिलीज, 0.8.8 (आणि जुळणारे `zokrates-js` 1.1.9), नोव्हेंबर 2023 मधील आहे आणि मुख्य ब्रँचमध्ये एप्रिल 2024 पासून कोणतेही कमिट्स झालेले नाहीत. या ट्युटोरिअलमधील कोड अद्याप कार्य करतो, परंतु बग फिक्सेस किंवा सुरक्षा अपडेट्सची अपेक्षा करू नका. नवीन प्रोजेक्टसाठी, [Noir](https://noir-lang.org/) सारख्या मेंटेन केल्या जाणाऱ्या भाषेचा विचार करा, जी [या ट्युटोरिअलमध्ये](/developers/tutorials/app-plasma/) वापरली आहे.
+
+तुमच्या ॲप्लिकेशनसाठी, वेगवेगळ्या आवश्यकतांसह, तुम्ही [Circom](https://docs.circom.io/getting-started/installation/) किंवा [Cairo](https://www.cairo-lang.org/) वापरण्यास प्राधान्य देऊ शकता.
 
 ### Zokrates कधी कंपाईल करावे {#when-compile-zokrates}
 
