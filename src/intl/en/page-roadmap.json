@@ -46,7 +46,7 @@
   "page-roadmap-faq-1-p1-continued": "The roadmap is the current plan for upgrading Ethereum, covering both near-term and future plans. We expect the roadmap to change as new information and technology become available.",
   "page-roadmap-faq-1-p2": "Think of Ethereum's roadmap as a set of intentions for improving Ethereum; it is the core researchers' and developers' best hypothesis of Ethereum's most optimal path forward.",
   "page-roadmap-faq-2-title": "When will the roadmap be finished?",
-  "page-roadmap-faq-2-p1": "Some upgrades are lower priority and likely not to be implemented for the next 5-10 years (e.g. quantum resistance).",
+  "page-roadmap-faq-2-p1": "Some upgrades are lower priority and may not be implemented for many years.",
   "page-roadmap-faq-2-p1-strong": "Giving precise timing of each upgrade is complicated",
   "page-roadmap-faq-2-p1-continued": "to predict as many roadmap items are worked on in parallel and developed at different speeds. The urgency of an upgrade can also change over time depending on external factors (e.g. a sudden leap in the performance and availability of quantum computers may make quantum-resistant cryptography more urgent).",
   "page-roadmap-faq-2-p2": "One way to think about Ethereum development is by analogy to biological evolution. A network that is able to adapt to new challenges and maintain fitness is more likely to succeed than one that is resistant to change, although as the network becomes more and more performant, scalable and secure fewer changes to the protocol will be required.",
