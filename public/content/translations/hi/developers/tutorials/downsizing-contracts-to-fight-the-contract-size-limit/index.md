@@ -13,15 +13,19 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 
 ## सीमा क्यों है? {#why-is-there-a-limit}
 
-[22 नवंबर, 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon) को Spurious Dragon हार्ड-फ़ोर्क ने [EIP-170](https://eips.ethereum.org/EIPS/eip-170) पेश किया, जिसने 24.576 kb की स्मार्ट अनुबंध आकार सीमा जोड़ दी। एक Solidity डेवलपर के रूप में आपके लिए इसका मतलब यह है कि जब आप अपने अनुबंध में अधिक से अधिक कार्यक्षमता जोड़ते हैं, तो किसी बिंदु पर आप सीमा तक पहुंच जाएंगे और तैनाती करते समय यह त्रुटि दिखाई देगी:
+[22 नवंबर, 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon) को Spurious Dragon हार्ड फ़ोर्क ने [EIP-170](https://eips.ethereum.org/EIPS/eip-170) पेश किया, जिसने 24,576 बाइट्स (24 KiB) की स्मार्ट अनुबंध आकार सीमा जोड़ दी। एक Solidity डेवलपर के रूप में आपके लिए इसका मतलब यह है कि जब आप अपने अनुबंध में अधिक से अधिक कार्यक्षमता जोड़ते हैं, तो किसी बिंदु पर आप सीमा तक पहुंच जाएंगे और कंपाइलर आपको चेतावनी देगा:
 
-`Warning: Contract code size exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low "runs" value!), turning off revert strings, or using libraries.`
+`Warning: Contract code size is 25000 bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low "runs" value!), turning off revert strings, or using libraries.`
 
-यह सीमा डिनायल-ऑफ़-सर्विस (DOS) हमलों को रोकने के लिए पेश की गई थी। गैस के लिहाज से किसी अनुबंध को कॉल करना अपेक्षाकृत सस्ता है। हालाँकि, इथेरियम नोड्स के लिए अनुबंध कॉल का प्रभाव कॉल किए गए अनुबंध कोड के आकार (डिस्क से कोड पढ़ना, कोड की प्री-प्रोसेसिंग करना, मर्कल प्रमाण में डेटा जोड़ना) के आधार पर असंगत रूप से बढ़ जाता है। जब भी आपके पास ऐसी स्थिति होती है जहां हमलावर को दूसरों के लिए बहुत अधिक काम पैदा करने के लिए कम संसाधनों की आवश्यकता होती है, तो DOS हमलों की संभावना बन जाती है।
+तैनाती कोड (initcode) के लिए भी एक समान चेतावनी है, जिसे [EIP-3860](https://eips.ethereum.org/EIPS/eip-3860) ने शंघाई अपग्रेड में 49,152 बाइट्स तक सीमित कर दिया था।
 
-मूल रूप से यह कम समस्या थी क्योंकि एक प्राकृतिक अनुबंध आकार सीमा ब्लॉक गैस सीमा है। जाहिर है, एक अनुबंध को एक ऐसे लेन-देन के भीतर तैनात किया जाना चाहिए जिसमें अनुबंध का सारा बाइटकोड हो। यदि आप एक ब्लॉक में केवल उस एक लेन-देन को शामिल करते हैं, तो आप उस सारी गैस का उपयोग कर सकते हैं, लेकिन यह अनंत नहीं है। [London Upgrade](/ethereum-forks/#london) के बाद से, नेटवर्क की मांग के आधार पर ब्लॉक गैस सीमा 15M और 30M इकाइयों के बीच भिन्न होने में सक्षम है।
+यह सीमा स्थायी नहीं है। [EIP-7954](https://eips.ethereum.org/EIPS/eip-7954) इसे बढ़ाकर 65,536 बाइट्स (64 KiB) और initcode सीमा को 131,072 बाइट्स कर देता है, और यह [ग्लैमस्टर्डम अपग्रेड](/roadmap/glamsterdam/) के लिए निर्धारित है। जब तक वह अपग्रेड उस नेटवर्क पर सक्रिय नहीं हो जाता जहां आप तैनात करते हैं, तब तक वहां 24,576 बाइट्स की सीमा है, और उसके बाद भी छोटे अनुबंधों को तैनात करना सस्ता और ऑडिट करना आसान रहता है।
 
-निम्नलिखित में हम उनके संभावित प्रभाव के क्रम में कुछ तरीकों को देखेंगे। इसे वजन कम करने के संदर्भ में सोचें। किसी के लिए अपने लक्षित वजन (हमारे मामले में 24kb) तक पहुंचने की सबसे अच्छी रणनीति पहले बड़े प्रभाव वाले तरीकों पर ध्यान केंद्रित करना है। ज्यादातर मामलों में केवल अपने आहार को ठीक करने से आप वहां पहुंच जाएंगे, लेकिन कभी-कभी आपको थोड़ा और चाहिए होता है। फिर आप कुछ व्यायाम (मध्यम प्रभाव) या सप्लीमेंट्स (छोटा प्रभाव) भी जोड़ सकते हैं।
+यह सीमा डिनायल-ऑफ़-सर्विस (DOS) हमलों को रोकने के लिए पेश की गई थी। किसी अनुबंध को कॉल करना गैस के लिहाज से अपेक्षाकृत सस्ता है। हालाँकि, इथेरियम नोड्स के लिए अनुबंध कॉल का प्रभाव कॉल किए गए अनुबंध कोड के आकार (डिस्क से कोड पढ़ना, कोड को प्री-प्रोसेस करना, मर्कल प्रमाण में डेटा जोड़ना) के आधार पर असंगत रूप से बढ़ जाता है। जब भी आपके पास ऐसी स्थिति होती है जहां हमलावर को दूसरों के लिए बहुत अधिक काम पैदा करने के लिए कम संसाधनों की आवश्यकता होती है, तो आपको DOS हमलों की संभावना मिलती है।
+
+मूल रूप से यह कम समस्या थी क्योंकि एक प्राकृतिक अनुबंध आकार सीमा ब्लॉक गैस सीमा है। जाहिर है, एक अनुबंध को एक लेन-देन के भीतर तैनात किया जाना चाहिए जिसमें अनुबंध का सारा बाइटकोड हो। यदि आप एक ब्लॉक में केवल उस एक लेन-देन को शामिल करते हैं, तो आप उस सारी गैस का उपयोग कर सकते हैं, लेकिन यह अनंत नहीं है। आज ब्लॉक गैस सीमा करोड़ों गैस है और इसे वैलिडेटर्स द्वारा कई बार बढ़ाया गया है, इसलिए यह अपने आप में बहुत बड़े अनुबंधों की अनुमति देगा। [फुसाका अपग्रेड](/roadmap/fusaka/) के बाद से, एक एकल लेन-देन भी 16,777,216 गैस ([EIP-7825](https://eips.ethereum.org/EIPS/eip-7825)) पर सीमित है, लेकिन यह अभी भी 24 KiB अनुबंध को तैनात करने की लागत से काफी ऊपर है, यही कारण है कि एक स्पष्ट आकार सीमा की आवश्यकता है।
+
+नीचे हम उनके संभावित प्रभाव के क्रम में कुछ तरीकों को देखेंगे। इसके बारे में वजन कम करने के संदर्भ में सोचें। किसी के लिए अपने लक्ष्य वजन (हमारे मामले में 24kb) तक पहुंचने की सबसे अच्छी रणनीति पहले बड़े प्रभाव वाले तरीकों पर ध्यान केंद्रित करना है। ज्यादातर मामलों में सिर्फ अपने आहार को ठीक करने से आप वहां पहुंच जाएंगे, लेकिन कभी-कभी आपको थोड़ा और चाहिए होता है। फिर आप कुछ व्यायाम (मध्यम प्रभाव) या यहां तक कि सप्लीमेंट्स (छोटा प्रभाव) जोड़ सकते हैं।
 
 ## बड़ा प्रभाव {#big-impact}
 
@@ -35,11 +39,11 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 
 ### लाइब्रेरी {#libraries}
 
-कार्यक्षमता कोड को स्टोरेज से दूर ले जाने का एक आसान तरीका [लाइब्रेरी](https://solidity.readthedocs.io/en/v0.6.10/contracts.html#libraries) का उपयोग करना है। लाइब्रेरी फ़ंक्शंस को इंटरनल (internal) घोषित न करें क्योंकि वे संकलन (compilation) के दौरान सीधे [अनुबंध में जोड़ दिए जाएंगे](https://ethereum.stackexchange.com/questions/12975/are-internal-functions-in-libraries-not-covered-by-linking)। लेकिन यदि आप पब्लिक (public) फ़ंक्शंस का उपयोग करते हैं, तो वे वास्तव में एक अलग लाइब्रेरी अनुबंध में होंगे। लाइब्रेरी के उपयोग को अधिक सुविधाजनक बनाने के लिए [using for](https://solidity.readthedocs.io/en/v0.6.10/contracts.html#using-for) पर विचार करें।
+कार्यक्षमता कोड को स्टोरेज से दूर ले जाने का एक आसान तरीका [लाइब्रेरी](https://docs.soliditylang.org/en/latest/contracts.html#libraries) का उपयोग करना है। लाइब्रेरी फ़ंक्शंस को इंटरनल (internal) घोषित न करें क्योंकि वे संकलन (compilation) के दौरान सीधे [अनुबंध में जोड़ दिए जाएंगे](https://ethereum.stackexchange.com/questions/12975/are-internal-functions-in-libraries-not-covered-by-linking)। लेकिन यदि आप पब्लिक (public) फ़ंक्शंस का उपयोग करते हैं, तो वे वास्तव में एक अलग लाइब्रेरी अनुबंध में होंगे। लाइब्रेरी के उपयोग को अधिक सुविधाजनक बनाने के लिए [using for](https://docs.soliditylang.org/en/latest/contracts.html#using-for) पर विचार करें।
 
 ### प्रॉक्सी {#proxies}
 
-एक अधिक उन्नत रणनीति प्रॉक्सी सिस्टम होगी। लाइब्रेरी बैकग्राउंड में `DELEGATECALL` का उपयोग करती हैं जो कॉलिंग अनुबंध की स्थिति के साथ किसी अन्य अनुबंध के फ़ंक्शन को निष्पादित करता है। प्रॉक्सी सिस्टम के बारे में अधिक जानने के लिए [इस ब्लॉग पोस्ट](https://hackernoon.com/how-to-make-smart-contracts-upgradable-2612e771d5a2) को देखें। वे आपको अधिक कार्यक्षमता देते हैं, उदाहरण के लिए, वे अपग्रेड करने की क्षमता को सक्षम करते हैं, लेकिन वे बहुत अधिक जटिलता भी जोड़ते हैं। मैं उन्हें केवल अनुबंध के आकार को कम करने के लिए नहीं जोड़ूंगा जब तक कि किसी भी कारण से यह आपका एकमात्र विकल्प न हो।
+एक अधिक उन्नत रणनीति प्रॉक्सी सिस्टम होगी। लाइब्रेरी बैकग्राउंड में `DELEGATECALL` का उपयोग करती हैं जो कॉलिंग अनुबंध की स्थिति के साथ किसी अन्य अनुबंध के फ़ंक्शन को निष्पादित करता है। प्रॉक्सी सिस्टम के बारे में अधिक जानने के लिए [स्मार्ट अनुबंधों को अपग्रेड करना](/developers/docs/smart-contracts/upgrading/) देखें। वे आपको अधिक कार्यक्षमता देते हैं, उदाहरण के लिए, वे अपग्रेडेबिलिटी को सक्षम करते हैं, लेकिन वे बहुत अधिक जटिलता भी जोड़ते हैं। मैं उन्हें केवल अनुबंध के आकार को कम करने के लिए नहीं जोड़ूंगा जब तक कि किसी भी कारण से यह आपका एकमात्र विकल्प न हो।
 
 ## मध्यम प्रभाव {#medium-impact}
 
@@ -53,19 +57,26 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 ### अतिरिक्त वेरिएबल्स से बचें {#avoid-additional-variables}
 
 ```solidity
-function get(uint id) returns (address,address) {
+struct MyStruct {
+    address addr1;
+    address addr2;
+}
+
+mapping(uint => MyStruct) myStructs;
+
+function get(uint id) public view returns (address, address) {
     MyStruct memory myStruct = myStructs[id];
     return (myStruct.addr1, myStruct.addr2);
 }
 ```
 
 ```solidity
-function get(uint id) returns (address,address) {
+function get(uint id) public view returns (address, address) {
     return (myStructs[id].addr1, myStructs[id].addr2);
 }
 ```
 
-इस तरह का एक साधारण बदलाव **0.28kb** का अंतर लाता है। संभावना है कि आप अपने अनुबंधों में कई समान स्थितियां पा सकते हैं और वे वास्तव में महत्वपूर्ण मात्रा में जुड़ सकती हैं।
+जब यह लेख लिखा गया था तब इस तरह के एक साधारण बदलाव ने **0.28kb** का अंतर पैदा किया था। सटीक बचत आपके कंपाइलर संस्करण और सेटिंग्स पर निर्भर करती है (Solidity 0.8.37 के साथ यह ऑप्टिमाइज़र के बिना लगभग 0.1kb है और इसके साथ बहुत कम है), इसलिए हमेशा मापें। संभावना है कि आप अपने अनुबंधों में कई समान स्थितियां पा सकते हैं और वे वास्तव में महत्वपूर्ण मात्रा में जुड़ सकते हैं।
 
 ### त्रुटि संदेश को छोटा करें {#shorten-error-message}
 
@@ -86,37 +97,39 @@ require(msg.sender == owner, "OW1");
 ```solidity
 error Unauthorized();
 
-if (msg.sender != owner) {
-    revert Unauthorized();
+function doSomething() public view {
+    if (msg.sender != owner) {
+        revert Unauthorized();
+    }
 }
 ```
 
 ### ऑप्टिमाइज़र में कम रन वैल्यू पर विचार करें {#consider-a-low-run-value-in-the-optimizer}
 
-आप ऑप्टिमाइज़र सेटिंग्स भी बदल सकते हैं। 200 के डिफ़ॉल्ट मान का मतलब है कि यह बाइटकोड को इस तरह से अनुकूलित करने का प्रयास कर रहा है जैसे कि किसी फ़ंक्शन को 200 बार कॉल किया गया हो। यदि आप इसे 1 में बदलते हैं, तो आप मूल रूप से ऑप्टिमाइज़र को प्रत्येक फ़ंक्शन को केवल एक बार चलाने के मामले के लिए अनुकूलित करने के लिए कहते हैं। केवल एक बार चलाने के लिए अनुकूलित फ़ंक्शन का अर्थ है कि यह स्वयं तैनाती के लिए अनुकूलित है। ध्यान रखें कि **यह फ़ंक्शंस को चलाने के लिए [गैस लागत](/developers/docs/gas/) को बढ़ाता है**, इसलिए आप ऐसा नहीं करना चाह सकते हैं।
+आप ऑप्टिमाइज़र सेटिंग्स भी बदल सकते हैं। 200 के डिफ़ॉल्ट मान का मतलब है कि यह बाइटकोड को इस तरह से अनुकूलित (optimize) करने का प्रयास कर रहा है जैसे कि किसी फ़ंक्शन को 200 बार कॉल किया गया हो। यदि आप इसे 1 में बदलते हैं, तो आप मूल रूप से ऑप्टिमाइज़र को प्रत्येक फ़ंक्शन को केवल एक बार चलाने के मामले के लिए अनुकूलित करने के लिए कहते हैं। केवल एक बार चलाने के लिए अनुकूलित फ़ंक्शन का अर्थ है कि यह तैनाती के लिए ही अनुकूलित है। ध्यान रखें कि **यह फ़ंक्शंस को चलाने के लिए [गैस लागत](/developers/docs/gas/) को बढ़ाता है**, इसलिए आप ऐसा नहीं करना चाहेंगे। यदि आप `viaIR` सक्षम करके संकलित (compile) करते हैं, तो इसके साथ और इसके बिना आकार की जांच करें, क्योंकि IR-आधारित कोड जनरेटर काफी अलग बाइटकोड आकार उत्पन्न कर सकता है। विवरण के लिए [ऑप्टिमाइज़र विकल्प](https://docs.soliditylang.org/en/latest/using-the-compiler.html#optimizer-options) देखें।
 
 ## छोटा प्रभाव {#small-impact}
 
 ### फ़ंक्शंस में स्ट्रक्ट्स (structs) पास करने से बचें {#avoid-passing-structs-to-functions}
 
-यदि आप [ABIEncoderV2](https://solidity.readthedocs.io/en/v0.6.10/layout-of-source-files.html#abiencoderv2) का उपयोग कर रहे हैं, तो यह किसी फ़ंक्शन में स्ट्रक्ट्स (structs) पास न करने में मदद कर सकता है। पैरामीटर को स्ट्रक्ट के रूप में पास करने के बजाय, आवश्यक पैरामीटर सीधे पास करें। इस उदाहरण में हमने एक और **0.1kb** बचाया।
+यदि आप [ABI कोडर v2](https://docs.soliditylang.org/en/latest/layout-of-source-files.html#abi-coder-pragma) (Solidity 0.8.0 के बाद से डिफ़ॉल्ट) का उपयोग कर रहे हैं, तो यह किसी फ़ंक्शन में स्ट्रक्ट्स पास न करने में मदद कर सकता है। पैरामीटर को स्ट्रक्ट के रूप में पास करने के बजाय, आवश्यक पैरामीटर्स को सीधे पास करें। इस उदाहरण में हमने एक और **0.1kb** बचाया।
 
 ```solidity
-function get(uint id) returns (address,address) {
-    return _get(myStruct);
+function get(uint id) public view returns (address, address) {
+    return _get(myStructs[id]);
 }
 
-function _get(MyStruct memory myStruct) private view returns(address,address) {
+function _get(MyStruct memory myStruct) private pure returns (address, address) {
     return (myStruct.addr1, myStruct.addr2);
 }
 ```
 
 ```solidity
-function get(uint id) returns(address,address) {
+function get(uint id) public view returns (address, address) {
     return _get(myStructs[id].addr1, myStructs[id].addr2);
 }
 
-function _get(address addr1, address addr2) private view returns(address,address) {
+function _get(address addr1, address addr2) private pure returns (address, address) {
     return (addr1, addr2);
 }
 ```
@@ -131,15 +144,22 @@ function _get(address addr1, address addr2) private view returns(address,address
 मॉडिफायर्स, विशेष रूप से जब तीव्रता से उपयोग किए जाते हैं, तो अनुबंध के आकार पर महत्वपूर्ण प्रभाव डाल सकते हैं। उन्हें हटाने पर विचार करें और इसके बजाय फ़ंक्शंस का उपयोग करें।
 
 ```solidity
-modifier checkStuff() {}
+modifier checkStuff() {
+    require(msg.sender == owner, "OW1");
+    _;
+}
 
-function doSomething() checkStuff {}
+function doSomething() public checkStuff {}
 ```
 
 ```solidity
-function checkStuff() private {}
+function checkStuff() private view {
+    require(msg.sender == owner, "OW1");
+}
 
-function doSomething() { checkStuff(); }
+function doSomething() public view {
+    checkStuff();
+}
 ```
 
 इन सुझावों से आपको अनुबंध के आकार को काफी कम करने में मदद मिलनी चाहिए। एक बार फिर, मैं इस बात पर पर्याप्त जोर नहीं दे सकता, सबसे बड़े प्रभाव के लिए यदि संभव हो तो हमेशा अनुबंधों को विभाजित करने पर ध्यान केंद्रित करें।
