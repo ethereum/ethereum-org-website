@@ -102,7 +102,6 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 
 - [ethereum.org jobs](/about/#open-jobs)
 - [Ethereum Foundation job board](https://jobs.ashbyhq.com/ethereum-foundation)
-- [JobStash](https://jobstash.xyz)
 - [Ethereum Job Board](https://www.ethereumjobboard.com/)
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [Careers at ConsenSys](https://consensys.net/careers/)
