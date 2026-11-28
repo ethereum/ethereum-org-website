@@ -33,36 +33,44 @@ Có một số tác vụ khả thi mà một máy chủ như vậy có thể th�
 
 ## Chương trình mẫu {#sample-program}
 
-Bạn có thể xem một máy chủ mẫu [trên GitHub](https://github.com/qbzzt/20240715-server-component). Máy chủ này lắng nghe các sự kiện đến từ [hợp đồng này](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code), một phiên bản sửa đổi của Greeter của Hardhat. Khi lời chào bị thay đổi, nó sẽ thay đổi trở lại.
+Bạn có thể xem một máy chủ mẫu [trên GitHub](https://github.com/qbzzt/20240715-server-component). Máy chủ này lắng nghe các sự kiện đến từ [hợp đồng này](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract_code) trên mạng thử nghiệm Sepolia, một phiên bản sửa đổi của Greeter của Hardhat. Khi lời chào bị thay đổi, nó sẽ thay đổi trở lại.
+
+Hợp đồng này được chia sẻ với các hướng dẫn khác, vì vậy những người khác (và máy chủ của họ) có thể thay đổi lời chào trong khi máy chủ của bạn đang chạy. Dừng máy chủ của bạn khi bạn hoàn tất để tránh tiêu tốn ETH thử nghiệm của bạn.
 
 Để chạy nó:
 
-1. Sao chép kho lưu trữ (clone repository).
+1. Sao chép kho lưu trữ.
 
    ```sh copy
    git clone https://github.com/qbzzt/20240715-server-component.git
    cd 20240715-server-component
    ```
 
-2. Cài đặt các gói cần thiết. Nếu bạn chưa có, hãy [cài đặt Node trước](https://nodejs.org/en/download/package-manager).
+2. Kho lưu trữ mẫu được viết cho mạng thử nghiệm Holesky, mạng này hiện đã ngừng hoạt động. Hãy cập nhật nó để sử dụng Sepolia và địa chỉ hợp đồng Sepolia.
+
+   ```sh copy
+   sed -i.bak -e 's/holesky/sepolia/g' -e 's/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA/' src/app.ts
+   ```
+
+3. Cài đặt các gói cần thiết. Nếu bạn chưa có, [hãy cài đặt Node trước](https://nodejs.org/en/download/package-manager).
 
    ```sh copy
    npm install
    ```
 
-3. Chỉnh sửa `.env` để chỉ định khóa riêng tư của một tài khoản có ETH trên mạng thử nghiệm Holesky. Nếu bạn không có ETH trên Holesky, bạn có thể [sử dụng vòi này](https://holesky-faucet.pk910.de/).
+4. Chỉnh sửa `.env` để chỉ định khóa riêng tư của một tài khoản có ETH trên mạng thử nghiệm Sepolia. Nếu bạn không có ETH trên Sepolia, bạn có thể [sử dụng vòi này](https://sepolia-faucet.pk910.de/). Sử dụng một tài khoản mới mà bạn chỉ dùng để thử nghiệm, không bao giờ dùng tài khoản chứa tài sản thực.
 
    ```sh filename=".env" copy
-   PRIVATE_KEY=0x <private key goes here>
+   PRIVATE_KEY=0x<private key goes here>
    ```
 
-4. Khởi động máy chủ.
+5. Khởi động máy chủ.
 
    ```sh copy
    npm start
    ```
 
-5. Truy cập [một trình khám phá khối](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract) và sử dụng một địa chỉ khác với địa chỉ có khóa riêng tư để sửa đổi lời chào. Bạn sẽ thấy lời chào tự động được sửa đổi trở lại.
+6. Truy cập [một trình khám phá khối](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract) và sử dụng một địa chỉ khác với địa chỉ có khóa riêng tư để sửa đổi lời chào. Bạn sẽ thấy lời chào tự động được sửa đổi trở lại.
 
 ### Nó hoạt động như thế nào? {#how-it-works}
 
@@ -93,10 +101,10 @@ import { privateKeyToAccount } from "viem/accounts"
 [Hàm này](https://viem.sh/docs/accounts/privateKey) cho phép chúng ta tạo thông tin ví, bao gồm địa chỉ, tương ứng với một khóa riêng tư.
 
 ```typescript
-import { holesky } from "viem/chains"
+import { sepolia } from "viem/chains"
 ```
 
-Để sử dụng một chuỗi khối trong Viem, bạn cần nhập định nghĩa của nó. Trong trường hợp này, chúng ta muốn kết nối với chuỗi khối thử nghiệm [Holesky](https://github.com/eth-clients/holesky).
+Để sử dụng một chuỗi khối trong Viem, bạn cần nhập định nghĩa của nó. Trong trường hợp này, chúng ta muốn kết nối với chuỗi khối thử nghiệm [Sepolia](/developers/docs/networks/#sepolia).
 
 ```typescript
 // Đây là cách chúng ta thêm các định nghĩa trong .env vào process.env.
@@ -107,7 +115,7 @@ dotenv.config()
 Đây là cách chúng ta đọc `.env` vào môi trường. Chúng ta cần nó cho khóa riêng tư (xem phần sau).
 
 ```typescript
-const greeterAddress : Address = "0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6"
+const greeterAddress : Address = "0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA"
 const greeterABI = [
     {
         "inputs": [
@@ -139,31 +147,31 @@ const greeterABI = [
 ] as const
 ```
 
-Để sử dụng một hợp đồng, chúng ta cần địa chỉ của nó và [ABI](/glossary/#abi) cho nó. Chúng ta cung cấp cả hai ở đây.
+Để sử dụng một hợp đồng, chúng ta cần địa chỉ và [ABI](/glossary/#abi) của nó. Chúng ta cung cấp cả hai ở đây.
 
-Trong JavaScript (và do đó là TypeScript), bạn không thể gán một giá trị mới cho một hằng số, nhưng bạn _có thể_ sửa đổi đối tượng được lưu trữ trong đó. Bằng cách sử dụng hậu tố `as const`, chúng ta đang nói với TypeScript rằng bản thân danh sách là hằng số và không thể bị thay đổi.
+Trong JavaScript (và do đó là TypeScript), bạn không thể gán một giá trị mới cho một hằng số, nhưng bạn _có thể_ sửa đổi đối tượng được lưu trữ trong đó. Bằng cách sử dụng hậu tố `as const`, chúng ta đang nói với TypeScript rằng bản thân danh sách này là hằng số và không thể bị thay đổi.
 
 ```typescript
 const publicClient = createPublicClient({
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
 
-Tạo một [máy khách công khai](https://viem.sh/docs/clients/public.html) Viem. Các máy khách công khai không có khóa riêng tư đính kèm và do đó không thể gửi giao dịch. Chúng có thể gọi [các hàm `view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm), đọc số dư tài khoản, v.v.
+Tạo một [máy khách công khai](https://viem.sh/docs/clients/public) của Viem. Các máy khách công khai không có khóa riêng tư đính kèm và do đó không thể gửi giao dịch. Chúng có thể gọi [các hàm `view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm), đọc số dư tài khoản, v.v.
 
 ```typescript
 const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`)
 ```
 
-Các biến môi trường có sẵn trong [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). Tuy nhiên, TypeScript được định kiểu mạnh. Một biến môi trường có thể là bất kỳ chuỗi nào, hoặc trống, vì vậy kiểu cho một biến môi trường là `string | undefined`. Tuy nhiên, một khóa được định nghĩa trong Viem là `0x${string}` (`0x` theo sau là một chuỗi). Ở đây chúng ta nói với TypeScript rằng biến môi trường `PRIVATE_KEY` sẽ thuộc kiểu đó. Nếu không, chúng ta sẽ gặp lỗi thời gian chạy (runtime error).
+Các biến môi trường có sẵn trong [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). Tuy nhiên, TypeScript được định kiểu mạnh. Một biến môi trường có thể là bất kỳ chuỗi nào, hoặc trống, vì vậy kiểu cho một biến môi trường là `string | undefined`. Tuy nhiên, một khóa được định nghĩa trong Viem là `0x${string}` (`0x` theo sau là một chuỗi). Ở đây chúng ta nói với TypeScript rằng biến môi trường `PRIVATE_KEY` sẽ thuộc kiểu đó. Nếu không, chúng ta sẽ gặp lỗi thời gian chạy.
 
 Hàm [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) sau đó sử dụng khóa riêng tư này để tạo một đối tượng tài khoản đầy đủ.
 
 ```typescript
 const walletClient = createWalletClient({
   account,
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
@@ -186,11 +194,11 @@ Bây giờ chúng ta đã có tất cả các điều kiện tiên quyết, cu�
 console.log(`Current greeting:`, await greeter.read.greet())
 ```
 
-Các hàm hợp đồng chỉ đọc ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) và [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) có sẵn trong `read`. Trong trường hợp này, chúng ta sử dụng nó để truy cập hàm [`greet`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=read_contract#cfae3217), hàm này trả về lời chào.
+Các hàm hợp đồng chỉ đọc ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) và [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) có sẵn trong `read`. Trong trường hợp này, chúng ta sử dụng nó để truy cập hàm [`greet`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=read_contract), hàm này trả về lời chào.
 
-JavaScript là đơn luồng, vì vậy khi chúng ta kích hoạt một quá trình chạy dài, chúng ta cần [chỉ định rằng chúng ta thực hiện nó một cách bất đồng bộ](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). Việc gọi chuỗi khối, ngay cả đối với một thao tác chỉ đọc, cũng yêu cầu một chuyến đi khứ hồi giữa máy tính và một nút chuỗi khối. Đó là lý do chúng ta chỉ định ở đây rằng mã cần `await` (chờ) kết quả.
+JavaScript là đơn luồng, vì vậy khi chúng ta kích hoạt một quá trình chạy dài, chúng ta cần [chỉ định rằng chúng ta thực hiện nó một cách bất đồng bộ](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). Việc gọi chuỗi khối, ngay cả đối với một thao tác chỉ đọc, cũng yêu cầu một chuyến đi khứ hồi giữa máy tính và một nút chuỗi khối. Đó là lý do chúng ta chỉ định ở đây rằng mã cần `await` kết quả.
 
-Nếu bạn quan tâm đến cách thức hoạt động của nó, bạn có thể [đọc về nó ở đây](https://www.w3schools.com/js/js_promise.asp), nhưng về mặt thực tế, tất cả những gì bạn cần biết là bạn `await` kết quả nếu bạn bắt đầu một thao tác mất nhiều thời gian và bất kỳ hàm nào thực hiện điều này đều phải được khai báo là `async`.
+Nếu bạn quan tâm đến cách thức hoạt động của điều này, bạn có thể [đọc về nó tại đây](https://www.w3schools.com/js/js_promise.asp), nhưng về mặt thực tế, tất cả những gì bạn cần biết là bạn `await` kết quả nếu bạn bắt đầu một thao tác mất nhiều thời gian và bất kỳ hàm nào thực hiện điều này đều phải được khai báo là `async`.
 
 ##### Phát hành giao dịch
 
@@ -198,22 +206,22 @@ Nếu bạn quan tâm đến cách thức hoạt động của nó, bạn có th
 const setGreeting = async (greeting: string): Promise<any> => {
 ```
 
-Đây là hàm bạn gọi để phát hành một giao dịch làm thay đổi lời chào. Vì đây là một thao tác dài, hàm được khai báo là `async`. Do việc triển khai nội bộ, bất kỳ hàm `async` nào cũng cần trả về một đối tượng `Promise`. Trong trường hợp này, `Promise<any>` có nghĩa là chúng ta không chỉ định chính xác những gì sẽ được trả về trong `Promise`.
+Đây là hàm bạn gọi để phát hành một giao dịch thay đổi lời chào. Vì đây là một thao tác dài, hàm được khai báo là `async`. Do việc triển khai nội bộ, bất kỳ hàm `async` nào cũng cần trả về một đối tượng `Promise`. Trong trường hợp này, `Promise<any>` có nghĩa là chúng ta không chỉ định chính xác những gì sẽ được trả về trong `Promise`.
 
 ```typescript
 const txHash = await greeter.write.setGreeting([greeting])
 ```
 
-Trường `write` của phiên bản hợp đồng có tất cả các hàm ghi vào trạng thái chuỗi khối (những hàm yêu cầu gửi một giao dịch), chẳng hạn như [`setGreeting`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862). Các tham số, nếu có, được cung cấp dưới dạng một danh sách và hàm trả về mã băm của giao dịch.
+Trường `write` của phiên bản hợp đồng có tất cả các hàm ghi vào trạng thái chuỗi khối (những hàm yêu cầu gửi một giao dịch), chẳng hạn như [`setGreeting`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract). Các tham số, nếu có, được cung cấp dưới dạng một danh sách và hàm trả về mã băm của giao dịch.
 
 ```typescript
-    console.log(`Working on a fix, see https://eth-holesky.blockscout.com/tx/${txHash}`)
+    console.log(`Working on a fix, see https://eth-sepolia.blockscout.com/tx/${txHash}`)
 
     return txHash
 }
 ```
 
-Báo cáo mã băm của giao dịch (như một phần của URL đến trình khám phá khối để xem nó) và trả về nó.
+Báo cáo mã băm của giao dịch (như một phần của URL tới trình khám phá khối để xem nó) và trả về nó.
 
 ##### Phản hồi các sự kiện
 
@@ -252,18 +260,12 @@ Nếu người gửi _không phải_ là máy chủ này, hãy sử dụng `setG
 
 ```json
 {
-  "main": "dist/index.js",
-```
-
-Định nghĩa này chỉ định tệp JavaScript nào sẽ chạy.
-
-```json
   "scripts": {
     "start": "tsc && node dist/app.js",
   },
 ```
 
-Các tập lệnh là các hành động ứng dụng khác nhau. Trong trường hợp này, tập lệnh duy nhất chúng ta có là `start`, nó biên dịch và sau đó chạy máy chủ. Lệnh `tsc` là một phần của gói `typescript` và biên dịch TypeScript thành JavaScript. Nếu bạn muốn chạy nó theo cách thủ công, nó nằm trong `node_modules/.bin`. Lệnh thứ hai chạy máy chủ.
+Các tập lệnh là các hành động khác nhau của ứng dụng. Trong trường hợp này, tập lệnh duy nhất chúng ta có là `start`, nó biên dịch và sau đó chạy máy chủ. Lệnh `tsc` là một phần của gói `typescript` và biên dịch TypeScript thành JavaScript. Nếu bạn muốn chạy nó theo cách thủ công, nó nằm trong `node_modules/.bin`. Lệnh thứ hai chạy máy chủ.
 
 ```json
   "type": "module",
@@ -278,7 +280,7 @@ Có nhiều loại ứng dụng nút JavaScript. Kiểu `module` cho phép chún
   },
 ```
 
-Đây là các gói chỉ cần thiết cho quá trình phát triển. Ở đây chúng ta cần `typescript` và vì chúng ta đang sử dụng nó với Node.js, chúng ta cũng đang lấy các kiểu cho các biến và đối tượng nút, chẳng hạn như `process`. [Ký hiệu `^<version>`](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) có nghĩa là phiên bản đó hoặc một phiên bản cao hơn không có các thay đổi phá vỡ (breaking changes). Xem [tại đây](https://semver.org) để biết thêm thông tin về ý nghĩa của các số phiên bản.
+Đây là các gói chỉ được yêu cầu cho quá trình phát triển. Ở đây chúng ta cần `typescript` và vì chúng ta đang sử dụng nó với Node.js, chúng ta cũng đang lấy các kiểu cho các biến và đối tượng của nút, chẳng hạn như `process`. [Ký hiệu `^<version>`](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) có nghĩa là phiên bản đó hoặc một phiên bản cao hơn không có các thay đổi phá vỡ. Xem [tại đây](https://semver.org) để biết thêm thông tin về ý nghĩa của các số phiên bản.
 
 ```json
   "dependencies": {
@@ -288,7 +290,7 @@ Có nhiều loại ứng dụng nút JavaScript. Kiểu `module` cho phép chún
 }
 ```
 
-Đây là các gói được yêu cầu trong thời gian chạy, khi chạy `dist/app.js`.
+Đây là các gói được yêu cầu tại thời gian chạy, khi chạy `dist/app.js`.
 
 ## Kết luận {#conclusion}
 
