@@ -22,7 +22,7 @@ _Obchodníci_ posílají do fondu jeden typ tokenu a získávají druhý (např�
 
 Když chtějí poskytovatelé likvidity svá aktiva zpět, mohou spálit tokeny fondu a získat zpět své tokeny, včetně svého podílu na odměnách.
 
-[Klikněte sem pro podrobnější popis](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
+[Klikněte sem pro podrobnější popis](https://developers.uniswap.org/docs/protocols/v2/concepts/swapping).
 
 ### Proč v2? Proč ne v3? {#why-v2}
 
@@ -109,7 +109,7 @@ Toto jsou bezpečné kontrakty, které drží likviditu.
 
 ### UniswapV2Pair.sol {#uniswapv2pair}
 
-[Tento kontrakt](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) implementuje samotný fond, který směňuje tokeny. Je to základní funkcionalita Uniswapu.
+[Tento kontrakt](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol) implementuje samotný fond, který směňuje tokeny. Je to hlavní funkcionalita Uniswapu.
 
 ```solidity
 pragma solidity =0.5.16;
@@ -123,7 +123,7 @@ import './interfaces/IUniswapV2Factory.sol';
 import './interfaces/IUniswapV2Callee.sol';
 ```
 
-Toto jsou všechna rozhraní, o kterých kontrakt potřebuje vědět, ať už proto, že je sám implementuje (`IUniswapV2Pair` a `UniswapV2ERC20`), nebo proto, že volá kontrakty, které je implementují.
+Toto jsou všechna rozhraní, o kterých kontrakt potřebuje vědět, ať už proto, že je kontrakt implementuje (`IUniswapV2Pair` a `UniswapV2ERC20`), nebo proto, že volá kontrakty, které je implementují.
 
 ```solidity
 contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
@@ -135,16 +135,16 @@ Tento kontrakt dědí z `UniswapV2ERC20`, což poskytuje funkce ERC-20 pro token
     using SafeMath  for uint;
 ```
 
-[Knihovna SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) se používá k zabránění přetečení a podtečení (overflow a underflow). To je důležité, protože jinak bychom se mohli dostat do situace, kdy by hodnota měla být `-1`, ale místo toho je `2^256-1`.
+[Knihovna SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) se používá k zabránění přetečení a podtečení (overflows and underflows). To je důležité, protože jinak bychom se mohli dostat do situace, kdy by hodnota měla být `-1`, ale místo toho je `2^256-1`.
 
 ```solidity
     using UQ112x112 for uint224;
 ```
 
 Mnoho výpočtů v kontraktu fondu vyžaduje zlomky. Zlomky však EVM nepodporuje.
-Řešení, které Uniswap našel, je použít 224bitové hodnoty, kde 112 bitů je pro celočíselnou část a 112 bitů pro zlomkovou část. Takže `1.0` je reprezentováno jako `2^112`, `1.5` je reprezentováno jako `2^112 + 2^111` atd.
+Řešení, které Uniswap našel, je použít 224bitové hodnoty, se 112 bity pro celočíselnou část a 112 bity pro zlomkovou část. Takže `1.0` je reprezentováno jako `2^112`, `1.5` je reprezentováno jako `2^112 + 2^111` atd.
 
-Více podrobností o této knihovně je k dispozici [dále v dokumentu](#fixedpoint).
+Další podrobnosti o této knihovně jsou k dispozici [dále v dokumentu](#fixedpoint).
 
 #### Proměnné {#pair-vars}
 
@@ -334,7 +334,7 @@ Konstruktor zajišťuje, že budeme sledovat adresu továrny, která pár vytvo�
 
 Tato funkce umožňuje továrně (a pouze továrně) specifikovat dva tokeny ERC-20, které bude tento pár směňovat.
 
-#### Interní funkce aktualizace {#pair-update-internal}
+#### Interní aktualizační funkce {#pair-update-internal}
 
 ##### \_update
 
@@ -343,13 +343,13 @@ Tato funkce umožňuje továrně (a pouze továrně) specifikovat dva tokeny ERC
     function _update(uint balance0, uint balance1, uint112 _reserve0, uint112 _reserve1) private {
 ```
 
-Tato funkce je volána pokaždé, když jsou tokeny vloženy nebo vybrány.
+Tato funkce se volá pokaždé, když jsou tokeny vloženy nebo vybrány.
 
 ```solidity
         require(balance0 <= uint112(-1) && balance1 <= uint112(-1), 'UniswapV2: OVERFLOW');
 ```
 
-Pokud je balance0 nebo balance1 (uint256) vyšší než uint112(-1) (=2^112-1) (takže přeteče a při převodu na uint112 se vrátí na 0), odmítněte pokračovat v \_update, abyste zabránili přetečení. U normálního tokenu, který lze rozdělit na 10^18 jednotek, to znamená, že každá směnárna je omezena na přibližně 5,1\*10^15 od každého tokenu. Zatím to nebyl problém.
+Pokud je balance0 nebo balance1 (uint256) vyšší než uint112(-1) (=2^112-1) (takže při převodu na uint112 přeteče a vrátí se na 0), odmítne pokračovat v \_update, aby se zabránilo přetečení. U normálního tokenu, který lze rozdělit na 10^18 jednotek, to znamená, že každá směna je omezena na přibližně 5,1\*10^15 od každého tokenu. Zatím to nebyl problém.
 
 ```solidity
         uint32 blockTimestamp = uint32(block.timestamp % 2**32);
@@ -357,7 +357,7 @@ Pokud je balance0 nebo balance1 (uint256) vyšší než uint112(-1) (=2^112-1) (
         if (timeElapsed > 0 && _reserve0 != 0 && _reserve1 != 0) {
 ```
 
-Pokud uplynulý čas není nula, znamená to, že jsme první transakcí směny v tomto bloku. V takovém případě musíme aktualizovat akumulátory nákladů.
+Pokud uplynulý čas není nula, znamená to, že jsme první směnnou transakcí v tomto bloku. V takovém případě musíme aktualizovat akumulátory nákladů.
 
 ```solidity
             // * nikdy nepřeteče a u + je přetečení žádoucí
@@ -366,18 +366,18 @@ Pokud uplynulý čas není nula, znamená to, že jsme první transakcí směny 
         }
 ```
 
-Každý akumulátor nákladů je aktualizován nejnovějšími náklady (rezerva druhého tokenu/rezerva tohoto tokenu) vynásobenými uplynulým časem v sekundách. Chcete-li získat průměrnou cenu, přečtete kumulativní cenu ve dvou časových bodech a vydělíte ji časovým rozdílem mezi nimi. Předpokládejme například tuto posloupnost událostí:
+Každý akumulátor nákladů se aktualizuje o nejnovější náklady (rezerva druhého tokenu / rezerva tohoto tokenu) vynásobené uplynulým časem v sekundách. Chcete-li získat průměrnou cenu, přečtete kumulativní cenu ve dvou časových bodech a vydělíte ji časovým rozdílem mezi nimi. Předpokládejme například tuto posloupnost událostí:
 
 | Událost                                                    |  reserve0 |  reserve1 | časové razítko | Mezní směnný kurz (reserve1 / reserve0) |       price0CumulativeLast |
 | -------------------------------------------------------- | --------: | --------: | --------- | -------------------------------------------: | -------------------------: |
 | Počáteční nastavení                                            | 1,000.000 | 1,000.000 | 5,000     |                                        1.000 |                          0 |
-| Obchodník A vloží 50 token0 a dostane zpět 47,619 token1  | 1,050.000 |   952.381 | 5,020     |                                        0.907 |                         20 |
-| Obchodník B vloží 10 token0 a dostane zpět 8,984 token1   | 1,060.000 |   943.396 | 5,030     |                                        0.890 |       20+10\*0.907 = 29.07 |
-| Obchodník C vloží 40 token0 a dostane zpět 34,305 token1  | 1,100.000 |   909.090 | 5,100     |                                        0.826 |    29.07+70\*0.890 = 91.37 |
-| Obchodník D vloží 100 token1 a dostane zpět 109,01 token0 |   990.990 | 1,009.090 | 5,110     |                                        1.018 |    91.37+10\*0.826 = 99.63 |
-| Obchodník E vloží 10 token0 a dostane zpět 10,079 token1  | 1,000.990 |   999.010 | 5,150     |                                        0.998 | 99.63+40\*1.1018 = 143.702 |
+| Obchodník A vloží 50 token0 a získá zpět 47,619 token1  | 1,050.000 |   952.381 | 5,020     |                                        0.907 |                         20 |
+| Obchodník B vloží 10 token0 a získá zpět 8,984 token1   | 1,060.000 |   943.396 | 5,030     |                                        0.890 |       20+10\*0.907 = 29.07 |
+| Obchodník C vloží 40 token0 a získá zpět 34,305 token1  | 1,100.000 |   909.090 | 5,100     |                                        0.826 |    29.07+70\*0.890 = 91.37 |
+| Obchodník D vloží 100 token1 a získá zpět 109,01 token0 |   990.990 | 1,009.090 | 5,110     |                                        1.018 |    91.37+10\*0.826 = 99.63 |
+| Obchodník E vloží 10 token0 a získá zpět 10,079 token1  | 1,000.990 |   999.010 | 5,150     |                                        0.998 |   99.63+40\*1.018 = 140.35 |
 
-Řekněme, že chceme vypočítat průměrnou cenu **Token0** mezi časovými razítky 5 030 a 5 150. Rozdíl v hodnotě `price0Cumulative` je 143,702-29,07=114,632. Toto je průměr za dvě minuty (120 sekund). Takže průměrná cena je 114,632/120 = 0,955.
+Řekněme, že chceme vypočítat průměrnou cenu **Token0** mezi časovými razítky 5 030 a 5 150. Rozdíl v hodnotě `price0Cumulative` je 140,35 - 29,07 = 111,28. To je průměr za dvě minuty (120 sekund). Průměrná cena je tedy 111,28 / 120 = 0,927.
 
 Tento výpočet ceny je důvodem, proč potřebujeme znát staré velikosti rezerv.
 
@@ -389,7 +389,7 @@ Tento výpočet ceny je důvodem, proč potřebujeme znát staré velikosti reze
     }
 ```
 
-Nakonec aktualizujte globální proměnné a emitujte událost `Sync`.
+Nakonec aktualizujte globální proměnné a vyvolejte událost `Sync`.
 
 ##### \_mintFee
 
@@ -398,30 +398,30 @@ Nakonec aktualizujte globální proměnné a emitujte událost `Sync`.
     function _mintFee(uint112 _reserve0, uint112 _reserve1) private returns (bool feeOn) {
 ```
 
-V Uniswap 2.0 platí obchodníci za používání trhu poplatek 0,30 %. Většina tohoto poplatku (0,25 % z obchodu) jde vždy poskytovatelům likvidity. Zbývajících 0,05 % může jít buď poskytovatelům likvidity, nebo na adresu specifikovanou továrnou jako poplatek za protokol, který platí Uniswapu za jejich úsilí při vývoji.
+V Uniswap 2.0 platí obchodníci za použití trhu poplatek 0,30 %. Většina tohoto poplatku (0,25 % z obchodu) jde vždy poskytovatelům likvidity. Zbývajících 0,05 % může jít buď poskytovatelům likvidity, nebo na adresu určenou továrnou jako poplatek protokolu, který platí Uniswapu za jejich vývojové úsilí. Na Ethereum Mainnet je tento poplatek protokolu zapnutý: adresa `feeTo` továrny je nastavena, takže 0,05 % jde na tuto adresu spíše než poskytovatelům likvidity.
 
-Aby se snížil počet výpočtů (a tím i náklady na gas), tento poplatek se počítá pouze při přidání nebo odebrání likvidity z fondu, nikoli při každé transakci.
+Aby se omezily výpočty (a tím i náklady na gas), tento poplatek se počítá pouze při přidání nebo odebrání likvidity z fondu, nikoli při každé transakci.
 
 ```solidity
         address feeTo = IUniswapV2Factory(factory).feeTo();
         feeOn = feeTo != address(0);
 ```
 
-Přečtěte si cíl poplatku továrny. Pokud je nula, pak neexistuje žádný poplatek za protokol a není třeba tento poplatek počítat.
+Přečtěte si cíl poplatku továrny. Pokud je nula, pak neexistuje žádný poplatek protokolu a není třeba tento poplatek počítat.
 
 ```solidity
         uint _kLast = kLast; // úspora gasu
 ```
 
 Stavová proměnná `kLast` je umístěna v úložišti, takže bude mít hodnotu mezi různými voláními kontraktu.
-Přístup k úložišti je mnohem dražší než přístup k volatilní paměti, která se uvolní po skončení volání funkce kontraktu, takže používáme interní proměnnou, abychom ušetřili gas.
+Přístup k úložišti je mnohem dražší než přístup k volatilní paměti, která se uvolní, když volání funkce kontraktu skončí, takže používáme interní proměnnou, abychom ušetřili gas.
 
 ```solidity
         if (feeOn) {
             if (_kLast != 0) {
 ```
 
-Poskytovatelé likvidity získají svůj podíl jednoduše zhodnocením svých tokenů likvidity. Poplatek za protokol však vyžaduje, aby byly vyraženy nové tokeny likvidity a poskytnuty na adresu `feeTo`.
+Poskytovatelé likvidity získají svůj podíl jednoduše zhodnocením svých tokenů likvidity. Poplatek protokolu však vyžaduje, aby byly vyraženy nové tokeny likvidity a poskytnuty na adresu `feeTo`.
 
 ```solidity
                 uint rootK = Math.sqrt(uint(_reserve0).mul(_reserve1));
@@ -429,7 +429,7 @@ Poskytovatelé likvidity získají svůj podíl jednoduše zhodnocením svých t
                 if (rootK > rootKLast) {
 ```
 
-Pokud existuje nová likvidita, ze které se má vybrat poplatek za protokol. Funkci druhé odmocniny můžete vidět [dále v tomto článku](#math)
+Pokud existuje nová likvidita, ze které se má vybrat poplatek protokolu. Funkci druhé odmocniny můžete vidět [později v tomto článku](#math).
 
 ```solidity
                     uint numerator = totalSupply.mul(rootK.sub(rootKLast));
@@ -437,7 +437,7 @@ Pokud existuje nová likvidita, ze které se má vybrat poplatek za protokol. Fu
                     uint liquidity = numerator / denominator;
 ```
 
-Tento složitý výpočet poplatků je vysvětlen v [bílé knize](https://app.uniswap.org/whitepaper.pdf) na straně 5. Víme, že mezi dobou, kdy bylo vypočítáno `kLast`, a současností nebyla přidána ani odebrána žádná likvidita (protože tento výpočet spouštíme pokaždé, když je likvidita přidána nebo odebrána, než se skutečně změní), takže jakákoli změna v `reserve0 * reserve1` musí pocházet z transakčních poplatků (bez nich bychom udržovali `reserve0 * reserve1` konstantní).
+Tento složitý výpočet poplatků je vysvětlen v [bílé knize](https://app.uniswap.org/whitepaper.pdf) na straně 5. Víme, že mezi dobou, kdy byla vypočítána `kLast`, a současností nebyla přidána ani odebrána žádná likvidita (protože tento výpočet provádíme pokaždé, když je likvidita přidána nebo odebrána, než se skutečně změní), takže jakákoli změna v `reserve0 * reserve1` musí pocházet z transakčních poplatků (bez nich bychom udržovali `reserve0 * reserve1` konstantní).
 
 ```solidity
                     if (liquidity > 0) _mint(feeTo, liquidity);
@@ -445,7 +445,7 @@ Tento složitý výpočet poplatků je vysvětlen v [bílé knize](https://app.u
             }
 ```
 
-Použijte funkci `UniswapV2ERC20._mint` ke skutečnému vytvoření dalších tokenů likvidity a jejich přiřazení k `feeTo`.
+Použijte funkci `UniswapV2ERC20._mint` ke skutečnému vytvoření dalších tokenů likvidity a přiřaďte je k `feeTo`.
 
 ```solidity
         } else if (_kLast != 0) {
@@ -454,8 +454,8 @@ Použijte funkci `UniswapV2ERC20._mint` ke skutečnému vytvoření dalších to
     }
 ```
 
-Pokud není nastaven žádný poplatek, nastavte `kLast` na nulu (pokud to tak již není). Když byl tento kontrakt napsán, existovala [funkce vrácení gasu](https://eips.ethereum.org/EIPS/eip-3298), která povzbuzovala kontrakty ke snížení celkové velikosti stavu Etherea vynulováním úložiště, které nepotřebovaly.
-Tento kód získá tuto náhradu, kdykoli je to možné.
+Pokud není nastaven žádný poplatek, nastavte `kLast` na nulu (pokud to tak již není). Ethereum má funkci vrácení gasu, která povzbuzuje kontrakty ke snížení celkové velikosti stavu Etherea vynulováním úložiště, které nepotřebují.
+Tento kód získá tuto náhradu, kdykoli je to možné. Od upgradu London ([EIP-3529](https://eips.ethereum.org/EIPS/eip-3529)) je náhrada menší a omezena na pětinu gasu transakce, ale stále existuje.
 
 #### Externě přístupné funkce {#pair-external}
 
@@ -692,7 +692,7 @@ V takovém případě existují dvě řešení:
 
 ### UniswapV2Factory.sol {#uniswapv2factory}
 
-[Tento kontrakt](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) vytváří směnárny párů.
+[Tento kontrakt](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Factory.sol) vytváří směnárny párů.
 
 ```solidity
 pragma solidity =0.5.16;
@@ -705,8 +705,8 @@ contract UniswapV2Factory is IUniswapV2Factory {
     address public feeToSetter;
 ```
 
-Tyto stavové proměnné jsou nezbytné k implementaci poplatku za protokol (viz [bílá kniha](https://app.uniswap.org/whitepaper.pdf), str. 5).
-Adresa `feeTo` shromažďuje tokeny likvidity pro poplatek za protokol a `feeToSetter` je adresa, která má povoleno změnit `feeTo` na jinou adresu.
+Tyto stavové proměnné jsou nezbytné k implementaci poplatku protokolu (viz [bílá kniha](https://app.uniswap.org/whitepaper.pdf), str. 5).
+Adresa `feeTo` shromažďuje tokeny likvidity pro poplatek protokolu a `feeToSetter` je adresa, která má povoleno změnit `feeTo` na jinou adresu.
 
 ```solidity
     mapping(address => mapping(address => address)) public getPair;
@@ -719,14 +719,13 @@ První z nich, `getPair`, je mapování, které identifikuje kontrakt směnárny
 
 Druhá proměnná, `allPairs`, je pole, které obsahuje všechny adresy směnáren párů vytvořených touto továrnou. V Ethereu nemůžete iterovat přes obsah mapování nebo získat seznam všech klíčů, takže tato proměnná je jediným způsobem, jak zjistit, které směnárny tato továrna spravuje.
 
-Poznámka: Důvodem, proč nemůžete iterovat přes všechny klíče mapování, je to, že ukládání dat kontraktu je _drahé_, takže čím méně ho používáme, tím lépe, a čím méně často ho měníme,
-tím lépe. Můžete vytvořit [mapování, která podporují iteraci](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol), ale vyžadují další úložiště pro seznam klíčů. Ve většině aplikací to nepotřebujete.
+Poznámka: Důvodem, proč nemůžete iterovat přes všechny klíče mapování, je to, že ukládání dat kontraktu je _drahé_, takže čím méně ho používáme, tím lépe, a čím méně často ho měníme, tím lépe. Můžete vytvořit [mapování, která podporují iteraci](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol), ale vyžadují další úložiště pro seznam klíčů. Ve většině aplikací to nepotřebujete.
 
 ```solidity
     event PairCreated(address indexed token0, address indexed token1, address pair, uint);
 ```
 
-Tato událost je emitována při vytvoření nové směnárny párů. Zahrnuje adresy tokenů, adresu směnárny párů a celkový počet směnáren spravovaných továrnou.
+Tato událost je vyvolána při vytvoření nové směnárny párů. Zahrnuje adresy tokenů, adresu směnárny párů a celkový počet směnáren spravovaných továrnou.
 
 ```solidity
     constructor(address _feeToSetter) public {
@@ -748,22 +747,22 @@ Tato funkce vrací počet směnných párů.
     function createPair(address tokenA, address tokenB) external returns (address pair) {
 ```
 
-Toto je hlavní funkce továrny, vytvořit směnárnu párů mezi dvěma tokeny ERC-20. Všimněte si, že tuto funkci může zavolat kdokoli. K vytvoření nové směnárny párů nepotřebujete povolení od Uniswapu.
+Toto je hlavní funkce továrny, vytvořit směnárnu párů mezi dvěma tokeny ERC-20. Všimněte si, že tuto funkci může volat kdokoli. K vytvoření nové směnárny párů nepotřebujete povolení od Uniswapu.
 
 ```solidity
         require(tokenA != tokenB, 'UniswapV2: IDENTICAL_ADDRESSES');
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Chceme, aby adresa nové směnárny byla deterministická, aby ji bylo možné vypočítat předem offchain (to může být užitečné pro [transakce na vrstvě 2 (l2)](/developers/docs/scaling/)).
-K tomu potřebujeme mít konzistentní pořadí adres tokenů, bez ohledu na pořadí, ve kterém jsme je obdrželi, takže je zde seřadíme.
+Chceme, aby adresa nové směnárny byla deterministická, aby ji bylo možné vypočítat předem offchain (to může být užitečné pro [transakce na vrstvě 2](/developers/docs/scaling/)).
+K tomu musíme mít konzistentní pořadí adres tokenů, bez ohledu na pořadí, ve kterém jsme je obdrželi, takže je zde seřadíme.
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
-        require(getPair[token0][token1] == address(0), 'UniswapV2: PAIR_EXISTS'); // jediná kontrola je dostatečná
+        require(getPair[token0][token1] == address(0), 'UniswapV2: PAIR_EXISTS'); // stačí jedna kontrola
 ```
 
-Velké fondy likvidity jsou lepší než malé, protože mají stabilnější ceny. Nechceme mít více než jeden fond likvidity na pár tokenů. Pokud již směnárna existuje, není třeba vytvářet další pro stejný pár.
+Velké fondy likvidity jsou lepší než malé, protože mají stabilnější ceny. Nechceme mít více než jeden fond likvidity na pár tokenů. Pokud již existuje směnárna, není třeba vytvářet další pro stejný pár.
 
 ```solidity
         bytes memory bytecode = type(UniswapV2Pair).creationCode;
@@ -795,7 +794,7 @@ Zavolejte funkci `initialize`, abyste nové směnárně řekli, jaké dva tokeny
     }
 ```
 
-Uložte informace o novém páru do stavových proměnných a emitujte událost, abyste informovali svět o nové směnárně párů.
+Uložte informace o novém páru do stavových proměnných a vyvolejte událost, abyste informovali svět o nové směnárně párů.
 
 ```solidity
     function setFeeTo(address _feeTo) external {
@@ -814,10 +813,10 @@ Tyto dvě funkce umožňují `feeSetter` ovládat příjemce poplatku (pokud exi
 
 ### UniswapV2ERC20.sol {#uniswapv2erc20}
 
-[Tento kontrakt](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implementuje token likvidity ERC-20. Je podobný [kontraktu ERC-20 od OpenZeppelin](/developers/tutorials/erc20-annotated-code), takže vysvětlím pouze část, která se liší, funkcionalitu `permit`.
+[Tento kontrakt](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2ERC20.sol) implementuje token likvidity ERC-20. Je podobný [kontraktu ERC-20 od OpenZeppelin](/developers/tutorials/erc20-annotated-code), takže vysvětlím pouze část, která je odlišná, funkcionalitu `permit`.
 
-Transakce na Ethereu stojí ether (ETH), což je ekvivalent skutečných peněz. Pokud máte tokeny ERC-20, ale nemáte ETH, nemůžete odesílat transakce, takže s nimi nemůžete nic dělat. Jedním z řešení, jak se tomuto problému vyhnout, jsou [metatransakce](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions).
-Vlastník tokenů podepíše transakci, která umožňuje někomu jinému vybrat tokeny offchain, a odešle ji pomocí internetu příjemci. Příjemce, který má ETH, pak odešle povolení jménem vlastníka.
+Transakce na Ethereu stojí ether (ETH), což je ekvivalent skutečných peněz. Pokud máte tokeny ERC-20, ale ne ETH, nemůžete odesílat transakce, takže s nimi nemůžete nic dělat. Jedním z řešení, jak se tomuto problému vyhnout, jsou [meta-transakce](https://developers.uniswap.org/docs/protocols/v2/concepts/meta-transactions).
+Vlastník tokenů podepíše transakci, která umožňuje někomu jinému vybrat tokeny offchain, a odešle ji pomocí internetu příjemci. Příjemce, který má ETH, pak předloží povolení jménem vlastníka.
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;
@@ -825,7 +824,7 @@ Vlastník tokenů podepíše transakci, která umožňuje někomu jinému vybrat
     bytes32 public constant PERMIT_TYPEHASH = 0x6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c9;
 ```
 
-Tento hash je [identifikátor typu transakce](https://eips.ethereum.org/EIPS/eip-712#rationale-for-typehash). Jediný, který zde podporujeme, je `Permit` s těmito parametry.
+Tento hash je [identifikátor pro typ transakce](https://eips.ethereum.org/EIPS/eip-712#rationale-for-typehash). Jediný, který zde podporujeme, je `Permit` s těmito parametry.
 
 ```solidity
     mapping(address => uint) public nonces;
@@ -856,7 +855,7 @@ Toto je kód pro načtení [identifikátoru řetězce](https://chainid.network/)
     }
 ```
 
-Vypočítejte [oddělovač domény](https://eips.ethereum.org/EIPS/eip-712#rationale-for-domainseparator) pro EIP-712.
+Vypočítejte [oddělovač domény (domain separator)](https://eips.ethereum.org/EIPS/eip-712#rationale-for-domainseparator) pro EIP-712.
 
 ```solidity
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
@@ -868,7 +867,7 @@ Toto je funkce, která implementuje oprávnění. Jako parametry přijímá př�
         require(deadline >= block.timestamp, 'UniswapV2: EXPIRED');
 ```
 
-Nepřijímejte transakce po termínu.
+Nepřijímejte transakce po uplynutí lhůty.
 
 ```solidity
         bytes32 digest = keccak256(
@@ -905,12 +904,12 @@ Periferní kontrakty jsou API (rozhraní pro programování aplikací) pro Unisw
 
 ### UniswapV2Router01.sol {#uniswapv2router01}
 
-[Tento kontrakt](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) má problémy a [už by se neměl používat](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Naštěstí jsou periferní kontrakty bezstavové (stateless) a nedrží žádná aktiva, takže je snadné jej označit za zastaralý a doporučit lidem, aby místo něj použili náhradu `UniswapV2Router02`.
+[Tento kontrakt](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router01.sol) má problémy a již by se neměl používat. Naštěstí jsou periferní kontrakty bezstavové a nedrží žádná aktiva, takže je snadné jej označit za zastaralý a navrhnout lidem, aby místo něj použili náhradu, `UniswapV2Router02`.
 
 ### UniswapV2Router02.sol {#uniswapv2router02}
 
-Ve většině případů byste Uniswap používali prostřednictvím [tohoto kontraktu](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
-Jak jej používat, se můžete podívat [zde](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
+Ve většině případů byste Uniswap používali prostřednictvím [tohoto kontraktu](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
+Jak jej používat, se můžete podívat [zde](https://developers.uniswap.org/docs/protocols/v2/guides/swapping).
 
 ```solidity
 pragma solidity =0.6.6;
@@ -925,7 +924,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-S většinou z nich jsme se už setkali, nebo jsou celkem zřejmé. Jedinou výjimkou je `IWETH.sol`. Uniswap v2 umožňuje směnu jakéhokoli páru tokenů ERC-20, ale samotný ether (ETH) není token ERC-20. Vznikl před tímto standardem a převádí se pomocí unikátních mechanismů. Aby bylo možné používat ETH v kontraktech, které pracují s tokeny ERC-20, přišli lidé s kontraktem pro [zabalený ether (WETH)](https://weth.tkn.eth.limo/). Pošlete tomuto kontraktu ETH a on vám vyrazí ekvivalentní množství WETH. Nebo můžete WETH spálit a získat ETH zpět.
+S většinou z nich jsme se buď setkali dříve, nebo jsou poměrně zřejmé. Jedinou výjimkou je `IWETH.sol`. Uniswap v2 umožňuje směny pro jakýkoli pár tokenů ERC-20, ale samotný ether (ETH) není token ERC-20. Předchází standardu a převádí se jedinečnými mechanismy. Aby bylo možné používat ETH v kontraktech, které se vztahují na tokeny ERC-20, lidé přišli s kontraktem [zabalený ether (WETH)](https://weth.tkn.eth.limo/). Pošlete tomuto kontraktu ETH a on vám vyrazí ekvivalentní množství WETH. Nebo můžete WETH spálit a získat zpět ETH.
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {
@@ -935,7 +934,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     address public immutable override WETH;
 ```
 
-Router potřebuje vědět, jakou továrnu (factory) použít, a pro transakce, které vyžadují WETH, jaký kontrakt WETH použít. Tyto hodnoty jsou [neměnné](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables), což znamená, že je lze nastavit pouze v konstruktoru. To dává uživatelům jistotu, že je nikdo nebude moci změnit tak, aby ukazovaly na méně poctivé kontrakty.
+Router potřebuje vědět, jakou továrnu použít, a pro transakce, které vyžadují WETH, jaký kontrakt WETH použít. Tyto hodnoty jsou [neměnné](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables), což znamená, že je lze nastavit pouze v konstruktoru. To dává uživatelům jistotu, že je nikdo nebude moci změnit tak, aby ukazovaly na méně poctivé kontrakty.
 
 ```solidity
     modifier ensure(uint deadline) {
@@ -957,15 +956,15 @@ Konstruktor pouze nastavuje neměnné stavové proměnné.
 
 ```solidity
     receive() external payable {
-        assert(msg.sender == WETH); // přijímat ETH pouze přes fallback z kontraktu WETH
+        assert(msg.sender == WETH); // přijímat ETH pouze přes fallback z WETH kontraktu
     }
 ```
 
-Tato funkce se volá, když vybíráme tokeny z kontraktu WETH zpět na ETH. K tomu je oprávněn pouze kontrakt WETH, který používáme.
+Tato funkce se volá, když vyměňujeme tokeny z kontraktu WETH zpět na ETH. K tomu je oprávněn pouze kontrakt WETH, který používáme.
 
 #### Přidání likvidity {#add-liquidity}
 
-Tyto funkce přidávají tokeny do párové směnárny, což zvětšuje fond likvidity.
+Tyto funkce přidávají tokeny do směnárny párů, což zvyšuje fond likvidity.
 
 ```solidity
 
@@ -973,7 +972,7 @@ Tyto funkce přidávají tokeny do párové směnárny, což zvětšuje fond lik
     function _addLiquidity(
 ```
 
-Tato funkce se používá k výpočtu množství tokenů A a B, které by měly být vloženy do párové směnárny.
+Tato funkce se používá k výpočtu množství tokenů A a B, které by měly být vloženy do směnárny párů.
 
 ```solidity
         address tokenA,
@@ -987,29 +986,29 @@ Toto jsou adresy kontraktů tokenů ERC-20.
         uint amountBDesired,
 ```
 
-Toto jsou částky, které chce poskytovatel likvidity vložit. Jsou to zároveň maximální částky A a B, které mají být vloženy.
+Toto jsou částky, které chce poskytovatel likvidity vložit. Jsou to také maximální částky A a B, které mají být vloženy.
 
 ```solidity
         uint amountAMin,
         uint amountBMin
 ```
 
-Toto jsou minimální přijatelné částky pro vklad. Pokud transakce nemůže proběhnout s těmito nebo vyššími částkami, dojde k jejímu zvrácení (revert). Pokud tuto funkci nechcete, jednoduše zadejte nulu.
+Toto jsou minimální přijatelné částky k vložení. Pokud transakce nemůže proběhnout s těmito částkami nebo vyššími, zvrátí se (revert). Pokud tuto funkci nechcete, zadejte nulu.
 
-Poskytovatelé likvidity obvykle specifikují minimum, protože chtějí omezit transakci na směnný kurz, který se blíží tomu aktuálnímu. Pokud směnný kurz příliš kolísá, může to znamenat novinky, které mění podkladové hodnoty, a oni se chtějí manuálně rozhodnout, co dělat.
+Poskytovatelé likvidity obvykle specifikují minimum, protože chtějí omezit transakci na směnný kurz, který se blíží aktuálnímu. Pokud směnný kurz příliš kolísá, může to znamenat zprávy, které mění podkladové hodnoty, a oni se chtějí ručně rozhodnout, co dělat.
 
-Představte si například případ, kdy je směnný kurz jedna ku jedné a poskytovatel likvidity zadá tyto hodnoty:
+Představte si například případ, kdy je směnný kurz jedna ku jedné a poskytovatel likvidity specifikuje tyto hodnoty:
 
-| Parameter      | Value |
+| Parametr      | Hodnota |
 | -------------- | ----: |
 | amountADesired |  1000 |
 | amountBDesired |  1000 |
 | amountAMin     |   900 |
 | amountBMin     |   800 |
 
-Dokud se směnný kurz drží mezi 0,9 a 1,25, transakce proběhne. Pokud se směnný kurz dostane mimo toto rozpětí, transakce se zruší.
+Dokud se směnný kurz drží mezi 0,9 a 1,25, transakce proběhne. Pokud se směnný kurz dostane mimo tento rozsah, transakce se zruší.
 
-Důvodem tohoto opatření je, že transakce nejsou okamžité; odešlete je a validátor je nakonec zahrne do bloku (pokud není vaše cena plynu velmi nízká, v takovém případě budete muset odeslat další transakci se stejnou hodnotou nonce a vyšší cenou plynu, abyste ji přepsali). Nemůžete ovlivnit, co se stane v intervalu mezi odesláním a zahrnutím.
+Důvodem tohoto opatření je, že transakce nejsou okamžité, odešlete je a nakonec je validátor zahrne do bloku (pokud není vaše cena plynu velmi nízká, v takovém případě budete muset odeslat další transakci se stejnou nonce a vyšší cenou plynu, abyste ji přepsali). Nemůžete ovlivnit, co se stane během intervalu mezi odesláním a zahrnutím.
 
 ```solidity
     ) internal virtual returns (uint amountA, uint amountB) {
@@ -1037,14 +1036,14 @@ Získejte aktuální rezervy v páru.
             (amountA, amountB) = (amountADesired, amountBDesired);
 ```
 
-Pokud jsou aktuální rezervy prázdné, jedná se o novou párovou směnárnu. Částky k vložení by měly být přesně stejné jako ty, které chce poskytovatel likvidity poskytnout.
+Pokud jsou aktuální rezervy prázdné, pak se jedná o novou směnárnu párů. Částky, které mají být vloženy, by měly být přesně stejné jako ty, které chce poskytovatel likvidity poskytnout.
 
 ```solidity
         } else {
             uint amountBOptimal = UniswapV2Library.quote(amountADesired, reserveA, reserveB);
 ```
 
-Pokud potřebujeme zjistit, jaké budou částky, získáme optimální částku pomocí [této funkce](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L35). Chceme stejný poměr, jako mají aktuální rezervy.
+Pokud potřebujeme zjistit, jaké budou částky, získáme optimální částku pomocí [této funkce](https://github.com/Uniswap/v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L36). Chceme stejný poměr jako u aktuálních rezerv.
 
 ```solidity
             if (amountBOptimal <= amountBDesired) {
@@ -1052,7 +1051,7 @@ Pokud potřebujeme zjistit, jaké budou částky, získáme optimální částku
                 (amountA, amountB) = (amountADesired, amountBOptimal);
 ```
 
-Pokud je `amountBOptimal` menší než částka, kterou chce poskytovatel likvidity vložit, znamená to, že token B je v současnosti cennější, než si vkladatel likvidity myslí, takže je potřeba menší částka.
+Pokud je `amountBOptimal` menší než částka, kterou chce poskytovatel likvidity vložit, znamená to, že token B je v současné době cennější, než si vkladatel likvidity myslí, takže je zapotřebí menší částka.
 
 ```solidity
             } else {
@@ -1062,13 +1061,13 @@ Pokud je `amountBOptimal` menší než částka, kterou chce poskytovatel likvid
                 (amountA, amountB) = (amountAOptimal, amountBDesired);
 ```
 
-Pokud je optimální částka B vyšší než požadovaná částka B, znamená to, že tokeny B jsou v současnosti méně cenné, než si vkladatel likvidity myslí, takže je potřeba vyšší částka. Požadovaná částka je však maximum, takže to nemůžeme udělat. Místo toho vypočítáme optimální počet tokenů A pro požadované množství tokenů B.
+Pokud je optimální částka B vyšší než požadovaná částka B, znamená to, že tokeny B jsou v současné době méně cenné, než si vkladatel likvidity myslí, takže je zapotřebí vyšší částka. Požadovaná částka je však maximum, takže to nemůžeme udělat. Místo toho vypočítáme optimální počet tokenů A pro požadované množství tokenů B.
 
-Když to všechno spojíme, dostaneme tento graf. Předpokládejme, že se snažíte vložit tisíc tokenů A (modrá čára) a tisíc tokenů B (červená čára). Osa x představuje směnný kurz, A/B. Pokud x=1, mají stejnou hodnotu a vložíte od každého tisíc. Pokud x=2, má A dvojnásobnou hodnotu než B (za každý token A dostanete dva tokeny B), takže vložíte tisíc tokenů B, ale pouze 500 tokenů A. Pokud x=0,5, situace je opačná, tisíc tokenů A a pět set tokenů B.
+Když to všechno dáme dohromady, dostaneme tento graf. Předpokládejme, že se snažíte vložit tisíc tokenů A (modrá čára) a tisíc tokenů B (červená čára). Osa x je směnný kurz, A/B. Pokud x=1, mají stejnou hodnotu a vložíte tisíc od každého. Pokud x=2, A má dvojnásobnou hodnotu než B (za každý token A získáte dva tokeny B), takže vložíte tisíc tokenů B, ale pouze 500 tokenů A. Pokud x=0,5, situace je opačná, tisíc tokenů A a pět set tokenů B.
 
-![Graph](liquidityProviderDeposit.png)
+![Graf](liquidityProviderDeposit.png)
 
-Likviditu byste mohli vložit přímo do hlavního kontraktu (pomocí [UniswapV2Pair::mint](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol#L110)), ale hlavní kontrakt pouze kontroluje, zda není sám podveden, takže se vystavujete riziku ztráty hodnoty, pokud se směnný kurz změní mezi okamžikem odeslání transakce a jejím provedením. Pokud použijete periferní kontrakt, ten vypočítá částku, kterou byste měli vložit, a okamžitě ji vloží, takže se směnný kurz nezmění a vy o nic nepřijdete.
+Likviditu byste mohli vložit přímo do hlavního kontraktu (pomocí [UniswapV2Pair::mint](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol#L110)), ale hlavní kontrakt pouze kontroluje, zda není sám podveden, takže riskujete ztrátu hodnoty, pokud se směnný kurz změní mezi dobou, kdy odešlete transakci, a dobou, kdy je provedena. Pokud použijete periferní kontrakt, zjistí částku, kterou byste měli vložit, a okamžitě ji vloží, takže se směnný kurz nezmění a vy nic neztratíte.
 
 ```solidity
     function addLiquidity(
@@ -1082,10 +1081,10 @@ Likviditu byste mohli vložit přímo do hlavního kontraktu (pomocí [UniswapV2
         uint deadline
 ```
 
-Tuto funkci lze zavolat transakcí pro vložení likvidity. Většina parametrů je stejná jako u `_addLiquidity` výše, se dvěma výjimkami:
+Tuto funkci může zavolat transakce k vložení likvidity. Většina parametrů je stejná jako v `_addLiquidity` výše, se dvěma výjimkami:
 
-. `to` je adresa, na kterou se vyrazí nové tokeny likvidity, aby ukazovaly podíl poskytovatele likvidity ve fondu
-. `deadline` je časový limit transakce
+- `to` je adresa, na kterou se vyrazí nové tokeny likvidity, aby se ukázal podíl poskytovatele likvidity ve fondu
+- `deadline` je časový limit transakce
 
 ```solidity
     ) external virtual override ensure(deadline) returns (uint amountA, uint amountB, uint liquidity) {
@@ -1100,14 +1099,14 @@ Vypočítáme částky, které se mají skutečně vložit, a poté najdeme adre
         TransferHelper.safeTransferFrom(tokenB, msg.sender, pair, amountB);
 ```
 
-Převeďte správné částky tokenů od uživatele do párové směnárny.
+Převeďte správné částky tokenů od uživatele do směnárny párů.
 
 ```solidity
         liquidity = IUniswapV2Pair(pair).mint(to);
     }
 ```
 
-Na oplátku dejte adrese `to` tokeny likvidity za částečné vlastnictví fondu. Funkce `mint` hlavního kontraktu zjistí, kolik má tokenů navíc (v porovnání s tím, co měl při poslední změně likvidity), a podle toho vyrazí likviditu.
+Na oplátku dejte adrese `to` tokeny likvidity za částečné vlastnictví fondu. Funkce `mint` hlavního kontraktu vidí, kolik má tokenů navíc (ve srovnání s tím, co měl při poslední změně likvidity), a podle toho vyrazí likviditu.
 
 ```solidity
     function addLiquidityETH(
@@ -1115,7 +1114,7 @@ Na oplátku dejte adrese `to` tokeny likvidity za částečné vlastnictví fond
         uint amountTokenDesired,
 ```
 
-Když chce poskytovatel likvidity poskytnout likviditu do párové směnárny Token/ETH, existuje několik rozdílů. Kontrakt se postará o zabalení ETH pro poskytovatele likvidity. Není třeba specifikovat, kolik ETH chce uživatel vložit, protože je uživatel jednoduše pošle s transakcí (částka je k dispozici v `msg.value`).
+Když chce poskytovatel likvidity poskytnout likviditu směnárně párů Token/ETH, existuje několik rozdílů. Kontrakt se stará o zabalení ETH pro poskytovatele likvidity. Není třeba specifikovat, kolik ETH chce uživatel vložit, protože je uživatel jednoduše odešle s transakcí (částka je k dispozici v `msg.value`).
 
 ```solidity
         uint amountTokenMin,
@@ -1137,16 +1136,16 @@ Když chce poskytovatel likvidity poskytnout likviditu do párové směnárny To
         assert(IWETH(WETH).transfer(pair, amountETH));
 ```
 
-Pro vložení ETH jej kontrakt nejprve zabalí do WETH a poté převede WETH do páru. Všimněte si, že převod je zabalen v `assert`. To znamená, že pokud převod selže, selže i toto volání kontraktu, a proto k zabalení ve skutečnosti nedojde.
+K vložení ETH kontrakt nejprve zabalí ETH do WETH a poté převede WETH do páru. Všimněte si, že převod je zabalen v `assert`. To znamená, že pokud převod selže, selže i toto volání kontraktu, a proto k zabalení ve skutečnosti nedojde.
 
 ```solidity
         liquidity = IUniswapV2Pair(pair).mint(to);
-        // vrátit zbytkový ether, pokud nějaký je
+        // vrátit zbytkové ETH, pokud nějaké je
         if (msg.value > amountETH) TransferHelper.safeTransferETH(msg.sender, msg.value - amountETH);
     }
 ```
 
-Uživatel nám již poslal ETH, takže pokud nějaké zbyde (protože druhý token je méně cenný, než si uživatel myslel), musíme provést vrácení peněz.
+Uživatel nám již poslal ETH, takže pokud nějaké zbydou (protože druhý token je méně cenný, než si uživatel myslel), musíme provést vrácení peněz.
 
 #### Odebrání likvidity {#remove-liquidity}
 
@@ -1309,25 +1308,25 @@ Tuto funkci lze použít pro tokeny, které mají poplatky za převod nebo ulož
 
 Poslední funkce kombinuje poplatky za uložení s meta-transakcemi.
 
-#### Obchodování {#trade}
+#### Obchod {#trade}
 
 ```solidity
     // **** SWAP ****
-    // vyžaduje, aby počáteční částka již byla odeslána do prvního páru
+    // vyžaduje, aby počáteční částka již byla odeslána prvnímu páru
     function _swap(uint[] memory amounts, address[] memory path, address _to) internal virtual {
 ```
 
-Tato funkce provádí interní zpracování, které je vyžadováno pro funkce vystavené obchodníkům.
+Tato funkce provádí interní zpracování, které je vyžadováno pro funkce, které jsou vystaveny obchodníkům.
 
 ```solidity
         for (uint i; i < path.length - 1; i++) {
 ```
 
-V době psaní tohoto textu existuje [388 160 tokenů ERC-20](https://eth.blockscout.com/tokens). Kdyby pro každý pár tokenů existovala párová směnárna, bylo by to přes 150 miliard párových směnáren. Celý řetězec má v současné době [pouze 0,1 % tohoto počtu účtů](https://eth.blockscout.com/stats/accountsGrowth). Místo toho funkce swapu podporují koncept cesty (path). Obchodník může směnit A za B, B za C a C za D, takže není potřeba přímá párová směnárna A-D.
+V době psaní tohoto textu existuje [388 160 tokenů ERC-20](https://eth.blockscout.com/tokens). Kdyby existovala směnárna párů pro každý pár tokenů, bylo by to přes 150 miliard směnáren párů. Celý řetězec má v současné době [pouze 0,1 % tohoto počtu účtů](https://eth.blockscout.com/stats/accountsGrowth). Místo toho funkce swapu podporují koncept cesty. Obchodník může směnit A za B, B za C a C za D, takže není potřeba přímá směnárna párů A-D.
 
-Ceny na těchto trzích bývají synchronizované, protože když nejsou, vytváří to příležitost pro arbitráž. Představte si například tři tokeny, A, B a C. Existují tři párové směnárny, jedna pro každý pár.
+Ceny na těchto trzích mají tendenci být synchronizovány, protože když nejsou synchronizovány, vytváří to příležitost pro arbitráž. Představte si například tři tokeny, A, B a C. Existují tři směnárny párů, jedna pro každý pár.
 
-1. Výchozí situace
+1. Počáteční situace
 2. Obchodník prodá 24,695 tokenů A a získá 25,305 tokenů B.
 3. Obchodník prodá 24,695 tokenů B za 25,305 tokenů C, přičemž si ponechá přibližně 0,61 tokenů B jako zisk.
 4. Poté obchodník prodá 24,695 tokenů C za 25,305 tokenů A, přičemž si ponechá přibližně 0,61 tokenů C jako zisk. Obchodník má také 0,61 tokenů A navíc (25,305, se kterými obchodník skončí, minus původní investice 24,695).
@@ -1345,19 +1344,19 @@ Ceny na těchto trzích bývají synchronizované, protože když nejsou, vytvá
             uint amountOut = amounts[i + 1];
 ```
 
-Získejte pár, který právě zpracováváme, seřaďte jej (pro použití s párem) a získejte očekávanou výstupní částku.
+Získejte pár, který právě zpracováváme, seřaďte jej (pro použití s párem) a získejte očekávané výstupní množství.
 
 ```solidity
             (uint amount0Out, uint amount1Out) = input == token0 ? (uint(0), amountOut) : (amountOut, uint(0));
 ```
 
-Získejte očekávané výstupní částky, seřazené tak, jak je párová směnárna očekává.
+Získejte očekávaná výstupní množství, seřazená tak, jak je směnárna párů očekává.
 
 ```solidity
             address to = i < path.length - 2 ? UniswapV2Library.pairFor(factory, output, path[i + 2]) : _to;
 ```
 
-Je toto poslední směna? Pokud ano, pošlete tokeny získané za obchod na cílovou adresu. Pokud ne, pošlete je do další párové směnárny.
+Je to poslední směna? Pokud ano, pošlete tokeny přijaté za obchod na místo určení. Pokud ne, pošlete je do další směnárny párů.
 
 ```solidity
 
@@ -1368,7 +1367,7 @@ Je toto poslední směna? Pokud ano, pošlete tokeny získané za obchod na cíl
     }
 ```
 
-Skutečně zavolejte párovou směnárnu pro swap tokenů. Nepotřebujeme zpětné volání (callback), které by nás o směně informovalo, takže v tomto poli neposíláme žádné bajty.
+Skutečně zavolejte směnárnu párů k provedení swapu tokenů. Nepotřebujeme zpětné volání (callback), abychom byli informováni o směně, takže v tomto poli neposíláme žádné bajty.
 
 ```solidity
     function swapExactTokensForTokens(
@@ -1382,11 +1381,11 @@ Tuto funkci používají přímo obchodníci ke swapu jednoho tokenu za jiný.
         address[] calldata path,
 ```
 
-Tento parametr obsahuje adresy kontraktů ERC-20. Jak bylo vysvětleno výše, jedná se o pole, protože možná budete muset projít několika párovými směnárnami, abyste se dostali od aktiva, které máte, k aktivu, které chcete.
+Tento parametr obsahuje adresy kontraktů ERC-20. Jak bylo vysvětleno výše, jedná se o pole, protože možná budete muset projít několika směnárnami párů, abyste se dostali od aktiva, které máte, k aktivu, které chcete.
 
-Parametr funkce v Solidity může být uložen buď v `memory` nebo v `calldata`. Pokud je funkce vstupním bodem do kontraktu, volaným přímo od uživatele (pomocí transakce) nebo z jiného kontraktu, pak lze hodnotu parametru převzít přímo z dat volání (call data). Pokud je funkce volána interně, jako `_swap` výše, pak musí být parametry uloženy v `memory`. Z pohledu volaného kontraktu jsou `calldata` pouze pro čtení.
+Parametr funkce v Solidity může být uložen buď v `memory`, nebo v `calldata`. Pokud je funkce vstupním bodem do kontraktu, volaným přímo od uživatele (pomocí transakce) nebo z jiného kontraktu, pak lze hodnotu parametru převzít přímo z dat volání. Pokud je funkce volána interně, jako `_swap` výše, pak musí být parametry uloženy v `memory`. Z pohledu volaného kontraktu je `calldata` pouze pro čtení.
 
-U skalárních typů, jako je `uint` nebo `address`, řeší kompilátor volbu úložiště za nás, ale u polí, která jsou delší a dražší, specifikujeme typ úložiště, které se má použít.
+U skalárních typů, jako je `uint` nebo `address`, za nás kompilátor řeší volbu úložiště, ale u polí, která jsou delší a dražší, specifikujeme typ úložiště, které se má použít.
 
 ```solidity
         address to,
@@ -1401,7 +1400,7 @@ Návratové hodnoty se vždy vracejí v paměti.
         require(amounts[amounts.length - 1] >= amountOutMin, 'UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT');
 ```
 
-Vypočítejte částku, která má být nakoupena v každém swapu. Pokud je výsledek menší než minimum, které je obchodník ochoten přijmout, zvrátí (revert) se transakce.
+Vypočítejte částku, která má být zakoupena v každém swapu. Pokud je výsledek menší než minimum, které je obchodník ochoten přijmout, zvrátit (revert) transakci.
 
 ```solidity
         TransferHelper.safeTransferFrom(
@@ -1411,7 +1410,7 @@ Vypočítejte částku, která má být nakoupena v každém swapu. Pokud je vý
     }
 ```
 
-Nakonec převeďte počáteční token ERC-20 na účet pro první párovou směnárnu a zavolejte `_swap`. To vše se děje ve stejné transakci, takže párová směnárna ví, že jakékoli neočekávané tokeny jsou součástí tohoto převodu.
+Nakonec převeďte počáteční token ERC-20 na účet pro první směnárnu párů a zavolejte `_swap`. To vše se děje ve stejné transakci, takže směnárna párů ví, že jakékoli neočekávané tokeny jsou součástí tohoto převodu.
 
 ```solidity
     function swapTokensForExactTokens(
@@ -1430,9 +1429,9 @@ Nakonec převeďte počáteční token ERC-20 na účet pro první párovou smě
     }
 ```
 
-Předchozí funkce, `swapTokensForTokens`, umožňuje obchodníkovi specifikovat přesný počet vstupních tokenů, které je ochoten dát, a minimální počet výstupních tokenů, které je ochoten za ně přijmout. Tato funkce provádí reverzní swap, umožňuje obchodníkovi specifikovat počet výstupních tokenů, které chce, a maximální počet vstupních tokenů, které je za ně ochoten zaplatit.
+Předchozí funkce, `swapExactTokensForTokens`, umožňuje obchodníkovi specifikovat přesný počet vstupních tokenů, které je ochoten dát, a minimální počet výstupních tokenů, které je ochoten obdržet na oplátku. Tato funkce provádí reverzní swap, umožňuje obchodníkovi specifikovat počet výstupních tokenů, které chce, a maximální počet vstupních tokenů, které je za ně ochoten zaplatit.
 
-V obou případech musí obchodník nejprve poskytnout tomuto perifernímu kontraktu povolený limit (allowance), aby mu umožnil jejich převod.
+V obou případech musí obchodník nejprve dát tomuto perifernímu kontraktu povolený limit, aby mu umožnil jejich převod.
 
 ```solidity
     function swapExactETHForTokens(uint amountOutMin, address[] calldata path, address to, uint deadline)
@@ -1505,20 +1504,20 @@ V obou případech musí obchodník nejprve poskytnout tomuto perifernímu kontr
         IWETH(WETH).deposit{value: amounts[0]}();
         assert(IWETH(WETH).transfer(UniswapV2Library.pairFor(factory, path[0], path[1]), amounts[0]));
         _swap(amounts, path, to);
-        // vrátit zbytkový ether, pokud nějaký je
+        // vrátit zbytkové ETH, pokud nějaké je
         if (msg.value > amounts[0]) TransferHelper.safeTransferETH(msg.sender, msg.value - amounts[0]);
     }
 ```
 
-Všechny tyto čtyři varianty zahrnují obchodování mezi ETH a tokeny. Jediný rozdíl je v tom, že buď obdržíme ETH od obchodníka a použijeme jej k vyražení WETH, nebo obdržíme WETH z poslední směnárny na cestě a spálíme jej, přičemž obchodníkovi pošleme zpět výsledné ETH.
+Všechny tyto čtyři varianty zahrnují obchodování mezi ETH a tokeny. Jediný rozdíl je v tom, že buď obdržíme ETH od obchodníka a použijeme je k ražení WETH, nebo obdržíme WETH z poslední směny v cestě a spálíme je, čímž obchodníkovi pošleme zpět výsledné ETH.
 
 ```solidity
-    // **** SWAP (s podporou tokenů s poplatkem při převodu) ****
-    // vyžaduje, aby počáteční částka již byla odeslána do prvního páru
+    // **** SWAP (s podporou tokenů s poplatkem za převod) ****
+    // vyžaduje, aby počáteční částka již byla odeslána prvnímu páru
     function _swapSupportingFeeOnTransferTokens(address[] memory path, address _to) internal virtual {
 ```
 
-Toto je interní funkce pro swap tokenů, které mají poplatky za převod nebo uložení, k vyřešení ([tohoto problému](https://github.com/Uniswap/uniswap-interface/issues/835)).
+Toto je interní funkce pro swap tokenů, které mají poplatky za převod nebo uložení, k vyřešení ([tohoto problému](https://github.com/Uniswap/interface/issues/835)).
 
 ```solidity
         for (uint i; i < path.length - 1; i++) {
@@ -1527,16 +1526,16 @@ Toto je interní funkce pro swap tokenů, které mají poplatky za převod nebo 
             IUniswapV2Pair pair = IUniswapV2Pair(UniswapV2Library.pairFor(factory, input, output));
             uint amountInput;
             uint amountOutput;
-            { // rozsah pro zabránění chybám stack too deep
+            { // vymezení rozsahu (scope) pro zabránění chybám stack too deep
             (uint reserve0, uint reserve1,) = pair.getReserves();
             (uint reserveInput, uint reserveOutput) = input == token0 ? (reserve0, reserve1) : (reserve1, reserve0);
             amountInput = IERC20(input).balanceOf(address(pair)).sub(reserveInput);
             amountOutput = UniswapV2Library.getAmountOut(amountInput, reserveInput, reserveOutput);
 ```
 
-Kvůli poplatkům za převod se nemůžeme spoléhat na to, že nám funkce `getAmountsOut` řekne, kolik získáme z každého převodu (jak to děláme před voláním původní `_swap`). Místo toho musíme nejprve provést převod a poté zjistit, kolik tokenů jsme dostali zpět.
+Kvůli poplatkům za převod se nemůžeme spoléhat na funkci `getAmountsOut`, že nám řekne, kolik získáme z každého převodu (jak to děláme před voláním původní `_swap`). Místo toho musíme nejprve provést převod a poté zjistit, kolik tokenů jsme dostali zpět.
 
-Poznámka: Teoreticky bychom mohli použít tuto funkci místo `_swap`, ale v určitých případech (například pokud je převod nakonec zvrácen, protože na konci není dostatek k dosažení požadovaného minima) by to nakonec stálo více gasu. Tokeny s poplatkem za převod jsou poměrně vzácné, takže i když se jim musíme přizpůsobit, není nutné, aby všechny swapy předpokládaly, že projdou alespoň jedním z nich.
+Poznámka: Teoreticky bychom mohli použít tuto funkci místo `_swap`, ale v určitých případech (například pokud je převod nakonec zvrácen, protože na konci není dostatek ke splnění požadovaného minima) by to nakonec stálo více gasu. Tokeny s poplatkem za převod jsou poměrně vzácné, takže i když se jim musíme přizpůsobit, není nutné, aby všechny swapy předpokládaly, že projdou alespoň jedním z nich.
 
 ```solidity
             }
@@ -1759,7 +1758,7 @@ Pokud vydělíme dvě hodnoty `UQ112x112`, výsledek už není vynásoben 2^112.
 
 ### UniswapV2Library {#uniswapv2library}
 
-Tato knihovna je používána pouze periferními kontrakty
+Tato knihovna je používána pouze periferními kontrakty.
 
 ```solidity
 pragma solidity >=0.5.0;
@@ -1779,10 +1778,10 @@ library UniswapV2Library {
     }
 ```
 
-Seřaďte dva tokeny podle adresy, abychom pro ně mohli získat adresu párové směnárny. To je nutné, protože jinak bychom měli dvě možnosti, jednu pro parametry A,B a druhou pro parametry B,A, což by vedlo ke dvěma směnárnám místo jedné.
+Seřaďte dva tokeny podle adresy, abychom pro ně mohli získat adresu směnárny párů. To je nutné, protože jinak bychom měli dvě možnosti, jednu pro parametry A,B a druhou pro parametry B,A, což by vedlo ke dvěma směnárnám místo jedné.
 
 ```solidity
-    // vypočítá adresu CREATE2 pro pár bez provádění jakýchkoli externích volání
+    // vypočítá CREATE2 adresu pro pár bez provádění jakýchkoli externích volání
     function pairFor(address factory, address tokenA, address tokenB) internal pure returns (address pair) {
         (address token0, address token1) = sortTokens(tokenA, tokenB);
         pair = address(uint(keccak256(abi.encodePacked(
@@ -1794,10 +1793,10 @@ Seřaďte dva tokeny podle adresy, abychom pro ně mohli získat adresu párové
     }
 ```
 
-Tato funkce vypočítá adresu párové směnárny pro dva tokeny. Tento kontrakt je vytvořen pomocí [operačního kódu CREATE2](https://eips.ethereum.org/EIPS/eip-1014), takže můžeme vypočítat adresu pomocí stejného algoritmu, pokud známe parametry, které používá. To je mnohem levnější než se ptát továrny (factory), a
+Tato funkce vypočítá adresu směnárny párů pro dva tokeny. Tento kontrakt je vytvořen pomocí [operačního kódu CREATE2](https://eips.ethereum.org/EIPS/eip-1014), takže můžeme vypočítat adresu pomocí stejného algoritmu, pokud známe parametry, které používá. To je mnohem levnější než se ptát továrny a nevyžaduje to externí volání.
 
 ```solidity
-    // načte a seřadí rezervy pro pár
+    // získá a seřadí rezervy pro pár
     function getReserves(address factory, address tokenA, address tokenB) internal view returns (uint reserveA, uint reserveB) {
         (address token0,) = sortTokens(tokenA, tokenB);
         (uint reserve0, uint reserve1,) = IUniswapV2Pair(pairFor(factory, tokenA, tokenB)).getReserves();
@@ -1805,10 +1804,10 @@ Tato funkce vypočítá adresu párové směnárny pro dva tokeny. Tento kontrak
     }
 ```
 
-Tato funkce vrací rezervy dvou tokenů, které má párová směnárna. Všimněte si, že může přijímat tokeny v libovolném pořadí a pro interní použití si je seřadí.
+Tato funkce vrací rezervy dvou tokenů, které má směnárna párů. Všimněte si, že může přijímat tokeny v libovolném pořadí a seřadí je pro interní použití.
 
 ```solidity
-    // na základě určitého množství aktiva a rezerv páru vrací ekvivalentní množství druhého aktiva
+    // na základě určitého množství aktiva a rezerv páru vrátí ekvivalentní množství druhého aktiva
     function quote(uint amountA, uint reserveA, uint reserveB) internal pure returns (uint amountB) {
         require(amountA > 0, 'UniswapV2Library: INSUFFICIENT_AMOUNT');
         require(reserveA > 0 && reserveB > 0, 'UniswapV2Library: INSUFFICIENT_LIQUIDITY');
@@ -1819,11 +1818,11 @@ Tato funkce vrací rezervy dvou tokenů, které má párová směnárna. Všimn�
 Tato funkce vám poskytne množství tokenu B, které získáte výměnou za token A, pokud není účtován žádný poplatek. Tento výpočet bere v úvahu, že převod mění směnný kurz.
 
 ```solidity
-    // na základě vstupního množství aktiva a rezerv páru vrací maximální výstupní množství druhého aktiva
+    // na základě vstupního množství aktiva a rezerv páru vrátí maximální výstupní množství druhého aktiva
     function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {
 ```
 
-Výše uvedená funkce `quote` funguje skvěle, pokud za použití párové směnárny není žádný poplatek. Pokud je však poplatek za směnu 0,3 %, částka, kterou skutečně dostanete, je nižší. Tato funkce vypočítá částku po odečtení poplatku za směnu.
+Funkce `quote` výše funguje skvěle, pokud za použití směnárny párů není žádný poplatek. Pokud je však poplatek za směnu 0,3 %, částka, kterou skutečně získáte, je nižší. Tato funkce vypočítá částku po odečtení poplatku za směnu.
 
 ```solidity
 
@@ -1836,10 +1835,10 @@ Výše uvedená funkce `quote` funguje skvěle, pokud za použití párové smě
     }
 ```
 
-Solidity nativně nezpracovává zlomky, takže nemůžeme částku jednoduše vynásobit 0,997. Místo toho vynásobíme čitatele 997 a jmenovatele 1000, čímž dosáhneme stejného efektu.
+Solidity nezpracovává zlomky nativně, takže nemůžeme jednoduše vynásobit výstupní částku 0,997. Místo toho vynásobíme čitatele 997 a jmenovatele 1000, čímž dosáhneme stejného efektu.
 
 ```solidity
-    // na základě výstupního množství aktiva a rezerv páru vrací požadované vstupní množství druhého aktiva
+    // na základě výstupního množství aktiva a rezerv páru vrátí požadované vstupní množství druhého aktiva
     function getAmountIn(uint amountOut, uint reserveIn, uint reserveOut) internal pure returns (uint amountIn) {
         require(amountOut > 0, 'UniswapV2Library: INSUFFICIENT_OUTPUT_AMOUNT');
         require(reserveIn > 0 && reserveOut > 0, 'UniswapV2Library: INSUFFICIENT_LIQUIDITY');
@@ -1877,11 +1876,11 @@ Tato funkce dělá zhruba to samé, ale získá výstupní částku a poskytne v
 }
 ```
 
-Tyto dvě funkce se starají o identifikaci hodnot, když je nutné projít několika párovými směnárnami.
+Tyto dvě funkce se starají o identifikaci hodnot, když je nutné projít několika směnárnami párů.
 
 ### Transfer Helper {#transfer-helper}
 
-[Tato knihovna](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) přidává kontroly úspěšnosti kolem převodů ERC-20 a Etherea, aby se zvrácení (revert) a vrácení hodnoty `false` zpracovávaly stejným způsobem.
+[Tato knihovna](https://github.com/Uniswap/solidity-lib/blob/master/contracts/libraries/TransferHelper.sol) (v repozitáři, který je nyní archivován) přidává kontroly úspěšnosti kolem převodů ERC-20 a Etherea, aby se zvrácení a vrácení hodnoty `false` zpracovávaly stejným způsobem.
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0-or-later
@@ -1900,10 +1899,10 @@ library TransferHelper {
 
 ```
 
-Jiný kontrakt můžeme zavolat jedním ze dvou způsobů:
+Jiný kontrakt můžeme volat jedním ze dvou způsobů:
 
 - Použít definici rozhraní k vytvoření volání funkce
-- Použít [aplikační binární rozhraní (ABI)](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html) „ručně“ k vytvoření volání. Takto se to rozhodl udělat autor kódu.
+- Použít [aplikační binární rozhraní (ABI)](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html) „ručně“ k vytvoření volání. Takto se rozhodl postupovat autor kódu.
 
 ```solidity
         require(
@@ -1932,7 +1931,7 @@ Z důvodu zpětné kompatibility s tokeny, které byly vytvořeny před standard
     }
 ```
 
-Tato funkce implementuje [funkcionalitu převodu ERC-20](https://eips.ethereum.org/EIPS/eip-20#transfer), která umožňuje účtu utratit povolený limit poskytnutý jiným účtem.
+Tato funkce implementuje [funkcionalitu převodu ERC-20](https://eips.ethereum.org/EIPS/eip-20#transfer), která přesouvá tokeny od volajícího (tohoto kontraktu) na `to`.
 
 ```solidity
 

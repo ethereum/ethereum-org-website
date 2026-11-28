@@ -42,7 +42,7 @@ Tuto funkci potřebujeme, aby nám poskytla hexadecimální hodnotu, protože ho
 
 ## Vstupní bod (0x00) {#the-entry-point-0x00}
 
-Kontrakty se vždy spouštějí od prvního bajtu. Toto je počáteční část kódu:
+Kontrakty jsou vždy spouštěny od prvního bajtu. Toto je počáteční část kódu:
 
 | Offset | Operační kód | Zásobník (po operačním kódu) |
 | -----: | ------------ | ---------------------------- |
@@ -57,10 +57,20 @@ Kontrakty se vždy spouštějí od prvního bajtu. Toto je počáteční část 
 
 Tento kód dělá dvě věci:
 
-1. Zapíše 0x80 jako 32bajtovou hodnotu na paměťová místa 0x40-0x5F (0x80 je uloženo v 0x5F a 0x40-0x5E jsou samé nuly).
-2. Přečte velikost dat volání. Normálně se data volání pro Ethereum kontrakt řídí [ABI (aplikačním binárním rozhraním)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html), které vyžaduje minimálně čtyři bajty pro selektor funkce. Pokud je velikost dat volání menší než čtyři, skočí na 0x5E.
+1. Zápis 0x80 jako 32bajtové hodnoty do paměťových míst 0x40-0x5F (0x80 je uloženo v 0x5F a 0x40-0x5E jsou samé nuly).
+2. Přečtení velikosti dat volání. Normálně data volání pro kontrakt Etherea následují [ABI (aplikační binární rozhraní)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html), které vyžaduje minimálně čtyři bajty pro selektor funkce. Pokud je velikost dat volání menší než čtyři, skočí se na 0x5E.
 
-![Flowchart for this portion](flowchart-entry.png)
+<Flowchart>
+
+- Vstupní bod (0x00)
+  - Jsou data volání kratší než čtyři bajty?
+    - **Ano** Volání mimo ABI (0x5E)
+      - Existují nějaká data volání?
+        - **Ano** 0x7C (účel zatím neznámý)
+        - **Ne** Převod ETH (0x64): zvrátit při přetečení, jinak přidat hodnotu volání k `Storage[6]` (`Value*`) a zastavit
+    - **Ne** Volání ABI (0x0D)
+
+</Flowchart>
 
 ### Obslužná rutina na 0x5E (pro data volání mimo ABI) {#the-handler-at-0x5e-for-non-abi-call-data}
 
@@ -71,28 +81,28 @@ Tento kód dělá dvě věci:
 |     60 | PUSH2 0x007c |
 |     63 | JUMPI        |
 
-Tento úryvek začíná pomocí `JUMPDEST`. Programy EVM (Ethereum virtuální stroj) vyhodí výjimku, pokud skočíte na operační kód, který není `JUMPDEST`. Poté se podívá na CALLDATASIZE, a pokud je „pravda“ (tedy není nula), skočí na 0x7C. K tomu se dostaneme níže.
+Tento úryvek začíná `JUMPDEST`. Programy virtuálního stroje Etherea (EVM) vyhodí výjimku, pokud skočíte na operační kód, který není `JUMPDEST`. Poté se podívá na CALLDATASIZE, a pokud je „pravda“ (tedy nenulová hodnota), skočí na 0x7C. K tomu se dostaneme níže.
 
-| Offset | Operační kód | Zásobník (po operačním kódu)                                               |
-| -----: | ------------ | -------------------------------------------------------------------------- |
+| Offset | Operační kód | Zásobník (po operačním kódu)                                                               |
+| -----: | ------------ | ------------------------------------------------------------------------------------------ |
 |     64 | CALLVALUE    | [Wei](/glossary/#wei) poskytnuté voláním. V Solidity se nazývá `msg.value` |
-|     65 | PUSH1 0x06   | 6 CALLVALUE                                                                |
-|     67 | PUSH1 0x00   | 0 6 CALLVALUE                                                              |
-|     69 | DUP3         | CALLVALUE 0 6 CALLVALUE                                                    |
-|     6A | DUP3         | 6 CALLVALUE 0 6 CALLVALUE                                                  |
-|     6B | SLOAD        | Storage[6] CALLVALUE 0 6 CALLVALUE                                         |
+|     65 | PUSH1 0x06   | 6 CALLVALUE                                                                                |
+|     67 | PUSH1 0x00   | 0 6 CALLVALUE                                                                              |
+|     69 | DUP3         | CALLVALUE 0 6 CALLVALUE                                                                    |
+|     6A | DUP3         | 6 CALLVALUE 0 6 CALLVALUE                                                                  |
+|     6B | SLOAD        | Storage[6] CALLVALUE 0 6 CALLVALUE                                                         |
 
-Takže když neexistují žádná data volání, přečteme hodnotu Storage[6]. Zatím nevíme, co tato hodnota znamená, ale můžeme se podívat na transakce, které kontrakt přijal bez dat volání. Transakce, které pouze převádějí ETH bez jakýchkoli dat volání (a tedy bez metody), mají v Etherscanu metodu `Transfer`. Ve skutečnosti je [úplně první transakce, kterou kontrakt přijal](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7), převod.
+Takže když neexistují žádná data volání, přečteme hodnotu Storage[6]. Zatím nevíme, jaká tato hodnota je, ale můžeme se podívat na transakce, které kontrakt přijal bez dat volání. Transakce, které pouze převádějí ETH bez jakýchkoli dat volání (a tedy bez metody), mají v Etherscanu metodu `Transfer`. Ve skutečnosti [úplně první transakce, kterou kontrakt přijal](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7), je převod.
 
-Pokud se podíváme na tuto transakci a klikneme na **Click to see More**, uvidíme, že data volání, nazývaná vstupní data (input data), jsou skutečně prázdná (`0x`). Všimněte si také, že hodnota je 1.559 ETH, což bude důležité později.
+Pokud se podíváme na tuto transakci a klikneme na **Click to see More**, uvidíme, že data volání, nazývaná vstupní data, jsou skutečně prázdná (`0x`). Všimněte si také, že hodnota je 1,559 ETH, což bude důležité později.
 
-![The call data is empty](calldata-empty.png)
+![Data volání jsou prázdná](calldata-empty.png)
 
-Dále klikněte na záložku **State** a rozbalte kontrakt, který zpětně analyzujeme (0x2510...). Můžete vidět, že `Storage[6]` se během transakce skutečně změnil, a pokud změníte Hex na **Number**, uvidíte, že se z něj stalo 1,559,000,000,000,000,000, což je převedená hodnota ve wei (čárky jsem přidal pro přehlednost), odpovídající další hodnotě kontraktu.
+Dále klikněte na záložku **State** a rozbalte kontrakt, u kterého provádíme reverzní inženýrství (0x2510...). Můžete vidět, že `Storage[6]` se během transakce změnilo, a pokud změníte Hex na **Number**, uvidíte, že se změnilo na 1 559 000 000 000 000 000, což je převedená hodnota ve Wei (mezery jsem přidal pro přehlednost), odpovídající další hodnotě kontraktu.
 
 ![Změna ve Storage[6]](storage6.png)
 
-Pokud se podíváme na změny stavu způsobené [dalšími `Transfer` transakcemi ze stejného období](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange), uvidíme, že `Storage[6]` nějakou dobu sledoval hodnotu kontraktu. Prozatím to budeme nazývat `Value*`. Hvězdička (`*`) nám připomíná, že zatím _nevíme_, co tato proměnná dělá, ale nemůže sloužit jen ke sledování hodnoty kontraktu, protože není potřeba používat úložiště (storage), které je velmi drahé, když můžete získat zůstatek svého účtu pomocí `ADDRESS BALANCE`. První operační kód vloží vlastní adresu kontraktu. Druhý přečte adresu na vrcholu zásobníku a nahradí ji zůstatkem této adresy.
+Pokud se podíváme na změny stavu způsobené [jinými transakcemi `Transfer` ze stejného období](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange), vidíme, že `Storage[6]` po nějakou dobu sledovalo hodnotu kontraktu. Prozatím to budeme nazývat `Value*`. Hvězdička (`*`) nám připomíná, že zatím _nevíme_, co tato proměnná dělá, ale nemůže sloužit jen ke sledování hodnoty kontraktu, protože není nutné používat úložiště, které je velmi drahé, když můžete získat zůstatek svého účtu pomocí `ADDRESS BALANCE`. První operační kód vloží vlastní adresu kontraktu. Druhý přečte adresu na vrcholu zásobníku a nahradí ji zůstatkem této adresy.
 
 | Offset | Operační kód | Zásobník                                    |
 | -----: | ------------ | ------------------------------------------- |
@@ -111,7 +121,7 @@ Budeme pokračovat ve sledování tohoto kódu v cíli skoku.
 |    1AA | DUP3         | CALLVALUE 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
 |    1AB | NOT          | 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 
-`NOT` je bitová operace, takže obrátí hodnotu každého bitu v hodnotě volání.
+`NOT` je bitový, takže obrací hodnotu každého bitu v hodnotě volání.
 
 | Offset | Operační kód | Zásobník                                                                    |
 | -----: | ------------ | --------------------------------------------------------------------------- |
@@ -121,9 +131,9 @@ Budeme pokračovat ve sledování tohoto kódu v cíli skoku.
 |    1AF | PUSH2 0x01df | 0x01DF Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 |    1B2 | JUMPI        |
 
-Skočíme, pokud je `Value*` menší než 2^256-CALLVALUE-1 nebo se mu rovná. Vypadá to jako logika pro zabránění přetečení (overflow). A skutečně vidíme, že po několika nesmyslných operacích (například zápis do paměti bude brzy smazán) na offsetu 0x01DE se kontrakt zvrátí, pokud je detekováno přetečení, což je normální chování.
+Skočíme, pokud je `Value*` menší než 2^256-CALLVALUE-1 nebo se mu rovná. Vypadá to jako logika pro zabránění přetečení. A skutečně vidíme, že po několika nesmyslných operacích (například zápis do paměti bude smazán) na offsetu 0x01DE kontrakt zvrátí transakci, pokud je detekováno přetečení, což je normální chování.
 
-Všimněte si, že takové přetečení je extrémně nepravděpodobné, protože by vyžadovalo, aby hodnota volání plus `Value*` byla srovnatelná s 2^256 wei, což je asi 10^59 ETH. [Celková zásoba ETH je v době psaní tohoto textu menší než dvě stě milionů](https://etherscan.io/stat/supply).
+Všimněte si, že takové přetečení je extrémně nepravděpodobné, protože by to vyžadovalo, aby hodnota volání plus `Value*` byla srovnatelná s 2^256 Wei, což je asi 10^59 ETH. [Celková zásoba ETH v době psaní je méně než dvě stě milionů](https://etherscan.io/stat/supply).
 
 | Offset | Operační kód | Zásobník                                  |
 | -----: | ------------ | ----------------------------------------- |
@@ -142,7 +152,7 @@ Pokud jsme se dostali sem, získáme `Value* + CALLVALUE` a skočíme na offset 
 |     77 | SWAP2        | 6 Value\*+CALLVALUE 0 CALLVALUE |
 |     78 | SSTORE       | 0 CALLVALUE                     |
 
-Pokud se dostaneme sem (což vyžaduje, aby data volání byla prázdná), přidáme k `Value*` hodnotu volání. To je v souladu s tím, co jsme říkali, že dělají transakce `Transfer`.
+Pokud se dostaneme sem (což vyžaduje, aby data volání byla prázdná), přidáme k `Value*` hodnotu volání. To je v souladu s tím, co jsme viděli, že dělají transakce `Transfer`.
 
 | Offset | Operační kód |
 | -----: | ------------ |
@@ -154,7 +164,17 @@ Nakonec vyčistíme zásobník (což není nutné) a signalizujeme úspěšný k
 
 Abychom to shrnuli, zde je vývojový diagram pro počáteční kód.
 
-![Entry point flowchart](flowchart-entry.png)
+<Flowchart>
+
+- Vstupní bod (0x00)
+  - Jsou data volání kratší než čtyři bajty?
+    - **Ano** Volání mimo ABI (0x5E)
+      - Existují nějaká data volání?
+        - **Ano** 0x7C (účel zatím neznámý)
+        - **Ne** Převod ETH (0x64): zvrátit při přetečení, jinak přidat hodnotu volání k `Storage[6]` (`Value*`) a zastavit
+    - **Ne** Volání ABI (0x0D)
+
+</Flowchart>
 
 ## Obslužná rutina na 0x7C {#the-handler-at-0x7c}
 
@@ -248,24 +268,36 @@ Zde zkopírujeme všechna návratová data do paměťového bufferu začínajíc
 
 Takže po volání zkopírujeme návratová data do bufferu 0x80 - 0x80+RETURNDATASIZE, a pokud je volání úspěšné, provedeme `RETURN` přesně s tímto bufferem.
 
-### DELEGATECALL selhal {#delegatecall-failed}
+### DELEGATECALL selhalo {#delegatecall-failed}
 
-Pokud se dostaneme sem, na 0xC0, znamená to, že volaný kontrakt se zvrátil (reverted). Protože jsme pro tento kontrakt pouze proxy, chceme vrátit stejná data a také transakci zvrátit.
+Pokud se dostaneme sem, na 0xC0, znamená to, že volaný kontrakt transakci zvrátil. Jelikož jsme pro daný kontrakt pouze proxy, chceme vrátit stejná data a také transakci zvrátit.
 
 | Offset | Operační kód | Zásobník                                                                                                            |
-| -----: | -------- | ------------------------------------------------------------------------------------------------------------------- |
-|     C0 | JUMPDEST | (((úspěch/selhání volání))) RETURNDATASIZE (((úspěch/selhání volání))) 0x80 Storage[3]-as-address                   |
-|     C1 | DUP2     | RETURNDATASIZE (((úspěch/selhání volání))) RETURNDATASIZE (((úspěch/selhání volání))) 0x80 Storage[3]-as-address    |
-|     C2 | DUP5     | 0x80 RETURNDATASIZE (((úspěch/selhání volání))) RETURNDATASIZE (((úspěch/selhání volání))) 0x80 Storage[3]-as-address|
-|     C3 | REVERT   |
+| -----: | ------------ | ------------------------------------------------------------------------------------------------------------------- |
+|     C0 | JUMPDEST     | (((úspěch/selhání volání))) RETURNDATASIZE (((úspěch/selhání volání))) 0x80 Storage[3]-jako-adresa                  |
+|     C1 | DUP2         | RETURNDATASIZE (((úspěch/selhání volání))) RETURNDATASIZE (((úspěch/selhání volání))) 0x80 Storage[3]-jako-adresa   |
+|     C2 | DUP5         | 0x80 RETURNDATASIZE (((úspěch/selhání volání))) RETURNDATASIZE (((úspěch/selhání volání))) 0x80 Storage[3]-jako-adresa |
+|     C3 | REVERT       |
 
-Takže provedeme `REVERT` se stejným bufferem, jaký jsme dříve použili pro `RETURN`: 0x80 - 0x80+RETURNDATASIZE
+Takže provedeme `REVERT` se stejným bufferem, jaký jsme použili dříve pro `RETURN`: 0x80 - 0x80+RETURNDATASIZE
 
-![Call to proxy flowchart](flowchart-proxy.png)
+<Flowchart>
+
+- Data volání dlouhá jeden až tři bajty, nebo neznámá metoda
+  - Obslužná rutina proxy (0x7C)
+    - Přečíst `Storage[3]`, adresu proxy
+      - Zkopírovat data volání do paměti
+        - `DELEGATECALL` na adresu proxy
+          - Zkopírovat návratová data do paměti
+            - Selhalo volání?
+              - **Ano** `REVERT` s návratovými daty (0xC0)
+              - **Ne** `RETURN` s návratovými daty (0xBD)
+
+</Flowchart>
 
 ## Volání ABI {#abi-calls}
 
-Pokud je velikost dat volání čtyři bajty nebo více, může se jednat o platné volání ABI.
+Pokud je velikost dat volání čtyři bajty nebo více, mohlo by se jednat o platné volání ABI.
 
 | Offset | Operační kód | Zásobník                                          |
 | -----: | ------------ | ------------------------------------------------- |
@@ -274,7 +306,7 @@ Pokud je velikost dat volání čtyři bajty nebo více, může se jednat o plat
 |     10 | PUSH1 0xe0   | 0xE0 (((První slovo (256 bitů) dat volání)))      |
 |     12 | SHR          | (((prvních 32 bitů (4 bajty) dat volání)))        |
 
-Etherscan nám říká, že `1C` je neznámý operační kód, protože [byl přidán až poté, co Etherscan tuto funkci napsal,](https://eips.ethereum.org/EIPS/eip-145) a ještě ji neaktualizovali. [Aktuální tabulka operačních kódů](https://github.com/wolflo/evm-opcodes) nám ukazuje, že se jedná o bitový posun vpravo (shift right).
+Etherscan nám říká, že `1C` je neznámý operační kód, protože [byl přidán poté, co Etherscan napsal tuto funkci](https://eips.ethereum.org/EIPS/eip-145), a ještě ji neaktualizovali. [Aktuální tabulka operačních kódů](https://github.com/wolflo/evm-opcodes) nám ukazuje, že se jedná o bitový posun vpravo (shift right)
 
 | Offset | Operační kód     | Zásobník                                                                                                 |
 | -----: | ---------------- | -------------------------------------------------------------------------------------------------------- |
@@ -284,19 +316,38 @@ Etherscan nám říká, že `1C` je neznámý operační kód, protože [byl př
 |     1A | PUSH2 0x0043     | 0x43 0x3CD8045E>prvních-32-bitů-dat-volání (((prvních 32 bitů (4 bajty) dat volání)))                    |
 |     1D | JUMPI            | (((prvních 32 bitů (4 bajty) dat volání)))                                                               |
 
-Rozdělení testů shody podpisu metody na dvě části tímto způsobem ušetří v průměru polovinu testů. Kód, který bezprostředně následuje, a kód na adrese 0x43 se řídí stejným vzorem: `DUP1` prvních 32 bitů dat volání, `PUSH4 (((method signature>`, spustí `EQ` pro kontrolu rovnosti a poté `JUMPI`, pokud se podpis metody shoduje. Zde jsou podpisy metod, jejich adresy a, pokud je známa, [odpovídající definice metody](https://www.4byte.directory/):
+Rozdělením testů shody podpisu metody na dvě části se v průměru ušetří polovina testů. Kód, který bezprostředně následuje, a kód na 0x43 sledují stejný vzor: `DUP1` prvních 32 bitů dat volání, `PUSH4 (((method signature>`, spuštění `EQ` pro kontrolu rovnosti a poté `JUMPI`, pokud se podpis metody shoduje. Zde jsou podpisy metod, jejich adresy a, pokud je známa, [odpovídající definice metody](https://www.4byte.directory/):
 
-| Metoda                                                                                 | Podpis metody    | Offset pro skok     |
-| -------------------------------------------------------------------------------------- | ---------------- | ------------------- |
-| [splitter()](https://www.4byte.directory/signatures/?bytes4_signature=0x3cd8045e)      | 0x3cd8045e       | 0x0103              |
-| ???                                                                                    | 0x81e580d3       | 0x0138              |
-| [currentWindow()](https://www.4byte.directory/signatures/?bytes4_signature=0xba0bafb4) | 0xba0bafb4       | 0x0158              |
-| ???                                                                                    | 0x1f135823       | 0x00C4              |
-| [merkleRoot()](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab)    | 0x2eb4a7ab       | 0x00ED              |
+| Metoda                                                                                 | Podpis metody | Offset pro skok |
+| -------------------------------------------------------------------------------------- | ------------- | --------------- |
+| [splitter()](https://www.4byte.directory/signatures/?bytes4_signature=0x3cd8045e)      | 0x3cd8045e    | 0x0103          |
+| ???                                                                                    | 0x81e580d3    | 0x0138          |
+| [currentWindow()](https://www.4byte.directory/signatures/?bytes4_signature=0xba0bafb4) | 0xba0bafb4    | 0x0158          |
+| ???                                                                                    | 0x1f135823    | 0x00C4          |
+| [merkleRoot()](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab)    | 0x2eb4a7ab    | 0x00ED          |
 
-Pokud není nalezena žádná shoda, kód přeskočí na [obslužnou rutinu proxy na adrese 0x7C](#the-handler-at-0x7c) v naději, že kontrakt, pro který jsme proxy, má shodu.
+Pokud není nalezena žádná shoda, kód skočí na [obslužnou rutinu proxy na 0x7C](#the-handler-at-0x7c) v naději, že u kontraktu, pro který jsme proxy, dojde ke shodě.
 
-![ABI calls flowchart](flowchart-abi.png)
+<Flowchart>
+
+- Přečíst selektor metody, první čtyři bajty dat volání (0x0D)
+  - Je selektor menší než `0x3cd8045e`?
+    - **Ano** Nízké selektory (0x43)
+      - Je to `0x1f135823`?
+        - **Ano** Funkce na 0xC4
+        - **Ne** Je to `0x2eb4a7ab`?
+          - **Ano** `merkleRoot()` na 0xED
+          - **Ne** [Obslužná rutina proxy (0x7C)](#the-handler-at-0x7c)
+    - **Ne** Vysoké selektory (0x1E)
+      - Je to `0x3cd8045e`?
+        - **Ano** `splitter()` na 0x0103
+        - **Ne** Je to `0x81e580d3`?
+          - **Ano** Funkce na 0x0138
+          - **Ne** Je to `0xba0bafb4`?
+            - **Ano** `currentWindow()` na 0x0158
+            - **Ne** [Obslužná rutina proxy (0x7C)](#the-handler-at-0x7c)
+
+</Flowchart>
 
 ## splitter() {#splitter}
 
