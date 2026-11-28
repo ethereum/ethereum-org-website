@@ -352,6 +352,19 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Pay-per-hour pricing
     - Direct support
 
+- [**Spectrum Nodes**](https://spectrumnodes.com/)
+  - [Docs](https://spectrumnodes.com/docs/)
+  - Features
+    - Ethereum Mainnet, Sepolia, and Hoodi
+    - HTTPS and WebSocket endpoints in each region
+    - Archive data and debug and trace methods on Mainnet and Sepolia
+    - Beacon API endpoints on Mainnet and Sepolia
+    - Spectrum's Boosted Nodes, a caching and routing layer in front of our own nodes
+    - Dedicated nodes
+    - Self operated Tier III data centers in Malta, the Netherlands, and Canada, plus a bare metal deployment in Singapore
+    - SOC 2 Type II attested
+    - Over a billion requests a day at 99.99% uptime
+
 - [**Tenderly**](https://tenderly.co/web3-gateway)
   - [Docs](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - Features
