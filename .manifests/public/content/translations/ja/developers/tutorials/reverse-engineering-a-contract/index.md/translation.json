@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "ja",
-  "translatedAt": "2026-06-17T00:37:53.693Z",
-  "englishManifestHash": "66f8df79cd04",
+  "translatedAt": "2026-11-28T07:12:54.205Z",
+  "englishManifestHash": "4bfcead9331f",
   "placeholderOrder": [
     "LINK-6dd727",
     "LINK-ef17b1",
@@ -23,7 +23,8 @@
     "CODE-f8b3c7",
     "CODE-fe9808",
     "LINK-936d95",
-    "IMAGE-909dc7",
+    "CODE-417e2c",
+    "CODE-5daf80",
     "CODE-04b0b7",
     "CODE-04b0b7",
     "LINK-46750f",
@@ -46,13 +47,17 @@
     "CODE-8b3587",
     "CODE-5daf80",
     "CODE-dde8be",
-    "IMAGE-47c7aa",
+    "CODE-417e2c",
+    "CODE-5daf80",
     "LINK-29d700",
     "CODE-2283b6",
     "CODE-c3172d",
     "CODE-c3172d",
     "CODE-0607a7",
-    "IMAGE-e1822a",
+    "CODE-25eaf4",
+    "CODE-8ed840",
+    "CODE-0607a7",
+    "CODE-c3172d",
     "CODE-0f88b9",
     "LINK-a15686",
     "LINK-216073",
@@ -65,7 +70,17 @@
     "LINK-3158de",
     "LINK-b2e65f",
     "LINK-f559dd",
-    "IMAGE-89a4bb",
+    "CODE-5cef3f",
+    "CODE-998951",
+    "CODE-fbae80",
+    "CODE-777d46",
+    "LINK-4f247a",
+    "CODE-5cef3f",
+    "CODE-5dbb1a",
+    "CODE-431abd",
+    "CODE-c031fa",
+    "CODE-e1d034",
+    "LINK-4f247a",
     "LINK-55ee8a",
     "CODE-9d0040",
     "CODE-0607a7",
@@ -80,8 +95,8 @@
     "CODE-e1d034",
     "LINK-cb9182",
     "CODE-e1d034",
-    "CODE-5dbb1a",
     "CODE-fe9808",
+    "CODE-5dbb1a",
     "CODE-777d46",
     "CODE-9d0040",
     "LINK-675ee8",
@@ -241,6 +256,18 @@
         "content": "JUMPI"
       }
     },
+    "CODE-417e2c": {
+      "type": "inline-code",
+      "values": {
+        "content": "Storage[6]"
+      }
+    },
+    "CODE-5daf80": {
+      "type": "inline-code",
+      "values": {
+        "content": "Value*"
+      }
+    },
     "CODE-04b0b7": {
       "type": "inline-code",
       "values": {
@@ -263,18 +290,6 @@
       "type": "inline-code",
       "values": {
         "content": "0x"
-      }
-    },
-    "CODE-417e2c": {
-      "type": "inline-code",
-      "values": {
-        "content": "Storage[6]"
-      }
-    },
-    "CODE-5daf80": {
-      "type": "inline-code",
-      "values": {
-        "content": "Value*"
       }
     },
     "CODE-684888": {
@@ -319,6 +334,18 @@
         "content": "REVERT"
       }
     },
+    "CODE-25eaf4": {
+      "type": "inline-code",
+      "values": {
+        "content": "Storage[3]"
+      }
+    },
+    "CODE-8ed840": {
+      "type": "inline-code",
+      "values": {
+        "content": "DELEGATECALL"
+      }
+    },
     "CODE-0f88b9": {
       "type": "inline-code",
       "values": {
@@ -343,10 +370,28 @@
         "content": "EQ"
       }
     },
-    "CODE-9d0040": {
+    "CODE-5cef3f": {
       "type": "inline-code",
       "values": {
-        "content": "payable"
+        "content": "0x3cd8045e"
+      }
+    },
+    "CODE-998951": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x1f135823"
+      }
+    },
+    "CODE-fbae80": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x2eb4a7ab"
+      }
+    },
+    "CODE-777d46": {
+      "type": "inline-code",
+      "values": {
+        "content": "merkleRoot()"
       }
     },
     "CODE-5dbb1a": {
@@ -355,16 +400,28 @@
         "content": "splitter()"
       }
     },
+    "CODE-431abd": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x81e580d3"
+      }
+    },
+    "CODE-c031fa": {
+      "type": "inline-code",
+      "values": {
+        "content": "0xba0bafb4"
+      }
+    },
     "CODE-e1d034": {
       "type": "inline-code",
       "values": {
         "content": "currentWindow()"
       }
     },
-    "CODE-777d46": {
+    "CODE-9d0040": {
       "type": "inline-code",
       "values": {
-        "content": "merkleRoot()"
+        "content": "payable"
       }
     },
     "CODE-817b53": {
@@ -457,34 +514,10 @@
         "path": "opcode-view.png"
       }
     },
-    "IMAGE-909dc7": {
-      "type": "image",
-      "values": {
-        "path": "flowchart-entry.png"
-      }
-    },
     "IMAGE-53a038": {
       "type": "image",
       "values": {
         "path": "calldata-empty.png"
-      }
-    },
-    "IMAGE-47c7aa": {
-      "type": "image",
-      "values": {
-        "path": "flowchart-entry.png"
-      }
-    },
-    "IMAGE-e1822a": {
-      "type": "image",
-      "values": {
-        "path": "flowchart-proxy.png"
-      }
-    },
-    "IMAGE-89a4bb": {
-      "type": "image",
-      "values": {
-        "path": "flowchart-abi.png"
       }
     },
     "IMAGE-972572": {
@@ -614,6 +647,12 @@
       }
     },
     "LINK-f559dd": {
+      "type": "link",
+      "values": {
+        "url": "#the-handler-at-0x7c"
+      }
+    },
+    "LINK-4f247a": {
       "type": "link",
       "values": {
         "url": "#the-handler-at-0x7c"
@@ -784,7 +823,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-17T00:37:53.693Z",
+      "translatedAt": "2026-11-28T07:12:54.205Z",
       "status": "success"
     }
   }
