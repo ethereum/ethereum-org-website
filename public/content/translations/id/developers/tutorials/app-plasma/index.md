@@ -102,15 +102,24 @@ Ini adalah cara berbagai komponen berkomunikasi untuk mentransfer dari satu akun
 
 ### Alat {#tools}
 
-Untuk kode sisi klien, kita akan menggunakan [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/), dan [Wagmi](https://wagmi.sh/). Ini adalah alat standar industri; jika Anda tidak terbiasa dengannya, Anda dapat menggunakan [tutorial ini](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
+Untuk kode sisi klien, kita akan menggunakan [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/), dan [Wagmi](https://wagmi.sh/). Ini adalah alat standar industri; jika Anda belum familier dengannya, Anda dapat menggunakan [tutorial ini](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
 
-Sebagian besar server ditulis dalam JavaScript menggunakan [Node](https://nodejs.org/en). Bagian zero-knowledge ditulis dalam [Noir](https://noir-lang.org/). Kita membutuhkan versi `1.0.0-beta.10`, jadi setelah Anda [menginstal Noir seperti yang diinstruksikan](https://noir-lang.org/docs/getting_started/quick_start), jalankan:
+Sebagian besar server ditulis dalam JavaScript menggunakan [Node](https://nodejs.org/en). Bagian zero-knowledge ditulis dalam [Noir](https://noir-lang.org/). Kita memerlukan versi `1.0.0-beta.10`, jadi setelah Anda [menginstal Noir sesuai petunjuk](https://noir-lang.org/docs/getting_started/quick_start), jalankan:
 
-```
+```sh
 noirup -v 1.0.0-beta.10
 ```
 
-Rantai blok yang kita gunakan adalah `anvil`, sebuah rantai blok pengujian lokal yang merupakan bagian dari [Foundry](https://getfoundry.sh/introduction/installation).
+Untuk membuat bukti yang dapat diverifikasi onchain (pada tahap 3) kita juga memerlukan [Barretenberg](https://barretenberg.aztec.network/docs/getting_started) (`bb`), backend pembuktian, dalam versi yang cocok dengan rilis Noir ini. Instal `bbup`, penginstal Barretenberg, lalu gunakan untuk menginstal `bb` versi `0.87.0` (jika `bbup` tidak ditemukan, buka terminal baru agar `PATH` yang diperbarui berlaku):
+
+```sh
+curl -L https://raw.githubusercontent.com/AztecProtocol/aztec-packages/refs/heads/next/barretenberg/bbup/install | bash
+bbup -v 0.87.0
+```
+
+Tutorial ini diuji dengan `nargo` 1.0.0-beta.10, `bb` 0.87.0, dan (di server) `@noir-lang/noir_js` 1.0.0-beta.11. Jangan gunakan versi yang lebih baru: kode Noir tidak dapat dikompilasi dengan kandidat rilis 1.0 saat ini, dan versi `bb` saat ini tidak dapat membaca sirkuit yang dikompilasi oleh `nargo` 1.0.0-beta.10 dan tidak lagi menerima bendera `--oracle_hash`.
+
+Blockchain yang kita gunakan adalah `anvil`, blockchain pengujian lokal yang merupakan bagian dari [Foundry](https://getfoundry.sh/introduction/installation).
 
 ## Implementasi {#implementation}
 
@@ -331,41 +340,41 @@ Ini adalah format HTML (lebih tepatnya, [JSX](https://react.dev/learn/writing-ma
 use std::hash::pedersen_hash;
 ```
 
-[Hash Pedersen](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) disediakan dengan [pustaka standar Noir](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). Bukti tanpa pengetahuan umumnya menggunakan fungsi hash ini. Jauh lebih mudah untuk dihitung di dalam [sirkuit aritmatika](https://rareskills.io/post/arithmetic-circuit) dibandingkan dengan fungsi hash standar.
+[Hash Pedersen](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) disediakan bersama [pustaka standar Noir](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). Bukti tanpa pengetahuan umumnya menggunakan fungsi hash ini. Ini jauh lebih mudah dihitung di dalam [sirkuit aritmatika](https://rareskills.io/post/arithmetic-circuit) dibandingkan dengan fungsi hash standar.
 
 ```
 use keccak256::keccak256;
 use dep::ecrecover;
 ```
 
-Kedua fungsi ini adalah pustaka eksternal, yang didefinisikan di [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). Mereka persis seperti namanya, fungsi yang menghitung [hash keccak256](https://emn178.github.io/online-tools/keccak_256.html) dan fungsi yang memverifikasi tanda tangan Ethereum serta memulihkan alamat Ethereum penandatangan.
+Kedua fungsi ini adalah pustaka eksternal, yang didefinisikan dalam [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). Keduanya persis seperti namanya, sebuah fungsi yang menghitung [hash keccak256](https://emn178.github.io/online-tools/keccak_256.html) dan sebuah fungsi yang memverifikasi tanda tangan Ethereum dan memulihkan alamat Ethereum penandatangan.
 
 ```
 global ACCOUNT_NUMBER : u32 = 5;
 ```
 
-Noir terinspirasi oleh [Rust](https://www.rust-lang.org/). Variabel, secara default, adalah konstanta. Beginilah cara kita mendefinisikan konstanta konfigurasi global. Secara khusus, `ACCOUNT_NUMBER` adalah jumlah akun yang kita simpan.
+Noir terinspirasi oleh [Rust](https://www.rust-lang.org/). Variabel, secara default, adalah konstanta. Ini adalah cara kita mendefinisikan konstanta konfigurasi global. Secara khusus, `ACCOUNT_NUMBER` adalah jumlah akun yang kita simpan.
 
-Tipe data bernama `u<number>` adalah sejumlah bit tersebut, tidak bertanda (unsigned). Satu-satunya tipe yang didukung adalah `u8`, `u16`, `u32`, `u64`, dan `u128`.
+Tipe data bernama `u<number>` adalah jumlah bit tersebut, tidak bertanda (unsigned). Satu-satunya tipe yang didukung adalah `u8`, `u16`, `u32`, `u64`, dan `u128`.
 
 ```
 global FLAT_ACCOUNT_FIELDS : u32 = 2;
 ```
 
-Variabel ini digunakan untuk hash Pedersen dari akun, seperti yang dijelaskan di bawah ini.
+Variabel ini digunakan untuk hash Pedersen dari akun-akun tersebut, seperti yang dijelaskan di bawah ini.
 
 ```
 global MESSAGE_LENGTH : u32 = 100;
 ```
 
-Seperti yang dijelaskan di atas, panjang pesan adalah tetap. Itu ditentukan di sini.
+Seperti yang dijelaskan di atas, panjang pesan adalah tetap. Ini ditentukan di sini.
 
 ```
 global ASCII_MESSAGE_LENGTH : [u8; 3] = [0x31, 0x30, 0x30];
 global HASH_BUFFER_SIZE : u32 = 26+3+MESSAGE_LENGTH;
 ```
 
-[Tanda tangan EIP-191](https://eips.ethereum.org/EIPS/eip-191) memerlukan buffer dengan awalan 26-byte, diikuti oleh panjang pesan dalam ASCII, dan terakhir pesan itu sendiri.
+[Tanda tangan EIP-191](https://eips.ethereum.org/EIPS/eip-191) mewajibkan buffer dengan awalan 26-byte, diikuti oleh panjang pesan dalam ASCII, dan terakhir pesan itu sendiri.
 
 ```
 struct Account {
@@ -375,7 +384,7 @@ struct Account {
 }
 ```
 
-Informasi yang kita simpan tentang sebuah akun. [`Field`](https://noir-lang.org/docs/noir/concepts/data_types/fields) adalah angka, biasanya hingga 253 bit, yang dapat digunakan langsung dalam [sirkuit aritmatika](https://rareskills.io/post/arithmetic-circuit) yang mengimplementasikan bukti tanpa pengetahuan. Di sini kita menggunakan `Field` untuk menyimpan alamat Ethereum 160-bit.
+Informasi yang kita simpan tentang sebuah akun. [`Field`](https://noir-lang.org/docs/noir/concepts/data_types/fields) adalah angka, biasanya hingga 253 bit, yang dapat digunakan secara langsung dalam [sirkuit aritmatika](https://rareskills.io/post/arithmetic-circuit) yang mengimplementasikan bukti tanpa pengetahuan. Di sini kita menggunakan `Field` untuk menyimpan alamat Ethereum 160-bit.
 
 ```
 struct TransferTxn {
@@ -392,7 +401,7 @@ Informasi yang kita simpan untuk transaksi transfer.
 fn flatten_account(account: Account) -> [Field; FLAT_ACCOUNT_FIELDS] {
 ```
 
-Definisi fungsi. Parameterny adalah informasi `Account`. Hasilnya adalah array variabel `Field`, yang panjangnya adalah `FLAT_ACCOUNT_FIELDS`
+Definisi fungsi. Parameternya adalah informasi `Account`. Hasilnya adalah array variabel `Field`, yang panjangnya adalah `FLAT_ACCOUNT_FIELDS`
 
 ```
     let flat = [
@@ -401,32 +410,32 @@ Definisi fungsi. Parameterny adalah informasi `Account`. Hasilnya adalah array v
     ];
 ```
 
-Nilai pertama dalam array adalah alamat akun. Yang kedua mencakup saldo dan nonce. Pemanggilan `.into()` mengubah angka menjadi tipe data yang dibutuhkannya. `account.nonce` adalah nilai `u32`, tetapi untuk menambahkannya ke `account.balance << 32`, nilai `u128`, itu harus menjadi `u128`. Itulah `.into()` yang pertama. Yang kedua mengonversi hasil `u128` menjadi `Field` sehingga muat ke dalam array.
+Nilai pertama dalam array adalah alamat akun. Yang kedua mencakup saldo dan nonce. Panggilan `.into()` mengubah angka menjadi tipe data yang dibutuhkan. `account.nonce` adalah nilai `u32`, tetapi untuk menambahkannya ke `account.balance << 32`, sebuah nilai `u128`, ia harus menjadi `u128`. Itulah `.into()` yang pertama. Yang kedua mengonversi hasil `u128` menjadi `Field` sehingga pas ke dalam array.
 
 ```
     flat
 }
 ```
 
-Di Noir, fungsi hanya dapat mengembalikan nilai di bagian akhir (tidak ada pengembalian awal/early return). Untuk menentukan nilai kembalian, Anda mengevaluasinya tepat sebelum tanda kurung tutup fungsi.
+Di Noir, fungsi hanya dapat mengembalikan nilai di bagian akhir (tidak ada pengembalian awal). Untuk menentukan nilai kembalian, Anda mengevaluasinya tepat sebelum kurung penutup fungsi.
 
 ```
 fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] {
 ```
 
-Fungsi ini mengubah array akun menjadi array `Field`, yang dapat digunakan sebagai masukan untuk Hash Petersen.
+Fungsi ini mengubah array akun menjadi array `Field`, yang dapat digunakan sebagai input untuk hash Pedersen.
 
 ```
     let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
 ```
 
-Beginilah cara Anda menentukan variabel yang dapat diubah (mutable), yaitu, _bukan_ konstanta. Variabel dalam Noir harus selalu memiliki nilai, jadi kita menginisialisasi variabel ini menjadi nol semua.
+Ini adalah cara Anda menentukan variabel yang dapat diubah (mutable), yaitu, _bukan_ konstanta. Variabel di Noir harus selalu memiliki nilai, jadi kita menginisialisasi variabel ini dengan semua nol.
 
 ```
     for i in 0..ACCOUNT_NUMBER {
 ```
 
-Ini adalah perulangan `for`. Perhatikan bahwa batas-batasnya adalah konstanta. Perulangan Noir harus diketahui batas-batasnya pada waktu kompilasi. Alasannya adalah sirkuit aritmatika tidak mendukung kontrol aliran. Saat memproses perulangan `for`, kompiler hanya meletakkan kode di dalamnya beberapa kali, satu untuk setiap iterasi.
+Ini adalah perulangan `for`. Perhatikan bahwa batas-batasnya adalah konstanta. Perulangan Noir harus diketahui batas-batasnya pada saat kompilasi. Alasannya adalah sirkuit aritmatika tidak mendukung kontrol aliran. Saat memproses perulangan `for`, kompiler hanya meletakkan kode di dalamnya beberapa kali, satu untuk setiap iterasi.
 
 ```
         let fields = flatten_account(accounts[i]);
@@ -456,11 +465,11 @@ fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
     }
 ```
 
-Fungsi ini menemukan akun dengan alamat spesifik. Fungsi ini akan sangat tidak efisien dalam kode standar karena mengulangi semua akun, bahkan setelah menemukan alamatnya.
+Fungsi ini menemukan akun dengan alamat tertentu. Fungsi ini akan sangat tidak efisien dalam kode standar karena ia mengulangi semua akun, bahkan setelah menemukan alamatnya.
 
 Namun, dalam bukti tanpa pengetahuan, tidak ada kontrol aliran. Jika kita perlu memeriksa suatu kondisi, kita harus memeriksanya setiap saat.
 
-Hal serupa terjadi dengan pernyataan `if`. Pernyataan `if` dalam perulangan di atas diterjemahkan ke dalam pernyataan matematis ini.
+Hal serupa terjadi dengan pernyataan `if`. Pernyataan `if` dalam perulangan di atas diterjemahkan ke dalam pernyataan matematika ini.
 
 _condition<sub>result</sub> = accounts[i].address == address_ // satu jika sama, nol jika sebaliknya
 
@@ -473,13 +482,13 @@ _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result
 }
 ```
 
-Fungsi [`assert`](https://noir-lang.org/docs/language/assert) menyebabkan bukti tanpa pengetahuan gagal jika asersi salah. Dalam hal ini, jika kita tidak dapat menemukan akun dengan alamat yang relevan. Untuk melaporkan alamat, kita menggunakan [string format](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
+Fungsi [`assert`](https://noir-lang.org/docs/language/assert) menyebabkan bukti tanpa pengetahuan gagal jika asersi tersebut salah. Dalam hal ini, jika kita tidak dapat menemukan akun dengan alamat yang relevan. Untuk melaporkan alamat tersebut, kita menggunakan [string format](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
 
 ```rust
 fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> [Account; ACCOUNT_NUMBER] {
 ```
 
-Fungsi ini menerapkan transaksi transfer dan mengembalikan array akun baru.
+Fungsi ini menerapkan transaksi transfer dan mengembalikan array akun yang baru.
 
 ```rust
     let from = find_account(accounts, txn.from);
@@ -512,7 +521,7 @@ Ini adalah dua kondisi yang dapat membuat transaksi menjadi tidak valid.
 }
 ```
 
-Buat array akun baru dan kemudian kembalikan.
+Buat array akun yang baru lalu kembalikan.
 
 ```rust
 fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field
@@ -527,7 +536,7 @@ Fungsi ini membaca alamat dari pesan.
     for i in 7..47 {
 ```
 
-Alamat selalu sepanjang 20 byte (alias 40 digit heksadesimal), dan dimulai pada karakter ke-7.
+Alamat selalu sepanjang 20 byte (alias 40 digit heksadesimal), dan dimulai pada karakter #7.
 
 ```rust
         result *= 0x10;
@@ -559,7 +568,7 @@ Baca jumlah dan nonce dari pesan.
     let mut stillReadingNonce: bool = false;
 ```
 
-Dalam pesan, angka pertama setelah alamat adalah jumlah finney (alias seperseribu ETH) yang akan ditransfer. Angka kedua adalah nonce. Teks apa pun di antara keduanya diabaikan.
+Dalam pesan, angka pertama setelah alamat adalah jumlah finney (alias seperseribu ETH) yang akan ditransfer. Angka kedua adalah nonce. Teks apa pun di antara keduanya akan diabaikan.
 
 ```rust
     for i in 48..MESSAGE_LENGTH {
@@ -570,7 +579,7 @@ Dalam pesan, angka pertama setelah alamat adalah jumlah finney (alias seperserib
                 amount = amount*10 + digit.into();
             }
 
-            if lookingForNonce {    // Kami baru saja menemukannya
+            if lookingForNonce {    // Kita baru saja menemukannya
                 stillReadingNonce = true;
                 lookingForNonce = false;
             }
@@ -610,15 +619,15 @@ fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn
 }
 ```
 
-Fungsi ini mengonversi pesan menjadi byte, lalu mengonversi jumlah menjadi `TransferTxn`.
+Fungsi ini mengonversi pesan menjadi byte, lalu mengonversi jumlahnya menjadi `TransferTxn`.
 
 ```rust
-// Setara dengan hashMessage milik Viem
+// Setara dengan hashMessage Viem
 // https://viem.sh/docs/utilities/hashMessage#hashmessage
 fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
 ```
 
-Kita dapat menggunakan Hash Pedersen untuk akun karena mereka hanya di-hash di dalam bukti tanpa pengetahuan. Namun, dalam kode ini kita perlu memeriksa tanda tangan pesan, yang dihasilkan oleh peramban. Untuk itu, kita perlu mengikuti format penandatanganan Ethereum dalam [EIP-191](https://eips.ethereum.org/EIPS/eip-191). Ini berarti kita perlu membuat buffer gabungan dengan awalan standar, panjang pesan dalam ASCII, dan pesan itu sendiri, serta menggunakan keccak256 standar Ethereum untuk menge-hash-nya.
+Kita dapat menggunakan Hash Pedersen untuk akun karena akun tersebut hanya di-hash di dalam bukti tanpa pengetahuan. Namun, dalam kode ini kita perlu memeriksa tanda tangan pesan, yang dihasilkan oleh peramban. Untuk itu, kita perlu mengikuti format penandatanganan Ethereum di [EIP-191](https://eips.ethereum.org/EIPS/eip-191). Ini berarti kita perlu membuat buffer gabungan dengan awalan standar, panjang pesan dalam ASCII, dan pesan itu sendiri, lalu menggunakan keccak256 standar Ethereum untuk menge-hash-nya.
 
 ```rust
     // Awalan ASCII
@@ -695,7 +704,7 @@ Untuk menghindari kasus di mana aplikasi meminta pengguna untuk menandatangani p
     assert(MESSAGE_LENGTH < 1000, "Messages whose length is over three digits are not supported");
 ```
 
-Tangani panjang pesan hingga 999 dan gagalkan jika lebih besar. Saya menambahkan kode ini, meskipun panjang pesan adalah konstanta, karena membuatnya lebih mudah untuk diubah. Pada sistem produksi, Anda mungkin hanya akan berasumsi bahwa `MESSAGE_LENGTH` tidak berubah demi kinerja yang lebih baik.
+Tangani panjang pesan hingga 999 dan gagalkan jika lebih besar. Saya menambahkan kode ini, meskipun panjang pesan adalah konstanta, karena ini membuatnya lebih mudah untuk diubah. Pada sistem produksi, Anda mungkin hanya berasumsi `MESSAGE_LENGTH` tidak berubah demi kinerja yang lebih baik.
 
 ```rust
     keccak256::keccak256(buffer, HASH_BUFFER_SIZE)
@@ -714,9 +723,9 @@ fn signatureToAddressAndHash(
 {
 ```
 
-Fungsi ini memverifikasi tanda tangan, yang memerlukan hash pesan. Fungsi ini kemudian memberi kita alamat yang menandatanganinya dan hash pesan. Hash pesan disediakan dalam dua nilai `Field` karena lebih mudah digunakan di sisa program daripada array byte.
+Fungsi ini memverifikasi tanda tangan, yang memerlukan hash pesan. Fungsi ini kemudian memberi kita alamat yang menandatanganinya dan hash pesan. Hash pesan disediakan dalam dua nilai `Field` karena nilai tersebut lebih mudah digunakan di sisa program daripada array byte.
 
-Kita perlu menggunakan dua nilai `Field` karena perhitungan bidang dilakukan [modulo](https://en.wikipedia.org/wiki/Modulo) terhadap angka yang besar, tetapi angka tersebut biasanya kurang dari 256 bit (jika tidak, akan sulit untuk melakukan perhitungan tersebut di EVM).
+Kita perlu menggunakan dua nilai `Field` karena perhitungan bidang dilakukan secara [modulo](https://en.wikipedia.org/wiki/Modulo) dengan angka yang besar, tetapi angka tersebut biasanya kurang dari 256 bit (jika tidak, akan sulit untuk melakukan perhitungan tersebut di EVM).
 
 ```rust
     let hash = hashMessage(message);
@@ -761,14 +770,14 @@ fn main(
     )
 ```
 
-Akhirnya, kita mencapai fungsi `main`. Kita perlu membuktikan bahwa kita memiliki transaksi yang secara valid mengubah hash akun dari nilai lama ke nilai baru. Kita juga perlu membuktikan bahwa transaksi tersebut memiliki hash transaksi spesifik ini sehingga orang yang mengirimkannya tahu bahwa transaksi mereka telah diproses.
+Akhirnya, kita mencapai fungsi `main`. Kita perlu membuktikan bahwa kita memiliki transaksi yang secara valid mengubah hash akun dari nilai lama ke nilai baru. Kita juga perlu membuktikan bahwa ia memiliki hash transaksi spesifik ini sehingga orang yang mengirimkannya tahu bahwa transaksinya telah diproses.
 
 ```rust
 {
     let mut txn = readTransferTxn(message);
 ```
 
-Kita perlu `txn` menjadi mutable karena kita tidak membaca alamat pengirim dari pesan, kita membacanya dari tanda tangan. 
+Kita memerlukan `txn` agar dapat diubah karena kita tidak membaca alamat pengirim dari pesan, kita membacanya dari tanda tangan. 
 
 ```rust
     let (fromAddress, txnHash1, txnHash2) = signatureToAddressAndHash(
@@ -808,7 +817,7 @@ Untuk melihatnya beraksi:
    npm install
    ```
 
-   Tidak perlu mengkompilasi kode Noir, kodenya sama dengan yang Anda gunakan untuk tahap 1.
+   Tidak perlu mengompilasi kode Noir, ini sama dengan kode yang Anda gunakan untuk tahap 1.
 
 3. Mulai server.
 
@@ -816,24 +825,24 @@ Untuk melihatnya beraksi:
    npm run start
    ```
 
-4. Di jendela baris perintah terpisah, jalankan Vite untuk menyajikan kode peramban.
+4. Di jendela baris perintah terpisah, mulai dari akar repositori, jalankan Vite untuk menyajikan kode peramban.
 
    ```sh
    cd client
    npm run dev
    ```
 
-5. Telusuri ke kode klien di [http://localhost:5173](http://localhost:5173)
+5. Telusuri kode klien di [http://localhost:5173](http://localhost:5173)
 
-6. Sebelum Anda dapat mengeluarkan transaksi, Anda perlu mengetahui nonce, serta jumlah yang dapat Anda kirim. Untuk mendapatkan informasi ini, klik **Update account data** dan tandatangani pesan.
+6. Sebelum Anda dapat mengeluarkan transaksi, Anda perlu mengetahui nonce, serta jumlah yang dapat Anda kirim. Untuk mendapatkan informasi ini, klik **Update account data** dan tandatangani pesan tersebut.
 
-   Kita memiliki dilema di sini. Di satu sisi, kita tidak ingin menandatangani pesan yang dapat digunakan kembali ([serangan pemutaran ulang](https://en.wikipedia.org/wiki/Replay_attack)), itulah sebabnya kita menginginkan nonce sejak awal. Namun, kita belum memiliki nonce. Solusinya adalah memilih nonce yang hanya dapat digunakan sekali dan yang sudah kita miliki di kedua sisi, seperti waktu saat ini.
+   Kita memiliki dilema di sini. Di satu sisi, kita tidak ingin menandatangani pesan yang dapat digunakan kembali ([serangan pemutaran ulang (replay attack)](https://en.wikipedia.org/wiki/Replay_attack)), itulah sebabnya kita menginginkan nonce sejak awal. Namun, kita belum memiliki nonce. Solusinya adalah memilih nonce yang hanya dapat digunakan sekali dan yang sudah kita miliki di kedua sisi, seperti waktu saat ini.
 
-   Masalah dengan solusi ini adalah bahwa waktu mungkin tidak disinkronkan dengan sempurna. Jadi sebagai gantinya, kita menandatangani nilai yang berubah setiap menit. Ini berarti jendela kerentanan kita terhadap serangan pemutaran ulang paling lama satu menit. Mengingat bahwa dalam produksi permintaan yang ditandatangani akan dilindungi oleh TLS, dan bahwa sisi lain dari terowongan---server---sudah dapat mengungkapkan saldo dan nonce (ia harus mengetahuinya agar berfungsi), ini adalah risiko yang dapat diterima.
+   Masalah dengan solusi ini adalah waktunya mungkin tidak tersinkronisasi dengan sempurna. Jadi sebagai gantinya, kita menandatangani nilai yang berubah setiap menit. Ini berarti bahwa jendela kerentanan kita terhadap serangan pemutaran ulang paling lama adalah satu menit. Mengingat bahwa dalam produksi permintaan yang ditandatangani akan dilindungi oleh TLS, dan bahwa sisi lain dari terowongan---server---sudah dapat mengungkapkan saldo dan nonce (ia harus mengetahuinya agar dapat berfungsi), ini adalah risiko yang dapat diterima.
 
-7. Setelah peramban mendapatkan kembali saldo dan nonce, formulir transfer akan ditampilkan. Pilih alamat tujuan dan jumlahnya lalu klik **Transfer**. Tandatangani permintaan ini.
+7. Setelah peramban mendapatkan kembali saldo dan nonce, ia menampilkan formulir transfer. Pilih alamat tujuan dan jumlahnya lalu klik **Transfer**. Tandatangani permintaan ini.
 
-8. Untuk melihat transfer, pilih **Update account data** atau lihat di jendela tempat Anda menjalankan server. Server mencatat state setiap kali ada perubahan.
+8. Untuk melihat transfer, baik **Update account data** atau lihat di jendela tempat Anda menjalankan server. Server mencatat state setiap kali berubah.
 
     ```
     ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
@@ -967,7 +976,7 @@ Struktur `Accounts` awal.
 
 3. Jalankan `anvil` di jendela baris perintah terpisah.
 
-4. Hasilkan kunci verifikasi dan pemverifikasi Solidity, lalu salin kode pemverifikasi ke proyek Solidity.
+4. Hasilkan kunci verifikasi dan pemverifikasi solidity, lalu salin kode pemverifikasi ke proyek Solidity.
 
    ```sh
    cd noir
@@ -976,7 +985,7 @@ Struktur `Accounts` awal.
    cp target/Verifier.sol ../../smart-contracts/src
    ```
 
-5. Buka kontrak pintar dan atur variabel lingkungan untuk menggunakan rantai blok `anvil`.
+5. Buka kontrak pintar dan atur variabel lingkungan untuk menggunakan blockchain `anvil`.
 
    ```sh
    cd ../../smart-contracts
@@ -998,7 +1007,7 @@ Struktur `Accounts` awal.
    echo $ZKBANK_ADDRESS
    ```
 
-   Nilai `0x199..67b` adalah hash Pederson dari state awal `Accounts`. Jika Anda memodifikasi state awal ini di `server/index.mjs`, Anda dapat menjalankan transaksi untuk melihat hash awal yang dilaporkan oleh bukti tanpa pengetahuan.
+   Nilai `0x199..67b` adalah hash Pedersen dari state awal `Accounts`. Jika Anda memodifikasi state awal ini di `server/index.mjs`, Anda dapat menjalankan transaksi untuk melihat hash awal yang dilaporkan oleh bukti tanpa pengetahuan.
 
 8. Jalankan server.
 
@@ -1007,7 +1016,7 @@ Struktur `Accounts` awal.
    npm run start
    ```
 
-9. Jalankan klien di jendela baris perintah yang berbeda.
+9. Jalankan klien di jendela baris perintah yang berbeda, mulai dari akar repositori.
 
    ```sh
    cd client
@@ -1016,7 +1025,7 @@ Struktur `Accounts` awal.
 
 10. Jalankan beberapa transaksi.
 
-11. Untuk memverifikasi bahwa state berubah secara onchain, mulai ulang proses server. Lihat bahwa `ZkBank` tidak lagi menerima transaksi, karena nilai hash asli dalam transaksi berbeda dari nilai hash yang disimpan secara onchain.
+11. Untuk memverifikasi bahwa state berubah onchain, mulai ulang proses server. Lihat bahwa `ZkBank` tidak lagi menerima transaksi, karena nilai hash asli dalam transaksi berbeda dari nilai hash yang disimpan onchain.
 
     Ini adalah jenis kesalahan yang diharapkan.
 
@@ -1038,7 +1047,7 @@ Struktur `Accounts` awal.
 
 #### `server/index.mjs` {#server-index-mjs-2}
 
-Perubahan dalam file ini sebagian besar berkaitan dengan pembuatan bukti aktual dan pengirimannya secara onchain.
+Perubahan dalam file ini sebagian besar berkaitan dengan pembuatan bukti yang sebenarnya dan mengirimkannya onchain.
 
 ```js
 import { exec } from 'child_process'
@@ -1047,15 +1056,15 @@ import util from 'util'
 const execPromise = util.promisify(exec)
 ```
 
-Kita perlu menggunakan [paket Barretenberg](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) untuk membuat bukti aktual yang akan dikirim secara onchain. Kita dapat menggunakan paket ini baik dengan menjalankan antarmuka baris perintah (`bb`) atau dengan menggunakan [pustaka JavaScript, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). Pustaka JavaScript jauh lebih lambat daripada menjalankan kode secara native, jadi kita menggunakan [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) di sini untuk menggunakan baris perintah.
+Kita perlu menggunakan [paket Barretenberg](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) untuk membuat bukti yang sebenarnya untuk dikirim onchain. Kita dapat menggunakan paket ini baik dengan menjalankan antarmuka baris perintah (`bb`) atau dengan menggunakan [pustaka JavaScript, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). Pustaka JavaScript jauh lebih lambat daripada menjalankan kode secara native, jadi kita menggunakan [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) di sini untuk menggunakan baris perintah.
 
-Perhatikan bahwa jika Anda memutuskan untuk menggunakan `bb.js`, Anda perlu menggunakan versi yang kompatibel dengan versi Noir yang Anda gunakan. Pada saat penulisan, versi Noir saat ini (1.0.0-beta.11) menggunakan `bb.js` versi 0.87.
+Perhatikan bahwa jika Anda memutuskan untuk menggunakan `bb.js`, Anda perlu menggunakan versi yang kompatibel dengan versi Noir yang Anda gunakan. Misalnya, Noir 1.0.0-beta.10 dan 1.0.0-beta.11 keduanya berjalan dengan `bb` dan `bb.js` versi 0.87.
 
 ```js
 const zkBankAddress = process.env.ZKBANK_ADDRESS || "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
 ```
 
-Alamat di sini adalah alamat yang Anda dapatkan saat memulai dengan `anvil` yang bersih dan mengikuti petunjuk di atas.
+Alamat di sini adalah alamat yang Anda dapatkan saat Anda memulai dengan `anvil` yang bersih dan mengikuti petunjuk di atas.
 
 ```js
 const walletClient = createWalletClient({ 
@@ -1065,20 +1074,20 @@ const walletClient = createWalletClient({
 })
 ```
 
-Kunci privat ini adalah salah satu akun pra-dana default di `anvil`. 
+Kunci privat ini adalah salah satu akun prapendanaan default di `anvil`. 
 
 ```js
 const generateProof = async (witness, fileID) => {
 ```
 
-Hasilkan bukti menggunakan file yang dapat dieksekusi `bb`.
+Hasilkan bukti menggunakan executable `bb`.
 
-```js 
+```js
     const fname = `witness-${fileID}.gz`    
     await fs.writeFile(fname, witness)
 ```
 
-Tulis saksi ke sebuah file.
+Tulis Saksi ke sebuah file.
 
 ```js
     await execPromise(`bb prove -b ./noir/target/zkBank.json -w ${fname} -o ${fileID} --oracle_hash keccak --output_format fields`)
@@ -1090,7 +1099,7 @@ Benar-benar membuat bukti. Langkah ini juga membuat file dengan variabel publik,
     const proof = "0x" + JSON.parse(await fs.readFile(`./${fileID}/proof_fields.json`)).reduce((a,b) => a+b, "").replace(/0x/g, "")
 ```
 
-Bukti ini adalah array JSON dari nilai `Field`, masing-masing direpresentasikan sebagai nilai heksadesimal. Namun, kita perlu mengirimkannya dalam transaksi sebagai nilai `bytes` tunggal, yang direpresentasikan Viem dengan string heksadesimal besar. Di sini kita mengubah format dengan menggabungkan semua nilai, menghapus semua `0x`, dan kemudian menambahkan satu di akhir.
+Bukti tersebut adalah array JSON dari nilai `Field`, masing-masing direpresentasikan sebagai nilai heksadesimal. Namun, kita perlu mengirimkannya dalam transaksi sebagai nilai `bytes` tunggal, yang direpresentasikan oleh Viem dengan string heksadesimal yang besar. Di sini kita mengubah formatnya dengan menggabungkan semua nilai, menghapus semua `0x`, lalu menambahkan satu di bagian akhir.
 
 ```js
     await execPromise(`rm -r ${fname} ${fileID}`)
@@ -1099,7 +1108,7 @@ Bukti ini adalah array JSON dari nilai `Field`, masing-masing direpresentasikan 
 }
 ```
 
-Bersihkan dan kembalikan buktinya.
+Bersihkan dan kembalikan bukti.
 
 ```js
 const processMessage = async (message, signature) => {
@@ -1110,13 +1119,13 @@ const processMessage = async (message, signature) => {
     const publicFields = noirResult.returnValue.map(x=>'0x' + x.slice(2).padStart(64, "0"))
 ```
 
-Bidang publik harus berupa array nilai 32-byte. Namun, karena kita perlu membagi hash transaksi di antara dua nilai `Field`, hash ini muncul sebagai nilai 16-byte. Di sini kita menambahkan angka nol sehingga Viem akan mengerti bahwa ini sebenarnya 32 byte.
+Bidang publik harus berupa array nilai 32-byte. Namun, karena kita perlu membagi hash transaksi di antara dua nilai `Field`, ia muncul sebagai nilai 16-byte. Di sini kita menambahkan nol sehingga Viem akan mengerti bahwa itu sebenarnya 32 byte.
 
 ```js
     const proof = await generateProof(noirResult.witness, `${fromAddress}-${nonce}`)
 ```
 
-Setiap alamat hanya menggunakan setiap nonce satu kali sehingga kita dapat menggunakan kombinasi `fromAddress` dan `nonce` sebagai pengidentifikasi unik untuk file saksi dan direktori keluaran.
+Setiap alamat hanya menggunakan setiap nonce sekali sehingga kita dapat menggunakan kombinasi `fromAddress` dan `nonce` sebagai pengidentifikasi unik untuk file Saksi dan direktori output.
 
 ```js
     try {
@@ -1155,7 +1164,7 @@ contract ZkBank {
     }
 ```
 
-Kode onchain perlu melacak dua variabel: pemverifikasi (kontrak terpisah yang dibuat oleh `nargo`) dan hash state saat ini.
+Kode onchain perlu melacak dua variabel: pemverifikasi (kontrak terpisah yang dihasilkan oleh `bb write_solidity_verifier` Barretenberg) dan hash state saat ini.
 
 ```solidity
     event TransactionProcessed(
@@ -1174,14 +1183,14 @@ Setiap kali state berubah, kita memancarkan kejadian `TransactionProcessed`.
     ) public {
 ```
 
-Fungsi ini memproses transaksi. Fungsi ini mendapatkan bukti (sebagai `bytes`) dan masukan publik (sebagai array `bytes32`), dalam format yang dibutuhkan oleh pemverifikasi (untuk meminimalkan pemrosesan onchain dan dengan demikian biaya gas).
+Fungsi ini memproses transaksi. Ia mendapatkan bukti (sebagai `bytes`) dan input publik (sebagai array `bytes32`), dalam format yang diwajibkan oleh pemverifikasi (untuk meminimalkan pemrosesan onchain dan karenanya biaya gas).
 
 ```solidity
-        require(_publicInputs[0] == currentStateHash,
+        require(_publicFields[0] == currentStateHash,
             "Wrong old state hash");
 ```
 
-Bukti tanpa pengetahuan harus menunjukkan bahwa transaksi mengubah hash kita saat ini menjadi hash yang baru.
+Bukti tanpa pengetahuan harus berupa bahwa transaksi berubah dari hash kita saat ini ke hash yang baru.
 
 ```solidity
         myVerifier.verify(_proof, _publicFields);
@@ -1201,7 +1210,7 @@ Panggil kontrak pemverifikasi untuk memverifikasi bukti tanpa pengetahuan. Langk
 }
 ```
 
-Jika semuanya terbukti benar, perbarui hash state ke nilai baru dan pancarkan kejadian `TransactionProcessed`.
+Jika semuanya sesuai, perbarui hash state ke nilai baru dan pancarkan kejadian `TransactionProcessed`.
 
 ## Penyalahgunaan oleh komponen terpusat {#abuses}
 
