@@ -44,23 +44,33 @@ Wir benötigen diese Funktion, um uns den hexadezimalen Wert zu liefern, da die 
 
 Verträge werden immer ab dem ersten Byte ausgeführt. Dies ist der anfängliche Teil des Codes:
 
-| Offset | Opcode       | Stack (nach dem Opcode) |
-| -----: | ------------ | ----------------------- |
-|      0 | PUSH1 0x80   | 0x80                    |
-|      2 | PUSH1 0x40   | 0x40, 0x80              |
-|      4 | MSTORE       | Leer                    |
-|      5 | PUSH1 0x04   | 0x04                    |
-|      7 | CALLDATASIZE | CALLDATASIZE 0x04       |
-|      8 | LT           | CALLDATASIZE\<4          |
-|      9 | PUSH2 0x005e | 0x5E CALLDATASIZE\<4     |
-|      C | JUMPI        | Leer                    |
+| Offset | Opcode       | Stack (nach dem Opcode)  |
+| -----: | ------------ | ------------------------ |
+|      0 | PUSH1 0x80   | 0x80                     |
+|      2 | PUSH1 0x40   | 0x40, 0x80               |
+|      4 | MSTORE       | Leer                     |
+|      5 | PUSH1 0x04   | 0x04                     |
+|      7 | CALLDATASIZE | CALLDATASIZE 0x04        |
+|      8 | LT           | CALLDATASIZE\<4           |
+|      9 | PUSH2 0x005e | 0x5E CALLDATASIZE\<4      |
+|      C | JUMPI        | Leer                     |
 
 Dieser Code macht zwei Dinge:
 
-1. Schreibt 0x80 als 32-Byte-Wert in die Speicherorte 0x40-0x5F (0x80 wird in 0x5F gespeichert und 0x40-0x5E sind alle Nullen).
+1. Schreibt 0x80 als 32-Byte-Wert in die Speicherorte 0x40-0x5F (0x80 wird in 0x5F gespeichert, und 0x40-0x5E sind alle Nullen).
 2. Liest die Größe der Aufrufdaten. Normalerweise folgen die Aufrufdaten für einen Ethereum-Vertrag [der ABI (Application Binary Interface)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html), die mindestens vier Bytes für den Funktionsselektor erfordert. Wenn die Größe der Aufrufdaten kleiner als vier ist, springe zu 0x5E.
 
-![Flowchart for this portion](flowchart-entry.png)
+<Flowchart>
+
+- Einstiegspunkt (0x00)
+  - Sind die Aufrufdaten kürzer als vier Bytes?
+    - **Ja** Nicht-ABI-Aufrufe (0x5E)
+      - Gibt es Aufrufdaten?
+        - **Ja** 0x7C (Zweck bisher unbekannt)
+        - **Nein** ETH-Transfer (0x64): bei Überlauf rückgängig machen, andernfalls den Aufrufwert zu `Storage[6]` (`Value*`) hinzufügen und anhalten
+    - **Nein** ABI-Aufrufe (0x0D)
+
+</Flowchart>
 
 ### Der Handler bei 0x5E (für Nicht-ABI-Aufrufdaten) {#the-handler-at-0x5e-for-non-abi-call-data}
 
@@ -71,28 +81,28 @@ Dieser Code macht zwei Dinge:
 |     60 | PUSH2 0x007c |
 |     63 | JUMPI        |
 
-Dieses Snippet beginnt mit einem `JUMPDEST`. EVM-Programme (Ethereum Virtual Machine) werfen eine Ausnahme, wenn man zu einem Opcode springt, der nicht `JUMPDEST` ist. Dann wird die CALLDATASIZE betrachtet, und wenn sie "wahr" ist (also nicht null), wird zu 0x7C gesprungen. Darauf kommen wir weiter unten zurück.
+Dieser Ausschnitt beginnt mit einem `JUMPDEST`. Programme der EVM (Virtuelle Ethereum-Maschine) werfen eine Ausnahme, wenn Sie zu einem Opcode springen, der nicht `JUMPDEST` ist. Dann wird die CALLDATASIZE betrachtet, und wenn sie „wahr“ ist (also nicht null), wird zu 0x7C gesprungen. Darauf kommen wir weiter unten zurück.
 
-| Offset | Opcode     | Stack (nach dem Opcode)                                                    |
+| Offset | Opcode     | Stack (nach Opcode)                                                        |
 | -----: | ---------- | -------------------------------------------------------------------------- |
-|     64 | CALLVALUE  | [Wei](/glossary/#wei), die durch den Aufruf bereitgestellt werden. In Solidity `msg.value` genannt |
+|     64 | CALLVALUE  | Durch den Aufruf bereitgestellte [Wei](/glossary/#wei). In Solidity `msg.value` genannt |
 |     65 | PUSH1 0x06 | 6 CALLVALUE                                                                |
 |     67 | PUSH1 0x00 | 0 6 CALLVALUE                                                              |
 |     69 | DUP3       | CALLVALUE 0 6 CALLVALUE                                                    |
 |     6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                  |
 |     6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                         |
 
-Wenn es also keine Aufrufdaten gibt, lesen wir den Wert von Storage[6]. Wir wissen noch nicht, was dieser Wert ist, aber wir können nach Transaktionen suchen, die der Vertrag ohne Aufrufdaten erhalten hat. Transaktionen, die einfach nur ETH ohne Aufrufdaten (und daher ohne Methode) transferieren, haben in Etherscan die Methode `Transfer`. Tatsächlich ist [die allererste Transaktion, die der Vertrag erhalten hat](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7), ein Transfer.
+Wenn es also keine Aufrufdaten gibt, lesen wir den Wert von Storage[6]. Wir wissen noch nicht, was dieser Wert ist, aber wir können nach Transaktionen suchen, die der Vertrag ohne Aufrufdaten erhalten hat. Transaktionen, die nur ETH ohne Aufrufdaten (und daher ohne Methode) transferieren, haben in Etherscan die Methode `Transfer`. Tatsächlich ist [die allererste Transaktion, die der Vertrag erhalten hat](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7), ein Transfer.
 
 Wenn wir uns diese Transaktion ansehen und auf **Click to see More** klicken, sehen wir, dass die Aufrufdaten, die als Eingabedaten (Input Data) bezeichnet werden, tatsächlich leer sind (`0x`). Beachten Sie auch, dass der Wert 1,559 ETH beträgt, was später noch relevant sein wird.
 
-![The call data is empty](calldata-empty.png)
+![Die Aufrufdaten sind leer](calldata-empty.png)
 
-Klicken Sie als Nächstes auf den Tab **State** und klappen Sie den Vertrag auf, den wir gerade per Reverse Engineering untersuchen (0x2510...). Sie können sehen, dass sich `Storage[6]` während der Transaktion geändert hat, und wenn Sie Hex auf **Number** umstellen, sehen Sie, dass es zu 1.559.000.000.000.000.000 wurde, dem in Wei transferierten Wert (ich habe die Punkte zur besseren Lesbarkeit hinzugefügt), was dem nächsten Vertragswert entspricht.
+Klicken Sie als Nächstes auf den Reiter **State** und klappen Sie den Vertrag auf, den wir reverse-engineeren (0x2510...). Sie können sehen, dass sich `Storage[6]` während der Transaktion geändert hat, und wenn Sie Hex auf **Number** umstellen, sehen Sie, dass es zu 1.559.000.000.000.000.000 wurde, dem in Wei transferierten Wert (ich habe die Punkte zur besseren Lesbarkeit hinzugefügt), was dem nächsten Vertragswert entspricht.
 
 ![Die Änderung in Storage[6]](storage6.png)
 
-Wenn wir uns die Zustandsänderungen ansehen, die durch [andere `Transfer`-Transaktionen aus demselben Zeitraum](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange) verursacht wurden, sehen wir, dass `Storage[6]` den Wert des Vertrags eine Zeit lang verfolgt hat. Für den Moment nennen wir es `Value*`. Das Sternchen (`*`) erinnert uns daran, dass wir noch nicht _wissen_, was diese Variable tut, aber sie kann nicht nur dazu dienen, den Vertragswert zu verfolgen, da es nicht nötig ist, Speicher (Storage) zu verwenden, der sehr teuer ist, wenn man den Kontostand mit `ADDRESS BALANCE` abrufen kann. Der erste Opcode legt die eigene Adresse des Vertrags auf den Stack. Der zweite liest die Adresse ganz oben auf dem Stack und ersetzt sie durch den Kontostand dieser Adresse.
+Wenn wir uns die Zustandsänderungen ansehen, die durch [andere `Transfer`-Transaktionen aus demselben Zeitraum](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange) verursacht wurden, sehen wir, dass `Storage[6]` den Wert des Vertrags eine Zeit lang verfolgt hat. Vorerst nennen wir es `Value*`. Das Sternchen (`*`) erinnert uns daran, dass wir noch nicht _wissen_, was diese Variable tut, aber sie kann nicht nur dazu dienen, den Vertragswert zu verfolgen, da es nicht nötig ist, Speicher (Storage) zu verwenden, was sehr teuer ist, wenn man den Kontostand mit `ADDRESS BALANCE` abrufen kann. Der erste Opcode pusht die eigene Adresse des Vertrags. Der zweite liest die Adresse oben auf dem Stack und ersetzt sie durch den Kontostand dieser Adresse.
 
 | Offset | Opcode       | Stack                                       |
 | -----: | ------------ | ------------------------------------------- |
@@ -121,7 +131,7 @@ Das `NOT` ist bitweise, es kehrt also den Wert jedes Bits im Aufrufwert um.
 |    1AF | PUSH2 0x01df | 0x01DF Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 |    1B2 | JUMPI        |
 
-Wir springen, wenn `Value*` kleiner als 2^256-CALLVALUE-1 oder gleich groß ist. Dies sieht nach einer Logik zur Verhinderung eines Überlaufs (Overflow) aus. Und tatsächlich sehen wir, dass nach ein paar unsinnigen Operationen (Schreiben in den Speicher, der gleich gelöscht wird, zum Beispiel) bei Offset 0x01DE der Vertrag rückgängig gemacht wird, wenn der Überlauf erkannt wird, was ein normales Verhalten ist.
+Wir springen, wenn `Value*` kleiner als 2^256-CALLVALUE-1 oder gleich groß ist. Dies sieht nach einer Logik zur Vermeidung eines Überlaufs aus. Und tatsächlich sehen wir, dass der Vertrag nach ein paar unsinnigen Operationen (Schreiben in den Speicher wird beispielsweise gleich gelöscht) bei Offset 0x01DE rückgängig gemacht wird, wenn der Überlauf erkannt wird, was ein normales Verhalten ist.
 
 Beachten Sie, dass ein solcher Überlauf extrem unwahrscheinlich ist, da der Aufrufwert plus `Value*` vergleichbar mit 2^256 Wei sein müsste, also etwa 10^59 ETH. [Das gesamte ETH-Angebot beträgt zum Zeitpunkt des Schreibens weniger als zweihundert Millionen](https://etherscan.io/stat/supply).
 
@@ -133,7 +143,7 @@ Beachten Sie, dass ein solcher Überlauf extrem unwahrscheinlich ist, da der Auf
 |    1E2 | SWAP1    | 0x75 Value\*+CALLVALUE 0 6 CALLVALUE      |
 |    1E3 | JUMP     |
 
-Wenn wir hier angekommen sind, holen wir uns `Value* + CALLVALUE` und springen zu Offset 0x75.
+Wenn wir hier angekommen sind, holen wir `Value* + CALLVALUE` und springen zu Offset 0x75.
 
 | Offset | Opcode   | Stack                           |
 | -----: | -------- | ------------------------------- |
@@ -142,7 +152,7 @@ Wenn wir hier angekommen sind, holen wir uns `Value* + CALLVALUE` und springen z
 |     77 | SWAP2    | 6 Value\*+CALLVALUE 0 CALLVALUE |
 |     78 | SSTORE   | 0 CALLVALUE                     |
 
-Wenn wir hier ankommen (was voraussetzt, dass die Aufrufdaten leer sind), addieren wir den Aufrufwert zu `Value*`. Dies stimmt mit dem überein, was wir über `Transfer`-Transaktionen gesagt haben.
+Wenn wir hier ankommen (was voraussetzt, dass die Aufrufdaten leer sind), addieren wir den Aufrufwert zu `Value*`. Dies deckt sich mit dem, was `Transfer`-Transaktionen unserer Beobachtung nach tun.
 
 | Offset | Opcode |
 | -----: | ------ |
@@ -154,7 +164,17 @@ Schließlich wird der Stack geleert (was nicht notwendig ist) und das erfolgreic
 
 Zusammenfassend ist hier ein Flussdiagramm für den anfänglichen Code.
 
-![Entry point flowchart](flowchart-entry.png)
+<Flowchart>
+
+- Einstiegspunkt (0x00)
+  - Sind die Aufrufdaten kürzer als vier Bytes?
+    - **Ja** Nicht-ABI-Aufrufe (0x5E)
+      - Gibt es Aufrufdaten?
+        - **Ja** 0x7C (Zweck bisher unbekannt)
+        - **Nein** ETH-Transfer (0x64): bei Überlauf rückgängig machen, andernfalls den Aufrufwert zu `Storage[6]` (`Value*`) hinzufügen und anhalten
+    - **Nein** ABI-Aufrufe (0x0D)
+
+</Flowchart>
 
 ## Der Handler bei 0x7C {#the-handler-at-0x7c}
 
@@ -250,53 +270,84 @@ Nach dem Aufruf kopieren wir also die Rückgabedaten in den Puffer 0x80 - 0x80+R
 
 ### DELEGATECALL fehlgeschlagen {#delegatecall-failed}
 
-Wenn wir hierher gelangen, zu 0xC0, bedeutet das, dass der Vertrag, den wir aufgerufen haben, revertiert ist. Da wir nur ein Proxy-Contract für diesen Vertrag sind, wollen wir dieselben Daten zurückgeben und ebenfalls revertieren.
+Wenn wir hier bei 0xC0 ankommen, bedeutet das, dass der von uns aufgerufene Vertrag rückgängig gemacht wurde. Da wir nur ein Proxy für diesen Vertrag sind, wollen wir dieselben Daten zurückgeben und ebenfalls rückgängig machen.
 
 | Offset | Opcode   | Stack                                                                                                               |
 | -----: | -------- | ------------------------------------------------------------------------------------------------------------------- |
-|     C0 | JUMPDEST | (((Aufruf erfolgreich/fehlgeschlagen))) RETURNDATASIZE (((Aufruf erfolgreich/fehlgeschlagen))) 0x80 Storage[3]-als-Adresse                     |
-|     C1 | DUP2     | RETURNDATASIZE (((Aufruf erfolgreich/fehlgeschlagen))) RETURNDATASIZE (((Aufruf erfolgreich/fehlgeschlagen))) 0x80 Storage[3]-als-Adresse      |
-|     C2 | DUP5     | 0x80 RETURNDATASIZE (((Aufruf erfolgreich/fehlgeschlagen))) RETURNDATASIZE (((Aufruf erfolgreich/fehlgeschlagen))) 0x80 Storage[3]-als-Adresse |
+|     C0 | JUMPDEST | (((Aufruf Erfolg/Fehlschlag))) RETURNDATASIZE (((Aufruf Erfolg/Fehlschlag))) 0x80 Storage[3]-als-Adresse                     |
+|     C1 | DUP2     | RETURNDATASIZE (((Aufruf Erfolg/Fehlschlag))) RETURNDATASIZE (((Aufruf Erfolg/Fehlschlag))) 0x80 Storage[3]-als-Adresse      |
+|     C2 | DUP5     | 0x80 RETURNDATASIZE (((Aufruf Erfolg/Fehlschlag))) RETURNDATASIZE (((Aufruf Erfolg/Fehlschlag))) 0x80 Storage[3]-als-Adresse |
 |     C3 | REVERT   |
 
-Wir führen also ein `REVERT` mit demselben Puffer aus, den wir zuvor für `RETURN` verwendet haben: 0x80 - 0x80+RETURNDATASIZE
+Wir führen also `REVERT` mit demselben Puffer aus, den wir zuvor für `RETURN` verwendet haben: 0x80 - 0x80+RETURNDATASIZE
 
-![Call to proxy flowchart](flowchart-proxy.png)
+<Flowchart>
+
+- Aufrufdaten ein bis drei Bytes lang, oder eine unbekannte Methode
+  - Proxy-Handler (0x7C)
+    - Lese `Storage[3]`, die Proxy-Adresse
+      - Kopiere die Aufrufdaten in den Speicher
+        - `DELEGATECALL` die Proxy-Adresse
+          - Kopiere die Rückgabedaten in den Speicher
+            - Ist der Aufruf fehlgeschlagen?
+              - **Ja** `REVERT` mit den Rückgabedaten (0xC0)
+              - **Nein** `RETURN` die Rückgabedaten (0xBD)
+
+</Flowchart>
 
 ## ABI-Aufrufe {#abi-calls}
 
-Wenn die Größe der Aufrufdaten vier Byte oder mehr beträgt, könnte dies ein gültiger ABI-Aufruf sein.
+Wenn die Größe der Aufrufdaten vier Bytes oder mehr beträgt, könnte dies ein gültiger ABI-Aufruf sein.
 
 | Offset | Opcode       | Stack                                             |
 | -----: | ------------ | ------------------------------------------------- |
 |      D | PUSH1 0x00   | 0x00                                              |
-|      F | CALLDATALOAD | (((Erstes Wort (256 Bit) der Aufrufdaten)))       |
-|     10 | PUSH1 0xe0   | 0xE0 (((Erstes Wort (256 Bit) der Aufrufdaten)))  |
-|     12 | SHR          | (((erste 32 Bit (4 Byte) der Aufrufdaten)))       |
+|      F | CALLDATALOAD | (((Erstes Wort (256 Bits) der Aufrufdaten)))      |
+|     10 | PUSH1 0xe0   | 0xE0 (((Erstes Wort (256 Bits) der Aufrufdaten))) |
+|     12 | SHR          | (((erste 32 Bits (4 Bytes) der Aufrufdaten)))    |
 
-Etherscan teilt uns mit, dass `1C` ein unbekannter Opcode ist, da [er hinzugefügt wurde, nachdem Etherscan diese Funktion geschrieben hat](https://eips.ethereum.org/EIPS/eip-145), und sie diese noch nicht aktualisiert haben. Eine [aktuelle Opcode-Tabelle](https://github.com/wolflo/evm-opcodes) zeigt uns, dass dies eine Rechtsverschiebung (Shift Right) ist.
+Etherscan sagt uns, dass `1C` ein unbekannter Opcode ist, da [er hinzugefügt wurde, nachdem Etherscan diese Funktion geschrieben hat](https://eips.ethereum.org/EIPS/eip-145), und sie diese noch nicht aktualisiert haben. Eine [aktuelle Opcode-Tabelle](https://github.com/wolflo/evm-opcodes) zeigt uns, dass dies eine Rechtsverschiebung (Shift Right) ist.
 
 | Offset | Opcode           | Stack                                                                                                    |
 | -----: | ---------------- | -------------------------------------------------------------------------------------------------------- |
-|     13 | DUP1             | (((erste 32 Bit (4 Byte) der Aufrufdaten))) (((erste 32 Bit (4 Byte) der Aufrufdaten)))                  |
-|     14 | PUSH4 0x3cd8045e | 0x3CD8045E (((erste 32 Bit (4 Byte) der Aufrufdaten))) (((erste 32 Bit (4 Byte) der Aufrufdaten)))       |
-|     19 | GT               | 0x3CD8045E>erste-32-Bit-der-Aufrufdaten (((erste 32 Bit (4 Byte) der Aufrufdaten)))                      |
-|     1A | PUSH2 0x0043     | 0x43 0x3CD8045E>erste-32-Bit-der-Aufrufdaten (((erste 32 Bit (4 Byte) der Aufrufdaten)))                 |
-|     1D | JUMPI            | (((erste 32 Bit (4 Byte) der Aufrufdaten)))                                                              |
+|     13 | DUP1             | (((erste 32 Bits (4 Bytes) der Aufrufdaten))) (((erste 32 Bits (4 Bytes) der Aufrufdaten)))            |
+|     14 | PUSH4 0x3cd8045e | 0x3CD8045E (((erste 32 Bits (4 Bytes) der Aufrufdaten))) (((erste 32 Bits (4 Bytes) der Aufrufdaten))) |
+|     19 | GT               | 0x3CD8045E>erste-32-Bits-der-Aufrufdaten (((erste 32 Bits (4 Bytes) der Aufrufdaten)))                 |
+|     1A | PUSH2 0x0043     | 0x43 0x3CD8045E>erste-32-Bits-der-Aufrufdaten (((erste 32 Bits (4 Bytes) der Aufrufdaten)))            |
+|     1D | JUMPI            | (((erste 32 Bits (4 Bytes) der Aufrufdaten)))                                                           |
 
-Indem die Tests zum Abgleich der Methodensignatur auf diese Weise in zwei Hälften geteilt werden, spart man im Durchschnitt die Hälfte der Tests. Der Code, der unmittelbar darauf folgt, und der Code in 0x43 folgen demselben Muster: `DUP1` auf die ersten 32 Bit der Aufrufdaten, `PUSH4 (((method signature>`, `EQ` ausführen, um auf Gleichheit zu prüfen, und dann `JUMPI`, wenn die Methodensignatur übereinstimmt. Hier sind die Methodensignaturen, ihre Adressen und, falls bekannt, [die entsprechende Methodendefinition](https://www.4byte.directory/):
+Indem die Tests zum Abgleich der Methodensignatur auf diese Weise in zwei Hälften geteilt werden, spart man im Durchschnitt die Hälfte der Tests. Der Code, der unmittelbar darauf folgt, und der Code in 0x43 folgen demselben Muster: `DUP1` die ersten 32 Bits der Aufrufdaten, `PUSH4 (((method signature>`, führe `EQ` aus, um auf Gleichheit zu prüfen, und dann `JUMPI`, wenn die Methodensignatur übereinstimmt. Hier sind die Methodensignaturen, ihre Adressen und, falls bekannt, [die entsprechende Methodendefinition](https://www.4byte.directory/):
 
-| Methode                                                                                | Methodensignatur | Offset für den Sprung |
-| -------------------------------------------------------------------------------------- | ---------------- | --------------------- |
-| [splitter()](https://www.4byte.directory/signatures/?bytes4_signature=0x3cd8045e)      | 0x3cd8045e       | 0x0103                |
-| ???                                                                                    | 0x81e580d3       | 0x0138                |
-| [currentWindow()](https://www.4byte.directory/signatures/?bytes4_signature=0xba0bafb4) | 0xba0bafb4       | 0x0158                |
-| ???                                                                                    | 0x1f135823       | 0x00C4                |
-| [merkleRoot()](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab)    | 0x2eb4a7ab       | 0x00ED                |
+| Methode                                                                                 | Methodensignatur | Offset zum Hineinspringen |
+| -------------------------------------------------------------------------------------- | ---------------- | ------------------- |
+| [splitter()](https://www.4byte.directory/signatures/?bytes4_signature=0x3cd8045e)      | 0x3cd8045e       | 0x0103              |
+| ???                                                                                    | 0x81e580d3       | 0x0138              |
+| [currentWindow()](https://www.4byte.directory/signatures/?bytes4_signature=0xba0bafb4) | 0xba0bafb4       | 0x0158              |
+| ???                                                                                    | 0x1f135823       | 0x00C4              |
+| [merkleRoot()](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab)    | 0x2eb4a7ab       | 0x00ED              |
 
-Wenn keine Übereinstimmung gefunden wird, springt der Code zum [Proxy-Handler bei 0x7C](#the-handler-at-0x7c), in der Hoffnung, dass der Vertrag, für den wir als Proxy fungieren, eine Übereinstimmung aufweist.
+Wenn keine Übereinstimmung gefunden wird, springt der Code zum [Proxy-Handler bei 0x7C](#the-handler-at-0x7c), in der Hoffnung, dass der Vertrag, für den wir ein Proxy sind, eine Übereinstimmung hat.
 
-![ABI calls flowchart](flowchart-abi.png)
+<Flowchart>
+
+- Lese den Methodenselektor, die ersten vier Bytes der Aufrufdaten (0x0D)
+  - Ist der Selektor kleiner als `0x3cd8045e`?
+    - **Ja** Niedrige Selektoren (0x43)
+      - Ist es `0x1f135823`?
+        - **Ja** Funktion bei 0xC4
+        - **Nein** Ist es `0x2eb4a7ab`?
+          - **Ja** `merkleRoot()` bei 0xED
+          - **Nein** [Proxy-Handler (0x7C)](#the-handler-at-0x7c)
+    - **Nein** Hohe Selektoren (0x1E)
+      - Ist es `0x3cd8045e`?
+        - **Ja** `splitter()` bei 0x0103
+        - **Nein** Ist es `0x81e580d3`?
+          - **Ja** Funktion bei 0x0138
+          - **Nein** Ist es `0xba0bafb4`?
+            - **Ja** `currentWindow()` bei 0x0158
+            - **Nein** [Proxy-Handler (0x7C)](#the-handler-at-0x7c)
+
+</Flowchart>
 
 ## splitter() {#splitter}
 
