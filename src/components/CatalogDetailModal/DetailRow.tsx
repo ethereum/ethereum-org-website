@@ -1,6 +1,8 @@
 import { Info } from "lucide-react"
 import type { ReactNode } from "react"
 
+import { CheckCircle } from "@/components/icons/CheckCircle"
+import { XCircle } from "@/components/icons/XCircle"
 import Tooltip from "@/components/Tooltip"
 
 import { cn } from "@/lib/utils/cn"
@@ -50,6 +52,28 @@ const DetailRow = ({
     </div>
     <div className="min-w-0 text-end text-sm">{children}</div>
   </div>
+)
+
+export const SupportedValue = ({
+  supported,
+  label,
+}: {
+  supported: boolean
+  label: string
+}) => (
+  <span
+    className={cn(
+      "inline-flex items-center gap-1.5 font-bold",
+      supported ? "text-success" : "text-error"
+    )}
+  >
+    {supported ? (
+      <CheckCircle className="my-0 shrink-0" />
+    ) : (
+      <XCircle className="my-0 shrink-0" />
+    )}
+    {label}
+  </span>
 )
 
 export default DetailRow
