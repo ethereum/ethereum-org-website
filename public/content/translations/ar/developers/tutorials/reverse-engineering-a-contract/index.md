@@ -46,115 +46,135 @@ _لا توجد أسرار على سلسلة الكتل_، كل ما يحدث ي�
 
 | الإزاحة | رمز التشغيل | المكدس (بعد رمز التشغيل) |
 | -----: | ------------ | ------------------------ |
-| 0 | PUSH1 0x80 | <span dir="ltr">0x80</span> |
-| 2 | PUSH1 0x40 | <span dir="ltr">0x40, 0x80</span> |
-| 4 | MSTORE | فارغ |
-| 5 | PUSH1 0x04 | <span dir="ltr">0x04</span> |
-| 7 | CALLDATASIZE | <span dir="ltr">CALLDATASIZE 0x04</span> |
-| 8 | LT | <span dir="ltr">CALLDATASIZE\<4</span> |
-| 9 | PUSH2 0x005e | <span dir="ltr">0x5E CALLDATASIZE\<4</span> |
-| C | JUMPI | فارغ |
+|      0 | PUSH1 0x80   | 0x80                     |
+|      2 | PUSH1 0x40   | 0x40, 0x80               |
+|      4 | MSTORE       | فارغ                    |
+|      5 | PUSH1 0x04   | 0x04                     |
+|      7 | CALLDATASIZE | CALLDATASIZE 0x04        |
+|      8 | LT           | <span dir="ltr">CALLDATASIZE\<4</span>           |
+|      9 | PUSH2 0x005e | 0x5E <span dir="ltr">CALLDATASIZE\<4</span>      |
+|      C | JUMPI        | فارغ                    |
 
 يقوم هذا الكود بشيئين:
 
-1. كتابة <span dir="ltr">0x80</span> كقيمة بحجم <span dir="ltr">32 byte</span> في مواقع الذاكرة <span dir="ltr">0x40-0x5F</span> (يتم تخزين <span dir="ltr">0x80</span> في <span dir="ltr">0x5F</span>، وتكون المواقع <span dir="ltr">0x40-0x5E</span> كلها أصفارًا).
-2. قراءة حجم بيانات الاستدعاء. عادةً ما تتبع بيانات الاستدعاء لعقد إيثريوم [واجهة التطبيق الثنائية (ABI)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html)، والتي تتطلب كحد أدنى أربعة بايتات لمُحدد الدالة. إذا كان حجم بيانات الاستدعاء أقل من أربعة، انتقل إلى <span dir="ltr">0x5E</span>.
+1. كتابة <span dir="ltr">0x80</span> كقيمة بحجم 32 بايت في مواقع الذاكرة <span dir="ltr">0x40-0x5F</span> (يتم تخزين <span dir="ltr">0x80</span> في <span dir="ltr">0x5F</span>، وتكون المواقع من <span dir="ltr">0x40</span> إلى <span dir="ltr">0x5E</span> كلها أصفارًا).
+2. قراءة حجم بيانات الاستدعاء. عادةً ما تتبع بيانات الاستدعاء لعقد إيثيريوم [ABI (واجهة التطبيق الثنائية)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html)، والتي تتطلب كحد أدنى أربعة بايتات لمُحدد الدالة. إذا كان حجم بيانات الاستدعاء أقل من أربعة، يتم القفز إلى <span dir="ltr">0x5E</span>.
 
-![Flowchart for this portion](flowchart-entry.png)
+<Flowchart>
 
-### المعالج عند <span dir="ltr">0x5E</span> (لبيانات الاستدعاء غير التابعة لـ ABI) {#the-handler-at-0x5e-for-non-abi-call-data}
+- نقطة الدخول (<span dir="ltr">0x00</span>)
+  - هل بيانات الاستدعاء أقصر من أربعة بايتات؟
+    - **نعم** استدعاءات غير ABI (<span dir="ltr">0x5E</span>)
+      - هل توجد أي بيانات استدعاء؟
+        - **نعم** <span dir="ltr">0x7C</span> (الغرض غير معروف حتى الآن)
+        - **لا** تحويل ETH (<span dir="ltr">0x64</span>): تراجع عند تجاوز السعة، وإلا أضف قيمة الاستدعاء إلى `Storage[6]` (`Value*`) وتوقف
+    - **لا** استدعاءات ABI (<span dir="ltr">0x0D</span>)
+
+</Flowchart>
+
+### المعالج عند <span dir="ltr">0x5E</span> (لبيانات الاستدعاء غير ABI) {#the-handler-at-0x5e-for-non-abi-call-data}
 
 | الإزاحة | رمز التشغيل |
 | -----: | ------------ |
-| 5E | JUMPDEST |
-| 5F | CALLDATASIZE |
-| 60 | PUSH2 0x007c |
-| 63 | JUMPI |
+|     5E | JUMPDEST     |
+|     5F | CALLDATASIZE |
+|     60 | PUSH2 0x007c |
+|     63 | JUMPI        |
 
-تبدأ هذه المقتطفة بـ `JUMPDEST`. تُلقي برامج آلة إيثريوم الافتراضية (EVM) استثناءً إذا انتقلت إلى رمز تشغيل ليس `JUMPDEST`. ثم تنظر إلى CALLDATASIZE، وإذا كانت "صحيحة" (أي ليست صفرًا) تنتقل إلى <span dir="ltr">0x7C</span>. سنصل إلى ذلك أدناه.
+يبدأ هذا المقتطف بـ `JUMPDEST`. تطرح برامج آلة إيثريوم الافتراضية (EVM) استثناءً إذا قفزت إلى رمز تشغيل ليس `JUMPDEST`. ثم ينظر إلى `CALLDATASIZE`، وإذا كان "صحيحًا" (أي ليس صفرًا) يقفز إلى <span dir="ltr">0x7C</span>. سنتطرق إلى ذلك أدناه.
 
-| الإزاحة | رمز التشغيل | المكدس (بعد رمز التشغيل) |
+| الإزاحة | رمز التشغيل | المكدس (بعد رمز التشغيل)                                                       |
 | -----: | ---------- | -------------------------------------------------------------------------- |
-| 64 | CALLVALUE | [Wei](/glossary/#wei) المقدمة بواسطة الاستدعاء. تُسمى `msg.value` في Solidity |
-| 65 | PUSH1 0x06 | <span dir="ltr">6 CALLVALUE</span> |
-| 67 | PUSH1 0x00 | <span dir="ltr">0 6 CALLVALUE</span> |
-| 69 | DUP3 | <span dir="ltr">CALLVALUE 0 6 CALLVALUE</span> |
-| 6A | DUP3 | <span dir="ltr">6 CALLVALUE 0 6 CALLVALUE</span> |
-| 6B | SLOAD | <span dir="ltr">Storage[6] CALLVALUE 0 6 CALLVALUE</span> |
+|     64 | CALLVALUE  | [Wei](/glossary/#wei) المقدمة بواسطة الاستدعاء. تُسمى `msg.value` في Solidity |
+|     65 | PUSH1 0x06 | 6 CALLVALUE                                                                |
+|     67 | PUSH1 0x00 | 0 6 CALLVALUE                                                              |
+|     69 | DUP3       | CALLVALUE 0 6 CALLVALUE                                                    |
+|     6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                  |
+|     6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                         |
 
-لذا عندما لا توجد بيانات استدعاء، نقرأ قيمة <span dir="ltr">Storage[6]</span>. لا نعرف ما هي هذه القيمة بعد، ولكن يمكننا البحث عن المعاملات التي تلقاها العقد بدون بيانات استدعاء. المعاملات التي تقوم فقط بتحويل ETH بدون أي بيانات استدعاء (وبالتالي بدون طريقة) تظهر في Etherscan بالطريقة `Transfer`. في الواقع، [أول معاملة تلقاها العقد على الإطلاق](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) هي تحويل.
+لذا عندما لا توجد بيانات استدعاء، نقرأ قيمة `Storage[6]`. لا نعرف ما هي هذه القيمة بعد، ولكن يمكننا البحث عن المعاملات التي تلقاها العقد بدون بيانات استدعاء. المعاملات التي تقوم فقط بتحويل ETH بدون أي بيانات استدعاء (وبالتالي بدون طريقة) يكون لها في Etherscan الطريقة `Transfer`. في الواقع، [أول معاملة تلقاها العقد](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) هي تحويل.
 
-إذا نظرنا في تلك المعاملة ونقرنا على **Click to see More** (انقر لرؤية المزيد)، نرى أن بيانات الاستدعاء، والتي تسمى بيانات الإدخال، فارغة بالفعل (`0x`). لاحظ أيضًا أن القيمة هي <span dir="ltr">1.559 ETH</span>، وسيكون ذلك ذا صلة لاحقًا.
+إذا نظرنا في تلك المعاملة ونقرنا على **<span dir="ltr">Click to see More</span>**، نرى أن بيانات الاستدعاء، والتي تسمى بيانات الإدخال، فارغة بالفعل (`0x`). لاحظ أيضًا أن القيمة هي <span dir="ltr">1.559 ETH</span>، وسيكون ذلك ذا صلة لاحقًا.
 
-![The call data is empty](calldata-empty.png)
+![بيانات الاستدعاء فارغة](calldata-empty.png)
 
-بعد ذلك، انقر فوق علامة التبويب **State** (الحالة) وقم بتوسيع العقد الذي نقوم بهندسته العكسية (<span dir="ltr">0x2510...</span>). يمكنك أن ترى أن `Storage[6]` قد تغيرت بالفعل أثناء المعاملة، وإذا قمت بتغيير Hex (النظام السداسي عشري) إلى **Number** (رقم)، فسترى أنها أصبحت <span dir="ltr">1,559,000,000,000,000,000</span>، وهي القيمة المحولة بوحدة wei (أضفت الفواصل للتوضيح)، والتي تتوافق مع قيمة العقد التالية.
+بعد ذلك، انقر فوق علامة التبويب **<span dir="ltr">State</span>** وقم بتوسيع العقد الذي نقوم بهندسته عكسيًا (<span dir="ltr">0x2510...</span>). يمكنك أن ترى أن `Storage[6]` قد تغيرت أثناء المعاملة، وإذا قمت بتغيير <span dir="ltr">Hex</span> إلى **<span dir="ltr">Number</span>**، فسترى أنها أصبحت <span dir="ltr">1,559,000,000,000,000,000</span>، وهي القيمة المحولة بوحدة Wei (أضفت الفواصل للتوضيح)، والتي تتوافق مع قيمة العقد التالية.
 
 ![التغيير في Storage[6]](storage6.png)
 
-إذا نظرنا في تغييرات الحالة الناتجة عن [معاملات `Transfer` أخرى من نفس الفترة](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange)، نرى أن `Storage[6]` تتبعت قيمة العقد لفترة من الوقت. في الوقت الحالي سنسميها `Value*`. تذكرنا العلامة النجمية (`*`) بأننا لا _نعرف_ ما يفعله هذا المتغير بعد، ولكن لا يمكن أن يكون مجرد تتبع لقيمة العقد لأنه لا توجد حاجة لاستخدام التخزين، وهو مكلف للغاية، عندما يمكنك الحصول على رصيد حساباتك باستخدام `ADDRESS BALANCE`. يدفع رمز التشغيل الأول عنوان العقد نفسه. ويقرأ الثاني العنوان الموجود في أعلى المكدس ويستبدله برصيد ذلك العنوان.
+إذا نظرنا في تغييرات الحالة الناتجة عن [معاملات `Transfer` أخرى من نفس الفترة](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange) نرى أن `Storage[6]` تتبعت قيمة العقد لفترة من الوقت. في الوقت الحالي سنسميها `Value*`. تذكرنا العلامة النجمية (`*`) بأننا لا _نعرف_ ما يفعله هذا المتغير بعد، ولكن لا يمكن أن يكون مجرد تتبع لقيمة العقد لأنه ليست هناك حاجة لاستخدام التخزين، وهو مكلف للغاية، عندما يمكنك الحصول على رصيد حساباتك باستخدام `ADDRESS BALANCE`. يدفع رمز التشغيل الأول عنوان العقد نفسه. ويقرأ الثاني العنوان الموجود في أعلى المكدس ويستبدله برصيد ذلك العنوان.
 
-| الإزاحة | رمز التشغيل | المكدس |
+| الإزاحة | رمز التشغيل | المكدس                                       |
 | -----: | ------------ | ------------------------------------------- |
-| 6C | PUSH2 0x0075 | <span dir="ltr">0x75 Value\* CALLVALUE 0 6 CALLVALUE</span> |
-| 6F | SWAP2 | <span dir="ltr">CALLVALUE Value\* 0x75 0 6 CALLVALUE</span> |
-| 70 | SWAP1 | <span dir="ltr">Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
-| 71 | PUSH2 0x01a7 | <span dir="ltr">0x01A7 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
-| 74 | JUMP |
+|     6C | PUSH2 0x0075 | 0x75 Value\* CALLVALUE 0 6 CALLVALUE        |
+|     6F | SWAP2        | CALLVALUE Value\* 0x75 0 6 CALLVALUE        |
+|     70 | SWAP1        | Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
+|     71 | PUSH2 0x01a7 | 0x01A7 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
+|     74 | JUMP         |
 
-سنستمر في تتبع هذا الكود عند وجهة الانتقال.
+سنستمر في تتبع هذا الكود عند وجهة القفز.
 
-| الإزاحة | رمز التشغيل | المكدس |
+| الإزاحة | رمز التشغيل | المكدس                                                       |
 | -----: | ---------- | ----------------------------------------------------------- |
-| 1A7 | JUMPDEST | <span dir="ltr">Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
-| 1A8 | PUSH1 0x00 | <span dir="ltr">0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
-| 1AA | DUP3 | <span dir="ltr">CALLVALUE 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
-| 1AB | NOT | <span dir="ltr">2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
+|    1A7 | JUMPDEST   | Value\* CALLVALUE 0x75 0 6 CALLVALUE                        |
+|    1A8 | PUSH1 0x00 | 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE                   |
+|    1AA | DUP3       | CALLVALUE 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
+|    1AB | NOT        | <span dir="ltr">2^256-CALLVALUE-1</span> 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 
-العملية `NOT` هي عملية على مستوى البت (bitwise)، لذا فهي تعكس قيمة كل بت في قيمة الاستدعاء.
+إن `NOT` هو عملية على مستوى البت، لذا فهو يعكس قيمة كل بت في قيمة الاستدعاء.
 
-| الإزاحة | رمز التشغيل | المكدس |
+| الإزاحة | رمز التشغيل | المكدس                                                                       |
 | -----: | ------------ | --------------------------------------------------------------------------- |
-| 1AC | DUP3 | <span dir="ltr">Value\* 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
-| 1AD | GT | <span dir="ltr">Value\*>2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
-| 1AE | ISZERO | <span dir="ltr">Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
-| 1AF | PUSH2 0x01df | <span dir="ltr">0x01DF Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
-| 1B2 | JUMPI |
+|    1AC | DUP3         | Value\* <span dir="ltr">2^256-CALLVALUE-1</span> 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
+|    1AD | GT           | <span dir="ltr">Value\*>2^256-CALLVALUE-1</span> 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
+|    1AE | ISZERO       | <span dir="ltr">Value\*\<=2^256-CALLVALUE-1</span> 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
+|    1AF | PUSH2 0x01df | 0x01DF <span dir="ltr">Value\*\<=2^256-CALLVALUE-1</span> 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
+|    1B2 | JUMPI        |
 
-ننتقل إذا كانت `Value*` أصغر من <span dir="ltr">2^256-CALLVALUE-1</span> أو تساويها. يبدو هذا كمنطق لمنع تجاوز السعة (overflow). وبالفعل، نرى أنه بعد بضع عمليات غير منطقية (الكتابة في الذاكرة على وشك أن تُحذف، على سبيل المثال) عند الإزاحة <span dir="ltr">0x01DE</span>، يتراجع العقد إذا تم اكتشاف تجاوز السعة، وهو سلوك طبيعي.
+نقفز إذا كانت `Value*` أصغر من <span dir="ltr">2^256-CALLVALUE-1</span> أو تساويها. يبدو هذا كمنطق لمنع تجاوز السعة. وبالفعل، نرى أنه بعد بضع عمليات غير منطقية (الكتابة في الذاكرة على وشك أن تُحذف، على سبيل المثال) عند الإزاحة <span dir="ltr">0x01DE</span> يتراجع العقد إذا تم اكتشاف تجاوز السعة، وهو سلوك طبيعي.
 
-لاحظ أن حدوث مثل هذا التجاوز في السعة مستبعد للغاية، لأنه سيتطلب أن تكون قيمة الاستدعاء بالإضافة إلى `Value*` قابلة للمقارنة بـ <span dir="ltr">2^256 wei</span>، أي حوالي <span dir="ltr">10^59 ETH</span>. [إجمالي المعروض من ETH، وقت الكتابة، أقل من مائتي مليون](https://etherscan.io/stat/supply).
+لاحظ أن تجاوز السعة هذا غير محتمل للغاية، لأنه سيتطلب أن تكون قيمة الاستدعاء زائد `Value*` قابلة للمقارنة بـ <span dir="ltr">2^256 Wei</span>، أي حوالي <span dir="ltr">10^59 ETH</span>. [إجمالي المعروض من ETH، وقت كتابة هذا التقرير، أقل من مائتي مليون](https://etherscan.io/stat/supply).
 
-| الإزاحة | رمز التشغيل | المكدس |
+| الإزاحة | رمز التشغيل | المكدس                                     |
 | -----: | -------- | ----------------------------------------- |
-| 1DF | JUMPDEST | <span dir="ltr">0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
-| 1E0 | POP | <span dir="ltr">Value\* CALLVALUE 0x75 0 6 CALLVALUE</span> |
-| 1E1 | ADD | <span dir="ltr">Value\*+CALLVALUE 0x75 0 6 CALLVALUE</span> |
-| 1E2 | SWAP1 | <span dir="ltr">0x75 Value\*+CALLVALUE 0 6 CALLVALUE</span> |
-| 1E3 | JUMP |
+|    1DF | JUMPDEST | 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
+|    1E0 | POP      | Value\* CALLVALUE 0x75 0 6 CALLVALUE      |
+|    1E1 | ADD      | <span dir="ltr">Value\*+CALLVALUE</span> 0x75 0 6 CALLVALUE      |
+|    1E2 | SWAP1    | 0x75 <span dir="ltr">Value\*+CALLVALUE</span> 0 6 CALLVALUE      |
+|    1E3 | JUMP     |
 
-إذا وصلنا إلى هنا، احصل على `Value* + CALLVALUE` وانتقل إلى الإزاحة <span dir="ltr">0x75</span>.
+إذا وصلنا إلى هنا، احصل على `Value* + CALLVALUE` واقفز إلى الإزاحة <span dir="ltr">0x75</span>.
 
-| الإزاحة | رمز التشغيل | المكدس |
+| الإزاحة | رمز التشغيل | المكدس                           |
 | -----: | -------- | ------------------------------- |
-| 75 | JUMPDEST | <span dir="ltr">Value\*+CALLVALUE 0 6 CALLVALUE</span> |
-| 76 | SWAP1 | <span dir="ltr">0 Value\*+CALLVALUE 6 CALLVALUE</span> |
-| 77 | SWAP2 | <span dir="ltr">6 Value\*+CALLVALUE 0 CALLVALUE</span> |
-| 78 | SSTORE | <span dir="ltr">0 CALLVALUE</span> |
+|     75 | JUMPDEST | <span dir="ltr">Value\*+CALLVALUE</span> 0 6 CALLVALUE |
+|     76 | SWAP1    | 0 <span dir="ltr">Value\*+CALLVALUE</span> 6 CALLVALUE |
+|     77 | SWAP2    | 6 <span dir="ltr">Value\*+CALLVALUE</span> 0 CALLVALUE |
+|     78 | SSTORE   | 0 CALLVALUE                     |
 
-إذا وصلنا إلى هنا (وهو ما يتطلب أن تكون بيانات الاستدعاء فارغة) فإننا نضيف إلى `Value*` قيمة الاستدعاء. هذا يتوافق مع ما نقوله عن ما تفعله معاملات `Transfer`.
+إذا وصلنا إلى هنا (وهو ما يتطلب أن تكون بيانات الاستدعاء فارغة) فإننا نضيف إلى `Value*` قيمة الاستدعاء. هذا يتوافق مع ما نقول إن معاملات `Transfer` تفعله.
 
 | الإزاحة | رمز التشغيل |
 | -----: | ------ |
-| 79 | POP |
-| 7A | POP |
-| 7B | STOP |
+|     79 | POP    |
+|     7A | POP    |
+|     7B | STOP   |
 
-أخيرًا، قم بمسح المكدس (وهو أمر غير ضروري) وأشر إلى النهاية الناجحة للمعاملة.
+أخيرًا، امسح المكدس (وهو أمر غير ضروري) وأشر إلى النهاية الناجحة للمعاملة.
 
 لتلخيص كل ذلك، إليك مخطط انسيابي للكود الأولي.
 
-![Entry point flowchart](flowchart-entry.png)
+<Flowchart>
+
+- نقطة الدخول (<span dir="ltr">0x00</span>)
+  - هل بيانات الاستدعاء أقصر من أربعة بايتات؟
+    - **نعم** استدعاءات غير ABI (<span dir="ltr">0x5E</span>)
+      - هل توجد أي بيانات استدعاء؟
+        - **نعم** <span dir="ltr">0x7C</span> (الغرض غير معروف حتى الآن)
+        - **لا** تحويل ETH (<span dir="ltr">0x64</span>): تراجع عند تجاوز السعة، وإلا أضف قيمة الاستدعاء إلى `Storage[6]` (`Value*`) وتوقف
+    - **لا** استدعاءات ABI (<span dir="ltr">0x0D</span>)
+
+</Flowchart>
 
 ## المعالج عند <span dir="ltr">0x7C</span> {#the-handler-at-0x7c}
 
@@ -250,53 +270,84 @@ _لا توجد أسرار على سلسلة الكتل_، كل ما يحدث ي�
 
 ### فشل <span dir="ltr">DELEGATECALL</span> {#delegatecall-failed}
 
-إذا وصلنا إلى هنا، إلى <span dir="ltr">0xC0</span>، فهذا يعني أن العقد الذي استدعيناه قد تراجع. وبما أننا مجرد وكيل لهذا العقد، فإننا نريد إرجاع نفس البيانات والتراجع أيضًا.
+إذا وصلنا إلى هنا، إلى <span dir="ltr">0xC0</span>، فهذا يعني أن العقد الذي استدعيناه قد تراجع. نظرًا لأننا مجرد وكيل لذلك العقد، فإننا نريد إرجاع نفس البيانات والتراجع أيضًا.
 
-| الإزاحة | رمز التشغيل | المكدس |
+| الإزاحة | رمز التشغيل | المكدس                                                                                                               |
 | -----: | -------- | ------------------------------------------------------------------------------------------------------------------- |
-|     C0 | JUMPDEST | (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address                     |
-|     C1 | DUP2     | RETURNDATASIZE (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address      |
-|     C2 | DUP5     | 0x80 RETURNDATASIZE (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address |
+|     C0 | JUMPDEST | (((نجاح/فشل الاستدعاء))) RETURNDATASIZE (((نجاح/فشل الاستدعاء))) 0x80 Storage[3]-كعنوان                     |
+|     C1 | DUP2     | RETURNDATASIZE (((نجاح/فشل الاستدعاء))) RETURNDATASIZE (((نجاح/فشل الاستدعاء))) 0x80 Storage[3]-كعنوان      |
+|     C2 | DUP5     | 0x80 RETURNDATASIZE (((نجاح/فشل الاستدعاء))) RETURNDATASIZE (((نجاح/فشل الاستدعاء))) 0x80 Storage[3]-كعنوان |
 |     C3 | REVERT   |
 
-لذا نقوم بـ `REVERT` بنفس المخزن المؤقت الذي استخدمناه لـ `RETURN` سابقًا: <span dir="ltr">0x80 - 0x80+RETURNDATASIZE</span>
+لذا فإننا ننفذ `REVERT` بنفس المخزن المؤقت الذي استخدمناه لـ `RETURN` سابقًا: <span dir="ltr">0x80 - 0x80+RETURNDATASIZE</span>
 
-![Call to proxy flowchart](flowchart-proxy.png)
+<Flowchart>
 
-## استدعاءات <span dir="ltr">ABI</span> {#abi-calls}
+- بيانات الاستدعاء بطول من بايت واحد إلى ثلاثة بايتات، أو طريقة غير معروفة
+  - معالج الوكيل (<span dir="ltr">0x7C</span>)
+    - قراءة `Storage[3]`، عنوان الوكيل
+      - نسخ بيانات الاستدعاء إلى الذاكرة
+        - `DELEGATECALL` عنوان الوكيل
+          - نسخ بيانات الإرجاع إلى الذاكرة
+            - هل فشل الاستدعاء؟
+              - **نعم** `REVERT` مع بيانات الإرجاع (<span dir="ltr">0xC0</span>)
+              - **لا** `RETURN` بيانات الإرجاع (<span dir="ltr">0xBD</span>)
 
-إذا كان حجم بيانات الاستدعاء أربعة بايتات أو أكثر، فقد يكون هذا استدعاء <span dir="ltr">ABI</span> صالحًا.
+</Flowchart>
 
-| الإزاحة | رمز التشغيل | المكدس |
+## استدعاءات ABI {#abi-calls}
+
+إذا كان حجم بيانات الاستدعاء أربعة بايتات أو أكثر، فقد يكون هذا استدعاء ABI صالحًا.
+
+| الإزاحة | رمز التشغيل | المكدس                                             |
 | -----: | ------------ | ------------------------------------------------- |
-| <span dir="ltr">D</span> | <span dir="ltr">PUSH1 0x00</span> | <span dir="ltr">0x00</span> |
-| <span dir="ltr">F</span> | <span dir="ltr">CALLDATALOAD</span> | (((الكلمة الأولى (256 بت) من بيانات الاستدعاء))) |
-| <span dir="ltr">10</span> | <span dir="ltr">PUSH1 0xe0</span> | <span dir="ltr">0xE0</span> (((الكلمة الأولى (256 بت) من بيانات الاستدعاء))) |
-| <span dir="ltr">12</span> | <span dir="ltr">SHR</span> | (((أول 32 بت (4 بايتات) من بيانات الاستدعاء))) |
+|      D | PUSH1 0x00   | 0x00                                              |
+|      F | CALLDATALOAD | (((الكلمة الأولى (256 بت) من بيانات الاستدعاء)))      |
+|     10 | PUSH1 0xe0   | 0xE0 (((الكلمة الأولى (256 بت) من بيانات الاستدعاء))) |
+|     12 | SHR          | (((أول 32 بت (4 بايتات) من بيانات الاستدعاء)))    |
 
-يخبرنا Etherscan أن `1C` هو رمز تشغيل غير معروف، لأنه [تمت إضافته بعد أن برمج Etherscan هذه الميزة](https://eips.ethereum.org/EIPS/eip-145) ولم يقوموا بتحديثها. يوضح لنا [جدول رموز التشغيل المُحدَّث](https://github.com/wolflo/evm-opcodes) أن هذا يعني إزاحة لليمين.
+يخبرنا Etherscan أن `1C` هو رمز تشغيل غير معروف، لأنه [تمت إضافته بعد أن كتب Etherscan هذه الميزة](https://eips.ethereum.org/EIPS/eip-145) ولم يقوموا بتحديثه. يوضح لنا [جدول رموز التشغيل المُحدَّث](https://github.com/wolflo/evm-opcodes) أن هذا هو إزاحة لليمين.
 
-| الإزاحة | رمز التشغيل | المكدس |
+| الإزاحة | رمز التشغيل | المكدس                                                                                                    |
 | -----: | ---------------- | -------------------------------------------------------------------------------------------------------- |
-| <span dir="ltr">13</span> | <span dir="ltr">DUP1</span> | (((أول 32 بت (4 بايتات) من بيانات الاستدعاء))) (((أول 32 بت (4 بايتات) من بيانات الاستدعاء))) |
-| <span dir="ltr">14</span> | <span dir="ltr">PUSH4 0x3cd8045e</span> | <span dir="ltr">0x3CD8045E</span> (((أول 32 بت (4 بايتات) من بيانات الاستدعاء))) (((أول 32 بت (4 بايتات) من بيانات الاستدعاء))) |
-| <span dir="ltr">19</span> | <span dir="ltr">GT</span> | <span dir="ltr">0x3CD8045E>first-32-bits-of-the-call-data</span> (((أول 32 بت (4 بايتات) من بيانات الاستدعاء))) |
-| <span dir="ltr">1A</span> | <span dir="ltr">PUSH2 0x0043</span> | <span dir="ltr">0x43 0x3CD8045E>first-32-bits-of-the-call-data</span> (((أول 32 بت (4 بايتات) من بيانات الاستدعاء))) |
-| <span dir="ltr">1D</span> | <span dir="ltr">JUMPI</span> | (((أول 32 بت (4 بايتات) من بيانات الاستدعاء))) |
+|     13 | DUP1             | (((أول 32 بت (4 بايتات) من بيانات الاستدعاء))) (((أول 32 بت (4 بايتات) من بيانات الاستدعاء)))            |
+|     14 | PUSH4 0x3cd8045e | 0x3CD8045E (((أول 32 بت (4 بايتات) من بيانات الاستدعاء))) (((أول 32 بت (4 بايتات) من بيانات الاستدعاء))) |
+|     19 | GT               | <span dir="ltr">0x3CD8045E</span>أول-32-بت-من-بيانات-الاستدعاء (((أول 32 بت (4 بايتات) من بيانات الاستدعاء)))                 |
+|     1A | PUSH2 0x0043     | 0x43 <span dir="ltr">0x3CD8045E</span>أول-32-بت-من-بيانات-الاستدعاء (((أول 32 بت (4 بايتات) من بيانات الاستدعاء)))            |
+|     1D | JUMPI            | (((أول 32 بت (4 بايتات) من بيانات الاستدعاء)))                                                           |
 
-من خلال تقسيم اختبارات مطابقة توقيع الطريقة إلى قسمين بهذا الشكل، يتم توفير نصف الاختبارات في المتوسط. يتبع الكود الذي يلي هذا مباشرة والكود الموجود في <span dir="ltr">0x43</span> نفس النمط: `DUP1` أول 32 بت من بيانات الاستدعاء، `PUSH4 (((method signature>`، ثم تشغيل `EQ` للتحقق من التطابق، وبعد ذلك `JUMPI` إذا كان توقيع الطريقة متطابقًا. إليك تواقيع الطرق، وعناوينها، و[تعريف الطريقة المقابل](https://www.4byte.directory/) إذا كان معروفًا:
+من خلال تقسيم اختبارات مطابقة توقيع الطريقة إلى قسمين بهذا الشكل، يتم توفير نصف الاختبارات في المتوسط. يتبع الكود الذي يلي هذا مباشرة والكود في <span dir="ltr">0x43</span> نفس النمط: `DUP1` لأول 32 بت من بيانات الاستدعاء، و `PUSH4 (((method signature>`، وتشغيل `EQ` للتحقق من المساواة، ثم `JUMPI` إذا كان توقيع الطريقة متطابقًا. فيما يلي تواقيع الطرق، وعناوينها، وإذا كان معروفًا [تعريف الطريقة المقابل](https://www.4byte.directory/):
 
-| الطريقة | توقيع الطريقة | الإزاحة للانتقال إليها |
+| الطريقة                                                                                 | توقيع الطريقة | الإزاحة للقفز إليها |
 | -------------------------------------------------------------------------------------- | ---------------- | ------------------- |
-| [<span dir="ltr">splitter()</span>](https://www.4byte.directory/signatures/?bytes4_signature=0x3cd8045e) | <span dir="ltr">0x3cd8045e</span> | <span dir="ltr">0x0103</span> |
-| ??? | <span dir="ltr">0x81e580d3</span> | <span dir="ltr">0x0138</span> |
-| [<span dir="ltr">currentWindow()</span>](https://www.4byte.directory/signatures/?bytes4_signature=0xba0bafb4) | <span dir="ltr">0xba0bafb4</span> | <span dir="ltr">0x0158</span> |
-| ??? | <span dir="ltr">0x1f135823</span> | <span dir="ltr">0x00C4</span> |
-| [<span dir="ltr">merkleRoot()</span>](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab) | <span dir="ltr">0x2eb4a7ab</span> | <span dir="ltr">0x00ED</span> |
+| [splitter()](https://www.4byte.directory/signatures/?bytes4_signature=0x3cd8045e)      | 0x3cd8045e       | 0x0103              |
+| ???                                                                                    | 0x81e580d3       | 0x0138              |
+| [currentWindow()](https://www.4byte.directory/signatures/?bytes4_signature=0xba0bafb4) | 0xba0bafb4       | 0x0158              |
+| ???                                                                                    | 0x1f135823       | 0x00C4              |
+| [merkleRoot()](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab)    | 0x2eb4a7ab       | 0x00ED              |
 
-إذا لم يتم العثور على تطابق، ينتقل الكود إلى [معالج الوكيل عند <span dir="ltr">0x7C</span>](#the-handler-at-0x7c)، على أمل أن يكون لدى العقد الذي نعمل كوكيل له تطابق.
+إذا لم يتم العثور على تطابق، يقفز الكود إلى [معالج الوكيل عند <span dir="ltr">0x7C</span>](#the-handler-at-0x7c)، على أمل أن يكون للعقد الذي نعتبر وكيلًا له تطابق.
 
-![ABI calls flowchart](flowchart-abi.png)
+<Flowchart>
+
+- قراءة مُحدد الطريقة، أول أربعة بايتات من بيانات الاستدعاء (<span dir="ltr">0x0D</span>)
+  - هل المُحدد أقل من `0x3cd8045e`؟
+    - **نعم** مُحددات منخفضة (<span dir="ltr">0x43</span>)
+      - هل هو `0x1f135823`؟
+        - **نعم** دالة عند <span dir="ltr">0xC4</span>
+        - **لا** هل هو `0x2eb4a7ab`؟
+          - **نعم** `merkleRoot()` عند <span dir="ltr">0xED</span>
+          - **لا** [معالج الوكيل (<span dir="ltr">0x7C</span>)](#the-handler-at-0x7c)
+    - **لا** مُحددات عالية (<span dir="ltr">0x1E</span>)
+      - هل هو `0x3cd8045e`؟
+        - **نعم** `splitter()` عند <span dir="ltr">0x0103</span>
+        - **لا** هل هو `0x81e580d3`؟
+          - **نعم** دالة عند <span dir="ltr">0x0138</span>
+          - **لا** هل هو `0xba0bafb4`؟
+            - **نعم** `currentWindow()` عند <span dir="ltr">0x0158</span>
+            - **لا** [معالج الوكيل (<span dir="ltr">0x7C</span>)](#the-handler-at-0x7c)
+
+</Flowchart>
 
 ## <span dir="ltr">splitter()</span> {#splitter}
 
