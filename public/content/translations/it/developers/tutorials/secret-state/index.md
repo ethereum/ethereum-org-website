@@ -16,21 +16,22 @@ lang: it
 published: 2025-03-15
 ---
 
-_Non ci sono segreti sulla blockchain_. Tutto ciò che viene pubblicato sulla blockchain è aperto alla lettura di tutti. Questo è necessario, perché la blockchain si basa sul fatto che chiunque possa verificarla. Tuttavia, i giochi spesso si basano su uno stato segreto. Ad esempio, il gioco del [campo minato](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) non ha assolutamente senso se puoi semplicemente andare su un block explorer e vedere la mappa.
+_Non ci sono segreti sulla blockchain_. Tutto ciò che viene pubblicato sulla blockchain è aperto alla lettura di tutti. Questo è necessario, perché la blockchain si basa sul fatto che chiunque possa verificarla. Tuttavia, i giochi spesso si basano su uno stato segreto. Ad esempio, il gioco di [Minesweeper](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) non ha assolutamente senso se puoi semplicemente andare su un esploratore di blockchain e vedere la mappa.
 
-La soluzione più semplice è utilizzare un [componente server](/developers/tutorials/server-components/) per mantenere lo stato segreto. Tuttavia, il motivo per cui utilizziamo la blockchain è prevenire i raggiri da parte dello sviluppatore del gioco. Dobbiamo garantire l'onestà del componente server. Il server può fornire un hash dello stato e utilizzare le [prove a conoscenza zero](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) per dimostrare che lo stato utilizzato per calcolare il risultato di una mossa sia quello corretto.
+La soluzione più semplice è utilizzare un [componente server](/developers/tutorials/server-components/) per mantenere lo stato segreto. Tuttavia, il motivo per cui utilizziamo la blockchain è impedire che lo sviluppatore del gioco bari. Dobbiamo garantire l'onestà del componente server. Il server può fornire un hash dello stato e utilizzare [prove a conoscenza zero](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) per dimostrare che lo stato utilizzato per calcolare il risultato di una mossa è quello corretto.
 
 Dopo aver letto questo articolo saprai come creare questo tipo di server che mantiene uno stato segreto, un client per mostrare lo stato e un componente onchain per la comunicazione tra i due. Gli strumenti principali che utilizzeremo saranno:
 
-| Strumento                                     | Scopo                                                            | Verificato sulla versione |
-| --------------------------------------------- | ---------------------------------------------------------------- | ------------------------: |
-| [Zokrates](https://zokrates.github.io/)   | Prove a conoscenza zero e la loro verifica                       |                     1.1.9 |
-| [TypeScript](https://www.typescriptlang.org/) | Linguaggio di programmazione sia per il server che per il client |                     5.4.2 |
-| [Node](https://nodejs.org/en)       | Esecuzione del server                                            |                   20.18.2 |
-| [Viem](https://viem.sh/)       | Comunicazione con la blockchain                                  |                    2.9.20 |
-| [MUD](https://mud.dev/)        | Gestione dei dati onchain                                        |                    2.0.12 |
-| [React](https://react.dev/)      | Interfaccia utente del client                                    |                    18.2.0 |
-| [Vite](https://vitejs.dev/)       | Distribuzione del codice client                                  |                     4.2.1 |
+| Strumento                                     | Scopo                                                   | Verificato sulla versione |
+| --------------------------------------------- | ------------------------------------------------------- | ------------------: |
+| [Zokrates](https://zokrates.github.io/)       | Prove a conoscenza zero e la loro verifica              |               1.1.9 |
+| [TypeScript](https://www.typescriptlang.org/) | Linguaggio di programmazione sia per il server che per il client |               5.4.2 |
+| [Node](https://nodejs.org/en)                 | Esecuzione del server                                   |             20.18.2 |
+| [Foundry](https://getfoundry.sh/)             | Blockchain locale e distribuzione dei contratti         |               1.0.0 |
+| [Viem](https://viem.sh/)                      | Comunicazione con la blockchain                         |              2.9.20 |
+| [MUD](https://mud.dev/)                       | Gestione dei dati onchain                               |              2.0.12 |
+| [React](https://react.dev/)                   | Interfaccia utente del client                           |              18.2.0 |
+| [Vite](https://vitejs.dev/)                   | Servire il codice del client                            |               4.2.1 |
 
 ## Esempio di Minesweeper {#minesweeper}
 
@@ -42,7 +43,24 @@ Questa applicazione è scritta utilizzando [MUD](https://mud.dev/), un framework
 
 Per eseguire l'esempio di Minesweeper:
 
-1. Assicurati di [avere installato i prerequisiti](https://mud.dev/quickstart#prerequisites): [Node](https://mud.dev/quickstart#prerequisites), [Foundry](https://book.getfoundry.sh/getting-started/installation), [`git`](https://git-scm.com/downloads), [`pnpm`](https://git-scm.com/downloads) e [`mprocs`](https://github.com/pvolok/mprocs).
+1. Assicurati di [avere installato i prerequisiti](https://mud.dev/quickstart#prerequisites): [Node](https://nodejs.org/en), [Foundry](https://getfoundry.sh/introduction/installation), [`git`](https://git-scm.com/downloads) e [`pnpm`](https://pnpm.io/installation).
+
+   Questo esempio utilizza MUD 2.0.12, che necessita di versioni specifiche di Node e Foundry:
+
+   - **Node 20**. Lo strumento a riga di comando di MUD 2.0.12 utilizza le [asserzioni di importazione JSON](https://v8.dev/features/import-attributes), che le versioni più recenti di Node non supportano più, quindi su Node 22 o versioni successive fallisce con `SyntaxError: Unexpected identifier 'assert'`. Node 20 [ha raggiunto la fine del ciclo di vita](https://nodejs.org/en/about/previous-releases) ad aprile 2026 e non riceve più aggiornamenti di sicurezza, quindi utilizzalo solo per questo esempio locale. Un gestore di versioni di Node come [`fnm`](https://github.com/Schniz/fnm) o [`nvm`](https://github.com/nvm-sh/nvm) ti consente di passare a Node 20 solo per questa directory, ad esempio:
+
+     ```sh copy
+     fnm install 20
+     fnm use 20
+     ```
+
+   - **Foundry 1.0.0**. Con le versioni attuali di Foundry, lo script post-distribuzione fallisce con _Usage of `address(this)` detected in script contract_. Installa la versione testata con:
+
+     ```sh copy
+     foundryup -i 1.0.0
+     ```
+
+     Quando hai finito con questo tutorial, puoi tornare all'ultima versione con `foundryup`.
 
 2. Clona il repository.
 
@@ -55,10 +73,9 @@ Per eseguire l'esempio di Minesweeper:
    ```sh copy
    cd 20240901-secret-state/
    pnpm install
-   npm install -g mprocs
    ```
 
-   Se Foundry è stato installato come parte di `pnpm install`, devi riavviare la shell della riga di comando.
+   [`mprocs`](https://github.com/pvolok/mprocs), che esegue tutti i processi in un terminale singolo, viene installato come uno dei pacchetti.
 
 4. Compila i contratti
 
@@ -69,17 +86,17 @@ Per eseguire l'esempio di Minesweeper:
     ```
 
 
-5. Avvia il programma (inclusa una blockchain [anvil](https://book.getfoundry.sh/anvil/)) e attendi.
+5. Avvia il programma (inclusa una blockchain [anvil](https://getfoundry.sh/anvil/overview)) e attendi.
 
    ```sh copy
-   mprocs
+   pnpm dev
    ```
 
    Nota che l'avvio richiede molto tempo. Per vedere i progressi, usa prima la freccia giù per scorrere fino alla scheda _contracts_ per vedere i contratti MUD in fase di distribuzione. Quando ricevi il messaggio _Waiting for file changes…_, i contratti sono distribuiti e gli ulteriori progressi avverranno nella scheda _server_. Lì, attendi fino a quando non ricevi il messaggio _Verifier address: 0x...._.
 
    Se questo passaggio ha esito positivo, vedrai la schermata di `mprocs`, con i diversi processi a sinistra e l'output della console per il processo attualmente selezionato a destra.
 
-   ![The mprocs screen](./mprocs.png)
+   ![La schermata di mprocs](./mprocs.png)
 
    Se c'è un problema con `mprocs`, puoi eseguire i quattro processi manualmente, ciascuno nella propria finestra della riga di comando:
 
@@ -102,14 +119,14 @@ Per eseguire l'esempio di Minesweeper:
      ```sh
      cd packages/server
      pnpm start
-     ```  
+     ```
 
    - **Client**
 
      ```sh
      cd packages/client
      pnpm run dev
-     ```  
+     ```
 
 6. Ora puoi navigare verso [il client](http://localhost:3000), cliccare su **New Game** e iniziare a giocare.
 
@@ -151,13 +168,13 @@ Questi flussi coordinano l'esecuzione tra il client, il componente onchain e il 
 
 #### Inizializzazione {#initialization-flow}
 
-Quando esegui `mprocs`, avvengono questi passaggi:
+Quando esegui `pnpm dev` (che esegue `mprocs`), si verificano questi passaggi:
 
 1. [`mprocs`](https://github.com/pvolok/mprocs) esegue quattro componenti:
 
-   - [Anvil](https://book.getfoundry.sh/anvil/), che esegue una blockchain locale
+   - [Anvil](https://getfoundry.sh/anvil/overview), che esegue una blockchain locale
    - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts), che compila (se necessario) e distribuisce i contratti per MUD
-   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), che esegue [Vite](https://vitejs.dev/) per servire l'interfaccia utente e il codice client ai browser web.
+   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), che esegue [Vite](https://vitejs.dev/) per servire l'interfaccia utente e il codice del client ai browser web.
    - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server), che esegue le azioni del server
 
 2. Il pacchetto `contracts` distribuisce i contratti MUD e poi esegue [lo script `PostDeploy.s.sol`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol). Questo script imposta la configurazione. Il codice da GitHub specifica [un campo minato 10x5 con otto mine al suo interno](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23).
@@ -170,7 +187,7 @@ Quando esegui `mprocs`, avvengono questi passaggi:
 
 6. Dopo che la parte a conoscenza zero del server è stata inizializzata, il passaggio successivo è [distribuire il contratto di verifica a conoscenza zero sulla blockchain](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) e impostare l'indirizzo del verificatore in MUD.
 
-7. Infine, ci iscriviamo agli aggiornamenti in modo da vedere quando un giocatore richiede di [iniziare una nuova partita](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) o di [scavare in una partita esistente](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108).
+7. Infine, ci iscriviamo agli aggiornamenti in modo da vedere quando un giocatore richiede [di iniziare una nuova partita](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) o di [scavare in una partita esistente](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108).
 
 #### Nuova partita {#new-game-flow}
 
@@ -518,7 +535,7 @@ I test di sicurezza sono importanti perché un bug di funzionalità prima o poi 
 
 ### Permessi {#permissions}
 
-C'è un'entità privilegiata in questo gioco, il server. È l'unico utente autorizzato a chiamare le funzioni in [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). Possiamo usare [`cast`](https://book.getfoundry.sh/cast/) per verificare che le chiamate alle funzioni autorizzate siano consentite solo come account del server.
+C'è un'entità privilegiata in questo gioco, il server. È l'unico utente autorizzato a chiamare le funzioni in [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). Possiamo usare [`cast`](https://getfoundry.sh/cast/overview) per verificare che le chiamate alle funzioni autorizzate siano consentite solo come account del server.
 
 [La chiave privata del server si trova in `setupNetwork.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52).
 
@@ -530,13 +547,15 @@ C'è un'entità privilegiata in questo gioco, il server. È l'unico utente autor
    AUTHORIZED_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
    ```
 
+   Questo `WORLD_ADDRESS` è l'indirizzo a cui MUD distribuisce su un `anvil` nuovo. Se il tuo `World` si trova a un indirizzo diverso, usa il valore in `packages/contracts/worlds.json`.
+
 2. Usa `cast` per tentare di impostare l'indirizzo del verificatore come un indirizzo non autorizzato.
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $UNAUTHORIZED_KEY
    ```
 
-   Non solo `cast` segnala un fallimento, ma puoi aprire i **MUD Dev Tools** nel gioco sul browser, cliccare su **Tables** e selezionare **app\_\_VerifierAddress**. Nota che l'indirizzo non è zero.
+   Non solo `cast` segnala un fallimento, ma puoi aprire i **MUD Dev Tools** nel gioco sul browser, cliccare su **Tables** e selezionare **app\_\_VerifierAddress**. Vedrai che l'indirizzo non è zero.
 
 3. Imposta l'indirizzo del verificatore come l'indirizzo del server.
 
@@ -544,9 +563,9 @@ C'è un'entità privilegiata in questo gioco, il server. È l'unico utente autor
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $AUTHORIZED_KEY
    ```
 
-   L'indirizzo in **app\_\_VerifiedAddress** dovrebbe ora essere zero.
+   L'indirizzo in **app\_\_VerifierAddress** dovrebbe ora essere zero.
 
-Tutte le funzioni MUD nello stesso `System` passano attraverso lo stesso controllo degli accessi, quindi considero questo test sufficiente. Se non sei d'accordo, puoi controllare le altre funzioni in [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol).
+Tutte le funzioni MUD nello stesso `System` passano attraverso lo stesso controllo degli accessi, quindi considero questo test sufficiente. Se non lo ritieni tale, puoi controllare le altre funzioni in [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol).
 
 ### Abusi a conoscenza zero {#zero-knowledge-abuses}
 
@@ -560,7 +579,7 @@ La possibilità più semplice è fornire la risposta sbagliata nella prova a con
 proof.inputs[3] = "0x" + "1".padStart(64, "0")
 ```
 
-Questo significa che dichiareremo sempre che c'è una bomba, indipendentemente dalla risposta corretta. Prova a giocare con questa versione e vedrai nella scheda **server** della schermata `pnpm dev` questo errore:
+Questo significa che dichiareremo sempre che c'è una bomba, indipendentemente dalla risposta corretta. Prova a giocare con questa versione e vedrai nella scheda **server** della schermata `mprocs` questo errore:
 
 ```
 cause: {
@@ -682,7 +701,9 @@ Essendo un tutorial, questo articolo aveva bisogno di un gioco breve e facile da
 
 [Zokrates](https://zokrates.github.io/) non è l'unica libreria a conoscenza zero disponibile, ma è simile a un normale linguaggio di programmazione [imperativo](https://en.wikipedia.org/wiki/Imperative_programming) e supporta le variabili booleane.
 
-Per la tua applicazione, con requisiti diversi, potresti preferire usare [Circum](https://docs.circom.io/getting-started/installation/) o [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/).
+Tuttavia, Zokrates non è più mantenuto attivamente. La sua ultima versione, la 0.8.8 (e il corrispondente `zokrates-js` 1.1.9), risale a novembre 2023 e il ramo principale non ha avuto commit da aprile 2024. Il codice in questo tutorial funziona ancora, ma non aspettarti correzioni di bug o aggiornamenti di sicurezza. Per un nuovo progetto, prendi in considerazione un linguaggio mantenuto come [Noir](https://noir-lang.org/), che viene utilizzato in [questo tutorial](/developers/tutorials/app-plasma/).
+
+Per la tua applicazione, con requisiti diversi, potresti preferire utilizzare [Circom](https://docs.circom.io/getting-started/installation/) o [Cairo](https://www.cairo-lang.org/).
 
 ### Quando compilare Zokrates {#when-compile-zokrates}
 
