@@ -16,7 +16,6 @@ import {
 import { Grid } from "@/components/ui/grid"
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
-import WindowBox from "@/components/WindowBox"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -24,6 +23,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 
 import FooterCTA from "../events/_components/footer-cta"
 
+import WindowBox from "./_components/WindowBox"
 import { sections } from "./data"
 import PageJsonLD from "./page-jsonld"
 

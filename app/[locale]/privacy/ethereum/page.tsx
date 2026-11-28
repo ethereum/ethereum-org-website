@@ -20,11 +20,12 @@ import { Card, CardContent, CardTitle } from "@/components/ui/card"
 import Link, { LinkWithArrow } from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
-import VideoWatch from "@/components/Videos/VideoWatch"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getIdFromHash } from "@/lib/utils/url"
+
+import VideoWatch from "../../_components/VideoWatch"
 
 import PageJsonLD from "./page-jsonld"
 
