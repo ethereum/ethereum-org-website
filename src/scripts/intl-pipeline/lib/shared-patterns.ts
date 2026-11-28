@@ -162,6 +162,49 @@ export function fenceLanguage(infoString: string): string {
   return infoString.trim().toLowerCase().split(/\s+/)[0] || ""
 }
 
+/** Comment text a compiler, linter or tool reads; never translated (known-patterns 114) */
+const DIRECTIVE = [
+  String.raw`SPDX-[A-Za-z]+(?:-[A-Za-z]+)*:`,
+  String.raw`(?:solhint|solium|ethlint|slither|eslint|tslint|jshint)-(?:disable|enable)`,
+  String.raw`\/\s*<(?:reference|amd-module)\b`,
+  String.raw`yaml-language-server:`,
+  String.raw`eslint-env\b`,
+  String.raw`prettier-ignore`,
+  String.raw`@ts-(?:ignore|expect-error|nocheck|check)\b`,
+  String.raw`(?:istanbul|c8|v8)\s+ignore\b`,
+  String.raw`forgefmt:`,
+  String.raw`biome-ignore\b`,
+  String.raw`deno-lint-ignore`,
+  String.raw`cspell:`,
+  String.raw`!\/`,
+  String.raw`type:\s*ignore\b`,
+  String.raw`(?:noqa|NOQA)\b`,
+  String.raw`(?:pylint|pyright|mypy|isort):`,
+  String.raw`fmt:\s*(?:off|on|skip)\b`,
+  String.raw`shellcheck\s+(?:disable|enable|source|shell)=`,
+  String.raw`pragma(?:\s+version\b|:)`,
+  String.raw`@version\b`,
+  String.raw`(?:nolint|NOLINT)\b`,
+  String.raw`go:(?:build|generate|embed)\b`,
+  String.raw`\+build\b`,
+  String.raw`-\*-.*-\*-`,
+].join("|")
+
+/** Comment text (after its `//`, `#` or `/*`) that is a tool directive. */
+export const DIRECTIVE_COMMENT_RE = new RegExp(String.raw`^\s*(?:${DIRECTIVE})`)
+
+const directiveLine = (marker: string) =>
+  new RegExp(String.raw`^(.*?(?:${marker}))\s*(?:${DIRECTIVE})`)
+
+/**
+ * A directive comment within a code line, by comment syntax (`//` and `/*`
+ * for the JS family, `#` for Python and shell); group 1 ends at the marker.
+ */
+export const DIRECTIVE_LINE_RE = {
+  js: directiveLine(String.raw`\/\/|\/\*`),
+  hash: directiveLine("#"),
+} as const
+
 // ---------------------------------------------------------------------------
 // JSX/HTML attributes
 // ---------------------------------------------------------------------------

@@ -28,10 +28,10 @@ Orientation — see llms.txt for the up-to-date contract.
 | Endpoint | Use case |
 |---|---|
 | `GET ${GLOSSARY_HOST}/llms.txt` | Canonical API contract reference for agents. Fetch first. |
-| `POST /api/v1/filter` | **Preferred per-file lookup.** Submit English source text + target language; returns only the glossary terms that appear in the source. Avoids pulling hundreds of irrelevant terms into prompt context. |
+| `POST /api/v1/filter` | **Preferred per-file lookup.** Submit English source text + target language; returns only the glossary terms that appear in the source. Avoids pulling hundreds of irrelevant terms into prompt context. Returns no `termRole`. |
+| `GET /api/v1/style-guide` | English style guide entries. The pipeline fetches it once per run (`loadTermRoles` in `prompt-builder.ts`) for each term's `termRole` (10s timeout, 3 tries with backoff), as a preflight in `main.ts` before any task. If it still fails or returns no roles, the run stops rather than translate with transliterated name entries; if none of the name roles appears (renamed upstream), a `::warning::` is logged and names keep their glossary forms. |
 | `GET /api/v1/translations/{lang}` | Full glossary for a language. Fallback when filter is impractical. |
 | `GET /api/v1/translations/{lang}/{termId}` | Single-term lookup. Intelligent term matching (aliases, avoid forms, variants resolve to canonical entries). |
-| `GET /api/v1/style-guide` | English style guide entries. Useful when validating English-side conventions. |
 
 ## `script_rule` → pipeline behavior
 
@@ -41,7 +41,7 @@ Pipeline-specific mapping — these are how this consumer interprets glossary fi
 |---|---|
 | `translate` | Use the LLM to render the term semantically in target-language prose. Most concept terms. |
 | `calque` | Use the LLM with explicit instruction to translate by meaning, not phonetics. CJK semantic group (zh, zh-tw). |
-| `transliterate` | The translation entry's `term` field IS the canonical native-script form. Pipeline injects it into prompts as the authoritative rendering. |
+| `transliterate` | The translation entry's `term` field IS the canonical native-script form. Pipeline injects it into prompts as the authoritative rendering, except for names: an entry whose `termRole` is `brand-or-project`, `programming-language` or `os-platform` and whose form differs from the English name (ignoring case, spaces and hyphens) is shown as keep-Latin (`"MetaMask" -> "MetaMask"`), because site policy keeps software, company and tool names exactly as in English (known-patterns 113). This covers part-transliterated (`キャスパー・FFG`) and translated (`enjambre` for Swarm) forms too. Names containing Ethereum, Ether or Bitcoin keep their glossary forms (the `(Geth)` of `Go Ethereum (Geth)` is restored to Latin), as do the official Chinese brand names in `OFFICIAL_NATIVE_NAMES` (zh, zh-tw: Binance, Huobi, Microsoft, PayPal, Twitter, Telegram, Facebook, CryptoKitties); people and network names are not affected. |
 | `keep_latin` | Pipeline preserves the English form in non-Latin target languages. Most dev tools by default. |
 | `always_latin` | Stricter than `keep_latin` — translating breaks code or specification. Pipeline never modifies. Solidity, ETH, ERC-20, file extensions. |
 | `transliterate_with_translation` | Latin form plus native-script gloss (e.g., "MetaMask 钱包"). |

@@ -113,10 +113,13 @@ export function buildIncrementalPrompt(
   const group = getLanguageGroup(targetLanguage)
   const siteNotes = getSiteSpecificNotes(group, fileType, targetLanguage)
   const translateSections = sections.filter((s) => s.action === "TRANSLATE")
+  // A JSON section's heading is its key, not text to translate
   const glossarySection = formatGlossary(
     glossaryTerms,
     translateSections
-      .map((s) => `${s.headingText ?? ""}\n${s.content}`)
+      .map((s) =>
+        fileType === "json" ? s.content : `${s.headingText ?? ""}\n${s.content}`
+      )
       .join("\n")
   )
 

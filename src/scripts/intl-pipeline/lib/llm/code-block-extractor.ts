@@ -9,6 +9,7 @@
 
 import { MAX_CHUNK_BYTES } from "../../constants"
 import {
+  DIRECTIVE_COMMENT_RE,
   FENCED_BLOCK_RE,
   fenceLanguage,
   FRONTMATTER_RE,
@@ -308,7 +309,9 @@ function getCommentSyntax(language: string): CommentSyntax {
  * is not a comment, '#fff' is not a comment).
  *
  * Returns the code with comments replaced by empty lines (preserving
- * line count for reinsertion) and a list of extracted comments.
+ * line count for reinsertion) and a list of extracted comments. Tool
+ * directives (`DIRECTIVE_COMMENT_RE`) count as code: every comment
+ * translation path and the fence-code gate start here.
  */
 export function extractComments(
   code: string,
@@ -339,16 +342,31 @@ export function extractComments(
       if (endIndex >= 0) {
         const endLen = syntax === "js" ? 2 : 3
         multiLineBuffer += "\n" + line.substring(0, endIndex)
-        comments.push({
-          blockIndex: -1, // filled in by caller
-          line: multiLineStart,
-          endLine: i,
-          type: "multi",
-          text: multiLineBuffer.trim(),
-        })
-        // Keep any code after the comment end
-        const rest = line.substring(endIndex + endLen).trim()
-        outputLines.push(rest)
+        const text = multiLineBuffer.trim()
+        // A directive on any line keeps the whole block English; output lines
+        // map 1:1 to input lines, so the span is restored in place
+        if (
+          text
+            .split("\n")
+            .some((l) => DIRECTIVE_COMMENT_RE.test(l.replace(/^\s*\*?/, "")))
+        ) {
+          outputLines.splice(
+            multiLineStart,
+            i - multiLineStart,
+            ...lines.slice(multiLineStart, i)
+          )
+          outputLines.push(line)
+        } else {
+          comments.push({
+            blockIndex: -1, // filled in by caller
+            line: multiLineStart,
+            endLine: i,
+            type: "multi",
+            text,
+          })
+          // Keep any code after the comment end
+          outputLines.push(line.substring(endIndex + endLen).trim())
+        }
         inMultiLineComment = false
         multiLineBuffer = ""
       } else {
@@ -420,6 +438,17 @@ export function extractComments(
         continue
       }
 
+      // A single-line directive stays in the code, comment marker and all
+      if (
+        ((syntax === "js" && ch === "/" && next === "/") ||
+          (syntax !== "js" && ch === "#")) &&
+        DIRECTIVE_COMMENT_RE.test(line.substring(j + (ch === "#" ? 1 : 2)))
+      ) {
+        outputLines.push(result + line.substring(j))
+        foundComment = true
+        break
+      }
+
       // JS-style single-line comment
       if (syntax === "js" && ch === "/" && next === "/") {
         const commentText = line.substring(j + 2).trim()
@@ -442,7 +471,9 @@ export function extractComments(
         if (endIdx >= 0) {
           // Inline multi-line comment
           const commentText = line.substring(j + 2, endIdx).trim()
-          if (commentText) {
+          if (DIRECTIVE_COMMENT_RE.test(commentText)) {
+            result += line.substring(j, endIdx + 2)
+          } else if (commentText) {
             comments.push({
               blockIndex: -1,
               line: i,

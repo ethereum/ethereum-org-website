@@ -20,7 +20,7 @@ import {
   type TranslatableAttribute,
 } from "../shared-patterns"
 
-import { relevantGlossary } from "./prompt-builder"
+import { glossaryLine, relevantGlossary } from "./prompt-builder"
 
 const ALLOWED_ATTRIBUTES = new Set<string>(TRANSLATABLE_ATTRIBUTES)
 
@@ -114,8 +114,8 @@ export function buildAttributePrompt(
     glossary,
     leaves.map((l) => l.englishValue).join("\n")
   )
-  for (const [en, tr] of relevant) {
-    glossaryLines.push(`- "${en}" -> "${tr}"`)
+  for (const [en, line] of relevant) {
+    glossaryLines.push(glossaryLine(en, line))
   }
   const glossaryBlock = glossaryLines.length
     ? `\n\nGlossary (use these translations for terms when they appear):\n${glossaryLines.join("\n")}`
@@ -124,7 +124,8 @@ export function buildAttributePrompt(
   return `You are translating UI component attribute values for the Ethereum.org website into ${targetLanguage}.
 
 These are JSX component attributes that contain human-readable text. Translate each value naturally and accurately while:
-- Preserving brand names (Ethereum, Vitalik, etc.) and product names per the glossary
+- Keeping software, product, protocol and company names (MetaMask, Uniswap, Geth) in Latin script exactly as in English; Ethereum, Ether, Bitcoin and people's names follow the glossary
+- Never expanding an abbreviation English leaves bare (L2, API, NFT stay as written)
 - Keeping technical identifiers (variable names, code references) untranslated when they appear
 - Matching the register/tone of UI copy (concise, user-facing)
 - Using Western Arabic numerals (0-9) for any digits. Exception: Urdu (ur) uses Urdu numerals (۰-۹).

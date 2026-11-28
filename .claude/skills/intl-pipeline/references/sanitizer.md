@@ -16,6 +16,7 @@ Each fix function is one of:
 | ------------------------------------- | ----------------------------------------------------------------------- | ---------------------------------------------- |
 | Brand-name mistranslations            | A known garbled brand form listed in `BRAND_GARBLE_CORRECTIONS`         | Only the listed garbles; no ETHGlossary lookup |
 | Code-fence drift                      | Translator put translated text inside ` ```python ` blocks              | Yes (split content / restore code)             |
+| Translated directive comments         | `// SPDX-License-Identifier: MIT` -> `// SPDX-लाइसेंस-पहचानकर्ता: MIT`  | Yes (`restoreDirectiveComments`, from English) |
 | BiDi corruption                       | RTL languages: Latin tokens followed by punctuation flip direction      | Yes (wrap in `<span dir="ltr">`)               |
 | Backslash escaping                    | Translator inserts backslash before closing HTML tag (`\</strong>`)     | Yes (strip the backslash)                      |
 | Asymmetric backticks                  | `` `code`` `` (single-open, double-close) — exposes raw HTML/JSX to MDX | Yes (rebalance)                                |
@@ -29,6 +30,8 @@ Each fix function is one of:
 | Crowdin `''text''` double apostrophes | Crowdin escaping artifact                                               | Yes (strip)                                    |
 | Lorem ipsum placeholder               | Placeholder text left in translation                                    | No (flag as warning; manual review)            |
 | Cross-script contamination            | Unexpected script characters (Devanagari in Turkish)                    | No (flag as warning; manual review)            |
+
+The brand-count warning in `fixProtectedBrandNames` ("Protected brand X appears Nx in English but Mx in translation") runs only for Latin-script locales. Policy keeps brands Latin everywhere (known-patterns 113), but older non-Latin pages transliterate them: enabling it there on 2026-11-27 produced 7,985 warnings across 4,251 pages (3,185 on 1,556 pages without Ethereum, Bitcoin and Beacon Chain, which follow the glossary). Turn it on once a sweep has restored Latin names.
 
 ## Adding a new fix function
 

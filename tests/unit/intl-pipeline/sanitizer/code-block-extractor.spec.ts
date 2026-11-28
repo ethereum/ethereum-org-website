@@ -648,7 +648,10 @@ Done.`
 
     // Step 4: Extract comments from the solidity block
     const solidityBlock = blocks.find((b) => b.language === "solidity")!
-    const { comments } = extractComments(solidityBlock.content, "solidity")
+    const { comments, strippedCode } = extractComments(
+      solidityBlock.content,
+      "solidity"
+    )
 
     expect(comments.length).toBeGreaterThanOrEqual(2)
     const licenseComment = comments.find((c) => c.text.includes("SPDX"))
@@ -659,7 +662,9 @@ Done.`
       c.text.includes("Transfer tokens")
     )
 
-    expect(licenseComment).toBeDefined()
+    // A compiler reads the license line, so it stays code
+    expect(licenseComment).toBeUndefined()
+    expect(strippedCode).toContain("// SPDX-License-Identifier: MIT")
     expect(managesComment).toBeDefined()
     expect(transferComment).toBeDefined()
   })

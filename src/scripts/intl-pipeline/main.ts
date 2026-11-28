@@ -59,7 +59,7 @@ import {
 } from "./lib/llm/manifest-adapter"
 import { openRouterKeyStatus } from "./lib/llm/openrouter"
 import { planIncrementalBatches } from "./lib/llm/plan"
-import { loadGlossary } from "./lib/llm/prompt-builder"
+import { loadGlossary, loadTermRoles } from "./lib/llm/prompt-builder"
 import { classifyFailure, Quarantine } from "./lib/quarantine"
 import { generateTempBranchName } from "./lib/utils/branch-naming"
 import type { TaskResult } from "./lib/utils/task-pool"
@@ -899,6 +899,10 @@ async function main() {
       `[WARN] Gemini direct: no provider-side spend ceiling exists on this key`
     )
   }
+
+  // Before any task: a failure inside one is recorded per file, not fatal
+  const termRoles = await loadTermRoles(GLOSSARY_API_URL)
+  log(`Glossary term roles: ${termRoles.size}`)
 
   // If the pending branch already exists (prior run against the same base),
   // use it as the baseline: merge current base into it first (fail-fast on

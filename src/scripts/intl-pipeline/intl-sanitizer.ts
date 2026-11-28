@@ -1,9 +1,14 @@
 import * as fs from "fs"
 import * as path from "path"
 
+import { getCommentSyntax } from "./lib/llm/code-block-extractor"
 import {
   CODE_SPLIT_RE,
+  DIRECTIVE_LINE_RE,
   FENCE_SPLIT_RE,
+  FENCED_BLOCK_RE,
+  fenceLanguage,
+  PROSE_FENCE_TAGS,
   proseLineMask,
   replaceOutsideInlineCode,
 } from "./lib/shared-patterns"
@@ -109,10 +114,8 @@ const COMMON_SPELLING_MISTAKES = [
 const CASE_SENSITIVE_SPELLING_MISTAKES = ["Metamask", "Github"]
 
 /**
- * Locales that use non-Latin scripts and require transliteration of brand names.
- * For these languages, brand names should be transliterated into the target script,
- * NOT kept in Latin. The sanitizer should NOT revert transliterated brands to English.
- * Locales that use non-Latin scripts for brand name transliteration.
+ * Non-Latin-script locales: author names are transliterated there, and the
+ * brand-count warning is skipped (see fixProtectedBrandNames).
  */
 const TRANSLITERATION_LOCALES = new Set([
   "hi",
@@ -132,9 +135,9 @@ const TRANSLITERATION_LOCALES = new Set([
 
 /**
  * Brand names that should NEVER be translated in ANY language.
- * These are proper nouns - programming languages, companies, products.
- * For Latin-script languages: must stay in English.
- * For non-Latin-script languages: must be TRANSLITERATED (phonetic), not translated.
+ * These are proper nouns - programming languages, companies, products. They
+ * stay in Latin script in every locale (known-patterns 113), except Ethereum
+ * and Bitcoin, which follow the glossary.
  */
 const PROTECTED_BRAND_NAMES = [
   // Programming languages
@@ -976,12 +979,9 @@ function fixProtectedBrandNames(
     )
   }
 
-  // Warn: Brand names with count mismatches in body content
-  // SKIP for non-Latin locales -- brands are transliterated, won't match Latin regex
-  if (isTranslitLang) {
-    // For transliteration languages, brand count mismatches are expected
-    // (brands appear in native script, not Latin). No warnings needed.
-  } else {
+  // Off for non-Latin locales: older pages there transliterate brands, so it
+  // floods (counts in the sanitizer reference doc)
+  if (!isTranslitLang) {
     for (const brand of PROTECTED_BRAND_NAMES) {
       const brandRegex = new RegExp(`\\b${escapeRegex(brand)}\\b`, "g")
       const inEnglish = englishContent.match(brandRegex)
@@ -1291,6 +1291,69 @@ function warnCodeFenceContentDrift(
   }
 
   return warnings
+}
+
+/**
+ * Backstop for known-patterns 114: restore translated directive comment lines
+ * from the English fence with the same index, language and line position.
+ */
+function restoreDirectiveComments(
+  content: string,
+  englishContent: string
+): { content: string; fixCount: number } {
+  const englishFences = [...englishContent.matchAll(FENCED_BLOCK_RE)]
+  const fences = [...content.matchAll(FENCED_BLOCK_RE)]
+  if (englishFences.length !== fences.length) return { content, fixCount: 0 }
+
+  let fixCount = 0
+  let out = ""
+  let last = 0
+  fences.forEach((fence, i) => {
+    const english = englishFences[i]
+    const body = fence[4]
+    const englishBody = english[4]
+    // Empty fences match the regex's second alternative (groups 5-7)
+    const language = fenceLanguage(english[3] ?? english[7] ?? "")
+    if (
+      body === undefined ||
+      englishBody === undefined ||
+      fenceLanguage(fence[3] ?? fence[7] ?? "") !== language ||
+      PROSE_FENCE_TAGS.has(language)
+    ) {
+      return
+    }
+    const lines = body.split("\n")
+    const englishLines = englishBody.split("\n")
+    if (lines.length !== englishLines.length) return
+    const directiveRe =
+      getCommentSyntax(language) === "js"
+        ? DIRECTIVE_LINE_RE.js
+        : DIRECTIVE_LINE_RE.hash
+    englishLines.forEach((englishLine, ln) => {
+      const directive = englishLine.match(directiveRe)
+      const line = lines[ln]
+      if (!directive || !line.startsWith(directive[1])) return
+      // A `/* directive */` may be followed by a translated comment: restore only up to `*/`
+      const close = directive[1].endsWith("/*")
+        ? englishLine.indexOf("*/", directive[1].length)
+        : -1
+      let restored = englishLine
+      if (close >= 0) {
+        const ownClose = line.indexOf("*/", directive[1].length)
+        if (ownClose < 0) return
+        restored = englishLine.slice(0, close + 2) + line.slice(ownClose + 2)
+      }
+      if (restored === line) return
+      lines[ln] = restored
+      fixCount++
+    })
+    const restored = lines.join("\n")
+    if (restored === body) return
+    const bodyStart = fence.index + fence[0].indexOf("\n") + 1
+    out += content.slice(last, bodyStart) + restored
+    last = bodyStart + body.length
+  })
+  return { content: out + content.slice(last), fixCount }
 }
 
 /**
@@ -5150,6 +5213,11 @@ function processMarkdownFile(
     const punctuationHeadingWarnings = warnPunctuationOnlyHeadings(content)
     issues.push(...punctuationHeadingWarnings)
 
+    applyFix(
+      () => restoreDirectiveComments(content, englishMd),
+      (n) => `Restored ${n} translated directive comment(s) in code fences`
+    )
+
     // Warn on code fence content drift (translated code blocks)
     const codeFenceWarnings = warnCodeFenceContentDrift(content, englishMd)
     issues.push(...codeFenceWarnings)
@@ -5965,6 +6033,7 @@ export const _testOnly = {
   fixCrowdinSplitBackticks,
   restoreDroppedBackslashEscapes,
   fixCollapsedComponentLineBreaks,
+  restoreDirectiveComments,
   // Warnings
   warnPunctuationOnlyHeadings,
   fixBackslashBeforeClosingTag,
