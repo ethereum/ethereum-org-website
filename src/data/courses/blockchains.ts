@@ -185,5 +185,19 @@ export const blockchainsCourse: Course = {
       type: "choice",
       options: ["one", "separate", "part"],
     },
+    {
+      id: "bad-page",
+      source:
+        "/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos",
+      type: "choice",
+      options: ["added", "rejected", "split"],
+    },
+    {
+      id: "download",
+      source:
+        "/developers/docs/nodes-and-clients/run-a-node/#getting-the-client",
+      type: "choice",
+      options: ["match", "reverse", "name"],
+    },
   ],
 }

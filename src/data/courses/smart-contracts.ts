@@ -235,5 +235,18 @@ export const smartContractsCourse: Course = {
       options: ["still", "disconnect", "revoke", "held"],
       multi: true,
     },
+    {
+      id: "holder",
+      source: "/developers/docs/standards/tokens/erc-20/#body",
+      type: "choice",
+      options: ["inside", "list", "creator"],
+    },
+    {
+      id: "unverified",
+      source:
+        "/guides/how-to-revoke-token-access/#why-do-projects-set-unlimited-token-allowance",
+      type: "choice",
+      options: ["exact", "unlimited", "disconnect"],
+    },
   ],
 }
