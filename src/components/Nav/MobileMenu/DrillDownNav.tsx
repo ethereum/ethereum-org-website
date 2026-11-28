@@ -98,8 +98,8 @@ const DrillDownNav = ({ className }: { className?: string }) => {
         <div
           key={activeKey ?? "root"}
           className={cn(
-            view.direction > 0 && "motion-safe:animate-nav-enter-from-right",
-            view.direction < 0 && "motion-safe:animate-nav-enter-from-left"
+            view.direction > 0 && "motion-safe:animate-nav-drill-in-from-right",
+            view.direction < 0 && "motion-safe:animate-nav-drill-in-from-left"
           )}
         >
           {activeKey && section ? (

@@ -20,7 +20,7 @@ import { usePathname } from "@/i18n/navigation"
 // Hover intent: a closed menu opens only after the pointer rests on a trigger
 // (NN/g), but an open one switches sections at once and closes as soon as the
 // pointer leaves its hover zone. Radix's own hover handling is disabled.
-const OPEN_DELAY_MS = 400
+const OPEN_DELAY_MS = 250
 const CLOSE_DELAY_MS = 50
 // Cutting across another trigger on the way into the panel switches only after a pause
 const AIM_DELAY_MS = 120
