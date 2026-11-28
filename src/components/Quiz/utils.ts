@@ -1,9 +1,12 @@
-import type { CompletedQuizzes, QuizShareStats } from "@/lib/types"
+import type { CompletedQuizzes, QuizKey, QuizShareStats } from "@/lib/types"
 
 import { numberFormat, numberToPercent } from "@/lib/utils/numbers"
 
 import allQuizzesData, { allQuizzesInOrder } from "@/data/quizzes"
-import type { QuizStatsData } from "@/data-layer/fetchers/fetchQuizStats"
+import type {
+  QuizStatsData,
+  QuizStatsEntry,
+} from "@/data-layer/fetchers/fetchQuizStats"
 
 export const getTotalQuizzesPoints = () =>
   Object.values(allQuizzesData)
@@ -54,6 +57,30 @@ export const getFormattedUserAverageScore = (
   locale: string,
   valueSet: number[]
 ) => asPercent(mean(valueSet), locale)
+
+/** How many quizzes carry the "popular" tag on the hub. */
+const POPULAR_QUIZ_COUNT = 5
+
+export type QuizStatsByQuiz = QuizStatsData["byQuiz"]
+
+/** Ids of the most-taken quizzes. */
+export const getPopularQuizIds = (byQuiz?: QuizStatsByQuiz | null): QuizKey[] =>
+  // Keys are quiz ids, but a stale blob can name a quiz that has since been
+  // removed, so filter before treating them as QuizKeys.
+  (Object.entries(byQuiz || {}) as [QuizKey, QuizStatsEntry][])
+    .filter(([id]) => id in allQuizzesData)
+    .sort(([, a], [, b]) => b.timesTaken - a.timesTaken)
+    .slice(0, POPULAR_QUIZ_COUNT)
+    .map(([id]) => id)
+
+/** Formatted per-quiz figures for a single row on the hub. */
+export const getQuizStatValues = (
+  locale: string,
+  { averageScore, timesTaken }: QuizStatsEntry
+) => ({
+  averageScore: asPercent(averageScore, locale),
+  timesTaken: numberFormat(locale, { style: "decimal" }).format(timesTaken),
+})
 
 /** Label/value rows for the community stats panel, in display order. */
 export const getCommunityStatRows = (

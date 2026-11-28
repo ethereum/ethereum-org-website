@@ -1,6 +1,36 @@
 {
-  "averageScore": 69.98158463195207,
-  "questionsAnswered": 1098539,
-  "retryRate": 24.682237043928346,
-  "timestamp": 1786057850729
+  "averageScore": 70.09,
+  "questionsAnswered": 1153598,
+  "retryRate": 24.67,
+  "byQuiz": {
+    "what-is-ethereum": {
+      "averageScore": 72.5,
+      "timesTaken": 18369
+    },
+    "wallets": {
+      "averageScore": 75.3,
+      "timesTaken": 15461
+    },
+    "web3": {
+      "averageScore": 73.3,
+      "timesTaken": 12900
+    },
+    "what-is-ether": {
+      "averageScore": 83.3,
+      "timesTaken": 9927
+    },
+    "stablecoins": {
+      "averageScore": 66.7,
+      "timesTaken": 5932
+    },
+    "smart-contracts": {
+      "averageScore": 62.6,
+      "timesTaken": 5025
+    },
+    "zero-knowledge-proofs": {
+      "averageScore": 61.6,
+      "timesTaken": 124
+    }
+  },
+  "timestamp": 1795595245513
 }

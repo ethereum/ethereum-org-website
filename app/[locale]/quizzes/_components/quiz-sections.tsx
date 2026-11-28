@@ -8,6 +8,10 @@ import QuizWidget from "@/components/Quiz/QuizWidget/QuizWidgetClient"
 import QuizzesList from "@/components/Quiz/QuizzesList"
 import QuizzesModal from "@/components/Quiz/QuizzesModal"
 import { useLocalQuizData } from "@/components/Quiz/useLocalQuizData"
+import {
+  getPopularQuizIds,
+  type QuizStatsByQuiz,
+} from "@/components/Quiz/utils"
 
 import { quizzesSections } from "@/data/quizzes"
 
@@ -15,8 +19,13 @@ import { INITIAL_QUIZ } from "@/lib/constants"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
 
+type QuizSectionsProps = {
+  /** Null until the daily Matomo fetch lands; rows then omit their figures */
+  quizStats: QuizStatsByQuiz | null
+}
+
 /** The quiz lists and the modal they open; both need the same widget state. */
-const QuizSections = () => {
+const QuizSections = ({ quizStats }: QuizSectionsProps) => {
   const t = useTranslations("learn-quizzes")
 
   const [userStats, updateUserStats] = useLocalQuizData()
@@ -29,8 +38,10 @@ const QuizSections = () => {
       userStats,
       quizHandler: setCurrentQuiz,
       modalHandler: onOpen,
+      quizStats,
+      popularQuizIds: getPopularQuizIds(quizStats),
     }),
-    [onOpen, userStats]
+    [onOpen, quizStats, userStats]
   )
 
   return (
