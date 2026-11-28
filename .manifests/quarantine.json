@@ -288,6 +288,39 @@
       "expiresAt": "2026-12-07T07:22:45.047Z"
     },
     {
+      "file": "public/content/developers/tutorials/short-abi/index.md",
+      "locale": "it",
+      "englishHash": "dc63900371f0",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/it/developers/tutorials/short-abi/index.md: 4 check(s) failed -- structure code-fence-content: fence 3 (`solidity`) body differs from English; structure code-fence-content: fence 5 (`solidity`) body differs from English; structure code-fence-content: fence 6 (`soli",
+      "attempts": 1,
+      "firstSeen": "2026-11-28T07:45:46.529Z",
+      "lastSeen": "2026-11-28T07:45:46.529Z",
+      "expiresAt": "2026-12-12T07:45:46.529Z"
+    },
+    {
+      "file": "public/content/developers/tutorials/short-abi/index.md",
+      "locale": "ja",
+      "englishHash": "dc63900371f0",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/ja/developers/tutorials/short-abi/index.md: 5 check(s) failed -- structure code-fence-content: fence 3 (`solidity`) body differs from English; structure code-fence-content: fence 5 (`solidity`) body differs from English; structure code-fence-content: fence 6 (`soli",
+      "attempts": 1,
+      "firstSeen": "2026-11-28T07:45:18.901Z",
+      "lastSeen": "2026-11-28T07:45:18.901Z",
+      "expiresAt": "2026-12-12T07:45:18.901Z"
+    },
+    {
+      "file": "public/content/developers/tutorials/short-abi/index.md",
+      "locale": "ur",
+      "englishHash": "dc63900371f0",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/ur/developers/tutorials/short-abi/index.md: 9 check(s) failed -- structure internal-href: /developers/docs/gas/#what-is-gas (en=1 tr=0); structure code-fence-content: fence 3 (`solidity`) body differs from English; structure code-fence-content: fence 5 (`solidity`)",
+      "attempts": 1,
+      "firstSeen": "2026-11-28T07:50:03.988Z",
+      "lastSeen": "2026-11-28T07:50:03.988Z",
+      "expiresAt": "2026-12-12T07:50:03.989Z"
+    },
+    {
       "file": "public/content/roadmap/privacy/index.md",
       "locale": "ar",
       "englishHash": "b9948e9f8a37",

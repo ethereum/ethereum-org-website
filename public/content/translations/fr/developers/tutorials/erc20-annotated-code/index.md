@@ -11,19 +11,27 @@ published: 2021-03-09
 
 ## Introduction {#introduction}
 
-L'une des utilisations les plus courantes d'Ethereum est la création par un groupe d'un jeton échangeable, en un sens leur propre monnaie. Ces jetons suivent généralement un standard, l'[ERC-20](/developers/docs/standards/tokens/erc-20/). Ce standard permet d'écrire des outils, tels que des réserves de liquidité et des portefeuilles, qui fonctionnent avec tous les jetons ERC-20. Dans cet article, nous analyserons l'[implémentation ERC20 en Solidity d'OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), ainsi que la [définition de l'interface](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
+L'une des utilisations les plus courantes d'Ethereum est la création par un groupe d'un jeton négociable, en un sens leur propre monnaie. Ces jetons suivent généralement un standard, l'[ERC-20](/developers/docs/standards/tokens/erc-20/). Ce standard permet d'écrire des outils, tels que des réserves de liquidité et des portefeuilles, qui fonctionnent avec tous les jetons ERC-20. Dans cet article, nous analyserons l'[implémentation Solidity ERC20 d'OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol), ainsi que la [définition de l'interface](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol).
 
-Il s'agit d'un code source annoté. Si vous souhaitez implémenter l'ERC-20, [lisez ce tutoriel](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
+Il s'agit d'un code source annoté. Si vous souhaitez implémenter l'ERC-20, [lisez ce tutoriel](https://docs.openzeppelin.com/contracts/5.x/erc20-supply).
+
+<Alert variant="info">
+<AlertContent>
+<AlertDescription>
+Cet examen détaillé couvre les contrats OpenZeppelin v3.3 (Solidity 0.6/0.7). Si vous installez `@openzeppelin/contracts` aujourd'hui, vous obtiendrez la v5.x, qui diffère du code ci-dessous : elle utilise l'arithmétique vérifiée intégrée de Solidity au lieu de `SafeMath`, remplace `_beforeTokenTransfer` et `_afterTokenTransfer` par une seule fonction `_update`, abandonne `increaseAllowance`, `decreaseAllowance` et `_setupDecimals`, et signale les échecs avec des erreurs personnalisées au lieu de chaînes d'annulation (revert strings). Les concepts expliqués ici s'appliquent toujours. Consultez la [documentation ERC-20 d'OpenZeppelin v5](https://docs.openzeppelin.com/contracts/5.x/erc20) pour l'API actuelle.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## L'interface {#the-interface}
 
-L'objectif d'un standard comme l'ERC-20 est de permettre de nombreuses implémentations de jetons qui soient interopérables entre les applications, comme les portefeuilles et les échanges décentralisés. Pour y parvenir, nous créons une [interface](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/). Tout code qui doit utiliser le contrat de jeton peut utiliser les mêmes définitions dans l'interface et être compatible avec tous les contrats de jetons qui l'utilisent, qu'il s'agisse d'un portefeuille tel que MetaMask, d'une application décentralisée (dapp) telle qu'Etherscan.io, ou d'un contrat différent tel qu'une réserve de liquidité.
+L'objectif d'un standard comme l'ERC-20 est de permettre de nombreuses implémentations de jetons qui sont interopérables entre les applications, comme les portefeuilles et les échanges décentralisés. Pour y parvenir, nous créons une [interface](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/). Tout code qui doit utiliser le contrat de jeton peut utiliser les mêmes définitions dans l'interface et être compatible avec tous les contrats de jetons qui l'utilisent, qu'il s'agisse d'un portefeuille tel que MetaMask, d'une dapp telle qu'etherscan.io, ou d'un contrat différent tel qu'une réserve de liquidité.
 
 ![Illustration of the ERC-20 interface](erc20_interface.png)
 
 Si vous êtes un programmeur expérimenté, vous vous souvenez probablement avoir vu des constructions similaires en [Java](https://www.w3schools.com/java/java_interface.asp) ou même dans des [fichiers d'en-tête C](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html).
 
-Voici une définition de l'[interface ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) d'OpenZeppelin. Il s'agit d'une traduction du [standard lisible par l'homme](https://eips.ethereum.org/EIPS/eip-20) en code Solidity. Bien sûr, l'interface elle-même ne définit pas _comment_ faire quoi que ce soit. Cela est expliqué dans le code source du contrat ci-dessous.
+Il s'agit d'une définition de l'[interface ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol) d'OpenZeppelin. C'est une traduction du [standard lisible par l'homme](https://eips.ethereum.org/EIPS/eip-20) en code Solidity. Bien sûr, l'interface elle-même ne définit pas _comment_ faire quoi que ce soit. Cela est expliqué dans le code source du contrat ci-dessous.
 
 &nbsp;
 
@@ -63,7 +71,7 @@ Par convention, les noms d'interface commencent par `I`.
 
 ```solidity
     /**
-     * @dev Retourne la quantité de jetons en existence.
+     * @dev Renvoie la quantité de jetons existants.
      */
     function totalSupply() external view returns (uint256);
 ```
@@ -77,7 +85,7 @@ Par exemple, voir [ce contrat](https://eth.blockscout.com/address/0xa530F85085C6
 
 ```solidity
     /**
-     * @dev Retourne la quantité de jetons possédés par `account`.
+     * @dev Renvoie la quantité de jetons possédés par `account`.
      */
     function balanceOf(address account) external view returns (uint256);
 ```
@@ -90,18 +98,18 @@ Comme son nom l'indique, `balanceOf` renvoie le solde d'un compte. Les comptes E
     /**
      * @dev Déplace `amount` jetons du compte de l'appelant vers `recipient`.
      *
-     * Retourne une valeur booléenne indiquant si l'opération a réussi.
+     * Renvoie une valeur booléenne indiquant si l'opération a réussi.
      *
      * Émet un événement {Transfer}.
      */
     function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
-La fonction `transfer` effectue un transfert de jetons de l'appelant vers une adresse différente. Cela implique un changement d'état, ce n'est donc pas une `view`. Lorsqu'un utilisateur appelle cette fonction, cela crée une transaction et coûte du gaz. Elle émet également un événement, `Transfer`, pour informer tout le monde sur la chaîne de blocs de l'événement.
+La fonction `transfer` transfère des jetons de l'appelant vers une adresse différente. Cela implique un changement d'état, ce n'est donc pas une `view`. Lorsqu'un utilisateur appelle cette fonction, cela crée une transaction et coûte du gaz. Elle émet également un événement, `Transfer`, pour informer tout le monde sur la chaîne de blocs de l'événement.
 
 La fonction a deux types de sortie pour deux types d'appelants différents :
 
-- Les utilisateurs qui appellent la fonction directement depuis une interface utilisateur. Généralement, l'utilisateur soumet une transaction et n'attend pas de réponse, ce qui pourrait prendre un temps indéfini. L'utilisateur peut voir ce qui s'est passé en cherchant le reçu de la transaction (qui est identifié par le hachage de transaction) ou en cherchant l'événement `Transfer`.
+- Les utilisateurs qui appellent la fonction directement depuis une interface utilisateur. Généralement, l'utilisateur soumet une transaction et n'attend pas de réponse, ce qui pourrait prendre un temps indéfini. L'utilisateur peut voir ce qui s'est passé en recherchant le reçu de la transaction (qui est identifié par le hachage de transaction) ou en recherchant l'événement `Transfer`.
 - D'autres contrats, qui appellent la fonction dans le cadre d'une transaction globale. Ces contrats obtiennent le résultat immédiatement, car ils s'exécutent dans la même transaction, ils peuvent donc utiliser la valeur de retour de la fonction.
 
 Le même type de sortie est créé par les autres fonctions qui modifient l'état du contrat.
@@ -112,7 +120,7 @@ Les allocations permettent à un compte de dépenser des jetons qui appartiennen
 
 ```solidity
     /**
-     * @dev Retourne le nombre restant de jetons que `spender` sera
+     * @dev Renvoie le nombre restant de jetons que `spender` sera
      * autorisé à dépenser au nom de `owner` via {transferFrom}. Ceci est
      * zéro par défaut.
      *
@@ -121,7 +129,7 @@ Les allocations permettent à un compte de dépenser des jetons qui appartiennen
     function allowance(address owner, address spender) external view returns (uint256);
 ```
 
-La fonction `allowance` permet à quiconque de demander quelle est l'allocation qu'une adresse (`owner`) permet à une autre adresse (`spender`) de dépenser.
+La fonction `allowance` permet à quiconque de demander quelle est l'allocation qu'une adresse (`owner`) laisse une autre adresse (`spender`) dépenser.
 
 &nbsp;
 
@@ -129,12 +137,12 @@ La fonction `allowance` permet à quiconque de demander quelle est l'allocation 
     /**
      * @dev Définit `amount` comme l'allocation de `spender` sur les jetons de l'appelant.
      *
-     * Retourne une valeur booléenne indiquant si l'opération a réussi.
+     * Renvoie une valeur booléenne indiquant si l'opération a réussi.
      *
-     * IMPORTANT : Attention, changer une allocation avec cette méthode comporte le risque
-     * que quelqu'un puisse utiliser à la fois l'ancienne et la nouvelle allocation suite à un ordre
-     * de transaction malheureux. Une solution possible pour atténuer cette condition
-     * de concurrence est de d'abord réduire l'allocation du dépensier à 0 puis de définir la
+     * IMPORTANT : Attention, changer une allocation avec cette méthode entraîne le risque
+     * que quelqu'un puisse utiliser à la fois l'ancienne et la nouvelle allocation suite à un ordre de
+     * transaction malheureux. Une solution possible pour atténuer cette condition de
+     * course est de d'abord réduire l'allocation du dépensier à 0 puis de définir la
      * valeur désirée ensuite :
      * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
      *
@@ -149,11 +157,11 @@ La fonction `approve` crée une allocation. Assurez-vous de lire le message sur 
 
 ```solidity
     /**
-     * @dev Déplace `amount` jetons de `sender` vers `recipient` en utilisant le
+     * @dev Déplace `amount` jetons de `sender` à `recipient` en utilisant le
      * mécanisme d'allocation. `amount` est ensuite déduit de l'allocation
      * de l'appelant.
      *
-     * Retourne une valeur booléenne indiquant si l'opération a réussi.
+     * Renvoie une valeur booléenne indiquant si l'opération a réussi.
      *
      * Émet un événement {Transfer}.
      */
@@ -167,7 +175,7 @@ Enfin, `transferFrom` est utilisée par le dépensier pour dépenser réellement
 ```solidity
 
     /**
-     * @dev Émis lorsque `value` jetons sont déplacés d'un compte (`from`) vers
+     * @dev Émis lorsque `value` jetons sont déplacés d'un compte (`from`) à
      * un autre (`to`).
      *
      * Notez que `value` peut être zéro.
@@ -186,7 +194,7 @@ Ces événements sont émis lorsque l'état du contrat ERC-20 change.
 
 ## Le contrat réel {#the-actual-contract}
 
-Il s'agit du contrat réel qui implémente le standard ERC-20, [tiré d'ici](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol). Il n'est pas destiné à être utilisé tel quel, mais vous pouvez en [hériter](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm) pour l'étendre à quelque chose d'utilisable.
+Il s'agit du contrat réel qui implémente le standard ERC-20, [tiré d'ici](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol). Il n'est pas destiné à être utilisé tel quel, mais vous pouvez en [hériter](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm) pour l'étendre à quelque chose d'utilisable.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -206,8 +214,8 @@ import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol` contient les définitions requises pour utiliser [OpenGSN](https://opengsn.org/), un système qui permet aux utilisateurs sans ether d'utiliser la chaîne de blocs. Notez qu'il s'agit d'une ancienne version, si vous souhaitez vous intégrer à OpenGSN, [utilisez ce tutoriel](https://docs.opengsn.org/javascript-client/tutorial.html).
-- [La bibliothèque SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), qui empêche les dépassements de capacité arithmétiques (overflows/underflows) pour les versions de Solidity **&lt;0.8.0**. Dans Solidity ≥0.8.0, les opérations arithmétiques s'annulent automatiquement en cas de dépassement de capacité, rendant SafeMath inutile. Ce contrat utilise SafeMath pour la rétrocompatibilité avec les anciennes versions du compilateur.
+- `GSN/Context.sol` contient les définitions requises pour utiliser [OpenGSN](https://opengsn.org/), un système qui permet aux utilisateurs sans ether d'utiliser la chaîne de blocs. Notez qu'il s'agit d'une ancienne version, si vous souhaitez l'intégrer à OpenGSN, [utilisez ce tutoriel](https://docs.opengsn.org/javascript-client/tutorial.html).
+- [La bibliothèque SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math#SafeMath), qui empêche les dépassements de capacité arithmétiques (overflows/underflows) pour les versions de Solidity **&lt;0.8.0**. Dans Solidity ≥0.8.0, les opérations arithmétiques s'annulent automatiquement en cas de dépassement de capacité, rendant SafeMath inutile. Ce contrat utilise SafeMath pour la rétrocompatibilité avec les anciennes versions du compilateur.
 
 &nbsp;
 
@@ -225,8 +233,8 @@ Ce commentaire explique l'objectif du contrat.
  * https://forum.zeppelin.solutions/t/how-to-implement-erc20-supply-mechanisms/226[How
  * to implement supply mechanisms].
  *
- * Nous avons suivi les directives générales d'OpenZeppelin : les fonctions s'annulent au lieu
- * de retourner `false` en cas d'échec. Ce comportement est néanmoins conventionnel
+ * Nous avons suivi les directives générales d'OpenZeppelin : les fonctions annulent au lieu
+ * de renvoyer `false` en cas d'échec. Ce comportement est néanmoins conventionnel
  * et n'entre pas en conflit avec les attentes des applications ERC-20.
  *
  * De plus, un événement {Approval} est émis lors des appels à {transferFrom}.
@@ -235,7 +243,7 @@ Ce commentaire explique l'objectif du contrat.
  * ces événements, car ce n'est pas requis par la spécification.
  *
  * Enfin, les fonctions non standard {decreaseAllowance} et {increaseAllowance}
- * ont été ajoutées pour atténuer les problèmes bien connus autour de la définition
+ * ont été ajoutées pour atténuer les problèmes bien connus liés à la définition
  * des allocations. Voir {IERC20-approve}.
  */
 
@@ -257,13 +265,13 @@ Cette ligne spécifie l'héritage, dans ce cas de `IERC20` ci-dessus et de `Cont
 
 ```
 
-Cette ligne attache la bibliothèque `SafeMath` au type `uint256`. Vous pouvez trouver cette bibliothèque [ici](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol).
+Cette ligne attache la bibliothèque `SafeMath` au type `uint256`. Vous pouvez trouver cette bibliothèque [ici](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/math/SafeMath.sol).
 
 ### Définitions des variables {#variable-definitions}
 
 Ces définitions spécifient les variables d'état du contrat. Ces variables sont déclarées `private`, mais cela signifie seulement que les autres contrats sur la chaîne de blocs ne peuvent pas les lire. _Il n'y a pas de secrets sur la chaîne de blocs_, le logiciel sur chaque nœud possède l'état de chaque contrat à chaque bloc. Par convention, les variables d'état sont nommées `_<something>`.
 
-Les deux premières variables sont des [mappings](https://www.tutorialspoint.com/solidity/solidity_mappings.htm), ce qui signifie qu'elles se comportent à peu près de la même manière que des [tableaux associatifs](https://wikipedia.org/wiki/Associative_array), sauf que les clés sont des valeurs numériques. Le stockage n'est alloué que pour les entrées qui ont des valeurs différentes de la valeur par défaut (zéro).
+Les deux premières variables sont des [mappings](https://www.tutorialspoint.com/solidity/solidity_mappings.htm), ce qui signifie qu'elles se comportent à peu près de la même manière que les [tableaux associatifs](https://wikipedia.org/wiki/Associative_array), sauf que les clés sont des valeurs numériques. Le stockage n'est alloué que pour les entrées qui ont des valeurs différentes de la valeur par défaut (zéro).
 
 ```solidity
     mapping (address => uint256) private _balances;
@@ -277,7 +285,7 @@ Le premier mapping, `_balances`, correspond aux adresses et à leurs soldes resp
     mapping (address => mapping (address => uint256)) private _allowances;
 ```
 
-Cette variable, `_allowances`, stocke les allocations expliquées précédemment. Le premier indice est le propriétaire des jetons, et le second est le contrat avec l'allocation. Pour accéder au montant que l'adresse A peut dépenser depuis le compte de l'adresse B, utilisez `_allowances[B][A]`.
+Cette variable, `_allowances`, stocke les allocations expliquées précédemment. Le premier indice est le propriétaire des jetons, et le second est le contrat avec l'allocation. Pour accéder au montant que l'adresse A peut dépenser à partir du compte de l'adresse B, utilisez `_allowances[B][A]`.
 
 &nbsp;
 
@@ -299,7 +307,7 @@ Ces trois variables sont utilisées pour améliorer la lisibilité. Les deux pre
 
 D'une part, Ethereum n'a pas de variables à virgule flottante ou fractionnaires. D'autre part, les humains aiment pouvoir diviser les jetons. L'une des raisons pour lesquelles les gens ont choisi l'or comme monnaie était qu'il était difficile de rendre la monnaie quand quelqu'un voulait acheter l'équivalent d'un canard en vache.
 
-La solution consiste à garder une trace des entiers, mais à compter à la place du jeton réel un jeton fractionnaire qui n'a presque aucune valeur. Dans le cas de l'ether, le jeton fractionnaire s'appelle le Wei, et 10^18 Wei équivalent à un ETH. Au moment de la rédaction, 10 000 000 000 000 Wei valent environ un centime américain ou européen.
+La solution consiste à garder une trace des entiers, mais à compter à la place du jeton réel un jeton fractionnaire qui n'a presque aucune valeur. Dans le cas de l'ether, le jeton fractionnaire s'appelle le Wei, et 10^18 Wei équivalent à un ETH.
 
 Les applications doivent savoir comment afficher le solde du jeton. Si un utilisateur a 3 141 000 000 000 000 000 Wei, est-ce 3,14 ETH ? 31,41 ETH ? 3 141 ETH ? Dans le cas de l'ether, il est défini 10^18 Wei pour un ETH, mais pour votre jeton, vous pouvez sélectionner une valeur différente. Si diviser le jeton n'a pas de sens, vous pouvez utiliser une valeur `_decimals` de zéro. Si vous souhaitez utiliser le même standard que l'ETH, utilisez la valeur **18**.
 
@@ -312,32 +320,30 @@ Les applications doivent savoir comment afficher le solde du jeton. Si un utilis
      *
      * Pour sélectionner une valeur différente pour {decimals}, utilisez {_setupDecimals}.
      *
-     * Ces trois valeurs sont immuables : elles ne peuvent être définies qu'une seule fois pendant
+     * Ces trois valeurs sont immuables : elles ne peuvent être définies qu'une seule fois lors de
      * la construction.
      */
     constructor (string memory name_, string memory symbol_) public {
-        // Dans Solidity ≥0.7.0, 'public' est implicite et peut être omis.
-
         _name = name_;
         _symbol = symbol_;
         _decimals = 18;
     }
 ```
 
-Le constructeur est appelé lors de la première création du contrat. Par convention, les paramètres de fonction sont nommés `<something>_`.
+Le constructeur est appelé lors de la première création du contrat. Par convention, les paramètres de fonction sont nommés `<something>_`. À partir de Solidity 0.7.0, la visibilité (`public` ou `internal`) sur les constructeurs est ignorée et obsolète, le code plus récent l'omet donc.
 
 ### Fonctions de l'interface utilisateur {#user-interface-functions}
 
 ```solidity
     /**
-     * @dev Retourne le nom du jeton.
+     * @dev Renvoie le nom du jeton.
      */
     function name() public view returns (string memory) {
         return _name;
     }
 
     /**
-     * @dev Retourne le symbole du jeton, généralement une version plus courte du
+     * @dev Renvoie le symbole du jeton, généralement une version plus courte du
      * nom.
      */
     function symbol() public view returns (string memory) {
@@ -345,16 +351,16 @@ Le constructeur est appelé lors de la première création du contrat. Par conve
     }
 
     /**
-     * @dev Retourne le nombre de décimales utilisées pour obtenir sa représentation utilisateur.
+     * @dev Renvoie le nombre de décimales utilisées pour obtenir sa représentation utilisateur.
      * Par exemple, si `decimals` vaut `2`, un solde de `505` jetons devrait
      * être affiché à un utilisateur comme `5,05` (`505 / 10 ** 2`).
      *
      * Les jetons optent généralement pour une valeur de 18, imitant la relation entre
-     * ether et Wei. C'est la valeur qu'utilise {ERC20}, à moins que {_setupDecimals} ne soit
+     * l'ether et le Wei. C'est la valeur qu'utilise {ERC20}, à moins que {_setupDecimals} ne soit
      * appelé.
      *
-     * REMARQUE : Cette information est uniquement utilisée à des fins d'_affichage_ : elle
-     * n'affecte en rien l'arithmétique du contrat, y compris
+     * REMARQUE : Cette information n'est utilisée qu'à des fins d'_affichage_ : elle n'affecte
+     * en rien l'arithmétique du contrat, y compris
      * {IERC20-balanceOf} et {IERC20-transfer}.
      */
     function decimals() public view returns (uint8) {
@@ -364,13 +370,13 @@ Le constructeur est appelé lors de la première création du contrat. Par conve
 
 Ces fonctions, `name`, `symbol` et `decimals` aident les interfaces utilisateur à connaître votre contrat afin qu'elles puissent l'afficher correctement.
 
-Le type de retour est `string memory`, ce qui signifie renvoyer une chaîne de caractères stockée en mémoire. Les variables, telles que les chaînes de caractères, peuvent être stockées à trois emplacements :
+Le type de retour est `string memory`, ce qui signifie renvoyer une chaîne stockée en mémoire. Les variables, telles que les chaînes, peuvent être stockées à trois emplacements :
 
-| | Durée de vie | Accès au contrat | Coût en gaz |
+|          | Durée de vie | Accès au contrat | Coût en gaz                                                    |
 | -------- | ------------- | --------------- | -------------------------------------------------------------- |
-| Mémoire | Appel de fonction | Lecture/Écriture | Des dizaines ou des centaines (plus élevé pour les emplacements supérieurs) |
-| Données d'appel | Appel de fonction | Lecture seule | Ne peut pas être utilisé comme type de retour, uniquement comme type de paramètre de fonction |
-| Stockage | Jusqu'à modification | Lecture/Écriture | Élevé (800 pour la lecture, 20k pour l'écriture) |
+| Mémoire   | Appel de fonction | Lecture/Écriture      | Des dizaines ou des centaines (plus élevé pour les emplacements supérieurs)                 |
+| Données d'appel | Appel de fonction | Lecture seule       | Ne peut pas être utilisé comme type de retour, uniquement comme type de paramètre de fonction |
+| Stockage  | Jusqu'à modification | Lecture/Écriture      | Élevé (2 100 pour une lecture à froid, 20 000 pour une nouvelle écriture)           |
 
 Dans ce cas, `memory` est le meilleur choix.
 
@@ -416,7 +422,7 @@ Lire le solde d'un compte. Notez que n'importe qui est autorisé à obtenir le s
     function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
 ```
 
-La fonction `transfer` est appelée pour effectuer un transfert de jetons du compte de l'expéditeur vers un autre. Notez que même si elle renvoie une valeur booléenne, cette valeur est toujours **true**. Si le transfert échoue, le contrat annule l'appel.
+La fonction `transfer` est appelée pour transférer des jetons du compte de l'expéditeur vers un autre. Notez que même si elle renvoie une valeur booléenne, cette valeur est toujours **true**. Si le transfert échoue, le contrat annule l'appel.
 
 &nbsp;
 
@@ -426,7 +432,7 @@ La fonction `transfer` est appelée pour effectuer un transfert de jetons du com
     }
 ```
 
-La fonction `_transfer` fait le travail réel. C'est une fonction privée qui ne peut être appelée que par d'autres fonctions du contrat. Par convention, les fonctions privées sont nommées `_<something>`, tout comme les variables d'état.
+La fonction `_transfer` fait le vrai travail. C'est une fonction privée qui ne peut être appelée que par d'autres fonctions du contrat. Par convention, les fonctions privées sont nommées `_<something>`, tout comme les variables d'état.
 
 Normalement, dans Solidity, nous utilisons `msg.sender` pour l'expéditeur du message. Cependant, cela casse [OpenGSN](https://opengsn.org/). Si nous voulons autoriser les transactions sans ether avec notre jeton, nous devons utiliser `_msgSender()`. Elle renvoie `msg.sender` pour les transactions normales, mais pour celles sans ether, elle renvoie le signataire d'origine et non le contrat qui a relayé le message.
 
@@ -463,7 +469,7 @@ La fonction `allowance` permet à tout le monde de vérifier n'importe quelle al
 Cette fonction est appelée pour créer une allocation. Elle est similaire à la fonction `transfer` ci-dessus :
 
 - La fonction appelle simplement une fonction interne (dans ce cas, `_approve`) qui fait le vrai travail.
-- La fonction renvoie soit `true` (en cas de succès), soit elle annule (sinon).
+- La fonction renvoie soit `true` (en cas de succès), soit s'annule (sinon).
 
 &nbsp;
 
@@ -500,7 +506,7 @@ C'est la fonction qu'un dépensier appelle pour dépenser une allocation. Cela n
 
 &nbsp;
 
-L'appel de la fonction `a.sub(b, "message")` fait deux choses. Premièrement, il calcule `a-b`, qui est la nouvelle allocation. Deuxièmement, il vérifie que ce résultat n'est pas négatif. S'il est négatif, l'appel s'annule avec le message fourni. Notez que lorsqu'un appel s'annule, tout traitement effectué précédemment pendant cet appel est ignoré, nous n'avons donc pas besoin de défaire le `_transfer`.
+L'appel de la fonction `a.sub(b, "message")` fait deux choses. Premièrement, il calcule `a-b`, qui est la nouvelle allocation. Deuxièmement, il vérifie que ce résultat n'est pas négatif. S'il est négatif, l'appel s'annule avec le message fourni. Notez que lorsqu'un appel s'annule, tout traitement effectué précédemment au cours de cet appel est ignoré, nous n'avons donc pas besoin d'annuler le `_transfer`.
 
 ```solidity
         _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount,
@@ -513,33 +519,33 @@ L'appel de la fonction `a.sub(b, "message")` fait deux choses. Premièrement, il
 
 Il est dangereux de définir une allocation non nulle à une autre valeur non nulle, car vous ne contrôlez que l'ordre de vos propres transactions, pas celles des autres. Imaginez que vous ayez deux utilisateurs, Alice qui est naïve et Bill qui est malhonnête. Alice veut un service de Bill, qui, selon elle, coûte cinq jetons - elle donne donc à Bill une allocation de cinq jetons.
 
-Puis quelque chose change et le prix de Bill passe à dix jetons. Alice, qui veut toujours le service, envoie une transaction qui fixe l'allocation de Bill à dix. Au moment où Bill voit cette nouvelle transaction dans le pool de transactions, il envoie une transaction qui dépense les cinq jetons d'Alice et a un prix du gaz beaucoup plus élevé afin qu'elle soit minée plus rapidement. De cette façon, Bill peut d'abord dépenser cinq jetons, puis, une fois la nouvelle allocation d'Alice minée, en dépenser dix de plus pour un prix total de quinze jetons, plus que ce qu'Alice avait l'intention d'autoriser. Cette technique s'appelle le [front-running](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running)
+Puis quelque chose change et le prix de Bill monte à dix jetons. Alice, qui veut toujours le service, envoie une transaction qui fixe l'allocation de Bill à dix. Au moment où Bill voit cette nouvelle transaction dans le pool de transactions, il envoie une transaction qui dépense les cinq jetons d'Alice et a un prix du gaz beaucoup plus élevé afin qu'elle soit minée plus rapidement. De cette façon, Bill peut dépenser d'abord cinq jetons, puis, une fois la nouvelle allocation d'Alice minée, en dépenser dix de plus pour un prix total de quinze jetons, plus que ce qu'Alice avait l'intention d'autoriser. Cette technique s'appelle le [front-running](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running)
 
-| Transaction d'Alice | Nonce d'Alice | Transaction de Bill | Nonce de Bill | Allocation de Bill | Revenu total de Bill provenant d'Alice |
+| Transaction d'Alice | Nonce d'Alice | Transaction de Bill              | Nonce de Bill | Allocation de Bill | Revenu total de Bill provenant d'Alice |
 | ----------------- | ----------- | ----------------------------- | ---------- | ---------------- | ---------------------------- |
-| approve(Bill, 5) | 10 | | | 5 | 0 |
-| | | transferFrom(Alice, Bill, 5) | 10,123 | 0 | 5 |
-| approve(Bill, 10) | 11 | | | 10 | 5 |
-| | | transferFrom(Alice, Bill, 10) | 10,124 | 0 | 15 |
+| approve(Bill, 5)  | 10          |                               |            | 5                | 0                            |
+|                   |             | transferFrom(Alice, Bill, 5)  | 10,123     | 0                | 5                            |
+| approve(Bill, 10) | 11          |                               |            | 10               | 5                            |
+|                   |             | transferFrom(Alice, Bill, 10) | 10,124     | 0                | 15                           |
 
 Pour éviter ce problème, ces deux fonctions (`increaseAllowance` et `decreaseAllowance`) vous permettent de modifier l'allocation d'un montant spécifique. Donc, si Bill avait déjà dépensé cinq jetons, il ne pourra en dépenser que cinq de plus. Selon le moment, il y a deux façons dont cela peut fonctionner, qui se terminent toutes deux par le fait que Bill n'obtient que dix jetons :
 
-A :
+A:
 
-| Transaction d'Alice | Nonce d'Alice | Transaction de Bill | Nonce de Bill | Allocation de Bill | Revenu total de Bill provenant d'Alice |
+| Transaction d'Alice          | Nonce d'Alice | Transaction de Bill             | Nonce de Bill | Allocation de Bill | Revenu total de Bill provenant d'Alice |
 | -------------------------- | ----------: | ---------------------------- | ---------: | ---------------: | ---------------------------- |
-| approve(Bill, 5) | 10 | | | 5 | 0 |
-| | | transferFrom(Alice, Bill, 5) | 10,123 | 0 | 5 |
-| increaseAllowance(Bill, 5) | 11 | | | 0+5 = 5 | 5 |
-| | | transferFrom(Alice, Bill, 5) | 10,124 | 0 | 10 |
+| approve(Bill, 5)           |          10 |                              |            |                5 | 0                            |
+|                            |             | transferFrom(Alice, Bill, 5) |     10,123 |                0 | 5                            |
+| increaseAllowance(Bill, 5) |          11 |                              |            |          0+5 = 5 | 5                            |
+|                            |             | transferFrom(Alice, Bill, 5) |     10,124 |                0 | 10                           |
 
-B :
+B:
 
-| Transaction d'Alice | Nonce d'Alice | Transaction de Bill | Nonce de Bill | Allocation de Bill | Revenu total de Bill provenant d'Alice |
+| Transaction d'Alice          | Nonce d'Alice | Transaction de Bill              | Nonce de Bill | Allocation de Bill | Revenu total de Bill provenant d'Alice |
 | -------------------------- | ----------: | ----------------------------- | ---------: | ---------------: | ---------------------------: |
-| approve(Bill, 5) | 10 | | | 5 | 0 |
-| increaseAllowance(Bill, 5) | 11 | | | 5+5 = 10 | 0 |
-| | | transferFrom(Alice, Bill, 10) | 10,124 | 0 | 10 |
+| approve(Bill, 5)           |          10 |                               |            |                5 |                            0 |
+| increaseAllowance(Bill, 5) |          11 |                               |            |         5+5 = 10 |                            0 |
+|                            |             | transferFrom(Alice, Bill, 10) |     10,124 |                0 |                           10 |
 
 ```solidity
     /**
@@ -560,7 +566,7 @@ B :
     }
 ```
 
-La fonction `a.add(b)` est une addition sécurisée. Dans le cas peu probable où `a`+`b`>=`2^256`, elle ne boucle pas (wrap around) comme le fait une addition normale.
+La fonction `a.add(b)` est une addition sécurisée. Dans le cas peu probable où `a`+`b`>=`2^256`, elle ne boucle pas (wrap around) comme le fait l'addition normale.
 
 ```solidity
 
@@ -587,16 +593,16 @@ La fonction `a.add(b)` est une addition sécurisée. Dans le cas peu probable o�
 
 ### Fonctions qui modifient les informations du jeton {#functions-that-modify-token-information}
 
-Ce sont les quatre fonctions qui font le travail réel : `_transfer`, `_mint`, `_burn` et `_approve`.
+Ce sont les quatre fonctions qui font le vrai travail : `_transfer`, `_mint`, `_burn` et `_approve`.
 
 #### La fonction _transfer {#transfer}
 
 ```solidity
     /**
-     * @dev Déplace `amount` jetons de `sender` vers `recipient`.
+     * @dev Déplace `amount` jetons de `sender` à `recipient`.
      *
      * Cette fonction interne est équivalente à {transfer}, et peut être utilisée pour
-     * par ex., implémenter des frais de jeton automatiques, des mécanismes de réduction, etc.
+     * par ex., implémenter des frais de jeton automatiques, des mécanismes de slashing, etc.
      *
      * Émet un événement {Transfer}.
      *
@@ -609,7 +615,7 @@ Ce sont les quatre fonctions qui font le travail réel : `_transfer`, `_mint`, `
     function _transfer(address sender, address recipient, uint256 amount) internal virtual {
 ```
 
-Cette fonction, `_transfer`, effectue un transfert de jetons d'un compte à un autre. Elle est appelée à la fois par `transfer` (pour les transferts depuis le propre compte de l'expéditeur) et `transferFrom` (pour utiliser les allocations afin de transférer depuis le compte de quelqu'un d'autre).
+Cette fonction, `_transfer`, transfère des jetons d'un compte à un autre. Elle est appelée à la fois par `transfer` (pour les transferts depuis le propre compte de l'expéditeur) et `transferFrom` (pour utiliser les allocations afin de transférer depuis le compte de quelqu'un d'autre).
 
 &nbsp;
 
@@ -630,7 +636,7 @@ Personne ne possède réellement l'adresse zéro dans Ethereum (c'est-à-dire qu
 Il y a deux façons d'utiliser ce contrat :
 
 1. L'utiliser comme modèle pour votre propre code
-1. [En hériter](https://www.bitdegree.org/learn/solidity-inheritance), et ne remplacer que les fonctions que vous devez modifier
+1. [En hériter](https://docs.soliditylang.org/en/latest/contracts.html#inheritance), et ne remplacer que les fonctions que vous devez modifier
 
 La deuxième méthode est bien meilleure car le code ERC-20 d'OpenZeppelin a déjà été audité et s'est avéré sécurisé. Lorsque vous utilisez l'héritage, les fonctions que vous modifiez sont claires, et pour faire confiance à votre contrat, les gens n'ont besoin d'auditer que ces fonctions spécifiques.
 
@@ -658,7 +664,7 @@ Enfin, émettre un événement `Transfer`. Les événements ne sont pas accessib
 
 Ces deux fonctions (`_mint` et `_burn`) modifient l'offre totale de jetons. Elles sont internes et aucune fonction ne les appelle dans ce contrat, elles ne sont donc utiles que si vous héritez du contrat et ajoutez votre propre logique pour décider dans quelles conditions frapper de nouveaux jetons ou brûler ceux existants.
 
-**REMARQUE :** Chaque jeton ERC-20 a sa propre logique métier qui dicte la gestion des jetons. Par exemple, un contrat à offre fixe pourrait n'appeler `_mint` que dans le constructeur et ne jamais appeler `_burn`. Un contrat qui vend des jetons appellera `_mint` lorsqu'il sera payé, et appellera vraisemblablement `_burn` à un moment donné pour éviter une inflation galopante.
+**REMARQUE :** Chaque jeton ERC-20 a sa propre logique métier qui dicte la gestion des jetons. Par exemple, un contrat à offre fixe pourrait n'appeler `_mint` que dans le constructeur et ne jamais appeler `_burn`. Un contrat qui vend des jetons appellera `_mint` lorsqu'il est payé, et appellera vraisemblablement `_burn` à un moment donné pour éviter une inflation galopante.
 
 ```solidity
     /** @dev Crée `amount` jetons et les assigne à `account`, augmentant
@@ -768,17 +774,17 @@ Cette fonction modifie la variable `_decimals` qui est utilisée pour indiquer a
 
     /**
      * @dev Hook qui est appelé avant tout transfert de jetons. Cela inclut
-     * la création et la destruction.
+     * la frappe et la destruction.
      *
      * Conditions d'appel :
      *
-     * - quand `from` et `to` sont tous deux non nuls, `amount` des jetons de ``from``
+     * - lorsque `from` et `to` sont tous deux non nuls, `amount` des jetons de ``from``
      * seront transférés à `to`.
-     * - quand `from` est zéro, `amount` jetons seront créés pour `to`.
-     * - quand `to` est zéro, `amount` des jetons de ``from`` seront détruits.
+     * - lorsque `from` est zéro, `amount` jetons seront frappés pour `to`.
+     * - lorsque `to` est zéro, `amount` des jetons de ``from`` seront brûlés.
      * - `from` et `to` ne sont jamais tous les deux zéro.
      *
-     * Pour en savoir plus sur les hooks, consultez xref:ROOT:extending-contracts.adoc#using-hooks[Using Hooks].
+     * Pour en savoir plus sur les hooks, rendez-vous sur xref:ROOT:extending-contracts.adoc#using-hooks[Using Hooks].
      */
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual { }
 }

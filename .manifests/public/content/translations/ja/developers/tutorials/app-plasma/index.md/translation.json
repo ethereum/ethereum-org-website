@@ -1,8 +1,8 @@
 {
   "version": 2,
   "locale": "ja",
-  "translatedAt": "2026-10-21T22:08:46.593Z",
-  "englishManifestHash": "52b486a8d9a4",
+  "translatedAt": "2026-11-28T07:39:40.833Z",
+  "englishManifestHash": "e8966182adf5",
   "placeholderOrder": [
     "LINK-21b137",
     "LINK-9ad53a",
@@ -19,7 +19,21 @@
     "LINK-232350",
     "CODE-e2ecd8",
     "LINK-02dddf",
-    "CODEBLOCK-0df7bf",
+    "CODEBLOCK-9b77f9",
+    "LINK-2ec345",
+    "CODE-3b64db",
+    "CODE-8a0a3b",
+    "CODE-3b64db",
+    "CODE-b05330",
+    "CODE-8a0a3b",
+    "CODE-d4db71",
+    "CODEBLOCK-a72d88",
+    "CODE-ba5de1",
+    "CODE-3b64db",
+    "CODE-d1272b",
+    "CODE-3b64db",
+    "CODE-ba5de1",
+    "CODE-3c88f6",
     "LINK-9883d5",
     "CODE-50bc66",
     "CODE-9a7c46",
@@ -107,8 +121,8 @@
     "CODEBLOCK-7faef8",
     "CODEBLOCK-63a703",
     "CODE-7e1b0d",
-    "CODE-ac636b",
     "CODE-f45fc1",
+    "CODE-ac636b",
     "CODEBLOCK-2f6561",
     "CODE-4e45bb",
     "CODE-fcdff7",
@@ -116,7 +130,6 @@
     "CODE-fcd03a",
     "CODE-6fb701",
     "CODE-fcd03a",
-    "CODE-4e45bb",
     "CODE-4e45bb",
     "CODE-fcd03a",
     "CODE-f45fc1",
@@ -222,6 +235,7 @@
     "LINK-78b709",
     "CODE-2706c6",
     "CODE-d8d153",
+    "CODE-3b64db",
     "CODE-d8d153",
     "CODEBLOCK-bd2cca",
     "CODE-50bc66",
@@ -245,13 +259,13 @@
     "CODEBLOCK-600779",
     "CODE-1a3d48",
     "CODEBLOCK-ed3145",
-    "CODE-ba5de1",
+    "CODE-60b7fd",
     "CODEBLOCK-3d8710",
     "CODE-564616",
     "CODEBLOCK-f65529",
     "CODE-277089",
     "CODE-71d982",
-    "CODEBLOCK-22ebe3",
+    "CODEBLOCK-419ace",
     "CODEBLOCK-757b87",
     "CODEBLOCK-eafb61",
     "CODE-564616",
@@ -266,7 +280,11 @@
     "LINK-f915fb"
   ],
   "placeholderMap": {
-    "CODEBLOCK-0df7bf": {
+    "CODEBLOCK-9b77f9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a72d88": {
       "type": "code-fence",
       "values": {}
     },
@@ -634,7 +652,7 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-22ebe3": {
+    "CODEBLOCK-419ace": {
       "type": "code-fence",
       "values": {}
     },
@@ -650,6 +668,48 @@
       "type": "inline-code",
       "values": {
         "content": "1.0.0-beta.10"
+      }
+    },
+    "CODE-3b64db": {
+      "type": "inline-code",
+      "values": {
+        "content": "bb"
+      }
+    },
+    "CODE-8a0a3b": {
+      "type": "inline-code",
+      "values": {
+        "content": "bbup"
+      }
+    },
+    "CODE-b05330": {
+      "type": "inline-code",
+      "values": {
+        "content": "0.87.0"
+      }
+    },
+    "CODE-d4db71": {
+      "type": "inline-code",
+      "values": {
+        "content": "PATH"
+      }
+    },
+    "CODE-ba5de1": {
+      "type": "inline-code",
+      "values": {
+        "content": "nargo"
+      }
+    },
+    "CODE-d1272b": {
+      "type": "inline-code",
+      "values": {
+        "content": "@noir-lang/noir_js"
+      }
+    },
+    "CODE-3c88f6": {
+      "type": "inline-code",
+      "values": {
+        "content": "--oracle_hash"
       }
     },
     "CODE-50bc66": {
@@ -946,12 +1006,6 @@
         "content": "0x199..67b"
       }
     },
-    "CODE-3b64db": {
-      "type": "inline-code",
-      "values": {
-        "content": "bb"
-      }
-    },
     "CODE-d8d153": {
       "type": "inline-code",
       "values": {
@@ -994,10 +1048,10 @@
         "content": "smart-contracts/src/ZkBank.sol"
       }
     },
-    "CODE-ba5de1": {
+    "CODE-60b7fd": {
       "type": "inline-code",
       "values": {
-        "content": "nargo"
+        "content": "bb write_solidity_verifier"
       }
     },
     "CODE-564616": {
@@ -1094,6 +1148,12 @@
       "type": "link",
       "values": {
         "url": "https://noir-lang.org/docs/getting_started/quick_start"
+      }
+    },
+    "LINK-2ec345": {
+      "type": "link",
+      "values": {
+        "url": "https://barretenberg.aztec.network/docs/getting_started"
       }
     },
     "LINK-9883d5": {
@@ -1381,7 +1441,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-10-21T22:08:46.593Z",
+      "translatedAt": "2026-11-28T07:39:40.833Z",
       "status": "success"
     }
   }

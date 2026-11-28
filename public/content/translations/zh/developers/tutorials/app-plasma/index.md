@@ -102,13 +102,22 @@ _Data<sub>private</sub>_ 中的这些字段：
 
 ### 工具 {#tools}
 
-对于客户端代码，我们将使用 [Vite](https://vite.dev/)、[React](https://react.dev/)、[Viem](https://viem.sh/) 和 [Wagmi](https://wagmi.sh/)。这些是行业标准工具；如果你不熟悉它们，可以使用[本教程](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)。
+对于客户端代码，我们将使用 [Vite](https://vite.dev/)、[React](https://react.dev/)、[Viem](https://viem.sh/) 和 [Wagmi](https://wagmi.sh/)。这些都是行业标准工具；如果你对它们不熟悉，可以使用[本教程](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)。
 
-服务器的大部分代码是使用 [Node](https://nodejs.org/en) 用 JavaScript 编写的。零知识部分是用 [Noir](https://noir-lang.org/) 编写的。我们需要 `1.0.0-beta.10` 版本，因此在[按照说明安装 Noir](https://noir-lang.org/docs/getting_started/quick_start) 后，运行：
+服务器的大部分代码是使用 [Node](https://nodejs.org/en) 用 JavaScript 编写的。零知识部分是用 [Noir](https://noir-lang.org/) 编写的。我们需要 `1.0.0-beta.10` 版本，因此在[按照说明安装 Noir](https://noir-lang.org/docs/getting_started/quick_start) 之后，运行：
 
-```
+```sh
 noirup -v 1.0.0-beta.10
 ```
+
+为了创建可以在链上验证的证明（在第 3 阶段），我们还需要 [Barretenberg](https://barretenberg.aztec.network/docs/getting_started)（`bb`），即证明后端，其版本需与此 Noir 版本匹配。安装 `bbup`（Barretenberg 安装程序），然后使用它安装 `bb` 的 `0.87.0` 版本（如果找不到 `bbup`，请打开一个新终端，以便更新后的 `PATH` 生效）：
+
+```sh
+curl -L https://raw.githubusercontent.com/AztecProtocol/aztec-packages/refs/heads/next/barretenberg/bbup/install | bash
+bbup -v 0.87.0
+```
+
+本教程已在 `nargo` 1.0.0-beta.10、`bb` 0.87.0 以及（在服务器中）`@noir-lang/noir_js` 1.0.0-beta.11 下进行了测试。请勿使用更新的版本：Noir 代码无法使用当前的 1.0 候选发布版本进行编译，并且当前版本的 `bb` 无法读取由 `nargo` 1.0.0-beta.10 编译的电路，也不再接受 `--oracle_hash` 标志。
 
 我们使用的区块链是 `anvil`，这是一个本地测试区块链，属于 [Foundry](https://getfoundry.sh/introduction/installation) 的一部分。
 
@@ -331,14 +340,14 @@ ${accounts.map(accountInProverToml).reduce((a,b) => a+b, "")}
 use std::hash::pedersen_hash;
 ```
 
-[Pedersen 哈希](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/)随 [Noir 标准库](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash)一起提供。零知识证明通常使用此哈希函数。与标准哈希函数相比，它在[算术电路](https://rareskills.io/post/arithmetic-circuit)内部计算要容易得多。
+[Pedersen 哈希](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/)由 [Noir 标准库](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash)提供。零知识证明通常使用此哈希函数。与标准哈希函数相比，它在[算术电路](https://rareskills.io/post/arithmetic-circuit)内部计算要容易得多。
 
 ```
 use keccak256::keccak256;
 use dep::ecrecover;
 ```
 
-这两个函数是外部库，在 [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml) 中定义。它们正如其名，一个是计算 [keccak256 哈希](https://emn178.github.io/online-tools/keccak_256.html)的函数，另一个是验证以太坊签名并恢复签名者以太坊地址的函数。
+这两个函数是外部库，在 [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml) 中定义。它们的功能正如其名，一个是计算 [keccak256 哈希](https://emn178.github.io/online-tools/keccak_256.html)的函数，另一个是验证以太坊签名并恢复签名者以太坊地址的函数。
 
 ```
 global ACCOUNT_NUMBER : u32 = 5;
@@ -401,20 +410,20 @@ fn flatten_account(account: Account) -> [Field; FLAT_ACCOUNT_FIELDS] {
     ];
 ```
 
-数组中的第一个值是账户地址。第二个值包括余额和随机数。`.into()` 调用将数字更改为其所需的数据类型。`account.nonce` 是一个 `u32` 值，但要将其添加到 `account.balance << 32`（一个 `u128` 值）中，它需要是一个 `u128`。这是第一个 `.into()`。第二个将 `u128` 结果转换为 `Field`，以便它适合数组。
+数组中的第一个值是账户地址。第二个值包括余额和随机数。`.into()` 调用将数字更改为其所需的数据类型。`account.nonce` 是一个 `u32` 值，但要将其添加到 `account.balance << 32`（一个 `u128` 值）中，它需要是一个 `u128`。这就是第一个 `.into()` 的作用。第二个调用将 `u128` 结果转换为 `Field`，以便它适合放入数组中。
 
 ```
     flat
 }
 ```
 
-在 Noir 中，函数只能在最后返回一个值（没有提前返回）。要指定返回值，你需要在函数的右括号之前对其进行求值。
+在 Noir 中，函数只能在末尾返回值（没有提前返回）。要指定返回值，你需要在函数的右括号之前对其进行求值。
 
 ```
 fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] {
 ```
 
-此函数将账户数组转换为 `Field` 数组，该数组可用作 Petersen 哈希的输入。
+此函数将账户数组转换为 `Field` 数组，该数组可用作 Pedersen 哈希的输入。
 
 ```
     let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
@@ -426,7 +435,7 @@ fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT
     for i in 0..ACCOUNT_NUMBER {
 ```
 
-这是一个 `for` 循环。请注意，边界是常量。Noir 循环必须在编译时知道其边界。原因是算术电路不支持流控制。在处理 `for` 循环时，编译器只需将内部代码放置多次，每次迭代一次。
+这是一个 `for` 循环。请注意，边界是常量。Noir 循环必须在编译时知道其边界。原因是算术电路不支持控制流。在处理 `for` 循环时，编译器只需将其内部的代码放置多次，每次迭代一次。
 
 ```
         let fields = flatten_account(accounts[i]);
@@ -456,13 +465,13 @@ fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
     }
 ```
 
-此函数查找具有特定地址的账户。此函数在标准代码中效率极低，因为它会遍历所有账户，即使在找到地址之后也是如此。
+此函数查找具有特定地址的账户。在标准代码中，此函数将非常低效，因为它会遍历所有账户，即使在找到地址之后也是如此。
 
-然而，在零知识证明中，没有流控制。如果我们需要检查一个条件，我们必须每次都检查它。
+然而，在零知识证明中，没有控制流。如果我们曾经需要检查一个条件，我们必须每次都检查它。
 
-类似的事情也发生在 `if` 语句中。上面循环中的 `if` 语句被转换为这些数学语句。
+类似的情况也发生在 `if` 语句中。上面循环中的 `if` 语句被转换为这些数学语句。
 
-_condition<sub>result</sub> = accounts[i].address == address_ // 如果相等则为 1，否则为 0
+_condition<sub>result</sub> = accounts[i].address == address_ // 如果它们相等则为 1，否则为 0
 
 _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result</sub>)\*account<sub>old</sub>_
 
@@ -518,7 +527,7 @@ fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> 
 fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field
 ```
 
-此函数从消息中读取地址。 
+此函数从消息中读取地址。
 
 ```rust
 {
@@ -548,7 +557,7 @@ fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field
 fn readAmountAndNonce(messageBytes: [u8; MESSAGE_LENGTH]) -> (u128, u32)
 ```
 
-从消息中读取金额和随机数。 
+从消息中读取金额和随机数。
 
 ```rust
 {
@@ -570,7 +579,7 @@ fn readAmountAndNonce(messageBytes: [u8; MESSAGE_LENGTH]) -> (u128, u32)
                 amount = amount*10 + digit.into();
             }
 
-            if lookingForNonce {    // 我们刚找到它
+            if lookingForNonce {    // 我们刚刚找到它
                 stillReadingNonce = true;
                 lookingForNonce = false;
             }
@@ -618,7 +627,7 @@ fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn
 fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
 ```
 
-我们能够对账户使用 Pedersen 哈希，因为它们仅在零知识证明内部进行哈希处理。然而，在这段代码中，我们需要检查由浏览器生成的消息签名。为此，我们需要遵循 [EIP-191](https://eips.ethereum.org/EIPS/eip-191) 中的以太坊签名格式。这意味着我们需要创建一个组合缓冲区，其中包含标准前缀、ASCII 格式的消息长度以及消息本身，并使用以太坊标准的 keccak256 对其进行哈希处理。
+我们能够对账户使用 Pedersen 哈希，因为它们仅在零知识证明内部进行哈希处理。然而，在此代码中，我们需要检查由浏览器生成的消息签名。为此，我们需要遵循 [EIP-191](https://eips.ethereum.org/EIPS/eip-191) 中的以太坊签名格式。这意味着我们需要创建一个组合缓冲区，其中包含标准前缀、ASCII 格式的消息长度以及消息本身，并使用以太坊标准的 keccak256 对其进行哈希处理。
 
 ```rust
     // ASCII 前缀
@@ -695,7 +704,7 @@ fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
     assert(MESSAGE_LENGTH < 1000, "Messages whose length is over three digits are not supported");
 ```
 
-处理最大为 999 的消息长度，如果更大则失败。我添加了这段代码，即使消息长度是一个常量，因为这使得更改它变得更容易。在生产系统上，为了获得更好的性能，你可能会假设 `MESSAGE_LENGTH` 不会改变。
+处理长度最多为 999 的消息，如果更大则失败。我添加了这段代码，即使消息长度是一个常量，因为它使得更改它变得更容易。在生产系统上，为了获得更好的性能，你可能会假设 `MESSAGE_LENGTH` 不会改变。
 
 ```rust
     keccak256::keccak256(buffer, HASH_BUFFER_SIZE)
@@ -710,13 +719,13 @@ fn signatureToAddressAndHash(
         pubKeyX: [u8; 32],
         pubKeyY: [u8; 32],
         signature: [u8; 64]
-    ) -> (Field, Field, Field)   // 地址，哈希的前 16 个字节，哈希的后 16 个字节        
+    ) -> (Field, Field, Field)   // 地址，哈希的前 16 字节，哈希的后 16 字节        
 {
 ```
 
 此函数验证签名，这需要消息哈希。然后它为我们提供签署它的地址和消息哈希。消息哈希以两个 `Field` 值的形式提供，因为在程序的其余部分中，它们比字节数组更容易使用。
 
-我们需要使用两个 `Field` 值，因为字段计算是对一个大数进行[取模](https://en.wikipedia.org/wiki/Modulo)，但该数字通常小于 256 位（否则很难在以太坊虚拟机 (EVM) 中执行这些计算）。
+我们需要使用两个 `Field` 值，因为字段计算是对一个大数[取模](https://en.wikipedia.org/wiki/Modulo)完成的，但该数字通常小于 256 位（否则很难在 EVM 中执行这些计算）。
 
 ```rust
     let hash = hashMessage(message);
@@ -738,7 +747,7 @@ fn signatureToAddressAndHash(
     
 这类似于 [Solidity 的 `ecrecover`](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions)，但有两个重要的区别：
 
-- 如果签名无效，调用将无法通过 `assert`，并且程序将中止。
+- 如果签名无效，调用将触发 `assert` 失败，并且程序将中止。
 - 虽然可以从签名和哈希中恢复公钥，但这是可以在外部完成的处理，因此不值得在零知识证明内部进行。如果有人试图在这里欺骗我们，签名验证将会失败。
 
 ```rust
@@ -756,19 +765,19 @@ fn main(
     ) -> pub (
         Field,  // 旧账户数组的哈希
         Field,  // 新账户数组的哈希
-        Field,  // 消息哈希的前 16 个字节
-        Field,  // 消息哈希的后 16 个字节
+        Field,  // 消息哈希的前 16 字节
+        Field,  // 消息哈希的后 16 字节
     )
 ```
 
-最后，我们到达 `main` 函数。我们需要证明我们有一笔交易，该交易有效地将账户的哈希从旧值更改为新值。我们还需要证明它具有这个特定的交易哈希，以便发送它的人知道他们的交易已被处理。
+最后，我们到达了 `main` 函数。我们需要证明我们有一笔交易，它有效地将账户的哈希从旧值更改为新值。我们还需要证明它具有这个特定的交易哈希，以便发送它的人知道他们的交易已被处理。
 
 ```rust
 {
     let mut txn = readTransferTxn(message);
 ```
 
-我们需要 `txn` 是可变的，因为我们不从消息中读取发送方地址，而是从签名中读取它。 
+我们需要 `txn` 是可变的，因为我们不是从消息中读取发送方地址，而是从签名中读取它。
 
 ```rust
     let (fromAddress, txnHash1, txnHash2) = signatureToAddressAndHash(
@@ -794,7 +803,7 @@ fn main(
 
 在第二阶段，我们添加一个服务器，该服务器接收并实现来自浏览器的转账交易。
 
-要查看实际效果：
+要查看它的实际运行情况：
 
 1. 如果 Vite 正在运行，请停止它。
 
@@ -808,7 +817,7 @@ fn main(
    npm install
    ```
 
-   不需要编译 Noir 代码，它与你在第 1 阶段使用的代码相同。
+   无需编译 Noir 代码，它与你在第 1 阶段使用的代码相同。
 
 3. 启动服务器。
 
@@ -816,24 +825,24 @@ fn main(
    npm run start
    ```
 
-4. 在单独的命令行窗口中，运行 Vite 以提供浏览器代码。
+4. 在一个单独的命令行窗口中，从仓库根目录开始，运行 Vite 以提供浏览器代码。
 
    ```sh
    cd client
    npm run dev
    ```
 
-5. 浏览到客户端代码 [http://localhost:5173](http://localhost:5173)
+5. 浏览客户端代码：[http://localhost:5173](http://localhost:5173)
 
-6. 在发出交易之前，你需要知道随机数以及你可以发送的金额。要获取此信息，请点击 **Update account data**（更新账户数据）并签署消息。
+6. 在你可以发出交易之前，你需要知道随机数，以及你可以发送的金额。要获取此信息，请点击 **Update account data**（更新账户数据）并签署消息。
 
-   我们在这里面临一个两难境地。一方面，我们不想签署可以重复使用的消息（[重放攻击](https://en.wikipedia.org/wiki/Replay_attack)），这就是为什么我们首先需要一个随机数。然而，我们还没有随机数。解决方案是选择一个只能使用一次且双方都已经拥有的随机数，例如当前时间。
+   我们在这里面临一个两难境地。一方面，我们不想签署可以被重复使用的消息（[重放攻击](https://en.wikipedia.org/wiki/Replay_attack)），这就是为什么我们首先需要一个随机数。然而，我们还没有随机数。解决方案是选择一个只能使用一次且我们双方都已经拥有的随机数，例如当前时间。
 
-   此解决方案的问题在于时间可能无法完美同步。因此，相反，我们签署一个每分钟更改一次的值。这意味着我们容易受到重放攻击的窗口最多为一分钟。考虑到在生产环境中，已签名的请求将受到 TLS 的保护，并且隧道的另一端——服务器——已经可以披露余额和随机数（它必须知道它们才能工作），这是一个可接受的风险。
+   此解决方案的问题在于时间可能无法完美同步。因此，我们改为签署一个每分钟更改一次的值。这意味着我们容易受到重放攻击的时间窗口最多为一分钟。考虑到在生产环境中，已签名的请求将受到 TLS 的保护，并且隧道的另一端——服务器——已经可以披露余额和随机数（它必须知道它们才能工作），这是一个可接受的风险。
 
-7. 一旦浏览器获取到余额和随机数，它就会显示转账表单。选择目标地址和金额，然后点击 **Transfer**（转账）。签署此请求。
+7. 一旦浏览器获取回余额和随机数，它就会显示转账表单。选择目标地址和金额，然后点击 **Transfer**（转账）。签署此请求。
 
-8. 要查看转账，请**更新账户数据**或查看运行服务器的窗口。服务器在每次状态更改时都会记录状态。
+8. 要查看转账，可以点击 **Update account data**（更新账户数据），或者查看运行服务器的窗口。服务器在每次状态更改时都会记录状态。
 
     ```
     ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
@@ -965,7 +974,7 @@ let Accounts = [
    npm install
    ```
 
-3. 在单独的命令行窗口中运行 `anvil`。
+3. 在一个单独的命令行窗口中运行 `anvil`。
 
 4. 生成验证密钥和 Solidity 验证者，然后将验证者代码复制到 Solidity 项目中。
 
@@ -998,7 +1007,7 @@ let Accounts = [
    echo $ZKBANK_ADDRESS
    ```
 
-   `0x199..67b` 值是 `Accounts` 初始状态的 Pederson 哈希。如果你在 `server/index.mjs` 中修改此初始状态，你可以运行一笔交易以查看零知识证明报告的初始哈希。
+   `0x199..67b` 值是 `Accounts` 初始状态的 Pedersen 哈希。如果你在 `server/index.mjs` 中修改此初始状态，你可以运行一笔交易以查看零知识证明报告的初始哈希。
 
 8. 运行服务器。
 
@@ -1007,7 +1016,7 @@ let Accounts = [
    npm run start
    ```
 
-9. 在不同的命令行窗口中运行客户端。
+9. 在一个不同的命令行窗口中运行客户端，从仓库根目录开始。
 
    ```sh
    cd client
@@ -1016,7 +1025,7 @@ let Accounts = [
 
 10. 运行一些交易。
 
-11. 要验证状态是否在链上发生更改，请重新启动服务器进程。你会看到 `ZkBank` 不再接受交易，因为交易中的原始哈希值与链上存储的哈希值不同。
+11. 要验证状态是否在链上发生了更改，请重新启动服务器进程。你会看到 `ZkBank` 不再接受交易，因为交易中的原始哈希值与存储在链上的哈希值不同。
 
     这是预期的错误类型。
 
@@ -1047,15 +1056,15 @@ import util from 'util'
 const execPromise = util.promisify(exec)
 ```
 
-我们需要使用 [Barretenberg 包](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg)来创建发送到链上的实际证明。我们可以通过运行命令行界面（`bb`）或使用 [JavaScript 库 `bb.js`](https://www.npmjs.com/package/@aztec/bb.js) 来使用此包。JavaScript 库比原生运行代码慢得多，因此我们在这里使用 [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) 来使用命令行。
+我们需要使用 [Barretenberg 包](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg)来创建要发送到链上的实际证明。我们可以通过运行命令行界面（`bb`）或使用 [JavaScript 库 `bb.js`](https://www.npmjs.com/package/@aztec/bb.js) 来使用此包。JavaScript 库比原生运行代码慢得多，因此我们在这里使用 [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) 来使用命令行。
 
-请注意，如果你决定使用 `bb.js`，你需要使用与你正在使用的 Noir 版本兼容的版本。在撰写本文时，当前的 Noir 版本 (1.0.0-beta.11) 使用 `bb.js` 版本 0.87。
+请注意，如果你确实决定使用 `bb.js`，你需要使用与你正在使用的 Noir 版本兼容的版本。例如，Noir 1.0.0-beta.10 和 1.0.0-beta.11 都与 `bb` 和 `bb.js` 0.87 版本兼容。
 
 ```js
 const zkBankAddress = process.env.ZKBANK_ADDRESS || "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
 ```
 
-这里的地址是当你从一个干净的 `anvil` 开始并按照上述说明操作时获得的地址。
+这里的地址是当你从一个干净的 `anvil` 开始并遵循上述说明时获得的地址。
 
 ```js
 const walletClient = createWalletClient({ 
@@ -1065,7 +1074,7 @@ const walletClient = createWalletClient({
 })
 ```
 
-此私钥是 `anvil` 中默认的预注资账户之一。 
+此私钥是 `anvil` 中默认的预注资账户之一。
 
 ```js
 const generateProof = async (witness, fileID) => {
@@ -1073,7 +1082,7 @@ const generateProof = async (witness, fileID) => {
 
 使用 `bb` 可执行文件生成证明。
 
-```js 
+```js
     const fname = `witness-${fileID}.gz`    
     await fs.writeFile(fname, witness)
 ```
@@ -1090,7 +1099,7 @@ const generateProof = async (witness, fileID) => {
     const proof = "0x" + JSON.parse(await fs.readFile(`./${fileID}/proof_fields.json`)).reduce((a,b) => a+b, "").replace(/0x/g, "")
 ```
 
-证明是 `Field` 值的 JSON 数组，每个值表示为十六进制值。然而，我们需要在交易中将其作为单个 `bytes` 值发送，Viem 用一个大的十六进制字符串表示它。在这里，我们通过连接所有值、删除所有 `0x`，然后在末尾添加一个来更改格式。
+证明是一个 `Field` 值的 JSON 数组，每个值都表示为十六进制值。然而，我们需要在交易中将其作为单个 `bytes` 值发送，Viem 将其表示为一个大的十六进制字符串。在这里，我们通过连接所有值、删除所有 `0x`，然后在末尾添加一个来更改格式。
 
 ```js
     await execPromise(`rm -r ${fname} ${fileID}`)
@@ -1110,7 +1119,7 @@ const processMessage = async (message, signature) => {
     const publicFields = noirResult.returnValue.map(x=>'0x' + x.slice(2).padStart(64, "0"))
 ```
 
-公共字段需要是 32 字节值的数组。然而，由于我们需要将交易哈希划分在两个 `Field` 值之间，因此它显示为 16 字节值。在这里，我们添加零，以便 Viem 能够理解它实际上是 32 字节。
+公共字段需要是一个 32 字节值的数组。然而，由于我们需要将交易哈希划分在两个 `Field` 值之间，因此它显示为 16 字节的值。在这里，我们添加零，以便 Viem 能够理解它实际上是 32 字节。
 
 ```js
     const proof = await generateProof(noirResult.witness, `${fromAddress}-${nonce}`)
@@ -1155,7 +1164,7 @@ contract ZkBank {
     }
 ```
 
-链上代码需要跟踪两个变量：验证者（由 `nargo` 创建的独立合约）和当前状态哈希。
+链上代码需要跟踪两个变量：验证者（由 Barretenberg 的 `bb write_solidity_verifier` 生成的独立合约）和当前状态哈希。
 
 ```solidity
     event TransactionProcessed(
@@ -1174,10 +1183,10 @@ contract ZkBank {
     ) public {
 ```
 
-此函数处理交易。它以验证者要求的格式获取证明（作为 `bytes`）和公共输入（作为 `bytes32` 数组）（以最小化链上处理，从而降低 Gas 成本）。
+此函数处理交易。它获取证明（作为 `bytes`）和公共输入（作为 `bytes32` 数组），格式为验证者所需的格式（以最小化链上处理，从而降低 Gas 成本）。
 
 ```solidity
-        require(_publicInputs[0] == currentStateHash,
+        require(_publicFields[0] == currentStateHash,
             "Wrong old state hash");
 ```
 
@@ -1201,7 +1210,7 @@ contract ZkBank {
 }
 ```
 
-如果一切验证通过，将状态哈希更新为新值并发出 `TransactionProcessed` 事件。
+如果一切检查无误，将状态哈希更新为新值并发出 `TransactionProcessed` 事件。
 
 ## 中心化组件的滥用 {#abuses}
 

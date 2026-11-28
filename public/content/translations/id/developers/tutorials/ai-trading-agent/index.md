@@ -44,6 +44,8 @@ Ada [banyak bursa terdesentralisasi (DEX)](/apps/categories/defi/) yang memungki
 
 Untuk model bahasa besar, saya memilih untuk memulai dengan [OpenAI](https://openai.com/). Untuk menjalankan aplikasi dalam tutorial ini, Anda harus membayar akses API. Pembayaran minimum sebesar $5 sudah lebih dari cukup.
 
+Pustaka Python OpenAI juga dapat berkomunikasi dengan titik akhir (endpoint) lain yang kompatibel dengan OpenAI, termasuk model yang Anda jalankan di komputer Anda sendiri. Lihat [Berinteraksi dengan LLM](#interface-llm) untuk mengetahui cara mengarahkannya ke tempat lain.
+
 ## Pengembangan, langkah demi langkah {#step-by-step}
 
 Untuk menyederhanakan pengembangan, kita melanjutkan secara bertahap. Setiap langkah adalah cabang di GitHub.
@@ -516,7 +518,7 @@ Tentukan titik waktu masa depan yang kita inginkan untuk perkiraan, dan buat pro
 Selanjutnya, kita memberikan prompt ke LLM yang sebenarnya dan menerima nilai masa depan yang diharapkan. Saya menulis program ini menggunakan OpenAI, jadi jika Anda ingin menggunakan penyedia yang berbeda, Anda perlu menyesuaikannya.
 
 1. Dapatkan [akun OpenAI](https://auth.openai.com/create-account)
-2. [Danai akun](https://platform.openai.com/settings/organization/billing/overview)—jumlah minimum pada saat penulisan adalah $5
+2. [Danai akun tersebut](https://platform.openai.com/settings/organization/billing/overview)—jumlah minimum pada saat penulisan adalah $5
 3. [Buat kunci API](https://platform.openai.com/settings/organization/api-keys)
 4. Di baris perintah, ekspor kunci API agar program Anda dapat menggunakannya
 
@@ -524,12 +526,29 @@ Selanjutnya, kita memberikan prompt ke LLM yang sebenarnya dan menerima nilai ma
    export OPENAI_API_KEY=sk-<the rest of the key goes here>
    ```
 
-5. Checkout dan jalankan agen
+5. Checkout agen
 
    ```sh
    git checkout 04-interface-llm
+   ```
+
+6. Kode di repositori menggunakan model `gpt-4-turbo`, yang [akan dimatikan oleh OpenAI pada 23 Oktober 2026](https://developers.openai.com/api/docs/deprecations). Ubah ke `gpt-6-luna`, model berbiaya rendah saat ini. Karena `gpt-6-luna` adalah model penalaran, perintah ini juga mematikan penalaran (`reasoning_effort="none"`, yang membuat `temperature` tetap dapat digunakan) dan mengganti parameter `max_tokens` yang sudah usang dengan `max_completion_tokens`.
+
+   ```sh
+   sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
+   ```
+
+7. Jalankan agen
+
+   ```sh
    uv run agent.py
    ```
+
+Jika Anda lebih suka menggunakan titik akhir lain yang kompatibel dengan OpenAI, seperti model yang Anda host secara lokal, pustaka OpenAI membaca titik akhir dari variabel lingkungan `OPENAI_BASE_URL`. Atur variabel tersebut, masukkan nilai apa pun yang tidak kosong di `OPENAI_API_KEY` jika server tidak memeriksa kunci, dan ubah `gpt-6-luna` di `agent.py` dan `test-predictor.py` menjadi nama model yang disediakan server tersebut. Jika server menolak `reasoning_effort`, hapus parameter tersebut.
+
+```sh
+export OPENAI_BASE_URL=http://localhost:<port>/v1
+```
 
 Berikut adalah kode baru.
 
@@ -539,20 +558,20 @@ from openai import OpenAI
 open_ai = OpenAI()  # Klien membaca variabel lingkungan OPENAI_API_KEY
 ```
 
-Impor dan instansiasi API OpenAI.
+Impor dan instansiasi API OpenAI. Klien juga membaca `OPENAI_BASE_URL` jika diatur, sehingga kode yang sama berfungsi dengan titik akhir lain yang kompatibel dengan OpenAI.
 
 ```python
 response = open_ai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-6-luna", reasoning_effort="none",
     messages=[
         {"role": "user", "content": prompt}
     ],
     temperature=0.0,
-    max_tokens=16,
+    max_completion_tokens=16,
 )
 ```
 
-Panggil API OpenAI (`open_ai.chat.completions.create`) untuk membuat respons.
+Panggil API OpenAI (`open_ai.chat.completions.create`) untuk membuat respons. `temperature` bernilai nol meminta jawaban yang paling dapat diprediksi, dan `max_completion_tokens` membatasi panjang jawaban, yang hanya perlu menampung angka. Dengan model penalaran, `max_completion_tokens` juga menghitung token yang digunakan model untuk berpikir, yang merupakan alasan lain untuk mengatur `reasoning_effort` ke `none`.
 
 ```python
 expected_price = Decimal(response.choices[0].message.content.strip())
@@ -691,7 +710,7 @@ Gunakan [`filter`](https://www.w3schools.com/python/ref_func_filter.asp) untuk m
 
 ### Mengirimkan transaksi {#submit-txn}
 
-Sekarang kita perlu benar-benar mengirimkan transaksi. Namun, saya tidak ingin menghabiskan uang sungguhan pada titik ini, sebelum sistemnya terbukti. Sebagai gantinya, kita akan membuat percabangan lokal dari Mainnet, dan "berdagang" di jaringan tersebut.
+Sekarang kita perlu benar-benar mengirimkan transaksi. Namun, saya tidak ingin menghabiskan uang sungguhan pada saat ini, sebelum sistem terbukti. Sebagai gantinya, kita akan membuat percabangan lokal dari Mainnet, dan "berdagang" di jaringan tersebut.
 
 Berikut adalah langkah-langkah untuk membuat percabangan lokal dan mengaktifkan perdagangan.
 
@@ -705,7 +724,7 @@ Berikut adalah langkah-langkah untuk membuat percabangan lokal dan mengaktifkan 
 
    `anvil` mendengarkan pada URL default untuk Foundry, http://localhost:8545, jadi kita tidak perlu menentukan URL untuk [perintah `cast`](https://getfoundry.sh/cast/overview) yang kita gunakan untuk memanipulasi rantai blok.
 
-3. Saat berjalan di `anvil`, ada sepuluh akun pengujian yang memiliki ETH—atur variabel lingkungan untuk yang pertama
+3. Saat berjalan di `anvil`, ada sepuluh akun pengujian yang memiliki ETH—atur variabel lingkungan untuk akun yang pertama
 
    ```sh
    PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
@@ -742,9 +761,9 @@ Berikut adalah langkah-langkah untuk membuat percabangan lokal dan mengaktifkan 
        --private-key $PRIVATE_KEY
    ```
 
-   Panggilan `approve` membuat jatah yang memungkinkan `SwapRouter` untuk membelanjakan sebagian token kita. Kontrak tidak dapat memantau peristiwa, jadi jika kita mentransfer token langsung ke kontrak `SwapRouter`, ia tidak akan tahu bahwa ia telah dibayar. Sebagai gantinya, kita mengizinkan kontrak `SwapRouter` untuk membelanjakan jumlah tertentu, dan kemudian `SwapRouter` melakukannya. Ini dilakukan melalui fungsi yang dipanggil oleh `SwapRouter`, sehingga ia tahu apakah itu berhasil.
+   Panggilan `approve` membuat jatah yang memungkinkan `SwapRouter` untuk membelanjakan sebagian token kita. Kontrak tidak dapat memantau kejadian, jadi jika kita mentransfer token langsung ke kontrak `SwapRouter`, kontrak tersebut tidak akan tahu bahwa ia telah dibayar. Sebagai gantinya, kita mengizinkan kontrak `SwapRouter` untuk membelanjakan jumlah tertentu, dan kemudian `SwapRouter` melakukannya. Ini dilakukan melalui fungsi yang dipanggil oleh `SwapRouter`, sehingga ia tahu jika berhasil.
 
-7. Verifikasi bahwa Anda memiliki cukup kedua token.
+7. Verifikasi bahwa Anda memiliki cukup kedua token tersebut.
 
    ```sh
    cast call $WETH_ADDRESS "balanceOf(address)" $ADDRESS | cast from-wei
@@ -754,9 +773,12 @@ Berikut adalah langkah-langkah untuk membuat percabangan lokal dan mengaktifkan 
 Sekarang setelah kita memiliki WETH dan USDC, kita dapat benar-benar menjalankan agen.
 
 ```sh
-git checkout 05-trade
+git checkout -f 05-trade
+sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
 uv run agent.py
 ```
+
+`-f` membuang perubahan model yang Anda buat di cabang sebelumnya, sehingga perintah `sed` menerapkannya lagi ke versi baru `agent.py`.
 
 Outputnya akan terlihat mirip dengan:
 
@@ -781,7 +803,7 @@ Untuk benar-benar menggunakannya, Anda memerlukan beberapa perubahan kecil.
 
 - Di baris 14, ubah `MAINNET_URL` ke titik akses nyata, seperti `https://eth.drpc.org`
 - Di baris 28, ubah `PRIVATE_KEY` ke kunci privat Anda sendiri
-- Kecuali Anda sangat kaya dan dapat membeli atau menjual 1 ETH setiap hari untuk agen yang belum terbukti, Anda mungkin ingin mengubah 29 untuk mengurangi `WETH_TRADE_AMOUNT`
+- Kecuali Anda sangat kaya dan dapat membeli atau menjual 1 ETH setiap hari untuk agen yang belum terbukti, Anda mungkin ingin mengubah baris 29 untuk mengurangi `WETH_TRADE_AMOUNT`
 
 #### Penjelasan kode {#trading-code}
 
@@ -811,7 +833,7 @@ ERC20_ABI = [
 ]
 ```
 
-Untuk benar-benar berdagang, kita membutuhkan fungsi `approve`. Kita juga ingin menunjukkan saldo sebelum dan sesudah, jadi kita juga membutuhkan `balanceOf`.
+Untuk benar-benar berdagang, kita memerlukan fungsi `approve`. Kita juga ingin menunjukkan saldo sebelum dan sesudah, jadi kita juga memerlukan `balanceOf`.
 
 ```python
 SWAP_ROUTER_ABI = [
@@ -819,7 +841,7 @@ SWAP_ROUTER_ABI = [
 ]
 ```
 
-Di ABI `SwapRouter` kita hanya membutuhkan `exactInput`. Ada fungsi terkait, `exactOutput`, yang bisa kita gunakan untuk membeli tepat satu WETH, tetapi demi kesederhanaan kita hanya menggunakan `exactInput` dalam kedua kasus.
+Dalam ABI `SwapRouter` kita hanya memerlukan `exactInput`. Ada fungsi terkait, `exactOutput`, yang bisa kita gunakan untuk membeli tepat satu WETH, tetapi demi kesederhanaan kita hanya menggunakan `exactInput` di kedua kasus.
 
 ```python
 account = w3.eth.account.from_key(PRIVATE_KEY)
@@ -841,7 +863,7 @@ def txn_params() -> dict:
     }
 ```
 
-Parameter transaksi. Kita membutuhkan fungsi di sini karena [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce) harus berubah setiap saat.
+Parameter transaksi. Kita memerlukan fungsi di sini karena [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce) harus berubah setiap saat.
 
 ```python
 def approve_token(contract: Contract, amount: int):
@@ -941,7 +963,7 @@ print("Account balances after trade:")
 balances()
 ```
 
-Agen ini saat ini hanya bekerja sekali. Namun, Anda dapat mengubahnya agar bekerja terus menerus baik dengan menjalankannya dari [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) atau dengan membungkus baris 368-400 dalam perulangan dan menggunakan [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) untuk menunggu hingga tiba waktunya untuk siklus berikutnya.
+Agen ini saat ini hanya bekerja sekali. Namun, Anda dapat mengubahnya agar bekerja terus-menerus baik dengan menjalankannya dari [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) atau dengan membungkus baris 368-397 dalam sebuah loop dan menggunakan [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) untuk menunggu hingga tiba waktunya untuk siklus berikutnya.
 
 ## Kemungkinan perbaikan {#improvements}
 
@@ -957,9 +979,9 @@ Ada dua fakta penting yang diabaikan agen saat memutuskan apa yang harus dilakuk
 
 ### Bagaimana jika Anda ingin merahasiakan strategi perdagangan Anda? {#secret}
 
-Vendor AI dapat melihat kueri yang Anda kirim ke LLM mereka, yang dapat mengekspos sistem perdagangan jenius yang Anda kembangkan dengan agen Anda. Sistem perdagangan yang digunakan terlalu banyak orang tidak ada nilainya karena terlalu banyak orang mencoba membeli saat Anda ingin membeli (dan harganya naik) dan mencoba menjual saat Anda ingin menjual (dan harganya turun).
+Vendor AI dapat melihat kueri yang Anda kirim ke LLM mereka, yang dapat mengekspos sistem perdagangan jenius yang Anda kembangkan dengan agen Anda. Sistem perdagangan yang digunakan terlalu banyak orang tidak ada nilainya karena terlalu banyak orang mencoba membeli saat Anda ingin membeli (dan harga naik) dan mencoba menjual saat Anda ingin menjual (dan harga turun).
 
-Anda dapat menjalankan LLM secara lokal, misalnya, menggunakan [LM-Studio](https://lmstudio.ai/), untuk menghindari masalah ini.
+Anda dapat menjalankan LLM secara lokal, misalnya, menggunakan `llama-server` dari [llama.cpp](https://github.com/ggml-org/llama.cpp), untuk menghindari masalah ini. Ini menyediakan titik akhir yang kompatibel dengan OpenAI, jadi Anda hanya perlu mengatur `OPENAI_BASE_URL` dan nama model seperti yang dijelaskan dalam [Berinteraksi dengan LLM](#interface-llm).
 
 ### Dari bot AI ke agen AI {#bot-to-agent}
 

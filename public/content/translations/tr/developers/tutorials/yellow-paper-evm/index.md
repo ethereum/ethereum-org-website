@@ -13,11 +13,13 @@ published: 2022-05-15
 
 ## Hangi Sarı Bülten? {#which-yellow-paper}
 
-Ethereum'daki hemen hemen her şey gibi, Sarı Bülten de zamanla gelişir. Belirli bir sürüme atıfta bulunabilmek için, [yazının yazıldığı sıradaki mevcut sürümü](https://ethereum.github.io/yellowpaper/paper.pdf) yükledim. Kullandığım bölüm, sayfa ve denklem numaraları bu sürüme atıfta bulunacaktır. Bu belgeyi okurken onu farklı bir pencerede açık tutmak iyi bir fikirdir.
+Ethereum'daki hemen hemen her şey gibi, Sarı Bülten de zamanla gelişir. Belirli bir sürüme atıfta bulunabilmek için, [yazıldığı sırada güncel olan sürümü](yellow-paper-berlin.pdf) (Berlin sürümü, 2022) yükledim. Bu eğitimdeki bölüm, sayfa ve denklem numaraları o sürüme atıfta bulunmaktadır. [En son sürüm](https://ethereum.github.io/yellowpaper/paper.pdf) o zamandan beri güncellendi, bu nedenle numaraları farklı olabilir. Bu belgeyi okurken onu farklı bir pencerede açık tutmak iyi bir fikirdir.
 
 ### Neden EVM? {#why-the-evm}
 
-Orijinal sarı bülten, Ethereum'un gelişiminin tam başında yazılmıştır. Ağı güvence altına almak için başlangıçta kullanılan orijinal İş Kanıtı (PoW) tabanlı mutabakat mekanizmasını açıklar. Ancak Ethereum, Eylül 2022'de İş Kanıtı'nı (PoW) kapattı ve Hisse Kanıtı (PoS) tabanlı mutabakat kullanmaya başladı. Bu eğitim, sarı bültenin Ethereum Sanal Makinesi'ni tanımlayan kısımlarına odaklanacaktır. EVM, Hisse Kanıtı'na (PoS) geçişten etkilenmedi (DIFFICULTY işlem kodunun dönüş değeri hariç).
+Orijinal Sarı Bülten, Ethereum'un gelişiminin tam başında yazılmıştır. Başlangıçta ağı güvence altına almak için kullanılan orijinal İş Kanıtı (PoW) tabanlı mutabakat mekanizmasını açıklar. Ancak Ethereum, Eylül 2022'de İş Kanıtı'nı (PoW) kapattı ve Hisse Kanıtı (PoS) tabanlı mutabakat kullanmaya başladı. Bu eğitim, Sarı Bülten'in Ethereum Sanal Makinesi'ni (EVM) tanımlayan kısımlarına odaklanacaktır. Hisse Kanıtı'na (PoS) geçiş EVM'yi neredeyse hiç değiştirmedi: `DIFFICULTY` işlem kodu (0x44) [`PREVRANDAO`](https://eips.ethereum.org/EIPS/eip-4399) olarak yeniden adlandırıldı ve artık İşaret zincirinden rastgele bir değer döndürüyor.
+
+Daha sonraki ağ yükseltmeleri EVM'yi değiştirdi. [`PUSH0`](https://eips.ethereum.org/EIPS/eip-3855), [`TLOAD` ve `TSTORE`](https://eips.ethereum.org/EIPS/eip-1153) (geçici depolama), [`MCOPY`](https://eips.ethereum.org/EIPS/eip-5656), [`BLOBHASH`](https://eips.ethereum.org/EIPS/eip-4844) ve [`BLOBBASEFEE`](https://eips.ethereum.org/EIPS/eip-7516) gibi işlem kodları eklediler ve [`SELFDESTRUCT`](https://eips.ethereum.org/EIPS/eip-6780)'in davranışını değiştirdiler. Sarı Bülten bu değişikliklerin tümünü kapsamaz. En güncel spesifikasyon [Python yürütme katmanı spesifikasyonudur](https://github.com/ethereum/execution-specs).
 
 ## 9 Yürütme modeli {#9-execution-model}
 
@@ -32,26 +34,28 @@ Bir [Turing makinesi](https://en.wikipedia.org/wiki/Turing_machine) hesaplamalı
 
 Bu bölüm, EVM'nin temellerini ve diğer hesaplama modelleriyle nasıl karşılaştırıldığını verir.
 
-Bir [yığın makinesi](https://en.wikipedia.org/wiki/Stack_machine), ara verileri yazmaçlarda değil, bir [**yığında (stack)**](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>) depolayan bir bilgisayardır. Bu, sanal makineler için tercih edilen mimaridir çünkü uygulanması kolaydır, bu da hataların ve güvenlik açıklarının çok daha az olası olduğu anlamına gelir. Yığındaki bellek 256 bitlik kelimelere (words) bölünmüştür. Bu, Keccak-256 hashleme ve eliptik eğri hesaplamaları gibi Ethereum'un temel kriptografik işlemleri için uygun olduğundan seçilmiştir. Yığının maksimum boyutu 1024 öğedir (1024 x 256 bit). İşlem kodları yürütüldüğünde genellikle parametrelerini yığından alırlar. `POP` (öğeyi yığının en üstünden kaldırır), `DUP_N` (yığındaki N'inci öğeyi çoğaltır) vb. gibi yığındaki öğeleri yeniden düzenlemek için özel işlem kodları vardır.
+Bir [yığın makinesi](https://en.wikipedia.org/wiki/Stack_machine), ara verileri yazmaçlarda değil, bir [**yığında**](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>) depolayan bir bilgisayardır. Bu, sanal makineler için tercih edilen mimaridir çünkü uygulanması kolaydır, bu da hataların ve güvenlik açıklarının çok daha az olası olduğu anlamına gelir. Yığındaki bellek 256 bitlik kelimelere bölünmüştür. Bu, Keccak-256 hashleme ve eliptik eğri hesaplamaları gibi Ethereum'un temel kriptografik işlemleri için uygun olduğu için seçilmiştir. Yığının maksimum boyutu 1024 öğedir (1024 x 256 bit). İşlem kodları yürütüldüğünde genellikle parametrelerini yığından alırlar. Yığındaki öğeleri yeniden düzenlemek için özel olarak `POP` (öğeyi yığının en üstünden kaldırır), `DUP_N` (yığındaki N'inci öğeyi çoğaltır) vb. gibi işlem kodları vardır.
 
-EVM ayrıca yürütme sırasında verileri depolamak için kullanılan **bellek (memory)** adı verilen geçici bir alana sahiptir. Bu bellek 32 baytlık kelimeler halinde düzenlenmiştir. Tüm bellek konumları sıfır olarak başlatılır. Belleğe bir kelime eklemek için bu [Yul](https://docs.soliditylang.org/en/latest/yul.html) kodunu yürütürseniz, kelimedeki boş alanı sıfırlarla doldurarak 32 baytlık belleği dolduracaktır, yani 0-29 konumlarında sıfırlar, 30'da 0x60 ve 31'de 0xA7 olan bir kelime oluşturur.
+EVM ayrıca yürütme sırasında verileri depolamak için kullanılan **bellek** adı verilen geçici bir alana sahiptir. Bu bellek 32 baytlık kelimeler halinde düzenlenmiştir. Tüm bellek konumları sıfır olarak başlatılır. Belleğe bir kelime eklemek için bu [Yul](https://docs.soliditylang.org/en/latest/yul.html) kodunu çalıştırırsanız, kelimedeki boş alanı sıfırlarla doldurarak 32 baytlık belleği dolduracaktır, yani 0-29 konumlarında sıfırlar, 30'da 0x60 ve 31'de 0xA7 olan bir kelime oluşturur.
 
 ```yul
 mstore(0, 0x60A7)
 ```
 
-`mstore`, EVM'nin bellekle etkileşim için sağladığı üç işlem kodundan biridir - belleğe bir kelime yükler. Diğer ikisi, belleğe tek bir bayt yükleyen `mstore8` ve bellekten yığına bir kelime taşıyan `mload` işlem kodlarıdır.
+`mstore`, EVM'nin bellekle etkileşim için sağladığı üç işlem kodundan biridir - belleğe bir kelime yükler. Diğer ikisi, belleğe tek bir bayt yükleyen `mstore8` ve bellekten yığına bir kelime taşıyan `mload`'dur.
 
-EVM ayrıca sistem durumunun bir parçası olarak korunan ayrı bir kalıcı **depolama (storage)** modeline sahiptir - bu bellek (yığındaki kelime adreslenebilir bayt dizilerinin aksine) kelime dizileri halinde düzenlenmiştir. Bu depolama, sözleşmelerin kalıcı verileri tuttuğu yerdir - bir sözleşme yalnızca kendi depolamasıyla etkileşime girebilir. Depolama, anahtar-değer eşlemeleri şeklinde düzenlenmiştir.
+EVM ayrıca sistem durumunun bir parçası olarak korunan ayrı bir kalıcı **depolama** modeline sahiptir - bu bellek 256 bitlik anahtarları 256 bitlik değerlerle eşler (bayt adreslenebilir bir dizi olan belleğin aksine). Bu depolama, sözleşmelerin kalıcı verileri tuttuğu yerdir - bir sözleşme yalnızca kendi depolamasıyla etkileşime girebilir. Depolama, anahtar-değer eşlemelerinde düzenlenmiştir.
 
-Sarı Bülten'in bu bölümünde bahsedilmese de, dördüncü bir bellek türü olduğunu bilmek de faydalıdır. **Çağrı verisi (Calldata)**, bir işlemin `data` parametresiyle iletilen değeri depolamak için kullanılan bayt adreslenebilir salt okunur bellektir. EVM'nin `calldata` yönetimi için özel işlem kodları vardır. `calldatasize` verinin boyutunu döndürür. `calldataload` veriyi yığına yükler. `calldatacopy` veriyi belleğe kopyalar.
+Kankun yükseltmesinden bu yana, **geçici depolama** ([EIP-1153](https://eips.ethereum.org/EIPS/eip-1153)) da vardır. `TLOAD` ve `TSTORE` işlem kodları kullanılarak depolama gibi erişilir, ancak her işlemin sonunda temizlenir.
 
-Standart [Von Neumann mimarisi](https://en.wikipedia.org/wiki/Von_Neumann_architecture) kodu ve veriyi aynı bellekte depolar. EVM güvenlik nedenleriyle bu standardı izlemez - geçici belleği paylaşmak program kodunu değiştirmeyi mümkün kılar. Bunun yerine, kod depolamaya kaydedilir.
+Sarı Bülten'in bu bölümünde bahsedilmese de, bir bellek türü daha olduğunu bilmek de faydalıdır. **Çağrı verisi**, bir işlemin `data` parametresiyle iletilen değeri depolamak için kullanılan bayt adreslenebilir salt okunur bellektir. EVM'nin `calldata`'yi yönetmek için özel işlem kodları vardır. `calldatasize` verinin boyutunu döndürür. `calldataload` veriyi yığına yükler. `calldatacopy` veriyi belleğe kopyalar.
+
+Standart [Von Neumann mimarisi](https://en.wikipedia.org/wiki/Von_Neumann_architecture) kodu ve veriyi aynı bellekte depolar. EVM güvenlik nedenleriyle bu standardı izlemez - geçici belleği paylaşmak program kodunu değiştirmeyi mümkün kılar. Bunun yerine kod, hem bellekten hem de sözleşmenin depolamasından ayrı olarak, dünya durumundaki sözleşme hesabının bir parçası olarak değişmez bir şekilde depolanır.
 
 Kodun bellekten yürütüldüğü yalnızca iki durum vardır:
 
 - Bir sözleşme başka bir sözleşme oluşturduğunda ([`CREATE`](https://www.evm.codes/#f0) veya [`CREATE2`](https://www.evm.codes/#f5) kullanarak), sözleşme kurucusu için kod bellekten gelir.
-- _Herhangi bir_ sözleşmenin oluşturulması sırasında, kurucu kodu çalışır ve ardından yine bellekten gelen asıl sözleşmenin koduyla geri döner.
+- _Herhangi_ bir sözleşmenin oluşturulması sırasında, kurucu kodu çalışır ve ardından yine bellekten gelen asıl sözleşmenin koduyla geri döner.
 
 İstisnai yürütme terimi, mevcut sözleşmenin yürütülmesinin durmasına neden olan bir istisna anlamına gelir.
 
@@ -88,27 +92,28 @@ _C<sub>mem</sub>_ işlevi denklem 328'de tanımlanmıştır: _C<sub>mem</sub>(a)
 
 Yürütme ortamı, blokzincir durumunun veya EVM'nin bir parçası olmayan bilgileri içeren bir demettir (tuple), _I_.
 
-| Parametre       | Veriye erişmek için işlem kodu                                                                                   | Veriye erişmek için Solidity kodu        |
+| Parametre       | Veriye erişmek için işlem kodu                                                                                        | Veriye erişmek için Solidity kodu         |
 | --------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
 | _I<sub>a</sub>_ | [`ADDRESS`](https://www.evm.codes/#30)                                                                           | `address(this)`                          |
 | _I<sub>o</sub>_ | [`ORIGIN`](https://www.evm.codes/#32)                                                                            | `tx.origin`                              |
 | _I<sub>p</sub>_ | [`GASPRICE`](https://www.evm.codes/#3a)                                                                          | `tx.gasprice`                            |
-| _I<sub>d</sub>_ | [`CALLDATALOAD`](https://www.evm.codes/#35) vb.                                                                  | `msg.data`                               |
+| _I<sub>d</sub>_ | [`CALLDATALOAD`](https://www.evm.codes/#35) vb.                                                                | `msg.data`                               |
 | _I<sub>s</sub>_ | [`CALLER`](https://www.evm.codes/#33)                                                                            | `msg.sender`                             |
 | _I<sub>v</sub>_ | [`CALLVALUE`](https://www.evm.codes/#34)                                                                         | `msg.value`                              |
 | _I<sub>b</sub>_ | [`CODECOPY`](https://www.evm.codes/#39)                                                                          | `address(this).code`                     |
-| _I<sub>H</sub>_ | [`NUMBER`](https://www.evm.codes/#43) ve [`DIFFICULTY`](https://www.evm.codes/#44) gibi blok başlığı alanları    | `block.number`, `block.difficulty` vb.   |
-| _I<sub>e</sub>_ | Sözleşmeler arası çağrılar için çağrı yığınının derinliği (sözleşme oluşturma dahil)                             |                                          |
-| _I<sub>w</sub>_ | EVM'nin durumu değiştirmesine izin veriliyor mu yoksa statik olarak mı çalışıyor                                 |                                          |
+| _I<sub>H</sub>_ | [`NUMBER`](https://www.evm.codes/#43) ve [`PREVRANDAO`](https://www.evm.codes/#44) gibi blok başlığı alanları | `block.number`, `block.prevrandao` vb. |
+| _I<sub>e</sub>_ | Sözleşmeler arası çağrılar için çağrı yığınının derinliği (sözleşme oluşturma dahil)                                |
+| _I<sub>w</sub>_ | EVM'nin durumu değiştirmesine izin veriliyor mu yoksa statik olarak mı çalışıyor                                                  |
 
-Bölüm 9'un geri kalanını anlamak için birkaç başka parametre daha gereklidir:
+Bölüm 9'un geri kalanını anlamak için birkaç parametre daha gereklidir:
 
-| Parametre | Tanımlandığı bölüm   | Anlamı                                                                                                                                                                                                                   |
+| Parametre | Tanımlandığı bölüm   | Anlamı                                                                                                                                                                                                                  |
 | --------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| _σ_       | 2 (s. 2, denklem 1)  | Blokzincirin durumu                                                                                                                                                                                                      |
-| _g_       | 9.3 (s. 14)          | Kalan gaz                                                                                                                                                                                                                |
-| _A_       | 6.1 (s. 9)           | Tahakkuk eden alt durum (işlem sona erdiğinde yapılması planlanan değişiklikler)                                                                                                                                         |
+| _σ_       | 2 (s. 2, denklem 1) | Blokzincirin durumu                                                                                                                                                                                              |
+| _g_       | 9.3 (s. 14)          | Kalan gaz                                                                                                                                                                                                            |
+| _A_       | 6.1 (s. 9)           | Tahakkuk eden alt durum (işlem bittiğinde planlanan değişiklikler)                                                                                                                                                       |
 | _o_       | 9.3 (s. 14)          | Çıktı - dahili işlem durumunda (bir sözleşme diğerini çağırdığında) ve görünüm (view) işlevlerine yapılan çağrılarda (sadece bilgi istediğinizde, bu nedenle bir işlem beklemenize gerek olmadığında) döndürülen sonuç |
+
 ## 9.4 Yürütmeye genel bakış {#94-execution-overview}
 
 Artık tüm ön bilgilere sahip olduğumuza göre, nihayet EVM'nin nasıl çalıştığı üzerinde çalışmaya başlayabiliriz.
@@ -138,7 +143,7 @@ Bu bir [yığın makinesi](https://en.wikipedia.org/wiki/Stack_machine) olduğun
 
 ## 9.4.2 İstisnai Durma {#942-exceptional-halt}
 
-Bu bölüm, ne zaman anormal bir sonlandırma yaşayacağımızı belirten _Z_ işlevini tanımlar. Bu bir [Boole](https://en.wikipedia.org/wiki/Boolean_data_type) işlevidir, bu nedenle [mantıksal veya için _∨_](https://en.wikipedia.org/wiki/Logical_disjunction) ve [mantıksal ve için _∧_](https://en.wikipedia.org/wiki/Logical_conjunction) kullanır.
+Bu bölüm, ne zaman anormal bir sonlandırmaya sahip olduğumuzu belirten _Z_ işlevini tanımlar. Bu bir [Boole](https://en.wikipedia.org/wiki/Boolean_data_type) işlevidir, bu nedenle [mantıksal veya için _∨_](https://en.wikipedia.org/wiki/Logical_disjunction) ve [mantıksal ve için _∧_](https://en.wikipedia.org/wiki/Logical_conjunction) kullanır.
 
 Bu koşullardan herhangi biri doğruysa istisnai bir durma yaşarız:
 
@@ -149,31 +154,31 @@ Bu koşullardan herhangi biri doğruysa istisnai bir durma yaşarız:
   Bir işlem kodu için çıkarılan öğelerin sayısı tanımsızsa, işlem kodunun kendisi de tanımsızdır.
 
 - **_|| μ<sub>s</sub> || < δ<sub>w</sub>_**
-  Yığın yetersizliği (stack underflow), mevcut işlem kodu için yığında yeterli öğe yok.
+  Yığın yetersizliği (underflow), mevcut işlem kodu için yığında yeterli öğe yok.
 
 - **_w = JUMP ∧ μ<sub>s</sub>[0]∉D(I<sub>b</sub>)_**
   İşlem kodu [`JUMP`](https://www.evm.codes/#56) ve adres bir [`JUMPDEST`](https://www.evm.codes/#5b) değil. Atlamalar _yalnızca_ hedef bir [`JUMPDEST`](https://www.evm.codes/#5b) olduğunda geçerlidir.
 
 - **_w = JUMPI ∧ μ<sub>s</sub>[1]≠0 ∧ μ<sub>s</sub>[0] ∉ D(I<sub>b</sub>)_**
-  İşlem kodu [`JUMPI`](https://www.evm.codes/#57), koşul doğru (sıfır değil) bu yüzden atlama gerçekleşmeli ve adres bir [`JUMPDEST`](https://www.evm.codes/#5b) değil. Atlamalar _yalnızca_ hedef bir [`JUMPDEST`](https://www.evm.codes/#5b) olduğunda geçerlidir.
+  İşlem kodu [`JUMPI`](https://www.evm.codes/#57), koşul doğru (sıfır değil) bu nedenle atlama gerçekleşmeli ve adres bir [`JUMPDEST`](https://www.evm.codes/#5b) değil. Atlamalar _yalnızca_ hedef bir [`JUMPDEST`](https://www.evm.codes/#5b) olduğunda geçerlidir.
 
 - **_w = RETURNDATACOPY ∧ μ<sub>s</sub>[1]+μ<sub>s</sub>[2]>|| μ<sub>o</sub> ||_**
-  İşlem kodu [`RETURNDATACOPY`](https://www.evm.codes/#3e). Bu işlem kodunda yığın öğesi _μ<sub>s</sub>[1]_ dönüş verisi arabelleğinden okunacak ofsettir ve yığın öğesi _μ<sub>s</sub>[2]_ verinin uzunluğudur. Bu koşul, dönüş verisi arabelleğinin sonunun ötesini okumaya çalıştığınızda oluşur. Çağrı verisi (calldata) veya kodun kendisi için benzer bir koşul olmadığına dikkat edin. Bu arabelleklerin sonunun ötesini okumaya çalıştığınızda sadece sıfırlar alırsınız.
+  İşlem kodu [`RETURNDATACOPY`](https://www.evm.codes/#3e). Bu işlem kodunda yığın öğesi _μ<sub>s</sub>[1]_ dönüş verisi arabelleğinde okunacak ofsettir ve yığın öğesi _μ<sub>s</sub>[2]_ verinin uzunluğudur. Bu koşul, dönüş verisi arabelleğinin sonunun ötesini okumaya çalıştığınızda oluşur. Çağrı verisi veya kodun kendisi için benzer bir koşul olmadığına dikkat edin. Bu arabelleklerin sonunun ötesini okumaya çalıştığınızda sadece sıfırlar alırsınız.
 
 - **_|| μ<sub>s</sub> || - δ<sub>w</sub> + α<sub>w</sub> > 1024_**
 
-  Yığın taşması (stack overflow). İşlem kodunu çalıştırmak 1024 öğeden fazla bir yığınla sonuçlanacaksa, iptal edin.
+  Yığın taşması. İşlem kodunu çalıştırmak 1024'ten fazla öğeden oluşan bir yığınla sonuçlanacaksa, iptal edin.
 
 - **_¬I<sub>w</sub> ∧ W(w,μ)_**
   Statik olarak mı çalışıyoruz ([¬ olumsuzlamadır](https://en.wikipedia.org/wiki/Negation) ve blokzincir durumunu değiştirmemize izin verildiğinde _I<sub>w</sub>_ doğrudur)? Eğer öyleyse ve durumu değiştiren bir işlem deniyorsak, bu gerçekleşemez.
 
   _W(w,μ)_ işlevi daha sonra denklem 159'da tanımlanmıştır. Bu koşullardan biri doğruysa _W(w,μ)_ doğrudur:
 
-  - **_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT\}_**
-    Bu işlem kodları, yeni bir sözleşme oluşturarak, bir değer depolayarak veya mevcut sözleşmeyi kendi kendini yok etme yoluyla yok ederek durumu değiştirir.
+  - **_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT}_**
+    Bu işlem kodları, yeni bir sözleşme oluşturarak, bir değer depolayarak veya mevcut sözleşmeyi yok ederek durumu değiştirir. Sarı Bülten'in bu sürümünden sonra eklenen `TSTORE` da statik bir bağlamda yasaktır.
 
   - **_LOG0≤w ∧ w≤LOG4_**
-    Statik olarak çağrılırsak günlük girişleri yayamayız.
+    Statik olarak çağrılırsak günlük girişleri yayımlayamayız.
     Günlük işlem kodlarının tümü [`LOG0` (A0)](https://www.evm.codes/#a0) ile [`LOG4` (A4)](https://www.evm.codes/#a4) aralığındadır.
     Günlük işlem kodundan sonraki sayı, günlük girişinin kaç konu içerdiğini belirtir.
   - **_w=CALL ∧ μ<sub>s</sub>[2]≠0_**
@@ -181,6 +186,7 @@ Bu koşullardan herhangi biri doğruysa istisnai bir durma yaşarız:
 
 - **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_**
   G<sub>callstipend</sub>'den (Ek G'de 2300 olarak tanımlanmıştır) daha fazla gazınız yoksa [`SSTORE`](https://www.evm.codes/#55) çalıştıramazsınız.
+
 ## 9.4.3 Atlama Hedefi Geçerliliği {#943-jump-dest-valid}
 
 Burada [`JUMPDEST`](https://www.evm.codes/#5b) işlem kodlarının ne olduğunu resmi olarak tanımlıyoruz. Sadece 0x5B bayt değerini arayamayız, çünkü bir PUSH içinde olabilir (ve bu nedenle bir işlem kodu değil, veridir).
@@ -195,7 +201,7 @@ Diğer tüm durumlarda, bir sonraki işlem koduna giderek ve ondan başlayan kü
 Durma işlevi _H_, üç tür değer döndürebilir.
 
 - Bir durma işlem kodunda değilsek, boş küme olan _∅_ döndürün. Geleneksel olarak, bu değer Boole yanlışı (false) olarak yorumlanır.
-- Çıktı üretmeyen bir durma işlem kodumuz varsa ([`STOP`](https://www.evm.codes/#00) veya [`SELFDESTRUCT`](https://www.evm.codes/#ff)), dönüş değeri olarak sıfır bayt boyutunda bir dizi döndürün. Bunun boş kümeden çok farklı olduğuna dikkat edin. Bu değer, EVM'nin gerçekten durduğu, sadece okunacak dönüş verisi olmadığı anlamına gelir.
+- Çıktı üretmeyen bir durma işlem kodumuz varsa ([`STOP`](https://www.evm.codes/#00) veya [`SELFDESTRUCT`](https://www.evm.codes/#ff)), dönüş değeri olarak sıfır bayt boyutunda bir dizi döndürün. Bunun boş kümeden çok farklı olduğuna dikkat edin. Bu değer, EVM'nin gerçekten durduğu, sadece okunacak dönüş verisi olmadığı anlamına gelir. (Ayrıca [EIP-6780](https://eips.ethereum.org/EIPS/eip-6780)'den bu yana, `SELFDESTRUCT`'nin sözleşmeyi yalnızca sözleşmeyi oluşturan aynı işlemde çağrılırsa sildiğini unutmayın. Aksi takdirde, sadece sözleşmenin ETH'sini transfer eder.)
 - Çıktı üreten bir durma işlem kodumuz varsa ([`RETURN`](https://www.evm.codes/#f3) veya [`REVERT`](https://www.evm.codes/#fd)), o işlem kodu tarafından belirtilen bayt dizisini döndürün. Bu dizi bellekten alınır, yığının en üstündeki değer (_μ<sub>s</sub>[0]_) ilk bayttır ve ondan sonraki değer (_μ<sub>s</sub>[1]_) uzunluktur.
 
 ## H.2 Talimat seti {#h2-instruction-set}
@@ -260,10 +266,10 @@ Yeni durumun _(σ', μ', A', I')_ olduğunu söyler.
 Bununla birlikte EVM tamamen tanımlanmış olur.
 ## Sonuç {#conclusion}
 
-Matematiksel gösterim kesindir ve Sarı Bülten'in Ethereum'un her detayını belirtmesine olanak tanımıştır. Ancak bazı dezavantajları vardır:
+Matematiksel gösterim kesindir ve Sarı Bülten'in Ethereum'un her detayını belirtmesine olanak sağlamıştır. Ancak bazı dezavantajları vardır:
 
-- Sadece insanlar tarafından anlaşılabilir, bu da [uyumluluk testlerinin](https://github.com/ethereum/tests) manuel olarak yazılması gerektiği anlamına gelir.
+- Yalnızca insanlar tarafından anlaşılabilir, bu da [uyumluluk testlerinin](https://github.com/ethereum/tests) manuel olarak yazılması gerektiği anlamına gelir.
 - Programcılar bilgisayar kodunu anlar.
   Matematiksel gösterimi anlayabilirler veya anlamayabilirler.
 
-Belki de bu nedenlerden dolayı, daha yeni [mutabakat katmanı spesifikasyonları](https://github.com/ethereum/consensus-specs/blob/master/tests/core/pyspec/README.md) Python'da yazılmıştır. [Python'da yürütme katmanı spesifikasyonları](https://ethereum.github.io/execution-specs) vardır, ancak bunlar tam değildir. Tüm Sarı Bülten de Python veya benzeri bir dile çevrilene kadar Sarı Bülten hizmet vermeye devam edecektir ve onu okuyabilmek faydalıdır.
+Bu nedenlerden dolayı, [mutabakat katmanı spesifikasyonları](https://github.com/ethereum/consensus-specs) Python ile yazılmıştır ve [yürütme katmanı spesifikasyonları](https://github.com/ethereum/execution-specs) da öyledir. Python yürütme katmanı spesifikasyonu artık EVM'nin nasıl çalıştığına dair korunan referanstır ve Sarı Bülten'in kapsamadığı yükseltmelerden gelen değişiklikleri içerir. Sarı Bülten hala yararlı bir resmi açıklamadır ve onu okuyabilmek, ilgili diğer matematiksel makaleleri okumanıza yardımcı olur.

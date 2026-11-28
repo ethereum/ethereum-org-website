@@ -13,27 +13,36 @@ published: 2021-03-09
 
 Ethereum'un en yaygın kullanımlarından biri, bir grubun ticareti yapılabilir bir Token, bir anlamda kendi para birimini yaratmasıdır. Bu Token'lar genellikle bir standardı,
 [ERC-20](/developers/docs/standards/tokens/erc-20/)'yi takip eder. Bu standart, tüm ERC-20
-Token'ları ile çalışan likidite havuzları ve cüzdanlar gibi araçlar yazmayı mümkün kılar. Bu makalede,
-[OpenZeppelin Solidity ERC20 uygulamasını](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol) ve
-[arayüz tanımını](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) analiz edeceğiz.
+Token'larıyla çalışan likidite havuzları ve Cüzdanlar gibi araçlar yazmayı mümkün kılar. Bu makalede,
+[OpenZeppelin Solidity ERC20 uygulamasını](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol) ve
+[arayüz tanımını](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol) inceleyeceğiz.
 
-Bu, açıklamalı bir kaynak kodudur. Eğer ERC-20 uygulamak istiyorsanız,
-[bu öğreticiyi okuyun](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
+Bu, açıklamalı bir kaynak kodudur. ERC-20'yi uygulamak istiyorsanız,
+[bu öğreticiyi okuyun](https://docs.openzeppelin.com/contracts/5.x/erc20-supply).
+
+<Alert variant="info">
+<AlertContent>
+<AlertDescription>
+Bu inceleme, OpenZeppelin Contracts v3.3'ü (Solidity 0.6/0.7) kapsar. Bugün `@openzeppelin/contracts` yüklerseniz, aşağıdaki koddan farklı olan v5.x'i elde edersiniz: `SafeMath` yerine Solidity'nin yerleşik denetimli aritmetiğini kullanır, `_beforeTokenTransfer` ve `_afterTokenTransfer`'ü tek bir `_update` fonksiyonuyla değiştirir, `increaseAllowance`, `decreaseAllowance` ve `_setupDecimals`'yi kaldırır ve hataları geri alma dizeleri yerine özel hatalarla bildirir. Burada açıklanan kavramlar hâlâ geçerlidir. Mevcut API için [OpenZeppelin v5 ERC-20 belgelerine](https://docs.openzeppelin.com/contracts/5.x/erc20) bakın.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Arayüz {#the-interface}
 
-ERC-20 gibi bir standardın amacı, cüzdanlar ve merkeziyetsiz borsalar gibi uygulamalar arasında birlikte çalışabilir birçok Token uygulamasına izin vermektir. Bunu başarmak için bir
-[arayüz](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/) oluşturuyoruz. Token sözleşmesini kullanması gereken herhangi bir kod,
-arayüzdeki aynı tanımları kullanabilir ve MetaMask gibi bir Cüzdan, etherscan.io gibi bir merkeziyetsiz uygulama (dapp) veya likidite havuzu gibi farklı bir sözleşme olsun, onu kullanan tüm Token sözleşmeleriyle uyumlu olabilir.
+ERC-20 gibi bir standardın amacı, Cüzdanlar ve merkeziyetsiz borsalar gibi uygulamalar arasında birlikte çalışabilir birçok Token uygulamasına izin vermektir. Bunu başarmak için bir
+[arayüz](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/) oluşturuyoruz. Token Sözleşmesini kullanması gereken herhangi bir kod,
+arayüzdeki aynı tanımları kullanabilir ve MetaMask gibi bir Cüzdan,
+etherscan.io gibi bir dapp veya likidite havuzu gibi farklı bir Sözleşme olsun, onu kullanan tüm Token Sözleşmeleriyle uyumlu olabilir.
 
-![Illustration of the ERC-20 interface](erc20_interface.png)
+![ERC-20 arayüzünün çizimi](erc20_interface.png)
 
-Deneyimli bir programcıysanız, muhtemelen [Java](https://www.w3schools.com/java/java_interface.asp)'da
+Deneyimli bir programcıysanız, muhtemelen [Java](https://www.w3schools.com/java/java_interface.asp)
 veya hatta [C başlık dosyalarında](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html) benzer yapılar gördüğünüzü hatırlarsınız.
 
-Bu, OpenZeppelin'den [ERC-20 Arayüzünün](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)
+Bu, OpenZeppelin'den [ERC-20 Arayüzünün](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol)
 bir tanımıdır. [İnsan tarafından okunabilir standardın](https://eips.ethereum.org/EIPS/eip-20) Solidity koduna çevrilmiş halidir. Elbette,
-arayüzün kendisi bir şeyin _nasıl_ yapılacağını tanımlamaz. Bu, aşağıdaki sözleşme kaynak kodunda açıklanmıştır.
+arayüzün kendisi bir şeyin _nasıl_ yapılacağını tanımlamaz. Bu, aşağıdaki Sözleşme kaynak kodunda açıklanmıştır.
 
 &nbsp;
 
@@ -41,8 +50,8 @@ arayüzün kendisi bir şeyin _nasıl_ yapılacağını tanımlamaz. Bu, aşağ�
 // SPDX-License-Identifier: MIT
 ```
 
-Solidity dosyalarının bir lisans tanımlayıcısı içermesi beklenir. [Lisansların listesini buradan görebilirsiniz](https://spdx.org/licenses/). Farklı bir lisansa ihtiyacınız varsa,
-bunu yorumlarda açıklamanız yeterlidir.
+Solidity dosyalarının bir lisans tanımlayıcısı içermesi beklenir. [Lisansların listesini buradan görebilirsiniz](https://spdx.org/licenses/). Farklı bir
+lisansa ihtiyacınız varsa, bunu yorumlarda açıklamanız yeterlidir.
 
 &nbsp;
 
@@ -50,7 +59,7 @@ bunu yorumlarda açıklamanız yeterlidir.
 pragma solidity >=0.6.0 <0.8.0;
 ```
 
-Solidity dili hala hızla gelişmektedir ve yeni sürümler eski kodlarla uyumlu olmayabilir
+Solidity dili hâlâ hızla gelişmektedir ve yeni sürümler eski kodla uyumlu olmayabilir
 ([buraya bakın](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Bu nedenle, yalnızca dilin minimum
 sürümünü değil, aynı zamanda kodu test ettiğiniz en son sürüm olan maksimum sürümü de belirtmek iyi bir fikirdir.
 
@@ -62,8 +71,7 @@ sürümünü değil, aynı zamanda kodu test ettiğiniz en son sürüm olan maks
  */
 ```
 
-Yorumdaki `@dev`, kaynak koddan
-belgelendirme üretmek için kullanılan [NatSpec formatının](https://docs.soliditylang.org/en/develop/natspec-format.html) bir parçasıdır.
+Yorumdaki `@dev`, kaynak koddan belgeler üretmek için kullanılan [NatSpec formatının](https://docs.soliditylang.org/en/develop/natspec-format.html) bir parçasıdır.
 
 &nbsp;
 
@@ -71,46 +79,46 @@ belgelendirme üretmek için kullanılan [NatSpec formatının](https://docs.sol
 interface IERC20 {
 ```
 
-Geleneksel olarak, arayüz isimleri `I` ile başlar.
+Geleneksel olarak, arayüz adları `I` ile başlar.
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev Mevcut Token miktarını döndürür.
+     * @dev Var olan Token miktarını döndürür.
      */
     function totalSupply() external view returns (uint256);
 ```
 
-Bu fonksiyon `external`'dir, yani [sadece sözleşmenin dışından çağrılabilir](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2).
-Sözleşmedeki toplam Token arzını döndürür. Bu değer, Ethereum'daki en yaygın tür olan işaretsiz 256 bit kullanılarak döndürülür (256 bit,
-EVM'nin yerel kelime boyutudur). Bu fonksiyon aynı zamanda bir `view`'dir, yani durumu değiştirmez, bu nedenle Blokzincir'deki her
-Düğüm'ün onu çalıştırması yerine tek bir Düğüm üzerinde yürütülebilir. Bu tür bir fonksiyon bir işlem oluşturmaz ve [Gaz](/developers/docs/gas/) maliyeti yoktur.
+Bu fonksiyon `external`'dir, yani [yalnızca Sözleşmenin dışından çağrılabilir](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2).
+Sözleşmedeki toplam Token arzını döndürür. Bu değer, Ethereum'daki en yaygın tür olan işaretsiz 256 bit (256 bit,
+EVM'nin yerel kelime boyutudur) kullanılarak döndürülür. Bu fonksiyon aynı zamanda bir `view`'dir, yani durumu değiştirmez, bu nedenle Blokzincir'deki her
+Düğüm'ün onu çalıştırması yerine tek bir Düğüm'de yürütülebilir. Bu tür bir fonksiyon bir işlem oluşturmaz ve [Gaz](/developers/docs/gas/) maliyeti yoktur.
 
-**Not:** Teoride, bir sözleşmenin yaratıcısı gerçek değerden daha küçük bir toplam arz döndürerek hile yapabilir ve her bir Token'ın gerçekte
-olduğundan daha değerli görünmesini sağlayabilir gibi görünebilir. Ancak bu korku, Blokzincir'in gerçek doğasını göz ardı eder. Blokzincir'de gerçekleşen her şey
-her Düğüm tarafından doğrulanabilir. Bunu başarmak için, her sözleşmenin makine dili kodu ve depolaması her Düğüm'de mevcuttur. Sözleşmeniz için Solidity
+**Not:** Teoride, bir Sözleşme yaratıcısının gerçek değerden daha küçük bir toplam arz döndürerek hile yapabileceği ve her bir Token'ı
+olduğundan daha değerli gösterebileceği düşünülebilir. Ancak bu korku, Blokzincir'in gerçek doğasını göz ardı eder. Blokzincir'de olan her şey
+her Düğüm tarafından doğrulanabilir. Bunu başarmak için, her Sözleşmenin makine dili kodu ve depolaması her Düğüm'de mevcuttur. Sözleşmeniz için Solidity
 kodunu yayınlamanız gerekmese de, kaynak kodunu ve derlendiği Solidity sürümünü yayınlamadığınız sürece kimse sizi ciddiye almaz, böylece
 sağladığınız makine dili koduna karşı doğrulanabilir.
-Örneğin, [bu sözleşmeye](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract) bakın.
+Örneğin, [bu Sözleşmeye](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract) bakın.
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev `account` (Hesap) sahibinin Token miktarını döndürür.
+     * @dev `account` adlı Hesabın sahip olduğu Token miktarını döndürür.
      */
     function balanceOf(address account) external view returns (uint256);
 ```
 
-Adından da anlaşılacağı gibi, `balanceOf` bir hesabın bakiyesini döndürür. Ethereum hesapları, Solidity'de 160 bit tutan `address` türü kullanılarak tanımlanır.
-Ayrıca `external` ve `view`'dir.
+Adından da anlaşılacağı gibi, `balanceOf` bir Hesabın bakiyesini döndürür. Ethereum Hesapları, Solidity'de 160 bit tutan `address` türü kullanılarak tanımlanır.
+Aynı zamanda `external` ve `view`'dir.
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev Çağırıcının Hesabından `recipient` adresine `amount` kadar Token transfer eder.
+     * @dev Çağırıcının Hesabından `recipient` adresine `amount` kadar Token taşır.
      *
      * İşlemin başarılı olup olmadığını belirten boolean bir değer döndürür.
      *
@@ -119,28 +127,28 @@ Ayrıca `external` ve `view`'dir.
     function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
-`transfer` fonksiyonu, çağıran kişiden farklı bir adrese Token transfer eder. Bu bir durum değişikliği içerir, bu yüzden bir `view` değildir.
-Bir kullanıcı bu fonksiyonu çağırdığında bir işlem oluşturur ve Gaz maliyeti olur. Ayrıca, Blokzincir'deki herkesi
-olay hakkında bilgilendirmek için bir olay, `Transfer`, yayar.
+`transfer` fonksiyonu, çağıran kişiden farklı bir Adrese Token transfer eder. Bu bir durum değişikliği içerir, bu nedenle bir `view` değildir.
+Bir kullanıcı bu fonksiyonu çağırdığında bir işlem oluşturur ve Gaz maliyeti olur. Ayrıca, Blokzincir'deki
+herkesi olay hakkında bilgilendirmek için bir olay, `Transfer`, yayınlar.
 
-Fonksiyonun iki farklı çağırıcı türü için iki tür çıktısı vardır:
+Fonksiyonun iki farklı çağıran türü için iki tür çıktısı vardır:
 
 - Fonksiyonu doğrudan bir kullanıcı arayüzünden çağıran kullanıcılar. Genellikle kullanıcı bir işlem gönderir
   ve belirsiz bir süre alabilecek bir yanıt beklemez. Kullanıcı, işlem makbuzunu (işlem hash'i ile tanımlanır) arayarak veya
   `Transfer` olayını arayarak ne olduğunu görebilir.
-- Fonksiyonu genel bir işlemin parçası olarak çağıran diğer sözleşmeler. Bu sözleşmeler sonucu hemen alırlar,
+- Fonksiyonu genel bir işlemin parçası olarak çağıran diğer Sözleşmeler. Bu Sözleşmeler sonucu hemen alır,
   çünkü aynı işlemde çalışırlar, böylece fonksiyonun dönüş değerini kullanabilirler.
 
-Sözleşmenin durumunu değiştiren diğer fonksiyonlar tarafından da aynı tür çıktı oluşturulur.
+Aynı tür çıktı, Sözleşmenin durumunu değiştiren diğer fonksiyonlar tarafından da oluşturulur.
 
 &nbsp;
 
-Harcama izinleri, bir hesabın farklı bir sahibe ait bazı Token'ları harcamasına izin verir.
-Bu, örneğin satıcı olarak hareket eden sözleşmeler için yararlıdır. Sözleşmeler
-olayları izleyemez, bu nedenle bir alıcı doğrudan satıcı sözleşmesine Token transfer ederse
-o sözleşme kendisine ödeme yapıldığını bilemez. Bunun yerine, alıcı
-satıcı sözleşmesinin belirli bir miktar harcamasına izin verir ve satıcı bu miktarı transfer eder.
-Bu, satıcı sözleşmesinin çağırdığı bir fonksiyon aracılığıyla yapılır, böylece satıcı sözleşmesi
+Harcama izinleri, bir Hesabın farklı bir sahibe ait bazı Token'ları harcamasına izin verir.
+Bu, örneğin satıcı olarak hareket eden Sözleşmeler için yararlıdır. Sözleşmeler
+olayları izleyemez, bu nedenle bir alıcı satıcı Sözleşmesine doğrudan Token transfer ederse
+o Sözleşme ödeme aldığını bilemez. Bunun yerine, alıcı
+satıcı Sözleşmesinin belirli bir miktar harcamasına izin verir ve satıcı bu miktarı transfer eder.
+Bu, satıcı Sözleşmesinin çağırdığı bir fonksiyon aracılığıyla yapılır, böylece satıcı Sözleşmesi
 başarılı olup olmadığını bilebilir.
 
 ```solidity
@@ -152,18 +160,18 @@ başarılı olup olmadığını bilebilir.
     function allowance(address owner, address spender) external view returns (uint256);
 ```
 
-`allowance` fonksiyonu, herkesin bir adresin
-(`owner`) başka bir adresin (`spender`) harcamasına izin verdiği harcama izninin ne olduğunu sorgulamasına olanak tanır.
+`allowance` fonksiyonu, herkesin bir
+Adresin (`owner`) başka bir Adresin (`spender`) harcamasına izin verdiği harcama izninin ne olduğunu sorgulamasına olanak tanır.
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev Çağırıcının Tokenları üzerinde `spender` için harcama izni olarak `amount` değerini ayarlar.
+     * @dev Çağırıcının Token'ları üzerinde `spender`ın harcama izni olarak `amount` değerini ayarlar.
      *
      * İşlemin başarılı olup olmadığını belirten boolean bir değer döndürür.
      *
-     * ÖNEMLİ: Bu yöntemle bir harcama iznini değiştirmenin, talihsiz bir işlem sıralamasıyla birisinin hem eski hem de yeni harcama iznini kullanabilmesi riskini getirdiğine dikkat edin. Bu yarış durumunu (race condition) hafifletmek için olası bir çözüm, önce harcayıcının harcama iznini 0'a düşürmek ve ardından istenen değeri ayarlamaktır:
+     * ÖNEMLİ: Bu yöntemle bir harcama izni değiştirmenin, talihsiz bir işlem sıralamasıyla birisinin hem eski hem de yeni harcama izni değerini kullanabilmesi riskini getirdiğini unutmayın. Bu yarış durumunu hafifletmek için olası bir çözüm, önce harcayıcının harcama izni değerini 0'a düşürmek ve ardından istenen değeri ayarlamaktır:
      * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
      *
      * Bir {Approval} olayı yayar.
@@ -171,16 +179,17 @@ başarılı olup olmadığını bilebilir.
     function approve(address spender, uint256 amount) external returns (bool);
 ```
 
-`approve` fonksiyonu bir harcama izni oluşturur. Nasıl kötüye kullanılabileceği
+`approve` fonksiyonu bir harcama izni oluşturur. Bunun nasıl kötüye kullanılabileceği
 hakkındaki mesajı okuduğunuzdan emin olun. Ethereum'da kendi işlemlerinizin sırasını kontrol edersiniz,
-ancak karşı tarafın işleminin gerçekleştiğini görene kadar kendi işleminizi göndermediğiniz sürece,
-diğer insanların işlemlerinin hangi sırayla yürütüleceğini kontrol edemezsiniz.
+ancak diğer tarafın işleminin gerçekleştiğini görene kadar kendi işleminizi
+göndermediğiniz sürece, diğer insanların işlemlerinin hangi sırayla
+yürütüleceğini kontrol edemezsiniz.
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev Harcama izni mekanizmasını kullanarak `sender` adresinden `recipient` adresine `amount` kadar Token transfer eder. `amount` daha sonra çağırıcının harcama izninden düşülür.
+     * @dev Harcama izni mekanizmasını kullanarak `sender` adresinden `recipient` adresine `amount` kadar Token taşır. `amount` daha sonra çağırıcının harcama izni miktarından düşülür.
      *
      * İşlemin başarılı olup olmadığını belirten boolean bir değer döndürür.
      *
@@ -189,32 +198,33 @@ diğer insanların işlemlerinin hangi sırayla yürütüleceğini kontrol edeme
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 ```
 
-Son olarak, `transferFrom` harcayan tarafından harcama iznini fiilen harcamak için kullanılır.
+Son olarak, `transferFrom`, harcayan tarafından harcama iznini fiilen harcamak için kullanılır.
 
 &nbsp;
 
 ```solidity
 
     /**
-     * @dev `value` kadar Token bir Hesaptan (`from`) diğerine (`to`) transfer edildiğinde yayılır.
+     * @dev `value` kadar Token bir Hesaptan (`from`) diğerine (`to`) taşındığında yayılır.
      *
      * `value` değerinin sıfır olabileceğini unutmayın.
      */
     event Transfer(address indexed from, address indexed to, uint256 value);
 
     /**
-     * @dev Bir `owner` için bir `spender`ın harcama izni {approve} çağrısı ile ayarlandığında yayılır. `value` yeni harcama iznidir.
+     * @dev Emitted when the allowance of a `spender` for an `owner` is set by
+     * a call to {approve}. `value` is the new allowance.
      */
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 ```
 
-Bu olaylar, ERC-20 sözleşmesinin durumu değiştiğinde yayılır.
+Bu olaylar, ERC-20 Sözleşmesinin durumu değiştiğinde yayınlanır.
 
 ## Asıl Sözleşme {#the-actual-contract}
 
 Bu, ERC-20 standardını uygulayan asıl sözleşmedir,
-[buradan alınmıştır](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol).
+[buradan alınmıştır](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol).
 Olduğu gibi kullanılması amaçlanmamıştır, ancak onu kullanılabilir bir şeye
 genişletmek için ondan [miras alabilirsiniz](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm).
 
@@ -239,7 +249,7 @@ import "../../math/SafeMath.sol";
 - `GSN/Context.sol`, Ether'i olmayan kullanıcıların Blokzincir'i kullanmasına olanak tanıyan bir sistem olan [OpenGSN](https://opengsn.org/)'yi kullanmak için gereken tanımlardır. Bunun eski bir sürüm olduğunu unutmayın, OpenGSN ile entegre olmak istiyorsanız
   [bu öğreticiyi kullanın](https://docs.opengsn.org/javascript-client/tutorial.html).
 - Solidity sürümleri **&lt;0.8.0** için aritmetik taşmaları/alt taşmaları önleyen
-  [SafeMath Kütüphanesi](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/). Solidity ≥0.8.0'da, aritmetik işlemler taşma/alt taşma durumunda otomatik olarak
+  [SafeMath Kütüphanesi](https://docs.openzeppelin.com/contracts/3.x/api/math#SafeMath). Solidity ≥0.8.0'da, aritmetik işlemler taşma/alt taşma durumunda otomatik olarak
   geri alınır ve SafeMath'i gereksiz kılar. Bu sözleşme, eski derleyici sürümleriyle geriye dönük uyumluluk için
   SafeMath kullanır.
 
@@ -287,25 +297,26 @@ Bu satır, bu durumda yukarıdaki `IERC20`'den ve OpenGSN için `Context`'den mi
 ```
 
 Bu satır, `SafeMath` kütüphanesini `uint256` türüne ekler. Bu kütüphaneyi
-[burada](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol) bulabilirsiniz.
+[burada](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/math/SafeMath.sol) bulabilirsiniz.
 
 ### Değişken Tanımları {#variable-definitions}
 
-Bu tanımlar sözleşmenin durum değişkenlerini belirtir. Bu değişkenler `private` olarak bildirilir, ancak
-bu yalnızca Blokzincir'deki diğer sözleşmelerin onları okuyamayacağı anlamına gelir. _Blokzincir'de
-sır yoktur_, her Düğüm'deki yazılım, her Blok'taki her sözleşmenin durumuna sahiptir.
-Geleneksel olarak, durum değişkenleri `_<something>` olarak adlandırılır.
+Bu tanımlar Sözleşmenin durum değişkenlerini belirtir. Bu değişkenler `private` olarak bildirilir, ancak
+bu yalnızca Blokzincir'deki diğer Sözleşmelerin onları okuyamayacağı anlamına gelir. _Blokzincir'de
+sır yoktur_, her Düğüm'deki yazılım, her Blok'taki her Sözleşmenin
+durumuna sahiptir. Geleneksel olarak, durum değişkenleri `_<something>` olarak adlandırılır.
 
 İlk iki değişken [eşlemelerdir (mappings)](https://www.tutorialspoint.com/solidity/solidity_mappings.htm),
-yani anahtarların sayısal değerler olması dışında kabaca [ilişkisel diziler](https://wikipedia.org/wiki/Associative_array) ile aynı şekilde davranırlar.
-Depolama yalnızca varsayılandan (sıfır) farklı değerlere sahip girişler için tahsis edilir.
+yani anahtarların sayısal değerler olması dışında kabaca [ilişkisel diziler (associative arrays)](https://wikipedia.org/wiki/Associative_array)
+ile aynı şekilde davranırlar. Depolama yalnızca varsayılandan (sıfır) farklı
+değerlere sahip girişler için ayrılır.
 
 ```solidity
     mapping (address => uint256) private _balances;
 ```
 
-İlk eşleme olan `_balances`, adresler ve bu Token'ın ilgili bakiyeleridir. Bakiyeye erişmek
-için şu sözdizimini kullanın: `_balances[<address>]`.
+İlk eşleme olan `_balances`, Adresler ve bu Token'ın ilgili bakiyeleridir. Bakiyeye
+erişmek için şu sözdizimini kullanın: `_balances[<address>]`.
 
 &nbsp;
 
@@ -314,8 +325,8 @@ için şu sözdizimini kullanın: `_balances[<address>]`.
 ```
 
 Bu değişken, `_allowances`, daha önce açıklanan harcama izinlerini depolar. İlk endeks Token'ların
-sahibidir ve ikincisi harcama iznine sahip sözleşmedir. A adresinin B adresinin hesabından
-harcayabileceği miktara erişmek için `_allowances[B][A]` kullanın.
+sahibidir ve ikincisi harcama iznine sahip Sözleşmedir. A Adresinin
+B Adresinin Hesabından harcayabileceği miktara erişmek için `_allowances[B][A]` kullanın.
 
 &nbsp;
 
@@ -323,7 +334,7 @@ harcayabileceği miktara erişmek için `_allowances[B][A]` kullanın.
     uint256 private _totalSupply;
 ```
 
-Adından da anlaşılacağı gibi, bu değişken Token'ların toplam arzını takip eder.
+Adından da anlaşılacağı gibi, bu değişken toplam Token arzını takip eder.
 
 &nbsp;
 
@@ -333,86 +344,87 @@ Adından da anlaşılacağı gibi, bu değişken Token'ların toplam arzını ta
     uint8 private _decimals;
 ```
 
-Bu üç değişken okunabilirliği artırmak için kullanılır. İlk ikisi kendi kendini açıklar, ancak `_decimals`
-öyle değildir.
+Bu üç değişken okunabilirliği artırmak için kullanılır. İlk ikisi kendini açıklar niteliktedir, ancak `_decimals`
+değildir.
 
 Bir yandan, Ethereum'un kayan noktalı veya kesirli değişkenleri yoktur. Öte yandan,
-insanlar Token'ları bölebilmeyi severler. İnsanların para birimi olarak altında karar kılmalarının bir nedeni,
+insanlar Token'ları bölebilmeyi severler. İnsanların para birimi olarak altına karar vermelerinin bir nedeni,
 birisi bir ördek değerinde inek almak istediğinde para üstü vermenin zor olmasıydı.
 
-Çözüm, tam sayıları takip etmek, ancak gerçek Token yerine neredeyse değersiz olan kesirli bir Token saymaktır.
-Ether durumunda, kesirli Token'a Wei denir ve 10^18 Wei bir ETH'ye eşittir.
-Bu yazının yazıldığı sırada, 10.000.000.000.000 Wei yaklaşık bir ABD veya Euro sentidir.
+Çözüm, tam sayıları takip etmek, ancak gerçek Token yerine neredeyse değersiz olan
+kesirli bir Token saymaktır. Ether durumunda, kesirli Token'a Wei denir ve 10^18 Wei bir
+ETH'ye eşittir.
 
 Uygulamaların Token bakiyesini nasıl görüntüleyeceğini bilmesi gerekir. Bir kullanıcının 3.141.000.000.000.000.000 Wei'si varsa, bu
-3,14 ETH midir? 31,41 ETH mi? 3.141 ETH mi? Ether durumunda ETH başına 10^18 Wei olarak tanımlanır, ancak
-Token'ınız için farklı bir değer seçebilirsiniz. Token'ı bölmek mantıklı değilse, sıfır
-`_decimals` değeri kullanabilirsiniz. ETH ile aynı standardı kullanmak istiyorsanız, **18** değerini kullanın.
+3,14 ETH midir? 31,41 ETH midir? 3.141 ETH midir? Ether durumunda ETH başına 10^18 Wei olarak tanımlanır, ancak
+Token'ınız için farklı bir değer seçebilirsiniz. Token'ı bölmek mantıklı değilse,
+sıfır `_decimals` değeri kullanabilirsiniz. ETH ile aynı standardı kullanmak istiyorsanız, **18** değerini kullanın.
 
 ### Kurucu {#the-constructor}
 
 ```solidity
     /**
-     * @dev {name} ve {symbol} değerlerini ayarlar, {decimals} değerini
-     * varsayılan olarak 18 ile başlatır.
+     * @dev {name} ve {symbol} değerlerini ayarlar, {decimals} değerini varsayılan olarak 18 ile başlatır.
      *
      * {decimals} için farklı bir değer seçmek üzere {_setupDecimals} kullanın.
      *
-     * Bu üç değerin tümü değiştirilemez (immutable): yalnızca kurucu (constructor) sırasında bir kez ayarlanabilirler.
+     * Bu üç değerin tümü değiştirilemez: yalnızca oluşturma sırasında bir kez ayarlanabilirler.
      */
     constructor (string memory name_, string memory symbol_) public {
-        // Solidity ≥0.7.0'da 'public' örtüktür ve atlanabilir.
-
         _name = name_;
         _symbol = symbol_;
         _decimals = 18;
     }
 ```
 
-Kurucu, sözleşme ilk oluşturulduğunda çağrılır. Geleneksel olarak, fonksiyon parametreleri `<something>_` olarak adlandırılır.
+Kurucu, Sözleşme ilk oluşturulduğunda çağrılır. Geleneksel olarak, fonksiyon parametreleri `<something>_` olarak adlandırılır.
+Solidity 0.7.0'dan başlayarak, kuruculardaki görünürlük (`public` veya `internal`) göz ardı edilir ve kullanımdan kaldırılmıştır, bu nedenle daha yeni kodlar bunu atlar.
 
 ### Kullanıcı Arayüzü Fonksiyonları {#user-interface-functions}
 
 ```solidity
     /**
-     * @dev Tokenın adını döndürür.
+     * @dev Token'ın adını döndürür.
      */
     function name() public view returns (string memory) {
         return _name;
     }
 
     /**
-     * @dev Tokenın sembolünü, genellikle adının daha kısa bir versiyonunu döndürür.
+     * @dev Token'ın sembolünü, genellikle adın daha kısa bir versiyonunu döndürür.
      */
     function symbol() public view returns (string memory) {
         return _symbol;
     }
 
     /**
-     * @dev Kullanıcı gösterimini elde etmek için kullanılan ondalık basamak sayısını döndürür.
-     * Örneğin, `decimals` `2`ye eşitse, `505` Tokenlık bir bakiye
-     * kullanıcıya `5,05` (`505 / 10 ** 2`) olarak gösterilmelidir.
+     * @dev Returns the number of decimals used to get its user representation.
+     * For example, if `decimals` equals `2`, a balance of `505` tokens should
+     * be displayed to a user as `5,05` (`505 / 10 ** 2`).
      *
-     * Tokenlar genellikle Ether ve Wei arasındaki ilişkiyi taklit ederek 18 değerini tercih eder. {_setupDecimals} çağrılmadığı sürece {ERC-20} tarafından kullanılan değer budur.
+     * Tokens usually opt for a value of 18, imitating the relationship between
+     * ether and wei. This is the value {ERC20} uses, unless {_setupDecimals} is
+     * called.
      *
-     * NOT: Bu bilgi yalnızca _görüntüleme_ amacıyla kullanılır: {IERC20-balanceOf} ve {IERC20-transfer} dahil olmak üzere
-     * Sözleşmenin aritmetiğini hiçbir şekilde etkilemez.
+     * NOTE: This information is only used for _display_ purposes: it in
+     * no way affects any of the arithmetic of the contract, including
+     * {IERC20-balanceOf} and {IERC20-transfer}.
      */
     function decimals() public view returns (uint8) {
         return _decimals;
     }
 ```
 
-Bu fonksiyonlar, `name`, `symbol` ve `decimals`, kullanıcı arayüzlerinin sözleşmeniz hakkında bilgi sahibi olmasına yardımcı olur, böylece onu düzgün bir şekilde görüntüleyebilirler.
+Bu fonksiyonlar, `name`, `symbol` ve `decimals`, kullanıcı arayüzlerinin Sözleşmeniz hakkında bilgi sahibi olmasına yardımcı olur, böylece onu düzgün bir şekilde görüntüleyebilirler.
 
 Dönüş türü `string memory`'dir, yani bellekte depolanan bir dize döndürür. Dizeler gibi
-değişkenler üç konumda saklanabilir:
+değişkenler üç konumda depolanabilir:
 
-|          | Ömür | Sözleşme Erişimi | Gaz Maliyeti |
-| -------- | ------------- | --------------- | -------------------------------------------------------------- |
-| Bellek | Fonksiyon çağrısı | Okuma/Yazma | Onlarca veya yüzlerce (daha yüksek konumlar için daha yüksek) |
-| Çağrı verisi | Fonksiyon çağrısı | Sadece Okunabilir | Dönüş türü olarak kullanılamaz, sadece fonksiyon parametre türü |
-| Depolama | Değiştirilene kadar | Okuma/Yazma | Yüksek (okuma için 800, yazma için 20k) |
+|          | Ömür          | Sözleşme Erişimi | Gaz Maliyeti                                                   |
+| -------- | ------------- | ---------------- | -------------------------------------------------------------- |
+| Bellek   | Fonksiyon çağrısı | Okuma/Yazma      | Onlarca veya yüzlerce (daha yüksek konumlar için daha yüksek)  |
+| Çağrı verisi | Fonksiyon çağrısı | Sadece Okuma     | Dönüş türü olarak kullanılamaz, yalnızca fonksiyon parametre türü |
+| Depolama | Değiştirilene kadar | Okuma/Yazma      | Yüksek (soğuk okuma için 2.100, yeni yazma için 20.000)        |
 
 Bu durumda, `memory` en iyi seçimdir.
 
@@ -700,7 +712,7 @@ yazılım hatasıdır - bu nedenle sıfır adresi gönderen veya alıcı olarak 
 Bu sözleşmeyi kullanmanın iki yolu vardır:
 
 1. Kendi kodunuz için bir şablon olarak kullanın
-1. [Ondan miras alın](https://www.bitdegree.org/learn/solidity-inheritance) ve yalnızca değiştirmeniz gereken fonksiyonları geçersiz kılın (override)
+1. [Ondan miras alın](https://docs.soliditylang.org/en/latest/contracts.html#inheritance) ve yalnızca değiştirmeniz gereken fonksiyonları geçersiz kılın (override)
 
 İkinci yöntem çok daha iyidir çünkü OpenZeppelin ERC-20 kodu zaten denetlenmiş ve güvenli olduğu gösterilmiştir. Miras kullandığınızda
 hangi fonksiyonları değiştirdiğiniz açıktır ve sözleşmenize güvenmek için insanların yalnızca bu belirli fonksiyonları denetlemesi gerekir.

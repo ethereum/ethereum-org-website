@@ -11,29 +11,27 @@ published: 2021-03-09
 
 ## Giới thiệu {#introduction}
 
-Một trong những ứng dụng phổ biến nhất của Ethereum là để một nhóm tạo ra một token có thể giao dịch, theo một nghĩa nào đó là tiền tệ của riêng họ. Các token này thường tuân theo một tiêu chuẩn,
-[ERC-20](/developers/docs/standards/tokens/erc-20/). Tiêu chuẩn này giúp cho việc viết các công cụ, chẳng hạn như pool thanh khoản và ví, có thể hoạt động với tất cả các token ERC-20. Trong bài viết này, chúng ta sẽ phân tích
-[bản triển khai ERC20 bằng Solidity của OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), cũng như
-[định nghĩa giao diện](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
+Một trong những cách sử dụng phổ biến nhất đối với Ethereum là để một nhóm tạo ra một token có thể giao dịch, theo một nghĩa nào đó là tiền tệ của riêng họ. Các token này thường tuân theo một tiêu chuẩn, [ERC-20](/developers/docs/standards/tokens/erc-20/). Tiêu chuẩn này giúp cho việc viết các công cụ, chẳng hạn như các pool thanh khoản và Ví, có thể hoạt động với tất cả các token ERC-20. Trong bài viết này, chúng ta sẽ phân tích [bản triển khai ERC20 bằng Solidity của OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol), cũng như [định nghĩa giao diện](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol).
 
-Đây là mã nguồn có chú thích. Nếu bạn muốn triển khai ERC-20,
-[hãy đọc hướng dẫn này](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
+Đây là mã nguồn có chú thích. Nếu bạn muốn triển khai ERC-20, [hãy đọc hướng dẫn này](https://docs.openzeppelin.com/contracts/5.x/erc20-supply).
+
+<Alert variant="info">
+<AlertContent>
+<AlertDescription>
+Bài hướng dẫn này đề cập đến OpenZeppelin Contracts v3.3 (Solidity 0.6/0.7). Nếu bạn cài đặt `@openzeppelin/contracts` hôm nay, bạn sẽ nhận được v5.x, phiên bản này khác với mã bên dưới: nó sử dụng số học có kiểm tra tích hợp sẵn của Solidity thay vì `SafeMath`, thay thế `_beforeTokenTransfer` và `_afterTokenTransfer` bằng một hàm `_update` duy nhất, loại bỏ `increaseAllowance`, `decreaseAllowance` và `_setupDecimals`, đồng thời báo cáo lỗi bằng các lỗi tùy chỉnh thay vì các chuỗi hoàn nguyên. Các khái niệm được giải thích ở đây vẫn được áp dụng. Xem [tài liệu ERC-20 của OpenZeppelin v5](https://docs.openzeppelin.com/contracts/5.x/erc20) để biết API hiện tại.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Giao diện {#the-interface}
 
-Mục đích của một tiêu chuẩn như ERC-20 là cho phép nhiều bản triển khai token có khả năng tương tác trên các ứng dụng, như ví và các sàn giao dịch phi tập trung. Để đạt được điều đó, chúng ta tạo ra một
-[giao diện](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/). Bất kỳ mã nào cần sử dụng hợp đồng token
-đều có thể sử dụng các định nghĩa tương tự trong giao diện và tương thích với tất cả các hợp đồng token sử dụng nó, cho dù đó là ví như
-MetaMask, một ứng dụng phi tập trung (dapp) như etherscan.io, hay một hợp đồng khác như pool thanh khoản.
+Mục đích của một tiêu chuẩn như ERC-20 là cho phép nhiều bản triển khai token có khả năng tương tác trên các ứng dụng, như Ví và các sàn giao dịch phi tập trung. Để đạt được điều đó, chúng ta tạo ra một [giao diện](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/). Bất kỳ mã nào cần sử dụng hợp đồng token đều có thể sử dụng các định nghĩa tương tự trong giao diện và tương thích với tất cả các hợp đồng token sử dụng nó, cho dù đó là một Ví như MetaMask, một dapp như etherscan.io, hay một hợp đồng khác như pool thanh khoản.
 
-![Illustration of the ERC-20 interface](erc20_interface.png)
+![Minh họa giao diện ERC-20](erc20_interface.png)
 
-Nếu bạn là một lập trình viên có kinh nghiệm, bạn có thể nhớ đã thấy các cấu trúc tương tự trong [Java](https://www.w3schools.com/java/java_interface.asp)
-hoặc thậm chí trong [các tệp tiêu đề C](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html).
+Nếu bạn là một lập trình viên có kinh nghiệm, bạn có thể nhớ đã thấy các cấu trúc tương tự trong [Java](https://www.w3schools.com/java/java_interface.asp) hoặc thậm chí trong [các tệp tiêu đề C](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html).
 
-Đây là định nghĩa của [Giao diện ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)
-từ OpenZeppelin. Nó là bản dịch của [tiêu chuẩn con người có thể đọc được](https://eips.ethereum.org/EIPS/eip-20) sang mã Solidity. Tất nhiên,
-bản thân giao diện không định nghĩa _cách_ để làm bất cứ điều gì. Điều đó được giải thích trong mã nguồn hợp đồng bên dưới.
+Đây là định nghĩa của [Giao diện ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol) từ OpenZeppelin. Nó là một bản dịch của [tiêu chuẩn có thể đọc được bởi con người](https://eips.ethereum.org/EIPS/eip-20) sang mã Solidity. Tất nhiên, bản thân giao diện không định nghĩa _cách_ để làm bất cứ điều gì. Điều đó được giải thích trong mã nguồn hợp đồng bên dưới.
 
 &nbsp;
 
@@ -49,8 +47,7 @@ Các tệp Solidity được cho là bao gồm một mã định danh giấy ph�
 pragma solidity >=0.6.0 <0.8.0;
 ```
 
-Ngôn ngữ Solidity vẫn đang phát triển nhanh chóng và các phiên bản mới có thể không tương thích với mã cũ
-([xem tại đây](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Do đó, bạn nên chỉ định không chỉ phiên bản tối thiểu của ngôn ngữ mà còn cả phiên bản tối đa, phiên bản mới nhất mà bạn đã kiểm tra mã.
+Ngôn ngữ Solidity vẫn đang phát triển nhanh chóng và các phiên bản mới có thể không tương thích với mã cũ ([xem tại đây](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Do đó, bạn nên chỉ định không chỉ phiên bản tối thiểu của ngôn ngữ mà còn cả phiên bản tối đa, phiên bản mới nhất mà bạn đã kiểm tra mã.
 
 &nbsp;
 
@@ -79,16 +76,9 @@ Theo quy ước, tên giao diện bắt đầu bằng `I`.
     function totalSupply() external view returns (uint256);
 ```
 
-Hàm này là `external`, nghĩa là [nó chỉ có thể được gọi từ bên ngoài hợp đồng](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2).
-Nó trả về tổng nguồn cung token trong hợp đồng. Giá trị này được trả về bằng cách sử dụng kiểu phổ biến nhất trong Ethereum, số nguyên không dấu 256 bit (256 bit là
-kích thước từ gốc của EVM). Hàm này cũng là một `view`, có nghĩa là nó không thay đổi trạng thái, vì vậy nó có thể được thực thi trên một nút duy nhất thay vì yêu cầu
-mọi nút trong chuỗi khối chạy nó. Loại hàm này không tạo ra giao dịch và không tốn [gas](/developers/docs/gas/).
+Hàm này là `external`, nghĩa là [nó chỉ có thể được gọi từ bên ngoài hợp đồng](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2). Nó trả về tổng nguồn cung token trong hợp đồng. Giá trị này được trả về bằng cách sử dụng kiểu phổ biến nhất trong Ethereum, số nguyên không dấu 256 bit (256 bit là kích thước từ gốc của EVM). Hàm này cũng là một `view`, có nghĩa là nó không thay đổi trạng thái, vì vậy nó có thể được thực thi trên một nút duy nhất thay vì yêu cầu mọi nút trong Chuỗi khối chạy nó. Loại hàm này không tạo ra giao dịch và không tốn [Gas](/developers/docs/gas/).
 
-**Lưu ý:** Về lý thuyết, có vẻ như người tạo hợp đồng có thể gian lận bằng cách trả về tổng nguồn cung nhỏ hơn giá trị thực, làm cho mỗi token có vẻ
-giá trị hơn thực tế. Tuy nhiên, nỗi sợ hãi đó bỏ qua bản chất thực sự của chuỗi khối. Mọi thứ xảy ra trên chuỗi khối đều có thể được xác minh bởi
-mọi nút. Để đạt được điều này, mã ngôn ngữ máy và bộ nhớ của mọi hợp đồng đều có sẵn trên mọi nút. Mặc dù bạn không bắt buộc phải xuất bản mã Solidity
-cho hợp đồng của mình, nhưng sẽ không ai coi trọng bạn trừ khi bạn xuất bản mã nguồn và phiên bản Solidity mà nó được biên dịch, để nó có thể
-được xác minh dựa trên mã ngôn ngữ máy mà bạn đã cung cấp.
+**Lưu ý:** Về lý thuyết, có vẻ như người tạo hợp đồng có thể gian lận bằng cách trả về tổng nguồn cung nhỏ hơn giá trị thực, làm cho mỗi token có vẻ giá trị hơn thực tế. Tuy nhiên, nỗi sợ hãi đó bỏ qua bản chất thực sự của Chuỗi khối. Mọi thứ xảy ra trên Chuỗi khối đều có thể được xác minh bởi mọi nút. Để đạt được điều này, mã ngôn ngữ máy và bộ nhớ của mọi hợp đồng đều có sẵn trên mọi nút. Mặc dù bạn không bắt buộc phải xuất bản mã Solidity cho hợp đồng của mình, nhưng sẽ không ai coi trọng bạn trừ khi bạn xuất bản mã nguồn và phiên bản Solidity mà nó được biên dịch, để nó có thể được xác minh dựa trên mã ngôn ngữ máy mà bạn đã cung cấp.
 Ví dụ, xem [hợp đồng này](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract).
 
 &nbsp;
@@ -100,60 +90,46 @@ Ví dụ, xem [hợp đồng này](https://eth.blockscout.com/address/0xa530F850
     function balanceOf(address account) external view returns (uint256);
 ```
 
-Đúng như tên gọi, `balanceOf` trả về số dư của một tài khoản. Các tài khoản Ethereum được xác định trong Solidity bằng cách sử dụng kiểu `address`, chứa 160 bit.
-Nó cũng là `external` và `view`.
+Đúng như tên gọi, `balanceOf` trả về số dư của một Tài khoản. Các Tài khoản Ethereum được xác định trong Solidity bằng cách sử dụng kiểu `address`, chứa 160 bit. Nó cũng là `external` và `view`.
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev Chuyển `amount` token từ Tài khoản của người gọi đến `recipient`.
+     * @dev Chuyển `amount` token từ tài khoản của người gọi đến `recipient`.
      *
-     * Trả về một giá trị boolean chỉ định liệu hoạt động có thành công hay không.
+     * Trả về một giá trị boolean chỉ định xem thao tác có thành công hay không.
      *
      * Phát ra một sự kiện {Transfer}.
      */
     function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
-Hàm `transfer` chuyển token từ người gọi đến một địa chỉ khác. Điều này liên quan đến sự thay đổi trạng thái, vì vậy nó không phải là `view`.
-Khi người dùng gọi hàm này, nó tạo ra một giao dịch và tốn gas. Nó cũng phát ra một sự kiện, `Transfer`, để thông báo cho mọi người trên
-chuỗi khối về sự kiện này.
+Hàm `transfer` chuyển token từ người gọi đến một Địa chỉ khác. Điều này liên quan đến sự thay đổi trạng thái, vì vậy nó không phải là một `view`. Khi người dùng gọi hàm này, nó sẽ tạo ra một giao dịch và tốn Gas. Nó cũng phát ra một sự kiện, `Transfer`, để thông báo cho mọi người trên Chuỗi khối về sự kiện này.
 
 Hàm có hai loại đầu ra cho hai loại người gọi khác nhau:
 
-- Người dùng gọi hàm trực tiếp từ giao diện người dùng. Thông thường, người dùng gửi một giao dịch
-  và không đợi phản hồi, điều này có thể mất một khoảng thời gian không xác định. Người dùng có thể xem những gì đã xảy ra
-  bằng cách tìm kiếm biên lai giao dịch (được xác định bởi mã băm giao dịch) hoặc bằng cách tìm kiếm
-  sự kiện `Transfer`.
-- Các hợp đồng khác, gọi hàm như một phần của giao dịch tổng thể. Các hợp đồng đó nhận được kết quả ngay lập tức,
-  vì chúng chạy trong cùng một giao dịch, do đó chúng có thể sử dụng giá trị trả về của hàm.
+- Người dùng gọi hàm trực tiếp từ giao diện người dùng. Thông thường, người dùng gửi một giao dịch và không đợi phản hồi, điều này có thể mất một khoảng thời gian không xác định. Người dùng có thể xem những gì đã xảy ra bằng cách tìm kiếm biên lai giao dịch (được xác định bởi mã băm giao dịch) hoặc bằng cách tìm kiếm sự kiện `Transfer`.
+- Các hợp đồng khác, gọi hàm như một phần của giao dịch tổng thể. Các hợp đồng đó nhận được kết quả ngay lập tức, vì chúng chạy trong cùng một giao dịch, vì vậy chúng có thể sử dụng giá trị trả về của hàm.
 
 Cùng một loại đầu ra được tạo bởi các hàm khác làm thay đổi trạng thái của hợp đồng.
 
 &nbsp;
 
-Hạn mức cho phép một tài khoản chi tiêu một số token thuộc về một chủ sở hữu khác.
-Điều này rất hữu ích, ví dụ, đối với các hợp đồng đóng vai trò là người bán. Các hợp đồng không thể
-theo dõi các sự kiện, vì vậy nếu người mua chuyển token trực tiếp đến hợp đồng người bán
-hợp đồng đó sẽ không biết nó đã được thanh toán. Thay vào đó, người mua cho phép
-hợp đồng người bán chi tiêu một số lượng nhất định và người bán chuyển số lượng đó.
-Điều này được thực hiện thông qua một hàm mà hợp đồng người bán gọi, để hợp đồng người bán
-có thể biết liệu nó có thành công hay không.
+Các hạn mức cho phép một Tài khoản chi tiêu một số token thuộc về một chủ sở hữu khác. Điều này hữu ích, ví dụ, đối với các hợp đồng đóng vai trò là người bán. Các hợp đồng không thể theo dõi các sự kiện, vì vậy nếu người mua chuyển token trực tiếp cho hợp đồng người bán, hợp đồng đó sẽ không biết nó đã được thanh toán. Thay vào đó, người mua cho phép hợp đồng người bán chi tiêu một số lượng nhất định và người bán chuyển số lượng đó. Điều này được thực hiện thông qua một hàm mà hợp đồng người bán gọi, vì vậy hợp đồng người bán có thể biết liệu nó có thành công hay không.
 
 ```solidity
     /**
      * @dev Trả về số lượng token còn lại mà `spender` sẽ được
-     * phép chi tiêu thay mặt cho `owner` thông qua {transferFrom}. Giá trị này mặc định
-     * là không (zero).
+     * phép chi tiêu thay mặt cho `owner` thông qua {transferFrom}. Giá trị này
+     * mặc định là 0.
      *
      * Giá trị này thay đổi khi {approve} hoặc {transferFrom} được gọi.
      */
     function allowance(address owner, address spender) external view returns (uint256);
 ```
 
-Hàm `allowance` cho phép bất kỳ ai truy vấn để xem hạn mức mà một
-địa chỉ (`owner`) cho phép một địa chỉ khác (`spender`) chi tiêu là bao nhiêu.
+Hàm `allowance` cho phép bất kỳ ai truy vấn để xem hạn mức mà một Địa chỉ (`owner`) cho phép một Địa chỉ khác (`spender`) chi tiêu là bao nhiêu.
 
 &nbsp;
 
@@ -161,10 +137,10 @@ Hàm `allowance` cho phép bất kỳ ai truy vấn để xem hạn mức mà m�
     /**
      * @dev Đặt `amount` làm hạn mức của `spender` đối với các token của người gọi.
      *
-     * Trả về một giá trị boolean chỉ định liệu hoạt động có thành công hay không.
+     * Trả về một giá trị boolean chỉ định xem thao tác có thành công hay không.
      *
-     * QUAN TRỌNG: Hãy cẩn thận rằng việc thay đổi một hạn mức bằng phương thức này mang lại rủi ro
-     * rằng ai đó có thể sử dụng cả hạn mức cũ và mới do thứ tự giao dịch
+     * QUAN TRỌNG: Hãy cẩn thận rằng việc thay đổi hạn mức bằng phương thức này mang lại rủi ro
+     * là ai đó có thể sử dụng cả hạn mức cũ và mới do thứ tự giao dịch
      * không may. Một giải pháp khả thi để giảm thiểu tình trạng
      * tương tranh này là trước tiên giảm hạn mức của người chi tiêu xuống 0 và đặt
      * giá trị mong muốn sau đó:
@@ -175,21 +151,17 @@ Hàm `allowance` cho phép bất kỳ ai truy vấn để xem hạn mức mà m�
     function approve(address spender, uint256 amount) external returns (bool);
 ```
 
-Hàm `approve` tạo ra một hạn mức. Hãy chắc chắn đọc thông điệp về
-cách nó có thể bị lạm dụng. Trong Ethereum, bạn kiểm soát thứ tự các giao dịch của riêng mình,
-nhưng bạn không thể kiểm soát thứ tự mà các giao dịch của người khác sẽ
-được thực thi, trừ khi bạn không gửi giao dịch của riêng mình cho đến khi bạn thấy
-giao dịch của bên kia đã xảy ra.
+Hàm `approve` tạo ra một hạn mức. Hãy chắc chắn đọc thông điệp về cách nó có thể bị lạm dụng. Trong Ethereum, bạn kiểm soát thứ tự các giao dịch của riêng mình, nhưng bạn không thể kiểm soát thứ tự mà các giao dịch của người khác sẽ được thực thi, trừ khi bạn không gửi giao dịch của riêng mình cho đến khi bạn thấy giao dịch của bên kia đã xảy ra.
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev Chuyển `amount` token từ `sender` đến `recipient` sử dụng cơ chế
-     * hạn mức. `amount` sau đó được khấu trừ từ hạn mức
+     * @dev Chuyển `amount` token từ `sender` sang `recipient` bằng cách sử dụng cơ chế
+     * hạn mức. `amount` sau đó được khấu trừ vào hạn mức
      * của người gọi.
      *
-     * Trả về một giá trị boolean chỉ định liệu hoạt động có thành công hay không.
+     * Trả về một giá trị boolean chỉ định xem thao tác có thành công hay không.
      *
      * Phát ra một sự kiện {Transfer}.
      */
@@ -203,15 +175,15 @@ Cuối cùng, `transferFrom` được sử dụng bởi người chi tiêu để
 ```solidity
 
     /**
-     * @dev Được phát ra khi `value` token được chuyển từ một Tài khoản (`from`) sang
-     * Tài khoản khác (`to`).
+     * @dev Được phát ra khi `value` token được chuyển từ một tài khoản (`from`) sang
+     * tài khoản khác (`to`).
      *
-     * Lưu ý rằng `value` có thể bằng không.
+     * Lưu ý rằng `value` có thể bằng 0.
      */
     event Transfer(address indexed from, address indexed to, uint256 value);
 
     /**
-     * @dev Được phát ra khi hạn mức của một `spender` cho một `owner` được đặt bởi
+     * @dev Được phát ra khi hạn mức của một `spender` dành cho một `owner` được đặt bởi
      * một lệnh gọi đến {approve}. `value` là hạn mức mới.
      */
     event Approval(address indexed owner, address indexed spender, uint256 value);
@@ -223,7 +195,7 @@ Các sự kiện này được phát ra khi trạng thái của hợp đồng ER
 ## Hợp đồng thực tế {#the-actual-contract}
 
 Đây là hợp đồng thực tế triển khai tiêu chuẩn ERC-20,
-[được lấy từ đây](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol).
+[được lấy từ đây](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol).
 Nó không nhằm mục đích được sử dụng nguyên bản, nhưng bạn có thể
 [kế thừa](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm) từ nó để mở rộng thành một thứ gì đó có thể sử dụng được.
 
@@ -248,7 +220,7 @@ import "../../math/SafeMath.sol";
 - `GSN/Context.sol` là các định nghĩa cần thiết để sử dụng [OpenGSN](https://opengsn.org/), một hệ thống cho phép người dùng không có ether
   sử dụng chuỗi khối. Lưu ý rằng đây là phiên bản cũ, nếu bạn muốn tích hợp với OpenGSN
   [hãy sử dụng hướng dẫn này](https://docs.opengsn.org/javascript-client/tutorial.html).
-- [Thư viện SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), giúp ngăn chặn
+- [Thư viện SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math#SafeMath), giúp ngăn chặn
   tràn số/tràn số dưới số học cho các phiên bản Solidity **&lt;0.8.0**. Trong Solidity ≥0.8.0, các phép toán số học tự động
   hoàn nguyên khi tràn số/tràn số dưới, làm cho SafeMath trở nên không cần thiết. Hợp đồng này sử dụng SafeMath để tương thích ngược với
   các phiên bản trình biên dịch cũ hơn.
@@ -302,26 +274,19 @@ Dòng này chỉ định sự kế thừa, trong trường hợp này là từ `
 ```
 
 Dòng này gắn thư viện `SafeMath` vào kiểu `uint256`. Bạn có thể tìm thấy thư viện này
-[tại đây](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol).
+[tại đây](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/math/SafeMath.sol).
 
-### Định nghĩa biến {#variable-definitions}
+### Các định nghĩa biến {#variable-definitions}
 
-Các định nghĩa này chỉ định các biến trạng thái của hợp đồng. Các biến này được khai báo là `private`, nhưng
-điều đó chỉ có nghĩa là các hợp đồng khác trên chuỗi khối không thể đọc chúng. _Không có
-bí mật nào trên chuỗi khối_, phần mềm trên mọi nút đều có trạng thái của mọi hợp đồng
-tại mọi khối. Theo quy ước, các biến trạng thái được đặt tên là `_<something>`.
+Các định nghĩa này chỉ định các biến trạng thái của hợp đồng. Các biến này được khai báo là `private`, nhưng điều đó chỉ có nghĩa là các hợp đồng khác trên Chuỗi khối không thể đọc chúng. _Không có bí mật nào trên Chuỗi khối_, phần mềm trên mọi nút đều có trạng thái của mọi hợp đồng tại mọi khối. Theo quy ước, các biến trạng thái được đặt tên là `_<something>`.
 
-Hai biến đầu tiên là [các ánh xạ (mappings)](https://www.tutorialspoint.com/solidity/solidity_mappings.htm),
-nghĩa là chúng hoạt động gần giống như [mảng kết hợp](https://wikipedia.org/wiki/Associative_array),
-ngoại trừ việc các khóa là các giá trị số. Bộ nhớ chỉ được phân bổ cho các mục nhập có giá trị khác
-với mặc định (không).
+Hai biến đầu tiên là [các ánh xạ (mappings)](https://www.tutorialspoint.com/solidity/solidity_mappings.htm), nghĩa là chúng hoạt động gần giống như [các mảng liên kết (associative arrays)](https://wikipedia.org/wiki/Associative_array), ngoại trừ việc các khóa là các giá trị số. Bộ nhớ chỉ được phân bổ cho các mục nhập có giá trị khác với mặc định (không).
 
 ```solidity
     mapping (address => uint256) private _balances;
 ```
 
-Ánh xạ đầu tiên, `_balances`, là các địa chỉ và số dư tương ứng của chúng đối với token này. Để truy cập
-số dư, hãy sử dụng cú pháp này: `_balances[<address>]`.
+Ánh xạ đầu tiên, `_balances`, là các Địa chỉ và số dư tương ứng của chúng đối với token này. Để truy cập số dư, hãy sử dụng cú pháp này: `_balances[<address>]`.
 
 &nbsp;
 
@@ -329,9 +294,7 @@ số dư, hãy sử dụng cú pháp này: `_balances[<address>]`.
     mapping (address => mapping (address => uint256)) private _allowances;
 ```
 
-Biến này, `_allowances`, lưu trữ các hạn mức đã giải thích trước đó. Chỉ số đầu tiên là chủ sở hữu
-của các token và chỉ số thứ hai là hợp đồng có hạn mức. Để truy cập số lượng địa chỉ A có thể
-chi tiêu từ tài khoản của địa chỉ B, hãy sử dụng `_allowances[B][A]`.
+Biến này, `_allowances`, lưu trữ các hạn mức đã được giải thích trước đó. Chỉ số đầu tiên là chủ sở hữu của các token và chỉ số thứ hai là hợp đồng có hạn mức. Để truy cập số lượng mà Địa chỉ A có thể chi tiêu từ Tài khoản của Địa chỉ B, hãy sử dụng `_allowances[B][A]`.
 
 &nbsp;
 
@@ -349,44 +312,34 @@ chi tiêu từ tài khoản của địa chỉ B, hãy sử dụng `_allowances[
     uint8 private _decimals;
 ```
 
-Ba biến này được sử dụng để cải thiện khả năng đọc. Hai biến đầu tiên tự giải thích, nhưng `_decimals`
-thì không.
+Ba biến này được sử dụng để cải thiện khả năng đọc. Hai biến đầu tiên tự giải thích, nhưng `_decimals` thì không.
 
-Một mặt, Ethereum không có biến dấu phẩy động hoặc phân số. Mặt khác,
-con người thích có thể chia nhỏ token. Một lý do khiến mọi người chọn vàng làm tiền tệ là vì
-rất khó để trả lại tiền thừa khi ai đó muốn mua một con bò bằng giá trị của một con vịt.
+Một mặt, Ethereum không có các biến dấu phẩy động hoặc phân số. Mặt khác, con người thích có thể chia nhỏ các token. Một lý do khiến mọi người chọn vàng làm tiền tệ là vì rất khó để trả lại tiền thừa khi ai đó muốn mua một con bò bằng giá trị của một con vịt.
 
-Giải pháp là theo dõi các số nguyên, nhưng thay vì đếm token thực, hãy đếm một token phân số
-gần như vô giá trị. Trong trường hợp của ether, token phân số được gọi là Wei và 10^18 Wei bằng một
-ETH. Tại thời điểm viết bài, 10.000.000.000.000 Wei xấp xỉ một xu Mỹ hoặc Euro.
+Giải pháp là theo dõi các số nguyên, nhưng thay vì đếm token thực, hãy đếm một token phân số gần như vô giá trị. Trong trường hợp của ether, token phân số được gọi là Wei và 10^18 Wei bằng một ETH.
 
-Các ứng dụng cần biết cách hiển thị số dư token. Nếu người dùng có 3.141.000.000.000.000.000 Wei, đó là
-3,14 ETH? 31,41 ETH? 3.141 ETH? Trong trường hợp của ether, nó được định nghĩa là 10^18 Wei cho mỗi ETH, nhưng đối với
-token của bạn, bạn có thể chọn một giá trị khác. Nếu việc chia nhỏ token không có ý nghĩa, bạn có thể sử dụng
-giá trị `_decimals` bằng không. Nếu bạn muốn sử dụng cùng tiêu chuẩn với ETH, hãy sử dụng giá trị **18**.
+Các ứng dụng cần biết cách hiển thị số dư token. Nếu một người dùng có 3.141.000.000.000.000.000 Wei, đó là 3,14 ETH? 31,41 ETH? 3.141 ETH? Trong trường hợp của ether, nó được định nghĩa là 10^18 Wei cho một ETH, nhưng đối với token của bạn, bạn có thể chọn một giá trị khác. Nếu việc chia nhỏ token không có ý nghĩa, bạn có thể sử dụng giá trị `_decimals` bằng không. Nếu bạn muốn sử dụng cùng một tiêu chuẩn như ETH, hãy sử dụng giá trị **18**.
 
 ### Hàm khởi tạo {#the-constructor}
 
 ```solidity
     /**
      * @dev Đặt các giá trị cho {name} và {symbol}, khởi tạo {decimals} với
-     * một giá trị mặc định là 18.
+     * giá trị mặc định là 18.
      *
      * Để chọn một giá trị khác cho {decimals}, hãy sử dụng {_setupDecimals}.
      *
-     * Cả ba giá trị này đều không thể thay đổi (immutable): chúng chỉ có thể được đặt một lần trong
+     * Cả ba giá trị này đều không thể thay đổi: chúng chỉ có thể được đặt một lần trong
      * quá trình khởi tạo.
      */
     constructor (string memory name_, string memory symbol_) public {
-        // Trong Solidity ≥0.7.0, 'public' là ngầm định và có thể được bỏ qua.
-
         _name = name_;
         _symbol = symbol_;
         _decimals = 18;
     }
 ```
 
-Hàm khởi tạo được gọi khi hợp đồng được tạo lần đầu tiên. Theo quy ước, các tham số hàm được đặt tên là `<something>_`.
+Hàm khởi tạo được gọi khi hợp đồng được tạo lần đầu tiên. Theo quy ước, các tham số của hàm được đặt tên là `<something>_`. Bắt đầu từ Solidity 0.7.0, khả năng hiển thị (`public` hoặc `internal`) trên các hàm khởi tạo bị bỏ qua và không còn được dùng nữa, vì vậy mã mới hơn sẽ bỏ qua nó.
 
 ### Các hàm giao diện người dùng {#user-interface-functions}
 
@@ -399,7 +352,7 @@ Hàm khởi tạo được gọi khi hợp đồng được tạo lần đầu t
     }
 
     /**
-     * @dev Trả về ký hiệu của token, thường là một phiên bản ngắn hơn của
+     * @dev Trả về ký hiệu của token, thường là phiên bản ngắn hơn của
      * tên.
      */
     function symbol() public view returns (string memory) {
@@ -407,8 +360,8 @@ Hàm khởi tạo được gọi khi hợp đồng được tạo lần đầu t
     }
 
     /**
-     * @dev Trả về số lượng chữ số thập phân được sử dụng để có được biểu diễn người dùng của nó.
-     * Ví dụ, nếu `decimals` bằng `2`, số dư `505` token nên
+     * @dev Trả về số chữ số thập phân được sử dụng để lấy biểu diễn người dùng của nó.
+     * Ví dụ: nếu `decimals` bằng `2`, số dư `505` token sẽ
      * được hiển thị cho người dùng là `5,05` (`505 / 10 ** 2`).
      *
      * Các token thường chọn giá trị là 18, bắt chước mối quan hệ giữa
@@ -424,16 +377,15 @@ Hàm khởi tạo được gọi khi hợp đồng được tạo lần đầu t
     }
 ```
 
-Các hàm này, `name`, `symbol` và `decimals` giúp giao diện người dùng biết về hợp đồng của bạn để chúng có thể hiển thị nó một cách chính xác.
+Các hàm này, `name`, `symbol` và `decimals` giúp các giao diện người dùng biết về hợp đồng của bạn để chúng có thể hiển thị nó một cách chính xác.
 
-Kiểu trả về là `string memory`, nghĩa là trả về một chuỗi được lưu trữ trong bộ nhớ. Các biến, chẳng hạn như
-chuỗi, có thể được lưu trữ ở ba vị trí:
+Kiểu trả về là `string memory`, nghĩa là trả về một chuỗi được lưu trữ trong bộ nhớ. Các biến, chẳng hạn như chuỗi, có thể được lưu trữ ở ba vị trí:
 
-|          | Vòng đời      | Quyền truy cập hợp đồng | Chi phí gas                                                    |
+| | Vòng đời | Quyền truy cập hợp đồng | Chi phí Gas |
 | -------- | ------------- | --------------- | -------------------------------------------------------------- |
-| Bộ nhớ   | Lệnh gọi hàm | Đọc/Ghi      | Hàng chục hoặc hàng trăm (cao hơn đối với các vị trí cao hơn)                 |
-| Dữ liệu lệnh gọi | Lệnh gọi hàm | Chỉ đọc       | Không thể được sử dụng làm kiểu trả về, chỉ là kiểu tham số hàm |
-| Lưu trữ  | Cho đến khi thay đổi | Đọc/Ghi      | Cao (800 cho đọc, 20k cho ghi)                             |
+| Memory | Lệnh gọi hàm | Đọc/Ghi | Hàng chục hoặc hàng trăm (cao hơn đối với các vị trí cao hơn) |
+| Calldata | Lệnh gọi hàm | Chỉ đọc | Không thể được sử dụng làm kiểu trả về, chỉ là kiểu tham số hàm |
+| Storage | Cho đến khi thay đổi | Đọc/Ghi | Cao (2.100 cho một lần đọc lạnh, 20.000 cho một lần ghi mới) |
 
 Trong trường hợp này, `memory` là lựa chọn tốt nhất.
 
@@ -726,7 +678,7 @@ sẽ thất bại nếu địa chỉ zero được sử dụng làm người g�
 Có hai cách để sử dụng hợp đồng này:
 
 1. Sử dụng nó làm mẫu cho mã của riêng bạn
-1. [Kế thừa từ nó](https://www.bitdegree.org/learn/solidity-inheritance) và chỉ ghi đè những hàm mà bạn cần sửa đổi
+1. [Kế thừa từ nó](https://docs.soliditylang.org/en/latest/contracts.html#inheritance) và chỉ ghi đè những hàm mà bạn cần sửa đổi
 
 Phương pháp thứ hai tốt hơn nhiều vì mã ERC-20 của OpenZeppelin đã được kiểm toán và cho thấy là an toàn. Khi bạn sử dụng tính kế thừa
 rõ ràng là bạn sửa đổi những hàm nào và để tin tưởng hợp đồng của bạn, mọi người chỉ cần kiểm toán những hàm cụ thể đó.

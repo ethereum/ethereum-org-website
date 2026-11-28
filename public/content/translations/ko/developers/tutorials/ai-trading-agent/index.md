@@ -48,6 +48,8 @@ AI 분야에서 가장 널리 사용되는 언어는 [Python](https://www.python
 
 대규모 언어 모델(LLM)의 경우, 시작하기 위해 [OpenAI](https://openai.com/)를 선택했습니다. 이 튜토리얼의 애플리케이션을 실행하려면 API 액세스 비용을 지불해야 합니다. 최소 결제 금액인 5달러면 충분합니다.
 
+OpenAI Python 라이브러리는 여러분의 컴퓨터에서 실행하는 모델을 포함하여 다른 모든 OpenAI 호환 엔드포인트와도 통신할 수 있습니다. 다른 곳을 가리키도록 하는 방법은 [LLM과 인터페이스하기](#interface-llm)를 참조하세요.
+
 ## 단계별 개발 {#step-by-step}
 
 개발을 단순화하기 위해 단계별로 진행합니다. 각 단계는 GitHub의 브랜치에 해당합니다.
@@ -520,7 +522,7 @@ print(make_prompt(wethusdc_quotes + wethwbtc_quotes, future_time, wethusdc_pool.
 다음으로, 실제 LLM에 프롬프트를 보내고 예상되는 미래 가치를 받습니다. 저는 OpenAI를 사용하여 이 프로그램을 작성했으므로, 다른 제공업체를 사용하려면 코드를 조정해야 합니다.
 
 1. [OpenAI 계정](https://auth.openai.com/create-account)을 만듭니다.
-2. [계정에 자금을 충전합니다](https://platform.openai.com/settings/organization/billing/overview)—작성 시점의 최소 금액은 5달러입니다.
+2. [계정에 자금을 충전합니다](https://platform.openai.com/settings/organization/billing/overview). 작성 시점 기준으로 최소 금액은 5달러입니다.
 3. [API 키를 생성합니다](https://platform.openai.com/settings/organization/api-keys).
 4. 프로그램에서 사용할 수 있도록 명령줄에서 API 키를 내보냅니다(export).
 
@@ -528,35 +530,52 @@ print(make_prompt(wethusdc_quotes + wethwbtc_quotes, future_time, wethusdc_pool.
    export OPENAI_API_KEY=sk-<the rest of the key goes here>
    ```
 
-5. 에이전트를 체크아웃하고 실행합니다.
+5. 에이전트를 체크아웃합니다.
 
    ```sh
    git checkout 04-interface-llm
+   ```
+
+6. 리포지토리의 코드는 `gpt-4-turbo` 모델을 사용하는데, [OpenAI는 2026년 10월 23일에 이 모델의 지원을 종료합니다](https://developers.openai.com/api/docs/deprecations). 이를 현재의 저비용 모델인 `gpt-6-luna`로 전환하세요. `gpt-6-luna`는 추론 모델이므로, 이 명령은 추론 기능도 끄고(`reasoning_effort="none"`, 이를 통해 `temperature`를 계속 사용할 수 있음) 더 이상 사용되지 않는 `max_tokens` 매개변수를 `max_completion_tokens`로 바꿉니다.
+
+   ```sh
+   sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
+   ```
+
+7. 에이전트를 실행합니다.
+
+   ```sh
    uv run agent.py
    ```
+
+로컬에서 호스팅하는 모델과 같이 다른 OpenAI 호환 엔드포인트를 사용하려는 경우, OpenAI 라이브러리는 `OPENAI_BASE_URL` 환경 변수에서 엔드포인트를 읽습니다. 이를 설정하고, 서버가 키를 확인하지 않는 경우 `OPENAI_API_KEY`에 비어 있지 않은 값을 넣은 다음, `agent.py` 및 `test-predictor.py`의 `gpt-6-luna`를 해당 서버가 제공하는 모델 이름으로 변경하세요. 서버가 `reasoning_effort`를 거부하는 경우 해당 매개변수를 제거하세요.
+
+```sh
+export OPENAI_BASE_URL=http://localhost:<port>/v1
+```
 
 다음은 새로운 코드입니다.
 
 ```python
 from openai import OpenAI
 
-open_ai = OpenAI()  # 클라이언트는 OPENAI_API_KEY 환경 변수를 읽습니다
+open_ai = OpenAI()  # The client reads the OPENAI_API_KEY environment variable
 ```
 
-OpenAI API를 임포트하고 인스턴스화합니다.
+OpenAI API를 가져오고(import) 인스턴스화합니다. 클라이언트는 `OPENAI_BASE_URL`가 설정된 경우 이를 읽으므로, 동일한 코드가 다른 OpenAI 호환 엔드포인트에서도 작동합니다.
 
 ```python
 response = open_ai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-6-luna", reasoning_effort="none",
     messages=[
         {"role": "user", "content": prompt}
     ],
     temperature=0.0,
-    max_tokens=16,
+    max_completion_tokens=16,
 )
 ```
 
-OpenAI API(`open_ai.chat.completions.create`)를 호출하여 응답을 생성합니다.
+OpenAI API(`open_ai.chat.completions.create`)를 호출하여 응답을 생성합니다. `temperature`를 0으로 설정하면 가장 예측 가능한 답변을 요청하며, `max_completion_tokens`는 숫자만 포함하면 되는 답변의 길이를 제한합니다. 추론 모델의 경우 `max_completion_tokens`는 모델이 생각하는 데 사용하는 토큰도 계산하므로, 이는 `reasoning_effort`를 `none`로 설정해야 하는 또 다른 이유입니다.
 
 ```python
 expected_price = Decimal(response.choices[0].message.content.strip())
@@ -571,7 +590,7 @@ else:
     print(f"Sell, I expect the price to go down by {current_price - expected_price} USD")
 ```
 
-가격 정보를 출력하고 매수 또는 매도 추천을 제공합니다.
+가격을 출력하고 매수 또는 매도 추천을 제공합니다.
 
 #### 예측 테스트하기 {#testing-the-predictions}
 
@@ -695,9 +714,9 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
 
 ### 트랜잭션 제출하기 {#submit-txn}
 
-이제 실제로 트랜잭션을 제출해야 합니다. 하지만 시스템이 검증되기 전인 현시점에서는 실제 돈을 쓰고 싶지 않습니다. 대신 메인넷의 로컬 포크를 생성하고 해당 네트워크에서 "거래"를 할 것입니다.
+이제 실제로 트랜잭션을 제출해야 합니다. 하지만 시스템이 검증되기 전인 현시점에서는 실제 돈을 쓰고 싶지 않습니다. 대신 메인넷의 로컬 포크를 만들고 해당 네트워크에서 "거래"를 할 것입니다.
 
-로컬 포크를 생성하고 거래를 활성화하는 단계는 다음과 같습니다.
+로컬 포크를 만들고 거래를 활성화하는 단계는 다음과 같습니다.
 
 1. [Foundry](https://getfoundry.sh/introduction/installation)를 설치합니다.
 
@@ -707,18 +726,18 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
    anvil --fork-url https://eth.drpc.org --block-time 12
    ```
 
-   `anvil`는 Foundry의 기본 URL인 http://localhost:8545에서 수신 대기 중이므로, 블록체인을 조작하는 데 사용하는 [`cast` 명령어](https://getfoundry.sh/cast/overview)에 대한 URL을 지정할 필요가 없습니다.
+   `anvil`은 Foundry의 기본 URL인 http://localhost:8545에서 수신 대기 중이므로, 블록체인을 조작하는 데 사용하는 [`cast` 명령](https://getfoundry.sh/cast/overview)에 대해 URL을 지정할 필요가 없습니다.
 
-3. `anvil`에서 실행할 때 ETH를 가진 10개의 테스트 계정이 있습니다—첫 번째 계정에 대한 환경 변수를 설정합니다.
+3. `anvil`에서 실행할 때 ETH를 가진 10개의 테스트 계정이 있습니다. 첫 번째 계정에 대한 환경 변수를 설정합니다.
 
    ```sh
    PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
    ADDRESS=`cast wallet address $PRIVATE_KEY`
    ```
 
-4. 우리가 사용해야 할 컨트랙트들입니다. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol)는 실제로 거래하는 데 사용하는 유니스왑 v3 컨트랙트입니다. 풀을 통해 직접 거래할 수도 있지만, 이 방법이 훨씬 쉽습니다.
+4. 우리가 사용해야 할 컨트랙트들입니다. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol)는 실제로 거래하는 데 사용하는 Uniswap v3 컨트랙트입니다. 풀을 통해 직접 거래할 수도 있지만, 이 방법이 훨씬 쉽습니다.
 
-   아래 두 변수는 WETH와 USDC 간에 스왑하는 데 필요한 유니스왑 v3 경로입니다.
+   아래 두 변수는 WETH와 USDC 간에 스왑하는 데 필요한 Uniswap v3 경로입니다.
 
    ```sh
    WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
@@ -746,9 +765,9 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
        --private-key $PRIVATE_KEY
    ```
 
-   `approve` 호출은 `SwapRouter`가 우리 토큰의 일부를 사용할 수 있도록 허용량을 생성합니다. 컨트랙트는 이벤트를 모니터링할 수 없으므로, 토큰을 `SwapRouter` 컨트랙트로 직접 전송하면 지불되었는지 알 수 없습니다. 대신 `SwapRouter` 컨트랙트가 특정 금액을 사용하도록 허용한 다음 `SwapRouter`가 이를 수행합니다. 이는 `SwapRouter`가 호출하는 함수를 통해 수행되므로 성공 여부를 알 수 있습니다.
+   `approve` 호출은 `SwapRouter`가 우리 토큰의 일부를 사용할 수 있도록 허용량을 생성합니다. 컨트랙트는 이벤트를 모니터링할 수 없으므로, 토큰을 `SwapRouter` 컨트랙트로 직접 전송하면 지불되었는지 알 수 없습니다. 대신 `SwapRouter` 컨트랙트가 특정 금액을 사용하도록 허용한 다음, `SwapRouter`가 이를 수행합니다. 이는 `SwapRouter`에 의해 호출되는 함수를 통해 수행되므로 성공 여부를 알 수 있습니다.
 
-7. 두 토큰이 충분히 있는지 확인합니다.
+7. 두 토큰이 모두 충분한지 확인합니다.
 
    ```sh
    cast call $WETH_ADDRESS "balanceOf(address)" $ADDRESS | cast from-wei
@@ -758,9 +777,12 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
 이제 WETH와 USDC가 있으므로 실제로 에이전트를 실행할 수 있습니다.
 
 ```sh
-git checkout 05-trade
+git checkout -f 05-trade
+sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
 uv run agent.py
 ```
+
+`-f`는 이전 브랜치에서 수행한 모델 변경 사항을 취소하므로, `sed` 명령을 사용하여 새 버전의 `agent.py`에 다시 적용합니다.
 
 출력은 다음과 유사할 것입니다.
 
@@ -785,7 +807,7 @@ WETH Balance: 499
 
 - 14번째 줄에서 `MAINNET_URL`를 `https://eth.drpc.org`와 같은 실제 액세스 포인트로 변경합니다.
 - 28번째 줄에서 `PRIVATE_KEY`를 자신의 개인 키로 변경합니다.
-- 매우 부유해서 검증되지 않은 에이전트를 위해 매일 1 ETH를 매수하거나 매도할 수 있는 것이 아니라면, 29번째 줄을 변경하여 `WETH_TRADE_AMOUNT`를 줄이는 것이 좋습니다.
+- 검증되지 않은 에이전트를 위해 매일 1 ETH를 매수하거나 매도할 수 있을 만큼 매우 부유하지 않다면, 29번째 줄을 변경하여 `WETH_TRADE_AMOUNT`를 줄이는 것이 좋습니다.
 
 #### 코드 설명 {#trading-code}
 
@@ -815,7 +837,7 @@ ERC20_ABI = [
 ]
 ```
 
-실제로 거래하려면 `approve` 함수가 필요합니다. 또한 거래 전후의 잔액을 표시하고 싶으므로 `balanceOf`도 필요합니다.
+실제로 거래하려면 `approve` 함수가 필요합니다. 또한 전후 잔액을 표시하고 싶으므로 `balanceOf`도 필요합니다.
 
 ```python
 SWAP_ROUTER_ABI = [
@@ -845,7 +867,7 @@ def txn_params() -> dict:
     }
 ```
 
-트랜잭션 매개변수입니다. [논스](https://en.wikipedia.org/wiki/Cryptographic_nonce)가 매번 변경되어야 하므로 여기에 함수가 필요합니다.
+트랜잭션 매개변수입니다. [논스](https://en.wikipedia.org/wiki/Cryptographic_nonce)는 매번 변경되어야 하므로 여기에 함수가 필요합니다.
 
 ```python
 def approve_token(contract: Contract, amount: int):
@@ -892,7 +914,7 @@ def make_buy_params(quote: Quote) -> dict:
     }
 ```
 
-`SELL_PARAMS`와 달리 매수 매개변수는 변경될 수 있습니다. 입력 금액은 `quote`에서 확인할 수 있는 1 WETH의 비용입니다.
+`SELL_PARAMS`와 대조적으로 매수 매개변수는 변경될 수 있습니다. 입력 금액은 `quote`에서 확인할 수 있는 1 WETH의 비용입니다.
 
 ```python
 def buy(quote: Quote):
@@ -917,7 +939,7 @@ def sell():
     print("Sell transaction mined.")
 ```
 
-`buy()`와 `sell()` 함수는 거의 동일합니다. 먼저 `SwapRouter`에 대해 충분한 허용량을 승인한 다음, 올바른 경로와 금액으로 이를 호출합니다.
+`buy()` 및 `sell()` 함수는 거의 동일합니다. 먼저 `SwapRouter`에 대해 충분한 허용량을 승인한 다음, 올바른 경로와 금액으로 이를 호출합니다.
 
 ```python
 def balances():
@@ -945,7 +967,7 @@ print("Account balances after trade:")
 balances()
 ```
 
-이 에이전트는 현재 한 번만 작동합니다. 하지만 [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html)에서 실행하거나 368-400줄을 루프로 감싸고 [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep)를 사용하여 다음 주기 시간이 될 때까지 대기하도록 하여 지속적으로 작동하도록 변경할 수 있습니다.
+이 에이전트는 현재 한 번만 작동합니다. 하지만 [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html)에서 실행하거나 368-397번째 줄을 루프로 감싸고 [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep)를 사용하여 다음 주기 시간이 될 때까지 기다리게 함으로써 지속적으로 작동하도록 변경할 수 있습니다.
 
 ## 가능한 개선 사항 {#improvements}
 
@@ -961,9 +983,9 @@ balances()
 
 ### 트레이딩 전략을 비밀로 유지하고 싶다면 어떻게 해야 할까요? {#secret}
 
-AI 공급업체는 사용자가 LLM에 보내는 쿼리를 볼 수 있으며, 이로 인해 에이전트와 함께 개발한 천재적인 트레이딩 시스템이 노출될 수 있습니다. 너무 많은 사람이 사용하는 트레이딩 시스템은 가치가 없습니다. 왜냐하면 당신이 사고 싶을 때 너무 많은 사람이 사려고 하고(가격이 오름), 당신이 팔고 싶을 때 너무 많은 사람이 팔려고 하기(가격이 내림) 때문입니다.
+AI 공급업체는 여러분이 LLM에 보내는 쿼리를 볼 수 있으며, 이로 인해 에이전트와 함께 개발한 천재적인 트레이딩 시스템이 노출될 수 있습니다. 너무 많은 사람이 사용하는 트레이딩 시스템은 가치가 없습니다. 왜냐하면 여러분이 매수하고 싶을 때 너무 많은 사람이 매수하려고 하고(가격이 상승함), 매도하고 싶을 때 매도하려고 하기(가격이 하락함) 때문입니다.
 
-이 문제를 피하기 위해 예를 들어 [LM-Studio](https://lmstudio.ai/)를 사용하여 로컬에서 LLM을 실행할 수 있습니다.
+이 문제를 피하기 위해 예를 들어 [llama.cpp](https://github.com/ggml-org/llama.cpp)의 `llama-server`를 사용하여 로컬에서 LLM을 실행할 수 있습니다. 이는 OpenAI 호환 엔드포인트를 제공하므로, [LLM과 인터페이스하기](#interface-llm)에서 설명한 대로 `OPENAI_BASE_URL`와 모델 이름만 설정하면 됩니다.
 
 ### AI 봇에서 AI 에이전트로 {#bot-to-agent}
 

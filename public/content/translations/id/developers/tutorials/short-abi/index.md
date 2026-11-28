@@ -3,7 +3,7 @@ title: "ABI Pendek untuk Optimasi Calldata"
 description: Mengoptimalkan kontrak pintar untuk Optimistic Rollup
 author: Ori Pomerantz
 lang: id
-tags: ["lapisan 2 (l2)"]
+tags: ["lapisan 2 (L2)"]
 skill: intermediate
 breadcrumb: ABI Pendek
 published: 2022-04-01
@@ -21,66 +21,108 @@ Namun, teknik yang dijelaskan di sini seharusnya berfungsi sama baiknya untuk ro
 
 ### Terminologi {#terminology}
 
-Saat membahas rollup, istilah 'lapisan 1 (l1)' digunakan untuk Mainnet, jaringan produksi Ethereum.
-Istilah 'lapisan 2 (l2)' digunakan untuk rollup atau sistem lain apa pun yang bergantung pada l1 untuk keamanan tetapi melakukan sebagian besar pemrosesannya secara offchain.
+Saat membahas rollup, istilah 'lapisan 1 (L1)' digunakan untuk Mainnet, jaringan produksi Ethereum.
+Istilah 'lapisan 2 (L2)' digunakan untuk rollup atau sistem lain apa pun yang bergantung pada L1 untuk keamanan tetapi melakukan sebagian besar pemrosesannya secara offchain.
 
-## Bagaimana kita dapat lebih mengurangi biaya transaksi l2? {#how-can-we-further-reduce-the-cost-of-l2-transactions}
+## Bagaimana kita dapat lebih mengurangi biaya transaksi L2? {#how-can-we-further-reduce-the-cost-of-l2-transactions}
 
 [Optimistic rollup](/developers/docs/scaling/optimistic-rollups) harus menyimpan catatan setiap transaksi historis sehingga siapa pun dapat memeriksanya dan memverifikasi bahwa state saat ini sudah benar.
-Cara termurah untuk memasukkan data ke Mainnet Ethereum adalah dengan menulisnya sebagai calldata.
-Solusi ini dipilih oleh [Optimism](https://docs.optimism.io/op-stack/protocol/overview) maupun [Arbitrum](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction).
+Saat artikel ini ditulis, cara termurah untuk memasukkan data ke Mainnet Ethereum adalah dengan menulisnya sebagai data panggilan.
+Solusi ini dipilih oleh [Optimism](https://docs.optimism.io/op-stack/protocol/overview) dan [Arbitrum](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction).
+Sejak peningkatan Dencun (Maret 2024), rollup dapat memposting data ini dalam [blob](/roadmap/danksharding/) sebagai gantinya, yang jauh lebih murah.
 
-### Biaya transaksi l2 {#cost-of-l2-transactions}
+### Biaya transaksi L2 {#cost-of-l2-transactions}
 
-Biaya transaksi l2 terdiri dari dua komponen:
+Biaya transaksi L2 terdiri dari dua komponen:
 
-1. Pemrosesan l2, yang biasanya sangat murah
-2. Penyimpanan l1, yang terikat dengan biaya gas Mainnet
+1. Pemrosesan L2, yang biasanya sangat murah
+2. Penyimpanan L1, yang terikat dengan biaya gas Mainnet
 
-Saat saya menulis ini, di Optimism biaya gas l2 adalah 0,001 [Gwei](/developers/docs/gas/#pre-london).
-Di sisi lain, biaya gas l1 adalah sekitar 40 Gwei.
-[Anda dapat melihat harga saat ini di sini](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
+Saat saya menulis artikel ini pada tahun 2022, di Optimism biaya gas L2 adalah 0,001 [Gwei](/developers/docs/gas/#what-is-gas).
+Di sisi lain, biaya gas L1 adalah sekitar 40 Gwei.
 
-Satu bita calldata memakan biaya 4 gas (jika bernilai nol) atau 16 gas (jika bernilai lainnya).
+Satu bita data panggilan berbiaya 4 gas (jika nol) atau 16 gas (jika nilainya selain nol).
 Salah satu operasi paling mahal di EVM adalah menulis ke penyimpanan.
-Biaya maksimum untuk menulis kata 32-bita ke penyimpanan di l2 adalah 22.100 gas. Saat ini, nilainya adalah 22,1 Gwei.
-Jadi, jika kita dapat menghemat satu bita nol calldata, kita akan dapat menulis sekitar 200 bita ke penyimpanan dan tetap untung.
+Biaya maksimum untuk menulis kata 32 bita ke penyimpanan di L2 adalah 22.100 gas. Pada saat itu, ini setara dengan 22,1 Gwei.
+Jadi, jika kita dapat menghemat satu bita nol dari data panggilan, kita akan dapat menulis sekitar 200 bita ke penyimpanan dan tetap untung.
 
-### ABI {#the-abi}
+#### Bagaimana biaya L2 berubah pada tahun 2024 {#how-l2-costs-changed-in-2024}
 
-Sebagian besar transaksi mengakses sebuah kontrak dari akun yang dimiliki secara eksternal (externally-owned account).
-Sebagian besar kontrak ditulis dalam Solidity dan menafsirkan bidang datanya sesuai dengan [antarmuka biner aplikasi (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
+Formula [biaya data L1](https://docs.optimism.io/op-stack/transactions/fees#l1-data-fee) OP Stack telah berubah dua kali sejak artikel ini ditulis:
 
-Namun, ABI dirancang untuk l1, di mana satu bita calldata memakan biaya yang kira-kira sama dengan empat operasi aritmatika, bukan l2 di mana satu bita calldata memakan biaya lebih dari seribu operasi aritmatika.
-Calldata dibagi seperti ini:
+- Dengan [peningkatan Ecotone](https://docs.optimism.io/op-stack/transactions/fees#ecotone) (Maret 2024), rantai OP Stack mulai memposting data transaksi ke blob, yang diberi harga berdasarkan biaya dasar blob yang terpisah (dan biasanya jauh lebih rendah).
+- Dengan [peningkatan Fjord](https://docs.optimism.io/op-stack/transactions/fees#fjord) (Juli 2024), biaya data L1 didasarkan pada perkiraan ukuran transaksi setelah kompresi [FastLZ](https://github.com/ariya/FastLZ), dengan minimum 100 bita per transaksi ([lihat spesifikasinya](https://specs.optimism.io/protocol/fjord/exec-engine.html)).
 
-| Bagian | Panjang | Bita | Bita terbuang | Gas terbuang | Bita yang diperlukan | Gas yang diperlukan |
-| ------------------- | -----: | ----: | -----------: | ---------: | --------------: | ------------: |
-| Pemilih fungsi | 4 | 0-3 | 3 | 48 | 1 | 16 |
-| Nol | 12 | 4-15 | 12 | 48 | 0 | 0 |
-| Alamat tujuan | 20 | 16-35 | 0 | 0 | 20 | 320 |
-| Jumlah | 32 | 36-67 | 17 | 64 | 15 | 240 |
-| Total | 68 | | | 160 | | 576 |
+Hal ini mengubah analisis di sisa artikel ini dalam tiga cara:
+
+1. Bita nol terkompresi dengan baik, sehingga hampir gratis.
+   Angka 4 dan 16 gas per bita di bawah ini adalah biaya data panggilan L1, bukan apa yang Anda bayarkan untuk data transaksi di rantai OP Stack saat ini.
+2. Di bawah minimum 100 bita, data panggilan yang lebih pendek tidak menghemat apa pun.
+   Misalnya, pada bulan Oktober 2026 di OP Mainnet, `transfer` ERC-20 standar (68 bita data panggilan) dan versi pendek 23 bita dalam artikel ini akan membayar biaya data L1 yang sama persis, yaitu minimum, sekitar 1 Gwei (10<sup>-9</sup> ETH).
+3. Karena ruang blob murah, biaya eksekusi L2 sekarang sering kali lebih besar daripada biaya data L1.
+   Pada harga gas L2 sebesar 0,001 Gwei, 1000 gas berbiaya 1 Gwei, sama dengan seluruh biaya data L1 tersebut, sehingga gas eksekusi ekstra untuk melalui kontrak proksi dapat berbiaya lebih mahal daripada bita yang dihematnya.
+
+Prinsipnya tetap berlaku: lebih sedikit bita terkompresi berarti biaya data L1 yang lebih rendah.
+ABI pendek paling masuk akal untuk transaksi dengan banyak data yang tidak terkompresi dengan baik, dan pada rantai atau pada saat data L1 mahal.
+Untuk melihat apa yang akan dibayar oleh transaksi tertentu, panggil `getL1Fee` pada [prapenerapan `GasPriceOracle`](https://specs.optimism.io/protocol/predeploys.html#gaspriceoracle) dengan transaksi yang tidak ditandatangani.
+Misalnya, menggunakan `cast` dari [Foundry](https://getfoundry.sh/introduction/installation/):
+
+```sh
+TX=$(cast mktx --raw-unsigned --from <your address> --chain 10 --nonce 0 --gas-limit 100000 \
+  --priority-gas-price 1000000 --gas-price 1000000 <destination address> <calldata>)
+cast call 0x420000000000000000000000000000000000000F "getL1Fee(bytes)(uint256)" $TX --rpc-url https://mainnet.optimism.io
+```
+
+Hasilnya dalam Wei.
+
+### Antarmuka Biner Aplikasi (ABI) {#the-abi}
+
+Sebagian besar transaksi mengakses kontrak dari akun milik eksternal (EOA).
+Sebagian besar kontrak ditulis dalam Solidity dan menafsirkan bidang datanya sesuai [Antarmuka Biner Aplikasi (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
+
+Namun, ABI dirancang untuk L1, di mana satu bita data panggilan berbiaya kira-kira sama dengan empat operasi aritmatika, bukan L2 di mana (pada harga tahun 2022) satu bita data panggilan berbiaya lebih dari seribu operasi aritmatika.
+Data panggilan dibagi seperti ini:
+
+| Bagian              | Panjang | Bita  | Bita terbuang | Gas terbuang | Bita yang diperlukan | Gas yang diperlukan |
+| ------------------- | ------: | ----: | ------------: | -----------: | -------------------: | ------------------: |
+| Pemilih fungsi      |       4 |   0-3 |             3 |           48 |                    1 |                  16 |
+| Nol                 |      12 |  4-15 |            12 |           48 |                    0 |                   0 |
+| Alamat tujuan       |      20 | 16-35 |             0 |            0 |                   20 |                 320 |
+| Jumlah              |      32 | 36-67 |            17 |           68 |                   15 |                 240 |
+| Total               |      68 |       |               |          164 |                      |                 576 |
 
 Penjelasan:
 
-- **Pemilih fungsi**: Kontrak memiliki kurang dari 256 fungsi, jadi kita dapat membedakannya dengan satu bita.
-  Bita-bita ini biasanya bukan nol dan oleh karena itu [memakan biaya enam belas gas](https://eips.ethereum.org/EIPS/eip-2028).
+- **Pemilih fungsi**: Kontrak memiliki kurang dari 256 fungsi, sehingga kita dapat membedakannya dengan satu bita.
+  Bita-bita ini biasanya bukan nol dan karenanya [berbiaya enam belas gas](https://eips.ethereum.org/EIPS/eip-2028).
 - **Nol**: Bita-bita ini selalu nol karena alamat dua puluh bita tidak memerlukan kata tiga puluh dua bita untuk menyimpannya.
-  Bita yang menyimpan nol memakan biaya empat gas ([lihat kertas kuning](https://ethereum.github.io/yellowpaper/paper.pdf), Lampiran G,
-  hlm. 27, nilai untuk `G`<sub>`txdatazero`</sub>).
+  Bita yang menyimpan nol berbiaya empat gas ([lihat kertas kuning](https://ethereum.github.io/yellowpaper/paper.pdf), Lampiran G,
+  hal. 27, nilai untuk `G`<sub>`txdatazero`</sub>).
 - **Jumlah**: Jika kita berasumsi bahwa dalam kontrak ini `decimals` adalah delapan belas (nilai normal) dan jumlah maksimum token yang kita transfer adalah 10<sup>18</sup>, kita mendapatkan jumlah maksimum 10<sup>36</sup>.
   256<sup>15</sup> &gt; 10<sup>36</sup>, jadi lima belas bita sudah cukup.
 
-Pemborosan 160 gas di l1 biasanya dapat diabaikan. Sebuah transaksi memakan biaya setidaknya [21.000 gas](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), jadi tambahan 0,8% tidak menjadi masalah.
-Namun, di l2, situasinya berbeda. Hampir seluruh biaya transaksi adalah untuk menulisnya ke l1.
-Selain calldata transaksi, terdapat 109 bita header transaksi (alamat tujuan, tanda tangan, dll.).
-Oleh karena itu, total biayanya adalah `109*16+576+160=2480`, dan kita membuang sekitar 6,5% dari jumlah tersebut.
+Pemborosan 164 gas di L1 biasanya dapat diabaikan. Sebuah transaksi berbiaya setidaknya [21.000 gas](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), jadi tambahan 0,8% tidak masalah.
+Namun, di L2 pada tahun 2022, keadaannya berbeda. Hampir seluruh biaya transaksi adalah untuk menulisnya ke L1.
+Selain data panggilan transaksi, ada 109 bita header transaksi (alamat tujuan, tanda tangan, dll.).
+Oleh karena itu, total biayanya adalah `109*16+576+164=2484`, dan kita membuang sekitar 6,6% dari itu.
 
-## Mengurangi biaya saat Anda tidak mengendalikan tujuan {#reducing-costs-when-you-dont-control-the-destination}
+## Mengurangi biaya saat Anda tidak mengontrol tujuan {#reducing-costs-when-you-dont-control-the-destination}
 
-Dengan asumsi bahwa Anda tidak memiliki kendali atas kontrak tujuan, Anda masih dapat menggunakan solusi yang mirip dengan [ini](https://github.com/qbzzt/ethereum.org-20220330-shortABI).
-Mari kita bahas berkas-berkas yang relevan.
+Dengan asumsi bahwa Anda tidak memiliki kendali atas kontrak tujuan, Anda masih dapat menggunakan solusi yang mirip dengan [yang ini](https://github.com/qbzzt/ethereum.org-20220330-shortABI).
+
+Untuk menjalankannya, Anda memerlukan [Node.js](https://nodejs.org/) dan git:
+
+```sh
+git clone https://github.com/qbzzt/ethereum.org-20220330-shortABI.git
+cd ethereum.org-20220330-shortABI
+npm install
+npx hardhat test
+```
+
+Pengujian ini men-deploy kontrak ke jaringan lokal bawaan Hardhat, jadi Anda tidak memerlukan ETH apa pun.
+Repositori ini menggunakan Hardhat 2.9, jadi pada versi Node.js saat ini ia memperingatkan bahwa versi Node.js Anda tidak didukung, tetapi pengujiannya tetap berhasil.
+
+Mari kita bahas file-file yang relevan.
 
 ### Token.sol {#token-sol}
 
@@ -100,7 +142,7 @@ Ini akan membuat kontrak ERC-20 produksi menjadi tidak berguna, tetapi ini mempe
 
 ### CalldataInterpreter.sol {#calldatainterpreter-sol}
 
-[Ini adalah kontrak yang seharusnya dipanggil oleh transaksi dengan calldata yang lebih pendek](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol).
+[Ini adalah kontrak yang seharusnya dipanggil oleh transaksi dengan data panggilan yang lebih pendek](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol).
 Mari kita bahas baris demi baris.
 
 ```solidity
@@ -115,22 +157,23 @@ Kita memerlukan fungsi token untuk mengetahui cara memanggilnya.
 
 ```solidity
 contract CalldataInterpreter {
+
     OrisUselessToken public immutable token;
 ```
 
-Alamat token di mana kita bertindak sebagai proksi.
+Alamat token yang kita proksikan.
 
 ```solidity
 
     /**
-     * @dev Menentukan alamat token
+     * @dev Tentukan alamat token
      * @param tokenAddr_ alamat kontrak ERC-20
      */
     constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);
-    }   // constructor
+    }   // konstruktor
 ```
 
 Alamat token adalah satu-satunya parameter yang perlu kita tentukan.
@@ -140,7 +183,7 @@ Alamat token adalah satu-satunya parameter yang perlu kita tentukan.
         private pure returns (uint) {
 ```
 
-Membaca sebuah nilai dari calldata.
+Membaca nilai dari data panggilan.
 
 ```solidity
         uint _retVal;
@@ -152,9 +195,9 @@ Membaca sebuah nilai dari calldata.
             "calldataVal trying to read beyond calldatasize");
 ```
 
-Kita akan memuat satu kata 32-bita (256-bit) ke memori dan menghapus bita yang bukan bagian dari bidang yang kita inginkan.
-Algoritma ini tidak berfungsi untuk nilai yang lebih panjang dari 32 bita, dan tentu saja kita tidak dapat membaca melewati akhir calldata.
-Di l1 mungkin perlu untuk melewati pengujian ini guna menghemat gas, tetapi di l2 gas sangat murah, yang memungkinkan pemeriksaan kewarasan (sanity check) apa pun yang dapat kita pikirkan.
+Kita akan memuat satu kata 32 bita (256 bit) ke memori dan menghapus bita yang bukan bagian dari bidang yang kita inginkan.
+Algoritma ini tidak berfungsi untuk nilai yang lebih panjang dari 32 bita, dan tentu saja kita tidak dapat membaca melewati akhir data panggilan.
+Di L1 mungkin perlu untuk melewati pengujian ini untuk menghemat gas, tetapi di L2 gas sangat murah, yang memungkinkan pemeriksaan kewarasan apa pun yang dapat kita pikirkan.
 
 ```solidity
         assembly {
@@ -162,18 +205,18 @@ Di l1 mungkin perlu untuk melewati pengujian ini guna menghemat gas, tetapi di l
         }
 ```
 
-Kita bisa saja menyalin data dari panggilan ke `fallback()` (lihat di bawah), tetapi lebih mudah menggunakan [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), bahasa rakitan (assembly) dari EVM.
+Kita bisa saja menyalin data dari panggilan ke `fallback()` (lihat di bawah), tetapi lebih mudah menggunakan [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), bahasa rakitan dari EVM.
 
-Di sini kita menggunakan [opcode CALLDATALOAD](https://www.evm.codes/#35) untuk membaca bita `startByte` hingga `startByte+31` ke dalam tumpukan (stack).
-Secara umum, sintaksis opcode di Yul adalah `<opcode name>(<first stack value, if any>,<second stack value, if any>...)`.
+Di sini kita menggunakan [opcode CALLDATALOAD](https://www.evm.codes/#35) untuk membaca bita `startByte` hingga `startByte+31` ke dalam tumpukan.
+Secara umum, sintaks opcode di Yul adalah `<opcode name>(<first stack value, if any>,<second stack value, if any>...)`.
 
 ```solidity
 
         _retVal = _retVal >> (256-length*8);
 ```
 
-Hanya bita `length` paling signifikan yang merupakan bagian dari bidang tersebut, jadi kita melakukan [geser kanan (right-shift)](https://en.wikipedia.org/wiki/Logical_shift) untuk menyingkirkan nilai lainnya.
-Ini memiliki keuntungan tambahan yaitu memindahkan nilai ke sebelah kanan bidang, sehingga menjadi nilai itu sendiri alih-alih nilai dikali 256<sup>sesuatu</sup>.
+Hanya `length` bita paling signifikan yang merupakan bagian dari bidang tersebut, jadi kita [menggeser ke kanan](https://en.wikipedia.org/wiki/Logical_shift) untuk menyingkirkan nilai lainnya.
+Ini memiliki keuntungan tambahan yaitu memindahkan nilai ke kanan bidang, sehingga itu adalah nilai itu sendiri, bukan nilai dikali 256<sup>sesuatu</sup>.
 
 ```solidity
 
@@ -184,8 +227,8 @@ Ini memiliki keuntungan tambahan yaitu memindahkan nilai ke sebelah kanan bidang
     fallback() external {
 ```
 
-Ketika panggilan ke kontrak Solidity tidak cocok dengan tanda tangan fungsi mana pun, ia memanggil [fungsi `fallback()`](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function) (dengan asumsi fungsi tersebut ada).
-Dalam kasus `CalldataInterpreter`, _apa pun_ panggilan akan masuk ke sini karena tidak ada fungsi `external` atau `public` lainnya.
+Ketika panggilan ke kontrak Solidity tidak cocok dengan tanda tangan fungsi mana pun, ia memanggil [fungsi `fallback()`](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function) (dengan asumsi ada satu).
+Dalam kasus `CalldataInterpreter`, panggilan _apa pun_ sampai di sini karena tidak ada fungsi `external` atau `public` lainnya.
 
 ```solidity
         uint _func;
@@ -193,20 +236,20 @@ Dalam kasus `CalldataInterpreter`, _apa pun_ panggilan akan masuk ke sini karena
         _func = calldataVal(0, 1);
 ```
 
-Membaca bita pertama dari calldata, yang memberi tahu kita fungsinya.
-Ada dua alasan mengapa sebuah fungsi tidak tersedia di sini:
+Membaca bita pertama dari data panggilan, yang memberi tahu kita fungsinya.
+Ada dua alasan mengapa suatu fungsi tidak akan tersedia di sini:
 
-1. Fungsi yang bersifat `pure` atau `view` tidak mengubah state dan tidak memakan biaya gas (saat dipanggil secara offchain).
+1. Fungsi yang bersifat `pure` atau `view` tidak mengubah state dan tidak berbiaya gas (saat dipanggil secara offchain).
    Tidak masuk akal untuk mencoba mengurangi biaya gasnya.
 2. Fungsi yang bergantung pada [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties).
    Nilai `msg.sender` akan menjadi alamat `CalldataInterpreter`, bukan pemanggilnya.
 
-Sayangnya, [melihat spesifikasi ERC-20](https://eips.ethereum.org/EIPS/eip-20), ini hanya menyisakan satu fungsi, `transfer`.
-Ini hanya menyisakan dua fungsi bagi kita: `transfer` (karena kita dapat memanggil `transferFrom`) dan `faucet` (karena kita dapat mentransfer token kembali ke siapa pun yang memanggil kita).
+Sayangnya, [melihat spesifikasi ERC-20](https://eips.ethereum.org/EIPS/eip-20), ini hanya menyisakan satu fungsi standar, `transfer` (karena kita dapat memanggil `transferFrom`).
+Token pengujian kita juga memiliki `faucet`, yang dapat kita dukung karena kita dapat mentransfer token kembali ke siapa pun yang memanggil kita.
 
 ```solidity
 
-        // Memanggil metode pengubah state dari token menggunakan
+        // Panggil metode pengubah state dari token menggunakan
         // informasi dari data panggilan
 
         // faucet
@@ -223,7 +266,7 @@ Panggilan ke `faucet()`, yang tidak memiliki parameter.
 ```
 
 Setelah kita memanggil `token.faucet()` kita mendapatkan token. Namun, sebagai kontrak proksi, kita tidak **membutuhkan** token.
-EOA (akun yang dimiliki secara eksternal) atau kontrak yang memanggil kitalah yang membutuhkannya.
+Akun milik eksternal (EOA) atau kontrak yang memanggil kitalah yang membutuhkannya.
 Jadi kita mentransfer semua token kita ke siapa pun yang memanggil kita.
 
 ```solidity
@@ -244,8 +287,8 @@ Kita hanya mengizinkan pemanggil untuk mentransfer token yang mereka miliki
                 address(uint160(calldataVal(1, 20))),
 ```
 
-Alamat tujuan dimulai pada bita #1 (bita #0 adalah fungsi).
-Sebagai sebuah alamat, panjangnya adalah 20 bita.
+Alamat tujuan dimulai pada bita #1 (bita #0 adalah fungsinya).
+Sebagai sebuah alamat, panjangnya 20 bita.
 
 ```solidity
                 calldataVal(21, 2)
@@ -258,24 +301,24 @@ Untuk kontrak khusus ini, kita berasumsi bahwa jumlah maksimum token yang ingin 
         }
 ```
 
-Secara keseluruhan, sebuah transfer membutuhkan 35 bita calldata:
+Secara keseluruhan, transfer membutuhkan 23 bita data panggilan:
 
-| Bagian | Panjang | Bita |
-| ------------------- | -----: | ----: |
-| Pemilih fungsi | 1 | 0 |
-| Alamat tujuan | 32 | 1-32 |
-| Jumlah | 2 | 33-34 |
+| Bagian              | Panjang | Bita  |
+| ------------------- | ------: | ----: |
+| Pemilih fungsi      |       1 |     0 |
+| Alamat tujuan       |      20 |  1-20 |
+| Jumlah              |       2 | 21-22 |
 
 ```solidity
     }   // fallback
 
-}       // contract CalldataInterpreter
+}       // kontrak CalldataInterpreter
 ```
 
 ### test.js {#test-js}
 
 [Pengujian unit JavaScript ini](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) menunjukkan kepada kita cara menggunakan mekanisme ini (dan cara memverifikasi bahwa mekanisme ini berfungsi dengan benar).
-Saya akan berasumsi bahwa Anda memahami [chai](https://www.chaijs.com/) dan [ethers](https://docs.ethers.io/v5/) dan hanya menjelaskan bagian-bagian yang secara khusus berlaku untuk kontrak tersebut.
+Saya akan berasumsi bahwa Anda memahami [chai](https://www.chaijs.com/) dan [ethers](https://docs.ethers.org/v5/) dan hanya menjelaskan bagian-bagian yang secara khusus berlaku untuk kontrak tersebut.
 
 ```js
 const { expect } = require("chai");
@@ -323,7 +366,7 @@ Ada dua parameter yang perlu kita sediakan untuk transaksi:
     await (await signer.sendTransaction(faucetTx)).wait()
 ```
 
-Kita memanggil [metode `sendTransaction` milik penandatangan](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction) karena kita sudah menentukan tujuan (`faucetTx.to`) dan kita memerlukan transaksi tersebut untuk ditandatangani.
+Kita memanggil [metode `sendTransaction` milik penandatangan](https://docs.ethers.org/v5/api/signer/#Signer-sendTransaction) karena kita sudah menentukan tujuan (`faucetTx.to`) dan kita memerlukan transaksi tersebut untuk ditandatangani.
 
 ```javascript
 // Periksa apakah faucet menyediakan token dengan benar
@@ -365,13 +408,19 @@ Buat transaksi transfer. Bita pertama adalah "0x02", diikuti oleh alamat tujuan,
 })      // describe
 ```
 
-## Mengurangi biaya saat Anda mengendalikan kontrak tujuan {#reducing-the-cost-when-you-do-control-the-destination-contract}
+## Mengurangi biaya saat Anda mengontrol kontrak tujuan {#reducing-the-cost-when-you-do-control-the-destination-contract}
 
-Jika Anda memiliki kendali atas kontrak tujuan, Anda dapat membuat fungsi yang melewati pemeriksaan `msg.sender` karena fungsi tersebut memercayai penerjemah calldata.
+Jika Anda memiliki kendali atas kontrak tujuan, Anda dapat membuat fungsi yang melewati pemeriksaan `msg.sender` karena mereka memercayai penerjemah data panggilan.
 [Anda dapat melihat contoh cara kerjanya di sini, di cabang `control-contract`](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
+Untuk menjalankannya, beralihlah ke cabang tersebut di repositori yang Anda kloning sebelumnya dan jalankan pengujiannya lagi:
 
-Jika kontrak hanya merespons transaksi eksternal, kita bisa bertahan dengan hanya memiliki satu kontrak.
-Namun, hal itu akan merusak [komposabilitas](/developers/docs/smart-contracts/composability/).
+```sh
+git checkout control-contract
+npx hardhat test
+```
+
+Jika kontrak hanya merespons transaksi eksternal, kita bisa saja hanya memiliki satu kontrak.
+Namun, itu akan merusak [komposabilitas](/developers/docs/smart-contracts/composability/).
 Jauh lebih baik memiliki kontrak yang merespons panggilan ERC-20 normal, dan kontrak lain yang merespons transaksi dengan data panggilan pendek.
 
 ### Token.sol {#token-sol-2}
@@ -576,9 +625,10 @@ Perhatikan bahwa `transferFromTx` memerlukan dua parameter alamat: pemberi jatah
 
 ## Kesimpulan {#conclusion}
 
-[Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92) maupun [Arbitrum](https://developer.offchainlabs.com/docs/special_features) sedang mencari cara untuk mengurangi ukuran calldata yang ditulis ke l1 dan dengan demikian mengurangi biaya transaksi.
+Baik [Optimism](https://docs.optimism.io/op-stack/transactions/fees#fjord) maupun [Arbitrum](https://docs.arbitrum.io/how-arbitrum-works/deep-dives/gas-and-fees) sekarang mengompresi data yang mereka tulis ke L1, dan membebankan biaya pada setiap transaksi berdasarkan ukuran terkompresinya, untuk mengurangi biaya transaksi.
 Namun, sebagai penyedia infrastruktur yang mencari solusi generik, kemampuan kami terbatas.
-Sebagai pengembang dapp, Anda memiliki pengetahuan khusus aplikasi, yang memungkinkan Anda mengoptimalkan calldata Anda jauh lebih baik daripada yang bisa kami lakukan dalam solusi generik.
+Sebagai pengembang dapp, Anda memiliki pengetahuan khusus aplikasi, yang memungkinkan Anda mengoptimalkan data panggilan Anda jauh lebih baik daripada yang dapat kami lakukan dalam solusi generik.
 Semoga artikel ini membantu Anda menemukan solusi ideal untuk kebutuhan Anda.
 
 [Lihat di sini untuk karya saya yang lain](https://cryptodocguy.pro/).
+

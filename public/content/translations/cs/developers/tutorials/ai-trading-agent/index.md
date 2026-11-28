@@ -46,7 +46,9 @@ Existuje [mnoho decentralizovaných burz (DEX)](/apps/categories/defi/), které 
 
 ### OpenAI {#openai}
 
-Jako velký jazykový model (LLM) jsem pro začátek zvolil [OpenAI](https://openai.com/). Ke spuštění aplikace v tomto tutoriálu si budete muset zaplatit přístup k API. Minimální platba 5 dolarů je více než dostačující.
+Pro velký jazykový model jsem se rozhodl začít s [OpenAI](https://openai.com/). Ke spuštění aplikace v tomto tutoriálu budete muset zaplatit za přístup k API. Minimální platba 5 $ je více než dostačující.
+
+Knihovna OpenAI pro Python dokáže komunikovat i s jakýmkoli jiným koncovým bodem kompatibilním s OpenAI, včetně modelu, který běží na vašem vlastním počítači. V části [Propojení s LLM](#interface-llm) najdete informace o tom, jak ji nasměrovat jinam.
 
 ## Vývoj krok za krokem {#step-by-step}
 
@@ -517,46 +519,63 @@ Určí budoucí časový bod, pro který chceme odhad, a vytvoří prompt.
 
 ### Propojení s LLM {#interface-llm}
 
-Dále zadáme prompt skutečnému LLM a obdržíme očekávanou budoucí hodnotu. Tento program jsem napsal s využitím OpenAI, takže pokud chcete použít jiného poskytovatele, budete jej muset upravit.
+Dále zadáme prompt skutečnému LLM a obdržíme očekávanou budoucí hodnotu. Tento program jsem napsal pomocí OpenAI, takže pokud chcete použít jiného poskytovatele, budete ho muset upravit.
 
-1. Založte si [účet u OpenAI](https://auth.openai.com/create-account).
-2. [Vložte na účet prostředky](https://platform.openai.com/settings/organization/billing/overview) – minimální částka v době psaní tohoto textu je 5 dolarů.
-3. [Vytvořte si API klíč](https://platform.openai.com/settings/organization/api-keys).
-4. V příkazovém řádku exportujte API klíč, aby jej váš program mohl používat.
+1. Získejte [účet OpenAI](https://auth.openai.com/create-account)
+2. [Vložte na účet prostředky](https://platform.openai.com/settings/organization/billing/overview) – minimální částka v době psaní tohoto textu je 5 $
+3. [Vytvořte klíč API](https://platform.openai.com/settings/organization/api-keys)
+4. V příkazovém řádku exportujte klíč API, aby jej váš program mohl použít
 
    ```sh
    export OPENAI_API_KEY=sk-<the rest of the key goes here>
    ```
 
-5. Přepněte větev (checkout) a spusťte agenta.
+5. Přepněte se na agenta (checkout)
 
    ```sh
    git checkout 04-interface-llm
+   ```
+
+6. Kód v repozitáři používá model `gpt-4-turbo`, který [OpenAI ukončí 23. října 2026](https://developers.openai.com/api/docs/deprecations). Přepněte jej na `gpt-6-luna`, což je aktuální nízkonákladový model. Protože `gpt-6-luna` je model uvažování (reasoning model), příkaz také vypne uvažování (`reasoning_effort="none"`, což zachová použitelnost `temperature`) a nahradí zastaralý parametr `max_tokens` parametrem `max_completion_tokens`.
+
+   ```sh
+   sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
+   ```
+
+7. Spusťte agenta
+
+   ```sh
    uv run agent.py
    ```
+
+Pokud byste raději použili jiný koncový bod kompatibilní s OpenAI, například model, který hostujete lokálně, knihovna OpenAI načte koncový bod z proměnné prostředí `OPENAI_BASE_URL`. Nastavte ji, vložte jakoukoli neprázdnou hodnotu do `OPENAI_API_KEY`, pokud server nekontroluje klíče, a změňte `gpt-6-luna` v `agent.py` a `test-predictor.py` na název modelu, který daný server poskytuje. Pokud server odmítne `reasoning_effort`, tento parametr odstraňte.
+
+```sh
+export OPENAI_BASE_URL=http://localhost:<port>/v1
+```
 
 Zde je nový kód.
 
 ```python
 from openai import OpenAI
 
-open_ai = OpenAI()  # Klient čte proměnnou prostředí OPENAI_API_KEY
+open_ai = OpenAI()  # Klient načítá proměnnou prostředí OPENAI_API_KEY
 ```
 
-Importuje a instancuje OpenAI API.
+Importujte a instancujte API OpenAI. Klient také čte `OPENAI_BASE_URL`, pokud je nastavena, takže stejný kód funguje i s jinými koncovými body kompatibilními s OpenAI.
 
 ```python
 response = open_ai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-6-luna", reasoning_effort="none",
     messages=[
         {"role": "user", "content": prompt}
     ],
     temperature=0.0,
-    max_tokens=16,
+    max_completion_tokens=16,
 )
 ```
 
-Zavolá OpenAI API (`open_ai.chat.completions.create`) k vytvoření odpovědi.
+Zavolejte API OpenAI (`open_ai.chat.completions.create`) k vytvoření odpovědi. Hodnota `temperature` rovna nule žádá o nejpředvídatelnější odpověď a `max_completion_tokens` omezuje délku odpovědi, která potřebuje obsahovat pouze číslo. U modelu uvažování `max_completion_tokens` také počítá tokeny, které model používá k přemýšlení, což je další důvod, proč nastavit `reasoning_effort` na `none`.
 
 ```python
 expected_price = Decimal(response.choices[0].message.content.strip())
@@ -571,7 +590,7 @@ else:
     print(f"Sell, I expect the price to go down by {current_price - expected_price} USD")
 ```
 
-Vypíše cenu a poskytne doporučení k nákupu nebo prodeji.
+Vypište cenu a poskytněte doporučení k nákupu nebo prodeji.
 
 #### Testování predikcí {#testing-the-predictions}
 
@@ -695,28 +714,28 @@ Použijte [`filter`](https://www.w3schools.com/python/ref_func_filter.asp) ke sp
 
 ### Odesílání transakcí {#submit-txn}
 
-Nyní musíme skutečně odesílat transakce. V této fázi, než se systém osvědčí, však nechci utrácet skutečné peníze. Místo toho vytvoříme lokální fork sítě Mainnet a budeme „obchodovat“ na této síti.
+Nyní musíme skutečně odesílat transakce. V této fázi, než se systém osvědčí, však nechci utrácet skutečné peníze. Místo toho vytvoříme lokální fork sítě Mainnet a budeme „obchodovat“ v této síti.
 
 Zde jsou kroky k vytvoření lokálního forku a povolení obchodování.
 
-1. Nainstalujte [Foundry](https://getfoundry.sh/introduction/installation).
+1. Nainstalujte [Foundry](https://getfoundry.sh/introduction/installation)
 
-2. Spusťte [`anvil`](https://getfoundry.sh/anvil/overview).
+2. Spusťte [`anvil`](https://getfoundry.sh/anvil/overview)
 
    ```sh
    anvil --fork-url https://eth.drpc.org --block-time 12
    ```
 
-   `anvil` naslouchá na výchozí URL adrese pro Foundry, http://localhost:8545, takže nemusíme specifikovat URL pro [příkaz `cast`](https://getfoundry.sh/cast/overview), který používáme k manipulaci s blockchainem.
+   `anvil` naslouchá na výchozí URL pro Foundry, http://localhost:8545, takže nemusíme specifikovat URL pro [příkaz `cast`](https://getfoundry.sh/cast/overview), který používáme k manipulaci s blockchainem.
 
-3. Při spuštění v `anvil` je k dispozici deset testovacích účtů, které mají ETH – nastavte proměnné prostředí pro ten první.
+3. Při spuštění v `anvil` existuje deset testovacích účtů, které mají ETH – nastavte proměnné prostředí pro ten první
 
    ```sh
    PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
    ADDRESS=`cast wallet address $PRIVATE_KEY`
    ```
 
-4. Toto jsou kontrakty, které potřebujeme použít. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) je kontrakt Uniswap v3, který používáme k samotnému obchodování. Mohli bychom obchodovat přímo přes pool, ale toto je mnohem jednodušší.
+4. Toto jsou kontrakty, které musíme použít. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) je kontrakt Uniswap v3, který používáme ke skutečnému obchodování. Mohli bychom obchodovat přímo přes pool, ale toto je mnohem jednodušší.
 
    Dvě spodní proměnné jsou cesty Uniswap v3 potřebné pro swap mezi WETH a USDC.
 
@@ -735,7 +754,7 @@ Zde jsou kroky k vytvoření lokálního forku a povolení obchodování.
    cast send $WETH_ADDRESS "deposit()" --value 1000ether --private-key $PRIVATE_KEY
    ```
 
-6. Použijte `SwapRouter` k provedení obchodu 500 WETH za USDC.
+6. Použijte `SwapRouter` k provedení swapu 500 WETH za USDC.
 
    ```sh
    cast send $WETH_ADDRESS "approve(address,uint256)" $SWAP_ROUTER 500ether --private-key $PRIVATE_KEY
@@ -746,7 +765,7 @@ Zde jsou kroky k vytvoření lokálního forku a povolení obchodování.
        --private-key $PRIVATE_KEY
    ```
 
-   Volání `approve` vytvoří povolený limit, který umožňuje kontraktu `SwapRouter` utratit část našich tokenů. Kontrakty nemohou monitorovat události, takže pokud bychom převedli tokeny přímo na kontrakt `SwapRouter`, nevěděl by, že mu bylo zaplaceno. Místo toho povolíme kontraktu `SwapRouter` utratit určitou částku a `SwapRouter` to pak provede. To se děje prostřednictvím funkce volané kontraktem `SwapRouter`, takže ví, zda byl úspěšný.
+   Volání `approve` vytvoří povolený limit, který umožňuje `SwapRouter` utratit některé z našich tokenů. Kontrakty nemohou sledovat události, takže pokud bychom převedli tokeny přímo na kontrakt `SwapRouter`, nevěděl by, že mu bylo zaplaceno. Místo toho povolíme kontraktu `SwapRouter` utratit určitou částku a poté to `SwapRouter` provede. To se děje prostřednictvím funkce volané `SwapRouter`, takže ví, zda to bylo úspěšné.
 
 7. Ověřte, že máte dostatek obou tokenů.
 
@@ -758,9 +777,12 @@ Zde jsou kroky k vytvoření lokálního forku a povolení obchodování.
 Nyní, když máme WETH a USDC, můžeme agenta skutečně spustit.
 
 ```sh
-git checkout 05-trade
+git checkout -f 05-trade
+sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
 uv run agent.py
 ```
+
+Příkaz `-f` zahodí změnu modelu, kterou jste provedli v předchozí větvi, takže příkaz `sed` ji znovu aplikuje na novou verzi `agent.py`.
 
 Výstup bude vypadat podobně jako tento:
 
@@ -781,11 +803,11 @@ USDC Balance: 929143.797116
 WETH Balance: 499
 ```
 
-Abyste jej mohli skutečně používat, potřebujete několik drobných změn.
+Abyste jej mohli skutečně použít, potřebujete několik drobných změn.
 
-- Na řádku 14 změňte `MAINNET_URL` na skutečný přístupový bod, jako je `https://eth.drpc.org`.
-- Na řádku 28 změňte `PRIVATE_KEY` na svůj vlastní soukromý klíč.
-- Pokud nejste velmi bohatí a nemůžete si dovolit kupovat nebo prodávat 1 ETH každý den pro neověřeného agenta, možná budete chtít změnit řádek 29 a snížit `WETH_TRADE_AMOUNT`.
+- Na řádku 14 změňte `MAINNET_URL` na skutečný přístupový bod, jako je `https://eth.drpc.org`
+- Na řádku 28 změňte `PRIVATE_KEY` na svůj vlastní soukromý klíč
+- Pokud nejste velmi bohatí a nemůžete si dovolit koupit nebo prodat 1 ETH každý den pro neověřeného agenta, možná budete chtít změnit řádek 29 a snížit `WETH_TRADE_AMOUNT`
 
 #### Vysvětlení kódu {#trading-code}
 
@@ -815,7 +837,7 @@ ERC20_ABI = [
 ]
 ```
 
-K samotnému obchodování potřebujeme funkci `approve`. Chceme také zobrazit zůstatky před a po, takže potřebujeme i `balanceOf`.
+Abychom mohli skutečně obchodovat, potřebujeme funkci `approve`. Chceme také zobrazit zůstatky před a po, takže potřebujeme i `balanceOf`.
 
 ```python
 SWAP_ROUTER_ABI = [
@@ -851,7 +873,7 @@ Parametry transakce. Zde potřebujeme funkci, protože [nonce](https://en.wikipe
 def approve_token(contract: Contract, amount: int):
 ```
 
-Schválí povolený limit tokenů pro `SwapRouter`.
+Schválit povolený limit tokenů pro `SwapRouter`.
 
 ```python
     txn = contract.functions.approve(SWAP_ROUTER_ADDRESS, amount).build_transaction(txn_params())
@@ -867,7 +889,7 @@ Takto odesíláme transakci ve Web3. Nejprve použijeme [objekt `Contract`](http
     print("Approve transaction mined.")
 ```
 
-[`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) čeká, dokud není transakce vytěžena. V případě potřeby vrací stvrzenku.
+[`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) čeká, dokud není transakce vytěžena. V případě potřeby vrátí stvrzenku.
 
 ```python
 SELL_PARAMS = {
@@ -928,7 +950,7 @@ def balances():
     print(f"{wethusdc_pool.token1.symbol} Balance: {Decimal(token1_balance) / Decimal(10 ** wethusdc_pool.token1.decimals)}")
 ```
 
-Nahlásí zůstatky uživatele v obou měnách.
+Nahlásit zůstatky uživatele v obou měnách.
 
 ```python
 print("Account balances before trade:")
@@ -945,7 +967,7 @@ print("Account balances after trade:")
 balances()
 ```
 
-Tento agent v současnosti funguje pouze jednou. Můžete jej však změnit tak, aby pracoval nepřetržitě, a to buď jeho spuštěním z [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html), nebo zabalením řádků 368-400 do smyčky a použitím [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) k čekání, dokud nenastane čas pro další cyklus.
+Tento agent v současné době funguje pouze jednou. Můžete jej však změnit tak, aby fungoval nepřetržitě, a to buď jeho spuštěním z [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html), nebo zabalením řádků 368-397 do smyčky a použitím [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) k čekání, dokud nenastane čas pro další cyklus.
 
 ## Možná vylepšení {#improvements}
 
@@ -963,7 +985,7 @@ Existují dva důležité fakty, které agent při rozhodování, co dělat, ign
 
 Prodejci AI mohou vidět dotazy, které posíláte jejich LLM, což by mohlo odhalit geniální obchodní systém, který jste se svým agentem vyvinuli. Obchodní systém, který používá příliš mnoho lidí, je bezcenný, protože příliš mnoho lidí se snaží nakupovat, když chcete nakupovat vy (a cena stoupá), a snaží se prodávat, když chcete prodávat vy (a cena klesá).
 
-Abyste se tomuto problému vyhnuli, můžete spustit LLM lokálně, například pomocí [LM-Studio](https://lmstudio.ai/).
+Abyste se tomuto problému vyhnuli, můžete spustit LLM lokálně, například pomocí `llama-server` z [llama.cpp](https://github.com/ggml-org/llama.cpp). Poskytuje koncový bod kompatibilní s OpenAI, takže stačí nastavit `OPENAI_BASE_URL` a název modelu, jak je vysvětleno v části [Propojení s LLM](#interface-llm).
 
 ### Od AI bota k AI agentovi {#bot-to-agent}
 

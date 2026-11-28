@@ -42,7 +42,9 @@ Hay [muchos intercambios descentralizados (DEX)](/apps/categories/defi/) que te 
 
 ### OpenAI {#openai}
 
-Para un modelo de lenguaje grande, elegí empezar con [OpenAI](https://openai.com/). Para ejecutar la aplicación en este tutorial tendrás que pagar por el acceso a la API. El pago mínimo de 5 $ es más que suficiente.
+Para un modelo de lenguaje grande (LLM), elegí empezar con [OpenAI](https://openai.com/). Para ejecutar la aplicación en este tutorial, tendrás que pagar por el acceso a la API. El pago mínimo de 5 $ es más que suficiente.
+
+La biblioteca de Python de OpenAI también puede comunicarse con cualquier otro punto de conexión compatible con OpenAI, incluyendo un modelo que ejecutes en tu propio ordenador. Consulta [Interactuar con un LLM](#interface-llm) para ver cómo apuntarlo a otro lugar.
 
 ## Desarrollo, paso a paso {#step-by-step}
 
@@ -524,12 +526,29 @@ A continuación, enviamos un prompt a un LLM real y recibimos un valor futuro es
    export OPENAI_API_KEY=sk-<the rest of the key goes here>
    ```
 
-5. Cambia de rama (checkout) y ejecuta el agente
+5. Haz checkout del agente
 
    ```sh
    git checkout 04-interface-llm
+   ```
+
+6. El código en el repositorio usa el modelo `gpt-4-turbo`, que [OpenAI cerrará el 23 de octubre de 2026](https://developers.openai.com/api/docs/deprecations). Cámbialo a `gpt-6-luna`, un modelo actual de bajo coste. Debido a que `gpt-6-luna` es un modelo de razonamiento, el comando también desactiva el razonamiento (`reasoning_effort="none"`, lo que mantiene `temperature` utilizable) y reemplaza el parámetro obsoleto `max_tokens` con `max_completion_tokens`.
+
+   ```sh
+   sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
+   ```
+
+7. Ejecuta el agente
+
+   ```sh
    uv run agent.py
    ```
+
+Si prefieres usar un punto de conexión compatible con OpenAI diferente, como un modelo que alojes localmente, la biblioteca de OpenAI lee el punto de conexión de la variable de entorno `OPENAI_BASE_URL`. Configúrala, pon cualquier valor no vacío en `OPENAI_API_KEY` si el servidor no comprueba las claves, y cambia `gpt-6-luna` en `agent.py` y `test-predictor.py` al nombre de un modelo que proporcione ese servidor. Si el servidor rechaza `reasoning_effort`, elimina ese parámetro.
+
+```sh
+export OPENAI_BASE_URL=http://localhost:<port>/v1
+```
 
 Aquí está el nuevo código.
 
@@ -539,20 +558,20 @@ from openai import OpenAI
 open_ai = OpenAI()  # El cliente lee la variable de entorno OPENAI_API_KEY
 ```
 
-Importa e instancia la API de OpenAI.
+Importa e instancia la API de OpenAI. El cliente también lee `OPENAI_BASE_URL` si está configurado, por lo que el mismo código funciona con otros puntos de conexión compatibles con OpenAI.
 
 ```python
 response = open_ai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-6-luna", reasoning_effort="none",
     messages=[
         {"role": "user", "content": prompt}
     ],
     temperature=0.0,
-    max_tokens=16,
+    max_completion_tokens=16,
 )
 ```
 
-Llama a la API de OpenAI (`open_ai.chat.completions.create`) para crear la respuesta.
+Llama a la API de OpenAI (`open_ai.chat.completions.create`) para crear la respuesta. Un `temperature` de cero pide la respuesta más predecible, y `max_completion_tokens` limita la longitud de la respuesta, que solo necesita contener un número. Con un modelo de razonamiento, `max_completion_tokens` también cuenta los tokens que el modelo usa para pensar, lo cual es otra razón para establecer `reasoning_effort` en `none`.
 
 ```python
 expected_price = Decimal(response.choices[0].message.content.strip())
@@ -691,9 +710,9 @@ Usa [`filter`](https://www.w3schools.com/python/ref_func_filter.asp) para contar
 
 ### Enviar transacciones {#submit-txn}
 
-Ahora necesitamos enviar transacciones realmente. Sin embargo, no quiero gastar dinero real en este punto, antes de que el sistema esté probado. En su lugar, crearemos una bifurcación local de la Red principal y "operaremos" en esa red.
+Ahora necesitamos enviar transacciones reales. Sin embargo, no quiero gastar dinero real en este momento, antes de que el sistema esté probado. En su lugar, crearemos una bifurcación local de la Red principal y "operaremos" en esa red.
 
-Aquí están los pasos para crear una bifurcación local y habilitar el trading.
+Aquí están los pasos para crear una bifurcación local y habilitar las operaciones.
 
 1. Instala [Foundry](https://getfoundry.sh/introduction/installation)
 
@@ -705,7 +724,7 @@ Aquí están los pasos para crear una bifurcación local y habilitar el trading.
 
    `anvil` está escuchando en la URL predeterminada para Foundry, http://localhost:8545, por lo que no necesitamos especificar la URL para [el comando `cast`](https://getfoundry.sh/cast/overview) que usamos para manipular la cadena de bloques.
 
-3. Al ejecutar en `anvil`, hay diez cuentas de prueba que tienen ETH: establece las variables de entorno para la primera
+3. Al ejecutar en `anvil`, hay diez cuentas de prueba que tienen ETH: configura las variables de entorno para la primera
 
    ```sh
    PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
@@ -714,7 +733,7 @@ Aquí están los pasos para crear una bifurcación local y habilitar el trading.
 
 4. Estos son los contratos que necesitamos usar. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) es el contrato de Uniswap v3 que usamos para operar realmente. Podríamos operar directamente a través del pool, pero esto es mucho más fácil.
 
-   Las dos variables inferiores son las rutas de Uniswap v3 necesarias para intercambiar entre WETH y USDC.
+   Las dos variables inferiores son las rutas de Uniswap v3 necesarias para el intercambio entre WETH y USDC.
 
    ```sh
    WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
@@ -742,7 +761,7 @@ Aquí están los pasos para crear una bifurcación local y habilitar el trading.
        --private-key $PRIVATE_KEY
    ```
 
-   La llamada `approve` crea una asignación que permite a `SwapRouter` gastar algunos de nuestros tokens. Los contratos no pueden monitorizar eventos, por lo que si transferimos tokens directamente al contrato `SwapRouter`, no sabría que se le pagó. En su lugar, permitimos que el contrato `SwapRouter` gaste una cierta cantidad, y luego `SwapRouter` lo hace. Esto se hace a través de una función llamada por `SwapRouter`, por lo que sabe si tuvo éxito.
+   La llamada `approve` crea una asignación que permite a `SwapRouter` gastar algunos de nuestros tokens. Los contratos no pueden monitorear eventos, por lo que si transferimos tokens directamente al contrato `SwapRouter`, no sabría que se le pagó. En su lugar, permitimos que el contrato `SwapRouter` gaste una cierta cantidad, y luego `SwapRouter` lo hace. Esto se hace a través de una función llamada por `SwapRouter`, por lo que sabe si tuvo éxito.
 
 7. Verifica que tienes suficientes de ambos tokens.
 
@@ -751,14 +770,17 @@ Aquí están los pasos para crear una bifurcación local y habilitar el trading.
    echo `cast call $USDC_ADDRESS "balanceOf(address)" $ADDRESS | cast to-dec`/10^6 | bc
    ```
 
-Ahora que tenemos WETH y USDC, podemos ejecutar realmente el agente.
+Ahora que tenemos WETH y USDC, podemos ejecutar el agente.
 
 ```sh
-git checkout 05-trade
+git checkout -f 05-trade
+sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
 uv run agent.py
 ```
 
-La salida se verá similar a:
+El `-f` descarta el cambio de modelo que hiciste en la rama anterior, por lo que el comando `sed` lo aplica de nuevo a la nueva versión de `agent.py`.
+
+La salida será similar a:
 
 ```
 (ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
@@ -781,7 +803,7 @@ Para usarlo realmente, necesitas algunos cambios menores.
 
 - En la línea 14, cambia `MAINNET_URL` a un punto de acceso real, como `https://eth.drpc.org`
 - En la línea 28, cambia `PRIVATE_KEY` a tu propia clave privada
-- A menos que seas muy rico y puedas comprar o vender 1 ETH cada día para un agente no probado, es posible que quieras cambiar la línea 29 para disminuir `WETH_TRADE_AMOUNT`
+- A menos que seas muy rico y puedas comprar o vender 1 ETH cada día para un agente no probado, es posible que quieras cambiar la 29 para disminuir `WETH_TRADE_AMOUNT`
 
 #### Explicación del código {#trading-code}
 
@@ -811,7 +833,7 @@ ERC20_ABI = [
 ]
 ```
 
-Para operar realmente, necesitamos la función `approve`. También queremos mostrar los saldos antes y después, así que también necesitamos `balanceOf`.
+Para operar realmente, necesitamos la función `approve`. También queremos mostrar los saldos antes y después, por lo que también necesitamos `balanceOf`.
 
 ```python
 SWAP_ROUTER_ABI = [
@@ -829,7 +851,7 @@ swap_router = w3.eth.contract(
 )
 ```
 
-Las definiciones de Web3 para el [`account`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html) y el contrato `SwapRouter`.
+Las definiciones de Web3 para la [`account`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html) y el contrato `SwapRouter`.
 
 ```python
 def txn_params() -> dict:
@@ -847,7 +869,7 @@ Los parámetros de la transacción. Necesitamos una función aquí porque [el no
 def approve_token(contract: Contract, amount: int):
 ```
 
-Aprueba una asignación de tokens para `SwapRouter`.
+Aprobar una asignación de tokens para `SwapRouter`.
 
 ```python
     txn = contract.functions.approve(SWAP_ROUTER_ADDRESS, amount).build_transaction(txn_params())
@@ -913,7 +935,7 @@ def sell():
     print("Sell transaction mined.")
 ```
 
-Las funciones `buy()` y `sell()` son casi idénticas. Primero aprobamos una asignación suficiente para `SwapRouter`, y luego lo llamamos con la ruta y la cantidad correctas.
+Las funciones `buy()` y `sell()` son casi idénticas. Primero aprobamos una asignación suficiente para `SwapRouter`, y luego la llamamos con la ruta y cantidad correctas.
 
 ```python
 def balances():
@@ -941,7 +963,7 @@ print("Account balances after trade:")
 balances()
 ```
 
-Este agente actualmente solo funciona una vez. Sin embargo, puedes cambiarlo para que funcione continuamente, ya sea ejecutándolo desde [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) o envolviendo las líneas 368-400 en un bucle y usando [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) para esperar hasta que sea el momento del siguiente ciclo.
+Este agente actualmente solo funciona una vez. Sin embargo, puedes cambiarlo para que funcione continuamente, ya sea ejecutándolo desde [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) o envolviendo las líneas 368-397 en un bucle y usando [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) para esperar hasta que sea el momento del siguiente ciclo.
 
 ## Posibles mejoras {#improvements}
 
@@ -957,9 +979,9 @@ Hay dos hechos importantes que el agente ignora al decidir qué hacer.
 
 ### ¿Qué pasa si quieres mantener tu estrategia de trading en secreto? {#secret}
 
-Los proveedores de IA pueden ver las consultas que envías a sus LLM, lo que podría exponer el genial sistema de trading que desarrollaste con tu agente. Un sistema de trading que demasiada gente usa no vale nada porque demasiada gente intenta comprar cuando tú quieres comprar (y el precio sube) e intenta vender cuando tú quieres vender (y el precio baja).
+Los proveedores de IA pueden ver las consultas que envías a sus LLM, lo que podría exponer el genial sistema de trading que desarrollaste con tu agente. Un sistema de trading que demasiadas personas usan no tiene valor porque demasiadas personas intentan comprar cuando tú quieres comprar (y el precio sube) e intentan vender cuando tú quieres vender (y el precio baja).
 
-Puedes ejecutar un LLM localmente, por ejemplo, usando [LM-Studio](https://lmstudio.ai/), para evitar este problema.
+Puedes ejecutar un LLM localmente, por ejemplo, usando `llama-server` de [llama.cpp](https://github.com/ggml-org/llama.cpp), para evitar este problema. Proporciona un punto de conexión compatible con OpenAI, por lo que solo necesitas configurar `OPENAI_BASE_URL` y el nombre del modelo como se explica en [Interactuar con un LLM](#interface-llm).
 
 ### De bot de IA a agente de IA {#bot-to-agent}
 

@@ -13,11 +13,13 @@ published: 2022-05-15
 
 ## Która żółta księga? {#which-yellow-paper}
 
-Jak prawie wszystko w Ethereum, żółta księga ewoluuje w czasie. Aby móc odnieść się do konkretnej wersji, przesłałem [wersję aktualną w momencie pisania](https://ethereum.github.io/yellowpaper/paper.pdf). Numery sekcji, stron i równań, których używam, będą odnosić się do tej wersji. Dobrym pomysłem jest otwarcie jej w innym oknie podczas czytania tego dokumentu.
+Podobnie jak prawie wszystko inne w Ethereum, żółta księga ewoluuje w czasie. Aby móc odnieść się do konkretnej wersji, przesłałem [wersję, która była aktualna w momencie pisania](yellow-paper-berlin.pdf) (wersja Berlin, 2022). Numery sekcji, stron i równań w tym samouczku odnoszą się do tej wersji. [Najnowsza wersja](https://ethereum.github.io/yellowpaper/paper.pdf) została od tego czasu zaktualizowana, więc jej numery mogą się różnić. Dobrym pomysłem jest otwarcie jej w innym oknie podczas czytania tego dokumentu.
 
 ### Dlaczego EVM? {#why-the-evm}
 
-Oryginalna żółta księga została napisana na samym początku rozwoju Ethereum. Opisuje ona oryginalny mechanizm konsensusu oparty na dowodzie pracy (PoW), który był pierwotnie używany do zabezpieczania sieci. Jednakże we wrześniu 2022 roku Ethereum wyłączyło dowód pracy i zaczęło używać konsensusu opartego na dowodzie stawki (PoS). Ten samouczek skupi się na częściach żółtej księgi definiujących maszynę wirtualną Ethereum (EVM). EVM pozostała niezmieniona po przejściu na dowód stawki (z wyjątkiem wartości zwracanej przez kod operacji DIFFICULTY).
+Oryginalna żółta księga została napisana na samym początku rozwoju Ethereum. Opisuje ona oryginalny mechanizm konsensusu oparty na dowodzie pracy (PoW), który był pierwotnie używany do zabezpieczania sieci. Jednakże we wrześniu 2022 roku Ethereum wyłączyło dowód pracy i zaczęło używać konsensusu opartego na dowodzie stawki (PoS). Ten samouczek skupi się na częściach żółtej księgi definiujących Maszynę Wirtualną Ethereum (EVM). Przejście na dowód stawki (PoS) prawie nie zmieniło EVM: kod operacji `DIFFICULTY` (0x44) został przemianowany na [`PREVRANDAO`](https://eips.ethereum.org/EIPS/eip-4399) i teraz zwraca losową wartość z Beacon Chain.
+
+Późniejsze aktualizacje sieci zmieniły EVM. Dodano kody operacji takie jak [`PUSH0`](https://eips.ethereum.org/EIPS/eip-3855), [`TLOAD` i `TSTORE`](https://eips.ethereum.org/EIPS/eip-1153) (pamięć ulotna), [`MCOPY`](https://eips.ethereum.org/EIPS/eip-5656), [`BLOBHASH`](https://eips.ethereum.org/EIPS/eip-4844) oraz [`BLOBBASEFEE`](https://eips.ethereum.org/EIPS/eip-7516), a także zmieniono zachowanie [`SELFDESTRUCT`](https://eips.ethereum.org/EIPS/eip-6780). Żółta księga nie obejmuje wszystkich tych zmian. Najbardziej aktualną specyfikacją jest [specyfikacja warstwy wykonawczej w języku Python](https://github.com/ethereum/execution-specs).
 
 ## 9 Model wykonawczy {#9-execution-model}
 
@@ -30,11 +32,11 @@ Termin _stan systemu_ (system state) obejmuje wszystko, co musisz wiedzieć o sy
 Termin [kompletność w sensie Turinga](https://en.wikipedia.org/wiki/Turing_completeness) (Turing-complete) oznacza komputer, który może wykonywać te same obliczenia co maszyna Turinga. Maszyny Turinga mogą wpaść w nieskończone pętle, a EVM nie może, ponieważ zabrakłoby jej gazu, więc jest tylko quasi-kompletna w sensie Turinga.
 ## 9.1 Podstawy {#91-basics}
 
-Ta sekcja przedstawia podstawy EVM i jej porównanie z innymi modelami obliczeniowymi.
+Ta sekcja przedstawia podstawy EVM i porównuje ją z innymi modelami obliczeniowymi.
 
-[Maszyna stosowa](https://en.wikipedia.org/wiki/Stack_machine) to komputer, który przechowuje dane pośrednie nie w rejestrach, ale na [**stosie**](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>). Jest to preferowana architektura dla maszyn wirtualnych, ponieważ jest łatwa do wdrożenia, co oznacza, że błędy i luki w zabezpieczeniach są znacznie mniej prawdopodobne. Pamięć na stosie jest podzielona na 256-bitowe słowa. Zostało to wybrane, ponieważ jest to wygodne dla podstawowych operacji kryptograficznych Ethereum, takich jak haszowanie Keccak-256 i obliczenia na krzywych eliptycznych. Maksymalny rozmiar stosu to 1024 elementy (1024 x 256 bitów). Kiedy kody operacji są wykonywane, zazwyczaj pobierają swoje parametry ze stosu. Istnieją kody operacji przeznaczone specjalnie do reorganizacji elementów na stosie, takie jak `POP` (usuwa element ze szczytu stosu), `DUP_N` (duplikuje N-ty element na stosie) itp.
+[Maszyna stosowa](https://en.wikipedia.org/wiki/Stack_machine) to komputer, który przechowuje dane pośrednie nie w rejestrach, ale na [**stosie**](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>). Jest to preferowana architektura dla maszyn wirtualnych, ponieważ jest łatwa do wdrożenia, co oznacza, że błędy i luki w zabezpieczeniach są znacznie mniej prawdopodobne. Pamięć na stosie jest podzielona na 256-bitowe słowa. Zostało to wybrane, ponieważ jest to wygodne dla podstawowych operacji kryptograficznych Ethereum, takich jak haszowanie Keccak-256 i obliczenia na krzywych eliptycznych. Maksymalny rozmiar stosu to 1024 elementy (1024 x 256 bitów). Kiedy kody operacji są wykonywane, zazwyczaj pobierają swoje parametry ze stosu. Istnieją kody operacji przeznaczone specjalnie do reorganizacji elementów na stosie, takie jak `POP` (usuwa element z wierzchołka stosu), `DUP_N` (duplikuje N-ty element na stosie) itp.
 
-EVM posiada również ulotną przestrzeń zwaną **pamięcią** (memory), która służy do przechowywania danych podczas wykonywania. Ta pamięć jest zorganizowana w 32-bajtowe słowa. Wszystkie lokalizacje w pamięci są inicjowane zerami. Jeśli wykonasz ten kod [Yul](https://docs.soliditylang.org/en/latest/yul.html), aby dodać słowo do pamięci, wypełni on 32 bajty pamięci, uzupełniając puste miejsce w słowie zerami, tj. utworzy jedno słowo - z zerami w lokalizacjach 0-29, 0x60 w 30 i 0xA7 w 31.
+EVM posiada również ulotną przestrzeń zwaną **pamięcią** (memory), która służy do przechowywania danych podczas wykonywania. Pamięć ta jest zorganizowana w 32-bajtowe słowa. Wszystkie lokalizacje pamięci są inicjowane zerami. Jeśli wykonasz ten kod [Yul](https://docs.soliditylang.org/en/latest/yul.html), aby dodać słowo do pamięci, wypełni on 32 bajty pamięci, uzupełniając puste miejsce w słowie zerami, tzn. utworzy jedno słowo - z zerami w lokalizacjach 0-29, 0x60 w 30 i 0xA7 w 31.
 
 ```yul
 mstore(0, 0x60A7)
@@ -42,11 +44,13 @@ mstore(0, 0x60A7)
 
 `mstore` to jeden z trzech kodów operacji, które EVM udostępnia do interakcji z pamięcią - ładuje on słowo do pamięci. Pozostałe dwa to `mstore8`, który ładuje pojedynczy bajt do pamięci, oraz `mload`, który przenosi słowo z pamięci na stos.
 
-EVM posiada również oddzielny, nieulotny model **pamięci masowej** (storage), który jest utrzymywany jako część stanu systemu - ta pamięć jest zorganizowana w tablice słów (w przeciwieństwie do adresowalnych słowami tablic bajtów na stosie). W tej pamięci masowej kontrakty przechowują trwałe dane - kontrakt może wchodzić w interakcje tylko z własną pamięcią masową. Pamięć masowa jest zorganizowana w mapowania klucz-wartość.
+EVM posiada również oddzielny, nieulotny model **pamięci masowej** (storage), który jest utrzymywany jako część stanu systemu - pamięć ta mapuje 256-bitowe klucze na 256-bitowe wartości (w przeciwieństwie do pamięci, która jest tablicą adresowaną bajtowo). W tej pamięci masowej kontrakty przechowują trwałe dane - kontrakt może wchodzić w interakcje tylko z własną pamięcią masową. Pamięć masowa jest zorganizowana w mapowania klucz-wartość.
 
-Chociaż nie wspomniano o tym w tej sekcji żółtej księgi, warto również wiedzieć, że istnieje czwarty rodzaj pamięci. **Dane wywołania** (calldata) to adresowalna bajtowo pamięć tylko do odczytu, używana do przechowywania wartości przekazanej z parametrem `data` transakcji. EVM posiada specyficzne kody operacji do zarządzania `calldata`. `calldatasize` zwraca rozmiar danych. `calldataload` ładuje dane na stos. `calldatacopy` kopiuje dane do pamięci.
+Od aktualizacji Cancun istnieje również **pamięć ulotna** (transient storage) ([EIP-1153](https://eips.ethereum.org/EIPS/eip-1153)). Dostęp do niej uzyskuje się podobnie jak do pamięci masowej, używając kodów operacji `TLOAD` i `TSTORE`, ale jest ona czyszczona na koniec każdej transakcji.
 
-Standardowa [architektura von Neumanna](https://en.wikipedia.org/wiki/Von_Neumann_architecture) przechowuje kod i dane w tej samej pamięci. EVM nie podąża za tym standardem ze względów bezpieczeństwa - współdzielenie pamięci ulotnej umożliwia zmianę kodu programu. Zamiast tego kod jest zapisywany w pamięci masowej.
+Chociaż nie wspomniano o tym w tej sekcji żółtej księgi, warto również wiedzieć, że istnieje jeszcze jeden rodzaj pamięci. **Dane wywołania** (calldata) to adresowana bajtowo pamięć tylko do odczytu, używana do przechowywania wartości przekazanej z parametrem `data` transakcji. EVM posiada specyficzne kody operacji do zarządzania `calldata`. `calldatasize` zwraca rozmiar danych. `calldataload` ładuje dane na stos. `calldatacopy` kopiuje dane do pamięci.
+
+Standardowa [architektura von Neumanna](https://en.wikipedia.org/wiki/Von_Neumann_architecture) przechowuje kod i dane w tej samej pamięci. EVM nie podąża za tym standardem ze względów bezpieczeństwa - współdzielenie pamięci ulotnej umożliwia zmianę kodu programu. Zamiast tego kod jest przechowywany niezmiennie jako część konta kontraktu w stanie świata, oddzielnie zarówno od pamięci, jak i pamięci masowej kontraktu.
 
 Istnieją tylko dwa przypadki, w których kod jest wykonywany z pamięci:
 
@@ -86,29 +90,30 @@ Funkcja _C<sub>mem</sub>_ jest zdefiniowana w równaniu 328: _C<sub>mem</sub>(a)
 [Dowiedz się więcej o gazie](/developers/docs/gas/).
 ## 9.3 Środowisko wykonawcze {#93-execution-env}
 
-Środowisko wykonawcze to krotka (tuple), _I_, która zawiera informacje niebędące częścią stanu blockchaina ani EVM.
+Środowisko wykonawcze to krotka _I_, która zawiera informacje niebędące częścią stanu blockchaina ani EVM.
 
-| Parametr        | Kod operacji dostępu do danych                                                                                   | Kod Solidity dostępu do danych           |
+| Parametr | Kod operacji umożliwiający dostęp do danych | Kod Solidity umożliwiający dostęp do danych |
 | --------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
 | _I<sub>a</sub>_ | [`ADDRESS`](https://www.evm.codes/#30)                                                                           | `address(this)`                          |
 | _I<sub>o</sub>_ | [`ORIGIN`](https://www.evm.codes/#32)                                                                            | `tx.origin`                              |
 | _I<sub>p</sub>_ | [`GASPRICE`](https://www.evm.codes/#3a)                                                                          | `tx.gasprice`                            |
-| _I<sub>d</sub>_ | [`CALLDATALOAD`](https://www.evm.codes/#35) itp.                                                                 | `msg.data`                               |
+| _I<sub>d</sub>_ | [`CALLDATALOAD`](https://www.evm.codes/#35) itp.                                                                | `msg.data`                               |
 | _I<sub>s</sub>_ | [`CALLER`](https://www.evm.codes/#33)                                                                            | `msg.sender`                             |
 | _I<sub>v</sub>_ | [`CALLVALUE`](https://www.evm.codes/#34)                                                                         | `msg.value`                              |
 | _I<sub>b</sub>_ | [`CODECOPY`](https://www.evm.codes/#39)                                                                          | `address(this).code`                     |
-| _I<sub>H</sub>_ | Pola nagłówka bloku, takie jak [`NUMBER`](https://www.evm.codes/#43) i [`DIFFICULTY`](https://www.evm.codes/#44) | `block.number`, `block.difficulty` itp.  |
-| _I<sub>e</sub>_ | Głębokość stosu wywołań dla wywołań między kontraktami (w tym tworzenia kontraktów)                              |                                          |
-| _I<sub>w</sub>_ | Czy EVM ma pozwolenie na zmianę stanu, czy działa statycznie                                                     |                                          |
+| _I<sub>H</sub>_ | Pola nagłówka bloku, takie jak [`NUMBER`](https://www.evm.codes/#43) i [`PREVRANDAO`](https://www.evm.codes/#44) | `block.number`, `block.prevrandao` itp. |
+| _I<sub>e</sub>_ | Głębokość stosu wywołań dla wywołań między kontraktami (w tym tworzenia kontraktów) |
+| _I<sub>w</sub>_ | Czy EVM ma pozwolenie na zmianę stanu, czy działa statycznie |
 
 Kilka innych parametrów jest niezbędnych do zrozumienia reszty sekcji 9:
 
-| Parametr  | Zdefiniowano w sekcji | Znaczenie                                                                                                                                                                                                                         |
-| --------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| _σ_       | 2 (str. 2, równanie 1)| Stan blockchaina                                                                                                                                                                                                                  |
-| _g_       | 9.3 (str. 14)         | Pozostały gaz                                                                                                                                                                                                                     |
-| _A_       | 6.1 (str. 9)          | Narosły podstan (zmiany zaplanowane na moment zakończenia transakcji)                                                                                                                                                             |
-| _o_       | 9.3 (str. 14)         | Wyjście - zwrócony wynik w przypadku transakcji wewnętrznej (gdy jeden kontrakt wywołuje inny) i wywołań funkcji widoku (gdy po prostu prosisz o informacje, więc nie ma potrzeby czekać na transakcję)                           |
+| Parametr | Zdefiniowano w sekcji | Znaczenie |
+| --------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| _σ_       | 2 (str. 2, równanie 1) | Stan blockchaina |
+| _g_       | 9.3 (str. 14)          | Pozostały gaz |
+| _A_       | 6.1 (str. 9)           | Narosły podstan (zmiany zaplanowane na moment zakończenia transakcji) |
+| _o_       | 9.3 (str. 14)          | Wyjście - zwrócony wynik w przypadku transakcji wewnętrznej (gdy jeden kontrakt wywołuje inny) oraz wywołań funkcji widoku (gdy tylko prosisz o informacje, więc nie ma potrzeby czekać na transakcję) |
+
 ## 9.4 Przegląd wykonania {#94-execution-overview}
 
 Teraz, gdy mamy już wszystkie wstępne informacje, możemy wreszcie zacząć pracę nad tym, jak działa EVM.
@@ -140,7 +145,7 @@ Ponieważ jest to [maszyna stosowa](https://en.wikipedia.org/wiki/Stack_machine)
 
 Ta sekcja definiuje funkcję _Z_, która określa, kiedy mamy do czynienia z nieprawidłowym zakończeniem. Jest to funkcja [logiczna (Boolean)](https://en.wikipedia.org/wiki/Boolean_data_type), więc używa [_∨_ dla logicznego lub](https://en.wikipedia.org/wiki/Logical_disjunction) oraz [_∧_ dla logicznego i](https://en.wikipedia.org/wiki/Logical_conjunction).
 
-Mamy wyjątkowe zatrzymanie, jeśli którykolwiek z tych warunków jest prawdziwy:
+Mamy do czynienia z wyjątkowym zatrzymaniem, jeśli którykolwiek z tych warunków jest prawdziwy:
 
 - **_μ<sub>g</sub> < C(σ,μ,A,I)_**
   Jak widzieliśmy w sekcji 9.2, _C_ to funkcja określająca koszt gazu. Nie ma wystarczającej ilości gazu, aby pokryć następny kod operacji.
@@ -152,17 +157,17 @@ Mamy wyjątkowe zatrzymanie, jeśli którykolwiek z tych warunków jest prawdziw
   Niedomiar stosu (stack underflow), niewystarczająca liczba elementów na stosie dla bieżącego kodu operacji.
 
 - **_w = JUMP ∧ μ<sub>s</sub>[0]∉D(I<sub>b</sub>)_**
-  Kodem operacji jest [`JUMP`](https://www.evm.codes/#56), a adres nie jest [`JUMPDEST`](https://www.evm.codes/#5b). Skoki są ważne _tylko_ wtedy, gdy miejscem docelowym jest [`JUMPDEST`](https://www.evm.codes/#5b).
+  Kod operacji to [`JUMP`](https://www.evm.codes/#56), a adres nie jest [`JUMPDEST`](https://www.evm.codes/#5b). Skoki są ważne _tylko_ wtedy, gdy miejscem docelowym jest [`JUMPDEST`](https://www.evm.codes/#5b).
 
 - **_w = JUMPI ∧ μ<sub>s</sub>[1]≠0 ∧ μ<sub>s</sub>[0] ∉ D(I<sub>b</sub>)_**
-  Kodem operacji jest [`JUMPI`](https://www.evm.codes/#57), warunek jest prawdziwy (niezerowy), więc skok powinien nastąpić, a adres nie jest [`JUMPDEST`](https://www.evm.codes/#5b). Skoki są ważne _tylko_ wtedy, gdy miejscem docelowym jest [`JUMPDEST`](https://www.evm.codes/#5b).
+  Kod operacji to [`JUMPI`](https://www.evm.codes/#57), warunek jest prawdziwy (niezerowy), więc skok powinien nastąpić, a adres nie jest [`JUMPDEST`](https://www.evm.codes/#5b). Skoki są ważne _tylko_ wtedy, gdy miejscem docelowym jest [`JUMPDEST`](https://www.evm.codes/#5b).
 
 - **_w = RETURNDATACOPY ∧ μ<sub>s</sub>[1]+μ<sub>s</sub>[2]>|| μ<sub>o</sub> ||_**
-  Kodem operacji jest [`RETURNDATACOPY`](https://www.evm.codes/#3e). W tym kodzie operacji element stosu _μ<sub>s</sub>[1]_ to przesunięcie (offset), od którego należy czytać w buforze zwracanych danych, a element stosu _μ<sub>s</sub>[2]_ to długość danych. Ten warunek występuje, gdy próbujesz czytać poza końcem bufora zwracanych danych. Zauważ, że nie ma podobnego warunku dla danych wywołania (calldata) ani dla samego kodu. Kiedy próbujesz czytać poza końcem tych buforów, po prostu otrzymujesz zera.
+  Kod operacji to [`RETURNDATACOPY`](https://www.evm.codes/#3e). W tym kodzie operacji element stosu _μ<sub>s</sub>[1]_ to przesunięcie, od którego należy czytać w buforze zwracanych danych, a element stosu _μ<sub>s</sub>[2]_ to długość danych. Ten warunek występuje, gdy próbujesz czytać poza końcem bufora zwracanych danych. Zauważ, że nie ma podobnego warunku dla danych wywołania ani dla samego kodu. Kiedy próbujesz czytać poza końcem tych buforów, po prostu otrzymujesz zera.
 
 - **_|| μ<sub>s</sub> || - δ<sub>w</sub> + α<sub>w</sub> > 1024_**
 
-  Przepełnienie stosu. Jeśli uruchomienie kodu operacji spowoduje powstanie stosu o wielkości ponad 1024 elementów, przerwij.
+  Przepełnienie stosu. Jeśli uruchomienie kodu operacji spowoduje, że na stosie znajdzie się ponad 1024 elementów, przerwij.
 
 - **_¬I<sub>w</sub> ∧ W(w,μ)_**
   Czy działamy statycznie ([¬ to negacja](https://en.wikipedia.org/wiki/Negation), a _I<sub>w</sub>_ jest prawdziwe, gdy mamy pozwolenie na zmianę stanu blockchaina)? Jeśli tak, a próbujemy wykonać operację zmieniającą stan, nie może się to wydarzyć.
@@ -170,17 +175,18 @@ Mamy wyjątkowe zatrzymanie, jeśli którykolwiek z tych warunków jest prawdziw
   Funkcja _W(w,μ)_ jest zdefiniowana później w równaniu 159. _W(w,μ)_ jest prawdziwe, jeśli jeden z tych warunków jest prawdziwy:
 
   - **_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT}_**
-    Te kody operacji zmieniają stan, tworząc nowy kontrakt, przechowując wartość lub niszcząc bieżący kontrakt.
+    Te kody operacji zmieniają stan, tworząc nowy kontrakt, przechowując wartość lub niszcząc bieżący kontrakt. `TSTORE`, który został dodany po tej wersji żółtej księgi, jest również zabroniony w kontekście statycznym.
 
   - **_LOG0≤w ∧ w≤LOG4_**
     Jeśli jesteśmy wywoływani statycznie, nie możemy emitować wpisów logów.
     Wszystkie kody operacji logów znajdują się w przedziale od [`LOG0` (A0)](https://www.evm.codes/#a0) do [`LOG4` (A4)](https://www.evm.codes/#a4).
     Liczba po kodzie operacji logu określa, ile tematów (topics) zawiera wpis logu.
   - **_w=CALL ∧ μ<sub>s</sub>[2]≠0_**
-    Możesz wywołać inny kontrakt, gdy jesteś statyczny, ale jeśli to zrobisz, nie możesz przetransferować do niego ETH.
+    Możesz wywołać inny kontrakt, gdy działasz statycznie, ale jeśli to zrobisz, nie możesz przetransferować do niego ETH.
 
 - **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_**
   Nie możesz uruchomić [`SSTORE`](https://www.evm.codes/#55), chyba że masz więcej niż G<sub>callstipend</sub> (zdefiniowane jako 2300 w Dodatku G) gazu.
+
 ## 9.4.3 Ważność miejsca docelowego skoku {#943-jump-dest-valid}
 
 Tutaj formalnie definiujemy, czym są kody operacji [`JUMPDEST`](https://www.evm.codes/#5b). Nie możemy po prostu szukać wartości bajtu 0x5B, ponieważ może on znajdować się wewnątrz PUSH (i w związku z tym być danymi, a nie kodem operacji).
@@ -194,9 +200,9 @@ We wszystkich innych przypadkach patrzymy na resztę kodu, przechodząc do nast�
 
 Funkcja zatrzymania _H_ może zwracać trzy typy wartości.
 
-- Jeśli nie jesteśmy w kodzie operacji zatrzymania, zwróć _∅_, zbiór pusty. Zgodnie z konwencją, ta wartość jest interpretowana jako logiczny fałsz.
-- Jeśli mamy kod operacji zatrzymania, który nie generuje wyjścia (albo [`STOP`](https://www.evm.codes/#00), albo [`SELFDESTRUCT`](https://www.evm.codes/#ff)), zwróć sekwencję o rozmiarze zero bajtów jako wartość zwracaną. Zauważ, że bardzo różni się to od zbioru pustego. Ta wartość oznacza, że EVM naprawdę się zatrzymała, po prostu nie ma żadnych zwracanych danych do odczytania.
-- Jeśli mamy kod operacji zatrzymania, który generuje wyjście (albo [`RETURN`](https://www.evm.codes/#f3), albo [`REVERT`](https://www.evm.codes/#fd)), zwróć sekwencję bajtów określoną przez ten kod operacji. Ta sekwencja jest pobierana z pamięci, wartość na szczycie stosu (_μ<sub>s</sub>[0]_) to pierwszy bajt, a wartość po niej (_μ<sub>s</sub>[1]_) to długość.
+- Jeśli nie znajdujemy się w kodzie operacji zatrzymania, zwróć _∅_, zbiór pusty. Zgodnie z konwencją wartość ta jest interpretowana jako logiczny fałsz.
+- Jeśli mamy kod operacji zatrzymania, który nie generuje wyjścia (albo [`STOP`](https://www.evm.codes/#00), albo [`SELFDESTRUCT`](https://www.evm.codes/#ff)), zwróć sekwencję o rozmiarze zero bajtów jako wartość zwracaną. Zauważ, że bardzo różni się to od zbioru pustego. Ta wartość oznacza, że EVM naprawdę się zatrzymała, po prostu nie ma żadnych zwracanych danych do odczytania. (Zauważ również, że od [EIP-6780](https://eips.ethereum.org/EIPS/eip-6780), `SELFDESTRUCT` usuwa kontrakt tylko wtedy, gdy jest wywoływany w tej samej transakcji, która go utworzyła. W przeciwnym razie po prostu transferuje ETH kontraktu).
+- Jeśli mamy kod operacji zatrzymania, który generuje wyjście (albo [`RETURN`](https://www.evm.codes/#f3), albo [`REVERT`](https://www.evm.codes/#fd)), zwróć sekwencję bajtów określoną przez ten kod operacji. Sekwencja ta jest pobierana z pamięci, wartość na wierzchołku stosu (_μ<sub>s</sub>[0]_) to pierwszy bajt, a wartość po niej (_μ<sub>s</sub>[1]_) to długość.
 
 ## H.2 Zestaw instrukcji {#h2-instruction-set}
 
@@ -266,4 +272,4 @@ Notacja matematyczna jest precyzyjna i pozwoliła żółtej księdze określić 
 - Programiści rozumieją kod komputerowy.
   Mogą, ale nie muszą rozumieć notacji matematycznej.
 
-Być może z tych powodów nowsze [specyfikacje warstwy konsensusu](https://github.com/ethereum/consensus-specs/blob/master/tests/core/pyspec/README.md) są napisane w języku Python. Istnieją [specyfikacje warstwy wykonawczej w języku Python](https://ethereum.github.io/execution-specs), ale nie są one kompletne. Dopóki cała żółta księga nie zostanie również przetłumaczona na język Python lub podobny, żółta księga będzie nadal w użyciu i warto umieć ją czytać.
+Z tych powodów [specyfikacje warstwy konsensusu](https://github.com/ethereum/consensus-specs) są napisane w języku Python, podobnie jak [specyfikacje warstwy wykonawczej](https://github.com/ethereum/execution-specs). Specyfikacja warstwy wykonawczej w języku Python jest obecnie utrzymywanym punktem odniesienia dla tego, jak działa EVM, i obejmuje zmiany z aktualizacji, których żółta księga nie pokrywa. Żółta księga jest nadal przydatnym formalnym opisem, a umiejętność jej czytania pomaga w czytaniu innych powiązanych prac matematycznych.

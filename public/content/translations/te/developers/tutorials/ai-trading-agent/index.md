@@ -46,7 +46,9 @@ AI కోసం అత్యంత విస్తృతంగా ఉపయో�
 
 ### OpenAI {#openai}
 
-లార్జ్ లాంగ్వేజ్ మోడల్ (LLM) కోసం, నేను [OpenAI](https://openai.com/)తో ప్రారంభించాలని ఎంచుకున్నాను. ఈ ట్యుటోరియల్‌లో అప్లికేషన్‌ను రన్ చేయడానికి మీరు API యాక్సెస్ కోసం చెల్లించాల్సి ఉంటుంది. కనీస చెల్లింపు $5 అనేది సరిపోతుంది.
+లార్జ్ లాంగ్వేజ్ మోడల్ కోసం, నేను [OpenAI](https://openai.com/)తో ప్రారంభించాలని ఎంచుకున్నాను. ఈ ట్యుటోరియల్‌లోని అప్లికేషన్‌ను రన్ చేయడానికి మీరు API యాక్సెస్ కోసం చెల్లించాల్సి ఉంటుంది. కనీస చెల్లింపు $5 అనేది సరిపోతుంది.
+
+OpenAI Python లైబ్రరీ మీ స్వంత కంప్యూటర్‌లో మీరు రన్ చేసే మోడల్‌తో సహా ఏదైనా ఇతర OpenAI-అనుకూల ఎండ్‌పాయింట్‌తో కూడా మాట్లాడగలదు. దాన్ని వేరే చోటికి ఎలా పాయింట్ చేయాలో తెలుసుకోవడానికి [LLMతో ఇంటర్‌ఫేసింగ్](#interface-llm) చూడండి.
 
 ## అభివృద్ధి, దశలవారీగా {#step-by-step}
 
@@ -517,46 +519,63 @@ print(make_prompt(wethusdc_quotes + wethwbtc_quotes, future_time, wethusdc_pool.
 
 ### LLMతో ఇంటర్‌ఫేసింగ్ {#interface-llm}
 
-తరువాత, మనం వాస్తవ LLMని ప్రాంప్ట్ చేస్తాము మరియు ఆశించిన భవిష్యత్తు విలువను స్వీకరిస్తాము. నేను OpenAIని ఉపయోగించి ఈ ప్రోగ్రామ్‌ను వ్రాసాను, కాబట్టి మీరు వేరే ప్రొవైడర్‌ను ఉపయోగించాలనుకుంటే, మీరు దానిని సర్దుబాటు చేయాలి.
+తరువాత, మనం వాస్తవ LLMని ప్రాంప్ట్ చేస్తాము మరియు ఆశించిన భవిష్యత్తు విలువను పొందుతాము. నేను ఈ ప్రోగ్రామ్‌ను OpenAIని ఉపయోగించి వ్రాసాను, కాబట్టి మీరు వేరే ప్రొవైడర్‌ను ఉపయోగించాలనుకుంటే, మీరు దాన్ని సర్దుబాటు చేయాలి.
 
-1. [OpenAI ఖాతాను](https://auth.openai.com/create-account) పొందండి
+1. [OpenAI ఖాతా](https://auth.openai.com/create-account)ను పొందండి
 2. [ఖాతాకు నిధులు సమకూర్చండి](https://platform.openai.com/settings/organization/billing/overview)—వ్రాసే సమయానికి కనీస మొత్తం $5
 3. [API కీని సృష్టించండి](https://platform.openai.com/settings/organization/api-keys)
-4. కమాండ్ లైన్‌లో, API కీని ఎగుమతి చేయండి, తద్వారా మీ ప్రోగ్రామ్ దానిని ఉపయోగించగలదు
+4. కమాండ్ లైన్‌లో, API కీని ఎగుమతి చేయండి, తద్వారా మీ ప్రోగ్రామ్ దాన్ని ఉపయోగించగలదు
 
    ```sh
    export OPENAI_API_KEY=sk-<the rest of the key goes here>
    ```
 
-5. ఏజెంట్‌ను చెక్అవుట్ చేసి రన్ చేయండి
+5. ఏజెంట్‌ను చెక్అవుట్ చేయండి
 
    ```sh
    git checkout 04-interface-llm
+   ```
+
+6. రిపోజిటరీలోని కోడ్ `gpt-4-turbo` మోడల్‌ను ఉపయోగిస్తుంది, దీనిని [OpenAI అక్టోబర్ 23, 2026న మూసివేస్తుంది](https://developers.openai.com/api/docs/deprecations). దాన్ని ప్రస్తుత తక్కువ-ధర మోడల్ అయిన `gpt-6-luna`కి మార్చండి. `gpt-6-luna` అనేది రీజనింగ్ మోడల్ కాబట్టి, కమాండ్ రీజనింగ్‌ను కూడా ఆఫ్ చేస్తుంది (`reasoning_effort="none"`, ఇది `temperature`ని ఉపయోగించగలిగేలా ఉంచుతుంది) మరియు నిలిపివేయబడిన `max_tokens` పారామీటర్‌ను `max_completion_tokens`తో భర్తీ చేస్తుంది.
+
+   ```sh
+   sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
+   ```
+
+7. ఏజెంట్‌ను రన్ చేయండి
+
+   ```sh
    uv run agent.py
    ```
+
+మీరు స్థానికంగా హోస్ట్ చేసే మోడల్ వంటి వేరే OpenAI-అనుకూల ఎండ్‌పాయింట్‌ను ఉపయోగించాలనుకుంటే, OpenAI లైబ్రరీ `OPENAI_BASE_URL` ఎన్విరాన్‌మెంట్ వేరియబుల్ నుండి ఎండ్‌పాయింట్‌ను చదువుతుంది. దాన్ని సెట్ చేయండి, సర్వర్ కీలను తనిఖీ చేయకపోతే `OPENAI_API_KEY`లో ఏదైనా ఖాళీ లేని విలువను ఉంచండి మరియు `agent.py` మరియు `test-predictor.py`లోని `gpt-6-luna`ని ఆ సర్వర్ అందించే మోడల్ పేరుకు మార్చండి. సర్వర్ `reasoning_effort`ని తిరస్కరిస్తే, ఆ పారామీటర్‌ను తీసివేయండి.
+
+```sh
+export OPENAI_BASE_URL=http://localhost:<port>/v1
+```
 
 ఇక్కడ కొత్త కోడ్ ఉంది.
 
 ```python
 from openai import OpenAI
 
-open_ai = OpenAI()  # క్లయింట్ OPENAI_API_KEY ఎన్విరాన్‌మెంట్ వేరియబుల్‌ను చదువుతుంది
+open_ai = OpenAI()  # The client reads the OPENAI_API_KEY environment variable
 ```
 
-OpenAI APIని దిగుమతి చేసి ఇన్‌స్టాన్షియేట్ చేయండి.
+OpenAI APIని దిగుమతి చేయండి మరియు ఇన్‌స్టాన్షియేట్ చేయండి. క్లయింట్ `OPENAI_BASE_URL` సెట్ చేయబడి ఉంటే దాన్ని కూడా చదువుతుంది, కాబట్టి అదే కోడ్ ఇతర OpenAI-అనుకూల ఎండ్‌పాయింట్‌లతో పనిచేస్తుంది.
 
 ```python
 response = open_ai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-6-luna", reasoning_effort="none",
     messages=[
         {"role": "user", "content": prompt}
     ],
     temperature=0.0,
-    max_tokens=16,
+    max_completion_tokens=16,
 )
 ```
 
-ప్రతిస్పందనను సృష్టించడానికి OpenAI API (`open_ai.chat.completions.create`)ని కాల్ చేయండి.
+ప్రతిస్పందనను సృష్టించడానికి OpenAI API (`open_ai.chat.completions.create`)ని కాల్ చేయండి. సున్నా యొక్క `temperature` అత్యంత ఊహించదగిన సమాధానాన్ని అడుగుతుంది మరియు `max_completion_tokens` సమాధానం యొక్క పొడవును పరిమితం చేస్తుంది, ఇది కేవలం ఒక సంఖ్యను మాత్రమే కలిగి ఉండాలి. రీజనింగ్ మోడల్‌తో, `max_completion_tokens` మోడల్ ఆలోచించడానికి ఉపయోగించే టోకెన్‌లను కూడా లెక్కిస్తుంది, ఇది `reasoning_effort`ని `none`కి సెట్ చేయడానికి మరొక కారణం.
 
 ```python
 expected_price = Decimal(response.choices[0].message.content.strip())
@@ -695,7 +714,7 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
 
 ### లావాదేవీలను సమర్పించడం {#submit-txn}
 
-ఇప్పుడు మనం వాస్తవానికి లావాదేవీలను సమర్పించాలి. అయితే, సిస్టమ్ నిరూపించబడకముందే, ఈ సమయంలో నేను నిజమైన డబ్బు ఖర్చు చేయాలనుకోవడం లేదు. బదులుగా, మనం మెయిన్‌నెట్ యొక్క స్థానిక ఫోర్క్‌ను సృష్టిస్తాము మరియు ఆ నెట్‌వర్క్‌లో "ట్రేడ్" చేస్తాము.
+ఇప్పుడు మనం వాస్తవానికి లావాదేవీలను సమర్పించాలి. అయితే, సిస్టమ్ నిరూపించబడకముందే, ఈ సమయంలో నేను నిజమైన డబ్బును ఖర్చు చేయాలనుకోవడం లేదు. బదులుగా, మనం మెయిన్‌నెట్ యొక్క స్థానిక ఫోర్క్‌ను సృష్టిస్తాము మరియు ఆ నెట్‌వర్క్‌లో "ట్రేడ్" చేస్తాము.
 
 స్థానిక ఫోర్క్‌ను సృష్టించడానికి మరియు ట్రేడింగ్‌ను ప్రారంభించడానికి ఇక్కడ దశలు ఉన్నాయి.
 
@@ -707,7 +726,7 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
    anvil --fork-url https://eth.drpc.org --block-time 12
    ```
 
-   `anvil` Foundry కోసం డిఫాల్ట్ URL, http://localhost:8545లో వింటోంది, కాబట్టి బ్లాక్‌చైన్‌ను మార్చడానికి మనం ఉపయోగించే [`cast` కమాండ్](https://getfoundry.sh/cast/overview) కోసం URLని పేర్కొనాల్సిన అవసరం లేదు.
+   `anvil` అనేది Foundry కోసం డిఫాల్ట్ URL అయిన http://localhost:8545లో వింటోంది, కాబట్టి బ్లాక్‌చైన్‌ను మార్చడానికి మనం ఉపయోగించే [`cast` కమాండ్](https://getfoundry.sh/cast/overview) కోసం URLని పేర్కొనాల్సిన అవసరం లేదు.
 
 3. `anvil`లో రన్ చేస్తున్నప్పుడు, ETH ఉన్న పది టెస్ట్ ఖాతాలు ఉన్నాయి—మొదటి దాని కోసం ఎన్విరాన్‌మెంట్ వేరియబుల్స్‌ను సెట్ చేయండి
 
@@ -716,9 +735,9 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
    ADDRESS=`cast wallet address $PRIVATE_KEY`
    ```
 
-4. మనం ఉపయోగించాల్సిన కాంట్రాక్ట్‌లు ఇవి. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) అనేది మనం వాస్తవానికి ట్రేడ్ చేయడానికి ఉపయోగించే యూనిస్వాప్ v3 కాంట్రాక్ట్. మనం నేరుగా పూల్ ద్వారా ట్రేడ్ చేయవచ్చు, కానీ ఇది చాలా సులభం.
+4. మనం ఉపయోగించాల్సిన కాంట్రాక్ట్‌లు ఇవి. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) అనేది మనం వాస్తవానికి ట్రేడ్ చేయడానికి ఉపయోగించే Uniswap v3 కాంట్రాక్ట్. మనం నేరుగా పూల్ ద్వారా ట్రేడ్ చేయవచ్చు, కానీ ఇది చాలా సులభం.
 
-   దిగువన ఉన్న రెండు వేరియబుల్స్ WETH మరియు USDC మధ్య మార్పిడి చేయడానికి అవసరమైన యూనిస్వాప్ v3 పాత్‌లు.
+   దిగువన ఉన్న రెండు వేరియబుల్స్ WETH మరియు USDC మధ్య మార్పిడి చేయడానికి అవసరమైన Uniswap v3 పాత్‌లు.
 
    ```sh
    WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
@@ -729,7 +748,7 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
    USDC_TO_WETH=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB480001F4C02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
    ```
 
-5. ప్రతి టెస్ట్ ఖాతాలో 10,000 ETH ఉంటుంది. ట్రేడింగ్ కోసం 1000 WETH పొందడానికి 1000 ETHని ర్యాప్ చేయడానికి WETH కాంట్రాక్ట్‌ను ఉపయోగించండి.
+5. ప్రతి టెస్ట్ ఖాతాలో 10,000 ETH ఉంటుంది. ట్రేడింగ్ కోసం 1000 WETHని పొందడానికి 1000 ETHని ర్యాప్ చేయడానికి WETH కాంట్రాక్ట్‌ను ఉపయోగించండి.
 
    ```sh
    cast send $WETH_ADDRESS "deposit()" --value 1000ether --private-key $PRIVATE_KEY
@@ -746,9 +765,9 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
        --private-key $PRIVATE_KEY
    ```
 
-   `approve` కాల్ ఒక అనుమతి మొత్తాన్ని సృష్టిస్తుంది, ఇది మన టోకెన్‌లలో కొన్నింటిని ఖర్చు చేయడానికి `SwapRouter`ని అనుమతిస్తుంది. కాంట్రాక్ట్‌లు ఈవెంట్‌లను పర్యవేక్షించలేవు, కాబట్టి మనం టోకెన్‌లను నేరుగా `SwapRouter` కాంట్రాక్ట్‌కి బదిలీ చేస్తే, దానికి చెల్లించినట్లు తెలియదు. బదులుగా, మనం `SwapRouter` కాంట్రాక్ట్‌ను కొంత మొత్తాన్ని ఖర్చు చేయడానికి అనుమతిస్తాము, ఆపై `SwapRouter` దానిని చేస్తుంది. ఇది `SwapRouter` ద్వారా కాల్ చేయబడిన ఫంక్షన్ ద్వారా చేయబడుతుంది, కాబట్టి అది విజయవంతమైందో లేదో దానికి తెలుస్తుంది.
+   `approve` కాల్ అనేది మన టోకెన్‌లలో కొన్నింటిని ఖర్చు చేయడానికి `SwapRouter`ని అనుమతించే అనుమతి మొత్తాన్ని సృష్టిస్తుంది. కాంట్రాక్ట్‌లు ఘటనలను పర్యవేక్షించలేవు, కాబట్టి మనం టోకెన్‌లను నేరుగా `SwapRouter` కాంట్రాక్ట్‌కు బదిలీ చేస్తే, దానికి చెల్లించబడిందని తెలియదు. బదులుగా, మనం `SwapRouter` కాంట్రాక్ట్‌ను నిర్దిష్ట మొత్తాన్ని ఖర్చు చేయడానికి అనుమతిస్తాము, ఆపై `SwapRouter` దాన్ని చేస్తుంది. ఇది `SwapRouter` ద్వారా కాల్ చేయబడిన ఫంక్షన్ ద్వారా చేయబడుతుంది, కాబట్టి అది విజయవంతమైందో లేదో దానికి తెలుస్తుంది.
 
-7. మీ వద్ద రెండు టోకెన్‌లు తగినంత ఉన్నాయో లేదో ధృవీకరించండి.
+7. మీ వద్ద రెండు టోకెన్‌లు తగినంత ఉన్నాయని ధృవీకరించండి.
 
    ```sh
    cast call $WETH_ADDRESS "balanceOf(address)" $ADDRESS | cast from-wei
@@ -758,11 +777,14 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
 ఇప్పుడు మన వద్ద WETH మరియు USDC ఉన్నాయి కాబట్టి, మనం వాస్తవానికి ఏజెంట్‌ను రన్ చేయవచ్చు.
 
 ```sh
-git checkout 05-trade
+git checkout -f 05-trade
+sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
 uv run agent.py
 ```
 
-అవుట్‌పుట్ దీనికి సమానంగా ఉంటుంది:
+`-f` మునుపటి బ్రాంచ్‌లో మీరు చేసిన మోడల్ మార్పును విస్మరిస్తుంది, కాబట్టి `sed` కమాండ్ దాన్ని మళ్లీ `agent.py` యొక్క కొత్త వెర్షన్‌కు వర్తింపజేస్తుంది.
+
+అవుట్‌పుట్ దీనికి సమానంగా కనిపిస్తుంది:
 
 ```
 (ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
@@ -785,7 +807,7 @@ WETH Balance: 499
 
 - లైన్ 14లో, `MAINNET_URL`ని `https://eth.drpc.org` వంటి నిజమైన యాక్సెస్ పాయింట్‌కి మార్చండి
 - లైన్ 28లో, `PRIVATE_KEY`ని మీ స్వంత ప్రైవేట్ కీకి మార్చండి
-- మీరు చాలా సంపన్నులైతే మరియు నిరూపించబడని ఏజెంట్ కోసం ప్రతిరోజూ 1 ETHని కొనగలిగితే లేదా అమ్మగలిగితే తప్ప, `WETH_TRADE_AMOUNT`ని తగ్గించడానికి మీరు 29ని మార్చాలనుకోవచ్చు
+- మీరు చాలా సంపన్నులైతే మరియు నిరూపించబడని ఏజెంట్ కోసం ప్రతిరోజూ 1 ETHని కొనుగోలు చేయగలిగితే లేదా విక్రయించగలిగితే తప్ప, మీరు `WETH_TRADE_AMOUNT`ని తగ్గించడానికి 29ని మార్చాలనుకోవచ్చు
 
 #### కోడ్ వివరణ {#trading-code}
 
@@ -798,7 +820,7 @@ USDC_TO_WETH=bytes.fromhex("A0b86991c6218b36c1d19D4a2e9Eb0cE3606eB480001F4C02aaA
 PRIVATE_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
 ```
 
-దశ 4లో మనం ఉపయోగించిన అవే వేరియబుల్స్.
+మనం దశ 4లో ఉపయోగించిన అదే వేరియబుల్స్.
 
 ```python
 WETH_TRADE_AMOUNT=1
@@ -815,7 +837,7 @@ ERC20_ABI = [
 ]
 ```
 
-వాస్తవానికి ట్రేడ్ చేయడానికి, మనకు `approve` ఫంక్షన్ అవసరం. మనం ముందు మరియు తర్వాత బ్యాలెన్స్‌లను కూడా చూపించాలనుకుంటున్నాము, కాబట్టి మనకు `balanceOf` కూడా అవసరం.
+వాస్తవానికి ట్రేడ్ చేయడానికి, మనకు `approve` ఫంక్షన్ అవసరం. మనం ముందు మరియు తరువాత బ్యాలెన్స్‌లను కూడా చూపించాలనుకుంటున్నాము, కాబట్టి మనకు `balanceOf` కూడా అవసరం.
 
 ```python
 SWAP_ROUTER_ABI = [
@@ -823,7 +845,7 @@ SWAP_ROUTER_ABI = [
 ]
 ```
 
-`SwapRouter` ABIలో మనకు కేవలం `exactInput` అవసరం. ఖచ్చితంగా ఒక WETHని కొనుగోలు చేయడానికి మనం ఉపయోగించగల సంబంధిత ఫంక్షన్ `exactOutput` ఉంది, కానీ సరళత కోసం మనం రెండు సందర్భాల్లోనూ `exactInput`ని ఉపయోగిస్తాము.
+`SwapRouter` ABIలో మనకు కేవలం `exactInput` మాత్రమే అవసరం. దీనికి సంబంధించిన ఫంక్షన్, `exactOutput` ఉంది, మనం ఖచ్చితంగా ఒక WETHని కొనుగోలు చేయడానికి దీన్ని ఉపయోగించవచ్చు, కానీ సరళత కోసం మనం రెండు సందర్భాల్లోనూ `exactInput`ని ఉపయోగిస్తాము.
 
 ```python
 account = w3.eth.account.from_key(PRIVATE_KEY)
@@ -845,7 +867,7 @@ def txn_params() -> dict:
     }
 ```
 
-లావాదేవీ పారామితులు. ఇక్కడ మనకు ఒక ఫంక్షన్ అవసరం ఎందుకంటే [నాన్స్](https://en.wikipedia.org/wiki/Cryptographic_nonce) ప్రతిసారీ మారాలి.
+లావాదేవీ పారామితులు. మనకు ఇక్కడ ఒక ఫంక్షన్ అవసరం ఎందుకంటే [నాన్స్](https://en.wikipedia.org/wiki/Cryptographic_nonce) ప్రతిసారీ మారాలి.
 
 ```python
 def approve_token(contract: Contract, amount: int):
@@ -859,7 +881,7 @@ def approve_token(contract: Contract, amount: int):
     tx_hash = w3.eth.send_raw_transaction(signed_txn.raw_transaction)
 ```
 
-Web3లో మనం లావాదేవీని పంపే విధానం ఇది. ముందుగా మనం లావాదేవీని నిర్మించడానికి [`Contract` ఆబ్జెక్ట్‌ను](https://web3py.readthedocs.io/en/stable/web3.contract.html) ఉపయోగిస్తాము. ఆపై మనం `PRIVATE_KEY`ని ఉపయోగించి లావాదేవీపై సంతకం చేయడానికి [`web3.eth.account.sign_transaction`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction)ని ఉపయోగిస్తాము. చివరగా, లావాదేవీని పంపడానికి మనం [`w3.eth.send_raw_transaction`](https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction)ని ఉపయోగిస్తాము.
+Web3లో మనం లావాదేవీని ఈ విధంగా పంపుతాము. ముందుగా మనం లావాదేవీని నిర్మించడానికి [`Contract` ఆబ్జెక్ట్](https://web3py.readthedocs.io/en/stable/web3.contract.html)ని ఉపయోగిస్తాము. ఆపై మనం `PRIVATE_KEY`ని ఉపయోగించి లావాదేవీపై సంతకం చేయడానికి [`web3.eth.account.sign_transaction`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction)ని ఉపయోగిస్తాము. చివరగా, లావాదేవీని పంపడానికి మనం [`w3.eth.send_raw_transaction`](https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction)ని ఉపయోగిస్తాము.
 
 ```python
     print(f"Approve transaction sent: {tx_hash.hex()}")
@@ -867,7 +889,7 @@ Web3లో మనం లావాదేవీని పంపే విధాన
     print("Approve transaction mined.")
 ```
 
-లావాదేవీ మైన్ చేయబడే వరకు [`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) వేచి ఉంటుంది. అవసరమైతే అది రశీదును తిరిగి ఇస్తుంది.
+[`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) లావాదేవీ మైన్ అయ్యే వరకు వేచి ఉంటుంది. అవసరమైతే ఇది రశీదును అందిస్తుంది.
 
 ```python
 SELL_PARAMS = {
@@ -892,7 +914,7 @@ def make_buy_params(quote: Quote) -> dict:
     }
 ```
 
-`SELL_PARAMS`కి భిన్నంగా, కొనుగోలు పారామితులు మారవచ్చు. ఇన్‌పుట్ మొత్తం 1 WETH ధర, ఇది `quote`లో అందుబాటులో ఉంటుంది.
+`SELL_PARAMS`కి భిన్నంగా, కొనుగోలు పారామితులు మారవచ్చు. ఇన్‌పుట్ మొత్తం అనేది `quote`లో అందుబాటులో ఉన్నట్లుగా 1 WETH ధర.
 
 ```python
 def buy(quote: Quote):
@@ -917,7 +939,7 @@ def sell():
     print("Sell transaction mined.")
 ```
 
-`buy()` మరియు `sell()` ఫంక్షన్‌లు దాదాపు ఒకేలా ఉంటాయి. ముందుగా మనం `SwapRouter` కోసం తగినంత అనుమతి మొత్తాన్ని ఆమోదిస్తాము, ఆపై సరైన పాత్ మరియు మొత్తంతో దానికి కాల్ చేస్తాము.
+`buy()` మరియు `sell()` ఫంక్షన్‌లు దాదాపు ఒకేలా ఉంటాయి. ముందుగా మనం `SwapRouter` కోసం తగినంత అనుమతి మొత్తాన్ని ఆమోదిస్తాము, ఆపై సరైన పాత్ మరియు మొత్తంతో దాన్ని కాల్ చేస్తాము.
 
 ```python
 def balances():
@@ -945,7 +967,7 @@ print("Account balances after trade:")
 balances()
 ```
 
-ఈ ఏజెంట్ ప్రస్తుతం ఒకసారి మాత్రమే పనిచేస్తుంది. అయితే, మీరు దీన్ని [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) నుండి రన్ చేయడం ద్వారా లేదా 368-400 లైన్‌లను లూప్‌లో చుట్టడం ద్వారా మరియు తదుపరి సైకిల్ సమయం వచ్చే వరకు వేచి ఉండటానికి [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep)ని ఉపయోగించడం ద్వారా నిరంతరం పనిచేసేలా మార్చవచ్చు.
+ఈ ఏజెంట్ ప్రస్తుతం ఒక్కసారి మాత్రమే పనిచేస్తుంది. అయితే, మీరు దీన్ని [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) నుండి రన్ చేయడం ద్వారా లేదా 368-397 లైన్‌లను లూప్‌లో ర్యాప్ చేయడం ద్వారా మరియు తదుపరి సైకిల్ సమయం వచ్చే వరకు వేచి ఉండటానికి [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep)ని ఉపయోగించడం ద్వారా నిరంతరం పనిచేసేలా మార్చవచ్చు.
 
 ## సాధ్యమయ్యే మెరుగుదలలు {#improvements}
 
@@ -959,11 +981,11 @@ balances()
   చిన్న మార్పులను విస్మరించడం మరియు ధర ఎంత తగ్గుతుందని మనం ఆశిస్తున్నాము అనే దాని ఆధారంగా విక్రయించడం మంచిది.
 - _ప్రస్తుత పోర్ట్‌ఫోలియో_. మీ పోర్ట్‌ఫోలియోలో 10% WETHలో ఉంటే మరియు ధర పెరుగుతుందని మీరు భావిస్తే, బహుశా మరింత కొనుగోలు చేయడం సమంజసం. కానీ మీ పోర్ట్‌ఫోలియోలో 90% WETHలో ఉంటే, మీరు తగినంతగా ఎక్స్‌పోజ్ అయి ఉండవచ్చు మరియు మరింత కొనుగోలు చేయాల్సిన అవసరం లేదు. ధర తగ్గుతుందని మీరు ఆశిస్తే దీనికి విరుద్ధంగా ఉంటుంది.
 
-### మీ ట్రేడింగ్ వ్యూహాన్ని రహస్యంగా ఉంచాలనుకుంటే ఏమి చేయాలి? {#secret}
+### మీరు మీ ట్రేడింగ్ వ్యూహాన్ని రహస్యంగా ఉంచాలనుకుంటే ఏమి చేయాలి? {#secret}
 
-AI విక్రేతలు మీరు వారి LLMలకు పంపే ప్రశ్నలను చూడగలరు, ఇది మీ ఏజెంట్‌తో మీరు అభివృద్ధి చేసిన అద్భుతమైన ట్రేడింగ్ సిస్టమ్‌ను బహిర్గతం చేస్తుంది. చాలా మంది వ్యక్తులు ఉపయోగించే ట్రేడింగ్ సిస్టమ్ పనికిరానిది ఎందుకంటే మీరు కొనుగోలు చేయాలనుకున్నప్పుడు చాలా మంది కొనుగోలు చేయడానికి ప్రయత్నిస్తారు (మరియు ధర పెరుగుతుంది) మరియు మీరు విక్రయించాలనుకున్నప్పుడు విక్రయించడానికి ప్రయత్నిస్తారు (మరియు ధర తగ్గుతుంది).
+AI విక్రేతలు మీరు వారి LLMలకు పంపే ప్రశ్నలను చూడగలరు, ఇది మీ ఏజెంట్‌తో మీరు అభివృద్ధి చేసిన అద్భుతమైన ట్రేడింగ్ సిస్టమ్‌ను బహిర్గతం చేస్తుంది. చాలా మంది వ్యక్తులు ఉపయోగించే ట్రేడింగ్ సిస్టమ్ పనికిరానిది ఎందుకంటే మీరు కొనుగోలు చేయాలనుకున్నప్పుడు చాలా మంది వ్యక్తులు కొనుగోలు చేయడానికి ప్రయత్నిస్తారు (మరియు ధర పెరుగుతుంది) మరియు మీరు విక్రయించాలనుకున్నప్పుడు విక్రయించడానికి ప్రయత్నిస్తారు (మరియు ధర తగ్గుతుంది).
 
-ఈ సమస్యను నివారించడానికి, మీరు ఉదాహరణకు [LM-Studio](https://lmstudio.ai/)ని ఉపయోగించి స్థానికంగా LLMని రన్ చేయవచ్చు.
+ఈ సమస్యను నివారించడానికి, ఉదాహరణకు, [llama.cpp](https://github.com/ggml-org/llama.cpp) యొక్క `llama-server`ని ఉపయోగించి మీరు స్థానికంగా LLMని రన్ చేయవచ్చు. ఇది OpenAI-అనుకూల ఎండ్‌పాయింట్‌ను అందిస్తుంది, కాబట్టి మీరు [LLMతో ఇంటర్‌ఫేసింగ్](#interface-llm)లో వివరించిన విధంగా `OPENAI_BASE_URL` మరియు మోడల్ పేరును మాత్రమే సెట్ చేయాలి.
 
 ### AI బాట్ నుండి కృత్రిమ మేధ ఏజెంట్‌కి {#bot-to-agent}
 

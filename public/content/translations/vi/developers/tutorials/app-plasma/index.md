@@ -96,17 +96,26 @@ Dưới đây là các cách mà các thành phần khác nhau giao tiếp để
    - Cập nhật mã băm trạng thái hiện tại thành mã băm trạng thái mới
    - Phát ra một mục nhật ký với mã băm trạng thái mới và mã băm giao dịch
 
-### Các công cụ {#tools}
+### Công cụ {#tools}
 
-Đối với mã phía máy khách, chúng ta sẽ sử dụng [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/) và [Wagmi](https://wagmi.sh/). Đây là những công cụ tiêu chuẩn trong ngành; nếu bạn không quen thuộc với chúng, bạn có thể sử dụng [hướng dẫn này](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
+Đối với mã phía máy khách, chúng ta sẽ sử dụng [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/), và [Wagmi](https://wagmi.sh/). Đây là các công cụ tiêu chuẩn trong ngành; nếu bạn chưa quen với chúng, bạn có thể sử dụng [hướng dẫn này](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
 
 Phần lớn máy chủ được viết bằng JavaScript sử dụng [Node](https://nodejs.org/en). Phần không tri thức được viết bằng [Noir](https://noir-lang.org/). Chúng ta cần phiên bản `1.0.0-beta.10`, vì vậy sau khi bạn [cài đặt Noir theo hướng dẫn](https://noir-lang.org/docs/getting_started/quick_start), hãy chạy:
 
-```
+```sh
 noirup -v 1.0.0-beta.10
 ```
 
-Chuỗi khối mà chúng ta sử dụng là `anvil`, một chuỗi khối thử nghiệm cục bộ thuộc một phần của [Foundry](https://getfoundry.sh/introduction/installation).
+Để tạo các bằng chứng có thể được xác minh trên chuỗi (ở giai đoạn 3), chúng ta cũng cần [Barretenberg](https://barretenberg.aztec.network/docs/getting_started) (`bb`), backend tạo bằng chứng, ở phiên bản khớp với bản phát hành Noir này. Cài đặt `bbup`, trình cài đặt Barretenberg, và sau đó sử dụng nó để cài đặt `bb` phiên bản `0.87.0` (nếu không tìm thấy `bbup`, hãy mở một terminal mới để `PATH` đã cập nhật có hiệu lực):
+
+```sh
+curl -L https://raw.githubusercontent.com/AztecProtocol/aztec-packages/refs/heads/next/barretenberg/bbup/install | bash
+bbup -v 0.87.0
+```
+
+Hướng dẫn này đã được thử nghiệm với `nargo` 1.0.0-beta.10, `bb` 0.87.0, và (trong máy chủ) `@noir-lang/noir_js` 1.0.0-beta.11. Không sử dụng các phiên bản mới hơn: mã Noir không biên dịch được với các bản phát hành ứng viên 1.0 hiện tại, và các phiên bản hiện tại của `bb` không thể đọc các mạch được biên dịch bởi `nargo` 1.0.0-beta.10 và không còn chấp nhận cờ `--oracle_hash`.
+
+Chuỗi khối mà chúng ta sử dụng là `anvil`, một chuỗi khối thử nghiệm cục bộ là một phần của [Foundry](https://getfoundry.sh/introduction/installation).
 
 ## Triển khai {#implementation}
 
@@ -321,26 +330,26 @@ Cung cấp các tài khoản.
 
 #### `server/noir/src/main.nr` {#server-noir-src-main-nr}
 
-[Tệp này](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/src/main.nr) là mã không tri thức thực tế.
+[Tệp này](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/src/main.nr) là mã không tri thức thực sự.
 
 ```
 use std::hash::pedersen_hash;
 ```
 
-[Mã băm Pedersen](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) được cung cấp kèm theo [thư viện tiêu chuẩn của Noir](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). Các bằng chứng không kiến thức thường sử dụng hàm băm này. Nó dễ tính toán hơn nhiều bên trong [các mạch số học (arithmetic circuit)](https://rareskills.io/post/arithmetic-circuit) so với các hàm băm tiêu chuẩn.
+[Hàm băm Pedersen](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) được cung cấp cùng với [thư viện tiêu chuẩn Noir](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). Các bằng chứng không kiến thức thường sử dụng hàm băm này. Nó dễ tính toán hơn nhiều bên trong các [mạch số học](https://rareskills.io/post/arithmetic-circuit) so với các hàm băm tiêu chuẩn.
 
 ```
 use keccak256::keccak256;
 use dep::ecrecover;
 ```
 
-Hai hàm này là các thư viện bên ngoài, được định nghĩa trong [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). Chúng hoạt động chính xác theo tên gọi của mình, một hàm tính toán [mã băm keccak256](https://emn178.github.io/online-tools/keccak_256.html) và một hàm xác minh chữ ký Ethereum và phục hồi địa chỉ Ethereum của người ký.
+Hai hàm này là các thư viện bên ngoài, được định nghĩa trong [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). Chúng thực hiện chính xác những gì tên gọi của chúng thể hiện, một hàm tính toán [mã băm keccak256](https://emn178.github.io/online-tools/keccak_256.html) và một hàm xác minh chữ ký Ethereum và phục hồi địa chỉ Ethereum của người ký.
 
 ```
 global ACCOUNT_NUMBER : u32 = 5;
 ```
 
-Noir được truyền cảm hứng bởi [Rust](https://www.rust-lang.org/). Các biến, theo mặc định, là các hằng số. Đây là cách chúng ta định nghĩa các hằng số cấu hình toàn cục. Cụ thể, `ACCOUNT_NUMBER` là số lượng tài khoản mà chúng ta lưu trữ.
+Noir được lấy cảm hứng từ [Rust](https://www.rust-lang.org/). Các biến, theo mặc định, là các hằng số. Đây là cách chúng ta định nghĩa các hằng số cấu hình toàn cục. Cụ thể, `ACCOUNT_NUMBER` là số lượng tài khoản mà chúng ta lưu trữ.
 
 Các kiểu dữ liệu có tên `u<number>` là số lượng bit đó, không dấu. Các kiểu duy nhất được hỗ trợ là `u8`, `u16`, `u32`, `u64`, và `u128`.
 
@@ -361,7 +370,7 @@ global ASCII_MESSAGE_LENGTH : [u8; 3] = [0x31, 0x30, 0x30];
 global HASH_BUFFER_SIZE : u32 = 26+3+MESSAGE_LENGTH;
 ```
 
-[Các chữ ký EIP-191](https://eips.ethereum.org/EIPS/eip-191) yêu cầu một bộ đệm có tiền tố 26 byte, tiếp theo là độ dài thông điệp trong mã ASCII và cuối cùng là chính thông điệp đó.
+[Chữ ký EIP-191](https://eips.ethereum.org/EIPS/eip-191) yêu cầu một bộ đệm với tiền tố 26 byte, theo sau là độ dài thông điệp bằng ASCII, và cuối cùng là chính thông điệp đó.
 
 ```
 struct Account {
@@ -371,7 +380,7 @@ struct Account {
 }
 ```
 
-Thông tin mà chúng ta lưu trữ về một tài khoản. [`Field`](https://noir-lang.org/docs/noir/concepts/data_types/fields) là một số, thường lên đến 253 bit, có thể được sử dụng trực tiếp trong [mạch số học](https://rareskills.io/post/arithmetic-circuit) triển khai bằng chứng không kiến thức. Ở đây chúng ta sử dụng `Field` để lưu trữ địa chỉ Ethereum 160 bit.
+Thông tin chúng ta lưu trữ về một tài khoản. [`Field`](https://noir-lang.org/docs/noir/concepts/data_types/fields) là một số, thường lên đến 253 bit, có thể được sử dụng trực tiếp trong [mạch số học](https://rareskills.io/post/arithmetic-circuit) triển khai bằng chứng không kiến thức. Ở đây chúng ta sử dụng `Field` để lưu trữ một địa chỉ Ethereum 160 bit.
 
 ```
 struct TransferTxn {
@@ -382,7 +391,7 @@ struct TransferTxn {
 }
 ```
 
-Thông tin mà chúng ta lưu trữ cho một giao dịch chuyển khoản.
+Thông tin chúng ta lưu trữ cho một giao dịch chuyển.
 
 ```
 fn flatten_account(account: Account) -> [Field; FLAT_ACCOUNT_FIELDS] {
@@ -397,7 +406,7 @@ Một định nghĩa hàm. Tham số là thông tin `Account`. Kết quả là m
     ];
 ```
 
-Giá trị đầu tiên trong mảng là địa chỉ tài khoản. Giá trị thứ hai bao gồm cả số dư và nonce. Các lời gọi `.into()` thay đổi một số thành kiểu dữ liệu mà nó cần. `account.nonce` là một giá trị `u32`, nhưng để cộng nó với `account.balance << 32`, một giá trị `u128`, nó cần phải là kiểu `u128`. Đó là lời gọi `.into()` đầu tiên. Lời gọi thứ hai chuyển đổi kết quả `u128` thành một `Field` để nó vừa với mảng.
+Giá trị đầu tiên trong mảng là địa chỉ tài khoản. Giá trị thứ hai bao gồm cả số dư và nonce. Các lệnh gọi `.into()` thay đổi một số thành kiểu dữ liệu mà nó cần. `account.nonce` là một giá trị `u32`, nhưng để cộng nó vào `account.balance << 32`, một giá trị `u128`, nó cần phải là một `u128`. Đó là `.into()` đầu tiên. Lệnh gọi thứ hai chuyển đổi kết quả `u128` thành một `Field` để nó vừa với mảng.
 
 ```
     flat
@@ -410,19 +419,19 @@ Trong Noir, các hàm chỉ có thể trả về một giá trị ở cuối (kh
 fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] {
 ```
 
-Hàm này biến mảng tài khoản thành một mảng `Field`, mảng này có thể được sử dụng làm đầu vào cho Mã băm Pedersen.
+Hàm này biến mảng tài khoản thành một mảng `Field`, có thể được sử dụng làm đầu vào cho một mã băm Pedersen.
 
 ```
     let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
 ```
 
-Đây là cách bạn chỉ định một biến có thể thay đổi (mutable), nghĩa là _không_ phải một hằng số. Các biến trong Noir phải luôn có giá trị, vì vậy chúng ta khởi tạo biến này thành toàn số không.
+Đây là cách bạn chỉ định một biến có thể thay đổi (mutable), tức là _không_ phải là một hằng số. Các biến trong Noir luôn phải có một giá trị, vì vậy chúng ta khởi tạo biến này bằng toàn số không.
 
 ```
     for i in 0..ACCOUNT_NUMBER {
 ```
 
-Đây là một vòng lặp `for`. Lưu ý rằng các giới hạn là hằng số. Các vòng lặp Noir phải có giới hạn được biết tại thời điểm biên dịch. Lý do là các mạch số học không hỗ trợ kiểm soát luồng. Khi xử lý một vòng lặp `for`, trình biên dịch chỉ đơn giản là đặt mã bên trong nó nhiều lần, một lần cho mỗi bước lặp.
+Đây là một vòng lặp `for`. Lưu ý rằng các ranh giới là các hằng số. Các vòng lặp Noir phải có ranh giới được biết tại thời điểm biên dịch. Lý do là các mạch số học không hỗ trợ kiểm soát luồng. Khi xử lý một vòng lặp `for`, trình biên dịch chỉ đơn giản là đặt mã bên trong nó nhiều lần, một lần cho mỗi vòng lặp.
 
 ```
         let fields = flatten_account(accounts[i]);
@@ -439,7 +448,7 @@ fn hash_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> Field {
 }
 ```
 
-Cuối cùng, chúng ta đã đến với hàm thực hiện việc băm mảng các tài khoản.
+Cuối cùng, chúng ta đã đến hàm băm mảng tài khoản.
 
 ```
 fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
@@ -452,13 +461,13 @@ fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
     }
 ```
 
-Hàm này tìm kiếm tài khoản có một địa chỉ cụ thể. Hàm này sẽ cực kỳ kém hiệu quả trong mã tiêu chuẩn vì nó lặp qua tất cả các tài khoản, ngay cả sau khi đã tìm thấy địa chỉ.
+Hàm này tìm tài khoản có một địa chỉ cụ thể. Hàm này sẽ cực kỳ kém hiệu quả trong mã tiêu chuẩn vì nó lặp qua tất cả các tài khoản, ngay cả sau khi nó đã tìm thấy địa chỉ.
 
-Tuy nhiên, trong các bằng chứng không kiến thức, không có sự kiểm soát luồng. Nếu chúng ta cần kiểm tra một điều kiện, chúng ta phải kiểm tra nó mỗi lần.
+Tuy nhiên, trong các bằng chứng không kiến thức, không có kiểm soát luồng. Nếu chúng ta cần kiểm tra một điều kiện, chúng ta phải kiểm tra nó mọi lúc.
 
-Điều tương tự xảy ra với các câu lệnh `if`. Câu lệnh `if` trong vòng lặp trên được biên dịch thành các mệnh đề toán học này.
+Một điều tương tự xảy ra với các câu lệnh `if`. Câu lệnh `if` trong vòng lặp ở trên được dịch thành các câu lệnh toán học này.
 
-_condition<sub>result</sub> = accounts[i].address == address_ // là 1 nếu chúng bằng nhau, ngược lại là 0
+_condition<sub>result</sub> = accounts[i].address == address_ // bằng một nếu chúng bằng nhau, bằng không nếu ngược lại
 
 _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result</sub>)\*account<sub>old</sub>_
 
@@ -469,13 +478,13 @@ _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result
 }
 ```
 
-Hàm [`assert`](https://noir-lang.org/docs/language/assert) làm cho bằng chứng không kiến thức bị lỗi (crash) nếu khẳng định là sai. Trong trường hợp này, nếu chúng ta không thể tìm thấy tài khoản có địa chỉ liên quan. Để báo cáo địa chỉ, chúng ta sử dụng một [chuỗi định dạng](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
+Hàm [`assert`](https://noir-lang.org/docs/language/assert) khiến bằng chứng không kiến thức bị lỗi nếu xác nhận là sai. Trong trường hợp này, nếu chúng ta không thể tìm thấy một tài khoản có địa chỉ liên quan. Để báo cáo địa chỉ, chúng ta sử dụng một [chuỗi định dạng](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
 
 ```rust
 fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> [Account; ACCOUNT_NUMBER] {
 ```
 
-Hàm này áp dụng một giao dịch chuyển khoản và trả về mảng các tài khoản mới.
+Hàm này áp dụng một giao dịch chuyển và trả về mảng tài khoản mới.
 
 ```rust
     let from = find_account(accounts, txn.from);
@@ -485,7 +494,7 @@ Hàm này áp dụng một giao dịch chuyển khoản và trả về mảng c�
         (txn.from, txn.amount, txn.nonce, accounts[from].nonce);
 ```
 
-Chúng ta không thể truy cập các phần tử cấu trúc bên trong một chuỗi định dạng trong Noir, vì vậy chúng ta tạo một bản sao khả dụng.
+Chúng ta không thể truy cập các phần tử cấu trúc bên trong một chuỗi định dạng trong Noir, vì vậy chúng ta tạo một bản sao có thể sử dụng được.
 
 ```rust
     assert (accounts[from].balance >= txn.amount,
@@ -495,7 +504,7 @@ Chúng ta không thể truy cập các phần tử cấu trúc bên trong một 
         f"Transaction has nonce {txnNonce}, but the account is expected to use {accountNonce}");
 ```
 
-Đây là hai điều kiện có thể làm cho một giao dịch không hợp lệ.
+Đây là hai điều kiện có thể khiến một giao dịch không hợp lệ.
 
 ```rust
     let mut newAccounts = accounts;
@@ -508,13 +517,13 @@ Chúng ta không thể truy cập các phần tử cấu trúc bên trong một 
 }
 ```
 
-Tạo mảng các tài khoản mới và sau đó trả về nó.
+Tạo mảng tài khoản mới và sau đó trả về nó.
 
 ```rust
 fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field
 ```
 
-Hàm này đọc địa chỉ từ thông điệp. 
+Hàm này đọc địa chỉ từ thông điệp.
 
 ```rust
 {
@@ -523,7 +532,7 @@ Hàm này đọc địa chỉ từ thông điệp.
     for i in 7..47 {
 ```
 
-Địa chỉ luôn dài 20 byte (tức là 40 chữ số thập lục phân) và bắt đầu ở ký tự #7.
+Địa chỉ luôn dài 20 byte (hay còn gọi là 40 chữ số thập lục phân), và bắt đầu ở ký tự số 7.
 
 ```rust
         result *= 0x10;
@@ -544,7 +553,7 @@ Hàm này đọc địa chỉ từ thông điệp.
 fn readAmountAndNonce(messageBytes: [u8; MESSAGE_LENGTH]) -> (u128, u32)
 ```
 
-Đọc số lượng và nonce từ thông điệp. 
+Đọc số tiền và nonce từ thông điệp.
 
 ```rust
 {
@@ -555,7 +564,7 @@ fn readAmountAndNonce(messageBytes: [u8; MESSAGE_LENGTH]) -> (u128, u32)
     let mut stillReadingNonce: bool = false;
 ```
 
-Trong thông điệp, số đầu tiên sau địa chỉ là số lượng finney (tức là một phần nghìn của một ETH) cần chuyển. Số thứ hai là nonce. Bất kỳ văn bản nào ở giữa chúng đều bị bỏ qua.
+Trong thông điệp, số đầu tiên sau địa chỉ là số lượng finney (hay còn gọi là một phần nghìn của một ETH) để chuyển. Số thứ hai là nonce. Bất kỳ văn bản nào giữa chúng đều bị bỏ qua.
 
 ```rust
     for i in 48..MESSAGE_LENGTH {
@@ -566,7 +575,7 @@ Trong thông điệp, số đầu tiên sau địa chỉ là số lượng finne
                 amount = amount*10 + digit.into();
             }
 
-            if lookingForNonce {    // Chúng tôi vừa tìm thấy nó
+            if lookingForNonce {    // Chúng ta vừa tìm thấy nó
                 stillReadingNonce = true;
                 lookingForNonce = false;
             }
@@ -589,7 +598,7 @@ Trong thông điệp, số đầu tiên sau địa chỉ là số lượng finne
 }
 ```
 
-Trả về một [bộ dữ liệu (tuple)](https://noir-lang.org/docs/noir/concepts/data_types/tuples) là cách của Noir để trả về nhiều giá trị từ một hàm.
+Trả về một [tuple](https://noir-lang.org/docs/noir/concepts/data_types/tuples) là cách của Noir để trả về nhiều giá trị từ một hàm.
 
 ```rust
 fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn 
@@ -606,7 +615,7 @@ fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn
 }
 ```
 
-Hàm này chuyển đổi thông điệp thành các byte, sau đó chuyển đổi các số lượng thành `TransferTxn`.
+Hàm này chuyển đổi thông điệp thành byte, sau đó chuyển đổi số tiền thành một `TransferTxn`.
 
 ```rust
 // Tương đương với hashMessage của Viem
@@ -614,7 +623,7 @@ Hàm này chuyển đổi thông điệp thành các byte, sau đó chuyển đ�
 fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
 ```
 
-Chúng ta có thể sử dụng Mã băm Pedersen cho các tài khoản vì chúng chỉ được băm bên trong bằng chứng không kiến thức. Tuy nhiên, trong đoạn mã này, chúng ta cần kiểm tra chữ ký của thông điệp, được tạo bởi trình duyệt. Để làm được điều đó, chúng ta cần tuân theo định dạng việc ký Ethereum trong [EIP-191](https://eips.ethereum.org/EIPS/eip-191). Điều này có nghĩa là chúng ta cần tạo một bộ đệm kết hợp với tiền tố tiêu chuẩn, độ dài thông điệp theo chuẩn ASCII và chính thông điệp đó, và sử dụng keccak256 tiêu chuẩn của Ethereum để băm nó.
+Chúng ta có thể sử dụng Hàm băm Pedersen cho các tài khoản vì chúng chỉ được băm bên trong bằng chứng không kiến thức. Tuy nhiên, trong mã này, chúng ta cần kiểm tra chữ ký của thông điệp, được tạo bởi trình duyệt. Để làm điều đó, chúng ta cần tuân theo định dạng ký Ethereum trong [EIP-191](https://eips.ethereum.org/EIPS/eip-191). Điều này có nghĩa là chúng ta cần tạo một bộ đệm kết hợp với một tiền tố tiêu chuẩn, độ dài thông điệp bằng ASCII, và chính thông điệp đó, và sử dụng keccak256 tiêu chuẩn của Ethereum để băm nó.
 
 ```rust
     // Tiền tố ASCII
@@ -648,7 +657,7 @@ Chúng ta có thể sử dụng Mã băm Pedersen cho các tài khoản vì chú
     ];
 ```
 
-Để tránh các trường hợp một ứng dụng yêu cầu người dùng ký một thông điệp có thể được sử dụng như một giao dịch hoặc cho một số mục đích khác, EIP-191 chỉ định rằng tất cả các thông điệp đã ký bắt đầu bằng ký tự 0x19 (không phải là ký tự ASCII hợp lệ) theo sau là `Ethereum Signed Message:` và một dòng mới.
+Để tránh các trường hợp một ứng dụng yêu cầu người dùng ký một thông điệp có thể được sử dụng như một giao dịch hoặc cho một mục đích khác, EIP-191 chỉ định rằng tất cả các thông điệp đã ký bắt đầu bằng ký tự 0x19 (không phải là một ký tự ASCII hợp lệ) theo sau là `Ethereum Signed Message:` và một dòng mới.
 
 ```rust
     let mut buffer: [u8; HASH_BUFFER_SIZE] = [0u8; HASH_BUFFER_SIZE];
@@ -691,7 +700,7 @@ Chúng ta có thể sử dụng Mã băm Pedersen cho các tài khoản vì chú
     assert(MESSAGE_LENGTH < 1000, "Messages whose length is over three digits are not supported");
 ```
 
-Xử lý độ dài thông điệp lên đến 999 và trả về lỗi nếu lớn hơn. Tôi đã thêm đoạn mã này, mặc dù độ dài thông điệp là một hằng số, vì nó giúp dễ dàng thay đổi hơn. Trên một hệ thống sản xuất, bạn có lẽ chỉ giả định `MESSAGE_LENGTH` không thay đổi nhằm đạt hiệu suất tốt hơn.
+Xử lý độ dài thông điệp lên đến 999 và thất bại nếu nó lớn hơn. Tôi đã thêm mã này, mặc dù độ dài thông điệp là một hằng số, vì nó giúp dễ dàng thay đổi hơn. Trên một hệ thống sản xuất, bạn có thể chỉ cần giả định `MESSAGE_LENGTH` không thay đổi vì lợi ích của hiệu suất tốt hơn.
 
 ```rust
     keccak256::keccak256(buffer, HASH_BUFFER_SIZE)
@@ -706,13 +715,13 @@ fn signatureToAddressAndHash(
         pubKeyX: [u8; 32],
         pubKeyY: [u8; 32],
         signature: [u8; 64]
-    ) -> (Field, Field, Field)   // Địa chỉ, 16 byte đầu tiên của mã băm, 16 byte cuối cùng của mã băm        
+    ) -> (Field, Field, Field)   // địa chỉ, 16 byte đầu của mã băm, 16 byte cuối của mã băm        
 {
 ```
 
-Hàm này xác minh chữ ký, yêu cầu có mã băm thông điệp. Sau đó nó cung cấp cho chúng ta địa chỉ đã ký nó và mã băm thông điệp. Mã băm thông điệp được cung cấp trong hai giá trị `Field` bởi vì những giá trị này dễ sử dụng hơn trong phần còn lại của chương trình so với một mảng byte.
+Hàm này xác minh chữ ký, yêu cầu mã băm thông điệp. Sau đó, nó cung cấp cho chúng ta địa chỉ đã ký nó và mã băm thông điệp. Mã băm thông điệp được cung cấp trong hai giá trị `Field` vì chúng dễ sử dụng hơn trong phần còn lại của chương trình so với một mảng byte.
 
-Chúng ta cần sử dụng hai giá trị `Field` vì các phép tính trường được thực hiện theo phép [modulo](https://en.wikipedia.org/wiki/Modulo) với một số lớn, nhưng số đó thường nhỏ hơn 256 bit (nếu không sẽ khó thực hiện các phép tính đó trong EVM).
+Chúng ta cần sử dụng hai giá trị `Field` vì các tính toán trường được thực hiện [modulo](https://en.wikipedia.org/wiki/Modulo) một số lớn, nhưng số đó thường nhỏ hơn 256 bit (nếu không sẽ khó thực hiện các tính toán đó trong EVM).
 
 ```rust
     let hash = hashMessage(message);
@@ -725,7 +734,7 @@ Chúng ta cần sử dụng hai giá trị `Field` vì các phép tính trườn
     }
 ```
 
-Chỉ định `hash1` và `hash2` làm các biến có thể thay đổi và ghi từng byte của mã băm vào chúng.
+Chỉ định `hash1` và `hash2` là các biến có thể thay đổi, và ghi mã băm vào chúng từng byte một.
 
 ```rust
     (
@@ -734,8 +743,8 @@ Chỉ định `hash1` và `hash2` làm các biến có thể thay đổi và ghi
     
 Điều này tương tự như [`ecrecover` của Solidity](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions), với hai điểm khác biệt quan trọng:
 
-- Nếu chữ ký không hợp lệ, lời gọi trả về lỗi ở lệnh `assert` và chương trình bị hủy.
-- Mặc dù khóa công khai có thể được phục hồi từ chữ ký và mã băm, nhưng đây là quá trình xử lý có thể được thực hiện bên ngoài, và do đó, không đáng để thực hiện bên trong bằng chứng không kiến thức. Nếu ai đó cố gắng lừa chúng ta ở đây, việc xác minh chữ ký sẽ thất bại.
+- Nếu chữ ký không hợp lệ, lệnh gọi sẽ thất bại một `assert` và chương trình bị hủy bỏ.
+- Mặc dù khóa công khai có thể được phục hồi từ chữ ký và mã băm, đây là quá trình xử lý có thể được thực hiện bên ngoài và do đó, không đáng để thực hiện bên trong bằng chứng không kiến thức. Nếu ai đó cố gắng lừa dối chúng ta ở đây, việc xác minh chữ ký sẽ thất bại.
 
 ```rust
         hash1,
@@ -752,19 +761,19 @@ fn main(
     ) -> pub (
         Field,  // Mã băm của mảng tài khoản cũ
         Field,  // Mã băm của mảng tài khoản mới
-        Field,  // 16 byte đầu tiên của mã băm thông điệp
-        Field,  // 16 byte cuối cùng của mã băm thông điệp
+        Field,  // 16 byte đầu của mã băm thông điệp
+        Field,  // 16 byte cuối của mã băm thông điệp
     )
 ```
 
-Cuối cùng, chúng ta đạt tới hàm `main`. Chúng ta cần chứng minh rằng chúng ta có một giao dịch thay đổi hợp lệ mã băm của các tài khoản từ giá trị cũ sang giá trị mới. Chúng ta cũng cần chứng minh rằng nó có mã băm giao dịch cụ thể này để người đã gửi nó biết giao dịch của họ đã được xử lý.
+Cuối cùng, chúng ta đến hàm `main`. Chúng ta cần chứng minh rằng chúng ta có một giao dịch thay đổi hợp lệ mã băm của các tài khoản từ giá trị cũ sang giá trị mới. Chúng ta cũng cần chứng minh rằng nó có mã băm giao dịch cụ thể này để người đã gửi nó biết giao dịch của họ đã được xử lý.
 
 ```rust
 {
     let mut txn = readTransferTxn(message);
 ```
 
-Chúng ta cần `txn` phải có thể thay đổi vì chúng ta không đọc địa chỉ gửi từ thông điệp, chúng ta đọc nó từ chữ ký. 
+Chúng ta cần `txn` có thể thay đổi vì chúng ta không đọc địa chỉ người gửi từ thông điệp, chúng ta đọc nó từ chữ ký.
 
 ```rust
     let (fromAddress, txnHash1, txnHash2) = signatureToAddressAndHash(
@@ -788,9 +797,9 @@ Chúng ta cần `txn` phải có thể thay đổi vì chúng ta không đọc �
 
 ### Giai đoạn 2 - Thêm một máy chủ {#stage-2}
 
-Trong giai đoạn thứ hai, chúng ta thêm một máy chủ để nhận và thực hiện các giao dịch chuyển khoản từ trình duyệt.
+Trong giai đoạn thứ hai, chúng ta thêm một máy chủ nhận và triển khai các giao dịch chuyển từ trình duyệt.
 
-Để xem cách nó hoạt động:
+Để xem nó hoạt động:
 
 1. Dừng Vite nếu nó đang chạy.
 
@@ -804,7 +813,7 @@ Trong giai đoạn thứ hai, chúng ta thêm một máy chủ để nhận và 
    npm install
    ```
 
-   Không cần phải biên dịch mã Noir, nó giống hệt như mã bạn đã sử dụng cho giai đoạn 1.
+   Không cần phải biên dịch mã Noir, nó giống với mã bạn đã sử dụng cho giai đoạn 1.
 
 3. Khởi động máy chủ.
 
@@ -812,7 +821,7 @@ Trong giai đoạn thứ hai, chúng ta thêm một máy chủ để nhận và 
    npm run start
    ```
 
-4. Trong một cửa sổ dòng lệnh riêng, hãy chạy Vite để phục vụ mã trình duyệt.
+4. Trong một cửa sổ dòng lệnh riêng biệt, bắt đầu từ thư mục gốc của kho lưu trữ, chạy Vite để phục vụ mã trình duyệt.
 
    ```sh
    cd client
@@ -821,15 +830,15 @@ Trong giai đoạn thứ hai, chúng ta thêm một máy chủ để nhận và 
 
 5. Duyệt đến mã máy khách tại [http://localhost:5173](http://localhost:5173)
 
-6. Trước khi bạn có thể đưa ra một giao dịch, bạn cần biết nonce, cũng như số lượng mà bạn có thể gửi. Để có được thông tin này, hãy nhấp vào **Update account data** (Cập nhật dữ liệu tài khoản) và ký thông điệp.
+6. Trước khi bạn có thể phát hành một giao dịch, bạn cần biết nonce, cũng như số tiền bạn có thể gửi. Để lấy thông tin này, hãy nhấp vào **Update account data** (Cập nhật dữ liệu tài khoản) và ký thông điệp.
 
-   Chúng ta có một tình huống tiến thoái lưỡng nan ở đây. Một mặt, chúng ta không muốn ký một thông điệp có thể được tái sử dụng (một [cuộc tấn công phát lại](https://en.wikipedia.org/wiki/Replay_attack)), đó là lý do tại sao chúng ta muốn có nonce ngay từ đầu. Tuy nhiên, chúng ta chưa có nonce. Giải pháp là chọn một nonce chỉ có thể được sử dụng một lần và chúng ta đã có ở cả hai bên, chẳng hạn như thời gian hiện tại.
+   Chúng ta có một tình thế tiến thoái lưỡng nan ở đây. Một mặt, chúng ta không muốn ký một thông điệp có thể được sử dụng lại (một [cuộc tấn công phát lại](https://en.wikipedia.org/wiki/Replay_attack)), đó là lý do tại sao chúng ta muốn có một nonce ngay từ đầu. Tuy nhiên, chúng ta chưa có nonce. Giải pháp là chọn một nonce chỉ có thể được sử dụng một lần và chúng ta đã có ở cả hai bên, chẳng hạn như thời gian hiện tại.
 
-   Vấn đề với giải pháp này là thời gian có thể không được đồng bộ hóa hoàn hảo. Vì vậy thay vào đó, chúng ta ký một giá trị thay đổi mỗi phút. Điều này có nghĩa là khoảng thời gian rủi ro trước các cuộc tấn công phát lại của chúng ta dài nhất là một phút. Xét rằng trong môi trường sản xuất, yêu cầu đã ký sẽ được bảo vệ bởi TLS và phía bên kia của đường hầm --- máy chủ --- có thể đã tiết lộ số dư và nonce (nó phải biết chúng để hoạt động), đây là một rủi ro có thể chấp nhận được.
+   Vấn đề với giải pháp này là thời gian có thể không được đồng bộ hóa hoàn hảo. Vì vậy, thay vào đó, chúng ta ký một giá trị thay đổi mỗi phút. Điều này có nghĩa là khoảng thời gian dễ bị tấn công phát lại của chúng ta nhiều nhất là một phút. Xem xét rằng trong môi trường sản xuất, yêu cầu đã ký sẽ được bảo vệ bởi TLS, và phía bên kia của đường hầm---máy chủ---đã có thể tiết lộ số dư và nonce (nó phải biết chúng để hoạt động), đây là một rủi ro có thể chấp nhận được.
 
-7. Khi trình duyệt lấy lại được số dư và nonce, nó sẽ hiển thị biểu mẫu chuyển khoản. Chọn địa chỉ đích và số lượng rồi nhấp vào **Transfer** (Chuyển khoản). Ký yêu cầu này.
+7. Khi trình duyệt nhận lại số dư và nonce, nó sẽ hiển thị biểu mẫu chuyển. Chọn địa chỉ đích và số tiền rồi nhấp vào **Transfer** (Chuyển). Ký yêu cầu này.
 
-8. Để xem chuyển khoản, chọn **Update account data** (Cập nhật dữ liệu tài khoản) hoặc nhìn vào cửa sổ nơi bạn chạy máy chủ. Máy chủ ghi nhật ký trạng thái mỗi khi nó thay đổi.
+8. Để xem việc chuyển, hãy **Update account data** (Cập nhật dữ liệu tài khoản) hoặc nhìn vào cửa sổ nơi bạn chạy máy chủ. Máy chủ ghi lại trạng thái mỗi khi nó thay đổi.
 
     ```
     ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
@@ -947,11 +956,11 @@ let Accounts = [
 
 Cấu trúc `Accounts` ban đầu.
 
-### Giai đoạn 3 - Các hợp đồng thông minh Ethereum {#stage-3}
+### Giai đoạn 3 - Hợp đồng thông minh Ethereum {#stage-3}
 
-1. Dừng các quá trình máy chủ và máy khách.
+1. Dừng các tiến trình máy chủ và máy khách.
 
-2. Tải xuống nhánh với các hợp đồng thông minh và đảm bảo bạn có tất cả các mô-đun cần thiết.
+2. Tải xuống nhánh có các hợp đồng thông minh và đảm bảo bạn có tất cả các mô-đun cần thiết.
 
    ```sh
    git checkout 03-smart-contracts
@@ -961,7 +970,7 @@ Cấu trúc `Accounts` ban đầu.
    npm install
    ```
 
-3. Chạy `anvil` trong một cửa sổ dòng lệnh riêng.
+3. Chạy `anvil` trong một cửa sổ dòng lệnh riêng biệt.
 
 4. Tạo khóa xác minh và trình xác minh Solidity, sau đó sao chép mã trình xác minh vào dự án Solidity.
 
@@ -972,7 +981,7 @@ Cấu trúc `Accounts` ban đầu.
    cp target/Verifier.sol ../../smart-contracts/src
    ```
 
-5. Đi tới các hợp đồng thông minh và đặt các biến môi trường để sử dụng chuỗi khối `anvil`.
+5. Đi tới các hợp đồng thông minh và thiết lập các biến môi trường để sử dụng Chuỗi khối `anvil`.
 
    ```sh
    cd ../../smart-contracts
@@ -980,7 +989,7 @@ Cấu trúc `Accounts` ban đầu.
    ETH_PRIVATE_KEY=ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
    ```
 
-6. Triển khai `Verifier.sol` và lưu trữ địa chỉ vào một biến môi trường.
+6. Triển khai `Verifier.sol` và lưu trữ địa chỉ trong một biến môi trường.
 
    ```sh
    VERIFIER_ADDRESS=`forge create src/Verifier.sol:HonkVerifier --private-key $ETH_PRIVATE_KEY --optimize --broadcast | awk '/Deployed to:/ {print $3}'`
@@ -994,27 +1003,27 @@ Cấu trúc `Accounts` ban đầu.
    echo $ZKBANK_ADDRESS
    ```
 
-   Giá trị `0x199..67b` là mã băm Pederson của trạng thái ban đầu của `Accounts`. Nếu bạn sửa đổi trạng thái ban đầu này trong `server/index.mjs`, bạn có thể chạy một giao dịch để xem mã băm ban đầu được báo cáo bởi bằng chứng không kiến thức.
+   Giá trị `0x199..67b` là mã băm Pedersen của trạng thái ban đầu của `Accounts`. Nếu bạn sửa đổi trạng thái ban đầu này trong `server/index.mjs`, bạn có thể chạy một giao dịch để xem mã băm ban đầu được báo cáo bởi bằng chứng không kiến thức.
 
-8. Khởi động máy chủ.
+8. Chạy máy chủ.
 
    ```sh
    cd ../server
    npm run start
    ```
 
-9. Chạy máy khách trong một cửa sổ dòng lệnh khác.
+9. Chạy máy khách trong một cửa sổ dòng lệnh khác, bắt đầu từ thư mục gốc của kho lưu trữ.
 
    ```sh
    cd client
    npm run dev
    ```
 
-10. Chạy một vài giao dịch.
+10. Chạy một số giao dịch.
 
-11. Để xác minh rằng trạng thái đã thay đổi trên chuỗi, hãy khởi động lại quá trình máy chủ. Bạn sẽ thấy rằng `ZkBank` không còn chấp nhận các giao dịch nữa, vì giá trị băm ban đầu trong các giao dịch khác với giá trị băm được lưu trữ trên chuỗi.
+11. Để xác minh rằng trạng thái đã thay đổi trên chuỗi, hãy khởi động lại tiến trình máy chủ. Xem rằng `ZkBank` không còn chấp nhận các giao dịch nữa, vì giá trị mã băm ban đầu trong các giao dịch khác với giá trị mã băm được lưu trữ trên chuỗi.
 
-    Đây là loại lỗi được dự đoán trước.
+    Đây là loại lỗi được mong đợi.
 
     ```
     ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
@@ -1034,7 +1043,7 @@ Cấu trúc `Accounts` ban đầu.
 
 #### `server/index.mjs` {#server-index-mjs-2}
 
-Các thay đổi trong tệp này chủ yếu liên quan đến việc tạo ra bằng chứng thực tế và gửi nó lên chuỗi.
+Các thay đổi trong tệp này chủ yếu liên quan đến việc tạo bằng chứng thực tế và gửi nó trên chuỗi.
 
 ```js
 import { exec } from 'child_process'
@@ -1043,15 +1052,15 @@ import util from 'util'
 const execPromise = util.promisify(exec)
 ```
 
-Chúng ta cần sử dụng [gói Barretenberg](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) để tạo ra bằng chứng thực tế để gửi lên chuỗi. Chúng ta có thể sử dụng gói này bằng cách chạy giao diện dòng lệnh (`bb`) hoặc bằng cách sử dụng [thư viện JavaScript, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). Thư viện JavaScript chậm hơn nhiều so với việc chạy mã một cách nguyên bản, vì vậy chúng ta sử dụng [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) ở đây để sử dụng giao diện dòng lệnh.
+Chúng ta cần sử dụng [gói Barretenberg](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) để tạo bằng chứng thực tế để gửi trên chuỗi. Chúng ta có thể sử dụng gói này bằng cách chạy giao diện dòng lệnh (`bb`) hoặc bằng cách sử dụng [thư viện JavaScript, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). Thư viện JavaScript chậm hơn nhiều so với việc chạy mã gốc, vì vậy chúng ta sử dụng [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) ở đây để sử dụng dòng lệnh.
 
-Lưu ý rằng nếu bạn quyết định sử dụng `bb.js`, bạn cần sử dụng một phiên bản tương thích với phiên bản Noir mà bạn đang sử dụng. Tại thời điểm viết bài, phiên bản Noir hiện tại (1.0.0-beta.11) sử dụng `bb.js` phiên bản 0.87.
+Lưu ý rằng nếu bạn quyết định sử dụng `bb.js`, bạn cần sử dụng một phiên bản tương thích với phiên bản Noir mà bạn đang sử dụng. Ví dụ: Noir 1.0.0-beta.10 và 1.0.0-beta.11 đều đi kèm với `bb` và `bb.js` phiên bản 0.87.
 
 ```js
 const zkBankAddress = process.env.ZKBANK_ADDRESS || "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
 ```
 
-Địa chỉ ở đây là địa chỉ bạn nhận được khi bạn bắt đầu với `anvil` nguyên sơ và làm theo các hướng dẫn ở trên.
+Địa chỉ ở đây là địa chỉ bạn nhận được khi bắt đầu với một `anvil` sạch và làm theo các hướng dẫn ở trên.
 
 ```js
 const walletClient = createWalletClient({ 
@@ -1061,15 +1070,15 @@ const walletClient = createWalletClient({
 })
 ```
 
-Khóa riêng tư này là một trong các tài khoản được cấp vốn sẵn mặc định trong `anvil`. 
+Khóa riêng tư này là một trong những tài khoản được cấp vốn trước mặc định trong `anvil`.
 
 ```js
 const generateProof = async (witness, fileID) => {
 ```
 
-Tạo một bằng chứng sử dụng tệp thực thi `bb`.
+Tạo một bằng chứng bằng cách sử dụng tệp thực thi `bb`.
 
-```js 
+```js
     const fname = `witness-${fileID}.gz`    
     await fs.writeFile(fname, witness)
 ```
@@ -1080,13 +1089,13 @@ Ghi bằng chứng dữ liệu vào một tệp.
     await execPromise(`bb prove -b ./noir/target/zkBank.json -w ${fname} -o ${fileID} --oracle_hash keccak --output_format fields`)
 ```
 
-Thực sự tạo ra bằng chứng. Bước này cũng tạo một tệp chứa các biến công khai, nhưng chúng ta không cần nó. Chúng ta đã lấy các biến đó từ `noir.execute`.
+Thực sự tạo bằng chứng. Bước này cũng tạo một tệp với các biến công khai, nhưng chúng ta không cần điều đó. Chúng ta đã lấy các biến đó từ `noir.execute`.
 
 ```js
     const proof = "0x" + JSON.parse(await fs.readFile(`./${fileID}/proof_fields.json`)).reduce((a,b) => a+b, "").replace(/0x/g, "")
 ```
 
-Bằng chứng là một mảng JSON các giá trị `Field`, mỗi giá trị được biểu diễn dưới dạng một giá trị thập lục phân. Tuy nhiên, chúng ta cần gửi nó trong giao dịch dưới dạng một giá trị `bytes` duy nhất, mà Viem biểu diễn bằng một chuỗi thập lục phân lớn. Ở đây chúng ta thay đổi định dạng bằng cách nối tất cả các giá trị, loại bỏ tất cả các chuỗi `0x`, và sau đó thêm một chuỗi đó vào cuối.
+Bằng chứng là một mảng JSON của các giá trị `Field`, mỗi giá trị được biểu diễn dưới dạng một giá trị thập lục phân. Tuy nhiên, chúng ta cần gửi nó trong giao dịch dưới dạng một giá trị `bytes` duy nhất, mà Viem biểu diễn bằng một chuỗi thập lục phân lớn. Ở đây chúng ta thay đổi định dạng bằng cách nối tất cả các giá trị, loại bỏ tất cả các `0x`, và sau đó thêm một cái ở cuối.
 
 ```js
     await execPromise(`rm -r ${fname} ${fileID}`)
@@ -1106,13 +1115,13 @@ const processMessage = async (message, signature) => {
     const publicFields = noirResult.returnValue.map(x=>'0x' + x.slice(2).padStart(64, "0"))
 ```
 
-Các trường công khai cần phải là một mảng các giá trị 32 byte. Tuy nhiên, vì chúng ta cần chia mã băm giao dịch thành hai giá trị `Field`, nó xuất hiện dưới dạng một giá trị 16 byte. Ở đây chúng ta thêm các số không để Viem hiểu nó thực sự là 32 byte.
+Các trường công khai cần phải là một mảng các giá trị 32 byte. Tuy nhiên, vì chúng ta cần chia mã băm giao dịch giữa hai giá trị `Field`, nó xuất hiện dưới dạng một giá trị 16 byte. Ở đây chúng ta thêm các số không để Viem sẽ hiểu nó thực sự là 32 byte.
 
 ```js
     const proof = await generateProof(noirResult.witness, `${fromAddress}-${nonce}`)
 ```
 
-Mỗi địa chỉ chỉ sử dụng mỗi nonce một lần để chúng ta có thể sử dụng kết hợp `fromAddress` và `nonce` làm số nhận dạng duy nhất cho tệp bằng chứng dữ liệu và thư mục đầu ra.
+Mỗi địa chỉ chỉ sử dụng mỗi nonce một lần để chúng ta có thể sử dụng sự kết hợp của `fromAddress` và `nonce` làm mã định danh duy nhất cho tệp bằng chứng dữ liệu và thư mục đầu ra.
 
 ```js
     try {
@@ -1132,7 +1141,7 @@ Gửi giao dịch lên chuỗi.
 
 #### `smart-contracts/src/ZkBank.sol` {#smart-contracts-src-zkbank-sol}
 
-Đây là mã trên chuỗi để nhận giao dịch.
+Đây là mã trên chuỗi nhận giao dịch.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -1151,7 +1160,7 @@ contract ZkBank {
     }
 ```
 
-Mã trên chuỗi cần theo dõi hai biến: trình xác minh (một hợp đồng riêng biệt được tạo bởi `nargo`) và mã băm trạng thái hiện tại.
+Mã trên chuỗi cần theo dõi hai biến: trình xác minh (một hợp đồng riêng biệt được tạo bởi `bb write_solidity_verifier` của Barretenberg) và mã băm trạng thái hiện tại.
 
 ```solidity
     event TransactionProcessed(
@@ -1170,20 +1179,20 @@ Mỗi khi trạng thái thay đổi, chúng ta phát ra một sự kiện `Trans
     ) public {
 ```
 
-Hàm này xử lý các giao dịch. Nó lấy bằng chứng (dưới dạng `bytes`) và các đầu vào công khai (dưới dạng mảng `bytes32`), ở định dạng mà trình xác minh yêu cầu (để giảm thiểu xử lý trên chuỗi và do đó giảm chi phí Gas).
+Hàm này xử lý các giao dịch. Nó nhận bằng chứng (dưới dạng `bytes`) và các đầu vào công khai (dưới dạng một mảng `bytes32`), theo định dạng mà trình xác minh yêu cầu (để giảm thiểu xử lý trên chuỗi và do đó giảm chi phí Gas).
 
 ```solidity
-        require(_publicInputs[0] == currentStateHash,
+        require(_publicFields[0] == currentStateHash,
             "Wrong old state hash");
 ```
 
-Bằng chứng không kiến thức cần chứng minh rằng giao dịch thay đổi từ mã băm hiện tại của chúng ta sang một mã băm mới.
+Bằng chứng không kiến thức cần phải là giao dịch thay đổi từ mã băm hiện tại của chúng ta sang một mã băm mới.
 
 ```solidity
         myVerifier.verify(_proof, _publicFields);
 ```
 
-Gọi hợp đồng trình xác minh để xác minh bằng chứng không kiến thức. Bước này hoàn nguyên (revert) giao dịch nếu bằng chứng không kiến thức bị sai.
+Gọi hợp đồng trình xác minh để xác minh bằng chứng không kiến thức. Bước này hoàn tác giao dịch nếu bằng chứng không kiến thức bị sai.
 
 ```solidity
         currentStateHash = _publicFields[1];
@@ -1197,7 +1206,7 @@ Gọi hợp đồng trình xác minh để xác minh bằng chứng không kiế
 }
 ```
 
-Nếu mọi thứ được kiểm tra thành công, hãy cập nhật mã băm trạng thái thành giá trị mới và phát ra sự kiện `TransactionProcessed`.
+Nếu mọi thứ đều ổn, hãy cập nhật mã băm trạng thái thành giá trị mới và phát ra một sự kiện `TransactionProcessed`.
 
 ## Các hành vi lạm dụng của thành phần tập trung {#abuses}
 

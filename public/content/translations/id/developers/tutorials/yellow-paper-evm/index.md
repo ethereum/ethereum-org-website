@@ -13,11 +13,13 @@ published: 2022-05-15
 
 ## Kertas Kuning yang Mana? {#which-yellow-paper}
 
-Seperti hampir semua hal lain di Ethereum, Kertas Kuning berevolusi seiring waktu. Agar dapat merujuk ke versi tertentu, saya mengunggah [versi saat penulisan ini](https://ethereum.github.io/yellowpaper/paper.pdf). Nomor bagian, halaman, dan persamaan yang saya gunakan akan merujuk ke versi tersebut. Ada baiknya Anda membukanya di jendela yang berbeda saat membaca dokumen ini.
+Seperti hampir semua hal lain di Ethereum, Kertas Kuning berkembang seiring waktu. Untuk dapat merujuk ke versi tertentu, saya mengunggah [versi yang berlaku saat penulisan](yellow-paper-berlin.pdf) (versi Berlin, 2022). Nomor bagian, halaman, dan persamaan dalam tutorial ini merujuk ke versi tersebut. [Versi terbaru](https://ethereum.github.io/yellowpaper/paper.pdf) telah diperbarui sejak saat itu, sehingga nomornya mungkin berbeda. Ada baiknya Anda membukanya di jendela yang berbeda saat membaca dokumen ini.
 
 ### Mengapa EVM? {#why-the-evm}
 
-Kertas kuning asli ditulis tepat pada awal pengembangan Ethereum. Dokumen ini menjelaskan mekanisme konsensus berbasis Bukti Kerja (PoW) asli yang pada awalnya digunakan untuk mengamankan jaringan. Namun, Ethereum mematikan Bukti Kerja dan mulai menggunakan konsensus berbasis Bukti Kepemilikan (PoS) pada bulan September 2022. Tutorial ini akan berfokus pada bagian-bagian kertas kuning yang mendefinisikan Mesin Virtual Ethereum (EVM). EVM tidak berubah oleh transisi ke Bukti Kepemilikan (kecuali untuk nilai kembalian dari opcode DIFFICULTY).
+Kertas kuning asli ditulis tepat pada awal pengembangan Ethereum. Ini menjelaskan mekanisme konsensus berbasis Bukti Kerja (PoW) asli yang awalnya digunakan untuk mengamankan jaringan. Namun, Ethereum mematikan Bukti Kerja dan mulai menggunakan konsensus berbasis Bukti Kepemilikan (PoS) pada bulan September 2022. Tutorial ini akan berfokus pada bagian-bagian kertas kuning yang mendefinisikan Mesin Virtual Ethereum (EVM). Transisi ke Bukti Kepemilikan hampir tidak mengubah EVM: opcode `DIFFICULTY` (0x44) diganti namanya menjadi [`PREVRANDAO`](https://eips.ethereum.org/EIPS/eip-4399) dan sekarang mengembalikan nilai acak dari Rantai suar.
+
+Peningkatan jaringan selanjutnya memang mengubah EVM. Mereka menambahkan opcode seperti [`PUSH0`](https://eips.ethereum.org/EIPS/eip-3855), [`TLOAD` dan `TSTORE`](https://eips.ethereum.org/EIPS/eip-1153) (penyimpanan sementara), [`MCOPY`](https://eips.ethereum.org/EIPS/eip-5656), [`BLOBHASH`](https://eips.ethereum.org/EIPS/eip-4844), dan [`BLOBBASEFEE`](https://eips.ethereum.org/EIPS/eip-7516), serta mengubah perilaku [`SELFDESTRUCT`](https://eips.ethereum.org/EIPS/eip-6780). Kertas Kuning tidak mencakup semua perubahan ini. Spesifikasi yang paling mutakhir adalah [spesifikasi lapisan eksekusi Python](https://github.com/ethereum/execution-specs).
 
 ## 9 Model eksekusi {#9-execution-model}
 
@@ -32,21 +34,23 @@ Istilah [Turing-complete](https://en.wikipedia.org/wiki/Turing_completeness) ber
 
 Bagian ini memberikan dasar-dasar EVM dan bagaimana perbandingannya dengan model komputasi lainnya.
 
-[Mesin tumpukan (stack machine)](https://en.wikipedia.org/wiki/Stack_machine) adalah komputer yang menyimpan data perantara bukan di dalam register, melainkan di dalam [**tumpukan (stack)**](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>). Ini adalah arsitektur yang disukai untuk mesin virtual karena mudah diimplementasikan yang berarti bug, dan kerentanan keamanan, jauh lebih kecil kemungkinannya. Memori dalam tumpukan dibagi menjadi kata (word) 256-bit. Ini dipilih karena nyaman untuk operasi kriptografi inti Ethereum seperti proses hash Keccak-256 dan komputasi kurva eliptik. Ukuran maksimum tumpukan adalah 1024 item (1024 x 256 bit). Ketika opcode dieksekusi, mereka biasanya mendapatkan parameternya dari tumpukan. Ada opcode khusus untuk mengatur ulang elemen dalam tumpukan seperti `POP` (menghapus item dari atas tumpukan), `DUP_N` (menduplikasi item ke-N dalam tumpukan), dll.
+[Mesin tumpukan (stack machine)](https://en.wikipedia.org/wiki/Stack_machine) adalah komputer yang menyimpan data perantara bukan di register, melainkan di dalam [**tumpukan (stack)**](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>). Ini adalah arsitektur yang disukai untuk mesin virtual karena mudah diimplementasikan, yang berarti bug dan kerentanan keamanan jauh lebih kecil kemungkinannya. Memori dalam tumpukan dibagi menjadi kata (word) 256-bit. Ini dipilih karena memudahkan operasi kriptografi inti Ethereum seperti proses hash Keccak-256 dan komputasi kurva eliptik. Ukuran maksimum tumpukan adalah 1024 item (1024 x 256 bit). Ketika opcode dieksekusi, mereka biasanya mendapatkan parameternya dari tumpukan. Ada opcode khusus untuk mengatur ulang elemen dalam tumpukan seperti `POP` (menghapus item dari atas tumpukan), `DUP_N` (menduplikasi item ke-N dalam tumpukan), dll.
 
-EVM juga memiliki ruang volatil yang disebut **memori** yang digunakan untuk menyimpan data selama eksekusi. Memori ini diatur ke dalam kata 32-byte. Semua lokasi memori diinisialisasi ke nol. Jika Anda mengeksekusi kode [Yul](https://docs.soliditylang.org/en/latest/yul.html) ini untuk menambahkan sebuah kata ke memori, kode ini akan mengisi 32 byte memori dengan menambahkan nol pada ruang kosong di kata tersebut, yaitu, kode ini membuat satu kata - dengan nol di lokasi 0-29, 0x60 ke 30, dan 0xA7 ke 31.
+EVM juga memiliki ruang volatil yang disebut **memori** yang digunakan untuk menyimpan data selama eksekusi. Memori ini diatur ke dalam kata 32-byte. Semua lokasi memori diinisialisasi ke nol. Jika Anda mengeksekusi kode [Yul](https://docs.soliditylang.org/en/latest/yul.html) ini untuk menambahkan kata ke memori, itu akan mengisi 32 byte memori dengan menambahkan ruang kosong dalam kata dengan nol, yaitu, ia membuat satu kata - dengan nol di lokasi 0-29, 0x60 ke 30, dan 0xA7 ke 31.
 
 ```yul
 mstore(0, 0x60A7)
 ```
 
-`mstore` adalah satu dari tiga opcode yang disediakan EVM untuk berinteraksi dengan memori - opcode ini memuat sebuah kata ke dalam memori. Dua lainnya adalah `mstore8` yang memuat satu byte ke dalam memori, dan `mload` yang memindahkan sebuah kata dari memori ke tumpukan.
+`mstore` adalah salah satu dari tiga opcode yang disediakan EVM untuk berinteraksi dengan memori - ini memuat kata ke dalam memori. Dua lainnya adalah `mstore8` yang memuat satu byte ke dalam memori, dan `mload` yang memindahkan kata dari memori ke tumpukan.
 
-EVM juga memiliki model **penyimpanan (storage)** non-volatil terpisah yang dipertahankan sebagai bagian dari state sistem - memori ini diatur ke dalam array kata (berlawanan dengan array byte yang dapat dialamatkan kata di tumpukan). Penyimpanan ini adalah tempat kontrak menyimpan data persisten - sebuah kontrak hanya dapat berinteraksi dengan penyimpanannya sendiri. Penyimpanan diatur dalam pemetaan kunci-nilai.
+EVM juga memiliki model **penyimpanan (storage)** non-volatil terpisah yang dipertahankan sebagai bagian dari state sistem - memori ini memetakan kunci 256-bit ke nilai 256-bit (berbeda dengan memori, yang merupakan array yang dapat dialamatkan byte). Penyimpanan ini adalah tempat kontrak menyimpan data persisten - kontrak hanya dapat berinteraksi dengan penyimpanannya sendiri. Penyimpanan diatur dalam pemetaan nilai-kunci.
 
-Meskipun tidak disebutkan di bagian Kertas Kuning ini, ada baiknya juga untuk mengetahui bahwa ada jenis memori keempat. **Calldata** adalah memori baca-saja yang dapat dialamatkan byte yang digunakan untuk menyimpan nilai yang diteruskan dengan parameter `data` dari sebuah transaksi. EVM memiliki opcode khusus untuk mengelola `calldata`. `calldatasize` mengembalikan ukuran data. `calldataload` memuat data ke dalam tumpukan. `calldatacopy` menyalin data ke dalam memori.
+Sejak peningkatan Cancun, ada juga **penyimpanan sementara (transient storage)** ([EIP-1153](https://eips.ethereum.org/EIPS/eip-1153)). Ini diakses seperti penyimpanan, menggunakan opcode `TLOAD` dan `TSTORE`, tetapi dihapus pada akhir setiap transaksi.
 
-Standar [arsitektur Von Neumann](https://en.wikipedia.org/wiki/Von_Neumann_architecture) menyimpan kode dan data dalam memori yang sama. EVM tidak mengikuti standar ini karena alasan keamanan - berbagi memori volatil memungkinkan untuk mengubah kode program. Sebaliknya, kode disimpan ke penyimpanan.
+Meskipun tidak disebutkan di bagian Kertas Kuning ini, ada baiknya juga mengetahui bahwa ada satu jenis memori lagi. **Data panggilan (Calldata)** adalah memori baca-saja yang dapat dialamatkan byte yang digunakan untuk menyimpan nilai yang diteruskan dengan parameter `data` dari sebuah transaksi. EVM memiliki opcode khusus untuk mengelola `calldata`. `calldatasize` mengembalikan ukuran data. `calldataload` memuat data ke dalam tumpukan. `calldatacopy` menyalin data ke dalam memori.
+
+[Arsitektur Von Neumann](https://en.wikipedia.org/wiki/Von_Neumann_architecture) standar menyimpan kode dan data dalam memori yang sama. EVM tidak mengikuti standar ini karena alasan keamanan - berbagi memori volatil memungkinkan untuk mengubah kode program. Sebaliknya, kode disimpan secara tidak dapat diubah sebagai bagian dari akun kontrak di state dunia, terpisah dari memori dan penyimpanan kontrak.
 
 Hanya ada dua kasus di mana kode dieksekusi dari memori:
 
@@ -86,7 +90,7 @@ Fungsi _C<sub>mem</sub>_ didefinisikan dalam persamaan 328: _C<sub>mem</sub>(a) 
 [Baca lebih lanjut tentang gas](/developers/docs/gas/).
 ## 9.3 Lingkungan eksekusi {#93-execution-env}
 
-Lingkungan eksekusi adalah sebuah tuple, _I_, yang mencakup informasi yang bukan bagian dari state rantai blok atau EVM.
+Lingkungan eksekusi adalah sebuah tupel, _I_, yang mencakup informasi yang bukan bagian dari state rantai blok atau EVM.
 
 | Parameter       | Opcode untuk mengakses data                                                                                        | Kode Solidity untuk mengakses data         |
 | --------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
@@ -97,7 +101,7 @@ Lingkungan eksekusi adalah sebuah tuple, _I_, yang mencakup informasi yang bukan
 | _I<sub>s</sub>_ | [`CALLER`](https://www.evm.codes/#33)                                                                            | `msg.sender`                             |
 | _I<sub>v</sub>_ | [`CALLVALUE`](https://www.evm.codes/#34)                                                                         | `msg.value`                              |
 | _I<sub>b</sub>_ | [`CODECOPY`](https://www.evm.codes/#39)                                                                          | `address(this).code`                     |
-| _I<sub>H</sub>_ | Bidang header blok, seperti [`NUMBER`](https://www.evm.codes/#43) dan [`DIFFICULTY`](https://www.evm.codes/#44) | `block.number`, `block.difficulty`, dll. |
+| _I<sub>H</sub>_ | Bidang header blok, seperti [`NUMBER`](https://www.evm.codes/#43) dan [`PREVRANDAO`](https://www.evm.codes/#44) | `block.number`, `block.prevrandao`, dll. |
 | _I<sub>e</sub>_ | Kedalaman tumpukan panggilan untuk panggilan antar kontrak (termasuk pembuatan kontrak)                                |
 | _I<sub>w</sub>_ | Apakah EVM diizinkan untuk mengubah state, atau apakah ia berjalan secara statis                                                  |
 
@@ -107,8 +111,9 @@ Beberapa parameter lain diperlukan untuk memahami sisa bagian 9:
 | --------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | _σ_       | 2 (hlm. 2, persamaan 1) | State rantai blok                                                                                                                                                                                              |
 | _g_       | 9.3 (hlm. 14)          | Gas yang tersisa                                                                                                                                                                                                            |
-| _A_       | 6.1 (hlm. 9)           | Substate yang terakumulasi (perubahan yang dijadwalkan saat transaksi berakhir)                                                                                                                                                       |
-| _o_       | 9.3 (hlm. 14)          | Output - hasil yang dikembalikan dalam kasus transaksi internal (ketika satu kontrak memanggil kontrak lain) dan panggilan ke fungsi view (ketika Anda hanya meminta informasi, sehingga tidak perlu menunggu transaksi) |
+| _A_       | 6.1 (hlm. 9)           | Substate yang masih harus dibayar (perubahan yang dijadwalkan saat transaksi berakhir)                                                                                                                                                       |
+| _o_       | 9.3 (hlm. 14)          | Output - hasil yang dikembalikan dalam kasus transaksi internal (ketika satu kontrak memanggil kontrak lain) dan panggilan ke fungsi tampilan (ketika Anda hanya meminta informasi, jadi tidak perlu menunggu transaksi) |
+
 ## 9.4 Gambaran umum eksekusi {#94-execution-overview}
 
 Sekarang setelah kita memiliki semua pendahuluan, kita akhirnya dapat mulai mempelajari cara kerja EVM.
@@ -138,7 +143,7 @@ Karena ini adalah [mesin tumpukan](https://en.wikipedia.org/wiki/Stack_machine),
 
 ## 9.4.2 Penghentian Luar Biasa {#942-exceptional-halt}
 
-Bagian ini mendefinisikan fungsi _Z_, yang menentukan kapan kita mengalami penghentian abnormal. Ini adalah fungsi [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type), sehingga menggunakan [_∨_ untuk logika or (atau)](https://en.wikipedia.org/wiki/Logical_disjunction) dan [_∧_ untuk logika and (dan)](https://en.wikipedia.org/wiki/Logical_conjunction).
+Bagian ini mendefinisikan fungsi _Z_, yang menentukan kapan kita mengalami penghentian abnormal. Ini adalah fungsi [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type), sehingga menggunakan [_∨_ untuk logika atau (or)](https://en.wikipedia.org/wiki/Logical_disjunction) dan [_∧_ untuk logika dan (and)](https://en.wikipedia.org/wiki/Logical_conjunction).
 
 Kita mengalami penghentian luar biasa jika salah satu dari kondisi ini benar:
 
@@ -146,19 +151,19 @@ Kita mengalami penghentian luar biasa jika salah satu dari kondisi ini benar:
   Seperti yang kita lihat di bagian 9.2, _C_ adalah fungsi yang menentukan biaya gas. Tidak ada cukup gas yang tersisa untuk menutupi opcode berikutnya.
 
 - **_δ<sub>w</sub>=∅_**
-  Jika jumlah item yang dikeluarkan (popped) untuk sebuah opcode tidak terdefinisi, maka opcode itu sendiri tidak terdefinisi.
+  Jika jumlah item yang dikeluarkan untuk sebuah opcode tidak terdefinisi, maka opcode itu sendiri tidak terdefinisi.
 
 - **_|| μ<sub>s</sub> || < δ<sub>w</sub>_**
-  Underflow tumpukan, tidak cukup item di tumpukan untuk opcode saat ini.
+  Kekurangan tumpukan (stack underflow), tidak cukup item dalam tumpukan untuk opcode saat ini.
 
 - **_w = JUMP ∧ μ<sub>s</sub>[0]∉D(I<sub>b</sub>)_**
-  Opcode-nya adalah [`JUMP`](https://www.evm.codes/#56) dan alamatnya bukan [`JUMPDEST`](https://www.evm.codes/#5b). Lompatan (jump) _hanya_ valid jika tujuannya adalah [`JUMPDEST`](https://www.evm.codes/#5b).
+  Opcode-nya adalah [`JUMP`](https://www.evm.codes/#56) dan alamatnya bukan [`JUMPDEST`](https://www.evm.codes/#5b). Lompatan _hanya_ valid jika tujuannya adalah [`JUMPDEST`](https://www.evm.codes/#5b).
 
 - **_w = JUMPI ∧ μ<sub>s</sub>[1]≠0 ∧ μ<sub>s</sub>[0] ∉ D(I<sub>b</sub>)_**
   Opcode-nya adalah [`JUMPI`](https://www.evm.codes/#57), kondisinya benar (bukan nol) sehingga lompatan harus terjadi, dan alamatnya bukan [`JUMPDEST`](https://www.evm.codes/#5b). Lompatan _hanya_ valid jika tujuannya adalah [`JUMPDEST`](https://www.evm.codes/#5b).
 
 - **_w = RETURNDATACOPY ∧ μ<sub>s</sub>[1]+μ<sub>s</sub>[2]>|| μ<sub>o</sub> ||_**
-  Opcode-nya adalah [`RETURNDATACOPY`](https://www.evm.codes/#3e). Dalam opcode ini, elemen tumpukan _μ<sub>s</sub>[1]_ adalah offset untuk membaca dari buffer data kembalian, dan elemen tumpukan _μ<sub>s</sub>[2]_ adalah panjang data. Kondisi ini terjadi ketika Anda mencoba membaca melampaui akhir buffer data kembalian. Perhatikan bahwa tidak ada kondisi serupa untuk calldata atau untuk kode itu sendiri. Ketika Anda mencoba membaca melampaui akhir buffer tersebut, Anda hanya mendapatkan nol.
+  Opcode-nya adalah [`RETURNDATACOPY`](https://www.evm.codes/#3e). Dalam opcode ini, elemen tumpukan _μ<sub>s</sub>[1]_ adalah offset untuk membaca dari buffer data kembalian, dan elemen tumpukan _μ<sub>s</sub>[2]_ adalah panjang data. Kondisi ini terjadi ketika Anda mencoba membaca melampaui akhir buffer data kembalian. Perhatikan bahwa tidak ada kondisi serupa untuk data panggilan atau untuk kode itu sendiri. Ketika Anda mencoba membaca melampaui akhir buffer tersebut, Anda hanya mendapatkan nol.
 
 - **_|| μ<sub>s</sub> || - δ<sub>w</sub> + α<sub>w</sub> > 1024_**
 
@@ -170,17 +175,18 @@ Kita mengalami penghentian luar biasa jika salah satu dari kondisi ini benar:
   Fungsi _W(w,μ)_ didefinisikan kemudian dalam persamaan 159. _W(w,μ)_ bernilai benar jika salah satu dari kondisi ini benar:
 
   - **_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT}_**
-    Opcode ini mengubah state, baik dengan membuat kontrak baru, menyimpan nilai, atau menghancurkan kontrak saat ini.
+    Opcode ini mengubah state, baik dengan membuat kontrak baru, menyimpan nilai, atau menghancurkan kontrak saat ini. `TSTORE`, yang ditambahkan setelah versi Kertas Kuning ini, juga dilarang dalam konteks statis.
 
   - **_LOG0≤w ∧ w≤LOG4_**
     Jika kita dipanggil secara statis, kita tidak dapat memancarkan entri Log.
     Semua opcode Log berada dalam rentang antara [`LOG0` (A0)](https://www.evm.codes/#a0) dan [`LOG4` (A4)](https://www.evm.codes/#a4).
-    Angka setelah opcode Log menentukan berapa banyak topik yang dikandung entri Log tersebut.
+    Angka setelah opcode Log menentukan berapa banyak topik yang dikandung entri Log.
   - **_w=CALL ∧ μ<sub>s</sub>[2]≠0_**
-    Anda dapat memanggil kontrak lain saat Anda statis, tetapi jika Anda melakukannya, Anda tidak dapat mentransfer ETH ke dalamnya.
+    Anda dapat memanggil kontrak lain saat Anda statis, tetapi jika Anda melakukannya, Anda tidak dapat mentransfer ETH ke kontrak tersebut.
 
 - **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_**
   Anda tidak dapat menjalankan [`SSTORE`](https://www.evm.codes/#55) kecuali Anda memiliki lebih dari G<sub>callstipend</sub> (didefinisikan sebagai 2300 di Lampiran G) gas.
+
 ## 9.4.3 Validitas Tujuan Lompatan {#943-jump-dest-valid}
 
 Di sini kita secara formal mendefinisikan apa itu opcode [`JUMPDEST`](https://www.evm.codes/#5b). Kita tidak bisa hanya mencari nilai byte 0x5B, karena itu mungkin berada di dalam PUSH (dan karenanya merupakan data dan bukan opcode).
@@ -194,8 +200,8 @@ Dalam semua kasus lain, kita melihat sisa kode dengan pergi ke opcode berikutnya
 
 Fungsi penghentian _H_, dapat mengembalikan tiga jenis nilai.
 
-- Jika kita tidak berada dalam opcode penghentian (halt), kembalikan _∅_, himpunan kosong. Berdasarkan konvensi, nilai ini ditafsirkan sebagai Boolean salah (false).
-- Jika kita memiliki opcode penghentian yang tidak menghasilkan output (baik [`STOP`](https://www.evm.codes/#00) atau [`SELFDESTRUCT`](https://www.evm.codes/#ff)), kembalikan urutan byte berukuran nol sebagai nilai kembalian. Perhatikan bahwa ini sangat berbeda dari himpunan kosong. Nilai ini berarti bahwa EVM benar-benar berhenti, hanya saja tidak ada data kembalian untuk dibaca.
+- Jika kita tidak berada dalam opcode penghentian, kembalikan _∅_, himpunan kosong. Berdasarkan konvensi, nilai ini ditafsirkan sebagai Boolean salah (false).
+- Jika kita memiliki opcode penghentian yang tidak menghasilkan output (baik [`STOP`](https://www.evm.codes/#00) atau [`SELFDESTRUCT`](https://www.evm.codes/#ff)), kembalikan urutan byte berukuran nol sebagai nilai kembalian. Perhatikan bahwa ini sangat berbeda dari himpunan kosong. Nilai ini berarti bahwa EVM benar-benar berhenti, hanya saja tidak ada data kembalian untuk dibaca. (Perhatikan juga bahwa sejak [EIP-6780](https://eips.ethereum.org/EIPS/eip-6780), `SELFDESTRUCT` hanya menghapus kontrak jika dipanggil dalam transaksi yang sama yang membuat kontrak tersebut. Jika tidak, ia hanya mentransfer ETH kontrak.)
 - Jika kita memiliki opcode penghentian yang menghasilkan output (baik [`RETURN`](https://www.evm.codes/#f3) atau [`REVERT`](https://www.evm.codes/#fd)), kembalikan urutan byte yang ditentukan oleh opcode tersebut. Urutan ini diambil dari memori, nilai di bagian atas tumpukan (_μ<sub>s</sub>[0]_) adalah byte pertama, dan nilai setelahnya (_μ<sub>s</sub>[1]_) adalah panjangnya.
 
 ## H.2 Set instruksi {#h2-instruction-set}
@@ -266,4 +272,4 @@ Notasi matematika sangat presisi dan telah memungkinkan Kertas Kuning untuk mene
 - Pemrogram memahami kode komputer.
   Mereka mungkin memahami atau tidak memahami notasi matematika.
 
-Mungkin karena alasan ini, [spesifikasi lapisan konsensus](https://github.com/ethereum/consensus-specs/blob/master/tests/core/pyspec/README.md) yang lebih baru ditulis dalam Python. Ada [spesifikasi lapisan eksekusi dalam Python](https://ethereum.github.io/execution-specs), tetapi belum lengkap. Sampai dan kecuali seluruh Kertas Kuning juga diterjemahkan ke Python atau bahasa serupa, Kertas Kuning akan terus digunakan, dan sangat membantu untuk dapat membacanya.
+Karena alasan ini, [spesifikasi lapisan konsensus](https://github.com/ethereum/consensus-specs) ditulis dalam Python, begitu pula [spesifikasi lapisan eksekusi](https://github.com/ethereum/execution-specs). Spesifikasi lapisan eksekusi Python sekarang menjadi referensi yang dipelihara untuk cara kerja EVM, dan ini mencakup perubahan dari peningkatan yang tidak dicakup oleh Kertas Kuning. Kertas Kuning masih merupakan deskripsi formal yang berguna, dan mampu membacanya membantu Anda membaca makalah matematika terkait lainnya.

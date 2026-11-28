@@ -13,11 +13,13 @@ published: 2022-05-15
 
 ## 哪一個版本的黃皮書？ {#which-yellow-paper}
 
-就像以太坊中的幾乎所有事物一樣，黃皮書也會隨著時間演進。為了能夠參考特定版本，我上傳了[撰寫本文時的當前版本](https://ethereum.github.io/yellowpaper/paper.pdf)。我使用的章節、頁碼和方程式編號都將參考該版本。建議在閱讀本文件時，在另一個視窗中開啟它。
+就像以太坊中的幾乎所有其他事物一樣，黃皮書也會隨著時間演進。為了能夠參考特定版本，我上傳了[撰寫本文時的最新版本](yellow-paper-berlin.pdf)（柏林版本，2022 年）。本教學中的章節、頁碼和方程式編號均參考該版本。[最新版本](https://ethereum.github.io/yellowpaper/paper.pdf)自那時起已經更新，因此其編號可能會有所不同。在閱讀本文件時，建議在另一個視窗中開啟它。
 
 ### 為什麼是 EVM？ {#why-the-evm}
 
-最初的黃皮書是在以太坊開發之初撰寫的。它描述了最初用於保護網路安全的基於工作量證明 (PoW) 的共識機制。然而，以太坊在 2022 年 9 月關閉了工作量證明，並開始使用基於權益證明 (PoS) 的共識機制。本教學將重點介紹黃皮書中定義以太坊虛擬機的部分。EVM 並未因過渡到權益證明而改變（除了 DIFFICULTY 操作碼的傳回值之外）。
+最初的黃皮書是在以太坊開發之初撰寫的。它描述了最初用於保護網路安全、基於工作量證明 (PoW) 的共識機制。然而，以太坊在 2022 年 9 月關閉了工作量證明，並開始使用基於權益證明 (PoS) 的共識。本教學將重點介紹黃皮書中定義以太坊虛擬機 (EVM) 的部分。向權益證明的過渡幾乎沒有改變 EVM：`DIFFICULTY` 操作碼 (0x44) 被重新命名為 [`PREVRANDAO`](https://eips.ethereum.org/EIPS/eip-4399)，現在會從信標鏈傳回一個隨機值。
+
+後續的網路升級確實改變了 EVM。它們新增了操作碼，例如 [`PUSH0`](https://eips.ethereum.org/EIPS/eip-3855)、[`TLOAD` 和 `TSTORE`](https://eips.ethereum.org/EIPS/eip-1153)（暫時性儲存）、[`MCOPY`](https://eips.ethereum.org/EIPS/eip-5656)、[`BLOBHASH`](https://eips.ethereum.org/EIPS/eip-4844) 以及 [`BLOBBASEFEE`](https://eips.ethereum.org/EIPS/eip-7516)，並改變了 [`SELFDESTRUCT`](https://eips.ethereum.org/EIPS/eip-6780) 的行為。黃皮書並未涵蓋所有這些變更。最新的規範是 [Python 執行層規範](https://github.com/ethereum/execution-specs)。
 
 ## 9 執行模型 {#9-execution-model}
 
@@ -32,28 +34,30 @@ _系統狀態 (system state)_ 一詞包含了運行系統所需了解的所有�
 
 本節介紹了 EVM 的基礎知識，以及它與其他運算模型的比較。
 
-[堆疊機 (stack machine)](https://en.wikipedia.org/wiki/Stack_machine)是一種不將中間資料儲存在暫存器，而是儲存在[**堆疊 (stack)**](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>)中的電腦。這是虛擬機的首選架構，因為它易於實作，這意味著出現錯誤和安全漏洞的可能性要小得多。堆疊中的記憶體被劃分為 256 位元的字組 (words)。選擇這種設計是因為它便於進行以太坊的核心密碼學操作，例如 Keccak-256 雜湊運算和橢圓曲線計算。堆疊的最大大小為 1024 個項目（1024 x 256 位元）。執行操作碼時，它們通常會從堆疊中取得參數。有專門用於重新組織堆疊中元素的操作碼，例如 `POP`（從堆疊頂部移除項目）、`DUP_N`（複製堆疊中的第 N 個項目）等。
+[堆疊機 (stack machine)](https://en.wikipedia.org/wiki/Stack_machine) 是一種不將中間資料儲存在暫存器中，而是儲存在[**堆疊 (stack)**](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>) 中的電腦。這是虛擬機的首選架構，因為它易於實作，這意味著出現錯誤和安全漏洞的可能性要小得多。堆疊中的記憶體被劃分為 256 位元的字組 (words)。選擇這個大小是因為它方便進行以太坊的核心密碼學操作，例如 Keccak-256 雜湊運算和橢圓曲線計算。堆疊的最大大小為 1024 個項目（1024 x 256 位元）。當操作碼執行時，它們通常從堆疊中取得參數。有一些專門用於重新組織堆疊中元素的操作碼，例如 `POP`（從堆疊頂部移除項目）、`DUP_N`（複製堆疊中的第 N 個項目）等。
 
-EVM 還有一個稱為**記憶體 (memory)** 的揮發性空間，用於在執行期間儲存資料。此記憶體被組織成 32 位元組的字組。所有記憶體位置都被初始化為零。如果你執行這段 [Yul](https://docs.soliditylang.org/en/latest/yul.html) 程式碼將一個字組加入記憶體中，它會透過用零填補字組中的空白空間來填滿 32 個位元組的記憶體，也就是說，它會建立一個字組——在位置 0-29 填入零，在 30 填入 0x60，在 31 填入 0xA7。
+EVM 還有一個稱為**記憶體 (memory)** 的揮發性空間，用於在執行期間儲存資料。此記憶體被組織成 32 位元組的字組。所有記憶體位置都被初始化為零。如果你執行這段 [Yul](https://docs.soliditylang.org/en/latest/yul.html) 程式碼將一個字組加入記憶體中，它將透過用零填補字組中的空白空間來填滿 32 位元組的記憶體，也就是說，它建立了一個字組——在位置 0-29 為零，0x60 在位置 30，0xA7 在位置 31。
 
 ```yul
 mstore(0, 0x60A7)
 ```
 
-`mstore` 是 EVM 提供的三個用於與記憶體互動的操作碼之一——它將一個字組載入記憶體中。另外兩個是將單一位元組載入記憶體的 `mstore8`，以及將字組從記憶體移至堆疊的 `mload`。
+`mstore` 是 EVM 提供的三個用於與記憶體互動的操作碼之一——它將一個字組載入記憶體中。另外兩個是 `mstore8`，它將單個位元組載入記憶體中，以及 `mload`，它將一個字組從記憶體移動到堆疊中。
 
-EVM 還有一個獨立的非揮發性**儲存 (storage)** 模型，作為系統狀態的一部分進行維護——此記憶體被組織成字組陣列（相對於堆疊中可按字組定址的位元組陣列）。這個儲存空間是合約保存持久性資料的地方——合約只能與自己的儲存空間互動。儲存空間以鍵值對應 (key-value mappings) 的形式組織。
+EVM 還有一個獨立的非揮發性**儲存 (storage)** 模型，作為系統狀態的一部分進行維護——此記憶體將 256 位元的金鑰對應到 256 位元的值（與記憶體相反，記憶體是可位元組定址的陣列）。這個儲存空間是合約保存持久性資料的地方——合約只能與自己的儲存空間互動。儲存空間以鍵值對應 (key-value mappings) 的形式組織。
 
-雖然黃皮書的這一節沒有提到，但了解還有第四種類型的記憶體也是很有用的。**呼叫資料 (Calldata)** 是可按位元組定址的唯讀記憶體，用於儲存隨交易的 `data` 參數傳遞的值。EVM 有專門管理 `calldata` 的操作碼。`calldatasize` 傳回資料的大小。`calldataload` 將資料載入堆疊中。`calldatacopy` 將資料複製到記憶體中。
+自坎昆升級以來，還出現了**暫時性儲存 (transient storage)**（[EIP-1153](https://eips.ethereum.org/EIPS/eip-1153)）。它的存取方式類似於儲存空間，使用 `TLOAD` 和 `TSTORE` 操作碼，但它會在每筆交易結束時被清除。
 
-標準的[馮·紐曼架構 (Von Neumann architecture)](https://en.wikipedia.org/wiki/Von_Neumann_architecture)將程式碼和資料儲存在同一個記憶體中。基於安全考量，EVM 並未遵循此標準——共用揮發性記憶體會使得更改程式碼成為可能。相反地，程式碼被儲存到儲存空間 (storage) 中。
+雖然黃皮書的本節沒有提到，但了解還有一種記憶體類型也是很有用的。**呼叫資料 (Calldata)** 是可位元組定址的唯讀記憶體，用於儲存與交易的 `data` 參數一起傳遞的值。EVM 有特定的操作碼來管理 `calldata`。`calldatasize` 傳回資料的大小。`calldataload` 將資料載入堆疊中。`calldatacopy` 將資料複製到記憶體中。
 
-只有在兩種情況下，程式碼會從記憶體中執行：
+標準的[馮·紐曼架構 (Von Neumann architecture)](https://en.wikipedia.org/wiki/Von_Neumann_architecture) 將程式碼和資料儲存在同一個記憶體中。出於安全原因，EVM 不遵循此標準——共用揮發性記憶體使得更改程式碼成為可能。相反地，程式碼作為世界狀態中合約帳戶的一部分被不可變地儲存，與記憶體和合約的儲存空間分開。
+
+只有兩種情況會從記憶體中執行程式碼：
 
 - 當一個合約建立另一個合約時（使用 [`CREATE`](https://www.evm.codes/#f0) 或 [`CREATE2`](https://www.evm.codes/#f5)），合約建構函式的程式碼來自記憶體。
-- 在建立*任何*合約的過程中，建構函式程式碼會執行，然後傳回實際合約的程式碼，這同樣來自記憶體。
+- 在建立_任何_合約期間，建構函式程式碼會執行，然後傳回實際合約的程式碼，這也是來自記憶體。
 
-異常執行 (exceptional execution) 一詞指的是導致目前合約停止執行的例外狀況。
+異常執行 (exceptional execution) 一詞是指導致目前合約執行停止的異常情況。
 
 ## 9.2 費用總覽 {#92-fees-overview}
 
@@ -88,7 +92,7 @@ EVM 還有一個獨立的非揮發性**儲存 (storage)** 模型，作為系統�
 
 執行環境是一個元組 (tuple) _I_，其中包含不屬於區塊鏈狀態或 EVM 的資訊。
 
-| 參數 | 存取資料的操作碼 | 存取資料的 Solidity 程式碼 |
+| 參數       | 存取資料的操作碼                                                                                        | 存取資料的 Solidity 程式碼         |
 | --------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
 | _I<sub>a</sub>_ | [`ADDRESS`](https://www.evm.codes/#30)                                                                           | `address(this)`                          |
 | _I<sub>o</sub>_ | [`ORIGIN`](https://www.evm.codes/#32)                                                                            | `tx.origin`                              |
@@ -97,18 +101,19 @@ EVM 還有一個獨立的非揮發性**儲存 (storage)** 模型，作為系統�
 | _I<sub>s</sub>_ | [`CALLER`](https://www.evm.codes/#33)                                                                            | `msg.sender`                             |
 | _I<sub>v</sub>_ | [`CALLVALUE`](https://www.evm.codes/#34)                                                                         | `msg.value`                              |
 | _I<sub>b</sub>_ | [`CODECOPY`](https://www.evm.codes/#39)                                                                          | `address(this).code`                     |
-| _I<sub>H</sub>_ | 區塊頭欄位，例如 [`NUMBER`](https://www.evm.codes/#43) 和 [`DIFFICULTY`](https://www.evm.codes/#44) | `block.number`、`block.difficulty` 等 |
+| _I<sub>H</sub>_ | 區塊頭欄位，例如 [`NUMBER`](https://www.evm.codes/#43) 和 [`PREVRANDAO`](https://www.evm.codes/#44) | `block.number`、`block.prevrandao` 等 |
 | _I<sub>e</sub>_ | 合約間呼叫（包含合約建立）的呼叫堆疊深度                                |
-| _I<sub>w</sub>_ | EVM 是否被允許改變狀態，或者它是否在靜態執行                                                  |
+| _I<sub>w</sub>_ | EVM 是否被允許改變狀態，或者它是否以靜態方式運行                                                  |
 
 要理解第 9 節的其餘部分，還需要了解其他幾個參數：
 
-| 參數 | 定義於章節 | 意義 |
+| 參數 | 定義於章節   | 意義                                                                                                                                                                                                                  |
 | --------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| _σ_       | 2（第 2 頁，方程式 1） | 區塊鏈的狀態 |
-| _g_       | 9.3（第 14 頁）          | 剩餘燃料 |
-| _A_       | 6.1（第 9 頁）           | 累計子狀態（排定在交易結束時發生的變更） |
-| _o_       | 9.3（第 14 頁）          | 輸出 - 在內部交易（當一個合約呼叫另一個合約時）和呼叫 view 函式（當你只是要求資訊，所以不需要等待交易時）的情況下傳回的結果 |
+| _σ_       | 2（第 2 頁，方程式 1） | 區塊鏈的狀態                                                                                                                                                                                              |
+| _g_       | 9.3（第 14 頁）          | 剩餘燃料                                                                                                                                                                                                            |
+| _A_       | 6.1（第 9 頁）           | 累計子狀態（排定在交易結束時發生的變更）                                                                                                                                                       |
+| _o_       | 9.3（第 14 頁）          | 輸出——在內部交易（當一個合約呼叫另一個合約時）和呼叫 view 函式（當你只是要求資訊，因此不需要等待交易時）的情況下傳回的結果 |
+
 ## 9.4 執行總覽 {#94-execution-overview}
 
 現在我們已經具備了所有的基礎知識，終於可以開始探討 EVM 的運作方式了。
@@ -138,7 +143,7 @@ EVM 還有一個獨立的非揮發性**儲存 (storage)** 模型，作為系統�
 
 ## 9.4.2 異常停止 {#942-exceptional-halt}
 
-本節定義了 _Z_ 函數，它指定了我們何時會發生異常終止。這是一個[布林 (Boolean)](https://en.wikipedia.org/wiki/Boolean_data_type) 函數，因此它使用 [_∨_ 表示邏輯或 (logical or)](https://en.wikipedia.org/wiki/Logical_disjunction) 以及 [_∧_ 表示邏輯和 (logical and)](https://en.wikipedia.org/wiki/Logical_conjunction)。
+本節定義了 _Z_ 函數，它指定了我們何時會發生異常終止。這是一個[布林 (Boolean)](https://en.wikipedia.org/wiki/Boolean_data_type) 函數，因此它使用 [_∨_ 表示邏輯或 (logical or)](https://en.wikipedia.org/wiki/Logical_disjunction) 以及 [_∧_ 表示邏輯及 (logical and)](https://en.wikipedia.org/wiki/Logical_conjunction)。
 
 如果以下任何條件為真，我們就會發生異常停止：
 
@@ -146,10 +151,10 @@ EVM 還有一個獨立的非揮發性**儲存 (storage)** 模型，作為系統�
   正如我們在第 9.2 節中看到的，_C_ 是指定燃料成本的函數。沒有足夠的剩餘燃料來支付下一個操作碼。
 
 - **_δ<sub>w</sub>=∅_**
-  如果操作碼彈出的項目數量未定義，則操作碼本身也未定義。
+  如果一個操作碼彈出的項目數量未定義，那麼該操作碼本身就是未定義的。
 
 - **_|| μ<sub>s</sub> || < δ<sub>w</sub>_**
-  堆疊下溢 (Stack underflow)，堆疊中沒有足夠的項目供目前的操作碼使用。
+  堆疊反向溢位 (Stack underflow)，堆疊中沒有足夠的項目供目前的操作碼使用。
 
 - **_w = JUMP ∧ μ<sub>s</sub>[0]∉D(I<sub>b</sub>)_**
   操作碼是 [`JUMP`](https://www.evm.codes/#56)，且地址不是 [`JUMPDEST`](https://www.evm.codes/#5b)。跳轉_只有_在目的地是 [`JUMPDEST`](https://www.evm.codes/#5b) 時才有效。
@@ -158,29 +163,30 @@ EVM 還有一個獨立的非揮發性**儲存 (storage)** 模型，作為系統�
   操作碼是 [`JUMPI`](https://www.evm.codes/#57)，條件為真（非零）因此應該發生跳轉，且地址不是 [`JUMPDEST`](https://www.evm.codes/#5b)。跳轉_只有_在目的地是 [`JUMPDEST`](https://www.evm.codes/#5b) 時才有效。
 
 - **_w = RETURNDATACOPY ∧ μ<sub>s</sub>[1]+μ<sub>s</sub>[2]>|| μ<sub>o</sub> ||_**
-  操作碼是 [`RETURNDATACOPY`](https://www.evm.codes/#3e)。在這個操作碼中，堆疊元素 _μ<sub>s</sub>[1]_ 是在傳回資料緩衝區中讀取的偏移量，而堆疊元素 _μ<sub>s</sub>[2]_ 是資料的長度。當你嘗試讀取超出傳回資料緩衝區末端時，就會發生此條件。請注意，對於呼叫資料 (calldata) 或程式碼本身並沒有類似的條件。當你嘗試讀取超出這些緩衝區的末端時，你只會得到零。
+  操作碼是 [`RETURNDATACOPY`](https://www.evm.codes/#3e)。在這個操作碼中，堆疊元素 _μ<sub>s</sub>[1]_ 是從傳回資料緩衝區讀取的偏移量，而堆疊元素 _μ<sub>s</sub>[2]_ 是資料的長度。當你嘗試讀取超出傳回資料緩衝區末端時，就會發生此條件。請注意，對於呼叫資料或程式碼本身並沒有類似的條件。當你嘗試讀取超出這些緩衝區的末端時，你只會得到零。
 
 - **_|| μ<sub>s</sub> || - δ<sub>w</sub> + α<sub>w</sub> > 1024_**
 
-  堆疊溢位 (Stack overflow)。如果執行操作碼會導致堆疊超過 1024 個項目，則中止。
+  堆疊溢位。如果執行該操作碼將導致堆疊超過 1024 個項目，則中止。
 
 - **_¬I<sub>w</sub> ∧ W(w,μ)_**
-  我們是否在靜態執行（[¬ 是否定](https://en.wikipedia.org/wiki/Negation)，而當我們被允許改變區塊鏈狀態時 _I<sub>w</sub>_ 為真）？如果是這樣，而且我們正在嘗試改變狀態的操作，它就無法發生。
+  我們是否以靜態方式運行（[¬ 是否定](https://en.wikipedia.org/wiki/Negation)，當我們被允許改變區塊鏈狀態時 _I<sub>w</sub>_ 為真）？如果是這樣，而我們正嘗試進行改變狀態的操作，它就無法發生。
 
   函數 _W(w,μ)_ 在後面的方程式 159 中定義。如果以下條件之一為真，則 _W(w,μ)_ 為真：
 
-  - **_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT\}_**
-    這些操作碼會改變狀態，無論是透過建立新合約、儲存值，還是銷毀目前的合約。
+  - **_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT}_**
+    這些操作碼會改變狀態，無論是透過建立新合約、儲存值還是銷毀目前合約。在此版本黃皮書之後新增的 `TSTORE`，在靜態上下文中也是被禁止的。
 
   - **_LOG0≤w ∧ w≤LOG4_**
-    如果我們被靜態呼叫，我們就無法發出日誌條目。
+    如果我們被靜態呼叫，我們就不能發出日誌條目。
     日誌操作碼都在 [`LOG0` (A0)](https://www.evm.codes/#a0) 和 [`LOG4` (A4)](https://www.evm.codes/#a4) 之間的範圍內。
     日誌操作碼後面的數字指定了日誌條目包含多少個主題 (topics)。
   - **_w=CALL ∧ μ<sub>s</sub>[2]≠0_**
-    當你是靜態時，你可以呼叫另一個合約，但如果你這樣做，你不能轉帳 ETH 給它。
+    當你處於靜態時，你可以呼叫另一個合約，但如果你這樣做，你不能向它轉帳 ETH。
 
 - **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_**
-  除非你有超過 G<sub>callstipend</sub>（在附錄 G 中定義為 2300）的燃料，否則你無法執行 [`SSTORE`](https://www.evm.codes/#55)。
+  除非你有超過 G<sub>callstipend</sub>（在附錄 G 中定義為 2300）的燃料，否則你不能執行 [`SSTORE`](https://www.evm.codes/#55)。
+
 ## 9.4.3 跳轉目的地有效性 {#943-jump-dest-valid}
 
 在這裡，我們正式定義什麼是 [`JUMPDEST`](https://www.evm.codes/#5b) 操作碼。我們不能只尋找位元組值 0x5B，因為它可能在 PUSH 內部（因此是資料而不是操作碼）。
@@ -194,8 +200,8 @@ EVM 還有一個獨立的非揮發性**儲存 (storage)** 模型，作為系統�
 
 停止函數 _H_ 可以傳回三種類型的值。
 
-- 如果我們不在停止操作碼中，則傳回 _∅_，即空集合。按照慣例，此值被解釋為布林值 false。
-- 如果我們有一個不產生輸出的停止操作碼（[`STOP`](https://www.evm.codes/#00) 或 [`SELFDESTRUCT`](https://www.evm.codes/#ff)），則傳回一個大小為零位元組的序列作為傳回值。請注意，這與空集合非常不同。這個值意味著 EVM 確實停止了，只是沒有傳回資料可讀取。
+- 如果我們不在停止操作碼中，則傳回 _∅_，即空集合。按照慣例，此值被解釋為布林值假 (false)。
+- 如果我們有一個不產生輸出的停止操作碼（[`STOP`](https://www.evm.codes/#00) 或 [`SELFDESTRUCT`](https://www.evm.codes/#ff)），則傳回一個大小為零位元組的序列作為傳回值。請注意，這與空集合非常不同。這個值意味著 EVM 確實停止了，只是沒有傳回資料可讀取。（另請注意，自 [EIP-6780](https://eips.ethereum.org/EIPS/eip-6780) 以來，`SELFDESTRUCT` 只有在建立合約的同一筆交易中被呼叫時才會刪除合約。否則，它只會轉帳合約的 ETH。）
 - 如果我們有一個確實產生輸出的停止操作碼（[`RETURN`](https://www.evm.codes/#f3) 或 [`REVERT`](https://www.evm.codes/#fd)），則傳回由該操作碼指定的位元組序列。這個序列取自記憶體，堆疊頂部的值 (_μ<sub>s</sub>[0]_) 是第一個位元組，其後的值 (_μ<sub>s</sub>[1]_) 是長度。
 
 ## H.2 指令集 {#h2-instruction-set}
@@ -260,10 +266,10 @@ _α_ 是我們推回的值數量。在這種情況下是一個，即總和。
 至此，EVM 已被完整定義。
 ## 結論 {#conclusion}
 
-數學符號是精確的，這使得黃皮書能夠指定以太坊的每一個細節。然而，它確實有一些缺點：
+數學符號是精確的，並使得黃皮書能夠指定以太坊的每一個細節。然而，它確實有一些缺點：
 
-- 它只能被人類理解，這意味著[合規性測試 (compliance tests)](https://github.com/ethereum/tests)必須手動撰寫。
+- 它只能被人類理解，這意味著[合規性測試](https://github.com/ethereum/tests)必須手動編寫。
 - 程式設計師了解電腦程式碼。
   他們可能了解也可能不了解數學符號。
 
-也許因為這些原因，較新的[共識層規範](https://github.com/ethereum/consensus-specs/blob/master/tests/core/pyspec/README.md)是用 Python 撰寫的。雖然有[用 Python 撰寫的執行層規範](https://ethereum.github.io/execution-specs)，但它們並不完整。除非整份黃皮書也被翻譯成 Python 或類似的語言，否則黃皮書將繼續發揮作用，而能夠閱讀它將會很有幫助。
+基於這些原因，[共識層規範](https://github.com/ethereum/consensus-specs)是用 Python 編寫的，[執行層規範](https://github.com/ethereum/execution-specs)也是如此。Python 執行層規範現在是 EVM 運作方式的維護參考，它包含了黃皮書未涵蓋的升級變更。黃皮書仍然是一個有用的正式描述，能夠閱讀它有助於你閱讀其他相關的數學論文。

@@ -102,13 +102,22 @@ _Data<sub>private</sub>_ 中的這些欄位：
 
 ### 工具 {#tools}
 
-對於客戶端程式碼，我們將使用 [Vite](https://vite.dev/)、[React](https://react.dev/)、[Viem](https://viem.sh/) 和 [Wagmi](https://wagmi.sh/)。這些是業界標準工具；如果您不熟悉它們，可以使用[本教學](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)。
+對於客戶端程式碼，我們將使用 [Vite](https://vite.dev/)、[React](https://react.dev/)、[Viem](https://viem.sh/) 和 [Wagmi](https://wagmi.sh/)。這些是業界標準的工具；如果您對它們不熟悉，可以使用[本教學](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)。
 
-伺服器的大部分內容是使用 [Node](https://nodejs.org/en) 以 JavaScript 撰寫的。零知識部分是用 [Noir](https://noir-lang.org/) 撰寫的。我們需要 `1.0.0-beta.10` 版本，因此在您[按照指示安裝 Noir](https://noir-lang.org/docs/getting_started/quick_start) 後，請執行：
+伺服器的大部分程式碼是使用 [Node](https://nodejs.org/en) 以 JavaScript 編寫的。零知識部分則以 [Noir](https://noir-lang.org/) 編寫。我們需要 `1.0.0-beta.10` 版本，因此在您[按照指示安裝 Noir](https://noir-lang.org/docs/getting_started/quick_start) 後，請執行：
 
-```
+```sh
 noirup -v 1.0.0-beta.10
 ```
+
+為了建立可以在鏈上驗證的證明（在第 3 階段），我們還需要 [Barretenberg](https://barretenberg.aztec.network/docs/getting_started) (`bb`)，即證明後端，其版本必須與此 Noir 版本相符。安裝 `bbup`（Barretenberg 安裝程式），然後使用它來安裝 `bb` 的 `0.87.0` 版本（如果找不到 `bbup`，請開啟新的終端機，以便更新後的 `PATH` 生效）：
+
+```sh
+curl -L https://raw.githubusercontent.com/AztecProtocol/aztec-packages/refs/heads/next/barretenberg/bbup/install | bash
+bbup -v 0.87.0
+```
+
+本教學已使用 `nargo` 1.0.0-beta.10、`bb` 0.87.0 以及（在伺服器中）`@noir-lang/noir_js` 1.0.0-beta.11 進行測試。請勿使用較新的版本：Noir 程式碼無法使用目前的 1.0 候選版本進行編譯，且目前版本的 `bb` 無法讀取由 `nargo` 1.0.0-beta.10 編譯的電路，並且不再接受 `--oracle_hash` 標誌。
 
 我們使用的區塊鏈是 `anvil`，這是一個本地測試區塊鏈，屬於 [Foundry](https://getfoundry.sh/introduction/installation) 的一部分。
 
@@ -331,14 +340,14 @@ ${accounts.map(accountInProverToml).reduce((a,b) => a+b, "")}
 use std::hash::pedersen_hash;
 ```
 
-[Pedersen 雜湊](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/)隨 [Noir 標準函式庫](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash)提供。零知識證明通常使用此雜湊函數。與標準雜湊函數相比，它在[算術電路](https://rareskills.io/post/arithmetic-circuit)內部計算要容易得多。
+[Pedersen 雜湊](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/)由 [Noir 標準函式庫](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash)提供。零知識證明通常使用此雜湊函數。與標準雜湊函數相比，它在[算術電路](https://rareskills.io/post/arithmetic-circuit)內部計算要容易得多。
 
 ```
 use keccak256::keccak256;
 use dep::ecrecover;
 ```
 
-這兩個函數是外部函式庫，定義在 [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml) 中。它們正如其名，一個是計算 [keccak256 雜湊](https://emn178.github.io/online-tools/keccak_256.html)的函數，另一個是驗證以太坊簽章並恢復簽署者以太坊地址的函數。
+這兩個函數是外部函式庫，定義在 [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml) 中。它們的功能正如其名，一個是計算 [keccak256 雜湊](https://emn178.github.io/online-tools/keccak_256.html)的函數，另一個是驗證以太坊簽章並恢復簽署者以太坊地址的函數。
 
 ```
 global ACCOUNT_NUMBER : u32 = 5;
@@ -365,7 +374,7 @@ global ASCII_MESSAGE_LENGTH : [u8; 3] = [0x31, 0x30, 0x30];
 global HASH_BUFFER_SIZE : u32 = 26+3+MESSAGE_LENGTH;
 ```
 
-[EIP-191 簽章](https://eips.ethereum.org/EIPS/eip-191)需要一個帶有 26 位元組前綴的緩衝區，後跟 ASCII 格式的訊息長度，最後是訊息本身。
+[EIP-191 簽章](https://eips.ethereum.org/EIPS/eip-191)要求緩衝區具有 26 位元組的前綴，接著是 ASCII 格式的訊息長度，最後是訊息本身。
 
 ```
 struct Account {
@@ -401,32 +410,32 @@ fn flatten_account(account: Account) -> [Field; FLAT_ACCOUNT_FIELDS] {
     ];
 ```
 
-陣列中的第一個值是帳戶地址。第二個包含餘額和隨機數。`.into()` 呼叫將數字更改為其所需的資料類型。`account.nonce` 是一個 `u32` 值，但要將其加到 `account.balance << 32`（一個 `u128` 值）中，它需要是一個 `u128`。這就是第一個 `.into()`。第二個將 `u128` 結果轉換為 `Field`，以便它適合放入陣列中。
+陣列中的第一個值是帳戶地址。第二個值包含餘額和隨機數。`.into()` 呼叫將數字轉換為其所需的資料類型。`account.nonce` 是一個 `u32` 值，但要將其加到 `account.balance << 32`（一個 `u128` 值）中，它必須是一個 `u128`。這就是第一個 `.into()` 的作用。第二個將 `u128` 結果轉換為 `Field`，以便它能放入陣列中。
 
 ```
     flat
 }
 ```
 
-在 Noir 中，函數只能在最後回傳一個值（沒有提早回傳）。要指定回傳值，您可以在函數的右括號之前對其進行求值。
+在 Noir 中，函數只能在最後回傳一個值（沒有提早回傳）。要指定回傳值，您需要在函數的右括號之前對其進行求值。
 
 ```
 fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] {
 ```
 
-此函數將帳戶陣列轉換為 `Field` 陣列，可用作 Petersen 雜湊的輸入。
+此函數將帳戶陣列轉換為 `Field` 陣列，該陣列可用作 Pedersen 雜湊的輸入。
 
 ```
     let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
 ```
 
-這就是您指定可變變數（即_不是_常數）的方式。Noir 中的變數必須始終具有值，因此我們將此變數初始化為全零。
+這是指定可變變數（即_不是_常數）的方法。Noir 中的變數必須始終具有值，因此我們將此變數初始化為全零。
 
 ```
     for i in 0..ACCOUNT_NUMBER {
 ```
 
-這是一個 `for` 迴圈。請注意，邊界是常數。Noir 迴圈必須在編譯時知道其邊界。原因是算術電路不支援流程控制。在處理 `for` 迴圈時，編譯器只需將其中的程式碼放置多次，每次迭代一次。
+這是一個 `for` 迴圈。請注意，邊界是常數。Noir 迴圈的邊界必須在編譯時已知。原因是算術電路不支援流程控制。在處理 `for` 迴圈時，編譯器只是將其中的程式碼放入多次，每次迭代一次。
 
 ```
         let fields = flatten_account(accounts[i]);
@@ -456,13 +465,13 @@ fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
     }
 ```
 
-此函數尋找具有特定地址的帳戶。此函數在標準程式碼中效率極低，因為即使找到地址後，它也會迭代所有帳戶。
+此函數尋找具有特定地址的帳戶。在標準程式碼中，此函數的效率會非常低，因為即使找到了地址，它也會迭代所有帳戶。
 
 然而，在零知識證明中，沒有流程控制。如果我們需要檢查一個條件，我們必須每次都檢查它。
 
-類似的情況也發生在 `if` 語句中。上面迴圈中的 `if` 語句被轉換為這些數學語句。
+類似的情況也發生在 `if` 語句中。上述迴圈中的 `if` 語句被轉換為這些數學語句。
 
-_condition<sub>result</sub> = accounts[i].address == address_ // 如果相等則為 1，否則為 0
+_condition<sub>result</sub> = accounts[i].address == address_ // 如果它們相等則為 1，否則為 0
 
 _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result</sub>)\*account<sub>old</sub>_
 
@@ -479,7 +488,7 @@ _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result
 fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> [Account; ACCOUNT_NUMBER] {
 ```
 
-此函數應用轉帳交易並回傳新的帳戶陣列。
+此函數套用轉帳交易並回傳新的帳戶陣列。
 
 ```rust
     let from = find_account(accounts, txn.from);
@@ -499,7 +508,7 @@ fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> 
         f"Transaction has nonce {txnNonce}, but the account is expected to use {accountNonce}");
 ```
 
-這是可能導致交易無效的兩個條件。
+這兩個條件可能會使交易無效。
 
 ```rust
     let mut newAccounts = accounts;
@@ -512,13 +521,13 @@ fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> 
 }
 ```
 
-建立新的帳戶陣列，然後將其回傳。
+建立新的帳戶陣列，然後回傳它。
 
 ```rust
 fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field
 ```
 
-此函數從訊息中讀取地址。 
+此函數從訊息中讀取地址。
 
 ```rust
 {
@@ -548,7 +557,7 @@ fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field
 fn readAmountAndNonce(messageBytes: [u8; MESSAGE_LENGTH]) -> (u128, u32)
 ```
 
-從訊息中讀取金額和隨機數。 
+從訊息中讀取金額和隨機數。
 
 ```rust
 {
@@ -593,7 +602,7 @@ fn readAmountAndNonce(messageBytes: [u8; MESSAGE_LENGTH]) -> (u128, u32)
 }
 ```
 
-回傳[元組 (tuple)](https://noir-lang.org/docs/noir/concepts/data_types/tuples) 是 Noir 從函數回傳多個值的方式。
+回傳[元組](https://noir-lang.org/docs/noir/concepts/data_types/tuples)是 Noir 從函數回傳多個值的方式。
 
 ```rust
 fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn 
@@ -618,7 +627,7 @@ fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn
 fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
 ```
 
-我們能夠對帳戶使用 Pedersen 雜湊，因為它們僅在零知識證明內部進行雜湊。然而，在此程式碼中，我們需要檢查由瀏覽器產生的訊息簽章。為此，我們需要遵循 [EIP-191](https://eips.ethereum.org/EIPS/eip-191) 中的以太坊簽署格式。這意味著我們需要建立一個組合緩衝區，其中包含標準前綴、ASCII 格式的訊息長度以及訊息本身，並使用以太坊標準 keccak256 對其進行雜湊。
+我們能夠對帳戶使用 Pedersen 雜湊，因為它們僅在零知識證明內部進行雜湊。然而，在此程式碼中，我們需要檢查由瀏覽器產生的訊息簽章。為此，我們需要遵循 [EIP-191](https://eips.ethereum.org/EIPS/eip-191) 中的以太坊簽署格式。這意味著我們需要建立一個組合緩衝區，其中包含標準前綴、ASCII 格式的訊息長度以及訊息本身，並使用以太坊標準的 keccak256 對其進行雜湊。
 
 ```rust
     // ASCII 前綴
@@ -652,7 +661,7 @@ fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
     ];
 ```
 
-為了避免應用程式要求使用者簽署可用作交易或用於其他目的的訊息的情況，EIP-191 規定所有已簽署的訊息都以字元 0x19（不是有效的 ASCII 字元）開頭，後跟 `Ethereum Signed Message:` 和換行符號。
+為了避免應用程式要求使用者簽署可用作交易或用於其他目的的訊息，EIP-191 指定所有已簽署的訊息都以字元 0x19（不是有效的 ASCII 字元）開頭，接著是 `Ethereum Signed Message:` 和換行符號。
 
 ```rust
     let mut buffer: [u8; HASH_BUFFER_SIZE] = [0u8; HASH_BUFFER_SIZE];
@@ -695,14 +704,14 @@ fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
     assert(MESSAGE_LENGTH < 1000, "Messages whose length is over three digits are not supported");
 ```
 
-處理長度不超過 999 的訊息，如果更大則失敗。我添加了這段程式碼，即使訊息長度是一個常數，因為這使得更改它變得更容易。在生產系統上，為了獲得更好的效能，您可能只會假設 `MESSAGE_LENGTH` 不會改變。
+處理長度最多為 999 的訊息，如果大於該長度則失敗。我加入了這段程式碼，即使訊息長度是常數，因為這使得更改它變得更容易。在生產系統上，為了獲得更好的效能，您可能會假設 `MESSAGE_LENGTH` 不會改變。
 
 ```rust
     keccak256::keccak256(buffer, HASH_BUFFER_SIZE)
 }
 ```
 
-使用以太坊標準 `keccak256` 函數。
+使用以太坊標準的 `keccak256` 函數。
 
 ```rust
 fn signatureToAddressAndHash(
@@ -716,7 +725,7 @@ fn signatureToAddressAndHash(
 
 此函數驗證簽章，這需要訊息雜湊。然後它為我們提供簽署它的地址和訊息雜湊。訊息雜湊以兩個 `Field` 值提供，因為在程式的其餘部分中，它們比位元組陣列更容易使用。
 
-我們需要使用兩個 `Field` 值，因為欄位計算是對一個大數字進行[模運算 (modulo)](https://en.wikipedia.org/wiki/Modulo)，但該數字通常小於 256 位元（否則很難在以太坊虛擬機 (EVM) 中執行這些計算）。
+我們需要使用兩個 `Field` 值，因為欄位計算是對一個大數字進行[模除](https://en.wikipedia.org/wiki/Modulo)，但該數字通常小於 256 位元（否則很難在 EVM 中執行這些計算）。
 
 ```rust
     let hash = hashMessage(message);
@@ -736,9 +745,9 @@ fn signatureToAddressAndHash(
         ecrecover::ecrecover(pubKeyX, pubKeyY, signature, hash), 
 ```
     
-這類似於 [Solidity 的 `ecrecover`](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions)，有兩個重要的區別：
+這類似於 [Solidity 的 `ecrecover`](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions)，但有兩個重要的區別：
 
-- 如果簽章無效，呼叫將在 `assert` 失敗，並且程式將中止。
+- 如果簽章無效，呼叫會使 `assert` 失敗，並且程式會中止。
 - 雖然可以從簽章和雜湊中恢復公鑰，但這是可以在外部完成的處理，因此不值得在零知識證明內部進行。如果有人試圖在這裡欺騙我們，簽章驗證將會失敗。
 
 ```rust
@@ -761,14 +770,14 @@ fn main(
     )
 ```
 
-最後，我們到達 `main` 函數。我們需要證明我們有一筆交易，可以有效地將帳戶的雜湊從舊值更改為新值。我們還需要證明它具有這個特定的交易雜湊值，以便發送它的人知道他們的交易已被處理。
+最後，我們來到了 `main` 函數。我們需要證明我們有一筆交易，該交易有效地將帳戶的雜湊從舊值更改為新值。我們還需要證明它具有這個特定的交易雜湊值，以便發送它的人知道他們的交易已被處理。
 
 ```rust
 {
     let mut txn = readTransferTxn(message);
 ```
 
-我們需要 `txn` 是可變的，因為我們不是從訊息中讀取來源地址，而是從簽章中讀取。 
+我們需要 `txn` 是可變的，因為我們不是從訊息中讀取發送者地址，而是從簽章中讀取。
 
 ```rust
     let (fromAddress, txnHash1, txnHash2) = signatureToAddressAndHash(
@@ -790,11 +799,11 @@ fn main(
 }
 ```
 
-### 第 2 階段 - 添加伺服器 {#stage-2}
+### 第 2 階段 - 加入伺服器 {#stage-2}
 
-在第二階段，我們添加一個伺服器，該伺服器接收並實作來自瀏覽器的轉帳交易。
+在第二階段，我們加入一個伺服器，該伺服器接收並實作來自瀏覽器的轉帳交易。
 
-要查看實際運作情況：
+要查看其實際運作：
 
 1. 如果 Vite 正在執行，請將其停止。
 
@@ -816,24 +825,24 @@ fn main(
    npm run start
    ```
 
-4. 在單獨的命令列視窗中，執行 Vite 以提供瀏覽器程式碼。
+4. 在單獨的命令列視窗中，從儲存庫根目錄開始，執行 Vite 以提供瀏覽器程式碼。
 
    ```sh
    cd client
    npm run dev
    ```
 
-5. 瀏覽至客戶端程式碼 [http://localhost:5173](http://localhost:5173)
+5. 瀏覽至 [http://localhost:5173](http://localhost:5173) 的客戶端程式碼。
 
-6. 在發出交易之前，您需要知道隨機數以及您可以發送的金額。要獲取此資訊，請點擊 **Update account data**（更新帳戶資料）並簽署訊息。
+6. 在發出交易之前，您需要知道隨機數以及您可以發送的金額。要取得此資訊，請點擊 **Update account data**（更新帳戶資料）並簽署訊息。
 
-   我們在這裡遇到了一個兩難。一方面，我們不想簽署可以重複使用的訊息（[重放攻擊](https://en.wikipedia.org/wiki/Replay_attack)），這就是為什麼我們首先需要一個隨機數。然而，我們還沒有隨機數。解決方案是選擇一個只能使用一次且雙方都已經擁有的隨機數，例如當前時間。
+   我們在這裡遇到了一個兩難。一方面，我們不想簽署可以重複使用的訊息（[重放攻擊](https://en.wikipedia.org/wiki/Replay_attack)），這就是我們首先需要隨機數的原因。然而，我們還沒有隨機數。解決方案是選擇一個只能使用一次且我們雙方都已經擁有的隨機數，例如當前時間。
 
-   這個解決方案的問題在於時間可能無法完美同步。因此，我們改為簽署一個每分鐘變更一次的值。這意味著我們容易受到重放攻擊的空窗期最多為一分鐘。考慮到在生產環境中，已簽署的請求將受到 TLS 的保護，並且隧道的另一端（伺服器）已經可以揭露餘額和隨機數（它必須知道它們才能運作），這是一個可接受的風險。
+   這個解決方案的問題在於時間可能無法完美同步。因此，我們改為簽署一個每分鐘都會改變的值。這意味著我們容易受到重放攻擊的空窗期最多為一分鐘。考慮到在生產環境中，已簽署的請求將受到 TLS 的保護，並且通道的另一端（伺服器）已經可以揭露餘額和隨機數（它必須知道它們才能運作），這是一個可接受的風險。
 
 7. 一旦瀏覽器取回餘額和隨機數，它就會顯示轉帳表單。選擇目標地址和金額，然後點擊 **Transfer**（轉帳）。簽署此請求。
 
-8. 要查看轉帳，請**更新帳戶資料**或查看執行伺服器的視窗。伺服器會在每次狀態變更時記錄狀態。
+8. 要查看轉帳，請點擊 **Update account data**（更新帳戶資料）或查看執行伺服器的視窗。伺服器會在狀態每次改變時記錄日誌。
 
     ```
     ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
@@ -955,7 +964,7 @@ let Accounts = [
 
 1. 停止伺服器和客戶端程序。
 
-2. 下載帶有智能合約的分支，並確保您擁有所有必要的模組。
+2. 下載包含智能合約的分支，並確保您擁有所有必要的模組。
 
    ```sh
    git checkout 03-smart-contracts
@@ -998,7 +1007,7 @@ let Accounts = [
    echo $ZKBANK_ADDRESS
    ```
 
-   `0x199..67b` 值是 `Accounts` 初始狀態的 Pederson 雜湊。如果您在 `server/index.mjs` 中修改此初始狀態，您可以執行一筆交易來查看零知識證明報告的初始雜湊。
+   `0x199..67b` 值是 `Accounts` 初始狀態的 Pedersen 雜湊。如果您在 `server/index.mjs` 中修改此初始狀態，您可以執行一筆交易來查看零知識證明報告的初始雜湊。
 
 8. 執行伺服器。
 
@@ -1007,7 +1016,7 @@ let Accounts = [
    npm run start
    ```
 
-9. 在不同的命令列視窗中執行客戶端。
+9. 在不同的命令列視窗中，從儲存庫根目錄開始執行客戶端。
 
    ```sh
    cd client
@@ -1016,9 +1025,9 @@ let Accounts = [
 
 10. 執行一些交易。
 
-11. 要驗證狀態是否在鏈上發生了變化，請重新啟動伺服器程序。您會看到 `ZkBank` 不再接受交易，因為交易中的原始雜湊值與儲存在鏈上的雜湊值不同。
+11. 要驗證狀態是否在鏈上發生了改變，請重新啟動伺服器程序。您會看到 `ZkBank` 不再接受交易，因為交易中的原始雜湊值與儲存在鏈上的雜湊值不同。
 
-    這是預期的錯誤類型。
+    這是預期中的錯誤類型。
 
     ```
     ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
@@ -1047,15 +1056,15 @@ import util from 'util'
 const execPromise = util.promisify(exec)
 ```
 
-我們需要使用 [Barretenberg 套件](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg)來建立發送到鏈上的實際證明。我們可以透過執行命令列介面 (`bb`) 或使用 [JavaScript 函式庫 `bb.js`](https://www.npmjs.com/package/@aztec/bb.js) 來使用此套件。JavaScript 函式庫比原生執行程式碼慢得多，因此我們在這裡使用 [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) 來使用命令列。
+我們需要使用 [Barretenberg 套件](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg)來建立要發送到鏈上的實際證明。我們可以透過執行命令列介面 (`bb`) 或使用 [JavaScript 函式庫 `bb.js`](https://www.npmjs.com/package/@aztec/bb.js) 來使用此套件。JavaScript 函式庫比原生執行程式碼慢得多，因此我們在這裡使用 [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) 來使用命令列。
 
-請注意，如果您決定使用 `bb.js`，您需要使用與您正在使用的 Noir 版本相容的版本。在撰寫本文時，目前的 Noir 版本 (1.0.0-beta.11) 使用 `bb.js` 0.87 版。
+請注意，如果您決定使用 `bb.js`，您需要使用與您正在使用的 Noir 版本相容的版本。例如，Noir 1.0.0-beta.10 和 1.0.0-beta.11 都與 `bb` 和 `bb.js` 版本 0.87 相容。
 
 ```js
 const zkBankAddress = process.env.ZKBANK_ADDRESS || "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
 ```
 
-這裡的地址是當您從乾淨的 `anvil` 開始並按照上述指示操作時獲得的地址。
+這裡的地址是當您從乾淨的 `anvil` 開始並遵循上述指示時獲得的地址。
 
 ```js
 const walletClient = createWalletClient({ 
@@ -1065,7 +1074,7 @@ const walletClient = createWalletClient({
 })
 ```
 
-此私鑰是 `anvil` 中預設的預先注資帳戶之一。 
+此私鑰是 `anvil` 中預設的預先注資帳戶之一。
 
 ```js
 const generateProof = async (witness, fileID) => {
@@ -1073,7 +1082,7 @@ const generateProof = async (witness, fileID) => {
 
 使用 `bb` 執行檔產生證明。
 
-```js 
+```js
     const fname = `witness-${fileID}.gz`    
     await fs.writeFile(fname, witness)
 ```
@@ -1084,13 +1093,13 @@ const generateProof = async (witness, fileID) => {
     await execPromise(`bb prove -b ./noir/target/zkBank.json -w ${fname} -o ${fileID} --oracle_hash keccak --output_format fields`)
 ```
 
-實際建立證明。此步驟還會建立一個包含公開變數的檔案，但我們不需要它。我們已經從 `noir.execute` 獲得了這些變數。
+實際建立證明。此步驟還會建立一個包含公共變數的檔案，但我們不需要它。我們已經從 `noir.execute` 獲得了這些變數。
 
 ```js
     const proof = "0x" + JSON.parse(await fs.readFile(`./${fileID}/proof_fields.json`)).reduce((a,b) => a+b, "").replace(/0x/g, "")
 ```
 
-證明是 `Field` 值的 JSON 陣列，每個值都表示為十六進位值。然而，我們需要在交易中將其作為單個 `bytes` 值發送，Viem 將其表示為一個大的十六進位字串。在這裡，我們透過連接所有值、刪除所有 `0x`，然後在最後添加一個來更改格式。
+證明是一個包含 `Field` 值的 JSON 陣列，每個值都表示為十六進位值。然而，我們需要在交易中將其作為單個 `bytes` 值發送，Viem 將其表示為一個大的十六進位字串。在這裡，我們透過連接所有值、移除所有 `0x`，然後在最後加上一個來更改格式。
 
 ```js
     await execPromise(`rm -r ${fname} ${fileID}`)
@@ -1110,7 +1119,7 @@ const processMessage = async (message, signature) => {
     const publicFields = noirResult.returnValue.map(x=>'0x' + x.slice(2).padStart(64, "0"))
 ```
 
-公開欄位需要是 32 位元組值的陣列。然而，由於我們需要將交易雜湊值劃分在兩個 `Field` 值之間，因此它顯示為 16 位元組的值。在這裡我們添加零，以便 Viem 了解它實際上是 32 個位元組。
+公共欄位需要是一個 32 位元組值的陣列。然而，由於我們需要將交易雜湊值劃分到兩個 `Field` 值中，因此它顯示為 16 位元組的值。在這裡，我們加入零，以便 Viem 能夠理解它實際上是 32 個位元組。
 
 ```js
     const proof = await generateProof(noirResult.witness, `${fromAddress}-${nonce}`)
@@ -1155,7 +1164,7 @@ contract ZkBank {
     }
 ```
 
-鏈上程式碼需要追蹤兩個變數：驗證者（由 `nargo` 建立的獨立合約）和當前狀態雜湊。
+鏈上程式碼需要追蹤兩個變數：驗證者（由 Barretenberg 的 `bb write_solidity_verifier` 產生的獨立合約）和當前狀態雜湊。
 
 ```solidity
     event TransactionProcessed(
@@ -1174,10 +1183,10 @@ contract ZkBank {
     ) public {
 ```
 
-此函數處理交易。它以驗證者要求的格式獲取證明（作為 `bytes`）和公開輸入（作為 `bytes32` 陣列）（以最小化鏈上處理，從而降低燃料成本）。
+此函數處理交易。它以驗證者要求的格式取得證明（作為 `bytes`）和公共輸入（作為 `bytes32` 陣列）（以最小化鏈上處理，從而降低燃料成本）。
 
 ```solidity
-        require(_publicInputs[0] == currentStateHash,
+        require(_publicFields[0] == currentStateHash,
             "Wrong old state hash");
 ```
 
@@ -1187,7 +1196,7 @@ contract ZkBank {
         myVerifier.verify(_proof, _publicFields);
 ```
 
-呼叫驗證者合約來驗證零知識證明。如果零知識證明錯誤，此步驟將還原交易。
+呼叫驗證者合約以驗證零知識證明。如果零知識證明錯誤，此步驟將還原交易。
 
 ```solidity
         currentStateHash = _publicFields[1];
@@ -1201,7 +1210,7 @@ contract ZkBank {
 }
 ```
 
-如果一切驗證通過，將狀態雜湊更新為新值並發出 `TransactionProcessed` 事件。
+如果一切檢查無誤，將狀態雜湊更新為新值並發出 `TransactionProcessed` 事件。
 
 ## 中心化元件的濫用 {#abuses}
 

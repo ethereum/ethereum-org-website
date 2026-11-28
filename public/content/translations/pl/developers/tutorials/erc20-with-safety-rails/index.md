@@ -11,36 +11,38 @@ published: 2022-08-15
 
 ## Wprowadzenie {#introduction}
 
-Jedną z wspaniałych rzeczy w Ethereum jest to, że nie ma centralnego organu, który mógłby modyfikować lub cofać twoje transakcje. Jednym z wielkich problemów z Ethereum jest to, że nie ma centralnego organu z uprawnieniami do cofania błędów użytkowników lub nielegalnych transakcji. W tym artykule dowiesz się o niektórych typowych błędach popełnianych przez użytkowników w przypadku tokenów [ERC-20](/developers/docs/standards/tokens/erc-20/), a także o tym, jak tworzyć kontrakty ERC-20, które pomagają użytkownikom unikać tych błędów lub dają centralnemu organowi pewną władzę (na przykład do zamrażania kont).
+Jedną z wspaniałych rzeczy w Ethereum jest to, że nie ma centralnego organu, który mógłby modyfikować lub cofać Twoje transakcje. Jednym z wielkich problemów z Ethereum jest to, że nie ma centralnego organu z uprawnieniami do cofania błędów użytkowników lub nielegalnych transakcji. W tym artykule dowiesz się o niektórych typowych błędach popełnianych przez użytkowników w przypadku tokenów [ERC-20](/developers/docs/standards/tokens/erc-20/), a także o tym, jak tworzyć kontrakty ERC-20, które pomagają użytkownikom unikać tych błędów lub dają centralnemu organowi pewną władzę (na przykład do zamrażania kont).
 
 Zauważ, że chociaż będziemy używać [kontraktu tokena ERC-20 OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20), ten artykuł nie wyjaśnia go w najdrobniejszych szczegółach. Możesz znaleźć te informacje [tutaj](/developers/tutorials/erc20-annotated-code).
 
 Jeśli chcesz zobaczyć kompletny kod źródłowy:
 
 1. Otwórz [Remix IDE](https://remix.ethereum.org/).
-2. Kliknij ikonę klonowania z GitHub (![clone github icon](icon-clone.png)).
+2. Kliknij ikonę klonowania z GitHub (![ikona klonowania z GitHub](icon-clone.png)).
 3. Sklonuj repozytorium GitHub `https://github.com/qbzzt/20220815-erc20-safety-rails`.
 4. Otwórz **contracts > erc20-safety-rails.sol**.
 
+Zauważ, że repozytorium zostało napisane dla OpenZeppelin Contracts 4.7.2, gdzie funkcja, którą ten artykuł nadpisuje, nazywa się `_beforeTokenTransfer`. Ten artykuł używa aktualnej wersji OpenZeppelin Contracts 5.x, gdzie zamiast tego nadpisujesz `_update`, więc kod w tym artykule nieznacznie różni się od kodu w repozytorium.
+
 ## Tworzenie kontraktu ERC-20 {#creating-an-erc-20-contract}
 
-Zanim będziemy mogli dodać funkcjonalność zabezpieczeń, potrzebujemy kontraktu ERC-20. W tym artykule użyjemy [kreatora kontraktów OpenZeppelin (OpenZeppelin Contracts Wizard)](https://docs.openzeppelin.com/contracts/5.x/wizard). Otwórz go w innej przeglądarce i postępuj zgodnie z poniższymi instrukcjami:
+Zanim będziemy mogli dodać funkcjonalność zabezpieczeń, potrzebujemy kontraktu ERC-20. W tym artykule użyjemy [OpenZeppelin Contracts Wizard](https://docs.openzeppelin.com/contracts/5.x/wizard). Otwórz go w innej przeglądarce i postępuj zgodnie z tymi instrukcjami:
 
 1. Wybierz **ERC20**.
-2. Wprowadź następujące ustawienia:
+2. Wprowadź te ustawienia:
 
-   | Parametr       | Wartość          |
-   | -------------- | ---------------- |
-   | Name           | SafetyRailsToken |
-   | Symbol         | SAFE             |
-   | Premint        | 1000             |
-   | Features       | None             |
-   | Access Control | Ownable          |
-   | Upgradability  | None             |
+   | Parametr       | Wartość                               |
+   | -------------- | ------------------------------------- |
+   | Name           | SafetyRailsToken                      |
+   | Symbol         | SAFE                                  |
+   | Premint        | 1000                                  |
+   | Features       | None (odznacz **Permit**)             |
+   | Access Control | Ownable                               |
+   | Upgradability  | None                                  |
 
 3. Przewiń w górę i kliknij **Open in Remix** (dla Remix) lub **Download**, aby użyć innego środowiska. Zakładam, że używasz Remix, jeśli używasz czegoś innego, po prostu wprowadź odpowiednie zmiany.
 4. Mamy teraz w pełni funkcjonalny kontrakt ERC-20. Możesz rozwinąć `.deps` > `npm`, aby zobaczyć zaimportowany kod.
-5. Skompiluj, wdróż i pobaw się kontraktem, aby zobaczyć, że działa on jako kontrakt ERC-20. Jeśli musisz dowiedzieć się, jak korzystać z Remix, [skorzystaj z tego samouczka](https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth).
+5. Skompiluj, wdróż i pobaw się kontraktem, aby zobaczyć, że działa jako kontrakt ERC-20. Jeśli musisz nauczyć się korzystać z Remix, [skorzystaj z tego samouczka](https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth).
 
 ## Częste błędy {#common-mistakes}
 
@@ -54,16 +56,16 @@ Użytkownicy czasami wysyłają tokeny na zły adres. Chociaż nie potrafimy czy
 
 ### Zapobieganie transferom {#preventing-transfers}
 
-Kontrakt ERC-20 OpenZeppelin zawiera [hook (zaczep), `_beforeTokenTransfer`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L364-L368), który jest wywoływany przed transferem tokena. Domyślnie ten hook nic nie robi, ale możemy podpiąć pod niego własną funkcjonalność, taką jak kontrole, które powodują wycofanie (revert), jeśli wystąpi problem.
+W kontrakcie ERC-20 OpenZeppelin każda zmiana salda, niezależnie od tego, czy jest to transfer, wybijanie, czy spalenie, przechodzi przez [wewnętrzną funkcję, `_update`](https://docs.openzeppelin.com/contracts/5.x/api/token/erc20#ERC20-_update-address-address-uint256-). Możemy ją nadpisać, aby podpiąć pod nią naszą własną funkcjonalność, taką jak kontrole, które powodują wycofanie w przypadku problemu.
 
-Aby użyć hooka, dodaj tę funkcję po konstruktorze:
+Aby to zrobić, dodaj tę funkcję po konstruktorze:
 
 ```solidity
-    function _beforeTokenTransfer(address from, address to, uint256 amount)
+    function _update(address from, address to, uint256 value)
         internal virtual
         override(ERC20)
     {
-        super._beforeTokenTransfer(from, to, amount);
+        super._update(from, to, value);
     }
 ```
 
@@ -79,24 +81,47 @@ Słowo kluczowe `virtual` oznacza, że tak jak odziedziczyliśmy funkcjonalnoś�
         override(ERC20)
 ```
 
-Musimy jawnie określić, że [nadpisujemy](https://docs.soliditylang.org/en/v0.8.15/contracts.html#function-overriding) definicję `_beforeTokenTransfer` tokena ERC20. Ogólnie rzecz biorąc, jawne definicje są o wiele lepsze z punktu widzenia bezpieczeństwa niż niejawne - nie możesz zapomnieć, że coś zrobiłeś, jeśli masz to tuż przed oczami. To jest również powód, dla którego musimy określić, której nadklasy `_beforeTokenTransfer` nadpisujemy.
+Musimy jawnie określić, że [nadpisujemy](https://docs.soliditylang.org/en/latest/contracts.html#function-overriding) definicję tokena ERC20 dla `_update`. Ogólnie rzecz biorąc, jawne definicje są o wiele lepsze z punktu widzenia bezpieczeństwa niż niejawne - nie możesz zapomnieć, że coś zrobiłeś, jeśli masz to tuż przed oczami. Z tego samego powodu musimy określić, której nadklasy `_update` nadpisujemy.
 
 ```solidity
-        super._beforeTokenTransfer(from, to, amount);
+        super._update(from, to, value);
 ```
 
-Ta linia wywołuje funkcję `_beforeTokenTransfer` kontraktu lub kontraktów, z których dziedziczymy, a które ją posiadają. W tym przypadku jest to tylko `ERC20`, `Ownable` nie ma tego hooka. Mimo że obecnie `ERC20._beforeTokenTransfer` nic nie robi, wywołujemy go na wypadek, gdyby funkcjonalność została dodana w przyszłości (a my zdecydujemy się ponownie wdrożyć kontrakt, ponieważ kontrakty nie zmieniają się po wdrożeniu).
+Ta linia wywołuje funkcję `_update` kontraktu lub kontraktów, z których dziedziczymy, a które ją posiadają. W tym przypadku jest to tylko `ERC20`, `Ownable` nie ma tej funkcji. W przeciwieństwie do pustego hooka, `ERC20._update` jest tym, co faktycznie przenosi tokeny, więc jej wywołanie jest niezbędne. Nasze kontrole znajdują się przed tym wywołaniem, więc mogą spowodować wycofanie przed jakimikolwiek zmianami salda.
 
 ### Kodowanie wymagań {#coding-the-requirements}
 
-Chcemy dodać do funkcji następujące wymagania:
+Chcemy dodać te wymagania do funkcji. Ponieważ `_update` jest również wywoływana, gdy tokeny są spalane, z `to` ustawionym na `address(0)`, sprawdzamy `to` tylko wtedy, gdy nie jest to `address(0)`:
 
 - Adres `to` nie może być równy `address(this)`, czyli adresowi samego kontraktu ERC-20.
 - Adres `to` nie może być pusty, musi to być:
-  - Konto zewnętrzne (EOA). Nie możemy bezpośrednio sprawdzić, czy adres jest EOA, ale możemy sprawdzić saldo ETH adresu. EOA prawie zawsze mają saldo, nawet jeśli nie są już używane - trudno jest je wyczyścić do ostatniego wei.
-  - Inteligentny kontrakt. Sprawdzenie, czy adres jest inteligentnym kontraktem, jest nieco trudniejsze. Istnieje kod operacji, który sprawdza długość zewnętrznego kodu, zwany [`EXTCODESIZE`](https://www.evm.codes/#3b), ale nie jest on dostępny bezpośrednio w Solidity. Musimy do tego użyć [Yul](https://docs.soliditylang.org/en/v0.8.15/yul.html), czyli asemblera EVM. Istnieją inne wartości, których moglibyśmy użyć z Solidity ([`<address>.code` i `<address>.codehash`](https://docs.soliditylang.org/en/v0.8.15/units-and-global-variables.html#members-of-address-types)), ale kosztują one więcej gazu.
+  - Konto posiadane zewnętrznie (EOA). Nie możemy bezpośrednio sprawdzić, czy adres to EOA, ale możemy sprawdzić saldo ETH adresu. EOA prawie zawsze mają saldo, nawet jeśli nie są już używane - trudno jest je wyczyścić do ostatniego wei.
+  - Inteligentny kontrakt. Sprawdzenie, czy adres jest inteligentnym kontraktem, jest nieco trudniejsze. Istnieje kod operacji, który sprawdza długość zewnętrznego kodu, zwany [`EXTCODESIZE`](https://www.evm.codes/#3b). W Solidity można go uzyskać za pomocą [`<address>.code.length`](https://docs.soliditylang.org/en/latest/units-and-global-variables.html#members-of-address-types), co kompilator zamienia na `EXTCODESIZE`. Tutaj używamy [Yul](https://docs.soliditylang.org/en/latest/yul.html), który jest asemblerem EVM, aby pokazać, jak bezpośrednio wywołać kod operacji. Zauważ, że od czasu [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) EOA może również posiadać kod (delegowanie do kontraktu), więc to sprawdzenie identyfikuje konta z kodem, a nie ściśle kontrakty. Dla naszego celu, czyli odrzucania pustych adresów, jest to w porządku.
 
-Przeanalizujmy nowy kod linijka po linijce:
+Oto kompletna funkcja:
+
+```solidity
+    function _update(address from, address to, uint256 value)
+        internal virtual
+        override(ERC20)
+    {
+        // Spalanie wysyła token (A digital asset on Ethereum following a standard (ERC-20, ERC-721). NOT a physical coin or voucher.)y na adres (A unique hexadecimal identifier (0x...) for an Ethereum account. NOT a physical location.)(0), nie blok (A unit of bundled transactions added to the blockchain. NOT a physical block or obstruction.)uj tego
+        if (to != address(0)) {
+            require(to != address(this), "Can't send tokens to the contract address");
+
+            bool isToContract;
+            assembly {
+               isToContract := gt(extcodesize(to), 0)
+            }
+
+            require(to.balance != 0 || isToContract, "Can't send tokens to an empty address");
+        }
+
+        super._update(from, to, value);
+    }
+```
+
+Przeanalizujmy nowy kod linia po linii:
 
 ```solidity
         require(to != address(this), "Can't send tokens to the contract address");
@@ -111,7 +136,7 @@ To jest pierwsze wymaganie, sprawdzenie, czy `to` i `this(address)` nie są tym 
         }
 ```
 
-W ten sposób sprawdzamy, czy adres jest kontraktem. Nie możemy otrzymać wyniku bezpośrednio z Yul, więc zamiast tego definiujemy zmienną do przechowywania wyniku (w tym przypadku `isToContract`). Sposób działania Yul polega na tym, że każdy kod operacji jest uważany za funkcję. Więc najpierw wywołujemy [`EXTCODESIZE`](https://www.evm.codes/#3b), aby uzyskać rozmiar kontraktu, a następnie używamy [`GT`](https://www.evm.codes/#11), aby sprawdzić, czy nie jest on zerem (mamy do czynienia z liczbami całkowitymi bez znaku, więc oczywiście nie może być ujemny). Następnie zapisujemy wynik do `isToContract`.
+W ten sposób sprawdzamy, czy adres jest kontraktem. Nie możemy odbierać danych wyjściowych bezpośrednio z Yul, więc zamiast tego definiujemy zmienną do przechowywania wyniku (w tym przypadku `isToContract`). Sposób działania Yul polega na tym, że każdy kod operacji jest uważany za funkcję. Więc najpierw wywołujemy [`EXTCODESIZE`](https://www.evm.codes/#3b), aby uzyskać rozmiar kontraktu, a następnie używamy [`GT`](https://www.evm.codes/#11), aby sprawdzić, czy nie jest to zero (mamy do czynienia z liczbami całkowitymi bez znaku, więc oczywiście nie może być ujemne). Następnie zapisujemy wynik do `isToContract`.
 
 ```solidity
         require(to.balance != 0 || isToContract, "Can't send tokens to an empty address");
@@ -132,7 +157,7 @@ Czasami przydatne jest posiadanie administratora, który może cofać błędy. A
 
 OpenZeppelin zapewnia dwa mechanizmy umożliwiające dostęp administracyjny:
 
-- Kontrakty [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable) mają jednego właściciela. Funkcje, które mają [modyfikator](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) `onlyOwner`, mogą być wywoływane tylko przez tego właściciela. Właściciele mogą przenieść własność na kogoś innego lub całkowicie się jej zrzec. Prawa wszystkich innych kont są zazwyczaj identyczne.
+- Kontrakty [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable) mają jednego właściciela. Funkcje, które mają [modyfikator](https://docs.soliditylang.org/en/latest/contracts.html#function-modifiers) `onlyOwner`, mogą być wywoływane tylko przez tego właściciela. Właściciele mogą przenieść własność na kogoś innego lub całkowicie się jej zrzec. Prawa wszystkich innych kont są zazwyczaj identyczne.
 - Kontrakty [`AccessControl`](https://docs.openzeppelin.com/contracts/5.x/access-control#role-based-access-control) posiadają [kontrolę dostępu opartą na rolach (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control).
 
 Dla uproszczenia w tym artykule używamy `Ownable`.
@@ -141,18 +166,18 @@ Dla uproszczenia w tym artykule używamy `Ownable`.
 
 Zamrażanie i odmrażanie kontraktów wymaga kilku zmian:
 
-- [Mapowanie](https://www.tutorialspoint.com/solidity/solidity_mappings.htm) z adresów na [wartości logiczne (boolean)](https://en.wikipedia.org/wiki/Boolean_data_type), aby śledzić, które adresy są zamrożone. Wszystkie wartości są początkowo zerowe, co dla wartości logicznych jest interpretowane jako fałsz. Tego właśnie chcemy, ponieważ domyślnie konta nie są zamrożone.
+- [Mapowanie](https://docs.soliditylang.org/en/latest/types.html#mapping-types) z adresów na [wartości logiczne (boolean)](https://en.wikipedia.org/wiki/Boolean_data_type), aby śledzić, które adresy są zamrożone. Wszystkie wartości są początkowo zerowe, co dla wartości logicznych jest interpretowane jako fałsz. Tego właśnie chcemy, ponieważ domyślnie konta nie są zamrożone.
 
   ```solidity
       mapping(address => bool) public frozenAccounts;
   ```
 
-- [Zdarzenia](https://www.tutorialspoint.com/solidity/solidity_events.htm), aby poinformować wszystkich zainteresowanych, kiedy konto zostanie zamrożone lub odmrożone. Technicznie rzecz biorąc, zdarzenia nie są wymagane do tych działań, ale pomagają kodowi pozałańcuchowemu nasłuchiwać tych zdarzeń i wiedzieć, co się dzieje. Uważa się za dobry zwyczaj, aby inteligentny kontrakt emitował je, gdy dzieje się coś, co może być istotne dla kogoś innego.
+- [Zdarzenia](https://docs.soliditylang.org/en/latest/contracts.html#events), aby poinformować wszystkich zainteresowanych, kiedy konto zostanie zamrożone lub odmrożone. Technicznie rzecz biorąc, zdarzenia nie są wymagane dla tych działań, ale pomagają kodowi pozałańcuchowemu nasłuchiwać tych zdarzeń i wiedzieć, co się dzieje. Uważa się za dobry zwyczaj, aby inteligentny kontrakt je emitował, gdy dzieje się coś, co może być istotne dla kogoś innego.
 
-  Zdarzenia są indeksowane, więc możliwe będzie wyszukanie wszystkich przypadków zamrożenia lub odmrożenia konta.
+  Zdarzenia są indeksowane, więc możliwe będzie wyszukanie wszystkich przypadków, gdy konto zostało zamrożone lub odmrożone.
 
   ```solidity
-    // Gdy konta są zamrażane lub odmrażane
+    // Kiedy konto (A digital identity on Ethereum with an address, balance, and optional code.) jest zamrożone lub odmrożone
     event AccountFrozen(address indexed _addr);
     event AccountThawed(address indexed _addr);
   ```
@@ -165,19 +190,19 @@ Zamrażanie i odmrażanie kontraktów wymaga kilku zmian:
         onlyOwner
   ```
 
-  Funkcje oznaczone jako [`public`](https://www.tutorialspoint.com/solidity/solidity_contracts.htm) mogą być wywoływane z innych inteligentnych kontraktów lub bezpośrednio przez transakcję.
+  Funkcje oznaczone jako [`public`](https://docs.soliditylang.org/en/latest/contracts.html#function-visibility) mogą być wywoływane z innych inteligentnych kontraktów lub bezpośrednio przez transakcję.
 
   ```solidity
     {
         require(!frozenAccounts[addr], "Account already frozen");
         frozenAccounts[addr] = true;
         emit AccountFrozen(addr);
-    }  // freezeAccount
+    }  // zamroź konto (A digital identity on Ethereum with an address, balance, and optional code.)
   ```
 
-  Jeśli konto jest już zamrożone, następuje wycofanie (revert). W przeciwnym razie zamroź je i wyemituj (`emit`) zdarzenie.
+  Jeśli konto jest już zamrożone, następuje wycofanie. W przeciwnym razie zamroź je i wyemituj (`emit`) zdarzenie.
 
-- Zmień `_beforeTokenTransfer`, aby zapobiec przenoszeniu środków z zamrożonego konta. Zauważ, że środki nadal mogą być transferowane na zamrożone konto.
+- Zmień `_update`, aby zapobiec przenoszeniu pieniędzy z zamrożonego konta. Zauważ, że pieniądze nadal mogą być transferowane na zamrożone konto. Umieść tę linię na początku funkcji, poza blokiem `if`, aby zapobiegała również spalaniu tokenów z zamrożonego konta.
 
   ```solidity
        require(!frozenAccounts[from], "The account is frozen");
@@ -198,7 +223,11 @@ Aby uwolnić tokeny ERC-20 przechowywane przez ten kontrakt, musimy wywołać fu
         IERC20 token = IERC20(erc20);
 ```
 
-To jest składnia do tworzenia obiektu dla kontraktu, gdy otrzymamy adres. Możemy to zrobić, ponieważ mamy definicję tokenów ERC20 jako część kodu źródłowego (patrz linia 4), a ten plik zawiera [definicję IERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol), interfejsu dla kontraktu ERC-20 OpenZeppelin.
+To jest składnia do utworzenia obiektu dla kontraktu, gdy otrzymamy adres. Aby z niej skorzystać, potrzebujemy [definicji dla IERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol), interfejsu dla kontraktu ERC-20 OpenZeppelin. Linia `import {ERC20} from ...` z kreatora (Wizard) importuje tylko `ERC20`, więc dodaj tę linię obok innych importów na górze pliku:
+
+```solidity
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+```
 
 ```solidity
         uint balance = token.balanceOf(address(this));
@@ -206,7 +235,7 @@ To jest składnia do tworzenia obiektu dla kontraktu, gdy otrzymamy adres. Może
     }
 ```
 
-To jest funkcja czyszcząca, więc prawdopodobnie nie chcemy zostawiać żadnych tokenów. Zamiast ręcznie pobierać saldo od użytkownika, równie dobrze możemy zautomatyzować ten proces.
+To jest funkcja czyszcząca, więc przypuszczalnie nie chcemy zostawiać żadnych tokenów. Zamiast ręcznie pobierać saldo od użytkownika, równie dobrze możemy zautomatyzować ten proces.
 
 ## Podsumowanie {#conclusion}
 
