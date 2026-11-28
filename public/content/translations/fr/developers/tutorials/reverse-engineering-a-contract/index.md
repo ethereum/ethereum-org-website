@@ -60,7 +60,17 @@ Ce code fait deux choses :
 1. Écrire 0x80 comme une valeur de 32 octets aux emplacements mémoire 0x40-0x5F (0x80 est stocké dans 0x5F, et 0x40-0x5E sont tous des zéros).
 2. Lire la taille des données d'appel. Normalement, les données d'appel pour un contrat Ethereum suivent [l'ABI (interface binaire-programme)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html), qui nécessite au minimum quatre octets pour le sélecteur de fonction. Si la taille des données d'appel est inférieure à quatre, sauter à 0x5E.
 
-![Flowchart for this portion](flowchart-entry.png)
+<Flowchart>
+
+- Point d'entrée (0x00)
+  - Les données d'appel sont-elles plus courtes que quatre octets ?
+    - **Oui** Appels non-ABI (0x5E)
+      - Y a-t-il des données d'appel ?
+        - **Oui** 0x7C (objectif inconnu pour le moment)
+        - **Non** Transfert d'ETH (0x64) : annuler en cas de dépassement de capacité, sinon ajouter la valeur d'appel à `Storage[6]` (`Value*`) et s'arrêter
+    - **Non** Appels ABI (0x0D)
+
+</Flowchart>
 
 ### Le gestionnaire à 0x5E (pour les données d'appel non-ABI) {#the-handler-at-0x5e-for-non-abi-call-data}
 
@@ -71,28 +81,28 @@ Ce code fait deux choses :
 |     60 | PUSH2 0x007c |
 |     63 | JUMPI        |
 
-Cet extrait commence par un `JUMPDEST`. Les programmes de l'EVM (machine virtuelle Ethereum) lèvent une exception si vous sautez vers un code d'opération qui n'est pas `JUMPDEST`. Ensuite, il examine la CALLDATASIZE, et si elle est « vraie » (c'est-à-dire non nulle), il saute à 0x7C. Nous y reviendrons plus bas.
+Cet extrait commence par un `JUMPDEST`. Les programmes de la Machine Virtuelle Ethereum (EVM) lèvent une exception si vous sautez vers un code d'opération qui n'est pas `JUMPDEST`. Ensuite, il examine la CALLDATASIZE, et si elle est « vraie » (c'est-à-dire non nulle), il saute à 0x7C. Nous y reviendrons plus bas.
 
 | Décalage | Code d'opération | Pile (après le code d'opération)                                                       |
 | -----: | ---------- | -------------------------------------------------------------------------- |
-|     64 | CALLVALUE  | [Wei](/glossary/#wei) fourni par l'appel. Appelé `msg.value` en Solidity |
+|     64 | CALLVALUE  | [Wei](/glossary/#wei) fournis par l'appel. Appelé `msg.value` en Solidity |
 |     65 | PUSH1 0x06 | 6 CALLVALUE                                                                |
 |     67 | PUSH1 0x00 | 0 6 CALLVALUE                                                              |
 |     69 | DUP3       | CALLVALUE 0 6 CALLVALUE                                                    |
 |     6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                  |
 |     6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                         |
 
-Donc, lorsqu'il n'y a pas de données d'appel, nous lisons la valeur de Storage[6]. Nous ne savons pas encore ce qu'est cette valeur, mais nous pouvons chercher des transactions que le contrat a reçues sans données d'appel. Les transactions qui transfèrent simplement de l'ETH sans aucune donnée d'appel (et donc sans méthode) ont dans Etherscan la méthode `Transfer`. En fait, [la toute première transaction que le contrat a reçue](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) est un transfert.
+Ainsi, lorsqu'il n'y a pas de données d'appel, nous lisons la valeur de Storage[6]. Nous ne savons pas encore ce qu'est cette valeur, mais nous pouvons rechercher les transactions que le contrat a reçues sans données d'appel. Les transactions qui transfèrent simplement de l'ETH sans aucune donnée d'appel (et donc sans méthode) ont dans Etherscan la méthode `Transfer`. En fait, [la toute première transaction que le contrat a reçue](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) est un transfert.
 
-Si nous regardons dans cette transaction et cliquons sur **Click to see More** (Cliquer pour voir plus), nous voyons que les données d'appel, appelées données d'entrée (input data), sont en effet vides (`0x`). Remarquez également que la valeur est de 1,559 ETH, ce qui sera pertinent plus tard.
+Si nous regardons dans cette transaction et cliquons sur **Click to see More**, nous voyons que les données d'appel, appelées données d'entrée (input data), sont effectivement vides (`0x`). Remarquez également que la valeur est de 1,559 ETH, ce qui sera pertinent plus tard.
 
-![The call data is empty](calldata-empty.png)
+![Les données d'appel sont vides](calldata-empty.png)
 
-Ensuite, cliquez sur l'onglet **State** (État) et développez le contrat que nous sommes en train de rétro-ingénierer (0x2510...). Vous pouvez voir que `Storage[6]` a bien changé pendant la transaction, et si vous changez Hex en **Number** (Nombre), vous voyez qu'il est devenu 1 559 000 000 000 000 000, la valeur transférée en wei (j'ai ajouté les espaces pour plus de clarté), correspondant à la valeur suivante du contrat.
+Ensuite, cliquez sur l'onglet **State** et développez le contrat dont nous faisons la rétro-ingénierie (0x2510...). Vous pouvez voir que `Storage[6]` a bien changé pendant la transaction, et si vous changez Hex en **Number**, vous voyez qu'il est devenu 1 559 000 000 000 000 000, la valeur transférée en Wei (j'ai ajouté les espaces pour plus de clarté), correspondant à la valeur suivante du contrat.
 
 ![Le changement dans Storage[6]](storage6.png)
 
-Si nous regardons les changements d'état causés par [d'autres transactions `Transfer` de la même période](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange), nous voyons que `Storage[6]` a suivi la valeur du contrat pendant un certain temps. Pour l'instant, nous l'appellerons `Value*`. L'astérisque (`*`) nous rappelle que nous ne _savons_ pas encore ce que fait cette variable, mais elle ne peut pas servir uniquement à suivre la valeur du contrat car il n'est pas nécessaire d'utiliser le stockage, qui est très coûteux, quand vous pouvez obtenir le solde de vos comptes en utilisant `ADDRESS BALANCE`. Le premier code d'opération pousse la propre adresse du contrat. Le second lit l'adresse au sommet de la pile et la remplace par le solde de cette adresse.
+Si nous regardons les changements d'état causés par [d'autres transactions `Transfer` de la même période](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange), nous voyons que `Storage[6]` a suivi la valeur du contrat pendant un certain temps. Pour l'instant, nous l'appellerons `Value*`. L'astérisque (`*`) nous rappelle que nous ne _savons_ pas encore ce que fait cette variable, mais elle ne peut pas servir uniquement à suivre la valeur du contrat car il n'est pas nécessaire d'utiliser le stockage, qui est très coûteux, alors que vous pouvez obtenir le solde de vos comptes en utilisant `ADDRESS BALANCE`. Le premier code d'opération empile la propre adresse du contrat. Le second lit l'adresse au sommet de la pile et la remplace par le solde de cette adresse.
 
 | Décalage | Code d'opération | Pile                                       |
 | -----: | ------------ | ------------------------------------------- |
@@ -111,7 +121,7 @@ Nous allons continuer à tracer ce code à la destination du saut.
 |    1AA | DUP3       | CALLVALUE 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
 |    1AB | NOT        | 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 
-Le `NOT` est au niveau du bit (bitwise), il inverse donc la valeur de chaque bit dans la valeur d'appel.
+Le `NOT` est une opération bit à bit, il inverse donc la valeur de chaque bit dans la valeur d'appel.
 
 | Décalage | Code d'opération | Pile                                                                       |
 | -----: | ------------ | --------------------------------------------------------------------------- |
@@ -121,9 +131,9 @@ Le `NOT` est au niveau du bit (bitwise), il inverse donc la valeur de chaque bit
 |    1AF | PUSH2 0x01df | 0x01DF Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 |    1B2 | JUMPI        |
 
-Nous sautons si `Value*` est inférieur ou égal à 2^256-CALLVALUE-1. Cela ressemble à une logique pour empêcher un dépassement de capacité (overflow). Et en effet, nous voyons qu'après quelques opérations dénuées de sens (l'écriture en mémoire est sur le point d'être supprimée, par exemple) au décalage 0x01DE, le contrat s'annule si le dépassement est détecté, ce qui est un comportement normal.
+Nous sautons si `Value*` est inférieur ou égal à 2^256-CALLVALUE-1. Cela ressemble à une logique pour empêcher un dépassement de capacité. Et en effet, nous voyons qu'après quelques opérations absurdes (l'écriture en mémoire est sur le point d'être supprimée, par exemple) au décalage 0x01DE, le contrat s'annule si le dépassement de capacité est détecté, ce qui est un comportement normal.
 
-Notez qu'un tel dépassement est extrêmement improbable, car il nécessiterait que la valeur d'appel plus `Value*` soit comparable à 2^256 wei, soit environ 10^59 ETH. [L'offre totale d'ETH, au moment de la rédaction, est inférieure à deux cents millions](https://etherscan.io/stat/supply).
+Notez qu'un tel dépassement de capacité est extrêmement improbable, car il nécessiterait que la valeur d'appel plus `Value*` soit comparable à 2^256 Wei, soit environ 10^59 ETH. [L'offre totale d'ETH, au moment de la rédaction, est inférieure à deux cents millions](https://etherscan.io/stat/supply).
 
 | Décalage | Code d'opération | Pile                                     |
 | -----: | -------- | ----------------------------------------- |
@@ -142,7 +152,7 @@ Si nous sommes arrivés ici, obtenez `Value* + CALLVALUE` et sautez au décalage
 |     77 | SWAP2    | 6 Value\*+CALLVALUE 0 CALLVALUE |
 |     78 | SSTORE   | 0 CALLVALUE                     |
 
-Si nous arrivons ici (ce qui nécessite que les données d'appel soient vides), nous ajoutons à `Value*` la valeur d'appel. Cela est cohérent avec ce que nous disons que les transactions `Transfer` font.
+Si nous arrivons ici (ce qui nécessite que les données d'appel soient vides), nous ajoutons à `Value*` la valeur d'appel. Cela correspond à ce que nous disons que les transactions `Transfer` font.
 
 | Décalage | Code d'opération |
 | -----: | ------ |
@@ -154,7 +164,17 @@ Enfin, videz la pile (ce qui n'est pas nécessaire) et signalez la fin réussie 
 
 Pour résumer, voici un organigramme pour le code initial.
 
-![Entry point flowchart](flowchart-entry.png)
+<Flowchart>
+
+- Point d'entrée (0x00)
+  - Les données d'appel sont-elles plus courtes que quatre octets ?
+    - **Oui** Appels non-ABI (0x5E)
+      - Y a-t-il des données d'appel ?
+        - **Oui** 0x7C (objectif inconnu pour le moment)
+        - **Non** Transfert d'ETH (0x64) : annuler en cas de dépassement de capacité, sinon ajouter la valeur d'appel à `Storage[6]` (`Value*`) et s'arrêter
+    - **Non** Appels ABI (0x0D)
+
+</Flowchart>
 
 ## Le gestionnaire à 0x7C {#the-handler-at-0x7c}
 
@@ -252,41 +272,53 @@ Donc, après l'appel, nous copions les données de retour dans le tampon 0x80 - 
 
 Si nous arrivons ici, à 0xC0, cela signifie que le contrat que nous avons appelé a été annulé. Comme nous ne sommes qu'un proxy pour ce contrat, nous voulons renvoyer les mêmes données et également annuler.
 
-| Décalage | Code d'opération | Pile                                                                                                                |
-| -------: | ---------------- | ------------------------------------------------------------------------------------------------------------------- |
-|       C0 | JUMPDEST         | (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Storage[3]-en-adresse               |
-|       C1 | DUP2             | RETURNDATASIZE (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Storage[3]-en-adresse|
-|       C2 | DUP5             | 0x80 RETURNDATASIZE (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Storage[3]-en-adresse |
-|       C3 | REVERT           |
+| Décalage | Code d'opération | Pile                                                                                                               |
+| -----: | -------- | ------------------------------------------------------------------------------------------------------------------- |
+|     C0 | JUMPDEST | (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Storage[3]-comme-adresse                     |
+|     C1 | DUP2     | RETURNDATASIZE (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Storage[3]-comme-adresse      |
+|     C2 | DUP5     | 0x80 RETURNDATASIZE (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Storage[3]-comme-adresse |
+|     C3 | REVERT   |
 
-Nous exécutons donc `REVERT` avec le même tampon que celui utilisé pour `RETURN` plus tôt : 0x80 - 0x80+RETURNDATASIZE
+Nous utilisons donc `REVERT` avec le même tampon que celui utilisé pour `RETURN` plus tôt : 0x80 - 0x80+RETURNDATASIZE
 
-![Call to proxy flowchart](flowchart-proxy.png)
+<Flowchart>
+
+- Données d'appel d'un à trois octets de long, ou une méthode inconnue
+  - Gestionnaire de proxy (0x7C)
+    - Lire `Storage[3]`, l'adresse du proxy
+      - Copier les données d'appel en mémoire
+        - `DELEGATECALL` l'adresse du proxy
+          - Copier les données de retour en mémoire
+            - L'appel a-t-il échoué ?
+              - **Oui** `REVERT` avec les données de retour (0xC0)
+              - **Non** `RETURN` les données de retour (0xBD)
+
+</Flowchart>
 
 ## Appels ABI {#abi-calls}
 
 Si la taille des données d'appel est de quatre octets ou plus, il peut s'agir d'un appel ABI valide.
 
-| Décalage | Code d'opération | Pile                                                  |
+| Décalage | Code d'opération | Pile                                             |
 | -----: | ------------ | ------------------------------------------------- |
 |      D | PUSH1 0x00   | 0x00                                              |
 |      F | CALLDATALOAD | (((Premier mot (256 bits) des données d'appel)))      |
 |     10 | PUSH1 0xe0   | 0xE0 (((Premier mot (256 bits) des données d'appel))) |
-|     12 | SHR          | (((les 32 premiers bits (4 octets) des données d'appel)))    |
+|     12 | SHR          | (((premiers 32 bits (4 octets) des données d'appel)))    |
 
 Etherscan nous indique que `1C` est un code d'opération inconnu, car [il a été ajouté après qu'Etherscan a écrit cette fonctionnalité](https://eips.ethereum.org/EIPS/eip-145) et ils ne l'ont pas mise à jour. Un [tableau des codes d'opération à jour](https://github.com/wolflo/evm-opcodes) nous montre qu'il s'agit d'un décalage vers la droite
 
-| Décalage | Code d'opération | Pile                                                                                                     |
+| Décalage | Code d'opération | Pile                                                                                                    |
 | -----: | ---------------- | -------------------------------------------------------------------------------------------------------- |
-|     13 | DUP1             | (((les 32 premiers bits (4 octets) des données d'appel))) (((les 32 premiers bits (4 octets) des données d'appel)))            |
-|     14 | PUSH4 0x3cd8045e | 0x3CD8045E (((les 32 premiers bits (4 octets) des données d'appel))) (((les 32 premiers bits (4 octets) des données d'appel))) |
-|     19 | GT               | 0x3CD8045E>les-32-premiers-bits-des-donnees-d-appel (((les 32 premiers bits (4 octets) des données d'appel)))                 |
-|     1A | PUSH2 0x0043     | 0x43 0x3CD8045E>les-32-premiers-bits-des-donnees-d-appel (((les 32 premiers bits (4 octets) des données d'appel)))            |
-|     1D | JUMPI            | (((les 32 premiers bits (4 octets) des données d'appel)))                                                           |
+|     13 | DUP1             | (((premiers 32 bits (4 octets) des données d'appel))) (((premiers 32 bits (4 octets) des données d'appel)))            |
+|     14 | PUSH4 0x3cd8045e | 0x3CD8045E (((premiers 32 bits (4 octets) des données d'appel))) (((premiers 32 bits (4 octets) des données d'appel))) |
+|     19 | GT               | 0x3CD8045E>premiers-32-bits-des-données-d'appel (((premiers 32 bits (4 octets) des données d'appel)))                 |
+|     1A | PUSH2 0x0043     | 0x43 0x3CD8045E>premiers-32-bits-des-données-d'appel (((premiers 32 bits (4 octets) des données d'appel)))            |
+|     1D | JUMPI            | (((premiers 32 bits (4 octets) des données d'appel)))                                                           |
 
-Diviser ainsi en deux les tests de correspondance de la signature de méthode permet d'économiser la moitié des tests en moyenne. Le code qui suit immédiatement ceci et le code en 0x43 suivent le même modèle : `DUP1` les 32 premiers bits des données d'appel, `PUSH4 (((method signature>`, exécutent `EQ` pour vérifier l'égalité, puis `JUMPI` si la signature de méthode correspond. Voici les signatures de méthode, leurs adresses et, si elle est connue, [la définition de méthode correspondante](https://www.4byte.directory/) :
+En divisant les tests de correspondance de signature de méthode en deux de cette manière, on économise en moyenne la moitié des tests. Le code qui suit immédiatement ceci et le code en 0x43 suivent le même modèle : `DUP1` les 32 premiers bits des données d'appel, `PUSH4 (((method signature>`, exécuter `EQ` pour vérifier l'égalité, puis `JUMPI` si la signature de la méthode correspond. Voici les signatures de méthode, leurs adresses et, si elle est connue, [la définition de méthode correspondante](https://www.4byte.directory/) :
 
-| Méthode                                                                                | Signature de méthode | Décalage vers lequel sauter |
+| Méthode                                                                                 | Signature de méthode | Décalage vers lequel sauter |
 | -------------------------------------------------------------------------------------- | ---------------- | ------------------- |
 | [splitter()](https://www.4byte.directory/signatures/?bytes4_signature=0x3cd8045e)      | 0x3cd8045e       | 0x0103              |
 | ???                                                                                    | 0x81e580d3       | 0x0138              |
@@ -296,7 +328,26 @@ Diviser ainsi en deux les tests de correspondance de la signature de méthode pe
 
 Si aucune correspondance n'est trouvée, le code saute vers [le gestionnaire de proxy à 0x7C](#the-handler-at-0x7c), dans l'espoir que le contrat pour lequel nous sommes un proxy ait une correspondance.
 
-![ABI calls flowchart](flowchart-abi.png)
+<Flowchart>
+
+- Lire le sélecteur de méthode, les quatre premiers octets des données d'appel (0x0D)
+  - Le sélecteur est-il inférieur à `0x3cd8045e` ?
+    - **Oui** Sélecteurs bas (0x43)
+      - Est-ce `0x1f135823` ?
+        - **Oui** Fonction à 0xC4
+        - **Non** Est-ce `0x2eb4a7ab` ?
+          - **Oui** `merkleRoot()` à 0xED
+          - **Non** [Gestionnaire de proxy (0x7C)](#the-handler-at-0x7c)
+    - **Non** Sélecteurs hauts (0x1E)
+      - Est-ce `0x3cd8045e` ?
+        - **Oui** `splitter()` à 0x0103
+        - **Non** Est-ce `0x81e580d3` ?
+          - **Oui** Fonction à 0x0138
+          - **Non** Est-ce `0xba0bafb4` ?
+            - **Oui** `currentWindow()` à 0x0158
+            - **Non** [Gestionnaire de proxy (0x7C)](#the-handler-at-0x7c)
+
+</Flowchart>
 
 ## splitter() {#splitter}
 

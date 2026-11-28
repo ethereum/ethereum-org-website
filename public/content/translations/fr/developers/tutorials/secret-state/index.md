@@ -16,9 +16,9 @@ lang: fr
 published: 2025-03-15
 ---
 
-_Il n'y a pas de secrets sur la chaîne de blocs_. Tout ce qui est publié sur la chaîne de blocs est ouvert et peut être lu par tout le monde. Cela est nécessaire, car la chaîne de blocs repose sur le fait que n'importe qui puisse la vérifier. Cependant, les jeux s'appuient souvent sur un état secret. Par exemple, le jeu du [démineur](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) n'a absolument aucun sens si vous pouvez simplement aller sur un explorateur de blocs et voir la carte.
+_Il n'y a pas de secrets sur la chaîne de blocs_. Tout ce qui est publié sur la chaîne de blocs est ouvert et peut être lu par tout le monde. Cela est nécessaire, car la chaîne de blocs repose sur le fait que n'importe qui puisse la vérifier. Cependant, les jeux s'appuient souvent sur un état secret. Par exemple, le jeu du [démineur](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) n'a absolument aucun sens si vous pouvez simplement aller sur un explorateur de chaîne de blocs et voir la carte.
 
-La solution la plus simple consiste à utiliser un [composant serveur](/developers/tutorials/server-components/) pour conserver l'état secret. Cependant, la raison pour laquelle nous utilisons la chaîne de blocs est d'empêcher le développeur du jeu de tricher. Nous devons garantir l'honnêteté du composant serveur. Le serveur peut fournir un hash de l'état, et utiliser des [preuves à divulgation nulle de connaissance](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) pour prouver que l'état utilisé pour calculer le résultat d'un mouvement est le bon.
+La solution la plus simple est d'utiliser un [composant serveur](/developers/tutorials/server-components/) pour conserver l'état secret. Cependant, la raison pour laquelle nous utilisons la chaîne de blocs est d'empêcher le développeur du jeu de tricher. Nous devons garantir l'honnêteté du composant serveur. Le serveur peut fournir un hash de l'état, et utiliser des [preuves à divulgation nulle de connaissance](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) pour prouver que l'état utilisé pour calculer le résultat d'un mouvement est le bon.
 
 Après avoir lu cet article, vous saurez comment créer ce type de serveur conservant un état secret, un client pour afficher l'état, et un composant onchain pour la communication entre les deux. Les principaux outils que nous utiliserons seront :
 
@@ -27,6 +27,7 @@ Après avoir lu cet article, vous saurez comment créer ce type de serveur conse
 | [Zokrates](https://zokrates.github.io/)       | Preuves à divulgation nulle de connaissance et leur vérification |               1.1.9 |
 | [TypeScript](https://www.typescriptlang.org/) | Langage de programmation pour le serveur et le client   |               5.4.2 |
 | [Node](https://nodejs.org/en)                 | Exécution du serveur                                    |             20.18.2 |
+| [Foundry](https://getfoundry.sh/)             | Chaîne de blocs locale et déploiement de contrats       |               1.0.0 |
 | [Viem](https://viem.sh/)                      | Communication avec la chaîne de blocs                   |              2.9.20 |
 | [MUD](https://mud.dev/)                       | Gestion des données onchain                             |              2.0.12 |
 | [React](https://react.dev/)                   | Interface utilisateur client                            |              18.2.0 |
@@ -42,7 +43,24 @@ Cette application est écrite en utilisant [MUD](https://mud.dev/), un framework
 
 Pour exécuter l'exemple du démineur :
 
-1. Assurez-vous d'[avoir installé les prérequis](https://mud.dev/quickstart#prerequisites) : [Node](https://mud.dev/quickstart#prerequisites), [Foundry](https://book.getfoundry.sh/getting-started/installation), [`git`](https://git-scm.com/downloads), [`pnpm`](https://git-scm.com/downloads) et [`mprocs`](https://github.com/pvolok/mprocs).
+1. Assurez-vous d'[avoir installé les prérequis](https://mud.dev/quickstart#prerequisites) : [Node](https://nodejs.org/en), [Foundry](https://getfoundry.sh/introduction/installation), [`git`](https://git-scm.com/downloads), et [`pnpm`](https://pnpm.io/installation).
+
+   Cet exemple utilise MUD 2.0.12, qui nécessite des versions spécifiques de Node et Foundry :
+
+   - **Node 20**. L'outil en ligne de commande de MUD 2.0.12 utilise les [assertions d'importation JSON](https://v8.dev/features/import-attributes), que les versions plus récentes de Node ne prennent plus en charge, donc sur Node 22 ou ultérieur, il échoue avec `SyntaxError: Unexpected identifier 'assert'`. Node 20 [a atteint sa fin de vie](https://nodejs.org/en/about/previous-releases) en avril 2026 et ne reçoit plus de mises à jour de sécurité, ne l'utilisez donc que pour cet exemple local. Un gestionnaire de versions Node tel que [`fnm`](https://github.com/Schniz/fnm) ou [`nvm`](https://github.com/nvm-sh/nvm) vous permet de passer à Node 20 uniquement pour ce répertoire, par exemple :
+
+     ```sh copy
+     fnm install 20
+     fnm use 20
+     ```
+
+   - **Foundry 1.0.0**. Avec les versions actuelles de Foundry, le script post-déploiement échoue avec _Usage of `address(this)` detected in script contract_. Installez la version testée avec :
+
+     ```sh copy
+     foundryup -i 1.0.0
+     ```
+
+     Lorsque vous aurez terminé ce tutoriel, vous pourrez revenir à la dernière version avec `foundryup`.
 
 2. Clonez le dépôt.
 
@@ -55,10 +73,9 @@ Pour exécuter l'exemple du démineur :
    ```sh copy
    cd 20240901-secret-state/
    pnpm install
-   npm install -g mprocs
    ```
 
-   Si Foundry a été installé dans le cadre de `pnpm install`, vous devez redémarrer le terminal de ligne de commande.
+   [`mprocs`](https://github.com/pvolok/mprocs), qui exécute tous les processus dans un seul terminal, est installé comme l'un des paquets.
 
 4. Compilez les contrats
 
@@ -69,17 +86,17 @@ Pour exécuter l'exemple du démineur :
     ```
 
 
-5. Démarrez le programme (y compris une chaîne de blocs [anvil](https://book.getfoundry.sh/anvil/)) et patientez.
+5. Démarrez le programme (y compris une chaîne de blocs [anvil](https://getfoundry.sh/anvil/overview)) et patientez.
 
    ```sh copy
-   mprocs
+   pnpm dev
    ```
 
-   Notez que le démarrage prend beaucoup de temps. Pour voir la progression, utilisez d'abord la flèche vers le bas pour faire défiler jusqu'à l'onglet _contracts_ afin de voir les contrats MUD en cours de déploiement. Lorsque vous obtenez le message _Waiting for file changes…_, les contrats sont déployés et la suite de la progression se fera dans l'onglet _server_. Là, vous patientez jusqu'à obtenir le message _Verifier address: 0x...._.
+   Notez que le démarrage prend beaucoup de temps. Pour voir la progression, utilisez d'abord la flèche vers le bas pour faire défiler jusqu'à l'onglet _contracts_ afin de voir les contrats MUD en cours de déploiement. Lorsque vous obtenez le message _Waiting for file changes…_, les contrats sont déployés et la suite de la progression se déroulera dans l'onglet _server_. Là, vous patientez jusqu'à obtenir le message _Verifier address: 0x...._.
 
-   Si cette étape réussit, vous verrez l'écran `mprocs`, avec les différents processus sur la gauche et la sortie de la console pour le processus actuellement sélectionné sur la droite.
+   Si cette étape réussit, vous verrez l'écran `mprocs`, avec les différents processus sur la gauche et la sortie console pour le processus actuellement sélectionné sur la droite.
 
-   ![The mprocs screen](./mprocs.png)
+   ![L'écran mprocs](./mprocs.png)
 
    S'il y a un problème avec `mprocs`, vous pouvez exécuter les quatre processus manuellement, chacun dans sa propre fenêtre de ligne de commande :
 
@@ -102,14 +119,14 @@ Pour exécuter l'exemple du démineur :
      ```sh
      cd packages/server
      pnpm start
-     ```  
+     ```
 
    - **Client**
 
      ```sh
      cd packages/client
      pnpm run dev
-     ```  
+     ```
 
 6. Vous pouvez maintenant naviguer vers [le client](http://localhost:3000), cliquer sur **New Game**, et commencer à jouer.
 
@@ -151,11 +168,11 @@ Ces flux coordonnent l'exécution entre le client, le composant onchain et le se
 
 #### Initialisation {#initialization-flow}
 
-Lorsque vous exécutez `mprocs`, ces étapes se produisent :
+Lorsque vous exécutez `pnpm dev` (qui exécute `mprocs`), les étapes suivantes se produisent :
 
 1. [`mprocs`](https://github.com/pvolok/mprocs) exécute quatre composants :
 
-   - [Anvil](https://book.getfoundry.sh/anvil/), qui exécute une chaîne de blocs locale
+   - [Anvil](https://getfoundry.sh/anvil/overview), qui exécute une chaîne de blocs locale
    - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts), qui compile (si nécessaire) et déploie les contrats pour MUD
    - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), qui exécute [Vite](https://vitejs.dev/) pour servir l'interface utilisateur et le code client aux navigateurs web.
    - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server), qui effectue les actions du serveur
@@ -166,7 +183,7 @@ Lorsque vous exécutez `mprocs`, ces étapes se produisent :
 
 4. Le serveur abonne une fonction pour qu'elle soit exécutée [lorsque la table `Configuration` change](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23). [Cette fonction](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) est appelée après que `PostDeploy.s.sol` s'exécute et modifie la table.
 
-5. Lorsque la fonction d'initialisation du serveur dispose de la configuration, [elle appelle `zkFunctions`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35) pour initialiser [la partie à divulgation nulle de connaissance du serveur](#using-zokrates-from-typescript). Cela ne peut pas se produire tant que nous n'avons pas la configuration, car les fonctions à divulgation nulle de connaissance doivent avoir la largeur et la hauteur du champ de mines comme constantes.
+5. Lorsque la fonction d'initialisation du serveur dispose de la configuration, [elle appelle `zkFunctions`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35) pour initialiser [la partie à divulgation nulle de connaissance du serveur](#using-zokrates-from-typescript). Cela ne peut pas se produire tant que nous n'avons pas obtenu la configuration, car les fonctions à divulgation nulle de connaissance doivent avoir la largeur et la hauteur du champ de mines comme constantes.
 
 6. Une fois la partie à divulgation nulle de connaissance du serveur initialisée, l'étape suivante consiste à [déployer le contrat de vérification à divulgation nulle de connaissance sur la chaîne de blocs](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) et à définir l'adresse du vérificateur dans MUD.
 
@@ -518,7 +535,7 @@ Les tests de sécurité sont importants car un bug de fonctionnalité finira tou
 
 ### Permissions {#permissions}
 
-Il y a une entité privilégiée dans ce jeu, le serveur. C'est le seul utilisateur autorisé à appeler les fonctions dans [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). Nous pouvons utiliser [`cast`](https://book.getfoundry.sh/cast/) pour vérifier que les appels aux fonctions à permission ne sont autorisés que pour le compte du serveur.
+Il y a une entité privilégiée dans ce jeu, le serveur. C'est le seul utilisateur autorisé à appeler les fonctions dans [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). Nous pouvons utiliser [`cast`](https://getfoundry.sh/cast/overview) pour vérifier que les appels aux fonctions à permission ne sont autorisés que pour le compte du serveur.
 
 [La clé privée du serveur se trouve dans `setupNetwork.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52).
 
@@ -529,6 +546,8 @@ Il y a une entité privilégiée dans ce jeu, le serveur. C'est le seul utilisat
    UNAUTHORIZED_KEY=0x5de4111afa1a4b94908f83103eb1f1706367c2e68ca870fc3fb9a804cdab365a
    AUTHORIZED_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
    ```
+
+   Cette `WORLD_ADDRESS` est l'adresse vers laquelle MUD déploie sur un `anvil` vierge. Si votre `World` se trouve à une adresse différente, utilisez la valeur dans `packages/contracts/worlds.json`.
 
 2. Utilisez `cast` pour tenter de définir l'adresse du vérificateur en tant qu'adresse non autorisée.
 
@@ -544,7 +563,7 @@ Il y a une entité privilégiée dans ce jeu, le serveur. C'est le seul utilisat
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $AUTHORIZED_KEY
    ```
 
-   L'adresse dans **app\_\_VerifiedAddress** devrait maintenant être zéro.
+   L'adresse dans **app\_\_VerifierAddress** devrait maintenant être zéro.
 
 Toutes les fonctions MUD dans le même `System` passent par le même contrôle d'accès, je considère donc ce test comme suffisant. Si ce n'est pas votre cas, vous pouvez vérifier les autres fonctions dans [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol).
 
@@ -560,7 +579,7 @@ La possibilité la plus simple est de fournir la mauvaise réponse dans la preuv
 proof.inputs[3] = "0x" + "1".padStart(64, "0")
 ```
 
-Cela signifie que nous prétendrons toujours qu'il y a une bombe, quelle que soit la bonne réponse. Essayez de jouer avec cette version, et vous verrez dans l'onglet **server** de l'écran `pnpm dev` cette erreur :
+Cela signifie que nous prétendrons toujours qu'il y a une bombe, quelle que soit la bonne réponse. Essayez de jouer avec cette version, et vous verrez dans l'onglet **server** de l'écran `mprocs` cette erreur :
 
 ```
 cause: {
@@ -682,7 +701,9 @@ En tant que tutoriel, cet article nécessitait un jeu court et facile à compren
 
 [Zokrates](https://zokrates.github.io/) n'est pas la seule bibliothèque à divulgation nulle de connaissance disponible, mais il est similaire à un langage de programmation [impératif](https://en.wikipedia.org/wiki/Imperative_programming) normal et prend en charge les variables booléennes.
 
-Pour votre application, avec des exigences différentes, vous pourriez préférer utiliser [Circum](https://docs.circom.io/getting-started/installation/) ou [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/).
+Cependant, Zokrates n'est plus activement maintenu. Sa dernière version, 0.8.8 (et le `zokrates-js` correspondant 1.1.9), date de novembre 2023, et la branche principale n'a eu aucun commit depuis avril 2024. Le code de ce tutoriel fonctionne toujours, mais ne vous attendez pas à des corrections de bugs ou à des mises à jour de sécurité. Pour un nouveau projet, envisagez un langage maintenu tel que [Noir](https://noir-lang.org/), qui est utilisé dans [ce tutoriel](/developers/tutorials/app-plasma/).
+
+Pour votre application, avec des exigences différentes, vous pourriez préférer utiliser [Circom](https://docs.circom.io/getting-started/installation/) ou [Cairo](https://www.cairo-lang.org/).
 
 ### Quand compiler Zokrates {#when-compile-zokrates}
 

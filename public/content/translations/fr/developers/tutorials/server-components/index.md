@@ -1,6 +1,6 @@
 ---
 title: "Composants de serveur et agents pour les applications web3"
-description: "Après avoir lu ce tutoriel, vous serez en mesure d'écrire des serveurs TypeScript qui écoutent les événements sur une chaîne de blocs et y répondent en conséquence avec leurs propres transactions. Cela vous permettra d'écrire des applications centralisées (car le serveur est un point de défaillance), mais qui peuvent interagir avec des entités web3. Les mêmes techniques peuvent également être utilisées pour écrire un agent qui répond aux événements onchain sans intervention humaine."
+description: "Après avoir lu ce tutoriel, vous serez en mesure d'écrire des serveurs TypeScript qui écoutent les événements sur une chaîne de blocs et y répondent en conséquence avec leurs propres transactions. Cela vous permettra d'écrire des applications centralisées (car le serveur est un point de défaillance), mais capables d'interagir avec des entités web3. Les mêmes techniques peuvent également être utilisées pour écrire un agent qui répond aux événements onchain sans intervention humaine."
 
 author: Ori Pomerantz
 lang: fr
@@ -12,11 +12,11 @@ published: 2024-07-15
 
 ## Introduction {#introduction}
 
-Dans la plupart des cas, une application décentralisée (dapp) utilise un serveur pour distribuer le logiciel, mais toute l'interaction réelle se produit entre le client (généralement, le navigateur web) et la chaîne de blocs.
+Dans la plupart des cas, une application décentralisée utilise un serveur pour distribuer le logiciel, mais toute l'interaction réelle se produit entre le client (généralement, le navigateur web) et la chaîne de blocs.
 
 ![Normal interaction between web server, client, and blockchain](./fig-1.svg)
 
-Cependant, dans certains cas, une application gagnerait à avoir un composant de serveur qui s'exécute de manière indépendante. Un tel serveur serait capable de répondre aux événements, et aux requêtes provenant d'autres sources, telles qu'une API, en émettant des transactions.
+Cependant, dans certains cas, une application gagnerait à avoir un composant de serveur qui s'exécute indépendamment. Un tel serveur serait capable de répondre aux événements et aux requêtes provenant d'autres sources, telles qu'une API, en émettant des transactions.
 
 ![The interaction with the addition of a server](./fig-2.svg)
 
@@ -24,13 +24,15 @@ Il y a plusieurs tâches possibles qu'un tel serveur pourrait accomplir.
 
 - Détenteur d'un état secret. Dans les jeux, il est souvent utile de ne pas mettre à la disposition des joueurs toutes les informations que le jeu connaît. Cependant, _il n'y a pas de secrets sur la chaîne de blocs_, toute information qui se trouve dans la chaîne de blocs est facile à découvrir pour quiconque. Par conséquent, si une partie de l'état du jeu doit être gardée secrète, elle doit être stockée ailleurs (et éventuellement faire vérifier les effets de cet état à l'aide de [preuves à divulgation nulle de connaissance](/zero-knowledge-proofs)).
 
-- Oracle centralisé. Si les enjeux sont suffisamment faibles, un serveur externe qui lit des informations en ligne puis les publie sur la chaîne peut être suffisant pour être utilisé comme [oracle](/developers/docs/oracles/).
+- Oracle centralisé. Si les enjeux sont suffisamment faibles, un serveur externe qui lit certaines informations en ligne et les publie ensuite sur la chaîne peut être suffisant pour être utilisé comme [oracle](/developers/docs/oracles/).
 
 - Agent. Rien ne se passe sur la chaîne de blocs sans une transaction pour l'activer. Un serveur peut agir au nom d'un utilisateur pour effectuer des actions telles que l'[arbitrage](/developers/docs/mev/#mev-examples-dex-arbitrage) lorsque l'occasion se présente.
 
 ## Programme d'exemple {#sample-program}
 
-Vous pouvez voir un exemple de serveur [sur GitHub](https://github.com/qbzzt/20240715-server-component). Ce serveur écoute les événements provenant de [ce contrat](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code), une version modifiée du Greeter de Hardhat. Lorsque la salutation est modifiée, il la rétablit.
+Vous pouvez voir un exemple de serveur [sur GitHub](https://github.com/qbzzt/20240715-server-component). Ce serveur écoute les événements provenant de [ce contrat](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract_code) sur le réseau de test Sepolia, une version modifiée du Greeter de Hardhat. Lorsque la salutation est modifiée, il la rétablit.
+
+Ce contrat est partagé avec d'autres tutoriels, de sorte que d'autres personnes (et leurs serveurs) peuvent modifier la salutation pendant que le vôtre est en cours d'exécution. Arrêtez votre serveur lorsque vous avez terminé pour éviter de dépenser vos ETH de test.
 
 Pour l'exécuter :
 
@@ -41,27 +43,33 @@ Pour l'exécuter :
    cd 20240715-server-component
    ```
 
-2. Installez les paquets nécessaires. Si vous ne l'avez pas déjà fait, [installez d'abord Node.js](https://nodejs.org/en/download/package-manager).
+2. Le dépôt d'exemple a été écrit pour le réseau de test Holesky, qui a depuis été fermé. Mettez-le à jour pour utiliser Sepolia et l'adresse du contrat Sepolia.
+
+   ```sh copy
+   sed -i.bak -e 's/holesky/sepolia/g' -e 's/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA/' src/app.ts
+   ```
+
+3. Installez les paquets nécessaires. Si vous ne l'avez pas déjà fait, [installez d'abord Node](https://nodejs.org/en/download/package-manager).
 
    ```sh copy
    npm install
    ```
 
-3. Modifiez `.env` pour spécifier la clé privée d'un compte qui possède des ETH sur le réseau de test Holesky. Si vous n'avez pas d'ETH sur Holesky, vous pouvez [utiliser ce faucet](https://holesky-faucet.pk910.de/).
+4. Modifiez `.env` pour spécifier la clé privée d'un compte qui possède des ETH sur le réseau de test Sepolia. Si vous n'avez pas d'ETH sur Sepolia, vous pouvez [utiliser ce faucet](https://sepolia-faucet.pk910.de/). Utilisez un nouveau compte que vous n'utilisez que pour les tests, jamais un compte qui détient des actifs réels.
 
    ```sh filename=".env" copy
-   PRIVATE_KEY=0x <private key goes here>
+   PRIVATE_KEY=0x<private key goes here>
    ```
 
-4. Démarrez le serveur.
+5. Démarrez le serveur.
 
    ```sh copy
    npm start
    ```
 
-5. Allez sur [un explorateur de blocs](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract), et en utilisant une adresse différente de celle qui possède la clé privée, modifiez la salutation. Constatez que la salutation est automatiquement rétablie.
+6. Allez sur [un explorateur de blocs](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract), et en utilisant une adresse différente de celle qui possède la clé privée, modifiez la salutation. Constatez que la salutation est automatiquement rétablie.
 
-### Comment ça marche ? {#how-it-works}
+### Comment cela fonctionne-t-il ? {#how-it-works}
 
 La façon la plus simple de comprendre comment écrire un composant de serveur est de parcourir l'exemple ligne par ligne.
 
@@ -90,13 +98,13 @@ import { privateKeyToAccount } from "viem/accounts"
 [Cette fonction](https://viem.sh/docs/accounts/privateKey) nous permet de générer les informations du portefeuille, y compris l'adresse, correspondant à une clé privée.
 
 ```typescript
-import { holesky } from "viem/chains"
+import { sepolia } from "viem/chains"
 ```
 
-Pour utiliser une chaîne de blocs dans Viem, vous devez importer sa définition. Dans ce cas, nous voulons nous connecter à la chaîne de blocs de test [Holesky](https://github.com/eth-clients/holesky).
+Pour utiliser une chaîne de blocs dans Viem, vous devez importer sa définition. Dans ce cas, nous voulons nous connecter à la chaîne de blocs de test [Sepolia](/developers/docs/networks/#sepolia).
 
 ```typescript
-// Voici comment nous ajoutons les définitions dans .env à process.env.
+// Voici comment nous ajoutons les définitions de .env à process.env.
 import * as dotenv from "dotenv"
 dotenv.config()
 ```
@@ -104,7 +112,7 @@ dotenv.config()
 C'est ainsi que nous lisons `.env` dans l'environnement. Nous en avons besoin pour la clé privée (voir plus loin).
 
 ```typescript
-const greeterAddress : Address = "0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6"
+const greeterAddress : Address = "0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA"
 const greeterABI = [
     {
         "inputs": [
@@ -138,29 +146,29 @@ const greeterABI = [
 
 Pour utiliser un contrat, nous avons besoin de son adresse et de son [ABI](/glossary/#abi). Nous fournissons les deux ici.
 
-En JavaScript (et donc en TypeScript), vous ne pouvez pas assigner une nouvelle valeur à une constante, mais vous _pouvez_ modifier l'objet qui y est stocké. En utilisant le suffixe `as const`, nous indiquons à TypeScript que la liste elle-même est constante et ne peut pas être modifiée.
+En JavaScript (et donc en TypeScript), vous ne pouvez pas attribuer une nouvelle valeur à une constante, mais vous _pouvez_ modifier l'objet qui y est stocké. En utilisant le suffixe `as const`, nous indiquons à TypeScript que la liste elle-même est constante et ne peut pas être modifiée.
 
 ```typescript
 const publicClient = createPublicClient({
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
 
-Créez un [client public](https://viem.sh/docs/clients/public.html) Viem. Les clients publics n'ont pas de clé privée attachée, et ne peuvent donc pas envoyer de transactions. Ils peuvent appeler des [fonctions `view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm), lire les soldes de compte, etc.
+Créez un [client public](https://viem.sh/docs/clients/public) Viem. Les clients publics n'ont pas de clé privée attachée et ne peuvent donc pas envoyer de transactions. Ils peuvent appeler des [fonctions `view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm), lire les soldes de compte, etc.
 
 ```typescript
 const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`)
 ```
 
-Les variables d'environnement sont disponibles dans [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). Cependant, TypeScript est fortement typé. Une variable d'environnement peut être n'importe quelle chaîne de caractères, ou vide, donc le type pour une variable d'environnement est `string | undefined`. Cependant, une clé est définie dans Viem comme `0x${string}` (`0x` suivi d'une chaîne de caractères). Ici, nous indiquons à TypeScript que la variable d'environnement `PRIVATE_KEY` sera de ce type. Si ce n'est pas le cas, nous obtiendrons une erreur d'exécution.
+Les variables d'environnement sont disponibles dans [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). Cependant, TypeScript est fortement typé. Une variable d'environnement peut être n'importe quelle chaîne de caractères, ou vide, donc le type d'une variable d'environnement est `string | undefined`. Cependant, une clé est définie dans Viem comme `0x${string}` (`0x` suivi d'une chaîne de caractères). Ici, nous indiquons à TypeScript que la variable d'environnement `PRIVATE_KEY` sera de ce type. Si ce n'est pas le cas, nous obtiendrons une erreur d'exécution.
 
 La fonction [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) utilise ensuite cette clé privée pour créer un objet de compte complet.
 
 ```typescript
 const walletClient = createWalletClient({
   account,
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
@@ -183,9 +191,9 @@ Maintenant que nous avons tous les prérequis, nous pouvons enfin créer une [in
 console.log(`Current greeting:`, await greeter.read.greet())
 ```
 
-Les fonctions du contrat qui sont en lecture seule ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) et [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) sont disponibles sous `read`. Dans ce cas, nous l'utilisons pour accéder à la fonction [`greet`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=read_contract#cfae3217), qui renvoie la salutation.
+Les fonctions du contrat qui sont en lecture seule ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) et [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) sont disponibles sous `read`. Dans ce cas, nous l'utilisons pour accéder à la fonction [`greet`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=read_contract), qui renvoie la salutation.
 
-JavaScript est mono-thread, donc lorsque nous lançons un processus long, nous devons [spécifier que nous le faisons de manière asynchrone](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). Appeler la chaîne de blocs, même pour une opération en lecture seule, nécessite un aller-retour entre l'ordinateur et un nœud de la chaîne de blocs. C'est la raison pour laquelle nous spécifions ici que le code doit attendre (`await`) le résultat.
+JavaScript est monothread, donc lorsque nous lançons un processus long, nous devons [spécifier que nous le faisons de manière asynchrone](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). L'appel à la chaîne de blocs, même pour une opération en lecture seule, nécessite un aller-retour entre l'ordinateur et un nœud de la chaîne de blocs. C'est la raison pour laquelle nous spécifions ici que le code doit attendre (`await`) le résultat.
 
 Si vous êtes intéressé par la façon dont cela fonctionne, vous pouvez [en lire plus ici](https://www.w3schools.com/js/js_promise.asp), mais en termes pratiques, tout ce que vous devez savoir est que vous attendez (`await`) les résultats si vous démarrez une opération qui prend beaucoup de temps, et que toute fonction qui fait cela doit être déclarée comme `async`.
 
@@ -201,10 +209,10 @@ C'est la fonction que vous appelez pour émettre une transaction qui modifie la 
 const txHash = await greeter.write.setGreeting([greeting])
 ```
 
-Le champ `write` de l'instance de contrat contient toutes les fonctions qui écrivent dans l'état de la chaîne de blocs (celles qui nécessitent l'envoi d'une transaction), telles que [`setGreeting`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862). Les paramètres, s'il y en a, sont fournis sous forme de liste, et la fonction renvoie le hash de la transaction.
+Le champ `write` de l'instance de contrat contient toutes les fonctions qui écrivent dans l'état de la chaîne de blocs (celles qui nécessitent l'envoi d'une transaction), telles que [`setGreeting`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract). Les paramètres, s'il y en a, sont fournis sous forme de liste, et la fonction renvoie le hash de la transaction.
 
 ```typescript
-    console.log(`Working on a fix, see https://eth-holesky.blockscout.com/tx/${txHash}`)
+    console.log(`Working on a fix, see https://eth-sepolia.blockscout.com/tx/${txHash}`)
 
     return txHash
 }
@@ -249,12 +257,6 @@ Si l'expéditeur n'est _pas_ ce serveur, utilisez `setGreeting` pour modifier la
 
 ```json
 {
-  "main": "dist/index.js",
-```
-
-Cette définition spécifie quel fichier JavaScript exécuter.
-
-```json
   "scripts": {
     "start": "tsc && node dist/app.js",
   },
@@ -285,12 +287,12 @@ Ce sont des paquets qui ne sont requis que pour le développement. Ici, nous avo
 }
 ```
 
-Ce sont des paquets qui sont requis à l'exécution, lors du lancement de `dist/app.js`.
+Ce sont des paquets qui sont requis à l'exécution, lors de l'exécution de `dist/app.js`.
 
 ## Conclusion {#conclusion}
 
 Le serveur centralisé que nous avons créé ici fait son travail, qui est d'agir comme un agent pour un utilisateur. Toute autre personne qui souhaite que la dapp continue de fonctionner et qui est prête à dépenser le gaz peut exécuter une nouvelle instance du serveur avec sa propre adresse.
 
-Cependant, cela ne fonctionne que lorsque les actions du serveur centralisé peuvent être facilement vérifiées. Si le serveur centralisé possède des informations d'état secrètes, ou exécute des calculs difficiles, c'est une entité centralisée en laquelle vous devez avoir confiance pour utiliser l'application, ce qui est exactement ce que les chaînes de blocs essaient d'éviter. Dans un prochain article, je prévois de montrer comment utiliser les [preuves à divulgation nulle de connaissance](/zero-knowledge-proofs) pour contourner ce problème.
+Cependant, cela ne fonctionne que lorsque les actions du serveur centralisé peuvent être facilement vérifiées. Si le serveur centralisé possède des informations d'état secrètes ou exécute des calculs difficiles, il s'agit d'une entité centralisée en laquelle vous devez avoir confiance pour utiliser l'application, ce qui est exactement ce que les chaînes de blocs essaient d'éviter. Dans un prochain article, je prévois de montrer comment utiliser des [preuves à divulgation nulle de connaissance](/zero-knowledge-proofs) pour contourner ce problème.
 
-[Voir ici pour plus de mes travaux](https://cryptodocguy.pro/).
+[Voir ici pour plus de mon travail](https://cryptodocguy.pro/).
